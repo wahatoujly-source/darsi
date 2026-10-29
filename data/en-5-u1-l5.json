@@ -1,0 +1,352 @@
+{
+ "id": "en-5-u1-l5",
+ "grade": 5,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 1 · Lesson 5: Learning English",
+ "titleAr": "الوحدة الأولى: عالمنا — الدرس الخامس: لماذا نتعلم الإنجليزية؟",
+ "characters": {},
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "لماذا نتعلم الإنجليزية؟",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "I want to study in the English language.",
+       "ar": "أريد أن أدرس باللغة الإنجليزية",
+       "em": "🎓"
+      },
+      {
+       "id": "v1",
+       "en": "There are lots of books in English.",
+       "ar": "توجد كتب كثيرة بالإنجليزية",
+       "em": "📚"
+      },
+      {
+       "id": "v2",
+       "en": "Lots of people in the world speak English.",
+       "ar": "كثير من الناس في العالم يتكلمون الإنجليزية",
+       "em": "🌍"
+      },
+      {
+       "id": "v3",
+       "en": "There are lots of songs in English.",
+       "ar": "توجد أغانٍ كثيرة بالإنجليزية",
+       "em": "🎧"
+      },
+      {
+       "id": "v4",
+       "en": "I want to travel to other countries.",
+       "ar": "أريد أن أسافر إلى بلدان أخرى",
+       "em": "✈️"
+      },
+      {
+       "id": "v5",
+       "en": "There is a lot of English on the internet.",
+       "ar": "توجد إنجليزية كثيرة على الإنترنت",
+       "em": "💻"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتابك ص 16–17."
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "I want to … / There are lots of …",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "I want to …",
+     "html": "<div class=\"ex\">I <b>want to</b> travel to other countries.</div><div class=\"ex\">I <b>want to</b> study in the English language.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "I want to travel to other countries."
+      }
+     ]
+    },
+    {
+     "type": "panel",
+     "title": "There is / There are",
+     "html": "<div class=\"ex\">There <b>are</b> lots of books in English.</div><div class=\"ex\">There <b>is</b> a lot of English on the internet.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "There are lots of books in English. There is a lot of English on the internet."
+      }
+     ]
+    }
+   ],
+   "lead": "نعبّر عن رغبتنا بـ I want to + فعل، ونقول There are lots of … عن أشياء كثيرة.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "طابق",
+       "blocks": [
+        {
+         "type": "choice",
+         "star": false,
+         "items": [
+          {
+           "q": "🌍 الصورة c",
+           "a": "Lots of people in the world speak English.",
+           "o": [
+            "Lots of people in the world speak English.",
+            "There are lots of songs in English."
+           ],
+           "why": ""
+          },
+          {
+           "q": "💻 الصورة a: www",
+           "a": "There is a lot of English on the internet.",
+           "o": [
+            "There is a lot of English on the internet.",
+            "I want to travel to other countries."
+           ],
+           "why": ""
+          },
+          {
+           "q": "🎧 الصورة b",
+           "a": "There are lots of songs in English.",
+           "o": [
+            "There are lots of songs in English.",
+            "There are lots of books in English."
+           ],
+           "why": ""
+          },
+          {
+           "q": "📚 الصورة e",
+           "a": "There are lots of books in English.",
+           "o": [
+            "There are lots of books in English.",
+            "I want to study in the English language."
+           ],
+           "why": ""
+          },
+          {
+           "q": "✈️ الصورة d",
+           "a": "I want to travel to other countries.",
+           "o": [
+            "I want to travel to other countries.",
+            "Lots of people speak English."
+           ],
+           "why": ""
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "I want ___ travel to other countries.",
+           "a": "to",
+           "o": [
+            "to",
+            "for",
+            "at"
+           ]
+          },
+          {
+           "s": "There ___ lots of books in English.",
+           "a": "are",
+           "o": [
+            "are",
+            "is"
+           ]
+          },
+          {
+           "s": "There ___ a lot of English on the internet.",
+           "a": "is",
+           "o": [
+            "is",
+            "are"
+           ]
+          },
+          {
+           "s": "Lots of people in the world ___ English.",
+           "a": "speak",
+           "o": [
+            "speak",
+            "speaks"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "I want to travel to other countries.",
+          "There are lots of songs in English."
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "I want to …",
+       "ipa": "/aɪ wɒnt tuː/",
+       "meaning": "أريد أن …",
+       "ex": "I want to travel."
+      },
+      {
+       "must": 1,
+       "term": "travel",
+       "ipa": "/ˈtrævl/",
+       "meaning": "يسافر",
+       "ex": "I want to travel to other countries."
+      },
+      {
+       "must": 1,
+       "term": "study",
+       "ipa": "/ˈstʌdi/",
+       "meaning": "يدرس",
+       "ex": "I want to study in English."
+      },
+      {
+       "must": 1,
+       "term": "lots of",
+       "ipa": "/lɒts ɒv/",
+       "meaning": "كثير من",
+       "ex": "There are lots of books."
+      },
+      {
+       "must": 0,
+       "term": "internet",
+       "ipa": "/ˈɪntənet/",
+       "meaning": "الإنترنت",
+       "ex": "There is a lot of English on the internet."
+      },
+      {
+       "must": 0,
+       "term": "speak",
+       "ipa": "/spiːk/",
+       "meaning": "يتكلم",
+       "ex": "Lots of people speak English."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "I want ___ study in English.",
+       "a": "to",
+       "o": [
+        "to",
+        "at"
+       ],
+       "why": ""
+      },
+      {
+       "q": "There ___ lots of songs in English.",
+       "a": "are",
+       "o": [
+        "are",
+        "is"
+       ],
+       "why": ""
+      },
+      {
+       "type": "listen",
+       "say": "I want to travel to other countries.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "I want to travel to other countries.",
+       "o": [
+        "I want to travel to other countries.",
+        "I want to study.",
+        "There are lots of books."
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى travel؟",
+       "a": "يسافر",
+       "o": [
+        "يسافر",
+        "يدرس",
+        "يتكلم"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى lots of؟",
+       "a": "كثير من",
+       "o": [
+        "كثير من",
+        "قليل من"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "Lots of people in the world ___ English.",
+       "a": "speak",
+       "o": [
+        "speak",
+        "speaks"
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ]
+}

@@ -1,0 +1,476 @@
+{
+ "id": "en-5-u1-l1",
+ "grade": 5,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 1 · Lesson 1: I'm from …",
+ "titleAr": "الوحدة الأولى: عالمنا — الدرس الأول: أنا من …",
+ "characters": {
+  "Murad": {
+   "ar": "مراد",
+   "color": "--c2",
+   "g": "m",
+   "pitch": 1.3
+  },
+  "Asma": {
+   "ar": "أسماء",
+   "color": "--c3",
+   "g": "f",
+   "pitch": 1.5
+  },
+  "Kareem": {
+   "ar": "كريم",
+   "color": "--c1",
+   "g": "m",
+   "pitch": 1.4
+  },
+  "Jena": {
+   "ar": "جنى",
+   "color": "--c4",
+   "g": "f",
+   "pitch": 1.6
+  }
+ },
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "الدول",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "Libya",
+       "ar": "ليبيا",
+       "em": "🇱🇾"
+      },
+      {
+       "id": "v1",
+       "en": "Egypt",
+       "ar": "مصر",
+       "em": "🇪🇬"
+      },
+      {
+       "id": "v2",
+       "en": "Turkey",
+       "ar": "تركيا",
+       "em": "🇹🇷"
+      },
+      {
+       "id": "v3",
+       "en": "Italy",
+       "ar": "إيطاليا",
+       "em": "🇮🇹"
+      },
+      {
+       "id": "v4",
+       "en": "France",
+       "ar": "فرنسا",
+       "em": "🇫🇷"
+      },
+      {
+       "id": "v5",
+       "en": "England",
+       "ar": "إنجلترا",
+       "em": "🏴"
+      },
+      {
+       "id": "v6",
+       "en": "Japan",
+       "ar": "اليابان",
+       "em": "🇯🇵"
+      },
+      {
+       "id": "v7",
+       "en": "Thailand",
+       "ar": "تايلاند",
+       "em": "🇹🇭"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتابك ص 8–9."
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "استمع إلى الحوار",
+   "blocks": [
+    {
+     "type": "dialogue",
+     "star": true
+    }
+   ],
+   "lead": "شغّل الحوار وتابع الكلمات المضيئة، واضغط على أي جملة لتعيدها."
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٣ — القاعدة",
+   "heading": "Is he from …? / Are they from …?",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "١. الإثبات والنفي",
+     "html": "<div class=\"ex\">He<b>'s</b> from Libya. = He <b>is</b> from Libya.</div><div class=\"ex\">He <b>isn't</b> from Japan.</div><div class=\"ex\">We<b>'re</b> from Turkey. We <b>aren't</b> from Italy.</div><p class=\"note\">isn't = is not &nbsp;·&nbsp; aren't = are not</p>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "He's from Libya. He isn't from Japan. We're from Turkey. We aren't from Italy."
+      }
+     ]
+    },
+    {
+     "type": "panel",
+     "title": "٢. السؤال والجواب",
+     "html": "<div class=\"ex\"><b>Is</b> he / she from Libya? — Yes, he <b>is</b>. / No, she <b>isn't</b>.</div><div class=\"ex\"><b>Are</b> we / you / they from Libya? — Yes, they <b>are</b>. / No, they <b>aren't</b>.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Is she from Libya? Yes, she is. Are they from Turkey? No, they aren't."
+      }
+     ]
+    }
+   ],
+   "lead": "نسأل عن بلد شخص بـ Is للمفرد و Are للجمع.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٤ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "___ Asma from England?",
+           "a": "Is",
+           "o": [
+            "Is",
+            "Are",
+            "Am"
+           ]
+          },
+          {
+           "s": "___ Murad and Ali from Turkey?",
+           "a": "Are",
+           "o": [
+            "Are",
+            "Is",
+            "Am"
+           ]
+          },
+          {
+           "s": "No, she ___ . She's from Libya.",
+           "a": "isn't",
+           "o": [
+            "isn't",
+            "aren't",
+            "not"
+           ]
+          },
+          {
+           "s": "We ___ from Italy. We're from Turkey.",
+           "a": "aren't",
+           "o": [
+            "aren't",
+            "isn't",
+            "not"
+           ]
+          },
+          {
+           "s": "Yes, they ___ .",
+           "a": "are",
+           "o": [
+            "are",
+            "is",
+            "am"
+           ]
+          },
+          {
+           "s": "My name's Asma. I'm ___ Libya.",
+           "a": "from",
+           "o": [
+            "from",
+            "in",
+            "at"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "I'm from Libya.",
+          "Where's Thailand?",
+          "He isn't from Japan.",
+          "Are they from Turkey?"
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "I'm from Libya.",
+           "o": [
+            "I'm from Libya.",
+            "I'm from Italy.",
+            "I'm from Egypt."
+           ]
+          },
+          {
+           "a": "Where's Thailand?",
+           "o": [
+            "Where's Thailand?",
+            "Where's Turkey?",
+            "Where's Japan?"
+           ]
+          },
+          {
+           "a": "No, she isn't.",
+           "o": [
+            "No, she isn't.",
+            "Yes, she is.",
+            "No, they aren't."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٥ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "I'm from …",
+       "ipa": "/aɪm frɒm/",
+       "meaning": "أنا من …",
+       "ex": "I'm from Libya."
+      },
+      {
+       "must": 1,
+       "term": "Where's …?",
+       "ipa": "/weəz/",
+       "meaning": "أين …؟",
+       "ex": "Where's Libya?"
+      },
+      {
+       "must": 1,
+       "term": "Here it is.",
+       "ipa": "/hɪər ɪt ɪz/",
+       "meaning": "ها هي.",
+       "ex": "Where's Libya? — Here it is."
+      },
+      {
+       "must": 1,
+       "term": "country",
+       "ipa": "/ˈkʌntri/",
+       "meaning": "بلد / دولة",
+       "ex": "Libya is my country."
+      },
+      {
+       "must": 0,
+       "term": "isn't",
+       "ipa": "/ˈɪznt/",
+       "meaning": "ليس",
+       "ex": "Fawzi isn't from Japan."
+      },
+      {
+       "must": 0,
+       "term": "aren't",
+       "ipa": "/ɑːnt/",
+       "meaning": "ليسوا",
+       "ex": "We aren't from Italy."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 6,
+     "items": [
+      {
+       "type": "listen",
+       "say": "I'm from Libya.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "I'm from Libya.",
+       "o": [
+        "I'm from Libya.",
+        "I'm from Egypt.",
+        "I'm from France."
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى Where's Libya?",
+       "a": "أين ليبيا؟",
+       "o": [
+        "أين ليبيا؟",
+        "هذه ليبيا.",
+        "أنا من ليبيا."
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "___ Asma from Libya?",
+       "a": "Is",
+       "o": [
+        "Is",
+        "Are"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Are Murad and Ali from Turkey?",
+       "a": "Yes, they are.",
+       "o": [
+        "Yes, they are.",
+        "Yes, he is.",
+        "Yes, I am."
+       ],
+       "why": ""
+      },
+      {
+       "q": "Is Asma from England?",
+       "a": "No, she isn't.",
+       "o": [
+        "No, she isn't.",
+        "Yes, she is."
+       ],
+       "why": "أسماء من ليبيا."
+      },
+      {
+       "q": "Japan بالعربية:",
+       "a": "اليابان",
+       "o": [
+        "اليابان",
+        "تايلاند",
+        "تركيا"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Here it is.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Here it is.",
+       "o": [
+        "Here it is.",
+        "Where is it?",
+        "That's right."
+       ],
+       "why": ""
+      },
+      {
+       "q": "We ___ from Italy.",
+       "a": "aren't",
+       "o": [
+        "aren't",
+        "isn't"
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "8 أسئلة. تنجح بـ 6 من 8."
+  }
+ ],
+ "dialogue": [
+  [
+   "Asma",
+   "My name's Asma. I'm from Libya."
+  ],
+  [
+   "Kareem",
+   "Where's Libya?"
+  ],
+  [
+   "Jena",
+   "Here it is. Where's Thailand?"
+  ],
+  [
+   "Kareem",
+   "Here it is."
+  ],
+  [
+   "Jena",
+   "Yes, that's right."
+  ],
+  [
+   "Asma",
+   "Fawzi isn't from Japan. He's from Libya."
+  ],
+  [
+   "Murad",
+   "Hi! We are Murad and Ali. We aren't from Italy. We're from Turkey."
+  ],
+  [
+   "Kareem",
+   "Is Asma from England?"
+  ],
+  [
+   "Jena",
+   "No, she isn't. She's from Libya."
+  ],
+  [
+   "Jena",
+   "Are Murad and Ali from Turkey?"
+  ],
+  [
+   "Kareem",
+   "Yes, they are."
+  ]
+ ],
+ "left": [
+  "Asma",
+  "Kareem"
+ ]
+}

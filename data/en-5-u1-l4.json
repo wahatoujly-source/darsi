@@ -1,0 +1,485 @@
+{
+ "id": "en-5-u1-l4",
+ "grade": 5,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 1 · Lesson 4: Where's it from?",
+ "titleAr": "الوحدة الأولى: عالمنا — الدرس الرابع: من أين هو؟",
+ "characters": {
+  "Kareem": {
+   "ar": "كريم",
+   "color": "--c1",
+   "g": "m",
+   "pitch": 1.4
+  },
+  "Jena": {
+   "ar": "جنى",
+   "color": "--c4",
+   "g": "f",
+   "pitch": 1.6
+  }
+ },
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "أشياء وحيوانات من بلدان العالم",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "pizza",
+       "ar": "بيتزا",
+       "em": "🍕"
+      },
+      {
+       "id": "v1",
+       "en": "macaroni",
+       "ar": "مكرونة",
+       "em": "🍝"
+      },
+      {
+       "id": "v2",
+       "en": "pandas",
+       "ar": "حيوانات الباندا",
+       "em": "🐼"
+      },
+      {
+       "id": "v3",
+       "en": "elephants",
+       "ar": "فيلة",
+       "em": "🐘"
+      },
+      {
+       "id": "v4",
+       "en": "curry",
+       "ar": "الكاري",
+       "em": "🍛"
+      },
+      {
+       "id": "v5",
+       "en": "kangaroos",
+       "ar": "كناغر",
+       "em": "🦘"
+      },
+      {
+       "id": "v6",
+       "en": "India",
+       "ar": "الهند",
+       "em": "🇮🇳"
+      },
+      {
+       "id": "v7",
+       "en": "China",
+       "ar": "الصين",
+       "em": "🇨🇳"
+      },
+      {
+       "id": "v8",
+       "en": "Australia",
+       "ar": "أستراليا",
+       "em": "🇦🇺"
+      },
+      {
+       "id": "v9",
+       "en": "Africa",
+       "ar": "أفريقيا",
+       "em": "🌍"
+      },
+      {
+       "id": "v10",
+       "en": "Asia",
+       "ar": "آسيا",
+       "em": "🌏"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتابك ص 14–15."
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "استمع إلى الحوار",
+   "blocks": [
+    {
+     "type": "dialogue",
+     "star": true
+    }
+   ],
+   "lead": "شغّل الحوار وتابع الكلمات المضيئة، واضغط على أي جملة لتعيدها."
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٣ — القاعدة",
+   "heading": "Where is … from? / Where are … from?",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "is أم are؟",
+     "html": "<div class=\"ex\">Where <b>is</b> pizza from? — <b>It's</b> from Italy.</div><div class=\"ex\">Where <b>are</b> pandas from? — <b>They're</b> from China.</div><p class=\"note\">pandas, elephants, kangaroos جمع لأنها تنتهي بـ s.</p>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Where is pizza from? It's from Italy. Where are pandas from? They're from China."
+      }
+     ]
+    },
+    {
+     "type": "panel",
+     "title": "المشروع الصحيح",
+     "html": "<div class=\"ex\">Mubatan batata is a famous <b>Libyan</b> dish. It is made from potato wedges stuffed with minced meat.</div><div class=\"ex\">Curry is from <b>India</b>. A famous <b>Italian</b> food is macaroni.</div><div class=\"ex\">Elephants are from <b>Africa</b> and Asia. Pandas are from <b>China</b>.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Mubatan batata is a famous Libyan dish. Curry is from India. Pandas are from China."
+      }
+     ]
+    }
+   ],
+   "lead": "نستخدم is مع المفرد، و are مع الجمع.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٤ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "من أين؟",
+       "blocks": [
+        {
+         "type": "choice",
+         "star": false,
+         "items": [
+          {
+           "q": "Where is pizza from?",
+           "a": "Italy",
+           "o": [
+            "Italy",
+            "China",
+            "India"
+           ],
+           "why": ""
+          },
+          {
+           "q": "Where are pandas from?",
+           "a": "China",
+           "o": [
+            "China",
+            "Australia",
+            "Libya"
+           ],
+           "why": ""
+          },
+          {
+           "q": "Where is curry from?",
+           "a": "India",
+           "o": [
+            "India",
+            "France",
+            "Japan"
+           ],
+           "why": ""
+          },
+          {
+           "q": "Where are kangaroos from?",
+           "a": "Australia",
+           "o": [
+            "Australia",
+            "Africa",
+            "Italy"
+           ],
+           "why": ""
+          },
+          {
+           "q": "Mubatan batata is a famous … dish.",
+           "a": "Libyan",
+           "o": [
+            "Libyan",
+            "English",
+            "Japanese"
+           ],
+           "why": ""
+          },
+          {
+           "q": "Where are elephants from?",
+           "a": "Africa and Asia",
+           "o": [
+            "Africa and Asia",
+            "England",
+            "Italy"
+           ],
+           "why": ""
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "is أم are",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "Where ___ pizza from?",
+           "a": "is",
+           "o": [
+            "is",
+            "are"
+           ]
+          },
+          {
+           "s": "Where ___ pandas from?",
+           "a": "are",
+           "o": [
+            "are",
+            "is"
+           ]
+          },
+          {
+           "s": "Where ___ elephants from?",
+           "a": "are",
+           "o": [
+            "are",
+            "is"
+           ]
+          },
+          {
+           "s": "Where ___ curry from?",
+           "a": "is",
+           "o": [
+            "is",
+            "are"
+           ]
+          },
+          {
+           "s": "___ from Australia. (kangaroos)",
+           "a": "They're",
+           "o": [
+            "They're",
+            "It's"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Where is pizza from?",
+          "Pandas are from China.",
+          "Curry is from India."
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٥ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "Where is it from?",
+       "ipa": "/weər ɪz ɪt frɒm/",
+       "meaning": "من أين هو؟",
+       "ex": "Where is pizza from? It's from Italy."
+      },
+      {
+       "must": 1,
+       "term": "famous",
+       "ipa": "/ˈfeɪməs/",
+       "meaning": "مشهور",
+       "ex": "Mubatan batata is a famous Libyan dish."
+      },
+      {
+       "must": 1,
+       "term": "dish",
+       "ipa": "/dɪʃ/",
+       "meaning": "طبق (أكلة)",
+       "ex": "a famous Libyan dish"
+      },
+      {
+       "must": 0,
+       "term": "survey",
+       "ipa": "/ˈsɜːveɪ/",
+       "meaning": "استطلاع / استبيان",
+       "ex": "This is a survey."
+      },
+      {
+       "must": 0,
+       "term": "partner",
+       "ipa": "/ˈpɑːtnə/",
+       "meaning": "زميل / شريك",
+       "ex": "Ask your partner."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 6,
+     "items": [
+      {
+       "q": "Where are pandas from?",
+       "a": "China",
+       "o": [
+        "China",
+        "Italy"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Where ___ curry from?",
+       "a": "is",
+       "o": [
+        "is",
+        "are"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Kangaroos are from …",
+       "a": "Australia",
+       "o": [
+        "Australia",
+        "Africa"
+       ],
+       "why": ""
+      },
+      {
+       "type": "listen",
+       "say": "Where is pizza from?",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Where is pizza from?",
+       "o": [
+        "Where is pizza from?",
+        "Where are pandas from?",
+        "Where is curry from?"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى famous؟",
+       "a": "مشهور",
+       "o": [
+        "مشهور",
+        "لذيذ",
+        "كبير"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "Mubatan batata is from …",
+       "a": "Libya",
+       "o": [
+        "Libya",
+        "England"
+       ],
+       "why": "مبطن بطاطا طبق ليبي مشهور."
+      },
+      {
+       "q": "Where ___ elephants from?",
+       "a": "are",
+       "o": [
+        "are",
+        "is"
+       ],
+       "why": ""
+      },
+      {
+       "q": "A famous Italian food is …",
+       "a": "macaroni",
+       "o": [
+        "macaroni",
+        "curry"
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "8 أسئلة. تنجح بـ 6 من 8."
+  }
+ ],
+ "dialogue": [
+  [
+   "Jena",
+   "Where is pizza from?"
+  ],
+  [
+   "Kareem",
+   "It's from Italy."
+  ],
+  [
+   "Jena",
+   "Where are pandas from?"
+  ],
+  [
+   "Kareem",
+   "They're from China."
+  ],
+  [
+   "Jena",
+   "Where is curry from?"
+  ],
+  [
+   "Kareem",
+   "It's from India. But we eat curry in Libya too."
+  ],
+  [
+   "Jena",
+   "Where are kangaroos from?"
+  ],
+  [
+   "Kareem",
+   "They're from Australia."
+  ],
+  [
+   "Jena",
+   "And mubatan batata?"
+  ],
+  [
+   "Kareem",
+   "It's a famous Libyan dish!"
+  ]
+ ],
+ "left": [
+  "Jena"
+ ]
+}
