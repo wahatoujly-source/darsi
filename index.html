@@ -822,9 +822,11 @@ const go=h=>{if(location.hash==='#'+h)route();else location.hash=h;};
 function bar(title,sub,backTo,right){const b=el('header',{class:'bar'},el('div',{class:'bar-top'},
   backTo?el('button',{class:'back',text:'→',title:'رجوع','aria-label':'رجوع',onclick:()=>go(backTo)}):el('span',{class:'brand',text:'درسي'}),
   el('h1',{},title,sub?el('small',{text:sub}):null),right||el('span')));return b;}
-const subPill=()=>el('button',{class:'pill',onclick:()=>go('subscribe'),text:App.sub?'✓ مشترك':'اشترك'});
+const subPill=()=>OPEN_ACCESS?el('span'):el('button',{class:'pill',onclick:()=>go('subscribe'),text:App.sub?'✓ مشترك':'اشترك'});
 
-const isFree=(l,k)=>k===0||!!l.free;
+// OPEN_ACCESS: كل الدروس مفتوحة دون اشتراك. غيّرها إلى false لتفعيل الاشتراك.
+const OPEN_ACCESS=true;
+const isFree=(l,k)=>OPEN_ACCESS||k===0||!!l.free;
 function gradeInfo(id){for(const st of App.catalog.stages){const g=st.grades.find(x=>x.id===String(id));if(g)return{...g,stage:st};}return null;}
 const gradeLabel=g=>g?(g.name+(g.track?' — '+g.track:'')):'';
 const unitsOf=s=>s.books?s.books.flatMap(b=>b.units.map(u=>({...u,book:b}))):s.units;
@@ -849,7 +851,7 @@ function renderHome(){
   const c=App.catalog;root.innerHTML='';
   root.append(bar('درسي','دروس تفاعلية بالصوت والصورة لكل المراحل',null,subPill()));
   const ic=installCard();if(ic)root.append(ic);
-  const h=el('div',{class:'hero'},el('h2',{text:'اختر صفك الدراسي'}),el('p',{class:'lead',text:'دروس مطابقة للمنهج الليبي: شرح بالصوت، وتمارين تُصحَّح فوراً، واختبار في نهاية كل درس. أول درس في كل وحدة مجاني.'}));
+  const h=el('div',{class:'hero'},el('h2',{text:'اختر صفك الدراسي'}),el('p',{class:'lead',text:'دروس مطابقة للمنهج الليبي: شرح بالصوت، وتمارين تُصحَّح فوراً، واختبار في نهاية كل درس.'+(OPEN_ACCESS?' كل الدروس مفتوحة مجاناً.':' أول درس في كل وحدة مجاني.')}));
   root.append(h);
   c.stages.forEach(st=>{const g=el('div',{class:'grades'});st.grades.forEach(gr=>{const on=!!c.grades[gr.id];g.append(el('button',{class:'gcard '+(on?'on':'off'),disabled:!on,onclick:()=>go('g'+gr.id)},el('b',{text:gr.name}),gr.track?el('span',{class:'tr',text:gr.track}):null,el('span',{class:'tag'+(on?'':' sun'),text:on?'متاح الآن':'قريباً'})));});
     root.append(el('div',{class:'stage'},el('h3',{text:st.name}),g));});
@@ -877,7 +879,7 @@ function renderSubject(n,sid){
       else{const d=store.get('done_'+l.id,[]).length;status=d?el('span',{class:'prog',text:'★ '+d}):(free?'مجاني':'ابدأ');}
       list.append(el('button',{class:cls,disabled:!l.ready,onclick:()=>{if(locked){App.after='l-'+l.id;go('subscribe');}else go('l-'+l.id);}},
         el('span',{class:'ln',text:String(l.n)}),el('span',{class:'lt'},el('b',{lang:sid==='en'?'en':null,text:l.title}),l.titleAr?el('span',{text:l.titleAr}):null,l.ref?el('span',{class:'lref',text:'📖 '+l.ref.replace(/–/g,'\u2060–\u2060')}):null),
-        el('span',{class:'ls'},free&&l.ready?el('span',{class:'tag',text:'مجاني',style:'margin-inline-end:6px'}):null,status)));});
+        el('span',{class:'ls'},free&&l.ready&&!OPEN_ACCESS?el('span',{class:'tag',text:'مجاني',style:'margin-inline-end:6px'}):null,status)));});
     sec.append(el('div',{class:'unit'},el('div',{class:'unit-h'},el('b',{text:(sid==='en'?'الوحدة ':'الفصل ')+u.n+': '}),el('b',{lang:sid==='en'?'en':null,text:u.title}),u.titleAr?el('span',{class:'note',text:u.titleAr}):null),list));});
   root.append(sec);
 }
