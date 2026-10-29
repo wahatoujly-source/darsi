@@ -1,0 +1,422 @@
+{
+ "id": "en-1-u1-l7",
+ "grade": 1,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "Unit 1 · Lesson 7: My Family",
+ "titleAr": "الوحدة الأولى: عائلتي — الدرس السابع: أفراد العائلة",
+ "steps": [
+  {
+   "title": "العائلة",
+   "eyebrow": "الخطوة ١ — العائلة",
+   "heading": "My Family — عائلتي",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "dad",
+       "em": "👨",
+       "say": "dad",
+       "sub": "أب",
+       "must": 1
+      },
+      {
+       "t": "mum",
+       "em": "👩",
+       "say": "mum",
+       "sub": "أم",
+       "must": 1
+      },
+      {
+       "t": "sister",
+       "em": "👧",
+       "say": "sister",
+       "sub": "أخت",
+       "must": 1
+      },
+      {
+       "t": "brother",
+       "em": "👶",
+       "say": "brother",
+       "sub": "أخ",
+       "must": 1
+      },
+      {
+       "t": "grandma",
+       "em": "👵",
+       "say": "grandma",
+       "sub": "جدة",
+       "must": 1
+      },
+      {
+       "t": "grandpa",
+       "em": "👴",
+       "say": "grandpa",
+       "sub": "جد",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل صورة واسمع. كتابك ص 14."
+  },
+  {
+   "title": "غنِّ",
+   "eyebrow": "الخطوة ٢ — غنِّ",
+   "heading": "He's my dad. She's my mum.",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "He's my dad.",
+       "em": "👨",
+       "say": "He's my dad.",
+       "sub": "هذا أبي",
+       "must": 1
+      },
+      {
+       "t": "She's my mum.",
+       "em": "👩",
+       "say": "She's my mum.",
+       "sub": "هذه أمي",
+       "must": 1
+      },
+      {
+       "t": "He's my brother.",
+       "em": "👶",
+       "say": "He's my brother.",
+       "sub": "هذا أخي"
+      },
+      {
+       "t": "She's my sister.",
+       "em": "👧",
+       "say": "She's my sister.",
+       "sub": "هذه أختي"
+      },
+      {
+       "t": "She's my grandma.",
+       "em": "👵",
+       "say": "She's my grandma.",
+       "sub": "هذه جدتي"
+      },
+      {
+       "t": "He's my grandpa.",
+       "em": "👴",
+       "say": "He's my grandpa.",
+       "sub": "هذا جدي"
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "He للولد والرجل، و She للبنت والمرأة."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "من هذا؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "dad",
+       "o": [
+        "👨",
+        "👩",
+        "👧"
+       ],
+       "a": "👨",
+       "lang": "en"
+      },
+      {
+       "say": "mum",
+       "o": [
+        "👩",
+        "👨",
+        "👧"
+       ],
+       "a": "👩",
+       "lang": "en"
+      },
+      {
+       "say": "sister",
+       "o": [
+        "👧",
+        "👨",
+        "👩"
+       ],
+       "a": "👧",
+       "lang": "en"
+      },
+      {
+       "say": "brother",
+       "o": [
+        "👶",
+        "👨",
+        "👩"
+       ],
+       "a": "👶",
+       "lang": "en"
+      },
+      {
+       "say": "grandma",
+       "o": [
+        "👵",
+        "👨",
+        "👩"
+       ],
+       "a": "👵",
+       "lang": "en"
+      },
+      {
+       "say": "grandpa",
+       "o": [
+        "👴",
+        "👨",
+        "👩"
+       ],
+       "a": "👴",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع واضغط على الصورة."
+  },
+  {
+   "title": "He أم She؟",
+   "eyebrow": "الخطوة ٤ — He أم She؟",
+   "heading": "He or She?",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "dad",
+       "o": [
+        "He",
+        "She"
+       ],
+       "a": "He",
+       "sayQ": false,
+       "q": "He أم She؟",
+       "show": "👨",
+       "lang": "en",
+       "keep": true
+      },
+      {
+       "say": "mum",
+       "o": [
+        "He",
+        "She"
+       ],
+       "a": "She",
+       "sayQ": false,
+       "q": "He أم She؟",
+       "show": "👩",
+       "lang": "en",
+       "keep": true
+      },
+      {
+       "say": "grandpa",
+       "o": [
+        "He",
+        "She"
+       ],
+       "a": "He",
+       "sayQ": false,
+       "q": "He أم She؟",
+       "show": "👴",
+       "lang": "en",
+       "keep": true
+      },
+      {
+       "say": "sister",
+       "o": [
+        "He",
+        "She"
+       ],
+       "a": "She",
+       "sayQ": false,
+       "q": "He أم She؟",
+       "show": "👧",
+       "lang": "en",
+       "keep": true
+      },
+      {
+       "say": "brother",
+       "o": [
+        "He",
+        "She"
+       ],
+       "a": "He",
+       "sayQ": false,
+       "q": "He أم She؟",
+       "show": "👶",
+       "lang": "en",
+       "keep": true
+      },
+      {
+       "say": "grandma",
+       "o": [
+        "He",
+        "She"
+       ],
+       "a": "She",
+       "sayQ": false,
+       "q": "He أم She؟",
+       "show": "👵",
+       "lang": "en",
+       "keep": true
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اختر He للرجل والولد، و She للمرأة والبنت."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٥ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "dad",
+       "em": "👨",
+       "say": "dad",
+       "sub": "أب",
+       "must": 1
+      },
+      {
+       "t": "mum",
+       "em": "👩",
+       "say": "mum",
+       "sub": "أم",
+       "must": 1
+      },
+      {
+       "t": "sister",
+       "em": "👧",
+       "say": "sister",
+       "sub": "أخت",
+       "must": 1
+      },
+      {
+       "t": "brother",
+       "em": "👶",
+       "say": "brother",
+       "sub": "أخ",
+       "must": 1
+      },
+      {
+       "t": "grandma",
+       "em": "👵",
+       "say": "grandma",
+       "sub": "جدة",
+       "must": 1
+      },
+      {
+       "t": "grandpa",
+       "em": "👴",
+       "say": "grandpa",
+       "sub": "جد",
+       "must": 1
+      }
+     ],
+     "intro": "<b>احفظ هذه الكلمات!</b> اضغط على كل بطاقة واسمع الكلمة الإنجليزية، ثم قلها بصوت عالٍ. البطاقات الصفراء <b>مهمة جداً</b>.",
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "grandma",
+       "o": [
+        "👵",
+        "👴",
+        "👩"
+       ],
+       "a": "👵",
+       "lang": "en"
+      },
+      {
+       "say": "brother",
+       "o": [
+        "👶",
+        "👧",
+        "👨"
+       ],
+       "a": "👶",
+       "lang": "en"
+      },
+      {
+       "say": "He's my dad.",
+       "o": [
+        "👨",
+        "👩",
+        "👴"
+       ],
+       "a": "👨",
+       "lang": "en"
+      },
+      {
+       "say": "She's my mum.",
+       "o": [
+        "👩",
+        "👵",
+        "👧"
+       ],
+       "a": "👩",
+       "lang": "en"
+      },
+      {
+       "say": "grandpa",
+       "o": [
+        "👴",
+        "👨",
+        "👶"
+       ],
+       "a": "👴",
+       "lang": "en"
+      },
+      {
+       "say": "sister",
+       "o": [
+        "👧",
+        "👶",
+        "👵"
+       ],
+       "a": "👧",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع واختر."
+  }
+ ]
+}

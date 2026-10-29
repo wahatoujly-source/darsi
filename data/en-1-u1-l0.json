@@ -1,0 +1,440 @@
+{
+ "id": "en-1-u1-l0",
+ "grade": 1,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "Introductory: The Alphabet",
+ "titleAr": "الوحدة الأولى: عائلتي — الحروف الإنجليزية",
+ "steps": [
+  {
+   "title": "الحروف",
+   "eyebrow": "الخطوة ١ — الحروف",
+   "heading": "26 حرفاً وصورها",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "Aa",
+       "em": "🍎",
+       "say": "A. apple.",
+       "sub": "apple"
+      },
+      {
+       "t": "Bb",
+       "em": "⚽",
+       "say": "B. ball.",
+       "sub": "ball"
+      },
+      {
+       "t": "Cc",
+       "em": "🚗",
+       "say": "C. car.",
+       "sub": "car"
+      },
+      {
+       "t": "Dd",
+       "em": "🦆",
+       "say": "D. duck.",
+       "sub": "duck"
+      },
+      {
+       "t": "Ee",
+       "em": "🐘",
+       "say": "E. elephant.",
+       "sub": "elephant"
+      },
+      {
+       "t": "Ff",
+       "em": "🌼",
+       "say": "F. flower.",
+       "sub": "flower"
+      },
+      {
+       "t": "Gg",
+       "em": "🚪",
+       "say": "G. gate.",
+       "sub": "gate"
+      },
+      {
+       "t": "Hh",
+       "em": "✋",
+       "say": "H. hand.",
+       "sub": "hand"
+      },
+      {
+       "t": "Ii",
+       "em": "🐞",
+       "say": "I. insect.",
+       "sub": "insect"
+      },
+      {
+       "t": "Jj",
+       "em": "🍓",
+       "say": "J. jam.",
+       "sub": "jam"
+      },
+      {
+       "t": "Kk",
+       "em": "🪁",
+       "say": "K. kite.",
+       "sub": "kite"
+      },
+      {
+       "t": "Ll",
+       "em": "🍋",
+       "say": "L. lemon.",
+       "sub": "lemon"
+      },
+      {
+       "t": "Mm",
+       "em": "🐒",
+       "say": "M. monkey.",
+       "sub": "monkey"
+      },
+      {
+       "t": "Nn",
+       "em": "👃",
+       "say": "N. nose.",
+       "sub": "nose"
+      },
+      {
+       "t": "Oo",
+       "em": "🍊",
+       "say": "O. orange.",
+       "sub": "orange"
+      },
+      {
+       "t": "Pp",
+       "em": "✈️",
+       "say": "P. plane.",
+       "sub": "plane"
+      },
+      {
+       "t": "Qq",
+       "em": "👸",
+       "say": "Q. queen.",
+       "sub": "queen"
+      },
+      {
+       "t": "Rr",
+       "em": "🚀",
+       "say": "R. rocket.",
+       "sub": "rocket"
+      },
+      {
+       "t": "Ss",
+       "em": "☀️",
+       "say": "S. sun.",
+       "sub": "sun"
+      },
+      {
+       "t": "Tt",
+       "em": "🍅",
+       "say": "T. tomato.",
+       "sub": "tomato"
+      },
+      {
+       "t": "Uu",
+       "em": "☂️",
+       "say": "U. umbrella.",
+       "sub": "umbrella"
+      },
+      {
+       "t": "Vv",
+       "em": "🎻",
+       "say": "V. violin.",
+       "sub": "violin"
+      },
+      {
+       "t": "Ww",
+       "em": "⌚",
+       "say": "W. watch.",
+       "sub": "watch"
+      },
+      {
+       "t": "Xx",
+       "em": "🩻",
+       "say": "X. x-ray.",
+       "sub": "x-ray"
+      },
+      {
+       "t": "Yy",
+       "em": "🪀",
+       "say": "Y. yo-yo.",
+       "sub": "yo-yo"
+      },
+      {
+       "t": "Zz",
+       "em": "🦓",
+       "say": "Z. zebra.",
+       "sub": "zebra"
+      }
+     ],
+     "size": "sm",
+     "lang": "en",
+     "need": 13
+    }
+   ],
+   "lead": "اضغط على كل حرف لتسمع اسمه وكلمة تبدأ به. كتابك ص 7."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٢ — العب",
+   "heading": "أين الحرف؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "A",
+       "o": [
+        "Aa",
+        "Ee",
+        "Oo"
+       ],
+       "a": "Aa",
+       "lang": "en"
+      },
+      {
+       "say": "B",
+       "o": [
+        "Bb",
+        "Dd",
+        "Pp"
+       ],
+       "a": "Bb",
+       "lang": "en"
+      },
+      {
+       "say": "M",
+       "o": [
+        "Mm",
+        "Nn",
+        "Ww"
+       ],
+       "a": "Mm",
+       "lang": "en"
+      },
+      {
+       "say": "S",
+       "o": [
+        "Ss",
+        "Zz",
+        "Cc"
+       ],
+       "a": "Ss",
+       "lang": "en"
+      },
+      {
+       "say": "T",
+       "o": [
+        "Tt",
+        "Ff",
+        "Ll"
+       ],
+       "a": "Tt",
+       "lang": "en"
+      },
+      {
+       "say": "G",
+       "o": [
+        "Gg",
+        "Jj",
+        "Qq"
+       ],
+       "a": "Gg",
+       "lang": "en"
+      }
+     ],
+     "q": "اسمع واضغط على الحرف",
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع اسم الحرف، ثم اضغط عليه."
+  },
+  {
+   "title": "الصور",
+   "eyebrow": "الخطوة ٣ — الصور",
+   "heading": "أي صورة تبدأ بالحرف؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "apple",
+       "o": [
+        "🍎",
+        "🚗",
+        "🦓"
+       ],
+       "a": "🍎",
+       "q": "اضغط على الصورة: apple",
+       "lang": "en"
+      },
+      {
+       "say": "ball",
+       "o": [
+        "⚽",
+        "🍋",
+        "🐒"
+       ],
+       "a": "⚽",
+       "q": "اضغط على الصورة: ball",
+       "lang": "en"
+      },
+      {
+       "say": "zebra",
+       "o": [
+        "🦓",
+        "☀️",
+        "🍅"
+       ],
+       "a": "🦓",
+       "q": "اضغط على الصورة: zebra",
+       "lang": "en"
+      },
+      {
+       "say": "kite",
+       "o": [
+        "🪁",
+        "🦆",
+        "✋"
+       ],
+       "a": "🪁",
+       "q": "اضغط على الصورة: kite",
+       "lang": "en"
+      },
+      {
+       "say": "sun",
+       "o": [
+        "☀️",
+        "🚀",
+        "🍊"
+       ],
+       "a": "☀️",
+       "q": "اضغط على الصورة: sun",
+       "lang": "en"
+      },
+      {
+       "say": "monkey",
+       "o": [
+        "🐒",
+        "🌼",
+        "⌚"
+       ],
+       "a": "🐒",
+       "q": "اضغط على الصورة: monkey",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "فرقع",
+   "eyebrow": "الخطوة ٤ — فرقع",
+   "heading": "بالونات الحروف",
+   "blocks": [
+    {
+     "type": "pop",
+     "star": true,
+     "target": "B",
+     "pool": [
+      "B",
+      "D",
+      "P",
+      "R",
+      "E"
+     ],
+     "need": 6,
+     "say": "B",
+     "q": "فرقع البالونات التي فيها الحرف",
+     "lang": "en"
+    }
+   ],
+   "lead": "فرقع كل بالون فيه الحرف B."
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "C",
+       "o": [
+        "Cc",
+        "Kk",
+        "Ss"
+       ],
+       "a": "Cc",
+       "lang": "en"
+      },
+      {
+       "say": "Hh",
+       "o": [
+        "Hh",
+        "Nn",
+        "Mm"
+       ],
+       "a": "Hh",
+       "lang": "en"
+      },
+      {
+       "say": "orange",
+       "o": [
+        "🍊",
+        "🍋",
+        "🍎"
+       ],
+       "a": "🍊",
+       "lang": "en"
+      },
+      {
+       "say": "Y",
+       "o": [
+        "Yy",
+        "Vv",
+        "Ww"
+       ],
+       "a": "Yy",
+       "lang": "en"
+      },
+      {
+       "say": "rocket",
+       "o": [
+        "🚀",
+        "✈️",
+        "🚗"
+       ],
+       "a": "🚀",
+       "lang": "en"
+      },
+      {
+       "say": "Q",
+       "o": [
+        "Qq",
+        "Oo",
+        "Pp"
+       ],
+       "a": "Qq",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع واختر. تنجح بـ 4 من 6."
+  }
+ ]
+}

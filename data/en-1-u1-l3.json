@@ -1,0 +1,320 @@
+{
+ "id": "en-1-u1-l3",
+ "grade": 1,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "Unit 1 · Lesson 3: t — What's your name?",
+ "titleAr": "الوحدة الأولى: عائلتي — الدرس الثالث: الحرف t وما اسمك؟",
+ "steps": [
+  {
+   "title": "الحرف",
+   "eyebrow": "الخطوة ١ — الحرف",
+   "heading": "الحرف Tt",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "Tt",
+       "say": "T. t, t.",
+       "c": "#E8590C",
+       "must": 1,
+       "big": true
+      },
+      {
+       "t": "{t}axi",
+       "em": "🚕",
+       "say": "taxi",
+       "sub": "سيارة أجرة",
+       "must": 1
+      },
+      {
+       "t": "{t}omato",
+       "em": "🍅",
+       "say": "tomato",
+       "sub": "طماطم",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على البطاقات واسمع. كتابك ص 10."
+  },
+  {
+   "title": "تتبّع",
+   "eyebrow": "الخطوة ٢ — تتبّع",
+   "heading": "اكتب الحرف T و t",
+   "blocks": [
+    {
+     "type": "trace",
+     "star": true,
+     "items": [
+      {
+       "t": "T",
+       "say": "T"
+      },
+      {
+       "t": "t",
+       "say": "t"
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "مرّر إصبعك فوق الحرف المنقّط، ثم اضغط «انتهيت». اضغط «شاهد» لترى كيف يُكتب."
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٣ — استمع",
+   "heading": "What's your name?",
+   "blocks": [
+    {
+     "type": "dialogue",
+     "star": true
+    },
+    {
+     "type": "cards",
+     "star": false,
+     "items": [
+      {
+       "t": "What's your name?",
+       "em": "❓",
+       "say": "What's your name?",
+       "sub": "ما اسمك؟",
+       "must": 1
+      },
+      {
+       "t": "I'm Nadia.",
+       "em": "👧",
+       "say": "I'm Nadia.",
+       "sub": "أنا نادية"
+      },
+      {
+       "t": "I'm Ahmed.",
+       "em": "👦",
+       "say": "I'm Ahmed.",
+       "sub": "أنا أحمد"
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على البطاقات واسمع، ثم ردّد."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٤ — العب",
+   "heading": "اسمع واختر",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "What's your name?",
+       "o": [
+        "❓ What's your name?",
+        "👋 Hello."
+       ],
+       "a": "❓ What's your name?",
+       "lang": "en"
+      },
+      {
+       "say": "I'm Ahmed.",
+       "o": [
+        "👦 I'm Ahmed.",
+        "👧 I'm Nadia."
+       ],
+       "a": "👦 I'm Ahmed.",
+       "lang": "en"
+      },
+      {
+       "say": "taxi",
+       "o": [
+        "🚕",
+        "🍅",
+        "✈️"
+       ],
+       "a": "🚕",
+       "lang": "en"
+      },
+      {
+       "say": "tomato",
+       "o": [
+        "🍅",
+        "🍎",
+        "🚕"
+       ],
+       "a": "🍅",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الكلمة واضغط على صورتها."
+  },
+  {
+   "title": "فرقع",
+   "eyebrow": "الخطوة ٥ — فرقع",
+   "heading": "بالونات الحرف t",
+   "blocks": [
+    {
+     "type": "pop",
+     "star": true,
+     "target": "t",
+     "pool": [
+      "t",
+      "s",
+      "a",
+      "t",
+      "p",
+      "i",
+      "n",
+      "e",
+      "o",
+      "m"
+     ],
+     "need": 6,
+     "say": "t",
+     "q": "فرقع البالونات التي فيها الحرف",
+     "lang": "en"
+    }
+   ],
+   "lead": "فرقع كل بالون فيه الحرف t."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٦ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "taxi",
+       "em": "🚕",
+       "say": "taxi",
+       "sub": "سيارة أجرة",
+       "must": 1
+      },
+      {
+       "t": "tomato",
+       "em": "🍅",
+       "say": "tomato",
+       "sub": "طماطم",
+       "must": 1
+      }
+     ],
+     "intro": "<b>احفظ هذه الكلمات!</b> اضغط على كل بطاقة واسمع الكلمة الإنجليزية، ثم قلها بصوت عالٍ. البطاقات الصفراء <b>مهمة جداً</b>.",
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٧ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "taxi",
+       "o": [
+        "🚕",
+        "🍅",
+        "🚗"
+       ],
+       "a": "🚕",
+       "lang": "en"
+      },
+      {
+       "say": "tomato",
+       "o": [
+        "🍅",
+        "🚕",
+        "🚗"
+       ],
+       "a": "🍅",
+       "lang": "en"
+      },
+      {
+       "say": "T",
+       "o": [
+        "Tt",
+        "Mm",
+        "Bb"
+       ],
+       "a": "Tt",
+       "lang": "en"
+      },
+      {
+       "say": "What's your name?",
+       "o": [
+        "❓ What's your name?",
+        "👋 Hello."
+       ],
+       "a": "❓ What's your name?",
+       "lang": "en"
+      },
+      {
+       "say": "I'm Ahmed.",
+       "o": [
+        "👦 I'm Ahmed.",
+        "👧 I'm Nadia."
+       ],
+       "a": "👦 I'm Ahmed.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع واختر الإجابة الصحيحة."
+  }
+ ],
+ "characters": {
+  "Astro": {
+   "ar": "رائد الفضاء",
+   "color": "--c2",
+   "g": "m",
+   "pitch": 1.5
+  },
+  "Nadia": {
+   "ar": "نادية",
+   "color": "--c4",
+   "g": "f",
+   "pitch": 1.5
+  },
+  "Ahmed": {
+   "ar": "أحمد",
+   "color": "--c5",
+   "g": "m",
+   "pitch": 1.35
+  }
+ },
+ "dialogue": [
+  [
+   "Astro",
+   "What's your name?"
+  ],
+  [
+   "Nadia",
+   "I'm Nadia."
+  ],
+  [
+   "Ahmed",
+   "I'm Ahmed."
+  ]
+ ],
+ "left": [
+  "Astro"
+ ]
+}

@@ -1,0 +1,274 @@
+{
+ "id": "en-1-u1-l1",
+ "grade": 1,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "Unit 1 · Lesson 1: s — Hello!",
+ "titleAr": "الوحدة الأولى: عائلتي — الدرس الأول: الحرف s والتحية",
+ "steps": [
+  {
+   "title": "الحرف",
+   "eyebrow": "الخطوة ١ — الحرف",
+   "heading": "الحرف Ss",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "Ss",
+       "say": "S. s, s.",
+       "c": "#E8590C",
+       "must": 1,
+       "big": true
+      },
+      {
+       "t": "{s}ister",
+       "em": "👧",
+       "say": "sister",
+       "sub": "أخت",
+       "must": 1
+      },
+      {
+       "t": "{s}on",
+       "em": "👦",
+       "say": "son",
+       "sub": "ابن",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على البطاقات واسمع. كتابك ص 8."
+  },
+  {
+   "title": "تتبّع",
+   "eyebrow": "الخطوة ٢ — تتبّع",
+   "heading": "اكتب الحرف S و s",
+   "blocks": [
+    {
+     "type": "trace",
+     "star": true,
+     "items": [
+      {
+       "t": "S",
+       "say": "S"
+      },
+      {
+       "t": "s",
+       "say": "s"
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "مرّر إصبعك فوق الحرف المنقّط، ثم اضغط «انتهيت». اضغط «شاهد» لترى كيف يُكتب."
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٣ — استمع",
+   "heading": "Hello! Goodbye!",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "Hello.",
+       "em": "👋",
+       "say": "Hello.",
+       "sub": "مرحباً"
+      },
+      {
+       "t": "Goodbye.",
+       "em": "🙋",
+       "say": "Goodbye.",
+       "sub": "مع السلامة"
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على البطاقات واسمع، ثم ردّد."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٤ — العب",
+   "heading": "اسمع واختر",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "sister",
+       "o": [
+        "👧",
+        "👦",
+        "👋"
+       ],
+       "a": "👧",
+       "lang": "en"
+      },
+      {
+       "say": "son",
+       "o": [
+        "👦",
+        "👧",
+        "🍎"
+       ],
+       "a": "👦",
+       "lang": "en"
+      },
+      {
+       "say": "Hello.",
+       "o": [
+        "👋 Hello.",
+        "🙋 Goodbye."
+       ],
+       "a": "👋 Hello.",
+       "lang": "en"
+      },
+      {
+       "say": "Goodbye.",
+       "o": [
+        "🙋 Goodbye.",
+        "👋 Hello."
+       ],
+       "a": "🙋 Goodbye.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الكلمة واضغط على صورتها."
+  },
+  {
+   "title": "فرقع",
+   "eyebrow": "الخطوة ٥ — فرقع",
+   "heading": "بالونات الحرف s",
+   "blocks": [
+    {
+     "type": "pop",
+     "star": true,
+     "target": "s",
+     "pool": [
+      "s",
+      "s",
+      "a",
+      "t",
+      "p",
+      "i",
+      "n",
+      "e",
+      "o",
+      "m"
+     ],
+     "need": 6,
+     "say": "s",
+     "q": "فرقع البالونات التي فيها الحرف",
+     "lang": "en"
+    }
+   ],
+   "lead": "فرقع كل بالون فيه الحرف s."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٦ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "sister",
+       "em": "👧",
+       "say": "sister",
+       "sub": "أخت",
+       "must": 1
+      },
+      {
+       "t": "son",
+       "em": "👦",
+       "say": "son",
+       "sub": "ابن",
+       "must": 1
+      }
+     ],
+     "intro": "<b>احفظ هذه الكلمات!</b> اضغط على كل بطاقة واسمع الكلمة الإنجليزية، ثم قلها بصوت عالٍ. البطاقات الصفراء <b>مهمة جداً</b>.",
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٧ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "sister",
+       "o": [
+        "👧",
+        "👦",
+        "🚗"
+       ],
+       "a": "👧",
+       "lang": "en"
+      },
+      {
+       "say": "son",
+       "o": [
+        "👦",
+        "👧",
+        "🚗"
+       ],
+       "a": "👦",
+       "lang": "en"
+      },
+      {
+       "say": "S",
+       "o": [
+        "Ss",
+        "Mm",
+        "Bb"
+       ],
+       "a": "Ss",
+       "lang": "en"
+      },
+      {
+       "say": "sister",
+       "o": [
+        "👧",
+        "👦",
+        "👋"
+       ],
+       "a": "👧",
+       "lang": "en"
+      },
+      {
+       "say": "son",
+       "o": [
+        "👦",
+        "👧",
+        "🍎"
+       ],
+       "a": "👦",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع واختر الإجابة الصحيحة."
+  }
+ ]
+}

@@ -1,0 +1,272 @@
+{
+ "id": "en-1-u1-l6",
+ "grade": 1,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "Unit 1 · Lesson 6: n — How many brothers?",
+ "titleAr": "الوحدة الأولى: عائلتي — الدرس السادس: الحرف n وكم أخاً لديك؟",
+ "steps": [
+  {
+   "title": "الحرف",
+   "eyebrow": "الخطوة ١ — الحرف",
+   "heading": "الحرف Nn",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "Nn",
+       "say": "N. n, n.",
+       "c": "#E8590C",
+       "must": 1,
+       "big": true
+      },
+      {
+       "t": "{n}et",
+       "em": "🥅",
+       "say": "net",
+       "sub": "شبكة",
+       "must": 1
+      },
+      {
+       "t": "{n}ose",
+       "em": "👃",
+       "say": "nose",
+       "sub": "أنف",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على البطاقات واسمع. كتابك ص 13."
+  },
+  {
+   "title": "تتبّع",
+   "eyebrow": "الخطوة ٢ — تتبّع",
+   "heading": "اكتب الحرف N و n",
+   "blocks": [
+    {
+     "type": "trace",
+     "star": true,
+     "items": [
+      {
+       "t": "N",
+       "say": "N"
+      },
+      {
+       "t": "n",
+       "say": "n"
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "مرّر إصبعك فوق الحرف المنقّط، ثم اضغط «انتهيت». اضغط «شاهد» لترى كيف يُكتب."
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٣ — استمع",
+   "heading": "How many brothers?",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "How many brothers do you have?",
+       "em": "👦👦👦",
+       "say": "How many brothers do you have?",
+       "sub": "كم أخاً لديك؟",
+       "must": 1
+      },
+      {
+       "t": "Three.",
+       "em": "3️⃣",
+       "say": "Three.",
+       "sub": "ثلاثة"
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على البطاقات واسمع، ثم ردّد."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٤ — العب",
+   "heading": "اسمع واختر",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "kind": "count",
+       "em": "👦",
+       "n": 3,
+       "say": "How many brothers?",
+       "q": "كم أخاً؟"
+      },
+      {
+       "kind": "count",
+       "em": "👦",
+       "n": 2,
+       "say": "How many brothers?",
+       "q": "كم أخاً؟"
+      },
+      {
+       "kind": "count",
+       "em": "👧",
+       "n": 4,
+       "say": "How many sisters?",
+       "q": "كم أختاً؟"
+      },
+      {
+       "say": "nose",
+       "o": [
+        "👃",
+        "🥅",
+        "✋"
+       ],
+       "a": "👃",
+       "lang": "en"
+      },
+      {
+       "say": "net",
+       "o": [
+        "🥅",
+        "👃",
+        "🍎"
+       ],
+       "a": "🥅",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الكلمة واضغط على صورتها."
+  },
+  {
+   "title": "فرقع",
+   "eyebrow": "الخطوة ٥ — فرقع",
+   "heading": "بالونات الحرف n",
+   "blocks": [
+    {
+     "type": "pop",
+     "star": true,
+     "target": "n",
+     "pool": [
+      "n",
+      "s",
+      "a",
+      "t",
+      "p",
+      "i",
+      "n",
+      "e",
+      "o",
+      "m"
+     ],
+     "need": 6,
+     "say": "n",
+     "q": "فرقع البالونات التي فيها الحرف",
+     "lang": "en"
+    }
+   ],
+   "lead": "فرقع كل بالون فيه الحرف n."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٦ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "net",
+       "em": "🥅",
+       "say": "net",
+       "sub": "شبكة",
+       "must": 1
+      },
+      {
+       "t": "nose",
+       "em": "👃",
+       "say": "nose",
+       "sub": "أنف",
+       "must": 1
+      }
+     ],
+     "intro": "<b>احفظ هذه الكلمات!</b> اضغط على كل بطاقة واسمع الكلمة الإنجليزية، ثم قلها بصوت عالٍ. البطاقات الصفراء <b>مهمة جداً</b>.",
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٧ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "net",
+       "o": [
+        "🥅",
+        "👃",
+        "🚗"
+       ],
+       "a": "🥅",
+       "lang": "en"
+      },
+      {
+       "say": "nose",
+       "o": [
+        "👃",
+        "🥅",
+        "🚗"
+       ],
+       "a": "👃",
+       "lang": "en"
+      },
+      {
+       "say": "N",
+       "o": [
+        "Nn",
+        "Mm",
+        "Bb"
+       ],
+       "a": "Nn",
+       "lang": "en"
+      },
+      {
+       "kind": "count",
+       "em": "👦",
+       "n": 3,
+       "say": "How many brothers?",
+       "q": "كم أخاً؟"
+      },
+      {
+       "kind": "count",
+       "em": "👦",
+       "n": 2,
+       "say": "How many brothers?",
+       "q": "كم أخاً؟"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع واختر الإجابة الصحيحة."
+  }
+ ]
+}
