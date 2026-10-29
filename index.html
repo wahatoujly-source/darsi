@@ -907,7 +907,7 @@ function renderSubject(n,sid){
     u.lessons.forEach((l,k)=>{const free=isFree(l,k),locked=!free&&!App.sub;let status,cls='lcard';
       if(!l.ready){status='قريباً';cls+=' soon';}
       else if(locked){status='🔒 للمشتركين';cls+=' locked';}
-      else{const d=store.get('done_'+l.id,[]).length;status=d?el('span',{class:'prog',text:'★ '+d}):(free?'مجاني':'ابدأ');}
+      else{const d=store.get('done_'+l.id,[]).length;status=d?el('span',{class:'prog',text:'★ '+d}):(free&&!OPEN_ACCESS?'مجاني':'ابدأ');}
       list.append(el('button',{class:cls,disabled:!l.ready,onclick:()=>{if(locked){App.after='l-'+l.id;go('subscribe');}else go('l-'+l.id);}},
         el('span',{class:'ln',text:String(l.n)}),el('span',{class:'lt'},el('b',{lang:sid==='en'?'en':null,text:l.title}),l.titleAr?el('span',{text:l.titleAr}):null,l.ref?el('span',{class:'lref',text:'📖 '+l.ref.replace(/–/g,'\u2060–\u2060')}):null),
         el('span',{class:'ls'},free&&l.ready&&!OPEN_ACCESS?el('span',{class:'tag',text:'مجاني',style:'margin-inline-end:6px'}):null,status)));});
