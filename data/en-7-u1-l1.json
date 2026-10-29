@@ -1,0 +1,945 @@
+{
+ "id": "en-7-u1-l1",
+ "grade": 7,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 1 · Lesson 1: Holidays",
+ "titleAr": "الوحدة الأولى: وقت فراغي — الدرس الأول: العطلات",
+ "characters": {
+  "Salem": {
+   "ar": "سالم",
+   "color": "--c1",
+   "g": "m",
+   "pitch": 1.15
+  },
+  "Khaled": {
+   "ar": "خالد",
+   "color": "--c2",
+   "g": "m",
+   "pitch": 1.35
+  },
+  "Amal": {
+   "ar": "أمل",
+   "color": "--c3",
+   "g": "f",
+   "pitch": 1.35
+  },
+  "Sara": {
+   "ar": "سارة",
+   "color": "--c4",
+   "g": "f",
+   "pitch": 1.55
+  },
+  "Mariam": {
+   "ar": "مريم",
+   "color": "--c5",
+   "g": "f",
+   "pitch": 1.75
+  }
+ },
+ "left": [
+  "Salem",
+  "Amal"
+ ],
+ "dialogue": [
+  [
+   "Salem",
+   "Did you go away in the summer holidays?"
+  ],
+  [
+   "Khaled",
+   "Yes, I did. I went to my grandfather's village by the sea."
+  ],
+  [
+   "Salem",
+   "Great! What did you do there?"
+  ],
+  [
+   "Khaled",
+   "I went swimming every morning. And I went fishing with my cousin. It was fun!"
+  ],
+  [
+   "Amal",
+   "Did you go away in the holidays, Sara?"
+  ],
+  [
+   "Sara",
+   "No, I didn't. Mariam and I stayed at home."
+  ],
+  [
+   "Amal",
+   "Oh! So what did you do?"
+  ],
+  [
+   "Sara",
+   "Lots of things! I saw my friends every day. And I made some clothes for my little sister."
+  ],
+  [
+   "Amal",
+   "And you, Mariam? What did you do?"
+  ],
+  [
+   "Mariam",
+   "Not very much. I got up late every day, and I read lots of books. Oh, and I learned to cook!"
+  ]
+ ],
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "ماذا فعلت في العطلة؟",
+   "lead": "اضغط على كل بطاقة لتسمع العبارة. ستحتاج هذه العبارات في الحوار. اسمع ٨ بطاقات على الأقل لتأخذ النجمة.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "shopping",
+       "en": "I went shopping.",
+       "ar": "ذهبتُ للتسوّق",
+       "em": "🛍️"
+      },
+      {
+       "id": "cook",
+       "en": "I learned to cook.",
+       "ar": "تعلّمتُ الطبخ",
+       "em": "🍳"
+      },
+      {
+       "id": "late",
+       "en": "I got up late every day.",
+       "ar": "كنت أستيقظ متأخراً كل يوم",
+       "em": "😴"
+      },
+      {
+       "id": "camping",
+       "en": "I went camping.",
+       "ar": "ذهبتُ للتخييم",
+       "em": "⛺"
+      },
+      {
+       "id": "zoo",
+       "en": "I went to the zoo.",
+       "ar": "ذهبتُ إلى حديقة الحيوان",
+       "em": "🦏"
+      },
+      {
+       "id": "fishing",
+       "en": "I went fishing.",
+       "ar": "ذهبتُ لصيد السمك",
+       "em": "🎣"
+      },
+      {
+       "id": "friends",
+       "en": "I saw my friends every day.",
+       "ar": "رأيتُ أصدقائي كل يوم",
+       "em": "👫"
+      },
+      {
+       "id": "football",
+       "en": "I went to a football match.",
+       "ar": "ذهبتُ إلى مباراة كرة قدم",
+       "em": "⚽"
+      },
+      {
+       "id": "clothes",
+       "en": "I made some clothes.",
+       "ar": "صنعتُ بعض الملابس",
+       "em": "🧵"
+      },
+      {
+       "id": "music",
+       "en": "We listened to music.",
+       "ar": "استمعنا إلى الموسيقى",
+       "em": "🎵"
+      },
+      {
+       "id": "books",
+       "en": "I read lots of books.",
+       "ar": "قرأتُ كتباً كثيرة",
+       "em": "📚"
+      },
+      {
+       "id": "museum",
+       "en": "I went to the museum.",
+       "ar": "ذهبتُ إلى المتحف",
+       "em": "🏛️"
+      },
+      {
+       "id": "swimming",
+       "en": "I went swimming.",
+       "ar": "ذهبتُ للسباحة",
+       "em": "🏊"
+      },
+      {
+       "id": "sea",
+       "en": "I went to a village by the sea.",
+       "ar": "ذهبتُ إلى قرية على البحر",
+       "em": "🏖️"
+      },
+      {
+       "id": "home",
+       "en": "I stayed at home.",
+       "ar": "بقيتُ في البيت",
+       "em": "🏠"
+      }
+     ],
+     "need": 8,
+     "star": true
+    }
+   ]
+  },
+  {
+   "title": "توقّع",
+   "eyebrow": "الخطوة ٢ — توقّع",
+   "heading": "من فعل ماذا؟",
+   "lead": "خالد سافر، وسارة ومريم بقيتا في البيت. اضغط على كل عبارة مرة أو أكثر لتختار صاحبها. بعض العبارات لم يفعلها أحد، فاتركها فارغة.",
+   "blocks": [
+    {
+     "type": "assign",
+     "star": true,
+     "owners": [
+      [
+       "Khaled",
+       "Yes, I went to a village by the sea."
+      ],
+      [
+       "Sara",
+       "No, Mariam and I stayed at home."
+      ],
+      [
+       "Mariam",
+       "Not very much. I …"
+      ]
+     ],
+     "items": [
+      {
+       "id": "shopping",
+       "en": "I went shopping.",
+       "ar": "ذهبتُ للتسوّق",
+       "em": "🛍️"
+      },
+      {
+       "id": "cook",
+       "en": "I learned to cook.",
+       "ar": "تعلّمتُ الطبخ",
+       "em": "🍳"
+      },
+      {
+       "id": "late",
+       "en": "I got up late every day.",
+       "ar": "كنت أستيقظ متأخراً كل يوم",
+       "em": "😴"
+      },
+      {
+       "id": "camping",
+       "en": "I went camping.",
+       "ar": "ذهبتُ للتخييم",
+       "em": "⛺"
+      },
+      {
+       "id": "zoo",
+       "en": "I went to the zoo.",
+       "ar": "ذهبتُ إلى حديقة الحيوان",
+       "em": "🦏"
+      },
+      {
+       "id": "fishing",
+       "en": "I went fishing.",
+       "ar": "ذهبتُ لصيد السمك",
+       "em": "🎣"
+      },
+      {
+       "id": "friends",
+       "en": "I saw my friends every day.",
+       "ar": "رأيتُ أصدقائي كل يوم",
+       "em": "👫"
+      },
+      {
+       "id": "football",
+       "en": "I went to a football match.",
+       "ar": "ذهبتُ إلى مباراة كرة قدم",
+       "em": "⚽"
+      },
+      {
+       "id": "clothes",
+       "en": "I made some clothes.",
+       "ar": "صنعتُ بعض الملابس",
+       "em": "🧵"
+      },
+      {
+       "id": "music",
+       "en": "We listened to music.",
+       "ar": "استمعنا إلى الموسيقى",
+       "em": "🎵"
+      },
+      {
+       "id": "books",
+       "en": "I read lots of books.",
+       "ar": "قرأتُ كتباً كثيرة",
+       "em": "📚"
+      },
+      {
+       "id": "museum",
+       "en": "I went to the museum.",
+       "ar": "ذهبتُ إلى المتحف",
+       "em": "🏛️"
+      }
+     ],
+     "answer": {
+      "fishing": "Khaled",
+      "friends": "Sara",
+      "clothes": "Sara",
+      "late": "Mariam",
+      "books": "Mariam",
+      "cook": "Mariam"
+     }
+    }
+   ]
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٣ — استمع",
+   "heading": "استمع إلى الحوار وتحقّق",
+   "lead": "شغّل الحوار وتابع الكلمات المضيئة. اضغط على أي جملة لتعيدها. جرّب إخفاء النص والاستماع فقط، ثم ارجع إلى الخطوة ٢ وقارن توقعاتك.",
+   "blocks": [
+    {
+     "type": "dialogue",
+     "star": true
+    }
+   ]
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٤ — القاعدة",
+   "heading": "الماضي البسيط Past Simple",
+   "starOnVisit": true,
+   "lead": "نستخدمه للحديث عن أشياء حدثت وانتهت في الماضي، مثل ما فعلناه في العطلة الماضية.",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "١. أفعال منتظمة: نضيف <span lang=\"en\">-ed</span>",
+     "html": "<p class=\"note\">اضغط على الفعل ليتحوّل إلى الماضي وتسمع نطقه.</p>",
+     "blocks": [
+      {
+       "type": "verbs",
+       "pairs": [
+        [
+         "stay",
+         "stayed"
+        ],
+        [
+         "listen",
+         "listened"
+        ],
+        [
+         "learn",
+         "learned"
+        ],
+        [
+         "finish",
+         "finished"
+        ],
+        [
+         "visit",
+         "visited"
+        ],
+        [
+         "cook",
+         "cooked"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "type": "panel",
+     "title": "٢. أفعال شاذة: تُحفظ حفظاً",
+     "html": "<p class=\"note\">لا تأخذ <span lang=\"en\">-ed</span>. انتبه: <span lang=\"en\">read</span> تُكتب في الماضي كما هي، لكنها تُنطق «رِد».</p>",
+     "blocks": [
+      {
+       "type": "verbs",
+       "pairs": [
+        [
+         "go",
+         "went"
+        ],
+        [
+         "get",
+         "got"
+        ],
+        [
+         "see",
+         "saw"
+        ],
+        [
+         "make",
+         "made"
+        ],
+        [
+         "read",
+         "read"
+        ],
+        [
+         "have",
+         "had"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "type": "panel",
+     "title": "٣. السؤال والجواب",
+     "html": "<p>في السؤال نستخدم <b lang=\"en\">Did</b>، ويرجع الفعل بعدها إلى أصله.</p><div class=\"ex\"><span class=\"y\">✓ Did you go away?</span></div><div class=\"ex\"><span class=\"n\">Did you went away?</span></div><div class=\"ex\">Yes, I <b>went</b> to a village by the sea. &nbsp;/&nbsp; No, I <b>stayed</b> at home.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع المثال",
+       "text": "Did you go away in the holidays? Yes, I went to a village by the sea."
+      }
+     ]
+    },
+    {
+     "type": "panel",
+     "title": "٤. نطق <span lang=\"en\">-ed</span> بثلاث طرق",
+     "html": "<div class=\"ipa\"><div><b>/d/</b><span lang=\"en\">stayed, listened</span></div><div><b>/t/</b><span lang=\"en\">cooked, finished</span></div><div><b>/ɪd/</b><span lang=\"en\">visited, wanted</span><br><span class=\"note\">بعد t و d فقط</span></div></div>"
+    }
+   ]
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٥ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "lead": "أكمل التمارين الثلاثة صحيحة كلها لتأخذ النجمة.",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الفعل",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "In the holidays, I ___ to the zoo.",
+           "a": "went",
+           "o": [
+            "went",
+            "goed",
+            "go"
+           ]
+          },
+          {
+           "s": "We ___ to music every evening.",
+           "a": "listened",
+           "o": [
+            "listened",
+            "listen",
+            "listening"
+           ]
+          },
+          {
+           "s": "Sara ___ some clothes.",
+           "a": "made",
+           "o": [
+            "made",
+            "maked",
+            "makes"
+           ]
+          },
+          {
+           "s": "Mariam ___ up late every day.",
+           "a": "got",
+           "o": [
+            "got",
+            "getted",
+            "gets"
+           ]
+          },
+          {
+           "s": "I ___ my friends every day.",
+           "a": "saw",
+           "o": [
+            "saw",
+            "seed",
+            "see"
+           ]
+          },
+          {
+           "s": "Did you ___ away in the holidays?",
+           "a": "go",
+           "o": [
+            "go",
+            "went",
+            "goes"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "I went fishing every day.",
+          "Did you go away in the holidays?",
+          "Mariam and I stayed at home.",
+          "I read lots of books."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "I went camping.",
+           "o": [
+            "I went camping.",
+            "I went to the zoo.",
+            "We listened to music."
+           ]
+          },
+          {
+           "a": "I went to a football match.",
+           "o": [
+            "I saw my friends every day.",
+            "I went to a football match.",
+            "I went fishing."
+           ]
+          },
+          {
+           "a": "I got up late every day.",
+           "o": [
+            "I learned to cook.",
+            "I read lots of books.",
+            "I got up late every day."
+           ]
+          },
+          {
+           "a": "I went to the museum.",
+           "o": [
+            "I made some clothes.",
+            "I went shopping.",
+            "I went to the museum."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "تحدّث",
+   "eyebrow": "الخطوة ٦ — تحدّث",
+   "heading": "دورك في الكلام",
+   "lead": "اختر شخصية ومثّل دورها. التطبيق يقول جمل الآخرين، وعندما يأتي دورك قل جملتك بصوت عالٍ.",
+   "blocks": [
+    {
+     "type": "roleplay",
+     "star": true,
+     "roles": {
+      "Khaled": [
+       0,
+       4
+      ],
+      "Sara": [
+       4,
+       10
+      ],
+      "Mariam": [
+       4,
+       10
+      ]
+     }
+    },
+    {
+     "type": "html",
+     "html": "<h3 class=\"h3\">تحدّث عن عطلتك أنت</h3><p class=\"lead\">اختر حتى ٤ أشياء فعلتها، وسيكتب التطبيق فقرة عنك. استمع إليها ثم قلها بنفسك.</p>"
+    },
+    {
+     "type": "myPara",
+     "items": [
+      {
+       "id": "shopping",
+       "en": "I went shopping.",
+       "ar": "ذهبتُ للتسوّق",
+       "em": "🛍️"
+      },
+      {
+       "id": "cook",
+       "en": "I learned to cook.",
+       "ar": "تعلّمتُ الطبخ",
+       "em": "🍳"
+      },
+      {
+       "id": "late",
+       "en": "I got up late every day.",
+       "ar": "كنت أستيقظ متأخراً كل يوم",
+       "em": "😴"
+      },
+      {
+       "id": "camping",
+       "en": "I went camping.",
+       "ar": "ذهبتُ للتخييم",
+       "em": "⛺"
+      },
+      {
+       "id": "zoo",
+       "en": "I went to the zoo.",
+       "ar": "ذهبتُ إلى حديقة الحيوان",
+       "em": "🦏"
+      },
+      {
+       "id": "fishing",
+       "en": "I went fishing.",
+       "ar": "ذهبتُ لصيد السمك",
+       "em": "🎣"
+      },
+      {
+       "id": "friends",
+       "en": "I saw my friends every day.",
+       "ar": "رأيتُ أصدقائي كل يوم",
+       "em": "👫"
+      },
+      {
+       "id": "football",
+       "en": "I went to a football match.",
+       "ar": "ذهبتُ إلى مباراة كرة قدم",
+       "em": "⚽"
+      },
+      {
+       "id": "clothes",
+       "en": "I made some clothes.",
+       "ar": "صنعتُ بعض الملابس",
+       "em": "🧵"
+      },
+      {
+       "id": "music",
+       "en": "We listened to music.",
+       "ar": "استمعنا إلى الموسيقى",
+       "em": "🎵"
+      },
+      {
+       "id": "books",
+       "en": "I read lots of books.",
+       "ar": "قرأتُ كتباً كثيرة",
+       "em": "📚"
+      },
+      {
+       "id": "museum",
+       "en": "I went to the museum.",
+       "ar": "ذهبتُ إلى المتحف",
+       "em": "🏛️"
+      },
+      {
+       "id": "swimming",
+       "en": "I went swimming.",
+       "ar": "ذهبتُ للسباحة",
+       "em": "🏊"
+      },
+      {
+       "id": "sea",
+       "en": "I went to a village by the sea.",
+       "ar": "ذهبتُ إلى قرية على البحر",
+       "em": "🏖️"
+      },
+      {
+       "id": "home",
+       "en": "I stayed at home.",
+       "ar": "بقيتُ في البيت",
+       "em": "🏠"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٧ — احفظ",
+   "heading": "كلمات يجب أن تحفظها من هذا الدرس",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس الأول، وستتكرر معك في الدروس القادمة وفي الامتحان. لا تكتفِ بقراءتها: <b>اسمعها، وردّدها بصوت عالٍ، واكتب كل كلمة في جملة من عندك</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "holidays",
+       "ipa": "/ˈhɒlədeɪz/",
+       "meaning": "العطلة / الإجازة",
+       "ex": "Did you go away in the summer holidays?"
+      },
+      {
+       "must": 1,
+       "term": "go away",
+       "alt": "went away",
+       "ipa": "/ɡəʊ əˈweɪ/",
+       "meaning": "يسافر / يذهب بعيداً عن البيت",
+       "ex": "Did you go away in the holidays?"
+      },
+      {
+       "must": 1,
+       "term": "stay at home",
+       "alt": "stayed",
+       "ipa": "/steɪ ət həʊm/",
+       "meaning": "يبقى في البيت",
+       "ex": "Mariam and I stayed at home."
+      },
+      {
+       "must": 1,
+       "term": "village",
+       "ipa": "/ˈvɪlɪdʒ/",
+       "meaning": "قرية",
+       "ex": "I went to a village by the sea."
+      },
+      {
+       "must": 1,
+       "term": "by the sea",
+       "ipa": "/baɪ ðə siː/",
+       "meaning": "على البحر (بجانب البحر)",
+       "ex": "a village by the sea",
+       "tip": "by هنا معناها «بجانب»، وليس «بواسطة»."
+      },
+      {
+       "must": 1,
+       "term": "every day",
+       "ipa": "/ˈevri deɪ/",
+       "meaning": "كل يوم",
+       "ex": "I saw my friends every day.",
+       "tip": "تُكتب كلمتين منفصلتين: every day."
+      },
+      {
+       "must": 1,
+       "term": "go",
+       "alt": "went",
+       "ipa": "/went/",
+       "meaning": "ذهب",
+       "ex": "I went fishing.",
+       "tip": "فعل شاذ: لا نقول goed أبداً."
+      },
+      {
+       "must": 1,
+       "term": "see",
+       "alt": "saw",
+       "ipa": "/sɔː/",
+       "meaning": "رأى",
+       "ex": "I saw my friends every day.",
+       "tip": "فعل شاذ: الماضي saw."
+      },
+      {
+       "must": 1,
+       "term": "make",
+       "alt": "made",
+       "ipa": "/meɪd/",
+       "meaning": "صنع",
+       "ex": "I made some clothes.",
+       "tip": "فعل شاذ: الماضي made."
+      },
+      {
+       "must": 1,
+       "term": "get up",
+       "alt": "got up",
+       "ipa": "/ɡɒt ʌp/",
+       "meaning": "استيقظ / نهض من النوم",
+       "ex": "I got up late every day."
+      },
+      {
+       "must": 1,
+       "term": "read",
+       "alt": "read",
+       "ipa": "/red/",
+       "meaning": "قرأ",
+       "ex": "I read lots of books.",
+       "tip": "تُكتب كما هي في الماضي لكنها تُنطق «رِد»."
+      },
+      {
+       "must": 1,
+       "term": "learn to",
+       "alt": "learned to",
+       "ipa": "/lɜːnd tə/",
+       "meaning": "تعلّم أن…",
+       "ex": "I learned to cook."
+      },
+      {
+       "must": 0,
+       "term": "go swimming / fishing",
+       "ipa": "/ɡəʊ ˈswɪmɪŋ/",
+       "meaning": "يذهب للسباحة / للصيد",
+       "ex": "I went swimming. I went fishing.",
+       "tip": "مع الأنشطة نقول go + ing بدون to."
+      },
+      {
+       "must": 0,
+       "term": "lots of",
+       "ipa": "/lɒts əv/",
+       "meaning": "الكثير من",
+       "ex": "I read lots of books."
+      },
+      {
+       "must": 0,
+       "term": "late",
+       "ipa": "/leɪt/",
+       "meaning": "متأخراً",
+       "ex": "I got up late."
+      },
+      {
+       "must": 0,
+       "term": "What did you do?",
+       "ipa": "/wɒt dɪd juː duː/",
+       "meaning": "ماذا فعلت؟",
+       "ex": "What did you do there?"
+      },
+      {
+       "must": 0,
+       "term": "It was great!",
+       "ipa": "/ɪt wəz ɡreɪt/",
+       "meaning": "كان رائعاً!",
+       "ex": "I went fishing. It was great!"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٨ — اختبار الدرس",
+   "heading": "اختبر نفسك في الدرس كله",
+   "lead": "10 أسئلة متنوعة: استماع وفهم ومفردات وقواعد. تنجح بـ 7 من 10، ويمكنك الإعادة متى شئت.",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 7,
+     "items": [
+      {
+       "type": "listen",
+       "say": "I went camping.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "I went camping.",
+       "o": [
+        "I went camping.",
+        "I went shopping.",
+        "I went to the museum."
+       ],
+       "why": "camping تعني التخييم."
+      },
+      {
+       "type": "listen",
+       "say": "I read lots of books.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "I read lots of books.",
+       "o": [
+        "I read lots of books.",
+        "I made some clothes.",
+        "I saw my friends."
+       ],
+       "why": "read lots of books: قرأت كتباً كثيرة."
+      },
+      {
+       "q": "ما معنى كلمة village؟",
+       "a": "قرية",
+       "o": [
+        "قرية",
+        "مدينة",
+        "شاطئ"
+       ],
+       "ar": true,
+       "why": "village = قرية."
+      },
+      {
+       "q": "اختر الترجمة الصحيحة لـ «كل يوم»:",
+       "a": "every day",
+       "o": [
+        "every day",
+        "one day",
+        "all days"
+       ],
+       "why": "every day تُكتب كلمتين."
+      },
+      {
+       "q": "Yesterday we ___ to the museum.",
+       "a": "went",
+       "o": [
+        "went",
+        "go",
+        "goed"
+       ],
+       "gap": true,
+       "why": "الماضي من go هو went، وهو فعل شاذ."
+      },
+      {
+       "q": "Did she ___ some clothes?",
+       "a": "make",
+       "o": [
+        "make",
+        "made",
+        "makes"
+       ],
+       "gap": true,
+       "why": "بعد Did يرجع الفعل إلى أصله: make."
+      },
+      {
+       "q": "What is the past of see?",
+       "a": "saw",
+       "o": [
+        "saw",
+        "seed",
+        "sees"
+       ],
+       "why": "see → saw."
+      },
+      {
+       "q": "من الحوار: أين ذهب خالد في العطلة؟",
+       "a": "To a village by the sea.",
+       "o": [
+        "To a village by the sea.",
+        "To the zoo.",
+        "He stayed at home."
+       ],
+       "why": "قال خالد: I went to my grandfather's village by the sea."
+      },
+      {
+       "q": "من الحوار: من التي تعلّمت الطبخ؟",
+       "a": "مريم",
+       "o": [
+        "مريم",
+        "سارة",
+        "أمل"
+       ],
+       "ar": true,
+       "why": "قالت مريم: I learned to cook!"
+      },
+      {
+       "q": "كيف تُنطق read في الماضي؟",
+       "a": "red /red/",
+       "o": [
+        "red /red/",
+        "reed /riːd/",
+        "road /rəʊd/"
+       ],
+       "why": "read في الماضي تُكتب كما هي لكنها تُنطق مثل red."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
