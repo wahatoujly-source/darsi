@@ -1,0 +1,539 @@
+{
+ "id": "en-7-u1-l2",
+ "grade": 7,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 1 · Lesson 2: Joe's Holiday Album",
+ "titleAr": "الوحدة الأولى: وقت فراغي — الدرس الثاني: ألبوم صور العطلة",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "كلمات نصف بها الأماكن",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "amazing",
+       "ar": "مذهل",
+       "em": "🤩"
+      },
+      {
+       "id": "v1",
+       "en": "interesting",
+       "ar": "مثير للاهتمام",
+       "em": "🤔"
+      },
+      {
+       "id": "v2",
+       "en": "exciting",
+       "ar": "مثير / ممتع جداً",
+       "em": "🎢"
+      },
+      {
+       "id": "v3",
+       "en": "fantastic",
+       "ar": "رائع جداً",
+       "em": "🌟"
+      },
+      {
+       "id": "v4",
+       "en": "great",
+       "ar": "عظيم / رائع",
+       "em": "👍"
+      },
+      {
+       "id": "v5",
+       "en": "beautiful",
+       "ar": "جميل",
+       "em": "🌺"
+      },
+      {
+       "id": "v6",
+       "en": "Leptis Magna, Libya",
+       "ar": "لبدة الكبرى، ليبيا",
+       "em": "🏛️"
+      },
+      {
+       "id": "v7",
+       "en": "the pyramids, Egypt",
+       "ar": "الأهرامات، مصر",
+       "em": "🔺"
+      },
+      {
+       "id": "v8",
+       "en": "Big Ben, London",
+       "ar": "ساعة بيغ بن، لندن",
+       "em": "🕰️"
+      },
+      {
+       "id": "v9",
+       "en": "the Leaning Tower of Pisa, Italy",
+       "ar": "برج بيزا المائل، إيطاليا",
+       "em": "🗼"
+      },
+      {
+       "id": "v10",
+       "en": "Victoria Falls, Zimbabwe",
+       "ar": "شلالات فيكتوريا، زيمبابوي",
+       "em": "💦"
+      },
+      {
+       "id": "v11",
+       "en": "Park Güell, Barcelona",
+       "ar": "حديقة غويل، برشلونة",
+       "em": "🦎"
+      }
+     ],
+     "need": 8,
+     "star": true
+    }
+   ],
+   "lead": "اسمع الصفات التي نصف بها الأماكن، وأسماء أماكن مشهورة حول العالم. اسمع ٨ بطاقات على الأقل."
+  },
+  {
+   "title": "استمع واقرأ",
+   "eyebrow": "الخطوة ٢ — استمع واقرأ",
+   "heading": "ألبوم جو",
+   "blocks": [
+    {
+     "type": "reading",
+     "star": true,
+     "title": "My Holiday Album",
+     "paragraphs": [
+      "My name is Joe and I love travelling. These are some of my favourite holiday photos.",
+      "Last year, my family and I visited Libya. We went to Leptis Magna. It was a great Roman city, and you can still see the theatre and the old market today. It was amazing!",
+      "Two years ago, we went to Egypt and saw the pyramids. People built them thousands of years ago. There are more than one hundred pyramids in Egypt!",
+      "In London, I took a photo of Big Ben. Many people think Big Ben is the clock, but it is the name of the big bell inside the tower. That was interesting!",
+      "In Italy, we saw the Leaning Tower of Pisa. The ground under it is too soft, so the tower leans. It was fantastic!",
+      "The most exciting place was Victoria Falls in Zimbabwe. The water falls more than one hundred metres, and it is very loud!",
+      "Last summer, we walked in Park Güell in Barcelona. There are beautiful buildings and colourful mosaics there."
+     ]
+    }
+   ],
+   "lead": "جو يحب السفر، وهذه بعض صور عطلاته. اضغط «اقرأ لي النص» وتابع الجمل المضيئة، أو اضغط على أي جملة لتسمعها وحدها."
+  },
+  {
+   "title": "رتّب الصور",
+   "eyebrow": "الخطوة ٣ — رتّب الصور",
+   "heading": "بأي ترتيب تحدّث جو عن صوره؟",
+   "blocks": [
+    {
+     "type": "sequence",
+     "star": true,
+     "lang": "en",
+     "items": [
+      {
+       "q": "Put the places in the order Joe talks about them.",
+       "order": [
+        "🏛️ Leptis Magna",
+        "🔺 The pyramids",
+        "🕰️ Big Ben",
+        "🗼 The Leaning Tower of Pisa",
+        "💦 Victoria Falls",
+        "🦎 Park Güell"
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "هذا مثل تمرين B في كتابك: رتّب الأماكن بنفس الترتيب الذي ذكرها به جو. يمكنك الرجوع للنص في الخطوة السابقة."
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "أسئلة عن النص",
+   "blocks": [
+    {
+     "type": "choice",
+     "star": true,
+     "items": [
+      {
+       "q": "Where is Leptis Magna?",
+       "a": "In Libya.",
+       "o": [
+        "In Libya.",
+        "In Italy.",
+        "In Egypt."
+       ],
+       "why": "لبدة الكبرى مدينة رومانية في ليبيا."
+      },
+      {
+       "q": "What is Big Ben?",
+       "a": "A big bell.",
+       "o": [
+        "A big bell.",
+        "A clock.",
+        "A park."
+       ],
+       "why": "Big Ben هو اسم الجرس الكبير داخل البرج."
+      },
+      {
+       "q": "Why does the Tower of Pisa lean?",
+       "a": "The ground is too soft.",
+       "o": [
+        "The ground is too soft.",
+        "It is very old.",
+        "It is very tall."
+       ],
+       "why": "الأرض تحت البرج لينة جداً."
+      },
+      {
+       "q": "Which place was the most exciting for Joe?",
+       "a": "Victoria Falls.",
+       "o": [
+        "Victoria Falls.",
+        "Big Ben.",
+        "Park Güell."
+       ],
+       "why": "قال جو: The most exciting place was Victoria Falls."
+      },
+      {
+       "q": "How many pyramids are there in Egypt?",
+       "a": "More than 100.",
+       "o": [
+        "More than 100.",
+        "Three.",
+        "Ten."
+       ],
+       "why": "قال جو: There are more than one hundred pyramids."
+      },
+      {
+       "q": "What can you see in Park Güell?",
+       "a": "Colourful mosaics.",
+       "o": [
+        "Colourful mosaics.",
+        "A big bell.",
+        "A Roman theatre."
+       ],
+       "why": "فيها مبانٍ جميلة وفسيفساء ملونة."
+      }
+     ]
+    }
+   ],
+   "lead": "اختر الإجابة الصحيحة."
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٥ — القاعدة",
+   "heading": "كيف نصف مكاناً زرناه؟",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "١. <span lang=\"en\">It was</span> + صفة",
+     "html": "<div class=\"ex\">It <b>was</b> amazing!</div><div class=\"ex\">The water <b>was</b> very loud.</div><p class=\"note\">was هي ماضي is.</p>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "It was amazing! The water was very loud."
+      }
+     ]
+    },
+    {
+     "type": "panel",
+     "title": "٢. <span lang=\"en\">There was / There were</span>",
+     "html": "<p>نستخدم <b lang=\"en\">There was</b> مع المفرد، و<b lang=\"en\">There were</b> مع الجمع.</p><div class=\"ex\">There <b>was</b> a big bell in the tower.</div><div class=\"ex\">There <b>were</b> beautiful buildings.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "There was a big bell in the tower. There were beautiful buildings."
+      }
+     ]
+    },
+    {
+     "type": "panel",
+     "title": "٣. أفعال شاذة في النص",
+     "html": "",
+     "blocks": [
+      {
+       "type": "verbs",
+       "pairs": [
+        [
+         "see",
+         "saw"
+        ],
+        [
+         "take",
+         "took"
+        ],
+        [
+         "go",
+         "went"
+        ],
+        [
+         "build",
+         "built"
+        ],
+        [
+         "is",
+         "was"
+        ],
+        [
+         "are",
+         "were"
+        ]
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "نستخدم الماضي البسيط لأن الزيارة انتهت.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٦ — تدرّب",
+   "heading": "أكمل الجمل",
+   "blocks": [
+    {
+     "type": "mcq",
+     "star": true,
+     "mode": "gap",
+     "items": [
+      {
+       "s": "Leptis Magna ___ amazing.",
+       "a": "was",
+       "o": [
+        "was",
+        "were",
+        "is"
+       ]
+      },
+      {
+       "s": "There ___ lots of tourists.",
+       "a": "were",
+       "o": [
+        "were",
+        "was",
+        "is"
+       ]
+      },
+      {
+       "s": "We ___ the pyramids last year.",
+       "a": "saw",
+       "o": [
+        "saw",
+        "see",
+        "seed"
+       ]
+      },
+      {
+       "s": "I ___ a photo of Big Ben.",
+       "a": "took",
+       "o": [
+        "took",
+        "taked",
+        "take"
+       ]
+      },
+      {
+       "s": "The most ___ place was Victoria Falls.",
+       "a": "exciting",
+       "o": [
+        "exciting",
+        "excited",
+        "excite"
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "اختر الكلمة الصحيحة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٧ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ، واكتب كل كلمة في جملة من عندك</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "amazing",
+       "ipa": "/əˈmeɪzɪŋ/",
+       "meaning": "مذهل",
+       "ex": "Leptis Magna was amazing!"
+      },
+      {
+       "must": 1,
+       "term": "interesting",
+       "ipa": "/ˈɪntrəstɪŋ/",
+       "meaning": "مثير للاهتمام",
+       "ex": "That was interesting!"
+      },
+      {
+       "must": 1,
+       "term": "exciting",
+       "ipa": "/ɪkˈsaɪtɪŋ/",
+       "meaning": "مثير / ممتع جداً",
+       "ex": "The most exciting place was Victoria Falls.",
+       "tip": "exciting للشيء المثير، أما excited فللشخص المتحمس."
+      },
+      {
+       "must": 1,
+       "term": "fantastic",
+       "ipa": "/fænˈtæstɪk/",
+       "meaning": "رائع جداً",
+       "ex": "It was fantastic!"
+      },
+      {
+       "must": 1,
+       "term": "beautiful",
+       "ipa": "/ˈbjuːtɪfl/",
+       "meaning": "جميل",
+       "ex": "There are beautiful buildings."
+      },
+      {
+       "must": 1,
+       "term": "take a photo",
+       "ipa": "/teɪk ə ˈfəʊtəʊ/",
+       "meaning": "يلتقط صورة",
+       "ex": "I took a photo of Big Ben.",
+       "alt": "took"
+      },
+      {
+       "must": 1,
+       "term": "visit",
+       "ipa": "/ˈvɪzɪt/",
+       "meaning": "يزور",
+       "ex": "We visited Libya.",
+       "alt": "visited"
+      },
+      {
+       "must": 0,
+       "term": "famous",
+       "ipa": "/ˈfeɪməs/",
+       "meaning": "مشهور",
+       "ex": "Big Ben is very famous."
+      },
+      {
+       "must": 0,
+       "term": "the most …",
+       "ipa": "/ðə məʊst/",
+       "meaning": "الأكثر …",
+       "ex": "the most exciting place",
+       "tip": "نستخدمها للمقارنة بين أكثر من شيئين."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٨ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 6,
+     "items": [
+      {
+       "q": "ما معنى amazing؟",
+       "a": "مذهل",
+       "o": [
+        "مذهل",
+        "مخيف",
+        "صغير"
+       ],
+       "why": "amazing = مذهل.",
+       "ar": true
+      },
+      {
+       "q": "Where is Victoria Falls?",
+       "a": "In Zimbabwe.",
+       "o": [
+        "In Zimbabwe.",
+        "In Italy.",
+        "In Libya."
+       ],
+       "why": "شلالات فيكتوريا في زيمبابوي."
+      },
+      {
+       "q": "It ___ fantastic!",
+       "a": "was",
+       "o": [
+        "was",
+        "were",
+        "are"
+       ],
+       "why": "It مفرد، فنستخدم was.",
+       "gap": true
+      },
+      {
+       "q": "There ___ more than 100 pyramids.",
+       "a": "are",
+       "o": [
+        "are",
+        "is",
+        "was"
+       ],
+       "why": "هذه حقيقة الآن، والأهرامات جمع، فنستخدم are.",
+       "gap": true
+      },
+      {
+       "q": "The past of take is:",
+       "a": "took",
+       "o": [
+        "took",
+        "taked",
+        "takes"
+       ],
+       "why": "take → took فعل شاذ."
+      },
+      {
+       "type": "listen",
+       "say": "The most exciting place was Victoria Falls.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "The most exciting place was Victoria Falls.",
+       "o": [
+        "The most exciting place was Victoria Falls.",
+        "The most beautiful place was Park Güell.",
+        "The most interesting place was Big Ben."
+       ],
+       "why": "the most exciting = الأكثر إثارة."
+      },
+      {
+       "q": "Big Ben is the name of …",
+       "a": "the bell",
+       "o": [
+        "the bell",
+        "the clock",
+        "the river"
+       ],
+       "why": "Big Ben اسم الجرس داخل البرج."
+      },
+      {
+       "q": "اختر الكلمة المناسبة: The trip was very ___.",
+       "a": "exciting",
+       "o": [
+        "exciting",
+        "excited",
+        "excite"
+       ],
+       "why": "نصف الرحلة (شيء) بـ exciting."
+      }
+     ]
+    }
+   ],
+   "lead": "8 أسئلة. تنجح بـ 6 من 8."
+  }
+ ],
+ "characters": {
+  "Joe": {
+   "ar": "جو",
+   "color": "--c2",
+   "g": "m",
+   "pitch": 1.3
+  }
+ }
+}

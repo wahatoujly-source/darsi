@@ -1,0 +1,342 @@
+{
+ "id": "en-7-u1-l9",
+ "grade": 7,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 1 · Round up",
+ "titleAr": "الوحدة الأولى — مراجعة الوحدة",
+ "steps": [
+  {
+   "title": "ماذا تعلّمت؟",
+   "eyebrow": "الخطوة ١ — ماذا تعلّمت؟",
+   "heading": "مراجعة الوحدة الأولى",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "١. التحدث عن العطلة (الماضي البسيط)",
+     "html": "<div class=\"ex\">I went swimming every day. I stayed at home.</div><div class=\"ex\">Did you visit your friends? — Yes, I did. / No, I didn't.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "I went swimming every day. Did you visit your friends? Yes, I did."
+      }
+     ]
+    },
+    {
+     "type": "panel",
+     "title": "٢. الهوايات",
+     "html": "<div class=\"ex\">I enjoy collecting stamps. I'm interested in planes.</div>"
+    },
+    {
+     "type": "panel",
+     "title": "٣. كم مرة؟",
+     "html": "<div class=\"ex\">always – usually – often – sometimes – never</div><div class=\"ex\">How often do you help at home? — I always help at home.</div>"
+    },
+    {
+     "type": "panel",
+     "title": "٤. الربط بـ and / but / or",
+     "html": "<div class=\"ex\">He plays football <b>and</b> tennis. ← إضافة</div><div class=\"ex\">He doesn't like water, <b>but</b> he can swim. ← عكس</div><div class=\"ex\">Do you wake up early <b>or</b> late? ← اختيار</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "He plays football and tennis. He doesn't like water, but he can swim. Do you wake up early or late?"
+      }
+     ]
+    }
+   ],
+   "lead": "هذا ما تعلمته في الوحدة. اقرأ واسمع الأمثلة.",
+   "starOnVisit": true
+  },
+  {
+   "title": "and / but / or",
+   "eyebrow": "الخطوة ٢ — and / but / or",
+   "heading": "اختر أداة الربط",
+   "blocks": [
+    {
+     "type": "choice",
+     "star": true,
+     "items": [
+      {
+       "q": "I like reading ___ drawing.",
+       "a": "and",
+       "o": [
+        "and",
+        "but",
+        "or"
+       ],
+       "why": "إضافة: and."
+      },
+      {
+       "q": "She is tired, ___ she is happy.",
+       "a": "but",
+       "o": [
+        "but",
+        "and",
+        "or"
+       ],
+       "why": "عكس: but."
+      },
+      {
+       "q": "Do you want tea ___ juice?",
+       "a": "or",
+       "o": [
+        "or",
+        "and",
+        "but"
+       ],
+       "why": "اختيار: or."
+      },
+      {
+       "q": "He can't swim, ___ he loves the sea.",
+       "a": "but",
+       "o": [
+        "but",
+        "or",
+        "and"
+       ],
+       "why": "عكس: but."
+      },
+      {
+       "q": "We went to the zoo ___ the museum.",
+       "a": "and",
+       "o": [
+        "and",
+        "or",
+        "but"
+       ],
+       "why": "إضافة: and."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تدريب شامل",
+   "blocks": [
+    {
+     "type": "mcq",
+     "star": true,
+     "mode": "gap",
+     "items": [
+      {
+       "s": "Last summer, I ___ to Ghadames.",
+       "a": "went",
+       "o": [
+        "went",
+        "go",
+        "goes"
+       ]
+      },
+      {
+       "s": "I'm interested ___ birds.",
+       "a": "in",
+       "o": [
+        "in",
+        "on",
+        "at"
+       ]
+      },
+      {
+       "s": "She ___ late for school.",
+       "a": "is never",
+       "o": [
+        "is never",
+        "never is",
+        "never"
+       ]
+      },
+      {
+       "s": "It ___ an amazing trip.",
+       "a": "was",
+       "o": [
+        "was",
+        "were",
+        "are"
+       ]
+      },
+      {
+       "s": "___ the paper between the covers.",
+       "a": "Put",
+       "o": [
+        "Put",
+        "Puts",
+        "Putting"
+       ]
+      },
+      {
+       "s": "The bird ___ away.",
+       "a": "flew",
+       "o": [
+        "flew",
+        "flied",
+        "flying"
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أسئلة من كل دروس الوحدة."
+  },
+  {
+   "title": "قل",
+   "eyebrow": "الخطوة ٤ — قل",
+   "heading": "عبارة الوحدة",
+   "blocks": [
+    {
+     "type": "speakLine",
+     "star": true,
+     "text": "She sells sea shells on the sea shore. The shells she sells are sea shells, I'm sure."
+    }
+   ]
+  },
+  {
+   "title": "اختبار الوحدة",
+   "eyebrow": "الخطوة ٥ — اختبار الوحدة",
+   "heading": "اختبار الوحدة الأولى",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 8,
+     "items": [
+      {
+       "q": "Did you go away in the holidays? — No, I ___.",
+       "a": "didn't",
+       "o": [
+        "didn't",
+        "don't",
+        "wasn't"
+       ],
+       "why": "No, I didn't.",
+       "gap": true
+      },
+      {
+       "q": "The past of see is:",
+       "a": "saw",
+       "o": [
+        "saw",
+        "seed",
+        "seen"
+       ],
+       "why": "see → saw."
+      },
+      {
+       "q": "I enjoy ___ photos.",
+       "a": "taking",
+       "o": [
+        "taking",
+        "take",
+        "to taking"
+       ],
+       "why": "enjoy + ing.",
+       "gap": true
+      },
+      {
+       "q": "Choose the correct sentence.",
+       "a": "We usually visit our grandparents.",
+       "o": [
+        "We usually visit our grandparents.",
+        "We visit usually our grandparents."
+       ],
+       "why": "قبل الفعل."
+      },
+      {
+       "q": "ما معنى never؟",
+       "a": "أبداً",
+       "o": [
+        "أبداً",
+        "دائماً",
+        "غالباً"
+       ],
+       "why": "never = أبداً.",
+       "ar": true
+      },
+      {
+       "q": "There ___ hundreds of birds.",
+       "a": "were",
+       "o": [
+        "were",
+        "was",
+        "is"
+       ],
+       "why": "جمع في الماضي: were.",
+       "gap": true
+      },
+      {
+       "q": "Do you like tea ___ coffee?",
+       "a": "or",
+       "o": [
+        "or",
+        "but",
+        "and"
+       ],
+       "why": "اختيار: or.",
+       "gap": true
+      },
+      {
+       "q": "___ use too much glue.",
+       "a": "Don't",
+       "o": [
+        "Don't",
+        "No",
+        "Not"
+       ],
+       "why": "النهي: Don't.",
+       "gap": true
+      },
+      {
+       "q": "How do we end an email to a friend?",
+       "a": "Bye for now,",
+       "o": [
+        "Bye for now,",
+        "Dear …,",
+        "Hello,"
+       ],
+       "why": "Bye for now."
+      },
+      {
+       "q": "ما معنى exciting؟",
+       "a": "مثير",
+       "o": [
+        "مثير",
+        "ممل",
+        "هادئ"
+       ],
+       "why": "exciting = مثير.",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "I always get up before seven o'clock.",
+       "q": "استمع: كم مرة يستيقظ قبل السابعة؟",
+       "a": "always",
+       "o": [
+        "always",
+        "sometimes",
+        "never"
+       ],
+       "why": "always = دائماً."
+      },
+      {
+       "q": "What are you doing? — I ___ my homework.",
+       "a": "am doing",
+       "o": [
+        "am doing",
+        "do",
+        "did"
+       ],
+       "why": "am + ing لشيء يحدث الآن.",
+       "gap": true
+      }
+     ]
+    }
+   ],
+   "lead": "12 سؤالاً من كل الوحدة. تنجح بـ 8 من 12."
+  }
+ ]
+}

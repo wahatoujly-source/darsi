@@ -1,0 +1,436 @@
+{
+ "id": "en-7-u1-l8",
+ "grade": 7,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 1 · Lesson 8: The Birdwatcher",
+ "titleAr": "الوحدة الأولى — الدرس الثامن: مراقِب الطيور",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "كلمات القصة",
+   "blocks": [
+    {
+     "type": "vocab",
+     "need": 7,
+     "star": true,
+     "items": [
+      {
+       "id": "v0",
+       "en": "binoculars",
+       "ar": "منظار",
+       "em": "🔭"
+      },
+      {
+       "id": "v1",
+       "en": "feathers",
+       "ar": "ريش",
+       "em": "🪶"
+      },
+      {
+       "id": "v2",
+       "en": "wings",
+       "ar": "أجنحة",
+       "em": "🪽"
+      },
+      {
+       "id": "v3",
+       "en": "bill (beak)",
+       "ar": "منقار",
+       "em": "🐦"
+      },
+      {
+       "id": "v4",
+       "en": "lagoon",
+       "ar": "بحيرة ساحلية (سبخة)",
+       "em": "🏞️"
+      },
+      {
+       "id": "v5",
+       "en": "hundreds of",
+       "ar": "مئات من",
+       "em": "💯"
+      },
+      {
+       "id": "v6",
+       "en": "flew away",
+       "ar": "طار بعيداً",
+       "em": "🕊️"
+      },
+      {
+       "id": "v7",
+       "en": "hobby",
+       "ar": "هواية",
+       "em": "🎯"
+      },
+      {
+       "id": "v8",
+       "en": "flamingo",
+       "ar": "طائر النحام (الفلامنجو)",
+       "em": "🦩"
+      }
+     ]
+    }
+   ],
+   "lead": "اسمعها كلها."
+  },
+  {
+   "title": "قصة",
+   "eyebrow": "الخطوة ٢ — قصة",
+   "heading": "القصة: مراقِب الطيور",
+   "blocks": [
+    {
+     "type": "reading",
+     "star": true,
+     "title": "The Birdwatcher",
+     "paragraphs": [
+      "Last Friday, my uncle asked, 'Where shall we go tomorrow?'",
+      "'Let's go to the lagoon near Benghazi,' I said. 'There are lots of birds there.'",
+      "'Oh, Yousef! You always want to watch birds,' my sister Nada laughed. 'It's boring!'",
+      "'No, it isn't. It's a great hobby,' said my uncle.",
+      "On Saturday morning, we drove to the lagoon. My uncle stayed by the car, and Nada and I walked along the water. There were hundreds of birds! I took out my binoculars because I wanted to see them better.",
+      "'What can you see?' Nada asked. I could see lots of ducks and some small birds. Then I saw a tall pink bird. It was standing on one leg in the water. It had long thin legs and a curved bill.",
+      "'Quick, Nada! Take a photo!' I said. Suddenly, a dog ran along the beach and the bird flew away. Under its wings, I could see black feathers.",
+      "At home, I looked in my bird book. There it was: a flamingo! I felt so excited. It was the first time I had seen one, and Nada had a photo of it!"
+     ]
+    }
+   ],
+   "lead": "استمع واقرأ القصة."
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٣ — افهم",
+   "heading": "أسئلة عن القصة",
+   "blocks": [
+    {
+     "type": "choice",
+     "star": true,
+     "items": [
+      {
+       "q": "Who is the birdwatcher?",
+       "a": "Yousef",
+       "o": [
+        "Yousef",
+        "Nada",
+        "The uncle"
+       ],
+       "why": "يوسف يحب مراقبة الطيور."
+      },
+      {
+       "q": "Where did they go?",
+       "a": "To a lagoon near Benghazi.",
+       "o": [
+        "To a lagoon near Benghazi.",
+        "To the zoo.",
+        "To the desert."
+       ],
+       "why": "the lagoon near Benghazi."
+      },
+      {
+       "q": "What did Nada think about birdwatching?",
+       "a": "It's boring.",
+       "o": [
+        "It's boring.",
+        "It's exciting.",
+        "It's difficult."
+       ],
+       "why": "قالت: It's boring!"
+      },
+      {
+       "q": "What colour was the tall bird?",
+       "a": "Pink",
+       "o": [
+        "Pink",
+        "White",
+        "Black"
+       ],
+       "why": "a tall pink bird."
+      },
+      {
+       "q": "Why did the bird fly away?",
+       "a": "A dog ran along the beach.",
+       "o": [
+        "A dog ran along the beach.",
+        "Nada shouted.",
+        "A boat came."
+       ],
+       "why": "Suddenly, a dog ran along the beach."
+      },
+      {
+       "q": "What was the bird?",
+       "a": "A flamingo",
+       "o": [
+        "A flamingo",
+        "A duck",
+        "A stork"
+       ],
+       "why": "There it was: a flamingo!"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "رتّب الأحداث",
+   "eyebrow": "الخطوة ٤ — رتّب الأحداث",
+   "heading": "رتّب أحداث القصة",
+   "blocks": [
+    {
+     "type": "sequence",
+     "star": true,
+     "lang": "en",
+     "items": [
+      {
+       "q": "Put the events in order.",
+       "order": [
+        "Yousef's uncle asked where to go.",
+        "They drove to the lagoon.",
+        "Yousef saw a tall pink bird.",
+        "A dog ran and the bird flew away.",
+        "Yousef found the bird in his book."
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٥ — القاعدة",
+   "heading": "كان يفعل…",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "الماضي المستمر: was / were + ing",
+     "html": "<p>لشيء كان يحدث في لحظة في الماضي:</p><div class=\"ex\">It <b>was standing</b> on one leg.</div><div class=\"ex\">I <b>was watching</b> the bird when it flew away.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "It was standing on one leg. I was watching the bird when it flew away."
+      }
+     ]
+    },
+    {
+     "type": "panel",
+     "title": "could = استطعت (ماضي can)",
+     "html": "<div class=\"ex\">I <b>could see</b> lots of ducks.</div>"
+    },
+    {
+     "type": "panel",
+     "title": "أفعال شاذة في القصة",
+     "html": "",
+     "blocks": [
+      {
+       "type": "verbs",
+       "pairs": [
+        [
+         "fly",
+         "flew"
+        ],
+        [
+         "run",
+         "ran"
+        ],
+        [
+         "feel",
+         "felt"
+        ],
+        [
+         "drive",
+         "drove"
+        ],
+        [
+         "take",
+         "took"
+        ],
+        [
+         "can",
+         "could"
+        ]
+       ]
+      }
+     ]
+    }
+   ],
+   "starOnVisit": true
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٦ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ، واكتب كل كلمة في جملة من عندك</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "binoculars",
+       "ipa": "/bɪˈnɒkjələz/",
+       "meaning": "منظار",
+       "ex": "I took out my binoculars."
+      },
+      {
+       "must": 1,
+       "term": "feathers",
+       "ipa": "/ˈfeðəz/",
+       "meaning": "ريش",
+       "ex": "I could see black feathers."
+      },
+      {
+       "must": 1,
+       "term": "wings",
+       "ipa": "/wɪŋz/",
+       "meaning": "أجنحة",
+       "ex": "Under its wings …"
+      },
+      {
+       "must": 1,
+       "term": "bill",
+       "ipa": "/bɪl/",
+       "meaning": "منقار (يقولها مراقبو الطيور)",
+       "ex": "It had a curved bill.",
+       "tip": "ويقال له أيضاً beak."
+      },
+      {
+       "must": 1,
+       "term": "fly",
+       "ipa": "/flaɪ/",
+       "meaning": "يطير",
+       "ex": "The bird flew away.",
+       "alt": "flew"
+      },
+      {
+       "must": 1,
+       "term": "hundreds of",
+       "ipa": "/ˈhʌndrədz əv/",
+       "meaning": "مئات من",
+       "ex": "There were hundreds of birds!"
+      },
+      {
+       "must": 0,
+       "term": "hobby",
+       "ipa": "/ˈhɒbi/",
+       "meaning": "هواية",
+       "ex": "It's a great hobby."
+      },
+      {
+       "must": 0,
+       "term": "excited",
+       "ipa": "/ɪkˈsaɪtɪd/",
+       "meaning": "متحمّس",
+       "ex": "I felt so excited."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٧ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 6,
+     "items": [
+      {
+       "q": "ما معنى binoculars؟",
+       "a": "منظار",
+       "o": [
+        "منظار",
+        "كاميرا",
+        "خريطة"
+       ],
+       "why": "binoculars = منظار.",
+       "ar": true
+      },
+      {
+       "q": "The bird ___ away.",
+       "a": "flew",
+       "o": [
+        "flew",
+        "flied",
+        "fly"
+       ],
+       "why": "fly → flew.",
+       "gap": true
+      },
+      {
+       "q": "It was ___ on one leg.",
+       "a": "standing",
+       "o": [
+        "standing",
+        "stand",
+        "stood"
+       ],
+       "why": "was + ing.",
+       "gap": true
+      },
+      {
+       "q": "I ___ see lots of ducks.",
+       "a": "could",
+       "o": [
+        "could",
+        "can",
+        "cans"
+       ],
+       "why": "ماضي can هو could.",
+       "gap": true
+      },
+      {
+       "q": "Who took the photo?",
+       "a": "Nada",
+       "o": [
+        "Nada",
+        "Yousef",
+        "The uncle"
+       ],
+       "why": "Nada had a photo of it."
+      },
+      {
+       "q": "ما معنى feathers؟",
+       "a": "ريش",
+       "o": [
+        "ريش",
+        "أرجل",
+        "عيون"
+       ],
+       "why": "feathers = ريش.",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "There were hundreds of birds!",
+       "q": "استمع: ماذا قال؟",
+       "a": "There were hundreds of birds!",
+       "o": [
+        "There were hundreds of birds!",
+        "There was a big bird.",
+        "There were some ducks."
+       ],
+       "why": "hundreds of = مئات من."
+      },
+      {
+       "q": "How did Yousef feel at the end?",
+       "a": "Excited",
+       "o": [
+        "Excited",
+        "Bored",
+        "Sad"
+       ],
+       "why": "I felt so excited."
+      }
+     ]
+    }
+   ],
+   "lead": "8 أسئلة. تنجح بـ 6 من 8."
+  }
+ ]
+}

@@ -1,0 +1,561 @@
+{
+ "id": "en-7-u1-l3",
+ "grade": 7,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 1 · Lesson 3: Whose scrapbooks are these?",
+ "titleAr": "الوحدة الأولى — الدرس الثالث: لمن هذه الدفاتر؟",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "هوايات وقت الفراغ",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "spare time",
+       "ar": "وقت الفراغ",
+       "em": "⏰"
+      },
+      {
+       "id": "v1",
+       "en": "collect",
+       "ar": "يجمع",
+       "em": "🗃️"
+      },
+      {
+       "id": "v2",
+       "en": "stamps",
+       "ar": "طوابع بريد",
+       "em": "📮"
+      },
+      {
+       "id": "v3",
+       "en": "scrapbook",
+       "ar": "دفتر قصاصات وصور",
+       "em": "📒"
+      },
+      {
+       "id": "v4",
+       "en": "interested in",
+       "ar": "مهتم بـ",
+       "em": "💡"
+      },
+      {
+       "id": "v5",
+       "en": "pilot",
+       "ar": "طيّار",
+       "em": "👨‍✈️"
+      },
+      {
+       "id": "v6",
+       "en": "planes",
+       "ar": "طائرات",
+       "em": "✈️"
+      },
+      {
+       "id": "v7",
+       "en": "plants",
+       "ar": "نباتات",
+       "em": "🌿"
+      },
+      {
+       "id": "v8",
+       "en": "flowers",
+       "ar": "زهور",
+       "em": "🌸"
+      },
+      {
+       "id": "v9",
+       "en": "take photos",
+       "ar": "يلتقط صوراً",
+       "em": "📷"
+      },
+      {
+       "id": "v10",
+       "en": "cut out",
+       "ar": "يقص",
+       "em": "✂️"
+      },
+      {
+       "id": "v11",
+       "en": "colours and shapes",
+       "ar": "ألوان وأشكال",
+       "em": "🎨"
+      }
+     ],
+     "need": 8,
+     "star": true
+    }
+   ],
+   "lead": "اسمع ٨ بطاقات على الأقل."
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "ستة أصدقاء يتحدثون عن هواياتهم",
+   "blocks": [
+    {
+     "type": "dialogue",
+     "star": true
+    }
+   ],
+   "lead": "شغّل الحوار وتابع الكلمات. انتبه لما يجمعه كل واحد."
+  },
+  {
+   "title": "لمن الدفتر؟",
+   "eyebrow": "الخطوة ٣ — لمن الدفتر؟",
+   "heading": "لمن هذه الدفاتر؟",
+   "blocks": [
+    {
+     "type": "assign",
+     "star": true,
+     "owners": [
+      [
+       "Hamza",
+       ""
+      ],
+      [
+       "Yousef",
+       ""
+      ],
+      [
+       "Laila",
+       ""
+      ],
+      [
+       "Tariq",
+       ""
+      ],
+      [
+       "Nour",
+       ""
+      ],
+      [
+       "Hana",
+       ""
+      ]
+     ],
+     "items": [
+      {
+       "id": "s1",
+       "en": "Stamps and flags",
+       "em": "📮"
+      },
+      {
+       "id": "s2",
+       "en": "Wild animals",
+       "em": "🦁"
+      },
+      {
+       "id": "s3",
+       "en": "Birds",
+       "em": "🐦"
+      },
+      {
+       "id": "s4",
+       "en": "Planes",
+       "em": "✈️"
+      },
+      {
+       "id": "s5",
+       "en": "Football players",
+       "em": "⚽"
+      },
+      {
+       "id": "s6",
+       "en": "Plants and flowers",
+       "em": "🌸"
+      }
+     ],
+     "answer": {
+      "s1": "Hamza",
+      "s2": "Yousef",
+      "s3": "Laila",
+      "s4": "Tariq",
+      "s5": "Nour",
+      "s6": "Hana"
+     }
+    }
+   ],
+   "lead": "اضغط على كل دفتر مرة أو أكثر لتختار صاحبه."
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٤ — القاعدة",
+   "heading": "كيف نتحدث عن هواياتنا؟",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "١. <span lang=\"en\">like / enjoy</span> + فعل بـ <span lang=\"en\">-ing</span>",
+     "html": "<div class=\"ex\">I <b>like finding</b> out about other countries.</div><div class=\"ex\">I <b>enjoy collecting</b> pictures of flowers.</div><p class=\"note\">بعد like و enjoy نضيف ing للفعل.</p>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "I like finding out about other countries. I enjoy collecting pictures of flowers."
+      }
+     ]
+    },
+    {
+     "type": "panel",
+     "title": "٢. <span lang=\"en\">be interested in</span>",
+     "html": "<div class=\"ex\">I'<b>m interested in</b> birds.</div><div class=\"ex\">Tariq <b>is interested in</b> planes.</div><p class=\"note\">انتبه لحرف الجر: in وليس on.</p>"
+    },
+    {
+     "type": "panel",
+     "title": "٣. <span lang=\"en\">want to</span> + فعل",
+     "html": "<div class=\"ex\">I <b>want to be</b> a pilot.</div><div class=\"ex\">I <b>want to go</b> to Kenya.</div>"
+    }
+   ],
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٥ — تدرّب",
+   "heading": "تمارين",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "I enjoy ___ stamps.",
+           "a": "collecting",
+           "o": [
+            "collecting",
+            "collect",
+            "collects"
+           ]
+          },
+          {
+           "s": "Laila is interested ___ birds.",
+           "a": "in",
+           "o": [
+            "in",
+            "on",
+            "at"
+           ]
+          },
+          {
+           "s": "Tariq wants ___ a pilot.",
+           "a": "to be",
+           "o": [
+            "to be",
+            "be",
+            "being"
+           ]
+          },
+          {
+           "s": "Hana likes ___ pictures of flowers.",
+           "a": "collecting",
+           "o": [
+            "collecting",
+            "collected",
+            "collect"
+           ]
+          },
+          {
+           "s": "In my ___ time, I read books.",
+           "a": "spare",
+           "o": [
+            "spare",
+            "free of",
+            "empty"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "In my spare time I like reading.",
+          "I am interested in planes.",
+          "She enjoys taking photos of birds."
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمرينين لتأخذ النجمة."
+  },
+  {
+   "title": "تحدّث",
+   "eyebrow": "الخطوة ٦ — تحدّث",
+   "heading": "تحدّث عن هوايتك",
+   "blocks": [
+    {
+     "type": "speakLine",
+     "star": true,
+     "text": "In my spare time, I like collecting stamps."
+    },
+    {
+     "type": "speakLine",
+     "text": "I'm interested in football."
+    }
+   ],
+   "lead": "استمع ثم قل الجمل بصوت عالٍ، ثم غيّر الهواية بهوايتك أنت."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٧ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ، واكتب كل كلمة في جملة من عندك</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "spare time",
+       "ipa": "/speə taɪm/",
+       "meaning": "وقت الفراغ",
+       "ex": "In my spare time, I like reading."
+      },
+      {
+       "must": 1,
+       "term": "collect",
+       "ipa": "/kəˈlekt/",
+       "meaning": "يجمع",
+       "ex": "I collect stamps.",
+       "alt": "collecting"
+      },
+      {
+       "must": 1,
+       "term": "interested in",
+       "ipa": "/ˈɪntrəstɪd ɪn/",
+       "meaning": "مهتم بـ",
+       "ex": "I'm interested in birds.",
+       "tip": "نقول interested in وليس interested on."
+      },
+      {
+       "must": 1,
+       "term": "enjoy",
+       "ipa": "/ɪnˈdʒɔɪ/",
+       "meaning": "يستمتع بـ",
+       "ex": "I enjoy collecting pictures.",
+       "tip": "بعدها فعل بـ ing: enjoy reading."
+      },
+      {
+       "must": 1,
+       "term": "scrapbook",
+       "ipa": "/ˈskræpbʊk/",
+       "meaning": "دفتر نلصق فيه الصور والقصاصات",
+       "ex": "Scrapbook 3 is mine."
+      },
+      {
+       "must": 1,
+       "term": "pilot",
+       "ipa": "/ˈpaɪlət/",
+       "meaning": "طيّار",
+       "ex": "I want to be a pilot."
+      },
+      {
+       "must": 0,
+       "term": "stamps",
+       "ipa": "/stæmps/",
+       "meaning": "طوابع بريد",
+       "ex": "I ask everyone to keep their stamps for me."
+      },
+      {
+       "must": 0,
+       "term": "find out",
+       "ipa": "/faɪnd aʊt/",
+       "meaning": "يكتشف / يعرف",
+       "ex": "I find out the names of birds."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٨ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 6,
+     "items": [
+      {
+       "q": "Who wants to be a pilot?",
+       "a": "Tariq",
+       "o": [
+        "Tariq",
+        "Hamza",
+        "Nour"
+       ],
+       "why": "قال طارق: I want to be a pilot."
+      },
+      {
+       "q": "What does Hamza collect?",
+       "a": "Stamps and flags",
+       "o": [
+        "Stamps and flags",
+        "Birds",
+        "Flowers"
+       ],
+       "why": "حمزة يجمع الطوابع والأعلام."
+      },
+      {
+       "q": "I'm interested ___ animals.",
+       "a": "in",
+       "o": [
+        "in",
+        "on",
+        "to"
+       ],
+       "why": "interested in.",
+       "gap": true
+      },
+      {
+       "q": "She enjoys ___ photos.",
+       "a": "taking",
+       "o": [
+        "taking",
+        "take",
+        "took"
+       ],
+       "why": "بعد enjoy فعل بـ ing.",
+       "gap": true
+      },
+      {
+       "q": "ما معنى spare time؟",
+       "a": "وقت الفراغ",
+       "o": [
+        "وقت الفراغ",
+        "وقت المدرسة",
+        "وقت النوم"
+       ],
+       "why": "spare time = وقت الفراغ.",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "I enjoy collecting pictures of plants and flowers.",
+       "q": "استمع: من المتحدثة؟",
+       "a": "Hana",
+       "o": [
+        "Hana",
+        "Laila",
+        "Nour"
+       ],
+       "why": "هناء تجمع صور النباتات والزهور."
+      },
+      {
+       "q": "Laila takes photos of …",
+       "a": "birds",
+       "o": [
+        "birds",
+        "planes",
+        "football players"
+       ],
+       "why": "ليلى مهتمة بالطيور."
+      },
+      {
+       "q": "Yousef wants to go to …",
+       "a": "Kenya",
+       "o": [
+        "Kenya",
+        "Libya",
+        "Italy"
+       ],
+       "why": "قال يوسف: I want to go to Kenya."
+      }
+     ]
+    }
+   ],
+   "lead": "8 أسئلة. تنجح بـ 6 من 8."
+  }
+ ],
+ "characters": {
+  "Hamza": {
+   "ar": "حمزة",
+   "color": "--c1",
+   "g": "m",
+   "pitch": 1.25
+  },
+  "Yousef": {
+   "ar": "يوسف",
+   "color": "--c2",
+   "g": "m",
+   "pitch": 1.35
+  },
+  "Laila": {
+   "ar": "ليلى",
+   "color": "--c3",
+   "g": "f",
+   "pitch": 1.5
+  },
+  "Tariq": {
+   "ar": "طارق",
+   "color": "--c5",
+   "g": "m",
+   "pitch": 1.2
+  },
+  "Nour": {
+   "ar": "نور",
+   "color": "--c4",
+   "g": "f",
+   "pitch": 1.6
+  },
+  "Hana": {
+   "ar": "هناء",
+   "color": "--c3",
+   "g": "f",
+   "pitch": 1.7
+  }
+ },
+ "left": [
+  "Hamza",
+  "Laila",
+  "Nour"
+ ],
+ "dialogue": [
+  [
+   "Hamza",
+   "Hi, I'm Hamza. In my spare time, I like finding out about other countries. I collect stamps and flags from all over the world."
+  ],
+  [
+   "Yousef",
+   "I'm Yousef. One day, I want to go to Kenya and take photos of the animals. For now, I cut out pictures from magazines."
+  ],
+  [
+   "Laila",
+   "My name is Laila. I'm interested in birds. I take photos of them, and then I find out their names."
+  ],
+  [
+   "Tariq",
+   "I'm Tariq. I want to be a pilot. I'm very interested in planes and flying, so you can guess what I collect!"
+  ],
+  [
+   "Nour",
+   "I'm Nour. I play football, I watch it on TV and I go to matches. So you know whose pictures I collect."
+  ],
+  [
+   "Hana",
+   "I'm Hana. I enjoy collecting pictures of plants and flowers. I love their colours and shapes."
+  ]
+ ]
+}

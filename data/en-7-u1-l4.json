@@ -1,0 +1,455 @@
+{
+ "id": "en-7-u1-l4",
+ "grade": 7,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 1 · Lesson 4: How often?",
+ "titleAr": "الوحدة الأولى — الدرس الرابع: كم مرة؟",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "كلمات التكرار",
+   "blocks": [
+    {
+     "type": "vocab",
+     "need": 5,
+     "star": true,
+     "items": [
+      {
+       "id": "v0",
+       "en": "always",
+       "ar": "دائماً (١٠٠٪)",
+       "em": "🟩🟩🟩🟩🟩"
+      },
+      {
+       "id": "v1",
+       "en": "usually",
+       "ar": "عادةً (٨٠٪)",
+       "em": "🟩🟩🟩🟩⬜"
+      },
+      {
+       "id": "v2",
+       "en": "often",
+       "ar": "غالباً / كثيراً (٦٠٪)",
+       "em": "🟩🟩🟩⬜⬜"
+      },
+      {
+       "id": "v3",
+       "en": "sometimes",
+       "ar": "أحياناً (٣٠٪)",
+       "em": "🟩🟩⬜⬜⬜"
+      },
+      {
+       "id": "v4",
+       "en": "never",
+       "ar": "أبداً (٠٪)",
+       "em": "⬜⬜⬜⬜⬜"
+      },
+      {
+       "id": "v5",
+       "en": "How often?",
+       "ar": "كم مرة؟",
+       "em": "❓"
+      }
+     ]
+    }
+   ],
+   "lead": "هذه الكلمات تخبرنا كم مرة نفعل الشيء. اسمعها كلها."
+  },
+  {
+   "title": "اقرأ",
+   "eyebrow": "الخطوة ٢ — اقرأ",
+   "heading": "يوم سالم",
+   "blocks": [
+    {
+     "type": "reading",
+     "star": true,
+     "title": "Salem's Day",
+     "paragraphs": [
+      "Every day after school, I always have lunch with my family. My father usually reads the newspaper after lunch.",
+      "I often help my mother in the kitchen. I never watch TV before I finish my homework.",
+      "In the evening, my brother and I sometimes play football in the street.",
+      "On Fridays, we usually visit our grandparents. Grandma is always happy to see us!"
+     ]
+    },
+    {
+     "type": "choice",
+     "items": [
+      {
+       "q": "How often does Salem have lunch with his family?",
+       "a": "always",
+       "o": [
+        "always",
+        "sometimes",
+        "never"
+       ],
+       "why": "I always have lunch with my family."
+      },
+      {
+       "q": "When does Salem watch TV?",
+       "a": "After his homework.",
+       "o": [
+        "After his homework.",
+        "Before his homework.",
+        "Never."
+       ],
+       "why": "I never watch TV before I finish my homework."
+      },
+      {
+       "q": "Who is always happy?",
+       "a": "Grandma",
+       "o": [
+        "Grandma",
+        "Salem's father",
+        "Salem's brother"
+       ],
+       "why": "Grandma is always happy to see us!"
+      }
+     ]
+    }
+   ],
+   "lead": "استمع إلى سالم وهو يصف يومه. لاحظ كلمات التكرار."
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٣ — القاعدة",
+   "heading": "أين نضع كلمة التكرار؟",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "١. بعد فعل <span lang=\"en\">be</span> (am / is / are)",
+     "html": "<div class=\"ex\">Grandma <b>is always</b> happy.</div><div class=\"ex\">We <b>are never</b> at home on Fridays.</div>"
+    },
+    {
+     "type": "panel",
+     "title": "٢. قبل الأفعال الأخرى",
+     "html": "<div class=\"ex\">I <b>always have</b> lunch with my family.</div><div class=\"ex\">My brother and I <b>sometimes play</b> football.</div><p class=\"note\">و <span lang=\"en\">sometimes</span> يمكن أن تأتي في أول الجملة: <span lang=\"en\">Sometimes we play football.</span></p>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "I always have lunch with my family. Grandma is always happy."
+      }
+     ]
+    },
+    {
+     "type": "panel",
+     "title": "٣. عادة أم شيء حدث وانتهى؟",
+     "html": "<p>للعادة نستخدم المضارع البسيط، ومع he / she نضيف s:</p><div class=\"ex\">I <b>play</b> football every day. — He <b>plays</b> football every day.</div><p>لشيء حدث وانتهى نستخدم الماضي البسيط:</p><div class=\"ex\">I <b>played</b> football yesterday.</div>"
+    }
+   ],
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٤ — تدرّب",
+   "heading": "تمارين",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "الجملة الصحيحة",
+       "blocks": [
+        {
+         "type": "choice",
+         "items": [
+          {
+           "q": "Choose the correct sentence.",
+           "a": "He is always happy.",
+           "o": [
+            "He is always happy.",
+            "He always is happy."
+           ],
+           "why": "بعد is نضع always."
+          },
+          {
+           "q": "Choose the correct sentence.",
+           "a": "I usually do my homework after lunch.",
+           "o": [
+            "I usually do my homework after lunch.",
+            "I do usually my homework after lunch."
+           ],
+           "why": "قبل الفعل do."
+          },
+          {
+           "q": "Choose the correct sentence.",
+           "a": "We are never late for school.",
+           "o": [
+            "We are never late for school.",
+            "We never are late for school."
+           ],
+           "why": "بعد are."
+          },
+          {
+           "q": "Choose the correct sentence.",
+           "a": "She often reads books.",
+           "o": [
+            "She often reads books.",
+            "She reads often books."
+           ],
+           "why": "قبل الفعل reads."
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "I usually get up at six.",
+          "She is never late for school.",
+          "We sometimes play games."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "عادة أم ماضٍ",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "I ___ football every day.",
+           "a": "play",
+           "o": [
+            "play",
+            "played",
+            "plays"
+           ]
+          },
+          {
+           "s": "Yesterday, I ___ football.",
+           "a": "played",
+           "o": [
+            "played",
+            "play",
+            "plays"
+           ]
+          },
+          {
+           "s": "My sister ___ every weekend.",
+           "a": "reads",
+           "o": [
+            "reads",
+            "read",
+            "reading"
+           ]
+          },
+          {
+           "s": "Last week, she ___ an interesting story.",
+           "a": "read",
+           "o": [
+            "read",
+            "reads",
+            "reading"
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين الثلاثة."
+  },
+  {
+   "title": "تحدّث",
+   "eyebrow": "الخطوة ٥ — تحدّث",
+   "heading": "تحدّث عن عاداتك",
+   "blocks": [
+    {
+     "type": "speakLine",
+     "star": true,
+     "text": "I always get up early."
+    },
+    {
+     "type": "speakLine",
+     "text": "I sometimes help my mother."
+    }
+   ],
+   "lead": "قل الجمل، ثم غيّر الكلمات لتصف يومك أنت."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٦ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ، واكتب كل كلمة في جملة من عندك</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "always",
+       "ipa": "/ˈɔːlweɪz/",
+       "meaning": "دائماً",
+       "ex": "Grandma is always happy."
+      },
+      {
+       "must": 1,
+       "term": "usually",
+       "ipa": "/ˈjuːʒuəli/",
+       "meaning": "عادةً",
+       "ex": "I usually do my homework after lunch."
+      },
+      {
+       "must": 1,
+       "term": "often",
+       "ipa": "/ˈɒfn/",
+       "meaning": "غالباً / كثيراً",
+       "ex": "I often help my mother."
+      },
+      {
+       "must": 1,
+       "term": "sometimes",
+       "ipa": "/ˈsʌmtaɪmz/",
+       "meaning": "أحياناً",
+       "ex": "We sometimes play football.",
+       "tip": "يمكن أن تأتي في أول الجملة."
+      },
+      {
+       "must": 1,
+       "term": "never",
+       "ipa": "/ˈnevə/",
+       "meaning": "أبداً",
+       "ex": "I never watch TV before my homework.",
+       "tip": "الجملة مع never مثبتة: لا نضيف not."
+      },
+      {
+       "must": 1,
+       "term": "How often …?",
+       "ipa": "/haʊ ˈɒfn/",
+       "meaning": "كم مرة …؟",
+       "ex": "How often do you play football?"
+      },
+      {
+       "must": 0,
+       "term": "every day",
+       "ipa": "/ˈevri deɪ/",
+       "meaning": "كل يوم",
+       "ex": "I play football every day."
+      },
+      {
+       "must": 0,
+       "term": "yesterday",
+       "ipa": "/ˈjestədeɪ/",
+       "meaning": "أمس",
+       "ex": "I played football yesterday."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٧ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 6,
+     "items": [
+      {
+       "q": "ما معنى never؟",
+       "a": "أبداً",
+       "o": [
+        "أبداً",
+        "دائماً",
+        "أحياناً"
+       ],
+       "why": "never = أبداً.",
+       "ar": true
+      },
+      {
+       "q": "ما معنى usually؟",
+       "a": "عادةً",
+       "o": [
+        "عادةً",
+        "نادراً",
+        "أبداً"
+       ],
+       "why": "usually = عادةً.",
+       "ar": true
+      },
+      {
+       "q": "Choose the correct sentence.",
+       "a": "I am always happy.",
+       "o": [
+        "I am always happy.",
+        "I always am happy."
+       ],
+       "why": "بعد am."
+      },
+      {
+       "q": "Choose the correct sentence.",
+       "a": "They often visit us.",
+       "o": [
+        "They often visit us.",
+        "They visit often us."
+       ],
+       "why": "قبل الفعل visit."
+      },
+      {
+       "q": "He ___ to school every day.",
+       "a": "walks",
+       "o": [
+        "walks",
+        "walk",
+        "walked"
+       ],
+       "why": "عادة مع he: نضيف s.",
+       "gap": true
+      },
+      {
+       "q": "We ___ our grandparents last Friday.",
+       "a": "visited",
+       "o": [
+        "visited",
+        "visit",
+        "visits"
+       ],
+       "why": "last Friday ماضٍ.",
+       "gap": true
+      },
+      {
+       "type": "listen",
+       "say": "My brother and I sometimes play football.",
+       "q": "استمع: كم مرة يلعبان كرة القدم؟",
+       "a": "sometimes",
+       "o": [
+        "sometimes",
+        "always",
+        "never"
+       ],
+       "why": "sometimes = أحياناً."
+      },
+      {
+       "q": "أي كلمة تعني ١٠٠٪ من المرات؟",
+       "a": "always",
+       "o": [
+        "always",
+        "often",
+        "sometimes"
+       ],
+       "why": "always = دائماً."
+      }
+     ]
+    }
+   ],
+   "lead": "8 أسئلة. تنجح بـ 6 من 8."
+  }
+ ]
+}

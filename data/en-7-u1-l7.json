@@ -1,0 +1,366 @@
+{
+ "id": "en-7-u1-l7",
+ "grade": 7,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 1 · Lesson 7: An Email from Australia",
+ "titleAr": "الوحدة الأولى — الدرس السابع: رسالة من أستراليا",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "كلمات الرسالة",
+   "blocks": [
+    {
+     "type": "vocab",
+     "need": 6,
+     "star": true,
+     "items": [
+      {
+       "id": "v0",
+       "en": "email",
+       "ar": "رسالة إلكترونية",
+       "em": "📧"
+      },
+      {
+       "id": "v1",
+       "en": "wonderful",
+       "ar": "رائع",
+       "em": "✨"
+      },
+      {
+       "id": "v2",
+       "en": "cousin",
+       "ar": "ابن / ابنة العم أو الخال",
+       "em": "👧"
+      },
+      {
+       "id": "v3",
+       "en": "barbecue",
+       "ar": "شواء",
+       "em": "🍖"
+      },
+      {
+       "id": "v4",
+       "en": "postcards",
+       "ar": "بطاقات بريدية",
+       "em": "🏞️"
+      },
+      {
+       "id": "v5",
+       "en": "favourite",
+       "ar": "المفضّل",
+       "em": "❤️"
+      },
+      {
+       "id": "v6",
+       "en": "Bye for now",
+       "ar": "إلى اللقاء الآن",
+       "em": "👋"
+      }
+     ]
+    }
+   ],
+   "lead": "اسمعها كلها."
+  },
+  {
+   "title": "اقرأ",
+   "eyebrow": "الخطوة ٢ — اقرأ",
+   "heading": "رسالة من لوسي",
+   "blocks": [
+    {
+     "type": "reading",
+     "star": true,
+     "voice": "teacher",
+     "mail": "<b>From:</b> Lucy Brown &nbsp; <b>To:</b> Salma Idris<br><b>Subject:</b> Back home after a great holiday",
+     "paragraphs": [
+      "Dear Salma,",
+      "How are you? Are you back at school now?",
+      "I came home to Perth last week after a wonderful holiday. First, I went camping with my family near the beach. Then I stayed with my cousin, Emma, for ten days.",
+      "We had a great time. We often swam in the sea and took lots of pictures. One day we visited the zoo. Is there a zoo in Benghazi? In the evenings we sometimes went to the cinema, but we usually stayed at home and played games.",
+      "Everyone in Emma's family loves chicken, so we often had chicken cooked on a barbecue. What is your favourite food?",
+      "In my spare time, I collect postcards from different countries. I don't have any from Libya. Can you send me some, please?",
+      "What did you do in the holidays? And what do you do in your spare time? Please write and tell me everything.",
+      "Bye for now,",
+      "Lucy"
+     ]
+    }
+   ],
+   "lead": "لوسي من أستراليا كتبت رسالة لصديقتها سلمى في ليبيا. استمع واقرأ."
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٣ — افهم",
+   "heading": "أسئلة عن الرسالة",
+   "blocks": [
+    {
+     "type": "choice",
+     "star": true,
+     "items": [
+      {
+       "q": "Where does Lucy live?",
+       "a": "In Perth.",
+       "o": [
+        "In Perth.",
+        "In Benghazi.",
+        "In London."
+       ],
+       "why": "I came home to Perth."
+      },
+      {
+       "q": "Who is Emma?",
+       "a": "Lucy's cousin.",
+       "o": [
+        "Lucy's cousin.",
+        "Lucy's teacher.",
+        "Salma's sister."
+       ],
+       "why": "my cousin, Emma."
+      },
+      {
+       "q": "What does Emma's family love?",
+       "a": "Chicken.",
+       "o": [
+        "Chicken.",
+        "Fish.",
+        "Pizza."
+       ],
+       "why": "Everyone in Emma's family loves chicken."
+      },
+      {
+       "q": "What does Lucy collect?",
+       "a": "Postcards.",
+       "o": [
+        "Postcards.",
+        "Stamps.",
+        "Photos of birds."
+       ],
+       "why": "I collect postcards from different countries."
+      },
+      {
+       "q": "What did they usually do in the evenings?",
+       "a": "They stayed at home and played games.",
+       "o": [
+        "They stayed at home and played games.",
+        "They went to the cinema.",
+        "They went camping."
+       ],
+       "why": "we usually stayed at home and played games."
+      },
+      {
+       "q": "How many questions does Lucy ask Salma?",
+       "a": "7",
+       "o": [
+        "7",
+        "3",
+        "5"
+       ],
+       "why": "عدّ علامات الاستفهام في الرسالة: سبعة أسئلة."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "شكل الرسالة",
+   "eyebrow": "الخطوة ٤ — شكل الرسالة",
+   "heading": "كيف نكتب رسالة لصديق؟",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أجزاء الرسالة",
+     "html": "<div class=\"ex\"><b>Dear Salma,</b> ← التحية</div><div class=\"ex\">How are you? … ← بداية لطيفة</div><div class=\"ex\">I came home … ← الأخبار</div><div class=\"ex\">What did you do …? ← أسئلة لصديقك</div><div class=\"ex\"><b>Bye for now, Lucy</b> ← الختام والاسم</div>"
+    },
+    {
+     "type": "panel",
+     "title": "كلمات السؤال",
+     "html": "<div class=\"ex\"><b>Who</b> = مَن — <b>What</b> = ماذا — <b>Where</b> = أين — <b>When</b> = متى — <b>How many</b> = كم عدد</div>"
+    }
+   ],
+   "starOnVisit": true
+  },
+  {
+   "title": "رتّب ردّك",
+   "eyebrow": "الخطوة ٥ — رتّب ردّك",
+   "heading": "ساعد سلمى في كتابة ردّها",
+   "blocks": [
+    {
+     "type": "sequence",
+     "star": true,
+     "lang": "en",
+     "items": [
+      {
+       "q": "Put Salma's reply in order.",
+       "order": [
+        "Dear Lucy,",
+        "Thank you for your email.",
+        "In the holidays, I visited my grandparents in Ghadames.",
+        "In my spare time, I like reading and drawing.",
+        "What is your favourite sport?",
+        "Bye for now,",
+        "Salma"
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "رتّب أجزاء رسالة سلمى."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٦ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ، واكتب كل كلمة في جملة من عندك</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "Dear …",
+       "ipa": "/dɪə/",
+       "meaning": "عزيزي / عزيزتي (في بداية الرسالة)",
+       "ex": "Dear Salma,"
+      },
+      {
+       "must": 1,
+       "term": "Bye for now",
+       "ipa": "/baɪ fə naʊ/",
+       "meaning": "إلى اللقاء الآن (في نهاية الرسالة)",
+       "ex": "Bye for now, Lucy"
+      },
+      {
+       "must": 1,
+       "term": "cousin",
+       "ipa": "/ˈkʌzn/",
+       "meaning": "ابن/ابنة العم أو الخال",
+       "ex": "I stayed with my cousin, Emma."
+      },
+      {
+       "must": 1,
+       "term": "favourite",
+       "ipa": "/ˈfeɪvərɪt/",
+       "meaning": "المفضّل",
+       "ex": "What is your favourite food?"
+      },
+      {
+       "must": 1,
+       "term": "wonderful",
+       "ipa": "/ˈwʌndəfl/",
+       "meaning": "رائع",
+       "ex": "a wonderful holiday"
+      },
+      {
+       "must": 1,
+       "term": "send",
+       "ipa": "/send/",
+       "meaning": "يرسل",
+       "ex": "Can you send me some, please?",
+       "alt": "sent"
+      },
+      {
+       "must": 0,
+       "term": "postcard",
+       "ipa": "/ˈpəʊstkɑːd/",
+       "meaning": "بطاقة بريدية",
+       "ex": "I collect postcards."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٧ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "How do we start an email to a friend?",
+       "a": "Dear …,",
+       "o": [
+        "Dear …,",
+        "Bye for now,",
+        "Thank you,"
+       ],
+       "why": "نبدأ بـ Dear."
+      },
+      {
+       "q": "How do we end it?",
+       "a": "Bye for now,",
+       "o": [
+        "Bye for now,",
+        "Dear …,",
+        "Hello,"
+       ],
+       "why": "نختم بـ Bye for now ثم الاسم."
+      },
+      {
+       "q": "ما معنى cousin؟",
+       "a": "ابن العم أو الخال",
+       "o": [
+        "ابن العم أو الخال",
+        "الجد",
+        "الجار"
+       ],
+       "why": "cousin = ابن/ابنة العم أو الخال.",
+       "ar": true
+      },
+      {
+       "q": "What is your ___ food?",
+       "a": "favourite",
+       "o": [
+        "favourite",
+        "wonderful",
+        "busy"
+       ],
+       "why": "favourite = المفضل.",
+       "gap": true
+      },
+      {
+       "q": "Where did Lucy go camping?",
+       "a": "Near the beach.",
+       "o": [
+        "Near the beach.",
+        "In the desert.",
+        "In Benghazi."
+       ],
+       "why": "near the beach."
+      },
+      {
+       "type": "listen",
+       "say": "Can you send me some, please?",
+       "q": "استمع: ماذا طلبت لوسي؟",
+       "a": "Can you send me some, please?",
+       "o": [
+        "Can you send me some, please?",
+        "Is there a zoo in Benghazi?",
+        "What is your favourite food?"
+       ],
+       "why": "طلبت أن ترسل لها سلمى بطاقات."
+      },
+      {
+       "q": "___ is Emma? She is Lucy's cousin.",
+       "a": "Who",
+       "o": [
+        "Who",
+        "What",
+        "Where"
+       ],
+       "why": "Who للسؤال عن شخص.",
+       "gap": true
+      }
+     ]
+    }
+   ],
+   "lead": "7 أسئلة. تنجح بـ 5 من 7."
+  }
+ ]
+}

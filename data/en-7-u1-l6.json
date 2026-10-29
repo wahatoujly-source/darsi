@@ -1,0 +1,367 @@
+{
+ "id": "en-7-u1-l6",
+ "grade": 7,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 1 · Lesson 6: Make Your Own Scrapbook",
+ "titleAr": "الوحدة الأولى — الدرس السادس: اصنع دفترك بنفسك",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "ماذا تحتاج؟",
+   "blocks": [
+    {
+     "type": "vocab",
+     "need": 7,
+     "star": true,
+     "items": [
+      {
+       "id": "v0",
+       "en": "cardboard",
+       "ar": "ورق مقوّى (كرتون)",
+       "em": "📦"
+      },
+      {
+       "id": "v1",
+       "en": "sheets of paper",
+       "ar": "أوراق",
+       "em": "📄"
+      },
+      {
+       "id": "v2",
+       "en": "a hole punch",
+       "ar": "خرّامة",
+       "em": "🕳️"
+      },
+      {
+       "id": "v3",
+       "en": "ribbon",
+       "ar": "شريط زينة",
+       "em": "🎀"
+      },
+      {
+       "id": "v4",
+       "en": "string",
+       "ar": "خيط",
+       "em": "🧵"
+      },
+      {
+       "id": "v5",
+       "en": "glue",
+       "ar": "صمغ / غراء",
+       "em": "🧴"
+      },
+      {
+       "id": "v6",
+       "en": "covers",
+       "ar": "غلافان",
+       "em": "📕"
+      },
+      {
+       "id": "v7",
+       "en": "holes",
+       "ar": "ثقوب",
+       "em": "⚫"
+      },
+      {
+       "id": "v8",
+       "en": "tie a bow",
+       "ar": "يربط عقدة فيونكة",
+       "em": "🎀"
+      }
+     ]
+    }
+   ],
+   "lead": "اسمع أسماء الأدوات."
+  },
+  {
+   "title": "اقرأ",
+   "eyebrow": "الخطوة ٢ — اقرأ",
+   "heading": "طريقة صنع دفتر القصاصات",
+   "blocks": [
+    {
+     "type": "reading",
+     "star": true,
+     "title": "Make Your Own Scrapbook",
+     "paragraphs": [
+      "What you need: two pieces of thick cardboard for the covers, lots of sheets of paper of the same size, a hole punch, some ribbon or string, and some glue.",
+      "What you do: First, punch two holes in each cover. Then punch holes in the paper in the same places. Next, put the paper between the two covers. Pull the ribbon through the holes and tie a bow. After that, glue your pictures and photos onto the pages. Finally, write a title on the front cover."
+     ]
+    }
+   ],
+   "lead": "استمع إلى التعليمات."
+  },
+  {
+   "title": "رتّب الخطوات",
+   "eyebrow": "الخطوة ٣ — رتّب الخطوات",
+   "heading": "رتّب خطوات العمل",
+   "blocks": [
+    {
+     "type": "sequence",
+     "star": true,
+     "lang": "en",
+     "items": [
+      {
+       "q": "Put the steps in order.",
+       "order": [
+        "Punch two holes in each cover.",
+        "Punch holes in the paper in the same places.",
+        "Put the paper between the two covers.",
+        "Pull the ribbon through the holes and tie a bow.",
+        "Glue your pictures and photos onto the pages.",
+        "Write a title on the front cover."
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط الخطوات بالترتيب الصحيح."
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٤ — القاعدة",
+   "heading": "لغة التعليمات",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "فعل الأمر",
+     "html": "<p>في التعليمات نبدأ الجملة بالفعل مباشرة، دون فاعل:</p><div class=\"ex\"><b>Punch</b> two holes. <b>Put</b> the paper between the covers. <b>Write</b> a title.</div><p>وللنهي نستخدم <b lang=\"en\">Don't</b>:</p><div class=\"ex\"><b>Don't</b> use too much glue.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Punch two holes. Put the paper between the covers. Don't use too much glue."
+      }
+     ]
+    },
+    {
+     "type": "panel",
+     "title": "كلمات الترتيب",
+     "html": "<div class=\"ex\"><b>First</b> → <b>Then</b> → <b>Next</b> → <b>After that</b> → <b>Finally</b></div>"
+    }
+   ],
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٥ — تدرّب",
+   "heading": "أسئلة",
+   "blocks": [
+    {
+     "type": "choice",
+     "star": true,
+     "items": [
+      {
+       "q": "What do you use to make holes?",
+       "a": "a hole punch",
+       "o": [
+        "a hole punch",
+        "glue",
+        "ribbon"
+       ],
+       "why": "الخرّامة تصنع الثقوب."
+      },
+      {
+       "q": "What do you use to stick photos?",
+       "a": "glue",
+       "o": [
+        "glue",
+        "string",
+        "cardboard"
+       ],
+       "why": "الصمغ للصق."
+      },
+      {
+       "q": "What are the covers made of?",
+       "a": "thick cardboard",
+       "o": [
+        "thick cardboard",
+        "glass",
+        "plastic bags"
+       ],
+       "why": "two pieces of thick cardboard."
+      },
+      {
+       "q": "What do you do first?",
+       "a": "Punch two holes in each cover.",
+       "o": [
+        "Punch two holes in each cover.",
+        "Write a title.",
+        "Glue the photos."
+       ],
+       "why": "First, punch two holes in each cover."
+      },
+      {
+       "q": "What do you do last?",
+       "a": "Write a title on the front cover.",
+       "o": [
+        "Write a title on the front cover.",
+        "Put the paper between the covers.",
+        "Tie a bow."
+       ],
+       "why": "Finally, write a title."
+      }
+     ]
+    }
+   ],
+   "lead": "اختر الإجابة الصحيحة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٦ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ، واكتب كل كلمة في جملة من عندك</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "cardboard",
+       "ipa": "/ˈkɑːdbɔːd/",
+       "meaning": "ورق مقوّى",
+       "ex": "two pieces of thick cardboard"
+      },
+      {
+       "must": 1,
+       "term": "glue",
+       "ipa": "/ɡluː/",
+       "meaning": "صمغ / يلصق",
+       "ex": "Glue your photos onto the pages."
+      },
+      {
+       "must": 1,
+       "term": "hole",
+       "ipa": "/həʊl/",
+       "meaning": "ثقب",
+       "ex": "Punch two holes in each cover."
+      },
+      {
+       "must": 1,
+       "term": "ribbon",
+       "ipa": "/ˈrɪbən/",
+       "meaning": "شريط",
+       "ex": "Pull the ribbon through the holes."
+      },
+      {
+       "must": 1,
+       "term": "cover",
+       "ipa": "/ˈkʌvə/",
+       "meaning": "غلاف",
+       "ex": "Write a title on the front cover."
+      },
+      {
+       "must": 1,
+       "term": "first … then … finally",
+       "ipa": "/fɜːst ðen ˈfaɪnəli/",
+       "meaning": "أولاً … ثم … أخيراً",
+       "ex": "First, punch the holes. Finally, write a title."
+      },
+      {
+       "must": 0,
+       "term": "Don't …",
+       "ipa": "/dəʊnt/",
+       "meaning": "لا تـ …",
+       "ex": "Don't use too much glue."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٧ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "ما معنى glue؟",
+       "a": "صمغ",
+       "o": [
+        "صمغ",
+        "مقص",
+        "خيط"
+       ],
+       "why": "glue = صمغ.",
+       "ar": true
+      },
+      {
+       "q": "___ the paper between the covers.",
+       "a": "Put",
+       "o": [
+        "Put",
+        "Puts",
+        "Putting"
+       ],
+       "why": "فعل الأمر بدون s.",
+       "gap": true
+      },
+      {
+       "q": "___ use too much glue.",
+       "a": "Don't",
+       "o": [
+        "Don't",
+        "Not",
+        "No"
+       ],
+       "why": "النهي بـ Don't.",
+       "gap": true
+      },
+      {
+       "q": "Which word comes last?",
+       "a": "Finally",
+       "o": [
+        "Finally",
+        "First",
+        "Then"
+       ],
+       "why": "Finally = أخيراً."
+      },
+      {
+       "q": "What do you need for the covers?",
+       "a": "cardboard",
+       "o": [
+        "cardboard",
+        "ribbon",
+        "glue"
+       ],
+       "why": "الغلافان من الكرتون."
+      },
+      {
+       "type": "listen",
+       "say": "Pull the ribbon through the holes.",
+       "q": "استمع: ماذا قال؟",
+       "a": "Pull the ribbon through the holes.",
+       "o": [
+        "Pull the ribbon through the holes.",
+        "Punch holes in the paper.",
+        "Write a title on the cover."
+       ],
+       "why": "ribbon = شريط."
+      },
+      {
+       "q": "ما معنى a hole punch؟",
+       "a": "خرّامة",
+       "o": [
+        "خرّامة",
+        "مسطرة",
+        "ممحاة"
+       ],
+       "why": "a hole punch = خرّامة.",
+       "ar": true
+      }
+     ]
+    }
+   ],
+   "lead": "7 أسئلة. تنجح بـ 5 من 7."
+  }
+ ]
+}

@@ -1,0 +1,454 @@
+{
+ "id": "en-7-u1-l5",
+ "grade": 7,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 1 · Lesson 5: Adam's Scrapbook",
+ "titleAr": "الوحدة الأولى — الدرس الخامس: دفتر آدم",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "كلمات الدرس",
+   "blocks": [
+    {
+     "type": "vocab",
+     "need": 6,
+     "star": true,
+     "items": [
+      {
+       "id": "v0",
+       "en": "historical sites",
+       "ar": "مواقع تاريخية",
+       "em": "🏛️"
+      },
+      {
+       "id": "v1",
+       "en": "old places",
+       "ar": "أماكن قديمة",
+       "em": "🏺"
+      },
+      {
+       "id": "v2",
+       "en": "ruins",
+       "ar": "آثار / أطلال",
+       "em": "🧱"
+      },
+      {
+       "id": "v3",
+       "en": "busy",
+       "ar": "مشغول",
+       "em": "⏳"
+      },
+      {
+       "id": "v4",
+       "en": "history",
+       "ar": "التاريخ",
+       "em": "📜"
+      },
+      {
+       "id": "v5",
+       "en": "lots of them",
+       "ar": "الكثير منها",
+       "em": "📚"
+      },
+      {
+       "id": "v6",
+       "en": "Cyrene",
+       "ar": "شحات (قورينا)",
+       "em": "🏛️"
+      },
+      {
+       "id": "v7",
+       "en": "Ghadames",
+       "ar": "غدامس",
+       "em": "🕌"
+      }
+     ]
+    }
+   ],
+   "lead": "اسمعها كلها."
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "عادل وآدم",
+   "blocks": [
+    {
+     "type": "dialogue",
+     "star": true
+    }
+   ],
+   "lead": "استمع إلى المحادثة وتابع الكلمات المضيئة."
+  },
+  {
+   "title": "أكمل المحادثة",
+   "eyebrow": "الخطوة ٣ — أكمل المحادثة",
+   "heading": "ماذا قال عادل؟",
+   "blocks": [
+    {
+     "type": "choice",
+     "star": true,
+     "items": [
+      {
+       "q": "Adam: \"I'm putting some photos in my scrapbook.\" — What did Adel say before this?",
+       "a": "What are you doing?",
+       "o": [
+        "What are you doing?",
+        "Photos of what?",
+        "Do you have many?"
+       ],
+       "why": "سؤال عن الشيء الذي يفعله الآن."
+      },
+      {
+       "q": "Adam: \"Old places in Libya, like Cyrene and Ghadames.\" — What did Adel say?",
+       "a": "Photos of what?",
+       "o": [
+        "Photos of what?",
+        "Where do you get the photos?",
+        "But why old places?"
+       ],
+       "why": "سأل عن موضوع الصور."
+      },
+      {
+       "q": "Adam: \"I take them when I visit different cities.\" — What did Adel say?",
+       "a": "Where do you get the photos?",
+       "o": [
+        "Where do you get the photos?",
+        "What are you doing?",
+        "Do you have many?"
+       ],
+       "why": "سأل من أين يحصل على الصور."
+      },
+      {
+       "q": "Adam: \"Yes, I have lots of them!\" — What did Adel say?",
+       "a": "Do you have many?",
+       "o": [
+        "Do you have many?",
+        "Photos of what?",
+        "Do you want to come to the park?"
+       ],
+       "why": "سأل هل عنده صور كثيرة."
+      },
+      {
+       "q": "Adam: \"Because they tell us about our history.\" — What did Adel say?",
+       "a": "But why old places?",
+       "o": [
+        "But why old places?",
+        "What are you doing?",
+        "Where do you get the photos?"
+       ],
+       "why": "Because تجيب عن Why."
+      }
+     ]
+    }
+   ],
+   "lead": "هذا مثل تمرين A في كتابك: اقرأ جواب آدم، واختر سؤال عادل الذي جاء قبله."
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٤ — القاعدة",
+   "heading": "ماذا تفعل الآن؟",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "المضارع المستمر: لشيء يحدث الآن",
+     "html": "<div class=\"ex\">What <b>are</b> you <b>doing</b>?</div><div class=\"ex\">I'<b>m putting</b> some photos in my scrapbook.</div><p class=\"note\">am / is / are + فعل بـ ing.</p>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "What are you doing? I'm putting some photos in my scrapbook."
+      }
+     ]
+    },
+    {
+     "type": "panel",
+     "title": "كلمات السؤال",
+     "html": "<div class=\"ex\"><b>What</b> …? ماذا — <b>Where</b> …? أين — <b>Why</b> …? لماذا</div><div class=\"ex\">Why …? → <b>Because</b> …</div>"
+    }
+   ],
+   "starOnVisit": true
+  },
+  {
+   "title": "مثّل الدور",
+   "eyebrow": "الخطوة ٥ — مثّل الدور",
+   "heading": "مثّل المحادثة",
+   "blocks": [
+    {
+     "type": "roleplay",
+     "star": true,
+     "roles": {
+      "Adam": [
+       0,
+       14
+      ],
+      "Adel": [
+       0,
+       14
+      ]
+     }
+    }
+   ],
+   "lead": "اختر دور آدم أو عادل."
+  },
+  {
+   "title": "عبارة صعبة",
+   "eyebrow": "الخطوة ٦ — عبارة صعبة",
+   "heading": "جرّب هذه العبارة الصعبة",
+   "blocks": [
+    {
+     "type": "speakLine",
+     "star": true,
+     "text": "She sells sea shells on the sea shore."
+    },
+    {
+     "type": "speakLine",
+     "text": "The shells she sells are sea shells, I'm sure."
+    }
+   ],
+   "lead": "هذه عبارة إنجليزية مشهورة لتمرين النطق (Tongue-twister). قلها ببطء أولاً، ثم أسرع."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٧ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ، واكتب كل كلمة في جملة من عندك</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "historical sites",
+       "ipa": "/hɪˈstɒrɪkl saɪts/",
+       "meaning": "مواقع تاريخية",
+       "ex": "Leptis Magna is a historical site."
+      },
+      {
+       "must": 1,
+       "term": "ruins",
+       "ipa": "/ˈruːɪnz/",
+       "meaning": "آثار / أطلال",
+       "ex": "I take pictures of ruins."
+      },
+      {
+       "must": 1,
+       "term": "busy",
+       "ipa": "/ˈbɪzi/",
+       "meaning": "مشغول",
+       "ex": "No, thanks. I'm busy."
+      },
+      {
+       "must": 1,
+       "term": "history",
+       "ipa": "/ˈhɪstri/",
+       "meaning": "التاريخ",
+       "ex": "They tell us about our history."
+      },
+      {
+       "must": 1,
+       "term": "What are you doing?",
+       "ipa": "/wɒt ɑː juː ˈduːɪŋ/",
+       "meaning": "ماذا تفعل (الآن)؟",
+       "ex": "I'm putting photos in my scrapbook."
+      },
+      {
+       "must": 1,
+       "term": "because",
+       "ipa": "/bɪˈkɒz/",
+       "meaning": "لأنّ",
+       "ex": "Because they tell us about our history.",
+       "tip": "نجيب بها عن سؤال Why."
+      },
+      {
+       "must": 0,
+       "term": "lots of them",
+       "ipa": "/lɒts əv ðəm/",
+       "meaning": "الكثير منها",
+       "ex": "Yes, I have lots of them!"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٨ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 6,
+     "items": [
+      {
+       "q": "What is Adam doing?",
+       "a": "Putting photos in his scrapbook.",
+       "o": [
+        "Putting photos in his scrapbook.",
+        "Going to the park.",
+        "Reading a book."
+       ],
+       "why": "I'm putting some photos in my scrapbook."
+      },
+      {
+       "q": "Why does Adam like old places?",
+       "a": "They tell us about our history.",
+       "o": [
+        "They tell us about our history.",
+        "They are near his house.",
+        "His friend likes them."
+       ],
+       "why": "Because they tell us about our history."
+      },
+      {
+       "q": "ما معنى busy؟",
+       "a": "مشغول",
+       "o": [
+        "مشغول",
+        "سعيد",
+        "متعب"
+       ],
+       "why": "busy = مشغول.",
+       "ar": true
+      },
+      {
+       "q": "What ___ you doing?",
+       "a": "are",
+       "o": [
+        "are",
+        "is",
+        "do"
+       ],
+       "why": "What are you doing?",
+       "gap": true
+      },
+      {
+       "q": "I'm ___ a photo.",
+       "a": "taking",
+       "o": [
+        "taking",
+        "take",
+        "took"
+       ],
+       "why": "am + فعل بـ ing.",
+       "gap": true
+      },
+      {
+       "q": "Why …? نجيب بـ:",
+       "a": "Because …",
+       "o": [
+        "Because …",
+        "Yes, I do.",
+        "At home."
+       ],
+       "why": "Why ← Because."
+      },
+      {
+       "type": "listen",
+       "say": "Where do you get the photos?",
+       "q": "استمع: ماذا سأل؟",
+       "a": "Where do you get the photos?",
+       "o": [
+        "Where do you get the photos?",
+        "Do you have many?",
+        "What are you doing?"
+       ],
+       "why": "Where = أين."
+      },
+      {
+       "q": "Cyrene and Ghadames are …",
+       "a": "old places in Libya",
+       "o": [
+        "old places in Libya",
+        "cities in Italy",
+        "parks in London"
+       ],
+       "why": "شحات وغدامس مدينتان تاريخيتان في ليبيا."
+      }
+     ]
+    }
+   ],
+   "lead": "8 أسئلة. تنجح بـ 6 من 8."
+  }
+ ],
+ "characters": {
+  "Adel": {
+   "ar": "عادل",
+   "color": "--c1",
+   "g": "m",
+   "pitch": 1.2
+  },
+  "Adam": {
+   "ar": "آدم",
+   "color": "--c2",
+   "g": "m",
+   "pitch": 1.4
+  }
+ },
+ "left": [
+  "Adel"
+ ],
+ "dialogue": [
+  [
+   "Adel",
+   "Hello, Adam."
+  ],
+  [
+   "Adam",
+   "Oh, hi, Adel."
+  ],
+  [
+   "Adel",
+   "Do you want to come to the park?"
+  ],
+  [
+   "Adam",
+   "No, thanks. I'm busy."
+  ],
+  [
+   "Adel",
+   "What are you doing?"
+  ],
+  [
+   "Adam",
+   "I'm putting some photos in my scrapbook."
+  ],
+  [
+   "Adel",
+   "Photos of what?"
+  ],
+  [
+   "Adam",
+   "Old places in Libya, like Cyrene and Ghadames."
+  ],
+  [
+   "Adel",
+   "Where do you get the photos?"
+  ],
+  [
+   "Adam",
+   "I take them when I visit different cities with my father."
+  ],
+  [
+   "Adel",
+   "Do you have many?"
+  ],
+  [
+   "Adam",
+   "Yes, I have lots of them!"
+  ],
+  [
+   "Adel",
+   "But why old places?"
+  ],
+  [
+   "Adam",
+   "Because they tell us about our history. I love them."
+  ]
+ ]
+}
