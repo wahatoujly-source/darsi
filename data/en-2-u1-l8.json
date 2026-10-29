@@ -1,0 +1,348 @@
+{
+ "id": "en-2-u1-l8",
+ "grade": 2,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "Unit 1 · Lesson 8: I'm hungry.",
+ "titleAr": "الوحدة الأولى: عني أنا — الدرس الثامن: أنا جائع",
+ "steps": [
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ١ — استمع",
+   "heading": "I'm hungry.",
+   "blocks": [
+    {
+     "type": "dialogue",
+     "star": true
+    }
+   ],
+   "lead": "شغّل الحوار. كتابك ص 15."
+  },
+  {
+   "title": "تكلّم",
+   "eyebrow": "الخطوة ٢ — تكلّم",
+   "heading": "Ask and answer",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "I'm hungry.",
+       "em": "😋",
+       "say": "I'm hungry.",
+       "sub": "أنا جائع",
+       "must": 1
+      },
+      {
+       "t": "I'm not hungry.",
+       "em": "🙅",
+       "say": "I'm not hungry.",
+       "sub": "لست جائعاً"
+      },
+      {
+       "t": "I'm thirsty.",
+       "em": "🥵",
+       "say": "I'm thirsty.",
+       "sub": "أنا عطشان",
+       "must": 1
+      },
+      {
+       "t": "Do you want a sandwich?",
+       "em": "🥪",
+       "say": "Do you want a sandwich?",
+       "sub": "هل تريد شطيرة؟",
+       "must": 1
+      },
+      {
+       "t": "Do you want some juice?",
+       "em": "🧃",
+       "say": "Do you want some juice?",
+       "sub": "هل تريد بعض العصير؟",
+       "must": 1
+      },
+      {
+       "t": "Yes, please.",
+       "em": "👍",
+       "say": "Yes, please.",
+       "sub": "نعم، من فضلك",
+       "must": 1
+      },
+      {
+       "t": "Here you are.",
+       "em": "🤲",
+       "say": "Here you are.",
+       "sub": "تفضّل"
+      },
+      {
+       "t": "Thank you.",
+       "em": "🙏",
+       "say": "Thank you.",
+       "sub": "شكراً",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط واسمع وردّد."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "What do you say?",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "q": "أنا جائع، تقول الأم:",
+       "o": [
+        "Do you want a sandwich?",
+        "Do you want some juice?"
+       ],
+       "a": "Do you want a sandwich?",
+       "show": "😋"
+      },
+      {
+       "q": "أنا عطشان، تقول الأم:",
+       "o": [
+        "Do you want some juice?",
+        "Do you want a sandwich?"
+       ],
+       "a": "Do you want some juice?",
+       "show": "🥵"
+      },
+      {
+       "q": "Do you want some juice?",
+       "o": [
+        "Yes, please.",
+        "I'm 7."
+       ],
+       "a": "Yes, please.",
+       "show": "🧃"
+      },
+      {
+       "q": "Here you are.",
+       "o": [
+        "Thank you.",
+        "Goodbye."
+       ],
+       "a": "Thank you.",
+       "show": "🤲"
+      }
+     ],
+     "q": "ماذا تقول؟"
+    }
+   ],
+   "lead": "اختر الجواب المناسب."
+  },
+  {
+   "title": "الصوت",
+   "eyebrow": "الخطوة ٤ — الصوت",
+   "heading": "Phonics: sh",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "sh",
+       "say": "sh. fish, sheep",
+       "c": "#E8590C",
+       "must": 1,
+       "big": true
+      },
+      {
+       "t": "fi{sh}",
+       "em": "🐟",
+       "say": "fish",
+       "sub": "سمكة",
+       "must": 1
+      },
+      {
+       "t": "{sh}eep",
+       "em": "🐑",
+       "say": "sheep",
+       "sub": "خروف",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الصوت والكلمات وردّدها."
+  },
+  {
+   "title": "تتبّع",
+   "eyebrow": "الخطوة ٥ — تتبّع",
+   "heading": "اكتب fish",
+   "blocks": [
+    {
+     "type": "trace",
+     "star": true,
+     "items": [
+      {
+       "t": "fish",
+       "say": "fish",
+       "size": 100
+      },
+      {
+       "t": "sheep",
+       "say": "sheep",
+       "size": 100
+      }
+     ],
+     "need": 1,
+     "lang": "en"
+    }
+   ],
+   "lead": "مرّر إصبعك فوق الكلمة."
+  },
+  {
+   "title": "فرقع",
+   "eyebrow": "الخطوة ٦ — فرقع",
+   "heading": "بالونات sh",
+   "blocks": [
+    {
+     "type": "pop",
+     "star": true,
+     "target": "sh",
+     "pool": [
+      "sh",
+      "ch",
+      "th",
+      "oo",
+      "ee"
+     ],
+     "need": 6,
+     "say": "sh",
+     "q": "فرقع البالونات التي فيها",
+     "lang": "en"
+    }
+   ],
+   "lead": "فرقع كل بالون فيه sh."
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٧ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "I'm thirsty.",
+       "o": [
+        "🥵",
+        "😋"
+       ],
+       "a": "🥵",
+       "lang": "en"
+      },
+      {
+       "say": "fish",
+       "o": [
+        "🐟",
+        "🐑",
+        "🐔"
+       ],
+       "a": "🐟",
+       "lang": "en"
+      },
+      {
+       "say": "sheep",
+       "o": [
+        "🐑",
+        "🐟",
+        "🐝"
+       ],
+       "a": "🐑",
+       "lang": "en"
+      },
+      {
+       "q": "Here you are.",
+       "o": [
+        "Thank you.",
+        "I'm fine."
+       ],
+       "a": "Thank you."
+      },
+      {
+       "say": "I'm hungry.",
+       "o": [
+        "😋",
+        "🥵"
+       ],
+       "a": "😋",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en",
+     "pass": 3
+    }
+   ]
+  }
+ ],
+ "characters": {
+  "Kareem": {
+   "ar": "كريم",
+   "color": "--c5",
+   "g": "m",
+   "pitch": 1.4
+  },
+  "Adam": {
+   "ar": "آدم",
+   "color": "--c2",
+   "g": "m",
+   "pitch": 1.5
+  },
+  "Mum": {
+   "ar": "الأم",
+   "color": "--c3",
+   "g": "f",
+   "pitch": 1.15
+  }
+ },
+ "dialogue": [
+  [
+   "Kareem",
+   "I'm hungry."
+  ],
+  [
+   "Mum",
+   "Do you want a sandwich?"
+  ],
+  [
+   "Kareem",
+   "Thank you."
+  ],
+  [
+   "Adam",
+   "I'm not hungry."
+  ],
+  [
+   "Kareem",
+   "I'm thirsty."
+  ],
+  [
+   "Mum",
+   "Do you want some juice?"
+  ],
+  [
+   "Kareem",
+   "Yes, please."
+  ],
+  [
+   "Mum",
+   "Here you are."
+  ]
+ ],
+ "left": [
+  "Kareem"
+ ]
+}

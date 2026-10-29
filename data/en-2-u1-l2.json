@@ -1,0 +1,410 @@
+{
+ "id": "en-2-u1-l2",
+ "grade": 2,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "Unit 1 · Lesson 2: How are you?",
+ "titleAr": "الوحدة الأولى: عني أنا — الدرس الثاني: كيف حالك؟",
+ "steps": [
+  {
+   "title": "تكلّم",
+   "eyebrow": "الخطوة ١ — تكلّم",
+   "heading": "How are you?",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "How are you?",
+       "em": "🙂",
+       "say": "How are you?",
+       "sub": "كيف حالك؟",
+       "must": 1
+      },
+      {
+       "t": "I'm very well, thanks.",
+       "em": "😄",
+       "say": "I'm very well, thanks.",
+       "sub": "أنا بخير جداً، شكراً",
+       "must": 1
+      },
+      {
+       "t": "I'm fine.",
+       "em": "🙂",
+       "say": "I'm fine.",
+       "sub": "أنا بخير",
+       "must": 1
+      },
+      {
+       "t": "I'm not very well!",
+       "em": "🤒",
+       "say": "I'm not very well!",
+       "sub": "لست بخير!",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط واسمع وردّد. كتابك ص 9."
+  },
+  {
+   "title": "افعل",
+   "eyebrow": "الخطوة ٢ — افعل",
+   "heading": "Listen and do",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "open",
+       "em": "📖",
+       "say": "open",
+       "sub": "افتح"
+      },
+      {
+       "t": "draw",
+       "em": "✏️",
+       "say": "draw",
+       "sub": "ارسم"
+      },
+      {
+       "t": "close",
+       "em": "🚪",
+       "say": "close",
+       "sub": "أغلق"
+      },
+      {
+       "t": "stand up",
+       "em": "🧍",
+       "say": "stand up",
+       "sub": "قف"
+      },
+      {
+       "t": "sit down",
+       "em": "🪑",
+       "say": "sit down",
+       "sub": "اجلس"
+      },
+      {
+       "t": "hands up",
+       "em": "🙌",
+       "say": "hands up",
+       "sub": "ارفع يديك"
+      },
+      {
+       "t": "turn around",
+       "em": "🔄",
+       "say": "turn around",
+       "sub": "استدر"
+      },
+      {
+       "t": "clap your hands",
+       "em": "👏",
+       "say": "clap your hands",
+       "sub": "صفّق"
+      },
+      {
+       "t": "stamp your feet",
+       "em": "🦶",
+       "say": "stamp your feet",
+       "sub": "اضرب الأرض بقدميك"
+      },
+      {
+       "t": "touch your toes",
+       "em": "🤸",
+       "say": "touch your toes",
+       "sub": "المس أصابع قدميك"
+      }
+     ],
+     "lang": "en",
+     "need": 8
+    }
+   ],
+   "lead": "اسمع الأمر وشاهد الصورة، ثم قم به أنت!"
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "Simon says",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "open",
+       "o": [
+        "📖",
+        "✏️",
+        "🚪"
+       ],
+       "a": "📖",
+       "lang": "en"
+      },
+      {
+       "say": "draw",
+       "o": [
+        "✏️",
+        "📖",
+        "🚪"
+       ],
+       "a": "✏️",
+       "lang": "en"
+      },
+      {
+       "say": "close",
+       "o": [
+        "🚪",
+        "📖",
+        "✏️"
+       ],
+       "a": "🚪",
+       "lang": "en"
+      },
+      {
+       "say": "stand up",
+       "o": [
+        "🧍",
+        "📖",
+        "✏️"
+       ],
+       "a": "🧍",
+       "lang": "en"
+      },
+      {
+       "say": "sit down",
+       "o": [
+        "🪑",
+        "📖",
+        "✏️"
+       ],
+       "a": "🪑",
+       "lang": "en"
+      },
+      {
+       "say": "hands up",
+       "o": [
+        "🙌",
+        "📖",
+        "✏️"
+       ],
+       "a": "🙌",
+       "lang": "en"
+      },
+      {
+       "say": "turn around",
+       "o": [
+        "🔄",
+        "📖",
+        "✏️"
+       ],
+       "a": "🔄",
+       "lang": "en"
+      },
+      {
+       "say": "clap your hands",
+       "o": [
+        "👏",
+        "📖",
+        "✏️"
+       ],
+       "a": "👏",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الأمر واضغط على الصورة المناسبة."
+  },
+  {
+   "title": "الحروف",
+   "eyebrow": "الخطوة ٤ — الحروف",
+   "heading": "The Alphabet",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "Aa",
+       "say": "A"
+      },
+      {
+       "t": "Bb",
+       "say": "B"
+      },
+      {
+       "t": "Cc",
+       "say": "C"
+      },
+      {
+       "t": "Dd",
+       "say": "D"
+      },
+      {
+       "t": "Ee",
+       "say": "E"
+      },
+      {
+       "t": "Ff",
+       "say": "F"
+      },
+      {
+       "t": "Gg",
+       "say": "G"
+      },
+      {
+       "t": "Hh",
+       "say": "H"
+      },
+      {
+       "t": "Ii",
+       "say": "I"
+      },
+      {
+       "t": "Jj",
+       "say": "J"
+      },
+      {
+       "t": "Kk",
+       "say": "K"
+      },
+      {
+       "t": "Ll",
+       "say": "L"
+      },
+      {
+       "t": "Mm",
+       "say": "M"
+      },
+      {
+       "t": "Nn",
+       "say": "N"
+      },
+      {
+       "t": "Oo",
+       "say": "O"
+      },
+      {
+       "t": "Pp",
+       "say": "P"
+      },
+      {
+       "t": "Qq",
+       "say": "Q"
+      },
+      {
+       "t": "Rr",
+       "say": "R"
+      },
+      {
+       "t": "Ss",
+       "say": "S"
+      },
+      {
+       "t": "Tt",
+       "say": "T"
+      },
+      {
+       "t": "Uu",
+       "say": "U"
+      },
+      {
+       "t": "Vv",
+       "say": "V"
+      },
+      {
+       "t": "Ww",
+       "say": "W"
+      },
+      {
+       "t": "Xx",
+       "say": "X"
+      },
+      {
+       "t": "Yy",
+       "say": "Y"
+      },
+      {
+       "t": "Zz",
+       "say": "Z"
+      }
+     ],
+     "size": "sm",
+     "lang": "en",
+     "need": 13
+    }
+   ],
+   "lead": "اسمع الحروف من A إلى Z."
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "I'm not very well!",
+       "o": [
+        "🤒",
+        "😄"
+       ],
+       "a": "🤒",
+       "lang": "en"
+      },
+      {
+       "say": "clap your hands",
+       "o": [
+        "👏",
+        "🦶",
+        "🙌"
+       ],
+       "a": "👏",
+       "lang": "en"
+      },
+      {
+       "say": "sit down",
+       "o": [
+        "🪑",
+        "🧍",
+        "🔄"
+       ],
+       "a": "🪑",
+       "lang": "en"
+      },
+      {
+       "say": "open",
+       "o": [
+        "📖",
+        "🚪",
+        "✏️"
+       ],
+       "a": "📖",
+       "lang": "en"
+      },
+      {
+       "say": "I'm very well, thanks.",
+       "o": [
+        "😄",
+        "🤒"
+       ],
+       "a": "😄",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en",
+     "pass": 3
+    }
+   ]
+  }
+ ]
+}

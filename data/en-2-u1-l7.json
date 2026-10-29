@@ -1,0 +1,302 @@
+{
+ "id": "en-2-u1-l7",
+ "grade": 2,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "Unit 1 · Lesson 7: Do you want an orange?",
+ "titleAr": "الوحدة الأولى: عني أنا — الدرس السابع: هل تريد برتقالة؟",
+ "steps": [
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ١ — القاعدة",
+   "heading": "a أم an؟",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "a lemon",
+       "em": "🍋",
+       "say": "It's a lemon."
+      },
+      {
+       "t": "an orange",
+       "em": "🍊",
+       "say": "It's an orange.",
+       "must": 1
+      },
+      {
+       "t": "a cake",
+       "em": "🧁",
+       "say": "a cake"
+      },
+      {
+       "t": "an ice-cream",
+       "em": "🍦",
+       "say": "an ice-cream",
+       "must": 1
+      },
+      {
+       "t": "a watermelon",
+       "em": "🍉",
+       "say": "a watermelon"
+      },
+      {
+       "t": "an egg",
+       "em": "🥚",
+       "say": "an egg",
+       "must": 1
+      },
+      {
+       "t": "a pizza",
+       "em": "🍕",
+       "say": "a pizza"
+      },
+      {
+       "t": "a sandwich",
+       "em": "🥪",
+       "say": "a sandwich"
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "نستخدم an قبل الكلمة التي تبدأ بصوت: a, e, i, o, u. كتابك ص 14."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٢ — العب",
+   "heading": "a or an?",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "cake",
+       "o": [
+        "a",
+        "an"
+       ],
+       "a": "a",
+       "q": "a أم an؟",
+       "show": "🧁",
+       "lang": "en",
+       "keep": true
+      },
+      {
+       "say": "ice-cream",
+       "o": [
+        "a",
+        "an"
+       ],
+       "a": "an",
+       "q": "a أم an؟",
+       "show": "🍦",
+       "lang": "en",
+       "keep": true
+      },
+      {
+       "say": "pizza",
+       "o": [
+        "a",
+        "an"
+       ],
+       "a": "a",
+       "q": "a أم an؟",
+       "show": "🍕",
+       "lang": "en",
+       "keep": true
+      },
+      {
+       "say": "orange",
+       "o": [
+        "a",
+        "an"
+       ],
+       "a": "an",
+       "q": "a أم an؟",
+       "show": "🍊",
+       "lang": "en",
+       "keep": true
+      },
+      {
+       "say": "watermelon",
+       "o": [
+        "a",
+        "an"
+       ],
+       "a": "a",
+       "q": "a أم an؟",
+       "show": "🍉",
+       "lang": "en",
+       "keep": true
+      },
+      {
+       "say": "egg",
+       "o": [
+        "a",
+        "an"
+       ],
+       "a": "an",
+       "q": "a أم an؟",
+       "show": "🥚",
+       "lang": "en",
+       "keep": true
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "انظر إلى الصورة واختر a أو an."
+  },
+  {
+   "title": "الصوت",
+   "eyebrow": "الخطوة ٣ — الصوت",
+   "heading": "Phonics: ch",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "ch",
+       "say": "ch. chicken, cheese",
+       "c": "#E8590C",
+       "must": 1,
+       "big": true
+      },
+      {
+       "t": "{ch}icken",
+       "em": "🐔",
+       "say": "chicken",
+       "sub": "دجاجة",
+       "must": 1
+      },
+      {
+       "t": "{ch}eese",
+       "em": "🧀",
+       "say": "cheese",
+       "sub": "جبن",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الصوت والكلمات وردّدها."
+  },
+  {
+   "title": "تتبّع",
+   "eyebrow": "الخطوة ٤ — تتبّع",
+   "heading": "اكتب chicken",
+   "blocks": [
+    {
+     "type": "trace",
+     "star": true,
+     "items": [
+      {
+       "t": "chicken",
+       "say": "chicken",
+       "size": 100
+      },
+      {
+       "t": "cheese",
+       "say": "cheese",
+       "size": 100
+      }
+     ],
+     "need": 1,
+     "lang": "en"
+    }
+   ],
+   "lead": "مرّر إصبعك فوق الكلمة."
+  },
+  {
+   "title": "فرقع",
+   "eyebrow": "الخطوة ٥ — فرقع",
+   "heading": "بالونات ch",
+   "blocks": [
+    {
+     "type": "pop",
+     "star": true,
+     "target": "ch",
+     "pool": [
+      "ch",
+      "sh",
+      "th",
+      "ee",
+      "oo"
+     ],
+     "need": 6,
+     "say": "ch",
+     "q": "فرقع البالونات التي فيها",
+     "lang": "en"
+    }
+   ],
+   "lead": "فرقع كل بالون فيه ch."
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "orange",
+       "o": [
+        "an",
+        "a"
+       ],
+       "a": "an",
+       "q": "a أم an؟",
+       "show": "🍊",
+       "lang": "en",
+       "keep": true
+      },
+      {
+       "say": "lemon",
+       "o": [
+        "a",
+        "an"
+       ],
+       "a": "a",
+       "q": "a أم an؟",
+       "show": "🍋",
+       "lang": "en",
+       "keep": true
+      },
+      {
+       "say": "chicken",
+       "o": [
+        "🐔",
+        "🧀",
+        "🍋"
+       ],
+       "a": "🐔",
+       "lang": "en"
+      },
+      {
+       "say": "cheese",
+       "o": [
+        "🧀",
+        "🐔",
+        "🥚"
+       ],
+       "a": "🧀",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en",
+     "pass": 3
+    }
+   ]
+  }
+ ]
+}

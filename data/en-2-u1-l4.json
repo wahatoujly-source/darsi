@@ -1,0 +1,313 @@
+{
+ "id": "en-2-u1-l4",
+ "grade": 2,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "Unit 1 · Lesson 4: I like fruit.",
+ "titleAr": "الوحدة الأولى: عني أنا — الدرس الرابع: أحب الفاكهة",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "Fruit",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "banana",
+       "em": "🍌",
+       "say": "banana",
+       "sub": "موز",
+       "must": 1
+      },
+      {
+       "t": "mango",
+       "em": "🥭",
+       "say": "mango",
+       "sub": "مانجو",
+       "must": 1
+      },
+      {
+       "t": "strawberry",
+       "em": "🍓",
+       "say": "strawberry",
+       "sub": "فراولة",
+       "must": 1
+      },
+      {
+       "t": "grapes",
+       "em": "🍇",
+       "say": "grapes",
+       "sub": "عنب",
+       "must": 1
+      },
+      {
+       "t": "pear",
+       "em": "🍐",
+       "say": "pear",
+       "sub": "كمثرى",
+       "must": 1
+      },
+      {
+       "t": "watermelon",
+       "em": "🍉",
+       "say": "watermelon",
+       "sub": "بطيخ",
+       "must": 1
+      },
+      {
+       "t": "dates",
+       "em": "🌴",
+       "say": "dates",
+       "sub": "تمر",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل فاكهة واسمع. كتابك ص 11."
+  },
+  {
+   "title": "تكلّم",
+   "eyebrow": "الخطوة ٢ — تكلّم",
+   "heading": "I like … / I don't like …",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "I like pears.",
+       "em": "🍐👍",
+       "say": "I like pears.",
+       "sub": "أحب الكمثرى",
+       "must": 1
+      },
+      {
+       "t": "I don't like bananas.",
+       "em": "🍌👎",
+       "say": "I don't like bananas.",
+       "sub": "لا أحب الموز",
+       "must": 1
+      },
+      {
+       "t": "I like watermelon.",
+       "em": "🍉👍",
+       "say": "I like watermelon.",
+       "sub": "أحب البطيخ"
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع وردّد."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "like أم don't like؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "q": "🍇👍",
+       "o": [
+        "I like grapes.",
+        "I don't like grapes."
+       ],
+       "a": "I like grapes.",
+       "show": "🍇👍"
+      },
+      {
+       "q": "🥭👎",
+       "o": [
+        "I don't like mangoes.",
+        "I like mangoes."
+       ],
+       "a": "I don't like mangoes.",
+       "show": "🥭👎"
+      },
+      {
+       "q": "🍓👍",
+       "o": [
+        "I like strawberries.",
+        "I don't like strawberries."
+       ],
+       "a": "I like strawberries.",
+       "show": "🍓👍"
+      },
+      {
+       "q": "🍐👎",
+       "o": [
+        "I don't like pears.",
+        "I like pears."
+       ],
+       "a": "I don't like pears.",
+       "show": "🍐👎"
+      }
+     ],
+     "q": "اختر الجملة المناسبة"
+    }
+   ],
+   "lead": "انظر إلى الإشارة 👍 أو 👎 واختر الجملة."
+  },
+  {
+   "title": "الصوت",
+   "eyebrow": "الخطوة ٤ — الصوت",
+   "heading": "Phonics: ue",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "ue",
+       "say": "ue. glue, blue",
+       "c": "#E8590C",
+       "must": 1,
+       "big": true
+      },
+      {
+       "t": "gl{ue}",
+       "em": "🧴",
+       "say": "glue",
+       "sub": "صمغ",
+       "must": 1
+      },
+      {
+       "t": "bl{ue}",
+       "em": "🔵",
+       "say": "blue",
+       "sub": "أزرق",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الصوت والكلمات وردّدها."
+  },
+  {
+   "title": "تتبّع",
+   "eyebrow": "الخطوة ٥ — تتبّع",
+   "heading": "اكتب glue",
+   "blocks": [
+    {
+     "type": "trace",
+     "star": true,
+     "items": [
+      {
+       "t": "glue",
+       "say": "glue",
+       "size": 100
+      },
+      {
+       "t": "blue",
+       "say": "blue",
+       "size": 100
+      }
+     ],
+     "need": 1,
+     "lang": "en"
+    }
+   ],
+   "lead": "مرّر إصبعك فوق الكلمة."
+  },
+  {
+   "title": "فرقع",
+   "eyebrow": "الخطوة ٦ — فرقع",
+   "heading": "بالونات ue",
+   "blocks": [
+    {
+     "type": "pop",
+     "star": true,
+     "target": "ue",
+     "pool": [
+      "ue",
+      "ee",
+      "oa",
+      "oo",
+      "ch"
+     ],
+     "need": 6,
+     "say": "ue",
+     "q": "فرقع البالونات التي فيها",
+     "lang": "en"
+    }
+   ],
+   "lead": "فرقع كل بالون فيه ue."
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٧ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "banana",
+       "o": [
+        "🍌",
+        "🥭",
+        "🍓"
+       ],
+       "a": "🍌",
+       "lang": "en"
+      },
+      {
+       "say": "mango",
+       "o": [
+        "🥭",
+        "🍌",
+        "🍓"
+       ],
+       "a": "🥭",
+       "lang": "en"
+      },
+      {
+       "say": "strawberry",
+       "o": [
+        "🍓",
+        "🍌",
+        "🥭"
+       ],
+       "a": "🍓",
+       "lang": "en"
+      },
+      {
+       "say": "grapes",
+       "o": [
+        "🍇",
+        "🍌",
+        "🥭"
+       ],
+       "a": "🍇",
+       "lang": "en"
+      },
+      {
+       "say": "pear",
+       "o": [
+        "🍐",
+        "🍌",
+        "🥭"
+       ],
+       "a": "🍐",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en",
+     "pass": 3
+    }
+   ]
+  }
+ ]
+}

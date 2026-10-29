@@ -1,0 +1,331 @@
+{
+ "id": "en-2-u1-l1",
+ "grade": 2,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "Unit 1 · Lesson 1: What's your name?",
+ "titleAr": "الوحدة الأولى: عني أنا — الدرس الأول: ما اسمك؟",
+ "steps": [
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ١ — استمع",
+   "heading": "What's your name?",
+   "blocks": [
+    {
+     "type": "dialogue",
+     "star": true
+    }
+   ],
+   "lead": "شغّل الحوار وتابع الكلمات المضيئة. كتابك ص 8."
+  },
+  {
+   "title": "تكلّم",
+   "eyebrow": "الخطوة ٢ — تكلّم",
+   "heading": "اسأل وأجب",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "What's your name?",
+       "em": "❓",
+       "say": "What's your name?",
+       "sub": "ما اسمك؟",
+       "must": 1
+      },
+      {
+       "t": "What's her name?",
+       "em": "👧",
+       "say": "What's her name?",
+       "sub": "ما اسمها؟",
+       "must": 1
+      },
+      {
+       "t": "What's his name?",
+       "em": "👦",
+       "say": "What's his name?",
+       "sub": "ما اسمه؟",
+       "must": 1
+      },
+      {
+       "t": "How old are you?",
+       "em": "🎂",
+       "say": "How old are you?",
+       "sub": "كم عمرك؟",
+       "must": 1
+      },
+      {
+       "t": "I'm 7.",
+       "em": "7️⃣",
+       "say": "I'm seven.",
+       "sub": "عمري 7"
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على البطاقات واسمع، ثم ردّد."
+  },
+  {
+   "title": "his أم her",
+   "eyebrow": "الخطوة ٣ — his أم her",
+   "heading": "his or her?",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "What's her name?",
+       "o": [
+        "👧",
+        "👦"
+       ],
+       "a": "👧",
+       "q": "عمّن يسأل؟",
+       "lang": "en"
+      },
+      {
+       "say": "What's his name?",
+       "o": [
+        "👦",
+        "👧"
+       ],
+       "a": "👦",
+       "q": "عمّن يسأل؟",
+       "lang": "en"
+      },
+      {
+       "say": "Muna",
+       "o": [
+        "What's her name?",
+        "What's his name?"
+       ],
+       "a": "What's her name?",
+       "q": "منى بنت. اختر السؤال:",
+       "lang": "en"
+      },
+      {
+       "say": "Kareem",
+       "o": [
+        "What's his name?",
+        "What's her name?"
+       ],
+       "a": "What's his name?",
+       "q": "كريم ولد. اختر السؤال:",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "his للولد، و her للبنت."
+  },
+  {
+   "title": "الصوت",
+   "eyebrow": "الخطوة ٤ — الصوت",
+   "heading": "Phonics: oa",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "oa",
+       "say": "oa. boat, coat",
+       "c": "#E8590C",
+       "must": 1,
+       "big": true
+      },
+      {
+       "t": "b{oa}t",
+       "em": "⛵",
+       "say": "boat",
+       "sub": "قارب",
+       "must": 1
+      },
+      {
+       "t": "c{oa}t",
+       "em": "🧥",
+       "say": "coat",
+       "sub": "معطف",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الصوت والكلمات وردّدها."
+  },
+  {
+   "title": "تتبّع",
+   "eyebrow": "الخطوة ٥ — تتبّع",
+   "heading": "اكتب boat",
+   "blocks": [
+    {
+     "type": "trace",
+     "star": true,
+     "items": [
+      {
+       "t": "boat",
+       "say": "boat",
+       "size": 100
+      },
+      {
+       "t": "coat",
+       "say": "coat",
+       "size": 100
+      }
+     ],
+     "need": 1,
+     "lang": "en"
+    }
+   ],
+   "lead": "مرّر إصبعك فوق الكلمة."
+  },
+  {
+   "title": "فرقع",
+   "eyebrow": "الخطوة ٦ — فرقع",
+   "heading": "بالونات oa",
+   "blocks": [
+    {
+     "type": "pop",
+     "star": true,
+     "target": "oa",
+     "pool": [
+      "oa",
+      "ee",
+      "oo",
+      "ue",
+      "ch",
+      "sh"
+     ],
+     "need": 6,
+     "say": "oa",
+     "q": "فرقع البالونات التي فيها",
+     "lang": "en"
+    }
+   ],
+   "lead": "فرقع كل بالون فيه oa."
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٧ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "How old are you?",
+       "o": [
+        "🎂 How old are you?",
+        "❓ What's your name?"
+       ],
+       "a": "🎂 How old are you?",
+       "lang": "en"
+      },
+      {
+       "say": "boat",
+       "o": [
+        "⛵",
+        "🧥",
+        "🚗"
+       ],
+       "a": "⛵",
+       "lang": "en"
+      },
+      {
+       "say": "coat",
+       "o": [
+        "🧥",
+        "⛵",
+        "👟"
+       ],
+       "a": "🧥",
+       "lang": "en"
+      },
+      {
+       "say": "What's his name?",
+       "o": [
+        "👦",
+        "👧"
+       ],
+       "a": "👦",
+       "lang": "en"
+      },
+      {
+       "say": "I'm 7.",
+       "o": [
+        "7",
+        "6",
+        "8"
+       ],
+       "a": "7",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en",
+     "pass": 3
+    }
+   ]
+  }
+ ],
+ "characters": {
+  "Kareem": {
+   "ar": "كريم",
+   "color": "--c5",
+   "g": "m",
+   "pitch": 1.4
+  },
+  "Adam": {
+   "ar": "آدم",
+   "color": "--c2",
+   "g": "m",
+   "pitch": 1.5
+  },
+  "Muna": {
+   "ar": "منى",
+   "color": "--c4",
+   "g": "f",
+   "pitch": 1.55
+  }
+ },
+ "dialogue": [
+  [
+   "Adam",
+   "What's her name?"
+  ],
+  [
+   "Kareem",
+   "Muna."
+  ],
+  [
+   "Muna",
+   "Hello."
+  ],
+  [
+   "Adam",
+   "What's his name?"
+  ],
+  [
+   "Muna",
+   "Kareem."
+  ],
+  [
+   "Adam",
+   "Hello! How old are you?"
+  ],
+  [
+   "Kareem",
+   "I'm 6."
+  ]
+ ],
+ "left": [
+  "Adam"
+ ]
+}

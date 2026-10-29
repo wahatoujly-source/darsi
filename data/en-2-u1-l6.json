@@ -1,0 +1,318 @@
+{
+ "id": "en-2-u1-l6",
+ "grade": 2,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "Unit 1 · Lesson 6: In The Café",
+ "titleAr": "الوحدة الأولى: عني أنا — الدرس السادس: في المقهى",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "Kids' Menu",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "sandwich",
+       "em": "🥪",
+       "say": "sandwich",
+       "sub": "شطيرة",
+       "must": 1
+      },
+      {
+       "t": "pizza",
+       "em": "🍕",
+       "say": "pizza",
+       "sub": "بيتزا",
+       "must": 1
+      },
+      {
+       "t": "burger",
+       "em": "🍔",
+       "say": "burger",
+       "sub": "برغر",
+       "must": 1
+      },
+      {
+       "t": "juice",
+       "em": "🧃",
+       "say": "juice",
+       "sub": "عصير",
+       "must": 1
+      },
+      {
+       "t": "water",
+       "em": "💧",
+       "say": "water",
+       "sub": "ماء",
+       "must": 1
+      },
+      {
+       "t": "milkshake",
+       "em": "🥤",
+       "say": "milkshake",
+       "sub": "ميلك شيك",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل صورة واسمع. كتابك ص 13."
+  },
+  {
+   "title": "تكلّم",
+   "eyebrow": "الخطوة ٢ — تكلّم",
+   "heading": "He likes … / She likes …",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "He likes burgers.",
+       "em": "👦🍔",
+       "say": "He likes burgers.",
+       "sub": "هو يحب البرغر",
+       "must": 1
+      },
+      {
+       "t": "She likes sandwiches.",
+       "em": "👧🥪",
+       "say": "She likes sandwiches.",
+       "sub": "هي تحب الشطائر",
+       "must": 1
+      },
+      {
+       "t": "What do you like?",
+       "em": "❓",
+       "say": "What do you like?",
+       "sub": "ماذا تحب؟",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "He للولد، She للبنت."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "He or She?",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "q": "👦🍕 ... likes pizza.",
+       "o": [
+        "He",
+        "She"
+       ],
+       "a": "He",
+       "show": "👦🍕"
+      },
+      {
+       "q": "👧🧃 ... likes juice.",
+       "o": [
+        "She",
+        "He"
+       ],
+       "a": "She",
+       "show": "👧🧃"
+      },
+      {
+       "q": "👧🥤 ... likes milkshakes.",
+       "o": [
+        "She",
+        "He"
+       ],
+       "a": "She",
+       "show": "👧🥤"
+      },
+      {
+       "q": "👦💧 ... likes water.",
+       "o": [
+        "He",
+        "She"
+       ],
+       "a": "He",
+       "show": "👦💧"
+      }
+     ],
+     "q": "He أم She؟"
+    }
+   ]
+  },
+  {
+   "title": "الصوت",
+   "eyebrow": "الخطوة ٤ — الصوت",
+   "heading": "Phonics: th",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "th",
+       "say": "th. bathroom, three, this",
+       "c": "#E8590C",
+       "must": 1,
+       "big": true
+      },
+      {
+       "t": "ba{th}room",
+       "em": "🛁",
+       "say": "bathroom",
+       "sub": "حمّام",
+       "must": 1
+      },
+      {
+       "t": "{th}ree",
+       "em": "3️⃣",
+       "say": "three",
+       "sub": "ثلاثة",
+       "must": 1
+      },
+      {
+       "t": "{th}is",
+       "em": "👉",
+       "say": "this",
+       "sub": "هذا",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الصوت والكلمات وردّدها."
+  },
+  {
+   "title": "تتبّع",
+   "eyebrow": "الخطوة ٥ — تتبّع",
+   "heading": "اكتب bathroom",
+   "blocks": [
+    {
+     "type": "trace",
+     "star": true,
+     "items": [
+      {
+       "t": "bathroom",
+       "say": "bathroom",
+       "size": 100
+      },
+      {
+       "t": "three",
+       "say": "three",
+       "size": 100
+      },
+      {
+       "t": "this",
+       "say": "this",
+       "size": 100
+      }
+     ],
+     "need": 1,
+     "lang": "en"
+    }
+   ],
+   "lead": "مرّر إصبعك فوق الكلمة."
+  },
+  {
+   "title": "فرقع",
+   "eyebrow": "الخطوة ٦ — فرقع",
+   "heading": "بالونات th",
+   "blocks": [
+    {
+     "type": "pop",
+     "star": true,
+     "target": "th",
+     "pool": [
+      "th",
+      "sh",
+      "ch",
+      "ee",
+      "oa"
+     ],
+     "need": 6,
+     "say": "th",
+     "q": "فرقع البالونات التي فيها",
+     "lang": "en"
+    }
+   ],
+   "lead": "فرقع كل بالون فيه th."
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٧ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "sandwich",
+       "o": [
+        "🥪",
+        "🍕",
+        "🍔"
+       ],
+       "a": "🥪",
+       "lang": "en"
+      },
+      {
+       "say": "pizza",
+       "o": [
+        "🍕",
+        "🥪",
+        "🍔"
+       ],
+       "a": "🍕",
+       "lang": "en"
+      },
+      {
+       "say": "burger",
+       "o": [
+        "🍔",
+        "🥪",
+        "🍕"
+       ],
+       "a": "🍔",
+       "lang": "en"
+      },
+      {
+       "say": "juice",
+       "o": [
+        "🧃",
+        "🥪",
+        "🍕"
+       ],
+       "a": "🧃",
+       "lang": "en"
+      },
+      {
+       "say": "three",
+       "o": [
+        "3",
+        "5",
+        "8"
+       ],
+       "a": "3",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en",
+     "pass": 3
+    }
+   ]
+  }
+ ]
+}

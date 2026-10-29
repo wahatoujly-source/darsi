@@ -1,0 +1,302 @@
+{
+ "id": "en-2-u1-l5",
+ "grade": 2,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "Unit 1 · Lesson 5: What's your favourite fruit?",
+ "titleAr": "الوحدة الأولى: عني أنا — الدرس الخامس: ما فاكهتك المفضلة؟",
+ "steps": [
+  {
+   "title": "غنِّ",
+   "eyebrow": "الخطوة ١ — غنِّ",
+   "heading": "The Fruit Song",
+   "blocks": [
+    {
+     "type": "reading",
+     "star": true,
+     "lang": "en",
+     "paragraphs": [
+      "What's your favourite fruit?",
+      "I like pears and mangoes.",
+      "I like strawberries and dates.",
+      "I like apples and grapes.",
+      "What's your favourite fruit?"
+     ],
+     "title": "🎵 The Fruit Song"
+    }
+   ],
+   "lead": "استمع وردّد. كتابك ص 12."
+  },
+  {
+   "title": "تكلّم",
+   "eyebrow": "الخطوة ٢ — تكلّم",
+   "heading": "Say",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "apples",
+       "em": "🍎",
+       "say": "apples"
+      },
+      {
+       "t": "pizza",
+       "em": "🍕",
+       "say": "pizza"
+      },
+      {
+       "t": "jam",
+       "em": "🍓",
+       "say": "jam"
+      },
+      {
+       "t": "cake",
+       "em": "🍰",
+       "say": "cake"
+      },
+      {
+       "t": "pear",
+       "em": "🍐",
+       "say": "pear"
+      },
+      {
+       "t": "grapes",
+       "em": "🍇",
+       "say": "grapes"
+      },
+      {
+       "t": "dates",
+       "em": "🌴",
+       "say": "dates"
+      }
+     ],
+     "lang": "en",
+     "need": 5
+    }
+   ],
+   "lead": "اضغط على الصورة وقل: I like … أو I don't like …"
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "Which fruit?",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "apples",
+       "o": [
+        "🍎",
+        "🍰",
+        "🍕"
+       ],
+       "a": "🍎",
+       "lang": "en"
+      },
+      {
+       "say": "cake",
+       "o": [
+        "🍰",
+        "🍎",
+        "🍇"
+       ],
+       "a": "🍰",
+       "lang": "en"
+      },
+      {
+       "say": "jam",
+       "o": [
+        "🍓",
+        "🍕",
+        "🌴"
+       ],
+       "a": "🍓",
+       "lang": "en"
+      },
+      {
+       "say": "pizza",
+       "o": [
+        "🍕",
+        "🍰",
+        "🍐"
+       ],
+       "a": "🍕",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "الصوت",
+   "eyebrow": "الخطوة ٤ — الصوت",
+   "heading": "Phonics: oo",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "oo",
+       "say": "oo. moon, zoo, book, foot",
+       "c": "#E8590C",
+       "must": 1,
+       "big": true
+      },
+      {
+       "t": "m{oo}n",
+       "em": "🌙",
+       "say": "moon",
+       "sub": "قمر",
+       "must": 1
+      },
+      {
+       "t": "z{oo}",
+       "em": "🦁",
+       "say": "zoo",
+       "sub": "حديقة حيوان",
+       "must": 1
+      },
+      {
+       "t": "b{oo}k",
+       "em": "📕",
+       "say": "book",
+       "sub": "كتاب",
+       "must": 1
+      },
+      {
+       "t": "f{oo}t",
+       "em": "🦶",
+       "say": "foot",
+       "sub": "قدم",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الصوت والكلمات وردّدها."
+  },
+  {
+   "title": "تتبّع",
+   "eyebrow": "الخطوة ٥ — تتبّع",
+   "heading": "اكتب moon",
+   "blocks": [
+    {
+     "type": "trace",
+     "star": true,
+     "items": [
+      {
+       "t": "moon",
+       "say": "moon",
+       "size": 100
+      },
+      {
+       "t": "zoo",
+       "say": "zoo",
+       "size": 100
+      },
+      {
+       "t": "book",
+       "say": "book",
+       "size": 100
+      },
+      {
+       "t": "foot",
+       "say": "foot",
+       "size": 100
+      }
+     ],
+     "need": 1,
+     "lang": "en"
+    }
+   ],
+   "lead": "مرّر إصبعك فوق الكلمة."
+  },
+  {
+   "title": "فرقع",
+   "eyebrow": "الخطوة ٦ — فرقع",
+   "heading": "بالونات oo",
+   "blocks": [
+    {
+     "type": "pop",
+     "star": true,
+     "target": "oo",
+     "pool": [
+      "oo",
+      "ee",
+      "oa",
+      "ue",
+      "sh"
+     ],
+     "need": 6,
+     "say": "oo",
+     "q": "فرقع البالونات التي فيها",
+     "lang": "en"
+    }
+   ],
+   "lead": "فرقع كل بالون فيه oo."
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٧ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "moon",
+       "o": [
+        "🌙",
+        "🦁",
+        "📕"
+       ],
+       "a": "🌙",
+       "lang": "en"
+      },
+      {
+       "say": "foot",
+       "o": [
+        "🦶",
+        "🌙",
+        "🍎"
+       ],
+       "a": "🦶",
+       "lang": "en"
+      },
+      {
+       "say": "cake",
+       "o": [
+        "🍰",
+        "🍕",
+        "🍐"
+       ],
+       "a": "🍰",
+       "lang": "en"
+      },
+      {
+       "say": "What's your favourite fruit?",
+       "o": [
+        "❓🍓 What's your favourite fruit?",
+        "👋 Hello."
+       ],
+       "a": "❓🍓 What's your favourite fruit?",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en",
+     "pass": 3
+    }
+   ]
+  }
+ ]
+}
