@@ -1,0 +1,114 @@
+{
+ "id": "comp-7-u1-l5",
+ "grade": 7,
+ "subject": "comp",
+ "stage": "prep-7-9",
+ "lang": "ar",
+ "title": "برنامج العروض التقديمية",
+ "titleAr": "الحاسوب — الصف السابع",
+ "steps": [
+  {
+   "title": "اقرأ",
+   "eyebrow": "الخطوة ١ — اقرأ",
+   "heading": "برنامج العروض التقديمية",
+   "blocks": [
+    {
+     "type": "reading",
+     "star": true,
+     "lang": "ar",
+     "paragraphs": [
+      "أشهر برامج العروض: Microsoft PowerPoint، وبدائله: Google Slides، وLibreOffice Impress، وKeynote.",
+      "امتداد ملفات PowerPoint: .pptx",
+      "يتيح البرنامج: إنشاء الشرائح، والتصاميم الجاهزة، والحركات، والانتقالات، والعرض على الشاشة أو جهاز العرض (البروجكتور)."
+     ]
+    }
+   ],
+   "lead": "اقرأ وجرّب على الحاسوب مع معلمك."
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٢ — تدرّب",
+   "heading": "اختر الإجابة",
+   "blocks": [
+    {
+     "type": "choice",
+     "star": true,
+     "items": [
+      {
+       "q": "امتداد ملفات PowerPoint:",
+       "a": ".pptx",
+       "o": [
+        ".pptx",
+        ".docx"
+       ]
+      },
+      {
+       "q": "بديل مجاني:",
+       "a": "Google Slides",
+       "o": [
+        "Google Slides",
+        "Excel"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٣ — احفظ",
+   "heading": "ما يجب أن تحفظه",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "ar",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم المصطلحات والأفكار في الدرس، وستُسأل عنها في الامتحان. <b>احفظها وافهمها</b>، والبطاقات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "برنامج العروض التقديمية",
+       "meaning": "أشهر برامج العروض: Microsoft PowerPoint، وبدائله: Google Slides، وLibr",
+       "ex": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٤ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 2,
+     "items": [
+      {
+       "q": "امتداد ملفات PowerPoint:",
+       "a": ".pptx",
+       "o": [
+        ".pptx",
+        ".docx"
+       ],
+       "ar": true,
+       "why": ""
+      },
+      {
+       "q": "بديل مجاني:",
+       "a": "Google Slides",
+       "o": [
+        "Google Slides",
+        "Excel"
+       ],
+       "ar": true,
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "2 أسئلة. تنجح بـ 2 من 2."
+  }
+ ]
+}
