@@ -1,0 +1,125 @@
+{
+ "id": "isl-2-l8",
+ "grade": 2,
+ "subject": "isl",
+ "stage": "primary-1-3",
+ "lang": "ar",
+ "title": "سورة الليل",
+ "titleAr": "التربية الإسلامية — الصف الثاني",
+ "steps": [
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ١ — استمع",
+   "heading": "سورة الليل",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "📖 اسمع وردّد",
+     "html": "<div class=\"quran qx\" data-q=\"92:1-21\" data-h=\"1-21\"><div class=\"qbasm\">بِسْمِ ࡴ۬للَّهِ ࡴ۬لرَّحْمَٰنِ ࡴ۬لرَّحِيمِ</div><span class=\"qa\" data-a=\"1\" data-h=\"1-1\">وَاليْلِ إِذَا يَغْشَىٰ <span class=\"qn\">﴿١﴾</span></span> <span class=\"qa\" data-a=\"2\" data-h=\"2-2\">وَالنَّهَارِ إِذَا تَجَلَّىٰ <span class=\"qn\">﴿٢﴾</span></span> <span class=\"qa\" data-a=\"3\" data-h=\"3-3\">وَمَا خَلَقَ ࡰ۬لذَّكَرَ وَالْأُنثَىٰ <span class=\"qn\">﴿٣﴾</span></span> <span class=\"qa\" data-a=\"4\" data-h=\"4-4\">إِنَّ سَعْيَكُمْ لَشَتَّىٰ <span class=\"qn\">﴿٤﴾</span></span> <span class=\"qa\" data-a=\"5\" data-h=\"5-5\">فَأَمَّا مَنْ أَعْطَىٰ وَاتَّقَىٰ <span class=\"qn\">﴿٥﴾</span></span> <span class=\"qa\" data-a=\"6\" data-h=\"6-6\">وَصَدَّقَ بِالْحُسْنَىٰ <span class=\"qn\">﴿٦﴾</span></span> <span class=\"qa\" data-a=\"7\" data-h=\"7-7\">فَسَنُيَسِّرُهُۥ لِلْيُسْرَىٰ <span class=\"qn\">﴿٧﴾</span></span> <span class=\"qa\" data-a=\"8\" data-h=\"8-8\">وَأَمَّا مَنۢ بَخِلَ وَاسْتَغْنَىٰ <span class=\"qn\">﴿٨﴾</span></span> <span class=\"qa\" data-a=\"9\" data-h=\"9-9\">وَكَذَّبَ بِالْحُسْنَىٰ <span class=\"qn\">﴿٩﴾</span></span> <span class=\"qa\" data-a=\"10\" data-h=\"10-10\">فَسَنُيَسِّرُهُۥ لِلْعُسْرَىٰ <span class=\"qn\">﴿١٠﴾</span></span> <span class=\"qa\" data-a=\"11\" data-h=\"11-11\">وَمَا يُغْنِے عَنْهُ مَالُهُۥ إِذَا تَرَدَّىٰ <span class=\"qn\">﴿١١﴾</span></span> <span class=\"qa\" data-a=\"12\" data-h=\"12-12\">إِنَّ عَلَيْنَا لَلْهُدَىٰ <span class=\"qn\">﴿١٢﴾</span></span> <span class=\"qa\" data-a=\"13\" data-h=\"13-13\">وَإِنَّ لَنَا لَلْأٓخِرَةَ وَالْأُولَىٰ <span class=\"qn\">﴿١٣﴾</span></span> <span class=\"qa\" data-a=\"14\" data-h=\"14-14\">فَأَنذَرْتُكُمْ نَاراࣰ تَلَظَّىٰ <span class=\"qn\">﴿١٤﴾</span></span> <span class=\"qa\" data-a=\"15\" data-h=\"15-15\">لَا يَصْلَيٰهَا إِلَّا ࡰ۬لْأَشْقَى <span class=\"qn\">﴿١٥﴾</span></span> <span class=\"qa\" data-a=\"16\" data-h=\"16-16\">ࡰ۬لذِے كَذَّبَ وَتَوَلَّىٰ <span class=\"qn\">﴿١٦﴾</span></span> <span class=\"qa\" data-a=\"17\" data-h=\"17-17\">وَسَيُجَنَّبُهَا ࡰ۬لْأَتْقَى <span class=\"qn\">﴿١٧﴾</span></span> <span class=\"qa\" data-a=\"18\" data-h=\"18-18\">ࡰ۬لذِے يُؤْتِے مَالَهُۥ يَتَزَكَّىٰ <span class=\"qn\">﴿١٨﴾</span></span> <span class=\"qa\" data-a=\"19\" data-h=\"19-19\">وَمَا لِأَحَدٍ عِندَهُۥ مِن نِّعْمَةࣲ تُجْزَىٰ <span class=\"qn\">﴿١٩﴾</span></span> <span class=\"qa\" data-a=\"20\" data-h=\"20-20\">إِلَّا ࡰٜبْتِغَآءَ وَجْهِ رَبِّهِ ࡴ۬لْأَعْلَىٰ <span class=\"qn\">﴿٢٠﴾</span></span> <span class=\"qa\" data-a=\"21\" data-h=\"21-21\">وَلَسَوْفَ يَرْضَىٰ <span class=\"qn\">﴿٢١﴾</span></span></div><p class=\"note\">📿 اضغط «استمع بصوت القارئ» أو على أي آية لتسمع التلاوة برواية قالون عن نافع.</p>"
+    }
+   ],
+   "lead": "استمع إلى القارئ وردّد بعده."
+  },
+  {
+   "title": "أفهم",
+   "eyebrow": "الخطوة ٢ — أفهم",
+   "heading": "عن ماذا تتحدث السورة؟",
+   "blocks": [
+    {
+     "type": "reading",
+     "star": true,
+     "lang": "ar",
+     "paragraphs": [
+      "سُورَةُ الليل، وَعَدَدُ آيَاتِهَا 21.",
+      "مَنْ أَعْطَى وَاتَّقَى اللهَ يَسَّرَ اللهُ لَهُ الْخَيْرَ، وَمَنْ بَخِلَ خَسِرَ."
+     ]
+    }
+   ],
+   "lead": "استمع."
+  },
+  {
+   "title": "الكلمات",
+   "eyebrow": "الخطوة ٣ — الكلمات",
+   "heading": "معاني الكلمات",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "يَغْشَى",
+       "em": "📘",
+       "sub": "يغطي بظلامه",
+       "must": 1
+      },
+      {
+       "t": "تَجَلَّى",
+       "em": "📘",
+       "sub": "ظهر وأضاء",
+       "must": 1
+      },
+      {
+       "t": "الْأَتْقَى",
+       "em": "📘",
+       "sub": "الأكثر خوفاً من الله",
+       "must": 1
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة."
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٤ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "q": "كم عدد آيات سورة الليل؟",
+       "o": [
+        "21",
+        "23",
+        "25"
+       ],
+       "a": "21"
+      },
+      {
+       "q": "من أعطى واتقى:",
+       "o": [
+        "يسّره الله للخير",
+        "خسر"
+       ],
+       "a": "يسّره الله للخير"
+      },
+      {
+       "q": "يغشى تعني:",
+       "o": [
+        "يغطي بظلامه",
+        "شيئاً آخر"
+       ],
+       "a": "يغطي بظلامه"
+      }
+     ],
+     "final": true
+    }
+   ]
+  }
+ ],
+ "quran": [
+  {
+   "s": 92,
+   "a1": 1,
+   "a2": 21,
+   "h": [
+    92,
+    1,
+    21
+   ],
+   "k": "div"
+  }
+ ]
+}

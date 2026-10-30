@@ -1,0 +1,125 @@
+{
+ "id": "isl-2-l10",
+ "grade": 2,
+ "subject": "isl",
+ "stage": "primary-1-3",
+ "lang": "ar",
+ "title": "سورة البلد",
+ "titleAr": "التربية الإسلامية — الصف الثاني",
+ "steps": [
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ١ — استمع",
+   "heading": "سورة البلد",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "📖 اسمع وردّد",
+     "html": "<div class=\"quran qx\" data-q=\"90:1-20\" data-h=\"1-20\"><div class=\"qbasm\">بِسْمِ ࡴ۬للَّهِ ࡴ۬لرَّحْمَٰنِ ࡴ۬لرَّحِيمِ</div><span class=\"qa\" data-a=\"1\" data-h=\"1-1\">لَا أُقْسِمُ بِهَٰذَا ࡰ۬لْبَلَدِ <span class=\"qn\">﴿١﴾</span></span> <span class=\"qa\" data-a=\"2\" data-h=\"2-2\">وَأَنتَ حِلُّۢ بِهَٰذَا ࡰ۬لْبَلَدِ <span class=\"qn\">﴿٢﴾</span></span> <span class=\"qa\" data-a=\"3\" data-h=\"3-3\">وَوَالِدࣲ وَمَا وَلَدَ <span class=\"qn\">﴿٣﴾</span></span> <span class=\"qa\" data-a=\"4\" data-h=\"4-4\">لَقَدْ خَلَقْنَا ࡰ۬لْإِنسَٰنَ فِے كَبَدٍ <span class=\"qn\">﴿٤﴾</span></span> <span class=\"qa\" data-a=\"5\" data-h=\"5-5\">أَيَحْسِبُ أَن لَّنْ يَّقْدِرَ عَلَيْهِ أَحَدࣱ <span class=\"qn\">﴿٥﴾</span></span> <span class=\"qa\" data-a=\"6\" data-h=\"6-6\">يَقُولُ أَهْلَكْتُ مَالاࣰ لُّبَداً <span class=\"qn\">﴿٦﴾</span></span> <span class=\"qa\" data-a=\"7\" data-h=\"7-7\">أَيَحْسِبُ أَن لَّمْ يَرَهُۥ أَحَدٌ <span class=\"qn\">﴿٧﴾</span></span> <span class=\"qa\" data-a=\"8\" data-h=\"8-8\">أَلَمْ نَجْعَل لَّهُۥ عَيْنَيْنِ <span class=\"qn\">﴿٨﴾</span></span> <span class=\"qa\" data-a=\"9\" data-h=\"9-9\">وَلِسَاناࣰ وَشَفَتَيْنِ <span class=\"qn\">﴿٩﴾</span></span> <span class=\"qa\" data-a=\"10\" data-h=\"10-10\">وَهَدَيْنَٰهُ ࡲ۬لنَّجْدَيْنِ <span class=\"qn\">﴿١٠﴾</span></span> <span class=\"qa\" data-a=\"11\" data-h=\"11-11\">فَلَا ࡰٜقْتَحَمَ ࡰ۬لْعَقَبَةَ <span class=\"qn\">﴿١١﴾</span></span> <span class=\"qa\" data-a=\"12\" data-h=\"12-12\">وَمَا أَدْرَيٰكَ مَا ࡰ۬لْعَقَبَةُ <span class=\"qn\">﴿١٢﴾</span></span> <span class=\"qa\" data-a=\"13\" data-h=\"13-13\">فَكُّ رَقَبَةٍ <span class=\"qn\">﴿١٣﴾</span></span> <span class=\"qa\" data-a=\"14\" data-h=\"14-14\">أَوْ إِطْعَامࣱ فِے يَوْمࣲ ذِے مَسْغَبَةࣲ <span class=\"qn\">﴿١٤﴾</span></span> <span class=\"qa\" data-a=\"15\" data-h=\"15-15\">يَتِيماࣰ ذَا مَقْرَبَةٍ <span class=\"qn\">﴿١٥﴾</span></span> <span class=\"qa\" data-a=\"16\" data-h=\"16-16\">أَوْ مِسْكِيناࣰ ذَا مَتْرَبَةࣲ <span class=\"qn\">﴿١٦﴾</span></span> <span class=\"qa\" data-a=\"17\" data-h=\"17-17\">ثُمَّ كَانَ مِنَ ࡰ۬لذِينَ ءَامَنُواْ وَتَوَاصَوْاْ بِالصَّبْرِ وَتَوَاصَوْاْ بِالْمَرْحَمَةِ <span class=\"qn\">﴿١٧﴾</span></span> <span class=\"qa\" data-a=\"18\" data-h=\"18-18\">أُوْلَٰٓئِكَ أَصْحَٰبُ ࡲ۬لْمَيْمَنَةِ <span class=\"qn\">﴿١٨﴾</span></span> <span class=\"qa\" data-a=\"19\" data-h=\"19-19\">وَالذِينَ كَفَرُواْ بِـَٔايَٰتِنَا هُمْ أَصْحَٰبُ ࡲ۬لْمَشْـَٔمَةِ <span class=\"qn\">﴿١٩﴾</span></span> <span class=\"qa\" data-a=\"20\" data-h=\"20-20\">عَلَيْهِمْ نَارࣱ مُّوصَدَةُۢ <span class=\"qn\">﴿٢٠﴾</span></span></div><p class=\"note\">📿 اضغط «استمع بصوت القارئ» أو على أي آية لتسمع التلاوة برواية قالون عن نافع.</p>"
+    }
+   ],
+   "lead": "استمع إلى القارئ وردّد بعده."
+  },
+  {
+   "title": "أفهم",
+   "eyebrow": "الخطوة ٢ — أفهم",
+   "heading": "عن ماذا تتحدث السورة؟",
+   "blocks": [
+    {
+     "type": "reading",
+     "star": true,
+     "lang": "ar",
+     "paragraphs": [
+      "سُورَةُ البلد، وَعَدَدُ آيَاتِهَا 20.",
+      "يُذَكِّرُنَا اللهُ بِنِعَمِهِ: الْعَيْنَيْنِ وَاللِّسَانِ، وَيَدْعُونَا إِلَى إِطْعَامِ الْيَتِيمِ وَالْمِسْكِينِ."
+     ]
+    }
+   ],
+   "lead": "استمع."
+  },
+  {
+   "title": "الكلمات",
+   "eyebrow": "الخطوة ٣ — الكلمات",
+   "heading": "معاني الكلمات",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "الْبَلَدُ",
+       "em": "📘",
+       "sub": "مكة المكرمة",
+       "must": 1
+      },
+      {
+       "t": "عَيْنَيْنِ",
+       "em": "📘",
+       "sub": "نعمة البصر",
+       "must": 1
+      },
+      {
+       "t": "مِسْكِينًا",
+       "em": "📘",
+       "sub": "فقيراً",
+       "must": 1
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة."
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٤ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "q": "كم عدد آيات سورة البلد؟",
+       "o": [
+        "20",
+        "22",
+        "24"
+       ],
+       "a": "20"
+      },
+      {
+       "q": "البلد في السورة:",
+       "o": [
+        "مكة",
+        "المدينة"
+       ],
+       "a": "مكة"
+      },
+      {
+       "q": "البلد تعني:",
+       "o": [
+        "مكة المكرمة",
+        "شيئاً آخر"
+       ],
+       "a": "مكة المكرمة"
+      }
+     ],
+     "final": true
+    }
+   ]
+  }
+ ],
+ "quran": [
+  {
+   "s": 90,
+   "a1": 1,
+   "a2": 20,
+   "h": [
+    90,
+    1,
+    20
+   ],
+   "k": "div"
+  }
+ ]
+}

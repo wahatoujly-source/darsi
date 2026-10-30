@@ -1,0 +1,125 @@
+{
+ "id": "isl-2-l13",
+ "grade": 2,
+ "subject": "isl",
+ "stage": "primary-1-3",
+ "lang": "ar",
+ "title": "سورة الأعلى",
+ "titleAr": "التربية الإسلامية — الصف الثاني",
+ "steps": [
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ١ — استمع",
+   "heading": "سورة الأعلى",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "📖 اسمع وردّد",
+     "html": "<div class=\"quran qx\" data-q=\"87:1-19\" data-h=\"1-19\"><div class=\"qbasm\">بِسْمِ ࡴ۬للَّهِ ࡴ۬لرَّحْمَٰنِ ࡴ۬لرَّحِيمِ</div><span class=\"qa\" data-a=\"1\" data-h=\"1-1\">سَبِّحِ ࡴٜسْمَ رَبِّكَ ࡰ۬لْأَعْلَى <span class=\"qn\">﴿١﴾</span></span> <span class=\"qa\" data-a=\"2\" data-h=\"2-2\">ࡰ۬لذِے خَلَقَ فَسَوَّىٰ <span class=\"qn\">﴿٢﴾</span></span> <span class=\"qa\" data-a=\"3\" data-h=\"3-3\">وَالذِے قَدَّرَ فَهَدَىٰ <span class=\"qn\">﴿٣﴾</span></span> <span class=\"qa\" data-a=\"4\" data-h=\"4-4\">وَالذِے أَخْرَجَ ࡰ۬لْمَرْعَىٰ <span class=\"qn\">﴿٤﴾</span></span> <span class=\"qa\" data-a=\"5\" data-h=\"5-5\">فَجَعَلَهُۥ غُثَآءً أَحْوَىٰ <span class=\"qn\">﴿٥﴾</span></span> <span class=\"qa\" data-a=\"6\" data-h=\"6-6\">سَنُقْرِئُكَ فَلَا تَنسَىٰ <span class=\"qn\">﴿٦﴾</span></span> <span class=\"qa\" data-a=\"7\" data-h=\"7-7\">إِلَّا مَا شَآءَ ࡰ۬للَّهُ إِنَّهُۥ يَعْلَمُ ࡲ۬لْجَهْرَ وَمَا يَخْفَىٰ <span class=\"qn\">﴿٧﴾</span></span> <span class=\"qa\" data-a=\"8\" data-h=\"8-8\">وَنُيَسِّرُكَ لِلْيُسْرَىٰ <span class=\"qn\">﴿٨﴾</span></span> <span class=\"qa\" data-a=\"9\" data-h=\"9-9\">فَذَكِّرْ إِن نَّفَعَتِ ࡴ۬لذِّكْرَىٰ <span class=\"qn\">﴿٩﴾</span></span> <span class=\"qa\" data-a=\"10\" data-h=\"10-10\">سَيَذَّكَّرُ مَنْ يَّخْشَىٰ <span class=\"qn\">﴿١٠﴾</span></span> <span class=\"qa\" data-a=\"11\" data-h=\"11-11\">وَيَتَجَنَّبُهَا ࡰ۬لْأَشْقَى <span class=\"qn\">﴿١١﴾</span></span> <span class=\"qa\" data-a=\"12\" data-h=\"12-12\">ࡰ۬لذِے يَصْلَى ࡰ۬لنَّارَ ࡰ۬لْكُبْرَىٰ <span class=\"qn\">﴿١٢﴾</span></span> <span class=\"qa\" data-a=\"13\" data-h=\"13-13\">ثُمَّ لَا يَمُوتُ فِيهَا وَلَا يَحْيَىٰ <span class=\"qn\">﴿١٣﴾</span></span> <span class=\"qa\" data-a=\"14\" data-h=\"14-14\">قَدْ أَفْلَحَ مَن تَزَكَّىٰ <span class=\"qn\">﴿١٤﴾</span></span> <span class=\"qa\" data-a=\"15\" data-h=\"15-15\">وَذَكَرَ ࡰٜسْمَ رَبِّهِۦ فَصَلَّىٰ <span class=\"qn\">﴿١٥﴾</span></span> <span class=\"qa\" data-a=\"16\" data-h=\"16-16\">بَلْ تُؤْثِرُونَ ࡰ۬لْحَيَوٰةَ ࡰ۬لدُّنْيَا <span class=\"qn\">﴿١٦﴾</span></span> <span class=\"qa\" data-a=\"17\" data-h=\"17-17\">وَالْأٓخِرَةُ خَيْرࣱ وَأَبْقَىٰ <span class=\"qn\">﴿١٧﴾</span></span> <span class=\"qa\" data-a=\"18\" data-h=\"18-18\">إِنَّ هَٰذَا لَفِے ࡴ۬لصُّحُفِ ࡴ۬لْأُولَىٰ <span class=\"qn\">﴿١٨﴾</span></span> <span class=\"qa\" data-a=\"19\" data-h=\"19-19\">صُحُفِ إِبْرَٰهِيمَ وَمُوسَىٰ <span class=\"qn\">﴿١٩﴾</span></span></div><p class=\"note\">📿 اضغط «استمع بصوت القارئ» أو على أي آية لتسمع التلاوة برواية قالون عن نافع.</p>"
+    }
+   ],
+   "lead": "استمع إلى القارئ وردّد بعده."
+  },
+  {
+   "title": "أفهم",
+   "eyebrow": "الخطوة ٢ — أفهم",
+   "heading": "عن ماذا تتحدث السورة؟",
+   "blocks": [
+    {
+     "type": "reading",
+     "star": true,
+     "lang": "ar",
+     "paragraphs": [
+      "سُورَةُ الأعلى، وَعَدَدُ آيَاتِهَا 19.",
+      "نُسَبِّحُ اللهَ الْأَعْلَى الَّذِي خَلَقَ كُلَّ شَيْءٍ، وَالْآخِرَةُ خَيْرٌ وَأَبْقَى."
+     ]
+    }
+   ],
+   "lead": "استمع."
+  },
+  {
+   "title": "الكلمات",
+   "eyebrow": "الخطوة ٣ — الكلمات",
+   "heading": "معاني الكلمات",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "سَبِّحْ",
+       "em": "📘",
+       "sub": "قل سبحان الله",
+       "must": 1
+      },
+      {
+       "t": "الْمَرْعَى",
+       "em": "📘",
+       "sub": "النبات",
+       "must": 1
+      },
+      {
+       "t": "أَفْلَحَ",
+       "em": "📘",
+       "sub": "فاز",
+       "must": 1
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة."
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٤ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "q": "كم عدد آيات سورة الأعلى؟",
+       "o": [
+        "19",
+        "21",
+        "23"
+       ],
+       "a": "19"
+      },
+      {
+       "q": "الآخرة:",
+       "o": [
+        "خير وأبقى",
+        "أقل"
+       ],
+       "a": "خير وأبقى"
+      },
+      {
+       "q": "سبح تعني:",
+       "o": [
+        "قل سبحان الله",
+        "شيئاً آخر"
+       ],
+       "a": "قل سبحان الله"
+      }
+     ],
+     "final": true
+    }
+   ]
+  }
+ ],
+ "quran": [
+  {
+   "s": 87,
+   "a1": 1,
+   "a2": 19,
+   "h": [
+    87,
+    1,
+    19
+   ],
+   "k": "div"
+  }
+ ]
+}
