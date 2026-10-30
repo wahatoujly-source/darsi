@@ -229,17 +229,17 @@
   }
  ],
  "characters": {
-  "Reem": {
-   "ar": "ريم",
-   "color": "--c4",
-   "g": "f",
-   "pitch": 1.6
-  },
   "Omar": {
    "ar": "عمر",
    "color": "--c2",
    "g": "m",
    "pitch": 1.45
+  },
+  "Reem": {
+   "ar": "ريم",
+   "color": "--c4",
+   "g": "f",
+   "pitch": 1.6
   }
  },
  "dialogue": [
