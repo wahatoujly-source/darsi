@@ -1,0 +1,160 @@
+{
+ "id": "isl-4-l4",
+ "grade": 4,
+ "subject": "isl",
+ "stage": "primary-4-6",
+ "lang": "ar",
+ "title": "سورة عبس (تلاوة)",
+ "titleAr": "التربية الإسلامية — الصف الرابع",
+ "steps": [
+  {
+   "title": "اقرأ",
+   "eyebrow": "الخطوة ١ — اقرأ",
+   "heading": "سورة عبس (تلاوة)",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "سورة عبس",
+     "html": "<div class=\"quran qx\" data-q=\"80:1-42\" data-h=\"1-42\"><div class=\"qbasm\">بِسْمِ ࡴ۬للَّهِ ࡴ۬لرَّحْمَٰنِ ࡴ۬لرَّحِيمِ</div><span class=\"qa\" data-a=\"1\" data-h=\"1-1\">عَبَسَ وَتَوَلَّىٰ <span class=\"qn\">﴿١﴾</span></span> <span class=\"qa\" data-a=\"2\" data-h=\"2-2\">أَن جَآءَهُ ࡲ۬لْأَعْمَىٰ <span class=\"qn\">﴿٢﴾</span></span> <span class=\"qa\" data-a=\"3\" data-h=\"3-3\">وَمَا يُدْرِيكَ لَعَلَّهُۥ يَزَّكَّىٰ <span class=\"qn\">﴿٣﴾</span></span> <span class=\"qa\" data-a=\"4\" data-h=\"4-4\">أَوْ يَذَّكَّرُ فَتَنفَعُهُ ࡲ۬لذِّكْرَىٰ <span class=\"qn\">﴿٤﴾</span></span> <span class=\"qa\" data-a=\"5\" data-h=\"5-5\">أَمَّا مَنِ ࡴٜسْتَغْنَىٰ <span class=\"qn\">﴿٥﴾</span></span> <span class=\"qa\" data-a=\"6\" data-h=\"6-6\">فَأَنتَ لَهُۥ تَصَّدَّىٰ <span class=\"qn\">﴿٦﴾</span></span> <span class=\"qa\" data-a=\"7\" data-h=\"7-7\">وَمَا عَلَيْكَ أَلَّا يَزَّكَّىٰ <span class=\"qn\">﴿٧﴾</span></span> <span class=\"qa\" data-a=\"8\" data-h=\"8-8\">وَأَمَّا مَن جَآءَكَ يَسْعَىٰ <span class=\"qn\">﴿٨﴾</span></span> <span class=\"qa\" data-a=\"9\" data-h=\"9-9\">وَهْوَ يَخْشَىٰ <span class=\"qn\">﴿٩﴾</span></span> <span class=\"qa\" data-a=\"10\" data-h=\"10-10\">فَأَنتَ عَنْهُ تَلَهَّىٰ <span class=\"qn\">﴿١٠﴾</span></span> <span class=\"qa\" data-a=\"11\" data-h=\"11-11\">كَلَّا إِنَّهَا تَذْكِرَةࣱ <span class=\"qn\">﴿١١﴾</span></span> <span class=\"qa\" data-a=\"12\" data-h=\"12-12\">فَمَن شَآءَ ذَكَرَهُۥ <span class=\"qn\">﴿١٢﴾</span></span> <span class=\"qa\" data-a=\"13\" data-h=\"13-13\">فِے صُحُفࣲ مُّكَرَّمَةࣲ <span class=\"qn\">﴿١٣﴾</span></span> <span class=\"qa\" data-a=\"14\" data-h=\"14-14\">مَّرْفُوعَةࣲ مُّطَهَّرَةِۢ <span class=\"qn\">﴿١٤﴾</span></span> <span class=\"qa\" data-a=\"15\" data-h=\"15-15\">بِأَيْدِے سَفَرَةࣲ <span class=\"qn\">﴿١٥﴾</span></span> <span class=\"qa\" data-a=\"16\" data-h=\"16-16\">كِرَامِۢ بَرَرَةࣲ <span class=\"qn\">﴿١٦﴾</span></span> <span class=\"qa\" data-a=\"17\" data-h=\"17-17\">قُتِلَ ࡰ۬لْإِنسَٰنُ مَا أَكْفَرَهُۥ <span class=\"qn\">﴿١٧﴾</span></span> <span class=\"qa\" data-a=\"18\" data-h=\"18-18\">مِنْ أَيِّ شَےْءٍ خَلَقَهُۥ <span class=\"qn\">﴿١٨﴾</span></span> <span class=\"qa\" data-a=\"19\" data-h=\"19-19\">مِن نُّطْفَةٍ خَلَقَهُۥ فَقَدَّرَهُۥ <span class=\"qn\">﴿١٩﴾</span></span> <span class=\"qa\" data-a=\"20\" data-h=\"20-20\">ثُمَّ ࡰ۬لسَّبِيلَ يَسَّرَهُۥ <span class=\"qn\">﴿٢٠﴾</span></span> <span class=\"qa\" data-a=\"21\" data-h=\"21-21\">ثُمَّ أَمَاتَهُۥ فَأَقْبَرَهُۥ <span class=\"qn\">﴿٢١﴾</span></span> <span class=\"qa\" data-a=\"22\" data-h=\"22-22\">ثُمَّ إِذَا شَا أَنشَرَهُۥ <span class=\"qn\">﴿٢٢﴾</span></span> <span class=\"qa\" data-a=\"23\" data-h=\"23-23\">كَلَّا لَمَّا يَقْضِ مَا أَمَرَهُۥ <span class=\"qn\">﴿٢٣﴾</span></span> <span class=\"qa\" data-a=\"24\" data-h=\"24-24\">فَلْيَنظُرِ ࡴ۬لْإِنسَٰنُ إِلَىٰ طَعَامِهِۦ <span class=\"qn\">﴿٢٤﴾</span></span> <span class=\"qa\" data-a=\"25\" data-h=\"25-25\">إِنَّا صَبَبْنَا ࡰ۬لْمَآءَ صَبّاࣰ <span class=\"qn\">﴿٢٥﴾</span></span> <span class=\"qa\" data-a=\"26\" data-h=\"26-26\">ثُمَّ شَقَقْنَا ࡰ۬لْأَرْضَ شَقّاࣰ <span class=\"qn\">﴿٢٦﴾</span></span> <span class=\"qa\" data-a=\"27\" data-h=\"27-27\">فَأَنۢبَتْنَا فِيهَا حَبّاࣰ <span class=\"qn\">﴿٢٧﴾</span></span> <span class=\"qa\" data-a=\"28\" data-h=\"28-28\">وَعِنَباࣰ وَقَضْباࣰ <span class=\"qn\">﴿٢٨﴾</span></span> <span class=\"qa\" data-a=\"29\" data-h=\"29-29\">وَزَيْتُوناࣰ وَنَخْلاࣰ <span class=\"qn\">﴿٢٩﴾</span></span> <span class=\"qa\" data-a=\"30\" data-h=\"30-30\">وَحَدَآئِقَ غُلْباࣰ <span class=\"qn\">﴿٣٠﴾</span></span> <span class=\"qa\" data-a=\"31\" data-h=\"31-31\">وَفَٰكِهَةࣰ وَأَبّاࣰ <span class=\"qn\">﴿٣١﴾</span></span> <span class=\"qa\" data-a=\"32\" data-h=\"32-32\">مَّتَٰعاࣰ لَّكُمْ وَلِأَنْعَٰمِكُمْ <span class=\"qn\">﴿٣٢﴾</span></span> <span class=\"qa\" data-a=\"33\" data-h=\"33-33\">فَإِذَا جَآءَتِ ࡴ۬لصَّآخَّةُ <span class=\"qn\">﴿٣٣﴾</span></span> <span class=\"qa\" data-a=\"34\" data-h=\"34-34\">يَوْمَ يَفِرُّ ࡲ۬لْمَرْءُ مِنْ أَخِيهِ <span class=\"qn\">﴿٣٤﴾</span></span> <span class=\"qa\" data-a=\"35\" data-h=\"35-35\">وَأُمِّهِۦ وَأَبِيهِ <span class=\"qn\">﴿٣٥﴾</span></span> <span class=\"qa\" data-a=\"36\" data-h=\"36-36\">وَصَٰحِبَتِهِۦ وَبَنِيهِ <span class=\"qn\">﴿٣٦﴾</span></span> <span class=\"qa\" data-a=\"37\" data-h=\"37-37\">لِكُلِّ ࡴٜمْرِےࣲٕ مِّنْهُمْ يَوْمَئِذࣲ شَأْنࣱ يُغْنِيهِ <span class=\"qn\">﴿٣٧﴾</span></span> <span class=\"qa\" data-a=\"38\" data-h=\"38-38\">وُجُوهࣱ يَوْمَئِذࣲ مُّسْفِرَةࣱ <span class=\"qn\">﴿٣٨﴾</span></span> <span class=\"qa\" data-a=\"39\" data-h=\"39-39\">ضَاحِكَةࣱ مُّسْتَبْشِرَةࣱ <span class=\"qn\">﴿٣٩﴾</span></span> <span class=\"qa\" data-a=\"40\" data-h=\"40-40\">وَوُجُوهࣱ يَوْمَئِذٍ عَلَيْهَا غَبَرَةࣱ <span class=\"qn\">﴿٤٠﴾</span></span> <span class=\"qa\" data-a=\"41\" data-h=\"41-41\">تَرْهَقُهَا قَتَرَةٌ <span class=\"qn\">﴿٤١﴾</span></span> <span class=\"qa\" data-a=\"42\" data-h=\"42-42\">أُوْلَٰٓئِكَ هُمُ ࡲ۬لْكَفَرَةُ ࡲ۬لْفَجَرَةُ <span class=\"qn\">﴿٤٢﴾</span></span></div><p class=\"note\">📿 اضغط «استمع بصوت القارئ» أو على أي آية لتسمع التلاوة برواية قالون عن نافع.</p>"
+    },
+    {
+     "type": "reading",
+     "star": true,
+     "lang": "ar",
+     "paragraphs": [
+      "سورة عبس سورة مكية، وعدد آياتها 42 آية برواية قالون عن نافع. نتلوها تلاوة صحيحة.",
+      "تعاتب النبي ﷺ في شأن الأعمى عبد الله بن أم مكتوم، وتذكّر الإنسان بنعم الله في طعامه، وتصف يوم القيامة.",
+      {
+       "h": "معاني المفردات"
+      },
+      "عبس: قطّب وجهه. تولّى: أعرض. يزّكّى: يتطهر. تصدّى: تُقبل عليه. تلهّى: تنشغل. سفرة: ملائكة كتبة. قضباً: علفاً. أبّاً: مرعى. الصاخّة: صيحة القيامة. مسفرة: مضيئة.",
+      {
+       "h": "ما ترشد إليه السورة"
+      },
+      "الميزان عند الله التقوى، والتفكر في نعمة الطعام، ويوم القيامة يفر المرء من أقرب الناس إليه.",
+      "استمع إلى السورة بصوت القارئ، ثم اقرأها مع مراعاة أحكام التلاوة."
+     ]
+    }
+   ],
+   "lead": "استمع إلى الدرس، والآيات تُتلى بصوت القارئ برواية قالون عن نافع."
+  },
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ٢ — المفردات",
+   "heading": "اختر المعنى",
+   "blocks": [
+    {
+     "type": "choice",
+     "star": true,
+     "items": [
+      {
+       "q": "عبس:",
+       "a": "قطّب وجهه",
+       "o": [
+        "قطّب وجهه",
+        "ضحك"
+       ]
+      },
+      {
+       "q": "الصاخّة:",
+       "a": "صيحة القيامة",
+       "o": [
+        "صيحة القيامة",
+        "الريح"
+       ]
+      },
+      {
+       "q": "أبّاً:",
+       "a": "مرعى للحيوان",
+       "o": [
+        "مرعى للحيوان",
+        "الأب"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٣ — احفظ",
+   "heading": "ما يجب أن تحفظه",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "ar",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم المصطلحات والأفكار في الدرس، وستُسأل عنها في الامتحان. <b>احفظها وافهمها</b>، والبطاقات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "السورة",
+       "meaning": "مكية، 42 آية",
+       "ex": ""
+      },
+      {
+       "must": 1,
+       "term": "أتعلّم",
+       "meaning": "الميزان عند الله التقوى",
+       "ex": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٤ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 2,
+     "items": [
+      {
+       "type": "input",
+       "q": "كم عدد آيات سورة عبس برواية قالون؟",
+       "a": 42,
+       "why": ""
+      },
+      {
+       "q": "عبس:",
+       "a": "قطّب وجهه",
+       "o": [
+        "قطّب وجهه",
+        "ضحك"
+       ],
+       "ar": true,
+       "why": ""
+      },
+      {
+       "q": "الصاخّة:",
+       "a": "صيحة القيامة",
+       "o": [
+        "صيحة القيامة",
+        "الريح"
+       ],
+       "ar": true,
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "3 أسئلة. تنجح بـ 2 من 3."
+  }
+ ],
+ "quran": [
+  {
+   "s": 80,
+   "a1": 1,
+   "a2": 42,
+   "h": [
+    80,
+    1,
+    42
+   ],
+   "k": "div"
+  }
+ ]
+}

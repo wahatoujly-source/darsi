@@ -1,0 +1,160 @@
+{
+ "id": "isl-4-l5",
+ "grade": 4,
+ "subject": "isl",
+ "stage": "primary-4-6",
+ "lang": "ar",
+ "title": "سورة النازعات (تلاوة)",
+ "titleAr": "التربية الإسلامية — الصف الرابع",
+ "steps": [
+  {
+   "title": "اقرأ",
+   "eyebrow": "الخطوة ١ — اقرأ",
+   "heading": "سورة النازعات (تلاوة)",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "سورة النازعات",
+     "html": "<div class=\"quran qx\" data-q=\"79:1-45\" data-h=\"1-46\"><div class=\"qbasm\">بِسْمِ ࡴ۬للَّهِ ࡴ۬لرَّحْمَٰنِ ࡴ۬لرَّحِيمِ</div><span class=\"qa\" data-a=\"1\" data-h=\"1-1\">وَالنَّٰزِعَٰتِ غَرْقاࣰ <span class=\"qn\">﴿١﴾</span></span> <span class=\"qa\" data-a=\"2\" data-h=\"2-2\">وَالنَّٰشِطَٰتِ نَشْطاࣰ <span class=\"qn\">﴿٢﴾</span></span> <span class=\"qa\" data-a=\"3\" data-h=\"3-3\">وَالسَّٰبِحَٰتِ سَبْحاࣰ <span class=\"qn\">﴿٣﴾</span></span> <span class=\"qa\" data-a=\"4\" data-h=\"4-4\">فَالسَّٰبِقَٰتِ سَبْقاࣰ <span class=\"qn\">﴿٤﴾</span></span> <span class=\"qa\" data-a=\"5\" data-h=\"5-5\">فَالْمُدَبِّرَٰتِ أَمْراࣰ <span class=\"qn\">﴿٥﴾</span></span> <span class=\"qa\" data-a=\"6\" data-h=\"6-6\">يَوْمَ تَرْجُفُ ࡲ۬لرَّاجِفَةُ <span class=\"qn\">﴿٦﴾</span></span> <span class=\"qa\" data-a=\"7\" data-h=\"7-7\">تَتْبَعُهَا ࡰ۬لرَّادِفَةُ <span class=\"qn\">﴿٧﴾</span></span> <span class=\"qa\" data-a=\"8\" data-h=\"8-8\">قُلُوبࣱ يَوْمَئِذࣲ وَاجِفَةٌ <span class=\"qn\">﴿٨﴾</span></span> <span class=\"qa\" data-a=\"9\" data-h=\"9-9\">أَبْصَٰرُهَا خَٰشِعَةࣱ <span class=\"qn\">﴿٩﴾</span></span> <span class=\"qa\" data-a=\"10\" data-h=\"10-10\">يَقُولُونَ أَٰࢇنَّا لَمَرْدُودُونَ فِے ࡴ۬لْحَافِرَةِ <span class=\"qn\">﴿١٠﴾</span></span> <span class=\"qa\" data-a=\"11\" data-h=\"11-11\">إِذَا كُنَّا عِظَٰماࣰ نَّخِرَةࣰ <span class=\"qn\">﴿١١﴾</span></span> <span class=\"qa\" data-a=\"12\" data-h=\"12-12\">قَالُواْ تِلْكَ إِذاࣰ كَرَّةٌ خَاسِرَةࣱ <span class=\"qn\">﴿١٢﴾</span></span> <span class=\"qa\" data-a=\"13\" data-h=\"13-13\">فَإِنَّمَا هِيَ زَجْرَةࣱ وَٰحِدَةࣱ <span class=\"qn\">﴿١٣﴾</span></span> <span class=\"qa\" data-a=\"14\" data-h=\"14-14\">فَإِذَا هُم بِالسَّاهِرَةِ <span class=\"qn\">﴿١٤﴾</span></span> <span class=\"qa\" data-a=\"15\" data-h=\"15-15\">هَلْ أَتَيٰكَ حَدِيثُ مُوسَىٰ <span class=\"qn\">﴿١٥﴾</span></span> <span class=\"qa\" data-a=\"16\" data-h=\"16-16\">إِذْ نَادَيٰهُ رَبُّهُۥ بِالْوَادِ ࡴ۬لْمُقَدَّسِ طُوَى <span class=\"qn\">﴿١٦﴾</span></span> <span class=\"qa\" data-a=\"17\" data-h=\"17-17\">ࡰٜذْهَبْ إِلَىٰ فِرْعَوْنَ إِنَّهُۥ طَغَىٰ <span class=\"qn\">﴿١٧﴾</span></span> <span class=\"qa\" data-a=\"18\" data-h=\"18-18\">فَقُلْ هَل لَّكَ إِلَىٰ أَن تَزَّكَّىٰ <span class=\"qn\">﴿١٨﴾</span></span> <span class=\"qa\" data-a=\"19\" data-h=\"19-19\">وَأَهْدِيَكَ إِلَىٰ رَبِّكَ فَتَخْشَىٰ <span class=\"qn\">﴿١٩﴾</span></span> <span class=\"qa\" data-a=\"20\" data-h=\"20-20\">فَأَرَيٰهُ ࡲ۬لْأٓيَةَ ࡰ۬لْكُبْرَىٰ <span class=\"qn\">﴿٢٠﴾</span></span> <span class=\"qa\" data-a=\"21\" data-h=\"21-21\">فَكَذَّبَ وَعَصَىٰ <span class=\"qn\">﴿٢١﴾</span></span> <span class=\"qa\" data-a=\"22\" data-h=\"22-22\">ثُمَّ أَدْبَرَ يَسْعَىٰ <span class=\"qn\">﴿٢٢﴾</span></span> <span class=\"qa\" data-a=\"23\" data-h=\"23-23\">فَحَشَرَ فَنَادَىٰ <span class=\"qn\">﴿٢٣﴾</span></span> <span class=\"qa\" data-a=\"24\" data-h=\"24-24\">فَقَالَ أَنَا رَبُّكُمُ ࡲ۬لْأَعْلَىٰ <span class=\"qn\">﴿٢٤﴾</span></span> <span class=\"qa\" data-a=\"25\" data-h=\"25-25\">فَأَخَذَهُ ࡲ۬للَّهُ نَكَالَ ࡰ۬لْأٓخِرَةِ وَالْأُولَىٰ <span class=\"qn\">﴿٢٥﴾</span></span> <span class=\"qa\" data-a=\"26\" data-h=\"26-26\">إِنَّ فِے ذَٰلِكَ لَعِبْرَةࣰ لِّمَنْ يَّخْشَىٰ <span class=\"qn\">﴿٢٦﴾</span></span> <span class=\"qa\" data-a=\"27\" data-h=\"27-27\">ءَٰࡶنتُمْ أَشَدُّ خَلْقاً أَمِ ࡴ۬لسَّمَآءُ بَنَيٰهَا <span class=\"qn\">﴿٢٧﴾</span></span> <span class=\"qa\" data-a=\"28\" data-h=\"28-28\">رَفَعَ سَمْكَهَا فَسَوَّيٰهَا <span class=\"qn\">﴿٢٨﴾</span></span> <span class=\"qa\" data-a=\"29\" data-h=\"29-29\">وَأَغْطَشَ لَيْلَهَا وَأَخْرَجَ ضُحَيٰهَا <span class=\"qn\">﴿٢٩﴾</span></span> <span class=\"qa\" data-a=\"30\" data-h=\"30-30\">وَالْأَرْضَ بَعْدَ ذَٰلِكَ دَحَيٰهَا <span class=\"qn\">﴿٣٠﴾</span></span> <span class=\"qa\" data-a=\"31\" data-h=\"31-31\">أَخْرَجَ مِنْهَا مَآءَهَا وَمَرْعَيٰهَا <span class=\"qn\">﴿٣١﴾</span></span> <span class=\"qa\" data-a=\"32\" data-h=\"32-32\">وَالْجِبَالَ أَرْسَيٰهَا <span class=\"qn\">﴿٣٢﴾</span></span> <span class=\"qa\" data-a=\"33\" data-h=\"33-33\">مَتَٰعاࣰ لَّكُمْ وَلِأَنْعَٰمِكُمْ <span class=\"qn\">﴿٣٣﴾</span></span> <span class=\"qa\" data-a=\"34\" data-h=\"34-34\">فَإِذَا جَآءَتِ ࡴ۬لطَّآمَّةُ ࡲ۬لْكُبْرَىٰ <span class=\"qn\">﴿٣٤﴾</span></span> <span class=\"qa\" data-a=\"35\" data-h=\"35-35\">يَوْمَ يَتَذَكَّرُ ࡲ۬لْإِنسَٰنُ مَا سَعَىٰ <span class=\"qn\">﴿٣٥﴾</span></span> <span class=\"qa\" data-a=\"36\" data-h=\"36-36\">وَبُرِّزَتِ ࡴ۬لْجَحِيمُ لِمَنْ يَّرَىٰ <span class=\"qn\">﴿٣٦﴾</span></span> <span class=\"qa\" data-a=\"37\" data-h=\"37-38\">فَأَمَّا مَن طَغَىٰ وَءَاثَرَ ࡰ۬لْحَيَوٰةَ ࡰ۬لدُّنْيَا <span class=\"qn\">﴿٣٧﴾</span></span> <span class=\"qa\" data-a=\"38\" data-h=\"39-39\">فَإِنَّ ࡰ۬لْجَحِيمَ هِيَ ࡰ۬لْمَأْوَىٰ <span class=\"qn\">﴿٣٨﴾</span></span> <span class=\"qa\" data-a=\"39\" data-h=\"40-40\">وَأَمَّا مَنْ خَافَ مَقَامَ رَبِّهِۦ وَنَهَى ࡰ۬لنَّفْسَ عَنِ ࡴ۬لْهَوَىٰ <span class=\"qn\">﴿٣٩﴾</span></span> <span class=\"qa\" data-a=\"40\" data-h=\"41-41\">فَإِنَّ ࡰ۬لْجَنَّةَ هِيَ ࡰ۬لْمَأْوَىٰ <span class=\"qn\">﴿٤٠﴾</span></span> <span class=\"qa\" data-a=\"41\" data-h=\"42-42\">يَسْـَٔلُونَكَ عَنِ ࡴ۬لسَّاعَةِ أَيَّانَ مُرْسَيٰهَا <span class=\"qn\">﴿٤١﴾</span></span> <span class=\"qa\" data-a=\"42\" data-h=\"43-43\">فِيمَ أَنتَ مِن ذِكْرَيٰهَا <span class=\"qn\">﴿٤٢﴾</span></span> <span class=\"qa\" data-a=\"43\" data-h=\"44-44\">إِلَىٰ رَبِّكَ مُنتَهَيٰهَا <span class=\"qn\">﴿٤٣﴾</span></span> <span class=\"qa\" data-a=\"44\" data-h=\"45-45\">إِنَّمَا أَنتَ مُنذِرُ مَنْ يَّخْشَيٰهَا <span class=\"qn\">﴿٤٤﴾</span></span> <span class=\"qa\" data-a=\"45\" data-h=\"46-46\">كَأَنَّهُمْ يَوْمَ يَرَوْنَهَا لَمْ يَلْبَثُواْ إِلَّا عَشِيَّةً أَوْ ضُحَيٰهَا <span class=\"qn\">﴿٤٥﴾</span></span></div><p class=\"note\">📿 اضغط «استمع بصوت القارئ» أو على أي آية لتسمع التلاوة برواية قالون عن نافع.</p>"
+    },
+    {
+     "type": "reading",
+     "star": true,
+     "lang": "ar",
+     "paragraphs": [
+      "سورة النازعات سورة مكية، وعدد آياتها 45 آية برواية قالون عن نافع. نتلوها تلاوة صحيحة.",
+      "تقسم بالملائكة على البعث، وتذكر قصة موسى مع فرعون، وتبيّن أن الجنة لمن خاف مقام ربه.",
+      {
+       "h": "معاني المفردات"
+      },
+      "النازعات: الملائكة تنزع أرواح الكفار. الراجفة: النفخة الأولى. نخرة: بالية. طُوى: الوادي المقدس. الطامة: القيامة. دحاها: بسطها.",
+      {
+       "h": "ما ترشد إليه السورة"
+      },
+      "البعث حق، وعاقبة الطغيان كفرعون، ومن نهى النفس عن الهوى فالجنة مأواه.",
+      "استمع إلى السورة بصوت القارئ، ثم اقرأها مع مراعاة أحكام التلاوة."
+     ]
+    }
+   ],
+   "lead": "استمع إلى الدرس، والآيات تُتلى بصوت القارئ برواية قالون عن نافع."
+  },
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ٢ — المفردات",
+   "heading": "اختر المعنى",
+   "blocks": [
+    {
+     "type": "choice",
+     "star": true,
+     "items": [
+      {
+       "q": "نخرة:",
+       "a": "بالية",
+       "o": [
+        "بالية",
+        "جديدة"
+       ]
+      },
+      {
+       "q": "الطامة:",
+       "a": "القيامة",
+       "o": [
+        "القيامة",
+        "البحر"
+       ]
+      },
+      {
+       "q": "دحاها:",
+       "a": "بسطها",
+       "o": [
+        "بسطها",
+        "رفعها"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٣ — احفظ",
+   "heading": "ما يجب أن تحفظه",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "ar",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم المصطلحات والأفكار في الدرس، وستُسأل عنها في الامتحان. <b>احفظها وافهمها</b>، والبطاقات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "السورة",
+       "meaning": "مكية، 45 آية",
+       "ex": ""
+      },
+      {
+       "must": 1,
+       "term": "أتعلّم",
+       "meaning": "البعث حق",
+       "ex": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٤ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 2,
+     "items": [
+      {
+       "type": "input",
+       "q": "كم عدد آيات سورة النازعات برواية قالون؟",
+       "a": 45,
+       "why": ""
+      },
+      {
+       "q": "نخرة:",
+       "a": "بالية",
+       "o": [
+        "بالية",
+        "جديدة"
+       ],
+       "ar": true,
+       "why": ""
+      },
+      {
+       "q": "الطامة:",
+       "a": "القيامة",
+       "o": [
+        "القيامة",
+        "البحر"
+       ],
+       "ar": true,
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "3 أسئلة. تنجح بـ 2 من 3."
+  }
+ ],
+ "quran": [
+  {
+   "s": 79,
+   "a1": 1,
+   "a2": 45,
+   "h": [
+    79,
+    1,
+    46
+   ],
+   "k": "div"
+  }
+ ]
+}
