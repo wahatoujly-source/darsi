@@ -1,0 +1,361 @@
+{
+ "id": "en-9-u1-l5",
+ "grade": 9,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 1 · Lesson 5: What are they for?",
+ "titleAr": "الوحدة الأولى: وصف الأشياء — الدرس الخامس: ما فائدتها؟",
+ "characters": {},
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "كلمات الإعلانات",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "cool",
+       "ar": "عصري، رائع",
+       "em": "😎"
+      },
+      {
+       "id": "v1",
+       "en": "stylish",
+       "ar": "أنيق",
+       "em": "👟"
+      },
+      {
+       "id": "v2",
+       "en": "battery-powered",
+       "ar": "يعمل بالبطارية",
+       "em": "🔋"
+      },
+      {
+       "id": "v3",
+       "en": "rotate",
+       "ar": "يدور",
+       "em": "🔄"
+      },
+      {
+       "id": "v4",
+       "en": "bright colours",
+       "ar": "ألوان زاهية",
+       "em": "🌈"
+      },
+      {
+       "id": "v5",
+       "en": "changeable",
+       "ar": "قابل للتبديل",
+       "em": "🔁"
+      },
+      {
+       "id": "v6",
+       "en": "advert",
+       "ar": "إعلان",
+       "em": "📢"
+      },
+      {
+       "id": "v7",
+       "en": "sunglasses",
+       "ar": "نظارة شمسية",
+       "em": "🕶️"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 13–14 · كتاب التمارين ص 12–13."
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Comparatives & superlatives",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "📢 Adverts",
+     "html": "<div class=\"ex\">Are you tired of your mobile phone? Buy a new cover and bring some colour into your life! — Phones4u</div><div class=\"ex\">The sun can be dangerous. Find the sunglasses for you! LOOK COOL THIS SUMMER! — shadesRus.com</div><div class=\"ex\">Be a cool runner! Look great and run faster with our new range of stylish trainers. — runners.com</div><div class=\"ex\">Make the most of the latest technology. These boards don’t just look good – they’re great for turning and fast, too! — skateboards.com</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Are you tired of your mobile phone? Buy a new cover and bring some colour into your life! The sun can be dangerous. Find the sunglasses for you! Be a cool runner! Look great and run faster with our new range of stylish trainers."
+      }
+     ]
+    },
+    {
+     "type": "panel",
+     "title": "المقارنة",
+     "html": "<div class=\"ex\">big → bigger → the biggest · good → better → the best</div><div class=\"ex\">expensive → more/less expensive → the most/least expensive</div><div class=\"ex\">I’m going to buy the Pro dental because it is <b>less expensive than</b> the Sonic 2000.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "big, bigger, the biggest. good, better, the best. expensive, more expensive, the most expensive."
+      }
+     ]
+    }
+   ],
+   "lead": "المقارنة بين شيئين (bigger, more expensive) وبين ثلاثة أو أكثر (the biggest, the most expensive, the best).",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "الإعلانات",
+       "blocks": [
+        {
+         "type": "choice",
+         "star": false,
+         "items": [
+          {
+           "q": "Which advert sells phone covers?",
+           "a": "Phones4u",
+           "o": [
+            "Phones4u",
+            "runners.com"
+           ],
+           "why": ""
+          },
+          {
+           "q": "The sun can be …",
+           "a": "dangerous",
+           "o": [
+            "dangerous",
+            "cheap"
+           ],
+           "why": ""
+          },
+          {
+           "q": "‘stylish trainers’ are sold by:",
+           "a": "runners.com",
+           "o": [
+            "runners.com",
+            "skateboards.com"
+           ],
+           "why": ""
+          },
+          {
+           "q": "Skateboards are great for:",
+           "a": "turning and fast",
+           "o": [
+            "turning and fast",
+            "sleeping"
+           ],
+           "why": ""
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "المقارنة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "The Sonic 2000 is ___ than the Pro dental. (50 LYD / 30 LYD)",
+           "a": "more expensive",
+           "o": [
+            "more expensive",
+            "expensiver"
+           ]
+          },
+          {
+           "s": "This is the ___ toothbrush of all.",
+           "a": "best",
+           "o": [
+            "best",
+            "goodest"
+           ]
+          },
+          {
+           "s": "Maxi Clean (12 LYD) is the ___ expensive.",
+           "a": "least",
+           "o": [
+            "least",
+            "less"
+           ]
+          },
+          {
+           "s": "My bike is ___ than yours.",
+           "a": "faster",
+           "o": [
+            "faster",
+            "more fast"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Look cool this summer!",
+           "o": [
+            "Look cool this summer!",
+            "Look cool this winter!",
+            "Look good this summer!"
+           ]
+          },
+          {
+           "a": "Be a cool runner!",
+           "o": [
+            "Be a cool runner!",
+            "Be a fast runner!",
+            "Be a cool rider!"
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "the most expensive",
+       "ipa": "/ðə məʊst ɪkˈspensɪv/",
+       "meaning": "الأغلى",
+       "ex": "the most expensive toothbrush"
+      },
+      {
+       "must": 1,
+       "term": "less expensive than",
+       "ipa": "/les ɪkˈspensɪv ðən/",
+       "meaning": "أرخص من",
+       "ex": "It is less expensive than the Sonic."
+      },
+      {
+       "must": 1,
+       "term": "the best",
+       "ipa": "/ðə best/",
+       "meaning": "الأفضل",
+       "ex": "the best for travelling"
+      },
+      {
+       "must": 1,
+       "term": "stylish",
+       "ipa": "/ˈstaɪlɪʃ/",
+       "meaning": "أنيق",
+       "ex": "stylish trainers"
+      },
+      {
+       "must": 0,
+       "term": "battery-powered",
+       "ipa": "/ˈbætri ˈpaʊəd/",
+       "meaning": "يعمل بالبطارية",
+       "ex": "a battery-powered toothbrush"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "good → better → …",
+       "a": "the best",
+       "o": [
+        "the best",
+        "the goodest"
+       ],
+       "why": ""
+      },
+      {
+       "q": "big → …",
+       "a": "bigger",
+       "o": [
+        "bigger",
+        "more big"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى advert؟",
+       "a": "إعلان",
+       "o": [
+        "إعلان",
+        "هدية",
+        "متجر"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Find the sunglasses for you.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Find the sunglasses for you.",
+       "o": [
+        "Find the sunglasses for you.",
+        "Find the glasses for you.",
+        "Buy the sunglasses for me."
+       ],
+       "why": ""
+      },
+      {
+       "q": "expensive → the ___ expensive",
+       "a": "most",
+       "o": [
+        "most",
+        "more"
+       ],
+       "why": ""
+      },
+      {
+       "q": "‘rotate’ means:",
+       "a": "turn round",
+       "o": [
+        "turn round",
+        "stop"
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ]
+}

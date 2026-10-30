@@ -1,0 +1,384 @@
+{
+ "id": "en-9-u1-l3",
+ "grade": 9,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 1 · Lesson 3: Car of the year!",
+ "titleAr": "الوحدة الأولى: وصف الأشياء — الدرس الثالث: سيارة العام!",
+ "characters": {},
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "مزايا السيارة",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "airbags",
+       "ar": "وسائد هوائية",
+       "em": "🎈"
+      },
+      {
+       "id": "v1",
+       "en": "CD player",
+       "ar": "مشغّل أقراص",
+       "em": "💿"
+      },
+      {
+       "id": "v2",
+       "en": "electric windows",
+       "ar": "نوافذ كهربائية",
+       "em": "🪟"
+      },
+      {
+       "id": "v3",
+       "en": "GPS",
+       "ar": "نظام تحديد المواقع",
+       "em": "🧭"
+      },
+      {
+       "id": "v4",
+       "en": "sunroof",
+       "ar": "فتحة سقف",
+       "em": "☀️"
+      },
+      {
+       "id": "v5",
+       "en": "tinted windows",
+       "ar": "نوافذ مظلّلة",
+       "em": "🕶️"
+      },
+      {
+       "id": "v6",
+       "en": "engine",
+       "ar": "محرّك",
+       "em": "⚙️"
+      },
+      {
+       "id": "v7",
+       "en": "safety features",
+       "ar": "وسائل الأمان",
+       "em": "🛡️"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 11 · كتاب التمارين ص 8–10."
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "quite / very / really",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "📰 The newspaper article",
+     "html": "<div class=\"ex\"><b>CAR OF THE YEAR AT ONE OF THE MAJOR MOTOR SHOWS!</b><br>I’m here at one of the major motor shows, and the car everyone is talking about is the Panther 3.0D. The new Panther is Car of the Year and it’s really fantastic! It’s a car everyone wants to come and see. Some people just stand and gaze at its beautiful shape. Others want to sit in the driver’s seat and dream. Some young men are more interested in the engine – and what a great engine! It’s beautifully made and looks like an engine from a much more expensive car.</div><div class=\"ex\">There’s loads of space inside. The Panther 3.0D has seats for eight people. It looks very expensive, but the Panther 3.0D is actually quite cheap. It runs at 12 kilometres to the litre and has a four-year warranty. But there’s something even more important. This is a really safe car. There are airbags for the driver and passengers and many other safety features.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "The new Panther is Car of the Year and it's really fantastic! Some people just stand and gaze at its beautiful shape. There's loads of space inside. It has seats for eight people. It looks very expensive, but it is actually quite cheap. It runs at 12 kilometres to the litre. This is a really safe car."
+      }
+     ]
+    },
+    {
+     "type": "panel",
+     "title": "المقوّيات",
+     "html": "<div class=\"ex\">It’s <b>quite</b> cheap. (رخيصة إلى حدّ ما)</div><div class=\"ex\">It looks <b>very</b> expensive. · It’s <b>really</b> fantastic! (رائعة جداً)</div><p class=\"note\">gaze = ينظر طويلاً · dream = يحلم</p>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "It's quite cheap. It looks very expensive. It's really fantastic!"
+      }
+     ]
+    }
+   ],
+   "lead": "نستخدم quite (إلى حدّ ما) و very و really (جداً) لتقوية الصفة أو تخفيفها.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "المقال",
+       "blocks": [
+        {
+         "type": "choice",
+         "star": false,
+         "items": [
+          {
+           "q": "Does the writer like the Panther 3.0D?",
+           "a": "Yes, he does.",
+           "o": [
+            "Yes, he does.",
+            "No, he doesn’t."
+           ],
+           "why": ""
+          },
+          {
+           "q": "How many seats does it have?",
+           "a": "eight",
+           "o": [
+            "eight",
+            "five",
+            "four"
+           ],
+           "why": ""
+          },
+          {
+           "q": "Kilometres per litre:",
+           "a": "12",
+           "o": [
+            "12",
+            "8",
+            "20"
+           ],
+           "why": ""
+          },
+          {
+           "q": "‘gaze’ means:",
+           "a": "to look at for a long time",
+           "o": [
+            "to look at for a long time",
+            "to drive fast"
+           ],
+           "why": ""
+          },
+          {
+           "q": "The car is actually:",
+           "a": "quite cheap",
+           "o": [
+            "quite cheap",
+            "very expensive"
+           ],
+           "why": ""
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "quite / really",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "It’s ___ fantastic! I love it!",
+           "a": "really",
+           "o": [
+            "really",
+            "quite"
+           ]
+          },
+          {
+           "s": "The exam was ___ easy, but not very easy.",
+           "a": "quite",
+           "o": [
+            "quite",
+            "really"
+           ]
+          },
+          {
+           "s": "It’s a ___ safe car. It has many airbags.",
+           "a": "really",
+           "o": [
+            "really",
+            "quite"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "المفردات",
+       "blocks": [
+        {
+         "type": "choice",
+         "star": false,
+         "items": [
+          {
+           "q": "A window in the roof:",
+           "a": "sunroof",
+           "o": [
+            "sunroof",
+            "tinted window"
+           ],
+           "why": ""
+          },
+          {
+           "q": "It helps you find your way:",
+           "a": "GPS",
+           "o": [
+            "GPS",
+            "CD player"
+           ],
+           "why": ""
+          },
+          {
+           "q": "They keep you safe in an accident:",
+           "a": "airbags",
+           "o": [
+            "airbags",
+            "electric windows"
+           ],
+           "why": ""
+          },
+          {
+           "q": "Dark windows:",
+           "a": "tinted windows",
+           "o": [
+            "tinted windows",
+            "electric windows"
+           ],
+           "why": ""
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "quite",
+       "ipa": "/kwaɪt/",
+       "meaning": "إلى حدّ ما",
+       "ex": "It’s quite cheap."
+      },
+      {
+       "must": 1,
+       "term": "really",
+       "ipa": "/ˈrɪəli/",
+       "meaning": "حقاً، جداً",
+       "ex": "It’s really fantastic!"
+      },
+      {
+       "must": 1,
+       "term": "safety features",
+       "ipa": "/ˈseɪfti ˈfiːtʃəz/",
+       "meaning": "وسائل الأمان",
+       "ex": "It has many safety features."
+      },
+      {
+       "must": 1,
+       "term": "engine",
+       "ipa": "/ˈendʒɪn/",
+       "meaning": "محرّك",
+       "ex": "What a great engine!"
+      },
+      {
+       "must": 0,
+       "term": "gaze",
+       "ipa": "/ɡeɪz/",
+       "meaning": "يحدّق طويلاً",
+       "ex": "People gaze at its shape."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "It’s ___ fantastic! (strong)",
+       "a": "really",
+       "o": [
+        "really",
+        "quite"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى airbags؟",
+       "a": "وسائد هوائية",
+       "o": [
+        "وسائد هوائية",
+        "نوافذ",
+        "محرّك"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "This is a really safe car.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "This is a really safe car.",
+       "o": [
+        "This is a really safe car.",
+        "This is a quite safe car.",
+        "This is a very fast car."
+       ],
+       "why": ""
+      },
+      {
+       "q": "GPS helps you …",
+       "a": "find your way",
+       "o": [
+        "find your way",
+        "listen to music"
+       ],
+       "why": ""
+      },
+      {
+       "q": "The Panther has seats for … people.",
+       "a": "eight",
+       "o": [
+        "eight",
+        "six"
+       ],
+       "why": ""
+      },
+      {
+       "q": "‘actually’ means:",
+       "a": "in fact",
+       "o": [
+        "in fact",
+        "never"
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ]
+}

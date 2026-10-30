@@ -1,0 +1,391 @@
+{
+ "id": "en-9-u1-l1",
+ "grade": 9,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 1 · Lesson 1: At the Mall",
+ "titleAr": "الوحدة الأولى: وصف الأشياء — الدرس الأول: في المركز التجاري",
+ "characters": {},
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "في المركز التجاري",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "lift",
+       "ar": "مصعد",
+       "em": "🛗"
+      },
+      {
+       "id": "v1",
+       "en": "clock",
+       "ar": "ساعة",
+       "em": "🕐"
+      },
+      {
+       "id": "v2",
+       "en": "security guard",
+       "ar": "حارس أمن",
+       "em": "👮"
+      },
+      {
+       "id": "v3",
+       "en": "escalator",
+       "ar": "سلّم كهربائي",
+       "em": "↗️"
+      },
+      {
+       "id": "v4",
+       "en": "queue",
+       "ar": "طابور",
+       "em": "🧍‍♂️🧍‍♀️🧍"
+      },
+      {
+       "id": "v5",
+       "en": "plant",
+       "ar": "نبتة",
+       "em": "🪴"
+      },
+      {
+       "id": "v6",
+       "en": "shop assistant",
+       "ar": "بائع",
+       "em": "🧑‍💼"
+      },
+      {
+       "id": "v7",
+       "en": "cinema",
+       "ar": "سينما",
+       "em": "🎬"
+      },
+      {
+       "id": "v8",
+       "en": "information desk",
+       "ar": "مكتب الاستعلامات",
+       "em": "ℹ️"
+      },
+      {
+       "id": "v9",
+       "en": "loads of",
+       "ar": "الكثير من",
+       "em": "🛍️"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 8–9 · كتاب التمارين ص 4–5."
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "There is / There are · It has",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "📖 Richard’s mall",
+     "html": "<div class=\"ex\">We’ve got a big mall in Manchester. I like going there with my family. It has lots of good shops. I like the sports shops and the ones that sell video games. There are loads of clothes shops. My father likes the electronics shops. He likes buying things for his computer.</div><div class=\"ex\">There isn’t a supermarket, so we can’t go food shopping there. I like going up and down in the lift because you can see everything. There are plants and trees everywhere. And there’s a big car park next to the mall. It has three floors. Sometimes my father can’t find his car when we finish shopping. He gets very angry!</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "We've got a big mall in Manchester. I like going there with my family. It has lots of good shops. There isn't a supermarket, so we can't go food shopping there. I like going up and down in the lift because you can see everything. Sometimes my father can't find his car when we finish shopping. He gets very angry!"
+      }
+     ]
+    },
+    {
+     "type": "panel",
+     "title": "Talking about places",
+     "html": "<div class=\"ex\">There <b>is</b> an information desk. · There <b>are</b> lots of clothes shops.</div><div class=\"ex\">There <b>isn’t</b> a supermarket. · There <b>aren’t</b> any sweet shops.</div><div class=\"ex\">It <b>has</b> a big car park. · It <b>doesn’t have</b> a swimming pool.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "There is an information desk. There are lots of clothes shops. There isn't a supermarket. There aren't any sweet shops. It has a big car park. It doesn't have a swimming pool."
+      }
+     ]
+    }
+   ],
+   "lead": "نصف المكان بـ There is (مفرد) و There are (جمع)، والنفي بـ isn’t / aren’t، و It has / It doesn’t have.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "is / are",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "There ___ an information desk.",
+           "a": "is",
+           "o": [
+            "is",
+            "are"
+           ]
+          },
+          {
+           "s": "There ___ lots of clothes shops.",
+           "a": "are",
+           "o": [
+            "are",
+            "is"
+           ]
+          },
+          {
+           "s": "There ___ a supermarket. (✗)",
+           "a": "isn’t",
+           "o": [
+            "isn’t",
+            "aren’t"
+           ]
+          },
+          {
+           "s": "There ___ any sweet shops. (✗)",
+           "a": "aren’t",
+           "o": [
+            "aren’t",
+            "isn’t"
+           ]
+          },
+          {
+           "s": "It ___ a swimming pool. (✗)",
+           "a": "doesn’t have",
+           "o": [
+            "doesn’t have",
+            "don’t have"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "Richard",
+       "blocks": [
+        {
+         "type": "choice",
+         "star": false,
+         "items": [
+          {
+           "q": "Where is Richard’s mall?",
+           "a": "Manchester",
+           "o": [
+            "Manchester",
+            "London",
+            "Tripoli"
+           ],
+           "why": ""
+          },
+          {
+           "q": "What does his father like?",
+           "a": "the electronics shops",
+           "o": [
+            "the electronics shops",
+            "the sports shops"
+           ],
+           "why": ""
+          },
+          {
+           "q": "Why can’t they go food shopping?",
+           "a": "There isn’t a supermarket.",
+           "o": [
+            "There isn’t a supermarket.",
+            "It is closed."
+           ],
+           "why": ""
+          },
+          {
+           "q": "Why does his father get angry?",
+           "a": "He can’t find his car.",
+           "o": [
+            "He can’t find his car.",
+            "The lift is slow."
+           ],
+           "why": ""
+          },
+          {
+           "q": "‘loads of’ means:",
+           "a": "lots of",
+           "o": [
+            "lots of",
+            "a few"
+           ],
+           "why": ""
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "There are plants and trees everywhere.",
+           "o": [
+            "There are plants and trees everywhere.",
+            "There are shops everywhere.",
+            "There isn't a car park."
+           ]
+          },
+          {
+           "a": "It has three floors.",
+           "o": [
+            "It has three floors.",
+            "It has two floors.",
+            "It doesn't have floors."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "escalator",
+       "ipa": "/ˈeskəleɪtə/",
+       "meaning": "سلّم كهربائي",
+       "ex": "There is an escalator."
+      },
+      {
+       "must": 1,
+       "term": "information desk",
+       "ipa": "/ˌɪnfəˈmeɪʃn desk/",
+       "meaning": "مكتب الاستعلامات",
+       "ex": "Ask at the information desk."
+      },
+      {
+       "must": 1,
+       "term": "queue",
+       "ipa": "/kjuː/",
+       "meaning": "طابور",
+       "ex": "There is a long queue."
+      },
+      {
+       "must": 1,
+       "term": "security guard",
+       "ipa": "/sɪˈkjʊərəti ɡɑːd/",
+       "meaning": "حارس أمن",
+       "ex": "The security guard has a walkie-talkie."
+      },
+      {
+       "must": 0,
+       "term": "loads of",
+       "ipa": "/ləʊdz əv/",
+       "meaning": "الكثير من",
+       "ex": "There are loads of clothes shops."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "There ___ lots of shops.",
+       "a": "are",
+       "o": [
+        "are",
+        "is"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى escalator؟",
+       "a": "سلّم كهربائي",
+       "o": [
+        "سلّم كهربائي",
+        "مصعد",
+        "طابور"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "There isn't a supermarket.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "There isn't a supermarket.",
+       "o": [
+        "There isn't a supermarket.",
+        "There is a supermarket.",
+        "There aren't any supermarkets."
+       ],
+       "why": ""
+      },
+      {
+       "q": "queue is pronounced:",
+       "a": "/kjuː/",
+       "o": [
+        "/kjuː/",
+        "/kweɪ/"
+       ],
+       "why": ""
+      },
+      {
+       "q": "It ___ a big car park.",
+       "a": "has",
+       "o": [
+        "has",
+        "have"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Richard likes going up and down in the …",
+       "a": "lift",
+       "o": [
+        "lift",
+        "escalator"
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ]
+}

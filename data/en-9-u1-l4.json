@@ -1,0 +1,347 @@
+{
+ "id": "en-9-u1-l4",
+ "grade": 9,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 1 · Lesson 4: Buying and Selling",
+ "titleAr": "الوحدة الأولى: وصف الأشياء — الدرس الرابع: البيع والشراء",
+ "characters": {},
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "الدراجة والخيمة",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "mountain bike",
+       "ar": "دراجة جبلية",
+       "em": "🚵"
+      },
+      {
+       "id": "v1",
+       "en": "disc brakes",
+       "ar": "مكابح قرصية",
+       "em": "🛑"
+      },
+      {
+       "id": "v2",
+       "en": "suspension",
+       "ar": "نظام التعليق",
+       "em": "🔩"
+      },
+      {
+       "id": "v3",
+       "en": "comfortable ride",
+       "ar": "ركوب مريح",
+       "em": "😌"
+      },
+      {
+       "id": "v4",
+       "en": "lightweight tent",
+       "ar": "خيمة خفيفة",
+       "em": "⛺"
+      },
+      {
+       "id": "v5",
+       "en": "easy to put up",
+       "ar": "سهلة النصب",
+       "em": "🙌"
+      },
+      {
+       "id": "v6",
+       "en": "insect-proof",
+       "ar": "مانعة للحشرات",
+       "em": "🦟🚫"
+      },
+      {
+       "id": "v7",
+       "en": "windproof",
+       "ar": "مانعة للرياح",
+       "em": "🌬️🚫"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 12 · كتاب التمارين ص 11."
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Compound words · so you can / to help you",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "الكلمات المركّبة",
+     "html": "<div class=\"ex\"><b>windproof</b> = made from material that wind can’t get through</div><div class=\"ex\"><b>disc brakes</b> = brakes that use discs</div><div class=\"ex\">insect-proof · airbag · car park · information desk · sweet shop</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "windproof: made from material that wind can't get through. disc brakes: brakes that use discs."
+      }
+     ]
+    },
+    {
+     "type": "panel",
+     "title": "ذكر الأسباب",
+     "html": "<div class=\"ex\">There are disc brakes <b>to help you</b> stop quickly.</div><div class=\"ex\">It is easy to put up <b>so you won’t waste time</b>.</div><div class=\"ex\">There are clear instructions, <b>so you can</b> put it up easily.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "There are disc brakes to help you stop quickly. There are clear instructions, so you can put it up easily."
+      }
+     ]
+    }
+   ],
+   "lead": "الكلمات المركّبة من اسمين، وذكر سبب الميزة بـ so you can أو to help you.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "لماذا؟",
+       "blocks": [
+        {
+         "type": "choice",
+         "star": false,
+         "items": [
+          {
+           "q": "disc brakes:",
+           "a": "to help you stop quickly",
+           "o": [
+            "to help you stop quickly",
+            "to keep you warm"
+           ],
+           "why": ""
+          },
+          {
+           "q": "suspension:",
+           "a": "to help make the ride smoother",
+           "o": [
+            "to help make the ride smoother",
+            "to stop insects"
+           ],
+           "why": ""
+          },
+          {
+           "q": "insect-proof tent:",
+           "a": "so insects can’t get in",
+           "o": [
+            "so insects can’t get in",
+            "so you can ride fast"
+           ],
+           "why": ""
+          },
+          {
+           "q": "GPS:",
+           "a": "so you can find the place easily",
+           "o": [
+            "so you can find the place easily",
+            "to make the car cheaper"
+           ],
+           "why": ""
+          },
+          {
+           "q": "windproof material:",
+           "a": "to help you stay warm in windy weather",
+           "o": [
+            "to help you stay warm in windy weather",
+            "to help you stop quickly"
+           ],
+           "why": ""
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "كلمة مركّبة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "A tent that insects can’t get into is ___ .",
+           "a": "insect-proof",
+           "o": [
+            "insect-proof",
+            "insect-free"
+           ]
+          },
+          {
+           "s": "Brakes that use discs are ___ .",
+           "a": "disc brakes",
+           "o": [
+            "disc brakes",
+            "brake discs"
+           ]
+          },
+          {
+           "s": "A place to park cars is a ___ .",
+           "a": "car park",
+           "o": [
+            "car park",
+            "park car"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "There are disc brakes to help you stop quickly.",
+          "It is easy to put up so you won’t waste time."
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "so you can",
+       "ipa": "/səʊ juː kæn/",
+       "meaning": "لكي تستطيع",
+       "ex": "so you can put it up easily"
+      },
+      {
+       "must": 1,
+       "term": "to help you",
+       "ipa": "/tə help juː/",
+       "meaning": "لمساعدتك على",
+       "ex": "to help you stop quickly"
+      },
+      {
+       "must": 1,
+       "term": "compound word",
+       "ipa": "/ˈkɒmpaʊnd wɜːd/",
+       "meaning": "كلمة مركّبة",
+       "ex": "windproof, car park"
+      },
+      {
+       "must": 1,
+       "term": "lightweight",
+       "ipa": "/ˈlaɪtweɪt/",
+       "meaning": "خفيف الوزن",
+       "ex": "a lightweight tent"
+      },
+      {
+       "must": 0,
+       "term": "suspension",
+       "ipa": "/səˈspenʃn/",
+       "meaning": "نظام التعليق",
+       "ex": "front and back suspension"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "‘windproof’ is a … word.",
+       "a": "compound",
+       "o": [
+        "compound",
+        "short"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Disc brakes help you …",
+       "a": "stop quickly",
+       "o": [
+        "stop quickly",
+        "sleep well"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى lightweight؟",
+       "a": "خفيف الوزن",
+       "o": [
+        "خفيف الوزن",
+        "ثقيل",
+        "مضيء"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "It sleeps two.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "It sleeps two.",
+       "o": [
+        "It sleeps two.",
+        "It seats two.",
+        "It sleeps ten."
+       ],
+       "why": ""
+      },
+      {
+       "q": "There are clear instructions, ___ you can put it up easily.",
+       "a": "so",
+       "o": [
+        "so",
+        "but"
+       ],
+       "why": ""
+      },
+      {
+       "q": "A mountain bike is good for …",
+       "a": "rough ground",
+       "o": [
+        "rough ground",
+        "swimming"
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ]
+}

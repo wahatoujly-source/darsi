@@ -1,0 +1,450 @@
+{
+ "id": "en-9-u1-l2",
+ "grade": 9,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 1 · Lesson 2: Hurry up! It’s time to go!",
+ "titleAr": "الوحدة الأولى: وصف الأشياء — الدرس الثاني: أسرعوا! حان وقت الذهاب",
+ "characters": {
+  "Jassim": {
+   "ar": "جاسم",
+   "color": "--c2",
+   "g": "m",
+   "pitch": 1.15
+  },
+  "Ibrahim": {
+   "ar": "إبراهيم",
+   "color": "--c1",
+   "g": "m",
+   "pitch": 1.1
+  },
+  "Mum": {
+   "ar": "الأم",
+   "color": "--c3",
+   "g": "f",
+   "pitch": 1.15
+  }
+ },
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "قول الوقت",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "ten past twelve / twelve ten",
+       "ar": "12:10",
+       "em": "🕛"
+      },
+      {
+       "id": "v1",
+       "en": "twenty past three / three twenty",
+       "ar": "15:20",
+       "em": "🕒"
+      },
+      {
+       "id": "v2",
+       "en": "ten to six / five fifty",
+       "ar": "17:50",
+       "em": "🕠"
+      },
+      {
+       "id": "v3",
+       "en": "half past nine / nine thirty",
+       "ar": "21:30",
+       "em": "🕘"
+      },
+      {
+       "id": "v4",
+       "en": "quarter to eleven / ten forty-five",
+       "ar": "10:45",
+       "em": "🕥"
+      },
+      {
+       "id": "v5",
+       "en": "worried",
+       "ar": "قلق",
+       "em": "😟"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 10 · كتاب التمارين ص 5–7."
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "استمع إلى الحوار",
+   "blocks": [
+    {
+     "type": "dialogue",
+     "star": true
+    }
+   ],
+   "lead": "شغّل الحوار وتابع الكلمات المضيئة، واضغط على أي جملة لتعيدها."
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٣ — القاعدة",
+   "heading": "Present continuous / Past continuous",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "الوقت بطريقتين",
+     "html": "<div class=\"ex\">15:20 = twenty past three = three twenty</div><div class=\"ex\">21:30 = half past nine = nine thirty</div><p class=\"note\">نستخدم نظام 24 ساعة في الكتابة، ونادراً ما ننطقه.</p>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "fifteen twenty: twenty past three, or three twenty. Twenty one thirty: half past nine, or nine thirty."
+      }
+     ]
+    },
+    {
+     "type": "panel",
+     "title": "الآن أم في الماضي؟",
+     "html": "<div class=\"ex\">What <b>are</b> you <b>doing</b>? — I<b>’m waiting</b> in a queue. (الآن)</div><div class=\"ex\">What <b>were</b> you <b>doing</b>? — I <b>was queuing</b> to buy an ice-cream. (في الماضي)</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "What are you doing? I'm waiting in a queue. What were you doing? I was queuing to buy an ice-cream."
+      }
+     ]
+    }
+   ],
+   "lead": "المضارع المستمر لما يحدث الآن، والماضي المستمر لما كان يحدث في وقت معيّن في الماضي.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٤ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "الوقت",
+       "blocks": [
+        {
+         "type": "choice",
+         "star": false,
+         "items": [
+          {
+           "q": "12:10",
+           "a": "ten past twelve",
+           "o": [
+            "ten past twelve",
+            "twelve past ten"
+           ],
+           "why": ""
+          },
+          {
+           "q": "17:50",
+           "a": "ten to six",
+           "o": [
+            "ten to six",
+            "ten past five"
+           ],
+           "why": ""
+          },
+          {
+           "q": "21:30",
+           "a": "half past nine",
+           "o": [
+            "half past nine",
+            "half past eight"
+           ],
+           "why": ""
+          },
+          {
+           "q": "10:45",
+           "a": "quarter to eleven",
+           "o": [
+            "quarter to eleven",
+            "quarter past ten"
+           ],
+           "why": ""
+          },
+          {
+           "q": "15:20",
+           "a": "three twenty",
+           "o": [
+            "three twenty",
+            "five twenty"
+           ],
+           "why": ""
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "am / was",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "What ___ you doing now?",
+           "a": "are",
+           "o": [
+            "are",
+            "were"
+           ]
+          },
+          {
+           "s": "I ___ having a burger now.",
+           "a": "’m",
+           "o": [
+            "’m",
+            "was"
+           ]
+          },
+          {
+           "s": "Yesterday at 5, I ___ queuing.",
+           "a": "was",
+           "o": [
+            "was",
+            "am"
+           ]
+          },
+          {
+           "s": "What ___ you doing at 8 last night?",
+           "a": "were",
+           "o": [
+            "were",
+            "are"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "الحوار",
+       "blocks": [
+        {
+         "type": "choice",
+         "star": false,
+         "items": [
+          {
+           "q": "Where is Ibrahim?",
+           "a": "in the lift",
+           "o": [
+            "in the lift",
+            "in the restaurant"
+           ],
+           "why": ""
+          },
+          {
+           "q": "What is Jassim having?",
+           "a": "a burger",
+           "o": [
+            "a burger",
+            "a cola"
+           ],
+           "why": ""
+          },
+          {
+           "q": "Why is Fahad having a cola?",
+           "a": "He was thirsty.",
+           "o": [
+            "He was thirsty.",
+            "He was hungry."
+           ],
+           "why": ""
+          },
+          {
+           "q": "Why is Mum worried?",
+           "a": "The children are late.",
+           "o": [
+            "The children are late.",
+            "She lost her bag."
+           ],
+           "why": ""
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٥ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "half past",
+       "ipa": "/hɑːf pɑːst/",
+       "meaning": "والنصف",
+       "ex": "half past nine"
+      },
+      {
+       "must": 1,
+       "term": "quarter to",
+       "ipa": "/ˈkwɔːtə tə/",
+       "meaning": "إلا ربعاً",
+       "ex": "quarter to eleven"
+      },
+      {
+       "must": 1,
+       "term": "hurry up",
+       "ipa": "/ˌhʌri ˈʌp/",
+       "meaning": "أسرِع",
+       "ex": "Hurry up! It’s time to go!"
+      },
+      {
+       "must": 1,
+       "term": "worried",
+       "ipa": "/ˈwʌrid/",
+       "meaning": "قلق",
+       "ex": "The mother looks worried."
+      },
+      {
+       "must": 0,
+       "term": "ground floor",
+       "ipa": "/ɡraʊnd flɔː/",
+       "meaning": "الطابق الأرضي",
+       "ex": "I’m coming to the ground floor."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "09:30 = …",
+       "a": "half past nine",
+       "o": [
+        "half past nine",
+        "nine half"
+       ],
+       "why": ""
+      },
+      {
+       "q": "What ___ you doing now?",
+       "a": "are",
+       "o": [
+        "are",
+        "were"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى worried؟",
+       "a": "قلق",
+       "o": [
+        "قلق",
+        "سعيد",
+        "جائع"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Hurry up! It's time to go!",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Hurry up! It's time to go!",
+       "o": [
+        "Hurry up! It's time to go!",
+        "Hurry up! It's time to eat!",
+        "Slow down! It's time to go!"
+       ],
+       "why": ""
+      },
+      {
+       "q": "I ___ queuing yesterday.",
+       "a": "was",
+       "o": [
+        "was",
+        "am"
+       ],
+       "why": ""
+      },
+      {
+       "q": "18:00 = …",
+       "a": "six o’clock",
+       "o": [
+        "six o’clock",
+        "eight o’clock"
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "dialogue": [
+  [
+   "Mum",
+   "It's your mum. Look Ibrahim, it's five past one. What are you doing?"
+  ],
+  [
+   "Ibrahim",
+   "Oh, hi Mum. I'm in the lift. I'm just coming to the ground floor now."
+  ],
+  [
+   "Mum",
+   "Oh, well hurry up, then! And what about Salwa? What's she doing?"
+  ],
+  [
+   "Ibrahim",
+   "I don't know. I'm with Ameena."
+  ],
+  [
+   "Mum",
+   "Jassim, what are you doing? Where are you?"
+  ],
+  [
+   "Jassim",
+   "I'm in the restaurant. I'm having a burger."
+  ],
+  [
+   "Mum",
+   "In the restaurant? But it's five past one! Where's Fahad?"
+  ],
+  [
+   "Jassim",
+   "He was thirsty. He's having a cola."
+  ],
+  [
+   "Mum",
+   "Will you hurry up, please! Bring the burger with you."
+  ]
+ ],
+ "left": [
+  "Mum"
+ ]
+}
