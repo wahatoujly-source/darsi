@@ -2489,6 +2489,681 @@
     ]
    }
   ],
+  "3": [
+   {
+    "id": "en",
+    "name": "اللغة الإنجليزية",
+    "icon": "Aa",
+    "lang": "en",
+    "unitWord": "الوحدة ",
+    "books": [
+     {
+      "id": "ab3",
+      "name": "English for Libya — Primary 3 Activity Book",
+      "note": "لم يصلنا كتاب التلميذ (Pupil's Book)، فبُنيت الدروس من كتاب المعلم وكتاب النشاط.",
+      "units": [
+       {
+        "n": 1,
+        "title": "At School",
+        "lessons": [
+         {
+          "n": 1,
+          "title": "My Friends",
+          "ref": "كتاب النشاط ص 4⁠–⁠6",
+          "titleAr": "أصدقائي",
+          "id": "en-3-u1-l1",
+          "ready": true
+         },
+         {
+          "n": 2,
+          "title": "My Classroom",
+          "ref": "كتاب النشاط ص 7⁠–⁠9",
+          "titleAr": "فصلي",
+          "id": "en-3-u1-l2",
+          "ready": true
+         },
+         {
+          "n": 3,
+          "title": "At School",
+          "ref": "كتاب النشاط ص 10⁠–⁠12",
+          "titleAr": "في المدرسة",
+          "id": "en-3-u1-l3",
+          "ready": true
+         },
+         {
+          "n": 4,
+          "title": "My Body",
+          "ref": "كتاب النشاط ص 13⁠–⁠15",
+          "titleAr": "جسمي",
+          "id": "en-3-u1-l4",
+          "ready": true
+         },
+         {
+          "n": 5,
+          "title": "Play Time",
+          "ref": "كتاب النشاط ص 16⁠–⁠18"
+         },
+         {
+          "n": 6,
+          "title": "My Head",
+          "ref": "كتاب النشاط ص 19⁠–⁠21",
+          "titleAr": "رأسي ووجهي",
+          "id": "en-3-u1-l6",
+          "ready": true
+         },
+         {
+          "n": 7,
+          "title": "Let’s count!",
+          "ref": "كتاب النشاط ص 22⁠–⁠24"
+         },
+         {
+          "n": 8,
+          "title": "The Magic Pencil",
+          "ref": "كتاب النشاط ص 25⁠–⁠27"
+         }
+        ],
+        "titleAr": "في المدرسة"
+       },
+       {
+        "n": 2,
+        "title": "At the Park",
+        "lessons": [
+         {
+          "n": 1,
+          "title": "I can …",
+          "ref": ""
+         },
+         {
+          "n": 2,
+          "title": "I can’t …",
+          "ref": ""
+         },
+         {
+          "n": 3,
+          "title": "Animals",
+          "ref": ""
+         },
+         {
+          "n": 4,
+          "title": "Food",
+          "ref": ""
+         },
+         {
+          "n": 5,
+          "title": "I don’t like …",
+          "ref": ""
+         },
+         {
+          "n": 6,
+          "title": "Clothes",
+          "ref": ""
+         },
+         {
+          "n": 7,
+          "title": "What are they wearing?",
+          "ref": ""
+         },
+         {
+          "n": 8,
+          "title": "The Clever Crow",
+          "ref": ""
+         }
+        ],
+        "titleAr": "في الحديقة"
+       },
+       {
+        "n": 3,
+        "title": "At Home",
+        "lessons": [
+         {
+          "n": 1,
+          "title": "My Family",
+          "ref": ""
+         },
+         {
+          "n": 2,
+          "title": "My Bedroom",
+          "ref": ""
+         },
+         {
+          "n": 3,
+          "title": "Happy Days",
+          "ref": ""
+         },
+         {
+          "n": 4,
+          "title": "In My Room",
+          "ref": ""
+         },
+         {
+          "n": 5,
+          "title": "My Day",
+          "ref": ""
+         },
+         {
+          "n": 6,
+          "title": "Ben’s Afternoon",
+          "ref": ""
+         },
+         {
+          "n": 7,
+          "title": "What’s the time?",
+          "ref": ""
+         },
+         {
+          "n": 8,
+          "title": "Ben’s Messy Room",
+          "ref": ""
+         }
+        ],
+        "titleAr": "في البيت"
+       },
+       {
+        "n": 4,
+        "title": "Revision",
+        "lessons": [
+         {
+          "n": 1,
+          "title": "Is it?",
+          "ref": ""
+         },
+         {
+          "n": 2,
+          "title": "My Big Family",
+          "ref": ""
+         },
+         {
+          "n": 3,
+          "title": "What is it?",
+          "ref": ""
+         },
+         {
+          "n": 4,
+          "title": "Can I play?",
+          "ref": ""
+         }
+        ],
+        "titleAr": "مراجعة"
+       },
+       {
+        "n": 5,
+        "title": "Healthy Habits",
+        "lessons": [
+         {
+          "n": 1,
+          "title": "My Health",
+          "ref": ""
+         },
+         {
+          "n": 2,
+          "title": "Are you healthy?",
+          "ref": ""
+         },
+         {
+          "n": 3,
+          "title": "Do we have any?",
+          "ref": ""
+         },
+         {
+          "n": 4,
+          "title": "At My School",
+          "ref": ""
+         },
+         {
+          "n": 5,
+          "title": "My House",
+          "ref": ""
+         },
+         {
+          "n": 6,
+          "title": "How many rooms?",
+          "ref": ""
+         },
+         {
+          "n": 7,
+          "title": "I Like Maths",
+          "ref": ""
+         },
+         {
+          "n": 8,
+          "title": "Roland’s Race",
+          "ref": ""
+         }
+        ],
+        "titleAr": "عادات صحية"
+       },
+       {
+        "n": 6,
+        "title": "Around Town",
+        "lessons": [
+         {
+          "n": 1,
+          "title": "My Town",
+          "ref": ""
+         },
+         {
+          "n": 2,
+          "title": "Where is the bakery?",
+          "ref": ""
+         },
+         {
+          "n": 3,
+          "title": "Let’s go!",
+          "ref": ""
+         },
+         {
+          "n": 4,
+          "title": "How tall?",
+          "ref": ""
+         },
+         {
+          "n": 5,
+          "title": "Growing a Plant",
+          "ref": ""
+         },
+         {
+          "n": 6,
+          "title": "A Little Seed",
+          "ref": ""
+         },
+         {
+          "n": 7,
+          "title": "Clean up the park!",
+          "ref": ""
+         },
+         {
+          "n": 8,
+          "title": "The Ant and the Grasshopper",
+          "ref": ""
+         }
+        ],
+        "titleAr": "في المدينة"
+       },
+       {
+        "n": 7,
+        "title": "At the Shop",
+        "lessons": [
+         {
+          "n": 1,
+          "title": "Shopping",
+          "ref": ""
+         },
+         {
+          "n": 2,
+          "title": "At the Supermarket",
+          "ref": ""
+         },
+         {
+          "n": 3,
+          "title": "A Pet for Ben",
+          "ref": ""
+         },
+         {
+          "n": 4,
+          "title": "Wild World",
+          "ref": ""
+         },
+         {
+          "n": 5,
+          "title": "Who am I?",
+          "ref": ""
+         },
+         {
+          "n": 6,
+          "title": "I’m playing …",
+          "ref": ""
+         },
+         {
+          "n": 7,
+          "title": "On Holiday",
+          "ref": ""
+         },
+         {
+          "n": 8,
+          "title": "The Shopping List",
+          "ref": ""
+         }
+        ],
+        "titleAr": "في المتجر"
+       },
+       {
+        "n": 8,
+        "title": "Revision",
+        "lessons": [
+         {
+          "n": 1,
+          "title": "At Home",
+          "ref": ""
+         },
+         {
+          "n": 2,
+          "title": "Picture A or B?",
+          "ref": ""
+         },
+         {
+          "n": 3,
+          "title": "At the Zoo",
+          "ref": ""
+         },
+         {
+          "n": 4,
+          "title": "The Greedy King",
+          "ref": ""
+         }
+        ],
+        "titleAr": "مراجعة"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "math",
+    "name": "الرياضيات",
+    "icon": "±",
+    "lang": "ar",
+    "books": [
+     {
+      "id": "m3a",
+      "name": "كتاب التلميذ — الجزء الأول",
+      "units": [
+       {
+        "n": 1,
+        "title": "الأعداد حتى 10 000",
+        "lessons": [
+         {
+          "n": 1,
+          "title": "الأعداد حتى 10 000",
+          "ref": "ص 8⁠–⁠12",
+          "id": "math-3-c1-l1",
+          "ready": true
+         },
+         {
+          "n": 2,
+          "title": "العد",
+          "ref": "ص 13⁠–⁠17",
+          "id": "math-3-c1-l2",
+          "ready": true
+         },
+         {
+          "n": 3,
+          "title": "مقارنة الأعداد حتى 10 000",
+          "ref": "ص 18⁠–⁠21",
+          "id": "math-3-c1-l3",
+          "ready": true
+         }
+        ]
+       },
+       {
+        "n": 2,
+        "title": "جمع الأعداد حتى 10 000",
+        "lessons": [
+         {
+          "n": 1,
+          "title": "معنى المجموع",
+          "ref": "ص 22⁠–⁠23"
+         },
+         {
+          "n": 2,
+          "title": "الجمع البسيط حتى 10 000",
+          "ref": "ص 24⁠–⁠25"
+         },
+         {
+          "n": 3,
+          "title": "الجمع مع إعادة تجميع المئات",
+          "ref": "ص 26⁠–⁠28"
+         },
+         {
+          "n": 4,
+          "title": "الجمع مع إعادة تجميع الآحاد والعشرات والمئات",
+          "ref": "ص 29⁠–⁠30"
+         }
+        ]
+       },
+       {
+        "n": 3,
+        "title": "طرح الأعداد حتى 10 000",
+        "lessons": [
+         {
+          "n": 1,
+          "title": "معنى الفرق",
+          "ref": "ص 31"
+         },
+         {
+          "n": 2,
+          "title": "الطرح البسيط حتى 10 000",
+          "ref": "ص 32⁠–⁠33"
+         },
+         {
+          "n": 3,
+          "title": "الطرح مع إعادة تجميع الآلاف",
+          "ref": "ص 34⁠–⁠38"
+         },
+         {
+          "n": 4,
+          "title": "الطرح مع إعادة تجميع العشرات والمئات",
+          "ref": "ص 39⁠–⁠42"
+         },
+         {
+          "n": 5,
+          "title": "طرح أعداد تحتوي أصفاراً",
+          "ref": "ص 43⁠–⁠45"
+         }
+        ]
+       },
+       {
+        "n": 4,
+        "title": "حل المسائل 1: الجمع والطرح",
+        "lessons": [
+         {
+          "n": 1,
+          "title": "الجمع والطرح",
+          "ref": "ص 46⁠–⁠48"
+         },
+         {
+          "n": 2,
+          "title": "مسائل لفظية من خطوتين",
+          "ref": "ص 49⁠–⁠50"
+         }
+        ]
+       },
+       {
+        "n": 5,
+        "title": "جداول ضرب 6، 7، 8، 9",
+        "lessons": [
+         {
+          "n": 1,
+          "title": "الضرب في 6: عد القفزات",
+          "ref": "ص 51⁠–⁠52"
+         },
+         {
+          "n": 2,
+          "title": "الضرب في 7: عد القفزات",
+          "ref": "ص 53⁠–⁠54"
+         },
+         {
+          "n": 3,
+          "title": "الضرب في 8: عد القفزات",
+          "ref": "ص 55⁠–⁠56"
+         },
+         {
+          "n": 4,
+          "title": "الضرب في 9",
+          "ref": "ص 57⁠–⁠58"
+         },
+         {
+          "n": 5,
+          "title": "القسمة: إيجاد عدد العناصر في كل مجموعة",
+          "ref": "ص 59⁠–⁠61"
+         },
+         {
+          "n": 6,
+          "title": "القسمة: تكوين مجموعات متساوية",
+          "ref": "ص 62⁠–⁠63"
+         }
+        ]
+       },
+       {
+        "n": 6,
+        "title": "الضرب",
+        "lessons": [
+         {
+          "n": 1,
+          "title": "الضرب بدون إعادة تجميع",
+          "ref": "ص 64⁠–⁠67"
+         },
+         {
+          "n": 2,
+          "title": "الضرب مع إعادة تجميع الآحاد والعشرات",
+          "ref": "ص 68⁠–⁠71"
+         },
+         {
+          "n": 3,
+          "title": "الضرب مع إعادة تجميع الآحاد والعشرات والمئات",
+          "ref": "ص 72⁠–⁠75"
+         }
+        ]
+       },
+       {
+        "n": 7,
+        "title": "القسمة",
+        "lessons": [
+         {
+          "n": 1,
+          "title": "خارج القسمة والباقي",
+          "ref": "ص 76⁠–⁠78"
+         },
+         {
+          "n": 2,
+          "title": "الأعداد الفردية والأعداد الزوجية",
+          "ref": "ص 79⁠–⁠80"
+         },
+         {
+          "n": 3,
+          "title": "القسمة بدون باق وإعادة تجميع",
+          "ref": "ص 81⁠–⁠83"
+         },
+         {
+          "n": 4,
+          "title": "القسمة مع إعادة تجميع العشرات",
+          "ref": "ص 84⁠–⁠86"
+         },
+         {
+          "n": 5,
+          "title": "القسمة مع إعادة تجميع المئات والعشرات",
+          "ref": "ص 87⁠–⁠93"
+         }
+        ]
+       },
+       {
+        "n": 8,
+        "title": "حل المسائل 2: الضرب والقسمة",
+        "lessons": [
+         {
+          "n": 1,
+          "title": "الضرب",
+          "ref": "ص 94⁠–⁠95"
+         },
+         {
+          "n": 2,
+          "title": "القسمة",
+          "ref": "ص 96⁠–⁠97"
+         }
+        ]
+       },
+       {
+        "n": 9,
+        "title": "الحساب الذهني",
+        "lessons": [
+         {
+          "n": 1,
+          "title": "الجمع الذهني بالتقريب للخمسينات",
+          "ref": "ص 98⁠–⁠100"
+         },
+         {
+          "n": 2,
+          "title": "الطرح الذهني بالتقريب للخمسينات",
+          "ref": "ص 101⁠–⁠103"
+         },
+         {
+          "n": 3,
+          "title": "الجمع الذهني بالتقريب للمئات",
+          "ref": "ص 104⁠–⁠106"
+         },
+         {
+          "n": 4,
+          "title": "الطرح الذهني بالتقريب للمئات",
+          "ref": "ص 107⁠–⁠110"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "sci",
+    "name": "العلوم",
+    "icon": "⚗",
+    "lang": "ar",
+    "unitWord": "الموضوع ",
+    "books": [
+     {
+      "id": "sci3a",
+      "name": "كتاب التلميذ — الجزء الأول",
+      "units": [
+       {
+        "n": 1,
+        "title": "التنوع",
+        "lessons": [
+         {
+          "n": 1,
+          "title": "المخلوقات الحية والأشياء غير الحية",
+          "ref": "ص 12⁠–⁠15",
+          "id": "sci-3-l1",
+          "ready": true
+         },
+         {
+          "n": 2,
+          "title": "صفات المخلوقات الحية",
+          "ref": "ص 16⁠–⁠23",
+          "id": "sci-3-l2",
+          "ready": true
+         },
+         {
+          "n": 3,
+          "title": "تصنيف الأشياء والمخلوقات الحية",
+          "ref": "ص 24⁠–⁠27",
+          "id": "sci-3-l3",
+          "ready": true
+         },
+         {
+          "n": 4,
+          "title": "الحياة التي تحيط بنا: الحيوانات",
+          "ref": "ص 28⁠–⁠51"
+         },
+         {
+          "n": 5,
+          "title": "تصنيف الحيوانات",
+          "ref": "ص 52⁠–⁠61"
+         },
+         {
+          "n": 6,
+          "title": "الحياة التي تحيط بنا: النباتات",
+          "ref": "ص 62⁠–⁠77"
+         },
+         {
+          "n": 7,
+          "title": "تصنيف النباتات",
+          "ref": "ص 78⁠–⁠84"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  ],
   "4": [
    {
     "id": "ar",
