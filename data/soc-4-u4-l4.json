@@ -1,0 +1,168 @@
+{
+ "id": "soc-4-u4-l4",
+ "grade": 4,
+ "subject": "soc",
+ "stage": "primary-4-6",
+ "lang": "ar",
+ "title": "القمر والهلال",
+ "titleAr": "الاجتماعيات — الصف الرابع",
+ "steps": [
+  {
+   "title": "اقرأ",
+   "eyebrow": "الخطوة ١ — اقرأ",
+   "heading": "القمر والهلال",
+   "blocks": [
+    {
+     "type": "panel",
+     "anim": "moon_phases",
+     "title": "🎬 شاهد",
+     "html": "<div class=\"anim\" style=\"max-width:460px;margin:0 auto\"><svg viewBox=\"0 0 380 360\" role=\"img\" aria-label=\"يتغير شكل القمر خلال الشهر القمري\" style=\"width:100%;height:auto;display:block;border-radius:16px;background:#0d1b3e\" xmlns=\"http://www.w3.org/2000/svg\"><style>@media (prefers-reduced-motion:reduce){*{animation:none!important}}</style><rect width=\"380\" height=\"360\" fill=\"#0d1b3e\"/><circle cx=\"30\" cy=\"40\" r=\"1.5\" fill=\"#fff\" opacity=\".8\"/><circle cx=\"90\" cy=\"80\" r=\"1.5\" fill=\"#fff\" opacity=\".8\"/><circle cx=\"150\" cy=\"30\" r=\"1.5\" fill=\"#fff\" opacity=\".8\"/><circle cx=\"300\" cy=\"50\" r=\"1.5\" fill=\"#fff\" opacity=\".8\"/><circle cx=\"340\" cy=\"120\" r=\"1.5\" fill=\"#fff\" opacity=\".8\"/><circle cx=\"60\" cy=\"200\" r=\"1.5\" fill=\"#fff\" opacity=\".8\"/><circle cx=\"330\" cy=\"230\" r=\"1.5\" fill=\"#fff\" opacity=\".8\"/><circle cx=\"200\" cy=\"90\" r=\"1.5\" fill=\"#fff\" opacity=\".8\"/><circle cx=\"250\" cy=\"20\" r=\"1.5\" fill=\"#fff\" opacity=\".8\"/><circle cx=\"190\" cy=\"150\" r=\"80\" fill=\"#1c2b55\"/><g opacity=\"0\"><path d=\"M190,70 A80,80 0 0 1 190,230 A50,80 0 0 0 190,70 Z\" fill=\"#fff9c4\"/><text x=\"190\" y=\"275\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"bold\" fill=\"#fff59d\">هلال أول الشهر</text><animate attributeName=\"opacity\" values=\"1;0;0;0;0\" calcMode=\"discrete\" dur=\"10s\" repeatCount=\"indefinite\"/></g><g opacity=\"0\"><path d=\"M190,70 A80,80 0 0 1 190,230 A0.1,80 0 0 0 190,70 Z\" fill=\"#fff9c4\"/><text x=\"190\" y=\"275\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"bold\" fill=\"#fff59d\">التربيع الأول</text><animate attributeName=\"opacity\" values=\"0;1;0;0;0\" calcMode=\"discrete\" dur=\"10s\" repeatCount=\"indefinite\"/></g><g opacity=\"0\"><path d=\"M110,150 A80,80 0 1 1 270,150 A80,80 0 1 1 110,150 Z\" fill=\"#fff9c4\"/><text x=\"190\" y=\"275\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"bold\" fill=\"#fff59d\">البدر (منتصف الشهر)</text><animate attributeName=\"opacity\" values=\"0;0;1;0;0\" calcMode=\"discrete\" dur=\"10s\" repeatCount=\"indefinite\"/></g><g opacity=\"0\"><path d=\"M190,70 A80,80 0 0 0 190,230 A0.1,80 0 0 1 190,70 Z\" fill=\"#fff9c4\"/><text x=\"190\" y=\"275\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"bold\" fill=\"#fff59d\">التربيع الثاني</text><animate attributeName=\"opacity\" values=\"0;0;0;1;0\" calcMode=\"discrete\" dur=\"10s\" repeatCount=\"indefinite\"/></g><g opacity=\"0\"><path d=\"M190,70 A80,80 0 0 0 190,230 A50,80 0 0 1 190,70 Z\" fill=\"#fff9c4\"/><text x=\"190\" y=\"275\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"bold\" fill=\"#fff59d\">الهلال آخر الشهر</text><animate attributeName=\"opacity\" values=\"0;0;0;0;1\" calcMode=\"discrete\" dur=\"10s\" repeatCount=\"indefinite\"/></g><text x=\"190.0\" y=\"329\" text-anchor=\"middle\" font-size=\"16\" font-weight=\"700\" fill=\"#fff\">يتغير شكل القمر</text><text x=\"190.0\" y=\"348\" text-anchor=\"middle\" font-size=\"16\" font-weight=\"700\" fill=\"#fff\">خلال الشهر القمري</text></svg></div>"
+    },
+    {
+     "type": "reading",
+     "star": true,
+     "lang": "ar",
+     "paragraphs": [
+      "القمر جسم يدور حول الأرض، ولا يضيء بنفسه بل يعكس ضوء الشمس.",
+      "أشكال القمر (منازله): في أول الشهر القمري يظهر هلالاً رفيعاً، ثم يكبر حتى يصبح نصف دائرة (التربيع الأول)، ثم بدراً كاملاً في منتصف الشهر (الليلة 14)، ثم يصغر حتى يعود هلالاً ويختفي.",
+      "﴿وَالْقَمَرُ قَدَّرْنَٰهُ مَنَازِلَ حَتَّىٰ عَادَ كَالْعُرْجُونِ ࡴ۬لْقَدِيمِ﴾.",
+      "فائدة الهلال: نعرف به بداية الشهور الهجرية، كرمضان وشوال وذي الحجة: ﴿يَسْـَٔلُونَكَ عَنِ ࡴ۬لْأَهِلَّةِ قُلْ هِيَ مَوَٰقِيتُ لِلنَّاسِ وَالْحَجِّ﴾.",
+      "القمر يدور حول الأرض في نحو 29 أو 30 يوماً، وهي مدة الشهر القمري."
+     ]
+    }
+   ],
+   "lead": "اقرأ مع معلمك، وتأمّل الصورة المتحركة."
+  },
+  {
+   "title": "رتّب",
+   "eyebrow": "الخطوة ٢ — رتّب",
+   "heading": "أشكال القمر",
+   "blocks": [
+    {
+     "type": "sequence",
+     "star": true,
+     "items": [
+      {
+       "q": "رتّب من أول الشهر",
+       "order": [
+        "هلال",
+        "تربيع أول",
+        "بدر",
+        "تربيع ثانٍ"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختر",
+   "eyebrow": "الخطوة ٣ — اختر",
+   "heading": "",
+   "blocks": [
+    {
+     "type": "choice",
+     "star": true,
+     "items": [
+      {
+       "q": "القمر يضيء بـ:",
+       "a": "انعكاس ضوء الشمس",
+       "o": [
+        "انعكاس ضوء الشمس",
+        "نفسه"
+       ]
+      },
+      {
+       "q": "البدر يكون في:",
+       "a": "منتصف الشهر",
+       "o": [
+        "منتصف الشهر",
+        "أول الشهر"
+       ]
+      },
+      {
+       "q": "نعرف بالهلال:",
+       "a": "بداية الشهر الهجري",
+       "o": [
+        "بداية الشهر الهجري",
+        "فصل الصيف"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "ما يجب أن تحفظه",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "ar",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم المصطلحات والأفكار في الدرس، وستُسأل عنها في الامتحان. <b>احفظها وافهمها</b>، والبطاقات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "الهلال",
+       "meaning": "أول الشهر القمري",
+       "ex": ""
+      },
+      {
+       "must": 1,
+       "term": "البدر",
+       "meaning": "القمر الكامل منتصف الشهر",
+       "ex": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 1,
+     "items": [
+      {
+       "type": "input",
+       "q": "أيام الشهر القمري لا تزيد على؟",
+       "a": 30,
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "1 أسئلة. تنجح بـ 1 من 1."
+  }
+ ],
+ "quran": [
+  {
+   "s": 36,
+   "a1": 38,
+   "a2": 38,
+   "h": [
+    36,
+    39,
+    39
+   ],
+   "k": "وَالْقَمَرُ قَدَّرْنَٰهُ مَنَازِلَ حَتَّىٰ عَادَ كَالْعُرْجُونِ ࡴ۬لْقَدِيمِ"
+  },
+  {
+   "s": 2,
+   "a1": 188,
+   "a2": 188,
+   "h": [
+    2,
+    189,
+    189
+   ],
+   "k": "يَسْـَٔلُونَكَ عَنِ ࡴ۬لْأَهِلَّةِ قُلْ هِيَ مَوَٰقِيتُ لِلنَّاسِ وَالْحَجِّ"
+  }
+ ]
+}

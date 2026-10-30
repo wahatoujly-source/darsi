@@ -1,0 +1,159 @@
+{
+ "id": "soc-4-u4-l11",
+ "grade": 4,
+ "subject": "soc",
+ "stage": "primary-4-6",
+ "lang": "ar",
+ "title": "الرياح والكثبان الرملية",
+ "titleAr": "الاجتماعيات — الصف الرابع",
+ "steps": [
+  {
+   "title": "اقرأ",
+   "eyebrow": "الخطوة ١ — اقرأ",
+   "heading": "الرياح والكثبان الرملية",
+   "blocks": [
+    {
+     "type": "panel",
+     "anim": "dunes_wind",
+     "title": "🎬 شاهد",
+     "html": "<div class=\"anim\" style=\"max-width:460px;margin:0 auto\"><svg viewBox=\"0 0 380 360\" role=\"img\" aria-label=\"الرياح تنقل الرمال فتتكون الكثبان الرملية\" style=\"width:100%;height:auto;display:block;border-radius:16px;background:#fff3e0\" xmlns=\"http://www.w3.org/2000/svg\"><style>@media (prefers-reduced-motion:reduce){*{animation:none!important}}</style><rect width=\"380\" height=\"360\" fill=\"#fff3e0\"/><path d=\"M0,280 Q60,200 130,250 Q200,170 280,240 Q330,200 380,250 L380,360 L0,360Z\" fill=\"#ffcc80\" stroke=\"#e65100\" stroke-width=\"2\"/><circle r=\"3\" fill=\"#ef6c00\"><animateMotion dur=\"2.5s\" begin=\"0.0s\" repeatCount=\"indefinite\" path=\"M-10,150 Q190,120 390,170\"/></circle><circle r=\"3\" fill=\"#ef6c00\"><animateMotion dur=\"2.9s\" begin=\"0.25s\" repeatCount=\"indefinite\" path=\"M-10,163 Q190,133 390,183\"/></circle><circle r=\"3\" fill=\"#ef6c00\"><animateMotion dur=\"3.3s\" begin=\"0.5s\" repeatCount=\"indefinite\" path=\"M-10,176 Q190,146 390,196\"/></circle><circle r=\"3\" fill=\"#ef6c00\"><animateMotion dur=\"3.7s\" begin=\"0.75s\" repeatCount=\"indefinite\" path=\"M-10,189 Q190,159 390,209\"/></circle><circle r=\"3\" fill=\"#ef6c00\"><animateMotion dur=\"2.5s\" begin=\"1.0s\" repeatCount=\"indefinite\" path=\"M-10,202 Q190,172 390,222\"/></circle><circle r=\"3\" fill=\"#ef6c00\"><animateMotion dur=\"2.9s\" begin=\"1.25s\" repeatCount=\"indefinite\" path=\"M-10,215 Q190,185 390,235\"/></circle><circle r=\"3\" fill=\"#ef6c00\"><animateMotion dur=\"3.3s\" begin=\"1.5s\" repeatCount=\"indefinite\" path=\"M-10,228 Q190,198 390,248\"/></circle><circle r=\"3\" fill=\"#ef6c00\"><animateMotion dur=\"3.7s\" begin=\"1.75s\" repeatCount=\"indefinite\" path=\"M-10,151 Q190,121 390,171\"/></circle><circle r=\"3\" fill=\"#ef6c00\"><animateMotion dur=\"2.5s\" begin=\"2.0s\" repeatCount=\"indefinite\" path=\"M-10,164 Q190,134 390,184\"/></circle><circle r=\"3\" fill=\"#ef6c00\"><animateMotion dur=\"2.9s\" begin=\"2.25s\" repeatCount=\"indefinite\" path=\"M-10,177 Q190,147 390,197\"/></circle><circle r=\"3\" fill=\"#ef6c00\"><animateMotion dur=\"3.3s\" begin=\"2.5s\" repeatCount=\"indefinite\" path=\"M-10,190 Q190,160 390,210\"/></circle><circle r=\"3\" fill=\"#ef6c00\"><animateMotion dur=\"3.7s\" begin=\"2.75s\" repeatCount=\"indefinite\" path=\"M-10,203 Q190,173 390,223\"/></circle><circle r=\"3\" fill=\"#ef6c00\"><animateMotion dur=\"2.5s\" begin=\"3.0s\" repeatCount=\"indefinite\" path=\"M-10,216 Q190,186 390,236\"/></circle><circle r=\"3\" fill=\"#ef6c00\"><animateMotion dur=\"2.9s\" begin=\"3.25s\" repeatCount=\"indefinite\" path=\"M-10,229 Q190,199 390,249\"/></circle><path d=\"M20,80 Q80,70 140,80\" stroke=\"#90a4ae\" stroke-width=\"3\" fill=\"none\" stroke-linecap=\"round\"><animateTransform attributeName=\"transform\" type=\"translate\" values=\"-60 0;300 0\" dur=\"3s\" begin=\"0.0s\" repeatCount=\"indefinite\"/></path><path d=\"M20,110 Q80,100 140,110\" stroke=\"#90a4ae\" stroke-width=\"3\" fill=\"none\" stroke-linecap=\"round\"><animateTransform attributeName=\"transform\" type=\"translate\" values=\"-60 0;300 0\" dur=\"3s\" begin=\"0.6s\" repeatCount=\"indefinite\"/></path><path d=\"M20,140 Q80,130 140,140\" stroke=\"#90a4ae\" stroke-width=\"3\" fill=\"none\" stroke-linecap=\"round\"><animateTransform attributeName=\"transform\" type=\"translate\" values=\"-60 0;300 0\" dur=\"3s\" begin=\"1.2s\" repeatCount=\"indefinite\"/></path><text x=\"300\" y=\"60\" font-size=\"16\" font-weight=\"bold\" fill=\"#5d4037\">الرياح ←</text><text x=\"190.0\" y=\"329\" text-anchor=\"middle\" font-size=\"16\" font-weight=\"700\" fill=\"#183b56\">الرياح تنقل الرمال فتتكون</text><text x=\"190.0\" y=\"348\" text-anchor=\"middle\" font-size=\"16\" font-weight=\"700\" fill=\"#183b56\">الكثبان الرملية</text></svg></div>"
+    },
+    {
+     "type": "panel",
+     "anim": "libya_ghibli",
+     "title": "🎬 شاهد",
+     "html": "<div class=\"anim\" style=\"max-width:460px;margin:0 auto\"><svg viewBox=\"0 0 380 360\" role=\"img\" aria-label=\"رياح القبلي الحارة المحمّلة بالغبار تهبّ من الجنوب\" style=\"width:100%;height:auto;display:block;border-radius:16px;background:#f7e7c6\" xmlns=\"http://www.w3.org/2000/svg\"><style>.sd{animation:sd 2.2s linear infinite;opacity:0}@keyframes sd{0%{transform:translate(0,0);opacity:0}20%{opacity:.9}100%{transform:translate(30px,-260px);opacity:0}}@media (prefers-reduced-motion:reduce){*{animation:none!important}}</style><rect x=\"0\" y=\"0\" width=\"380\" height=\"70\" fill=\"#7cc4ea\"/><text x=\"300\" y=\"30\" font-size=\"13\" fill=\"#0d4f78\" text-anchor=\"middle\">البحر المتوسط</text><path d=\"M70,58 L104,62 L142,72 L172,96 L200,110 L232,112 L242,92 L242,78 L274,62 L292,64 L320,78 L342,88 L336,120 L340,280 L340,320 L320,320 L320,330 L158,252 L124,268 L110,256 L78,250 L70,234 L44,224 L28,196 L38,176 L34,158 L38,114 L46,102 L40,92 L58,78 Z\" fill=\"#f3d9a4\" stroke=\"#b07a2a\" stroke-width=\"2.5\" stroke-linejoin=\"round\"/><circle cx=\"104\" cy=\"62\" r=\"4\" fill=\"#c0392b\"/><text x=\"104\" y=\"78\" font-size=\"11\" text-anchor=\"middle\" fill=\"#5a3b12\">طرابلس</text><circle cx=\"242\" cy=\"78\" r=\"4\" fill=\"#c0392b\"/><text x=\"242\" y=\"94\" font-size=\"11\" text-anchor=\"middle\" fill=\"#5a3b12\">بنغازي</text><circle cx=\"128\" cy=\"180\" r=\"4\" fill=\"#c0392b\"/><text x=\"128\" y=\"196\" font-size=\"11\" text-anchor=\"middle\" fill=\"#5a3b12\">سبها</text><circle cx=\"306\" cy=\"236\" r=\"4\" fill=\"#c0392b\"/><text x=\"306\" y=\"252\" font-size=\"11\" text-anchor=\"middle\" fill=\"#5a3b12\">الكفرة</text><circle class=\"sd\" style=\"animation-delay:0.00s\" cx=\"40\" cy=\"330\" r=\"2\" fill=\"#c98b35\"/><circle class=\"sd\" style=\"animation-delay:0.13s\" cx=\"77\" cy=\"330\" r=\"3\" fill=\"#c98b35\"/><circle class=\"sd\" style=\"animation-delay:0.26s\" cx=\"114\" cy=\"330\" r=\"4\" fill=\"#c98b35\"/><circle class=\"sd\" style=\"animation-delay:0.39s\" cx=\"151\" cy=\"330\" r=\"2\" fill=\"#c98b35\"/><circle class=\"sd\" style=\"animation-delay:0.52s\" cx=\"188\" cy=\"330\" r=\"3\" fill=\"#c98b35\"/><circle class=\"sd\" style=\"animation-delay:0.65s\" cx=\"225\" cy=\"330\" r=\"4\" fill=\"#c98b35\"/><circle class=\"sd\" style=\"animation-delay:0.78s\" cx=\"262\" cy=\"330\" r=\"2\" fill=\"#c98b35\"/><circle class=\"sd\" style=\"animation-delay:0.91s\" cx=\"299\" cy=\"330\" r=\"3\" fill=\"#c98b35\"/><circle class=\"sd\" style=\"animation-delay:1.04s\" cx=\"336\" cy=\"330\" r=\"4\" fill=\"#c98b35\"/><circle class=\"sd\" style=\"animation-delay:1.17s\" cx=\"73\" cy=\"330\" r=\"2\" fill=\"#c98b35\"/><circle class=\"sd\" style=\"animation-delay:1.30s\" cx=\"110\" cy=\"330\" r=\"3\" fill=\"#c98b35\"/><circle class=\"sd\" style=\"animation-delay:1.43s\" cx=\"147\" cy=\"330\" r=\"4\" fill=\"#c98b35\"/><circle class=\"sd\" style=\"animation-delay:1.56s\" cx=\"184\" cy=\"330\" r=\"2\" fill=\"#c98b35\"/><circle class=\"sd\" style=\"animation-delay:1.69s\" cx=\"221\" cy=\"330\" r=\"3\" fill=\"#c98b35\"/><circle class=\"sd\" style=\"animation-delay:1.82s\" cx=\"258\" cy=\"330\" r=\"4\" fill=\"#c98b35\"/><circle class=\"sd\" style=\"animation-delay:1.95s\" cx=\"295\" cy=\"330\" r=\"2\" fill=\"#c98b35\"/><circle class=\"sd\" style=\"animation-delay:0.08s\" cx=\"332\" cy=\"330\" r=\"3\" fill=\"#c98b35\"/><circle class=\"sd\" style=\"animation-delay:0.21s\" cx=\"69\" cy=\"330\" r=\"4\" fill=\"#c98b35\"/><circle class=\"sd\" style=\"animation-delay:0.34s\" cx=\"106\" cy=\"330\" r=\"2\" fill=\"#c98b35\"/><circle class=\"sd\" style=\"animation-delay:0.47s\" cx=\"143\" cy=\"330\" r=\"3\" fill=\"#c98b35\"/><circle class=\"sd\" style=\"animation-delay:0.60s\" cx=\"180\" cy=\"330\" r=\"4\" fill=\"#c98b35\"/><circle class=\"sd\" style=\"animation-delay:0.73s\" cx=\"217\" cy=\"330\" r=\"2\" fill=\"#c98b35\"/><circle class=\"sd\" style=\"animation-delay:0.86s\" cx=\"254\" cy=\"330\" r=\"3\" fill=\"#c98b35\"/><circle class=\"sd\" style=\"animation-delay:0.99s\" cx=\"291\" cy=\"330\" r=\"4\" fill=\"#c98b35\"/><circle class=\"sd\" style=\"animation-delay:1.12s\" cx=\"328\" cy=\"330\" r=\"2\" fill=\"#c98b35\"/><circle class=\"sd\" style=\"animation-delay:1.25s\" cx=\"65\" cy=\"330\" r=\"3\" fill=\"#c98b35\"/><circle class=\"sd\" style=\"animation-delay:1.38s\" cx=\"102\" cy=\"330\" r=\"4\" fill=\"#c98b35\"/><circle class=\"sd\" style=\"animation-delay:1.51s\" cx=\"139\" cy=\"330\" r=\"2\" fill=\"#c98b35\"/><text x=\"190.0\" y=\"329\" text-anchor=\"middle\" font-size=\"16\" font-weight=\"700\" fill=\"#183b56\">رياح القبلي الحارة المحمّلة</text><text x=\"190.0\" y=\"348\" text-anchor=\"middle\" font-size=\"16\" font-weight=\"700\" fill=\"#183b56\">بالغبار تهبّ من الجنوب</text></svg></div>"
+    },
+    {
+     "type": "reading",
+     "star": true,
+     "lang": "ar",
+     "paragraphs": [
+      "الرياح: هواء متحرك نشعر به ولا نراه، ونرى أثره في حركة أوراق الأشجار والأعلام.",
+      "الرياح في ليبيا: رياح شمالية رطبة من البحر في الشتاء تجلب الأمطار، ورياح «القبلي» الجنوبية الحارة المحملة بالأتربة والرمال في الربيع.",
+      "الكثبان الرملية: تلال من الرمل تكونها الرياح عندما تحمل الرمال وتلقيها في مكان ما. وتتحرك الكثبان مع الرياح.",
+      "زحف الرمال: قد تغطي الرمال المزارع والطرق، ونحميها بزراعة الأشجار كمصدات للرياح.",
+      "فوائد الرياح: تحريك السحب، وتلقيح النباتات، وتوليد الكهرباء بطواحين الهواء: ﴿وَأَرْسَلْنَا ࡰ۬لرِّيَٰحَ لَوَٰقِحَ﴾."
+     ]
+    }
+   ],
+   "lead": "اقرأ مع معلمك، وتأمّل الصورة المتحركة."
+  },
+  {
+   "title": "اختر",
+   "eyebrow": "الخطوة ٢ — اختر",
+   "heading": "",
+   "blocks": [
+    {
+     "type": "choice",
+     "star": true,
+     "items": [
+      {
+       "q": "الرياح الجنوبية الحارة في ليبيا:",
+       "a": "القبلي",
+       "o": [
+        "القبلي",
+        "الشمالية"
+       ]
+      },
+      {
+       "q": "تلال من الرمل:",
+       "a": "الكثبان",
+       "o": [
+        "الكثبان",
+        "الهضاب"
+       ]
+      },
+      {
+       "q": "نحمي المزارع من الرمال بـ:",
+       "a": "زراعة الأشجار",
+       "o": [
+        "زراعة الأشجار",
+        "قطع الأشجار"
+       ]
+      },
+      {
+       "q": "الرياح الشمالية في الشتاء تجلب:",
+       "a": "الأمطار",
+       "o": [
+        "الأمطار",
+        "الغبار"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٣ — احفظ",
+   "heading": "ما يجب أن تحفظه",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "ar",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم المصطلحات والأفكار في الدرس، وستُسأل عنها في الامتحان. <b>احفظها وافهمها</b>، والبطاقات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "الرياح",
+       "meaning": "هواء متحرك",
+       "ex": ""
+      },
+      {
+       "must": 1,
+       "term": "القبلي",
+       "meaning": "رياح جنوبية حارة مغبرة",
+       "ex": ""
+      },
+      {
+       "must": 1,
+       "term": "الكثبان",
+       "meaning": "تلال رملية تكونها الرياح",
+       "ex": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٤ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 1,
+     "items": [
+      {
+       "q": "الكثبان الرملية ثابتة لا تتحرك أبداً.",
+       "a": "خطأ",
+       "o": [
+        "صح",
+        "خطأ"
+       ],
+       "ar": true,
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "1 أسئلة. تنجح بـ 1 من 1."
+  }
+ ],
+ "quran": [
+  {
+   "s": 15,
+   "a1": 22,
+   "a2": 22,
+   "h": [
+    15,
+    22,
+    22
+   ],
+   "k": "وَأَرْسَلْنَا ࡰ۬لرِّيَٰحَ لَوَٰقِحَ"
+  }
+ ]
+}

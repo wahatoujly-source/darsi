@@ -1,0 +1,135 @@
+{
+ "id": "soc-4-u4-l2",
+ "grade": 4,
+ "subject": "soc",
+ "stage": "primary-4-6",
+ "lang": "ar",
+ "title": "الغروب",
+ "titleAr": "الاجتماعيات — الصف الرابع",
+ "steps": [
+  {
+   "title": "اقرأ",
+   "eyebrow": "الخطوة ١ — اقرأ",
+   "heading": "الغروب",
+   "blocks": [
+    {
+     "type": "panel",
+     "anim": "sun_path",
+     "title": "🎬 شاهد",
+     "html": "<div class=\"anim\" style=\"max-width:460px;margin:0 auto\"><svg viewBox=\"0 0 380 360\" role=\"img\" aria-label=\"تشرق الشمس من الشرق وتغرب في الغرب\" style=\"width:100%;height:auto;display:block;border-radius:16px;background:#4fc3f7\" xmlns=\"http://www.w3.org/2000/svg\"><style>.sky{animation:sky 9s linear infinite}@keyframes sky{0%{fill:#ffab91}15%{fill:#81d4fa}50%{fill:#4fc3f7}85%{fill:#ff8a65}100%{fill:#ffab91}}.t1,.t2,.t3{opacity:0;animation:t 9s infinite}.t2{animation-delay:3.5s}.t3{animation-delay:7.5s}.t1{animation-delay:0s}@keyframes t{0%,20%{opacity:1}25%,100%{opacity:0}}@media (prefers-reduced-motion:reduce){*{animation:none!important}}</style><rect class=\"sky\" x=\"0\" y=\"0\" width=\"380\" height=\"270\"/><rect x=\"0\" y=\"260\" width=\"380\" height=\"100\" fill=\"#8d6e63\"/><path d=\"M0,262 Q90,240 190,258 T380,250 L380,270 L0,270Z\" fill=\"#6d4c41\"/><text x=\"55\" y=\"300\" font-size=\"18\" font-weight=\"bold\" fill=\"#fff\" text-anchor=\"middle\">الغرب</text><text x=\"325\" y=\"300\" font-size=\"18\" font-weight=\"bold\" fill=\"#fff\" text-anchor=\"middle\">الشرق</text><circle r=\"26\" fill=\"#ffca28\"><animateMotion dur=\"9s\" repeatCount=\"indefinite\" path=\"M340,275 Q190,-90 40,275\"/></circle><g class=\"hs\" font-size=\"15\" font-weight=\"bold\" fill=\"#5d4037\" text-anchor=\"middle\"><text class=\"t1\" x=\"320\" y=\"235\">شروق 🌅</text><text class=\"t2\" x=\"190\" y=\"60\">الظهر</text><text class=\"t3\" x=\"60\" y=\"235\">غروب 🌇</text></g><text x=\"190.0\" y=\"329\" text-anchor=\"middle\" font-size=\"16\" font-weight=\"700\" fill=\"#183b56\">تشرق الشمس من الشرق</text><text x=\"190.0\" y=\"348\" text-anchor=\"middle\" font-size=\"16\" font-weight=\"700\" fill=\"#183b56\">وتغرب في الغرب</text></svg></div>"
+    },
+    {
+     "type": "reading",
+     "star": true,
+     "lang": "ar",
+     "paragraphs": [
+      "الغروب: اختفاء الشمس في المساء جهة الغرب.",
+      "يتحول لون السماء عند الغروب إلى البرتقالي والأحمر، ثم يحل الظلام تدريجياً ويبدأ الليل.",
+      "عند غروب الشمس نصلي المغرب، وفي رمضان يفطر الصائمون.",
+      "الليل للراحة والنوم: ﴿وَجَعَلْنَا ࡰ۬ليْلَ لِبَاساࣰ وَجَعَلْنَا ࡰ۬لنَّهَارَ مَعَاشاࣰ﴾.",
+      "تعاقب الشروق والغروب ينتج الليل والنهار، ويتكرر كل يوم بسبب دوران الأرض حول نفسها مرة كل 24 ساعة."
+     ]
+    }
+   ],
+   "lead": "اقرأ مع معلمك، وتأمّل الصورة المتحركة."
+  },
+  {
+   "title": "اختر",
+   "eyebrow": "الخطوة ٢ — اختر",
+   "heading": "",
+   "blocks": [
+    {
+     "type": "choice",
+     "star": true,
+     "items": [
+      {
+       "q": "تغرب الشمس في:",
+       "a": "الغرب",
+       "o": [
+        "الغرب",
+        "الشرق"
+       ]
+      },
+      {
+       "q": "صلاة عند الغروب:",
+       "a": "المغرب",
+       "o": [
+        "المغرب",
+        "الفجر"
+       ]
+      },
+      {
+       "q": "تدور الأرض حول نفسها كل:",
+       "a": "24 ساعة",
+       "o": [
+        "24 ساعة",
+        "أسبوع"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٣ — احفظ",
+   "heading": "ما يجب أن تحفظه",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "ar",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم المصطلحات والأفكار في الدرس، وستُسأل عنها في الامتحان. <b>احفظها وافهمها</b>، والبطاقات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "الغروب",
+       "meaning": "اختفاء الشمس في الغرب",
+       "ex": ""
+      },
+      {
+       "must": 1,
+       "term": "الليل والنهار",
+       "meaning": "بسبب دوران الأرض",
+       "ex": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٤ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 1,
+     "items": [
+      {
+       "type": "input",
+       "q": "كم ساعة في اليوم الكامل؟",
+       "a": 24,
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "1 أسئلة. تنجح بـ 1 من 1."
+  }
+ ],
+ "quran": [
+  {
+   "s": 78,
+   "a1": 10,
+   "a2": 11,
+   "h": [
+    78,
+    10,
+    11
+   ],
+   "k": "وَجَعَلْنَا ࡰ۬ليْلَ لِبَاساࣰ وَجَعَلْنَا ࡰ۬لنَّهَارَ مَعَاشاࣰ"
+  }
+ ]
+}
