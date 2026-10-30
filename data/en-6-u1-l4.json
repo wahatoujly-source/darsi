@@ -1,0 +1,326 @@
+{
+ "id": "en-6-u1-l4",
+ "grade": 6,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 1 · Lesson 4: Our Daily Routine",
+ "titleAr": "الوحدة الأولى: العائلة والعمل — الدرس الرابع: روتيننا اليومي",
+ "characters": {},
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "كلمات النص",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "routine",
+       "ar": "روتين يومي",
+       "em": "🔁"
+      },
+      {
+       "id": "v1",
+       "en": "leave home",
+       "ar": "يغادر البيت",
+       "em": "🚪"
+      },
+      {
+       "id": "v2",
+       "en": "by bus",
+       "ar": "بالحافلة",
+       "em": "🚌"
+      },
+      {
+       "id": "v3",
+       "en": "drives to work",
+       "ar": "يقود السيارة إلى العمل",
+       "em": "🚗"
+      },
+      {
+       "id": "v4",
+       "en": "five days a week",
+       "ar": "خمسة أيام في الأسبوع",
+       "em": "📅"
+      },
+      {
+       "id": "v5",
+       "en": "it takes more than an hour",
+       "ar": "يستغرق أكثر من ساعة",
+       "em": "⏳"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتابك ص 14–15."
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Present simple: He works / She works",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "📖 My family routine — By Anwer",
+     "html": "<div class=\"ex\" dir=\"ltr\">My mum is a nurse and my dad works in an office. He's an IT programmer.<br>My sister, Dania, and I go to school by bus. We leave home at 7.30. My grandma takes our little brother to school.<br>My dad drives to work and he takes our mum to the hospital first. They leave home at 6.45.<br>My dad works five days a week, but my mum only works three days a week. When she is not working in the hospital, she is a housewife at home. She has two jobs.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "My mum is a nurse and my dad works in an office. He's an IT programmer. My sister, Dania, and I go to school by bus. We leave home at 7.30. My grandma takes our little brother to school. My dad drives to work and he takes our mum to the hospital first. They leave home at 6.45. My dad works five days a week, but my mum only works three days a week. She has two jobs."
+      }
+     ]
+    },
+    {
+     "type": "panel",
+     "title": "قاعدة s",
+     "html": "<div class=\"ex\">I work → he work<b>s</b> · I drive → she drive<b>s</b> · I go → he go<b>es</b> · I have → she <b>has</b></div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "I work, he works. I go, he goes. I have, she has."
+      }
+     ]
+    }
+   ],
+   "lead": "مع he / she / it نضيف s للفعل في المضارع البسيط.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "افهم النص",
+       "blocks": [
+        {
+         "type": "choice",
+         "star": false,
+         "items": [
+          {
+           "q": "Where does Anwer's father work?",
+           "a": "In an office.",
+           "o": [
+            "In an office.",
+            "In a hospital.",
+            "On a farm."
+           ],
+           "why": ""
+          },
+          {
+           "q": "Who is a nurse?",
+           "a": "Anwer's mum",
+           "o": [
+            "Anwer's mum",
+            "Dania",
+            "Anwer's grandma"
+           ],
+           "why": ""
+          },
+          {
+           "q": "What time does Dania leave home?",
+           "a": "At 7.30.",
+           "o": [
+            "At 7.30.",
+            "At 6.45.",
+            "At 8.00."
+           ],
+           "why": ""
+          },
+          {
+           "q": "How many days a week does Anwer's mother work?",
+           "a": "Three",
+           "o": [
+            "Three",
+            "Five",
+            "Seven"
+           ],
+           "why": ""
+          },
+          {
+           "q": "How do Anwer and Dania go to school?",
+           "a": "By bus.",
+           "o": [
+            "By bus.",
+            "By car.",
+            "On foot."
+           ],
+           "why": ""
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "اختر الفعل",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "My dad ___ in an office.",
+           "a": "works",
+           "o": [
+            "works",
+            "work",
+            "working"
+           ]
+          },
+          {
+           "s": "She ___ two jobs.",
+           "a": "has",
+           "o": [
+            "has",
+            "have",
+            "haves"
+           ]
+          },
+          {
+           "s": "We ___ home at 7.30.",
+           "a": "leave",
+           "o": [
+            "leave",
+            "leaves"
+           ]
+          },
+          {
+           "s": "My grandma ___ our brother to school.",
+           "a": "takes",
+           "o": [
+            "takes",
+            "take"
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "routine",
+       "ipa": "/ruːˈtiːn/",
+       "meaning": "روتين يومي",
+       "ex": "My family routine."
+      },
+      {
+       "must": 1,
+       "term": "leave home",
+       "ipa": "/liːv həʊm/",
+       "meaning": "يغادر البيت",
+       "ex": "We leave home at 7.30."
+      },
+      {
+       "must": 1,
+       "term": "by bus",
+       "ipa": "/baɪ bʌs/",
+       "meaning": "بالحافلة",
+       "ex": "We go to school by bus."
+      },
+      {
+       "must": 1,
+       "term": "a week",
+       "ipa": "/ə wiːk/",
+       "meaning": "في الأسبوع",
+       "ex": "He works five days a week."
+      },
+      {
+       "must": 0,
+       "term": "housewife",
+       "ipa": "/ˈhaʊswaɪf/",
+       "meaning": "ربة بيت",
+       "ex": "She is a housewife at home."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 4,
+     "items": [
+      {
+       "q": "He ___ in an office.",
+       "a": "works",
+       "o": [
+        "works",
+        "work"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Anwer's mum works ___ days a week.",
+       "a": "three",
+       "o": [
+        "three",
+        "five"
+       ],
+       "why": ""
+      },
+      {
+       "q": "They leave home at …",
+       "a": "6.45",
+       "o": [
+        "6.45",
+        "7.30"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى routine؟",
+       "a": "روتين يومي",
+       "o": [
+        "روتين يومي",
+        "رحلة",
+        "عطلة"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "She ___ two jobs.",
+       "a": "has",
+       "o": [
+        "has",
+        "have"
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "5 أسئلة. تنجح بـ 4 من 5."
+  }
+ ]
+}

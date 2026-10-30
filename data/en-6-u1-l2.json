@@ -1,0 +1,368 @@
+{
+ "id": "en-6-u1-l2",
+ "grade": 6,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 1 · Lesson 2: Jobs",
+ "titleAr": "الوحدة الأولى: العائلة والعمل — الدرس الثاني: المهن",
+ "characters": {},
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "المهن",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "doctor",
+       "ar": "طبيب",
+       "em": "🩺"
+      },
+      {
+       "id": "v1",
+       "en": "nurse",
+       "ar": "ممرض/ة",
+       "em": "👩‍⚕️"
+      },
+      {
+       "id": "v2",
+       "en": "teacher",
+       "ar": "معلم/ة",
+       "em": "🧑‍🏫"
+      },
+      {
+       "id": "v3",
+       "en": "engineer",
+       "ar": "مهندس",
+       "em": "👷"
+      },
+      {
+       "id": "v4",
+       "en": "farmer",
+       "ar": "مزارع",
+       "em": "🧑‍🌾"
+      },
+      {
+       "id": "v5",
+       "en": "bus driver",
+       "ar": "سائق حافلة",
+       "em": "🚌"
+      },
+      {
+       "id": "v6",
+       "en": "waiter",
+       "ar": "نادل",
+       "em": "🤵"
+      },
+      {
+       "id": "v7",
+       "en": "shop assistant",
+       "ar": "بائع/ة",
+       "em": "🛒"
+      },
+      {
+       "id": "v8",
+       "en": "IT programmer",
+       "ar": "مبرمج حاسوب",
+       "em": "💻"
+      },
+      {
+       "id": "v9",
+       "en": "housewife",
+       "ar": "ربة بيت",
+       "em": "🏠"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتابك ص 10–11."
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "What's your dad's job? — He's an engineer.",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "السؤال عن المهنة",
+     "html": "<div class=\"ex\">What's your dad's job? — He's <b>an</b> engineer.</div><div class=\"ex\">What's your mum's job? — She's <b>a</b> teacher.</div><p class=\"note\">an engineer · an IT programmer · a doctor · a nurse</p>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "What's your dad's job? He's an engineer. What's your mum's job? She's a teacher."
+      }
+     ]
+    }
+   ],
+   "lead": "نستخدم a قبل المهنة التي تبدأ بصوت ساكن، و an قبل التي تبدأ بصوت متحرك.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "من هو؟",
+       "blocks": [
+        {
+         "type": "choice",
+         "star": false,
+         "items": [
+          {
+           "q": "He helps people when they are ill.",
+           "a": "doctor",
+           "o": [
+            "doctor",
+            "farmer",
+            "waiter"
+           ],
+           "why": ""
+          },
+          {
+           "q": "She works with children and helps them learn.",
+           "a": "teacher",
+           "o": [
+            "teacher",
+            "nurse",
+            "engineer"
+           ],
+           "why": ""
+          },
+          {
+           "q": "He grows vegetables on a farm.",
+           "a": "farmer",
+           "o": [
+            "farmer",
+            "bus driver",
+            "shop assistant"
+           ],
+           "why": ""
+          },
+          {
+           "q": "He makes computer programs.",
+           "a": "IT programmer",
+           "o": [
+            "IT programmer",
+            "waiter",
+            "teacher"
+           ],
+           "why": ""
+          },
+          {
+           "q": "He drives a bus.",
+           "a": "bus driver",
+           "o": [
+            "bus driver",
+            "engineer",
+            "doctor"
+           ],
+           "why": ""
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "a أم an",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "He's ___ engineer.",
+           "a": "an",
+           "o": [
+            "an",
+            "a"
+           ]
+          },
+          {
+           "s": "She's ___ teacher.",
+           "a": "a",
+           "o": [
+            "a",
+            "an"
+           ]
+          },
+          {
+           "s": "He's ___ IT programmer.",
+           "a": "an",
+           "o": [
+            "an",
+            "a"
+           ]
+          },
+          {
+           "s": "She's ___ nurse.",
+           "a": "a",
+           "o": [
+            "a",
+            "an"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "What's your mum's job?",
+           "o": [
+            "What's your mum's job?",
+            "What's your dad's job?",
+            "Where's your mum?"
+           ]
+          },
+          {
+           "a": "He's an engineer.",
+           "o": [
+            "He's an engineer.",
+            "He's a farmer.",
+            "She's a nurse."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "job",
+       "ipa": "/dʒɒb/",
+       "meaning": "مهنة / وظيفة",
+       "ex": "What's your dad's job?"
+      },
+      {
+       "must": 1,
+       "term": "engineer",
+       "ipa": "/ˌendʒɪˈnɪə/",
+       "meaning": "مهندس",
+       "ex": "He's an engineer."
+      },
+      {
+       "must": 1,
+       "term": "nurse",
+       "ipa": "/nɜːs/",
+       "meaning": "ممرض/ة",
+       "ex": "She's a nurse."
+      },
+      {
+       "must": 1,
+       "term": "farmer",
+       "ipa": "/ˈfɑːmə/",
+       "meaning": "مزارع",
+       "ex": "My grandfather is a farmer."
+      },
+      {
+       "must": 0,
+       "term": "IT programmer",
+       "ipa": "/ˌaɪ ˈtiː ˈprəʊɡræmə/",
+       "meaning": "مبرمج حاسوب",
+       "ex": "He's an IT programmer."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 4,
+     "items": [
+      {
+       "q": "He's ___ engineer.",
+       "a": "an",
+       "o": [
+        "an",
+        "a"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى waiter؟",
+       "a": "نادل",
+       "o": [
+        "نادل",
+        "سائق",
+        "مزارع"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "She's a teacher.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "She's a teacher.",
+       "o": [
+        "She's a teacher.",
+        "She's a nurse.",
+        "He's a doctor."
+       ],
+       "why": ""
+      },
+      {
+       "q": "Who works in a hospital?",
+       "a": "a nurse",
+       "o": [
+        "a nurse",
+        "a farmer",
+        "a bus driver"
+       ],
+       "why": ""
+      },
+      {
+       "q": "What's your dad's ___ ?",
+       "a": "job",
+       "o": [
+        "job",
+        "work job",
+        "jobs"
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "5 أسئلة. تنجح بـ 4 من 5."
+  }
+ ]
+}

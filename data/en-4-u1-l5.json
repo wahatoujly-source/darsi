@@ -1,0 +1,344 @@
+{
+ "id": "en-4-u1-l5",
+ "grade": 4,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 1 · Lesson 5: What's the difference?",
+ "titleAr": "الوحدة الأولى: مدرستنا — الدرس الخامس: ما الفرق؟",
+ "characters": {},
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "التفضيل",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "long → longer",
+       "ar": "طويل ← أطول",
+       "em": "📏"
+      },
+      {
+       "id": "v1",
+       "en": "short → shorter",
+       "ar": "قصير ← أقصر",
+       "em": "✂️"
+      },
+      {
+       "id": "v2",
+       "en": "old → older",
+       "ar": "كبير السن ← أكبر",
+       "em": "🧓"
+      },
+      {
+       "id": "v3",
+       "en": "young → younger",
+       "ar": "صغير السن ← أصغر",
+       "em": "👶"
+      },
+      {
+       "id": "v4",
+       "en": "tall → taller",
+       "ar": "طويل القامة ← أطول",
+       "em": "🦒"
+      },
+      {
+       "id": "v5",
+       "en": "big → bigger",
+       "ar": "كبير ← أكبر",
+       "em": "🐘"
+      },
+      {
+       "id": "v6",
+       "en": "small → smaller",
+       "ar": "صغير ← أصغر",
+       "em": "🐭"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتابك ص 16–17."
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "bigger than / smaller than",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "١. الصفة + er + than",
+     "html": "<div class=\"ex\">This ruler is long<b>er than</b> that ruler.</div><div class=\"ex\">I am young<b>er than</b> Yousif.</div><p class=\"note\">big → bi<b>gg</b>er (نضاعف الحرف الأخير)</p>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "This ruler is longer than that ruler. I am younger than Yousif."
+      }
+     ]
+    },
+    {
+     "type": "panel",
+     "title": "🎵 Bigger and smaller",
+     "html": "<div class=\"ex\">A ruler is longer than a pen,<br>And number 12 is bigger than 10.<br>A giraffe is taller than a bee,<br>And my mum and dad are older than me.<br>So I am younger than them, you see!</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "A ruler is longer than a pen, and number 12 is bigger than 10. A giraffe is taller than a bee, and my mum and dad are older than me. So I am younger than them, you see!"
+      }
+     ]
+    }
+   ],
+   "lead": "نقارن بين شيئين بإضافة er للصفة ثم than.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "A ruler is ___ than a pen.",
+           "a": "longer",
+           "o": [
+            "longer",
+            "long",
+            "longest"
+           ]
+          },
+          {
+           "s": "12 is ___ than 10.",
+           "a": "bigger",
+           "o": [
+            "bigger",
+            "biger",
+            "big"
+           ]
+          },
+          {
+           "s": "A giraffe is ___ than a bee.",
+           "a": "taller",
+           "o": [
+            "taller",
+            "tall",
+            "smaller"
+           ]
+          },
+          {
+           "s": "A car is ___ than a van.",
+           "a": "smaller",
+           "o": [
+            "smaller",
+            "bigger",
+            "older"
+           ]
+          },
+          {
+           "s": "My dad is older ___ me.",
+           "a": "than",
+           "o": [
+            "than",
+            "then",
+            "that"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "صواب أم خطأ",
+       "blocks": [
+        {
+         "type": "choice",
+         "star": false,
+         "items": [
+          {
+           "q": "A bee is taller than a giraffe.",
+           "a": "False",
+           "o": [
+            "True",
+            "False"
+           ],
+           "why": ""
+          },
+          {
+           "q": "10 is smaller than 12.",
+           "a": "True",
+           "o": [
+            "True",
+            "False"
+           ],
+           "why": ""
+          },
+          {
+           "q": "My grandfather is younger than me.",
+           "a": "False",
+           "o": [
+            "True",
+            "False"
+           ],
+           "why": ""
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "I am taller than my sister.",
+          "A ruler is longer than a pen."
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "bigger than",
+       "ipa": "/ˈbɪɡə ðən/",
+       "meaning": "أكبر من",
+       "ex": "12 is bigger than 10."
+      },
+      {
+       "must": 1,
+       "term": "smaller than",
+       "ipa": "/ˈsmɔːlə ðən/",
+       "meaning": "أصغر من",
+       "ex": "A car is smaller than a van."
+      },
+      {
+       "must": 1,
+       "term": "taller than",
+       "ipa": "/ˈtɔːlə ðən/",
+       "meaning": "أطول من",
+       "ex": "A giraffe is taller than a bee."
+      },
+      {
+       "must": 1,
+       "term": "longer than",
+       "ipa": "/ˈlɒŋɡə ðən/",
+       "meaning": "أطول من (للأشياء)",
+       "ex": "A ruler is longer than a pen."
+      },
+      {
+       "must": 0,
+       "term": "opposite",
+       "ipa": "/ˈɒpəzɪt/",
+       "meaning": "الضد",
+       "ex": "big and small are opposites."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "big →",
+       "a": "bigger",
+       "o": [
+        "bigger",
+        "biger"
+       ],
+       "why": ""
+      },
+      {
+       "q": "A giraffe is ___ than a bee.",
+       "a": "taller",
+       "o": [
+        "taller",
+        "shorter"
+       ],
+       "why": ""
+      },
+      {
+       "type": "listen",
+       "say": "My mum and dad are older than me.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "My mum and dad are older than me.",
+       "o": [
+        "My mum and dad are older than me.",
+        "I am taller than my mum.",
+        "A car is smaller than a van."
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى younger than؟",
+       "a": "أصغر سناً من",
+       "o": [
+        "أصغر سناً من",
+        "أطول من",
+        "أكبر من"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "A ruler is longer ___ a pen.",
+       "a": "than",
+       "o": [
+        "than",
+        "then"
+       ],
+       "why": ""
+      },
+      {
+       "q": "12 is ___ than 10.",
+       "a": "bigger",
+       "o": [
+        "bigger",
+        "smaller"
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ]
+}

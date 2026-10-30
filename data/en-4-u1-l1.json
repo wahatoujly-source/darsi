@@ -1,0 +1,423 @@
+{
+ "id": "en-4-u1-l1",
+ "grade": 4,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 1 · Lesson 1: New Friends",
+ "titleAr": "الوحدة الأولى: مدرستنا — الدرس الأول: أصدقاء جدد",
+ "characters": {
+  "Kareem": {
+   "ar": "كريم",
+   "color": "--c2",
+   "g": "m",
+   "pitch": 1.4
+  },
+  "Yousif": {
+   "ar": "يوسف",
+   "color": "--c1",
+   "g": "m",
+   "pitch": 1.35
+  },
+  "Nadia": {
+   "ar": "نادية",
+   "color": "--c4",
+   "g": "f",
+   "pitch": 1.55
+  },
+  "Lina": {
+   "ar": "لينا",
+   "color": "--c3",
+   "g": "f",
+   "pitch": 1.65
+  }
+ },
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "المدرسة والعمر",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "school",
+       "ar": "مدرسة",
+       "em": "🏫"
+      },
+      {
+       "id": "v1",
+       "en": "classroom",
+       "ar": "فصل دراسي",
+       "em": "🧑‍🏫"
+      },
+      {
+       "id": "v2",
+       "en": "playground",
+       "ar": "ساحة اللعب",
+       "em": "🛝"
+      },
+      {
+       "id": "v3",
+       "en": "Grade 4",
+       "ar": "الصف الرابع",
+       "em": "4️⃣"
+      },
+      {
+       "id": "v4",
+       "en": "best friend",
+       "ar": "أعز صديق",
+       "em": "🤝"
+      },
+      {
+       "id": "v5",
+       "en": "older",
+       "ar": "أكبر سناً",
+       "em": "🧓"
+      },
+      {
+       "id": "v6",
+       "en": "younger",
+       "ar": "أصغر سناً",
+       "em": "👶"
+      },
+      {
+       "id": "v7",
+       "en": "swings",
+       "ar": "الأرجوحة",
+       "em": "🎠"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتابك ص 8–9."
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "استمع إلى الحوار",
+   "blocks": [
+    {
+     "type": "dialogue",
+     "star": true
+    }
+   ],
+   "lead": "شغّل الحوار وتابع الكلمات المضيئة، واضغط على أي جملة لتعيدها."
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٣ — القاعدة",
+   "heading": "How old …? / I'm …",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "١. العمر والصف",
+     "html": "<div class=\"ex\">How old <b>is</b> Nadia? — She<b>'s</b> 9.</div><div class=\"ex\">I<b>'m</b> 9. I'm <b>in Grade 4</b>.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "How old is Nadia? She's 9. I'm 9. I'm in Grade 4."
+      }
+     ]
+    },
+    {
+     "type": "panel",
+     "title": "٢. أكبر وأصغر",
+     "html": "<div class=\"ex\">Nadia is <b>older than</b> Lina.</div><div class=\"ex\">Lina is <b>younger than</b> Nadia.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Nadia is older than Lina. Lina is younger than Nadia."
+      }
+     ]
+    }
+   ],
+   "lead": "نسأل عن العمر بـ How old، ونقارن الأعمار بـ older و younger.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٤ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "How ___ is Nadia?",
+           "a": "old",
+           "o": [
+            "old",
+            "many",
+            "is"
+           ]
+          },
+          {
+           "s": "I'm 8, so I'm ___ Grade 3.",
+           "a": "in",
+           "o": [
+            "in",
+            "on",
+            "at"
+           ]
+          },
+          {
+           "s": "Lina is ___ than Nadia.",
+           "a": "younger",
+           "o": [
+            "younger",
+            "young",
+            "older"
+           ]
+          },
+          {
+           "s": "Here's our new ___ .",
+           "a": "classroom",
+           "o": [
+            "classroom",
+            "swing",
+            "rule"
+           ]
+          },
+          {
+           "s": "Kareem is my best ___ .",
+           "a": "friend",
+           "o": [
+            "friend",
+            "school",
+            "grade"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "This is my school.",
+          "We're in Grade 4 now!",
+          "How old is Nadia?",
+          "I like the swings best."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "I'm in Grade 4.",
+           "o": [
+            "I'm in Grade 4.",
+            "I'm in Grade 3.",
+            "I'm 4."
+           ]
+          },
+          {
+           "a": "How old is Nadia?",
+           "o": [
+            "How old is Nadia?",
+            "How old is Lina?",
+            "Who is Nadia?"
+           ]
+          },
+          {
+           "a": "She's my best friend.",
+           "o": [
+            "She's my best friend.",
+            "He's my best friend.",
+            "She's my sister."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٥ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "How old …?",
+       "ipa": "/haʊ əʊld/",
+       "meaning": "كم عمر …؟",
+       "ex": "How old is Nadia?"
+      },
+      {
+       "must": 1,
+       "term": "older than",
+       "ipa": "/ˈəʊldə ðən/",
+       "meaning": "أكبر سناً من",
+       "ex": "Nadia is older than Lina."
+      },
+      {
+       "must": 1,
+       "term": "younger than",
+       "ipa": "/ˈjʌŋɡə ðən/",
+       "meaning": "أصغر سناً من",
+       "ex": "I'm younger than Yousif."
+      },
+      {
+       "must": 1,
+       "term": "classroom",
+       "ipa": "/ˈklɑːsruːm/",
+       "meaning": "الفصل الدراسي",
+       "ex": "Come and see my classroom."
+      },
+      {
+       "must": 0,
+       "term": "best friend",
+       "ipa": "/best frend/",
+       "meaning": "أعز صديق",
+       "ex": "Kareem is my best friend."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "type": "listen",
+       "say": "I'm in Grade 4.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "I'm in Grade 4.",
+       "o": [
+        "I'm in Grade 4.",
+        "I'm in Grade 5.",
+        "I'm 4."
+       ],
+       "why": ""
+      },
+      {
+       "q": "How old is Nadia?",
+       "a": "She's 9.",
+       "o": [
+        "She's 9.",
+        "She's in Grade 9.",
+        "Yes, she is."
+       ],
+       "why": ""
+      },
+      {
+       "q": "Lina is 8. Nadia is 9. Lina is …",
+       "a": "younger",
+       "o": [
+        "younger",
+        "older"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى classroom؟",
+       "a": "الفصل الدراسي",
+       "o": [
+        "الفصل الدراسي",
+        "ساحة اللعب",
+        "المدرسة"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "I'm 8, ___ I'm in Grade 3.",
+       "a": "so",
+       "o": [
+        "so",
+        "but",
+        "or"
+       ],
+       "why": ""
+      },
+      {
+       "q": "What does Nadia like best?",
+       "a": "The swings.",
+       "o": [
+        "The swings.",
+        "The slide.",
+        "The tunnel."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "dialogue": [
+  [
+   "Yousif",
+   "This is my school. Come and see my classroom."
+  ],
+  [
+   "Kareem",
+   "Here's our new classroom. We're in Grade 4 now!"
+  ],
+  [
+   "Lina",
+   "I'm younger. I'm only 8, so I'm in Grade 3. My classroom is next door."
+  ],
+  [
+   "Nadia",
+   "I like the swings best. My rule is don't stand on the swing."
+  ],
+  [
+   "Yousif",
+   "Our playground is great! My class is writing the playground rules."
+  ],
+  [
+   "Kareem",
+   "How old is Nadia?"
+  ],
+  [
+   "Lina",
+   "Nadia is 9."
+  ]
+ ],
+ "left": [
+  "Yousif",
+  "Kareem"
+ ]
+}

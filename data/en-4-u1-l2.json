@@ -1,0 +1,371 @@
+{
+ "id": "en-4-u1-l2",
+ "grade": 4,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 1 · Lesson 2: Our Playground",
+ "titleAr": "الوحدة الأولى: مدرستنا — الدرس الثاني: ساحة اللعب",
+ "characters": {},
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "ألعاب الساحة",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "swing",
+       "ar": "أرجوحة",
+       "em": "🎠"
+      },
+      {
+       "id": "v1",
+       "en": "slide",
+       "ar": "زحليقة",
+       "em": "🛝"
+      },
+      {
+       "id": "v2",
+       "en": "ladder",
+       "ar": "سُلّم",
+       "em": "🪜"
+      },
+      {
+       "id": "v3",
+       "en": "tunnel",
+       "ar": "نفق",
+       "em": "🕳️"
+      },
+      {
+       "id": "v4",
+       "en": "bars",
+       "ar": "قضبان التسلق",
+       "em": "🧗"
+      },
+      {
+       "id": "v5",
+       "en": "roundabout",
+       "ar": "الدوّامة",
+       "em": "🎡"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتابك ص 10–11."
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "I'm climbing up the ladder.",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "١. am / is / are + ing",
+     "html": "<div class=\"ex\">I<b>'m climbing</b> up the ladder.</div><div class=\"ex\">She<b>'s going</b> down the slide.</div><p class=\"note\">walk → walking · play → playing · spin → spin<b>n</b>ing</p>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "I'm climbing up the ladder. She's going down the slide."
+      }
+     ]
+    },
+    {
+     "type": "panel",
+     "title": "٢. حروف الحركة",
+     "html": "<div class=\"ex\">climbing <b>up</b> the ladder · going <b>down</b> the slide</div><div class=\"ex\">crawling <b>through</b> the tunnel · walking <b>along</b> the bars · spinning <b>around</b> on the roundabout</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "climbing up the ladder, going down the slide, crawling through the tunnel, walking along the bars, spinning around on the roundabout."
+      }
+     ]
+    }
+   ],
+   "lead": "نستخدم المضارع المستمر (am/is/are + ing) لما يحدث الآن، ومعه حروف الحركة up / down / through / along / around.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "أين يلعب؟",
+       "blocks": [
+        {
+         "type": "choice",
+         "star": false,
+         "items": [
+          {
+           "q": "I'm flying up on the …",
+           "a": "swing",
+           "o": [
+            "swing",
+            "tunnel",
+            "ladder"
+           ],
+           "why": ""
+          },
+          {
+           "q": "I'm walking along the …",
+           "a": "bars",
+           "o": [
+            "bars",
+            "slide",
+            "swing"
+           ],
+           "why": ""
+          },
+          {
+           "q": "I'm on my knees. I'm crawling through the …",
+           "a": "tunnel",
+           "o": [
+            "tunnel",
+            "roundabout",
+            "slide"
+           ],
+           "why": ""
+          },
+          {
+           "q": "I'm going down the …",
+           "a": "slide",
+           "o": [
+            "slide",
+            "ladder",
+            "bars"
+           ],
+           "why": ""
+          },
+          {
+           "q": "I'm spinning around on the …",
+           "a": "roundabout",
+           "o": [
+            "roundabout",
+            "swing",
+            "tunnel"
+           ],
+           "why": ""
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "I'm climbing ___ the ladder.",
+           "a": "up",
+           "o": [
+            "up",
+            "down",
+            "through"
+           ]
+          },
+          {
+           "s": "I'm going ___ the slide.",
+           "a": "down",
+           "o": [
+            "down",
+            "up",
+            "along"
+           ]
+          },
+          {
+           "s": "I'm crawling ___ the tunnel.",
+           "a": "through",
+           "o": [
+            "through",
+            "around",
+            "up"
+           ]
+          },
+          {
+           "s": "I'm walking ___ the bars.",
+           "a": "along",
+           "o": [
+            "along",
+            "down",
+            "through"
+           ]
+          },
+          {
+           "s": "I'm ___ around on the roundabout.",
+           "a": "spinning",
+           "o": [
+            "spinning",
+            "spining",
+            "spin"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "I'm climbing up the ladder.",
+          "She's going down the slide.",
+          "He's crawling through the tunnel."
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "slide",
+       "ipa": "/slaɪd/",
+       "meaning": "زحليقة",
+       "ex": "I'm going down the slide."
+      },
+      {
+       "must": 1,
+       "term": "swing",
+       "ipa": "/swɪŋ/",
+       "meaning": "أرجوحة",
+       "ex": "Don't stand on the swing."
+      },
+      {
+       "must": 1,
+       "term": "ladder",
+       "ipa": "/ˈlædə/",
+       "meaning": "سُلّم",
+       "ex": "I'm climbing up the ladder."
+      },
+      {
+       "must": 1,
+       "term": "tunnel",
+       "ipa": "/ˈtʌnl/",
+       "meaning": "نفق",
+       "ex": "I'm crawling through the tunnel."
+      },
+      {
+       "must": 0,
+       "term": "roundabout",
+       "ipa": "/ˈraʊndəbaʊt/",
+       "meaning": "الدوّامة",
+       "ex": "I'm spinning around on the roundabout."
+      },
+      {
+       "must": 0,
+       "term": "bars",
+       "ipa": "/bɑːz/",
+       "meaning": "قضبان التسلق",
+       "ex": "I'm walking along the bars."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "I'm climbing ___ the ladder.",
+       "a": "up",
+       "o": [
+        "up",
+        "down"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى slide؟",
+       "a": "زحليقة",
+       "o": [
+        "زحليقة",
+        "أرجوحة",
+        "نفق"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "I'm crawling through the tunnel.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "I'm crawling through the tunnel.",
+       "o": [
+        "I'm crawling through the tunnel.",
+        "I'm going down the slide.",
+        "I'm walking along the bars."
+       ],
+       "why": ""
+      },
+      {
+       "q": "spin + ing =",
+       "a": "spinning",
+       "o": [
+        "spinning",
+        "spining",
+        "spinnig"
+       ],
+       "why": ""
+      },
+      {
+       "q": "She ___ going down the slide.",
+       "a": "is",
+       "o": [
+        "is",
+        "are",
+        "am"
+       ],
+       "why": ""
+      },
+      {
+       "q": "I'm on the ___ . I'm flying up!",
+       "a": "swing",
+       "o": [
+        "swing",
+        "tunnel"
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ]
+}

@@ -1,0 +1,345 @@
+{
+ "id": "en-6-u1-l3",
+ "grade": 6,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 1 · Lesson 3: Where do they work?",
+ "titleAr": "الوحدة الأولى: العائلة والعمل — الدرس الثالث: أين يعملون؟",
+ "characters": {},
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "أماكن العمل",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "hospital",
+       "ar": "مستشفى",
+       "em": "🏥"
+      },
+      {
+       "id": "v1",
+       "en": "office",
+       "ar": "مكتب",
+       "em": "🏢"
+      },
+      {
+       "id": "v2",
+       "en": "restaurant",
+       "ar": "مطعم",
+       "em": "🍽️"
+      },
+      {
+       "id": "v3",
+       "en": "oil refinery",
+       "ar": "مصفاة نفط",
+       "em": "🏭"
+      },
+      {
+       "id": "v4",
+       "en": "building site",
+       "ar": "موقع بناء",
+       "em": "🏗️"
+      },
+      {
+       "id": "v5",
+       "en": "farm",
+       "ar": "مزرعة",
+       "em": "🚜"
+      },
+      {
+       "id": "v6",
+       "en": "roads",
+       "ar": "الطرق",
+       "em": "🛣️"
+      },
+      {
+       "id": "v7",
+       "en": "home",
+       "ar": "البيت",
+       "em": "🏠"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتابك ص 12–13."
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "in / on / at",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "حروف الجر مع أماكن العمل",
+     "html": "<div class=\"ex\"><b>in</b> a hospital · <b>in</b> an office · <b>in</b> a restaurant · <b>in</b> an oil refinery</div><div class=\"ex\"><b>on</b> the roads · <b>on</b> a building site · <b>on</b> a farm</div><div class=\"ex\"><b>at</b> home</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "A doctor works in a hospital. A farmer works on a farm. A housewife works at home."
+      }
+     ]
+    },
+    {
+     "type": "panel",
+     "title": "Where does … work?",
+     "html": "<div class=\"ex\">Where <b>does</b> a doctor <b>work</b>? — In a hospital.</div><div class=\"ex\">A farmer <b>works</b> on a farm.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Where does a doctor work? In a hospital. A farmer works on a farm."
+      }
+     ]
+    }
+   ],
+   "lead": "in a hospital / an office / a restaurant / an oil refinery · on the roads / a building site / a farm · at home",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "in / on / at",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "My uncle is a chef. He works ___ a big restaurant.",
+           "a": "in",
+           "o": [
+            "in",
+            "on",
+            "at"
+           ]
+          },
+          {
+           "s": "My aunt is a nurse. She works ___ a hospital.",
+           "a": "in",
+           "o": [
+            "in",
+            "on",
+            "at"
+           ]
+          },
+          {
+           "s": "He is a farmer. He works ___ a farm.",
+           "a": "on",
+           "o": [
+            "on",
+            "in",
+            "at"
+           ]
+          },
+          {
+           "s": "My cousin drives a bus. He works ___ the roads.",
+           "a": "on",
+           "o": [
+            "on",
+            "in",
+            "at"
+           ]
+          },
+          {
+           "s": "A housewife works ___ home.",
+           "a": "at",
+           "o": [
+            "at",
+            "in",
+            "on"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "صِل",
+       "blocks": [
+        {
+         "type": "choice",
+         "star": false,
+         "items": [
+          {
+           "q": "waiter →",
+           "a": "restaurant",
+           "o": [
+            "restaurant",
+            "farm",
+            "office"
+           ],
+           "why": ""
+          },
+          {
+           "q": "engineer →",
+           "a": "building site",
+           "o": [
+            "building site",
+            "restaurant",
+            "home"
+           ],
+           "why": ""
+          },
+          {
+           "q": "IT programmer →",
+           "a": "office",
+           "o": [
+            "office",
+            "farm",
+            "roads"
+           ],
+           "why": ""
+          },
+          {
+           "q": "builder →",
+           "a": "building site",
+           "o": [
+            "building site",
+            "hospital",
+            "office"
+           ],
+           "why": ""
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "in a hospital",
+       "ipa": "/ɪn ə ˈhɒspɪtl/",
+       "meaning": "في مستشفى",
+       "ex": "She works in a hospital."
+      },
+      {
+       "must": 1,
+       "term": "on a farm",
+       "ipa": "/ɒn ə fɑːm/",
+       "meaning": "في مزرعة",
+       "ex": "He works on a farm."
+      },
+      {
+       "must": 1,
+       "term": "at home",
+       "ipa": "/ət həʊm/",
+       "meaning": "في البيت",
+       "ex": "A housewife works at home."
+      },
+      {
+       "must": 1,
+       "term": "office",
+       "ipa": "/ˈɒfɪs/",
+       "meaning": "مكتب",
+       "ex": "My dad works in an office."
+      },
+      {
+       "must": 0,
+       "term": "oil refinery",
+       "ipa": "/ɔɪl rɪˈfaɪnəri/",
+       "meaning": "مصفاة نفط",
+       "ex": "Who works in an oil refinery?"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 4,
+     "items": [
+      {
+       "q": "A housewife works ___ home.",
+       "a": "at",
+       "o": [
+        "at",
+        "in",
+        "on"
+       ],
+       "why": ""
+      },
+      {
+       "q": "A farmer works ___ a farm.",
+       "a": "on",
+       "o": [
+        "on",
+        "in",
+        "at"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Where does a doctor work?",
+       "a": "In a hospital.",
+       "o": [
+        "In a hospital.",
+        "On a farm.",
+        "At home."
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى building site؟",
+       "a": "موقع بناء",
+       "o": [
+        "موقع بناء",
+        "مطعم",
+        "مكتب"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Where does an IT programmer work?",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Where does an IT programmer work?",
+       "o": [
+        "Where does an IT programmer work?",
+        "Who works in an oil refinery?",
+        "Where does a doctor work?"
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "5 أسئلة. تنجح بـ 4 من 5."
+  }
+ ]
+}

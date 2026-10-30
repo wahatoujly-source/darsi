@@ -1,0 +1,312 @@
+{
+ "id": "en-4-u1-l3",
+ "grade": 4,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 1 · Lesson 3: Playground Rules",
+ "titleAr": "الوحدة الأولى: مدرستنا — الدرس الثالث: قواعد ساحة اللعب",
+ "characters": {},
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "قواعد الساحة",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "Do not stand on the swing.",
+       "ar": "لا تقف على الأرجوحة",
+       "em": "🎠"
+      },
+      {
+       "id": "v1",
+       "en": "Do not go too fast.",
+       "ar": "لا تسرع كثيراً",
+       "em": "🏃"
+      },
+      {
+       "id": "v2",
+       "en": "Hold on with both hands.",
+       "ar": "تمسّك بكلتا يديك",
+       "em": "🙌"
+      },
+      {
+       "id": "v3",
+       "en": "Do not push.",
+       "ar": "لا تدفع",
+       "em": "🚫"
+      },
+      {
+       "id": "v4",
+       "en": "Do not balance on 1 leg.",
+       "ar": "لا تقف على رجل واحدة",
+       "em": "🦩"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتابك ص 12–13."
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Don't …! / Hold on …",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "الأمر والنهي",
+     "html": "<div class=\"ex\"><b>Hold on</b> with both hands.</div><div class=\"ex\"><b>Don't</b> go too fast! &nbsp; (do not = don't)</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Hold on with both hands. Don't go too fast!"
+      }
+     ]
+    },
+    {
+     "type": "panel",
+     "title": "🎵 The playground song",
+     "html": "<div class=\"ex\">Playing in the playground, lots of games to play.<br>Playing in the playground. We do it every day.<br>Climbing up the ladder. Going down the slide.<br>Crawling through the tunnel, a clever place to hide!</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Playing in the playground, lots of games to play. Playing in the playground. We do it every day. Climbing up the ladder. Going down the slide. Crawling through the tunnel, a clever place to hide!"
+      }
+     ]
+    }
+   ],
+   "lead": "نكتب القواعد بصيغة الأمر: الفعل في أول الجملة، وللنهي نضع Don't قبله.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "ما الخطأ؟",
+       "blocks": [
+        {
+         "type": "choice",
+         "star": false,
+         "items": [
+          {
+           "q": "A boy is standing on the swing.",
+           "a": "Don't stand on the swing.",
+           "o": [
+            "Don't stand on the swing.",
+            "Hold on with both hands."
+           ],
+           "why": ""
+          },
+          {
+           "q": "A girl is spinning very fast.",
+           "a": "Don't go too fast.",
+           "o": [
+            "Don't go too fast.",
+            "Don't push."
+           ],
+           "why": ""
+          },
+          {
+           "q": "A boy is pushing his friend on the slide.",
+           "a": "Don't push.",
+           "o": [
+            "Don't push.",
+            "Don't go too fast."
+           ],
+           "why": ""
+          },
+          {
+           "q": "A boy is standing on one leg on the bars.",
+           "a": "Don't balance on 1 leg.",
+           "o": [
+            "Don't balance on 1 leg.",
+            "Don't stand on the swing."
+           ],
+           "why": ""
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "___ stand on the swing.",
+           "a": "Don't",
+           "o": [
+            "Don't",
+            "Do",
+            "Not"
+           ]
+          },
+          {
+           "s": "Hold on with ___ hands.",
+           "a": "both",
+           "o": [
+            "both",
+            "two",
+            "all"
+           ]
+          },
+          {
+           "s": "Don't go too ___ .",
+           "a": "fast",
+           "o": [
+            "fast",
+            "slow",
+            "up"
+           ]
+          },
+          {
+           "s": "do not = ___",
+           "a": "don't",
+           "o": [
+            "don't",
+            "doesn't",
+            "not"
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "rule",
+       "ipa": "/ruːl/",
+       "meaning": "قاعدة",
+       "ex": "Our playground rules."
+      },
+      {
+       "must": 1,
+       "term": "Don't push.",
+       "ipa": "/dəʊnt pʊʃ/",
+       "meaning": "لا تدفع",
+       "ex": "Don't push your friends."
+      },
+      {
+       "must": 1,
+       "term": "hold on",
+       "ipa": "/həʊld ɒn/",
+       "meaning": "تمسّك",
+       "ex": "Hold on with both hands."
+      },
+      {
+       "must": 1,
+       "term": "too fast",
+       "ipa": "/tuː fɑːst/",
+       "meaning": "بسرعة كبيرة",
+       "ex": "Don't go too fast."
+      },
+      {
+       "must": 0,
+       "term": "balance",
+       "ipa": "/ˈbæləns/",
+       "meaning": "يتوازن",
+       "ex": "Don't balance on 1 leg."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 4,
+     "items": [
+      {
+       "q": "do not =",
+       "a": "don't",
+       "o": [
+        "don't",
+        "doesn't"
+       ],
+       "why": ""
+      },
+      {
+       "type": "listen",
+       "say": "Hold on with both hands.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Hold on with both hands.",
+       "o": [
+        "Hold on with both hands.",
+        "Don't push.",
+        "Don't go too fast."
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى Don't push؟",
+       "a": "لا تدفع",
+       "o": [
+        "لا تدفع",
+        "لا تسرع",
+        "تمسّك"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "Crawling through the tunnel, a clever place to …",
+       "a": "hide",
+       "o": [
+        "hide",
+        "play",
+        "slide"
+       ],
+       "why": ""
+      },
+      {
+       "q": "___ with both hands.",
+       "a": "Hold on",
+       "o": [
+        "Hold on",
+        "Don't"
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "5 أسئلة. تنجح بـ 4 من 5."
+  }
+ ]
+}
