@@ -1,0 +1,426 @@
+{
+ "id": "en-8-u1-l1",
+ "grade": 8,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 1 · Lesson 1: Our School Magazine",
+ "titleAr": "الوحدة الأولى: مجلة المدرسة — الدرس الأول: مجلة مدرستنا",
+ "characters": {},
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "أقسام المجلة",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "school news",
+       "ar": "أخبار المدرسة",
+       "em": "🏫"
+      },
+      {
+       "id": "v1",
+       "en": "stories",
+       "ar": "قصص",
+       "em": "📖"
+      },
+      {
+       "id": "v2",
+       "en": "puzzles",
+       "ar": "ألغاز",
+       "em": "🧩"
+      },
+      {
+       "id": "v3",
+       "en": "poetry",
+       "ar": "شعر",
+       "em": "✍️"
+      },
+      {
+       "id": "v4",
+       "en": "sports reports",
+       "ar": "تقارير رياضية",
+       "em": "⚽"
+      },
+      {
+       "id": "v5",
+       "en": "town events",
+       "ar": "أحداث المدينة",
+       "em": "🏙️"
+      },
+      {
+       "id": "v6",
+       "en": "jokes",
+       "ar": "نكت",
+       "em": "😂"
+      },
+      {
+       "id": "v7",
+       "en": "cartoons",
+       "ar": "رسوم كاريكاتيرية",
+       "em": "🖍️"
+      },
+      {
+       "id": "v8",
+       "en": "interviews",
+       "ar": "مقابلات",
+       "em": "🎤"
+      },
+      {
+       "id": "v9",
+       "en": "problem page",
+       "ar": "صفحة المشكلات",
+       "em": "💬"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 8 · كتاب التمارين ص 4."
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Possessive ’s / s’",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "📰 The notice",
+     "html": "<div class=\"ex\"><b>Write for the school magazine.</b> Choose any of these sections:<br>School news · Stories · Puzzles · Poetry · Sports reports · Town events · Letters · Jokes · Cartoons · Problem page · Interviews (Talk to somebody well known in the town)<br><b>Post them here – NOW – and get your name in print!</b></div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Write for the school magazine. Choose any of these sections: School news, Stories, Puzzles, Poetry, Sports reports, Town events, Letters, Jokes, Cartoons, Problem page, Interviews. Post them here now, and get your name in print!"
+      }
+     ]
+    },
+    {
+     "type": "panel",
+     "title": "’s للمفرد · s’ للجمع",
+     "html": "<div class=\"ex\">Go and get the <b>boy’s</b> bags. = one boy</div><div class=\"ex\">Go and get the <b>boys’</b> bags. = more than one boy</div><div class=\"ex\">The <b>school’s</b> magazine is very interesting. = one school</div><div class=\"ex\">The <b>schools’</b> magazines are very interesting. = more than one school</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Go and get the boy's bags. One boy. Go and get the boys' bags. More than one boy."
+      }
+     ]
+    }
+   ],
+   "lead": "نعبّر عن الملكية بإضافة ’s للمفرد، و s’ للجمع المنتهي بحرف s.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "طابق القسم",
+       "blocks": [
+        {
+         "type": "choice",
+         "star": false,
+         "items": [
+          {
+           "q": "funny stories with small pictures",
+           "a": "cartoons",
+           "o": [
+            "cartoons",
+            "jokes",
+            "poetry"
+           ],
+           "why": ""
+          },
+          {
+           "q": "short, funny stories",
+           "a": "jokes",
+           "o": [
+            "jokes",
+            "stories",
+            "interviews"
+           ],
+           "why": ""
+          },
+          {
+           "q": "writing with words that rhyme",
+           "a": "poetry",
+           "o": [
+            "poetry",
+            "puzzles",
+            "letters"
+           ],
+           "why": ""
+          },
+          {
+           "q": "asking people questions about themselves",
+           "a": "interviews",
+           "o": [
+            "interviews",
+            "school news",
+            "cartoons"
+           ],
+           "why": ""
+          },
+          {
+           "q": "things happening in the town",
+           "a": "town events",
+           "o": [
+            "town events",
+            "sports reports",
+            "school news"
+           ],
+           "why": ""
+          },
+          {
+           "q": "descriptions of events, e.g. football matches",
+           "a": "sports reports",
+           "o": [
+            "sports reports",
+            "town events",
+            "stories"
+           ],
+           "why": ""
+          },
+          {
+           "q": "reports about school events",
+           "a": "school news",
+           "o": [
+            "school news",
+            "town events",
+            "letters"
+           ],
+           "why": ""
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "’s أم s’",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "The ___ bags. (one girl)",
+           "a": "girl’s",
+           "o": [
+            "girl’s",
+            "girls’",
+            "girls"
+           ]
+          },
+          {
+           "s": "The ___ bags. (three girls)",
+           "a": "girls’",
+           "o": [
+            "girls’",
+            "girl’s",
+            "girls"
+           ]
+          },
+          {
+           "s": "My ___ car is new. (one brother)",
+           "a": "brother’s",
+           "o": [
+            "brother’s",
+            "brothers’"
+           ]
+          },
+          {
+           "s": "The ___ magazine is great. (one school)",
+           "a": "school’s",
+           "o": [
+            "school’s",
+            "schools’"
+           ]
+          },
+          {
+           "s": "The ___ room is big. (two teachers)",
+           "a": "teachers’",
+           "o": [
+            "teachers’",
+            "teacher’s"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Write for the school magazine.",
+           "o": [
+            "Write for the school magazine.",
+            "Read the school magazine.",
+            "Write a school story."
+           ]
+          },
+          {
+           "a": "Get your name in print!",
+           "o": [
+            "Get your name in print!",
+            "Get your name on the board!",
+            "Print your name here!"
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "magazine",
+       "ipa": "/ˌmæɡəˈziːn/",
+       "meaning": "مجلة",
+       "ex": "Our school has a monthly magazine."
+      },
+      {
+       "must": 1,
+       "term": "section",
+       "ipa": "/ˈsekʃn/",
+       "meaning": "قسم",
+       "ex": "Choose any of these sections."
+      },
+      {
+       "must": 1,
+       "term": "interview",
+       "ipa": "/ˈɪntəvjuː/",
+       "meaning": "مقابلة",
+       "ex": "Talk to somebody well known in the town."
+      },
+      {
+       "must": 1,
+       "term": "poetry",
+       "ipa": "/ˈpəʊətri/",
+       "meaning": "الشعر",
+       "ex": "Writing with words that rhyme."
+      },
+      {
+       "must": 0,
+       "term": "contribution",
+       "ipa": "/ˌkɒntrɪˈbjuːʃn/",
+       "meaning": "مشاركة",
+       "ex": "They put their contributions in a box."
+      },
+      {
+       "must": 0,
+       "term": "in print",
+       "ipa": "/ɪn prɪnt/",
+       "meaning": "مطبوع",
+       "ex": "Get your name in print!"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "The ___ bags. (two boys)",
+       "a": "boys’",
+       "o": [
+        "boys’",
+        "boy’s"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى magazine؟",
+       "a": "مجلة",
+       "o": [
+        "مجلة",
+        "مكتبة",
+        "جريدة يومية"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "Funny stories with small pictures are …",
+       "a": "cartoons",
+       "o": [
+        "cartoons",
+        "poetry",
+        "interviews"
+       ],
+       "why": ""
+      },
+      {
+       "type": "listen",
+       "say": "Post them here – now!",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Post them here – now!",
+       "o": [
+        "Post them here – now!",
+        "Put them here – now!",
+        "Post them later!"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Writing with words that rhyme is …",
+       "a": "poetry",
+       "o": [
+        "poetry",
+        "news"
+       ],
+       "why": ""
+      },
+      {
+       "q": "How many students are in the magazine team?",
+       "a": "four",
+       "o": [
+        "four",
+        "two",
+        "ten"
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ]
+}

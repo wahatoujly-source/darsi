@@ -1,0 +1,473 @@
+{
+ "id": "en-8-u1-l3",
+ "grade": 8,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 1 · Lesson 3: An Interview",
+ "titleAr": "الوحدة الأولى: مجلة المدرسة — الدرس الثالث: مقابلة",
+ "characters": {
+  "Mr James": {
+   "ar": "السيد جيمس",
+   "color": "--c4",
+   "g": "m",
+   "pitch": 0.9
+  },
+  "Reporter": {
+   "ar": "الصحفية",
+   "color": "--c3",
+   "g": "f",
+   "pitch": 1.3
+  }
+ },
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "كلمات المقابلة",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "well-known",
+       "ar": "مشهور",
+       "em": "⭐"
+      },
+      {
+       "id": "v1",
+       "en": "impolite",
+       "ar": "غير مهذّب",
+       "em": "😠"
+      },
+      {
+       "id": "v2",
+       "en": "dislike",
+       "ar": "يكره / لا يحب",
+       "em": "👎"
+      },
+      {
+       "id": "v3",
+       "en": "ring road",
+       "ar": "طريق دائري",
+       "em": "🛣️"
+      },
+      {
+       "id": "v4",
+       "en": "takeaway",
+       "ar": "مطعم وجبات سفرية",
+       "em": "🍕"
+      },
+      {
+       "id": "v5",
+       "en": "spare time",
+       "ar": "وقت الفراغ",
+       "em": "⏰"
+      },
+      {
+       "id": "v6",
+       "en": "washing-up",
+       "ar": "غسل الصحون",
+       "em": "🍽️"
+      },
+      {
+       "id": "v7",
+       "en": "gardening",
+       "ar": "البستنة",
+       "em": "🌻"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 10–11 · كتاب التمارين ص 5–6."
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "استمع إلى الحوار",
+   "blocks": [
+    {
+     "type": "dialogue",
+     "star": true
+    }
+   ],
+   "lead": "شغّل الحوار وتابع الكلمات المضيئة، واضغط على أي جملة لتعيدها."
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٣ — القاعدة",
+   "heading": "for / since · like + ing · who",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "١. for و since",
+     "html": "<div class=\"ex\">I’ve worked in the café <b>for</b> ten years. (مدة)</div><div class=\"ex\">I’ve lived in Ashby <b>since</b> I was born. (بداية)</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "I've worked in the café for ten years. I've lived in Ashby since I was born."
+      }
+     ]
+    },
+    {
+     "type": "panel",
+     "title": "٢. like + verb-ing",
+     "html": "<div class=\"ex\">I like cook<b>ing</b>. I don’t like clean<b>ing</b> up.</div><div class=\"ex\">enjoy · love · hate + play<b>ing</b> football</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "I like cooking. I don't like cleaning up."
+      }
+     ]
+    },
+    {
+     "type": "panel",
+     "title": "٣. صفة أو who",
+     "html": "<div class=\"ex\">I like <b>helpful</b> people. = I like people <b>who</b> help others.</div><div class=\"ex\">I dislike people <b>who</b> are noisy.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "I like helpful people. I like people who help others."
+      }
+     ]
+    }
+   ],
+   "lead": "for مع مدة زمنية و since مع نقطة بداية، والفعل بعد like/enjoy/love/hate ينتهي بـ ing، ونصف الناس بـ who.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٤ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "for أم since",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "I’ve lived here ___ 2015.",
+           "a": "since",
+           "o": [
+            "since",
+            "for"
+           ]
+          },
+          {
+           "s": "She has been in this class ___ two years.",
+           "a": "for",
+           "o": [
+            "for",
+            "since"
+           ]
+          },
+          {
+           "s": "We’ve known him ___ we were children.",
+           "a": "since",
+           "o": [
+            "since",
+            "for"
+           ]
+          },
+          {
+           "s": "He has worked there ___ ten years.",
+           "a": "for",
+           "o": [
+            "for",
+            "since"
+           ]
+          },
+          {
+           "s": "I’ve been at this school ___ September.",
+           "a": "since",
+           "o": [
+            "since",
+            "for"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "الفعل بعد like",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "I enjoy ___ films.",
+           "a": "watching",
+           "o": [
+            "watching",
+            "watch",
+            "to watched"
+           ]
+          },
+          {
+           "s": "He hates ___ .",
+           "a": "gardening",
+           "o": [
+            "gardening",
+            "garden",
+            "gardened"
+           ]
+          },
+          {
+           "s": "Do you like ___ chess?",
+           "a": "playing",
+           "o": [
+            "playing",
+            "play",
+            "played"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "فهم المقابلة",
+       "blocks": [
+        {
+         "type": "choice",
+         "star": false,
+         "items": [
+          {
+           "q": "What does Mr James love doing?",
+           "a": "painting",
+           "o": [
+            "painting",
+            "gardening",
+            "washing-up"
+           ],
+           "why": ""
+          },
+          {
+           "q": "How long has he worked at the café?",
+           "a": "ten years",
+           "o": [
+            "ten years",
+            "since he was born",
+            "two years"
+           ],
+           "why": ""
+          },
+          {
+           "q": "What kind of people does he dislike?",
+           "a": "people who shout",
+           "o": [
+            "people who shout",
+            "polite people"
+           ],
+           "why": ""
+          },
+          {
+           "q": "What is his suggestion?",
+           "a": "build a ring road",
+           "o": [
+            "build a ring road",
+            "open a new café",
+            "plant trees"
+           ],
+           "why": ""
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٥ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "for + period",
+       "ipa": "/fɔː/",
+       "meaning": "لمدة",
+       "ex": "for ten years"
+      },
+      {
+       "must": 1,
+       "term": "since + start",
+       "ipa": "/sɪns/",
+       "meaning": "منذ",
+       "ex": "since I was born"
+      },
+      {
+       "must": 1,
+       "term": "well-known",
+       "ipa": "/ˌwel ˈnəʊn/",
+       "meaning": "مشهور",
+       "ex": "a well-known café"
+      },
+      {
+       "must": 1,
+       "term": "impolite",
+       "ipa": "/ˌɪmpəˈlaɪt/",
+       "meaning": "غير مهذّب",
+       "ex": "people who are impolite"
+      },
+      {
+       "must": 1,
+       "term": "people who …",
+       "ipa": "/ˈpiːpl huː/",
+       "meaning": "الناس الذين …",
+       "ex": "I like people who help others."
+      },
+      {
+       "must": 0,
+       "term": "spare time",
+       "ipa": "/speə taɪm/",
+       "meaning": "وقت الفراغ",
+       "ex": "What do you do in your spare time?"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "I’ve lived here ___ I was born.",
+       "a": "since",
+       "o": [
+        "since",
+        "for"
+       ],
+       "why": ""
+      },
+      {
+       "q": "I’ve worked here ___ five years.",
+       "a": "for",
+       "o": [
+        "for",
+        "since"
+       ],
+       "why": ""
+      },
+      {
+       "q": "I like ___ .",
+       "a": "cooking",
+       "o": [
+        "cooking",
+        "cook"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى well-known؟",
+       "a": "مشهور",
+       "o": [
+        "مشهور",
+        "مهذّب",
+        "مزدحم"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Why don't they build a ring road?",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Why don't they build a ring road?",
+       "o": [
+        "Why don't they build a ring road?",
+        "Why don't they build a new road?",
+        "Why don't we build a ring road?"
+       ],
+       "why": ""
+      },
+      {
+       "q": "The opposite of ‘polite’:",
+       "a": "impolite",
+       "o": [
+        "impolite",
+        "unpolite",
+        "dispolite"
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "dialogue": [
+  [
+   "Reporter",
+   "How long have you worked at Pizza Cabin, Mr James?"
+  ],
+  [
+   "Mr James",
+   "I've worked in the café for ten years, but I've lived in Ashby since I was born."
+  ],
+  [
+   "Reporter",
+   "Do you enjoy your work?"
+  ],
+  [
+   "Mr James",
+   "I enjoy some parts of my work. I don't enjoy cleaning up when the café closes."
+  ],
+  [
+   "Reporter",
+   "What do you like doing in your spare time?"
+  ],
+  [
+   "Mr James",
+   "I love painting. I don't like washing-up, and I hate gardening."
+  ],
+  [
+   "Reporter",
+   "What kind of people do you like and dislike?"
+  ],
+  [
+   "Mr James",
+   "I really like people who are polite. I don't like people who are impolite and shout."
+  ],
+  [
+   "Reporter",
+   "Do you have any suggestions for making the town better?"
+  ],
+  [
+   "Mr James",
+   "There are too many cars in the town centre. Why don't they build a ring road?"
+  ]
+ ],
+ "left": [
+  "Reporter"
+ ]
+}

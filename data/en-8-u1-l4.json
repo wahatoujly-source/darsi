@@ -1,0 +1,401 @@
+{
+ "id": "en-8-u1-l4",
+ "grade": 8,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 1 · Lesson 4: Problems",
+ "titleAr": "الوحدة الأولى: مجلة المدرسة — الدرس الرابع: المشكلات",
+ "characters": {},
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "كلمات المشكلات",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "shy",
+       "ar": "خجول",
+       "em": "🙈"
+      },
+      {
+       "id": "v1",
+       "en": "confident",
+       "ar": "واثق بنفسه",
+       "em": "😎"
+      },
+      {
+       "id": "v2",
+       "en": "go red",
+       "ar": "يحمرّ وجهه",
+       "em": "😳"
+      },
+      {
+       "id": "v3",
+       "en": "stammer",
+       "ar": "يتلعثم",
+       "em": "🗣️"
+      },
+      {
+       "id": "v4",
+       "en": "tips",
+       "ar": "نصائح",
+       "em": "💡"
+      },
+      {
+       "id": "v5",
+       "en": "lazy",
+       "ar": "كسول",
+       "em": "😴"
+      },
+      {
+       "id": "v6",
+       "en": "copy",
+       "ar": "ينقل / يغش",
+       "em": "📄"
+      },
+      {
+       "id": "v7",
+       "en": "worry",
+       "ar": "يقلق",
+       "em": "😟"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 12–13 · كتاب التمارين ص 7–8."
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Giving advice · Notes",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "💬 Dear Aunt Sally",
+     "html": "<div class=\"ex\">I am very, very shy. I have just arrived in a new school and I am afraid to speak to the other students. When the teacher asks me a question, I go red. I stammer. — Jill (aged 15)</div><div class=\"ex\"><b>Dear Jill,</b> A lot of people are shy, but you can learn to be confident. Don’t hurry. It takes time.<br>1 Say to yourself, ‘I will speak to somebody today.’<br>2 Be friendly. Say ‘hello’ and smile.<br>3 Before you speak, count to five.<br>4 Ask your teacher to give you a little time to answer.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "I am very shy. I have just arrived in a new school. Dear Jill, a lot of people are shy, but you can learn to be confident. Be friendly. Say hello and smile. Before you speak, count to five."
+      }
+     ]
+    },
+    {
+     "type": "panel",
+     "title": "الاختصارات في الملاحظات",
+     "html": "<div class=\"ex\"><b>etc.</b> = and so on &nbsp;·&nbsp; <b>h.w.</b> = homework &nbsp;·&nbsp; <b>e.g.</b> = for example &nbsp;·&nbsp; <b>v.</b> = very</div><p class=\"note\">الملاحظات notes كلمات قصيرة تفصلها شرطات، لا جمل وفقرات كاملة.</p>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "etc means and so on. h.w. means homework. e.g. means for example. v. means very."
+      }
+     ]
+    }
+   ],
+   "lead": "نعطي النصيحة بصيغة الأمر أو Try to …، ونكتب الملاحظات مختصرة بلا جمل كاملة.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "فهم الرسالة",
+       "blocks": [
+        {
+         "type": "choice",
+         "star": false,
+         "items": [
+          {
+           "q": "What is Jill’s problem?",
+           "a": "She is very shy.",
+           "o": [
+            "She is very shy.",
+            "She is lazy.",
+            "She can’t sleep."
+           ],
+           "why": ""
+          },
+          {
+           "q": "What happens when the teacher asks her a question?",
+           "a": "She goes red and stammers.",
+           "o": [
+            "She goes red and stammers.",
+            "She laughs.",
+            "She answers quickly."
+           ],
+           "why": ""
+          },
+          {
+           "q": "To stop stammering, Aunt Sally says:",
+           "a": "count to five first",
+           "o": [
+            "count to five first",
+            "speak very fast",
+            "don’t speak"
+           ],
+           "why": ""
+          },
+          {
+           "q": "Aunt Sally says being confident:",
+           "a": "takes time",
+           "o": [
+            "takes time",
+            "is impossible",
+            "is quick"
+           ],
+           "why": ""
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "الاختصارات",
+       "blocks": [
+        {
+         "type": "choice",
+         "star": false,
+         "items": [
+          {
+           "q": "h.w.",
+           "a": "homework",
+           "o": [
+            "homework",
+            "how",
+            "high way"
+           ],
+           "why": ""
+          },
+          {
+           "q": "e.g.",
+           "a": "for example",
+           "o": [
+            "for example",
+            "everything good",
+            "the end"
+           ],
+           "why": ""
+          },
+          {
+           "q": "v.",
+           "a": "very",
+           "o": [
+            "very",
+            "verb",
+            "visit"
+           ],
+           "why": ""
+          },
+          {
+           "q": "etc.",
+           "a": "and so on",
+           "o": [
+            "and so on",
+            "exactly",
+            "excellent"
+           ],
+           "why": ""
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "A lot of people are shy, but you can learn to be ___ .",
+           "a": "confident",
+           "o": [
+            "confident",
+            "lazy",
+            "shy"
+           ]
+          },
+          {
+           "s": "When I’m nervous, I ___ red.",
+           "a": "go",
+           "o": [
+            "go",
+            "make",
+            "do"
+           ]
+          },
+          {
+           "s": "My friend is very ___ and never does her homework.",
+           "a": "lazy",
+           "o": [
+            "lazy",
+            "shy",
+            "polite"
+           ]
+          },
+          {
+           "s": "At exam time, try not to ___ .",
+           "a": "worry",
+           "o": [
+            "worry",
+            "sleep",
+            "smile"
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "shy",
+       "ipa": "/ʃaɪ/",
+       "meaning": "خجول",
+       "ex": "I am very, very shy."
+      },
+      {
+       "must": 1,
+       "term": "confident",
+       "ipa": "/ˈkɒnfɪdənt/",
+       "meaning": "واثق بنفسه",
+       "ex": "You can learn to be confident."
+      },
+      {
+       "must": 1,
+       "term": "advice",
+       "ipa": "/ədˈvaɪs/",
+       "meaning": "نصيحة",
+       "ex": "What advice would you give Jill?"
+      },
+      {
+       "must": 1,
+       "term": "stammer",
+       "ipa": "/ˈstæmə/",
+       "meaning": "يتلعثم",
+       "ex": "I stammer when I speak."
+      },
+      {
+       "must": 0,
+       "term": "notes",
+       "ipa": "/nəʊts/",
+       "meaning": "ملاحظات مختصرة",
+       "ex": "Sally made some notes."
+      },
+      {
+       "must": 0,
+       "term": "e.g.",
+       "ipa": "/ˌiː ˈdʒiː/",
+       "meaning": "على سبيل المثال",
+       "ex": "e.g., can’t copy in exams"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "The opposite of ‘shy’:",
+       "a": "confident",
+       "o": [
+        "confident",
+        "lazy",
+        "quiet"
+       ],
+       "why": ""
+      },
+      {
+       "q": "h.w. means …",
+       "a": "homework",
+       "o": [
+        "homework",
+        "how"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى advice؟",
+       "a": "نصيحة",
+       "o": [
+        "نصيحة",
+        "مشكلة",
+        "مقابلة"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Be friendly. Say hello and smile.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Be friendly. Say hello and smile.",
+       "o": [
+        "Be friendly. Say hello and smile.",
+        "Be careful. Say hello and smile.",
+        "Be friendly. Say goodbye."
+       ],
+       "why": ""
+      },
+      {
+       "q": "Should you give your homework to a lazy friend?",
+       "a": "No, it doesn’t help her.",
+       "o": [
+        "No, it doesn’t help her.",
+        "Yes, always."
+       ],
+       "why": ""
+      },
+      {
+       "q": "Before exams, go to bed …",
+       "a": "early",
+       "o": [
+        "early",
+        "late"
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ]
+}

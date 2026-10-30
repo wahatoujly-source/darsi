@@ -1,0 +1,436 @@
+{
+ "id": "en-8-u1-l2",
+ "grade": 8,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 1 · Lesson 2: A New Project",
+ "titleAr": "الوحدة الأولى: مجلة المدرسة — الدرس الثاني: مشروع جديد",
+ "characters": {
+  "Usama": {
+   "ar": "أسامة",
+   "color": "--c1",
+   "g": "m",
+   "pitch": 1.15
+  },
+  "Hamza": {
+   "ar": "حمزة",
+   "color": "--c2",
+   "g": "m",
+   "pitch": 1.05
+  }
+ },
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "كلمات المجلة",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "article (n.)",
+       "ar": "مقال",
+       "em": "📰"
+      },
+      {
+       "id": "v1",
+       "en": "cover (n.)",
+       "ar": "غلاف",
+       "em": "📘"
+      },
+      {
+       "id": "v2",
+       "en": "edit (v.)",
+       "ar": "يحرّر ويصحّح",
+       "em": "✏️"
+      },
+      {
+       "id": "v3",
+       "en": "editor (n.)",
+       "ar": "محرّر",
+       "em": "🧑‍💼"
+      },
+      {
+       "id": "v4",
+       "en": "print (v.)",
+       "ar": "يطبع",
+       "em": "🖨️"
+      },
+      {
+       "id": "v5",
+       "en": "printer (n.)",
+       "ar": "طابعة / عامل طباعة",
+       "em": "🖨️"
+      },
+      {
+       "id": "v6",
+       "en": "report (v.)",
+       "ar": "يكتب تقريراً عن حدث",
+       "em": "📝"
+      },
+      {
+       "id": "v7",
+       "en": "reporter (n.)",
+       "ar": "مراسل صحفي",
+       "em": "🎤"
+      },
+      {
+       "id": "v8",
+       "en": "photographer",
+       "ar": "مصوّر",
+       "em": "📷"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 9 · كتاب التمارين ص 5."
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "استمع إلى الحوار",
+   "blocks": [
+    {
+     "type": "dialogue",
+     "star": true
+    }
+   ],
+   "lead": "شغّل الحوار وتابع الكلمات المضيئة، واضغط على أي جملة لتعيدها."
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٣ — القاعدة",
+   "heading": "Why don't we …? / Let's …",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "الاقتراح بلطف",
+     "html": "<div class=\"ex\"><b>Why don’t we</b> start a magazine?</div><div class=\"ex\"><b>What</b> sections <b>shall we</b> have?</div><div class=\"ex\"><b>Let’s</b> have articles about the school.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Why don't we start a magazine? What sections shall we have? Let's have articles about the school."
+      }
+     ]
+    },
+    {
+     "type": "panel",
+     "title": "(n.) و (v.)",
+     "html": "<div class=\"ex\"><b>(n.)</b> = noun اسم &nbsp;·&nbsp; <b>(v.)</b> = verb فعل</div><div class=\"ex\">report (v.) → reporter (n.) &nbsp;·&nbsp; edit (v.) → editor (n.) &nbsp;·&nbsp; print (v.) → printer (n.)</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "n means noun. v means verb. report, reporter. edit, editor. print, printer."
+      }
+     ]
+    }
+   ],
+   "lead": "نقترح بلطف بـ Why don't we …? و Let's …، ونسأل عن الاقتراح بـ What … shall we …?",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٤ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "المعنى",
+       "blocks": [
+        {
+         "type": "choice",
+         "star": false,
+         "items": [
+          {
+           "q": "A piece of writing in a newspaper or magazine:",
+           "a": "article",
+           "o": [
+            "article",
+            "cover",
+            "printer"
+           ],
+           "why": ""
+          },
+          {
+           "q": "The outside of a book or magazine:",
+           "a": "cover",
+           "o": [
+            "cover",
+            "article",
+            "editor"
+           ],
+           "why": ""
+          },
+          {
+           "q": "To check and correct a piece of writing:",
+           "a": "edit",
+           "o": [
+            "edit",
+            "print",
+            "report"
+           ],
+           "why": ""
+          },
+          {
+           "q": "Somebody who describes events:",
+           "a": "reporter",
+           "o": [
+            "reporter",
+            "editor",
+            "printer"
+           ],
+           "why": ""
+          },
+          {
+           "q": "How many meanings does ‘printer’ have?",
+           "a": "two",
+           "o": [
+            "two",
+            "one",
+            "three"
+           ],
+           "why": ""
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "___ don’t we start a magazine?",
+           "a": "Why",
+           "o": [
+            "Why",
+            "What",
+            "How"
+           ]
+          },
+          {
+           "s": "What sections ___ we have?",
+           "a": "shall",
+           "o": [
+            "shall",
+            "do",
+            "are"
+           ]
+          },
+          {
+           "s": "___ have articles about the school.",
+           "a": "Let’s",
+           "o": [
+            "Let’s",
+            "Why",
+            "Shall"
+           ]
+          },
+          {
+           "s": "The ___ checks the writing of others.",
+           "a": "editor",
+           "o": [
+            "editor",
+            "printer",
+            "cover"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Why don’t we start a magazine?",
+          "What sections shall we have?",
+          "Let’s have a sports page."
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٥ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "article",
+       "ipa": "/ˈɑːtɪkl/",
+       "meaning": "مقال",
+       "ex": "She wrote an article about the school."
+      },
+      {
+       "must": 1,
+       "term": "edit / editor",
+       "ipa": "/ˈedɪt/",
+       "meaning": "يحرّر / محرّر",
+       "ex": "The editor edits the articles."
+      },
+      {
+       "must": 1,
+       "term": "report / reporter",
+       "ipa": "/rɪˈpɔːt/",
+       "meaning": "يكتب تقريراً / مراسل",
+       "ex": "The reporter reports school news."
+      },
+      {
+       "must": 1,
+       "term": "Why don’t we …?",
+       "ipa": "/waɪ dəʊnt wiː/",
+       "meaning": "لماذا لا …؟ (اقتراح)",
+       "ex": "Why don’t we start a magazine?"
+      },
+      {
+       "must": 1,
+       "term": "Let’s …",
+       "ipa": "/lets/",
+       "meaning": "هيا بنا …",
+       "ex": "Let’s have a sports page."
+      },
+      {
+       "must": 0,
+       "term": "cover",
+       "ipa": "/ˈkʌvə/",
+       "meaning": "غلاف",
+       "ex": "Put a photo on the cover."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "What does (v.) mean?",
+       "a": "verb",
+       "o": [
+        "verb",
+        "noun",
+        "adjective"
+       ],
+       "why": ""
+      },
+      {
+       "q": "___ we start a magazine?",
+       "a": "Why don’t",
+       "o": [
+        "Why don’t",
+        "What shall",
+        "Let’s"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى editor؟",
+       "a": "محرّر",
+       "o": [
+        "محرّر",
+        "طابعة",
+        "غلاف"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Let’s have articles about the school.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Let’s have articles about the school.",
+       "o": [
+        "Let’s have articles about the school.",
+        "Let’s have a party at school.",
+        "Let’s write a story."
+       ],
+       "why": ""
+      },
+      {
+       "q": "What do the boys decide to do?",
+       "a": "start a magazine",
+       "o": [
+        "start a magazine",
+        "play football",
+        "buy a camera"
+       ],
+       "why": ""
+      },
+      {
+       "q": "report → ?",
+       "a": "reporter",
+       "o": [
+        "reporter",
+        "reportor",
+        "reporting"
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "dialogue": [
+  [
+   "Hamza",
+   "Hey, Usama! Look at this. The girls' school has its own magazine."
+  ],
+  [
+   "Usama",
+   "That's interesting. Why don't we start a magazine?"
+  ],
+  [
+   "Hamza",
+   "Good idea! I'm a good photographer."
+  ],
+  [
+   "Usama",
+   "What sections shall we have?"
+  ],
+  [
+   "Hamza",
+   "Let's have articles about the school, and a sports page."
+  ],
+  [
+   "Usama",
+   "Why don't we ask our English teacher to help us?"
+  ]
+ ],
+ "left": [
+  "Hamza"
+ ]
+}

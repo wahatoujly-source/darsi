@@ -1,0 +1,367 @@
+{
+ "id": "en-8-u1-l5",
+ "grade": 8,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 1 · Lesson 5: Embarrassing Moments",
+ "titleAr": "الوحدة الأولى: مجلة المدرسة — الدرس الخامس: مواقف محرجة",
+ "characters": {},
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "كلمات القصة",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "embarrassed",
+       "ar": "محرَج",
+       "em": "😳"
+      },
+      {
+       "id": "v1",
+       "en": "mug",
+       "ar": "كوب (فنجان كبير)",
+       "em": "☕"
+      },
+      {
+       "id": "v2",
+       "en": "shelf",
+       "ar": "رف",
+       "em": "🗄️"
+      },
+      {
+       "id": "v3",
+       "en": "spill",
+       "ar": "يسكب",
+       "em": "💦"
+      },
+      {
+       "id": "v4",
+       "en": "shop assistant",
+       "ar": "بائع / موظف المتجر",
+       "em": "🧑‍💼"
+      },
+      {
+       "id": "v5",
+       "en": "mirror",
+       "ar": "مرآة",
+       "em": "🪞"
+      },
+      {
+       "id": "v6",
+       "en": "black eye",
+       "ar": "كدمة حول العين",
+       "em": "🤕"
+      },
+      {
+       "id": "v7",
+       "en": "I nearly died!",
+       "ar": "كدت أموت (من الإحراج)",
+       "em": "😱"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 14–15 · كتاب التمارين ص 9–11."
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Pronouns · Meaning from context",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "📖 I nearly died! (Liz Ellen)",
+     "html": "<div class=\"ex\">One day last week, my mum and I were out shopping in town. We were looking for a present for my uncle, so we went to a gift shop. Mum saw a really nice mug on the shelf. ‘That’s nice,’ she said. ‘Your uncle will like that. He drinks lots of tea.’ I picked it up to look at the price and spilled hot coffee all over my dress. It was the shop assistant’s own mug! I was so embarrassed that I nearly died!</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "One day last week, my mum and I were out shopping in town. We were looking for a present for my uncle, so we went to a gift shop. Mum saw a really nice mug on the shelf. That's nice, she said. Your uncle will like that. He drinks lots of tea. I picked it up to look at the price and spilled hot coffee all over my dress. It was the shop assistant's own mug! I was so embarrassed that I nearly died!"
+      }
+     ]
+    },
+    {
+     "type": "panel",
+     "title": "الضمائر و there",
+     "html": "<div class=\"ex\">she · he · it · we · they · them · there</div><div class=\"ex\">My father went to the shop on the corner. <b>He</b> bought a magazine <b>there</b>.</div><div class=\"ex\">The cat ran up the tree. <b>It</b> got stuck <b>there</b>.</div><p class=\"note\">الجملة التي فيها ضمير تأتي بعد الجملة التي فيها الاسم.</p>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "My father went to the shop on the corner. He bought a magazine there. The cat ran up the tree. It got stuck there."
+      }
+     ]
+    }
+   ],
+   "lead": "نستخدم الضمائر بدلاً من تكرار الأسماء، ونخمّن معنى الكلمة من السياق.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "رتّب القصة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Last week, my dad took my sister and me to the museum.",
+          "We were looking at an old car and I wanted to ask Dad something.",
+          "I turned round, but he wasn’t there.",
+          "‘Dad! Dad!’ I shouted. I was worried.",
+          "Suddenly I saw him and ran towards him.",
+          "Bang! I ran into a big mirror."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "الضمير المناسب",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "The boys played in the park. ___ loved it there.",
+           "a": "They",
+           "o": [
+            "They",
+            "He",
+            "It"
+           ]
+          },
+          {
+           "s": "My mum saw a mug. ___ said, ‘That’s nice.’",
+           "a": "She",
+           "o": [
+            "She",
+            "He",
+            "They"
+           ]
+          },
+          {
+           "s": "Mum saw a mug. I picked ___ up.",
+           "a": "it",
+           "o": [
+            "it",
+            "them",
+            "her"
+           ]
+          },
+          {
+           "s": "We went to a gift shop. We bought a present ___ .",
+           "a": "there",
+           "o": [
+            "there",
+            "it",
+            "them"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "فهم القصة",
+       "blocks": [
+        {
+         "type": "choice",
+         "star": false,
+         "items": [
+          {
+           "q": "Why did they go to the gift shop?",
+           "a": "to buy a present for her uncle",
+           "o": [
+            "to buy a present for her uncle",
+            "to buy coffee",
+            "to see a friend"
+           ],
+           "why": ""
+          },
+          {
+           "q": "Whose mug was it?",
+           "a": "the shop assistant’s",
+           "o": [
+            "the shop assistant’s",
+            "her uncle’s",
+            "her mum’s"
+           ],
+           "why": ""
+          },
+          {
+           "q": "‘I nearly died!’ means she was very …",
+           "a": "embarrassed",
+           "o": [
+            "embarrassed",
+            "ill",
+            "hungry"
+           ],
+           "why": ""
+          },
+          {
+           "q": "How did Wendy get a black eye?",
+           "a": "She ran into a mirror.",
+           "o": [
+            "She ran into a mirror.",
+            "She fell off a bike.",
+            "She played football."
+           ],
+           "why": ""
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "embarrassed",
+       "ipa": "/ɪmˈbærəst/",
+       "meaning": "محرَج",
+       "ex": "I was so embarrassed."
+      },
+      {
+       "must": 1,
+       "term": "spill",
+       "ipa": "/spɪl/",
+       "meaning": "يسكب",
+       "ex": "I spilled hot coffee on my dress."
+      },
+      {
+       "must": 1,
+       "term": "pronoun",
+       "ipa": "/ˈprəʊnaʊn/",
+       "meaning": "ضمير",
+       "ex": "she, he, it, we, they, them"
+      },
+      {
+       "must": 1,
+       "term": "mirror",
+       "ipa": "/ˈmɪrə/",
+       "meaning": "مرآة",
+       "ex": "I ran into a big mirror."
+      },
+      {
+       "must": 0,
+       "term": "black eye",
+       "ipa": "/ˌblæk ˈaɪ/",
+       "meaning": "كدمة حول العين",
+       "ex": "I still have a black eye."
+      },
+      {
+       "must": 0,
+       "term": "shop assistant",
+       "ipa": "/ʃɒp əˈsɪstənt/",
+       "meaning": "موظف المتجر",
+       "ex": "It was the shop assistant’s mug."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "My sister went to school. ___ was late.",
+       "a": "She",
+       "o": [
+        "She",
+        "He",
+        "They"
+       ],
+       "why": ""
+      },
+      {
+       "q": "‘I nearly died!’ means:",
+       "a": "I was very embarrassed.",
+       "o": [
+        "I was very embarrassed.",
+        "I was very ill."
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى mirror؟",
+       "a": "مرآة",
+       "o": [
+        "مرآة",
+        "رف",
+        "كوب"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "I was so embarrassed that I nearly died!",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "I was so embarrassed that I nearly died!",
+       "o": [
+        "I was so embarrassed that I nearly died!",
+        "I was so tired that I nearly cried!",
+        "I was so happy that I nearly died!"
+       ],
+       "why": ""
+      },
+      {
+       "q": "spill → past:",
+       "a": "spilled",
+       "o": [
+        "spilled",
+        "spilling",
+        "spills"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Pronouns come ___ the sentence with the noun.",
+       "a": "after",
+       "o": [
+        "after",
+        "before"
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ]
+}
