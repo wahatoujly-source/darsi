@@ -2636,9 +2636,312 @@
     "unitWord": "الوحدة ",
     "books": [
      {
+      "id": "pb3",
+      "name": "English for Libya — Primary 3 Pupil's Book (21st Century)",
+      "units": [
+       {
+        "n": 1,
+        "title": "At the Park",
+        "lessons": [
+         {
+          "n": 1,
+          "title": "I can …",
+          "ref": "كتاب التلميذ ص 8⁠–⁠9",
+          "titleAr": "أستطيع …",
+          "id": "en-3-p1-l1",
+          "ready": true
+         },
+         {
+          "n": 2,
+          "title": "I can’t …",
+          "ref": "كتاب التلميذ ص 10⁠–⁠11",
+          "titleAr": "لا أستطيع …",
+          "id": "en-3-p1-l2",
+          "ready": true
+         },
+         {
+          "n": 3,
+          "title": "Animals",
+          "ref": "كتاب التلميذ ص 12⁠–⁠13",
+          "titleAr": "الحيوانات",
+          "id": "en-3-p1-l3",
+          "ready": true
+         },
+         {
+          "n": 4,
+          "title": "Food",
+          "ref": "كتاب التلميذ ص 14⁠–⁠15",
+          "titleAr": "الطعام",
+          "id": "en-3-p1-l4",
+          "ready": true
+         },
+         {
+          "n": 5,
+          "title": "I don’t like …",
+          "ref": "كتاب التلميذ ص 16⁠–⁠17",
+          "titleAr": "لا أحب …",
+          "id": "en-3-p1-l5",
+          "ready": true
+         },
+         {
+          "n": 6,
+          "title": "Clothes",
+          "ref": "كتاب التلميذ ص 18⁠–⁠19"
+         },
+         {
+          "n": 7,
+          "title": "What are they wearing?",
+          "ref": "كتاب التلميذ ص 20⁠–⁠21"
+         },
+         {
+          "n": 8,
+          "title": "The Clever Crow",
+          "ref": "كتاب التلميذ ص 22⁠–⁠23"
+         }
+        ],
+        "titleAr": "في الحديقة"
+       },
+       {
+        "n": 2,
+        "title": "Around the World",
+        "lessons": [
+         {
+          "n": 1,
+          "title": "Where are you from?",
+          "ref": "كتاب التلميذ ص 26⁠–⁠27"
+         },
+         {
+          "n": 2,
+          "title": "I’m from Libya.",
+          "ref": "كتاب التلميذ ص 28⁠–⁠29"
+         },
+         {
+          "n": 3,
+          "title": "Are they the same?",
+          "ref": "كتاب التلميذ ص 30⁠–⁠31"
+         },
+         {
+          "n": 4,
+          "title": "Different Days",
+          "ref": "كتاب التلميذ ص 32⁠–⁠33"
+         },
+         {
+          "n": 5,
+          "title": "About Time",
+          "ref": "كتاب التلميذ ص 34⁠–⁠35"
+         },
+         {
+          "n": 6,
+          "title": "Geography: Country Profile",
+          "ref": "كتاب التلميذ ص 36⁠–⁠37"
+         },
+         {
+          "n": 7,
+          "title": "Guess what it is!",
+          "ref": "كتاب التلميذ ص 38⁠–⁠39"
+         },
+         {
+          "n": 8,
+          "title": "City Mouse and Village Mouse",
+          "ref": "كتاب التلميذ ص 40⁠–⁠41"
+         }
+        ],
+        "titleAr": "حول العالم"
+       },
+       {
+        "n": 3,
+        "title": "At the Shop",
+        "lessons": [
+         {
+          "n": 1,
+          "title": "Shopping",
+          "ref": "كتاب التلميذ ص 44⁠–⁠45"
+         },
+         {
+          "n": 2,
+          "title": "At the Supermarket",
+          "ref": "كتاب التلميذ ص 46⁠–⁠47"
+         },
+         {
+          "n": 3,
+          "title": "A Pet",
+          "ref": "كتاب التلميذ ص 48⁠–⁠49"
+         },
+         {
+          "n": 4,
+          "title": "Wild World",
+          "ref": "كتاب التلميذ ص 50⁠–⁠51"
+         },
+         {
+          "n": 5,
+          "title": "Who am I?",
+          "ref": "كتاب التلميذ ص 52⁠–⁠53"
+         },
+         {
+          "n": 6,
+          "title": "What are you doing?",
+          "ref": "كتاب التلميذ ص 54⁠–⁠55"
+         },
+         {
+          "n": 7,
+          "title": "The Weather",
+          "ref": "كتاب التلميذ ص 56⁠–⁠57"
+         },
+         {
+          "n": 8,
+          "title": "The Shopping List",
+          "ref": "كتاب التلميذ ص 58⁠–⁠59"
+         }
+        ],
+        "titleAr": "في المتجر"
+       },
+       {
+        "n": 4,
+        "title": "Open Day",
+        "lessons": [
+         {
+          "n": 1,
+          "title": "Welcome to our Open Day!",
+          "ref": "كتاب التلميذ ص 62⁠–⁠63"
+         },
+         {
+          "n": 2,
+          "title": "What do you want to drink?",
+          "ref": "كتاب التلميذ ص 64⁠–⁠65"
+         },
+         {
+          "n": 3,
+          "title": "What do you want to eat?",
+          "ref": "كتاب التلميذ ص 66⁠–⁠67"
+         },
+         {
+          "n": 4,
+          "title": "At the Races",
+          "ref": "كتاب التلميذ ص 68⁠–⁠69"
+         },
+         {
+          "n": 5,
+          "title": "What’s wrong?",
+          "ref": "كتاب التلميذ ص 70⁠–⁠71"
+         },
+         {
+          "n": 6,
+          "title": "What’s first?",
+          "ref": "كتاب التلميذ ص 72⁠–⁠73"
+         },
+         {
+          "n": 7,
+          "title": "Making a Poster",
+          "ref": "كتاب التلميذ ص 74⁠–⁠75"
+         },
+         {
+          "n": 8,
+          "title": "Races on the Sports Field",
+          "ref": "كتاب التلميذ ص 76⁠–⁠77"
+         }
+        ],
+        "titleAr": "اليوم المفتوح"
+       },
+       {
+        "n": 5,
+        "title": "Places to See",
+        "lessons": [
+         {
+          "n": 1,
+          "title": "Different Places",
+          "ref": "كتاب التلميذ ص 80⁠–⁠81"
+         },
+         {
+          "n": 2,
+          "title": "A School Trip",
+          "ref": "كتاب التلميذ ص 82⁠–⁠83"
+         },
+         {
+          "n": 3,
+          "title": "On the Train",
+          "ref": "كتاب التلميذ ص 84⁠–⁠85"
+         },
+         {
+          "n": 4,
+          "title": "At the Waterfall",
+          "ref": "كتاب التلميذ ص 86⁠–⁠87"
+         },
+         {
+          "n": 5,
+          "title": "Mountains in Libya",
+          "ref": "كتاب التلميذ ص 88⁠–⁠89"
+         },
+         {
+          "n": 6,
+          "title": "Higher and Highest",
+          "ref": "كتاب التلميذ ص 90⁠–⁠91"
+         },
+         {
+          "n": 7,
+          "title": "Let’s play a game!",
+          "ref": "كتاب التلميذ ص 92⁠–⁠93"
+         },
+         {
+          "n": 8,
+          "title": "A Trip to the Museum",
+          "ref": "كتاب التلميذ ص 94⁠–⁠95"
+         }
+        ],
+        "titleAr": "أماكن تستحق الزيارة"
+       },
+       {
+        "n": 6,
+        "title": "In the Past",
+        "lessons": [
+         {
+          "n": 1,
+          "title": "Wh- Questions",
+          "ref": "كتاب التلميذ ص 98⁠–⁠99"
+         },
+         {
+          "n": 2,
+          "title": "Yesterday",
+          "ref": "كتاب التلميذ ص 100⁠–⁠101"
+         },
+         {
+          "n": 3,
+          "title": "Question Game",
+          "ref": "كتاب التلميذ ص 102⁠–⁠103"
+         },
+         {
+          "n": 4,
+          "title": "Nadia’s Grandma",
+          "ref": "كتاب التلميذ ص 104⁠–⁠105"
+         },
+         {
+          "n": 5,
+          "title": "At the Cinema",
+          "ref": "كتاب التلميذ ص 106⁠–⁠107"
+         },
+         {
+          "n": 6,
+          "title": "Where did you go?",
+          "ref": "كتاب التلميذ ص 108⁠–⁠109"
+         },
+         {
+          "n": 7,
+          "title": "There was … / There were …",
+          "ref": "كتاب التلميذ ص 110⁠–⁠111"
+         },
+         {
+          "n": 8,
+          "title": "The Little Brown Bird",
+          "ref": "كتاب التلميذ ص 112⁠–⁠113"
+         }
+        ],
+        "titleAr": "في الماضي"
+       }
+      ]
+     },
+     {
       "id": "ab3",
-      "name": "English for Libya — Primary 3 Activity Book",
-      "note": "لم يصلنا كتاب التلميذ (Pupil's Book)، فبُنيت الدروس من كتاب المعلم وكتاب النشاط.",
+      "name": "دروس إضافية: في المدرسة (من كتاب المعلم وكتاب النشاط — الطبعة السابقة)",
+      "note": "كتاب المعلم وكتاب النشاط المتوفران لدينا من طبعة أقدم تبدأ بوحدة «At School» غير الموجودة في كتاب التلميذ الحالي. أبقيناها دروساً إضافية للمراجعة.",
       "units": [
        {
         "n": 1,

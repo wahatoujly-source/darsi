@@ -3,7 +3,138 @@
   {
    "id": "e1",
    "title": "Monthly Test 1",
-   "scope": "Unit 1: At School, Lessons 1–6",
+   "scope": "Unit 1: At the Park, Lessons 1–5 (pp. 8–17)",
+   "lessons": [
+    "en-3-p1-l1",
+    "en-3-p1-l2",
+    "en-3-p1-l3",
+    "en-3-p1-l4",
+    "en-3-p1-l5"
+   ],
+   "lang": "en",
+   "duration": "35 دقيقة",
+   "questions": [
+    {
+     "t": "mcq",
+     "q": "She can swim ____ run.",
+     "o": [
+      "and",
+      "but"
+     ],
+     "a": "and",
+     "m": 1
+    },
+    {
+     "t": "mcq",
+     "q": "I ____ cycle. (🚫)",
+     "o": [
+      "can't",
+      "can"
+     ],
+     "a": "can't",
+     "m": 1
+    },
+    {
+     "t": "mcq",
+     "q": "Can it fly? (🐝)",
+     "o": [
+      "Yes, it can.",
+      "No, it can't."
+     ],
+     "a": "Yes, it can.",
+     "m": 1
+    },
+    {
+     "t": "mcq",
+     "q": "What colour is a zebra?",
+     "o": [
+      "black and white",
+      "red and yellow"
+     ],
+     "a": "black and white",
+     "m": 1
+    },
+    {
+     "t": "mcq",
+     "q": "No, thanks. I ____ like fish.",
+     "o": [
+      "don't",
+      "do"
+     ],
+     "a": "don't",
+     "m": 1
+    },
+    {
+     "t": "match",
+     "q": "Match the word with its meaning.",
+     "pairs": [
+      [
+       "frog",
+       "ضفدع"
+      ],
+      [
+       "camel",
+       "جمل"
+      ],
+      [
+       "bread",
+       "خبز"
+      ],
+      [
+       "rice",
+       "أرز"
+      ],
+      [
+       "skip",
+       "ينط الحبل"
+      ]
+     ],
+     "m": 5
+    },
+    {
+     "t": "match",
+     "q": "Match the colour.",
+     "pairs": [
+      [
+       "red",
+       "أحمر"
+      ],
+      [
+       "green",
+       "أخضر"
+      ],
+      [
+       "purple",
+       "بنفسجي"
+      ]
+     ],
+     "m": 3
+    },
+    {
+     "t": "fill",
+     "q": "Do you want some ____ ? (🐟)",
+     "a": "fish",
+     "m": 1
+    },
+    {
+     "t": "fill",
+     "q": "I like ice-____ .",
+     "a": "cream",
+     "m": 1
+    },
+    {
+     "t": "short",
+     "q": "Write two things you can do.",
+     "a": "I can swim. I can run.",
+     "m": 2,
+     "lines": 1
+    }
+   ]
+  },
+  {
+   "id": "e2",
+   "title": "Review Test: At School",
+   "scope": "At School (extra lessons)",
    "lessons": [
     "en-3-u1-l1",
     "en-3-u1-l2",

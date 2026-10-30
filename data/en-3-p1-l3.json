@@ -1,0 +1,373 @@
+{
+ "id": "en-3-p1-l3",
+ "grade": 3,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "Unit 1 · Lesson 3: Animals",
+ "titleAr": "الوحدة الأولى: في الحديقة — الدرس الثالث: الحيوانات",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "Animals",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "frog",
+       "em": "🐸",
+       "say": "frog",
+       "sub": "ضفدع",
+       "must": 1
+      },
+      {
+       "t": "mouse",
+       "em": "🐭",
+       "say": "mouse",
+       "sub": "فأر",
+       "must": 1
+      },
+      {
+       "t": "cow",
+       "em": "🐄",
+       "say": "cow",
+       "sub": "بقرة",
+       "must": 1
+      },
+      {
+       "t": "camel",
+       "em": "🐫",
+       "say": "camel",
+       "sub": "جمل",
+       "must": 1
+      },
+      {
+       "t": "hen",
+       "em": "🐔",
+       "say": "hen",
+       "sub": "دجاجة",
+       "must": 1
+      },
+      {
+       "t": "donkey",
+       "em": "🫏",
+       "say": "donkey",
+       "sub": "حمار",
+       "must": 1
+      },
+      {
+       "t": "snake",
+       "em": "🐍",
+       "say": "snake",
+       "sub": "ثعبان",
+       "must": 1
+      },
+      {
+       "t": "bee",
+       "em": "🐝",
+       "say": "bee",
+       "sub": "نحلة",
+       "must": 1
+      },
+      {
+       "t": "dog",
+       "em": "🐕",
+       "say": "dog",
+       "sub": "كلب",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل حيوان واسمع. كتابك ص 12."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٢ — العب",
+   "heading": "Which animal?",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "frog",
+       "o": [
+        "🐸",
+        "🐭",
+        "🐄"
+       ],
+       "a": "🐸",
+       "lang": "en"
+      },
+      {
+       "say": "mouse",
+       "o": [
+        "🐭",
+        "🐄",
+        "🐫"
+       ],
+       "a": "🐭",
+       "lang": "en"
+      },
+      {
+       "say": "cow",
+       "o": [
+        "🐄",
+        "🐫",
+        "🐔"
+       ],
+       "a": "🐄",
+       "lang": "en"
+      },
+      {
+       "say": "camel",
+       "o": [
+        "🐫",
+        "🐔",
+        "🫏"
+       ],
+       "a": "🐫",
+       "lang": "en"
+      },
+      {
+       "say": "hen",
+       "o": [
+        "🐔",
+        "🫏",
+        "🐍"
+       ],
+       "a": "🐔",
+       "lang": "en"
+      },
+      {
+       "say": "donkey",
+       "o": [
+        "🫏",
+        "🐸",
+        "🐭"
+       ],
+       "a": "🫏",
+       "lang": "en"
+      },
+      {
+       "say": "snake",
+       "o": [
+        "🐍",
+        "🐭",
+        "🐄"
+       ],
+       "a": "🐍",
+       "lang": "en"
+      },
+      {
+       "say": "bee",
+       "o": [
+        "🐝",
+        "🐄",
+        "🐫"
+       ],
+       "a": "🐝",
+       "lang": "en"
+      },
+      {
+       "say": "dog",
+       "o": [
+        "🐕",
+        "🐫",
+        "🐔"
+       ],
+       "a": "🐕",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع واضغط."
+  },
+  {
+   "title": "تكلّم",
+   "eyebrow": "الخطوة ٣ — تكلّم",
+   "heading": "Can it fly?",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "Can it fly?",
+       "em": "🐝",
+       "say": "Can it fly?",
+       "sub": "هل يستطيع الطيران؟",
+       "must": 1
+      },
+      {
+       "t": "Yes, it can.",
+       "em": "👍",
+       "say": "Yes, it can.",
+       "sub": "نعم، يستطيع",
+       "must": 1
+      },
+      {
+       "t": "Can it run?",
+       "em": "🐕",
+       "say": "Can it run?",
+       "sub": "هل يستطيع الجري؟",
+       "must": 1
+      },
+      {
+       "t": "No, it can't.",
+       "em": "👎",
+       "say": "No, it can't.",
+       "sub": "لا، لا يستطيع",
+       "must": 1
+      },
+      {
+       "t": "Is it a bee?",
+       "em": "🐝❓",
+       "say": "Is it a bee?",
+       "sub": "هل هي نحلة؟"
+      },
+      {
+       "t": "Yes, it is.",
+       "em": "✅",
+       "say": "Yes, it is.",
+       "sub": "نعم، هي كذلك"
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع وردّد. كتابك ص 13."
+  },
+  {
+   "title": "Yes أم No",
+   "eyebrow": "الخطوة ٤ — Yes أم No",
+   "heading": "Yes, it can. / No, it can't.",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "q": "🐝 Can it fly?",
+       "o": [
+        "Yes, it can.",
+        "No, it can't."
+       ],
+       "a": "Yes, it can.",
+       "show": "🐝"
+      },
+      {
+       "q": "🐍 Can it run?",
+       "o": [
+        "No, it can't.",
+        "Yes, it can."
+       ],
+       "a": "No, it can't.",
+       "show": "🐍"
+      },
+      {
+       "q": "🐸 Can it jump?",
+       "o": [
+        "Yes, it can.",
+        "No, it can't."
+       ],
+       "a": "Yes, it can.",
+       "show": "🐸"
+      },
+      {
+       "q": "🐄 Can it fly?",
+       "o": [
+        "No, it can't.",
+        "Yes, it can."
+       ],
+       "a": "No, it can't.",
+       "show": "🐄"
+      },
+      {
+       "q": "🐔 Can it run?",
+       "o": [
+        "Yes, it can.",
+        "No, it can't."
+       ],
+       "a": "Yes, it can.",
+       "show": "🐔"
+      }
+     ],
+     "q": "اختر الجواب"
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "camel",
+       "o": [
+        "🐫",
+        "🐄",
+        "🫏"
+       ],
+       "a": "🐫",
+       "lang": "en"
+      },
+      {
+       "say": "hen",
+       "o": [
+        "🐔",
+        "🐸",
+        "🐝"
+       ],
+       "a": "🐔",
+       "lang": "en"
+      },
+      {
+       "say": "snake",
+       "o": [
+        "🐍",
+        "🐭",
+        "🐕"
+       ],
+       "a": "🐍",
+       "lang": "en"
+      },
+      {
+       "q": "🐕 Can it fly?",
+       "o": [
+        "No, it can't.",
+        "Yes, it can."
+       ],
+       "a": "No, it can't.",
+       "show": "🐕"
+      },
+      {
+       "say": "donkey",
+       "o": [
+        "🫏",
+        "🐫",
+        "🐄"
+       ],
+       "a": "🫏",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en",
+     "pass": 3
+    }
+   ]
+  }
+ ]
+}
