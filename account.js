@@ -240,7 +240,10 @@ function renderAccount() {
   s.append(el('div', { class: 'panel accbox' }, el('b', { text: 'اشتراكاتي' }),
     ...(ACC.subs.length ? ACC.subs.map(x => el('div', { class: 'kidrow' }, el('span', {}, el('b', { text: subName(x) }), el('span', { class: 'note', text: ' — حتى ' + fmtDate(x.end.toMillis()) })))) : [el('span', { class: 'note', text: 'لا يوجد اشتراك بعد. الدروس المجانية متاحة لك.' })]),
     el('button', { class: 'btn sun', text: 'اشترك / أضف باقة', onclick: () => go('subscribe') })));
+  const adm = el('div'); s.append(adm);
+  call('adminCheck', {}).then(() => { ACC.isAdmin = true; adm.append(el('button', { class: 'btn sun', text: '🛠️ لوحة الإدارة', onclick: () => go('admin') })); }).catch(() => {});
   s.append(el('button', { class: 'btn ghost', text: 'تسجيل الخروج', onclick: async () => { await signOut(auth); go('home'); } }));
+  s.append(el('p', { class: 'note', dir: 'ltr', style: 'text-align:center;font-size:.75rem;opacity:.6', text: 'ID: ' + u.uid }));
 }
 
 /* ---------- SMS verification: only before the first payment (resala, via our server) ---------- */
@@ -295,7 +298,7 @@ const subApplies = sub => {
   const sc = sub.scope || {}, role = ACC.profile && ACC.profile.role;
   if (sc.teacherOnly) return role === 'teacher' && ACC.pid === 'me';
   if (sc.kids) return !!ACC.pid && ACC.pid !== 'me';
-  return role === 'student';
+  return role === 'student' || (!!sc.self && ACC.pid === 'me');
 };
 ACC.hasAccess = (g, s) => ACC.subs.some(sub => { if (!subApplies(sub)) return false; const sc = sub.scope || {};
   if (sc.pairs) return sc.pairs.includes(g + ':' + s);
@@ -303,11 +306,11 @@ ACC.hasAccess = (g, s) => ACC.subs.some(sub => { if (!subApplies(sub)) return fa
 ACC.hasAnySub = () => ACC.subs.some(subApplies);
 const fmtDate = ms => new Date(ms).toLocaleDateString('ar-LY', { year: 'numeric', month: 'long', day: 'numeric' });
 const KINDS = {
-  student_subject: ['📘', 'مادة واحدة', 'مادة واحدة في صف واحد', ['student']],
-  student_grade: ['📚', 'الصف كاملاً', 'كل مواد صف واحد', ['student']],
+  gift: ['🎁', 'اشتراك مجاني', 'منحة من الإدارة', []],
+  student_subject: ['📘', 'مادة واحدة', 'مادة واحدة في صف واحد', ['student', 'teacher']],
+  student_grade: ['📚', 'الصف كاملاً', 'كل مواد صف واحد', ['student', 'teacher']],
   parent_grade: ['👨‍👩‍👧', 'العائلة — صف واحد', 'كل مواد صف واحد لأبنائك (حتى 5)', ['parent', 'teacher']],
   parent_all: ['🏫', 'العائلة — كل الصفوف', 'كل الصفوف والمواد لأبنائك (حتى 5)', ['parent', 'teacher']],
-  teacher: ['👩‍🏫', 'المعلم', 'المواد والصفوف التي تدرّسها', ['teacher']],
 };
 const subName = sub => { const k = KINDS[sub.kind] || ['', sub.kind]; const sc = sub.scope || {};
   let t = k[1]; if (sc.pairs) t += ' — ' + sc.pairs.length + ' مادة'; else if (sc.grades && sc.grades[0] !== '*') t += ' — الصف ' + gradeName(sc.grades[0]);
@@ -380,7 +383,59 @@ function renderPaid(orderId) {
   tick();
 }
 
-const ROUTES = { subscribe: renderSubscribe, login: renderLogin, onboard: renderOnboard, kids: renderKids, who: renderWho, account: renderAccount };
+/* ---------- admin dashboard ---------- */
+const ROLE_AR = { student: 'طالب', parent: 'ولي أمر', teacher: 'معلم' };
+function renderAdmin() {
+  if (!ACC.user) { go('login'); return; }
+  const s = page('لوحة الإدارة', 'المجتهد', 'account');
+  const st = el('div'); s.append(st); fbk(st, 'info', 'جارٍ التحميل…');
+  call('adminStats', {}).then(d => {
+    st.innerHTML = '';
+    const card = (n, t) => el('div', { class: 'stat' }, el('b', { text: String(n) }), el('span', { text: t }));
+    s.append(el('h3', { text: 'المستخدمون' }), el('div', { class: 'stats' },
+      card(d.users, 'كل الحسابات'), card(d.roles.student || 0, 'طلاب'), card(d.roles.parent || 0, 'أولياء أمور'),
+      card(d.roles.teacher || 0, 'معلمون'), card(d.kids, 'أبناء مسجّلون عند أولياء الأمور')));
+    s.append(el('h3', { text: 'الاشتراكات الفعّالة' }), el('div', { class: 'stats' },
+      card(d.activeSubs, 'كل الاشتراكات'), card(d.payingStudents, 'طلاب مشتركون'), card(d.payingParents, 'أولياء أمور مشتركون'),
+      card(d.payingTeachers, 'معلمون مشتركون'), card(d.kidsCovered, 'أبناء مشمولون باشتراك عائلة'), card(d.byKind.gift || 0, 'اشتراكات مجانية (منح)'),
+      card(d.paidOrders, 'عمليات دفع ناجحة'), card(d.revenue + ' د.ل', 'إجمالي المدفوعات')));
+    // prices
+    const pr = {}; const pbox = el('div', { class: 'panel accbox' }, el('b', { text: '💰 الأسعار (دينار) — 0 يعني غير معروضة للبيع' }));
+    [['student_subject', 'طالب — مادة واحدة'], ['student_grade', 'طالب — الصف كاملاً'], ['parent_grade', 'ولي أمر — صف واحد'], ['parent_all', 'ولي أمر — كل الصفوف']].forEach(([k, t]) => {
+      pr[k] = el('input', { type: 'number', min: '0', step: '0.5', value: String(d.prices[k] || 0), 'aria-label': t });
+      pbox.append(el('label', { class: 'prow' }, el('span', { text: t }), pr[k])); });
+    const pm = el('div');
+    pbox.append(el('button', { class: 'btn', text: 'حفظ الأسعار', onclick: async () => { try { await call('adminSetPrices', Object.fromEntries(Object.entries(pr).map(([k, i]) => [k, Number(i.value)]))); fbk(pm, 'ok', '✓ حُفظت الأسعار.'); } catch (e) { fbk(pm, 'bad', fnErr(e)); } } }), pm);
+    s.append(pbox);
+    // grants
+    const gq = el('input', { placeholder: 'رقم الهاتف 09xxxxxxxx أو البريد', 'aria-label': 'بحث' }), gres = el('div', { class: 'stack' }), gm = el('div');
+    const gbox = el('div', { class: 'panel accbox' }, el('b', { text: '🎁 منح اشتراك مجاني (أبناؤك، أقاربك…)' }),
+      el('span', { class: 'note', text: 'ابحث عن الشخص بعد أن يسجّل في الموقع، ثم اختر صفاً معيّناً أو كل الصفوف. ولي الأمر تُفتح الدروس لكل أبنائه.' }),
+      el('div', { class: 'code' }, gq, el('button', { class: 'btn', text: 'بحث', onclick: async () => { gres.innerHTML = ''; gm.innerHTML = '';
+        try { const r = await call('adminFindUser', { q: gq.value.trim() });
+          if (!r.users.length) { fbk(gm, 'info', 'لا يوجد حساب بهذا الرقم/البريد. اطلب منه أن يسجّل أولاً.'); return; }
+          r.users.forEach(u => { let grade = '*'; const gp = el('div', { class: 'gpick' });
+            const drawG = () => { gp.innerHTML = ''; [['*', 'كل الصفوف'], ...GRADES].forEach(([g, n]) => gp.append(el('button', { class: 'btn ghost sm' + (grade === g ? ' on' : ''), text: n, onclick: () => { grade = g; drawG(); } }))); }; drawG();
+            const note = el('input', { placeholder: 'ملاحظة (مثلاً: ابن أخي)', 'aria-label': 'ملاحظة' });
+            gres.append(el('div', { class: 'panel accbox' },
+              el('b', { text: (u.name || '—') + ' — ' + (ROLE_AR[u.role] || u.role) }),
+              el('span', { class: 'note', dir: 'ltr', text: (u.phone || u.email || '') }),
+              u.profiles.length ? el('span', { class: 'note', text: 'الملفات: ' + u.profiles.map(p => p.id === 'me' ? 'هو نفسه' : p.name + (p.grade ? ' (' + gradeName(p.grade) + ')' : '')).join('، ') }) : null,
+              gp, note, el('button', { class: 'btn sun', text: '🎁 امنح الاشتراك', onclick: async () => { try { await call('adminGrant', { uid: u.uid, grade, note: note.value }); fbk(gm, 'ok', '✓ تم منح الاشتراك حتى 31 أغسطس.'); } catch (e) { fbk(gm, 'bad', fnErr(e)); } } }))); });
+        } catch (e) { fbk(gm, 'bad', fnErr(e)); } } })), gres, gm);
+    s.append(gbox);
+    // list
+    const tb = el('div', { class: 'stack' });
+    d.list.forEach(x => { const sc = x.scope || {}; const what = (KINDS[x.kind] || ['', x.kind])[1] + (sc.grades && sc.grades[0] !== '*' ? ' — الصف ' + gradeName(sc.grades[0]) : sc.grades ? ' — كل الصفوف' : '') + (sc.subjects && sc.subjects[0] && sc.subjects[0] !== '*' ? ' — ' + sc.subjects[0] : '');
+      tb.append(el('div', { class: 'kidrow' }, el('span', {}, el('b', { text: (x.name || '—') + ' (' + (ROLE_AR[x.role] || '') + ')' }), el('span', { class: 'note', text: ' — ' + what + (x.amount ? ' — ' + x.amount + ' د.ل' : '') + ' — حتى ' + fmtDate(x.end) + (x.note ? ' — ' + x.note : '') })),
+        el('span', { class: 'note', dir: 'ltr', text: (x.phone || '').replace('+218', '0') }),
+        el('button', { class: 'btn ghost sm', text: 'إلغاء', onclick: async e => { const b = e.currentTarget; if (b.dataset.c !== '1') { b.dataset.c = '1'; b.textContent = 'تأكيد الإلغاء'; return; }
+          try { await call('adminRevoke', { id: x.id }); b.closest('.kidrow').remove(); } catch (er) { b.textContent = fnErr(er); } } }))); });
+    s.append(el('h3', { text: 'آخر الاشتراكات الفعّالة (' + d.list.length + ')' }), tb);
+  }).catch(e => fbk(st, 'bad', fnErr(e)));
+}
+
+const ROUTES = { admin: renderAdmin, subscribe: renderSubscribe, login: renderLogin, onboard: renderOnboard, kids: renderKids, who: renderWho, account: renderAccount };
 ACC.route = h => { const pm = /^paid-([A-Za-z0-9]{10,40})$/.exec(h); const f = pm ? () => renderPaid(pm[1]) : ROUTES[h]; if (!f) return false; if (!ACC.ready) { page('…', 'جارٍ التحميل', 'home'); return true; } if (ACC.loadError && ACC.user) { showLoadError(); return true; } f(); return true; };
 
 /* ---------- auth state ---------- */

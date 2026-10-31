@@ -191,29 +191,33 @@ exports.verifyOtp = onCall(async (req) => {
 });
 
 // ===================== الباقات والأسعار =====================
-function priceOf(kind) {
-  const v = Number(P[kind] ? P[kind].value() : NaN);
-  return isFinite(v) && v > 0 ? r2(v) : 0;
-}
-exports.getPlans = onCall(async () => {
+// الأسعار تُعدَّل من لوحة الإدارة (config/prices)، وإن لم تُحدَّد تُقرأ من ملف .env
+const KINDS_ON_SALE = ["student_subject", "student_grade", "parent_grade", "parent_all"];
+async function getPrices() {
+  const snap = await db.collection("config").doc("prices").get();
+  const fsP = snap.exists ? snap.data() : {};
   const out = {};
-  for (const k of Object.keys(P)) out[k] = priceOf(k);
-  return {prices: out, end: seasonEnd().toMillis()};
-});
+  for (const k of KINDS_ON_SALE) {
+    const v = Number(fsP[k] != null ? fsP[k] : (P[k] ? P[k].value() : NaN));
+    out[k] = isFinite(v) && v > 0 ? r2(v) : 0;
+  }
+  return out;
+}
+exports.getPlans = onCall(async () => ({prices: await getPrices(), end: seasonEnd().toMillis()}));
 
 // يحدّد نطاق الاشتراك ويحسب سعره في الخادم فقط
 function buildScope(kind, role, d, kidsCount) {
   const grade = String(d.grade || "");
   const subject = String(d.subject || "");
   if (kind === "student_subject") {
-    if (role !== "student") throw new HttpsError("permission-denied", "هذه الباقة للطالب");
+    if (!["student", "teacher"].includes(role)) throw new HttpsError("permission-denied", "هذه الباقة للطالب أو المعلم");
     if (!GRADES.includes(grade) || !SUBJECTS.includes(subject)) throw new HttpsError("invalid-argument", "اختر الصف والمادة");
-    return {scope: {grades: [grade], subjects: [subject]}, qty: 1};
+    return {scope: {grades: [grade], subjects: [subject], self: true}, qty: 1};
   }
   if (kind === "student_grade") {
-    if (role !== "student") throw new HttpsError("permission-denied", "هذه الباقة للطالب");
+    if (!["student", "teacher"].includes(role)) throw new HttpsError("permission-denied", "هذه الباقة للطالب أو المعلم");
     if (!GRADES.includes(grade)) throw new HttpsError("invalid-argument", "اختر الصف");
-    return {scope: {grades: [grade], subjects: ["*"]}, qty: 1};
+    return {scope: {grades: [grade], subjects: ["*"], self: true}, qty: 1};
   }
   if (kind === "parent_grade" || kind === "parent_all") {
     if (!["parent", "teacher"].includes(role)) throw new HttpsError("permission-denied", "هذه الباقة لولي الأمر");
@@ -251,7 +255,8 @@ exports.createOrder = onCall({secrets: [MYPAY_ID, MYPAY_SECRET], memory: "256MiB
   if (!u.phoneVerified) throw new HttpsError("failed-precondition", "أكّد رقم هاتفك أولاً");
   const kids = (await db.collection("users").doc(uid).collection("profiles").get()).docs.filter((x) => x.id !== "me").length;
   const {scope, qty} = buildScope(kind, u.role, d, kids);
-  const unit = priceOf(kind);
+  if (!KINDS_ON_SALE.includes(kind)) throw new HttpsError("failed-precondition", "هذه الباقة غير متاحة حالياً");
+  const unit = (await getPrices())[kind] || 0;
   if (!unit) throw new HttpsError("failed-precondition", "هذه الباقة غير متاحة للشراء بعد");
   const amount = r2(unit * qty);
 
@@ -380,7 +385,7 @@ exports.getLesson = onCall({memory: "512MiB"}, async (req) => {
     if (sub.active === false || !sub.end || sub.end.toMillis() <= now) return false;
     const sc = sub.scope || {};
     if (sc.teacherOnly) return role === "teacher" && pid === "me" && (sc.pairs || []).includes(g + ":" + s);
-    if (sc.kids) { if (!pid || pid === "me") return false; } else if (role !== "student") return false;
+    if (sc.kids) { if (!pid || pid === "me") return false; } else if (!(role === "student" || (sc.self && pid === "me"))) return false;
     return (sc.grades || []).some((x) => x === "*" || x === g) && (sc.subjects || []).some((x) => x === "*" || x === s);
   });
   if (!ok) throw new HttpsError("permission-denied", "هذا الدرس للمشتركين. اشترك لتفتحه.");
@@ -396,4 +401,117 @@ exports.getLesson = onCall({memory: "512MiB"}, async (req) => {
   const lesson = lessonFrom(g, id);
   if (!lesson) throw new HttpsError("not-found", "الدرس غير موجود");
   return {lesson};
+});
+
+
+// ===================== لوحة الإدارة =====================
+// المدير: من يوجد معرّفه (uid) في المستند config/admins داخل الحقل uids (يُضاف من كونسول Firebase مرة واحدة).
+async function needAdmin(req) {
+  const uid = needUser(req);
+  const a = await db.collection("config").doc("admins").get();
+  const list = (a.exists && Array.isArray(a.data().uids)) ? a.data().uids : [];
+  if (!list.includes(uid)) throw new HttpsError("permission-denied", "هذه الصفحة للإدارة فقط");
+  return uid;
+}
+exports.adminCheck = onCall(async (req) => { await needAdmin(req); return {admin: true}; });
+
+exports.adminStats = onCall({memory: "512MiB"}, async (req) => {
+  await needAdmin(req);
+  const now = Date.now();
+  const [users, profiles, subs, orders] = await Promise.all([
+    db.collection("users").select("role", "name", "phone", "email", "phoneVerified").get(),
+    db.collectionGroup("profiles").select("grade").get(),
+    db.collection("subscriptions").get(),
+    db.collection("orders").where("status", "==", "paid").select("amount", "kind", "paidAt", "uid").get(),
+  ]);
+  const roles = {student: 0, parent: 0, teacher: 0};
+  const uinfo = {};
+  users.docs.forEach((d) => { const u = d.data(); roles[u.role] = (roles[u.role] || 0) + 1; uinfo[d.id] = u; });
+  const kids = profiles.docs.filter((d) => d.id !== "me").length;
+  const kidsByGrade = {};
+  profiles.docs.filter((d) => d.id !== "me").forEach((d) => { const g = d.data().grade || "?"; kidsByGrade[g] = (kidsByGrade[g] || 0) + 1; });
+  const active = subs.docs.map((d) => ({id: d.id, ...d.data()})).filter((x) => x.active !== false && x.end && x.end.toMillis() > now);
+  const byKind = {};
+  const payers = {student: new Set(), parent: new Set(), teacher: new Set()};
+  active.forEach((x) => {
+    byKind[x.kind] = (byKind[x.kind] || 0) + 1;
+    const r = (uinfo[x.uid] || {}).role;
+    if (x.kind !== "gift" && payers[r]) payers[r].add(x.uid);
+  });
+  let kidsCovered = 0;
+  const kidSubUsers = new Set(active.filter((x) => (x.scope || {}).kids).map((x) => x.uid));
+  profiles.docs.forEach((d) => { if (d.id !== "me" && kidSubUsers.has(d.ref.parent.parent.id)) kidsCovered++; });
+  let revenue = 0; orders.docs.forEach((d) => { revenue += Number(d.data().amount) || 0; });
+  const list = active.sort((a, b) => (b.start && b.start.toMillis ? b.start.toMillis() : 0) - (a.start && a.start.toMillis ? a.start.toMillis() : 0))
+      .slice(0, 200).map((x) => ({id: x.id, uid: x.uid, kind: x.kind, scope: x.scope, amount: x.amount || 0,
+        end: x.end.toMillis(), name: (uinfo[x.uid] || {}).name || "", phone: (uinfo[x.uid] || {}).phone || "", role: (uinfo[x.uid] || {}).role || "", note: x.note || ""}));
+  return {
+    users: users.size, roles, kids, kidsByGrade, kidsCovered,
+    activeSubs: active.length, byKind,
+    payingStudents: payers.student.size, payingParents: payers.parent.size, payingTeachers: payers.teacher.size,
+    paidOrders: orders.size, revenue: r2(revenue), prices: await getPrices(), list,
+  };
+});
+
+exports.adminSetPrices = onCall(async (req) => {
+  await needAdmin(req);
+  const d = req.data || {};
+  const out = {};
+  for (const k of KINDS_ON_SALE) {
+    const v = Number(d[k]);
+    if (!isFinite(v) || v < 0 || v > 5000) throw new HttpsError("invalid-argument", "سعر غير صحيح");
+    out[k] = r2(v);
+  }
+  await db.collection("config").doc("prices").set({...out, updatedAt: FieldValue.serverTimestamp()});
+  return {prices: out};
+});
+
+// البحث عن مستخدم برقم الهاتف أو البريد
+exports.adminFindUser = onCall(async (req) => {
+  await needAdmin(req);
+  const q = String((req.data && req.data.q) || "").trim();
+  let snap;
+  if (/^09[1-5]\d{7}$/.test(q)) snap = await db.collection("users").where("phone", "==", toE164(q)).limit(5).get();
+  else if (q.includes("@")) snap = await db.collection("users").where("email", "==", q.toLowerCase()).limit(5).get();
+  else throw new HttpsError("invalid-argument", "اكتب رقم هاتف (09xxxxxxxx) أو بريداً إلكترونياً");
+  const out = [];
+  for (const d of snap.docs) {
+    const u = d.data();
+    const ps = await d.ref.collection("profiles").get();
+    out.push({uid: d.id, name: u.name, role: u.role, phone: u.phone || "", email: u.email || "",
+      profiles: ps.docs.map((p) => ({id: p.id, name: p.data().name, grade: p.data().grade || null}))});
+  }
+  return {users: out};
+});
+
+// منح اشتراك مجاني (أقارب، أبناء…) لصف معيّن أو لكل الصفوف
+exports.adminGrant = onCall(async (req) => {
+  const admin = await needAdmin(req);
+  const d = req.data || {};
+  const uid = String(d.uid || "");
+  const grade = String(d.grade || "*");
+  if (grade !== "*" && !GRADES.includes(grade)) throw new HttpsError("invalid-argument", "الصف غير صحيح");
+  const us = await db.collection("users").doc(uid).get();
+  if (!us.exists) throw new HttpsError("not-found", "المستخدم غير موجود");
+  const role = us.data().role;
+  const scope = role === "student" ? {grades: [grade], subjects: ["*"], self: true} :
+    {grades: [grade], subjects: ["*"], kids: true};
+  const ref = db.collection("subscriptions").doc("gift_" + uid + "_" + grade.replace("*", "all"));
+  await ref.set({uid, kind: "gift", scope, amount: 0, orderId: null, start: FieldValue.serverTimestamp(),
+    end: seasonEnd(), active: true, grantedBy: admin, note: String(d.note || "").slice(0, 80)});
+  // المعلم: نمنحه لنفسه أيضاً
+  if (role === "teacher") {
+    await db.collection("subscriptions").doc("gift_" + uid + "_self_" + grade.replace("*", "all")).set({uid, kind: "gift",
+      scope: {grades: [grade], subjects: ["*"], self: true}, amount: 0, orderId: null, start: FieldValue.serverTimestamp(),
+      end: seasonEnd(), active: true, grantedBy: admin, note: String(d.note || "").slice(0, 80)});
+  }
+  return {ok: true};
+});
+
+exports.adminRevoke = onCall(async (req) => {
+  await needAdmin(req);
+  const id = String((req.data && req.data.id) || "");
+  if (!/^[A-Za-z0-9_*-]{5,120}$/.test(id)) throw new HttpsError("invalid-argument", "معرّف غير صحيح");
+  await db.collection("subscriptions").doc(id).update({active: false, revokedAt: FieldValue.serverTimestamp()});
+  return {ok: true};
 });
