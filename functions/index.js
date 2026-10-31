@@ -385,6 +385,7 @@ exports.getLesson = onCall({memory: "512MiB"}, async (req) => {
     if (sub.active === false || !sub.end || sub.end.toMillis() <= now) return false;
     const sc = sub.scope || {};
     if (sc.teacherOnly) return role === "teacher" && pid === "me" && (sc.pairs || []).includes(g + ":" + s);
+    if (sc.any) return (sc.grades || []).some((x) => x === "*" || x === g);
     if (sc.kids) { if (!pid || pid === "me") return false; } else if (!(role === "student" || (sc.self && pid === "me"))) return false;
     return (sc.grades || []).some((x) => x === "*" || x === g) && (sc.subjects || []).some((x) => x === "*" || x === s);
   });
@@ -497,18 +498,11 @@ exports.adminGrant = onCall(async (req) => {
   if (grade !== "*" && !GRADES.includes(grade)) throw new HttpsError("invalid-argument", "الصف غير صحيح");
   const us = await db.collection("users").doc(uid).get();
   if (!us.exists) throw new HttpsError("not-found", "المستخدم غير موجود");
-  const role = us.data().role;
-  const scope = role === "student" ? {grades: [grade], subjects: ["*"], self: true} :
-    {grades: [grade], subjects: ["*"], kids: true};
+  // المنحة تشمل كل ملفات الحساب: صاحب الحساب وكل أبنائه
+  const scope = {grades: [grade], subjects: ["*"], any: true};
   const ref = db.collection("subscriptions").doc("gift_" + uid + "_" + grade.replace("*", "all"));
   await ref.set({uid, kind: "gift", scope, amount: 0, orderId: null, start: FieldValue.serverTimestamp(),
     end: seasonEnd(), active: true, grantedBy: admin, note: String(d.note || "").slice(0, 80)});
-  // المعلم: نمنحه لنفسه أيضاً
-  if (role === "teacher") {
-    await db.collection("subscriptions").doc("gift_" + uid + "_self_" + grade.replace("*", "all")).set({uid, kind: "gift",
-      scope: {grades: [grade], subjects: ["*"], self: true}, amount: 0, orderId: null, start: FieldValue.serverTimestamp(),
-      end: seasonEnd(), active: true, grantedBy: admin, note: String(d.note || "").slice(0, 80)});
-  }
   return {ok: true};
 });
 

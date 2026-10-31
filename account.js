@@ -296,6 +296,7 @@ async function loadSubs() {
 }
 const subApplies = sub => {
   const sc = sub.scope || {}, role = ACC.profile && ACC.profile.role;
+  if (sc.any) return true;                        // منحة الإدارة: لكل ملفات الحساب
   if (sc.teacherOnly) return role === 'teacher' && ACC.pid === 'me';
   if (sc.kids) return !!ACC.pid && ACC.pid !== 'me';
   return role === 'student' || (!!sc.self && ACC.pid === 'me');
@@ -414,14 +415,19 @@ function renderAdmin() {
       el('div', { class: 'code' }, gq, el('button', { class: 'btn', text: 'بحث', onclick: async () => { gres.innerHTML = ''; gm.innerHTML = '';
         try { const r = await call('adminFindUser', { q: gq.value.trim() });
           if (!r.users.length) { fbk(gm, 'info', 'لا يوجد حساب بهذا الرقم/البريد. اطلب منه أن يسجّل أولاً.'); return; }
-          r.users.forEach(u => { let grade = '*'; const gp = el('div', { class: 'gpick' });
-            const drawG = () => { gp.innerHTML = ''; [['*', 'كل الصفوف'], ...GRADES].forEach(([g, n]) => gp.append(el('button', { class: 'btn ghost sm' + (grade === g ? ' on' : ''), text: n, onclick: () => { grade = g; drawG(); } }))); }; drawG();
+          r.users.forEach(u => { const sel = new Set(['*']); const gp = el('div', { class: 'gpick' });
+            const drawG = () => { gp.innerHTML = ''; [['*', 'كل الصفوف'], ...GRADES].forEach(([g, n]) => gp.append(el('button', { class: 'btn ghost sm' + (sel.has(g) ? ' on' : ''), text: (sel.has(g) ? '✓ ' : '') + n,
+              onclick: () => { if (g === '*') { sel.clear(); sel.add('*'); } else { sel.delete('*'); sel.has(g) ? sel.delete(g) : sel.add(g); if (!sel.size) sel.add('*'); } drawG(); } }))); }; drawG();
             const note = el('input', { placeholder: 'ملاحظة (مثلاً: ابن أخي)', 'aria-label': 'ملاحظة' });
             gres.append(el('div', { class: 'panel accbox' },
               el('b', { text: (u.name || '—') + ' — ' + (ROLE_AR[u.role] || u.role) }),
               el('span', { class: 'note', dir: 'ltr', text: (u.phone || u.email || '') }),
               u.profiles.length ? el('span', { class: 'note', text: 'الملفات: ' + u.profiles.map(p => p.id === 'me' ? 'هو نفسه' : p.name + (p.grade ? ' (' + gradeName(p.grade) + ')' : '')).join('، ') }) : null,
-              gp, note, el('button', { class: 'btn sun', text: '🎁 امنح الاشتراك', onclick: async () => { try { await call('adminGrant', { uid: u.uid, grade, note: note.value }); fbk(gm, 'ok', '✓ تم منح الاشتراك حتى 31 أغسطس.'); } catch (e) { fbk(gm, 'bad', fnErr(e)); } } }))); });
+              gp, note, el('button', { class: 'btn sun', text: '🎁 امنح الاشتراك', onclick: async ev => { const b = ev.currentTarget; b.disabled = true; fbk(gm, 'info', 'جارٍ المنح…');
+                try { for (const g of sel) await call('adminGrant', { uid: u.uid, grade: g, note: note.value });
+                  if (u.uid === ACC.user.uid) await loadSubs();
+                  fbk(gm, 'ok', '✓ تم منح الاشتراك (' + [...sel].map(g => g === '*' ? 'كل الصفوف' : 'الصف ' + gradeName(g)).join('، ') + ') حتى 31 أغسطس. على صاحب الحساب أن يعيد فتح الموقع.'); }
+                catch (e) { fbk(gm, 'bad', fnErr(e)); } b.disabled = false; } }))); });
         } catch (e) { fbk(gm, 'bad', fnErr(e)); } } })), gres, gm);
     s.append(gbox);
     // list
@@ -434,6 +440,8 @@ function renderAdmin() {
     s.append(el('h3', { text: 'آخر الاشتراكات الفعّالة (' + d.list.length + ')' }), tb);
   }).catch(e => fbk(st, 'bad', fnErr(e)));
 }
+
+document.addEventListener('visibilitychange', async () => { if (document.visibilityState === 'visible' && ACC.user && ACC.profile) { const n = ACC.subs.length; await loadSubs(); if (ACC.subs.length !== n && D.App.catalog) D.route(); } });
 
 const ROUTES = { admin: renderAdmin, subscribe: renderSubscribe, login: renderLogin, onboard: renderOnboard, kids: renderKids, who: renderWho, account: renderAccount };
 ACC.route = h => { const pm = /^paid-([A-Za-z0-9]{10,40})$/.exec(h); const f = pm ? () => renderPaid(pm[1]) : ROUTES[h]; if (!f) return false; if (!ACC.ready) { page('…', 'جارٍ التحميل', 'home'); return true; } if (ACC.loadError && ACC.user) { showLoadError(); return true; } f(); return true; };
