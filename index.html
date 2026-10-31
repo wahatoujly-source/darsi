@@ -546,6 +546,7 @@ h2{font-weight:800}
 .brand svg{width:30px;height:30px;flex:0 0 auto}
 .pill{background:rgba(255,255,255,.18);backdrop-filter:blur(4px);padding:4px 14px}
 .back{border-radius:12px}
+.home-btn{display:grid;place-items:center;padding:0 8px}
 
 /* الصفحة الرئيسية: مسار الصفوف */
 .hero{padding:26px 0 8px}
@@ -1437,8 +1438,14 @@ const go=h=>{if(location.hash==='#'+h)route();else location.hash=h;};
 const LOGO='<svg viewBox="0 0 120 120" aria-hidden="true"><rect class="s1" x="10" y="74" width="28" height="36" rx="8" fill="#FF5D73"/><rect class="s2" x="46" y="52" width="28" height="58" rx="8" fill="#4CC9F0"/><rect class="s3" x="82" y="30" width="28" height="80" rx="8" fill="#7BE07B"/><circle class="glow" cx="96" cy="14" r="16" fill="#FFB800" opacity=".3"/><path class="star" d="M96 2l3.9 8 8.8 1.3-6.4 6.2 1.5 8.8L96 22.1l-7.8 4.2 1.5-8.8-6.4-6.2 8.8-1.3z" fill="#FFB800"/></svg>';
 const logoEl=()=>{const t=document.createElement('span');t.innerHTML=LOGO;return t.firstChild;};
 
-function bar(title,sub,backTo,right){const b=el('header',{class:'bar'},el('div',{class:'bar-top'},
-  backTo?el('button',{class:'back',text:'→',title:'رجوع','aria-label':'رجوع',onclick:()=>go(backTo)}):el('span',{class:'brand'},logoEl(),'المجتهد'),
+const HOME_ICON='<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5.5v-6h-5v6H4a1 1 0 0 1-1-1z" fill="currentColor"/></svg>';
+// سجل التنقل داخل التطبيق: زر الرجوع يعيدك خطوة واحدة كما في زر الجوال
+const NAV={stack:(()=>{try{return JSON.parse(sessionStorage.getItem('mj_nav')||'[]')}catch(e){return[]}})()};
+function navTrack(h){const st=NAV.stack;if(st.length>1&&st[st.length-2]===h)st.pop();else if(st[st.length-1]!==h)st.push(h);if(st.length>60)st.splice(0,st.length-60);try{sessionStorage.setItem('mj_nav',JSON.stringify(st))}catch(e){}}
+function goBack(backTo){const st=NAV.stack;if(st.length>1&&st[st.length-2]===backTo)history.back();else go(backTo);}
+function bar(title,sub,backTo,right){const homeBtn=backTo&&backTo!=='home'?(()=>{const b=el('button',{class:'back home-btn',title:'الرئيسية','aria-label':'الرئيسية',onclick:()=>go('home')});b.innerHTML=HOME_ICON;return b;})():null;
+  const b=el('header',{class:'bar'},el('div',{class:'bar-top'},
+  backTo?el('span',{class:'row',style:'gap:6px;flex-wrap:nowrap'},el('button',{class:'back',text:'→',title:'رجوع','aria-label':'رجوع',onclick:()=>goBack(backTo)}),homeBtn):el('span',{class:'brand'},logoEl(),'المجتهد'),
   el('h1',{},title,sub?el('small',{text:sub}):null),right||el('span')));return b;}
 const subPill=()=>el('span',{class:'row',style:'gap:6px;flex-wrap:nowrap'},window.ACC&&ACC.pill?ACC.pill():null,OPEN_ACCESS?null:el('button',{class:'pill',onclick:()=>go('subscribe'),text:window.ACC&&ACC.hasAnySub&&ACC.hasAnySub()?'✓ مشترك':'اشترك'}));
 
@@ -1553,7 +1560,7 @@ async function renderLesson(id){
   root.innerHTML='';
   const head=bar(el('span',{lang:L.lang==='en'?'en':null,text:L.title}),L.titleAr,backTo,el('span',{class:'row',style:'flex-wrap:nowrap;gap:6px'},snd,stars));head.append(nav);root.append(head);
   if(info.lesson.ref)root.append(el('div',{class:'refchip'},el('span',{text:'📖'}),el('span',{},'في كتابك: ',el('b',{text:info.lesson.ref.replace(/–/g,'\u2060–\u2060')}))));
-  let cur=1;const sections=[];
+  let cur=1;const sections=[];const stepKey='step_'+id;
   const award=n=>{if(done.has(n))return;done.add(n);store.set('done_'+id,[...done]);window.ACC&&ACC.saveProgress&&ACC.saveProgress(id,[...done]);cheer('star');drawNav();};
   function drawNav(){nav.innerHTML='';L.steps.forEach((s,i)=>{const n=i+1;const b=el('button',{class:done.has(n)?'done':'',onclick:()=>show(n)},el('span',{class:'n',text:AR[i]}),s.title);if(n===cur)b.setAttribute('aria-current','step');nav.append(b);});stars.textContent='★ '+done.size+'/'+N;}
   L.steps.forEach((s,i)=>{const n=i+1;const ctx={L,stepIndex:n,done:()=>award(n)};
@@ -1564,9 +1571,9 @@ async function renderLesson(id){
   const vnote=el('p',{class:'note',style:'margin-top:18px'});root.append(vnote);
   const voiceNote=()=>{const need=L.lang==='en'?TTS.en:TTS.ar;vnote.textContent=!TTS.synth?'المتصفح لا يدعم النطق الآلي.':!need.length?('لم يُعثر على صوت '+(L.lang==='en'?'إنجليزي':'عربي')+' في هذا الجهاز. ثبّت اللغة من إعدادات تحويل النص إلى كلام في جهازك. في النسخة النهائية ستكون الأصوات تسجيلات ثابتة.'):'الأصوات حالياً من جهازك. في النسخة النهائية ستُستبدل بتسجيلات ثابتة بنفس الجودة على كل الأجهزة.';};
   voiceNote();setTimeout(voiceNote,1200);
-  function show(n){stopAll();cur=Math.max(1,Math.min(N,n));sections.forEach((s,i)=>s.hidden=i+1!==cur);prev.disabled=cur===1;next.textContent=cur===N?'إنهاء الدرس ✓':'التالي ←';
+  function show(n){stopAll();cur=Math.max(1,Math.min(N,n));store.set(stepKey,cur);sections.forEach((s,i)=>s.hidden=i+1!==cur);prev.disabled=cur===1;next.textContent=cur===N?'إنهاء الدرس ✓':'التالي ←';
     if(L.steps[cur-1].starOnVisit)award(cur);drawNav();const cb=$('[aria-current]',nav);cb&&cb.scrollIntoView({block:'nearest',inline:'center'});window.scrollTo({top:0,behavior:'smooth'});}
-  show(1);
+  show(store.get(stepKey,1));
 }
 
 /* =========================================================
@@ -1814,6 +1821,7 @@ function renderQuran(g,sid,num){
 function route(){
   stopAll();$$('audio').forEach(a=>{try{a.pause()}catch(e){}});document.body.classList.remove('kids');const h=location.hash.replace(/^#/,'');let m;
   {let g='';const gm=/^(?:g|teacher-|tx-)(\d)/.exec(h)||/^qr-(\d)/.exec(h);if(gm)g=gm[1];else if((m=/^l-([a-z0-9-]+)$/.exec(h))&&App.catalog){const f=findLesson(m[1]);if(f)g=String(f.grade).replace(/\D/g,'');}
+   navTrack(h||'home');if(/^(l-|g\d|qr-)/.test(h))store.set('last_route',h);
    document.body.dataset.g=g;document.body.dataset.stage=g?(+g<=3?'k':+g<=6?'m':'s'):'';
    const tc=getComputedStyle(document.body).getPropertyValue('--sea').trim();const meta=document.querySelector('meta[name=theme-color]');if(meta&&tc)meta.content=tc;}
   if(!h||h==='home')renderHome();
@@ -1832,7 +1840,11 @@ function route(){
 window.addEventListener('hashchange',()=>{if(document.startViewTransition&&!matchMedia('(prefers-reduced-motion: reduce)').matches){const t=document.startViewTransition(()=>route());[t.ready,t.finished,t.updateCallbackDone].forEach(x=>x&&x.catch(()=>{}));}else{route();root.classList.remove('enter');void root.offsetWidth;root.classList.add('enter');}});
 window.DARSI={el,go,store,App,route,cheer,bar,root,$,$$};
 const SPLASH_T0=performance.now();function hideSplash(){const sp=document.getElementById('splash');if(!sp)return;const wait=sessionStorage.getItem('mj_splash')?0:Math.max(0,1700-(performance.now()-SPLASH_T0));try{sessionStorage.setItem('mj_splash','1')}catch(e){}setTimeout(()=>{sp.classList.add('go');setTimeout(()=>sp.remove(),600);},wait);}
-getJSON('data/catalog.json').then(c=>{markFree(c);App.catalog=c;route();hideSplash();}).catch(()=>{hideSplash();root.innerHTML='';root.append(el('div',{class:'err'},el('p',{text:'تعذّر تحميل قائمة الدروس. تحقق من الاتصال وحاول مرة أخرى.'}),el('button',{class:'btn',text:'أعد المحاولة',onclick:()=>location.reload()})));});
+// عند فتح التطبيق: نضع الرئيسية أولاً في السجل ثم نعود إلى آخر مكان توقف فيه الطالب
+(function bootNav(){let fresh=false;try{fresh=!sessionStorage.getItem('mj_open');sessionStorage.setItem('mj_open','1')}catch(e){}
+  const h=location.hash.replace(/^#/,'');
+  if(fresh&&(!h||h==='home')){history.replaceState(null,'','#home');const last=store.get('last_route',null);if(last&&last!=='home')App.resume=last;}})();
+getJSON('data/catalog.json').then(c=>{markFree(c);App.catalog=c;route();hideSplash();if(App.resume){const r=App.resume;App.resume=null;setTimeout(()=>go(r),60);}}).catch(()=>{hideSplash();root.innerHTML='';root.append(el('div',{class:'err'},el('p',{text:'تعذّر تحميل قائمة الدروس. تحقق من الاتصال وحاول مرة أخرى.'}),el('button',{class:'btn',text:'أعد المحاولة',onclick:()=>location.reload()})));});
 })();
 </script>
 <script type="module" src="account.js"></script>
