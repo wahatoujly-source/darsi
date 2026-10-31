@@ -1,0 +1,315 @@
+{
+ "id": "en-3-p5-l5",
+ "grade": 3,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "Mountains in Libya",
+ "titleAr": "الإنجليزية — الصف الثالث",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "Mountains in Libya",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "Green Mountain",
+       "em": "⛰️",
+       "say": "Green Mountain",
+       "sub": "الجبل الأخضر",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "Nafusa Mountains",
+       "em": "🏔️",
+       "say": "Nafusa Mountains",
+       "sub": "جبال نفوسة",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "high",
+       "em": "⬆️",
+       "say": "high",
+       "sub": "عالٍ",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "valley",
+       "em": "🏞️",
+       "say": "valley",
+       "sub": "وادٍ",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "trees",
+       "em": "🌳",
+       "say": "trees",
+       "sub": "أشجار",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك كتاب التلميذ ص 88⁠–⁠89"
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "The Green Mountain is in the east of Libya.",
+       "em": "⛰️",
+       "say": "The Green Mountain is in the east of Libya.",
+       "sub": "الجبل الأخضر في شرق ليبيا.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "There are many trees there.",
+       "em": "🌳",
+       "say": "There are many trees there.",
+       "sub": "توجد أشجار كثيرة هناك.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "Green Mountain",
+       "o": [
+        "⛰️",
+        "🏞️",
+        "🏔️"
+       ],
+       "a": "⛰️",
+       "lang": "en"
+      },
+      {
+       "say": "Nafusa Mountains",
+       "o": [
+        "🏔️",
+        "🏞️",
+        "🌳"
+       ],
+       "a": "🏔️",
+       "lang": "en"
+      },
+      {
+       "say": "high",
+       "o": [
+        "⬆️",
+        "⛰️",
+        "🏞️"
+       ],
+       "a": "⬆️",
+       "lang": "en"
+      },
+      {
+       "say": "valley",
+       "o": [
+        "🏞️",
+        "🏔️",
+        "⛰️"
+       ],
+       "a": "🏞️",
+       "lang": "en"
+      },
+      {
+       "say": "trees",
+       "o": [
+        "🌳",
+        "🏔️",
+        "🏞️"
+       ],
+       "a": "🌳",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "The Green Mountain is in the east of Libya.",
+       "o": [
+        "الجبل الأخضر في شرق ليبيا.",
+        "توجد أشجار كثيرة هناك."
+       ],
+       "a": "الجبل الأخضر في شرق ليبيا.",
+       "lang": "en"
+      },
+      {
+       "say": "There are many trees there.",
+       "o": [
+        "توجد أشجار كثيرة هناك.",
+        "الجبل الأخضر في شرق ليبيا."
+       ],
+       "a": "توجد أشجار كثيرة هناك.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "أكمل",
+   "eyebrow": "الخطوة ٥ — أكمل",
+   "heading": "اختر الكلمة الناقصة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "The Green Mountain is in the east .",
+       "o": [
+        "east",
+        "west"
+       ],
+       "a": "east",
+       "sayQ": false,
+       "show": "The Green Mountain is in the ___ .",
+       "lang": "en"
+      },
+      {
+       "say": "The Nafusa Mountains are in the west .",
+       "o": [
+        "west",
+        "east"
+       ],
+       "a": "west",
+       "sayQ": false,
+       "show": "The Nafusa Mountains are in the ___ .",
+       "lang": "en"
+      },
+      {
+       "say": "There are many trees .",
+       "o": [
+        "trees",
+        "tree"
+       ],
+       "a": "trees",
+       "sayQ": false,
+       "show": "There are many ___ .",
+       "lang": "en"
+      }
+     ],
+     "q": "اختر الكلمة المناسبة",
+     "lang": "en"
+    }
+   ],
+   "lead": "نحدد المكان بـ in the north/south/east/west."
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "Green Mountain",
+       "o": [
+        "⛰️",
+        "🏞️",
+        "⬆️"
+       ],
+       "a": "⛰️",
+       "lang": "en"
+      },
+      {
+       "say": "Nafusa Mountains",
+       "o": [
+        "🏔️",
+        "⬆️",
+        "⛰️"
+       ],
+       "a": "🏔️",
+       "lang": "en"
+      },
+      {
+       "say": "high",
+       "o": [
+        "⬆️",
+        "🏔️",
+        "⛰️"
+       ],
+       "a": "⬆️",
+       "lang": "en"
+      },
+      {
+       "say": "valley",
+       "o": [
+        "🏞️",
+        "🌳",
+        "🏔️"
+       ],
+       "a": "🏞️",
+       "lang": "en"
+      },
+      {
+       "say": "The Green Mountain is in the east of Libya.",
+       "o": [
+        "الجبل الأخضر في شرق ليبيا.",
+        "توجد أشجار كثيرة هناك."
+       ],
+       "a": "الجبل الأخضر في شرق ليبيا.",
+       "lang": "en"
+      },
+      {
+       "say": "There are many trees there.",
+       "o": [
+        "توجد أشجار كثيرة هناك.",
+        "الجبل الأخضر في شرق ليبيا."
+       ],
+       "a": "توجد أشجار كثيرة هناك.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

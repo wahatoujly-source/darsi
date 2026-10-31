@@ -1,0 +1,319 @@
+{
+ "id": "en-3-u7-l1",
+ "grade": 3,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "Shopping",
+ "titleAr": "الإنجليزية — الصف الثالث",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "Shopping",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "shop",
+       "em": "🏪",
+       "say": "shop",
+       "sub": "متجر",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "buy",
+       "em": "🛍️",
+       "say": "buy",
+       "sub": "يشتري",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "money",
+       "em": "💵",
+       "say": "money",
+       "sub": "نقود",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "how much",
+       "em": "💰",
+       "say": "how much",
+       "sub": "بكم",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك "
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "How much is this?",
+       "em": "💰",
+       "say": "How much is this?",
+       "sub": "بكم هذا؟",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "It's two dinars.",
+       "em": "🏪",
+       "say": "It's two dinars.",
+       "sub": "إنه بدينارين.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "I want to buy a pen.",
+       "em": "🛍️",
+       "say": "I want to buy a pen.",
+       "sub": "أريد أن أشتري قلماً.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "shop",
+       "o": [
+        "🏪",
+        "💵",
+        "🛍️"
+       ],
+       "a": "🏪",
+       "lang": "en"
+      },
+      {
+       "say": "buy",
+       "o": [
+        "🛍️",
+        "💵",
+        "🏪"
+       ],
+       "a": "🛍️",
+       "lang": "en"
+      },
+      {
+       "say": "money",
+       "o": [
+        "💵",
+        "🏪",
+        "🛍️"
+       ],
+       "a": "💵",
+       "lang": "en"
+      },
+      {
+       "say": "how much",
+       "o": [
+        "💰",
+        "🛍️",
+        "🏪"
+       ],
+       "a": "💰",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "How much is this?",
+       "o": [
+        "بكم هذا؟",
+        "إنه بدينارين.",
+        "أريد أن أشتري قلماً."
+       ],
+       "a": "بكم هذا؟",
+       "lang": "en"
+      },
+      {
+       "say": "It's two dinars.",
+       "o": [
+        "إنه بدينارين.",
+        "بكم هذا؟",
+        "أريد أن أشتري قلماً."
+       ],
+       "a": "إنه بدينارين.",
+       "lang": "en"
+      },
+      {
+       "say": "I want to buy a pen.",
+       "o": [
+        "أريد أن أشتري قلماً.",
+        "بكم هذا؟",
+        "إنه بدينارين."
+       ],
+       "a": "أريد أن أشتري قلماً.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "أكمل",
+   "eyebrow": "الخطوة ٥ — أكمل",
+   "heading": "اختر الكلمة الناقصة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "How much is this?",
+       "o": [
+        "much",
+        "many"
+       ],
+       "a": "much",
+       "sayQ": false,
+       "show": "How ___ is this?",
+       "lang": "en"
+      },
+      {
+       "say": "I want to buy a pen.",
+       "o": [
+        "buy",
+        "sell"
+       ],
+       "a": "buy",
+       "sayQ": false,
+       "show": "I want to ___ a pen.",
+       "lang": "en"
+      },
+      {
+       "say": "It's two dinars .",
+       "o": [
+        "dinars",
+        "pens"
+       ],
+       "a": "dinars",
+       "sayQ": false,
+       "show": "It's two ___ .",
+       "lang": "en"
+      }
+     ],
+     "q": "اختر الكلمة المناسبة",
+     "lang": "en"
+    }
+   ],
+   "lead": "نسأل عن السعر بـ How much is …?"
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "shop",
+       "o": [
+        "🏪",
+        "💵",
+        "🛍️"
+       ],
+       "a": "🏪",
+       "lang": "en"
+      },
+      {
+       "say": "buy",
+       "o": [
+        "🛍️",
+        "🏪",
+        "💰"
+       ],
+       "a": "🛍️",
+       "lang": "en"
+      },
+      {
+       "say": "money",
+       "o": [
+        "💵",
+        "💰",
+        "🛍️"
+       ],
+       "a": "💵",
+       "lang": "en"
+      },
+      {
+       "say": "how much",
+       "o": [
+        "💰",
+        "💵",
+        "🏪"
+       ],
+       "a": "💰",
+       "lang": "en"
+      },
+      {
+       "say": "How much is this?",
+       "o": [
+        "بكم هذا؟",
+        "إنه بدينارين.",
+        "أريد أن أشتري قلماً."
+       ],
+       "a": "بكم هذا؟",
+       "lang": "en"
+      },
+      {
+       "say": "It's two dinars.",
+       "o": [
+        "إنه بدينارين.",
+        "بكم هذا؟",
+        "أريد أن أشتري قلماً."
+       ],
+       "a": "إنه بدينارين.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

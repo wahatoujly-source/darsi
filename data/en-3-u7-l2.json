@@ -1,0 +1,337 @@
+{
+ "id": "en-3-u7-l2",
+ "grade": 3,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "At the Supermarket",
+ "titleAr": "الإنجليزية — الصف الثالث",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "At the Supermarket",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "milk",
+       "em": "🥛",
+       "say": "milk",
+       "sub": "حليب",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "bread",
+       "em": "🍞",
+       "say": "bread",
+       "sub": "خبز",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "cheese",
+       "em": "🧀",
+       "say": "cheese",
+       "sub": "جبن",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "basket",
+       "em": "🧺",
+       "say": "basket",
+       "sub": "سلة",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "eggs",
+       "em": "🥚",
+       "say": "eggs",
+       "sub": "بيض",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك "
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "Can I have some milk, please?",
+       "em": "🥛",
+       "say": "Can I have some milk, please?",
+       "sub": "هل يمكنني الحصول على حليب من فضلك؟",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "Here you are.",
+       "em": "🥛",
+       "say": "Here you are.",
+       "sub": "تفضّل.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "Thank you.",
+       "em": "🥛",
+       "say": "Thank you.",
+       "sub": "شكراً.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "milk",
+       "o": [
+        "🥛",
+        "🧺",
+        "🍞"
+       ],
+       "a": "🥛",
+       "lang": "en"
+      },
+      {
+       "say": "bread",
+       "o": [
+        "🍞",
+        "🧀",
+        "🥛"
+       ],
+       "a": "🍞",
+       "lang": "en"
+      },
+      {
+       "say": "cheese",
+       "o": [
+        "🧀",
+        "🥛",
+        "🥚"
+       ],
+       "a": "🧀",
+       "lang": "en"
+      },
+      {
+       "say": "basket",
+       "o": [
+        "🧺",
+        "🥛",
+        "🧀"
+       ],
+       "a": "🧺",
+       "lang": "en"
+      },
+      {
+       "say": "eggs",
+       "o": [
+        "🥚",
+        "🍞",
+        "🧀"
+       ],
+       "a": "🥚",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "Can I have some milk, please?",
+       "o": [
+        "هل يمكنني الحصول على حليب من فضلك؟",
+        "تفضّل.",
+        "شكراً."
+       ],
+       "a": "هل يمكنني الحصول على حليب من فضلك؟",
+       "lang": "en"
+      },
+      {
+       "say": "Here you are.",
+       "o": [
+        "تفضّل.",
+        "هل يمكنني الحصول على حليب من فضلك؟",
+        "شكراً."
+       ],
+       "a": "تفضّل.",
+       "lang": "en"
+      },
+      {
+       "say": "Thank you.",
+       "o": [
+        "شكراً.",
+        "هل يمكنني الحصول على حليب من فضلك؟",
+        "تفضّل."
+       ],
+       "a": "شكراً.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "أكمل",
+   "eyebrow": "الخطوة ٥ — أكمل",
+   "heading": "اختر الكلمة الناقصة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "Can I have some milk?",
+       "o": [
+        "some",
+        "a"
+       ],
+       "a": "some",
+       "sayQ": false,
+       "show": "Can I have ___ milk?",
+       "lang": "en"
+      },
+      {
+       "say": "Here you are .",
+       "o": [
+        "are",
+        "is"
+       ],
+       "a": "are",
+       "sayQ": false,
+       "show": "Here you ___ .",
+       "lang": "en"
+      },
+      {
+       "say": "Put the eggs in the basket .",
+       "o": [
+        "basket",
+        "bread"
+       ],
+       "a": "basket",
+       "sayQ": false,
+       "show": "Put the eggs in the ___ .",
+       "lang": "en"
+      }
+     ],
+     "q": "اختر الكلمة المناسبة",
+     "lang": "en"
+    }
+   ],
+   "lead": "نستخدم some مع الأشياء غير المعدودة والجمع."
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "milk",
+       "o": [
+        "🥛",
+        "🧺",
+        "🥚"
+       ],
+       "a": "🥛",
+       "lang": "en"
+      },
+      {
+       "say": "bread",
+       "o": [
+        "🍞",
+        "🥚",
+        "🧺"
+       ],
+       "a": "🍞",
+       "lang": "en"
+      },
+      {
+       "say": "cheese",
+       "o": [
+        "🧀",
+        "🍞",
+        "🧺"
+       ],
+       "a": "🧀",
+       "lang": "en"
+      },
+      {
+       "say": "basket",
+       "o": [
+        "🧺",
+        "🥚",
+        "🧀"
+       ],
+       "a": "🧺",
+       "lang": "en"
+      },
+      {
+       "say": "Can I have some milk, please?",
+       "o": [
+        "هل يمكنني الحصول على حليب من فضلك؟",
+        "تفضّل.",
+        "شكراً."
+       ],
+       "a": "هل يمكنني الحصول على حليب من فضلك؟",
+       "lang": "en"
+      },
+      {
+       "say": "Here you are.",
+       "o": [
+        "تفضّل.",
+        "هل يمكنني الحصول على حليب من فضلك؟",
+        "شكراً."
+       ],
+       "a": "تفضّل.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

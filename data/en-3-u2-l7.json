@@ -1,0 +1,337 @@
+{
+ "id": "en-3-u2-l7",
+ "grade": 3,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "What are they wearing?",
+ "titleAr": "الإنجليزية — الصف الثالث",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "What are they wearing?",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "wearing",
+       "em": "👚",
+       "say": "wearing",
+       "sub": "يرتدي",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "scarf",
+       "em": "🧣",
+       "say": "scarf",
+       "sub": "وشاح",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "boots",
+       "em": "🥾",
+       "say": "boots",
+       "sub": "حذاء طويل",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "cap",
+       "em": "🧢",
+       "say": "cap",
+       "sub": "قبعة رياضية",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "coat",
+       "em": "🧥",
+       "say": "coat",
+       "sub": "معطف",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك "
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "What are they wearing?",
+       "em": "👚",
+       "say": "What are they wearing?",
+       "sub": "ماذا يرتدون؟",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "They're wearing coats.",
+       "em": "👚",
+       "say": "They're wearing coats.",
+       "sub": "إنهم يرتدون معاطف.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "He's wearing a cap.",
+       "em": "👚",
+       "say": "He's wearing a cap.",
+       "sub": "هو يرتدي قبعة.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "wearing",
+       "o": [
+        "👚",
+        "🧥",
+        "🥾"
+       ],
+       "a": "👚",
+       "lang": "en"
+      },
+      {
+       "say": "scarf",
+       "o": [
+        "🧣",
+        "🧥",
+        "👚"
+       ],
+       "a": "🧣",
+       "lang": "en"
+      },
+      {
+       "say": "boots",
+       "o": [
+        "🥾",
+        "👚",
+        "🧢"
+       ],
+       "a": "🥾",
+       "lang": "en"
+      },
+      {
+       "say": "cap",
+       "o": [
+        "🧢",
+        "🥾",
+        "🧣"
+       ],
+       "a": "🧢",
+       "lang": "en"
+      },
+      {
+       "say": "coat",
+       "o": [
+        "🧥",
+        "🧣",
+        "👚"
+       ],
+       "a": "🧥",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "What are they wearing?",
+       "o": [
+        "ماذا يرتدون؟",
+        "إنهم يرتدون معاطف.",
+        "هو يرتدي قبعة."
+       ],
+       "a": "ماذا يرتدون؟",
+       "lang": "en"
+      },
+      {
+       "say": "They're wearing coats.",
+       "o": [
+        "إنهم يرتدون معاطف.",
+        "ماذا يرتدون؟",
+        "هو يرتدي قبعة."
+       ],
+       "a": "إنهم يرتدون معاطف.",
+       "lang": "en"
+      },
+      {
+       "say": "He's wearing a cap.",
+       "o": [
+        "هو يرتدي قبعة.",
+        "ماذا يرتدون؟",
+        "إنهم يرتدون معاطف."
+       ],
+       "a": "هو يرتدي قبعة.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "أكمل",
+   "eyebrow": "الخطوة ٥ — أكمل",
+   "heading": "اختر الكلمة الناقصة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "They are wearing boots.",
+       "o": [
+        "are",
+        "is"
+       ],
+       "a": "are",
+       "sayQ": false,
+       "show": "They ___ wearing boots.",
+       "lang": "en"
+      },
+      {
+       "say": "She is wearing a scarf.",
+       "o": [
+        "is",
+        "are"
+       ],
+       "a": "is",
+       "sayQ": false,
+       "show": "She ___ wearing a scarf.",
+       "lang": "en"
+      },
+      {
+       "say": "He's wearing a cap on his head.",
+       "o": [
+        "cap",
+        "boots"
+       ],
+       "a": "cap",
+       "sayQ": false,
+       "show": "He's wearing a ___ on his head.",
+       "lang": "en"
+      }
+     ],
+     "q": "اختر الكلمة المناسبة",
+     "lang": "en"
+    }
+   ],
+   "lead": "He/She is wearing … و They are wearing …"
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "wearing",
+       "o": [
+        "👚",
+        "🥾",
+        "🧢"
+       ],
+       "a": "👚",
+       "lang": "en"
+      },
+      {
+       "say": "scarf",
+       "o": [
+        "🧣",
+        "👚",
+        "🥾"
+       ],
+       "a": "🧣",
+       "lang": "en"
+      },
+      {
+       "say": "boots",
+       "o": [
+        "🥾",
+        "🧢",
+        "🧥"
+       ],
+       "a": "🥾",
+       "lang": "en"
+      },
+      {
+       "say": "cap",
+       "o": [
+        "🧢",
+        "🥾",
+        "🧥"
+       ],
+       "a": "🧢",
+       "lang": "en"
+      },
+      {
+       "say": "What are they wearing?",
+       "o": [
+        "ماذا يرتدون؟",
+        "إنهم يرتدون معاطف.",
+        "هو يرتدي قبعة."
+       ],
+       "a": "ماذا يرتدون؟",
+       "lang": "en"
+      },
+      {
+       "say": "They're wearing coats.",
+       "o": [
+        "إنهم يرتدون معاطف.",
+        "ماذا يرتدون؟",
+        "هو يرتدي قبعة."
+       ],
+       "a": "إنهم يرتدون معاطف.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

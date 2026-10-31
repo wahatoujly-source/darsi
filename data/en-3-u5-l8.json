@@ -1,0 +1,315 @@
+{
+ "id": "en-3-u5-l8",
+ "grade": 3,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "Roland's Race",
+ "titleAr": "الإنجليزية — الصف الثالث",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "Roland's Race",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "race",
+       "em": "🏁",
+       "say": "race",
+       "sub": "سباق",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "slow",
+       "em": "🐢",
+       "say": "slow",
+       "sub": "بطيء",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "fast",
+       "em": "🐇",
+       "say": "fast",
+       "sub": "سريع",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "win",
+       "em": "🏆",
+       "say": "win",
+       "sub": "يفوز",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "tortoise",
+       "em": "🐢",
+       "say": "tortoise",
+       "sub": "سلحفاة",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك "
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "Roland is slow but he doesn't stop.",
+       "em": "🐢",
+       "say": "Roland is slow but he doesn't stop.",
+       "sub": "رولاند بطيء لكنه لا يتوقف.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "Roland wins the race!",
+       "em": "🏁",
+       "say": "Roland wins the race!",
+       "sub": "رولاند يفوز بالسباق!",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "race",
+       "o": [
+        "🏁",
+        "🐇",
+        "🐢"
+       ],
+       "a": "🏁",
+       "lang": "en"
+      },
+      {
+       "say": "slow",
+       "o": [
+        "🐢",
+        "🐇",
+        "🏁"
+       ],
+       "a": "🐢",
+       "lang": "en"
+      },
+      {
+       "say": "fast",
+       "o": [
+        "🐇",
+        "🐢",
+        "🏁"
+       ],
+       "a": "🐇",
+       "lang": "en"
+      },
+      {
+       "say": "win",
+       "o": [
+        "🏆",
+        "🏁",
+        "🐢"
+       ],
+       "a": "🏆",
+       "lang": "en"
+      },
+      {
+       "say": "tortoise",
+       "o": [
+        "🐢",
+        "🏁",
+        "🐇"
+       ],
+       "a": "🐢",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "Roland is slow but he doesn't stop.",
+       "o": [
+        "رولاند بطيء لكنه لا يتوقف.",
+        "رولاند يفوز بالسباق!"
+       ],
+       "a": "رولاند بطيء لكنه لا يتوقف.",
+       "lang": "en"
+      },
+      {
+       "say": "Roland wins the race!",
+       "o": [
+        "رولاند يفوز بالسباق!",
+        "رولاند بطيء لكنه لا يتوقف."
+       ],
+       "a": "رولاند يفوز بالسباق!",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "أكمل",
+   "eyebrow": "الخطوة ٥ — أكمل",
+   "heading": "اختر الكلمة الناقصة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "He is slow but he doesn't stop.",
+       "o": [
+        "but",
+        "and"
+       ],
+       "a": "but",
+       "sayQ": false,
+       "show": "He is slow ___ he doesn't stop.",
+       "lang": "en"
+      },
+      {
+       "say": "Roland wins the race.",
+       "o": [
+        "wins",
+        "win"
+       ],
+       "a": "wins",
+       "sayQ": false,
+       "show": "Roland ___ the race.",
+       "lang": "en"
+      },
+      {
+       "say": "A tortoise is slow .",
+       "o": [
+        "slow",
+        "fast"
+       ],
+       "a": "slow",
+       "sayQ": false,
+       "show": "A tortoise is ___ .",
+       "lang": "en"
+      }
+     ],
+     "q": "اختر الكلمة المناسبة",
+     "lang": "en"
+    }
+   ],
+   "lead": "نربط فكرتين متعاكستين بـ but."
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "race",
+       "o": [
+        "🏁",
+        "🏆",
+        "🐢"
+       ],
+       "a": "🏁",
+       "lang": "en"
+      },
+      {
+       "say": "slow",
+       "o": [
+        "🐢",
+        "🏆",
+        "🐇"
+       ],
+       "a": "🐢",
+       "lang": "en"
+      },
+      {
+       "say": "fast",
+       "o": [
+        "🐇",
+        "🏁",
+        "🐢"
+       ],
+       "a": "🐇",
+       "lang": "en"
+      },
+      {
+       "say": "win",
+       "o": [
+        "🏆",
+        "🏁",
+        "🐇"
+       ],
+       "a": "🏆",
+       "lang": "en"
+      },
+      {
+       "say": "Roland is slow but he doesn't stop.",
+       "o": [
+        "رولاند بطيء لكنه لا يتوقف.",
+        "رولاند يفوز بالسباق!"
+       ],
+       "a": "رولاند بطيء لكنه لا يتوقف.",
+       "lang": "en"
+      },
+      {
+       "say": "Roland wins the race!",
+       "o": [
+        "رولاند يفوز بالسباق!",
+        "رولاند بطيء لكنه لا يتوقف."
+       ],
+       "a": "رولاند يفوز بالسباق!",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

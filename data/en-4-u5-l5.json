@@ -1,0 +1,287 @@
+{
+ "id": "en-4-u5-l5",
+ "grade": 4,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 5 · Lesson 5: Mountains in Libya",
+ "titleAr": "الجبل الأخضر في شرق ليبيا.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "الجبل الأخضر في شرق ليبيا.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "Green Mountain",
+       "ar": "الجبل الأخضر",
+       "em": "⛰️"
+      },
+      {
+       "id": "v1",
+       "en": "Nafusa Mountains",
+       "ar": "جبال نفوسة",
+       "em": "🏔️"
+      },
+      {
+       "id": "v2",
+       "en": "high",
+       "ar": "عالٍ",
+       "em": "⬆️"
+      },
+      {
+       "id": "v3",
+       "en": "valley",
+       "ar": "وادٍ",
+       "em": "🏞️"
+      },
+      {
+       "id": "v4",
+       "en": "trees",
+       "ar": "أشجار",
+       "em": "🌳"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 76⁠–⁠77 · كتاب النشاط ص 64⁠–⁠65"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "in the east / west",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">The Green Mountain is in the <b>east</b> of Libya.</div><div class=\"ex\">There are many <b>trees</b> there.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "The Green Mountain is in the east of Libya. There are many trees there."
+      }
+     ]
+    }
+   ],
+   "lead": "نحدد المكان بـ in the north/south/east/west.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "The Green Mountain is in the ___ .",
+           "a": "east",
+           "o": [
+            "east",
+            "west"
+           ]
+          },
+          {
+           "s": "The Nafusa Mountains are in the ___ .",
+           "a": "west",
+           "o": [
+            "west",
+            "east"
+           ]
+          },
+          {
+           "s": "There are many ___ .",
+           "a": "trees",
+           "o": [
+            "trees",
+            "tree"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "The Green Mountain is in the east of Libya.",
+          "There are many trees there."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "The Green Mountain is in the east of Libya.",
+           "o": [
+            "The Green Mountain is in the east of Libya.",
+            "There are many trees there."
+           ]
+          },
+          {
+           "a": "There are many trees there.",
+           "o": [
+            "There are many trees there.",
+            "The Green Mountain is in the east of Libya."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "Green Mountain",
+       "ipa": "",
+       "meaning": "الجبل الأخضر",
+       "ex": "The Green Mountain is in the east of Libya."
+      },
+      {
+       "must": 1,
+       "term": "Nafusa Mountains",
+       "ipa": "",
+       "meaning": "جبال نفوسة",
+       "ex": "Nafusa Mountains"
+      },
+      {
+       "must": 1,
+       "term": "high",
+       "ipa": "",
+       "meaning": "عالٍ",
+       "ex": "high"
+      },
+      {
+       "must": 0,
+       "term": "valley",
+       "ipa": "",
+       "meaning": "وادٍ",
+       "ex": "valley"
+      },
+      {
+       "must": 0,
+       "term": "trees",
+       "ipa": "",
+       "meaning": "أشجار",
+       "ex": "There are many trees there."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "The Green Mountain is in the ___ .",
+       "a": "east",
+       "o": [
+        "east",
+        "west"
+       ],
+       "why": ""
+      },
+      {
+       "q": "The Nafusa Mountains are in the ___ .",
+       "a": "west",
+       "o": [
+        "west",
+        "east"
+       ],
+       "why": ""
+      },
+      {
+       "q": "There are many ___ .",
+       "a": "trees",
+       "o": [
+        "trees",
+        "tree"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى trees؟",
+       "a": "أشجار",
+       "o": [
+        "أشجار",
+        "الجبل الأخضر",
+        "جبال نفوسة"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى high؟",
+       "a": "عالٍ",
+       "o": [
+        "عالٍ",
+        "الجبل الأخضر",
+        "جبال نفوسة"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "The Green Mountain is in the east of Libya.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "The Green Mountain is in the east of Libya.",
+       "o": [
+        "The Green Mountain is in the east of Libya.",
+        "There are many trees there."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

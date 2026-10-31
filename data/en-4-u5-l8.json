@@ -1,0 +1,287 @@
+{
+ "id": "en-4-u5-l8",
+ "grade": 4,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 5 · Lesson 8: A Trip to the Museum",
+ "titleAr": "رأينا عملات قديمة.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "رأينا عملات قديمة.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "museum",
+       "ar": "متحف",
+       "em": "🏛️"
+      },
+      {
+       "id": "v1",
+       "en": "old",
+       "ar": "قديم",
+       "em": "🏺"
+      },
+      {
+       "id": "v2",
+       "en": "statue",
+       "ar": "تمثال",
+       "em": "🗿"
+      },
+      {
+       "id": "v3",
+       "en": "coins",
+       "ar": "عملات",
+       "em": "🪙"
+      },
+      {
+       "id": "v4",
+       "en": "history",
+       "ar": "تاريخ",
+       "em": "📜"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 82⁠–⁠83 · كتاب النشاط ص 70⁠–⁠71"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Past simple: saw, was",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">We <b>saw</b> old coins.</div><div class=\"ex\">The statue <b>was</b> very big.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "We saw old coins. The statue was very big."
+      }
+     ]
+    }
+   ],
+   "lead": "saw ماضي see، و was ماضي is.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "We ___ old coins.",
+           "a": "saw",
+           "o": [
+            "saw",
+            "see"
+           ]
+          },
+          {
+           "s": "The statue ___ very big.",
+           "a": "was",
+           "o": [
+            "was",
+            "is"
+           ]
+          },
+          {
+           "s": "A ___ has old things.",
+           "a": "museum",
+           "o": [
+            "museum",
+            "market"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "We saw old coins.",
+          "The statue was very big."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "We saw old coins.",
+           "o": [
+            "We saw old coins.",
+            "The statue was very big."
+           ]
+          },
+          {
+           "a": "The statue was very big.",
+           "o": [
+            "The statue was very big.",
+            "We saw old coins."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "museum",
+       "ipa": "",
+       "meaning": "متحف",
+       "ex": "museum"
+      },
+      {
+       "must": 1,
+       "term": "old",
+       "ipa": "",
+       "meaning": "قديم",
+       "ex": "We saw old coins."
+      },
+      {
+       "must": 1,
+       "term": "statue",
+       "ipa": "",
+       "meaning": "تمثال",
+       "ex": "The statue was very big."
+      },
+      {
+       "must": 0,
+       "term": "coins",
+       "ipa": "",
+       "meaning": "عملات",
+       "ex": "We saw old coins."
+      },
+      {
+       "must": 0,
+       "term": "history",
+       "ipa": "",
+       "meaning": "تاريخ",
+       "ex": "history"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "We ___ old coins.",
+       "a": "saw",
+       "o": [
+        "saw",
+        "see"
+       ],
+       "why": ""
+      },
+      {
+       "q": "The statue ___ very big.",
+       "a": "was",
+       "o": [
+        "was",
+        "is"
+       ],
+       "why": ""
+      },
+      {
+       "q": "A ___ has old things.",
+       "a": "museum",
+       "o": [
+        "museum",
+        "market"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى statue؟",
+       "a": "تمثال",
+       "o": [
+        "تمثال",
+        "متحف",
+        "قديم"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى old؟",
+       "a": "قديم",
+       "o": [
+        "قديم",
+        "متحف",
+        "تمثال"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "We saw old coins.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "We saw old coins.",
+       "o": [
+        "We saw old coins.",
+        "The statue was very big."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

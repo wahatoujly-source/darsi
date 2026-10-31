@@ -1,0 +1,299 @@
+{
+ "id": "en-4-u3-l5",
+ "grade": 4,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 3 · Lesson 5: What's wrong?",
+ "titleAr": "ما بك؟",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "ما بك؟",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "headache",
+       "ar": "صداع",
+       "em": "🤕"
+      },
+      {
+       "id": "v1",
+       "en": "stomach ache",
+       "ar": "ألم بطن",
+       "em": "🤢"
+      },
+      {
+       "id": "v2",
+       "en": "cold",
+       "ar": "زكام",
+       "em": "🤧"
+      },
+      {
+       "id": "v3",
+       "en": "tired",
+       "ar": "متعب",
+       "em": "😴"
+      },
+      {
+       "id": "v4",
+       "en": "doctor",
+       "ar": "طبيب",
+       "em": "🧑‍⚕️"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 52⁠–⁠53 · كتاب النشاط ص 44⁠–⁠45"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "I have a …",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">What's <b>wrong</b>?</div><div class=\"ex\">I <b>have</b> a headache.</div><div class=\"ex\">Go to the <b>doctor</b>.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "What's wrong? I have a headache. Go to the doctor."
+      }
+     ]
+    }
+   ],
+   "lead": "نعبّر عن المرض بـ I have a …",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "What's ___ ?",
+           "a": "wrong",
+           "o": [
+            "wrong",
+            "right"
+           ]
+          },
+          {
+           "s": "I ___ a headache.",
+           "a": "have",
+           "o": [
+            "have",
+            "am"
+           ]
+          },
+          {
+           "s": "Go to the ___ .",
+           "a": "doctor",
+           "o": [
+            "doctor",
+            "teacher"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "What's wrong?",
+          "I have a headache.",
+          "Go to the doctor."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "What's wrong?",
+           "o": [
+            "What's wrong?",
+            "I have a headache.",
+            "Go to the doctor."
+           ]
+          },
+          {
+           "a": "I have a headache.",
+           "o": [
+            "I have a headache.",
+            "What's wrong?",
+            "Go to the doctor."
+           ]
+          },
+          {
+           "a": "Go to the doctor.",
+           "o": [
+            "Go to the doctor.",
+            "What's wrong?",
+            "I have a headache."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "headache",
+       "ipa": "",
+       "meaning": "صداع",
+       "ex": "I have a headache."
+      },
+      {
+       "must": 1,
+       "term": "stomach ache",
+       "ipa": "",
+       "meaning": "ألم بطن",
+       "ex": "stomach ache"
+      },
+      {
+       "must": 1,
+       "term": "cold",
+       "ipa": "",
+       "meaning": "زكام",
+       "ex": "cold"
+      },
+      {
+       "must": 0,
+       "term": "tired",
+       "ipa": "",
+       "meaning": "متعب",
+       "ex": "tired"
+      },
+      {
+       "must": 0,
+       "term": "doctor",
+       "ipa": "",
+       "meaning": "طبيب",
+       "ex": "Go to the doctor."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "What's ___ ?",
+       "a": "wrong",
+       "o": [
+        "wrong",
+        "right"
+       ],
+       "why": ""
+      },
+      {
+       "q": "I ___ a headache.",
+       "a": "have",
+       "o": [
+        "have",
+        "am"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Go to the ___ .",
+       "a": "doctor",
+       "o": [
+        "doctor",
+        "teacher"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى stomach ache؟",
+       "a": "ألم بطن",
+       "o": [
+        "ألم بطن",
+        "صداع",
+        "زكام"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى headache؟",
+       "a": "صداع",
+       "o": [
+        "صداع",
+        "ألم بطن",
+        "زكام"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "What's wrong?",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "What's wrong?",
+       "o": [
+        "What's wrong?",
+        "I have a headache.",
+        "Go to the doctor."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

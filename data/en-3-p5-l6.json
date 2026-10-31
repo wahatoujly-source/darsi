@@ -1,0 +1,315 @@
+{
+ "id": "en-3-p5-l6",
+ "grade": 3,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "Higher and Highest",
+ "titleAr": "الإنجليزية — الصف الثالث",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "Higher and Highest",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "high",
+       "em": "⬆️",
+       "say": "high",
+       "sub": "عالٍ",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "higher",
+       "em": "⏫",
+       "say": "higher",
+       "sub": "أعلى",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "highest",
+       "em": "🔝",
+       "say": "highest",
+       "sub": "الأعلى",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "tall",
+       "em": "🦒",
+       "say": "tall",
+       "sub": "طويل",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "tallest",
+       "em": "🗼",
+       "say": "tallest",
+       "sub": "الأطول",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك كتاب التلميذ ص 90⁠–⁠91"
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "This mountain is higher than that one.",
+       "em": "⬆️",
+       "say": "This mountain is higher than that one.",
+       "sub": "هذا الجبل أعلى من ذاك.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "Everest is the highest mountain.",
+       "em": "⬆️",
+       "say": "Everest is the highest mountain.",
+       "sub": "إيفرست أعلى جبل.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "high",
+       "o": [
+        "⬆️",
+        "⏫",
+        "🔝"
+       ],
+       "a": "⬆️",
+       "lang": "en"
+      },
+      {
+       "say": "higher",
+       "o": [
+        "⏫",
+        "⬆️",
+        "🦒"
+       ],
+       "a": "⏫",
+       "lang": "en"
+      },
+      {
+       "say": "highest",
+       "o": [
+        "🔝",
+        "⬆️",
+        "🗼"
+       ],
+       "a": "🔝",
+       "lang": "en"
+      },
+      {
+       "say": "tall",
+       "o": [
+        "🦒",
+        "🔝",
+        "⏫"
+       ],
+       "a": "🦒",
+       "lang": "en"
+      },
+      {
+       "say": "tallest",
+       "o": [
+        "🗼",
+        "⏫",
+        "🦒"
+       ],
+       "a": "🗼",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "This mountain is higher than that one.",
+       "o": [
+        "هذا الجبل أعلى من ذاك.",
+        "إيفرست أعلى جبل."
+       ],
+       "a": "هذا الجبل أعلى من ذاك.",
+       "lang": "en"
+      },
+      {
+       "say": "Everest is the highest mountain.",
+       "o": [
+        "إيفرست أعلى جبل.",
+        "هذا الجبل أعلى من ذاك."
+       ],
+       "a": "إيفرست أعلى جبل.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "أكمل",
+   "eyebrow": "الخطوة ٥ — أكمل",
+   "heading": "اختر الكلمة الناقصة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "This tree is taller than that tree.",
+       "o": [
+        "taller",
+        "tallest"
+       ],
+       "a": "taller",
+       "sayQ": false,
+       "show": "This tree is ___ than that tree.",
+       "lang": "en"
+      },
+      {
+       "say": "It's the highest mountain in the world.",
+       "o": [
+        "highest",
+        "higher"
+       ],
+       "a": "highest",
+       "sayQ": false,
+       "show": "It's the ___ mountain in the world.",
+       "lang": "en"
+      },
+      {
+       "say": "big → bigger → biggest",
+       "o": [
+        "biggest",
+        "bigest"
+       ],
+       "a": "biggest",
+       "sayQ": false,
+       "show": "big → bigger → ___",
+       "lang": "en"
+      }
+     ],
+     "q": "اختر الكلمة المناسبة",
+     "lang": "en"
+    }
+   ],
+   "lead": "er than للمقارنة بين اثنين، و the …est للأكثر بين الجميع."
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "high",
+       "o": [
+        "⬆️",
+        "🔝",
+        "🗼"
+       ],
+       "a": "⬆️",
+       "lang": "en"
+      },
+      {
+       "say": "higher",
+       "o": [
+        "⏫",
+        "⬆️",
+        "🦒"
+       ],
+       "a": "⏫",
+       "lang": "en"
+      },
+      {
+       "say": "highest",
+       "o": [
+        "🔝",
+        "🦒",
+        "⬆️"
+       ],
+       "a": "🔝",
+       "lang": "en"
+      },
+      {
+       "say": "tall",
+       "o": [
+        "🦒",
+        "🔝",
+        "⬆️"
+       ],
+       "a": "🦒",
+       "lang": "en"
+      },
+      {
+       "say": "This mountain is higher than that one.",
+       "o": [
+        "هذا الجبل أعلى من ذاك.",
+        "إيفرست أعلى جبل."
+       ],
+       "a": "هذا الجبل أعلى من ذاك.",
+       "lang": "en"
+      },
+      {
+       "say": "Everest is the highest mountain.",
+       "o": [
+        "إيفرست أعلى جبل.",
+        "هذا الجبل أعلى من ذاك."
+       ],
+       "a": "إيفرست أعلى جبل.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

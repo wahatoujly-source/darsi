@@ -1,0 +1,315 @@
+{
+ "id": "en-3-u3-l5",
+ "grade": 3,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "My Day",
+ "titleAr": "الإنجليزية — الصف الثالث",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "My Day",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "get up",
+       "em": "⏰",
+       "say": "get up",
+       "sub": "يستيقظ",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "have breakfast",
+       "em": "🍳",
+       "say": "have breakfast",
+       "sub": "يتناول الفطور",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "go to school",
+       "em": "🏫",
+       "say": "go to school",
+       "sub": "يذهب إلى المدرسة",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "do homework",
+       "em": "📝",
+       "say": "do homework",
+       "sub": "يؤدي الواجب",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "go to bed",
+       "em": "🛏️",
+       "say": "go to bed",
+       "sub": "ينام",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك "
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "I get up at six o'clock.",
+       "em": "⏰",
+       "say": "I get up at six o'clock.",
+       "sub": "أستيقظ في السادسة.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "I go to bed at nine o'clock.",
+       "em": "🏫",
+       "say": "I go to bed at nine o'clock.",
+       "sub": "أنام في التاسعة.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "get up",
+       "o": [
+        "⏰",
+        "📝",
+        "🏫"
+       ],
+       "a": "⏰",
+       "lang": "en"
+      },
+      {
+       "say": "have breakfast",
+       "o": [
+        "🍳",
+        "🏫",
+        "📝"
+       ],
+       "a": "🍳",
+       "lang": "en"
+      },
+      {
+       "say": "go to school",
+       "o": [
+        "🏫",
+        "🛏️",
+        "🍳"
+       ],
+       "a": "🏫",
+       "lang": "en"
+      },
+      {
+       "say": "do homework",
+       "o": [
+        "📝",
+        "🏫",
+        "🛏️"
+       ],
+       "a": "📝",
+       "lang": "en"
+      },
+      {
+       "say": "go to bed",
+       "o": [
+        "🛏️",
+        "⏰",
+        "🍳"
+       ],
+       "a": "🛏️",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "I get up at six o'clock.",
+       "o": [
+        "أستيقظ في السادسة.",
+        "أنام في التاسعة."
+       ],
+       "a": "أستيقظ في السادسة.",
+       "lang": "en"
+      },
+      {
+       "say": "I go to bed at nine o'clock.",
+       "o": [
+        "أنام في التاسعة.",
+        "أستيقظ في السادسة."
+       ],
+       "a": "أنام في التاسعة.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "أكمل",
+   "eyebrow": "الخطوة ٥ — أكمل",
+   "heading": "اختر الكلمة الناقصة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "I get up at six o'clock.",
+       "o": [
+        "at",
+        "in"
+       ],
+       "a": "at",
+       "sayQ": false,
+       "show": "I get up ___ six o'clock.",
+       "lang": "en"
+      },
+      {
+       "say": "I have breakfast at seven.",
+       "o": [
+        "have",
+        "has"
+       ],
+       "a": "have",
+       "sayQ": false,
+       "show": "I ___ breakfast at seven.",
+       "lang": "en"
+      },
+      {
+       "say": "I do my homework after school.",
+       "o": [
+        "homework",
+        "bed"
+       ],
+       "a": "homework",
+       "sayQ": false,
+       "show": "I do my ___ after school.",
+       "lang": "en"
+      }
+     ],
+     "q": "اختر الكلمة المناسبة",
+     "lang": "en"
+    }
+   ],
+   "lead": "نستخدم at مع الوقت: at six o'clock."
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "get up",
+       "o": [
+        "⏰",
+        "🍳",
+        "📝"
+       ],
+       "a": "⏰",
+       "lang": "en"
+      },
+      {
+       "say": "have breakfast",
+       "o": [
+        "🍳",
+        "⏰",
+        "🏫"
+       ],
+       "a": "🍳",
+       "lang": "en"
+      },
+      {
+       "say": "go to school",
+       "o": [
+        "🏫",
+        "📝",
+        "⏰"
+       ],
+       "a": "🏫",
+       "lang": "en"
+      },
+      {
+       "say": "do homework",
+       "o": [
+        "📝",
+        "🏫",
+        "⏰"
+       ],
+       "a": "📝",
+       "lang": "en"
+      },
+      {
+       "say": "I get up at six o'clock.",
+       "o": [
+        "أستيقظ في السادسة.",
+        "أنام في التاسعة."
+       ],
+       "a": "أستيقظ في السادسة.",
+       "lang": "en"
+      },
+      {
+       "say": "I go to bed at nine o'clock.",
+       "o": [
+        "أنام في التاسعة.",
+        "أستيقظ في السادسة."
+       ],
+       "a": "أنام في التاسعة.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

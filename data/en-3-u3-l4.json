@@ -1,0 +1,315 @@
+{
+ "id": "en-3-u3-l4",
+ "grade": 3,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "In My Room",
+ "titleAr": "الإنجليزية — الصف الثالث",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "In My Room",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "toys",
+       "em": "🧸",
+       "say": "toys",
+       "sub": "ألعاب",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "books",
+       "em": "📚",
+       "say": "books",
+       "sub": "كتب",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "shelf",
+       "em": "🗄️",
+       "say": "shelf",
+       "sub": "رف",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "box",
+       "em": "📦",
+       "say": "box",
+       "sub": "صندوق",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "clock",
+       "em": "🕐",
+       "say": "clock",
+       "sub": "ساعة",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك "
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "Where are my toys? They're in the box.",
+       "em": "🧸",
+       "say": "Where are my toys? They're in the box.",
+       "sub": "أين ألعابي؟ في الصندوق.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "Where is the clock? It's on the wall.",
+       "em": "🕐",
+       "say": "Where is the clock? It's on the wall.",
+       "sub": "أين الساعة؟ على الحائط.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "toys",
+       "o": [
+        "🧸",
+        "📦",
+        "🗄️"
+       ],
+       "a": "🧸",
+       "lang": "en"
+      },
+      {
+       "say": "books",
+       "o": [
+        "📚",
+        "🕐",
+        "🧸"
+       ],
+       "a": "📚",
+       "lang": "en"
+      },
+      {
+       "say": "shelf",
+       "o": [
+        "🗄️",
+        "📚",
+        "📦"
+       ],
+       "a": "🗄️",
+       "lang": "en"
+      },
+      {
+       "say": "box",
+       "o": [
+        "📦",
+        "🕐",
+        "🧸"
+       ],
+       "a": "📦",
+       "lang": "en"
+      },
+      {
+       "say": "clock",
+       "o": [
+        "🕐",
+        "📚",
+        "🧸"
+       ],
+       "a": "🕐",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "Where are my toys? They're in the box.",
+       "o": [
+        "أين ألعابي؟ في الصندوق.",
+        "أين الساعة؟ على الحائط."
+       ],
+       "a": "أين ألعابي؟ في الصندوق.",
+       "lang": "en"
+      },
+      {
+       "say": "Where is the clock? It's on the wall.",
+       "o": [
+        "أين الساعة؟ على الحائط.",
+        "أين ألعابي؟ في الصندوق."
+       ],
+       "a": "أين الساعة؟ على الحائط.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "أكمل",
+   "eyebrow": "الخطوة ٥ — أكمل",
+   "heading": "اختر الكلمة الناقصة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "Where are my toys?",
+       "o": [
+        "are",
+        "is"
+       ],
+       "a": "are",
+       "sayQ": false,
+       "show": "Where ___ my toys?",
+       "lang": "en"
+      },
+      {
+       "say": "Where is the clock?",
+       "o": [
+        "is",
+        "are"
+       ],
+       "a": "is",
+       "sayQ": false,
+       "show": "Where ___ the clock?",
+       "lang": "en"
+      },
+      {
+       "say": "The books are on the shelf .",
+       "o": [
+        "shelf",
+        "clock"
+       ],
+       "a": "shelf",
+       "sayQ": false,
+       "show": "The books are on the ___ .",
+       "lang": "en"
+      }
+     ],
+     "q": "اختر الكلمة المناسبة",
+     "lang": "en"
+    }
+   ],
+   "lead": "Where is للمفرد و Where are للجمع."
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "toys",
+       "o": [
+        "🧸",
+        "🕐",
+        "📦"
+       ],
+       "a": "🧸",
+       "lang": "en"
+      },
+      {
+       "say": "books",
+       "o": [
+        "📚",
+        "📦",
+        "🕐"
+       ],
+       "a": "📚",
+       "lang": "en"
+      },
+      {
+       "say": "shelf",
+       "o": [
+        "🗄️",
+        "🧸",
+        "📚"
+       ],
+       "a": "🗄️",
+       "lang": "en"
+      },
+      {
+       "say": "box",
+       "o": [
+        "📦",
+        "🧸",
+        "🗄️"
+       ],
+       "a": "📦",
+       "lang": "en"
+      },
+      {
+       "say": "Where are my toys? They're in the box.",
+       "o": [
+        "أين ألعابي؟ في الصندوق.",
+        "أين الساعة؟ على الحائط."
+       ],
+       "a": "أين ألعابي؟ في الصندوق.",
+       "lang": "en"
+      },
+      {
+       "say": "Where is the clock? It's on the wall.",
+       "o": [
+        "أين الساعة؟ على الحائط.",
+        "أين ألعابي؟ في الصندوق."
+       ],
+       "a": "أين الساعة؟ على الحائط.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

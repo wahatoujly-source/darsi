@@ -1,0 +1,299 @@
+{
+ "id": "en-4-u3-l7",
+ "grade": 4,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 3 · Lesson 7: Making a Poster",
+ "titleAr": "قصّ الصور.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "قصّ الصور.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "poster",
+       "ar": "ملصق",
+       "em": "🖼️"
+      },
+      {
+       "id": "v1",
+       "en": "glue",
+       "ar": "صمغ",
+       "em": "🧴"
+      },
+      {
+       "id": "v2",
+       "en": "scissors",
+       "ar": "مقص",
+       "em": "✂️"
+      },
+      {
+       "id": "v3",
+       "en": "colour",
+       "ar": "يلوّن",
+       "em": "🖍️"
+      },
+      {
+       "id": "v4",
+       "en": "cut",
+       "ar": "يقص",
+       "em": "✂️"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 56⁠–⁠57 · كتاب النشاط ص 48⁠–⁠49"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Instructions",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\"><b>Cut</b> out the pictures.</div><div class=\"ex\">Stick them <b>on</b> the poster.</div><div class=\"ex\">Colour the title.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Cut out the pictures. Stick them on the poster. Colour the title."
+      }
+     ]
+    }
+   ],
+   "lead": "التعليمات تبدأ بالفعل: Cut, Stick, Colour.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "___ out the pictures.",
+           "a": "Cut",
+           "o": [
+            "Cut",
+            "Cuts"
+           ]
+          },
+          {
+           "s": "We need ___ to cut.",
+           "a": "scissors",
+           "o": [
+            "scissors",
+            "glue"
+           ]
+          },
+          {
+           "s": "Stick them ___ the poster.",
+           "a": "on",
+           "o": [
+            "on",
+            "in"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Cut out the pictures.",
+          "Stick them on the poster.",
+          "Colour the title."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Cut out the pictures.",
+           "o": [
+            "Cut out the pictures.",
+            "Stick them on the poster.",
+            "Colour the title."
+           ]
+          },
+          {
+           "a": "Stick them on the poster.",
+           "o": [
+            "Stick them on the poster.",
+            "Cut out the pictures.",
+            "Colour the title."
+           ]
+          },
+          {
+           "a": "Colour the title.",
+           "o": [
+            "Colour the title.",
+            "Cut out the pictures.",
+            "Stick them on the poster."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "poster",
+       "ipa": "",
+       "meaning": "ملصق",
+       "ex": "Stick them on the poster."
+      },
+      {
+       "must": 1,
+       "term": "glue",
+       "ipa": "",
+       "meaning": "صمغ",
+       "ex": "glue"
+      },
+      {
+       "must": 1,
+       "term": "scissors",
+       "ipa": "",
+       "meaning": "مقص",
+       "ex": "scissors"
+      },
+      {
+       "must": 0,
+       "term": "colour",
+       "ipa": "",
+       "meaning": "يلوّن",
+       "ex": "Colour the title."
+      },
+      {
+       "must": 0,
+       "term": "cut",
+       "ipa": "",
+       "meaning": "يقص",
+       "ex": "Cut out the pictures."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "___ out the pictures.",
+       "a": "Cut",
+       "o": [
+        "Cut",
+        "Cuts"
+       ],
+       "why": ""
+      },
+      {
+       "q": "We need ___ to cut.",
+       "a": "scissors",
+       "o": [
+        "scissors",
+        "glue"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Stick them ___ the poster.",
+       "a": "on",
+       "o": [
+        "on",
+        "in"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى poster؟",
+       "a": "ملصق",
+       "o": [
+        "ملصق",
+        "صمغ",
+        "مقص"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى colour؟",
+       "a": "يلوّن",
+       "o": [
+        "يلوّن",
+        "ملصق",
+        "صمغ"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Cut out the pictures.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Cut out the pictures.",
+       "o": [
+        "Cut out the pictures.",
+        "Stick them on the poster.",
+        "Colour the title."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

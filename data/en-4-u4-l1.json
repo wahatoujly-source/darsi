@@ -1,0 +1,287 @@
+{
+ "id": "en-4-u4-l1",
+ "grade": 4,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 4 · Lesson 1: The Challenge",
+ "titleAr": "لفريقنا عشر نقاط.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "لفريقنا عشر نقاط.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "challenge",
+       "ar": "تحدٍّ",
+       "em": "🏅"
+      },
+      {
+       "id": "v1",
+       "en": "team",
+       "ar": "فريق",
+       "em": "👥"
+      },
+      {
+       "id": "v2",
+       "en": "points",
+       "ar": "نقاط",
+       "em": "🔢"
+      },
+      {
+       "id": "v3",
+       "en": "question",
+       "ar": "سؤال",
+       "em": "❓"
+      },
+      {
+       "id": "v4",
+       "en": "correct",
+       "ar": "صحيح",
+       "em": "✅"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 62 · كتاب النشاط ص 52"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Revision",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Our team <b>has</b> ten points.</div><div class=\"ex\">Is the answer <b>correct</b>?</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Our team has ten points. Is the answer correct?"
+      }
+     ]
+    }
+   ],
+   "lead": "نراجع: have/has, can, There is/are.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "Our team ___ ten points.",
+           "a": "has",
+           "o": [
+            "has",
+            "have"
+           ]
+          },
+          {
+           "s": "There ___ five questions.",
+           "a": "are",
+           "o": [
+            "are",
+            "is"
+           ]
+          },
+          {
+           "s": "Is the answer ___ ?",
+           "a": "correct",
+           "o": [
+            "correct",
+            "team"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Our team has ten points.",
+          "Is the answer correct?"
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Our team has ten points.",
+           "o": [
+            "Our team has ten points.",
+            "Is the answer correct?"
+           ]
+          },
+          {
+           "a": "Is the answer correct?",
+           "o": [
+            "Is the answer correct?",
+            "Our team has ten points."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "challenge",
+       "ipa": "",
+       "meaning": "تحدٍّ",
+       "ex": "challenge"
+      },
+      {
+       "must": 1,
+       "term": "team",
+       "ipa": "",
+       "meaning": "فريق",
+       "ex": "Our team has ten points."
+      },
+      {
+       "must": 1,
+       "term": "points",
+       "ipa": "",
+       "meaning": "نقاط",
+       "ex": "Our team has ten points."
+      },
+      {
+       "must": 0,
+       "term": "question",
+       "ipa": "",
+       "meaning": "سؤال",
+       "ex": "question"
+      },
+      {
+       "must": 0,
+       "term": "correct",
+       "ipa": "",
+       "meaning": "صحيح",
+       "ex": "Is the answer correct?"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "Our team ___ ten points.",
+       "a": "has",
+       "o": [
+        "has",
+        "have"
+       ],
+       "why": ""
+      },
+      {
+       "q": "There ___ five questions.",
+       "a": "are",
+       "o": [
+        "are",
+        "is"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Is the answer ___ ?",
+       "a": "correct",
+       "o": [
+        "correct",
+        "team"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى challenge؟",
+       "a": "تحدٍّ",
+       "o": [
+        "تحدٍّ",
+        "فريق",
+        "نقاط"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى correct؟",
+       "a": "صحيح",
+       "o": [
+        "صحيح",
+        "تحدٍّ",
+        "فريق"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Our team has ten points.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Our team has ten points.",
+       "o": [
+        "Our team has ten points.",
+        "Is the answer correct?"
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

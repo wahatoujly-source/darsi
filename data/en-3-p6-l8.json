@@ -1,0 +1,337 @@
+{
+ "id": "en-3-p6-l8",
+ "grade": 3,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "The Little Brown Bird",
+ "titleAr": "الإنجليزية — الصف الثالث",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "The Little Brown Bird",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "bird",
+       "em": "🐦",
+       "say": "bird",
+       "sub": "طائر",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "nest",
+       "em": "🪹",
+       "say": "nest",
+       "sub": "عش",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "hungry",
+       "em": "😋",
+       "say": "hungry",
+       "sub": "جائع",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "worm",
+       "em": "🪱",
+       "say": "worm",
+       "sub": "دودة",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "fly",
+       "em": "🕊️",
+       "say": "fly",
+       "sub": "يطير",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك كتاب التلميذ ص 112⁠–⁠113"
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "The little brown bird was hungry.",
+       "em": "🐦",
+       "say": "The little brown bird was hungry.",
+       "sub": "كان الطائر البني الصغير جائعاً.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "It found a worm.",
+       "em": "🪱",
+       "say": "It found a worm.",
+       "sub": "وجد دودة.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "It flew back to its nest.",
+       "em": "🪹",
+       "say": "It flew back to its nest.",
+       "sub": "طار عائداً إلى عشه.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "bird",
+       "o": [
+        "🐦",
+        "🪱",
+        "😋"
+       ],
+       "a": "🐦",
+       "lang": "en"
+      },
+      {
+       "say": "nest",
+       "o": [
+        "🪹",
+        "🕊️",
+        "🐦"
+       ],
+       "a": "🪹",
+       "lang": "en"
+      },
+      {
+       "say": "hungry",
+       "o": [
+        "😋",
+        "🐦",
+        "🕊️"
+       ],
+       "a": "😋",
+       "lang": "en"
+      },
+      {
+       "say": "worm",
+       "o": [
+        "🪱",
+        "🐦",
+        "🪹"
+       ],
+       "a": "🪱",
+       "lang": "en"
+      },
+      {
+       "say": "fly",
+       "o": [
+        "🕊️",
+        "🪱",
+        "😋"
+       ],
+       "a": "🕊️",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "The little brown bird was hungry.",
+       "o": [
+        "كان الطائر البني الصغير جائعاً.",
+        "وجد دودة.",
+        "طار عائداً إلى عشه."
+       ],
+       "a": "كان الطائر البني الصغير جائعاً.",
+       "lang": "en"
+      },
+      {
+       "say": "It found a worm.",
+       "o": [
+        "وجد دودة.",
+        "كان الطائر البني الصغير جائعاً.",
+        "طار عائداً إلى عشه."
+       ],
+       "a": "وجد دودة.",
+       "lang": "en"
+      },
+      {
+       "say": "It flew back to its nest.",
+       "o": [
+        "طار عائداً إلى عشه.",
+        "كان الطائر البني الصغير جائعاً.",
+        "وجد دودة."
+       ],
+       "a": "طار عائداً إلى عشه.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "أكمل",
+   "eyebrow": "الخطوة ٥ — أكمل",
+   "heading": "اختر الكلمة الناقصة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "The bird was hungry.",
+       "o": [
+        "was",
+        "is"
+       ],
+       "a": "was",
+       "sayQ": false,
+       "show": "The bird ___ hungry.",
+       "lang": "en"
+      },
+      {
+       "say": "It found a worm.",
+       "o": [
+        "found",
+        "find"
+       ],
+       "a": "found",
+       "sayQ": false,
+       "show": "It ___ a worm.",
+       "lang": "en"
+      },
+      {
+       "say": "It flew back to its nest.",
+       "o": [
+        "flew",
+        "flied"
+       ],
+       "a": "flew",
+       "sayQ": false,
+       "show": "It ___ back to its nest.",
+       "lang": "en"
+      }
+     ],
+     "q": "اختر الكلمة المناسبة",
+     "lang": "en"
+    }
+   ],
+   "lead": "find → found, fly → flew."
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "bird",
+       "o": [
+        "🐦",
+        "🪹",
+        "🪱"
+       ],
+       "a": "🐦",
+       "lang": "en"
+      },
+      {
+       "say": "nest",
+       "o": [
+        "🪹",
+        "🪱",
+        "🕊️"
+       ],
+       "a": "🪹",
+       "lang": "en"
+      },
+      {
+       "say": "hungry",
+       "o": [
+        "😋",
+        "🐦",
+        "🪹"
+       ],
+       "a": "😋",
+       "lang": "en"
+      },
+      {
+       "say": "worm",
+       "o": [
+        "🪱",
+        "🐦",
+        "😋"
+       ],
+       "a": "🪱",
+       "lang": "en"
+      },
+      {
+       "say": "The little brown bird was hungry.",
+       "o": [
+        "كان الطائر البني الصغير جائعاً.",
+        "وجد دودة.",
+        "طار عائداً إلى عشه."
+       ],
+       "a": "كان الطائر البني الصغير جائعاً.",
+       "lang": "en"
+      },
+      {
+       "say": "It found a worm.",
+       "o": [
+        "وجد دودة.",
+        "كان الطائر البني الصغير جائعاً.",
+        "طار عائداً إلى عشه."
+       ],
+       "a": "وجد دودة.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

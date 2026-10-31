@@ -1,0 +1,297 @@
+{
+ "id": "en-3-p6-l6",
+ "grade": 3,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "Where did you go?",
+ "titleAr": "الإنجليزية — الصف الثالث",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "Where did you go?",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "holiday",
+       "em": "🏖️",
+       "say": "holiday",
+       "sub": "عطلة",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "went",
+       "em": "➡️",
+       "say": "went",
+       "sub": "ذهب",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "sea",
+       "em": "🌊",
+       "say": "sea",
+       "sub": "بحر",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "grandparents",
+       "em": "👴👵",
+       "say": "grandparents",
+       "sub": "الأجداد",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك كتاب التلميذ ص 108⁠–⁠109"
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "Where did you go?",
+       "em": "🏖️",
+       "say": "Where did you go?",
+       "sub": "إلى أين ذهبت؟",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "I went to the sea.",
+       "em": "➡️",
+       "say": "I went to the sea.",
+       "sub": "ذهبت إلى البحر.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "holiday",
+       "o": [
+        "🏖️",
+        "➡️",
+        "🌊"
+       ],
+       "a": "🏖️",
+       "lang": "en"
+      },
+      {
+       "say": "went",
+       "o": [
+        "➡️",
+        "👴👵",
+        "🌊"
+       ],
+       "a": "➡️",
+       "lang": "en"
+      },
+      {
+       "say": "sea",
+       "o": [
+        "🌊",
+        "🏖️",
+        "➡️"
+       ],
+       "a": "🌊",
+       "lang": "en"
+      },
+      {
+       "say": "grandparents",
+       "o": [
+        "👴👵",
+        "➡️",
+        "🌊"
+       ],
+       "a": "👴👵",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "Where did you go?",
+       "o": [
+        "إلى أين ذهبت؟",
+        "ذهبت إلى البحر."
+       ],
+       "a": "إلى أين ذهبت؟",
+       "lang": "en"
+      },
+      {
+       "say": "I went to the sea.",
+       "o": [
+        "ذهبت إلى البحر.",
+        "إلى أين ذهبت؟"
+       ],
+       "a": "ذهبت إلى البحر.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "أكمل",
+   "eyebrow": "الخطوة ٥ — أكمل",
+   "heading": "اختر الكلمة الناقصة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "Where did you go?",
+       "o": [
+        "did",
+        "do"
+       ],
+       "a": "did",
+       "sayQ": false,
+       "show": "Where ___ you go?",
+       "lang": "en"
+      },
+      {
+       "say": "I went to the sea.",
+       "o": [
+        "went",
+        "go"
+       ],
+       "a": "went",
+       "sayQ": false,
+       "show": "I ___ to the sea.",
+       "lang": "en"
+      },
+      {
+       "say": "We visited our grandparents .",
+       "o": [
+        "grandparents",
+        "holiday"
+       ],
+       "a": "grandparents",
+       "sayQ": false,
+       "show": "We visited our ___ .",
+       "lang": "en"
+      }
+     ],
+     "q": "اختر الكلمة المناسبة",
+     "lang": "en"
+    }
+   ],
+   "lead": "السؤال عن المكان في الماضي."
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "holiday",
+       "o": [
+        "🏖️",
+        "➡️",
+        "👴👵"
+       ],
+       "a": "🏖️",
+       "lang": "en"
+      },
+      {
+       "say": "went",
+       "o": [
+        "➡️",
+        "🌊",
+        "🏖️"
+       ],
+       "a": "➡️",
+       "lang": "en"
+      },
+      {
+       "say": "sea",
+       "o": [
+        "🌊",
+        "👴👵",
+        "🏖️"
+       ],
+       "a": "🌊",
+       "lang": "en"
+      },
+      {
+       "say": "grandparents",
+       "o": [
+        "👴👵",
+        "🌊",
+        "🏖️"
+       ],
+       "a": "👴👵",
+       "lang": "en"
+      },
+      {
+       "say": "Where did you go?",
+       "o": [
+        "إلى أين ذهبت؟",
+        "ذهبت إلى البحر."
+       ],
+       "a": "إلى أين ذهبت؟",
+       "lang": "en"
+      },
+      {
+       "say": "I went to the sea.",
+       "o": [
+        "ذهبت إلى البحر.",
+        "إلى أين ذهبت؟"
+       ],
+       "a": "ذهبت إلى البحر.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,315 @@
+{
+ "id": "en-3-u4-l1",
+ "grade": 3,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "Is it?",
+ "titleAr": "الإنجليزية — الصف الثالث",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "Is it?",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "big",
+       "em": "🐘",
+       "say": "big",
+       "sub": "كبير",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "small",
+       "em": "🐁",
+       "say": "small",
+       "sub": "صغير",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "hot",
+       "em": "🔥",
+       "say": "hot",
+       "sub": "ساخن",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "cold",
+       "em": "🧊",
+       "say": "cold",
+       "sub": "بارد",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "soft",
+       "em": "🧸",
+       "say": "soft",
+       "sub": "ناعم",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك "
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "Is it big? Yes, it is.",
+       "em": "🐘",
+       "say": "Is it big? Yes, it is.",
+       "sub": "هل هو كبير؟ نعم.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "Is it hot? No, it isn't.",
+       "em": "🔥",
+       "say": "Is it hot? No, it isn't.",
+       "sub": "هل هو ساخن؟ لا.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "big",
+       "o": [
+        "🐘",
+        "🧸",
+        "🧊"
+       ],
+       "a": "🐘",
+       "lang": "en"
+      },
+      {
+       "say": "small",
+       "o": [
+        "🐁",
+        "🧊",
+        "🧸"
+       ],
+       "a": "🐁",
+       "lang": "en"
+      },
+      {
+       "say": "hot",
+       "o": [
+        "🔥",
+        "🧸",
+        "🧊"
+       ],
+       "a": "🔥",
+       "lang": "en"
+      },
+      {
+       "say": "cold",
+       "o": [
+        "🧊",
+        "🔥",
+        "🐁"
+       ],
+       "a": "🧊",
+       "lang": "en"
+      },
+      {
+       "say": "soft",
+       "o": [
+        "🧸",
+        "🐘",
+        "🔥"
+       ],
+       "a": "🧸",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "Is it big? Yes, it is.",
+       "o": [
+        "هل هو كبير؟ نعم.",
+        "هل هو ساخن؟ لا."
+       ],
+       "a": "هل هو كبير؟ نعم.",
+       "lang": "en"
+      },
+      {
+       "say": "Is it hot? No, it isn't.",
+       "o": [
+        "هل هو ساخن؟ لا.",
+        "هل هو كبير؟ نعم."
+       ],
+       "a": "هل هو ساخن؟ لا.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "أكمل",
+   "eyebrow": "الخطوة ٥ — أكمل",
+   "heading": "اختر الكلمة الناقصة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "Is it big?",
+       "o": [
+        "Is",
+        "Are"
+       ],
+       "a": "Is",
+       "sayQ": false,
+       "show": "___ it big?",
+       "lang": "en"
+      },
+      {
+       "say": "Is it cold? Yes, it is .",
+       "o": [
+        "is",
+        "isn't"
+       ],
+       "a": "is",
+       "sayQ": false,
+       "show": "Is it cold? Yes, it ___ .",
+       "lang": "en"
+      },
+      {
+       "say": "Is ice hot? No, it isn't .",
+       "o": [
+        "isn't",
+        "is"
+       ],
+       "a": "isn't",
+       "sayQ": false,
+       "show": "Is ice hot? No, it ___ .",
+       "lang": "en"
+      }
+     ],
+     "q": "اختر الكلمة المناسبة",
+     "lang": "en"
+    }
+   ],
+   "lead": "Yes, it is. / No, it isn't."
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "big",
+       "o": [
+        "🐘",
+        "🔥",
+        "🐁"
+       ],
+       "a": "🐘",
+       "lang": "en"
+      },
+      {
+       "say": "small",
+       "o": [
+        "🐁",
+        "🧸",
+        "🔥"
+       ],
+       "a": "🐁",
+       "lang": "en"
+      },
+      {
+       "say": "hot",
+       "o": [
+        "🔥",
+        "🧸",
+        "🐁"
+       ],
+       "a": "🔥",
+       "lang": "en"
+      },
+      {
+       "say": "cold",
+       "o": [
+        "🧊",
+        "🐘",
+        "🧸"
+       ],
+       "a": "🧊",
+       "lang": "en"
+      },
+      {
+       "say": "Is it big? Yes, it is.",
+       "o": [
+        "هل هو كبير؟ نعم.",
+        "هل هو ساخن؟ لا."
+       ],
+       "a": "هل هو كبير؟ نعم.",
+       "lang": "en"
+      },
+      {
+       "say": "Is it hot? No, it isn't.",
+       "o": [
+        "هل هو ساخن؟ لا.",
+        "هل هو كبير؟ نعم."
+       ],
+       "a": "هل هو ساخن؟ لا.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

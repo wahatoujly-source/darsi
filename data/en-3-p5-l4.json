@@ -1,0 +1,315 @@
+{
+ "id": "en-3-p5-l4",
+ "grade": 3,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "At the Waterfall",
+ "titleAr": "الإنجليزية — الصف الثالث",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "At the Waterfall",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "waterfall",
+       "em": "💦",
+       "say": "waterfall",
+       "sub": "شلال",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "river",
+       "em": "🏞️",
+       "say": "river",
+       "sub": "نهر",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "rocks",
+       "em": "🪨",
+       "say": "rocks",
+       "sub": "صخور",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "wet",
+       "em": "💧",
+       "say": "wet",
+       "sub": "مبلل",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "beautiful",
+       "em": "😍",
+       "say": "beautiful",
+       "sub": "جميل",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك كتاب التلميذ ص 86⁠–⁠87"
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "The waterfall is beautiful.",
+       "em": "💦",
+       "say": "The waterfall is beautiful.",
+       "sub": "الشلال جميل.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "Don't climb on the rocks.",
+       "em": "🪨",
+       "say": "Don't climb on the rocks.",
+       "sub": "لا تتسلق الصخور.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "waterfall",
+       "o": [
+        "💦",
+        "💧",
+        "🏞️"
+       ],
+       "a": "💦",
+       "lang": "en"
+      },
+      {
+       "say": "river",
+       "o": [
+        "🏞️",
+        "😍",
+        "💦"
+       ],
+       "a": "🏞️",
+       "lang": "en"
+      },
+      {
+       "say": "rocks",
+       "o": [
+        "🪨",
+        "💦",
+        "😍"
+       ],
+       "a": "🪨",
+       "lang": "en"
+      },
+      {
+       "say": "wet",
+       "o": [
+        "💧",
+        "🪨",
+        "😍"
+       ],
+       "a": "💧",
+       "lang": "en"
+      },
+      {
+       "say": "beautiful",
+       "o": [
+        "😍",
+        "💦",
+        "🪨"
+       ],
+       "a": "😍",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "The waterfall is beautiful.",
+       "o": [
+        "الشلال جميل.",
+        "لا تتسلق الصخور."
+       ],
+       "a": "الشلال جميل.",
+       "lang": "en"
+      },
+      {
+       "say": "Don't climb on the rocks.",
+       "o": [
+        "لا تتسلق الصخور.",
+        "الشلال جميل."
+       ],
+       "a": "لا تتسلق الصخور.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "أكمل",
+   "eyebrow": "الخطوة ٥ — أكمل",
+   "heading": "اختر الكلمة الناقصة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "Don't climb on the rocks.",
+       "o": [
+        "Don't",
+        "Do"
+       ],
+       "a": "Don't",
+       "sayQ": false,
+       "show": "___ climb on the rocks.",
+       "lang": "en"
+      },
+      {
+       "say": "The water is wet .",
+       "o": [
+        "wet",
+        "dry"
+       ],
+       "a": "wet",
+       "sayQ": false,
+       "show": "The water is ___ .",
+       "lang": "en"
+      },
+      {
+       "say": "The waterfall is beautiful .",
+       "o": [
+        "beautiful",
+        "noisy"
+       ],
+       "a": "beautiful",
+       "sayQ": false,
+       "show": "The waterfall is ___ .",
+       "lang": "en"
+      }
+     ],
+     "q": "اختر الكلمة المناسبة",
+     "lang": "en"
+    }
+   ],
+   "lead": "النهي: Don't climb."
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "waterfall",
+       "o": [
+        "💦",
+        "💧",
+        "😍"
+       ],
+       "a": "💦",
+       "lang": "en"
+      },
+      {
+       "say": "river",
+       "o": [
+        "🏞️",
+        "🪨",
+        "😍"
+       ],
+       "a": "🏞️",
+       "lang": "en"
+      },
+      {
+       "say": "rocks",
+       "o": [
+        "🪨",
+        "💦",
+        "😍"
+       ],
+       "a": "🪨",
+       "lang": "en"
+      },
+      {
+       "say": "wet",
+       "o": [
+        "💧",
+        "🪨",
+        "😍"
+       ],
+       "a": "💧",
+       "lang": "en"
+      },
+      {
+       "say": "The waterfall is beautiful.",
+       "o": [
+        "الشلال جميل.",
+        "لا تتسلق الصخور."
+       ],
+       "a": "الشلال جميل.",
+       "lang": "en"
+      },
+      {
+       "say": "Don't climb on the rocks.",
+       "o": [
+        "لا تتسلق الصخور.",
+        "الشلال جميل."
+       ],
+       "a": "لا تتسلق الصخور.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

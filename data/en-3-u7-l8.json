@@ -1,0 +1,315 @@
+{
+ "id": "en-3-u7-l8",
+ "grade": 3,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "The Shopping List",
+ "titleAr": "الإنجليزية — الصف الثالث",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "The Shopping List",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "list",
+       "em": "📝",
+       "say": "list",
+       "sub": "قائمة",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "oranges",
+       "em": "🍊",
+       "say": "oranges",
+       "sub": "برتقال",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "rice",
+       "em": "🍚",
+       "say": "rice",
+       "sub": "أرز",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "tomatoes",
+       "em": "🍅",
+       "say": "tomatoes",
+       "sub": "طماطم",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "sugar",
+       "em": "🧂",
+       "say": "sugar",
+       "sub": "سكر",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك "
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "We need some oranges.",
+       "em": "🍊",
+       "say": "We need some oranges.",
+       "sub": "نحتاج بعض البرتقال.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "We don't need any rice.",
+       "em": "🍚",
+       "say": "We don't need any rice.",
+       "sub": "لا نحتاج أرزاً.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "list",
+       "o": [
+        "📝",
+        "🍊",
+        "🧂"
+       ],
+       "a": "📝",
+       "lang": "en"
+      },
+      {
+       "say": "oranges",
+       "o": [
+        "🍊",
+        "🍚",
+        "📝"
+       ],
+       "a": "🍊",
+       "lang": "en"
+      },
+      {
+       "say": "rice",
+       "o": [
+        "🍚",
+        "📝",
+        "🧂"
+       ],
+       "a": "🍚",
+       "lang": "en"
+      },
+      {
+       "say": "tomatoes",
+       "o": [
+        "🍅",
+        "🧂",
+        "🍊"
+       ],
+       "a": "🍅",
+       "lang": "en"
+      },
+      {
+       "say": "sugar",
+       "o": [
+        "🧂",
+        "🍚",
+        "🍅"
+       ],
+       "a": "🧂",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "We need some oranges.",
+       "o": [
+        "نحتاج بعض البرتقال.",
+        "لا نحتاج أرزاً."
+       ],
+       "a": "نحتاج بعض البرتقال.",
+       "lang": "en"
+      },
+      {
+       "say": "We don't need any rice.",
+       "o": [
+        "لا نحتاج أرزاً.",
+        "نحتاج بعض البرتقال."
+       ],
+       "a": "لا نحتاج أرزاً.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "أكمل",
+   "eyebrow": "الخطوة ٥ — أكمل",
+   "heading": "اختر الكلمة الناقصة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "We need some oranges.",
+       "o": [
+        "some",
+        "any"
+       ],
+       "a": "some",
+       "sayQ": false,
+       "show": "We need ___ oranges.",
+       "lang": "en"
+      },
+      {
+       "say": "We don't need any rice.",
+       "o": [
+        "any",
+        "some"
+       ],
+       "a": "any",
+       "sayQ": false,
+       "show": "We don't need ___ rice.",
+       "lang": "en"
+      },
+      {
+       "say": "Do we need any sugar?",
+       "o": [
+        "any",
+        "a"
+       ],
+       "a": "any",
+       "sayQ": false,
+       "show": "Do we need ___ sugar?",
+       "lang": "en"
+      }
+     ],
+     "q": "اختر الكلمة المناسبة",
+     "lang": "en"
+    }
+   ],
+   "lead": "some في الإثبات و any في النفي والسؤال."
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "list",
+       "o": [
+        "📝",
+        "🍊",
+        "🧂"
+       ],
+       "a": "📝",
+       "lang": "en"
+      },
+      {
+       "say": "oranges",
+       "o": [
+        "🍊",
+        "🧂",
+        "🍚"
+       ],
+       "a": "🍊",
+       "lang": "en"
+      },
+      {
+       "say": "rice",
+       "o": [
+        "🍚",
+        "🧂",
+        "🍅"
+       ],
+       "a": "🍚",
+       "lang": "en"
+      },
+      {
+       "say": "tomatoes",
+       "o": [
+        "🍅",
+        "📝",
+        "🍚"
+       ],
+       "a": "🍅",
+       "lang": "en"
+      },
+      {
+       "say": "We need some oranges.",
+       "o": [
+        "نحتاج بعض البرتقال.",
+        "لا نحتاج أرزاً."
+       ],
+       "a": "نحتاج بعض البرتقال.",
+       "lang": "en"
+      },
+      {
+       "say": "We don't need any rice.",
+       "o": [
+        "لا نحتاج أرزاً.",
+        "نحتاج بعض البرتقال."
+       ],
+       "a": "لا نحتاج أرزاً.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

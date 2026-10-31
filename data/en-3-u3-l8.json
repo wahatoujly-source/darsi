@@ -1,0 +1,337 @@
+{
+ "id": "en-3-u3-l8",
+ "grade": 3,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "Ben's Messy Room",
+ "titleAr": "الإنجليزية — الصف الثالث",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "Ben's Messy Room",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "messy",
+       "em": "🌀",
+       "say": "messy",
+       "sub": "فوضوي",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "tidy",
+       "em": "✨",
+       "say": "tidy",
+       "sub": "مرتب",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "floor",
+       "em": "🟫",
+       "say": "floor",
+       "sub": "أرض",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "put away",
+       "em": "📥",
+       "say": "put away",
+       "sub": "يرتب/يعيد",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "socks",
+       "em": "🧦",
+       "say": "socks",
+       "sub": "جوارب",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك "
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "Ben's room is messy.",
+       "em": "🌀",
+       "say": "Ben's room is messy.",
+       "sub": "غرفة بن فوضوية.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "Put your socks away, Ben!",
+       "em": "📥",
+       "say": "Put your socks away, Ben!",
+       "sub": "أعد جواربك إلى مكانها يا بن!",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "Now the room is tidy.",
+       "em": "✨",
+       "say": "Now the room is tidy.",
+       "sub": "الآن الغرفة مرتبة.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "messy",
+       "o": [
+        "🌀",
+        "✨",
+        "📥"
+       ],
+       "a": "🌀",
+       "lang": "en"
+      },
+      {
+       "say": "tidy",
+       "o": [
+        "✨",
+        "🟫",
+        "🌀"
+       ],
+       "a": "✨",
+       "lang": "en"
+      },
+      {
+       "say": "floor",
+       "o": [
+        "🟫",
+        "✨",
+        "🌀"
+       ],
+       "a": "🟫",
+       "lang": "en"
+      },
+      {
+       "say": "put away",
+       "o": [
+        "📥",
+        "🌀",
+        "🧦"
+       ],
+       "a": "📥",
+       "lang": "en"
+      },
+      {
+       "say": "socks",
+       "o": [
+        "🧦",
+        "📥",
+        "✨"
+       ],
+       "a": "🧦",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "Ben's room is messy.",
+       "o": [
+        "غرفة بن فوضوية.",
+        "أعد جواربك إلى مكانها يا بن!",
+        "الآن الغرفة مرتبة."
+       ],
+       "a": "غرفة بن فوضوية.",
+       "lang": "en"
+      },
+      {
+       "say": "Put your socks away, Ben!",
+       "o": [
+        "أعد جواربك إلى مكانها يا بن!",
+        "غرفة بن فوضوية.",
+        "الآن الغرفة مرتبة."
+       ],
+       "a": "أعد جواربك إلى مكانها يا بن!",
+       "lang": "en"
+      },
+      {
+       "say": "Now the room is tidy.",
+       "o": [
+        "الآن الغرفة مرتبة.",
+        "غرفة بن فوضوية.",
+        "أعد جواربك إلى مكانها يا بن!"
+       ],
+       "a": "الآن الغرفة مرتبة.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "أكمل",
+   "eyebrow": "الخطوة ٥ — أكمل",
+   "heading": "اختر الكلمة الناقصة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "Ben's room is messy .",
+       "o": [
+        "messy",
+        "tidy"
+       ],
+       "a": "messy",
+       "sayQ": false,
+       "show": "Ben's room is ___ .",
+       "lang": "en"
+      },
+      {
+       "say": "Put your socks away.",
+       "o": [
+        "Put",
+        "Puts"
+       ],
+       "a": "Put",
+       "sayQ": false,
+       "show": "___ your socks away.",
+       "lang": "en"
+      },
+      {
+       "say": "Now the room is tidy .",
+       "o": [
+        "tidy",
+        "messy"
+       ],
+       "a": "tidy",
+       "sayQ": false,
+       "show": "Now the room is ___ .",
+       "lang": "en"
+      }
+     ],
+     "q": "اختر الكلمة المناسبة",
+     "lang": "en"
+    }
+   ],
+   "lead": "الأمر: Put … away. Pick up …"
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "messy",
+       "o": [
+        "🌀",
+        "✨",
+        "🧦"
+       ],
+       "a": "🌀",
+       "lang": "en"
+      },
+      {
+       "say": "tidy",
+       "o": [
+        "✨",
+        "🟫",
+        "🧦"
+       ],
+       "a": "✨",
+       "lang": "en"
+      },
+      {
+       "say": "floor",
+       "o": [
+        "🟫",
+        "✨",
+        "🌀"
+       ],
+       "a": "🟫",
+       "lang": "en"
+      },
+      {
+       "say": "put away",
+       "o": [
+        "📥",
+        "🟫",
+        "🧦"
+       ],
+       "a": "📥",
+       "lang": "en"
+      },
+      {
+       "say": "Ben's room is messy.",
+       "o": [
+        "غرفة بن فوضوية.",
+        "أعد جواربك إلى مكانها يا بن!",
+        "الآن الغرفة مرتبة."
+       ],
+       "a": "غرفة بن فوضوية.",
+       "lang": "en"
+      },
+      {
+       "say": "Put your socks away, Ben!",
+       "o": [
+        "أعد جواربك إلى مكانها يا بن!",
+        "غرفة بن فوضوية.",
+        "الآن الغرفة مرتبة."
+       ],
+       "a": "أعد جواربك إلى مكانها يا بن!",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

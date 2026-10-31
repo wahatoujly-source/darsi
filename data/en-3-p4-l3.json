@@ -1,0 +1,337 @@
+{
+ "id": "en-3-p4-l3",
+ "grade": 3,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "What do you want to eat?",
+ "titleAr": "الإنجليزية — الصف الثالث",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "What do you want to eat?",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "sandwich",
+       "em": "🥪",
+       "say": "sandwich",
+       "sub": "شطيرة",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "cake",
+       "em": "🍰",
+       "say": "cake",
+       "sub": "كعكة",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "biscuits",
+       "em": "🍪",
+       "say": "biscuits",
+       "sub": "بسكويت",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "pizza",
+       "em": "🍕",
+       "say": "pizza",
+       "sub": "بيتزا",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "salad",
+       "em": "🥗",
+       "say": "salad",
+       "sub": "سلطة",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك كتاب التلميذ ص 66⁠–⁠67"
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "What do you want to eat?",
+       "em": "🥪",
+       "say": "What do you want to eat?",
+       "sub": "ماذا تريد أن تأكل؟",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "I want a sandwich.",
+       "em": "🥪",
+       "say": "I want a sandwich.",
+       "sub": "أريد شطيرة.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "She wants some cake.",
+       "em": "🍰",
+       "say": "She wants some cake.",
+       "sub": "هي تريد كعكة.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "sandwich",
+       "o": [
+        "🥪",
+        "🍰",
+        "🍕"
+       ],
+       "a": "🥪",
+       "lang": "en"
+      },
+      {
+       "say": "cake",
+       "o": [
+        "🍰",
+        "🥗",
+        "🍕"
+       ],
+       "a": "🍰",
+       "lang": "en"
+      },
+      {
+       "say": "biscuits",
+       "o": [
+        "🍪",
+        "🍰",
+        "🍕"
+       ],
+       "a": "🍪",
+       "lang": "en"
+      },
+      {
+       "say": "pizza",
+       "o": [
+        "🍕",
+        "🍰",
+        "🍪"
+       ],
+       "a": "🍕",
+       "lang": "en"
+      },
+      {
+       "say": "salad",
+       "o": [
+        "🥗",
+        "🥪",
+        "🍕"
+       ],
+       "a": "🥗",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "What do you want to eat?",
+       "o": [
+        "ماذا تريد أن تأكل؟",
+        "أريد شطيرة.",
+        "هي تريد كعكة."
+       ],
+       "a": "ماذا تريد أن تأكل؟",
+       "lang": "en"
+      },
+      {
+       "say": "I want a sandwich.",
+       "o": [
+        "أريد شطيرة.",
+        "ماذا تريد أن تأكل؟",
+        "هي تريد كعكة."
+       ],
+       "a": "أريد شطيرة.",
+       "lang": "en"
+      },
+      {
+       "say": "She wants some cake.",
+       "o": [
+        "هي تريد كعكة.",
+        "ماذا تريد أن تأكل؟",
+        "أريد شطيرة."
+       ],
+       "a": "هي تريد كعكة.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "أكمل",
+   "eyebrow": "الخطوة ٥ — أكمل",
+   "heading": "اختر الكلمة الناقصة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "She wants some cake.",
+       "o": [
+        "wants",
+        "want"
+       ],
+       "a": "wants",
+       "sayQ": false,
+       "show": "She ___ some cake.",
+       "lang": "en"
+      },
+      {
+       "say": "I want a sandwich.",
+       "o": [
+        "want",
+        "wants"
+       ],
+       "a": "want",
+       "sayQ": false,
+       "show": "I ___ a sandwich.",
+       "lang": "en"
+      },
+      {
+       "say": "What do you want to eat ?",
+       "o": [
+        "eat",
+        "eats"
+       ],
+       "a": "eat",
+       "sayQ": false,
+       "show": "What do you want to ___ ?",
+       "lang": "en"
+      }
+     ],
+     "q": "اختر الكلمة المناسبة",
+     "lang": "en"
+    }
+   ],
+   "lead": "I want و He/She wants."
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "sandwich",
+       "o": [
+        "🥪",
+        "🍰",
+        "🍕"
+       ],
+       "a": "🥪",
+       "lang": "en"
+      },
+      {
+       "say": "cake",
+       "o": [
+        "🍰",
+        "🍪",
+        "🥗"
+       ],
+       "a": "🍰",
+       "lang": "en"
+      },
+      {
+       "say": "biscuits",
+       "o": [
+        "🍪",
+        "🍕",
+        "🥗"
+       ],
+       "a": "🍪",
+       "lang": "en"
+      },
+      {
+       "say": "pizza",
+       "o": [
+        "🍕",
+        "🥗",
+        "🍰"
+       ],
+       "a": "🍕",
+       "lang": "en"
+      },
+      {
+       "say": "What do you want to eat?",
+       "o": [
+        "ماذا تريد أن تأكل؟",
+        "أريد شطيرة.",
+        "هي تريد كعكة."
+       ],
+       "a": "ماذا تريد أن تأكل؟",
+       "lang": "en"
+      },
+      {
+       "say": "I want a sandwich.",
+       "o": [
+        "أريد شطيرة.",
+        "ماذا تريد أن تأكل؟",
+        "هي تريد كعكة."
+       ],
+       "a": "أريد شطيرة.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

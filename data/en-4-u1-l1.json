@@ -5,143 +5,75 @@
  "stage": "primary-4-6",
  "lang": "en",
  "title": "Unit 1 · Lesson 1: New Friends",
- "titleAr": "الوحدة الأولى: مدرستنا — الدرس الأول: أصدقاء جدد",
- "characters": {
-  "Kareem": {
-   "ar": "كريم",
-   "color": "--c2",
-   "g": "m",
-   "pitch": 1.4
-  },
-  "Yousif": {
-   "ar": "يوسف",
-   "color": "--c1",
-   "g": "m",
-   "pitch": 1.35
-  },
-  "Nadia": {
-   "ar": "نادية",
-   "color": "--c4",
-   "g": "f",
-   "pitch": 1.55
-  },
-  "Lina": {
-   "ar": "لينا",
-   "color": "--c3",
-   "g": "f",
-   "pitch": 1.65
-  }
- },
+ "titleAr": "مرحباً، أنا رامي. ما اسمك؟",
  "steps": [
   {
    "title": "المفردات",
    "eyebrow": "الخطوة ١ — المفردات",
-   "heading": "المدرسة والعمر",
+   "heading": "مرحباً، أنا رامي. ما اسمك؟",
    "blocks": [
     {
      "type": "vocab",
      "items": [
       {
        "id": "v0",
-       "en": "school",
-       "ar": "مدرسة",
-       "em": "🏫"
+       "en": "new",
+       "ar": "جديد",
+       "em": "🆕"
       },
       {
        "id": "v1",
-       "en": "classroom",
-       "ar": "فصل دراسي",
-       "em": "🧑‍🏫"
+       "en": "friend",
+       "ar": "صديق",
+       "em": "🧑‍🤝‍🧑"
       },
       {
        "id": "v2",
-       "en": "playground",
-       "ar": "ساحة اللعب",
-       "em": "🛝"
+       "en": "class",
+       "ar": "صف",
+       "em": "🏫"
       },
       {
        "id": "v3",
-       "en": "Grade 4",
-       "ar": "الصف الرابع",
-       "em": "4️⃣"
-      },
-      {
-       "id": "v4",
-       "en": "best friend",
-       "ar": "أعز صديق",
+       "en": "meet",
+       "ar": "يقابل",
        "em": "🤝"
       },
       {
-       "id": "v5",
-       "en": "older",
-       "ar": "أكبر سناً",
-       "em": "🧓"
-      },
-      {
-       "id": "v6",
-       "en": "younger",
-       "ar": "أصغر سناً",
-       "em": "👶"
-      },
-      {
-       "id": "v7",
-       "en": "swings",
-       "ar": "الأرجوحة",
-       "em": "🎠"
+       "id": "v4",
+       "en": "nice",
+       "ar": "لطيف",
+       "em": "😊"
       }
      ]
     }
    ],
-   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتابك ص 8–9."
-  },
-  {
-   "title": "استمع",
-   "eyebrow": "الخطوة ٢ — استمع",
-   "heading": "استمع إلى الحوار",
-   "blocks": [
-    {
-     "type": "dialogue",
-     "star": true
-    }
-   ],
-   "lead": "شغّل الحوار وتابع الكلمات المضيئة، واضغط على أي جملة لتعيدها."
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 8⁠–⁠9 · كتاب النشاط ص 4⁠–⁠5"
   },
   {
    "title": "القاعدة",
-   "eyebrow": "الخطوة ٣ — القاعدة",
-   "heading": "How old …? / I'm …",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Introducing yourself",
    "blocks": [
     {
      "type": "panel",
-     "title": "١. العمر والصف",
-     "html": "<div class=\"ex\">How old <b>is</b> Nadia? — She<b>'s</b> 9.</div><div class=\"ex\">I<b>'m</b> 9. I'm <b>in Grade 4</b>.</div>",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Hi, I'm Rami. What's your name?</div><div class=\"ex\">Nice to <b>meet</b> you.</div><div class=\"ex\">How <b>old</b> are you? I'm nine.</div>",
      "blocks": [
       {
        "type": "say",
        "label": "▶ اسمع",
-       "text": "How old is Nadia? She's 9. I'm 9. I'm in Grade 4."
-      }
-     ]
-    },
-    {
-     "type": "panel",
-     "title": "٢. أكبر وأصغر",
-     "html": "<div class=\"ex\">Nadia is <b>older than</b> Lina.</div><div class=\"ex\">Lina is <b>younger than</b> Nadia.</div>",
-     "blocks": [
-      {
-       "type": "say",
-       "label": "▶ اسمع",
-       "text": "Nadia is older than Lina. Lina is younger than Nadia."
+       "text": "Hi, I'm Rami. What's your name? Nice to meet you. How old are you? I'm nine."
       }
      ]
     }
    ],
-   "lead": "نسأل عن العمر بـ How old، ونقارن الأعمار بـ older و younger.",
+   "lead": "I'm … / Nice to meet you / How old are you?",
    "starOnVisit": true
   },
   {
    "title": "تدرّب",
-   "eyebrow": "الخطوة ٤ — تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
    "heading": "تمارين تُصحَّح فوراً",
    "blocks": [
     {
@@ -156,48 +88,27 @@
          "mode": "gap",
          "items": [
           {
-           "s": "How ___ is Nadia?",
+           "s": "Nice to ___ you.",
+           "a": "meet",
+           "o": [
+            "meet",
+            "meets"
+           ]
+          },
+          {
+           "s": "How ___ are you?",
            "a": "old",
            "o": [
             "old",
-            "many",
-            "is"
+            "many"
            ]
           },
           {
-           "s": "I'm 8, so I'm ___ Grade 3.",
-           "a": "in",
+           "s": "I'm ___ . (9)",
+           "a": "nine",
            "o": [
-            "in",
-            "on",
-            "at"
-           ]
-          },
-          {
-           "s": "Lina is ___ than Nadia.",
-           "a": "younger",
-           "o": [
-            "younger",
-            "young",
-            "older"
-           ]
-          },
-          {
-           "s": "Here's our new ___ .",
-           "a": "classroom",
-           "o": [
-            "classroom",
-            "swing",
-            "rule"
-           ]
-          },
-          {
-           "s": "Kareem is my best ___ .",
-           "a": "friend",
-           "o": [
-            "friend",
-            "school",
-            "grade"
+            "nine",
+            "ninety"
            ]
           }
          ]
@@ -210,10 +121,9 @@
         {
          "type": "order",
          "sentences": [
-          "This is my school.",
-          "We're in Grade 4 now!",
-          "How old is Nadia?",
-          "I like the swings best."
+          "Hi, I'm Rami. What's your name?",
+          "Nice to meet you.",
+          "How old are you? I'm nine."
          ]
         }
        ]
@@ -226,27 +136,27 @@
          "mode": "listen",
          "items": [
           {
-           "a": "I'm in Grade 4.",
+           "a": "Hi, I'm Rami. What's your name?",
            "o": [
-            "I'm in Grade 4.",
-            "I'm in Grade 3.",
-            "I'm 4."
+            "Hi, I'm Rami. What's your name?",
+            "Nice to meet you.",
+            "How old are you? I'm nine."
            ]
           },
           {
-           "a": "How old is Nadia?",
+           "a": "Nice to meet you.",
            "o": [
-            "How old is Nadia?",
-            "How old is Lina?",
-            "Who is Nadia?"
+            "Nice to meet you.",
+            "Hi, I'm Rami. What's your name?",
+            "How old are you? I'm nine."
            ]
           },
           {
-           "a": "She's my best friend.",
+           "a": "How old are you? I'm nine.",
            "o": [
-            "She's my best friend.",
-            "He's my best friend.",
-            "She's my sister."
+            "How old are you? I'm nine.",
+            "Hi, I'm Rami. What's your name?",
+            "Nice to meet you."
            ]
           }
          ]
@@ -260,7 +170,7 @@
   },
   {
    "title": "احفظ",
-   "eyebrow": "الخطوة ٥ — احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
    "heading": "كلمات يجب أن تحفظها",
    "blocks": [
     {
@@ -271,38 +181,38 @@
      "items": [
       {
        "must": 1,
-       "term": "How old …?",
-       "ipa": "/haʊ əʊld/",
-       "meaning": "كم عمر …؟",
-       "ex": "How old is Nadia?"
+       "term": "new",
+       "ipa": "",
+       "meaning": "جديد",
+       "ex": "new"
       },
       {
        "must": 1,
-       "term": "older than",
-       "ipa": "/ˈəʊldə ðən/",
-       "meaning": "أكبر سناً من",
-       "ex": "Nadia is older than Lina."
+       "term": "friend",
+       "ipa": "",
+       "meaning": "صديق",
+       "ex": "friend"
       },
       {
        "must": 1,
-       "term": "younger than",
-       "ipa": "/ˈjʌŋɡə ðən/",
-       "meaning": "أصغر سناً من",
-       "ex": "I'm younger than Yousif."
-      },
-      {
-       "must": 1,
-       "term": "classroom",
-       "ipa": "/ˈklɑːsruːm/",
-       "meaning": "الفصل الدراسي",
-       "ex": "Come and see my classroom."
+       "term": "class",
+       "ipa": "",
+       "meaning": "صف",
+       "ex": "class"
       },
       {
        "must": 0,
-       "term": "best friend",
-       "ipa": "/best frend/",
-       "meaning": "أعز صديق",
-       "ex": "Kareem is my best friend."
+       "term": "meet",
+       "ipa": "",
+       "meaning": "يقابل",
+       "ex": "Nice to meet you."
+      },
+      {
+       "must": 0,
+       "term": "nice",
+       "ipa": "",
+       "meaning": "لطيف",
+       "ex": "Nice to meet you."
       }
      ]
     }
@@ -310,7 +220,7 @@
   },
   {
    "title": "اختبار",
-   "eyebrow": "الخطوة ٦ — اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
    "heading": "اختبر نفسك",
    "blocks": [
     {
@@ -319,64 +229,63 @@
      "pass": 5,
      "items": [
       {
-       "type": "listen",
-       "say": "I'm in Grade 4.",
-       "q": "استمع: ماذا قال المتحدث؟",
-       "a": "I'm in Grade 4.",
+       "q": "Nice to ___ you.",
+       "a": "meet",
        "o": [
-        "I'm in Grade 4.",
-        "I'm in Grade 5.",
-        "I'm 4."
+        "meet",
+        "meets"
        ],
        "why": ""
       },
       {
-       "q": "How old is Nadia?",
-       "a": "She's 9.",
+       "q": "How ___ are you?",
+       "a": "old",
        "o": [
-        "She's 9.",
-        "She's in Grade 9.",
-        "Yes, she is."
+        "old",
+        "many"
        ],
        "why": ""
       },
       {
-       "q": "Lina is 8. Nadia is 9. Lina is …",
-       "a": "younger",
+       "q": "I'm ___ . (9)",
+       "a": "nine",
        "o": [
-        "younger",
-        "older"
+        "nine",
+        "ninety"
        ],
        "why": ""
       },
       {
-       "q": "ما معنى classroom؟",
-       "a": "الفصل الدراسي",
+       "q": "ما معنى nice؟",
+       "a": "لطيف",
        "o": [
-        "الفصل الدراسي",
-        "ساحة اللعب",
-        "المدرسة"
+        "لطيف",
+        "جديد",
+        "صديق"
        ],
        "why": "",
        "ar": true
       },
       {
-       "q": "I'm 8, ___ I'm in Grade 3.",
-       "a": "so",
+       "q": "ما معنى new؟",
+       "a": "جديد",
        "o": [
-        "so",
-        "but",
-        "or"
+        "جديد",
+        "صديق",
+        "صف"
        ],
-       "why": ""
+       "why": "",
+       "ar": true
       },
       {
-       "q": "What does Nadia like best?",
-       "a": "The swings.",
+       "type": "listen",
+       "say": "Hi, I'm Rami. What's your name?",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Hi, I'm Rami. What's your name?",
        "o": [
-        "The swings.",
-        "The slide.",
-        "The tunnel."
+        "Hi, I'm Rami. What's your name?",
+        "Nice to meet you.",
+        "How old are you? I'm nine."
        ],
        "why": ""
       }
@@ -386,38 +295,5 @@
    "lead": "6 أسئلة. تنجح بـ 5 من 6."
   }
  ],
- "dialogue": [
-  [
-   "Yousif",
-   "This is my school. Come and see my classroom."
-  ],
-  [
-   "Kareem",
-   "Here's our new classroom. We're in Grade 4 now!"
-  ],
-  [
-   "Lina",
-   "I'm younger. I'm only 8, so I'm in Grade 3. My classroom is next door."
-  ],
-  [
-   "Nadia",
-   "I like the swings best. My rule is don't stand on the swing."
-  ],
-  [
-   "Yousif",
-   "Our playground is great! My class is writing the playground rules."
-  ],
-  [
-   "Kareem",
-   "How old is Nadia?"
-  ],
-  [
-   "Lina",
-   "Nadia is 9."
-  ]
- ],
- "left": [
-  "Yousif",
-  "Kareem"
- ]
+ "characters": {}
 }

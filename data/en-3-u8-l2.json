@@ -1,0 +1,315 @@
+{
+ "id": "en-3-u8-l2",
+ "grade": 3,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "Picture A or B?",
+ "titleAr": "الإنجليزية — الصف الثالث",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "Picture A or B?",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "picture",
+       "em": "🖼️",
+       "say": "picture",
+       "sub": "صورة",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "different",
+       "em": "↔️",
+       "say": "different",
+       "sub": "مختلف",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "same",
+       "em": "🟰",
+       "say": "same",
+       "sub": "نفسه",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "find",
+       "em": "🔍",
+       "say": "find",
+       "sub": "يجد",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "spot",
+       "em": "👁️",
+       "say": "spot",
+       "sub": "يلاحظ",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك "
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "In picture A, the cat is on the chair.",
+       "em": "🖼️",
+       "say": "In picture A, the cat is on the chair.",
+       "sub": "في الصورة أ، القطة على الكرسي.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "In picture B, the cat is under the chair.",
+       "em": "🖼️",
+       "say": "In picture B, the cat is under the chair.",
+       "sub": "في الصورة ب، القطة تحت الكرسي.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "picture",
+       "o": [
+        "🖼️",
+        "👁️",
+        "🔍"
+       ],
+       "a": "🖼️",
+       "lang": "en"
+      },
+      {
+       "say": "different",
+       "o": [
+        "↔️",
+        "🖼️",
+        "🟰"
+       ],
+       "a": "↔️",
+       "lang": "en"
+      },
+      {
+       "say": "same",
+       "o": [
+        "🟰",
+        "🔍",
+        "👁️"
+       ],
+       "a": "🟰",
+       "lang": "en"
+      },
+      {
+       "say": "find",
+       "o": [
+        "🔍",
+        "👁️",
+        "🟰"
+       ],
+       "a": "🔍",
+       "lang": "en"
+      },
+      {
+       "say": "spot",
+       "o": [
+        "👁️",
+        "🔍",
+        "↔️"
+       ],
+       "a": "👁️",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "In picture A, the cat is on the chair.",
+       "o": [
+        "في الصورة أ، القطة على الكرسي.",
+        "في الصورة ب، القطة تحت الكرسي."
+       ],
+       "a": "في الصورة أ، القطة على الكرسي.",
+       "lang": "en"
+      },
+      {
+       "say": "In picture B, the cat is under the chair.",
+       "o": [
+        "في الصورة ب، القطة تحت الكرسي.",
+        "في الصورة أ، القطة على الكرسي."
+       ],
+       "a": "في الصورة ب، القطة تحت الكرسي.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "أكمل",
+   "eyebrow": "الخطوة ٥ — أكمل",
+   "heading": "اختر الكلمة الناقصة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "In picture A, the cat is on the chair.",
+       "o": [
+        "on",
+        "in"
+       ],
+       "a": "on",
+       "sayQ": false,
+       "show": "In picture A, the cat is ___ the chair.",
+       "lang": "en"
+      },
+      {
+       "say": "In picture B, it is under the chair.",
+       "o": [
+        "under",
+        "on"
+       ],
+       "a": "under",
+       "sayQ": false,
+       "show": "In picture B, it is ___ the chair.",
+       "lang": "en"
+      },
+      {
+       "say": "Find five differences .",
+       "o": [
+        "differences",
+        "pictures"
+       ],
+       "a": "differences",
+       "sayQ": false,
+       "show": "Find five ___ .",
+       "lang": "en"
+      }
+     ],
+     "q": "اختر الكلمة المناسبة",
+     "lang": "en"
+    }
+   ],
+   "lead": "نصف الفرق بين الصورتين."
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "picture",
+       "o": [
+        "🖼️",
+        "↔️",
+        "🟰"
+       ],
+       "a": "🖼️",
+       "lang": "en"
+      },
+      {
+       "say": "different",
+       "o": [
+        "↔️",
+        "👁️",
+        "🟰"
+       ],
+       "a": "↔️",
+       "lang": "en"
+      },
+      {
+       "say": "same",
+       "o": [
+        "🟰",
+        "🔍",
+        "👁️"
+       ],
+       "a": "🟰",
+       "lang": "en"
+      },
+      {
+       "say": "find",
+       "o": [
+        "🔍",
+        "🖼️",
+        "👁️"
+       ],
+       "a": "🔍",
+       "lang": "en"
+      },
+      {
+       "say": "In picture A, the cat is on the chair.",
+       "o": [
+        "في الصورة أ، القطة على الكرسي.",
+        "في الصورة ب، القطة تحت الكرسي."
+       ],
+       "a": "في الصورة أ، القطة على الكرسي.",
+       "lang": "en"
+      },
+      {
+       "say": "In picture B, the cat is under the chair.",
+       "o": [
+        "في الصورة ب، القطة تحت الكرسي.",
+        "في الصورة أ، القطة على الكرسي."
+       ],
+       "a": "في الصورة ب، القطة تحت الكرسي.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

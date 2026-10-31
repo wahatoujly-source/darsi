@@ -1,0 +1,337 @@
+{
+ "id": "en-3-p5-l7",
+ "grade": 3,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "Let's play a game!",
+ "titleAr": "الإنجليزية — الصف الثالث",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "Let's play a game!",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "game",
+       "em": "🎲",
+       "say": "game",
+       "sub": "لعبة",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "turn",
+       "em": "🔄",
+       "say": "turn",
+       "sub": "دور",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "dice",
+       "em": "🎲",
+       "say": "dice",
+       "sub": "نرد",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "win",
+       "em": "🏆",
+       "say": "win",
+       "sub": "يفوز",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "lose",
+       "em": "😞",
+       "say": "lose",
+       "sub": "يخسر",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك كتاب التلميذ ص 92⁠–⁠93"
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "Let's play a game!",
+       "em": "🎲",
+       "say": "Let's play a game!",
+       "sub": "هيا نلعب لعبة!",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "It's your turn.",
+       "em": "🔄",
+       "say": "It's your turn.",
+       "sub": "إنه دورك.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "Throw the dice.",
+       "em": "🎲",
+       "say": "Throw the dice.",
+       "sub": "ارمِ النرد.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "game",
+       "o": [
+        "🎲",
+        "🏆",
+        "😞"
+       ],
+       "a": "🎲",
+       "lang": "en"
+      },
+      {
+       "say": "turn",
+       "o": [
+        "🔄",
+        "🏆",
+        "🎲"
+       ],
+       "a": "🔄",
+       "lang": "en"
+      },
+      {
+       "say": "dice",
+       "o": [
+        "🎲",
+        "😞",
+        "🏆"
+       ],
+       "a": "🎲",
+       "lang": "en"
+      },
+      {
+       "say": "win",
+       "o": [
+        "🏆",
+        "😞",
+        "🎲"
+       ],
+       "a": "🏆",
+       "lang": "en"
+      },
+      {
+       "say": "lose",
+       "o": [
+        "😞",
+        "🏆",
+        "🔄"
+       ],
+       "a": "😞",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "Let's play a game!",
+       "o": [
+        "هيا نلعب لعبة!",
+        "إنه دورك.",
+        "ارمِ النرد."
+       ],
+       "a": "هيا نلعب لعبة!",
+       "lang": "en"
+      },
+      {
+       "say": "It's your turn.",
+       "o": [
+        "إنه دورك.",
+        "هيا نلعب لعبة!",
+        "ارمِ النرد."
+       ],
+       "a": "إنه دورك.",
+       "lang": "en"
+      },
+      {
+       "say": "Throw the dice.",
+       "o": [
+        "ارمِ النرد.",
+        "هيا نلعب لعبة!",
+        "إنه دورك."
+       ],
+       "a": "ارمِ النرد.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "أكمل",
+   "eyebrow": "الخطوة ٥ — أكمل",
+   "heading": "اختر الكلمة الناقصة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "Let's play a game!",
+       "o": [
+        "Let's",
+        "Lets"
+       ],
+       "a": "Let's",
+       "sayQ": false,
+       "show": "___ play a game!",
+       "lang": "en"
+      },
+      {
+       "say": "It's your turn .",
+       "o": [
+        "turn",
+        "game"
+       ],
+       "a": "turn",
+       "sayQ": false,
+       "show": "It's your ___ .",
+       "lang": "en"
+      },
+      {
+       "say": "Throw the dice .",
+       "o": [
+        "dice",
+        "turn"
+       ],
+       "a": "dice",
+       "sayQ": false,
+       "show": "Throw the ___ .",
+       "lang": "en"
+      }
+     ],
+     "q": "اختر الكلمة المناسبة",
+     "lang": "en"
+    }
+   ],
+   "lead": "للاقتراح: Let's play."
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "game",
+       "o": [
+        "🎲",
+        "😞",
+        "🏆"
+       ],
+       "a": "🎲",
+       "lang": "en"
+      },
+      {
+       "say": "turn",
+       "o": [
+        "🔄",
+        "🏆",
+        "😞"
+       ],
+       "a": "🔄",
+       "lang": "en"
+      },
+      {
+       "say": "dice",
+       "o": [
+        "🎲",
+        "😞",
+        "🔄"
+       ],
+       "a": "🎲",
+       "lang": "en"
+      },
+      {
+       "say": "win",
+       "o": [
+        "🏆",
+        "🎲",
+        "😞"
+       ],
+       "a": "🏆",
+       "lang": "en"
+      },
+      {
+       "say": "Let's play a game!",
+       "o": [
+        "هيا نلعب لعبة!",
+        "إنه دورك.",
+        "ارمِ النرد."
+       ],
+       "a": "هيا نلعب لعبة!",
+       "lang": "en"
+      },
+      {
+       "say": "It's your turn.",
+       "o": [
+        "إنه دورك.",
+        "هيا نلعب لعبة!",
+        "ارمِ النرد."
+       ],
+       "a": "إنه دورك.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

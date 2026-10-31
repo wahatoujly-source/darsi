@@ -1,0 +1,287 @@
+{
+ "id": "en-4-u3-l8",
+ "grade": 4,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 3 · Lesson 8: Races on the Sports Field",
+ "titleAr": "فريقنا هو الفائز!",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "فريقنا هو الفائز!",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "sports field",
+       "ar": "ملعب",
+       "em": "🏟️"
+      },
+      {
+       "id": "v1",
+       "en": "jump",
+       "ar": "يقفز",
+       "em": "🤾"
+      },
+      {
+       "id": "v2",
+       "en": "throw",
+       "ar": "يرمي",
+       "em": "🤾‍♂️"
+      },
+      {
+       "id": "v3",
+       "en": "winner",
+       "ar": "فائز",
+       "em": "🏆"
+      },
+      {
+       "id": "v4",
+       "en": "team",
+       "ar": "فريق",
+       "em": "👥"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 58⁠–⁠59 · كتاب النشاط ص 50⁠–⁠51"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "can / can't",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Our team is the <b>winner</b>!</div><div class=\"ex\">He <b>can</b> jump very high.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Our team is the winner! He can jump very high."
+      }
+     ]
+    }
+   ],
+   "lead": "can للقدرة و can't لعدم القدرة.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "He ___ jump very high.",
+           "a": "can",
+           "o": [
+            "can",
+            "is"
+           ]
+          },
+          {
+           "s": "Our team is the ___ !",
+           "a": "winner",
+           "o": [
+            "winner",
+            "race"
+           ]
+          },
+          {
+           "s": "I can ___ the ball far.",
+           "a": "throw",
+           "o": [
+            "throw",
+            "throws"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Our team is the winner!",
+          "He can jump very high."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Our team is the winner!",
+           "o": [
+            "Our team is the winner!",
+            "He can jump very high."
+           ]
+          },
+          {
+           "a": "He can jump very high.",
+           "o": [
+            "He can jump very high.",
+            "Our team is the winner!"
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "sports field",
+       "ipa": "",
+       "meaning": "ملعب",
+       "ex": "sports field"
+      },
+      {
+       "must": 1,
+       "term": "jump",
+       "ipa": "",
+       "meaning": "يقفز",
+       "ex": "He can jump very high."
+      },
+      {
+       "must": 1,
+       "term": "throw",
+       "ipa": "",
+       "meaning": "يرمي",
+       "ex": "throw"
+      },
+      {
+       "must": 0,
+       "term": "winner",
+       "ipa": "",
+       "meaning": "فائز",
+       "ex": "Our team is the winner!"
+      },
+      {
+       "must": 0,
+       "term": "team",
+       "ipa": "",
+       "meaning": "فريق",
+       "ex": "Our team is the winner!"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "He ___ jump very high.",
+       "a": "can",
+       "o": [
+        "can",
+        "is"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Our team is the ___ !",
+       "a": "winner",
+       "o": [
+        "winner",
+        "race"
+       ],
+       "why": ""
+      },
+      {
+       "q": "I can ___ the ball far.",
+       "a": "throw",
+       "o": [
+        "throw",
+        "throws"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى throw؟",
+       "a": "يرمي",
+       "o": [
+        "يرمي",
+        "ملعب",
+        "يقفز"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى jump؟",
+       "a": "يقفز",
+       "o": [
+        "يقفز",
+        "ملعب",
+        "يرمي"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Our team is the winner!",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Our team is the winner!",
+       "o": [
+        "Our team is the winner!",
+        "He can jump very high."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

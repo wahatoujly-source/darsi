@@ -1,0 +1,287 @@
+{
+ "id": "en-4-u8-l4",
+ "grade": 4,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 8 · Lesson 4: A Pronunciation Game",
+ "titleAr": "cat و hat متقافيتان.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "cat و hat متقافيتان.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "sound",
+       "ar": "صوت",
+       "em": "🔊"
+      },
+      {
+       "id": "v1",
+       "en": "rhyme",
+       "ar": "قافية",
+       "em": "🎵"
+      },
+      {
+       "id": "v2",
+       "en": "cat / hat",
+       "ar": "قطة / قبعة",
+       "em": "🐈"
+      },
+      {
+       "id": "v3",
+       "en": "ship / sheep",
+       "ar": "سفينة / خروف",
+       "em": "🚢"
+      },
+      {
+       "id": "v4",
+       "en": "say",
+       "ar": "يقول",
+       "em": "🗣️"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 125 · كتاب النشاط ص 107"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Short and long sounds",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Cat and <b>hat</b> rhyme.</div><div class=\"ex\">Ship and sheep sound different.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Cat and hat rhyme. Ship and sheep sound different."
+      }
+     ]
+    }
+   ],
+   "lead": "i قصيرة في ship و ee طويلة في sheep.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "Cat rhymes with ___ .",
+           "a": "hat",
+           "o": [
+            "hat",
+            "cup"
+           ]
+          },
+          {
+           "s": "'sheep' has a ___ sound.",
+           "a": "long",
+           "o": [
+            "long",
+            "short"
+           ]
+          },
+          {
+           "s": "'ship' has a ___ sound.",
+           "a": "short",
+           "o": [
+            "short",
+            "long"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Cat and hat rhyme.",
+          "Ship and sheep sound different."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Cat and hat rhyme.",
+           "o": [
+            "Cat and hat rhyme.",
+            "Ship and sheep sound different."
+           ]
+          },
+          {
+           "a": "Ship and sheep sound different.",
+           "o": [
+            "Ship and sheep sound different.",
+            "Cat and hat rhyme."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "sound",
+       "ipa": "",
+       "meaning": "صوت",
+       "ex": "Ship and sheep sound different."
+      },
+      {
+       "must": 1,
+       "term": "rhyme",
+       "ipa": "",
+       "meaning": "قافية",
+       "ex": "Cat and hat rhyme."
+      },
+      {
+       "must": 1,
+       "term": "cat / hat",
+       "ipa": "",
+       "meaning": "قطة / قبعة",
+       "ex": "Cat and hat rhyme."
+      },
+      {
+       "must": 0,
+       "term": "ship / sheep",
+       "ipa": "",
+       "meaning": "سفينة / خروف",
+       "ex": "Ship and sheep sound different."
+      },
+      {
+       "must": 0,
+       "term": "say",
+       "ipa": "",
+       "meaning": "يقول",
+       "ex": "say"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "Cat rhymes with ___ .",
+       "a": "hat",
+       "o": [
+        "hat",
+        "cup"
+       ],
+       "why": ""
+      },
+      {
+       "q": "'sheep' has a ___ sound.",
+       "a": "long",
+       "o": [
+        "long",
+        "short"
+       ],
+       "why": ""
+      },
+      {
+       "q": "'ship' has a ___ sound.",
+       "a": "short",
+       "o": [
+        "short",
+        "long"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى sound؟",
+       "a": "صوت",
+       "o": [
+        "صوت",
+        "قافية",
+        "قطة / قبعة"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى say؟",
+       "a": "يقول",
+       "o": [
+        "يقول",
+        "صوت",
+        "قافية"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Cat and hat rhyme.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Cat and hat rhyme.",
+       "o": [
+        "Cat and hat rhyme.",
+        "Ship and sheep sound different."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

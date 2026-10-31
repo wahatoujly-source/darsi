@@ -1,0 +1,315 @@
+{
+ "id": "en-3-u5-l6",
+ "grade": 3,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "How many rooms?",
+ "titleAr": "الإنجليزية — الصف الثالث",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "How many rooms?",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "rooms",
+       "em": "🚪",
+       "say": "rooms",
+       "sub": "غرف",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "two",
+       "em": "2️⃣",
+       "say": "two",
+       "sub": "اثنان",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "three",
+       "em": "3️⃣",
+       "say": "three",
+       "sub": "ثلاثة",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "four",
+       "em": "4️⃣",
+       "say": "four",
+       "sub": "أربعة",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "flat",
+       "em": "🏢",
+       "say": "flat",
+       "sub": "شقة",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك "
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "How many rooms are there?",
+       "em": "🚪",
+       "say": "How many rooms are there?",
+       "sub": "كم غرفة توجد؟",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "There are four rooms.",
+       "em": "🚪",
+       "say": "There are four rooms.",
+       "sub": "توجد أربع غرف.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "rooms",
+       "o": [
+        "🚪",
+        "3️⃣",
+        "2️⃣"
+       ],
+       "a": "🚪",
+       "lang": "en"
+      },
+      {
+       "say": "two",
+       "o": [
+        "2️⃣",
+        "3️⃣",
+        "🏢"
+       ],
+       "a": "2️⃣",
+       "lang": "en"
+      },
+      {
+       "say": "three",
+       "o": [
+        "3️⃣",
+        "2️⃣",
+        "4️⃣"
+       ],
+       "a": "3️⃣",
+       "lang": "en"
+      },
+      {
+       "say": "four",
+       "o": [
+        "4️⃣",
+        "🚪",
+        "3️⃣"
+       ],
+       "a": "4️⃣",
+       "lang": "en"
+      },
+      {
+       "say": "flat",
+       "o": [
+        "🏢",
+        "2️⃣",
+        "3️⃣"
+       ],
+       "a": "🏢",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "How many rooms are there?",
+       "o": [
+        "كم غرفة توجد؟",
+        "توجد أربع غرف."
+       ],
+       "a": "كم غرفة توجد؟",
+       "lang": "en"
+      },
+      {
+       "say": "There are four rooms.",
+       "o": [
+        "توجد أربع غرف.",
+        "كم غرفة توجد؟"
+       ],
+       "a": "توجد أربع غرف.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "أكمل",
+   "eyebrow": "الخطوة ٥ — أكمل",
+   "heading": "اختر الكلمة الناقصة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "How many rooms are there?",
+       "o": [
+        "many",
+        "much"
+       ],
+       "a": "many",
+       "sayQ": false,
+       "show": "How ___ rooms are there?",
+       "lang": "en"
+      },
+      {
+       "say": "There are four rooms.",
+       "o": [
+        "are",
+        "is"
+       ],
+       "a": "are",
+       "sayQ": false,
+       "show": "There ___ four rooms.",
+       "lang": "en"
+      },
+      {
+       "say": "We live in a flat .",
+       "o": [
+        "flat",
+        "room"
+       ],
+       "a": "flat",
+       "sayQ": false,
+       "show": "We live in a ___ .",
+       "lang": "en"
+      }
+     ],
+     "q": "اختر الكلمة المناسبة",
+     "lang": "en"
+    }
+   ],
+   "lead": "السؤال عن العدد بـ How many."
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "rooms",
+       "o": [
+        "🚪",
+        "3️⃣",
+        "🏢"
+       ],
+       "a": "🚪",
+       "lang": "en"
+      },
+      {
+       "say": "two",
+       "o": [
+        "2️⃣",
+        "4️⃣",
+        "3️⃣"
+       ],
+       "a": "2️⃣",
+       "lang": "en"
+      },
+      {
+       "say": "three",
+       "o": [
+        "3️⃣",
+        "🚪",
+        "4️⃣"
+       ],
+       "a": "3️⃣",
+       "lang": "en"
+      },
+      {
+       "say": "four",
+       "o": [
+        "4️⃣",
+        "🏢",
+        "3️⃣"
+       ],
+       "a": "4️⃣",
+       "lang": "en"
+      },
+      {
+       "say": "How many rooms are there?",
+       "o": [
+        "كم غرفة توجد؟",
+        "توجد أربع غرف."
+       ],
+       "a": "كم غرفة توجد؟",
+       "lang": "en"
+      },
+      {
+       "say": "There are four rooms.",
+       "o": [
+        "توجد أربع غرف.",
+        "كم غرفة توجد؟"
+       ],
+       "a": "توجد أربع غرف.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

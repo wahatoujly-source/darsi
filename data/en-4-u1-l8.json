@@ -1,0 +1,319 @@
+{
+ "id": "en-4-u1-l8",
+ "grade": 4,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 1 · Lesson 8: The Lion and the Mouse",
+ "titleAr": "يمسك الأسد بالفأر.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "يمسك الأسد بالفأر.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "lion",
+       "ar": "أسد",
+       "em": "🦁"
+      },
+      {
+       "id": "v1",
+       "en": "mouse",
+       "ar": "فأر",
+       "em": "🐭"
+      },
+      {
+       "id": "v2",
+       "en": "net",
+       "ar": "شبكة",
+       "em": "🕸️"
+      },
+      {
+       "id": "v3",
+       "en": "help",
+       "ar": "يساعد",
+       "em": "🤝"
+      },
+      {
+       "id": "v4",
+       "en": "small",
+       "ar": "صغير",
+       "em": "🐁"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 22⁠–⁠23 · كتاب النشاط ص 18⁠–⁠19"
+  },
+  {
+   "title": "اقرأ",
+   "eyebrow": "الخطوة ٢ — اقرأ",
+   "heading": "اقرأ واستمع",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "📖 The Lion and the Mouse",
+     "html": "<div class=\"ex\">The lion catches the mouse.</div><div class=\"ex\">Later, the lion is in a net.</div><div class=\"ex\">The mouse bites the net and helps the lion.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "The lion catches the mouse. Later, the lion is in a net. The mouse bites the net and helps the lion."
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط ▶ لتسمع النص."
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٣ — القاعدة",
+   "heading": "Story: present simple",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">The lion <b>catches</b> the mouse.</div><div class=\"ex\">Later, the lion is in a net.</div><div class=\"ex\">The mouse <b>bites</b> the net and helps the lion.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "The lion catches the mouse. Later, the lion is in a net. The mouse bites the net and helps the lion."
+      }
+     ]
+    }
+   ],
+   "lead": "catches, bites, helps — نضيف s أو es مع المفرد الغائب.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٤ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "The lion ___ the mouse.",
+           "a": "catches",
+           "o": [
+            "catches",
+            "catch"
+           ]
+          },
+          {
+           "s": "The mouse ___ the net.",
+           "a": "bites",
+           "o": [
+            "bites",
+            "bite"
+           ]
+          },
+          {
+           "s": "Small friends can ___ too.",
+           "a": "help",
+           "o": [
+            "help",
+            "helps"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "The lion catches the mouse.",
+          "Later, the lion is in a net.",
+          "The mouse bites the net and helps the lion."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "The lion catches the mouse.",
+           "o": [
+            "The lion catches the mouse.",
+            "Later, the lion is in a net.",
+            "The mouse bites the net and helps the lion."
+           ]
+          },
+          {
+           "a": "Later, the lion is in a net.",
+           "o": [
+            "Later, the lion is in a net.",
+            "The lion catches the mouse.",
+            "The mouse bites the net and helps the lion."
+           ]
+          },
+          {
+           "a": "The mouse bites the net and helps the lion.",
+           "o": [
+            "The mouse bites the net and helps the lion.",
+            "The lion catches the mouse.",
+            "Later, the lion is in a net."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٥ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "lion",
+       "ipa": "",
+       "meaning": "أسد",
+       "ex": "The lion catches the mouse."
+      },
+      {
+       "must": 1,
+       "term": "mouse",
+       "ipa": "",
+       "meaning": "فأر",
+       "ex": "The lion catches the mouse."
+      },
+      {
+       "must": 1,
+       "term": "net",
+       "ipa": "",
+       "meaning": "شبكة",
+       "ex": "Later, the lion is in a net."
+      },
+      {
+       "must": 0,
+       "term": "help",
+       "ipa": "",
+       "meaning": "يساعد",
+       "ex": "The mouse bites the net and helps the lion."
+      },
+      {
+       "must": 0,
+       "term": "small",
+       "ipa": "",
+       "meaning": "صغير",
+       "ex": "small"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "The lion ___ the mouse.",
+       "a": "catches",
+       "o": [
+        "catches",
+        "catch"
+       ],
+       "why": ""
+      },
+      {
+       "q": "The mouse ___ the net.",
+       "a": "bites",
+       "o": [
+        "bites",
+        "bite"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Small friends can ___ too.",
+       "a": "help",
+       "o": [
+        "help",
+        "helps"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى net؟",
+       "a": "شبكة",
+       "o": [
+        "شبكة",
+        "أسد",
+        "فأر"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى mouse؟",
+       "a": "فأر",
+       "o": [
+        "فأر",
+        "أسد",
+        "شبكة"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "The lion catches the mouse.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "The lion catches the mouse.",
+       "o": [
+        "The lion catches the mouse.",
+        "Later, the lion is in a net.",
+        "The mouse bites the net and helps the lion."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

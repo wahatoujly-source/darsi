@@ -1,0 +1,315 @@
+{
+ "id": "en-3-u7-l7",
+ "grade": 3,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "On Holiday",
+ "titleAr": "الإنجليزية — الصف الثالث",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "On Holiday",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "holiday",
+       "em": "🏖️",
+       "say": "holiday",
+       "sub": "عطلة",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "beach",
+       "em": "🏝️",
+       "say": "beach",
+       "sub": "شاطئ",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "swimming",
+       "em": "🏊",
+       "say": "swimming",
+       "sub": "يسبح",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "sandcastle",
+       "em": "🏰",
+       "say": "sandcastle",
+       "sub": "قلعة رملية",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "sunglasses",
+       "em": "🕶️",
+       "say": "sunglasses",
+       "sub": "نظارة شمسية",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك "
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "We're on holiday.",
+       "em": "🏖️",
+       "say": "We're on holiday.",
+       "sub": "نحن في عطلة.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "I'm building a sandcastle.",
+       "em": "🏰",
+       "say": "I'm building a sandcastle.",
+       "sub": "أنا أبني قلعة رملية.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "holiday",
+       "o": [
+        "🏖️",
+        "🏊",
+        "🏰"
+       ],
+       "a": "🏖️",
+       "lang": "en"
+      },
+      {
+       "say": "beach",
+       "o": [
+        "🏝️",
+        "🏖️",
+        "🏰"
+       ],
+       "a": "🏝️",
+       "lang": "en"
+      },
+      {
+       "say": "swimming",
+       "o": [
+        "🏊",
+        "🏖️",
+        "🕶️"
+       ],
+       "a": "🏊",
+       "lang": "en"
+      },
+      {
+       "say": "sandcastle",
+       "o": [
+        "🏰",
+        "🏝️",
+        "🏊"
+       ],
+       "a": "🏰",
+       "lang": "en"
+      },
+      {
+       "say": "sunglasses",
+       "o": [
+        "🕶️",
+        "🏊",
+        "🏖️"
+       ],
+       "a": "🕶️",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "We're on holiday.",
+       "o": [
+        "نحن في عطلة.",
+        "أنا أبني قلعة رملية."
+       ],
+       "a": "نحن في عطلة.",
+       "lang": "en"
+      },
+      {
+       "say": "I'm building a sandcastle.",
+       "o": [
+        "أنا أبني قلعة رملية.",
+        "نحن في عطلة."
+       ],
+       "a": "أنا أبني قلعة رملية.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "أكمل",
+   "eyebrow": "الخطوة ٥ — أكمل",
+   "heading": "اختر الكلمة الناقصة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "We're on holiday.",
+       "o": [
+        "on",
+        "in"
+       ],
+       "a": "on",
+       "sayQ": false,
+       "show": "We're ___ holiday.",
+       "lang": "en"
+      },
+      {
+       "say": "I'm building a sandcastle.",
+       "o": [
+        "building",
+        "build"
+       ],
+       "a": "building",
+       "sayQ": false,
+       "show": "I'm ___ a sandcastle.",
+       "lang": "en"
+      },
+      {
+       "say": "Dad is swimming in the sea.",
+       "o": [
+        "swimming",
+        "swim"
+       ],
+       "a": "swimming",
+       "sayQ": false,
+       "show": "Dad is ___ in the sea.",
+       "lang": "en"
+      }
+     ],
+     "q": "اختر الكلمة المناسبة",
+     "lang": "en"
+    }
+   ],
+   "lead": "We're … / I'm …ing"
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "holiday",
+       "o": [
+        "🏖️",
+        "🕶️",
+        "🏝️"
+       ],
+       "a": "🏖️",
+       "lang": "en"
+      },
+      {
+       "say": "beach",
+       "o": [
+        "🏝️",
+        "🕶️",
+        "🏖️"
+       ],
+       "a": "🏝️",
+       "lang": "en"
+      },
+      {
+       "say": "swimming",
+       "o": [
+        "🏊",
+        "🏖️",
+        "🏝️"
+       ],
+       "a": "🏊",
+       "lang": "en"
+      },
+      {
+       "say": "sandcastle",
+       "o": [
+        "🏰",
+        "🕶️",
+        "🏝️"
+       ],
+       "a": "🏰",
+       "lang": "en"
+      },
+      {
+       "say": "We're on holiday.",
+       "o": [
+        "نحن في عطلة.",
+        "أنا أبني قلعة رملية."
+       ],
+       "a": "نحن في عطلة.",
+       "lang": "en"
+      },
+      {
+       "say": "I'm building a sandcastle.",
+       "o": [
+        "أنا أبني قلعة رملية.",
+        "نحن في عطلة."
+       ],
+       "a": "أنا أبني قلعة رملية.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

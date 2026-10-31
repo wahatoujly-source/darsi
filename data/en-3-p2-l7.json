@@ -1,0 +1,337 @@
+{
+ "id": "en-3-p2-l7",
+ "grade": 3,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "Guess what it is!",
+ "titleAr": "الإنجليزية — الصف الثالث",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "Guess what it is!",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "animal",
+       "em": "🐾",
+       "say": "animal",
+       "sub": "حيوان",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "fruit",
+       "em": "🍎",
+       "say": "fruit",
+       "sub": "فاكهة",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "long",
+       "em": "📏",
+       "say": "long",
+       "sub": "طويل",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "round",
+       "em": "⚪",
+       "say": "round",
+       "sub": "مستدير",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "guess",
+       "em": "🤔",
+       "say": "guess",
+       "sub": "يخمّن",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك كتاب التلميذ ص 38⁠–⁠39"
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "It's an animal. It's very tall.",
+       "em": "🐾",
+       "say": "It's an animal. It's very tall.",
+       "sub": "إنه حيوان. طويل جداً.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "Is it a giraffe?",
+       "em": "🐾",
+       "say": "Is it a giraffe?",
+       "sub": "هل هي زرافة؟",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "Yes, it is!",
+       "em": "🐾",
+       "say": "Yes, it is!",
+       "sub": "نعم!",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "animal",
+       "o": [
+        "🐾",
+        "🍎",
+        "📏"
+       ],
+       "a": "🐾",
+       "lang": "en"
+      },
+      {
+       "say": "fruit",
+       "o": [
+        "🍎",
+        "🐾",
+        "📏"
+       ],
+       "a": "🍎",
+       "lang": "en"
+      },
+      {
+       "say": "long",
+       "o": [
+        "📏",
+        "⚪",
+        "🐾"
+       ],
+       "a": "📏",
+       "lang": "en"
+      },
+      {
+       "say": "round",
+       "o": [
+        "⚪",
+        "🍎",
+        "🤔"
+       ],
+       "a": "⚪",
+       "lang": "en"
+      },
+      {
+       "say": "guess",
+       "o": [
+        "🤔",
+        "🐾",
+        "🍎"
+       ],
+       "a": "🤔",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "It's an animal. It's very tall.",
+       "o": [
+        "إنه حيوان. طويل جداً.",
+        "هل هي زرافة؟",
+        "نعم!"
+       ],
+       "a": "إنه حيوان. طويل جداً.",
+       "lang": "en"
+      },
+      {
+       "say": "Is it a giraffe?",
+       "o": [
+        "هل هي زرافة؟",
+        "إنه حيوان. طويل جداً.",
+        "نعم!"
+       ],
+       "a": "هل هي زرافة؟",
+       "lang": "en"
+      },
+      {
+       "say": "Yes, it is!",
+       "o": [
+        "نعم!",
+        "إنه حيوان. طويل جداً.",
+        "هل هي زرافة؟"
+       ],
+       "a": "نعم!",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "أكمل",
+   "eyebrow": "الخطوة ٥ — أكمل",
+   "heading": "اختر الكلمة الناقصة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "Is it a giraffe?",
+       "o": [
+        "Is",
+        "Are"
+       ],
+       "a": "Is",
+       "sayQ": false,
+       "show": "___ it a giraffe?",
+       "lang": "en"
+      },
+      {
+       "say": "No, it isn't .",
+       "o": [
+        "isn't",
+        "aren't"
+       ],
+       "a": "isn't",
+       "sayQ": false,
+       "show": "No, it ___ .",
+       "lang": "en"
+      },
+      {
+       "say": "An apple is round .",
+       "o": [
+        "round",
+        "long"
+       ],
+       "a": "round",
+       "sayQ": false,
+       "show": "An apple is ___ .",
+       "lang": "en"
+      }
+     ],
+     "q": "اختر الكلمة المناسبة",
+     "lang": "en"
+    }
+   ],
+   "lead": "نخمّن بالسؤال Is it a …? ونجيب Yes, it is / No, it isn't."
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "animal",
+       "o": [
+        "🐾",
+        "🍎",
+        "🤔"
+       ],
+       "a": "🐾",
+       "lang": "en"
+      },
+      {
+       "say": "fruit",
+       "o": [
+        "🍎",
+        "⚪",
+        "🤔"
+       ],
+       "a": "🍎",
+       "lang": "en"
+      },
+      {
+       "say": "long",
+       "o": [
+        "📏",
+        "🐾",
+        "🍎"
+       ],
+       "a": "📏",
+       "lang": "en"
+      },
+      {
+       "say": "round",
+       "o": [
+        "⚪",
+        "🍎",
+        "🐾"
+       ],
+       "a": "⚪",
+       "lang": "en"
+      },
+      {
+       "say": "It's an animal. It's very tall.",
+       "o": [
+        "إنه حيوان. طويل جداً.",
+        "هل هي زرافة؟",
+        "نعم!"
+       ],
+       "a": "إنه حيوان. طويل جداً.",
+       "lang": "en"
+      },
+      {
+       "say": "Is it a giraffe?",
+       "o": [
+        "هل هي زرافة؟",
+        "إنه حيوان. طويل جداً.",
+        "نعم!"
+       ],
+       "a": "هل هي زرافة؟",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

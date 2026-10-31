@@ -1,0 +1,297 @@
+{
+ "id": "en-3-p2-l4",
+ "grade": 3,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "Different Days",
+ "titleAr": "الإنجليزية — الصف الثالث",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "Different Days",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "weekend",
+       "em": "📅",
+       "say": "weekend",
+       "sub": "عطلة نهاية الأسبوع",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "Friday",
+       "em": "🕌",
+       "say": "Friday",
+       "sub": "الجمعة",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "Saturday",
+       "em": "6️⃣",
+       "say": "Saturday",
+       "sub": "السبت",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "holiday",
+       "em": "🏖️",
+       "say": "holiday",
+       "sub": "عطلة",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك كتاب التلميذ ص 32⁠–⁠33"
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "Our weekend is Friday and Saturday.",
+       "em": "📅",
+       "say": "Our weekend is Friday and Saturday.",
+       "sub": "عطلتنا الجمعة والسبت.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "In the UK, the weekend is Saturday and Sunday.",
+       "em": "📅",
+       "say": "In the UK, the weekend is Saturday and Sunday.",
+       "sub": "في بريطانيا العطلة السبت والأحد.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "weekend",
+       "o": [
+        "📅",
+        "6️⃣",
+        "🕌"
+       ],
+       "a": "📅",
+       "lang": "en"
+      },
+      {
+       "say": "Friday",
+       "o": [
+        "🕌",
+        "📅",
+        "🏖️"
+       ],
+       "a": "🕌",
+       "lang": "en"
+      },
+      {
+       "say": "Saturday",
+       "o": [
+        "6️⃣",
+        "🕌",
+        "🏖️"
+       ],
+       "a": "6️⃣",
+       "lang": "en"
+      },
+      {
+       "say": "holiday",
+       "o": [
+        "🏖️",
+        "📅",
+        "🕌"
+       ],
+       "a": "🏖️",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "Our weekend is Friday and Saturday.",
+       "o": [
+        "عطلتنا الجمعة والسبت.",
+        "في بريطانيا العطلة السبت والأحد."
+       ],
+       "a": "عطلتنا الجمعة والسبت.",
+       "lang": "en"
+      },
+      {
+       "say": "In the UK, the weekend is Saturday and Sunday.",
+       "o": [
+        "في بريطانيا العطلة السبت والأحد.",
+        "عطلتنا الجمعة والسبت."
+       ],
+       "a": "في بريطانيا العطلة السبت والأحد.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "أكمل",
+   "eyebrow": "الخطوة ٥ — أكمل",
+   "heading": "اختر الكلمة الناقصة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "Our weekend is Friday and Saturday .",
+       "o": [
+        "Saturday",
+        "Monday"
+       ],
+       "a": "Saturday",
+       "sayQ": false,
+       "show": "Our weekend is Friday and ___ .",
+       "lang": "en"
+      },
+      {
+       "say": "Days start with a capital letter.",
+       "o": [
+        "capital",
+        "small"
+       ],
+       "a": "capital",
+       "sayQ": false,
+       "show": "Days start with a ___ letter.",
+       "lang": "en"
+      },
+      {
+       "say": "On Friday we go to the mosque.",
+       "o": [
+        "Friday",
+        "Tuesday"
+       ],
+       "a": "Friday",
+       "sayQ": false,
+       "show": "On ___ we go to the mosque.",
+       "lang": "en"
+      }
+     ],
+     "q": "اختر الكلمة المناسبة",
+     "lang": "en"
+    }
+   ],
+   "lead": "أيام الأسبوع تبدأ بحرف كبير: Friday."
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "weekend",
+       "o": [
+        "📅",
+        "6️⃣",
+        "🏖️"
+       ],
+       "a": "📅",
+       "lang": "en"
+      },
+      {
+       "say": "Friday",
+       "o": [
+        "🕌",
+        "6️⃣",
+        "📅"
+       ],
+       "a": "🕌",
+       "lang": "en"
+      },
+      {
+       "say": "Saturday",
+       "o": [
+        "6️⃣",
+        "📅",
+        "🏖️"
+       ],
+       "a": "6️⃣",
+       "lang": "en"
+      },
+      {
+       "say": "holiday",
+       "o": [
+        "🏖️",
+        "6️⃣",
+        "🕌"
+       ],
+       "a": "🏖️",
+       "lang": "en"
+      },
+      {
+       "say": "Our weekend is Friday and Saturday.",
+       "o": [
+        "عطلتنا الجمعة والسبت.",
+        "في بريطانيا العطلة السبت والأحد."
+       ],
+       "a": "عطلتنا الجمعة والسبت.",
+       "lang": "en"
+      },
+      {
+       "say": "In the UK, the weekend is Saturday and Sunday.",
+       "o": [
+        "في بريطانيا العطلة السبت والأحد.",
+        "عطلتنا الجمعة والسبت."
+       ],
+       "a": "في بريطانيا العطلة السبت والأحد.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

@@ -4,12 +4,12 @@
  "subject": "en",
  "stage": "primary-1-3",
  "lang": "en",
- "title": "Unit 1 · Lesson 2: I can't …",
- "titleAr": "الوحدة الأولى: في الحديقة — الدرس الثاني: لا أستطيع …",
+ "title": "I can't …",
+ "titleAr": "الإنجليزية — الصف الثالث",
  "steps": [
   {
-   "title": "تكلّم",
-   "eyebrow": "الخطوة ١ — تكلّم",
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
    "heading": "I can't …",
    "blocks": [
     {
@@ -17,251 +17,230 @@
      "star": true,
      "items": [
       {
-       "t": "I can't skip.",
-       "em": "🪢🚫",
-       "say": "I can't skip.",
-       "sub": "لا أستطيع نط الحبل",
+       "t": "fly",
+       "em": "🕊️",
+       "say": "fly",
+       "sub": "يطير",
+       "lang": "en",
        "must": 1
       },
       {
-       "t": "I can't cycle.",
-       "em": "🚲🚫",
-       "say": "I can't cycle.",
-       "sub": "لا أستطيع ركوب الدراجة",
+       "t": "skip",
+       "em": "🪢",
+       "say": "skip",
+       "sub": "يقفز بالحبل",
+       "lang": "en",
        "must": 1
       },
       {
-       "t": "I can't sing.",
-       "em": "🎤🚫",
-       "say": "I can't sing.",
-       "sub": "لا أستطيع الغناء",
+       "t": "skate",
+       "em": "⛸️",
+       "say": "skate",
+       "sub": "يتزلج",
+       "lang": "en",
        "must": 1
       },
       {
-       "t": "I can't hop.",
-       "em": "🐇🚫",
-       "say": "I can't hop.",
-       "sub": "لا أستطيع الحجل",
+       "t": "sing",
+       "em": "🎤",
+       "say": "sing",
+       "sub": "يغني",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "dance",
+       "em": "💃",
+       "say": "dance",
+       "sub": "يرقص",
+       "lang": "en",
        "must": 1
       }
      ],
      "lang": "en"
     }
    ],
-   "lead": "اسمع وردّد. can't = لا أستطيع. كتابك ص 10."
+   "lead": "اضغط على كل بطاقة واسمع. كتابك كتاب التلميذ ص 10⁠–⁠11"
   },
   {
-   "title": "can أم can't",
-   "eyebrow": "الخطوة ٢ — can أم can't",
-   "heading": "can or can't?",
-   "blocks": [
-    {
-     "type": "game",
-     "star": true,
-     "items": [
-      {
-       "q": "🏊👍 I ... swim.",
-       "o": [
-        "can",
-        "can't"
-       ],
-       "a": "can",
-       "show": "🏊👍"
-      },
-      {
-       "q": "🚲🚫 I ... cycle.",
-       "o": [
-        "can't",
-        "can"
-       ],
-       "a": "can't",
-       "show": "🚲🚫"
-      },
-      {
-       "q": "🎤👍 I ... sing.",
-       "o": [
-        "can",
-        "can't"
-       ],
-       "a": "can",
-       "show": "🎤👍"
-      },
-      {
-       "q": "🪢🚫 I ... skip.",
-       "o": [
-        "can't",
-        "can"
-       ],
-       "a": "can't",
-       "show": "🪢🚫"
-      }
-     ],
-     "q": "can أم can't؟"
-    }
-   ],
-   "lead": "👍 = can و 🚫 = can't"
-  },
-  {
-   "title": "الألوان",
-   "eyebrow": "الخطوة ٣ — الألوان",
-   "heading": "Colours",
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
    "blocks": [
     {
      "type": "cards",
      "star": true,
      "items": [
       {
-       "t": "red",
-       "em": "🔴",
-       "say": "red",
-       "sub": "أحمر",
+       "t": "I can't fly.",
+       "em": "🕊️",
+       "say": "I can't fly.",
+       "sub": "لا أستطيع أن أطير.",
+       "lang": "en",
        "must": 1
       },
       {
-       "t": "blue",
-       "em": "🔵",
-       "say": "blue",
-       "sub": "أزرق",
+       "t": "Can you skate? No, I can't.",
+       "em": "⛸️",
+       "say": "Can you skate? No, I can't.",
+       "sub": "هل تستطيع التزلج؟ لا.",
+       "lang": "en",
        "must": 1
-      },
-      {
-       "t": "yellow",
-       "em": "🟡",
-       "say": "yellow",
-       "sub": "أصفر",
-       "must": 1
-      },
-      {
-       "t": "pink",
-       "em": "🩷",
-       "say": "pink",
-       "sub": "وردي",
-       "must": 1
-      },
-      {
-       "t": "orange",
-       "em": "🟠",
-       "say": "orange",
-       "sub": "برتقالي",
-       "must": 1
-      },
-      {
-       "t": "green",
-       "em": "🟢",
-       "say": "green",
-       "sub": "أخضر",
-       "must": 1
-      },
-      {
-       "t": "white",
-       "em": "⚪",
-       "say": "white",
-       "sub": "أبيض",
-       "must": 1
-      },
-      {
-       "t": "brown",
-       "em": "🟤",
-       "say": "brown",
-       "sub": "بني",
-       "must": 1
-      },
-      {
-       "t": "grey",
-       "em": "🩶",
-       "say": "grey",
-       "sub": "رمادي"
-      },
-      {
-       "t": "purple",
-       "em": "🟣",
-       "say": "purple",
-       "sub": "بنفسجي"
-      },
-      {
-       "t": "black",
-       "em": "⚫",
-       "say": "black",
-       "sub": "أسود"
       }
      ],
-     "lang": "en",
-     "need": 9
+     "lang": "en"
     }
    ],
-   "lead": "اضغط على كل لون واسمع. كتابك ص 11."
+   "lead": "اسمع الجملة وردّدها."
   },
   {
    "title": "العب",
-   "eyebrow": "الخطوة ٤ — العب",
-   "heading": "What colour is it?",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
    "blocks": [
     {
      "type": "game",
      "star": true,
      "items": [
       {
-       "q": "What colour is a zebra?",
+       "say": "fly",
        "o": [
-        "black and white",
-        "red and blue"
+        "🕊️",
+        "⛸️",
+        "💃"
        ],
-       "a": "black and white",
-       "show": "🦓"
+       "a": "🕊️",
+       "lang": "en"
       },
       {
-       "q": "What colour is a tomato?",
+       "say": "skip",
        "o": [
-        "red",
-        "blue"
+        "🪢",
+        "🎤",
+        "⛸️"
        ],
-       "a": "red",
-       "show": "🍅"
+       "a": "🪢",
+       "lang": "en"
       },
       {
-       "q": "What colour is a carrot?",
+       "say": "skate",
        "o": [
-        "orange",
-        "green"
+        "⛸️",
+        "🪢",
+        "💃"
        ],
-       "a": "orange",
-       "show": "🥕"
+       "a": "⛸️",
+       "lang": "en"
       },
       {
-       "q": "What colour is milk?",
+       "say": "sing",
        "o": [
-        "white",
-        "black"
+        "🎤",
+        "🕊️",
+        "🪢"
        ],
-       "a": "white",
-       "show": "🥛"
+       "a": "🎤",
+       "lang": "en"
       },
       {
-       "q": "What colour is a lemon?",
+       "say": "dance",
        "o": [
-        "yellow",
-        "purple"
+        "💃",
+        "⛸️",
+        "🎤"
        ],
-       "a": "yellow",
-       "show": "🍋"
-      },
-      {
-       "q": "What colour is an elephant?",
-       "o": [
-        "grey",
-        "pink"
-       ],
-       "a": "grey",
-       "show": "🐘"
+       "a": "💃",
+       "lang": "en"
       }
      ],
-     "q": "اختر اللون"
+     "lang": "en"
     }
    ]
   },
   {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "I can't fly.",
+       "o": [
+        "لا أستطيع أن أطير.",
+        "هل تستطيع التزلج؟ لا."
+       ],
+       "a": "لا أستطيع أن أطير.",
+       "lang": "en"
+      },
+      {
+       "say": "Can you skate? No, I can't.",
+       "o": [
+        "هل تستطيع التزلج؟ لا.",
+        "لا أستطيع أن أطير."
+       ],
+       "a": "هل تستطيع التزلج؟ لا.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "أكمل",
+   "eyebrow": "الخطوة ٥ — أكمل",
+   "heading": "اختر الكلمة الناقصة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "I can't fly.",
+       "o": [
+        "can't",
+        "can"
+       ],
+       "a": "can't",
+       "sayQ": false,
+       "show": "I ___ fly.",
+       "lang": "en"
+      },
+      {
+       "say": "Can you skip? Yes, I can .",
+       "o": [
+        "can",
+        "can't"
+       ],
+       "a": "can",
+       "sayQ": false,
+       "show": "Can you skip? Yes, I ___ .",
+       "lang": "en"
+      },
+      {
+       "say": "Birds can fly .",
+       "o": [
+        "fly",
+        "swim"
+       ],
+       "a": "fly",
+       "sayQ": false,
+       "show": "Birds can ___ .",
+       "lang": "en"
+      }
+     ],
+     "q": "اختر الكلمة المناسبة",
+     "lang": "en"
+    }
+   ],
+   "lead": "can't = cannot لعدم القدرة."
+  },
+  {
    "title": "اختبار",
-   "eyebrow": "الخطوة ٥ — اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
    "heading": "اختبر نفسك",
    "blocks": [
     {
@@ -269,57 +248,66 @@
      "star": true,
      "items": [
       {
-       "say": "green",
+       "say": "fly",
        "o": [
-        "🟢",
-        "🔴",
-        "🔵"
+        "🕊️",
+        "🎤",
+        "🪢"
        ],
-       "a": "🟢",
+       "a": "🕊️",
        "lang": "en"
       },
       {
-       "say": "purple",
+       "say": "skip",
        "o": [
-        "🟣",
-        "🟤",
-        "🩷"
+        "🪢",
+        "⛸️",
+        "💃"
        ],
-       "a": "🟣",
+       "a": "🪢",
        "lang": "en"
       },
       {
-       "say": "I can't cycle.",
+       "say": "skate",
        "o": [
-        "🚲🚫",
-        "🚲👍"
+        "⛸️",
+        "🪢",
+        "💃"
        ],
-       "a": "🚲🚫",
+       "a": "⛸️",
        "lang": "en"
       },
       {
-       "q": "What colour is a penguin?",
+       "say": "sing",
        "o": [
-        "black and white",
-        "green"
+        "🎤",
+        "🕊️",
+        "⛸️"
        ],
-       "a": "black and white",
-       "show": "🐧"
+       "a": "🎤",
+       "lang": "en"
       },
       {
-       "say": "brown",
+       "say": "I can't fly.",
        "o": [
-        "🟤",
-        "⚫",
-        "🟠"
+        "لا أستطيع أن أطير.",
+        "هل تستطيع التزلج؟ لا."
        ],
-       "a": "🟤",
+       "a": "لا أستطيع أن أطير.",
+       "lang": "en"
+      },
+      {
+       "say": "Can you skate? No, I can't.",
+       "o": [
+        "هل تستطيع التزلج؟ لا.",
+        "لا أستطيع أن أطير."
+       ],
+       "a": "هل تستطيع التزلج؟ لا.",
        "lang": "en"
       }
      ],
      "final": true,
-     "lang": "en",
-     "pass": 3
+     "lang": "en"
     }
    ]
   }

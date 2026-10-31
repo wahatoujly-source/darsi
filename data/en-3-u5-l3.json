@@ -1,0 +1,315 @@
+{
+ "id": "en-3-u5-l3",
+ "grade": 3,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "Do we have any?",
+ "titleAr": "الإنجليزية — الصف الثالث",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "Do we have any?",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "any",
+       "em": "❓",
+       "say": "any",
+       "sub": "أي",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "some",
+       "em": "➕",
+       "say": "some",
+       "sub": "بعض",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "flour",
+       "em": "🌾",
+       "say": "flour",
+       "sub": "طحين",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "tomatoes",
+       "em": "🍅",
+       "say": "tomatoes",
+       "sub": "طماطم",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "oil",
+       "em": "🫒",
+       "say": "oil",
+       "sub": "زيت",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك "
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "Do we have any flour?",
+       "em": "❓",
+       "say": "Do we have any flour?",
+       "sub": "هل لدينا طحين؟",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "Yes, we have some.",
+       "em": "➕",
+       "say": "Yes, we have some.",
+       "sub": "نعم، لدينا بعض.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "any",
+       "o": [
+        "❓",
+        "➕",
+        "🍅"
+       ],
+       "a": "❓",
+       "lang": "en"
+      },
+      {
+       "say": "some",
+       "o": [
+        "➕",
+        "🍅",
+        "🌾"
+       ],
+       "a": "➕",
+       "lang": "en"
+      },
+      {
+       "say": "flour",
+       "o": [
+        "🌾",
+        "➕",
+        "❓"
+       ],
+       "a": "🌾",
+       "lang": "en"
+      },
+      {
+       "say": "tomatoes",
+       "o": [
+        "🍅",
+        "❓",
+        "🫒"
+       ],
+       "a": "🍅",
+       "lang": "en"
+      },
+      {
+       "say": "oil",
+       "o": [
+        "🫒",
+        "❓",
+        "🌾"
+       ],
+       "a": "🫒",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "Do we have any flour?",
+       "o": [
+        "هل لدينا طحين؟",
+        "نعم، لدينا بعض."
+       ],
+       "a": "هل لدينا طحين؟",
+       "lang": "en"
+      },
+      {
+       "say": "Yes, we have some.",
+       "o": [
+        "نعم، لدينا بعض.",
+        "هل لدينا طحين؟"
+       ],
+       "a": "نعم، لدينا بعض.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "أكمل",
+   "eyebrow": "الخطوة ٥ — أكمل",
+   "heading": "اختر الكلمة الناقصة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "Do we have any oil?",
+       "o": [
+        "any",
+        "some"
+       ],
+       "a": "any",
+       "sayQ": false,
+       "show": "Do we have ___ oil?",
+       "lang": "en"
+      },
+      {
+       "say": "Yes, we have some .",
+       "o": [
+        "some",
+        "any"
+       ],
+       "a": "some",
+       "sayQ": false,
+       "show": "Yes, we have ___ .",
+       "lang": "en"
+      },
+      {
+       "say": "We don't have any tomatoes.",
+       "o": [
+        "any",
+        "some"
+       ],
+       "a": "any",
+       "sayQ": false,
+       "show": "We don't have ___ tomatoes.",
+       "lang": "en"
+      }
+     ],
+     "q": "اختر الكلمة المناسبة",
+     "lang": "en"
+    }
+   ],
+   "lead": "any في السؤال والنفي، و some في الإثبات."
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "any",
+       "o": [
+        "❓",
+        "🌾",
+        "🫒"
+       ],
+       "a": "❓",
+       "lang": "en"
+      },
+      {
+       "say": "some",
+       "o": [
+        "➕",
+        "🫒",
+        "🌾"
+       ],
+       "a": "➕",
+       "lang": "en"
+      },
+      {
+       "say": "flour",
+       "o": [
+        "🌾",
+        "🍅",
+        "❓"
+       ],
+       "a": "🌾",
+       "lang": "en"
+      },
+      {
+       "say": "tomatoes",
+       "o": [
+        "🍅",
+        "➕",
+        "🫒"
+       ],
+       "a": "🍅",
+       "lang": "en"
+      },
+      {
+       "say": "Do we have any flour?",
+       "o": [
+        "هل لدينا طحين؟",
+        "نعم، لدينا بعض."
+       ],
+       "a": "هل لدينا طحين؟",
+       "lang": "en"
+      },
+      {
+       "say": "Yes, we have some.",
+       "o": [
+        "نعم، لدينا بعض.",
+        "هل لدينا طحين؟"
+       ],
+       "a": "نعم، لدينا بعض.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

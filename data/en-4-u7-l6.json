@@ -1,0 +1,287 @@
+{
+ "id": "en-4-u7-l6",
+ "grade": 4,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 7 · Lesson 6: Maths and Art",
+ "titleAr": "خمسة زائد ثلاثة تساوي ثمانية.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "خمسة زائد ثلاثة تساوي ثمانية.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "add",
+       "ar": "يجمع",
+       "em": "➕"
+      },
+      {
+       "id": "v1",
+       "en": "take away",
+       "ar": "يطرح",
+       "em": "➖"
+      },
+      {
+       "id": "v2",
+       "en": "shape",
+       "ar": "شكل",
+       "em": "🔷"
+      },
+      {
+       "id": "v3",
+       "en": "triangle",
+       "ar": "مثلث",
+       "em": "🔺"
+      },
+      {
+       "id": "v4",
+       "en": "circle",
+       "ar": "دائرة",
+       "em": "⚪"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 114⁠–⁠115 · كتاب النشاط ص 98⁠–⁠99"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Maths words",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Five add three is <b>eight</b>.</div><div class=\"ex\">Draw a <b>triangle</b> and a circle.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Five add three is eight. Draw a triangle and a circle."
+      }
+     ]
+    }
+   ],
+   "lead": "add (+) و take away (−).",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "Five add three is ___ .",
+           "a": "eight",
+           "o": [
+            "eight",
+            "two"
+           ]
+          },
+          {
+           "s": "Nine take away four is ___ .",
+           "a": "five",
+           "o": [
+            "five",
+            "thirteen"
+           ]
+          },
+          {
+           "s": "A ___ has three sides.",
+           "a": "triangle",
+           "o": [
+            "triangle",
+            "circle"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Five add three is eight.",
+          "Draw a triangle and a circle."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Five add three is eight.",
+           "o": [
+            "Five add three is eight.",
+            "Draw a triangle and a circle."
+           ]
+          },
+          {
+           "a": "Draw a triangle and a circle.",
+           "o": [
+            "Draw a triangle and a circle.",
+            "Five add three is eight."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "add",
+       "ipa": "",
+       "meaning": "يجمع",
+       "ex": "Five add three is eight."
+      },
+      {
+       "must": 1,
+       "term": "take away",
+       "ipa": "",
+       "meaning": "يطرح",
+       "ex": "take away"
+      },
+      {
+       "must": 1,
+       "term": "shape",
+       "ipa": "",
+       "meaning": "شكل",
+       "ex": "shape"
+      },
+      {
+       "must": 0,
+       "term": "triangle",
+       "ipa": "",
+       "meaning": "مثلث",
+       "ex": "Draw a triangle and a circle."
+      },
+      {
+       "must": 0,
+       "term": "circle",
+       "ipa": "",
+       "meaning": "دائرة",
+       "ex": "Draw a triangle and a circle."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "Five add three is ___ .",
+       "a": "eight",
+       "o": [
+        "eight",
+        "two"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Nine take away four is ___ .",
+       "a": "five",
+       "o": [
+        "five",
+        "thirteen"
+       ],
+       "why": ""
+      },
+      {
+       "q": "A ___ has three sides.",
+       "a": "triangle",
+       "o": [
+        "triangle",
+        "circle"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى add؟",
+       "a": "يجمع",
+       "o": [
+        "يجمع",
+        "يطرح",
+        "شكل"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى shape؟",
+       "a": "شكل",
+       "o": [
+        "شكل",
+        "يجمع",
+        "يطرح"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Five add three is eight.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Five add three is eight.",
+       "o": [
+        "Five add three is eight.",
+        "Draw a triangle and a circle."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

@@ -4,44 +4,32 @@
  "subject": "en",
  "stage": "primary-1-3",
  "lang": "en",
- "title": "Unit 1 · Lesson 2: My Classroom",
- "titleAr": "الوحدة الأولى: في المدرسة — الدرس الثاني: فصلي",
+ "title": "My Classroom",
+ "titleAr": "الإنجليزية — الصف الثالث",
  "steps": [
   {
-   "title": "المفردات",
-   "eyebrow": "الخطوة ١ — المفردات",
-   "heading": "Classroom objects",
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "My Classroom",
    "blocks": [
     {
      "type": "cards",
      "star": true,
      "items": [
       {
-       "t": "chair",
-       "em": "🪑",
-       "say": "chair",
-       "sub": "كرسي",
+       "t": "board",
+       "em": "🟩",
+       "say": "board",
+       "sub": "سبورة",
+       "lang": "en",
        "must": 1
       },
       {
        "t": "desk",
-       "em": "🗄️",
+       "em": "🪑",
        "say": "desk",
        "sub": "مكتب",
-       "must": 1
-      },
-      {
-       "t": "ruler",
-       "em": "📏",
-       "say": "ruler",
-       "sub": "مسطرة",
-       "must": 1
-      },
-      {
-       "t": "pen",
-       "em": "🖊️",
-       "say": "pen",
-       "sub": "قلم حبر",
+       "lang": "en",
        "must": 1
       },
       {
@@ -49,6 +37,15 @@
        "em": "✏️",
        "say": "pencil",
        "sub": "قلم رصاص",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "ruler",
+       "em": "📏",
+       "say": "ruler",
+       "sub": "مسطرة",
+       "lang": "en",
        "must": 1
       },
       {
@@ -56,287 +53,208 @@
        "em": "🧽",
        "say": "rubber",
        "sub": "ممحاة",
+       "lang": "en",
        "must": 1
       },
       {
-       "t": "board",
-       "em": "🧑‍🏫",
-       "say": "board",
-       "sub": "سبورة",
+       "t": "book",
+       "em": "📕",
+       "say": "book",
+       "sub": "كتاب",
+       "lang": "en",
        "must": 1
-      },
-      {
-       "t": "marker",
-       "em": "🖍️",
-       "say": "marker",
-       "sub": "قلم سبورة",
-       "must": 1
-      },
-      {
-       "t": "notebook",
-       "em": "📓",
-       "say": "notebook",
-       "sub": "دفتر"
-      },
-      {
-       "t": "pencil case",
-       "em": "👝",
-       "say": "pencil case",
-       "sub": "مقلمة"
-      },
-      {
-       "t": "crayon",
-       "em": "🖍️",
-       "say": "crayon",
-       "sub": "قلم تلوين"
-      },
-      {
-       "t": "paper",
-       "em": "📄",
-       "say": "paper",
-       "sub": "ورق"
-      }
-     ],
-     "lang": "en",
-     "need": 9
-    }
-   ],
-   "lead": "اضغط على كل صورة واسمع الكلمة. كتاب النشاط ص 7–9."
-  },
-  {
-   "title": "العب",
-   "eyebrow": "الخطوة ٢ — العب",
-   "heading": "What's this?",
-   "blocks": [
-    {
-     "type": "game",
-     "star": true,
-     "items": [
-      {
-       "say": "chair",
-       "o": [
-        "🪑",
-        "🗄️",
-        "📏"
-       ],
-       "a": "🪑",
-       "lang": "en"
-      },
-      {
-       "say": "desk",
-       "o": [
-        "🗄️",
-        "📏",
-        "🖊️"
-       ],
-       "a": "🗄️",
-       "lang": "en"
-      },
-      {
-       "say": "ruler",
-       "o": [
-        "📏",
-        "🖊️",
-        "✏️"
-       ],
-       "a": "📏",
-       "lang": "en"
-      },
-      {
-       "say": "pen",
-       "o": [
-        "🖊️",
-        "✏️",
-        "🧽"
-       ],
-       "a": "🖊️",
-       "lang": "en"
-      },
-      {
-       "say": "pencil",
-       "o": [
-        "✏️",
-        "🪑",
-        "🗄️"
-       ],
-       "a": "✏️",
-       "lang": "en"
-      },
-      {
-       "say": "rubber",
-       "o": [
-        "🧽",
-        "🗄️",
-        "📏"
-       ],
-       "a": "🧽",
-       "lang": "en"
-      },
-      {
-       "say": "board",
-       "o": [
-        "🧑‍🏫",
-        "📏",
-        "🖊️"
-       ],
-       "a": "🧑‍🏫",
-       "lang": "en"
-      },
-      {
-       "say": "marker",
-       "o": [
-        "🖍️",
-        "🖊️",
-        "✏️"
-       ],
-       "a": "🖍️",
-       "lang": "en"
       }
      ],
      "lang": "en"
     }
    ],
-   "lead": "اسمع الكلمة واضغط على الصورة."
+   "lead": "اضغط على كل بطاقة واسمع. كتابك كتاب النشاط ص 7⁠–⁠9"
   },
   {
-   "title": "افعل",
-   "eyebrow": "الخطوة ٣ — افعل",
-   "heading": "Listen and do",
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
    "blocks": [
     {
      "type": "cards",
      "star": true,
      "items": [
       {
-       "t": "Stand up.",
-       "em": "🧍",
-       "say": "Stand up.",
-       "sub": "قف",
-       "must": 1
-      },
-      {
-       "t": "Sit down.",
+       "t": "This is my desk.",
        "em": "🪑",
-       "say": "Sit down.",
-       "sub": "اجلس",
+       "say": "This is my desk.",
+       "sub": "هذا مكتبي.",
+       "lang": "en",
        "must": 1
       },
       {
-       "t": "Listen.",
-       "em": "👂",
-       "say": "Listen.",
-       "sub": "استمع",
-       "must": 1
-      },
-      {
-       "t": "Look.",
-       "em": "👀",
-       "say": "Look.",
-       "sub": "انظر",
-       "must": 1
-      },
-      {
-       "t": "Jump up.",
-       "em": "🤸",
-       "say": "Jump up.",
-       "sub": "اقفز",
-       "must": 1
-      },
-      {
-       "t": "Turn around.",
-       "em": "🔄",
-       "say": "Turn around.",
-       "sub": "استدر",
-       "must": 1
-      },
-      {
-       "t": "Clap your hands.",
-       "em": "👏",
-       "say": "Clap your hands.",
-       "sub": "صفّق",
+       "t": "There is a board in my classroom.",
+       "em": "🟩",
+       "say": "There is a board in my classroom.",
+       "sub": "توجد سبورة في صفي.",
+       "lang": "en",
        "must": 1
       }
      ],
      "lang": "en"
     }
    ],
-   "lead": "اسمع الأمر وقم به أنت!"
+   "lead": "اسمع الجملة وردّدها."
   },
   {
-   "title": "صِل",
-   "eyebrow": "الخطوة ٤ — صِل",
-   "heading": "Match",
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
    "blocks": [
     {
-     "type": "match",
-     "star": true,
-     "pairs": [
-      [
-       "Stand up.",
-       "🧍",
-       "Stand up."
-      ],
-      [
-       "Sit down.",
-       "🪑",
-       "Sit down."
-      ],
-      [
-       "Listen.",
-       "👂",
-       "Listen."
-      ],
-      [
-       "Look.",
-       "👀",
-       "Look."
-      ],
-      [
-       "Jump up.",
-       "🤸",
-       "Jump up."
-      ]
-     ],
-     "lang": "en"
-    }
-   ],
-   "lead": "اضغط على الكلمة ثم صورتها."
-  },
-  {
-   "title": "اكتب",
-   "eyebrow": "الخطوة ٥ — اكتب",
-   "heading": "Letters e–h",
-   "blocks": [
-    {
-     "type": "trace",
+     "type": "game",
      "star": true,
      "items": [
       {
-       "t": "e",
-       "say": "e",
-       "size": 120
+       "say": "board",
+       "o": [
+        "🟩",
+        "✏️",
+        "🧽"
+       ],
+       "a": "🟩",
+       "lang": "en"
       },
       {
-       "t": "f",
-       "say": "f",
-       "size": 120
+       "say": "desk",
+       "o": [
+        "🪑",
+        "🧽",
+        "✏️"
+       ],
+       "a": "🪑",
+       "lang": "en"
       },
       {
-       "t": "g",
-       "say": "g",
-       "size": 120
+       "say": "pencil",
+       "o": [
+        "✏️",
+        "🧽",
+        "📏"
+       ],
+       "a": "✏️",
+       "lang": "en"
       },
       {
-       "t": "h",
-       "say": "h",
-       "size": 120
+       "say": "ruler",
+       "o": [
+        "📏",
+        "📕",
+        "🪑"
+       ],
+       "a": "📏",
+       "lang": "en"
+      },
+      {
+       "say": "rubber",
+       "o": [
+        "🧽",
+        "🟩",
+        "✏️"
+       ],
+       "a": "🧽",
+       "lang": "en"
+      },
+      {
+       "say": "book",
+       "o": [
+        "📕",
+        "📏",
+        "🧽"
+       ],
+       "a": "📕",
+       "lang": "en"
       }
      ],
-     "need": 4,
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "This is my desk.",
+       "o": [
+        "هذا مكتبي.",
+        "توجد سبورة في صفي."
+       ],
+       "a": "هذا مكتبي.",
+       "lang": "en"
+      },
+      {
+       "say": "There is a board in my classroom.",
+       "o": [
+        "توجد سبورة في صفي.",
+        "هذا مكتبي."
+       ],
+       "a": "توجد سبورة في صفي.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "أكمل",
+   "eyebrow": "الخطوة ٥ — أكمل",
+   "heading": "اختر الكلمة الناقصة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "This is a pencil.",
+       "o": [
+        "a",
+        "an"
+       ],
+       "a": "a",
+       "sayQ": false,
+       "show": "This is ___ pencil.",
+       "lang": "en"
+      },
+      {
+       "say": "This is an apple.",
+       "o": [
+        "an",
+        "a"
+       ],
+       "a": "an",
+       "sayQ": false,
+       "show": "This is ___ apple.",
+       "lang": "en"
+      },
+      {
+       "say": "Write on the board .",
+       "o": [
+        "board",
+        "desk"
+       ],
+       "a": "board",
+       "sayQ": false,
+       "show": "Write on the ___ .",
+       "lang": "en"
+      }
+     ],
+     "q": "اختر الكلمة المناسبة",
      "lang": "en"
     }
    ],
-   "lead": "مرّر إصبعك فوق الحرف واسمعه."
+   "lead": "a قبل الحرف الساكن و an قبل المتحرك: an eraser."
   },
   {
    "title": "اختبار",
@@ -348,59 +266,66 @@
      "star": true,
      "items": [
       {
+       "say": "board",
+       "o": [
+        "🟩",
+        "✏️",
+        "📏"
+       ],
+       "a": "🟩",
+       "lang": "en"
+      },
+      {
+       "say": "desk",
+       "o": [
+        "🪑",
+        "🟩",
+        "✏️"
+       ],
+       "a": "🪑",
+       "lang": "en"
+      },
+      {
+       "say": "pencil",
+       "o": [
+        "✏️",
+        "📕",
+        "📏"
+       ],
+       "a": "✏️",
+       "lang": "en"
+      },
+      {
        "say": "ruler",
        "o": [
         "📏",
-        "🖊️",
+        "✏️",
         "🪑"
        ],
        "a": "📏",
        "lang": "en"
       },
       {
-       "say": "rubber",
+       "say": "This is my desk.",
        "o": [
-        "🧽",
-        "📓",
-        "✏️"
+        "هذا مكتبي.",
+        "توجد سبورة في صفي."
        ],
-       "a": "🧽",
+       "a": "هذا مكتبي.",
        "lang": "en"
       },
       {
-       "say": "Sit down.",
+       "say": "There is a board in my classroom.",
        "o": [
-        "🪑",
-        "🧍",
-        "👏"
+        "توجد سبورة في صفي.",
+        "هذا مكتبي."
        ],
-       "a": "🪑",
-       "lang": "en"
-      },
-      {
-       "say": "Clap your hands.",
-       "o": [
-        "👏",
-        "👂",
-        "🔄"
-       ],
-       "a": "👏",
-       "lang": "en"
-      },
-      {
-       "say": "notebook",
-       "o": [
-        "📓",
-        "📄",
-        "👝"
-       ],
-       "a": "📓",
+       "a": "توجد سبورة في صفي.",
        "lang": "en"
       }
      ],
      "final": true,
-     "lang": "en",
-     "pass": 3
+     "lang": "en"
     }
    ]
   }

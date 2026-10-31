@@ -1,0 +1,287 @@
+{
+ "id": "en-4-u7-l4",
+ "grade": 4,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 7 · Lesson 4: must / mustn't",
+ "titleAr": "يجب أن تستمع إلى المعلم.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "يجب أن تستمع إلى المعلم.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "must",
+       "ar": "يجب",
+       "em": "❗"
+      },
+      {
+       "id": "v1",
+       "en": "mustn't",
+       "ar": "يجب ألا",
+       "em": "🚫"
+      },
+      {
+       "id": "v2",
+       "en": "quiet",
+       "ar": "هادئ",
+       "em": "🤫"
+      },
+      {
+       "id": "v3",
+       "en": "run",
+       "ar": "يجري",
+       "em": "🏃"
+      },
+      {
+       "id": "v4",
+       "en": "listen",
+       "ar": "يستمع",
+       "em": "👂"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 110⁠–⁠111 · كتاب النشاط ص 94⁠–⁠95"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "must / mustn't + verb",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">You <b>must</b> listen to the teacher.</div><div class=\"ex\">You <b>mustn't</b> run in the classroom.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "You must listen to the teacher. You mustn't run in the classroom."
+      }
+     ]
+    }
+   ],
+   "lead": "must للواجب و mustn't للمنع، وبعدهما فعل مجرد.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "You ___ run in the classroom.",
+           "a": "mustn't",
+           "o": [
+            "mustn't",
+            "must"
+           ]
+          },
+          {
+           "s": "You ___ listen to the teacher.",
+           "a": "must",
+           "o": [
+            "must",
+            "mustn't"
+           ]
+          },
+          {
+           "s": "You must ___ quiet in the library.",
+           "a": "be",
+           "o": [
+            "be",
+            "are"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "You must listen to the teacher.",
+          "You mustn't run in the classroom."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "You must listen to the teacher.",
+           "o": [
+            "You must listen to the teacher.",
+            "You mustn't run in the classroom."
+           ]
+          },
+          {
+           "a": "You mustn't run in the classroom.",
+           "o": [
+            "You mustn't run in the classroom.",
+            "You must listen to the teacher."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "must",
+       "ipa": "",
+       "meaning": "يجب",
+       "ex": "You must listen to the teacher."
+      },
+      {
+       "must": 1,
+       "term": "mustn't",
+       "ipa": "",
+       "meaning": "يجب ألا",
+       "ex": "You mustn't run in the classroom."
+      },
+      {
+       "must": 1,
+       "term": "quiet",
+       "ipa": "",
+       "meaning": "هادئ",
+       "ex": "quiet"
+      },
+      {
+       "must": 0,
+       "term": "run",
+       "ipa": "",
+       "meaning": "يجري",
+       "ex": "You mustn't run in the classroom."
+      },
+      {
+       "must": 0,
+       "term": "listen",
+       "ipa": "",
+       "meaning": "يستمع",
+       "ex": "You must listen to the teacher."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "You ___ run in the classroom.",
+       "a": "mustn't",
+       "o": [
+        "mustn't",
+        "must"
+       ],
+       "why": ""
+      },
+      {
+       "q": "You ___ listen to the teacher.",
+       "a": "must",
+       "o": [
+        "must",
+        "mustn't"
+       ],
+       "why": ""
+      },
+      {
+       "q": "You must ___ quiet in the library.",
+       "a": "be",
+       "o": [
+        "be",
+        "are"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى must؟",
+       "a": "يجب",
+       "o": [
+        "يجب",
+        "يجب ألا",
+        "هادئ"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى quiet؟",
+       "a": "هادئ",
+       "o": [
+        "هادئ",
+        "يجب",
+        "يجب ألا"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "You must listen to the teacher.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "You must listen to the teacher.",
+       "o": [
+        "You must listen to the teacher.",
+        "You mustn't run in the classroom."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

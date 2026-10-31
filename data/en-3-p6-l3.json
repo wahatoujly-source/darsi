@@ -1,0 +1,337 @@
+{
+ "id": "en-3-p6-l3",
+ "grade": 3,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "Question Game",
+ "titleAr": "الإنجليزية — الصف الثالث",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "Question Game",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "question",
+       "em": "❓",
+       "say": "question",
+       "sub": "سؤال",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "answer",
+       "em": "💬",
+       "say": "answer",
+       "sub": "جواب",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "did",
+       "em": "🔙",
+       "say": "did",
+       "sub": "فعل مساعد للماضي",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "right",
+       "em": "✅",
+       "say": "right",
+       "sub": "صحيح",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "wrong",
+       "em": "❌",
+       "say": "wrong",
+       "sub": "خطأ",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك كتاب التلميذ ص 102⁠–⁠103"
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "Did you play yesterday?",
+       "em": "🔙",
+       "say": "Did you play yesterday?",
+       "sub": "هل لعبت أمس؟",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "Yes, I did.",
+       "em": "🔙",
+       "say": "Yes, I did.",
+       "sub": "نعم.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "No, I didn't.",
+       "em": "🔙",
+       "say": "No, I didn't.",
+       "sub": "لا.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "question",
+       "o": [
+        "❓",
+        "❌",
+        "🔙"
+       ],
+       "a": "❓",
+       "lang": "en"
+      },
+      {
+       "say": "answer",
+       "o": [
+        "💬",
+        "🔙",
+        "❌"
+       ],
+       "a": "💬",
+       "lang": "en"
+      },
+      {
+       "say": "did",
+       "o": [
+        "🔙",
+        "❓",
+        "❌"
+       ],
+       "a": "🔙",
+       "lang": "en"
+      },
+      {
+       "say": "right",
+       "o": [
+        "✅",
+        "💬",
+        "❌"
+       ],
+       "a": "✅",
+       "lang": "en"
+      },
+      {
+       "say": "wrong",
+       "o": [
+        "❌",
+        "🔙",
+        "✅"
+       ],
+       "a": "❌",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "Did you play yesterday?",
+       "o": [
+        "هل لعبت أمس؟",
+        "نعم.",
+        "لا."
+       ],
+       "a": "هل لعبت أمس؟",
+       "lang": "en"
+      },
+      {
+       "say": "Yes, I did.",
+       "o": [
+        "نعم.",
+        "هل لعبت أمس؟",
+        "لا."
+       ],
+       "a": "نعم.",
+       "lang": "en"
+      },
+      {
+       "say": "No, I didn't.",
+       "o": [
+        "لا.",
+        "هل لعبت أمس؟",
+        "نعم."
+       ],
+       "a": "لا.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "أكمل",
+   "eyebrow": "الخطوة ٥ — أكمل",
+   "heading": "اختر الكلمة الناقصة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "Did you play yesterday?",
+       "o": [
+        "Did",
+        "Do"
+       ],
+       "a": "Did",
+       "sayQ": false,
+       "show": "___ you play yesterday?",
+       "lang": "en"
+      },
+      {
+       "say": "Yes, I did .",
+       "o": [
+        "did",
+        "do"
+       ],
+       "a": "did",
+       "sayQ": false,
+       "show": "Yes, I ___ .",
+       "lang": "en"
+      },
+      {
+       "say": "Did she watch TV?",
+       "o": [
+        "watch",
+        "watched"
+       ],
+       "a": "watch",
+       "sayQ": false,
+       "show": "Did she ___ TV?",
+       "lang": "en"
+      }
+     ],
+     "q": "اختر الكلمة المناسبة",
+     "lang": "en"
+    }
+   ],
+   "lead": "السؤال في الماضي: Did + فاعل + فعل مجرد."
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "question",
+       "o": [
+        "❓",
+        "💬",
+        "❌"
+       ],
+       "a": "❓",
+       "lang": "en"
+      },
+      {
+       "say": "answer",
+       "o": [
+        "💬",
+        "❌",
+        "❓"
+       ],
+       "a": "💬",
+       "lang": "en"
+      },
+      {
+       "say": "did",
+       "o": [
+        "🔙",
+        "💬",
+        "❓"
+       ],
+       "a": "🔙",
+       "lang": "en"
+      },
+      {
+       "say": "right",
+       "o": [
+        "✅",
+        "❌",
+        "💬"
+       ],
+       "a": "✅",
+       "lang": "en"
+      },
+      {
+       "say": "Did you play yesterday?",
+       "o": [
+        "هل لعبت أمس؟",
+        "نعم.",
+        "لا."
+       ],
+       "a": "هل لعبت أمس؟",
+       "lang": "en"
+      },
+      {
+       "say": "Yes, I did.",
+       "o": [
+        "نعم.",
+        "هل لعبت أمس؟",
+        "لا."
+       ],
+       "a": "نعم.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

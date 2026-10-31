@@ -1,0 +1,287 @@
+{
+ "id": "en-4-u5-l4",
+ "grade": 4,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 5 · Lesson 4: At the Waterfall",
+ "titleAr": "الشلال جميل.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "الشلال جميل.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "waterfall",
+       "ar": "شلال",
+       "em": "💦"
+      },
+      {
+       "id": "v1",
+       "en": "river",
+       "ar": "نهر",
+       "em": "🏞️"
+      },
+      {
+       "id": "v2",
+       "en": "rocks",
+       "ar": "صخور",
+       "em": "🪨"
+      },
+      {
+       "id": "v3",
+       "en": "wet",
+       "ar": "مبلل",
+       "em": "💧"
+      },
+      {
+       "id": "v4",
+       "en": "beautiful",
+       "ar": "جميل",
+       "em": "😍"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 74⁠–⁠75 · كتاب النشاط ص 62⁠–⁠63"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Don't + verb",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">The waterfall is <b>beautiful</b>.</div><div class=\"ex\"><b>Don't</b> climb on the rocks.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "The waterfall is beautiful. Don't climb on the rocks."
+      }
+     ]
+    }
+   ],
+   "lead": "النهي: Don't climb.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "___ climb on the rocks.",
+           "a": "Don't",
+           "o": [
+            "Don't",
+            "Do"
+           ]
+          },
+          {
+           "s": "The water is ___ .",
+           "a": "wet",
+           "o": [
+            "wet",
+            "dry"
+           ]
+          },
+          {
+           "s": "The waterfall is ___ .",
+           "a": "beautiful",
+           "o": [
+            "beautiful",
+            "noisy"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "The waterfall is beautiful.",
+          "Don't climb on the rocks."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "The waterfall is beautiful.",
+           "o": [
+            "The waterfall is beautiful.",
+            "Don't climb on the rocks."
+           ]
+          },
+          {
+           "a": "Don't climb on the rocks.",
+           "o": [
+            "Don't climb on the rocks.",
+            "The waterfall is beautiful."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "waterfall",
+       "ipa": "",
+       "meaning": "شلال",
+       "ex": "The waterfall is beautiful."
+      },
+      {
+       "must": 1,
+       "term": "river",
+       "ipa": "",
+       "meaning": "نهر",
+       "ex": "river"
+      },
+      {
+       "must": 1,
+       "term": "rocks",
+       "ipa": "",
+       "meaning": "صخور",
+       "ex": "Don't climb on the rocks."
+      },
+      {
+       "must": 0,
+       "term": "wet",
+       "ipa": "",
+       "meaning": "مبلل",
+       "ex": "wet"
+      },
+      {
+       "must": 0,
+       "term": "beautiful",
+       "ipa": "",
+       "meaning": "جميل",
+       "ex": "The waterfall is beautiful."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "___ climb on the rocks.",
+       "a": "Don't",
+       "o": [
+        "Don't",
+        "Do"
+       ],
+       "why": ""
+      },
+      {
+       "q": "The water is ___ .",
+       "a": "wet",
+       "o": [
+        "wet",
+        "dry"
+       ],
+       "why": ""
+      },
+      {
+       "q": "The waterfall is ___ .",
+       "a": "beautiful",
+       "o": [
+        "beautiful",
+        "noisy"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى wet؟",
+       "a": "مبلل",
+       "o": [
+        "مبلل",
+        "شلال",
+        "نهر"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى beautiful؟",
+       "a": "جميل",
+       "o": [
+        "جميل",
+        "شلال",
+        "نهر"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "The waterfall is beautiful.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "The waterfall is beautiful.",
+       "o": [
+        "The waterfall is beautiful.",
+        "Don't climb on the rocks."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

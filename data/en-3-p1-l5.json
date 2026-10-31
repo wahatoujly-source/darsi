@@ -4,160 +4,243 @@
  "subject": "en",
  "stage": "primary-1-3",
  "lang": "en",
- "title": "Unit 1 · Lesson 5: I don't like …",
- "titleAr": "الوحدة الأولى: في الحديقة — الدرس الخامس: لا أحب …",
+ "title": "I don't like …",
+ "titleAr": "الإنجليزية — الصف الثالث",
  "steps": [
   {
-   "title": "استمع",
-   "eyebrow": "الخطوة ١ — استمع",
-   "heading": "Do you want some fish?",
-   "blocks": [
-    {
-     "type": "dialogue",
-     "star": true
-    }
-   ],
-   "lead": "شغّل الحوار. كتابك ص 16."
-  },
-  {
-   "title": "تكلّم",
-   "eyebrow": "الخطوة ٢ — تكلّم",
-   "heading": "I like / I don't like",
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "I don't like …",
    "blocks": [
     {
      "type": "cards",
      "star": true,
      "items": [
       {
-       "t": "Do you want some fish?",
-       "em": "🐟❓",
-       "say": "Do you want some fish?",
-       "sub": "هل تريد بعض السمك؟",
+       "t": "carrots",
+       "em": "🥕",
+       "say": "carrots",
+       "sub": "جزر",
+       "lang": "en",
        "must": 1
       },
       {
-       "t": "No, thanks. I don't like fish.",
-       "em": "🙅🐟",
-       "say": "No, thanks. I don't like fish.",
-       "sub": "لا، شكراً. لا أحب السمك",
+       "t": "onions",
+       "em": "🧅",
+       "say": "onions",
+       "sub": "بصل",
+       "lang": "en",
        "must": 1
       },
       {
-       "t": "Yes, please. I like fish.",
-       "em": "👍🐟",
-       "say": "Yes, please. I like fish.",
-       "sub": "نعم من فضلك. أحب السمك",
+       "t": "eggs",
+       "em": "🥚",
+       "say": "eggs",
+       "sub": "بيض",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "cheese",
+       "em": "🧀",
+       "say": "cheese",
+       "sub": "جبن",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "grapes",
+       "em": "🍇",
+       "say": "grapes",
+       "sub": "عنب",
+       "lang": "en",
        "must": 1
       }
      ],
      "lang": "en"
     }
    ],
-   "lead": "اسمع وردّد."
+   "lead": "اضغط على كل بطاقة واسمع. كتابك كتاب التلميذ ص 16⁠–⁠17"
   },
   {
-   "title": "المفردات",
-   "eyebrow": "الخطوة ٣ — المفردات",
-   "heading": "Happy Days",
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
    "blocks": [
     {
      "type": "cards",
      "star": true,
      "items": [
       {
-       "t": "cola",
-       "em": "🥤",
-       "say": "cola"
+       "t": "I don't like onions.",
+       "em": "🧅",
+       "say": "I don't like onions.",
+       "sub": "لا أحب البصل.",
+       "lang": "en",
+       "must": 1
       },
       {
-       "t": "ice",
-       "em": "🧊",
-       "say": "ice"
-      },
-      {
-       "t": "cups",
-       "em": "🥛",
-       "say": "cups"
-      },
-      {
-       "t": "plates",
-       "em": "🍽️",
-       "say": "plates"
-      },
-      {
-       "t": "balloons",
-       "em": "🎈",
-       "say": "balloons"
-      },
-      {
-       "t": "lights",
-       "em": "💡",
-       "say": "lights"
-      },
-      {
-       "t": "soup",
-       "em": "🍲",
-       "say": "soup"
-      },
-      {
-       "t": "dates",
-       "em": "🌴",
-       "say": "dates"
-      },
-      {
-       "t": "robots",
-       "em": "🤖",
-       "say": "robots"
-      },
-      {
-       "t": "kites",
-       "em": "🪁",
-       "say": "kites"
-      },
-      {
-       "t": "presents",
-       "em": "🎁",
-       "say": "presents"
-      },
-      {
-       "t": "cards",
-       "em": "💌",
-       "say": "cards"
+       "t": "Do you like grapes? Yes, I do.",
+       "em": "🍇",
+       "say": "Do you like grapes? Yes, I do.",
+       "sub": "هل تحب العنب؟ نعم.",
+       "lang": "en",
+       "must": 1
       }
      ],
-     "lang": "en",
-     "need": 8
+     "lang": "en"
     }
    ],
-   "lead": "اضغط على كل صورة واسمع. كتابك ص 17."
+   "lead": "اسمع الجملة وردّدها."
   },
   {
-   "title": "أنشد",
-   "eyebrow": "الخطوة ٤ — أنشد",
-   "heading": "Happy Days",
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
    "blocks": [
     {
-     "type": "reading",
+     "type": "game",
      "star": true,
-     "lang": "en",
-     "paragraphs": [
-      "Chicken and rice,",
-      "Cola and ice,",
-      "Apples and cakes,",
-      "Cups and plates.",
-      "Balloons and lights,",
-      "Robots and kites,",
-      "Presents and cards,",
-      "Stories and fun."
+     "items": [
+      {
+       "say": "carrots",
+       "o": [
+        "🥕",
+        "🍇",
+        "🧅"
+       ],
+       "a": "🥕",
+       "lang": "en"
+      },
+      {
+       "say": "onions",
+       "o": [
+        "🧅",
+        "🥚",
+        "🍇"
+       ],
+       "a": "🧅",
+       "lang": "en"
+      },
+      {
+       "say": "eggs",
+       "o": [
+        "🥚",
+        "🍇",
+        "🧀"
+       ],
+       "a": "🥚",
+       "lang": "en"
+      },
+      {
+       "say": "cheese",
+       "o": [
+        "🧀",
+        "🍇",
+        "🥕"
+       ],
+       "a": "🧀",
+       "lang": "en"
+      },
+      {
+       "say": "grapes",
+       "o": [
+        "🍇",
+        "🥕",
+        "🥚"
+       ],
+       "a": "🍇",
+       "lang": "en"
+      }
      ],
-     "title": "🎵 Happy Days"
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "I don't like onions.",
+       "o": [
+        "لا أحب البصل.",
+        "هل تحب العنب؟ نعم."
+       ],
+       "a": "لا أحب البصل.",
+       "lang": "en"
+      },
+      {
+       "say": "Do you like grapes? Yes, I do.",
+       "o": [
+        "هل تحب العنب؟ نعم.",
+        "لا أحب البصل."
+       ],
+       "a": "هل تحب العنب؟ نعم.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "أكمل",
+   "eyebrow": "الخطوة ٥ — أكمل",
+   "heading": "اختر الكلمة الناقصة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "I don't like onions.",
+       "o": [
+        "don't",
+        "not"
+       ],
+       "a": "don't",
+       "sayQ": false,
+       "show": "I ___ like onions.",
+       "lang": "en"
+      },
+      {
+       "say": "Do you like grapes? Yes, I do .",
+       "o": [
+        "do",
+        "am"
+       ],
+       "a": "do",
+       "sayQ": false,
+       "show": "Do you like grapes? Yes, I ___ .",
+       "lang": "en"
+      },
+      {
+       "say": "Do you like eggs? No, I don't .",
+       "o": [
+        "don't",
+        "do"
+       ],
+       "a": "don't",
+       "sayQ": false,
+       "show": "Do you like eggs? No, I ___ .",
+       "lang": "en"
+      }
+     ],
+     "q": "اختر الكلمة المناسبة",
+     "lang": "en"
     }
    ],
-   "lead": "استمع وغنِّ."
+   "lead": "النفي: I don't like …"
   },
   {
    "title": "اختبار",
-   "eyebrow": "الخطوة ٥ — اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
    "heading": "اختبر نفسك",
    "blocks": [
     {
@@ -165,94 +248,68 @@
      "star": true,
      "items": [
       {
-       "q": "👎🐟 I ... like fish.",
+       "say": "carrots",
        "o": [
-        "don't",
-        "do"
+        "🥕",
+        "🥚",
+        "🍇"
        ],
-       "a": "don't",
-       "show": "👎🐟"
-      },
-      {
-       "say": "balloons",
-       "o": [
-        "🎈",
-        "🪁",
-        "🎁"
-       ],
-       "a": "🎈",
+       "a": "🥕",
        "lang": "en"
       },
       {
-       "say": "presents",
+       "say": "onions",
        "o": [
-        "🎁",
-        "💌",
-        "🤖"
+        "🧅",
+        "🧀",
+        "🍇"
        ],
-       "a": "🎁",
+       "a": "🧅",
        "lang": "en"
       },
       {
-       "q": "Do you want some soup?",
+       "say": "eggs",
        "o": [
-        "Yes, please.",
-        "I'm 8."
+        "🥚",
+        "🥕",
+        "🧅"
        ],
-       "a": "Yes, please.",
-       "show": "🍲"
+       "a": "🥚",
+       "lang": "en"
       },
       {
-       "say": "kites",
+       "say": "cheese",
        "o": [
-        "🪁",
-        "🎈",
-        "💡"
+        "🧀",
+        "🧅",
+        "🥚"
        ],
-       "a": "🪁",
+       "a": "🧀",
+       "lang": "en"
+      },
+      {
+       "say": "I don't like onions.",
+       "o": [
+        "لا أحب البصل.",
+        "هل تحب العنب؟ نعم."
+       ],
+       "a": "لا أحب البصل.",
+       "lang": "en"
+      },
+      {
+       "say": "Do you like grapes? Yes, I do.",
+       "o": [
+        "هل تحب العنب؟ نعم.",
+        "لا أحب البصل."
+       ],
+       "a": "هل تحب العنب؟ نعم.",
        "lang": "en"
       }
      ],
      "final": true,
-     "lang": "en",
-     "pass": 3
+     "lang": "en"
     }
    ]
   }
- ],
- "characters": {
-  "Ben": {
-   "ar": "بن",
-   "color": "--c1",
-   "g": "m",
-   "pitch": 1.5
-  },
-  "Reem": {
-   "ar": "ريم",
-   "color": "--c4",
-   "g": "f",
-   "pitch": 1.6
-  }
- },
- "dialogue": [
-  [
-   "Reem",
-   "Do you want some fish?"
-  ],
-  [
-   "Ben",
-   "No, thanks. I don't like fish."
-  ],
-  [
-   "Reem",
-   "Do you want some rice?"
-  ],
-  [
-   "Ben",
-   "Yes, please. I like rice."
-  ]
- ],
- "left": [
-  "Reem"
  ]
 }

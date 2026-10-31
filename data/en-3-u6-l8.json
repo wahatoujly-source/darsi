@@ -1,0 +1,337 @@
+{
+ "id": "en-3-u6-l8",
+ "grade": 3,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "The Ant and the Grasshopper",
+ "titleAr": "الإنجليزية — الصف الثالث",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "The Ant and the Grasshopper",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "ant",
+       "em": "🐜",
+       "say": "ant",
+       "sub": "نملة",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "grasshopper",
+       "em": "🦗",
+       "say": "grasshopper",
+       "sub": "جرادة",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "work",
+       "em": "🧺",
+       "say": "work",
+       "sub": "يعمل",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "winter",
+       "em": "❄️",
+       "say": "winter",
+       "sub": "شتاء",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "food",
+       "em": "🌾",
+       "say": "food",
+       "sub": "طعام",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك "
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "The ant works hard in summer.",
+       "em": "🐜",
+       "say": "The ant works hard in summer.",
+       "sub": "تعمل النملة بجد في الصيف.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "The grasshopper sings and plays.",
+       "em": "🦗",
+       "say": "The grasshopper sings and plays.",
+       "sub": "الجرادة تغني وتلعب.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "In winter, the ant has food.",
+       "em": "🐜",
+       "say": "In winter, the ant has food.",
+       "sub": "في الشتاء لدى النملة طعام.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "ant",
+       "o": [
+        "🐜",
+        "🧺",
+        "❄️"
+       ],
+       "a": "🐜",
+       "lang": "en"
+      },
+      {
+       "say": "grasshopper",
+       "o": [
+        "🦗",
+        "❄️",
+        "🌾"
+       ],
+       "a": "🦗",
+       "lang": "en"
+      },
+      {
+       "say": "work",
+       "o": [
+        "🧺",
+        "❄️",
+        "🦗"
+       ],
+       "a": "🧺",
+       "lang": "en"
+      },
+      {
+       "say": "winter",
+       "o": [
+        "❄️",
+        "🧺",
+        "🌾"
+       ],
+       "a": "❄️",
+       "lang": "en"
+      },
+      {
+       "say": "food",
+       "o": [
+        "🌾",
+        "🦗",
+        "🐜"
+       ],
+       "a": "🌾",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "The ant works hard in summer.",
+       "o": [
+        "تعمل النملة بجد في الصيف.",
+        "الجرادة تغني وتلعب.",
+        "في الشتاء لدى النملة طعام."
+       ],
+       "a": "تعمل النملة بجد في الصيف.",
+       "lang": "en"
+      },
+      {
+       "say": "The grasshopper sings and plays.",
+       "o": [
+        "الجرادة تغني وتلعب.",
+        "تعمل النملة بجد في الصيف.",
+        "في الشتاء لدى النملة طعام."
+       ],
+       "a": "الجرادة تغني وتلعب.",
+       "lang": "en"
+      },
+      {
+       "say": "In winter, the ant has food.",
+       "o": [
+        "في الشتاء لدى النملة طعام.",
+        "تعمل النملة بجد في الصيف.",
+        "الجرادة تغني وتلعب."
+       ],
+       "a": "في الشتاء لدى النملة طعام.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "أكمل",
+   "eyebrow": "الخطوة ٥ — أكمل",
+   "heading": "اختر الكلمة الناقصة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "The ant works hard.",
+       "o": [
+        "works",
+        "work"
+       ],
+       "a": "works",
+       "sayQ": false,
+       "show": "The ant ___ hard.",
+       "lang": "en"
+      },
+      {
+       "say": "In winter , it is cold.",
+       "o": [
+        "winter",
+        "summer"
+       ],
+       "a": "winter",
+       "sayQ": false,
+       "show": "In ___ , it is cold.",
+       "lang": "en"
+      },
+      {
+       "say": "The grasshopper has no food .",
+       "o": [
+        "food",
+        "work"
+       ],
+       "a": "food",
+       "sayQ": false,
+       "show": "The grasshopper has no ___ .",
+       "lang": "en"
+      }
+     ],
+     "q": "اختر الكلمة المناسبة",
+     "lang": "en"
+    }
+   ],
+   "lead": "The ant works … The grasshopper plays …"
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "ant",
+       "o": [
+        "🐜",
+        "❄️",
+        "🧺"
+       ],
+       "a": "🐜",
+       "lang": "en"
+      },
+      {
+       "say": "grasshopper",
+       "o": [
+        "🦗",
+        "❄️",
+        "🌾"
+       ],
+       "a": "🦗",
+       "lang": "en"
+      },
+      {
+       "say": "work",
+       "o": [
+        "🧺",
+        "❄️",
+        "🦗"
+       ],
+       "a": "🧺",
+       "lang": "en"
+      },
+      {
+       "say": "winter",
+       "o": [
+        "❄️",
+        "🧺",
+        "🦗"
+       ],
+       "a": "❄️",
+       "lang": "en"
+      },
+      {
+       "say": "The ant works hard in summer.",
+       "o": [
+        "تعمل النملة بجد في الصيف.",
+        "الجرادة تغني وتلعب.",
+        "في الشتاء لدى النملة طعام."
+       ],
+       "a": "تعمل النملة بجد في الصيف.",
+       "lang": "en"
+      },
+      {
+       "say": "The grasshopper sings and plays.",
+       "o": [
+        "الجرادة تغني وتلعب.",
+        "تعمل النملة بجد في الصيف.",
+        "في الشتاء لدى النملة طعام."
+       ],
+       "a": "الجرادة تغني وتلعب.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

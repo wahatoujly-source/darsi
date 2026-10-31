@@ -1,0 +1,315 @@
+{
+ "id": "en-3-u2-l5",
+ "grade": 3,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "I don't like …",
+ "titleAr": "الإنجليزية — الصف الثالث",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "I don't like …",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "carrots",
+       "em": "🥕",
+       "say": "carrots",
+       "sub": "جزر",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "onions",
+       "em": "🧅",
+       "say": "onions",
+       "sub": "بصل",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "eggs",
+       "em": "🥚",
+       "say": "eggs",
+       "sub": "بيض",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "cheese",
+       "em": "🧀",
+       "say": "cheese",
+       "sub": "جبن",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "grapes",
+       "em": "🍇",
+       "say": "grapes",
+       "sub": "عنب",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك "
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "I don't like onions.",
+       "em": "🧅",
+       "say": "I don't like onions.",
+       "sub": "لا أحب البصل.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "Do you like grapes? Yes, I do.",
+       "em": "🍇",
+       "say": "Do you like grapes? Yes, I do.",
+       "sub": "هل تحب العنب؟ نعم.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "carrots",
+       "o": [
+        "🥕",
+        "🧀",
+        "🥚"
+       ],
+       "a": "🥕",
+       "lang": "en"
+      },
+      {
+       "say": "onions",
+       "o": [
+        "🧅",
+        "🥚",
+        "🍇"
+       ],
+       "a": "🧅",
+       "lang": "en"
+      },
+      {
+       "say": "eggs",
+       "o": [
+        "🥚",
+        "🍇",
+        "🧅"
+       ],
+       "a": "🥚",
+       "lang": "en"
+      },
+      {
+       "say": "cheese",
+       "o": [
+        "🧀",
+        "🥚",
+        "🍇"
+       ],
+       "a": "🧀",
+       "lang": "en"
+      },
+      {
+       "say": "grapes",
+       "o": [
+        "🍇",
+        "🥕",
+        "🧅"
+       ],
+       "a": "🍇",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "I don't like onions.",
+       "o": [
+        "لا أحب البصل.",
+        "هل تحب العنب؟ نعم."
+       ],
+       "a": "لا أحب البصل.",
+       "lang": "en"
+      },
+      {
+       "say": "Do you like grapes? Yes, I do.",
+       "o": [
+        "هل تحب العنب؟ نعم.",
+        "لا أحب البصل."
+       ],
+       "a": "هل تحب العنب؟ نعم.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "أكمل",
+   "eyebrow": "الخطوة ٥ — أكمل",
+   "heading": "اختر الكلمة الناقصة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "I don't like onions.",
+       "o": [
+        "don't",
+        "not"
+       ],
+       "a": "don't",
+       "sayQ": false,
+       "show": "I ___ like onions.",
+       "lang": "en"
+      },
+      {
+       "say": "Do you like grapes? Yes, I do .",
+       "o": [
+        "do",
+        "am"
+       ],
+       "a": "do",
+       "sayQ": false,
+       "show": "Do you like grapes? Yes, I ___ .",
+       "lang": "en"
+      },
+      {
+       "say": "Do you like eggs? No, I don't .",
+       "o": [
+        "don't",
+        "do"
+       ],
+       "a": "don't",
+       "sayQ": false,
+       "show": "Do you like eggs? No, I ___ .",
+       "lang": "en"
+      }
+     ],
+     "q": "اختر الكلمة المناسبة",
+     "lang": "en"
+    }
+   ],
+   "lead": "النفي: I don't like …"
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "carrots",
+       "o": [
+        "🥕",
+        "🍇",
+        "🧀"
+       ],
+       "a": "🥕",
+       "lang": "en"
+      },
+      {
+       "say": "onions",
+       "o": [
+        "🧅",
+        "🍇",
+        "🥚"
+       ],
+       "a": "🧅",
+       "lang": "en"
+      },
+      {
+       "say": "eggs",
+       "o": [
+        "🥚",
+        "🧀",
+        "🥕"
+       ],
+       "a": "🥚",
+       "lang": "en"
+      },
+      {
+       "say": "cheese",
+       "o": [
+        "🧀",
+        "🧅",
+        "🥚"
+       ],
+       "a": "🧀",
+       "lang": "en"
+      },
+      {
+       "say": "I don't like onions.",
+       "o": [
+        "لا أحب البصل.",
+        "هل تحب العنب؟ نعم."
+       ],
+       "a": "لا أحب البصل.",
+       "lang": "en"
+      },
+      {
+       "say": "Do you like grapes? Yes, I do.",
+       "o": [
+        "هل تحب العنب؟ نعم.",
+        "لا أحب البصل."
+       ],
+       "a": "هل تحب العنب؟ نعم.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

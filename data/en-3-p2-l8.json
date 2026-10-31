@@ -1,0 +1,337 @@
+{
+ "id": "en-3-p2-l8",
+ "grade": 3,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "City Mouse and Village Mouse",
+ "titleAr": "الإنجليزية — الصف الثالث",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "City Mouse and Village Mouse",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "city",
+       "em": "🏙️",
+       "say": "city",
+       "sub": "مدينة",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "village",
+       "em": "🏡",
+       "say": "village",
+       "sub": "قرية",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "mouse",
+       "em": "🐭",
+       "say": "mouse",
+       "sub": "فأر",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "quiet",
+       "em": "🤫",
+       "say": "quiet",
+       "sub": "هادئ",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "noisy",
+       "em": "📢",
+       "say": "noisy",
+       "sub": "صاخب",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك كتاب التلميذ ص 40⁠–⁠41"
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "The city is noisy.",
+       "em": "🏙️",
+       "say": "The city is noisy.",
+       "sub": "المدينة صاخبة.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "The village is quiet.",
+       "em": "🏡",
+       "say": "The village is quiet.",
+       "sub": "القرية هادئة.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "Village Mouse goes home.",
+       "em": "🏡",
+       "say": "Village Mouse goes home.",
+       "sub": "يعود فأر القرية إلى بيته.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "city",
+       "o": [
+        "🏙️",
+        "🐭",
+        "🏡"
+       ],
+       "a": "🏙️",
+       "lang": "en"
+      },
+      {
+       "say": "village",
+       "o": [
+        "🏡",
+        "🏙️",
+        "📢"
+       ],
+       "a": "🏡",
+       "lang": "en"
+      },
+      {
+       "say": "mouse",
+       "o": [
+        "🐭",
+        "🤫",
+        "🏡"
+       ],
+       "a": "🐭",
+       "lang": "en"
+      },
+      {
+       "say": "quiet",
+       "o": [
+        "🤫",
+        "🏙️",
+        "🏡"
+       ],
+       "a": "🤫",
+       "lang": "en"
+      },
+      {
+       "say": "noisy",
+       "o": [
+        "📢",
+        "🏙️",
+        "🐭"
+       ],
+       "a": "📢",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "The city is noisy.",
+       "o": [
+        "المدينة صاخبة.",
+        "القرية هادئة.",
+        "يعود فأر القرية إلى بيته."
+       ],
+       "a": "المدينة صاخبة.",
+       "lang": "en"
+      },
+      {
+       "say": "The village is quiet.",
+       "o": [
+        "القرية هادئة.",
+        "المدينة صاخبة.",
+        "يعود فأر القرية إلى بيته."
+       ],
+       "a": "القرية هادئة.",
+       "lang": "en"
+      },
+      {
+       "say": "Village Mouse goes home.",
+       "o": [
+        "يعود فأر القرية إلى بيته.",
+        "المدينة صاخبة.",
+        "القرية هادئة."
+       ],
+       "a": "يعود فأر القرية إلى بيته.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "أكمل",
+   "eyebrow": "الخطوة ٥ — أكمل",
+   "heading": "اختر الكلمة الناقصة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "The city is noisy .",
+       "o": [
+        "noisy",
+        "quiet"
+       ],
+       "a": "noisy",
+       "sayQ": false,
+       "show": "The city is ___ .",
+       "lang": "en"
+      },
+      {
+       "say": "The village is quiet .",
+       "o": [
+        "quiet",
+        "noisy"
+       ],
+       "a": "quiet",
+       "sayQ": false,
+       "show": "The village is ___ .",
+       "lang": "en"
+      },
+      {
+       "say": "Village Mouse goes home .",
+       "o": [
+        "home",
+        "city"
+       ],
+       "a": "home",
+       "sayQ": false,
+       "show": "Village Mouse goes ___ .",
+       "lang": "en"
+      }
+     ],
+     "q": "اختر الكلمة المناسبة",
+     "lang": "en"
+    }
+   ],
+   "lead": "الصفة تأتي بعد is: The village is quiet."
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "city",
+       "o": [
+        "🏙️",
+        "🐭",
+        "🤫"
+       ],
+       "a": "🏙️",
+       "lang": "en"
+      },
+      {
+       "say": "village",
+       "o": [
+        "🏡",
+        "🐭",
+        "🤫"
+       ],
+       "a": "🏡",
+       "lang": "en"
+      },
+      {
+       "say": "mouse",
+       "o": [
+        "🐭",
+        "🏡",
+        "🤫"
+       ],
+       "a": "🐭",
+       "lang": "en"
+      },
+      {
+       "say": "quiet",
+       "o": [
+        "🤫",
+        "🐭",
+        "🏙️"
+       ],
+       "a": "🤫",
+       "lang": "en"
+      },
+      {
+       "say": "The city is noisy.",
+       "o": [
+        "المدينة صاخبة.",
+        "القرية هادئة.",
+        "يعود فأر القرية إلى بيته."
+       ],
+       "a": "المدينة صاخبة.",
+       "lang": "en"
+      },
+      {
+       "say": "The village is quiet.",
+       "o": [
+        "القرية هادئة.",
+        "المدينة صاخبة.",
+        "يعود فأر القرية إلى بيته."
+       ],
+       "a": "القرية هادئة.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

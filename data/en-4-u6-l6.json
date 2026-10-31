@@ -1,0 +1,274 @@
+{
+ "id": "en-4-u6-l6",
+ "grade": 4,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 6 · Lesson 6: Where did you go?",
+ "titleAr": "إلى أين ذهبت؟",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "إلى أين ذهبت؟",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "holiday",
+       "ar": "عطلة",
+       "em": "🏖️"
+      },
+      {
+       "id": "v1",
+       "en": "went",
+       "ar": "ذهب",
+       "em": "➡️"
+      },
+      {
+       "id": "v2",
+       "en": "sea",
+       "ar": "بحر",
+       "em": "🌊"
+      },
+      {
+       "id": "v3",
+       "en": "grandparents",
+       "ar": "الأجداد",
+       "em": "👴👵"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 96⁠–⁠97 · كتاب النشاط ص 82⁠–⁠83"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Where did …?",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Where <b>did</b> you go?</div><div class=\"ex\">I <b>went</b> to the sea.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Where did you go? I went to the sea."
+      }
+     ]
+    }
+   ],
+   "lead": "السؤال عن المكان في الماضي.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "Where ___ you go?",
+           "a": "did",
+           "o": [
+            "did",
+            "do"
+           ]
+          },
+          {
+           "s": "I ___ to the sea.",
+           "a": "went",
+           "o": [
+            "went",
+            "go"
+           ]
+          },
+          {
+           "s": "We visited our ___ .",
+           "a": "grandparents",
+           "o": [
+            "grandparents",
+            "holiday"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Where did you go?",
+          "I went to the sea."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Where did you go?",
+           "o": [
+            "Where did you go?",
+            "I went to the sea."
+           ]
+          },
+          {
+           "a": "I went to the sea.",
+           "o": [
+            "I went to the sea.",
+            "Where did you go?"
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "holiday",
+       "ipa": "",
+       "meaning": "عطلة",
+       "ex": "holiday"
+      },
+      {
+       "must": 1,
+       "term": "went",
+       "ipa": "",
+       "meaning": "ذهب",
+       "ex": "I went to the sea."
+      },
+      {
+       "must": 1,
+       "term": "sea",
+       "ipa": "",
+       "meaning": "بحر",
+       "ex": "I went to the sea."
+      },
+      {
+       "must": 0,
+       "term": "grandparents",
+       "ipa": "",
+       "meaning": "الأجداد",
+       "ex": "grandparents"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "Where ___ you go?",
+       "a": "did",
+       "o": [
+        "did",
+        "do"
+       ],
+       "why": ""
+      },
+      {
+       "q": "I ___ to the sea.",
+       "a": "went",
+       "o": [
+        "went",
+        "go"
+       ],
+       "why": ""
+      },
+      {
+       "q": "We visited our ___ .",
+       "a": "grandparents",
+       "o": [
+        "grandparents",
+        "holiday"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى went؟",
+       "a": "ذهب",
+       "o": [
+        "ذهب",
+        "عطلة",
+        "بحر"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى holiday؟",
+       "a": "عطلة",
+       "o": [
+        "عطلة",
+        "ذهب",
+        "بحر"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Where did you go?",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Where did you go?",
+       "o": [
+        "Where did you go?",
+        "I went to the sea."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

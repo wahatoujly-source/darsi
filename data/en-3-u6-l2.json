@@ -1,0 +1,337 @@
+{
+ "id": "en-3-u6-l2",
+ "grade": 3,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "Where is the bakery?",
+ "titleAr": "الإنجليزية — الصف الثالث",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "Where is the bakery?",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "next to",
+       "em": "↔️",
+       "say": "next to",
+       "sub": "بجانب",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "opposite",
+       "em": "🔄",
+       "say": "opposite",
+       "sub": "مقابل",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "between",
+       "em": "↕️",
+       "say": "between",
+       "sub": "بين",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "behind",
+       "em": "🔙",
+       "say": "behind",
+       "sub": "خلف",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "street",
+       "em": "🛣️",
+       "say": "street",
+       "sub": "شارع",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك "
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "Where is the bakery?",
+       "em": "↔️",
+       "say": "Where is the bakery?",
+       "sub": "أين المخبز؟",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "It's next to the mosque.",
+       "em": "↔️",
+       "say": "It's next to the mosque.",
+       "sub": "إنه بجانب المسجد.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "It's between the park and the market.",
+       "em": "↕️",
+       "say": "It's between the park and the market.",
+       "sub": "إنه بين الحديقة والسوق.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "next to",
+       "o": [
+        "↔️",
+        "🔄",
+        "🔙"
+       ],
+       "a": "↔️",
+       "lang": "en"
+      },
+      {
+       "say": "opposite",
+       "o": [
+        "🔄",
+        "↕️",
+        "🔙"
+       ],
+       "a": "🔄",
+       "lang": "en"
+      },
+      {
+       "say": "between",
+       "o": [
+        "↕️",
+        "🛣️",
+        "🔙"
+       ],
+       "a": "↕️",
+       "lang": "en"
+      },
+      {
+       "say": "behind",
+       "o": [
+        "🔙",
+        "🛣️",
+        "↕️"
+       ],
+       "a": "🔙",
+       "lang": "en"
+      },
+      {
+       "say": "street",
+       "o": [
+        "🛣️",
+        "🔄",
+        "↔️"
+       ],
+       "a": "🛣️",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "Where is the bakery?",
+       "o": [
+        "أين المخبز؟",
+        "إنه بجانب المسجد.",
+        "إنه بين الحديقة والسوق."
+       ],
+       "a": "أين المخبز؟",
+       "lang": "en"
+      },
+      {
+       "say": "It's next to the mosque.",
+       "o": [
+        "إنه بجانب المسجد.",
+        "أين المخبز؟",
+        "إنه بين الحديقة والسوق."
+       ],
+       "a": "إنه بجانب المسجد.",
+       "lang": "en"
+      },
+      {
+       "say": "It's between the park and the market.",
+       "o": [
+        "إنه بين الحديقة والسوق.",
+        "أين المخبز؟",
+        "إنه بجانب المسجد."
+       ],
+       "a": "إنه بين الحديقة والسوق.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "أكمل",
+   "eyebrow": "الخطوة ٥ — أكمل",
+   "heading": "اختر الكلمة الناقصة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "It's next to the mosque.",
+       "o": [
+        "next",
+        "near"
+       ],
+       "a": "next",
+       "sayQ": false,
+       "show": "It's ___ to the mosque.",
+       "lang": "en"
+      },
+      {
+       "say": "It's between the park and the market.",
+       "o": [
+        "between",
+        "behind"
+       ],
+       "a": "between",
+       "sayQ": false,
+       "show": "It's ___ the park and the market.",
+       "lang": "en"
+      },
+      {
+       "say": "The school is opposite the hospital. (مقابل)",
+       "o": [
+        "opposite",
+        "between"
+       ],
+       "a": "opposite",
+       "sayQ": false,
+       "show": "The school is ___ the hospital. (مقابل)",
+       "lang": "en"
+      }
+     ],
+     "q": "اختر الكلمة المناسبة",
+     "lang": "en"
+    }
+   ],
+   "lead": "next to, opposite, between, behind."
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "next to",
+       "o": [
+        "↔️",
+        "↕️",
+        "🔄"
+       ],
+       "a": "↔️",
+       "lang": "en"
+      },
+      {
+       "say": "opposite",
+       "o": [
+        "🔄",
+        "↕️",
+        "🛣️"
+       ],
+       "a": "🔄",
+       "lang": "en"
+      },
+      {
+       "say": "between",
+       "o": [
+        "↕️",
+        "🔙",
+        "↔️"
+       ],
+       "a": "↕️",
+       "lang": "en"
+      },
+      {
+       "say": "behind",
+       "o": [
+        "🔙",
+        "🔄",
+        "🛣️"
+       ],
+       "a": "🔙",
+       "lang": "en"
+      },
+      {
+       "say": "Where is the bakery?",
+       "o": [
+        "أين المخبز؟",
+        "إنه بجانب المسجد.",
+        "إنه بين الحديقة والسوق."
+       ],
+       "a": "أين المخبز؟",
+       "lang": "en"
+      },
+      {
+       "say": "It's next to the mosque.",
+       "o": [
+        "إنه بجانب المسجد.",
+        "أين المخبز؟",
+        "إنه بين الحديقة والسوق."
+       ],
+       "a": "إنه بجانب المسجد.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

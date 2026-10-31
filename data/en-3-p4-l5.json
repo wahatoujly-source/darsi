@@ -1,0 +1,337 @@
+{
+ "id": "en-3-p4-l5",
+ "grade": 3,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "What's wrong?",
+ "titleAr": "الإنجليزية — الصف الثالث",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "What's wrong?",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "headache",
+       "em": "🤕",
+       "say": "headache",
+       "sub": "صداع",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "stomach ache",
+       "em": "🤢",
+       "say": "stomach ache",
+       "sub": "ألم بطن",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "cold",
+       "em": "🤧",
+       "say": "cold",
+       "sub": "زكام",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "tired",
+       "em": "😴",
+       "say": "tired",
+       "sub": "متعب",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "doctor",
+       "em": "🧑‍⚕️",
+       "say": "doctor",
+       "sub": "طبيب",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك كتاب التلميذ ص 70⁠–⁠71"
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "What's wrong?",
+       "em": "🤕",
+       "say": "What's wrong?",
+       "sub": "ما بك؟",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "I have a headache.",
+       "em": "🤕",
+       "say": "I have a headache.",
+       "sub": "لدي صداع.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "Go to the doctor.",
+       "em": "🧑‍⚕️",
+       "say": "Go to the doctor.",
+       "sub": "اذهب إلى الطبيب.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "headache",
+       "o": [
+        "🤕",
+        "🤧",
+        "🤢"
+       ],
+       "a": "🤕",
+       "lang": "en"
+      },
+      {
+       "say": "stomach ache",
+       "o": [
+        "🤢",
+        "🤕",
+        "🧑‍⚕️"
+       ],
+       "a": "🤢",
+       "lang": "en"
+      },
+      {
+       "say": "cold",
+       "o": [
+        "🤧",
+        "😴",
+        "🤕"
+       ],
+       "a": "🤧",
+       "lang": "en"
+      },
+      {
+       "say": "tired",
+       "o": [
+        "😴",
+        "🤢",
+        "🧑‍⚕️"
+       ],
+       "a": "😴",
+       "lang": "en"
+      },
+      {
+       "say": "doctor",
+       "o": [
+        "🧑‍⚕️",
+        "🤕",
+        "😴"
+       ],
+       "a": "🧑‍⚕️",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "What's wrong?",
+       "o": [
+        "ما بك؟",
+        "لدي صداع.",
+        "اذهب إلى الطبيب."
+       ],
+       "a": "ما بك؟",
+       "lang": "en"
+      },
+      {
+       "say": "I have a headache.",
+       "o": [
+        "لدي صداع.",
+        "ما بك؟",
+        "اذهب إلى الطبيب."
+       ],
+       "a": "لدي صداع.",
+       "lang": "en"
+      },
+      {
+       "say": "Go to the doctor.",
+       "o": [
+        "اذهب إلى الطبيب.",
+        "ما بك؟",
+        "لدي صداع."
+       ],
+       "a": "اذهب إلى الطبيب.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "أكمل",
+   "eyebrow": "الخطوة ٥ — أكمل",
+   "heading": "اختر الكلمة الناقصة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "What's wrong ?",
+       "o": [
+        "wrong",
+        "right"
+       ],
+       "a": "wrong",
+       "sayQ": false,
+       "show": "What's ___ ?",
+       "lang": "en"
+      },
+      {
+       "say": "I have a headache.",
+       "o": [
+        "have",
+        "am"
+       ],
+       "a": "have",
+       "sayQ": false,
+       "show": "I ___ a headache.",
+       "lang": "en"
+      },
+      {
+       "say": "Go to the doctor .",
+       "o": [
+        "doctor",
+        "teacher"
+       ],
+       "a": "doctor",
+       "sayQ": false,
+       "show": "Go to the ___ .",
+       "lang": "en"
+      }
+     ],
+     "q": "اختر الكلمة المناسبة",
+     "lang": "en"
+    }
+   ],
+   "lead": "نعبّر عن المرض بـ I have a …"
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "headache",
+       "o": [
+        "🤕",
+        "🤢",
+        "🧑‍⚕️"
+       ],
+       "a": "🤕",
+       "lang": "en"
+      },
+      {
+       "say": "stomach ache",
+       "o": [
+        "🤢",
+        "🤕",
+        "😴"
+       ],
+       "a": "🤢",
+       "lang": "en"
+      },
+      {
+       "say": "cold",
+       "o": [
+        "🤧",
+        "😴",
+        "🤢"
+       ],
+       "a": "🤧",
+       "lang": "en"
+      },
+      {
+       "say": "tired",
+       "o": [
+        "😴",
+        "🤧",
+        "🤢"
+       ],
+       "a": "😴",
+       "lang": "en"
+      },
+      {
+       "say": "What's wrong?",
+       "o": [
+        "ما بك؟",
+        "لدي صداع.",
+        "اذهب إلى الطبيب."
+       ],
+       "a": "ما بك؟",
+       "lang": "en"
+      },
+      {
+       "say": "I have a headache.",
+       "o": [
+        "لدي صداع.",
+        "ما بك؟",
+        "اذهب إلى الطبيب."
+       ],
+       "a": "لدي صداع.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

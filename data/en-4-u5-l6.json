@@ -1,0 +1,287 @@
+{
+ "id": "en-4-u5-l6",
+ "grade": 4,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 5 · Lesson 6: Higher and Highest",
+ "titleAr": "هذا الجبل أعلى من ذاك.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "هذا الجبل أعلى من ذاك.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "high",
+       "ar": "عالٍ",
+       "em": "⬆️"
+      },
+      {
+       "id": "v1",
+       "en": "higher",
+       "ar": "أعلى",
+       "em": "⏫"
+      },
+      {
+       "id": "v2",
+       "en": "highest",
+       "ar": "الأعلى",
+       "em": "🔝"
+      },
+      {
+       "id": "v3",
+       "en": "tall",
+       "ar": "طويل",
+       "em": "🦒"
+      },
+      {
+       "id": "v4",
+       "en": "tallest",
+       "ar": "الأطول",
+       "em": "🗼"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 78⁠–⁠79 · كتاب النشاط ص 66⁠–⁠67"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Comparatives & superlatives",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">This mountain is higher than that one.</div><div class=\"ex\">Everest is the <b>highest</b> mountain.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "This mountain is higher than that one. Everest is the highest mountain."
+      }
+     ]
+    }
+   ],
+   "lead": "er than للمقارنة بين اثنين، و the …est للأكثر بين الجميع.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "This tree is ___ than that tree.",
+           "a": "taller",
+           "o": [
+            "taller",
+            "tallest"
+           ]
+          },
+          {
+           "s": "It's the ___ mountain in the world.",
+           "a": "highest",
+           "o": [
+            "highest",
+            "higher"
+           ]
+          },
+          {
+           "s": "big → bigger → ___",
+           "a": "biggest",
+           "o": [
+            "biggest",
+            "bigest"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "This mountain is higher than that one.",
+          "Everest is the highest mountain."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "This mountain is higher than that one.",
+           "o": [
+            "This mountain is higher than that one.",
+            "Everest is the highest mountain."
+           ]
+          },
+          {
+           "a": "Everest is the highest mountain.",
+           "o": [
+            "Everest is the highest mountain.",
+            "This mountain is higher than that one."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "high",
+       "ipa": "",
+       "meaning": "عالٍ",
+       "ex": "This mountain is higher than that one."
+      },
+      {
+       "must": 1,
+       "term": "higher",
+       "ipa": "",
+       "meaning": "أعلى",
+       "ex": "This mountain is higher than that one."
+      },
+      {
+       "must": 1,
+       "term": "highest",
+       "ipa": "",
+       "meaning": "الأعلى",
+       "ex": "Everest is the highest mountain."
+      },
+      {
+       "must": 0,
+       "term": "tall",
+       "ipa": "",
+       "meaning": "طويل",
+       "ex": "tall"
+      },
+      {
+       "must": 0,
+       "term": "tallest",
+       "ipa": "",
+       "meaning": "الأطول",
+       "ex": "tallest"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "This tree is ___ than that tree.",
+       "a": "taller",
+       "o": [
+        "taller",
+        "tallest"
+       ],
+       "why": ""
+      },
+      {
+       "q": "It's the ___ mountain in the world.",
+       "a": "highest",
+       "o": [
+        "highest",
+        "higher"
+       ],
+       "why": ""
+      },
+      {
+       "q": "big → bigger → ___",
+       "a": "biggest",
+       "o": [
+        "biggest",
+        "bigest"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى higher؟",
+       "a": "أعلى",
+       "o": [
+        "أعلى",
+        "عالٍ",
+        "الأعلى"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى highest؟",
+       "a": "الأعلى",
+       "o": [
+        "الأعلى",
+        "عالٍ",
+        "أعلى"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "This mountain is higher than that one.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "This mountain is higher than that one.",
+       "o": [
+        "This mountain is higher than that one.",
+        "Everest is the highest mountain."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

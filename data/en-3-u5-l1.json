@@ -1,0 +1,315 @@
+{
+ "id": "en-3-u5-l1",
+ "grade": 3,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "My Health",
+ "titleAr": "الإنجليزية — الصف الثالث",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "My Health",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "healthy",
+       "em": "💪",
+       "say": "healthy",
+       "sub": "صحي",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "water",
+       "em": "💧",
+       "say": "water",
+       "sub": "ماء",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "sleep",
+       "em": "😴",
+       "say": "sleep",
+       "sub": "ينام",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "exercise",
+       "em": "🏃",
+       "say": "exercise",
+       "sub": "يمارس الرياضة",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "vegetables",
+       "em": "🥦",
+       "say": "vegetables",
+       "sub": "خضروات",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك "
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "I drink water every day.",
+       "em": "💧",
+       "say": "I drink water every day.",
+       "sub": "أشرب الماء كل يوم.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "I eat vegetables.",
+       "em": "🥦",
+       "say": "I eat vegetables.",
+       "sub": "آكل الخضروات.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "healthy",
+       "o": [
+        "💪",
+        "💧",
+        "🏃"
+       ],
+       "a": "💪",
+       "lang": "en"
+      },
+      {
+       "say": "water",
+       "o": [
+        "💧",
+        "🏃",
+        "😴"
+       ],
+       "a": "💧",
+       "lang": "en"
+      },
+      {
+       "say": "sleep",
+       "o": [
+        "😴",
+        "🥦",
+        "💧"
+       ],
+       "a": "😴",
+       "lang": "en"
+      },
+      {
+       "say": "exercise",
+       "o": [
+        "🏃",
+        "💪",
+        "💧"
+       ],
+       "a": "🏃",
+       "lang": "en"
+      },
+      {
+       "say": "vegetables",
+       "o": [
+        "🥦",
+        "💪",
+        "💧"
+       ],
+       "a": "🥦",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "I drink water every day.",
+       "o": [
+        "أشرب الماء كل يوم.",
+        "آكل الخضروات."
+       ],
+       "a": "أشرب الماء كل يوم.",
+       "lang": "en"
+      },
+      {
+       "say": "I eat vegetables.",
+       "o": [
+        "آكل الخضروات.",
+        "أشرب الماء كل يوم."
+       ],
+       "a": "آكل الخضروات.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "أكمل",
+   "eyebrow": "الخطوة ٥ — أكمل",
+   "heading": "اختر الكلمة الناقصة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "I drink water every day.",
+       "o": [
+        "water",
+        "sleep"
+       ],
+       "a": "water",
+       "sayQ": false,
+       "show": "I drink ___ every day.",
+       "lang": "en"
+      },
+      {
+       "say": "Vegetables are healthy .",
+       "o": [
+        "healthy",
+        "messy"
+       ],
+       "a": "healthy",
+       "sayQ": false,
+       "show": "Vegetables are ___ .",
+       "lang": "en"
+      },
+      {
+       "say": "I sleep early.",
+       "o": [
+        "sleep",
+        "sleeps"
+       ],
+       "a": "sleep",
+       "sayQ": false,
+       "show": "I ___ early.",
+       "lang": "en"
+      }
+     ],
+     "q": "اختر الكلمة المناسبة",
+     "lang": "en"
+    }
+   ],
+   "lead": "نستخدم المضارع البسيط للعادات."
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "healthy",
+       "o": [
+        "💪",
+        "🥦",
+        "😴"
+       ],
+       "a": "💪",
+       "lang": "en"
+      },
+      {
+       "say": "water",
+       "o": [
+        "💧",
+        "🥦",
+        "😴"
+       ],
+       "a": "💧",
+       "lang": "en"
+      },
+      {
+       "say": "sleep",
+       "o": [
+        "😴",
+        "💪",
+        "🏃"
+       ],
+       "a": "😴",
+       "lang": "en"
+      },
+      {
+       "say": "exercise",
+       "o": [
+        "🏃",
+        "🥦",
+        "💧"
+       ],
+       "a": "🏃",
+       "lang": "en"
+      },
+      {
+       "say": "I drink water every day.",
+       "o": [
+        "أشرب الماء كل يوم.",
+        "آكل الخضروات."
+       ],
+       "a": "أشرب الماء كل يوم.",
+       "lang": "en"
+      },
+      {
+       "say": "I eat vegetables.",
+       "o": [
+        "آكل الخضروات.",
+        "أشرب الماء كل يوم."
+       ],
+       "a": "آكل الخضروات.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

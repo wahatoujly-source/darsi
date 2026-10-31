@@ -1,0 +1,274 @@
+{
+ "id": "en-4-u2-l4",
+ "grade": 4,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 2 · Lesson 4: Different Days",
+ "titleAr": "عطلتنا الجمعة والسبت.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "عطلتنا الجمعة والسبت.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "weekend",
+       "ar": "عطلة نهاية الأسبوع",
+       "em": "📅"
+      },
+      {
+       "id": "v1",
+       "en": "Friday",
+       "ar": "الجمعة",
+       "em": "🕌"
+      },
+      {
+       "id": "v2",
+       "en": "Saturday",
+       "ar": "السبت",
+       "em": "6️⃣"
+      },
+      {
+       "id": "v3",
+       "en": "holiday",
+       "ar": "عطلة",
+       "em": "🏖️"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 32⁠–⁠33 · كتاب النشاط ص 26⁠–⁠27"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Days of the week",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Our weekend is Friday and <b>Saturday</b>.</div><div class=\"ex\">In the UK, the weekend is <b>Saturday</b> and Sunday.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Our weekend is Friday and Saturday. In the UK, the weekend is Saturday and Sunday."
+      }
+     ]
+    }
+   ],
+   "lead": "أيام الأسبوع تبدأ بحرف كبير: Friday.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "Our weekend is Friday and ___ .",
+           "a": "Saturday",
+           "o": [
+            "Saturday",
+            "Monday"
+           ]
+          },
+          {
+           "s": "Days start with a ___ letter.",
+           "a": "capital",
+           "o": [
+            "capital",
+            "small"
+           ]
+          },
+          {
+           "s": "On ___ we go to the mosque.",
+           "a": "Friday",
+           "o": [
+            "Friday",
+            "Tuesday"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Our weekend is Friday and Saturday.",
+          "In the UK, the weekend is Saturday and Sunday."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Our weekend is Friday and Saturday.",
+           "o": [
+            "Our weekend is Friday and Saturday.",
+            "In the UK, the weekend is Saturday and Sunday."
+           ]
+          },
+          {
+           "a": "In the UK, the weekend is Saturday and Sunday.",
+           "o": [
+            "In the UK, the weekend is Saturday and Sunday.",
+            "Our weekend is Friday and Saturday."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "weekend",
+       "ipa": "",
+       "meaning": "عطلة نهاية الأسبوع",
+       "ex": "Our weekend is Friday and Saturday."
+      },
+      {
+       "must": 1,
+       "term": "Friday",
+       "ipa": "",
+       "meaning": "الجمعة",
+       "ex": "Our weekend is Friday and Saturday."
+      },
+      {
+       "must": 1,
+       "term": "Saturday",
+       "ipa": "",
+       "meaning": "السبت",
+       "ex": "Our weekend is Friday and Saturday."
+      },
+      {
+       "must": 0,
+       "term": "holiday",
+       "ipa": "",
+       "meaning": "عطلة",
+       "ex": "holiday"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "Our weekend is Friday and ___ .",
+       "a": "Saturday",
+       "o": [
+        "Saturday",
+        "Monday"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Days start with a ___ letter.",
+       "a": "capital",
+       "o": [
+        "capital",
+        "small"
+       ],
+       "why": ""
+      },
+      {
+       "q": "On ___ we go to the mosque.",
+       "a": "Friday",
+       "o": [
+        "Friday",
+        "Tuesday"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى weekend؟",
+       "a": "عطلة نهاية الأسبوع",
+       "o": [
+        "عطلة نهاية الأسبوع",
+        "الجمعة",
+        "السبت"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى Saturday؟",
+       "a": "السبت",
+       "o": [
+        "السبت",
+        "عطلة نهاية الأسبوع",
+        "الجمعة"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Our weekend is Friday and Saturday.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Our weekend is Friday and Saturday.",
+       "o": [
+        "Our weekend is Friday and Saturday.",
+        "In the UK, the weekend is Saturday and Sunday."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

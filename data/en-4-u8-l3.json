@@ -1,0 +1,299 @@
+{
+ "id": "en-4-u8-l3",
+ "grade": 4,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 8 · Lesson 3: Ice-creams for everyone!",
+ "titleAr": "أي نكهة تريد؟",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "أي نكهة تريد؟",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "ice-cream",
+       "ar": "بوظة",
+       "em": "🍦"
+      },
+      {
+       "id": "v1",
+       "en": "flavour",
+       "ar": "نكهة",
+       "em": "🍓"
+      },
+      {
+       "id": "v2",
+       "en": "chocolate",
+       "ar": "شوكولاتة",
+       "em": "🍫"
+      },
+      {
+       "id": "v3",
+       "en": "vanilla",
+       "ar": "فانيلا",
+       "em": "🍨"
+      },
+      {
+       "id": "v4",
+       "en": "everyone",
+       "ar": "الجميع",
+       "em": "👨‍👩‍👧‍👦"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 124 · كتاب النشاط ص 106"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "What … do you want?",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">What <b>flavour</b> do you want?</div><div class=\"ex\">I <b>want</b> chocolate, please.</div><div class=\"ex\">Ice-creams for <b>everyone</b>!</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "What flavour do you want? I want chocolate, please. Ice-creams for everyone!"
+      }
+     ]
+    }
+   ],
+   "lead": "نسأل عن الاختيار بـ What flavour do you want?",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "What ___ do you want?",
+           "a": "flavour",
+           "o": [
+            "flavour",
+            "everyone"
+           ]
+          },
+          {
+           "s": "I ___ vanilla, please.",
+           "a": "want",
+           "o": [
+            "want",
+            "wants"
+           ]
+          },
+          {
+           "s": "Ice-creams for ___ !",
+           "a": "everyone",
+           "o": [
+            "everyone",
+            "flavour"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "What flavour do you want?",
+          "I want chocolate, please.",
+          "Ice-creams for everyone!"
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "What flavour do you want?",
+           "o": [
+            "What flavour do you want?",
+            "I want chocolate, please.",
+            "Ice-creams for everyone!"
+           ]
+          },
+          {
+           "a": "I want chocolate, please.",
+           "o": [
+            "I want chocolate, please.",
+            "What flavour do you want?",
+            "Ice-creams for everyone!"
+           ]
+          },
+          {
+           "a": "Ice-creams for everyone!",
+           "o": [
+            "Ice-creams for everyone!",
+            "What flavour do you want?",
+            "I want chocolate, please."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "ice-cream",
+       "ipa": "",
+       "meaning": "بوظة",
+       "ex": "Ice-creams for everyone!"
+      },
+      {
+       "must": 1,
+       "term": "flavour",
+       "ipa": "",
+       "meaning": "نكهة",
+       "ex": "What flavour do you want?"
+      },
+      {
+       "must": 1,
+       "term": "chocolate",
+       "ipa": "",
+       "meaning": "شوكولاتة",
+       "ex": "I want chocolate, please."
+      },
+      {
+       "must": 0,
+       "term": "vanilla",
+       "ipa": "",
+       "meaning": "فانيلا",
+       "ex": "vanilla"
+      },
+      {
+       "must": 0,
+       "term": "everyone",
+       "ipa": "",
+       "meaning": "الجميع",
+       "ex": "Ice-creams for everyone!"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "What ___ do you want?",
+       "a": "flavour",
+       "o": [
+        "flavour",
+        "everyone"
+       ],
+       "why": ""
+      },
+      {
+       "q": "I ___ vanilla, please.",
+       "a": "want",
+       "o": [
+        "want",
+        "wants"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Ice-creams for ___ !",
+       "a": "everyone",
+       "o": [
+        "everyone",
+        "flavour"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى chocolate؟",
+       "a": "شوكولاتة",
+       "o": [
+        "شوكولاتة",
+        "بوظة",
+        "نكهة"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى ice-cream؟",
+       "a": "بوظة",
+       "o": [
+        "بوظة",
+        "نكهة",
+        "شوكولاتة"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "What flavour do you want?",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "What flavour do you want?",
+       "o": [
+        "What flavour do you want?",
+        "I want chocolate, please.",
+        "Ice-creams for everyone!"
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

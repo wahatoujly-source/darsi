@@ -1,0 +1,337 @@
+{
+ "id": "en-3-p3-l5",
+ "grade": 3,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "Who am I?",
+ "titleAr": "الإنجليزية — الصف الثالث",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "Who am I?",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "tall",
+       "em": "🦒",
+       "say": "tall",
+       "sub": "طويل",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "strong",
+       "em": "💪",
+       "say": "strong",
+       "sub": "قوي",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "fast",
+       "em": "🐆",
+       "say": "fast",
+       "sub": "سريع",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "stripes",
+       "em": "🦓",
+       "say": "stripes",
+       "sub": "خطوط",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "spots",
+       "em": "🐆",
+       "say": "spots",
+       "sub": "بقع",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك كتاب التلميذ ص 52⁠–⁠53"
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "I have black and white stripes.",
+       "em": "🦓",
+       "say": "I have black and white stripes.",
+       "sub": "لدي خطوط سوداء وبيضاء.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "Who am I?",
+       "em": "🦒",
+       "say": "Who am I?",
+       "sub": "من أنا؟",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "You're a zebra!",
+       "em": "🦒",
+       "say": "You're a zebra!",
+       "sub": "أنت حمار وحشي!",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "tall",
+       "o": [
+        "🦒",
+        "🦓",
+        "💪"
+       ],
+       "a": "🦒",
+       "lang": "en"
+      },
+      {
+       "say": "strong",
+       "o": [
+        "💪",
+        "🦒",
+        "🐆"
+       ],
+       "a": "💪",
+       "lang": "en"
+      },
+      {
+       "say": "fast",
+       "o": [
+        "🐆",
+        "💪",
+        "🦒"
+       ],
+       "a": "🐆",
+       "lang": "en"
+      },
+      {
+       "say": "stripes",
+       "o": [
+        "🦓",
+        "🐆",
+        "💪"
+       ],
+       "a": "🦓",
+       "lang": "en"
+      },
+      {
+       "say": "spots",
+       "o": [
+        "🐆",
+        "🦒",
+        "💪"
+       ],
+       "a": "🐆",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "I have black and white stripes.",
+       "o": [
+        "لدي خطوط سوداء وبيضاء.",
+        "من أنا؟",
+        "أنت حمار وحشي!"
+       ],
+       "a": "لدي خطوط سوداء وبيضاء.",
+       "lang": "en"
+      },
+      {
+       "say": "Who am I?",
+       "o": [
+        "من أنا؟",
+        "لدي خطوط سوداء وبيضاء.",
+        "أنت حمار وحشي!"
+       ],
+       "a": "من أنا؟",
+       "lang": "en"
+      },
+      {
+       "say": "You're a zebra!",
+       "o": [
+        "أنت حمار وحشي!",
+        "لدي خطوط سوداء وبيضاء.",
+        "من أنا؟"
+       ],
+       "a": "أنت حمار وحشي!",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "أكمل",
+   "eyebrow": "الخطوة ٥ — أكمل",
+   "heading": "اختر الكلمة الناقصة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "I have black and white stripes.",
+       "o": [
+        "have",
+        "am"
+       ],
+       "a": "have",
+       "sayQ": false,
+       "show": "I ___ black and white stripes.",
+       "lang": "en"
+      },
+      {
+       "say": "I can run fast.",
+       "o": [
+        "can",
+        "have"
+       ],
+       "a": "can",
+       "sayQ": false,
+       "show": "I ___ run fast.",
+       "lang": "en"
+      },
+      {
+       "say": "Who am I?",
+       "o": [
+        "am",
+        "is"
+       ],
+       "a": "am",
+       "sayQ": false,
+       "show": "Who ___ I?",
+       "lang": "en"
+      }
+     ],
+     "q": "اختر الكلمة المناسبة",
+     "lang": "en"
+    }
+   ],
+   "lead": "نصف الحيوان بـ I have … و I can …"
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "tall",
+       "o": [
+        "🦒",
+        "🐆",
+        "🐆"
+       ],
+       "a": "🦒",
+       "lang": "en"
+      },
+      {
+       "say": "strong",
+       "o": [
+        "💪",
+        "🦓",
+        "🐆"
+       ],
+       "a": "💪",
+       "lang": "en"
+      },
+      {
+       "say": "fast",
+       "o": [
+        "🐆",
+        "🦓",
+        "💪"
+       ],
+       "a": "🐆",
+       "lang": "en"
+      },
+      {
+       "say": "stripes",
+       "o": [
+        "🦓",
+        "🐆",
+        "💪"
+       ],
+       "a": "🦓",
+       "lang": "en"
+      },
+      {
+       "say": "I have black and white stripes.",
+       "o": [
+        "لدي خطوط سوداء وبيضاء.",
+        "من أنا؟",
+        "أنت حمار وحشي!"
+       ],
+       "a": "لدي خطوط سوداء وبيضاء.",
+       "lang": "en"
+      },
+      {
+       "say": "Who am I?",
+       "o": [
+        "من أنا؟",
+        "لدي خطوط سوداء وبيضاء.",
+        "أنت حمار وحشي!"
+       ],
+       "a": "من أنا؟",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

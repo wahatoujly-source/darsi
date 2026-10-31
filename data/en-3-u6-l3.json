@@ -1,0 +1,315 @@
+{
+ "id": "en-3-u6-l3",
+ "grade": 3,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "Let's go!",
+ "titleAr": "الإنجليزية — الصف الثالث",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "Let's go!",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "walk",
+       "em": "🚶",
+       "say": "walk",
+       "sub": "يمشي",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "car",
+       "em": "🚗",
+       "say": "car",
+       "sub": "سيارة",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "bus",
+       "em": "🚌",
+       "say": "bus",
+       "sub": "حافلة",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "bike",
+       "em": "🚲",
+       "say": "bike",
+       "sub": "دراجة",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "go",
+       "em": "➡️",
+       "say": "go",
+       "sub": "يذهب",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك "
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "Let's go to the park!",
+       "em": "➡️",
+       "say": "Let's go to the park!",
+       "sub": "هيا نذهب إلى الحديقة!",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "Let's go by bus.",
+       "em": "🚌",
+       "say": "Let's go by bus.",
+       "sub": "هيا نذهب بالحافلة.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "walk",
+       "o": [
+        "🚶",
+        "🚗",
+        "➡️"
+       ],
+       "a": "🚶",
+       "lang": "en"
+      },
+      {
+       "say": "car",
+       "o": [
+        "🚗",
+        "🚌",
+        "🚶"
+       ],
+       "a": "🚗",
+       "lang": "en"
+      },
+      {
+       "say": "bus",
+       "o": [
+        "🚌",
+        "➡️",
+        "🚲"
+       ],
+       "a": "🚌",
+       "lang": "en"
+      },
+      {
+       "say": "bike",
+       "o": [
+        "🚲",
+        "➡️",
+        "🚌"
+       ],
+       "a": "🚲",
+       "lang": "en"
+      },
+      {
+       "say": "go",
+       "o": [
+        "➡️",
+        "🚲",
+        "🚶"
+       ],
+       "a": "➡️",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "Let's go to the park!",
+       "o": [
+        "هيا نذهب إلى الحديقة!",
+        "هيا نذهب بالحافلة."
+       ],
+       "a": "هيا نذهب إلى الحديقة!",
+       "lang": "en"
+      },
+      {
+       "say": "Let's go by bus.",
+       "o": [
+        "هيا نذهب بالحافلة.",
+        "هيا نذهب إلى الحديقة!"
+       ],
+       "a": "هيا نذهب بالحافلة.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "أكمل",
+   "eyebrow": "الخطوة ٥ — أكمل",
+   "heading": "اختر الكلمة الناقصة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "Let's go by bus.",
+       "o": [
+        "by",
+        "in"
+       ],
+       "a": "by",
+       "sayQ": false,
+       "show": "Let's go ___ bus.",
+       "lang": "en"
+      },
+      {
+       "say": "Let's go to the park!",
+       "o": [
+        "Let's",
+        "Let"
+       ],
+       "a": "Let's",
+       "sayQ": false,
+       "show": "___ go to the park!",
+       "lang": "en"
+      },
+      {
+       "say": "I go to school on foot .",
+       "o": [
+        "foot",
+        "walk"
+       ],
+       "a": "foot",
+       "sayQ": false,
+       "show": "I go to school on ___ .",
+       "lang": "en"
+      }
+     ],
+     "q": "اختر الكلمة المناسبة",
+     "lang": "en"
+    }
+   ],
+   "lead": "by bus, by car — ولكن on foot."
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "walk",
+       "o": [
+        "🚶",
+        "🚌",
+        "🚗"
+       ],
+       "a": "🚶",
+       "lang": "en"
+      },
+      {
+       "say": "car",
+       "o": [
+        "🚗",
+        "➡️",
+        "🚶"
+       ],
+       "a": "🚗",
+       "lang": "en"
+      },
+      {
+       "say": "bus",
+       "o": [
+        "🚌",
+        "➡️",
+        "🚗"
+       ],
+       "a": "🚌",
+       "lang": "en"
+      },
+      {
+       "say": "bike",
+       "o": [
+        "🚲",
+        "🚶",
+        "🚌"
+       ],
+       "a": "🚲",
+       "lang": "en"
+      },
+      {
+       "say": "Let's go to the park!",
+       "o": [
+        "هيا نذهب إلى الحديقة!",
+        "هيا نذهب بالحافلة."
+       ],
+       "a": "هيا نذهب إلى الحديقة!",
+       "lang": "en"
+      },
+      {
+       "say": "Let's go by bus.",
+       "o": [
+        "هيا نذهب بالحافلة.",
+        "هيا نذهب إلى الحديقة!"
+       ],
+       "a": "هيا نذهب بالحافلة.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

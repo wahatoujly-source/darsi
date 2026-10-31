@@ -1,0 +1,315 @@
+{
+ "id": "en-3-u6-l1",
+ "grade": 3,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "My Town",
+ "titleAr": "الإنجليزية — الصف الثالث",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "My Town",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "bakery",
+       "em": "🥖",
+       "say": "bakery",
+       "sub": "مخبز",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "mosque",
+       "em": "🕌",
+       "say": "mosque",
+       "sub": "مسجد",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "hospital",
+       "em": "🏥",
+       "say": "hospital",
+       "sub": "مستشفى",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "park",
+       "em": "🌳",
+       "say": "park",
+       "sub": "حديقة",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "market",
+       "em": "🏪",
+       "say": "market",
+       "sub": "سوق",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك "
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "There is a mosque in my town.",
+       "em": "🕌",
+       "say": "There is a mosque in my town.",
+       "sub": "يوجد مسجد في مدينتي.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "We buy bread at the bakery.",
+       "em": "🥖",
+       "say": "We buy bread at the bakery.",
+       "sub": "نشتري الخبز من المخبز.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "bakery",
+       "o": [
+        "🥖",
+        "🏪",
+        "🏥"
+       ],
+       "a": "🥖",
+       "lang": "en"
+      },
+      {
+       "say": "mosque",
+       "o": [
+        "🕌",
+        "🥖",
+        "🏥"
+       ],
+       "a": "🕌",
+       "lang": "en"
+      },
+      {
+       "say": "hospital",
+       "o": [
+        "🏥",
+        "🕌",
+        "🌳"
+       ],
+       "a": "🏥",
+       "lang": "en"
+      },
+      {
+       "say": "park",
+       "o": [
+        "🌳",
+        "🥖",
+        "🏪"
+       ],
+       "a": "🌳",
+       "lang": "en"
+      },
+      {
+       "say": "market",
+       "o": [
+        "🏪",
+        "🏥",
+        "🥖"
+       ],
+       "a": "🏪",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "There is a mosque in my town.",
+       "o": [
+        "يوجد مسجد في مدينتي.",
+        "نشتري الخبز من المخبز."
+       ],
+       "a": "يوجد مسجد في مدينتي.",
+       "lang": "en"
+      },
+      {
+       "say": "We buy bread at the bakery.",
+       "o": [
+        "نشتري الخبز من المخبز.",
+        "يوجد مسجد في مدينتي."
+       ],
+       "a": "نشتري الخبز من المخبز.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "أكمل",
+   "eyebrow": "الخطوة ٥ — أكمل",
+   "heading": "اختر الكلمة الناقصة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "We buy bread at the bakery .",
+       "o": [
+        "bakery",
+        "hospital"
+       ],
+       "a": "bakery",
+       "sayQ": false,
+       "show": "We buy bread at the ___ .",
+       "lang": "en"
+      },
+      {
+       "say": "Doctors work in a hospital .",
+       "o": [
+        "hospital",
+        "park"
+       ],
+       "a": "hospital",
+       "sayQ": false,
+       "show": "Doctors work in a ___ .",
+       "lang": "en"
+      },
+      {
+       "say": "There is a park in my town.",
+       "o": [
+        "is",
+        "are"
+       ],
+       "a": "is",
+       "sayQ": false,
+       "show": "There ___ a park in my town.",
+       "lang": "en"
+      }
+     ],
+     "q": "اختر الكلمة المناسبة",
+     "lang": "en"
+    }
+   ],
+   "lead": "نصف المدينة بـ There is / There are."
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "bakery",
+       "o": [
+        "🥖",
+        "🏥",
+        "🌳"
+       ],
+       "a": "🥖",
+       "lang": "en"
+      },
+      {
+       "say": "mosque",
+       "o": [
+        "🕌",
+        "🌳",
+        "🏪"
+       ],
+       "a": "🕌",
+       "lang": "en"
+      },
+      {
+       "say": "hospital",
+       "o": [
+        "🏥",
+        "🏪",
+        "🕌"
+       ],
+       "a": "🏥",
+       "lang": "en"
+      },
+      {
+       "say": "park",
+       "o": [
+        "🌳",
+        "🏥",
+        "🕌"
+       ],
+       "a": "🌳",
+       "lang": "en"
+      },
+      {
+       "say": "There is a mosque in my town.",
+       "o": [
+        "يوجد مسجد في مدينتي.",
+        "نشتري الخبز من المخبز."
+       ],
+       "a": "يوجد مسجد في مدينتي.",
+       "lang": "en"
+      },
+      {
+       "say": "We buy bread at the bakery.",
+       "o": [
+        "نشتري الخبز من المخبز.",
+        "يوجد مسجد في مدينتي."
+       ],
+       "a": "نشتري الخبز من المخبز.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,299 @@
+{
+ "id": "en-4-u3-l4",
+ "grade": 4,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 3 · Lesson 4: At the Races",
+ "titleAr": "من الأول؟",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "من الأول؟",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "race",
+       "ar": "سباق",
+       "em": "🏁"
+      },
+      {
+       "id": "v1",
+       "en": "win",
+       "ar": "يفوز",
+       "em": "🏆"
+      },
+      {
+       "id": "v2",
+       "en": "first",
+       "ar": "الأول",
+       "em": "🥇"
+      },
+      {
+       "id": "v3",
+       "en": "second",
+       "ar": "الثاني",
+       "em": "🥈"
+      },
+      {
+       "id": "v4",
+       "en": "fast",
+       "ar": "سريع",
+       "em": "💨"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 50⁠–⁠51 · كتاب النشاط ص 42⁠–⁠43"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Ordinal numbers",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Who is <b>first</b>?</div><div class=\"ex\">Kareem is <b>first</b>. Lina is second.</div><div class=\"ex\">Run <b>fast</b>!</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Who is first? Kareem is first. Lina is second. Run fast!"
+      }
+     ]
+    }
+   ],
+   "lead": "first, second, third, fourth …",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "Kareem is ___ . (1st)",
+           "a": "first",
+           "o": [
+            "first",
+            "one"
+           ]
+          },
+          {
+           "s": "Lina is ___ . (2nd)",
+           "a": "second",
+           "o": [
+            "second",
+            "two"
+           ]
+          },
+          {
+           "s": "He can run ___ .",
+           "a": "fast",
+           "o": [
+            "fast",
+            "slow"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Who is first?",
+          "Kareem is first. Lina is second.",
+          "Run fast!"
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Who is first?",
+           "o": [
+            "Who is first?",
+            "Kareem is first. Lina is second.",
+            "Run fast!"
+           ]
+          },
+          {
+           "a": "Kareem is first. Lina is second.",
+           "o": [
+            "Kareem is first. Lina is second.",
+            "Who is first?",
+            "Run fast!"
+           ]
+          },
+          {
+           "a": "Run fast!",
+           "o": [
+            "Run fast!",
+            "Who is first?",
+            "Kareem is first. Lina is second."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "race",
+       "ipa": "",
+       "meaning": "سباق",
+       "ex": "race"
+      },
+      {
+       "must": 1,
+       "term": "win",
+       "ipa": "",
+       "meaning": "يفوز",
+       "ex": "win"
+      },
+      {
+       "must": 1,
+       "term": "first",
+       "ipa": "",
+       "meaning": "الأول",
+       "ex": "Who is first?"
+      },
+      {
+       "must": 0,
+       "term": "second",
+       "ipa": "",
+       "meaning": "الثاني",
+       "ex": "Kareem is first. Lina is second."
+      },
+      {
+       "must": 0,
+       "term": "fast",
+       "ipa": "",
+       "meaning": "سريع",
+       "ex": "Run fast!"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "Kareem is ___ . (1st)",
+       "a": "first",
+       "o": [
+        "first",
+        "one"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Lina is ___ . (2nd)",
+       "a": "second",
+       "o": [
+        "second",
+        "two"
+       ],
+       "why": ""
+      },
+      {
+       "q": "He can run ___ .",
+       "a": "fast",
+       "o": [
+        "fast",
+        "slow"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى race؟",
+       "a": "سباق",
+       "o": [
+        "سباق",
+        "يفوز",
+        "الأول"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى first؟",
+       "a": "الأول",
+       "o": [
+        "الأول",
+        "سباق",
+        "يفوز"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Who is first?",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Who is first?",
+       "o": [
+        "Who is first?",
+        "Kareem is first. Lina is second.",
+        "Run fast!"
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

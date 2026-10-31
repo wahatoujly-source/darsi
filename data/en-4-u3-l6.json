@@ -1,0 +1,286 @@
+{
+ "id": "en-4-u3-l6",
+ "grade": 4,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 3 · Lesson 6: What's first?",
+ "titleAr": "أولاً اغسل يديك.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "أولاً اغسل يديك.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "first",
+       "ar": "أولاً",
+       "em": "1️⃣"
+      },
+      {
+       "id": "v1",
+       "en": "then",
+       "ar": "ثم",
+       "em": "➡️"
+      },
+      {
+       "id": "v2",
+       "en": "next",
+       "ar": "بعد ذلك",
+       "em": "⏭️"
+      },
+      {
+       "id": "v3",
+       "en": "finally",
+       "ar": "أخيراً",
+       "em": "🏁"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 54⁠–⁠55 · كتاب النشاط ص 46⁠–⁠47"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Sequencing",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\"><b>First</b>, wash your hands.</div><div class=\"ex\">Then, <b>eat</b> your lunch.</div><div class=\"ex\"><b>Finally</b>, clean the table.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "First, wash your hands. Then, eat your lunch. Finally, clean the table."
+      }
+     ]
+    }
+   ],
+   "lead": "نرتب الخطوات بـ first, then, next, finally.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "___ , wash your hands.",
+           "a": "First",
+           "o": [
+            "First",
+            "Finally"
+           ]
+          },
+          {
+           "s": "___ , clean the table.",
+           "a": "Finally",
+           "o": [
+            "Finally",
+            "First"
+           ]
+          },
+          {
+           "s": "Then ___ your lunch.",
+           "a": "eat",
+           "o": [
+            "eat",
+            "eats"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "First, wash your hands.",
+          "Then, eat your lunch.",
+          "Finally, clean the table."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "First, wash your hands.",
+           "o": [
+            "First, wash your hands.",
+            "Then, eat your lunch.",
+            "Finally, clean the table."
+           ]
+          },
+          {
+           "a": "Then, eat your lunch.",
+           "o": [
+            "Then, eat your lunch.",
+            "First, wash your hands.",
+            "Finally, clean the table."
+           ]
+          },
+          {
+           "a": "Finally, clean the table.",
+           "o": [
+            "Finally, clean the table.",
+            "First, wash your hands.",
+            "Then, eat your lunch."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "first",
+       "ipa": "",
+       "meaning": "أولاً",
+       "ex": "First, wash your hands."
+      },
+      {
+       "must": 1,
+       "term": "then",
+       "ipa": "",
+       "meaning": "ثم",
+       "ex": "Then, eat your lunch."
+      },
+      {
+       "must": 1,
+       "term": "next",
+       "ipa": "",
+       "meaning": "بعد ذلك",
+       "ex": "next"
+      },
+      {
+       "must": 0,
+       "term": "finally",
+       "ipa": "",
+       "meaning": "أخيراً",
+       "ex": "Finally, clean the table."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "___ , wash your hands.",
+       "a": "First",
+       "o": [
+        "First",
+        "Finally"
+       ],
+       "why": ""
+      },
+      {
+       "q": "___ , clean the table.",
+       "a": "Finally",
+       "o": [
+        "Finally",
+        "First"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Then ___ your lunch.",
+       "a": "eat",
+       "o": [
+        "eat",
+        "eats"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى finally؟",
+       "a": "أخيراً",
+       "o": [
+        "أخيراً",
+        "أولاً",
+        "ثم"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى next؟",
+       "a": "بعد ذلك",
+       "o": [
+        "بعد ذلك",
+        "أولاً",
+        "ثم"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "First, wash your hands.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "First, wash your hands.",
+       "o": [
+        "First, wash your hands.",
+        "Then, eat your lunch.",
+        "Finally, clean the table."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

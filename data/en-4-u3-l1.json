@@ -1,0 +1,287 @@
+{
+ "id": "en-4-u3-l1",
+ "grade": 4,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 3 · Lesson 1: Welcome to our Open Day!",
+ "titleAr": "أهلاً بكم في يومنا المفتوح!",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "أهلاً بكم في يومنا المفتوح!",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "welcome",
+       "ar": "أهلاً",
+       "em": "🤗"
+      },
+      {
+       "id": "v1",
+       "en": "parents",
+       "ar": "آباء",
+       "em": "👨‍👩‍👧"
+      },
+      {
+       "id": "v2",
+       "en": "visit",
+       "ar": "يزور",
+       "em": "🚶"
+      },
+      {
+       "id": "v3",
+       "en": "show",
+       "ar": "يعرض",
+       "em": "🖼️"
+      },
+      {
+       "id": "v4",
+       "en": "projects",
+       "ar": "مشاريع",
+       "em": "🗂️"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 44⁠–⁠45 · كتاب النشاط ص 36⁠–⁠37"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Imperatives",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\"><b>Welcome</b> to our Open Day!</div><div class=\"ex\">Come and <b>see</b> our projects.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Welcome to our Open Day! Come and see our projects."
+      }
+     ]
+    }
+   ],
+   "lead": "الأمر يبدأ بالفعل: Come, Look, Sit.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "___ to our Open Day!",
+           "a": "Welcome",
+           "o": [
+            "Welcome",
+            "Goodbye"
+           ]
+          },
+          {
+           "s": "Come and ___ our projects.",
+           "a": "see",
+           "o": [
+            "see",
+            "sees"
+           ]
+          },
+          {
+           "s": "Our ___ visit the school.",
+           "a": "parents",
+           "o": [
+            "parents",
+            "projects"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Welcome to our Open Day!",
+          "Come and see our projects."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Welcome to our Open Day!",
+           "o": [
+            "Welcome to our Open Day!",
+            "Come and see our projects."
+           ]
+          },
+          {
+           "a": "Come and see our projects.",
+           "o": [
+            "Come and see our projects.",
+            "Welcome to our Open Day!"
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "welcome",
+       "ipa": "",
+       "meaning": "أهلاً",
+       "ex": "Welcome to our Open Day!"
+      },
+      {
+       "must": 1,
+       "term": "parents",
+       "ipa": "",
+       "meaning": "آباء",
+       "ex": "parents"
+      },
+      {
+       "must": 1,
+       "term": "visit",
+       "ipa": "",
+       "meaning": "يزور",
+       "ex": "visit"
+      },
+      {
+       "must": 0,
+       "term": "show",
+       "ipa": "",
+       "meaning": "يعرض",
+       "ex": "show"
+      },
+      {
+       "must": 0,
+       "term": "projects",
+       "ipa": "",
+       "meaning": "مشاريع",
+       "ex": "Come and see our projects."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "___ to our Open Day!",
+       "a": "Welcome",
+       "o": [
+        "Welcome",
+        "Goodbye"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Come and ___ our projects.",
+       "a": "see",
+       "o": [
+        "see",
+        "sees"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Our ___ visit the school.",
+       "a": "parents",
+       "o": [
+        "parents",
+        "projects"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى parents؟",
+       "a": "آباء",
+       "o": [
+        "آباء",
+        "أهلاً",
+        "يزور"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى projects؟",
+       "a": "مشاريع",
+       "o": [
+        "مشاريع",
+        "أهلاً",
+        "آباء"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Welcome to our Open Day!",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Welcome to our Open Day!",
+       "o": [
+        "Welcome to our Open Day!",
+        "Come and see our projects."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

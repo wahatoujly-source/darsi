@@ -1,0 +1,337 @@
+{
+ "id": "en-3-u6-l6",
+ "grade": 3,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "A Little Seed",
+ "titleAr": "الإنجليزية — الصف الثالث",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "A Little Seed",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "little",
+       "em": "🤏",
+       "say": "little",
+       "sub": "صغير",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "root",
+       "em": "🫚",
+       "say": "root",
+       "sub": "جذر",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "stem",
+       "em": "🌿",
+       "say": "stem",
+       "sub": "ساق",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "leaf",
+       "em": "🍃",
+       "say": "leaf",
+       "sub": "ورقة",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "flower",
+       "em": "🌸",
+       "say": "flower",
+       "sub": "زهرة",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك "
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "The little seed has a root.",
+       "em": "🤏",
+       "say": "The little seed has a root.",
+       "sub": "للبذرة الصغيرة جذر.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "Then it has a stem and leaves.",
+       "em": "🌿",
+       "say": "Then it has a stem and leaves.",
+       "sub": "ثم يصبح لها ساق وأوراق.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "Now it's a flower!",
+       "em": "🌸",
+       "say": "Now it's a flower!",
+       "sub": "الآن هي زهرة!",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "little",
+       "o": [
+        "🤏",
+        "🌸",
+        "🌿"
+       ],
+       "a": "🤏",
+       "lang": "en"
+      },
+      {
+       "say": "root",
+       "o": [
+        "🫚",
+        "🌿",
+        "🤏"
+       ],
+       "a": "🫚",
+       "lang": "en"
+      },
+      {
+       "say": "stem",
+       "o": [
+        "🌿",
+        "🤏",
+        "🫚"
+       ],
+       "a": "🌿",
+       "lang": "en"
+      },
+      {
+       "say": "leaf",
+       "o": [
+        "🍃",
+        "🌸",
+        "🫚"
+       ],
+       "a": "🍃",
+       "lang": "en"
+      },
+      {
+       "say": "flower",
+       "o": [
+        "🌸",
+        "🌿",
+        "🤏"
+       ],
+       "a": "🌸",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "The little seed has a root.",
+       "o": [
+        "للبذرة الصغيرة جذر.",
+        "ثم يصبح لها ساق وأوراق.",
+        "الآن هي زهرة!"
+       ],
+       "a": "للبذرة الصغيرة جذر.",
+       "lang": "en"
+      },
+      {
+       "say": "Then it has a stem and leaves.",
+       "o": [
+        "ثم يصبح لها ساق وأوراق.",
+        "للبذرة الصغيرة جذر.",
+        "الآن هي زهرة!"
+       ],
+       "a": "ثم يصبح لها ساق وأوراق.",
+       "lang": "en"
+      },
+      {
+       "say": "Now it's a flower!",
+       "o": [
+        "الآن هي زهرة!",
+        "للبذرة الصغيرة جذر.",
+        "ثم يصبح لها ساق وأوراق."
+       ],
+       "a": "الآن هي زهرة!",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "أكمل",
+   "eyebrow": "الخطوة ٥ — أكمل",
+   "heading": "اختر الكلمة الناقصة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "one leaf, two leaves",
+       "o": [
+        "leaves",
+        "leafs"
+       ],
+       "a": "leaves",
+       "sayQ": false,
+       "show": "one leaf, two ___",
+       "lang": "en"
+      },
+      {
+       "say": "The root is under the soil.",
+       "o": [
+        "root",
+        "flower"
+       ],
+       "a": "root",
+       "sayQ": false,
+       "show": "The ___ is under the soil.",
+       "lang": "en"
+      },
+      {
+       "say": "Now it's a beautiful flower .",
+       "o": [
+        "flower",
+        "seed"
+       ],
+       "a": "flower",
+       "sayQ": false,
+       "show": "Now it's a beautiful ___ .",
+       "lang": "en"
+      }
+     ],
+     "q": "اختر الكلمة المناسبة",
+     "lang": "en"
+    }
+   ],
+   "lead": "leaf → leaves"
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "little",
+       "o": [
+        "🤏",
+        "🍃",
+        "🌿"
+       ],
+       "a": "🤏",
+       "lang": "en"
+      },
+      {
+       "say": "root",
+       "o": [
+        "🫚",
+        "🌸",
+        "🌿"
+       ],
+       "a": "🫚",
+       "lang": "en"
+      },
+      {
+       "say": "stem",
+       "o": [
+        "🌿",
+        "🤏",
+        "🍃"
+       ],
+       "a": "🌿",
+       "lang": "en"
+      },
+      {
+       "say": "leaf",
+       "o": [
+        "🍃",
+        "🤏",
+        "🌿"
+       ],
+       "a": "🍃",
+       "lang": "en"
+      },
+      {
+       "say": "The little seed has a root.",
+       "o": [
+        "للبذرة الصغيرة جذر.",
+        "ثم يصبح لها ساق وأوراق.",
+        "الآن هي زهرة!"
+       ],
+       "a": "للبذرة الصغيرة جذر.",
+       "lang": "en"
+      },
+      {
+       "say": "Then it has a stem and leaves.",
+       "o": [
+        "ثم يصبح لها ساق وأوراق.",
+        "للبذرة الصغيرة جذر.",
+        "الآن هي زهرة!"
+       ],
+       "a": "ثم يصبح لها ساق وأوراق.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

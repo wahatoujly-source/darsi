@@ -1,0 +1,315 @@
+{
+ "id": "en-3-u6-l4",
+ "grade": 3,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "How tall?",
+ "titleAr": "الإنجليزية — الصف الثالث",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "How tall?",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "tall",
+       "em": "📏",
+       "say": "tall",
+       "sub": "طويل",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "short",
+       "em": "🔽",
+       "say": "short",
+       "sub": "قصير",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "metre",
+       "em": "📐",
+       "say": "metre",
+       "sub": "متر",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "centimetre",
+       "em": "📏",
+       "say": "centimetre",
+       "sub": "سنتيمتر",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "measure",
+       "em": "📏",
+       "say": "measure",
+       "sub": "يقيس",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك "
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "How tall are you?",
+       "em": "📏",
+       "say": "How tall are you?",
+       "sub": "كم طولك؟",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "I'm one metre thirty.",
+       "em": "📐",
+       "say": "I'm one metre thirty.",
+       "sub": "طولي متر وثلاثون سنتيمتراً.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "tall",
+       "o": [
+        "📏",
+        "🔽",
+        "📐"
+       ],
+       "a": "📏",
+       "lang": "en"
+      },
+      {
+       "say": "short",
+       "o": [
+        "🔽",
+        "📏",
+        "📐"
+       ],
+       "a": "🔽",
+       "lang": "en"
+      },
+      {
+       "say": "metre",
+       "o": [
+        "📐",
+        "📏",
+        "📏"
+       ],
+       "a": "📐",
+       "lang": "en"
+      },
+      {
+       "say": "centimetre",
+       "o": [
+        "📏",
+        "🔽",
+        "📐"
+       ],
+       "a": "📏",
+       "lang": "en"
+      },
+      {
+       "say": "measure",
+       "o": [
+        "📏",
+        "📐",
+        "🔽"
+       ],
+       "a": "📏",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "How tall are you?",
+       "o": [
+        "كم طولك؟",
+        "طولي متر وثلاثون سنتيمتراً."
+       ],
+       "a": "كم طولك؟",
+       "lang": "en"
+      },
+      {
+       "say": "I'm one metre thirty.",
+       "o": [
+        "طولي متر وثلاثون سنتيمتراً.",
+        "كم طولك؟"
+       ],
+       "a": "طولي متر وثلاثون سنتيمتراً.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "أكمل",
+   "eyebrow": "الخطوة ٥ — أكمل",
+   "heading": "اختر الكلمة الناقصة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "How tall are you?",
+       "o": [
+        "tall",
+        "many"
+       ],
+       "a": "tall",
+       "sayQ": false,
+       "show": "How ___ are you?",
+       "lang": "en"
+      },
+      {
+       "say": "A giraffe is very tall .",
+       "o": [
+        "tall",
+        "short"
+       ],
+       "a": "tall",
+       "sayQ": false,
+       "show": "A giraffe is very ___ .",
+       "lang": "en"
+      },
+      {
+       "say": "We measure with a ruler.",
+       "o": [
+        "measure",
+        "measures"
+       ],
+       "a": "measure",
+       "sayQ": false,
+       "show": "We ___ with a ruler.",
+       "lang": "en"
+      }
+     ],
+     "q": "اختر الكلمة المناسبة",
+     "lang": "en"
+    }
+   ],
+   "lead": "السؤال عن الطول."
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "tall",
+       "o": [
+        "📏",
+        "🔽",
+        "📐"
+       ],
+       "a": "📏",
+       "lang": "en"
+      },
+      {
+       "say": "short",
+       "o": [
+        "🔽",
+        "📐",
+        "📏"
+       ],
+       "a": "🔽",
+       "lang": "en"
+      },
+      {
+       "say": "metre",
+       "o": [
+        "📐",
+        "🔽",
+        "📏"
+       ],
+       "a": "📐",
+       "lang": "en"
+      },
+      {
+       "say": "centimetre",
+       "o": [
+        "📏",
+        "📐",
+        "🔽"
+       ],
+       "a": "📏",
+       "lang": "en"
+      },
+      {
+       "say": "How tall are you?",
+       "o": [
+        "كم طولك؟",
+        "طولي متر وثلاثون سنتيمتراً."
+       ],
+       "a": "كم طولك؟",
+       "lang": "en"
+      },
+      {
+       "say": "I'm one metre thirty.",
+       "o": [
+        "طولي متر وثلاثون سنتيمتراً.",
+        "كم طولك؟"
+       ],
+       "a": "طولي متر وثلاثون سنتيمتراً.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,319 @@
+{
+ "id": "en-4-u7-l8",
+ "grade": 4,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 7 · Lesson 8: The Big Bike Race",
+ "titleAr": "ارتدى عمر خوذته.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "ارتدى عمر خوذته.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "bike",
+       "ar": "دراجة",
+       "em": "🚲"
+      },
+      {
+       "id": "v1",
+       "en": "helmet",
+       "ar": "خوذة",
+       "em": "⛑️"
+      },
+      {
+       "id": "v2",
+       "en": "finish line",
+       "ar": "خط النهاية",
+       "em": "🏁"
+      },
+      {
+       "id": "v3",
+       "en": "fell",
+       "ar": "سقط",
+       "em": "🤕"
+      },
+      {
+       "id": "v4",
+       "en": "won",
+       "ar": "فاز",
+       "em": "🏆"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 118⁠–⁠119 · كتاب النشاط ص 102⁠–⁠103"
+  },
+  {
+   "title": "اقرأ",
+   "eyebrow": "الخطوة ٢ — اقرأ",
+   "heading": "اقرأ واستمع",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "📖 The Big Bike Race",
+     "html": "<div class=\"ex\">Omar wore his helmet.</div><div class=\"ex\">He fell, but he got up.</div><div class=\"ex\">He won the race!</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Omar wore his helmet. He fell, but he got up. He won the race!"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط ▶ لتسمع النص."
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٣ — القاعدة",
+   "heading": "Past irregular",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Omar wore his <b>helmet</b>.</div><div class=\"ex\">He <b>fell</b>, but he got up.</div><div class=\"ex\">He <b>won</b> the race!</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Omar wore his helmet. He fell, but he got up. He won the race!"
+      }
+     ]
+    }
+   ],
+   "lead": "win → won, fall → fell, wear → wore.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٤ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "He ___ the race.",
+           "a": "won",
+           "o": [
+            "won",
+            "winned"
+           ]
+          },
+          {
+           "s": "He ___ but he got up.",
+           "a": "fell",
+           "o": [
+            "fell",
+            "falled"
+           ]
+          },
+          {
+           "s": "You must wear a ___ .",
+           "a": "helmet",
+           "o": [
+            "helmet",
+            "bike"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Omar wore his helmet.",
+          "He fell, but he got up.",
+          "He won the race!"
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Omar wore his helmet.",
+           "o": [
+            "Omar wore his helmet.",
+            "He fell, but he got up.",
+            "He won the race!"
+           ]
+          },
+          {
+           "a": "He fell, but he got up.",
+           "o": [
+            "He fell, but he got up.",
+            "Omar wore his helmet.",
+            "He won the race!"
+           ]
+          },
+          {
+           "a": "He won the race!",
+           "o": [
+            "He won the race!",
+            "Omar wore his helmet.",
+            "He fell, but he got up."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٥ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "bike",
+       "ipa": "",
+       "meaning": "دراجة",
+       "ex": "bike"
+      },
+      {
+       "must": 1,
+       "term": "helmet",
+       "ipa": "",
+       "meaning": "خوذة",
+       "ex": "Omar wore his helmet."
+      },
+      {
+       "must": 1,
+       "term": "finish line",
+       "ipa": "",
+       "meaning": "خط النهاية",
+       "ex": "finish line"
+      },
+      {
+       "must": 0,
+       "term": "fell",
+       "ipa": "",
+       "meaning": "سقط",
+       "ex": "He fell, but he got up."
+      },
+      {
+       "must": 0,
+       "term": "won",
+       "ipa": "",
+       "meaning": "فاز",
+       "ex": "He won the race!"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "He ___ the race.",
+       "a": "won",
+       "o": [
+        "won",
+        "winned"
+       ],
+       "why": ""
+      },
+      {
+       "q": "He ___ but he got up.",
+       "a": "fell",
+       "o": [
+        "fell",
+        "falled"
+       ],
+       "why": ""
+      },
+      {
+       "q": "You must wear a ___ .",
+       "a": "helmet",
+       "o": [
+        "helmet",
+        "bike"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى helmet؟",
+       "a": "خوذة",
+       "o": [
+        "خوذة",
+        "دراجة",
+        "خط النهاية"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى finish line؟",
+       "a": "خط النهاية",
+       "o": [
+        "خط النهاية",
+        "دراجة",
+        "خوذة"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Omar wore his helmet.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Omar wore his helmet.",
+       "o": [
+        "Omar wore his helmet.",
+        "He fell, but he got up.",
+        "He won the race!"
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

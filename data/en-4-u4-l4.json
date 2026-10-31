@@ -1,0 +1,299 @@
+{
+ "id": "en-4-u4-l4",
+ "grade": 4,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 4 · Lesson 4: Snakes and Ladders",
+ "titleAr": "ارمِ النرد.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "ارمِ النرد.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "snake",
+       "ar": "ثعبان",
+       "em": "🐍"
+      },
+      {
+       "id": "v1",
+       "en": "ladder",
+       "ar": "سلّم",
+       "em": "🪜"
+      },
+      {
+       "id": "v2",
+       "en": "square",
+       "ar": "مربع",
+       "em": "⬜"
+      },
+      {
+       "id": "v3",
+       "en": "go up",
+       "ar": "يصعد",
+       "em": "⬆️"
+      },
+      {
+       "id": "v4",
+       "en": "go down",
+       "ar": "ينزل",
+       "em": "⬇️"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 65 · كتاب النشاط ص 55"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "up / down",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Throw the dice.</div><div class=\"ex\">Go <b>up</b> the ladder!</div><div class=\"ex\">Oh no! Go <b>down</b> the snake.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Throw the dice. Go up the ladder! Oh no! Go down the snake."
+      }
+     ]
+    }
+   ],
+   "lead": "go up the ladder — go down the snake.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "Go ___ the ladder.",
+           "a": "up",
+           "o": [
+            "up",
+            "down"
+           ]
+          },
+          {
+           "s": "Go ___ the snake.",
+           "a": "down",
+           "o": [
+            "down",
+            "up"
+           ]
+          },
+          {
+           "s": "Move three ___ .",
+           "a": "squares",
+           "o": [
+            "squares",
+            "snakes"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Throw the dice.",
+          "Go up the ladder!",
+          "Oh no! Go down the snake."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Throw the dice.",
+           "o": [
+            "Throw the dice.",
+            "Go up the ladder!",
+            "Oh no! Go down the snake."
+           ]
+          },
+          {
+           "a": "Go up the ladder!",
+           "o": [
+            "Go up the ladder!",
+            "Throw the dice.",
+            "Oh no! Go down the snake."
+           ]
+          },
+          {
+           "a": "Oh no! Go down the snake.",
+           "o": [
+            "Oh no! Go down the snake.",
+            "Throw the dice.",
+            "Go up the ladder!"
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "snake",
+       "ipa": "",
+       "meaning": "ثعبان",
+       "ex": "Oh no! Go down the snake."
+      },
+      {
+       "must": 1,
+       "term": "ladder",
+       "ipa": "",
+       "meaning": "سلّم",
+       "ex": "Go up the ladder!"
+      },
+      {
+       "must": 1,
+       "term": "square",
+       "ipa": "",
+       "meaning": "مربع",
+       "ex": "square"
+      },
+      {
+       "must": 0,
+       "term": "go up",
+       "ipa": "",
+       "meaning": "يصعد",
+       "ex": "Go up the ladder!"
+      },
+      {
+       "must": 0,
+       "term": "go down",
+       "ipa": "",
+       "meaning": "ينزل",
+       "ex": "Go up the ladder!"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "Go ___ the ladder.",
+       "a": "up",
+       "o": [
+        "up",
+        "down"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Go ___ the snake.",
+       "a": "down",
+       "o": [
+        "down",
+        "up"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Move three ___ .",
+       "a": "squares",
+       "o": [
+        "squares",
+        "snakes"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى square؟",
+       "a": "مربع",
+       "o": [
+        "مربع",
+        "ثعبان",
+        "سلّم"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى ladder؟",
+       "a": "سلّم",
+       "o": [
+        "سلّم",
+        "ثعبان",
+        "مربع"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Throw the dice.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Throw the dice.",
+       "o": [
+        "Throw the dice.",
+        "Go up the ladder!",
+        "Oh no! Go down the snake."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

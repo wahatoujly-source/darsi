@@ -1,0 +1,337 @@
+{
+ "id": "en-3-u3-l7",
+ "grade": 3,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "What's the time?",
+ "titleAr": "الإنجليزية — الصف الثالث",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "What's the time?",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "o'clock",
+       "em": "🕐",
+       "say": "o'clock",
+       "sub": "تماماً",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "half past",
+       "em": "🕧",
+       "say": "half past",
+       "sub": "والنصف",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "morning",
+       "em": "🌅",
+       "say": "morning",
+       "sub": "صباح",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "evening",
+       "em": "🌆",
+       "say": "evening",
+       "sub": "مساء",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "clock",
+       "em": "⏰",
+       "say": "clock",
+       "sub": "ساعة",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك "
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "What's the time?",
+       "em": "🕐",
+       "say": "What's the time?",
+       "sub": "كم الساعة؟",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "It's three o'clock.",
+       "em": "🕐",
+       "say": "It's three o'clock.",
+       "sub": "إنها الثالثة.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "It's half past four.",
+       "em": "🕧",
+       "say": "It's half past four.",
+       "sub": "إنها الرابعة والنصف.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "o'clock",
+       "o": [
+        "🕐",
+        "🕧",
+        "⏰"
+       ],
+       "a": "🕐",
+       "lang": "en"
+      },
+      {
+       "say": "half past",
+       "o": [
+        "🕧",
+        "⏰",
+        "🕐"
+       ],
+       "a": "🕧",
+       "lang": "en"
+      },
+      {
+       "say": "morning",
+       "o": [
+        "🌅",
+        "🕐",
+        "⏰"
+       ],
+       "a": "🌅",
+       "lang": "en"
+      },
+      {
+       "say": "evening",
+       "o": [
+        "🌆",
+        "⏰",
+        "🕐"
+       ],
+       "a": "🌆",
+       "lang": "en"
+      },
+      {
+       "say": "clock",
+       "o": [
+        "⏰",
+        "🕐",
+        "🌅"
+       ],
+       "a": "⏰",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "What's the time?",
+       "o": [
+        "كم الساعة؟",
+        "إنها الثالثة.",
+        "إنها الرابعة والنصف."
+       ],
+       "a": "كم الساعة؟",
+       "lang": "en"
+      },
+      {
+       "say": "It's three o'clock.",
+       "o": [
+        "إنها الثالثة.",
+        "كم الساعة؟",
+        "إنها الرابعة والنصف."
+       ],
+       "a": "إنها الثالثة.",
+       "lang": "en"
+      },
+      {
+       "say": "It's half past four.",
+       "o": [
+        "إنها الرابعة والنصف.",
+        "كم الساعة؟",
+        "إنها الثالثة."
+       ],
+       "a": "إنها الرابعة والنصف.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "أكمل",
+   "eyebrow": "الخطوة ٥ — أكمل",
+   "heading": "اختر الكلمة الناقصة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "What's the time ?",
+       "o": [
+        "time",
+        "clock"
+       ],
+       "a": "time",
+       "sayQ": false,
+       "show": "What's the ___ ?",
+       "lang": "en"
+      },
+      {
+       "say": "It's three o'clock .",
+       "o": [
+        "o'clock",
+        "half"
+       ],
+       "a": "o'clock",
+       "sayQ": false,
+       "show": "It's three ___ .",
+       "lang": "en"
+      },
+      {
+       "say": "4:30 = It's half past four.",
+       "o": [
+        "half",
+        "quarter"
+       ],
+       "a": "half",
+       "sayQ": false,
+       "show": "4:30 = It's ___ past four.",
+       "lang": "en"
+      }
+     ],
+     "q": "اختر الكلمة المناسبة",
+     "lang": "en"
+    }
+   ],
+   "lead": "نجيب It's … o'clock / half past …"
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "o'clock",
+       "o": [
+        "🕐",
+        "⏰",
+        "🌅"
+       ],
+       "a": "🕐",
+       "lang": "en"
+      },
+      {
+       "say": "half past",
+       "o": [
+        "🕧",
+        "⏰",
+        "🌆"
+       ],
+       "a": "🕧",
+       "lang": "en"
+      },
+      {
+       "say": "morning",
+       "o": [
+        "🌅",
+        "🌆",
+        "🕐"
+       ],
+       "a": "🌅",
+       "lang": "en"
+      },
+      {
+       "say": "evening",
+       "o": [
+        "🌆",
+        "🕧",
+        "⏰"
+       ],
+       "a": "🌆",
+       "lang": "en"
+      },
+      {
+       "say": "What's the time?",
+       "o": [
+        "كم الساعة؟",
+        "إنها الثالثة.",
+        "إنها الرابعة والنصف."
+       ],
+       "a": "كم الساعة؟",
+       "lang": "en"
+      },
+      {
+       "say": "It's three o'clock.",
+       "o": [
+        "إنها الثالثة.",
+        "كم الساعة؟",
+        "إنها الرابعة والنصف."
+       ],
+       "a": "إنها الثالثة.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

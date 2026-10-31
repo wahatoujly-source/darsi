@@ -1,0 +1,299 @@
+{
+ "id": "en-4-u2-l7",
+ "grade": 4,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 2 · Lesson 7: Guess what it is!",
+ "titleAr": "إنه حيوان. طويل جداً.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "إنه حيوان. طويل جداً.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "animal",
+       "ar": "حيوان",
+       "em": "🐾"
+      },
+      {
+       "id": "v1",
+       "en": "fruit",
+       "ar": "فاكهة",
+       "em": "🍎"
+      },
+      {
+       "id": "v2",
+       "en": "long",
+       "ar": "طويل",
+       "em": "📏"
+      },
+      {
+       "id": "v3",
+       "en": "round",
+       "ar": "مستدير",
+       "em": "⚪"
+      },
+      {
+       "id": "v4",
+       "en": "guess",
+       "ar": "يخمّن",
+       "em": "🤔"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 38⁠–⁠39 · كتاب النشاط ص 32⁠–⁠33"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Is it a …?",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">It's an animal. It's very tall.</div><div class=\"ex\"><b>Is</b> it a giraffe?</div><div class=\"ex\">Yes, it is!</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "It's an animal. It's very tall. Is it a giraffe? Yes, it is!"
+      }
+     ]
+    }
+   ],
+   "lead": "نخمّن بالسؤال Is it a …? ونجيب Yes, it is / No, it isn't.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "___ it a giraffe?",
+           "a": "Is",
+           "o": [
+            "Is",
+            "Are"
+           ]
+          },
+          {
+           "s": "No, it ___ .",
+           "a": "isn't",
+           "o": [
+            "isn't",
+            "aren't"
+           ]
+          },
+          {
+           "s": "An apple is ___ .",
+           "a": "round",
+           "o": [
+            "round",
+            "long"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "It's an animal. It's very tall.",
+          "Is it a giraffe?",
+          "Yes, it is!"
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "It's an animal. It's very tall.",
+           "o": [
+            "It's an animal. It's very tall.",
+            "Is it a giraffe?",
+            "Yes, it is!"
+           ]
+          },
+          {
+           "a": "Is it a giraffe?",
+           "o": [
+            "Is it a giraffe?",
+            "It's an animal. It's very tall.",
+            "Yes, it is!"
+           ]
+          },
+          {
+           "a": "Yes, it is!",
+           "o": [
+            "Yes, it is!",
+            "It's an animal. It's very tall.",
+            "Is it a giraffe?"
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "animal",
+       "ipa": "",
+       "meaning": "حيوان",
+       "ex": "It's an animal. It's very tall."
+      },
+      {
+       "must": 1,
+       "term": "fruit",
+       "ipa": "",
+       "meaning": "فاكهة",
+       "ex": "fruit"
+      },
+      {
+       "must": 1,
+       "term": "long",
+       "ipa": "",
+       "meaning": "طويل",
+       "ex": "long"
+      },
+      {
+       "must": 0,
+       "term": "round",
+       "ipa": "",
+       "meaning": "مستدير",
+       "ex": "round"
+      },
+      {
+       "must": 0,
+       "term": "guess",
+       "ipa": "",
+       "meaning": "يخمّن",
+       "ex": "guess"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "___ it a giraffe?",
+       "a": "Is",
+       "o": [
+        "Is",
+        "Are"
+       ],
+       "why": ""
+      },
+      {
+       "q": "No, it ___ .",
+       "a": "isn't",
+       "o": [
+        "isn't",
+        "aren't"
+       ],
+       "why": ""
+      },
+      {
+       "q": "An apple is ___ .",
+       "a": "round",
+       "o": [
+        "round",
+        "long"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى guess؟",
+       "a": "يخمّن",
+       "o": [
+        "يخمّن",
+        "حيوان",
+        "فاكهة"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى long؟",
+       "a": "طويل",
+       "o": [
+        "طويل",
+        "حيوان",
+        "فاكهة"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "It's an animal. It's very tall.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "It's an animal. It's very tall.",
+       "o": [
+        "It's an animal. It's very tall.",
+        "Is it a giraffe?",
+        "Yes, it is!"
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

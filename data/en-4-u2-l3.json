@@ -1,0 +1,299 @@
+{
+ "id": "en-4-u2-l3",
+ "grade": 4,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 2 · Lesson 3: Are they the same?",
+ "titleAr": "هل هما متشابهان؟",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "هل هما متشابهان؟",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "same",
+       "ar": "نفس الشيء",
+       "em": "🟰"
+      },
+      {
+       "id": "v1",
+       "en": "different",
+       "ar": "مختلف",
+       "em": "↔️"
+      },
+      {
+       "id": "v2",
+       "en": "big",
+       "ar": "كبير",
+       "em": "🐘"
+      },
+      {
+       "id": "v3",
+       "en": "small",
+       "ar": "صغير",
+       "em": "🐭"
+      },
+      {
+       "id": "v4",
+       "en": "colour",
+       "ar": "لون",
+       "em": "🎨"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 30⁠–⁠31 · كتاب النشاط ص 24⁠–⁠25"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "same / different",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Are they the <b>same</b>?</div><div class=\"ex\">No, they're <b>different</b>.</div><div class=\"ex\">This one is big. That one is <b>small</b>.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Are they the same? No, they're different. This one is big. That one is small."
+      }
+     ]
+    }
+   ],
+   "lead": "نقارن بين شيئين بـ the same أو different.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "Are they the ___ ?",
+           "a": "same",
+           "o": [
+            "same",
+            "small"
+           ]
+          },
+          {
+           "s": "No, they're ___ .",
+           "a": "different",
+           "o": [
+            "different",
+            "same"
+           ]
+          },
+          {
+           "s": "This one is big. That one is ___ .",
+           "a": "small",
+           "o": [
+            "small",
+            "big"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Are they the same?",
+          "No, they're different.",
+          "This one is big. That one is small."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Are they the same?",
+           "o": [
+            "Are they the same?",
+            "No, they're different.",
+            "This one is big. That one is small."
+           ]
+          },
+          {
+           "a": "No, they're different.",
+           "o": [
+            "No, they're different.",
+            "Are they the same?",
+            "This one is big. That one is small."
+           ]
+          },
+          {
+           "a": "This one is big. That one is small.",
+           "o": [
+            "This one is big. That one is small.",
+            "Are they the same?",
+            "No, they're different."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "same",
+       "ipa": "",
+       "meaning": "نفس الشيء",
+       "ex": "Are they the same?"
+      },
+      {
+       "must": 1,
+       "term": "different",
+       "ipa": "",
+       "meaning": "مختلف",
+       "ex": "No, they're different."
+      },
+      {
+       "must": 1,
+       "term": "big",
+       "ipa": "",
+       "meaning": "كبير",
+       "ex": "This one is big. That one is small."
+      },
+      {
+       "must": 0,
+       "term": "small",
+       "ipa": "",
+       "meaning": "صغير",
+       "ex": "This one is big. That one is small."
+      },
+      {
+       "must": 0,
+       "term": "colour",
+       "ipa": "",
+       "meaning": "لون",
+       "ex": "colour"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "Are they the ___ ?",
+       "a": "same",
+       "o": [
+        "same",
+        "small"
+       ],
+       "why": ""
+      },
+      {
+       "q": "No, they're ___ .",
+       "a": "different",
+       "o": [
+        "different",
+        "same"
+       ],
+       "why": ""
+      },
+      {
+       "q": "This one is big. That one is ___ .",
+       "a": "small",
+       "o": [
+        "small",
+        "big"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى different؟",
+       "a": "مختلف",
+       "o": [
+        "مختلف",
+        "نفس الشيء",
+        "كبير"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى same؟",
+       "a": "نفس الشيء",
+       "o": [
+        "نفس الشيء",
+        "مختلف",
+        "كبير"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Are they the same?",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Are they the same?",
+       "o": [
+        "Are they the same?",
+        "No, they're different.",
+        "This one is big. That one is small."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

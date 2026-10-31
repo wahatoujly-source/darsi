@@ -1,0 +1,287 @@
+{
+ "id": "en-4-u5-l3",
+ "grade": 4,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 5 · Lesson 3: On the Train",
+ "titleAr": "يغادر القطار في التاسعة.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "يغادر القطار في التاسعة.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "train",
+       "ar": "قطار",
+       "em": "🚆"
+      },
+      {
+       "id": "v1",
+       "en": "station",
+       "ar": "محطة",
+       "em": "🚉"
+      },
+      {
+       "id": "v2",
+       "en": "window",
+       "ar": "نافذة",
+       "em": "🪟"
+      },
+      {
+       "id": "v3",
+       "en": "seat",
+       "ar": "مقعد",
+       "em": "💺"
+      },
+      {
+       "id": "v4",
+       "en": "journey",
+       "ar": "رحلة",
+       "em": "🛤️"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 72⁠–⁠73 · كتاب النشاط ص 60⁠–⁠61"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Present continuous",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">The train <b>leaves</b> at nine.</div><div class=\"ex\">I'm <b>sitting</b> by the window.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "The train leaves at nine. I'm sitting by the window."
+      }
+     ]
+    }
+   ],
+   "lead": "I'm sitting / We're looking …",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "The train ___ at nine.",
+           "a": "leaves",
+           "o": [
+            "leaves",
+            "leave"
+           ]
+          },
+          {
+           "s": "I'm ___ by the window.",
+           "a": "sitting",
+           "o": [
+            "sitting",
+            "sit"
+           ]
+          },
+          {
+           "s": "We wait at the ___ .",
+           "a": "station",
+           "o": [
+            "station",
+            "seat"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "The train leaves at nine.",
+          "I'm sitting by the window."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "The train leaves at nine.",
+           "o": [
+            "The train leaves at nine.",
+            "I'm sitting by the window."
+           ]
+          },
+          {
+           "a": "I'm sitting by the window.",
+           "o": [
+            "I'm sitting by the window.",
+            "The train leaves at nine."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "train",
+       "ipa": "",
+       "meaning": "قطار",
+       "ex": "The train leaves at nine."
+      },
+      {
+       "must": 1,
+       "term": "station",
+       "ipa": "",
+       "meaning": "محطة",
+       "ex": "station"
+      },
+      {
+       "must": 1,
+       "term": "window",
+       "ipa": "",
+       "meaning": "نافذة",
+       "ex": "I'm sitting by the window."
+      },
+      {
+       "must": 0,
+       "term": "seat",
+       "ipa": "",
+       "meaning": "مقعد",
+       "ex": "seat"
+      },
+      {
+       "must": 0,
+       "term": "journey",
+       "ipa": "",
+       "meaning": "رحلة",
+       "ex": "journey"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "The train ___ at nine.",
+       "a": "leaves",
+       "o": [
+        "leaves",
+        "leave"
+       ],
+       "why": ""
+      },
+      {
+       "q": "I'm ___ by the window.",
+       "a": "sitting",
+       "o": [
+        "sitting",
+        "sit"
+       ],
+       "why": ""
+      },
+      {
+       "q": "We wait at the ___ .",
+       "a": "station",
+       "o": [
+        "station",
+        "seat"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى seat؟",
+       "a": "مقعد",
+       "o": [
+        "مقعد",
+        "قطار",
+        "محطة"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى train؟",
+       "a": "قطار",
+       "o": [
+        "قطار",
+        "محطة",
+        "نافذة"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "The train leaves at nine.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "The train leaves at nine.",
+       "o": [
+        "The train leaves at nine.",
+        "I'm sitting by the window."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

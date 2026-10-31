@@ -1,0 +1,315 @@
+{
+ "id": "en-3-u7-l6",
+ "grade": 3,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "I'm playing …",
+ "titleAr": "الإنجليزية — الصف الثالث",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "I'm playing …",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "football",
+       "em": "⚽",
+       "say": "football",
+       "sub": "كرة القدم",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "tennis",
+       "em": "🎾",
+       "say": "tennis",
+       "sub": "تنس",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "basketball",
+       "em": "🏀",
+       "say": "basketball",
+       "sub": "كرة السلة",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "chess",
+       "em": "♟️",
+       "say": "chess",
+       "sub": "شطرنج",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "now",
+       "em": "⏱️",
+       "say": "now",
+       "sub": "الآن",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك "
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "I'm playing football now.",
+       "em": "⚽",
+       "say": "I'm playing football now.",
+       "sub": "أنا ألعب كرة القدم الآن.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "They're playing chess.",
+       "em": "♟️",
+       "say": "They're playing chess.",
+       "sub": "هم يلعبون الشطرنج.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "football",
+       "o": [
+        "⚽",
+        "🎾",
+        "♟️"
+       ],
+       "a": "⚽",
+       "lang": "en"
+      },
+      {
+       "say": "tennis",
+       "o": [
+        "🎾",
+        "🏀",
+        "⚽"
+       ],
+       "a": "🎾",
+       "lang": "en"
+      },
+      {
+       "say": "basketball",
+       "o": [
+        "🏀",
+        "🎾",
+        "♟️"
+       ],
+       "a": "🏀",
+       "lang": "en"
+      },
+      {
+       "say": "chess",
+       "o": [
+        "♟️",
+        "⚽",
+        "🎾"
+       ],
+       "a": "♟️",
+       "lang": "en"
+      },
+      {
+       "say": "now",
+       "o": [
+        "⏱️",
+        "♟️",
+        "🎾"
+       ],
+       "a": "⏱️",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "I'm playing football now.",
+       "o": [
+        "أنا ألعب كرة القدم الآن.",
+        "هم يلعبون الشطرنج."
+       ],
+       "a": "أنا ألعب كرة القدم الآن.",
+       "lang": "en"
+      },
+      {
+       "say": "They're playing chess.",
+       "o": [
+        "هم يلعبون الشطرنج.",
+        "أنا ألعب كرة القدم الآن."
+       ],
+       "a": "هم يلعبون الشطرنج.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "أكمل",
+   "eyebrow": "الخطوة ٥ — أكمل",
+   "heading": "اختر الكلمة الناقصة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "I'm playing football.",
+       "o": [
+        "playing",
+        "play"
+       ],
+       "a": "playing",
+       "sayQ": false,
+       "show": "I'm ___ football.",
+       "lang": "en"
+      },
+      {
+       "say": "They are playing chess.",
+       "o": [
+        "are",
+        "is"
+       ],
+       "a": "are",
+       "sayQ": false,
+       "show": "They ___ playing chess.",
+       "lang": "en"
+      },
+      {
+       "say": "She is playing tennis.",
+       "o": [
+        "is",
+        "are"
+       ],
+       "a": "is",
+       "sayQ": false,
+       "show": "She ___ playing tennis.",
+       "lang": "en"
+      }
+     ],
+     "q": "اختر الكلمة المناسبة",
+     "lang": "en"
+    }
+   ],
+   "lead": "لما يحدث الآن."
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "football",
+       "o": [
+        "⚽",
+        "🏀",
+        "♟️"
+       ],
+       "a": "⚽",
+       "lang": "en"
+      },
+      {
+       "say": "tennis",
+       "o": [
+        "🎾",
+        "⏱️",
+        "⚽"
+       ],
+       "a": "🎾",
+       "lang": "en"
+      },
+      {
+       "say": "basketball",
+       "o": [
+        "🏀",
+        "🎾",
+        "⏱️"
+       ],
+       "a": "🏀",
+       "lang": "en"
+      },
+      {
+       "say": "chess",
+       "o": [
+        "♟️",
+        "🏀",
+        "🎾"
+       ],
+       "a": "♟️",
+       "lang": "en"
+      },
+      {
+       "say": "I'm playing football now.",
+       "o": [
+        "أنا ألعب كرة القدم الآن.",
+        "هم يلعبون الشطرنج."
+       ],
+       "a": "أنا ألعب كرة القدم الآن.",
+       "lang": "en"
+      },
+      {
+       "say": "They're playing chess.",
+       "o": [
+        "هم يلعبون الشطرنج.",
+        "أنا ألعب كرة القدم الآن."
+       ],
+       "a": "هم يلعبون الشطرنج.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,337 @@
+{
+ "id": "en-3-u8-l4",
+ "grade": 3,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "The Greedy King",
+ "titleAr": "الإنجليزية — الصف الثالث",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "The Greedy King",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "king",
+       "em": "🤴",
+       "say": "king",
+       "sub": "ملك",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "greedy",
+       "em": "🤑",
+       "say": "greedy",
+       "sub": "جشع",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "gold",
+       "em": "🪙",
+       "say": "gold",
+       "sub": "ذهب",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "touch",
+       "em": "👆",
+       "say": "touch",
+       "sub": "يلمس",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "lesson",
+       "em": "📘",
+       "say": "lesson",
+       "sub": "درس",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك "
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "The king loves gold.",
+       "em": "🤴",
+       "say": "The king loves gold.",
+       "sub": "الملك يحب الذهب.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "Everything he touches turns to gold.",
+       "em": "🪙",
+       "say": "Everything he touches turns to gold.",
+       "sub": "كل ما يلمسه يتحول إلى ذهب.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "He learns a lesson.",
+       "em": "📘",
+       "say": "He learns a lesson.",
+       "sub": "يتعلم درساً.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "king",
+       "o": [
+        "🤴",
+        "📘",
+        "👆"
+       ],
+       "a": "🤴",
+       "lang": "en"
+      },
+      {
+       "say": "greedy",
+       "o": [
+        "🤑",
+        "👆",
+        "🪙"
+       ],
+       "a": "🤑",
+       "lang": "en"
+      },
+      {
+       "say": "gold",
+       "o": [
+        "🪙",
+        "🤴",
+        "🤑"
+       ],
+       "a": "🪙",
+       "lang": "en"
+      },
+      {
+       "say": "touch",
+       "o": [
+        "👆",
+        "🤴",
+        "🪙"
+       ],
+       "a": "👆",
+       "lang": "en"
+      },
+      {
+       "say": "lesson",
+       "o": [
+        "📘",
+        "🤴",
+        "🤑"
+       ],
+       "a": "📘",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "The king loves gold.",
+       "o": [
+        "الملك يحب الذهب.",
+        "كل ما يلمسه يتحول إلى ذهب.",
+        "يتعلم درساً."
+       ],
+       "a": "الملك يحب الذهب.",
+       "lang": "en"
+      },
+      {
+       "say": "Everything he touches turns to gold.",
+       "o": [
+        "كل ما يلمسه يتحول إلى ذهب.",
+        "الملك يحب الذهب.",
+        "يتعلم درساً."
+       ],
+       "a": "كل ما يلمسه يتحول إلى ذهب.",
+       "lang": "en"
+      },
+      {
+       "say": "He learns a lesson.",
+       "o": [
+        "يتعلم درساً.",
+        "الملك يحب الذهب.",
+        "كل ما يلمسه يتحول إلى ذهب."
+       ],
+       "a": "يتعلم درساً.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "أكمل",
+   "eyebrow": "الخطوة ٥ — أكمل",
+   "heading": "اختر الكلمة الناقصة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "The king loves gold .",
+       "o": [
+        "gold",
+        "food"
+       ],
+       "a": "gold",
+       "sayQ": false,
+       "show": "The king loves ___ .",
+       "lang": "en"
+      },
+      {
+       "say": "He is very greedy .",
+       "o": [
+        "greedy",
+        "kind"
+       ],
+       "a": "greedy",
+       "sayQ": false,
+       "show": "He is very ___ .",
+       "lang": "en"
+      },
+      {
+       "say": "He learns a lesson.",
+       "o": [
+        "learns",
+        "learn"
+       ],
+       "a": "learns",
+       "sayQ": false,
+       "show": "He ___ a lesson.",
+       "lang": "en"
+      }
+     ],
+     "q": "اختر الكلمة المناسبة",
+     "lang": "en"
+    }
+   ],
+   "lead": "greedy = يريد أكثر مما يحتاج."
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "king",
+       "o": [
+        "🤴",
+        "📘",
+        "👆"
+       ],
+       "a": "🤴",
+       "lang": "en"
+      },
+      {
+       "say": "greedy",
+       "o": [
+        "🤑",
+        "👆",
+        "🪙"
+       ],
+       "a": "🤑",
+       "lang": "en"
+      },
+      {
+       "say": "gold",
+       "o": [
+        "🪙",
+        "🤴",
+        "🤑"
+       ],
+       "a": "🪙",
+       "lang": "en"
+      },
+      {
+       "say": "touch",
+       "o": [
+        "👆",
+        "🤴",
+        "🤑"
+       ],
+       "a": "👆",
+       "lang": "en"
+      },
+      {
+       "say": "The king loves gold.",
+       "o": [
+        "الملك يحب الذهب.",
+        "كل ما يلمسه يتحول إلى ذهب.",
+        "يتعلم درساً."
+       ],
+       "a": "الملك يحب الذهب.",
+       "lang": "en"
+      },
+      {
+       "say": "Everything he touches turns to gold.",
+       "o": [
+        "كل ما يلمسه يتحول إلى ذهب.",
+        "الملك يحب الذهب.",
+        "يتعلم درساً."
+       ],
+       "a": "كل ما يلمسه يتحول إلى ذهب.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

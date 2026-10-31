@@ -1,0 +1,297 @@
+{
+ "id": "en-3-p6-l7",
+ "grade": 3,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "There was … / There were …",
+ "titleAr": "الإنجليزية — الصف الثالث",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "There was … / There were …",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "there was",
+       "em": "1️⃣",
+       "say": "there was",
+       "sub": "كان يوجد (مفرد)",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "there were",
+       "em": "🔢",
+       "say": "there were",
+       "sub": "كان يوجد (جمع)",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "old house",
+       "em": "🏚️",
+       "say": "old house",
+       "sub": "بيت قديم",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "well",
+       "em": "🪣",
+       "say": "well",
+       "sub": "بئر",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك كتاب التلميذ ص 110⁠–⁠111"
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "There was a well in the village.",
+       "em": "1️⃣",
+       "say": "There was a well in the village.",
+       "sub": "كان يوجد بئر في القرية.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "There were many camels.",
+       "em": "1️⃣",
+       "say": "There were many camels.",
+       "sub": "كانت توجد جمال كثيرة.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "there was",
+       "o": [
+        "1️⃣",
+        "🪣",
+        "🏚️"
+       ],
+       "a": "1️⃣",
+       "lang": "en"
+      },
+      {
+       "say": "there were",
+       "o": [
+        "🔢",
+        "1️⃣",
+        "🏚️"
+       ],
+       "a": "🔢",
+       "lang": "en"
+      },
+      {
+       "say": "old house",
+       "o": [
+        "🏚️",
+        "1️⃣",
+        "🪣"
+       ],
+       "a": "🏚️",
+       "lang": "en"
+      },
+      {
+       "say": "well",
+       "o": [
+        "🪣",
+        "🏚️",
+        "1️⃣"
+       ],
+       "a": "🪣",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "There was a well in the village.",
+       "o": [
+        "كان يوجد بئر في القرية.",
+        "كانت توجد جمال كثيرة."
+       ],
+       "a": "كان يوجد بئر في القرية.",
+       "lang": "en"
+      },
+      {
+       "say": "There were many camels.",
+       "o": [
+        "كانت توجد جمال كثيرة.",
+        "كان يوجد بئر في القرية."
+       ],
+       "a": "كانت توجد جمال كثيرة.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "أكمل",
+   "eyebrow": "الخطوة ٥ — أكمل",
+   "heading": "اختر الكلمة الناقصة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "There was a well.",
+       "o": [
+        "was",
+        "were"
+       ],
+       "a": "was",
+       "sayQ": false,
+       "show": "There ___ a well.",
+       "lang": "en"
+      },
+      {
+       "say": "There were many camels.",
+       "o": [
+        "were",
+        "was"
+       ],
+       "a": "were",
+       "sayQ": false,
+       "show": "There ___ many camels.",
+       "lang": "en"
+      },
+      {
+       "say": "There was an old house.",
+       "o": [
+        "was",
+        "were"
+       ],
+       "a": "was",
+       "sayQ": false,
+       "show": "There ___ an old house.",
+       "lang": "en"
+      }
+     ],
+     "q": "اختر الكلمة المناسبة",
+     "lang": "en"
+    }
+   ],
+   "lead": "was للمفرد و were للجمع في الماضي."
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "there was",
+       "o": [
+        "1️⃣",
+        "🔢",
+        "🏚️"
+       ],
+       "a": "1️⃣",
+       "lang": "en"
+      },
+      {
+       "say": "there were",
+       "o": [
+        "🔢",
+        "1️⃣",
+        "🏚️"
+       ],
+       "a": "🔢",
+       "lang": "en"
+      },
+      {
+       "say": "old house",
+       "o": [
+        "🏚️",
+        "🔢",
+        "🪣"
+       ],
+       "a": "🏚️",
+       "lang": "en"
+      },
+      {
+       "say": "well",
+       "o": [
+        "🪣",
+        "1️⃣",
+        "🏚️"
+       ],
+       "a": "🪣",
+       "lang": "en"
+      },
+      {
+       "say": "There was a well in the village.",
+       "o": [
+        "كان يوجد بئر في القرية.",
+        "كانت توجد جمال كثيرة."
+       ],
+       "a": "كان يوجد بئر في القرية.",
+       "lang": "en"
+      },
+      {
+       "say": "There were many camels.",
+       "o": [
+        "كانت توجد جمال كثيرة.",
+        "كان يوجد بئر في القرية."
+       ],
+       "a": "كانت توجد جمال كثيرة.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

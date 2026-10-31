@@ -1,0 +1,319 @@
+{
+ "id": "en-4-u6-l8",
+ "grade": 4,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 6 · Lesson 8: The Little Brown Bird",
+ "titleAr": "كان الطائر البني الصغير جائعاً.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "كان الطائر البني الصغير جائعاً.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "bird",
+       "ar": "طائر",
+       "em": "🐦"
+      },
+      {
+       "id": "v1",
+       "en": "nest",
+       "ar": "عش",
+       "em": "🪹"
+      },
+      {
+       "id": "v2",
+       "en": "hungry",
+       "ar": "جائع",
+       "em": "😋"
+      },
+      {
+       "id": "v3",
+       "en": "worm",
+       "ar": "دودة",
+       "em": "🪱"
+      },
+      {
+       "id": "v4",
+       "en": "fly",
+       "ar": "يطير",
+       "em": "🕊️"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 100⁠–⁠101 · كتاب النشاط ص 86⁠–⁠87"
+  },
+  {
+   "title": "اقرأ",
+   "eyebrow": "الخطوة ٢ — اقرأ",
+   "heading": "اقرأ واستمع",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "📖 The Little Brown Bird",
+     "html": "<div class=\"ex\">The little brown bird was hungry.</div><div class=\"ex\">It found a worm.</div><div class=\"ex\">It flew back to its nest.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "The little brown bird was hungry. It found a worm. It flew back to its nest."
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط ▶ لتسمع النص."
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٣ — القاعدة",
+   "heading": "Past irregular",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">The little brown bird <b>was</b> hungry.</div><div class=\"ex\">It <b>found</b> a worm.</div><div class=\"ex\">It <b>flew</b> back to its nest.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "The little brown bird was hungry. It found a worm. It flew back to its nest."
+      }
+     ]
+    }
+   ],
+   "lead": "find → found, fly → flew.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٤ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "The bird ___ hungry.",
+           "a": "was",
+           "o": [
+            "was",
+            "is"
+           ]
+          },
+          {
+           "s": "It ___ a worm.",
+           "a": "found",
+           "o": [
+            "found",
+            "find"
+           ]
+          },
+          {
+           "s": "It ___ back to its nest.",
+           "a": "flew",
+           "o": [
+            "flew",
+            "flied"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "The little brown bird was hungry.",
+          "It found a worm.",
+          "It flew back to its nest."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "The little brown bird was hungry.",
+           "o": [
+            "The little brown bird was hungry.",
+            "It found a worm.",
+            "It flew back to its nest."
+           ]
+          },
+          {
+           "a": "It found a worm.",
+           "o": [
+            "It found a worm.",
+            "The little brown bird was hungry.",
+            "It flew back to its nest."
+           ]
+          },
+          {
+           "a": "It flew back to its nest.",
+           "o": [
+            "It flew back to its nest.",
+            "The little brown bird was hungry.",
+            "It found a worm."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٥ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "bird",
+       "ipa": "",
+       "meaning": "طائر",
+       "ex": "The little brown bird was hungry."
+      },
+      {
+       "must": 1,
+       "term": "nest",
+       "ipa": "",
+       "meaning": "عش",
+       "ex": "It flew back to its nest."
+      },
+      {
+       "must": 1,
+       "term": "hungry",
+       "ipa": "",
+       "meaning": "جائع",
+       "ex": "The little brown bird was hungry."
+      },
+      {
+       "must": 0,
+       "term": "worm",
+       "ipa": "",
+       "meaning": "دودة",
+       "ex": "It found a worm."
+      },
+      {
+       "must": 0,
+       "term": "fly",
+       "ipa": "",
+       "meaning": "يطير",
+       "ex": "fly"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "The bird ___ hungry.",
+       "a": "was",
+       "o": [
+        "was",
+        "is"
+       ],
+       "why": ""
+      },
+      {
+       "q": "It ___ a worm.",
+       "a": "found",
+       "o": [
+        "found",
+        "find"
+       ],
+       "why": ""
+      },
+      {
+       "q": "It ___ back to its nest.",
+       "a": "flew",
+       "o": [
+        "flew",
+        "flied"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى hungry؟",
+       "a": "جائع",
+       "o": [
+        "جائع",
+        "طائر",
+        "عش"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى bird؟",
+       "a": "طائر",
+       "o": [
+        "طائر",
+        "عش",
+        "جائع"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "The little brown bird was hungry.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "The little brown bird was hungry.",
+       "o": [
+        "The little brown bird was hungry.",
+        "It found a worm.",
+        "It flew back to its nest."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

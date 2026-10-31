@@ -1,0 +1,287 @@
+{
+ "id": "en-4-u7-l3",
+ "grade": 4,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 7 · Lesson 3: What do they need?",
+ "titleAr": "ماذا يحتاجون؟",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "ماذا يحتاجون؟",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "they",
+       "ar": "هم",
+       "em": "👥"
+      },
+      {
+       "id": "v1",
+       "en": "ball",
+       "ar": "كرة",
+       "em": "⚽"
+      },
+      {
+       "id": "v2",
+       "en": "water bottle",
+       "ar": "قارورة ماء",
+       "em": "🧴"
+      },
+      {
+       "id": "v3",
+       "en": "trainers",
+       "ar": "حذاء رياضي",
+       "em": "👟"
+      },
+      {
+       "id": "v4",
+       "en": "kit",
+       "ar": "زي رياضي",
+       "em": "🎽"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 108⁠–⁠109 · كتاب النشاط ص 92⁠–⁠93"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "do / does",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">What <b>do</b> they need?</div><div class=\"ex\">They need <b>trainers</b> and a ball.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "What do they need? They need trainers and a ball."
+      }
+     ]
+    }
+   ],
+   "lead": "What do they need? / What does he need?",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "What ___ they need?",
+           "a": "do",
+           "o": [
+            "do",
+            "does"
+           ]
+          },
+          {
+           "s": "What ___ she need?",
+           "a": "does",
+           "o": [
+            "does",
+            "do"
+           ]
+          },
+          {
+           "s": "They need ___ for sport.",
+           "a": "trainers",
+           "o": [
+            "trainers",
+            "paint"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "What do they need?",
+          "They need trainers and a ball."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "What do they need?",
+           "o": [
+            "What do they need?",
+            "They need trainers and a ball."
+           ]
+          },
+          {
+           "a": "They need trainers and a ball.",
+           "o": [
+            "They need trainers and a ball.",
+            "What do they need?"
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "they",
+       "ipa": "",
+       "meaning": "هم",
+       "ex": "What do they need?"
+      },
+      {
+       "must": 1,
+       "term": "ball",
+       "ipa": "",
+       "meaning": "كرة",
+       "ex": "They need trainers and a ball."
+      },
+      {
+       "must": 1,
+       "term": "water bottle",
+       "ipa": "",
+       "meaning": "قارورة ماء",
+       "ex": "water bottle"
+      },
+      {
+       "must": 0,
+       "term": "trainers",
+       "ipa": "",
+       "meaning": "حذاء رياضي",
+       "ex": "They need trainers and a ball."
+      },
+      {
+       "must": 0,
+       "term": "kit",
+       "ipa": "",
+       "meaning": "زي رياضي",
+       "ex": "kit"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "What ___ they need?",
+       "a": "do",
+       "o": [
+        "do",
+        "does"
+       ],
+       "why": ""
+      },
+      {
+       "q": "What ___ she need?",
+       "a": "does",
+       "o": [
+        "does",
+        "do"
+       ],
+       "why": ""
+      },
+      {
+       "q": "They need ___ for sport.",
+       "a": "trainers",
+       "o": [
+        "trainers",
+        "paint"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى ball؟",
+       "a": "كرة",
+       "o": [
+        "كرة",
+        "هم",
+        "قارورة ماء"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى trainers؟",
+       "a": "حذاء رياضي",
+       "o": [
+        "حذاء رياضي",
+        "هم",
+        "كرة"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "What do they need?",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "What do they need?",
+       "o": [
+        "What do they need?",
+        "They need trainers and a ball."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

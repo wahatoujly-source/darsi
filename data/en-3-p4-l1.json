@@ -1,0 +1,315 @@
+{
+ "id": "en-3-p4-l1",
+ "grade": 3,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "Welcome to our Open Day!",
+ "titleAr": "الإنجليزية — الصف الثالث",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "Welcome to our Open Day!",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "welcome",
+       "em": "🤗",
+       "say": "welcome",
+       "sub": "أهلاً",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "parents",
+       "em": "👨‍👩‍👧",
+       "say": "parents",
+       "sub": "آباء",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "visit",
+       "em": "🚶",
+       "say": "visit",
+       "sub": "يزور",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "show",
+       "em": "🖼️",
+       "say": "show",
+       "sub": "يعرض",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "projects",
+       "em": "🗂️",
+       "say": "projects",
+       "sub": "مشاريع",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك كتاب التلميذ ص 62⁠–⁠63"
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "Welcome to our Open Day!",
+       "em": "🤗",
+       "say": "Welcome to our Open Day!",
+       "sub": "أهلاً بكم في يومنا المفتوح!",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "Come and see our projects.",
+       "em": "🗂️",
+       "say": "Come and see our projects.",
+       "sub": "تعالوا وشاهدوا مشاريعنا.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "welcome",
+       "o": [
+        "🤗",
+        "🚶",
+        "🗂️"
+       ],
+       "a": "🤗",
+       "lang": "en"
+      },
+      {
+       "say": "parents",
+       "o": [
+        "👨‍👩‍👧",
+        "🚶",
+        "🗂️"
+       ],
+       "a": "👨‍👩‍👧",
+       "lang": "en"
+      },
+      {
+       "say": "visit",
+       "o": [
+        "🚶",
+        "🖼️",
+        "🗂️"
+       ],
+       "a": "🚶",
+       "lang": "en"
+      },
+      {
+       "say": "show",
+       "o": [
+        "🖼️",
+        "🚶",
+        "🗂️"
+       ],
+       "a": "🖼️",
+       "lang": "en"
+      },
+      {
+       "say": "projects",
+       "o": [
+        "🗂️",
+        "🤗",
+        "🖼️"
+       ],
+       "a": "🗂️",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "Welcome to our Open Day!",
+       "o": [
+        "أهلاً بكم في يومنا المفتوح!",
+        "تعالوا وشاهدوا مشاريعنا."
+       ],
+       "a": "أهلاً بكم في يومنا المفتوح!",
+       "lang": "en"
+      },
+      {
+       "say": "Come and see our projects.",
+       "o": [
+        "تعالوا وشاهدوا مشاريعنا.",
+        "أهلاً بكم في يومنا المفتوح!"
+       ],
+       "a": "تعالوا وشاهدوا مشاريعنا.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "أكمل",
+   "eyebrow": "الخطوة ٥ — أكمل",
+   "heading": "اختر الكلمة الناقصة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "Welcome to our Open Day!",
+       "o": [
+        "Welcome",
+        "Goodbye"
+       ],
+       "a": "Welcome",
+       "sayQ": false,
+       "show": "___ to our Open Day!",
+       "lang": "en"
+      },
+      {
+       "say": "Come and see our projects.",
+       "o": [
+        "see",
+        "sees"
+       ],
+       "a": "see",
+       "sayQ": false,
+       "show": "Come and ___ our projects.",
+       "lang": "en"
+      },
+      {
+       "say": "Our parents visit the school.",
+       "o": [
+        "parents",
+        "projects"
+       ],
+       "a": "parents",
+       "sayQ": false,
+       "show": "Our ___ visit the school.",
+       "lang": "en"
+      }
+     ],
+     "q": "اختر الكلمة المناسبة",
+     "lang": "en"
+    }
+   ],
+   "lead": "الأمر يبدأ بالفعل: Come, Look, Sit."
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "welcome",
+       "o": [
+        "🤗",
+        "🖼️",
+        "🚶"
+       ],
+       "a": "🤗",
+       "lang": "en"
+      },
+      {
+       "say": "parents",
+       "o": [
+        "👨‍👩‍👧",
+        "🗂️",
+        "🤗"
+       ],
+       "a": "👨‍👩‍👧",
+       "lang": "en"
+      },
+      {
+       "say": "visit",
+       "o": [
+        "🚶",
+        "🤗",
+        "🗂️"
+       ],
+       "a": "🚶",
+       "lang": "en"
+      },
+      {
+       "say": "show",
+       "o": [
+        "🖼️",
+        "🗂️",
+        "👨‍👩‍👧"
+       ],
+       "a": "🖼️",
+       "lang": "en"
+      },
+      {
+       "say": "Welcome to our Open Day!",
+       "o": [
+        "أهلاً بكم في يومنا المفتوح!",
+        "تعالوا وشاهدوا مشاريعنا."
+       ],
+       "a": "أهلاً بكم في يومنا المفتوح!",
+       "lang": "en"
+      },
+      {
+       "say": "Come and see our projects.",
+       "o": [
+        "تعالوا وشاهدوا مشاريعنا.",
+        "أهلاً بكم في يومنا المفتوح!"
+       ],
+       "a": "تعالوا وشاهدوا مشاريعنا.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

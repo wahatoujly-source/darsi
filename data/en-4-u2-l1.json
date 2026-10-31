@@ -1,0 +1,299 @@
+{
+ "id": "en-4-u2-l1",
+ "grade": 4,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 2 · Lesson 1: Where are you from?",
+ "titleAr": "من أين أنت؟",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "من أين أنت؟",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "Libya",
+       "ar": "ليبيا",
+       "em": "🇱🇾"
+      },
+      {
+       "id": "v1",
+       "en": "Egypt",
+       "ar": "مصر",
+       "em": "🇪🇬"
+      },
+      {
+       "id": "v2",
+       "en": "Tunisia",
+       "ar": "تونس",
+       "em": "🇹🇳"
+      },
+      {
+       "id": "v3",
+       "en": "country",
+       "ar": "دولة",
+       "em": "🌍"
+      },
+      {
+       "id": "v4",
+       "en": "from",
+       "ar": "من",
+       "em": "📍"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 26⁠–⁠27 · كتاب النشاط ص 20⁠–⁠21"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Where … from?",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Where <b>are</b> you from?</div><div class=\"ex\">I'm <b>from</b> Libya.</div><div class=\"ex\">She's <b>from</b> Egypt.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Where are you from? I'm from Libya. She's from Egypt."
+      }
+     ]
+    }
+   ],
+   "lead": "نسأل عن البلد: Where are you from? ونجيب: I'm from …",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "Where ___ you from?",
+           "a": "are",
+           "o": [
+            "are",
+            "is"
+           ]
+          },
+          {
+           "s": "I'm ___ Libya.",
+           "a": "from",
+           "o": [
+            "from",
+            "in"
+           ]
+          },
+          {
+           "s": "Where ___ she from?",
+           "a": "is",
+           "o": [
+            "is",
+            "are"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Where are you from?",
+          "I'm from Libya.",
+          "She's from Egypt."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Where are you from?",
+           "o": [
+            "Where are you from?",
+            "I'm from Libya.",
+            "She's from Egypt."
+           ]
+          },
+          {
+           "a": "I'm from Libya.",
+           "o": [
+            "I'm from Libya.",
+            "Where are you from?",
+            "She's from Egypt."
+           ]
+          },
+          {
+           "a": "She's from Egypt.",
+           "o": [
+            "She's from Egypt.",
+            "Where are you from?",
+            "I'm from Libya."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "Libya",
+       "ipa": "",
+       "meaning": "ليبيا",
+       "ex": "I'm from Libya."
+      },
+      {
+       "must": 1,
+       "term": "Egypt",
+       "ipa": "",
+       "meaning": "مصر",
+       "ex": "She's from Egypt."
+      },
+      {
+       "must": 1,
+       "term": "Tunisia",
+       "ipa": "",
+       "meaning": "تونس",
+       "ex": "Tunisia"
+      },
+      {
+       "must": 0,
+       "term": "country",
+       "ipa": "",
+       "meaning": "دولة",
+       "ex": "country"
+      },
+      {
+       "must": 0,
+       "term": "from",
+       "ipa": "",
+       "meaning": "من",
+       "ex": "Where are you from?"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "Where ___ you from?",
+       "a": "are",
+       "o": [
+        "are",
+        "is"
+       ],
+       "why": ""
+      },
+      {
+       "q": "I'm ___ Libya.",
+       "a": "from",
+       "o": [
+        "from",
+        "in"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Where ___ she from?",
+       "a": "is",
+       "o": [
+        "is",
+        "are"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى country؟",
+       "a": "دولة",
+       "o": [
+        "دولة",
+        "ليبيا",
+        "مصر"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى Egypt؟",
+       "a": "مصر",
+       "o": [
+        "مصر",
+        "ليبيا",
+        "تونس"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Where are you from?",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Where are you from?",
+       "o": [
+        "Where are you from?",
+        "I'm from Libya.",
+        "She's from Egypt."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

@@ -1,0 +1,299 @@
+{
+ "id": "en-4-u3-l3",
+ "grade": 4,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 3 · Lesson 3: What do you want to eat?",
+ "titleAr": "ماذا تريد أن تأكل؟",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "ماذا تريد أن تأكل؟",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "sandwich",
+       "ar": "شطيرة",
+       "em": "🥪"
+      },
+      {
+       "id": "v1",
+       "en": "cake",
+       "ar": "كعكة",
+       "em": "🍰"
+      },
+      {
+       "id": "v2",
+       "en": "biscuits",
+       "ar": "بسكويت",
+       "em": "🍪"
+      },
+      {
+       "id": "v3",
+       "en": "pizza",
+       "ar": "بيتزا",
+       "em": "🍕"
+      },
+      {
+       "id": "v4",
+       "en": "salad",
+       "ar": "سلطة",
+       "em": "🥗"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 48⁠–⁠49 · كتاب النشاط ص 40⁠–⁠41"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "want / wants",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">What do you <b>want</b> to eat?</div><div class=\"ex\">I <b>want</b> a sandwich.</div><div class=\"ex\">She <b>wants</b> some cake.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "What do you want to eat? I want a sandwich. She wants some cake."
+      }
+     ]
+    }
+   ],
+   "lead": "I want و He/She wants.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "She ___ some cake.",
+           "a": "wants",
+           "o": [
+            "wants",
+            "want"
+           ]
+          },
+          {
+           "s": "I ___ a sandwich.",
+           "a": "want",
+           "o": [
+            "want",
+            "wants"
+           ]
+          },
+          {
+           "s": "What do you want to ___ ?",
+           "a": "eat",
+           "o": [
+            "eat",
+            "eats"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "What do you want to eat?",
+          "I want a sandwich.",
+          "She wants some cake."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "What do you want to eat?",
+           "o": [
+            "What do you want to eat?",
+            "I want a sandwich.",
+            "She wants some cake."
+           ]
+          },
+          {
+           "a": "I want a sandwich.",
+           "o": [
+            "I want a sandwich.",
+            "What do you want to eat?",
+            "She wants some cake."
+           ]
+          },
+          {
+           "a": "She wants some cake.",
+           "o": [
+            "She wants some cake.",
+            "What do you want to eat?",
+            "I want a sandwich."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "sandwich",
+       "ipa": "",
+       "meaning": "شطيرة",
+       "ex": "I want a sandwich."
+      },
+      {
+       "must": 1,
+       "term": "cake",
+       "ipa": "",
+       "meaning": "كعكة",
+       "ex": "She wants some cake."
+      },
+      {
+       "must": 1,
+       "term": "biscuits",
+       "ipa": "",
+       "meaning": "بسكويت",
+       "ex": "biscuits"
+      },
+      {
+       "must": 0,
+       "term": "pizza",
+       "ipa": "",
+       "meaning": "بيتزا",
+       "ex": "pizza"
+      },
+      {
+       "must": 0,
+       "term": "salad",
+       "ipa": "",
+       "meaning": "سلطة",
+       "ex": "salad"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "She ___ some cake.",
+       "a": "wants",
+       "o": [
+        "wants",
+        "want"
+       ],
+       "why": ""
+      },
+      {
+       "q": "I ___ a sandwich.",
+       "a": "want",
+       "o": [
+        "want",
+        "wants"
+       ],
+       "why": ""
+      },
+      {
+       "q": "What do you want to ___ ?",
+       "a": "eat",
+       "o": [
+        "eat",
+        "eats"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى salad؟",
+       "a": "سلطة",
+       "o": [
+        "سلطة",
+        "شطيرة",
+        "كعكة"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى biscuits؟",
+       "a": "بسكويت",
+       "o": [
+        "بسكويت",
+        "شطيرة",
+        "كعكة"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "What do you want to eat?",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "What do you want to eat?",
+       "o": [
+        "What do you want to eat?",
+        "I want a sandwich.",
+        "She wants some cake."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

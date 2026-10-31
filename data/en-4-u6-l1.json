@@ -1,0 +1,299 @@
+{
+ "id": "en-4-u6-l1",
+ "grade": 4,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 6 · Lesson 1: Wh- Questions",
+ "titleAr": "أين مدرستك؟",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "أين مدرستك؟",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "who",
+       "ar": "من",
+       "em": "🧑"
+      },
+      {
+       "id": "v1",
+       "en": "what",
+       "ar": "ماذا",
+       "em": "❓"
+      },
+      {
+       "id": "v2",
+       "en": "where",
+       "ar": "أين",
+       "em": "📍"
+      },
+      {
+       "id": "v3",
+       "en": "when",
+       "ar": "متى",
+       "em": "⏰"
+      },
+      {
+       "id": "v4",
+       "en": "why",
+       "ar": "لماذا",
+       "em": "🤔"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 86⁠–⁠87 · كتاب النشاط ص 72⁠–⁠73"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Wh- questions",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\"><b>Where</b> is your school?</div><div class=\"ex\"><b>When</b> do you get up?</div><div class=\"ex\"><b>Who</b> is your teacher?</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Where is your school? When do you get up? Who is your teacher?"
+      }
+     ]
+    }
+   ],
+   "lead": "who للشخص، what للشيء، where للمكان، when للزمن، why للسبب.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "___ is your teacher? — Mr Ali.",
+           "a": "Who",
+           "o": [
+            "Who",
+            "Where"
+           ]
+          },
+          {
+           "s": "___ do you live? — In Tripoli.",
+           "a": "Where",
+           "o": [
+            "Where",
+            "When"
+           ]
+          },
+          {
+           "s": "___ do you get up? — At seven.",
+           "a": "When",
+           "o": [
+            "When",
+            "Who"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Where is your school?",
+          "When do you get up?",
+          "Who is your teacher?"
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Where is your school?",
+           "o": [
+            "Where is your school?",
+            "When do you get up?",
+            "Who is your teacher?"
+           ]
+          },
+          {
+           "a": "When do you get up?",
+           "o": [
+            "When do you get up?",
+            "Where is your school?",
+            "Who is your teacher?"
+           ]
+          },
+          {
+           "a": "Who is your teacher?",
+           "o": [
+            "Who is your teacher?",
+            "Where is your school?",
+            "When do you get up?"
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "who",
+       "ipa": "",
+       "meaning": "من",
+       "ex": "Who is your teacher?"
+      },
+      {
+       "must": 1,
+       "term": "what",
+       "ipa": "",
+       "meaning": "ماذا",
+       "ex": "what"
+      },
+      {
+       "must": 1,
+       "term": "where",
+       "ipa": "",
+       "meaning": "أين",
+       "ex": "Where is your school?"
+      },
+      {
+       "must": 0,
+       "term": "when",
+       "ipa": "",
+       "meaning": "متى",
+       "ex": "When do you get up?"
+      },
+      {
+       "must": 0,
+       "term": "why",
+       "ipa": "",
+       "meaning": "لماذا",
+       "ex": "why"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "___ is your teacher? — Mr Ali.",
+       "a": "Who",
+       "o": [
+        "Who",
+        "Where"
+       ],
+       "why": ""
+      },
+      {
+       "q": "___ do you live? — In Tripoli.",
+       "a": "Where",
+       "o": [
+        "Where",
+        "When"
+       ],
+       "why": ""
+      },
+      {
+       "q": "___ do you get up? — At seven.",
+       "a": "When",
+       "o": [
+        "When",
+        "Who"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى who؟",
+       "a": "من",
+       "o": [
+        "من",
+        "ماذا",
+        "أين"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى where؟",
+       "a": "أين",
+       "o": [
+        "أين",
+        "من",
+        "ماذا"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Where is your school?",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Where is your school?",
+       "o": [
+        "Where is your school?",
+        "When do you get up?",
+        "Who is your teacher?"
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

@@ -1,0 +1,287 @@
+{
+ "id": "en-4-u8-l1",
+ "grade": 4,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 8 · Lesson 1: Test your partner.",
+ "titleAr": "اسأل زميلك خمسة أسئلة.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "اسأل زميلك خمسة أسئلة.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "partner",
+       "ar": "زميل",
+       "em": "🧑‍🤝‍🧑"
+      },
+      {
+       "id": "v1",
+       "en": "ask",
+       "ar": "يسأل",
+       "em": "❓"
+      },
+      {
+       "id": "v2",
+       "en": "answer",
+       "ar": "يجيب",
+       "em": "💬"
+      },
+      {
+       "id": "v3",
+       "en": "check",
+       "ar": "يتحقق",
+       "em": "✔️"
+      },
+      {
+       "id": "v4",
+       "en": "score",
+       "ar": "نتيجة",
+       "em": "🔢"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 122 · كتاب النشاط ص 104"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Revision",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\"><b>Ask</b> your partner five questions.</div><div class=\"ex\">Check the answers.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Ask your partner five questions. Check the answers."
+      }
+     ]
+    }
+   ],
+   "lead": "نراجع: must, past simple, need.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "___ your partner a question.",
+           "a": "Ask",
+           "o": [
+            "Ask",
+            "Answer"
+           ]
+          },
+          {
+           "s": "You ___ wear a helmet.",
+           "a": "must",
+           "o": [
+            "must",
+            "mustn't"
+           ]
+          },
+          {
+           "s": "Yesterday I ___ to school.",
+           "a": "went",
+           "o": [
+            "went",
+            "go"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Ask your partner five questions.",
+          "Check the answers."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Ask your partner five questions.",
+           "o": [
+            "Ask your partner five questions.",
+            "Check the answers."
+           ]
+          },
+          {
+           "a": "Check the answers.",
+           "o": [
+            "Check the answers.",
+            "Ask your partner five questions."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "partner",
+       "ipa": "",
+       "meaning": "زميل",
+       "ex": "Ask your partner five questions."
+      },
+      {
+       "must": 1,
+       "term": "ask",
+       "ipa": "",
+       "meaning": "يسأل",
+       "ex": "Ask your partner five questions."
+      },
+      {
+       "must": 1,
+       "term": "answer",
+       "ipa": "",
+       "meaning": "يجيب",
+       "ex": "Check the answers."
+      },
+      {
+       "must": 0,
+       "term": "check",
+       "ipa": "",
+       "meaning": "يتحقق",
+       "ex": "Check the answers."
+      },
+      {
+       "must": 0,
+       "term": "score",
+       "ipa": "",
+       "meaning": "نتيجة",
+       "ex": "score"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "___ your partner a question.",
+       "a": "Ask",
+       "o": [
+        "Ask",
+        "Answer"
+       ],
+       "why": ""
+      },
+      {
+       "q": "You ___ wear a helmet.",
+       "a": "must",
+       "o": [
+        "must",
+        "mustn't"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Yesterday I ___ to school.",
+       "a": "went",
+       "o": [
+        "went",
+        "go"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى ask؟",
+       "a": "يسأل",
+       "o": [
+        "يسأل",
+        "زميل",
+        "يجيب"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى answer؟",
+       "a": "يجيب",
+       "o": [
+        "يجيب",
+        "زميل",
+        "يسأل"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Ask your partner five questions.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Ask your partner five questions.",
+       "o": [
+        "Ask your partner five questions.",
+        "Check the answers."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

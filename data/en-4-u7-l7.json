@@ -1,0 +1,299 @@
+{
+ "id": "en-4-u7-l7",
+ "grade": 4,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 7 · Lesson 7: English and Sport",
+ "titleAr": "هل تستطيع تهجئة school؟",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "هل تستطيع تهجئة school؟",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "spell",
+       "ar": "يتهجى",
+       "em": "🔤"
+      },
+      {
+       "id": "v1",
+       "en": "word",
+       "ar": "كلمة",
+       "em": "💬"
+      },
+      {
+       "id": "v2",
+       "en": "throw",
+       "ar": "يرمي",
+       "em": "🤾"
+      },
+      {
+       "id": "v3",
+       "en": "catch",
+       "ar": "يلتقط",
+       "em": "🧤"
+      },
+      {
+       "id": "v4",
+       "en": "kick",
+       "ar": "يركل",
+       "em": "🦵"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 116⁠–⁠117 · كتاب النشاط ص 100⁠–⁠101"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Can you …?",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Can you <b>spell</b> 'school'?</div><div class=\"ex\"><b>Catch</b> the ball!</div><div class=\"ex\"><b>Kick</b> the ball to me.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Can you spell 'school'? Catch the ball! Kick the ball to me."
+      }
+     ]
+    }
+   ],
+   "lead": "Can you spell …? / Can you catch …?",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "Can you ___ 'cat'? C-A-T.",
+           "a": "spell",
+           "o": [
+            "spell",
+            "kick"
+           ]
+          },
+          {
+           "s": "___ the ball with your foot.",
+           "a": "Kick",
+           "o": [
+            "Kick",
+            "Catch"
+           ]
+          },
+          {
+           "s": "___ the ball with your hands.",
+           "a": "Catch",
+           "o": [
+            "Catch",
+            "Kick"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Can you spell 'school'?",
+          "Catch the ball!",
+          "Kick the ball to me."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Can you spell 'school'?",
+           "o": [
+            "Can you spell 'school'?",
+            "Catch the ball!",
+            "Kick the ball to me."
+           ]
+          },
+          {
+           "a": "Catch the ball!",
+           "o": [
+            "Catch the ball!",
+            "Can you spell 'school'?",
+            "Kick the ball to me."
+           ]
+          },
+          {
+           "a": "Kick the ball to me.",
+           "o": [
+            "Kick the ball to me.",
+            "Can you spell 'school'?",
+            "Catch the ball!"
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "spell",
+       "ipa": "",
+       "meaning": "يتهجى",
+       "ex": "Can you spell 'school'?"
+      },
+      {
+       "must": 1,
+       "term": "word",
+       "ipa": "",
+       "meaning": "كلمة",
+       "ex": "word"
+      },
+      {
+       "must": 1,
+       "term": "throw",
+       "ipa": "",
+       "meaning": "يرمي",
+       "ex": "throw"
+      },
+      {
+       "must": 0,
+       "term": "catch",
+       "ipa": "",
+       "meaning": "يلتقط",
+       "ex": "Catch the ball!"
+      },
+      {
+       "must": 0,
+       "term": "kick",
+       "ipa": "",
+       "meaning": "يركل",
+       "ex": "Kick the ball to me."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "Can you ___ 'cat'? C-A-T.",
+       "a": "spell",
+       "o": [
+        "spell",
+        "kick"
+       ],
+       "why": ""
+      },
+      {
+       "q": "___ the ball with your foot.",
+       "a": "Kick",
+       "o": [
+        "Kick",
+        "Catch"
+       ],
+       "why": ""
+      },
+      {
+       "q": "___ the ball with your hands.",
+       "a": "Catch",
+       "o": [
+        "Catch",
+        "Kick"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى throw؟",
+       "a": "يرمي",
+       "o": [
+        "يرمي",
+        "يتهجى",
+        "كلمة"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى spell؟",
+       "a": "يتهجى",
+       "o": [
+        "يتهجى",
+        "كلمة",
+        "يرمي"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Can you spell 'school'?",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Can you spell 'school'?",
+       "o": [
+        "Can you spell 'school'?",
+        "Catch the ball!",
+        "Kick the ball to me."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

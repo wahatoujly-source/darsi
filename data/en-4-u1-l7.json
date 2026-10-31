@@ -1,0 +1,299 @@
+{
+ "id": "en-4-u1-l7",
+ "grade": 4,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 1 · Lesson 7: At the School Shop",
+ "titleAr": "بكم أصبع الصمغ؟",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "بكم أصبع الصمغ؟",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "shop",
+       "ar": "متجر",
+       "em": "🏪"
+      },
+      {
+       "id": "v1",
+       "en": "crayons",
+       "ar": "أقلام تلوين",
+       "em": "🖍️"
+      },
+      {
+       "id": "v2",
+       "en": "glue stick",
+       "ar": "أصبع صمغ",
+       "em": "🧴"
+      },
+      {
+       "id": "v3",
+       "en": "dinar",
+       "ar": "دينار",
+       "em": "💵"
+      },
+      {
+       "id": "v4",
+       "en": "cost",
+       "ar": "يكلّف",
+       "em": "💰"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 20⁠–⁠21 · كتاب النشاط ص 16⁠–⁠17"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "How much is / are …?",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">How much <b>is</b> the glue stick?</div><div class=\"ex\">It's one <b>dinar</b>.</div><div class=\"ex\">How much <b>are</b> the crayons? They're three dinars.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "How much is the glue stick? It's one dinar. How much are the crayons? They're three dinars."
+      }
+     ]
+    }
+   ],
+   "lead": "is للمفرد و are للجمع.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "How much ___ the glue stick?",
+           "a": "is",
+           "o": [
+            "is",
+            "are"
+           ]
+          },
+          {
+           "s": "How much ___ the crayons?",
+           "a": "are",
+           "o": [
+            "are",
+            "is"
+           ]
+          },
+          {
+           "s": "It's one ___ .",
+           "a": "dinar",
+           "o": [
+            "dinar",
+            "dinars"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "How much is the glue stick?",
+          "It's one dinar.",
+          "How much are the crayons? They're three dinars."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "How much is the glue stick?",
+           "o": [
+            "How much is the glue stick?",
+            "It's one dinar.",
+            "How much are the crayons? They're three dinars."
+           ]
+          },
+          {
+           "a": "It's one dinar.",
+           "o": [
+            "It's one dinar.",
+            "How much is the glue stick?",
+            "How much are the crayons? They're three dinars."
+           ]
+          },
+          {
+           "a": "How much are the crayons? They're three dinars.",
+           "o": [
+            "How much are the crayons? They're three dinars.",
+            "How much is the glue stick?",
+            "It's one dinar."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "shop",
+       "ipa": "",
+       "meaning": "متجر",
+       "ex": "shop"
+      },
+      {
+       "must": 1,
+       "term": "crayons",
+       "ipa": "",
+       "meaning": "أقلام تلوين",
+       "ex": "How much are the crayons? They're three dinars."
+      },
+      {
+       "must": 1,
+       "term": "glue stick",
+       "ipa": "",
+       "meaning": "أصبع صمغ",
+       "ex": "How much is the glue stick?"
+      },
+      {
+       "must": 0,
+       "term": "dinar",
+       "ipa": "",
+       "meaning": "دينار",
+       "ex": "It's one dinar."
+      },
+      {
+       "must": 0,
+       "term": "cost",
+       "ipa": "",
+       "meaning": "يكلّف",
+       "ex": "cost"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "How much ___ the glue stick?",
+       "a": "is",
+       "o": [
+        "is",
+        "are"
+       ],
+       "why": ""
+      },
+      {
+       "q": "How much ___ the crayons?",
+       "a": "are",
+       "o": [
+        "are",
+        "is"
+       ],
+       "why": ""
+      },
+      {
+       "q": "It's one ___ .",
+       "a": "dinar",
+       "o": [
+        "dinar",
+        "dinars"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى crayons؟",
+       "a": "أقلام تلوين",
+       "o": [
+        "أقلام تلوين",
+        "متجر",
+        "أصبع صمغ"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى glue stick؟",
+       "a": "أصبع صمغ",
+       "o": [
+        "أصبع صمغ",
+        "متجر",
+        "أقلام تلوين"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "How much is the glue stick?",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "How much is the glue stick?",
+       "o": [
+        "How much is the glue stick?",
+        "It's one dinar.",
+        "How much are the crayons? They're three dinars."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

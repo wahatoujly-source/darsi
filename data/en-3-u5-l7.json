@@ -1,0 +1,315 @@
+{
+ "id": "en-3-u5-l7",
+ "grade": 3,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "I Like Maths",
+ "titleAr": "الإنجليزية — الصف الثالث",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "I Like Maths",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "maths",
+       "em": "➗",
+       "say": "maths",
+       "sub": "رياضيات",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "science",
+       "em": "🔬",
+       "say": "science",
+       "sub": "علوم",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "art",
+       "em": "🎨",
+       "say": "art",
+       "sub": "فن",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "Arabic",
+       "em": "📖",
+       "say": "Arabic",
+       "sub": "العربية",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "favourite",
+       "em": "⭐",
+       "say": "favourite",
+       "sub": "المفضل",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك "
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "I like maths.",
+       "em": "➗",
+       "say": "I like maths.",
+       "sub": "أحب الرياضيات.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "My favourite subject is science.",
+       "em": "🔬",
+       "say": "My favourite subject is science.",
+       "sub": "مادتي المفضلة العلوم.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "maths",
+       "o": [
+        "➗",
+        "📖",
+        "⭐"
+       ],
+       "a": "➗",
+       "lang": "en"
+      },
+      {
+       "say": "science",
+       "o": [
+        "🔬",
+        "➗",
+        "⭐"
+       ],
+       "a": "🔬",
+       "lang": "en"
+      },
+      {
+       "say": "art",
+       "o": [
+        "🎨",
+        "🔬",
+        "➗"
+       ],
+       "a": "🎨",
+       "lang": "en"
+      },
+      {
+       "say": "Arabic",
+       "o": [
+        "📖",
+        "🔬",
+        "🎨"
+       ],
+       "a": "📖",
+       "lang": "en"
+      },
+      {
+       "say": "favourite",
+       "o": [
+        "⭐",
+        "➗",
+        "🎨"
+       ],
+       "a": "⭐",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "I like maths.",
+       "o": [
+        "أحب الرياضيات.",
+        "مادتي المفضلة العلوم."
+       ],
+       "a": "أحب الرياضيات.",
+       "lang": "en"
+      },
+      {
+       "say": "My favourite subject is science.",
+       "o": [
+        "مادتي المفضلة العلوم.",
+        "أحب الرياضيات."
+       ],
+       "a": "مادتي المفضلة العلوم.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "أكمل",
+   "eyebrow": "الخطوة ٥ — أكمل",
+   "heading": "اختر الكلمة الناقصة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "My favourite subject is art.",
+       "o": [
+        "favourite",
+        "like"
+       ],
+       "a": "favourite",
+       "sayQ": false,
+       "show": "My ___ subject is art.",
+       "lang": "en"
+      },
+      {
+       "say": "I like maths.",
+       "o": [
+        "like",
+        "likes"
+       ],
+       "a": "like",
+       "sayQ": false,
+       "show": "I ___ maths.",
+       "lang": "en"
+      },
+      {
+       "say": "We draw in art .",
+       "o": [
+        "art",
+        "maths"
+       ],
+       "a": "art",
+       "sayQ": false,
+       "show": "We draw in ___ .",
+       "lang": "en"
+      }
+     ],
+     "q": "اختر الكلمة المناسبة",
+     "lang": "en"
+    }
+   ],
+   "lead": "My favourite … is …"
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "maths",
+       "o": [
+        "➗",
+        "📖",
+        "⭐"
+       ],
+       "a": "➗",
+       "lang": "en"
+      },
+      {
+       "say": "science",
+       "o": [
+        "🔬",
+        "🎨",
+        "📖"
+       ],
+       "a": "🔬",
+       "lang": "en"
+      },
+      {
+       "say": "art",
+       "o": [
+        "🎨",
+        "➗",
+        "⭐"
+       ],
+       "a": "🎨",
+       "lang": "en"
+      },
+      {
+       "say": "Arabic",
+       "o": [
+        "📖",
+        "➗",
+        "🔬"
+       ],
+       "a": "📖",
+       "lang": "en"
+      },
+      {
+       "say": "I like maths.",
+       "o": [
+        "أحب الرياضيات.",
+        "مادتي المفضلة العلوم."
+       ],
+       "a": "أحب الرياضيات.",
+       "lang": "en"
+      },
+      {
+       "say": "My favourite subject is science.",
+       "o": [
+        "مادتي المفضلة العلوم.",
+        "أحب الرياضيات."
+       ],
+       "a": "مادتي المفضلة العلوم.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,315 @@
+{
+ "id": "en-3-u4-l4",
+ "grade": 3,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "Can I play?",
+ "titleAr": "الإنجليزية — الصف الثالث",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "Can I play?",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "play",
+       "em": "⚽",
+       "say": "play",
+       "sub": "يلعب",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "join",
+       "em": "🤝",
+       "say": "join",
+       "sub": "ينضم",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "please",
+       "em": "🙏",
+       "say": "please",
+       "sub": "من فضلك",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "sure",
+       "em": "👍",
+       "say": "sure",
+       "sub": "بالتأكيد",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "game",
+       "em": "🎲",
+       "say": "game",
+       "sub": "لعبة",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك "
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "Can I play, please?",
+       "em": "⚽",
+       "say": "Can I play, please?",
+       "sub": "هل يمكنني اللعب من فضلك؟",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "Sure! Come and join us.",
+       "em": "🤝",
+       "say": "Sure! Come and join us.",
+       "sub": "بالتأكيد! تعال وانضم إلينا.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "play",
+       "o": [
+        "⚽",
+        "🙏",
+        "👍"
+       ],
+       "a": "⚽",
+       "lang": "en"
+      },
+      {
+       "say": "join",
+       "o": [
+        "🤝",
+        "⚽",
+        "🙏"
+       ],
+       "a": "🤝",
+       "lang": "en"
+      },
+      {
+       "say": "please",
+       "o": [
+        "🙏",
+        "🤝",
+        "🎲"
+       ],
+       "a": "🙏",
+       "lang": "en"
+      },
+      {
+       "say": "sure",
+       "o": [
+        "👍",
+        "🎲",
+        "⚽"
+       ],
+       "a": "👍",
+       "lang": "en"
+      },
+      {
+       "say": "game",
+       "o": [
+        "🎲",
+        "⚽",
+        "🤝"
+       ],
+       "a": "🎲",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "Can I play, please?",
+       "o": [
+        "هل يمكنني اللعب من فضلك؟",
+        "بالتأكيد! تعال وانضم إلينا."
+       ],
+       "a": "هل يمكنني اللعب من فضلك؟",
+       "lang": "en"
+      },
+      {
+       "say": "Sure! Come and join us.",
+       "o": [
+        "بالتأكيد! تعال وانضم إلينا.",
+        "هل يمكنني اللعب من فضلك؟"
+       ],
+       "a": "بالتأكيد! تعال وانضم إلينا.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "أكمل",
+   "eyebrow": "الخطوة ٥ — أكمل",
+   "heading": "اختر الكلمة الناقصة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "Can I play, please?",
+       "o": [
+        "Can",
+        "Do"
+       ],
+       "a": "Can",
+       "sayQ": false,
+       "show": "___ I play, please?",
+       "lang": "en"
+      },
+      {
+       "say": "Sure! Come and join us.",
+       "o": [
+        "join",
+        "joins"
+       ],
+       "a": "join",
+       "sayQ": false,
+       "show": "Sure! Come and ___ us.",
+       "lang": "en"
+      },
+      {
+       "say": "Can I play, please ?",
+       "o": [
+        "please",
+        "sure"
+       ],
+       "a": "please",
+       "sayQ": false,
+       "show": "Can I play, ___ ?",
+       "lang": "en"
+      }
+     ],
+     "q": "اختر الكلمة المناسبة",
+     "lang": "en"
+    }
+   ],
+   "lead": "لطلب الإذن: Can I …, please?"
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "play",
+       "o": [
+        "⚽",
+        "🎲",
+        "🙏"
+       ],
+       "a": "⚽",
+       "lang": "en"
+      },
+      {
+       "say": "join",
+       "o": [
+        "🤝",
+        "⚽",
+        "🎲"
+       ],
+       "a": "🤝",
+       "lang": "en"
+      },
+      {
+       "say": "please",
+       "o": [
+        "🙏",
+        "🤝",
+        "🎲"
+       ],
+       "a": "🙏",
+       "lang": "en"
+      },
+      {
+       "say": "sure",
+       "o": [
+        "👍",
+        "🎲",
+        "⚽"
+       ],
+       "a": "👍",
+       "lang": "en"
+      },
+      {
+       "say": "Can I play, please?",
+       "o": [
+        "هل يمكنني اللعب من فضلك؟",
+        "بالتأكيد! تعال وانضم إلينا."
+       ],
+       "a": "هل يمكنني اللعب من فضلك؟",
+       "lang": "en"
+      },
+      {
+       "say": "Sure! Come and join us.",
+       "o": [
+        "بالتأكيد! تعال وانضم إلينا.",
+        "هل يمكنني اللعب من فضلك؟"
+       ],
+       "a": "بالتأكيد! تعال وانضم إلينا.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,319 @@
+{
+ "id": "en-3-p2-l5",
+ "grade": 3,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "About Time",
+ "titleAr": "الإنجليزية — الصف الثالث",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "About Time",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "o'clock",
+       "em": "🕐",
+       "say": "o'clock",
+       "sub": "تماماً",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "half past",
+       "em": "🕧",
+       "say": "half past",
+       "sub": "والنصف",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "quarter past",
+       "em": "🕒",
+       "say": "quarter past",
+       "sub": "والربع",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "quarter to",
+       "em": "🕘",
+       "say": "quarter to",
+       "sub": "إلا ربعاً",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك كتاب التلميذ ص 34⁠–⁠35"
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "What's the time?",
+       "em": "🕐",
+       "say": "What's the time?",
+       "sub": "كم الساعة؟",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "It's half past seven.",
+       "em": "🕧",
+       "say": "It's half past seven.",
+       "sub": "إنها السابعة والنصف.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "It's quarter to nine.",
+       "em": "🕒",
+       "say": "It's quarter to nine.",
+       "sub": "إنها التاسعة إلا ربعاً.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "o'clock",
+       "o": [
+        "🕐",
+        "🕒",
+        "🕧"
+       ],
+       "a": "🕐",
+       "lang": "en"
+      },
+      {
+       "say": "half past",
+       "o": [
+        "🕧",
+        "🕒",
+        "🕘"
+       ],
+       "a": "🕧",
+       "lang": "en"
+      },
+      {
+       "say": "quarter past",
+       "o": [
+        "🕒",
+        "🕘",
+        "🕧"
+       ],
+       "a": "🕒",
+       "lang": "en"
+      },
+      {
+       "say": "quarter to",
+       "o": [
+        "🕘",
+        "🕐",
+        "🕧"
+       ],
+       "a": "🕘",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "What's the time?",
+       "o": [
+        "كم الساعة؟",
+        "إنها السابعة والنصف.",
+        "إنها التاسعة إلا ربعاً."
+       ],
+       "a": "كم الساعة؟",
+       "lang": "en"
+      },
+      {
+       "say": "It's half past seven.",
+       "o": [
+        "إنها السابعة والنصف.",
+        "كم الساعة؟",
+        "إنها التاسعة إلا ربعاً."
+       ],
+       "a": "إنها السابعة والنصف.",
+       "lang": "en"
+      },
+      {
+       "say": "It's quarter to nine.",
+       "o": [
+        "إنها التاسعة إلا ربعاً.",
+        "كم الساعة؟",
+        "إنها السابعة والنصف."
+       ],
+       "a": "إنها التاسعة إلا ربعاً.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "أكمل",
+   "eyebrow": "الخطوة ٥ — أكمل",
+   "heading": "اختر الكلمة الناقصة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "It's seven o'clock .",
+       "o": [
+        "o'clock",
+        "half"
+       ],
+       "a": "o'clock",
+       "sayQ": false,
+       "show": "It's seven ___ .",
+       "lang": "en"
+      },
+      {
+       "say": "It's half past seven. (7:30)",
+       "o": [
+        "half",
+        "quarter"
+       ],
+       "a": "half",
+       "sayQ": false,
+       "show": "It's ___ past seven. (7:30)",
+       "lang": "en"
+      },
+      {
+       "say": "8:45 = It's quarter to nine.",
+       "o": [
+        "to",
+        "past"
+       ],
+       "a": "to",
+       "sayQ": false,
+       "show": "8:45 = It's quarter ___ nine.",
+       "lang": "en"
+      }
+     ],
+     "q": "اختر الكلمة المناسبة",
+     "lang": "en"
+    }
+   ],
+   "lead": "o'clock للساعة تماماً، half past للنصف، quarter past/to للربع."
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "o'clock",
+       "o": [
+        "🕐",
+        "🕒",
+        "🕧"
+       ],
+       "a": "🕐",
+       "lang": "en"
+      },
+      {
+       "say": "half past",
+       "o": [
+        "🕧",
+        "🕐",
+        "🕒"
+       ],
+       "a": "🕧",
+       "lang": "en"
+      },
+      {
+       "say": "quarter past",
+       "o": [
+        "🕒",
+        "🕘",
+        "🕧"
+       ],
+       "a": "🕒",
+       "lang": "en"
+      },
+      {
+       "say": "quarter to",
+       "o": [
+        "🕘",
+        "🕧",
+        "🕒"
+       ],
+       "a": "🕘",
+       "lang": "en"
+      },
+      {
+       "say": "What's the time?",
+       "o": [
+        "كم الساعة؟",
+        "إنها السابعة والنصف.",
+        "إنها التاسعة إلا ربعاً."
+       ],
+       "a": "كم الساعة؟",
+       "lang": "en"
+      },
+      {
+       "say": "It's half past seven.",
+       "o": [
+        "إنها السابعة والنصف.",
+        "كم الساعة؟",
+        "إنها التاسعة إلا ربعاً."
+       ],
+       "a": "إنها السابعة والنصف.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

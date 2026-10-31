@@ -1,0 +1,307 @@
+{
+ "id": "en-4-u6-l4",
+ "grade": 4,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 6 · Lesson 4: Nadia's Grandma",
+ "titleAr": "عندما كانت الجدة صغيرة عاشت في قرية.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "عندما كانت الجدة صغيرة عاشت في قرية.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "grandma",
+       "ar": "جدة",
+       "em": "👵"
+      },
+      {
+       "id": "v1",
+       "en": "young",
+       "ar": "صغيرة السن",
+       "em": "👧"
+      },
+      {
+       "id": "v2",
+       "en": "lived",
+       "ar": "عاش",
+       "em": "🏡"
+      },
+      {
+       "id": "v3",
+       "en": "village",
+       "ar": "قرية",
+       "em": "🏘️"
+      },
+      {
+       "id": "v4",
+       "en": "walked",
+       "ar": "مشى",
+       "em": "🚶"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 92⁠–⁠93 · كتاب النشاط ص 78⁠–⁠79"
+  },
+  {
+   "title": "اقرأ",
+   "eyebrow": "الخطوة ٢ — اقرأ",
+   "heading": "اقرأ واستمع",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "📖 Nadia's Grandma",
+     "html": "<div class=\"ex\">When Grandma was young, she lived in a village.</div><div class=\"ex\">She walked to school.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "When Grandma was young, she lived in a village. She walked to school."
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط ▶ لتسمع النص."
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٣ — القاعدة",
+   "heading": "was / were",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">When Grandma <b>was</b> young, she lived in a village.</div><div class=\"ex\">She walked to school.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "When Grandma was young, she lived in a village. She walked to school."
+      }
+     ]
+    }
+   ],
+   "lead": "was مع I/he/she و were مع you/we/they.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٤ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "Grandma ___ young.",
+           "a": "was",
+           "o": [
+            "was",
+            "were"
+           ]
+          },
+          {
+           "s": "She ___ in a village.",
+           "a": "lived",
+           "o": [
+            "lived",
+            "lives"
+           ]
+          },
+          {
+           "s": "They ___ happy.",
+           "a": "were",
+           "o": [
+            "were",
+            "was"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "When Grandma was young, she lived in a village.",
+          "She walked to school."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "When Grandma was young, she lived in a village.",
+           "o": [
+            "When Grandma was young, she lived in a village.",
+            "She walked to school."
+           ]
+          },
+          {
+           "a": "She walked to school.",
+           "o": [
+            "She walked to school.",
+            "When Grandma was young, she lived in a village."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٥ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "grandma",
+       "ipa": "",
+       "meaning": "جدة",
+       "ex": "When Grandma was young, she lived in a village."
+      },
+      {
+       "must": 1,
+       "term": "young",
+       "ipa": "",
+       "meaning": "صغيرة السن",
+       "ex": "When Grandma was young, she lived in a village."
+      },
+      {
+       "must": 1,
+       "term": "lived",
+       "ipa": "",
+       "meaning": "عاش",
+       "ex": "When Grandma was young, she lived in a village."
+      },
+      {
+       "must": 0,
+       "term": "village",
+       "ipa": "",
+       "meaning": "قرية",
+       "ex": "When Grandma was young, she lived in a village."
+      },
+      {
+       "must": 0,
+       "term": "walked",
+       "ipa": "",
+       "meaning": "مشى",
+       "ex": "She walked to school."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "Grandma ___ young.",
+       "a": "was",
+       "o": [
+        "was",
+        "were"
+       ],
+       "why": ""
+      },
+      {
+       "q": "She ___ in a village.",
+       "a": "lived",
+       "o": [
+        "lived",
+        "lives"
+       ],
+       "why": ""
+      },
+      {
+       "q": "They ___ happy.",
+       "a": "were",
+       "o": [
+        "were",
+        "was"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى grandma؟",
+       "a": "جدة",
+       "o": [
+        "جدة",
+        "صغيرة السن",
+        "عاش"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى village؟",
+       "a": "قرية",
+       "o": [
+        "قرية",
+        "جدة",
+        "صغيرة السن"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "When Grandma was young, she lived in a village.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "When Grandma was young, she lived in a village.",
+       "o": [
+        "When Grandma was young, she lived in a village.",
+        "She walked to school."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

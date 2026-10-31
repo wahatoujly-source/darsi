@@ -1,0 +1,287 @@
+{
+ "id": "en-4-u5-l2",
+ "grade": 4,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 5 · Lesson 2: A School Trip",
+ "titleAr": "ذهبنا في رحلة مدرسية.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "ذهبنا في رحلة مدرسية.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "trip",
+       "ar": "رحلة",
+       "em": "🚌"
+      },
+      {
+       "id": "v1",
+       "en": "bus",
+       "ar": "حافلة",
+       "em": "🚌"
+      },
+      {
+       "id": "v2",
+       "en": "museum",
+       "ar": "متحف",
+       "em": "🏛️"
+      },
+      {
+       "id": "v3",
+       "en": "ticket",
+       "ar": "تذكرة",
+       "em": "🎟️"
+      },
+      {
+       "id": "v4",
+       "en": "guide",
+       "ar": "مرشد",
+       "em": "🧑‍🏫"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 70⁠–⁠71 · كتاب النشاط ص 58⁠–⁠59"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "went = past of go",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">We <b>went</b> on a school trip.</div><div class=\"ex\">We <b>went</b> by bus.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "We went on a school trip. We went by bus."
+      }
+     ]
+    }
+   ],
+   "lead": "الماضي من go هو went.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "We ___ on a trip yesterday.",
+           "a": "went",
+           "o": [
+            "went",
+            "go"
+           ]
+          },
+          {
+           "s": "We went ___ bus.",
+           "a": "by",
+           "o": [
+            "by",
+            "on"
+           ]
+          },
+          {
+           "s": "The ___ told us about the museum.",
+           "a": "guide",
+           "o": [
+            "guide",
+            "ticket"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "We went on a school trip.",
+          "We went by bus."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "We went on a school trip.",
+           "o": [
+            "We went on a school trip.",
+            "We went by bus."
+           ]
+          },
+          {
+           "a": "We went by bus.",
+           "o": [
+            "We went by bus.",
+            "We went on a school trip."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "trip",
+       "ipa": "",
+       "meaning": "رحلة",
+       "ex": "We went on a school trip."
+      },
+      {
+       "must": 1,
+       "term": "bus",
+       "ipa": "",
+       "meaning": "حافلة",
+       "ex": "We went by bus."
+      },
+      {
+       "must": 1,
+       "term": "museum",
+       "ipa": "",
+       "meaning": "متحف",
+       "ex": "museum"
+      },
+      {
+       "must": 0,
+       "term": "ticket",
+       "ipa": "",
+       "meaning": "تذكرة",
+       "ex": "ticket"
+      },
+      {
+       "must": 0,
+       "term": "guide",
+       "ipa": "",
+       "meaning": "مرشد",
+       "ex": "guide"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "We ___ on a trip yesterday.",
+       "a": "went",
+       "o": [
+        "went",
+        "go"
+       ],
+       "why": ""
+      },
+      {
+       "q": "We went ___ bus.",
+       "a": "by",
+       "o": [
+        "by",
+        "on"
+       ],
+       "why": ""
+      },
+      {
+       "q": "The ___ told us about the museum.",
+       "a": "guide",
+       "o": [
+        "guide",
+        "ticket"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى bus؟",
+       "a": "حافلة",
+       "o": [
+        "حافلة",
+        "رحلة",
+        "متحف"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى trip؟",
+       "a": "رحلة",
+       "o": [
+        "رحلة",
+        "حافلة",
+        "متحف"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "We went on a school trip.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "We went on a school trip.",
+       "o": [
+        "We went on a school trip.",
+        "We went by bus."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

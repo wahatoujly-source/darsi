@@ -1,0 +1,274 @@
+{
+ "id": "en-4-u6-l7",
+ "grade": 4,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 6 · Lesson 7: There was … / There were …",
+ "titleAr": "كان يوجد بئر في القرية.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "كان يوجد بئر في القرية.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "there was",
+       "ar": "كان يوجد (مفرد)",
+       "em": "1️⃣"
+      },
+      {
+       "id": "v1",
+       "en": "there were",
+       "ar": "كان يوجد (جمع)",
+       "em": "🔢"
+      },
+      {
+       "id": "v2",
+       "en": "old house",
+       "ar": "بيت قديم",
+       "em": "🏚️"
+      },
+      {
+       "id": "v3",
+       "en": "well",
+       "ar": "بئر",
+       "em": "🪣"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 98⁠–⁠99 · كتاب النشاط ص 84⁠–⁠85"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "There was / There were",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">There <b>was</b> a well in the village.</div><div class=\"ex\">There <b>were</b> many camels.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "There was a well in the village. There were many camels."
+      }
+     ]
+    }
+   ],
+   "lead": "was للمفرد و were للجمع في الماضي.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "There ___ a well.",
+           "a": "was",
+           "o": [
+            "was",
+            "were"
+           ]
+          },
+          {
+           "s": "There ___ many camels.",
+           "a": "were",
+           "o": [
+            "were",
+            "was"
+           ]
+          },
+          {
+           "s": "There ___ an old house.",
+           "a": "was",
+           "o": [
+            "was",
+            "were"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "There was a well in the village.",
+          "There were many camels."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "There was a well in the village.",
+           "o": [
+            "There was a well in the village.",
+            "There were many camels."
+           ]
+          },
+          {
+           "a": "There were many camels.",
+           "o": [
+            "There were many camels.",
+            "There was a well in the village."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "there was",
+       "ipa": "",
+       "meaning": "كان يوجد (مفرد)",
+       "ex": "There was a well in the village."
+      },
+      {
+       "must": 1,
+       "term": "there were",
+       "ipa": "",
+       "meaning": "كان يوجد (جمع)",
+       "ex": "There was a well in the village."
+      },
+      {
+       "must": 1,
+       "term": "old house",
+       "ipa": "",
+       "meaning": "بيت قديم",
+       "ex": "old house"
+      },
+      {
+       "must": 0,
+       "term": "well",
+       "ipa": "",
+       "meaning": "بئر",
+       "ex": "There was a well in the village."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "There ___ a well.",
+       "a": "was",
+       "o": [
+        "was",
+        "were"
+       ],
+       "why": ""
+      },
+      {
+       "q": "There ___ many camels.",
+       "a": "were",
+       "o": [
+        "were",
+        "was"
+       ],
+       "why": ""
+      },
+      {
+       "q": "There ___ an old house.",
+       "a": "was",
+       "o": [
+        "was",
+        "were"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى well؟",
+       "a": "بئر",
+       "o": [
+        "بئر",
+        "كان يوجد (مفرد)",
+        "كان يوجد (جمع)"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى old house؟",
+       "a": "بيت قديم",
+       "o": [
+        "بيت قديم",
+        "كان يوجد (مفرد)",
+        "كان يوجد (جمع)"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "There was a well in the village.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "There was a well in the village.",
+       "o": [
+        "There was a well in the village.",
+        "There were many camels."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

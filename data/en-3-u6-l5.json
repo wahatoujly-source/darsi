@@ -1,0 +1,337 @@
+{
+ "id": "en-3-u6-l5",
+ "grade": 3,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "Growing a Plant",
+ "titleAr": "الإنجليزية — الصف الثالث",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "Growing a Plant",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "seed",
+       "em": "🌰",
+       "say": "seed",
+       "sub": "بذرة",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "soil",
+       "em": "🟫",
+       "say": "soil",
+       "sub": "تربة",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "water",
+       "em": "💧",
+       "say": "water",
+       "sub": "يسقي",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "sun",
+       "em": "☀️",
+       "say": "sun",
+       "sub": "شمس",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "grow",
+       "em": "🌱",
+       "say": "grow",
+       "sub": "ينمو",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك "
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "Put the seed in the soil.",
+       "em": "🌰",
+       "say": "Put the seed in the soil.",
+       "sub": "ضع البذرة في التربة.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "Water it every day.",
+       "em": "💧",
+       "say": "Water it every day.",
+       "sub": "اسقها كل يوم.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "The plant grows.",
+       "em": "🌱",
+       "say": "The plant grows.",
+       "sub": "تنمو النبتة.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "seed",
+       "o": [
+        "🌰",
+        "💧",
+        "🟫"
+       ],
+       "a": "🌰",
+       "lang": "en"
+      },
+      {
+       "say": "soil",
+       "o": [
+        "🟫",
+        "🌱",
+        "☀️"
+       ],
+       "a": "🟫",
+       "lang": "en"
+      },
+      {
+       "say": "water",
+       "o": [
+        "💧",
+        "🌱",
+        "☀️"
+       ],
+       "a": "💧",
+       "lang": "en"
+      },
+      {
+       "say": "sun",
+       "o": [
+        "☀️",
+        "🟫",
+        "🌰"
+       ],
+       "a": "☀️",
+       "lang": "en"
+      },
+      {
+       "say": "grow",
+       "o": [
+        "🌱",
+        "💧",
+        "🌰"
+       ],
+       "a": "🌱",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "Put the seed in the soil.",
+       "o": [
+        "ضع البذرة في التربة.",
+        "اسقها كل يوم.",
+        "تنمو النبتة."
+       ],
+       "a": "ضع البذرة في التربة.",
+       "lang": "en"
+      },
+      {
+       "say": "Water it every day.",
+       "o": [
+        "اسقها كل يوم.",
+        "ضع البذرة في التربة.",
+        "تنمو النبتة."
+       ],
+       "a": "اسقها كل يوم.",
+       "lang": "en"
+      },
+      {
+       "say": "The plant grows.",
+       "o": [
+        "تنمو النبتة.",
+        "ضع البذرة في التربة.",
+        "اسقها كل يوم."
+       ],
+       "a": "تنمو النبتة.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "أكمل",
+   "eyebrow": "الخطوة ٥ — أكمل",
+   "heading": "اختر الكلمة الناقصة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "Put the seed in the soil.",
+       "o": [
+        "seed",
+        "sun"
+       ],
+       "a": "seed",
+       "sayQ": false,
+       "show": "Put the ___ in the soil.",
+       "lang": "en"
+      },
+      {
+       "say": "Water it every day.",
+       "o": [
+        "Water",
+        "Waters"
+       ],
+       "a": "Water",
+       "sayQ": false,
+       "show": "___ it every day.",
+       "lang": "en"
+      },
+      {
+       "say": "Plants need sun and water.",
+       "o": [
+        "sun",
+        "soil"
+       ],
+       "a": "sun",
+       "sayQ": false,
+       "show": "Plants need ___ and water.",
+       "lang": "en"
+      }
+     ],
+     "q": "اختر الكلمة المناسبة",
+     "lang": "en"
+    }
+   ],
+   "lead": "خطوات الزراعة تبدأ بالفعل: Put, Water."
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "seed",
+       "o": [
+        "🌰",
+        "☀️",
+        "💧"
+       ],
+       "a": "🌰",
+       "lang": "en"
+      },
+      {
+       "say": "soil",
+       "o": [
+        "🟫",
+        "🌰",
+        "🌱"
+       ],
+       "a": "🟫",
+       "lang": "en"
+      },
+      {
+       "say": "water",
+       "o": [
+        "💧",
+        "🟫",
+        "🌰"
+       ],
+       "a": "💧",
+       "lang": "en"
+      },
+      {
+       "say": "sun",
+       "o": [
+        "☀️",
+        "🟫",
+        "🌰"
+       ],
+       "a": "☀️",
+       "lang": "en"
+      },
+      {
+       "say": "Put the seed in the soil.",
+       "o": [
+        "ضع البذرة في التربة.",
+        "اسقها كل يوم.",
+        "تنمو النبتة."
+       ],
+       "a": "ضع البذرة في التربة.",
+       "lang": "en"
+      },
+      {
+       "say": "Water it every day.",
+       "o": [
+        "اسقها كل يوم.",
+        "ضع البذرة في التربة.",
+        "تنمو النبتة."
+       ],
+       "a": "اسقها كل يوم.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

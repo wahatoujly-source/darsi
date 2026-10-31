@@ -1,0 +1,315 @@
+{
+ "id": "en-3-u1-l5",
+ "grade": 3,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "Play Time",
+ "titleAr": "الإنجليزية — الصف الثالث",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "Play Time",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "ball",
+       "em": "⚽",
+       "say": "ball",
+       "sub": "كرة",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "rope",
+       "em": "🪢",
+       "say": "rope",
+       "sub": "حبل",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "slide",
+       "em": "🛝",
+       "say": "slide",
+       "sub": "زحليقة",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "swing",
+       "em": "🎠",
+       "say": "swing",
+       "sub": "أرجوحة",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "play",
+       "em": "🤾",
+       "say": "play",
+       "sub": "يلعب",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك كتاب النشاط ص 16⁠–⁠18"
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "Let's play with the ball.",
+       "em": "⚽",
+       "say": "Let's play with the ball.",
+       "sub": "هيا نلعب بالكرة.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "I like the swing.",
+       "em": "🎠",
+       "say": "I like the swing.",
+       "sub": "أحب الأرجوحة.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "ball",
+       "o": [
+        "⚽",
+        "🤾",
+        "🪢"
+       ],
+       "a": "⚽",
+       "lang": "en"
+      },
+      {
+       "say": "rope",
+       "o": [
+        "🪢",
+        "⚽",
+        "🛝"
+       ],
+       "a": "🪢",
+       "lang": "en"
+      },
+      {
+       "say": "slide",
+       "o": [
+        "🛝",
+        "🎠",
+        "🤾"
+       ],
+       "a": "🛝",
+       "lang": "en"
+      },
+      {
+       "say": "swing",
+       "o": [
+        "🎠",
+        "⚽",
+        "🪢"
+       ],
+       "a": "🎠",
+       "lang": "en"
+      },
+      {
+       "say": "play",
+       "o": [
+        "🤾",
+        "🛝",
+        "🪢"
+       ],
+       "a": "🤾",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "Let's play with the ball.",
+       "o": [
+        "هيا نلعب بالكرة.",
+        "أحب الأرجوحة."
+       ],
+       "a": "هيا نلعب بالكرة.",
+       "lang": "en"
+      },
+      {
+       "say": "I like the swing.",
+       "o": [
+        "أحب الأرجوحة.",
+        "هيا نلعب بالكرة."
+       ],
+       "a": "أحب الأرجوحة.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "أكمل",
+   "eyebrow": "الخطوة ٥ — أكمل",
+   "heading": "اختر الكلمة الناقصة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "Let's play with the ball.",
+       "o": [
+        "Let's",
+        "Lets"
+       ],
+       "a": "Let's",
+       "sayQ": false,
+       "show": "___ play with the ball.",
+       "lang": "en"
+      },
+      {
+       "say": "I like the swing .",
+       "o": [
+        "swing",
+        "rope"
+       ],
+       "a": "swing",
+       "sayQ": false,
+       "show": "I like the ___ .",
+       "lang": "en"
+      },
+      {
+       "say": "Skip with the rope .",
+       "o": [
+        "rope",
+        "slide"
+       ],
+       "a": "rope",
+       "sayQ": false,
+       "show": "Skip with the ___ .",
+       "lang": "en"
+      }
+     ],
+     "q": "اختر الكلمة المناسبة",
+     "lang": "en"
+    }
+   ],
+   "lead": "للاقتراح: Let's play."
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "ball",
+       "o": [
+        "⚽",
+        "🛝",
+        "🤾"
+       ],
+       "a": "⚽",
+       "lang": "en"
+      },
+      {
+       "say": "rope",
+       "o": [
+        "🪢",
+        "🛝",
+        "🎠"
+       ],
+       "a": "🪢",
+       "lang": "en"
+      },
+      {
+       "say": "slide",
+       "o": [
+        "🛝",
+        "🪢",
+        "🤾"
+       ],
+       "a": "🛝",
+       "lang": "en"
+      },
+      {
+       "say": "swing",
+       "o": [
+        "🎠",
+        "🛝",
+        "🤾"
+       ],
+       "a": "🎠",
+       "lang": "en"
+      },
+      {
+       "say": "Let's play with the ball.",
+       "o": [
+        "هيا نلعب بالكرة.",
+        "أحب الأرجوحة."
+       ],
+       "a": "هيا نلعب بالكرة.",
+       "lang": "en"
+      },
+      {
+       "say": "I like the swing.",
+       "o": [
+        "أحب الأرجوحة.",
+        "هيا نلعب بالكرة."
+       ],
+       "a": "أحب الأرجوحة.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

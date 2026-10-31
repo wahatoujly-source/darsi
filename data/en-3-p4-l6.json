@@ -1,0 +1,319 @@
+{
+ "id": "en-3-p4-l6",
+ "grade": 3,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "What's first?",
+ "titleAr": "الإنجليزية — الصف الثالث",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "What's first?",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "first",
+       "em": "1️⃣",
+       "say": "first",
+       "sub": "أولاً",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "then",
+       "em": "➡️",
+       "say": "then",
+       "sub": "ثم",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "next",
+       "em": "⏭️",
+       "say": "next",
+       "sub": "بعد ذلك",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "finally",
+       "em": "🏁",
+       "say": "finally",
+       "sub": "أخيراً",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك كتاب التلميذ ص 72⁠–⁠73"
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "First, wash your hands.",
+       "em": "1️⃣",
+       "say": "First, wash your hands.",
+       "sub": "أولاً اغسل يديك.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "Then, eat your lunch.",
+       "em": "➡️",
+       "say": "Then, eat your lunch.",
+       "sub": "ثم تناول غداءك.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "Finally, clean the table.",
+       "em": "🏁",
+       "say": "Finally, clean the table.",
+       "sub": "أخيراً نظّف الطاولة.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "first",
+       "o": [
+        "1️⃣",
+        "➡️",
+        "🏁"
+       ],
+       "a": "1️⃣",
+       "lang": "en"
+      },
+      {
+       "say": "then",
+       "o": [
+        "➡️",
+        "⏭️",
+        "🏁"
+       ],
+       "a": "➡️",
+       "lang": "en"
+      },
+      {
+       "say": "next",
+       "o": [
+        "⏭️",
+        "1️⃣",
+        "🏁"
+       ],
+       "a": "⏭️",
+       "lang": "en"
+      },
+      {
+       "say": "finally",
+       "o": [
+        "🏁",
+        "⏭️",
+        "➡️"
+       ],
+       "a": "🏁",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "First, wash your hands.",
+       "o": [
+        "أولاً اغسل يديك.",
+        "ثم تناول غداءك.",
+        "أخيراً نظّف الطاولة."
+       ],
+       "a": "أولاً اغسل يديك.",
+       "lang": "en"
+      },
+      {
+       "say": "Then, eat your lunch.",
+       "o": [
+        "ثم تناول غداءك.",
+        "أولاً اغسل يديك.",
+        "أخيراً نظّف الطاولة."
+       ],
+       "a": "ثم تناول غداءك.",
+       "lang": "en"
+      },
+      {
+       "say": "Finally, clean the table.",
+       "o": [
+        "أخيراً نظّف الطاولة.",
+        "أولاً اغسل يديك.",
+        "ثم تناول غداءك."
+       ],
+       "a": "أخيراً نظّف الطاولة.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "أكمل",
+   "eyebrow": "الخطوة ٥ — أكمل",
+   "heading": "اختر الكلمة الناقصة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "First , wash your hands.",
+       "o": [
+        "First",
+        "Finally"
+       ],
+       "a": "First",
+       "sayQ": false,
+       "show": "___ , wash your hands.",
+       "lang": "en"
+      },
+      {
+       "say": "Finally , clean the table.",
+       "o": [
+        "Finally",
+        "First"
+       ],
+       "a": "Finally",
+       "sayQ": false,
+       "show": "___ , clean the table.",
+       "lang": "en"
+      },
+      {
+       "say": "Then eat your lunch.",
+       "o": [
+        "eat",
+        "eats"
+       ],
+       "a": "eat",
+       "sayQ": false,
+       "show": "Then ___ your lunch.",
+       "lang": "en"
+      }
+     ],
+     "q": "اختر الكلمة المناسبة",
+     "lang": "en"
+    }
+   ],
+   "lead": "نرتب الخطوات بـ first, then, next, finally."
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "first",
+       "o": [
+        "1️⃣",
+        "➡️",
+        "⏭️"
+       ],
+       "a": "1️⃣",
+       "lang": "en"
+      },
+      {
+       "say": "then",
+       "o": [
+        "➡️",
+        "1️⃣",
+        "⏭️"
+       ],
+       "a": "➡️",
+       "lang": "en"
+      },
+      {
+       "say": "next",
+       "o": [
+        "⏭️",
+        "➡️",
+        "1️⃣"
+       ],
+       "a": "⏭️",
+       "lang": "en"
+      },
+      {
+       "say": "finally",
+       "o": [
+        "🏁",
+        "⏭️",
+        "➡️"
+       ],
+       "a": "🏁",
+       "lang": "en"
+      },
+      {
+       "say": "First, wash your hands.",
+       "o": [
+        "أولاً اغسل يديك.",
+        "ثم تناول غداءك.",
+        "أخيراً نظّف الطاولة."
+       ],
+       "a": "أولاً اغسل يديك.",
+       "lang": "en"
+      },
+      {
+       "say": "Then, eat your lunch.",
+       "o": [
+        "ثم تناول غداءك.",
+        "أولاً اغسل يديك.",
+        "أخيراً نظّف الطاولة."
+       ],
+       "a": "ثم تناول غداءك.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

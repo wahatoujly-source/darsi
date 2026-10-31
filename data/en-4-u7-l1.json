@@ -1,0 +1,287 @@
+{
+ "id": "en-4-u7-l1",
+ "grade": 4,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 7 · Lesson 1: The School Challenge",
+ "titleAr": "هناك تحدٍّ مدرسي يوم الاثنين.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "هناك تحدٍّ مدرسي يوم الاثنين.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "compete",
+       "ar": "يتنافس",
+       "em": "🏆"
+      },
+      {
+       "id": "v1",
+       "en": "subject",
+       "ar": "مادة",
+       "em": "📚"
+      },
+      {
+       "id": "v2",
+       "en": "prize",
+       "ar": "جائزة",
+       "em": "🎁"
+      },
+      {
+       "id": "v3",
+       "en": "ready",
+       "ar": "مستعد",
+       "em": "✅"
+      },
+      {
+       "id": "v4",
+       "en": "quiz",
+       "ar": "مسابقة",
+       "em": "❓"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 104⁠–⁠105 · كتاب النشاط ص 88⁠–⁠89"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "on + day",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">There is a school challenge <b>on</b> Monday.</div><div class=\"ex\">Are you <b>ready</b>?</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "There is a school challenge on Monday. Are you ready?"
+      }
+     ]
+    }
+   ],
+   "lead": "نستخدم on مع الأيام: on Monday.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "The challenge is ___ Monday.",
+           "a": "on",
+           "o": [
+            "on",
+            "in"
+           ]
+          },
+          {
+           "s": "Are you ___ ?",
+           "a": "ready",
+           "o": [
+            "ready",
+            "prize"
+           ]
+          },
+          {
+           "s": "The winners get a ___ .",
+           "a": "prize",
+           "o": [
+            "prize",
+            "subject"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "There is a school challenge on Monday.",
+          "Are you ready?"
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "There is a school challenge on Monday.",
+           "o": [
+            "There is a school challenge on Monday.",
+            "Are you ready?"
+           ]
+          },
+          {
+           "a": "Are you ready?",
+           "o": [
+            "Are you ready?",
+            "There is a school challenge on Monday."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "compete",
+       "ipa": "",
+       "meaning": "يتنافس",
+       "ex": "compete"
+      },
+      {
+       "must": 1,
+       "term": "subject",
+       "ipa": "",
+       "meaning": "مادة",
+       "ex": "subject"
+      },
+      {
+       "must": 1,
+       "term": "prize",
+       "ipa": "",
+       "meaning": "جائزة",
+       "ex": "prize"
+      },
+      {
+       "must": 0,
+       "term": "ready",
+       "ipa": "",
+       "meaning": "مستعد",
+       "ex": "Are you ready?"
+      },
+      {
+       "must": 0,
+       "term": "quiz",
+       "ipa": "",
+       "meaning": "مسابقة",
+       "ex": "quiz"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "The challenge is ___ Monday.",
+       "a": "on",
+       "o": [
+        "on",
+        "in"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Are you ___ ?",
+       "a": "ready",
+       "o": [
+        "ready",
+        "prize"
+       ],
+       "why": ""
+      },
+      {
+       "q": "The winners get a ___ .",
+       "a": "prize",
+       "o": [
+        "prize",
+        "subject"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى prize؟",
+       "a": "جائزة",
+       "o": [
+        "جائزة",
+        "يتنافس",
+        "مادة"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى ready؟",
+       "a": "مستعد",
+       "o": [
+        "مستعد",
+        "يتنافس",
+        "مادة"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "There is a school challenge on Monday.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "There is a school challenge on Monday.",
+       "o": [
+        "There is a school challenge on Monday.",
+        "Are you ready?"
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

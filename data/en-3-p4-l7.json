@@ -1,0 +1,337 @@
+{
+ "id": "en-3-p4-l7",
+ "grade": 3,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "Making a Poster",
+ "titleAr": "الإنجليزية — الصف الثالث",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "Making a Poster",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "poster",
+       "em": "🖼️",
+       "say": "poster",
+       "sub": "ملصق",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "glue",
+       "em": "🧴",
+       "say": "glue",
+       "sub": "صمغ",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "scissors",
+       "em": "✂️",
+       "say": "scissors",
+       "sub": "مقص",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "colour",
+       "em": "🖍️",
+       "say": "colour",
+       "sub": "يلوّن",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "cut",
+       "em": "✂️",
+       "say": "cut",
+       "sub": "يقص",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك كتاب التلميذ ص 74⁠–⁠75"
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "Cut out the pictures.",
+       "em": "✂️",
+       "say": "Cut out the pictures.",
+       "sub": "قصّ الصور.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "Stick them on the poster.",
+       "em": "🖼️",
+       "say": "Stick them on the poster.",
+       "sub": "ألصقها على الملصق.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "Colour the title.",
+       "em": "🖍️",
+       "say": "Colour the title.",
+       "sub": "لوّن العنوان.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "poster",
+       "o": [
+        "🖼️",
+        "✂️",
+        "🖍️"
+       ],
+       "a": "🖼️",
+       "lang": "en"
+      },
+      {
+       "say": "glue",
+       "o": [
+        "🧴",
+        "✂️",
+        "🖍️"
+       ],
+       "a": "🧴",
+       "lang": "en"
+      },
+      {
+       "say": "scissors",
+       "o": [
+        "✂️",
+        "🧴",
+        "🖍️"
+       ],
+       "a": "✂️",
+       "lang": "en"
+      },
+      {
+       "say": "colour",
+       "o": [
+        "🖍️",
+        "🖼️",
+        "✂️"
+       ],
+       "a": "🖍️",
+       "lang": "en"
+      },
+      {
+       "say": "cut",
+       "o": [
+        "✂️",
+        "🧴",
+        "🖼️"
+       ],
+       "a": "✂️",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "Cut out the pictures.",
+       "o": [
+        "قصّ الصور.",
+        "ألصقها على الملصق.",
+        "لوّن العنوان."
+       ],
+       "a": "قصّ الصور.",
+       "lang": "en"
+      },
+      {
+       "say": "Stick them on the poster.",
+       "o": [
+        "ألصقها على الملصق.",
+        "قصّ الصور.",
+        "لوّن العنوان."
+       ],
+       "a": "ألصقها على الملصق.",
+       "lang": "en"
+      },
+      {
+       "say": "Colour the title.",
+       "o": [
+        "لوّن العنوان.",
+        "قصّ الصور.",
+        "ألصقها على الملصق."
+       ],
+       "a": "لوّن العنوان.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "أكمل",
+   "eyebrow": "الخطوة ٥ — أكمل",
+   "heading": "اختر الكلمة الناقصة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "Cut out the pictures.",
+       "o": [
+        "Cut",
+        "Cuts"
+       ],
+       "a": "Cut",
+       "sayQ": false,
+       "show": "___ out the pictures.",
+       "lang": "en"
+      },
+      {
+       "say": "We need scissors to cut.",
+       "o": [
+        "scissors",
+        "glue"
+       ],
+       "a": "scissors",
+       "sayQ": false,
+       "show": "We need ___ to cut.",
+       "lang": "en"
+      },
+      {
+       "say": "Stick them on the poster.",
+       "o": [
+        "on",
+        "in"
+       ],
+       "a": "on",
+       "sayQ": false,
+       "show": "Stick them ___ the poster.",
+       "lang": "en"
+      }
+     ],
+     "q": "اختر الكلمة المناسبة",
+     "lang": "en"
+    }
+   ],
+   "lead": "التعليمات تبدأ بالفعل: Cut, Stick, Colour."
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "poster",
+       "o": [
+        "🖼️",
+        "✂️",
+        "🖍️"
+       ],
+       "a": "🖼️",
+       "lang": "en"
+      },
+      {
+       "say": "glue",
+       "o": [
+        "🧴",
+        "✂️",
+        "🖼️"
+       ],
+       "a": "🧴",
+       "lang": "en"
+      },
+      {
+       "say": "scissors",
+       "o": [
+        "✂️",
+        "🧴",
+        "🖍️"
+       ],
+       "a": "✂️",
+       "lang": "en"
+      },
+      {
+       "say": "colour",
+       "o": [
+        "🖍️",
+        "🧴",
+        "🖼️"
+       ],
+       "a": "🖍️",
+       "lang": "en"
+      },
+      {
+       "say": "Cut out the pictures.",
+       "o": [
+        "قصّ الصور.",
+        "ألصقها على الملصق.",
+        "لوّن العنوان."
+       ],
+       "a": "قصّ الصور.",
+       "lang": "en"
+      },
+      {
+       "say": "Stick them on the poster.",
+       "o": [
+        "ألصقها على الملصق.",
+        "قصّ الصور.",
+        "لوّن العنوان."
+       ],
+       "a": "ألصقها على الملصق.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

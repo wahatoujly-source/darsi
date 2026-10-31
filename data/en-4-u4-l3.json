@@ -1,0 +1,319 @@
+{
+ "id": "en-4-u4-l3",
+ "grade": 4,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 4 · Lesson 3: The Magic Bird",
+ "titleAr": "الطائر السحري في قفص.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "الطائر السحري في قفص.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "magic",
+       "ar": "سحري",
+       "em": "✨"
+      },
+      {
+       "id": "v1",
+       "en": "bird",
+       "ar": "طائر",
+       "em": "🐦"
+      },
+      {
+       "id": "v2",
+       "en": "cage",
+       "ar": "قفص",
+       "em": "🪤"
+      },
+      {
+       "id": "v3",
+       "en": "free",
+       "ar": "حر",
+       "em": "🕊️"
+      },
+      {
+       "id": "v4",
+       "en": "sing",
+       "ar": "يغني",
+       "em": "🎶"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 64 · كتاب النشاط ص 54"
+  },
+  {
+   "title": "اقرأ",
+   "eyebrow": "الخطوة ٢ — اقرأ",
+   "heading": "اقرأ واستمع",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "📖 The Magic Bird",
+     "html": "<div class=\"ex\">The magic bird is in a cage.</div><div class=\"ex\">A girl opens the cage.</div><div class=\"ex\">The bird is free and it sings.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "The magic bird is in a cage. A girl opens the cage. The bird is free and it sings."
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط ▶ لتسمع النص."
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٣ — القاعدة",
+   "heading": "Story words",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">The magic bird is in a <b>cage</b>.</div><div class=\"ex\">A girl opens the <b>cage</b>.</div><div class=\"ex\">The bird is <b>free</b> and it sings.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "The magic bird is in a cage. A girl opens the cage. The bird is free and it sings."
+      }
+     ]
+    }
+   ],
+   "lead": "free = حر، cage = قفص.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٤ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "The bird is in a ___ .",
+           "a": "cage",
+           "o": [
+            "cage",
+            "tree"
+           ]
+          },
+          {
+           "s": "A girl ___ the cage.",
+           "a": "opens",
+           "o": [
+            "opens",
+            "open"
+           ]
+          },
+          {
+           "s": "The bird is ___ !",
+           "a": "free",
+           "o": [
+            "free",
+            "sad"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "The magic bird is in a cage.",
+          "A girl opens the cage.",
+          "The bird is free and it sings."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "The magic bird is in a cage.",
+           "o": [
+            "The magic bird is in a cage.",
+            "A girl opens the cage.",
+            "The bird is free and it sings."
+           ]
+          },
+          {
+           "a": "A girl opens the cage.",
+           "o": [
+            "A girl opens the cage.",
+            "The magic bird is in a cage.",
+            "The bird is free and it sings."
+           ]
+          },
+          {
+           "a": "The bird is free and it sings.",
+           "o": [
+            "The bird is free and it sings.",
+            "The magic bird is in a cage.",
+            "A girl opens the cage."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٥ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "magic",
+       "ipa": "",
+       "meaning": "سحري",
+       "ex": "The magic bird is in a cage."
+      },
+      {
+       "must": 1,
+       "term": "bird",
+       "ipa": "",
+       "meaning": "طائر",
+       "ex": "The magic bird is in a cage."
+      },
+      {
+       "must": 1,
+       "term": "cage",
+       "ipa": "",
+       "meaning": "قفص",
+       "ex": "The magic bird is in a cage."
+      },
+      {
+       "must": 0,
+       "term": "free",
+       "ipa": "",
+       "meaning": "حر",
+       "ex": "The bird is free and it sings."
+      },
+      {
+       "must": 0,
+       "term": "sing",
+       "ipa": "",
+       "meaning": "يغني",
+       "ex": "The bird is free and it sings."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "The bird is in a ___ .",
+       "a": "cage",
+       "o": [
+        "cage",
+        "tree"
+       ],
+       "why": ""
+      },
+      {
+       "q": "A girl ___ the cage.",
+       "a": "opens",
+       "o": [
+        "opens",
+        "open"
+       ],
+       "why": ""
+      },
+      {
+       "q": "The bird is ___ !",
+       "a": "free",
+       "o": [
+        "free",
+        "sad"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى bird؟",
+       "a": "طائر",
+       "o": [
+        "طائر",
+        "سحري",
+        "قفص"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى sing؟",
+       "a": "يغني",
+       "o": [
+        "يغني",
+        "سحري",
+        "طائر"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "The magic bird is in a cage.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "The magic bird is in a cage.",
+       "o": [
+        "The magic bird is in a cage.",
+        "A girl opens the cage.",
+        "The bird is free and it sings."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

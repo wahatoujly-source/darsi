@@ -1,0 +1,333 @@
+{
+ "id": "en-3-u3-l1",
+ "grade": 3,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "My Family",
+ "titleAr": "الإنجليزية — الصف الثالث",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "My Family",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "mother",
+       "em": "👩",
+       "say": "mother",
+       "sub": "أم",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "father",
+       "em": "👨",
+       "say": "father",
+       "sub": "أب",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "brother",
+       "em": "👦",
+       "say": "brother",
+       "sub": "أخ",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "sister",
+       "em": "👧",
+       "say": "sister",
+       "sub": "أخت",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "grandpa",
+       "em": "👴",
+       "say": "grandpa",
+       "sub": "جد",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "grandma",
+       "em": "👵",
+       "say": "grandma",
+       "sub": "جدة",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك "
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "This is my mother.",
+       "em": "👩",
+       "say": "This is my mother.",
+       "sub": "هذه أمي.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "I have one brother and two sisters.",
+       "em": "👦",
+       "say": "I have one brother and two sisters.",
+       "sub": "لدي أخ واحد وأختان.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "mother",
+       "o": [
+        "👩",
+        "👴",
+        "👵"
+       ],
+       "a": "👩",
+       "lang": "en"
+      },
+      {
+       "say": "father",
+       "o": [
+        "👨",
+        "👵",
+        "👩"
+       ],
+       "a": "👨",
+       "lang": "en"
+      },
+      {
+       "say": "brother",
+       "o": [
+        "👦",
+        "👨",
+        "👴"
+       ],
+       "a": "👦",
+       "lang": "en"
+      },
+      {
+       "say": "sister",
+       "o": [
+        "👧",
+        "👩",
+        "👵"
+       ],
+       "a": "👧",
+       "lang": "en"
+      },
+      {
+       "say": "grandpa",
+       "o": [
+        "👴",
+        "👵",
+        "👩"
+       ],
+       "a": "👴",
+       "lang": "en"
+      },
+      {
+       "say": "grandma",
+       "o": [
+        "👵",
+        "👨",
+        "👴"
+       ],
+       "a": "👵",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "This is my mother.",
+       "o": [
+        "هذه أمي.",
+        "لدي أخ واحد وأختان."
+       ],
+       "a": "هذه أمي.",
+       "lang": "en"
+      },
+      {
+       "say": "I have one brother and two sisters.",
+       "o": [
+        "لدي أخ واحد وأختان.",
+        "هذه أمي."
+       ],
+       "a": "لدي أخ واحد وأختان.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "أكمل",
+   "eyebrow": "الخطوة ٥ — أكمل",
+   "heading": "اختر الكلمة الناقصة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "This is my mother . She is kind.",
+       "o": [
+        "mother",
+        "father"
+       ],
+       "a": "mother",
+       "sayQ": false,
+       "show": "This is my ___ . She is kind.",
+       "lang": "en"
+      },
+      {
+       "say": "I have two sisters .",
+       "o": [
+        "sisters",
+        "sister"
+       ],
+       "a": "sisters",
+       "sayQ": false,
+       "show": "I have two ___ .",
+       "lang": "en"
+      },
+      {
+       "say": "My father's father is my grandpa .",
+       "o": [
+        "grandpa",
+        "brother"
+       ],
+       "a": "grandpa",
+       "sayQ": false,
+       "show": "My father's father is my ___ .",
+       "lang": "en"
+      }
+     ],
+     "q": "اختر الكلمة المناسبة",
+     "lang": "en"
+    }
+   ],
+   "lead": "نقدّم أفراد الأسرة بـ This is my …"
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "mother",
+       "o": [
+        "👩",
+        "👵",
+        "👦"
+       ],
+       "a": "👩",
+       "lang": "en"
+      },
+      {
+       "say": "father",
+       "o": [
+        "👨",
+        "👧",
+        "👩"
+       ],
+       "a": "👨",
+       "lang": "en"
+      },
+      {
+       "say": "brother",
+       "o": [
+        "👦",
+        "👨",
+        "👵"
+       ],
+       "a": "👦",
+       "lang": "en"
+      },
+      {
+       "say": "sister",
+       "o": [
+        "👧",
+        "👦",
+        "👴"
+       ],
+       "a": "👧",
+       "lang": "en"
+      },
+      {
+       "say": "This is my mother.",
+       "o": [
+        "هذه أمي.",
+        "لدي أخ واحد وأختان."
+       ],
+       "a": "هذه أمي.",
+       "lang": "en"
+      },
+      {
+       "say": "I have one brother and two sisters.",
+       "o": [
+        "لدي أخ واحد وأختان.",
+        "هذه أمي."
+       ],
+       "a": "لدي أخ واحد وأختان.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

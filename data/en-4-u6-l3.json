@@ -1,0 +1,299 @@
+{
+ "id": "en-4-u6-l3",
+ "grade": 4,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 6 · Lesson 3: Question Game",
+ "titleAr": "هل لعبت أمس؟",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "هل لعبت أمس؟",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "question",
+       "ar": "سؤال",
+       "em": "❓"
+      },
+      {
+       "id": "v1",
+       "en": "answer",
+       "ar": "جواب",
+       "em": "💬"
+      },
+      {
+       "id": "v2",
+       "en": "did",
+       "ar": "فعل مساعد للماضي",
+       "em": "🔙"
+      },
+      {
+       "id": "v3",
+       "en": "right",
+       "ar": "صحيح",
+       "em": "✅"
+      },
+      {
+       "id": "v4",
+       "en": "wrong",
+       "ar": "خطأ",
+       "em": "❌"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 90⁠–⁠91 · كتاب النشاط ص 76⁠–⁠77"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Did …?",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\"><b>Did</b> you play yesterday?</div><div class=\"ex\">Yes, I <b>did</b>.</div><div class=\"ex\">No, I didn't.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Did you play yesterday? Yes, I did. No, I didn't."
+      }
+     ]
+    }
+   ],
+   "lead": "السؤال في الماضي: Did + فاعل + فعل مجرد.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "___ you play yesterday?",
+           "a": "Did",
+           "o": [
+            "Did",
+            "Do"
+           ]
+          },
+          {
+           "s": "Yes, I ___ .",
+           "a": "did",
+           "o": [
+            "did",
+            "do"
+           ]
+          },
+          {
+           "s": "Did she ___ TV?",
+           "a": "watch",
+           "o": [
+            "watch",
+            "watched"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Did you play yesterday?",
+          "Yes, I did.",
+          "No, I didn't."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Did you play yesterday?",
+           "o": [
+            "Did you play yesterday?",
+            "Yes, I did.",
+            "No, I didn't."
+           ]
+          },
+          {
+           "a": "Yes, I did.",
+           "o": [
+            "Yes, I did.",
+            "Did you play yesterday?",
+            "No, I didn't."
+           ]
+          },
+          {
+           "a": "No, I didn't.",
+           "o": [
+            "No, I didn't.",
+            "Did you play yesterday?",
+            "Yes, I did."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "question",
+       "ipa": "",
+       "meaning": "سؤال",
+       "ex": "question"
+      },
+      {
+       "must": 1,
+       "term": "answer",
+       "ipa": "",
+       "meaning": "جواب",
+       "ex": "answer"
+      },
+      {
+       "must": 1,
+       "term": "did",
+       "ipa": "",
+       "meaning": "فعل مساعد للماضي",
+       "ex": "Did you play yesterday?"
+      },
+      {
+       "must": 0,
+       "term": "right",
+       "ipa": "",
+       "meaning": "صحيح",
+       "ex": "right"
+      },
+      {
+       "must": 0,
+       "term": "wrong",
+       "ipa": "",
+       "meaning": "خطأ",
+       "ex": "wrong"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "___ you play yesterday?",
+       "a": "Did",
+       "o": [
+        "Did",
+        "Do"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Yes, I ___ .",
+       "a": "did",
+       "o": [
+        "did",
+        "do"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Did she ___ TV?",
+       "a": "watch",
+       "o": [
+        "watch",
+        "watched"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى answer؟",
+       "a": "جواب",
+       "o": [
+        "جواب",
+        "سؤال",
+        "فعل مساعد للماضي"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى question؟",
+       "a": "سؤال",
+       "o": [
+        "سؤال",
+        "جواب",
+        "فعل مساعد للماضي"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Did you play yesterday?",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Did you play yesterday?",
+       "o": [
+        "Did you play yesterday?",
+        "Yes, I did.",
+        "No, I didn't."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

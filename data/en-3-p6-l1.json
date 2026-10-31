@@ -1,0 +1,337 @@
+{
+ "id": "en-3-p6-l1",
+ "grade": 3,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "Wh- Questions",
+ "titleAr": "الإنجليزية — الصف الثالث",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "Wh- Questions",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "who",
+       "em": "🧑",
+       "say": "who",
+       "sub": "من",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "what",
+       "em": "❓",
+       "say": "what",
+       "sub": "ماذا",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "where",
+       "em": "📍",
+       "say": "where",
+       "sub": "أين",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "when",
+       "em": "⏰",
+       "say": "when",
+       "sub": "متى",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "why",
+       "em": "🤔",
+       "say": "why",
+       "sub": "لماذا",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك كتاب التلميذ ص 98⁠–⁠99"
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "Where is your school?",
+       "em": "📍",
+       "say": "Where is your school?",
+       "sub": "أين مدرستك؟",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "When do you get up?",
+       "em": "⏰",
+       "say": "When do you get up?",
+       "sub": "متى تستيقظ؟",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "Who is your teacher?",
+       "em": "🧑",
+       "say": "Who is your teacher?",
+       "sub": "من معلمك؟",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "who",
+       "o": [
+        "🧑",
+        "📍",
+        "❓"
+       ],
+       "a": "🧑",
+       "lang": "en"
+      },
+      {
+       "say": "what",
+       "o": [
+        "❓",
+        "🧑",
+        "⏰"
+       ],
+       "a": "❓",
+       "lang": "en"
+      },
+      {
+       "say": "where",
+       "o": [
+        "📍",
+        "❓",
+        "⏰"
+       ],
+       "a": "📍",
+       "lang": "en"
+      },
+      {
+       "say": "when",
+       "o": [
+        "⏰",
+        "🧑",
+        "❓"
+       ],
+       "a": "⏰",
+       "lang": "en"
+      },
+      {
+       "say": "why",
+       "o": [
+        "🤔",
+        "⏰",
+        "📍"
+       ],
+       "a": "🤔",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "Where is your school?",
+       "o": [
+        "أين مدرستك؟",
+        "متى تستيقظ؟",
+        "من معلمك؟"
+       ],
+       "a": "أين مدرستك؟",
+       "lang": "en"
+      },
+      {
+       "say": "When do you get up?",
+       "o": [
+        "متى تستيقظ؟",
+        "أين مدرستك؟",
+        "من معلمك؟"
+       ],
+       "a": "متى تستيقظ؟",
+       "lang": "en"
+      },
+      {
+       "say": "Who is your teacher?",
+       "o": [
+        "من معلمك؟",
+        "أين مدرستك؟",
+        "متى تستيقظ؟"
+       ],
+       "a": "من معلمك؟",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "أكمل",
+   "eyebrow": "الخطوة ٥ — أكمل",
+   "heading": "اختر الكلمة الناقصة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "Who is your teacher? — Mr Ali.",
+       "o": [
+        "Who",
+        "Where"
+       ],
+       "a": "Who",
+       "sayQ": false,
+       "show": "___ is your teacher? — Mr Ali.",
+       "lang": "en"
+      },
+      {
+       "say": "Where do you live? — In Tripoli.",
+       "o": [
+        "Where",
+        "When"
+       ],
+       "a": "Where",
+       "sayQ": false,
+       "show": "___ do you live? — In Tripoli.",
+       "lang": "en"
+      },
+      {
+       "say": "When do you get up? — At seven.",
+       "o": [
+        "When",
+        "Who"
+       ],
+       "a": "When",
+       "sayQ": false,
+       "show": "___ do you get up? — At seven.",
+       "lang": "en"
+      }
+     ],
+     "q": "اختر الكلمة المناسبة",
+     "lang": "en"
+    }
+   ],
+   "lead": "who للشخص، what للشيء، where للمكان، when للزمن، why للسبب."
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "who",
+       "o": [
+        "🧑",
+        "📍",
+        "❓"
+       ],
+       "a": "🧑",
+       "lang": "en"
+      },
+      {
+       "say": "what",
+       "o": [
+        "❓",
+        "⏰",
+        "🧑"
+       ],
+       "a": "❓",
+       "lang": "en"
+      },
+      {
+       "say": "where",
+       "o": [
+        "📍",
+        "⏰",
+        "❓"
+       ],
+       "a": "📍",
+       "lang": "en"
+      },
+      {
+       "say": "when",
+       "o": [
+        "⏰",
+        "📍",
+        "🤔"
+       ],
+       "a": "⏰",
+       "lang": "en"
+      },
+      {
+       "say": "Where is your school?",
+       "o": [
+        "أين مدرستك؟",
+        "متى تستيقظ؟",
+        "من معلمك؟"
+       ],
+       "a": "أين مدرستك؟",
+       "lang": "en"
+      },
+      {
+       "say": "When do you get up?",
+       "o": [
+        "متى تستيقظ؟",
+        "أين مدرستك؟",
+        "من معلمك؟"
+       ],
+       "a": "متى تستيقظ؟",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

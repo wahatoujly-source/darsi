@@ -1,0 +1,337 @@
+{
+ "id": "en-3-p4-l4",
+ "grade": 3,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "At the Races",
+ "titleAr": "الإنجليزية — الصف الثالث",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "At the Races",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "race",
+       "em": "🏁",
+       "say": "race",
+       "sub": "سباق",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "win",
+       "em": "🏆",
+       "say": "win",
+       "sub": "يفوز",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "first",
+       "em": "🥇",
+       "say": "first",
+       "sub": "الأول",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "second",
+       "em": "🥈",
+       "say": "second",
+       "sub": "الثاني",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "fast",
+       "em": "💨",
+       "say": "fast",
+       "sub": "سريع",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك كتاب التلميذ ص 68⁠–⁠69"
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "Who is first?",
+       "em": "🥇",
+       "say": "Who is first?",
+       "sub": "من الأول؟",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "Kareem is first. Lina is second.",
+       "em": "🥇",
+       "say": "Kareem is first. Lina is second.",
+       "sub": "كريم الأول. لينا الثانية.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "Run fast!",
+       "em": "💨",
+       "say": "Run fast!",
+       "sub": "اجرِ بسرعة!",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "race",
+       "o": [
+        "🏁",
+        "🥇",
+        "🥈"
+       ],
+       "a": "🏁",
+       "lang": "en"
+      },
+      {
+       "say": "win",
+       "o": [
+        "🏆",
+        "🥇",
+        "🏁"
+       ],
+       "a": "🏆",
+       "lang": "en"
+      },
+      {
+       "say": "first",
+       "o": [
+        "🥇",
+        "💨",
+        "🏆"
+       ],
+       "a": "🥇",
+       "lang": "en"
+      },
+      {
+       "say": "second",
+       "o": [
+        "🥈",
+        "💨",
+        "🏁"
+       ],
+       "a": "🥈",
+       "lang": "en"
+      },
+      {
+       "say": "fast",
+       "o": [
+        "💨",
+        "🥇",
+        "🏆"
+       ],
+       "a": "💨",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "Who is first?",
+       "o": [
+        "من الأول؟",
+        "كريم الأول. لينا الثانية.",
+        "اجرِ بسرعة!"
+       ],
+       "a": "من الأول؟",
+       "lang": "en"
+      },
+      {
+       "say": "Kareem is first. Lina is second.",
+       "o": [
+        "كريم الأول. لينا الثانية.",
+        "من الأول؟",
+        "اجرِ بسرعة!"
+       ],
+       "a": "كريم الأول. لينا الثانية.",
+       "lang": "en"
+      },
+      {
+       "say": "Run fast!",
+       "o": [
+        "اجرِ بسرعة!",
+        "من الأول؟",
+        "كريم الأول. لينا الثانية."
+       ],
+       "a": "اجرِ بسرعة!",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "أكمل",
+   "eyebrow": "الخطوة ٥ — أكمل",
+   "heading": "اختر الكلمة الناقصة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "Kareem is first . (1st)",
+       "o": [
+        "first",
+        "one"
+       ],
+       "a": "first",
+       "sayQ": false,
+       "show": "Kareem is ___ . (1st)",
+       "lang": "en"
+      },
+      {
+       "say": "Lina is second . (2nd)",
+       "o": [
+        "second",
+        "two"
+       ],
+       "a": "second",
+       "sayQ": false,
+       "show": "Lina is ___ . (2nd)",
+       "lang": "en"
+      },
+      {
+       "say": "He can run fast .",
+       "o": [
+        "fast",
+        "slow"
+       ],
+       "a": "fast",
+       "sayQ": false,
+       "show": "He can run ___ .",
+       "lang": "en"
+      }
+     ],
+     "q": "اختر الكلمة المناسبة",
+     "lang": "en"
+    }
+   ],
+   "lead": "first, second, third, fourth …"
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "race",
+       "o": [
+        "🏁",
+        "🥈",
+        "🥇"
+       ],
+       "a": "🏁",
+       "lang": "en"
+      },
+      {
+       "say": "win",
+       "o": [
+        "🏆",
+        "🥈",
+        "🏁"
+       ],
+       "a": "🏆",
+       "lang": "en"
+      },
+      {
+       "say": "first",
+       "o": [
+        "🥇",
+        "🏁",
+        "💨"
+       ],
+       "a": "🥇",
+       "lang": "en"
+      },
+      {
+       "say": "second",
+       "o": [
+        "🥈",
+        "🏆",
+        "🥇"
+       ],
+       "a": "🥈",
+       "lang": "en"
+      },
+      {
+       "say": "Who is first?",
+       "o": [
+        "من الأول؟",
+        "كريم الأول. لينا الثانية.",
+        "اجرِ بسرعة!"
+       ],
+       "a": "من الأول؟",
+       "lang": "en"
+      },
+      {
+       "say": "Kareem is first. Lina is second.",
+       "o": [
+        "كريم الأول. لينا الثانية.",
+        "من الأول؟",
+        "اجرِ بسرعة!"
+       ],
+       "a": "كريم الأول. لينا الثانية.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

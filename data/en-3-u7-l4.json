@@ -1,0 +1,315 @@
+{
+ "id": "en-3-u7-l4",
+ "grade": 3,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "Wild World",
+ "titleAr": "الإنجليزية — الصف الثالث",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "Wild World",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "lion",
+       "em": "🦁",
+       "say": "lion",
+       "sub": "أسد",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "elephant",
+       "em": "🐘",
+       "say": "elephant",
+       "sub": "فيل",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "monkey",
+       "em": "🐒",
+       "say": "monkey",
+       "sub": "قرد",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "snake",
+       "em": "🐍",
+       "say": "snake",
+       "sub": "ثعبان",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "jungle",
+       "em": "🌴",
+       "say": "jungle",
+       "sub": "غابة",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك "
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "Lions live in Africa.",
+       "em": "🦁",
+       "say": "Lions live in Africa.",
+       "sub": "تعيش الأسود في أفريقيا.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "Monkeys can climb trees.",
+       "em": "🐒",
+       "say": "Monkeys can climb trees.",
+       "sub": "القرود تستطيع تسلق الأشجار.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "lion",
+       "o": [
+        "🦁",
+        "🐘",
+        "🐒"
+       ],
+       "a": "🦁",
+       "lang": "en"
+      },
+      {
+       "say": "elephant",
+       "o": [
+        "🐘",
+        "🐍",
+        "🐒"
+       ],
+       "a": "🐘",
+       "lang": "en"
+      },
+      {
+       "say": "monkey",
+       "o": [
+        "🐒",
+        "🦁",
+        "🐘"
+       ],
+       "a": "🐒",
+       "lang": "en"
+      },
+      {
+       "say": "snake",
+       "o": [
+        "🐍",
+        "🌴",
+        "🐒"
+       ],
+       "a": "🐍",
+       "lang": "en"
+      },
+      {
+       "say": "jungle",
+       "o": [
+        "🌴",
+        "🐘",
+        "🐒"
+       ],
+       "a": "🌴",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "Lions live in Africa.",
+       "o": [
+        "تعيش الأسود في أفريقيا.",
+        "القرود تستطيع تسلق الأشجار."
+       ],
+       "a": "تعيش الأسود في أفريقيا.",
+       "lang": "en"
+      },
+      {
+       "say": "Monkeys can climb trees.",
+       "o": [
+        "القرود تستطيع تسلق الأشجار.",
+        "تعيش الأسود في أفريقيا."
+       ],
+       "a": "القرود تستطيع تسلق الأشجار.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "أكمل",
+   "eyebrow": "الخطوة ٥ — أكمل",
+   "heading": "اختر الكلمة الناقصة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "Monkeys can climb trees.",
+       "o": [
+        "can",
+        "is"
+       ],
+       "a": "can",
+       "sayQ": false,
+       "show": "Monkeys ___ climb trees.",
+       "lang": "en"
+      },
+      {
+       "say": "Elephants are very big .",
+       "o": [
+        "big",
+        "small"
+       ],
+       "a": "big",
+       "sayQ": false,
+       "show": "Elephants are very ___ .",
+       "lang": "en"
+      },
+      {
+       "say": "Snakes can't walk .",
+       "o": [
+        "walk",
+        "move"
+       ],
+       "a": "walk",
+       "sayQ": false,
+       "show": "Snakes can't ___ .",
+       "lang": "en"
+      }
+     ],
+     "q": "اختر الكلمة المناسبة",
+     "lang": "en"
+    }
+   ],
+   "lead": "can + فعل للقدرة: Monkeys can climb."
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "lion",
+       "o": [
+        "🦁",
+        "🐘",
+        "🌴"
+       ],
+       "a": "🦁",
+       "lang": "en"
+      },
+      {
+       "say": "elephant",
+       "o": [
+        "🐘",
+        "🐍",
+        "🦁"
+       ],
+       "a": "🐘",
+       "lang": "en"
+      },
+      {
+       "say": "monkey",
+       "o": [
+        "🐒",
+        "🦁",
+        "🐘"
+       ],
+       "a": "🐒",
+       "lang": "en"
+      },
+      {
+       "say": "snake",
+       "o": [
+        "🐍",
+        "🌴",
+        "🐘"
+       ],
+       "a": "🐍",
+       "lang": "en"
+      },
+      {
+       "say": "Lions live in Africa.",
+       "o": [
+        "تعيش الأسود في أفريقيا.",
+        "القرود تستطيع تسلق الأشجار."
+       ],
+       "a": "تعيش الأسود في أفريقيا.",
+       "lang": "en"
+      },
+      {
+       "say": "Monkeys can climb trees.",
+       "o": [
+        "القرود تستطيع تسلق الأشجار.",
+        "تعيش الأسود في أفريقيا."
+       ],
+       "a": "القرود تستطيع تسلق الأشجار.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

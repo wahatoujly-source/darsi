@@ -1,0 +1,315 @@
+{
+ "id": "en-3-p4-l8",
+ "grade": 3,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "Races on the Sports Field",
+ "titleAr": "الإنجليزية — الصف الثالث",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "Races on the Sports Field",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "sports field",
+       "em": "🏟️",
+       "say": "sports field",
+       "sub": "ملعب",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "jump",
+       "em": "🤾",
+       "say": "jump",
+       "sub": "يقفز",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "throw",
+       "em": "🤾‍♂️",
+       "say": "throw",
+       "sub": "يرمي",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "winner",
+       "em": "🏆",
+       "say": "winner",
+       "sub": "فائز",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "team",
+       "em": "👥",
+       "say": "team",
+       "sub": "فريق",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك كتاب التلميذ ص 76⁠–⁠77"
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "Our team is the winner!",
+       "em": "🏆",
+       "say": "Our team is the winner!",
+       "sub": "فريقنا هو الفائز!",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "He can jump very high.",
+       "em": "🤾",
+       "say": "He can jump very high.",
+       "sub": "يستطيع أن يقفز عالياً جداً.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "sports field",
+       "o": [
+        "🏟️",
+        "🤾‍♂️",
+        "🤾"
+       ],
+       "a": "🏟️",
+       "lang": "en"
+      },
+      {
+       "say": "jump",
+       "o": [
+        "🤾",
+        "🤾‍♂️",
+        "👥"
+       ],
+       "a": "🤾",
+       "lang": "en"
+      },
+      {
+       "say": "throw",
+       "o": [
+        "🤾‍♂️",
+        "👥",
+        "🏟️"
+       ],
+       "a": "🤾‍♂️",
+       "lang": "en"
+      },
+      {
+       "say": "winner",
+       "o": [
+        "🏆",
+        "🤾‍♂️",
+        "🏟️"
+       ],
+       "a": "🏆",
+       "lang": "en"
+      },
+      {
+       "say": "team",
+       "o": [
+        "👥",
+        "🏆",
+        "🤾"
+       ],
+       "a": "👥",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "Our team is the winner!",
+       "o": [
+        "فريقنا هو الفائز!",
+        "يستطيع أن يقفز عالياً جداً."
+       ],
+       "a": "فريقنا هو الفائز!",
+       "lang": "en"
+      },
+      {
+       "say": "He can jump very high.",
+       "o": [
+        "يستطيع أن يقفز عالياً جداً.",
+        "فريقنا هو الفائز!"
+       ],
+       "a": "يستطيع أن يقفز عالياً جداً.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "أكمل",
+   "eyebrow": "الخطوة ٥ — أكمل",
+   "heading": "اختر الكلمة الناقصة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "He can jump very high.",
+       "o": [
+        "can",
+        "is"
+       ],
+       "a": "can",
+       "sayQ": false,
+       "show": "He ___ jump very high.",
+       "lang": "en"
+      },
+      {
+       "say": "Our team is the winner !",
+       "o": [
+        "winner",
+        "race"
+       ],
+       "a": "winner",
+       "sayQ": false,
+       "show": "Our team is the ___ !",
+       "lang": "en"
+      },
+      {
+       "say": "I can throw the ball far.",
+       "o": [
+        "throw",
+        "throws"
+       ],
+       "a": "throw",
+       "sayQ": false,
+       "show": "I can ___ the ball far.",
+       "lang": "en"
+      }
+     ],
+     "q": "اختر الكلمة المناسبة",
+     "lang": "en"
+    }
+   ],
+   "lead": "can للقدرة و can't لعدم القدرة."
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "sports field",
+       "o": [
+        "🏟️",
+        "🏆",
+        "🤾‍♂️"
+       ],
+       "a": "🏟️",
+       "lang": "en"
+      },
+      {
+       "say": "jump",
+       "o": [
+        "🤾",
+        "🏟️",
+        "🤾‍♂️"
+       ],
+       "a": "🤾",
+       "lang": "en"
+      },
+      {
+       "say": "throw",
+       "o": [
+        "🤾‍♂️",
+        "🏆",
+        "👥"
+       ],
+       "a": "🤾‍♂️",
+       "lang": "en"
+      },
+      {
+       "say": "winner",
+       "o": [
+        "🏆",
+        "🤾",
+        "👥"
+       ],
+       "a": "🏆",
+       "lang": "en"
+      },
+      {
+       "say": "Our team is the winner!",
+       "o": [
+        "فريقنا هو الفائز!",
+        "يستطيع أن يقفز عالياً جداً."
+       ],
+       "a": "فريقنا هو الفائز!",
+       "lang": "en"
+      },
+      {
+       "say": "He can jump very high.",
+       "o": [
+        "يستطيع أن يقفز عالياً جداً.",
+        "فريقنا هو الفائز!"
+       ],
+       "a": "يستطيع أن يقفز عالياً جداً.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

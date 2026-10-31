@@ -1,0 +1,315 @@
+{
+ "id": "en-3-p6-l2",
+ "grade": 3,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "Yesterday",
+ "titleAr": "الإنجليزية — الصف الثالث",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "Yesterday",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "yesterday",
+       "em": "📅",
+       "say": "yesterday",
+       "sub": "أمس",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "played",
+       "em": "⚽",
+       "say": "played",
+       "sub": "لعب",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "visited",
+       "em": "🏠",
+       "say": "visited",
+       "sub": "زار",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "watched",
+       "em": "📺",
+       "say": "watched",
+       "sub": "شاهد",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "helped",
+       "em": "🤝",
+       "say": "helped",
+       "sub": "ساعد",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك كتاب التلميذ ص 100⁠–⁠101"
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "Yesterday, I played football.",
+       "em": "📅",
+       "say": "Yesterday, I played football.",
+       "sub": "أمس لعبت كرة القدم.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "We visited our grandma.",
+       "em": "🏠",
+       "say": "We visited our grandma.",
+       "sub": "زرنا جدتنا.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "yesterday",
+       "o": [
+        "📅",
+        "📺",
+        "🤝"
+       ],
+       "a": "📅",
+       "lang": "en"
+      },
+      {
+       "say": "played",
+       "o": [
+        "⚽",
+        "📺",
+        "📅"
+       ],
+       "a": "⚽",
+       "lang": "en"
+      },
+      {
+       "say": "visited",
+       "o": [
+        "🏠",
+        "📺",
+        "📅"
+       ],
+       "a": "🏠",
+       "lang": "en"
+      },
+      {
+       "say": "watched",
+       "o": [
+        "📺",
+        "🤝",
+        "🏠"
+       ],
+       "a": "📺",
+       "lang": "en"
+      },
+      {
+       "say": "helped",
+       "o": [
+        "🤝",
+        "📅",
+        "🏠"
+       ],
+       "a": "🤝",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "Yesterday, I played football.",
+       "o": [
+        "أمس لعبت كرة القدم.",
+        "زرنا جدتنا."
+       ],
+       "a": "أمس لعبت كرة القدم.",
+       "lang": "en"
+      },
+      {
+       "say": "We visited our grandma.",
+       "o": [
+        "زرنا جدتنا.",
+        "أمس لعبت كرة القدم."
+       ],
+       "a": "زرنا جدتنا.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "أكمل",
+   "eyebrow": "الخطوة ٥ — أكمل",
+   "heading": "اختر الكلمة الناقصة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "Yesterday, I played football.",
+       "o": [
+        "played",
+        "play"
+       ],
+       "a": "played",
+       "sayQ": false,
+       "show": "Yesterday, I ___ football.",
+       "lang": "en"
+      },
+      {
+       "say": "We visited our grandma.",
+       "o": [
+        "visited",
+        "visit"
+       ],
+       "a": "visited",
+       "sayQ": false,
+       "show": "We ___ our grandma.",
+       "lang": "en"
+      },
+      {
+       "say": "She watched TV last night.",
+       "o": [
+        "watched",
+        "watches"
+       ],
+       "a": "watched",
+       "sayQ": false,
+       "show": "She ___ TV last night.",
+       "lang": "en"
+      }
+     ],
+     "q": "اختر الكلمة المناسبة",
+     "lang": "en"
+    }
+   ],
+   "lead": "نضيف ed للفعل المنتظم: play → played."
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "yesterday",
+       "o": [
+        "📅",
+        "⚽",
+        "📺"
+       ],
+       "a": "📅",
+       "lang": "en"
+      },
+      {
+       "say": "played",
+       "o": [
+        "⚽",
+        "🏠",
+        "🤝"
+       ],
+       "a": "⚽",
+       "lang": "en"
+      },
+      {
+       "say": "visited",
+       "o": [
+        "🏠",
+        "📅",
+        "🤝"
+       ],
+       "a": "🏠",
+       "lang": "en"
+      },
+      {
+       "say": "watched",
+       "o": [
+        "📺",
+        "⚽",
+        "🤝"
+       ],
+       "a": "📺",
+       "lang": "en"
+      },
+      {
+       "say": "Yesterday, I played football.",
+       "o": [
+        "أمس لعبت كرة القدم.",
+        "زرنا جدتنا."
+       ],
+       "a": "أمس لعبت كرة القدم.",
+       "lang": "en"
+      },
+      {
+       "say": "We visited our grandma.",
+       "o": [
+        "زرنا جدتنا.",
+        "أمس لعبت كرة القدم."
+       ],
+       "a": "زرنا جدتنا.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

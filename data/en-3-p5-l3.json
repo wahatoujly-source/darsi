@@ -1,0 +1,315 @@
+{
+ "id": "en-3-p5-l3",
+ "grade": 3,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "On the Train",
+ "titleAr": "الإنجليزية — الصف الثالث",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "On the Train",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "train",
+       "em": "🚆",
+       "say": "train",
+       "sub": "قطار",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "station",
+       "em": "🚉",
+       "say": "station",
+       "sub": "محطة",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "window",
+       "em": "🪟",
+       "say": "window",
+       "sub": "نافذة",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "seat",
+       "em": "💺",
+       "say": "seat",
+       "sub": "مقعد",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "journey",
+       "em": "🛤️",
+       "say": "journey",
+       "sub": "رحلة",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك كتاب التلميذ ص 84⁠–⁠85"
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "The train leaves at nine.",
+       "em": "🚆",
+       "say": "The train leaves at nine.",
+       "sub": "يغادر القطار في التاسعة.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "I'm sitting by the window.",
+       "em": "🪟",
+       "say": "I'm sitting by the window.",
+       "sub": "أجلس بجوار النافذة.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "train",
+       "o": [
+        "🚆",
+        "💺",
+        "🚉"
+       ],
+       "a": "🚆",
+       "lang": "en"
+      },
+      {
+       "say": "station",
+       "o": [
+        "🚉",
+        "💺",
+        "🚆"
+       ],
+       "a": "🚉",
+       "lang": "en"
+      },
+      {
+       "say": "window",
+       "o": [
+        "🪟",
+        "🚆",
+        "🚉"
+       ],
+       "a": "🪟",
+       "lang": "en"
+      },
+      {
+       "say": "seat",
+       "o": [
+        "💺",
+        "🚆",
+        "🚉"
+       ],
+       "a": "💺",
+       "lang": "en"
+      },
+      {
+       "say": "journey",
+       "o": [
+        "🛤️",
+        "🚉",
+        "🪟"
+       ],
+       "a": "🛤️",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "The train leaves at nine.",
+       "o": [
+        "يغادر القطار في التاسعة.",
+        "أجلس بجوار النافذة."
+       ],
+       "a": "يغادر القطار في التاسعة.",
+       "lang": "en"
+      },
+      {
+       "say": "I'm sitting by the window.",
+       "o": [
+        "أجلس بجوار النافذة.",
+        "يغادر القطار في التاسعة."
+       ],
+       "a": "أجلس بجوار النافذة.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "أكمل",
+   "eyebrow": "الخطوة ٥ — أكمل",
+   "heading": "اختر الكلمة الناقصة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "The train leaves at nine.",
+       "o": [
+        "leaves",
+        "leave"
+       ],
+       "a": "leaves",
+       "sayQ": false,
+       "show": "The train ___ at nine.",
+       "lang": "en"
+      },
+      {
+       "say": "I'm sitting by the window.",
+       "o": [
+        "sitting",
+        "sit"
+       ],
+       "a": "sitting",
+       "sayQ": false,
+       "show": "I'm ___ by the window.",
+       "lang": "en"
+      },
+      {
+       "say": "We wait at the station .",
+       "o": [
+        "station",
+        "seat"
+       ],
+       "a": "station",
+       "sayQ": false,
+       "show": "We wait at the ___ .",
+       "lang": "en"
+      }
+     ],
+     "q": "اختر الكلمة المناسبة",
+     "lang": "en"
+    }
+   ],
+   "lead": "I'm sitting / We're looking …"
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "train",
+       "o": [
+        "🚆",
+        "🛤️",
+        "💺"
+       ],
+       "a": "🚆",
+       "lang": "en"
+      },
+      {
+       "say": "station",
+       "o": [
+        "🚉",
+        "🛤️",
+        "🪟"
+       ],
+       "a": "🚉",
+       "lang": "en"
+      },
+      {
+       "say": "window",
+       "o": [
+        "🪟",
+        "🚉",
+        "🚆"
+       ],
+       "a": "🪟",
+       "lang": "en"
+      },
+      {
+       "say": "seat",
+       "o": [
+        "💺",
+        "🚆",
+        "🛤️"
+       ],
+       "a": "💺",
+       "lang": "en"
+      },
+      {
+       "say": "The train leaves at nine.",
+       "o": [
+        "يغادر القطار في التاسعة.",
+        "أجلس بجوار النافذة."
+       ],
+       "a": "يغادر القطار في التاسعة.",
+       "lang": "en"
+      },
+      {
+       "say": "I'm sitting by the window.",
+       "o": [
+        "أجلس بجوار النافذة.",
+        "يغادر القطار في التاسعة."
+       ],
+       "a": "أجلس بجوار النافذة.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

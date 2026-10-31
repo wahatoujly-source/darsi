@@ -1,0 +1,287 @@
+{
+ "id": "en-4-u8-l2",
+ "grade": 4,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 8 · Lesson 2: My Progress",
+ "titleAr": "أستطيع التحدث عن مدرستي.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "أستطيع التحدث عن مدرستي.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "progress",
+       "ar": "تقدم",
+       "em": "📈"
+      },
+      {
+       "id": "v1",
+       "en": "easy",
+       "ar": "سهل",
+       "em": "🙂"
+      },
+      {
+       "id": "v2",
+       "en": "difficult",
+       "ar": "صعب",
+       "em": "😓"
+      },
+      {
+       "id": "v3",
+       "en": "practise",
+       "ar": "يتدرب",
+       "em": "🔁"
+      },
+      {
+       "id": "v4",
+       "en": "improve",
+       "ar": "يتحسن",
+       "em": "⬆️"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 123 · كتاب النشاط ص 105"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "I can … / I need to …",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">I <b>can</b> talk about my school.</div><div class=\"ex\">I need to <b>practise</b> the past tense.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "I can talk about my school. I need to practise the past tense."
+      }
+     ]
+    }
+   ],
+   "lead": "نقيّم تقدمنا في التعلم.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "I ___ talk about my family.",
+           "a": "can",
+           "o": [
+            "can",
+            "need"
+           ]
+          },
+          {
+           "s": "I need to ___ more.",
+           "a": "practise",
+           "o": [
+            "practise",
+            "practises"
+           ]
+          },
+          {
+           "s": "This is ___ for me. 🙂",
+           "a": "easy",
+           "o": [
+            "easy",
+            "difficult"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "I can talk about my school.",
+          "I need to practise the past tense."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "I can talk about my school.",
+           "o": [
+            "I can talk about my school.",
+            "I need to practise the past tense."
+           ]
+          },
+          {
+           "a": "I need to practise the past tense.",
+           "o": [
+            "I need to practise the past tense.",
+            "I can talk about my school."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "progress",
+       "ipa": "",
+       "meaning": "تقدم",
+       "ex": "progress"
+      },
+      {
+       "must": 1,
+       "term": "easy",
+       "ipa": "",
+       "meaning": "سهل",
+       "ex": "easy"
+      },
+      {
+       "must": 1,
+       "term": "difficult",
+       "ipa": "",
+       "meaning": "صعب",
+       "ex": "difficult"
+      },
+      {
+       "must": 0,
+       "term": "practise",
+       "ipa": "",
+       "meaning": "يتدرب",
+       "ex": "I need to practise the past tense."
+      },
+      {
+       "must": 0,
+       "term": "improve",
+       "ipa": "",
+       "meaning": "يتحسن",
+       "ex": "improve"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "I ___ talk about my family.",
+       "a": "can",
+       "o": [
+        "can",
+        "need"
+       ],
+       "why": ""
+      },
+      {
+       "q": "I need to ___ more.",
+       "a": "practise",
+       "o": [
+        "practise",
+        "practises"
+       ],
+       "why": ""
+      },
+      {
+       "q": "This is ___ for me. 🙂",
+       "a": "easy",
+       "o": [
+        "easy",
+        "difficult"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى practise؟",
+       "a": "يتدرب",
+       "o": [
+        "يتدرب",
+        "تقدم",
+        "سهل"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى easy؟",
+       "a": "سهل",
+       "o": [
+        "سهل",
+        "تقدم",
+        "صعب"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "I can talk about my school.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "I can talk about my school.",
+       "o": [
+        "I can talk about my school.",
+        "I need to practise the past tense."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

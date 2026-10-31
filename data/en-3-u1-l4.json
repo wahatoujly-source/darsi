@@ -4,13 +4,13 @@
  "subject": "en",
  "stage": "primary-1-3",
  "lang": "en",
- "title": "Unit 1 · Lesson 4: My Body",
- "titleAr": "الوحدة الأولى: في المدرسة — الدرس الرابع: جسمي",
+ "title": "My Body",
+ "titleAr": "الإنجليزية — الصف الثالث",
  "steps": [
   {
-   "title": "المفردات",
-   "eyebrow": "الخطوة ١ — المفردات",
-   "heading": "Parts of the body",
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "My Body",
    "blocks": [
     {
      "type": "cards",
@@ -18,16 +18,10 @@
      "items": [
       {
        "t": "head",
-       "em": "🙆",
+       "em": "🧑",
        "say": "head",
        "sub": "رأس",
-       "must": 1
-      },
-      {
-       "t": "shoulder",
-       "em": "🤷",
-       "say": "shoulder",
-       "sub": "كتف",
+       "lang": "en",
        "must": 1
       },
       {
@@ -35,6 +29,15 @@
        "em": "💪",
        "say": "arm",
        "sub": "ذراع",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "leg",
+       "em": "🦵",
+       "say": "leg",
+       "sub": "ساق",
+       "lang": "en",
        "must": 1
       },
       {
@@ -42,57 +45,66 @@
        "em": "✋",
        "say": "hand",
        "sub": "يد",
+       "lang": "en",
        "must": 1
-      },
-      {
-       "t": "finger",
-       "em": "☝️",
-       "say": "finger",
-       "sub": "إصبع",
-       "must": 1
-      },
-      {
-       "t": "thumb",
-       "em": "👍",
-       "say": "thumb",
-       "sub": "إبهام",
-       "must": 1
-      },
-      {
-       "t": "leg",
-       "em": "🦵",
-       "say": "leg",
-       "sub": "ساق"
-      },
-      {
-       "t": "knee",
-       "em": "🦵",
-       "say": "knee",
-       "sub": "ركبة"
       },
       {
        "t": "foot",
        "em": "🦶",
        "say": "foot",
-       "sub": "قدم"
+       "sub": "قدم",
+       "lang": "en",
+       "must": 1
       },
       {
-       "t": "toe",
-       "em": "🦶",
-       "say": "toe",
-       "sub": "إصبع القدم"
+       "t": "feet",
+       "em": "👣",
+       "say": "feet",
+       "sub": "قدمان",
+       "lang": "en",
+       "must": 1
       }
      ],
-     "lang": "en",
-     "need": 8
+     "lang": "en"
     }
    ],
-   "lead": "اضغط على كل صورة واسمع. كتاب النشاط ص 13–15."
+   "lead": "اضغط على كل بطاقة واسمع. كتابك كتاب النشاط ص 13⁠–⁠15"
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "I have two arms.",
+       "em": "💪",
+       "say": "I have two arms.",
+       "sub": "لدي ذراعان.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "Touch your head.",
+       "em": "🧑",
+       "say": "Touch your head.",
+       "sub": "المس رأسك.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
   },
   {
    "title": "العب",
-   "eyebrow": "الخطوة ٢ — العب",
-   "heading": "Touch your …",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
    "blocks": [
     {
      "type": "game",
@@ -101,152 +113,152 @@
       {
        "say": "head",
        "o": [
-        "🙆",
-        "🤷",
-        "💪"
+        "🧑",
+        "🦵",
+        "👣"
        ],
-       "a": "🙆",
+       "a": "🧑",
        "lang": "en"
       },
       {
        "say": "arm",
        "o": [
         "💪",
-        "🤷",
-        "✋"
+        "🦶",
+        "🧑"
        ],
        "a": "💪",
-       "lang": "en"
-      },
-      {
-       "say": "hand",
-       "o": [
-        "✋",
-        "💪",
-        "☝️"
-       ],
-       "a": "✋",
-       "lang": "en"
-      },
-      {
-       "say": "finger",
-       "o": [
-        "☝️",
-        "🙆",
-        "🤷"
-       ],
-       "a": "☝️",
        "lang": "en"
       },
       {
        "say": "leg",
        "o": [
         "🦵",
-        "🤷",
-        "💪"
+        "💪",
+        "🧑"
        ],
        "a": "🦵",
+       "lang": "en"
+      },
+      {
+       "say": "hand",
+       "o": [
+        "✋",
+        "🧑",
+        "💪"
+       ],
+       "a": "✋",
        "lang": "en"
       },
       {
        "say": "foot",
        "o": [
         "🦶",
-        "💪",
-        "✋"
+        "👣",
+        "💪"
        ],
        "a": "🦶",
+       "lang": "en"
+      },
+      {
+       "say": "feet",
+       "o": [
+        "👣",
+        "✋",
+        "🧑"
+       ],
+       "a": "👣",
        "lang": "en"
       }
      ],
      "lang": "en"
     }
-   ],
-   "lead": "اسمع واضغط على الصورة."
+   ]
   },
   {
-   "title": "عدّ",
-   "eyebrow": "الخطوة ٣ — عدّ",
-   "heading": "Numbers 1–5",
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
    "blocks": [
     {
      "type": "game",
      "star": true,
      "items": [
       {
-       "kind": "count",
-       "em": "✋",
-       "n": 5,
-       "say": "five"
+       "say": "I have two arms.",
+       "o": [
+        "لدي ذراعان.",
+        "المس رأسك."
+       ],
+       "a": "لدي ذراعان.",
+       "lang": "en"
       },
       {
-       "kind": "count",
-       "em": "👍",
-       "n": 2,
-       "say": "two"
-      },
-      {
-       "kind": "count",
-       "em": "🦶",
-       "n": 3,
-       "say": "three"
-      },
-      {
-       "kind": "count",
-       "em": "💪",
-       "n": 4,
-       "say": "four"
-      },
-      {
-       "kind": "count",
-       "em": "🙆",
-       "n": 1,
-       "say": "one"
+       "say": "Touch your head.",
+       "o": [
+        "المس رأسك.",
+        "لدي ذراعان."
+       ],
+       "a": "المس رأسك.",
+       "lang": "en"
       }
-     ]
+     ],
+     "lang": "en"
     }
-   ],
-   "lead": "اسمع وعُدّ."
+   ]
   },
   {
-   "title": "اكتب",
-   "eyebrow": "الخطوة ٤ — اكتب",
-   "heading": "Letters m–p",
+   "title": "أكمل",
+   "eyebrow": "الخطوة ٥ — أكمل",
+   "heading": "اختر الكلمة الناقصة",
    "blocks": [
     {
-     "type": "trace",
+     "type": "game",
      "star": true,
      "items": [
       {
-       "t": "m",
-       "say": "m",
-       "size": 120
+       "say": "I have two feet .",
+       "o": [
+        "feet",
+        "foot"
+       ],
+       "a": "feet",
+       "sayQ": false,
+       "show": "I have two ___ .",
+       "lang": "en"
       },
       {
-       "t": "n",
-       "say": "n",
-       "size": 120
+       "say": "Touch your head .",
+       "o": [
+        "head",
+        "heads"
+       ],
+       "a": "head",
+       "sayQ": false,
+       "show": "Touch your ___ .",
+       "lang": "en"
       },
       {
-       "t": "o",
-       "say": "o",
-       "size": 120
-      },
-      {
-       "t": "p",
-       "say": "p",
-       "size": 120
+       "say": "I have two hands .",
+       "o": [
+        "hands",
+        "hand"
+       ],
+       "a": "hands",
+       "sayQ": false,
+       "show": "I have two ___ .",
+       "lang": "en"
       }
      ],
-     "need": 4,
+     "q": "اختر الكلمة المناسبة",
      "lang": "en"
     }
    ],
-   "lead": "مرّر إصبعك فوق الحرف واسمعه."
+   "lead": "foot → feet، و hand → hands."
   },
   {
    "title": "اختبار",
-   "eyebrow": "الخطوة ٥ — اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
    "heading": "اختبر نفسك",
    "blocks": [
     {
@@ -254,59 +266,66 @@
      "star": true,
      "items": [
       {
+       "say": "head",
+       "o": [
+        "🧑",
+        "💪",
+        "🦶"
+       ],
+       "a": "🧑",
+       "lang": "en"
+      },
+      {
+       "say": "arm",
+       "o": [
+        "💪",
+        "👣",
+        "🦶"
+       ],
+       "a": "💪",
+       "lang": "en"
+      },
+      {
+       "say": "leg",
+       "o": [
+        "🦵",
+        "🦶",
+        "🧑"
+       ],
+       "a": "🦵",
+       "lang": "en"
+      },
+      {
        "say": "hand",
        "o": [
         "✋",
-        "🦶",
-        "🙆"
+        "💪",
+        "🦵"
        ],
        "a": "✋",
        "lang": "en"
       },
       {
-       "say": "foot",
+       "say": "I have two arms.",
        "o": [
-        "🦶",
-        "✋",
-        "💪"
+        "لدي ذراعان.",
+        "المس رأسك."
        ],
-       "a": "🦶",
+       "a": "لدي ذراعان.",
        "lang": "en"
       },
       {
-       "say": "head",
+       "say": "Touch your head.",
        "o": [
-        "🙆",
-        "🦵",
-        "👍"
+        "المس رأسك.",
+        "لدي ذراعان."
        ],
-       "a": "🙆",
-       "lang": "en"
-      },
-      {
-       "say": "thumb",
-       "o": [
-        "👍",
-        "☝️",
-        "✋"
-       ],
-       "a": "👍",
-       "lang": "en"
-      },
-      {
-       "say": "four",
-       "o": [
-        "4",
-        "5",
-        "3"
-       ],
-       "a": "4",
+       "a": "المس رأسك.",
        "lang": "en"
       }
      ],
      "final": true,
-     "lang": "en",
-     "pass": 3
+     "lang": "en"
     }
    ]
   }

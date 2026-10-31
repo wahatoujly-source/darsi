@@ -1,0 +1,315 @@
+{
+ "id": "en-3-u1-l8",
+ "grade": 3,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "The Magic Pencil",
+ "titleAr": "الإنجليزية — الصف الثالث",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "The Magic Pencil",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "magic",
+       "em": "✨",
+       "say": "magic",
+       "sub": "سحري",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "pencil",
+       "em": "✏️",
+       "say": "pencil",
+       "sub": "قلم",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "draw",
+       "em": "🖍️",
+       "say": "draw",
+       "sub": "يرسم",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "real",
+       "em": "🌟",
+       "say": "real",
+       "sub": "حقيقي",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "wish",
+       "em": "🌠",
+       "say": "wish",
+       "sub": "أمنية",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك كتاب النشاط ص 25⁠–⁠27"
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "Ali has a magic pencil.",
+       "em": "✨",
+       "say": "Ali has a magic pencil.",
+       "sub": "لدى علي قلم سحري.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "He draws a cat. The cat is real!",
+       "em": "🖍️",
+       "say": "He draws a cat. The cat is real!",
+       "sub": "يرسم قطة. القطة حقيقية!",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "magic",
+       "o": [
+        "✨",
+        "🌠",
+        "✏️"
+       ],
+       "a": "✨",
+       "lang": "en"
+      },
+      {
+       "say": "pencil",
+       "o": [
+        "✏️",
+        "🌟",
+        "🖍️"
+       ],
+       "a": "✏️",
+       "lang": "en"
+      },
+      {
+       "say": "draw",
+       "o": [
+        "🖍️",
+        "✨",
+        "✏️"
+       ],
+       "a": "🖍️",
+       "lang": "en"
+      },
+      {
+       "say": "real",
+       "o": [
+        "🌟",
+        "✏️",
+        "🖍️"
+       ],
+       "a": "🌟",
+       "lang": "en"
+      },
+      {
+       "say": "wish",
+       "o": [
+        "🌠",
+        "✨",
+        "✏️"
+       ],
+       "a": "🌠",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "Ali has a magic pencil.",
+       "o": [
+        "لدى علي قلم سحري.",
+        "يرسم قطة. القطة حقيقية!"
+       ],
+       "a": "لدى علي قلم سحري.",
+       "lang": "en"
+      },
+      {
+       "say": "He draws a cat. The cat is real!",
+       "o": [
+        "يرسم قطة. القطة حقيقية!",
+        "لدى علي قلم سحري."
+       ],
+       "a": "يرسم قطة. القطة حقيقية!",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "أكمل",
+   "eyebrow": "الخطوة ٥ — أكمل",
+   "heading": "اختر الكلمة الناقصة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "Ali has a magic pencil.",
+       "o": [
+        "has",
+        "have"
+       ],
+       "a": "has",
+       "sayQ": false,
+       "show": "Ali ___ a magic pencil.",
+       "lang": "en"
+      },
+      {
+       "say": "He draws a cat.",
+       "o": [
+        "draws",
+        "draw"
+       ],
+       "a": "draws",
+       "sayQ": false,
+       "show": "He ___ a cat.",
+       "lang": "en"
+      },
+      {
+       "say": "The cat is real !",
+       "o": [
+        "real",
+        "magic"
+       ],
+       "a": "real",
+       "sayQ": false,
+       "show": "The cat is ___ !",
+       "lang": "en"
+      }
+     ],
+     "q": "اختر الكلمة المناسبة",
+     "lang": "en"
+    }
+   ],
+   "lead": "He/She has …"
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "magic",
+       "o": [
+        "✨",
+        "🌠",
+        "🖍️"
+       ],
+       "a": "✨",
+       "lang": "en"
+      },
+      {
+       "say": "pencil",
+       "o": [
+        "✏️",
+        "🖍️",
+        "🌟"
+       ],
+       "a": "✏️",
+       "lang": "en"
+      },
+      {
+       "say": "draw",
+       "o": [
+        "🖍️",
+        "🌠",
+        "✨"
+       ],
+       "a": "🖍️",
+       "lang": "en"
+      },
+      {
+       "say": "real",
+       "o": [
+        "🌟",
+        "✨",
+        "✏️"
+       ],
+       "a": "🌟",
+       "lang": "en"
+      },
+      {
+       "say": "Ali has a magic pencil.",
+       "o": [
+        "لدى علي قلم سحري.",
+        "يرسم قطة. القطة حقيقية!"
+       ],
+       "a": "لدى علي قلم سحري.",
+       "lang": "en"
+      },
+      {
+       "say": "He draws a cat. The cat is real!",
+       "o": [
+        "يرسم قطة. القطة حقيقية!",
+        "لدى علي قلم سحري."
+       ],
+       "a": "يرسم قطة. القطة حقيقية!",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

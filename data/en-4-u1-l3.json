@@ -5,83 +5,70 @@
  "stage": "primary-4-6",
  "lang": "en",
  "title": "Unit 1 · Lesson 3: Playground Rules",
- "titleAr": "الوحدة الأولى: مدرستنا — الدرس الثالث: قواعد ساحة اللعب",
- "characters": {},
+ "titleAr": "انتظر دورك.",
  "steps": [
   {
    "title": "المفردات",
    "eyebrow": "الخطوة ١ — المفردات",
-   "heading": "قواعد الساحة",
+   "heading": "انتظر دورك.",
    "blocks": [
     {
      "type": "vocab",
      "items": [
       {
        "id": "v0",
-       "en": "Do not stand on the swing.",
-       "ar": "لا تقف على الأرجوحة",
-       "em": "🎠"
+       "en": "rules",
+       "ar": "قواعد",
+       "em": "📜"
       },
       {
        "id": "v1",
-       "en": "Do not go too fast.",
-       "ar": "لا تسرع كثيراً",
-       "em": "🏃"
+       "en": "push",
+       "ar": "يدفع",
+       "em": "🫸"
       },
       {
        "id": "v2",
-       "en": "Hold on with both hands.",
-       "ar": "تمسّك بكلتا يديك",
-       "em": "🙌"
+       "en": "share",
+       "ar": "يتشارك",
+       "em": "🤝"
       },
       {
        "id": "v3",
-       "en": "Do not push.",
-       "ar": "لا تدفع",
-       "em": "🚫"
+       "en": "wait",
+       "ar": "ينتظر",
+       "em": "⏳"
       },
       {
        "id": "v4",
-       "en": "Do not balance on 1 leg.",
-       "ar": "لا تقف على رجل واحدة",
-       "em": "🦩"
+       "en": "careful",
+       "ar": "حذر",
+       "em": "⚠️"
       }
      ]
     }
    ],
-   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتابك ص 12–13."
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 12⁠–⁠13 · كتاب النشاط ص 8⁠–⁠9"
   },
   {
    "title": "القاعدة",
    "eyebrow": "الخطوة ٢ — القاعدة",
-   "heading": "Don't …! / Hold on …",
+   "heading": "Do / Don't",
    "blocks": [
     {
      "type": "panel",
-     "title": "الأمر والنهي",
-     "html": "<div class=\"ex\"><b>Hold on</b> with both hands.</div><div class=\"ex\"><b>Don't</b> go too fast! &nbsp; (do not = don't)</div>",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\"><b>Wait</b> for your turn.</div><div class=\"ex\"><b>Don't</b> push your friends.</div><div class=\"ex\">Share the toys.</div>",
      "blocks": [
       {
        "type": "say",
        "label": "▶ اسمع",
-       "text": "Hold on with both hands. Don't go too fast!"
-      }
-     ]
-    },
-    {
-     "type": "panel",
-     "title": "🎵 The playground song",
-     "html": "<div class=\"ex\">Playing in the playground, lots of games to play.<br>Playing in the playground. We do it every day.<br>Climbing up the ladder. Going down the slide.<br>Crawling through the tunnel, a clever place to hide!</div>",
-     "blocks": [
-      {
-       "type": "say",
-       "label": "▶ اسمع",
-       "text": "Playing in the playground, lots of games to play. Playing in the playground. We do it every day. Climbing up the ladder. Going down the slide. Crawling through the tunnel, a clever place to hide!"
+       "text": "Wait for your turn. Don't push your friends. Share the toys."
       }
      ]
     }
    ],
-   "lead": "نكتب القواعد بصيغة الأمر: الفعل في أول الجملة، وللنهي نضع Don't قبله.",
+   "lead": "الأمر بـ Do والنهي بـ Don't + فعل.",
    "starOnVisit": true
   },
   {
@@ -94,53 +81,6 @@
      "star": true,
      "tabs": [
       {
-       "label": "ما الخطأ؟",
-       "blocks": [
-        {
-         "type": "choice",
-         "star": false,
-         "items": [
-          {
-           "q": "A boy is standing on the swing.",
-           "a": "Don't stand on the swing.",
-           "o": [
-            "Don't stand on the swing.",
-            "Hold on with both hands."
-           ],
-           "why": ""
-          },
-          {
-           "q": "A girl is spinning very fast.",
-           "a": "Don't go too fast.",
-           "o": [
-            "Don't go too fast.",
-            "Don't push."
-           ],
-           "why": ""
-          },
-          {
-           "q": "A boy is pushing his friend on the slide.",
-           "a": "Don't push.",
-           "o": [
-            "Don't push.",
-            "Don't go too fast."
-           ],
-           "why": ""
-          },
-          {
-           "q": "A boy is standing on one leg on the bars.",
-           "a": "Don't balance on 1 leg.",
-           "o": [
-            "Don't balance on 1 leg.",
-            "Don't stand on the swing."
-           ],
-           "why": ""
-          }
-         ]
-        }
-       ]
-      },
-      {
        "label": "اختر الكلمة",
        "blocks": [
         {
@@ -148,39 +88,75 @@
          "mode": "gap",
          "items": [
           {
-           "s": "___ stand on the swing.",
+           "s": "___ push your friends.",
            "a": "Don't",
            "o": [
             "Don't",
-            "Do",
-            "Not"
+            "Do"
            ]
           },
           {
-           "s": "Hold on with ___ hands.",
-           "a": "both",
+           "s": "___ for your turn.",
+           "a": "Wait",
            "o": [
-            "both",
-            "two",
-            "all"
+            "Wait",
+            "Waits"
            ]
           },
           {
-           "s": "Don't go too ___ .",
-           "a": "fast",
+           "s": "Be ___ on the swings.",
+           "a": "careful",
            "o": [
-            "fast",
-            "slow",
-            "up"
+            "careful",
+            "care"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Wait for your turn.",
+          "Don't push your friends.",
+          "Share the toys."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Wait for your turn.",
+           "o": [
+            "Wait for your turn.",
+            "Don't push your friends.",
+            "Share the toys."
            ]
           },
           {
-           "s": "do not = ___",
-           "a": "don't",
+           "a": "Don't push your friends.",
            "o": [
-            "don't",
-            "doesn't",
-            "not"
+            "Don't push your friends.",
+            "Wait for your turn.",
+            "Share the toys."
+           ]
+          },
+          {
+           "a": "Share the toys.",
+           "o": [
+            "Share the toys.",
+            "Wait for your turn.",
+            "Don't push your friends."
            ]
           }
          ]
@@ -205,38 +181,38 @@
      "items": [
       {
        "must": 1,
-       "term": "rule",
-       "ipa": "/ruːl/",
-       "meaning": "قاعدة",
-       "ex": "Our playground rules."
+       "term": "rules",
+       "ipa": "",
+       "meaning": "قواعد",
+       "ex": "rules"
       },
       {
        "must": 1,
-       "term": "Don't push.",
-       "ipa": "/dəʊnt pʊʃ/",
-       "meaning": "لا تدفع",
+       "term": "push",
+       "ipa": "",
+       "meaning": "يدفع",
        "ex": "Don't push your friends."
       },
       {
        "must": 1,
-       "term": "hold on",
-       "ipa": "/həʊld ɒn/",
-       "meaning": "تمسّك",
-       "ex": "Hold on with both hands."
-      },
-      {
-       "must": 1,
-       "term": "too fast",
-       "ipa": "/tuː fɑːst/",
-       "meaning": "بسرعة كبيرة",
-       "ex": "Don't go too fast."
+       "term": "share",
+       "ipa": "",
+       "meaning": "يتشارك",
+       "ex": "Share the toys."
       },
       {
        "must": 0,
-       "term": "balance",
-       "ipa": "/ˈbæləns/",
-       "meaning": "يتوازن",
-       "ex": "Don't balance on 1 leg."
+       "term": "wait",
+       "ipa": "",
+       "meaning": "ينتظر",
+       "ex": "Wait for your turn."
+      },
+      {
+       "must": 0,
+       "term": "careful",
+       "ipa": "",
+       "meaning": "حذر",
+       "ex": "careful"
       }
      ]
     }
@@ -250,63 +226,74 @@
     {
      "type": "quiz",
      "star": true,
-     "pass": 4,
+     "pass": 5,
      "items": [
       {
-       "q": "do not =",
-       "a": "don't",
+       "q": "___ push your friends.",
+       "a": "Don't",
        "o": [
-        "don't",
-        "doesn't"
+        "Don't",
+        "Do"
        ],
        "why": ""
       },
       {
-       "type": "listen",
-       "say": "Hold on with both hands.",
-       "q": "استمع: ماذا قال المتحدث؟",
-       "a": "Hold on with both hands.",
+       "q": "___ for your turn.",
+       "a": "Wait",
        "o": [
-        "Hold on with both hands.",
-        "Don't push.",
-        "Don't go too fast."
+        "Wait",
+        "Waits"
        ],
        "why": ""
       },
       {
-       "q": "ما معنى Don't push؟",
-       "a": "لا تدفع",
+       "q": "Be ___ on the swings.",
+       "a": "careful",
        "o": [
-        "لا تدفع",
-        "لا تسرع",
-        "تمسّك"
+        "careful",
+        "care"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى share؟",
+       "a": "يتشارك",
+       "o": [
+        "يتشارك",
+        "قواعد",
+        "يدفع"
        ],
        "why": "",
        "ar": true
       },
       {
-       "q": "Crawling through the tunnel, a clever place to …",
-       "a": "hide",
+       "q": "ما معنى rules؟",
+       "a": "قواعد",
        "o": [
-        "hide",
-        "play",
-        "slide"
+        "قواعد",
+        "يدفع",
+        "يتشارك"
        ],
-       "why": ""
+       "why": "",
+       "ar": true
       },
       {
-       "q": "___ with both hands.",
-       "a": "Hold on",
+       "type": "listen",
+       "say": "Wait for your turn.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Wait for your turn.",
        "o": [
-        "Hold on",
-        "Don't"
+        "Wait for your turn.",
+        "Don't push your friends.",
+        "Share the toys."
        ],
        "why": ""
       }
      ]
     }
    ],
-   "lead": "5 أسئلة. تنجح بـ 4 من 5."
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
   }
- ]
+ ],
+ "characters": {}
 }

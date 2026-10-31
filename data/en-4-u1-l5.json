@@ -5,95 +5,70 @@
  "stage": "primary-4-6",
  "lang": "en",
  "title": "Unit 1 · Lesson 5: What's the difference?",
- "titleAr": "الوحدة الأولى: مدرستنا — الدرس الخامس: ما الفرق؟",
- "characters": {},
+ "titleAr": "لدى سارة حقيبة حمراء، لكن منى لديها زرقاء.",
  "steps": [
   {
    "title": "المفردات",
    "eyebrow": "الخطوة ١ — المفردات",
-   "heading": "التفضيل",
+   "heading": "لدى سارة حقيبة حمراء، لكن منى لديها زرقاء.",
    "blocks": [
     {
      "type": "vocab",
      "items": [
       {
        "id": "v0",
-       "en": "long → longer",
-       "ar": "طويل ← أطول",
-       "em": "📏"
+       "en": "difference",
+       "ar": "فرق",
+       "em": "↔️"
       },
       {
        "id": "v1",
-       "en": "short → shorter",
-       "ar": "قصير ← أقصر",
-       "em": "✂️"
+       "en": "both",
+       "ar": "كلاهما",
+       "em": "👯"
       },
       {
        "id": "v2",
-       "en": "old → older",
-       "ar": "كبير السن ← أكبر",
-       "em": "🧓"
+       "en": "but",
+       "ar": "لكن",
+       "em": "⚖️"
       },
       {
        "id": "v3",
-       "en": "young → younger",
-       "ar": "صغير السن ← أصغر",
-       "em": "👶"
+       "en": "has got",
+       "ar": "لديه",
+       "em": "✋"
       },
       {
        "id": "v4",
-       "en": "tall → taller",
-       "ar": "طويل القامة ← أطول",
-       "em": "🦒"
-      },
-      {
-       "id": "v5",
-       "en": "big → bigger",
-       "ar": "كبير ← أكبر",
-       "em": "🐘"
-      },
-      {
-       "id": "v6",
-       "en": "small → smaller",
-       "ar": "صغير ← أصغر",
-       "em": "🐭"
+       "en": "hasn't got",
+       "ar": "ليس لديه",
+       "em": "🚫"
       }
      ]
     }
    ],
-   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتابك ص 16–17."
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 16⁠–⁠17 · كتاب النشاط ص 12⁠–⁠13"
   },
   {
    "title": "القاعدة",
    "eyebrow": "الخطوة ٢ — القاعدة",
-   "heading": "bigger than / smaller than",
+   "heading": "has got / hasn't got",
    "blocks": [
     {
      "type": "panel",
-     "title": "١. الصفة + er + than",
-     "html": "<div class=\"ex\">This ruler is long<b>er than</b> that ruler.</div><div class=\"ex\">I am young<b>er than</b> Yousif.</div><p class=\"note\">big → bi<b>gg</b>er (نضاعف الحرف الأخير)</p>",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Sara <b>has</b> got a red bag, but Mona has got a blue bag.</div><div class=\"ex\"><b>Both</b> girls have got pencils.</div>",
      "blocks": [
       {
        "type": "say",
        "label": "▶ اسمع",
-       "text": "This ruler is longer than that ruler. I am younger than Yousif."
-      }
-     ]
-    },
-    {
-     "type": "panel",
-     "title": "🎵 Bigger and smaller",
-     "html": "<div class=\"ex\">A ruler is longer than a pen,<br>And number 12 is bigger than 10.<br>A giraffe is taller than a bee,<br>And my mum and dad are older than me.<br>So I am younger than them, you see!</div>",
-     "blocks": [
-      {
-       "type": "say",
-       "label": "▶ اسمع",
-       "text": "A ruler is longer than a pen, and number 12 is bigger than 10. A giraffe is taller than a bee, and my mum and dad are older than me. So I am younger than them, you see!"
+       "text": "Sara has got a red bag, but Mona has got a blue bag. Both girls have got pencils."
       }
      ]
     }
    ],
-   "lead": "نقارن بين شيئين بإضافة er للصفة ثم than.",
+   "lead": "He/She has got … / hasn't got …",
    "starOnVisit": true
   },
   {
@@ -113,87 +88,28 @@
          "mode": "gap",
          "items": [
           {
-           "s": "A ruler is ___ than a pen.",
-           "a": "longer",
+           "s": "Sara ___ got a red bag.",
+           "a": "has",
            "o": [
-            "longer",
-            "long",
-            "longest"
+            "has",
+            "have"
            ]
           },
           {
-           "s": "12 is ___ than 10.",
-           "a": "bigger",
+           "s": "Mona ___ got a ruler.",
+           "a": "hasn't",
            "o": [
-            "bigger",
-            "biger",
-            "big"
+            "hasn't",
+            "haven't"
            ]
           },
           {
-           "s": "A giraffe is ___ than a bee.",
-           "a": "taller",
+           "s": "___ girls have got pencils.",
+           "a": "Both",
            "o": [
-            "taller",
-            "tall",
-            "smaller"
+            "Both",
+            "But"
            ]
-          },
-          {
-           "s": "A car is ___ than a van.",
-           "a": "smaller",
-           "o": [
-            "smaller",
-            "bigger",
-            "older"
-           ]
-          },
-          {
-           "s": "My dad is older ___ me.",
-           "a": "than",
-           "o": [
-            "than",
-            "then",
-            "that"
-           ]
-          }
-         ]
-        }
-       ]
-      },
-      {
-       "label": "صواب أم خطأ",
-       "blocks": [
-        {
-         "type": "choice",
-         "star": false,
-         "items": [
-          {
-           "q": "A bee is taller than a giraffe.",
-           "a": "False",
-           "o": [
-            "True",
-            "False"
-           ],
-           "why": ""
-          },
-          {
-           "q": "10 is smaller than 12.",
-           "a": "True",
-           "o": [
-            "True",
-            "False"
-           ],
-           "why": ""
-          },
-          {
-           "q": "My grandfather is younger than me.",
-           "a": "False",
-           "o": [
-            "True",
-            "False"
-           ],
-           "why": ""
           }
          ]
         }
@@ -205,8 +121,33 @@
         {
          "type": "order",
          "sentences": [
-          "I am taller than my sister.",
-          "A ruler is longer than a pen."
+          "Sara has got a red bag, but Mona has got a blue bag.",
+          "Both girls have got pencils."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Sara has got a red bag, but Mona has got a blue bag.",
+           "o": [
+            "Sara has got a red bag, but Mona has got a blue bag.",
+            "Both girls have got pencils."
+           ]
+          },
+          {
+           "a": "Both girls have got pencils.",
+           "o": [
+            "Both girls have got pencils.",
+            "Sara has got a red bag, but Mona has got a blue bag."
+           ]
+          }
          ]
         }
        ]
@@ -229,38 +170,38 @@
      "items": [
       {
        "must": 1,
-       "term": "bigger than",
-       "ipa": "/ˈbɪɡə ðən/",
-       "meaning": "أكبر من",
-       "ex": "12 is bigger than 10."
+       "term": "difference",
+       "ipa": "",
+       "meaning": "فرق",
+       "ex": "difference"
       },
       {
        "must": 1,
-       "term": "smaller than",
-       "ipa": "/ˈsmɔːlə ðən/",
-       "meaning": "أصغر من",
-       "ex": "A car is smaller than a van."
+       "term": "both",
+       "ipa": "",
+       "meaning": "كلاهما",
+       "ex": "Both girls have got pencils."
       },
       {
        "must": 1,
-       "term": "taller than",
-       "ipa": "/ˈtɔːlə ðən/",
-       "meaning": "أطول من",
-       "ex": "A giraffe is taller than a bee."
-      },
-      {
-       "must": 1,
-       "term": "longer than",
-       "ipa": "/ˈlɒŋɡə ðən/",
-       "meaning": "أطول من (للأشياء)",
-       "ex": "A ruler is longer than a pen."
+       "term": "but",
+       "ipa": "",
+       "meaning": "لكن",
+       "ex": "Sara has got a red bag, but Mona has got a blue bag."
       },
       {
        "must": 0,
-       "term": "opposite",
-       "ipa": "/ˈɒpəzɪt/",
-       "meaning": "الضد",
-       "ex": "big and small are opposites."
+       "term": "has got",
+       "ipa": "",
+       "meaning": "لديه",
+       "ex": "Sara has got a red bag, but Mona has got a blue bag."
+      },
+      {
+       "must": 0,
+       "term": "hasn't got",
+       "ipa": "",
+       "meaning": "ليس لديه",
+       "ex": "hasn't got"
       }
      ]
     }
@@ -277,61 +218,62 @@
      "pass": 5,
      "items": [
       {
-       "q": "big →",
-       "a": "bigger",
+       "q": "Sara ___ got a red bag.",
+       "a": "has",
        "o": [
-        "bigger",
-        "biger"
+        "has",
+        "have"
        ],
        "why": ""
       },
       {
-       "q": "A giraffe is ___ than a bee.",
-       "a": "taller",
+       "q": "Mona ___ got a ruler.",
+       "a": "hasn't",
        "o": [
-        "taller",
-        "shorter"
+        "hasn't",
+        "haven't"
        ],
        "why": ""
       },
       {
-       "type": "listen",
-       "say": "My mum and dad are older than me.",
-       "q": "استمع: ماذا قال المتحدث؟",
-       "a": "My mum and dad are older than me.",
+       "q": "___ girls have got pencils.",
+       "a": "Both",
        "o": [
-        "My mum and dad are older than me.",
-        "I am taller than my mum.",
-        "A car is smaller than a van."
+        "Both",
+        "But"
        ],
        "why": ""
       },
       {
-       "q": "ما معنى younger than؟",
-       "a": "أصغر سناً من",
+       "q": "ما معنى has got؟",
+       "a": "لديه",
        "o": [
-        "أصغر سناً من",
-        "أطول من",
-        "أكبر من"
+        "لديه",
+        "فرق",
+        "كلاهما"
        ],
        "why": "",
        "ar": true
       },
       {
-       "q": "A ruler is longer ___ a pen.",
-       "a": "than",
+       "q": "ما معنى difference؟",
+       "a": "فرق",
        "o": [
-        "than",
-        "then"
+        "فرق",
+        "كلاهما",
+        "لكن"
        ],
-       "why": ""
+       "why": "",
+       "ar": true
       },
       {
-       "q": "12 is ___ than 10.",
-       "a": "bigger",
+       "type": "listen",
+       "say": "Sara has got a red bag, but Mona has got a blue bag.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Sara has got a red bag, but Mona has got a blue bag.",
        "o": [
-        "bigger",
-        "smaller"
+        "Sara has got a red bag, but Mona has got a blue bag.",
+        "Both girls have got pencils."
        ],
        "why": ""
       }
@@ -340,5 +282,6 @@
    ],
    "lead": "6 أسئلة. تنجح بـ 5 من 6."
   }
- ]
+ ],
+ "characters": {}
 }

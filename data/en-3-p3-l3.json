@@ -1,0 +1,315 @@
+{
+ "id": "en-3-p3-l3",
+ "grade": 3,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "A Pet",
+ "titleAr": "الإنجليزية — الصف الثالث",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "A Pet",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "pet",
+       "em": "🐶",
+       "say": "pet",
+       "sub": "حيوان أليف",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "cat",
+       "em": "🐈",
+       "say": "cat",
+       "sub": "قطة",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "fish",
+       "em": "🐠",
+       "say": "fish",
+       "sub": "سمكة",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "bird",
+       "em": "🐦",
+       "say": "bird",
+       "sub": "طائر",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "feed",
+       "em": "🥣",
+       "say": "feed",
+       "sub": "يطعم",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك كتاب التلميذ ص 48⁠–⁠49"
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "I have a pet cat.",
+       "em": "🐶",
+       "say": "I have a pet cat.",
+       "sub": "لدي قطة أليفة.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "I feed my cat every day.",
+       "em": "🐈",
+       "say": "I feed my cat every day.",
+       "sub": "أطعم قطتي كل يوم.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "pet",
+       "o": [
+        "🐶",
+        "🐠",
+        "🥣"
+       ],
+       "a": "🐶",
+       "lang": "en"
+      },
+      {
+       "say": "cat",
+       "o": [
+        "🐈",
+        "🐦",
+        "🐠"
+       ],
+       "a": "🐈",
+       "lang": "en"
+      },
+      {
+       "say": "fish",
+       "o": [
+        "🐠",
+        "🥣",
+        "🐦"
+       ],
+       "a": "🐠",
+       "lang": "en"
+      },
+      {
+       "say": "bird",
+       "o": [
+        "🐦",
+        "🐠",
+        "🐈"
+       ],
+       "a": "🐦",
+       "lang": "en"
+      },
+      {
+       "say": "feed",
+       "o": [
+        "🥣",
+        "🐠",
+        "🐶"
+       ],
+       "a": "🥣",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "I have a pet cat.",
+       "o": [
+        "لدي قطة أليفة.",
+        "أطعم قطتي كل يوم."
+       ],
+       "a": "لدي قطة أليفة.",
+       "lang": "en"
+      },
+      {
+       "say": "I feed my cat every day.",
+       "o": [
+        "أطعم قطتي كل يوم.",
+        "لدي قطة أليفة."
+       ],
+       "a": "أطعم قطتي كل يوم.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "أكمل",
+   "eyebrow": "الخطوة ٥ — أكمل",
+   "heading": "اختر الكلمة الناقصة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "I have a pet bird.",
+       "o": [
+        "have",
+        "has"
+       ],
+       "a": "have",
+       "sayQ": false,
+       "show": "I ___ a pet bird.",
+       "lang": "en"
+      },
+      {
+       "say": "She has a fish.",
+       "o": [
+        "has",
+        "have"
+       ],
+       "a": "has",
+       "sayQ": false,
+       "show": "She ___ a fish.",
+       "lang": "en"
+      },
+      {
+       "say": "I feed my cat every day.",
+       "o": [
+        "feed",
+        "feeds"
+       ],
+       "a": "feed",
+       "sayQ": false,
+       "show": "I ___ my cat every day.",
+       "lang": "en"
+      }
+     ],
+     "q": "اختر الكلمة المناسبة",
+     "lang": "en"
+    }
+   ],
+   "lead": "I have … و She has …"
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "pet",
+       "o": [
+        "🐶",
+        "🐈",
+        "🐠"
+       ],
+       "a": "🐶",
+       "lang": "en"
+      },
+      {
+       "say": "cat",
+       "o": [
+        "🐈",
+        "🐶",
+        "🐦"
+       ],
+       "a": "🐈",
+       "lang": "en"
+      },
+      {
+       "say": "fish",
+       "o": [
+        "🐠",
+        "🐶",
+        "🐦"
+       ],
+       "a": "🐠",
+       "lang": "en"
+      },
+      {
+       "say": "bird",
+       "o": [
+        "🐦",
+        "🐈",
+        "🥣"
+       ],
+       "a": "🐦",
+       "lang": "en"
+      },
+      {
+       "say": "I have a pet cat.",
+       "o": [
+        "لدي قطة أليفة.",
+        "أطعم قطتي كل يوم."
+       ],
+       "a": "لدي قطة أليفة.",
+       "lang": "en"
+      },
+      {
+       "say": "I feed my cat every day.",
+       "o": [
+        "أطعم قطتي كل يوم.",
+        "لدي قطة أليفة."
+       ],
+       "a": "أطعم قطتي كل يوم.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

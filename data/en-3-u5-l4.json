@@ -1,0 +1,315 @@
+{
+ "id": "en-3-u5-l4",
+ "grade": 3,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "At My School",
+ "titleAr": "الإنجليزية — الصف الثالث",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "At My School",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "classroom",
+       "em": "🏫",
+       "say": "classroom",
+       "sub": "صف",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "office",
+       "em": "🗂️",
+       "say": "office",
+       "sub": "مكتب الإدارة",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "canteen",
+       "em": "🥪",
+       "say": "canteen",
+       "sub": "مقصف",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "computer room",
+       "em": "💻",
+       "say": "computer room",
+       "sub": "غرفة الحاسوب",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "toilets",
+       "em": "🚻",
+       "say": "toilets",
+       "sub": "دورات المياه",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك "
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "There is a canteen at my school.",
+       "em": "🥪",
+       "say": "There is a canteen at my school.",
+       "sub": "يوجد مقصف في مدرستي.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "There are ten classrooms.",
+       "em": "🏫",
+       "say": "There are ten classrooms.",
+       "sub": "توجد عشرة صفوف.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "classroom",
+       "o": [
+        "🏫",
+        "🗂️",
+        "💻"
+       ],
+       "a": "🏫",
+       "lang": "en"
+      },
+      {
+       "say": "office",
+       "o": [
+        "🗂️",
+        "💻",
+        "🥪"
+       ],
+       "a": "🗂️",
+       "lang": "en"
+      },
+      {
+       "say": "canteen",
+       "o": [
+        "🥪",
+        "🗂️",
+        "🏫"
+       ],
+       "a": "🥪",
+       "lang": "en"
+      },
+      {
+       "say": "computer room",
+       "o": [
+        "💻",
+        "🚻",
+        "🗂️"
+       ],
+       "a": "💻",
+       "lang": "en"
+      },
+      {
+       "say": "toilets",
+       "o": [
+        "🚻",
+        "🏫",
+        "🥪"
+       ],
+       "a": "🚻",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "There is a canteen at my school.",
+       "o": [
+        "يوجد مقصف في مدرستي.",
+        "توجد عشرة صفوف."
+       ],
+       "a": "يوجد مقصف في مدرستي.",
+       "lang": "en"
+      },
+      {
+       "say": "There are ten classrooms.",
+       "o": [
+        "توجد عشرة صفوف.",
+        "يوجد مقصف في مدرستي."
+       ],
+       "a": "توجد عشرة صفوف.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "أكمل",
+   "eyebrow": "الخطوة ٥ — أكمل",
+   "heading": "اختر الكلمة الناقصة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "There is a canteen.",
+       "o": [
+        "is",
+        "are"
+       ],
+       "a": "is",
+       "sayQ": false,
+       "show": "There ___ a canteen.",
+       "lang": "en"
+      },
+      {
+       "say": "There are ten classrooms.",
+       "o": [
+        "are",
+        "is"
+       ],
+       "a": "are",
+       "sayQ": false,
+       "show": "There ___ ten classrooms.",
+       "lang": "en"
+      },
+      {
+       "say": "We use computers in the computer room .",
+       "o": [
+        "computer room",
+        "canteen"
+       ],
+       "a": "computer room",
+       "sayQ": false,
+       "show": "We use computers in the ___ .",
+       "lang": "en"
+      }
+     ],
+     "q": "اختر الكلمة المناسبة",
+     "lang": "en"
+    }
+   ],
+   "lead": "للمفرد والجمع."
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "classroom",
+       "o": [
+        "🏫",
+        "🥪",
+        "🚻"
+       ],
+       "a": "🏫",
+       "lang": "en"
+      },
+      {
+       "say": "office",
+       "o": [
+        "🗂️",
+        "💻",
+        "🏫"
+       ],
+       "a": "🗂️",
+       "lang": "en"
+      },
+      {
+       "say": "canteen",
+       "o": [
+        "🥪",
+        "💻",
+        "🚻"
+       ],
+       "a": "🥪",
+       "lang": "en"
+      },
+      {
+       "say": "computer room",
+       "o": [
+        "💻",
+        "🏫",
+        "🗂️"
+       ],
+       "a": "💻",
+       "lang": "en"
+      },
+      {
+       "say": "There is a canteen at my school.",
+       "o": [
+        "يوجد مقصف في مدرستي.",
+        "توجد عشرة صفوف."
+       ],
+       "a": "يوجد مقصف في مدرستي.",
+       "lang": "en"
+      },
+      {
+       "say": "There are ten classrooms.",
+       "o": [
+        "توجد عشرة صفوف.",
+        "يوجد مقصف في مدرستي."
+       ],
+       "a": "توجد عشرة صفوف.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

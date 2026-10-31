@@ -1,0 +1,299 @@
+{
+ "id": "en-4-u1-l6",
+ "grade": 4,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 1 · Lesson 6: Packing My School Bag",
+ "titleAr": "أنظر إلى جدول حصصي.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "أنظر إلى جدول حصصي.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "pack",
+       "ar": "يحزم",
+       "em": "🎒"
+      },
+      {
+       "id": "v1",
+       "en": "timetable",
+       "ar": "جدول الحصص",
+       "em": "🗓️"
+      },
+      {
+       "id": "v2",
+       "en": "tomorrow",
+       "ar": "غداً",
+       "em": "➡️"
+      },
+      {
+       "id": "v3",
+       "en": "need",
+       "ar": "يحتاج",
+       "em": "❗"
+      },
+      {
+       "id": "v4",
+       "en": "forget",
+       "ar": "ينسى",
+       "em": "🤦"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 18⁠–⁠19 · كتاب النشاط ص 14⁠–⁠15"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "need",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">I look at my <b>timetable</b>.</div><div class=\"ex\">I <b>need</b> my maths book tomorrow.</div><div class=\"ex\">Don't <b>forget</b> your water bottle!</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "I look at my timetable. I need my maths book tomorrow. Don't forget your water bottle!"
+      }
+     ]
+    }
+   ],
+   "lead": "I need … / Do you need …?",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "I ___ my maths book.",
+           "a": "need",
+           "o": [
+            "need",
+            "needs"
+           ]
+          },
+          {
+           "s": "Don't ___ your water!",
+           "a": "forget",
+           "o": [
+            "forget",
+            "forgets"
+           ]
+          },
+          {
+           "s": "I look at my ___ .",
+           "a": "timetable",
+           "o": [
+            "timetable",
+            "tomorrow"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "I look at my timetable.",
+          "I need my maths book tomorrow.",
+          "Don't forget your water bottle!"
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "I look at my timetable.",
+           "o": [
+            "I look at my timetable.",
+            "I need my maths book tomorrow.",
+            "Don't forget your water bottle!"
+           ]
+          },
+          {
+           "a": "I need my maths book tomorrow.",
+           "o": [
+            "I need my maths book tomorrow.",
+            "I look at my timetable.",
+            "Don't forget your water bottle!"
+           ]
+          },
+          {
+           "a": "Don't forget your water bottle!",
+           "o": [
+            "Don't forget your water bottle!",
+            "I look at my timetable.",
+            "I need my maths book tomorrow."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "pack",
+       "ipa": "",
+       "meaning": "يحزم",
+       "ex": "pack"
+      },
+      {
+       "must": 1,
+       "term": "timetable",
+       "ipa": "",
+       "meaning": "جدول الحصص",
+       "ex": "I look at my timetable."
+      },
+      {
+       "must": 1,
+       "term": "tomorrow",
+       "ipa": "",
+       "meaning": "غداً",
+       "ex": "I need my maths book tomorrow."
+      },
+      {
+       "must": 0,
+       "term": "need",
+       "ipa": "",
+       "meaning": "يحتاج",
+       "ex": "I need my maths book tomorrow."
+      },
+      {
+       "must": 0,
+       "term": "forget",
+       "ipa": "",
+       "meaning": "ينسى",
+       "ex": "Don't forget your water bottle!"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "I ___ my maths book.",
+       "a": "need",
+       "o": [
+        "need",
+        "needs"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Don't ___ your water!",
+       "a": "forget",
+       "o": [
+        "forget",
+        "forgets"
+       ],
+       "why": ""
+      },
+      {
+       "q": "I look at my ___ .",
+       "a": "timetable",
+       "o": [
+        "timetable",
+        "tomorrow"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى forget؟",
+       "a": "ينسى",
+       "o": [
+        "ينسى",
+        "يحزم",
+        "جدول الحصص"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى tomorrow؟",
+       "a": "غداً",
+       "o": [
+        "غداً",
+        "يحزم",
+        "جدول الحصص"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "I look at my timetable.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "I look at my timetable.",
+       "o": [
+        "I look at my timetable.",
+        "I need my maths book tomorrow.",
+        "Don't forget your water bottle!"
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

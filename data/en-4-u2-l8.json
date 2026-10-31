@@ -1,0 +1,319 @@
+{
+ "id": "en-4-u2-l8",
+ "grade": 4,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 2 · Lesson 8: City Mouse and Village Mouse",
+ "titleAr": "المدينة صاخبة.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "المدينة صاخبة.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "city",
+       "ar": "مدينة",
+       "em": "🏙️"
+      },
+      {
+       "id": "v1",
+       "en": "village",
+       "ar": "قرية",
+       "em": "🏡"
+      },
+      {
+       "id": "v2",
+       "en": "mouse",
+       "ar": "فأر",
+       "em": "🐭"
+      },
+      {
+       "id": "v3",
+       "en": "quiet",
+       "ar": "هادئ",
+       "em": "🤫"
+      },
+      {
+       "id": "v4",
+       "en": "noisy",
+       "ar": "صاخب",
+       "em": "📢"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 40⁠–⁠41 · كتاب النشاط ص 34⁠–⁠35"
+  },
+  {
+   "title": "اقرأ",
+   "eyebrow": "الخطوة ٢ — اقرأ",
+   "heading": "اقرأ واستمع",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "📖 City Mouse and Village Mouse",
+     "html": "<div class=\"ex\">The city is noisy.</div><div class=\"ex\">The village is quiet.</div><div class=\"ex\">Village Mouse goes home.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "The city is noisy. The village is quiet. Village Mouse goes home."
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط ▶ لتسمع النص."
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٣ — القاعدة",
+   "heading": "Adjectives",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">The city is <b>noisy</b>.</div><div class=\"ex\">The village is <b>quiet</b>.</div><div class=\"ex\">Village Mouse goes <b>home</b>.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "The city is noisy. The village is quiet. Village Mouse goes home."
+      }
+     ]
+    }
+   ],
+   "lead": "الصفة تأتي بعد is: The village is quiet.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٤ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "The city is ___ .",
+           "a": "noisy",
+           "o": [
+            "noisy",
+            "quiet"
+           ]
+          },
+          {
+           "s": "The village is ___ .",
+           "a": "quiet",
+           "o": [
+            "quiet",
+            "noisy"
+           ]
+          },
+          {
+           "s": "Village Mouse goes ___ .",
+           "a": "home",
+           "o": [
+            "home",
+            "city"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "The city is noisy.",
+          "The village is quiet.",
+          "Village Mouse goes home."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "The city is noisy.",
+           "o": [
+            "The city is noisy.",
+            "The village is quiet.",
+            "Village Mouse goes home."
+           ]
+          },
+          {
+           "a": "The village is quiet.",
+           "o": [
+            "The village is quiet.",
+            "The city is noisy.",
+            "Village Mouse goes home."
+           ]
+          },
+          {
+           "a": "Village Mouse goes home.",
+           "o": [
+            "Village Mouse goes home.",
+            "The city is noisy.",
+            "The village is quiet."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٥ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "city",
+       "ipa": "",
+       "meaning": "مدينة",
+       "ex": "The city is noisy."
+      },
+      {
+       "must": 1,
+       "term": "village",
+       "ipa": "",
+       "meaning": "قرية",
+       "ex": "The village is quiet."
+      },
+      {
+       "must": 1,
+       "term": "mouse",
+       "ipa": "",
+       "meaning": "فأر",
+       "ex": "Village Mouse goes home."
+      },
+      {
+       "must": 0,
+       "term": "quiet",
+       "ipa": "",
+       "meaning": "هادئ",
+       "ex": "The village is quiet."
+      },
+      {
+       "must": 0,
+       "term": "noisy",
+       "ipa": "",
+       "meaning": "صاخب",
+       "ex": "The city is noisy."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "The city is ___ .",
+       "a": "noisy",
+       "o": [
+        "noisy",
+        "quiet"
+       ],
+       "why": ""
+      },
+      {
+       "q": "The village is ___ .",
+       "a": "quiet",
+       "o": [
+        "quiet",
+        "noisy"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Village Mouse goes ___ .",
+       "a": "home",
+       "o": [
+        "home",
+        "city"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى mouse؟",
+       "a": "فأر",
+       "o": [
+        "فأر",
+        "مدينة",
+        "قرية"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى village؟",
+       "a": "قرية",
+       "o": [
+        "قرية",
+        "مدينة",
+        "فأر"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "The city is noisy.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "The city is noisy.",
+       "o": [
+        "The city is noisy.",
+        "The village is quiet.",
+        "Village Mouse goes home."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

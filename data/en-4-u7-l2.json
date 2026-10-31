@@ -1,0 +1,287 @@
+{
+ "id": "en-4-u7-l2",
+ "grade": 4,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 7 · Lesson 2: You need a ruler.",
+ "titleAr": "تحتاج مسطرة للرياضيات.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "تحتاج مسطرة للرياضيات.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "ruler",
+       "ar": "مسطرة",
+       "em": "📏"
+      },
+      {
+       "id": "v1",
+       "en": "calculator",
+       "ar": "آلة حاسبة",
+       "em": "🧮"
+      },
+      {
+       "id": "v2",
+       "en": "paint",
+       "ar": "ألوان",
+       "em": "🎨"
+      },
+      {
+       "id": "v3",
+       "en": "brush",
+       "ar": "فرشاة",
+       "em": "🖌️"
+      },
+      {
+       "id": "v4",
+       "en": "compass",
+       "ar": "فرجار",
+       "em": "📐"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 106⁠–⁠107 · كتاب النشاط ص 90⁠–⁠91"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "need + for",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">You need a ruler <b>for</b> maths.</div><div class=\"ex\">You need paint and a brush <b>for</b> art.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "You need a ruler for maths. You need paint and a brush for art."
+      }
+     ]
+    }
+   ],
+   "lead": "You need … for …",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "You need a ruler ___ maths.",
+           "a": "for",
+           "o": [
+            "for",
+            "to"
+           ]
+          },
+          {
+           "s": "You need a ___ for art.",
+           "a": "brush",
+           "o": [
+            "brush",
+            "calculator"
+           ]
+          },
+          {
+           "s": "He ___ a calculator.",
+           "a": "needs",
+           "o": [
+            "needs",
+            "need"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "You need a ruler for maths.",
+          "You need paint and a brush for art."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "You need a ruler for maths.",
+           "o": [
+            "You need a ruler for maths.",
+            "You need paint and a brush for art."
+           ]
+          },
+          {
+           "a": "You need paint and a brush for art.",
+           "o": [
+            "You need paint and a brush for art.",
+            "You need a ruler for maths."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "ruler",
+       "ipa": "",
+       "meaning": "مسطرة",
+       "ex": "You need a ruler for maths."
+      },
+      {
+       "must": 1,
+       "term": "calculator",
+       "ipa": "",
+       "meaning": "آلة حاسبة",
+       "ex": "calculator"
+      },
+      {
+       "must": 1,
+       "term": "paint",
+       "ipa": "",
+       "meaning": "ألوان",
+       "ex": "You need paint and a brush for art."
+      },
+      {
+       "must": 0,
+       "term": "brush",
+       "ipa": "",
+       "meaning": "فرشاة",
+       "ex": "You need paint and a brush for art."
+      },
+      {
+       "must": 0,
+       "term": "compass",
+       "ipa": "",
+       "meaning": "فرجار",
+       "ex": "compass"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "You need a ruler ___ maths.",
+       "a": "for",
+       "o": [
+        "for",
+        "to"
+       ],
+       "why": ""
+      },
+      {
+       "q": "You need a ___ for art.",
+       "a": "brush",
+       "o": [
+        "brush",
+        "calculator"
+       ],
+       "why": ""
+      },
+      {
+       "q": "He ___ a calculator.",
+       "a": "needs",
+       "o": [
+        "needs",
+        "need"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى brush؟",
+       "a": "فرشاة",
+       "o": [
+        "فرشاة",
+        "مسطرة",
+        "آلة حاسبة"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى compass؟",
+       "a": "فرجار",
+       "o": [
+        "فرجار",
+        "مسطرة",
+        "آلة حاسبة"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "You need a ruler for maths.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "You need a ruler for maths.",
+       "o": [
+        "You need a ruler for maths.",
+        "You need paint and a brush for art."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

@@ -1,0 +1,337 @@
+{
+ "id": "en-3-u6-l7",
+ "grade": 3,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "Clean up the park!",
+ "titleAr": "الإنجليزية — الصف الثالث",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "Clean up the park!",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "rubbish",
+       "em": "🗑️",
+       "say": "rubbish",
+       "sub": "قمامة",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "bin",
+       "em": "🚮",
+       "say": "bin",
+       "sub": "سلة مهملات",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "pick up",
+       "em": "🫳",
+       "say": "pick up",
+       "sub": "يلتقط",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "clean",
+       "em": "✨",
+       "say": "clean",
+       "sub": "نظيف",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "plastic",
+       "em": "🧴",
+       "say": "plastic",
+       "sub": "بلاستيك",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك "
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "Pick up the rubbish.",
+       "em": "🗑️",
+       "say": "Pick up the rubbish.",
+       "sub": "التقط القمامة.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "Put it in the bin.",
+       "em": "🚮",
+       "say": "Put it in the bin.",
+       "sub": "ضعها في سلة المهملات.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "Keep the park clean!",
+       "em": "✨",
+       "say": "Keep the park clean!",
+       "sub": "حافظ على نظافة الحديقة!",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "rubbish",
+       "o": [
+        "🗑️",
+        "✨",
+        "🧴"
+       ],
+       "a": "🗑️",
+       "lang": "en"
+      },
+      {
+       "say": "bin",
+       "o": [
+        "🚮",
+        "🗑️",
+        "🧴"
+       ],
+       "a": "🚮",
+       "lang": "en"
+      },
+      {
+       "say": "pick up",
+       "o": [
+        "🫳",
+        "🚮",
+        "🧴"
+       ],
+       "a": "🫳",
+       "lang": "en"
+      },
+      {
+       "say": "clean",
+       "o": [
+        "✨",
+        "🚮",
+        "🗑️"
+       ],
+       "a": "✨",
+       "lang": "en"
+      },
+      {
+       "say": "plastic",
+       "o": [
+        "🧴",
+        "🚮",
+        "🗑️"
+       ],
+       "a": "🧴",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "Pick up the rubbish.",
+       "o": [
+        "التقط القمامة.",
+        "ضعها في سلة المهملات.",
+        "حافظ على نظافة الحديقة!"
+       ],
+       "a": "التقط القمامة.",
+       "lang": "en"
+      },
+      {
+       "say": "Put it in the bin.",
+       "o": [
+        "ضعها في سلة المهملات.",
+        "التقط القمامة.",
+        "حافظ على نظافة الحديقة!"
+       ],
+       "a": "ضعها في سلة المهملات.",
+       "lang": "en"
+      },
+      {
+       "say": "Keep the park clean!",
+       "o": [
+        "حافظ على نظافة الحديقة!",
+        "التقط القمامة.",
+        "ضعها في سلة المهملات."
+       ],
+       "a": "حافظ على نظافة الحديقة!",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "أكمل",
+   "eyebrow": "الخطوة ٥ — أكمل",
+   "heading": "اختر الكلمة الناقصة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "Pick up the rubbish.",
+       "o": [
+        "Pick",
+        "Picks"
+       ],
+       "a": "Pick",
+       "sayQ": false,
+       "show": "___ up the rubbish.",
+       "lang": "en"
+      },
+      {
+       "say": "Put it in the bin .",
+       "o": [
+        "bin",
+        "park"
+       ],
+       "a": "bin",
+       "sayQ": false,
+       "show": "Put it in the ___ .",
+       "lang": "en"
+      },
+      {
+       "say": "Don't throw plastic on the ground.",
+       "o": [
+        "throw",
+        "throws"
+       ],
+       "a": "throw",
+       "sayQ": false,
+       "show": "Don't ___ plastic on the ground.",
+       "lang": "en"
+      }
+     ],
+     "q": "اختر الكلمة المناسبة",
+     "lang": "en"
+    }
+   ],
+   "lead": "Pick up … / Put … / Don't throw …"
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "rubbish",
+       "o": [
+        "🗑️",
+        "🫳",
+        "✨"
+       ],
+       "a": "🗑️",
+       "lang": "en"
+      },
+      {
+       "say": "bin",
+       "o": [
+        "🚮",
+        "✨",
+        "🫳"
+       ],
+       "a": "🚮",
+       "lang": "en"
+      },
+      {
+       "say": "pick up",
+       "o": [
+        "🫳",
+        "🧴",
+        "🚮"
+       ],
+       "a": "🫳",
+       "lang": "en"
+      },
+      {
+       "say": "clean",
+       "o": [
+        "✨",
+        "🚮",
+        "🫳"
+       ],
+       "a": "✨",
+       "lang": "en"
+      },
+      {
+       "say": "Pick up the rubbish.",
+       "o": [
+        "التقط القمامة.",
+        "ضعها في سلة المهملات.",
+        "حافظ على نظافة الحديقة!"
+       ],
+       "a": "التقط القمامة.",
+       "lang": "en"
+      },
+      {
+       "say": "Put it in the bin.",
+       "o": [
+        "ضعها في سلة المهملات.",
+        "التقط القمامة.",
+        "حافظ على نظافة الحديقة!"
+       ],
+       "a": "ضعها في سلة المهملات.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

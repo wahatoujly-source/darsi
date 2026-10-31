@@ -1,0 +1,315 @@
+{
+ "id": "en-3-u1-l7",
+ "grade": 3,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "Let's count!",
+ "titleAr": "الإنجليزية — الصف الثالث",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "Let's count!",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "one",
+       "em": "1️⃣",
+       "say": "one",
+       "sub": "واحد",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "five",
+       "em": "5️⃣",
+       "say": "five",
+       "sub": "خمسة",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "ten",
+       "em": "🔟",
+       "say": "ten",
+       "sub": "عشرة",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "fifteen",
+       "em": "1️⃣5️⃣",
+       "say": "fifteen",
+       "sub": "خمسة عشر",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "twenty",
+       "em": "2️⃣0️⃣",
+       "say": "twenty",
+       "sub": "عشرون",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك كتاب النشاط ص 22⁠–⁠24"
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "How many pencils? Ten pencils.",
+       "em": "🔟",
+       "say": "How many pencils? Ten pencils.",
+       "sub": "كم قلماً؟ عشرة أقلام.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "Five and five is ten.",
+       "em": "5️⃣",
+       "say": "Five and five is ten.",
+       "sub": "خمسة وخمسة تساوي عشرة.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "one",
+       "o": [
+        "1️⃣",
+        "5️⃣",
+        "🔟"
+       ],
+       "a": "1️⃣",
+       "lang": "en"
+      },
+      {
+       "say": "five",
+       "o": [
+        "5️⃣",
+        "1️⃣5️⃣",
+        "🔟"
+       ],
+       "a": "5️⃣",
+       "lang": "en"
+      },
+      {
+       "say": "ten",
+       "o": [
+        "🔟",
+        "2️⃣0️⃣",
+        "5️⃣"
+       ],
+       "a": "🔟",
+       "lang": "en"
+      },
+      {
+       "say": "fifteen",
+       "o": [
+        "1️⃣5️⃣",
+        "🔟",
+        "5️⃣"
+       ],
+       "a": "1️⃣5️⃣",
+       "lang": "en"
+      },
+      {
+       "say": "twenty",
+       "o": [
+        "2️⃣0️⃣",
+        "1️⃣",
+        "🔟"
+       ],
+       "a": "2️⃣0️⃣",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "How many pencils? Ten pencils.",
+       "o": [
+        "كم قلماً؟ عشرة أقلام.",
+        "خمسة وخمسة تساوي عشرة."
+       ],
+       "a": "كم قلماً؟ عشرة أقلام.",
+       "lang": "en"
+      },
+      {
+       "say": "Five and five is ten.",
+       "o": [
+        "خمسة وخمسة تساوي عشرة.",
+        "كم قلماً؟ عشرة أقلام."
+       ],
+       "a": "خمسة وخمسة تساوي عشرة.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "أكمل",
+   "eyebrow": "الخطوة ٥ — أكمل",
+   "heading": "اختر الكلمة الناقصة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "How many pencils?",
+       "o": [
+        "many",
+        "much"
+       ],
+       "a": "many",
+       "sayQ": false,
+       "show": "How ___ pencils?",
+       "lang": "en"
+      },
+      {
+       "say": "Five and five is ten .",
+       "o": [
+        "ten",
+        "nine"
+       ],
+       "a": "ten",
+       "sayQ": false,
+       "show": "Five and five is ___ .",
+       "lang": "en"
+      },
+      {
+       "say": "Ten and ten is twenty .",
+       "o": [
+        "twenty",
+        "twelve"
+       ],
+       "a": "twenty",
+       "sayQ": false,
+       "show": "Ten and ten is ___ .",
+       "lang": "en"
+      }
+     ],
+     "q": "اختر الكلمة المناسبة",
+     "lang": "en"
+    }
+   ],
+   "lead": "نسأل عن العدد ونستخدم الجمع بعده."
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "one",
+       "o": [
+        "1️⃣",
+        "🔟",
+        "5️⃣"
+       ],
+       "a": "1️⃣",
+       "lang": "en"
+      },
+      {
+       "say": "five",
+       "o": [
+        "5️⃣",
+        "2️⃣0️⃣",
+        "🔟"
+       ],
+       "a": "5️⃣",
+       "lang": "en"
+      },
+      {
+       "say": "ten",
+       "o": [
+        "🔟",
+        "5️⃣",
+        "1️⃣5️⃣"
+       ],
+       "a": "🔟",
+       "lang": "en"
+      },
+      {
+       "say": "fifteen",
+       "o": [
+        "1️⃣5️⃣",
+        "5️⃣",
+        "2️⃣0️⃣"
+       ],
+       "a": "1️⃣5️⃣",
+       "lang": "en"
+      },
+      {
+       "say": "How many pencils? Ten pencils.",
+       "o": [
+        "كم قلماً؟ عشرة أقلام.",
+        "خمسة وخمسة تساوي عشرة."
+       ],
+       "a": "كم قلماً؟ عشرة أقلام.",
+       "lang": "en"
+      },
+      {
+       "say": "Five and five is ten.",
+       "o": [
+        "خمسة وخمسة تساوي عشرة.",
+        "كم قلماً؟ عشرة أقلام."
+       ],
+       "a": "خمسة وخمسة تساوي عشرة.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

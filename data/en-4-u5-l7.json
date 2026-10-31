@@ -1,0 +1,299 @@
+{
+ "id": "en-4-u5-l7",
+ "grade": 4,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 5 · Lesson 7: Let's play a game!",
+ "titleAr": "هيا نلعب لعبة!",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "هيا نلعب لعبة!",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "game",
+       "ar": "لعبة",
+       "em": "🎲"
+      },
+      {
+       "id": "v1",
+       "en": "turn",
+       "ar": "دور",
+       "em": "🔄"
+      },
+      {
+       "id": "v2",
+       "en": "dice",
+       "ar": "نرد",
+       "em": "🎲"
+      },
+      {
+       "id": "v3",
+       "en": "win",
+       "ar": "يفوز",
+       "em": "🏆"
+      },
+      {
+       "id": "v4",
+       "en": "lose",
+       "ar": "يخسر",
+       "em": "😞"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 80⁠–⁠81 · كتاب النشاط ص 68⁠–⁠69"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Let's + verb",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\"><b>Let's</b> play a game!</div><div class=\"ex\">It's your <b>turn</b>.</div><div class=\"ex\">Throw the <b>dice</b>.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Let's play a game! It's your turn. Throw the dice."
+      }
+     ]
+    }
+   ],
+   "lead": "للاقتراح: Let's play.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "___ play a game!",
+           "a": "Let's",
+           "o": [
+            "Let's",
+            "Lets"
+           ]
+          },
+          {
+           "s": "It's your ___ .",
+           "a": "turn",
+           "o": [
+            "turn",
+            "game"
+           ]
+          },
+          {
+           "s": "Throw the ___ .",
+           "a": "dice",
+           "o": [
+            "dice",
+            "turn"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Let's play a game!",
+          "It's your turn.",
+          "Throw the dice."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Let's play a game!",
+           "o": [
+            "Let's play a game!",
+            "It's your turn.",
+            "Throw the dice."
+           ]
+          },
+          {
+           "a": "It's your turn.",
+           "o": [
+            "It's your turn.",
+            "Let's play a game!",
+            "Throw the dice."
+           ]
+          },
+          {
+           "a": "Throw the dice.",
+           "o": [
+            "Throw the dice.",
+            "Let's play a game!",
+            "It's your turn."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "game",
+       "ipa": "",
+       "meaning": "لعبة",
+       "ex": "Let's play a game!"
+      },
+      {
+       "must": 1,
+       "term": "turn",
+       "ipa": "",
+       "meaning": "دور",
+       "ex": "It's your turn."
+      },
+      {
+       "must": 1,
+       "term": "dice",
+       "ipa": "",
+       "meaning": "نرد",
+       "ex": "Throw the dice."
+      },
+      {
+       "must": 0,
+       "term": "win",
+       "ipa": "",
+       "meaning": "يفوز",
+       "ex": "win"
+      },
+      {
+       "must": 0,
+       "term": "lose",
+       "ipa": "",
+       "meaning": "يخسر",
+       "ex": "lose"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "___ play a game!",
+       "a": "Let's",
+       "o": [
+        "Let's",
+        "Lets"
+       ],
+       "why": ""
+      },
+      {
+       "q": "It's your ___ .",
+       "a": "turn",
+       "o": [
+        "turn",
+        "game"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Throw the ___ .",
+       "a": "dice",
+       "o": [
+        "dice",
+        "turn"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى dice؟",
+       "a": "نرد",
+       "o": [
+        "نرد",
+        "لعبة",
+        "دور"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى win؟",
+       "a": "يفوز",
+       "o": [
+        "يفوز",
+        "لعبة",
+        "دور"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Let's play a game!",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Let's play a game!",
+       "o": [
+        "Let's play a game!",
+        "It's your turn.",
+        "Throw the dice."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

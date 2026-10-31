@@ -1,0 +1,315 @@
+{
+ "id": "en-3-u5-l5",
+ "grade": 3,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "My House",
+ "titleAr": "الإنجليزية — الصف الثالث",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "My House",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "living room",
+       "em": "🛋️",
+       "say": "living room",
+       "sub": "غرفة الجلوس",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "kitchen",
+       "em": "🍳",
+       "say": "kitchen",
+       "sub": "مطبخ",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "bathroom",
+       "em": "🛁",
+       "say": "bathroom",
+       "sub": "حمام",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "bedroom",
+       "em": "🛏️",
+       "say": "bedroom",
+       "sub": "غرفة نوم",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "stairs",
+       "em": "🪜",
+       "say": "stairs",
+       "sub": "درج",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك "
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "We cook in the kitchen.",
+       "em": "🍳",
+       "say": "We cook in the kitchen.",
+       "sub": "نطبخ في المطبخ.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "We sit in the living room.",
+       "em": "🛋️",
+       "say": "We sit in the living room.",
+       "sub": "نجلس في غرفة الجلوس.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "living room",
+       "o": [
+        "🛋️",
+        "🍳",
+        "🛁"
+       ],
+       "a": "🛋️",
+       "lang": "en"
+      },
+      {
+       "say": "kitchen",
+       "o": [
+        "🍳",
+        "🪜",
+        "🛁"
+       ],
+       "a": "🍳",
+       "lang": "en"
+      },
+      {
+       "say": "bathroom",
+       "o": [
+        "🛁",
+        "🛋️",
+        "🪜"
+       ],
+       "a": "🛁",
+       "lang": "en"
+      },
+      {
+       "say": "bedroom",
+       "o": [
+        "🛏️",
+        "🛁",
+        "🛋️"
+       ],
+       "a": "🛏️",
+       "lang": "en"
+      },
+      {
+       "say": "stairs",
+       "o": [
+        "🪜",
+        "🛋️",
+        "🍳"
+       ],
+       "a": "🪜",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "We cook in the kitchen.",
+       "o": [
+        "نطبخ في المطبخ.",
+        "نجلس في غرفة الجلوس."
+       ],
+       "a": "نطبخ في المطبخ.",
+       "lang": "en"
+      },
+      {
+       "say": "We sit in the living room.",
+       "o": [
+        "نجلس في غرفة الجلوس.",
+        "نطبخ في المطبخ."
+       ],
+       "a": "نجلس في غرفة الجلوس.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "أكمل",
+   "eyebrow": "الخطوة ٥ — أكمل",
+   "heading": "اختر الكلمة الناقصة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "We cook in the kitchen .",
+       "o": [
+        "kitchen",
+        "bedroom"
+       ],
+       "a": "kitchen",
+       "sayQ": false,
+       "show": "We cook in the ___ .",
+       "lang": "en"
+      },
+      {
+       "say": "I sleep in the bedroom .",
+       "o": [
+        "bedroom",
+        "kitchen"
+       ],
+       "a": "bedroom",
+       "sayQ": false,
+       "show": "I sleep in the ___ .",
+       "lang": "en"
+      },
+      {
+       "say": "We sit in the living room.",
+       "o": [
+        "in",
+        "on"
+       ],
+       "a": "in",
+       "sayQ": false,
+       "show": "We sit ___ the living room.",
+       "lang": "en"
+      }
+     ],
+     "q": "اختر الكلمة المناسبة",
+     "lang": "en"
+    }
+   ],
+   "lead": "نستخدم in مع الغرف."
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "living room",
+       "o": [
+        "🛋️",
+        "🪜",
+        "🛏️"
+       ],
+       "a": "🛋️",
+       "lang": "en"
+      },
+      {
+       "say": "kitchen",
+       "o": [
+        "🍳",
+        "🛏️",
+        "🪜"
+       ],
+       "a": "🍳",
+       "lang": "en"
+      },
+      {
+       "say": "bathroom",
+       "o": [
+        "🛁",
+        "🍳",
+        "🛋️"
+       ],
+       "a": "🛁",
+       "lang": "en"
+      },
+      {
+       "say": "bedroom",
+       "o": [
+        "🛏️",
+        "🛁",
+        "🛋️"
+       ],
+       "a": "🛏️",
+       "lang": "en"
+      },
+      {
+       "say": "We cook in the kitchen.",
+       "o": [
+        "نطبخ في المطبخ.",
+        "نجلس في غرفة الجلوس."
+       ],
+       "a": "نطبخ في المطبخ.",
+       "lang": "en"
+      },
+      {
+       "say": "We sit in the living room.",
+       "o": [
+        "نجلس في غرفة الجلوس.",
+        "نطبخ في المطبخ."
+       ],
+       "a": "نجلس في غرفة الجلوس.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

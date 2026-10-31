@@ -1,0 +1,287 @@
+{
+ "id": "en-4-u6-l2",
+ "grade": 4,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 6 · Lesson 2: Yesterday",
+ "titleAr": "أمس لعبت كرة القدم.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "أمس لعبت كرة القدم.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "yesterday",
+       "ar": "أمس",
+       "em": "📅"
+      },
+      {
+       "id": "v1",
+       "en": "played",
+       "ar": "لعب",
+       "em": "⚽"
+      },
+      {
+       "id": "v2",
+       "en": "visited",
+       "ar": "زار",
+       "em": "🏠"
+      },
+      {
+       "id": "v3",
+       "en": "watched",
+       "ar": "شاهد",
+       "em": "📺"
+      },
+      {
+       "id": "v4",
+       "en": "helped",
+       "ar": "ساعد",
+       "em": "🤝"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 88⁠–⁠89 · كتاب النشاط ص 74⁠–⁠75"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Past simple: -ed",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Yesterday, I <b>played</b> football.</div><div class=\"ex\">We <b>visited</b> our grandma.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Yesterday, I played football. We visited our grandma."
+      }
+     ]
+    }
+   ],
+   "lead": "نضيف ed للفعل المنتظم: play → played.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "Yesterday, I ___ football.",
+           "a": "played",
+           "o": [
+            "played",
+            "play"
+           ]
+          },
+          {
+           "s": "We ___ our grandma.",
+           "a": "visited",
+           "o": [
+            "visited",
+            "visit"
+           ]
+          },
+          {
+           "s": "She ___ TV last night.",
+           "a": "watched",
+           "o": [
+            "watched",
+            "watches"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Yesterday, I played football.",
+          "We visited our grandma."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Yesterday, I played football.",
+           "o": [
+            "Yesterday, I played football.",
+            "We visited our grandma."
+           ]
+          },
+          {
+           "a": "We visited our grandma.",
+           "o": [
+            "We visited our grandma.",
+            "Yesterday, I played football."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "yesterday",
+       "ipa": "",
+       "meaning": "أمس",
+       "ex": "Yesterday, I played football."
+      },
+      {
+       "must": 1,
+       "term": "played",
+       "ipa": "",
+       "meaning": "لعب",
+       "ex": "Yesterday, I played football."
+      },
+      {
+       "must": 1,
+       "term": "visited",
+       "ipa": "",
+       "meaning": "زار",
+       "ex": "We visited our grandma."
+      },
+      {
+       "must": 0,
+       "term": "watched",
+       "ipa": "",
+       "meaning": "شاهد",
+       "ex": "watched"
+      },
+      {
+       "must": 0,
+       "term": "helped",
+       "ipa": "",
+       "meaning": "ساعد",
+       "ex": "helped"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "Yesterday, I ___ football.",
+       "a": "played",
+       "o": [
+        "played",
+        "play"
+       ],
+       "why": ""
+      },
+      {
+       "q": "We ___ our grandma.",
+       "a": "visited",
+       "o": [
+        "visited",
+        "visit"
+       ],
+       "why": ""
+      },
+      {
+       "q": "She ___ TV last night.",
+       "a": "watched",
+       "o": [
+        "watched",
+        "watches"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى helped؟",
+       "a": "ساعد",
+       "o": [
+        "ساعد",
+        "أمس",
+        "لعب"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى watched؟",
+       "a": "شاهد",
+       "o": [
+        "شاهد",
+        "أمس",
+        "لعب"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Yesterday, I played football.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Yesterday, I played football.",
+       "o": [
+        "Yesterday, I played football.",
+        "We visited our grandma."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

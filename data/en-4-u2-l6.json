@@ -1,0 +1,299 @@
+{
+ "id": "en-4-u2-l6",
+ "grade": 4,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 2 · Lesson 6: Geography: Country Profile",
+ "titleAr": "ليبيا في شمال أفريقيا.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "ليبيا في شمال أفريقيا.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "population",
+       "ar": "عدد السكان",
+       "em": "👥"
+      },
+      {
+       "id": "v1",
+       "en": "desert",
+       "ar": "صحراء",
+       "em": "🏜️"
+      },
+      {
+       "id": "v2",
+       "en": "sea",
+       "ar": "بحر",
+       "em": "🌊"
+      },
+      {
+       "id": "v3",
+       "en": "language",
+       "ar": "لغة",
+       "em": "🗣️"
+      },
+      {
+       "id": "v4",
+       "en": "north",
+       "ar": "شمال",
+       "em": "⬆️"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 36⁠–⁠37 · كتاب النشاط ص 30⁠–⁠31"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "There is / There are",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Libya <b>is</b> in North Africa.</div><div class=\"ex\">The language <b>is</b> Arabic.</div><div class=\"ex\">There <b>is</b> a big desert.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Libya is in North Africa. The language is Arabic. There is a big desert."
+      }
+     ]
+    }
+   ],
+   "lead": "There is للمفرد و There are للجمع.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "There ___ a big desert.",
+           "a": "is",
+           "o": [
+            "is",
+            "are"
+           ]
+          },
+          {
+           "s": "There ___ many cities.",
+           "a": "are",
+           "o": [
+            "are",
+            "is"
+           ]
+          },
+          {
+           "s": "The ___ is Arabic.",
+           "a": "language",
+           "o": [
+            "language",
+            "desert"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Libya is in North Africa.",
+          "The language is Arabic.",
+          "There is a big desert."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Libya is in North Africa.",
+           "o": [
+            "Libya is in North Africa.",
+            "The language is Arabic.",
+            "There is a big desert."
+           ]
+          },
+          {
+           "a": "The language is Arabic.",
+           "o": [
+            "The language is Arabic.",
+            "Libya is in North Africa.",
+            "There is a big desert."
+           ]
+          },
+          {
+           "a": "There is a big desert.",
+           "o": [
+            "There is a big desert.",
+            "Libya is in North Africa.",
+            "The language is Arabic."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "population",
+       "ipa": "",
+       "meaning": "عدد السكان",
+       "ex": "population"
+      },
+      {
+       "must": 1,
+       "term": "desert",
+       "ipa": "",
+       "meaning": "صحراء",
+       "ex": "There is a big desert."
+      },
+      {
+       "must": 1,
+       "term": "sea",
+       "ipa": "",
+       "meaning": "بحر",
+       "ex": "sea"
+      },
+      {
+       "must": 0,
+       "term": "language",
+       "ipa": "",
+       "meaning": "لغة",
+       "ex": "The language is Arabic."
+      },
+      {
+       "must": 0,
+       "term": "north",
+       "ipa": "",
+       "meaning": "شمال",
+       "ex": "Libya is in North Africa."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "There ___ a big desert.",
+       "a": "is",
+       "o": [
+        "is",
+        "are"
+       ],
+       "why": ""
+      },
+      {
+       "q": "There ___ many cities.",
+       "a": "are",
+       "o": [
+        "are",
+        "is"
+       ],
+       "why": ""
+      },
+      {
+       "q": "The ___ is Arabic.",
+       "a": "language",
+       "o": [
+        "language",
+        "desert"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى desert؟",
+       "a": "صحراء",
+       "o": [
+        "صحراء",
+        "عدد السكان",
+        "بحر"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى population؟",
+       "a": "عدد السكان",
+       "o": [
+        "عدد السكان",
+        "صحراء",
+        "بحر"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Libya is in North Africa.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Libya is in North Africa.",
+       "o": [
+        "Libya is in North Africa.",
+        "The language is Arabic.",
+        "There is a big desert."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

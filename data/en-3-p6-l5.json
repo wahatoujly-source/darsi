@@ -1,0 +1,315 @@
+{
+ "id": "en-3-p6-l5",
+ "grade": 3,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "At the Cinema",
+ "titleAr": "الإنجليزية — الصف الثالث",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "At the Cinema",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "cinema",
+       "em": "🎬",
+       "say": "cinema",
+       "sub": "سينما",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "film",
+       "em": "🎞️",
+       "say": "film",
+       "sub": "فيلم",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "popcorn",
+       "em": "🍿",
+       "say": "popcorn",
+       "sub": "فشار",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "funny",
+       "em": "😂",
+       "say": "funny",
+       "sub": "مضحك",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "exciting",
+       "em": "🤩",
+       "say": "exciting",
+       "sub": "مثير",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك كتاب التلميذ ص 106⁠–⁠107"
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "We went to the cinema.",
+       "em": "🎬",
+       "say": "We went to the cinema.",
+       "sub": "ذهبنا إلى السينما.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "The film was funny.",
+       "em": "🎞️",
+       "say": "The film was funny.",
+       "sub": "كان الفيلم مضحكاً.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "cinema",
+       "o": [
+        "🎬",
+        "🎞️",
+        "🍿"
+       ],
+       "a": "🎬",
+       "lang": "en"
+      },
+      {
+       "say": "film",
+       "o": [
+        "🎞️",
+        "🎬",
+        "😂"
+       ],
+       "a": "🎞️",
+       "lang": "en"
+      },
+      {
+       "say": "popcorn",
+       "o": [
+        "🍿",
+        "😂",
+        "🤩"
+       ],
+       "a": "🍿",
+       "lang": "en"
+      },
+      {
+       "say": "funny",
+       "o": [
+        "😂",
+        "🎬",
+        "🤩"
+       ],
+       "a": "😂",
+       "lang": "en"
+      },
+      {
+       "say": "exciting",
+       "o": [
+        "🤩",
+        "😂",
+        "🍿"
+       ],
+       "a": "🤩",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "We went to the cinema.",
+       "o": [
+        "ذهبنا إلى السينما.",
+        "كان الفيلم مضحكاً."
+       ],
+       "a": "ذهبنا إلى السينما.",
+       "lang": "en"
+      },
+      {
+       "say": "The film was funny.",
+       "o": [
+        "كان الفيلم مضحكاً.",
+        "ذهبنا إلى السينما."
+       ],
+       "a": "كان الفيلم مضحكاً.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "أكمل",
+   "eyebrow": "الخطوة ٥ — أكمل",
+   "heading": "اختر الكلمة الناقصة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "We went to the cinema.",
+       "o": [
+        "went",
+        "goed"
+       ],
+       "a": "went",
+       "sayQ": false,
+       "show": "We ___ to the cinema.",
+       "lang": "en"
+      },
+      {
+       "say": "The film was funny.",
+       "o": [
+        "was",
+        "were"
+       ],
+       "a": "was",
+       "sayQ": false,
+       "show": "The film ___ funny.",
+       "lang": "en"
+      },
+      {
+       "say": "We had popcorn.",
+       "o": [
+        "had",
+        "haved"
+       ],
+       "a": "had",
+       "sayQ": false,
+       "show": "We ___ popcorn.",
+       "lang": "en"
+      }
+     ],
+     "q": "اختر الكلمة المناسبة",
+     "lang": "en"
+    }
+   ],
+   "lead": "go → went, see → saw, have → had."
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "cinema",
+       "o": [
+        "🎬",
+        "😂",
+        "🍿"
+       ],
+       "a": "🎬",
+       "lang": "en"
+      },
+      {
+       "say": "film",
+       "o": [
+        "🎞️",
+        "🤩",
+        "😂"
+       ],
+       "a": "🎞️",
+       "lang": "en"
+      },
+      {
+       "say": "popcorn",
+       "o": [
+        "🍿",
+        "😂",
+        "🎬"
+       ],
+       "a": "🍿",
+       "lang": "en"
+      },
+      {
+       "say": "funny",
+       "o": [
+        "😂",
+        "🍿",
+        "🤩"
+       ],
+       "a": "😂",
+       "lang": "en"
+      },
+      {
+       "say": "We went to the cinema.",
+       "o": [
+        "ذهبنا إلى السينما.",
+        "كان الفيلم مضحكاً."
+       ],
+       "a": "ذهبنا إلى السينما.",
+       "lang": "en"
+      },
+      {
+       "say": "The film was funny.",
+       "o": [
+        "كان الفيلم مضحكاً.",
+        "ذهبنا إلى السينما."
+       ],
+       "a": "كان الفيلم مضحكاً.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

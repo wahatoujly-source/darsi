@@ -1,0 +1,337 @@
+{
+ "id": "en-3-p2-l1",
+ "grade": 3,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "Where are you from?",
+ "titleAr": "الإنجليزية — الصف الثالث",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "Where are you from?",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "Libya",
+       "em": "🇱🇾",
+       "say": "Libya",
+       "sub": "ليبيا",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "Egypt",
+       "em": "🇪🇬",
+       "say": "Egypt",
+       "sub": "مصر",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "Tunisia",
+       "em": "🇹🇳",
+       "say": "Tunisia",
+       "sub": "تونس",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "country",
+       "em": "🌍",
+       "say": "country",
+       "sub": "دولة",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "from",
+       "em": "📍",
+       "say": "from",
+       "sub": "من",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك كتاب التلميذ ص 26⁠–⁠27"
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "Where are you from?",
+       "em": "📍",
+       "say": "Where are you from?",
+       "sub": "من أين أنت؟",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "I'm from Libya.",
+       "em": "🇱🇾",
+       "say": "I'm from Libya.",
+       "sub": "أنا من ليبيا.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "She's from Egypt.",
+       "em": "🇪🇬",
+       "say": "She's from Egypt.",
+       "sub": "هي من مصر.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "Libya",
+       "o": [
+        "🇱🇾",
+        "🇹🇳",
+        "🌍"
+       ],
+       "a": "🇱🇾",
+       "lang": "en"
+      },
+      {
+       "say": "Egypt",
+       "o": [
+        "🇪🇬",
+        "📍",
+        "🇹🇳"
+       ],
+       "a": "🇪🇬",
+       "lang": "en"
+      },
+      {
+       "say": "Tunisia",
+       "o": [
+        "🇹🇳",
+        "📍",
+        "🇪🇬"
+       ],
+       "a": "🇹🇳",
+       "lang": "en"
+      },
+      {
+       "say": "country",
+       "o": [
+        "🌍",
+        "📍",
+        "🇪🇬"
+       ],
+       "a": "🌍",
+       "lang": "en"
+      },
+      {
+       "say": "from",
+       "o": [
+        "📍",
+        "🌍",
+        "🇱🇾"
+       ],
+       "a": "📍",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "Where are you from?",
+       "o": [
+        "من أين أنت؟",
+        "أنا من ليبيا.",
+        "هي من مصر."
+       ],
+       "a": "من أين أنت؟",
+       "lang": "en"
+      },
+      {
+       "say": "I'm from Libya.",
+       "o": [
+        "أنا من ليبيا.",
+        "من أين أنت؟",
+        "هي من مصر."
+       ],
+       "a": "أنا من ليبيا.",
+       "lang": "en"
+      },
+      {
+       "say": "She's from Egypt.",
+       "o": [
+        "هي من مصر.",
+        "من أين أنت؟",
+        "أنا من ليبيا."
+       ],
+       "a": "هي من مصر.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "أكمل",
+   "eyebrow": "الخطوة ٥ — أكمل",
+   "heading": "اختر الكلمة الناقصة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "Where are you from?",
+       "o": [
+        "are",
+        "is"
+       ],
+       "a": "are",
+       "sayQ": false,
+       "show": "Where ___ you from?",
+       "lang": "en"
+      },
+      {
+       "say": "I'm from Libya.",
+       "o": [
+        "from",
+        "in"
+       ],
+       "a": "from",
+       "sayQ": false,
+       "show": "I'm ___ Libya.",
+       "lang": "en"
+      },
+      {
+       "say": "Where is she from?",
+       "o": [
+        "is",
+        "are"
+       ],
+       "a": "is",
+       "sayQ": false,
+       "show": "Where ___ she from?",
+       "lang": "en"
+      }
+     ],
+     "q": "اختر الكلمة المناسبة",
+     "lang": "en"
+    }
+   ],
+   "lead": "نسأل عن البلد: Where are you from? ونجيب: I'm from …"
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "Libya",
+       "o": [
+        "🇱🇾",
+        "🌍",
+        "🇹🇳"
+       ],
+       "a": "🇱🇾",
+       "lang": "en"
+      },
+      {
+       "say": "Egypt",
+       "o": [
+        "🇪🇬",
+        "🌍",
+        "📍"
+       ],
+       "a": "🇪🇬",
+       "lang": "en"
+      },
+      {
+       "say": "Tunisia",
+       "o": [
+        "🇹🇳",
+        "🇱🇾",
+        "🇪🇬"
+       ],
+       "a": "🇹🇳",
+       "lang": "en"
+      },
+      {
+       "say": "country",
+       "o": [
+        "🌍",
+        "🇱🇾",
+        "🇪🇬"
+       ],
+       "a": "🌍",
+       "lang": "en"
+      },
+      {
+       "say": "Where are you from?",
+       "o": [
+        "من أين أنت؟",
+        "أنا من ليبيا.",
+        "هي من مصر."
+       ],
+       "a": "من أين أنت؟",
+       "lang": "en"
+      },
+      {
+       "say": "I'm from Libya.",
+       "o": [
+        "أنا من ليبيا.",
+        "من أين أنت؟",
+        "هي من مصر."
+       ],
+       "a": "أنا من ليبيا.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

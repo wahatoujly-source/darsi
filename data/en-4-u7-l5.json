@@ -1,0 +1,299 @@
+{
+ "id": "en-4-u7-l5",
+ "grade": 4,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 7 · Lesson 5: Challenge Rules",
+ "titleAr": "يجب أن تصل في الوقت.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "يجب أن تصل في الوقت.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "rule",
+       "ar": "قاعدة",
+       "em": "📜"
+      },
+      {
+       "id": "v1",
+       "en": "on time",
+       "ar": "في الوقت",
+       "em": "⏰"
+      },
+      {
+       "id": "v2",
+       "en": "cheat",
+       "ar": "يغش",
+       "em": "🙈"
+      },
+      {
+       "id": "v3",
+       "en": "together",
+       "ar": "معاً",
+       "em": "🤝"
+      },
+      {
+       "id": "v4",
+       "en": "fair",
+       "ar": "عادل",
+       "em": "⚖️"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 112⁠–⁠113 · كتاب النشاط ص 96⁠–⁠97"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Rules",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">You must arrive <b>on</b> time.</div><div class=\"ex\">You <b>mustn't</b> cheat.</div><div class=\"ex\">Work together as a team.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "You must arrive on time. You mustn't cheat. Work together as a team."
+      }
+     ]
+    }
+   ],
+   "lead": "نكتب القواعد بـ must / mustn't.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "You ___ cheat.",
+           "a": "mustn't",
+           "o": [
+            "mustn't",
+            "must"
+           ]
+          },
+          {
+           "s": "You must arrive ___ time.",
+           "a": "on",
+           "o": [
+            "on",
+            "in"
+           ]
+          },
+          {
+           "s": "Play ___ .",
+           "a": "fair",
+           "o": [
+            "fair",
+            "cheat"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "You must arrive on time.",
+          "You mustn't cheat.",
+          "Work together as a team."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "You must arrive on time.",
+           "o": [
+            "You must arrive on time.",
+            "You mustn't cheat.",
+            "Work together as a team."
+           ]
+          },
+          {
+           "a": "You mustn't cheat.",
+           "o": [
+            "You mustn't cheat.",
+            "You must arrive on time.",
+            "Work together as a team."
+           ]
+          },
+          {
+           "a": "Work together as a team.",
+           "o": [
+            "Work together as a team.",
+            "You must arrive on time.",
+            "You mustn't cheat."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "rule",
+       "ipa": "",
+       "meaning": "قاعدة",
+       "ex": "rule"
+      },
+      {
+       "must": 1,
+       "term": "on time",
+       "ipa": "",
+       "meaning": "في الوقت",
+       "ex": "You must arrive on time."
+      },
+      {
+       "must": 1,
+       "term": "cheat",
+       "ipa": "",
+       "meaning": "يغش",
+       "ex": "You mustn't cheat."
+      },
+      {
+       "must": 0,
+       "term": "together",
+       "ipa": "",
+       "meaning": "معاً",
+       "ex": "Work together as a team."
+      },
+      {
+       "must": 0,
+       "term": "fair",
+       "ipa": "",
+       "meaning": "عادل",
+       "ex": "fair"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "You ___ cheat.",
+       "a": "mustn't",
+       "o": [
+        "mustn't",
+        "must"
+       ],
+       "why": ""
+      },
+      {
+       "q": "You must arrive ___ time.",
+       "a": "on",
+       "o": [
+        "on",
+        "in"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Play ___ .",
+       "a": "fair",
+       "o": [
+        "fair",
+        "cheat"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى together؟",
+       "a": "معاً",
+       "o": [
+        "معاً",
+        "قاعدة",
+        "في الوقت"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى cheat؟",
+       "a": "يغش",
+       "o": [
+        "يغش",
+        "قاعدة",
+        "في الوقت"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "You must arrive on time.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "You must arrive on time.",
+       "o": [
+        "You must arrive on time.",
+        "You mustn't cheat.",
+        "Work together as a team."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

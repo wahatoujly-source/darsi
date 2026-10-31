@@ -1,0 +1,315 @@
+{
+ "id": "en-3-p5-l2",
+ "grade": 3,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "A School Trip",
+ "titleAr": "الإنجليزية — الصف الثالث",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "A School Trip",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "trip",
+       "em": "🚌",
+       "say": "trip",
+       "sub": "رحلة",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "bus",
+       "em": "🚌",
+       "say": "bus",
+       "sub": "حافلة",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "museum",
+       "em": "🏛️",
+       "say": "museum",
+       "sub": "متحف",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "ticket",
+       "em": "🎟️",
+       "say": "ticket",
+       "sub": "تذكرة",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "guide",
+       "em": "🧑‍🏫",
+       "say": "guide",
+       "sub": "مرشد",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك كتاب التلميذ ص 82⁠–⁠83"
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "We went on a school trip.",
+       "em": "🚌",
+       "say": "We went on a school trip.",
+       "sub": "ذهبنا في رحلة مدرسية.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "We went by bus.",
+       "em": "🚌",
+       "say": "We went by bus.",
+       "sub": "ذهبنا بالحافلة.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "trip",
+       "o": [
+        "🚌",
+        "🎟️",
+        "🧑‍🏫"
+       ],
+       "a": "🚌",
+       "lang": "en"
+      },
+      {
+       "say": "bus",
+       "o": [
+        "🚌",
+        "🏛️",
+        "🎟️"
+       ],
+       "a": "🚌",
+       "lang": "en"
+      },
+      {
+       "say": "museum",
+       "o": [
+        "🏛️",
+        "🚌",
+        "🎟️"
+       ],
+       "a": "🏛️",
+       "lang": "en"
+      },
+      {
+       "say": "ticket",
+       "o": [
+        "🎟️",
+        "🚌",
+        "🧑‍🏫"
+       ],
+       "a": "🎟️",
+       "lang": "en"
+      },
+      {
+       "say": "guide",
+       "o": [
+        "🧑‍🏫",
+        "🏛️",
+        "🚌"
+       ],
+       "a": "🧑‍🏫",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "We went on a school trip.",
+       "o": [
+        "ذهبنا في رحلة مدرسية.",
+        "ذهبنا بالحافلة."
+       ],
+       "a": "ذهبنا في رحلة مدرسية.",
+       "lang": "en"
+      },
+      {
+       "say": "We went by bus.",
+       "o": [
+        "ذهبنا بالحافلة.",
+        "ذهبنا في رحلة مدرسية."
+       ],
+       "a": "ذهبنا بالحافلة.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "أكمل",
+   "eyebrow": "الخطوة ٥ — أكمل",
+   "heading": "اختر الكلمة الناقصة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "We went on a trip yesterday.",
+       "o": [
+        "went",
+        "go"
+       ],
+       "a": "went",
+       "sayQ": false,
+       "show": "We ___ on a trip yesterday.",
+       "lang": "en"
+      },
+      {
+       "say": "We went by bus.",
+       "o": [
+        "by",
+        "on"
+       ],
+       "a": "by",
+       "sayQ": false,
+       "show": "We went ___ bus.",
+       "lang": "en"
+      },
+      {
+       "say": "The guide told us about the museum.",
+       "o": [
+        "guide",
+        "ticket"
+       ],
+       "a": "guide",
+       "sayQ": false,
+       "show": "The ___ told us about the museum.",
+       "lang": "en"
+      }
+     ],
+     "q": "اختر الكلمة المناسبة",
+     "lang": "en"
+    }
+   ],
+   "lead": "الماضي من go هو went."
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "trip",
+       "o": [
+        "🚌",
+        "🏛️",
+        "🧑‍🏫"
+       ],
+       "a": "🚌",
+       "lang": "en"
+      },
+      {
+       "say": "bus",
+       "o": [
+        "🚌",
+        "🏛️",
+        "🧑‍🏫"
+       ],
+       "a": "🚌",
+       "lang": "en"
+      },
+      {
+       "say": "museum",
+       "o": [
+        "🏛️",
+        "🧑‍🏫",
+        "🎟️"
+       ],
+       "a": "🏛️",
+       "lang": "en"
+      },
+      {
+       "say": "ticket",
+       "o": [
+        "🎟️",
+        "🧑‍🏫",
+        "🚌"
+       ],
+       "a": "🎟️",
+       "lang": "en"
+      },
+      {
+       "say": "We went on a school trip.",
+       "o": [
+        "ذهبنا في رحلة مدرسية.",
+        "ذهبنا بالحافلة."
+       ],
+       "a": "ذهبنا في رحلة مدرسية.",
+       "lang": "en"
+      },
+      {
+       "say": "We went by bus.",
+       "o": [
+        "ذهبنا بالحافلة.",
+        "ذهبنا في رحلة مدرسية."
+       ],
+       "a": "ذهبنا بالحافلة.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

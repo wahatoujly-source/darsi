@@ -1,0 +1,315 @@
+{
+ "id": "en-3-u3-l2",
+ "grade": 3,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "My Bedroom",
+ "titleAr": "الإنجليزية — الصف الثالث",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "My Bedroom",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "bed",
+       "em": "🛏️",
+       "say": "bed",
+       "sub": "سرير",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "lamp",
+       "em": "💡",
+       "say": "lamp",
+       "sub": "مصباح",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "cupboard",
+       "em": "🗄️",
+       "say": "cupboard",
+       "sub": "خزانة",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "pillow",
+       "em": "🛌",
+       "say": "pillow",
+       "sub": "وسادة",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "rug",
+       "em": "🟫",
+       "say": "rug",
+       "sub": "سجادة",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك "
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "My bed is next to the window.",
+       "em": "🛏️",
+       "say": "My bed is next to the window.",
+       "sub": "سريري بجانب النافذة.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "The lamp is on the table.",
+       "em": "💡",
+       "say": "The lamp is on the table.",
+       "sub": "المصباح على الطاولة.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "bed",
+       "o": [
+        "🛏️",
+        "🛌",
+        "💡"
+       ],
+       "a": "🛏️",
+       "lang": "en"
+      },
+      {
+       "say": "lamp",
+       "o": [
+        "💡",
+        "🛌",
+        "🛏️"
+       ],
+       "a": "💡",
+       "lang": "en"
+      },
+      {
+       "say": "cupboard",
+       "o": [
+        "🗄️",
+        "💡",
+        "🛌"
+       ],
+       "a": "🗄️",
+       "lang": "en"
+      },
+      {
+       "say": "pillow",
+       "o": [
+        "🛌",
+        "🛏️",
+        "🗄️"
+       ],
+       "a": "🛌",
+       "lang": "en"
+      },
+      {
+       "say": "rug",
+       "o": [
+        "🟫",
+        "🛏️",
+        "🛌"
+       ],
+       "a": "🟫",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "My bed is next to the window.",
+       "o": [
+        "سريري بجانب النافذة.",
+        "المصباح على الطاولة."
+       ],
+       "a": "سريري بجانب النافذة.",
+       "lang": "en"
+      },
+      {
+       "say": "The lamp is on the table.",
+       "o": [
+        "المصباح على الطاولة.",
+        "سريري بجانب النافذة."
+       ],
+       "a": "المصباح على الطاولة.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "أكمل",
+   "eyebrow": "الخطوة ٥ — أكمل",
+   "heading": "اختر الكلمة الناقصة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "The lamp is on the table.",
+       "o": [
+        "on",
+        "under"
+       ],
+       "a": "on",
+       "sayQ": false,
+       "show": "The lamp is ___ the table.",
+       "lang": "en"
+      },
+      {
+       "say": "The shoes are under the bed.",
+       "o": [
+        "under",
+        "on"
+       ],
+       "a": "under",
+       "sayQ": false,
+       "show": "The shoes are ___ the bed.",
+       "lang": "en"
+      },
+      {
+       "say": "My clothes are in the cupboard.",
+       "o": [
+        "in",
+        "on"
+       ],
+       "a": "in",
+       "sayQ": false,
+       "show": "My clothes are ___ the cupboard.",
+       "lang": "en"
+      }
+     ],
+     "q": "اختر الكلمة المناسبة",
+     "lang": "en"
+    }
+   ],
+   "lead": "حروف الجر للمكان."
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "bed",
+       "o": [
+        "🛏️",
+        "🟫",
+        "💡"
+       ],
+       "a": "🛏️",
+       "lang": "en"
+      },
+      {
+       "say": "lamp",
+       "o": [
+        "💡",
+        "🛏️",
+        "🟫"
+       ],
+       "a": "💡",
+       "lang": "en"
+      },
+      {
+       "say": "cupboard",
+       "o": [
+        "🗄️",
+        "🛌",
+        "🛏️"
+       ],
+       "a": "🗄️",
+       "lang": "en"
+      },
+      {
+       "say": "pillow",
+       "o": [
+        "🛌",
+        "🛏️",
+        "💡"
+       ],
+       "a": "🛌",
+       "lang": "en"
+      },
+      {
+       "say": "My bed is next to the window.",
+       "o": [
+        "سريري بجانب النافذة.",
+        "المصباح على الطاولة."
+       ],
+       "a": "سريري بجانب النافذة.",
+       "lang": "en"
+      },
+      {
+       "say": "The lamp is on the table.",
+       "o": [
+        "المصباح على الطاولة.",
+        "سريري بجانب النافذة."
+       ],
+       "a": "المصباح على الطاولة.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

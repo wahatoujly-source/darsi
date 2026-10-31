@@ -1,0 +1,337 @@
+{
+ "id": "en-3-p2-l6",
+ "grade": 3,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "Geography: Country Profile",
+ "titleAr": "الإنجليزية — الصف الثالث",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "Geography: Country Profile",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "population",
+       "em": "👥",
+       "say": "population",
+       "sub": "عدد السكان",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "desert",
+       "em": "🏜️",
+       "say": "desert",
+       "sub": "صحراء",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "sea",
+       "em": "🌊",
+       "say": "sea",
+       "sub": "بحر",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "language",
+       "em": "🗣️",
+       "say": "language",
+       "sub": "لغة",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "north",
+       "em": "⬆️",
+       "say": "north",
+       "sub": "شمال",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك كتاب التلميذ ص 36⁠–⁠37"
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "Libya is in North Africa.",
+       "em": "⬆️",
+       "say": "Libya is in North Africa.",
+       "sub": "ليبيا في شمال أفريقيا.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "The language is Arabic.",
+       "em": "🗣️",
+       "say": "The language is Arabic.",
+       "sub": "اللغة العربية.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "There is a big desert.",
+       "em": "🏜️",
+       "say": "There is a big desert.",
+       "sub": "توجد صحراء كبيرة.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "population",
+       "o": [
+        "👥",
+        "🏜️",
+        "🗣️"
+       ],
+       "a": "👥",
+       "lang": "en"
+      },
+      {
+       "say": "desert",
+       "o": [
+        "🏜️",
+        "👥",
+        "🌊"
+       ],
+       "a": "🏜️",
+       "lang": "en"
+      },
+      {
+       "say": "sea",
+       "o": [
+        "🌊",
+        "👥",
+        "⬆️"
+       ],
+       "a": "🌊",
+       "lang": "en"
+      },
+      {
+       "say": "language",
+       "o": [
+        "🗣️",
+        "👥",
+        "🌊"
+       ],
+       "a": "🗣️",
+       "lang": "en"
+      },
+      {
+       "say": "north",
+       "o": [
+        "⬆️",
+        "🌊",
+        "👥"
+       ],
+       "a": "⬆️",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "Libya is in North Africa.",
+       "o": [
+        "ليبيا في شمال أفريقيا.",
+        "اللغة العربية.",
+        "توجد صحراء كبيرة."
+       ],
+       "a": "ليبيا في شمال أفريقيا.",
+       "lang": "en"
+      },
+      {
+       "say": "The language is Arabic.",
+       "o": [
+        "اللغة العربية.",
+        "ليبيا في شمال أفريقيا.",
+        "توجد صحراء كبيرة."
+       ],
+       "a": "اللغة العربية.",
+       "lang": "en"
+      },
+      {
+       "say": "There is a big desert.",
+       "o": [
+        "توجد صحراء كبيرة.",
+        "ليبيا في شمال أفريقيا.",
+        "اللغة العربية."
+       ],
+       "a": "توجد صحراء كبيرة.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "أكمل",
+   "eyebrow": "الخطوة ٥ — أكمل",
+   "heading": "اختر الكلمة الناقصة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "There is a big desert.",
+       "o": [
+        "is",
+        "are"
+       ],
+       "a": "is",
+       "sayQ": false,
+       "show": "There ___ a big desert.",
+       "lang": "en"
+      },
+      {
+       "say": "There are many cities.",
+       "o": [
+        "are",
+        "is"
+       ],
+       "a": "are",
+       "sayQ": false,
+       "show": "There ___ many cities.",
+       "lang": "en"
+      },
+      {
+       "say": "The language is Arabic.",
+       "o": [
+        "language",
+        "desert"
+       ],
+       "a": "language",
+       "sayQ": false,
+       "show": "The ___ is Arabic.",
+       "lang": "en"
+      }
+     ],
+     "q": "اختر الكلمة المناسبة",
+     "lang": "en"
+    }
+   ],
+   "lead": "There is للمفرد و There are للجمع."
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "population",
+       "o": [
+        "👥",
+        "🏜️",
+        "🗣️"
+       ],
+       "a": "👥",
+       "lang": "en"
+      },
+      {
+       "say": "desert",
+       "o": [
+        "🏜️",
+        "⬆️",
+        "🗣️"
+       ],
+       "a": "🏜️",
+       "lang": "en"
+      },
+      {
+       "say": "sea",
+       "o": [
+        "🌊",
+        "⬆️",
+        "👥"
+       ],
+       "a": "🌊",
+       "lang": "en"
+      },
+      {
+       "say": "language",
+       "o": [
+        "🗣️",
+        "👥",
+        "🏜️"
+       ],
+       "a": "🗣️",
+       "lang": "en"
+      },
+      {
+       "say": "Libya is in North Africa.",
+       "o": [
+        "ليبيا في شمال أفريقيا.",
+        "اللغة العربية.",
+        "توجد صحراء كبيرة."
+       ],
+       "a": "ليبيا في شمال أفريقيا.",
+       "lang": "en"
+      },
+      {
+       "say": "The language is Arabic.",
+       "o": [
+        "اللغة العربية.",
+        "ليبيا في شمال أفريقيا.",
+        "توجد صحراء كبيرة."
+       ],
+       "a": "اللغة العربية.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

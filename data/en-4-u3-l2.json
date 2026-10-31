@@ -1,0 +1,287 @@
+{
+ "id": "en-4-u3-l2",
+ "grade": 4,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 3 · Lesson 2: What do you want to drink?",
+ "titleAr": "ماذا تريد أن تشرب؟",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "ماذا تريد أن تشرب؟",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "water",
+       "ar": "ماء",
+       "em": "💧"
+      },
+      {
+       "id": "v1",
+       "en": "juice",
+       "ar": "عصير",
+       "em": "🧃"
+      },
+      {
+       "id": "v2",
+       "en": "milk",
+       "ar": "حليب",
+       "em": "🥛"
+      },
+      {
+       "id": "v3",
+       "en": "tea",
+       "ar": "شاي",
+       "em": "🍵"
+      },
+      {
+       "id": "v4",
+       "en": "lemonade",
+       "ar": "ليمونادة",
+       "em": "🍋"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 46⁠–⁠47 · كتاب النشاط ص 38⁠–⁠39"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "want to + verb",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">What do you want to <b>drink</b>?</div><div class=\"ex\">I want <b>some</b> juice, please.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "What do you want to drink? I want some juice, please."
+      }
+     ]
+    }
+   ],
+   "lead": "نستخدم want to + فعل: I want to drink.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "What do you want to ___ ?",
+           "a": "drink",
+           "o": [
+            "drink",
+            "drinks"
+           ]
+          },
+          {
+           "s": "I want ___ juice.",
+           "a": "some",
+           "o": [
+            "some",
+            "a"
+           ]
+          },
+          {
+           "s": "Do you ___ tea?",
+           "a": "want",
+           "o": [
+            "want",
+            "wants"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "What do you want to drink?",
+          "I want some juice, please."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "What do you want to drink?",
+           "o": [
+            "What do you want to drink?",
+            "I want some juice, please."
+           ]
+          },
+          {
+           "a": "I want some juice, please.",
+           "o": [
+            "I want some juice, please.",
+            "What do you want to drink?"
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "water",
+       "ipa": "",
+       "meaning": "ماء",
+       "ex": "water"
+      },
+      {
+       "must": 1,
+       "term": "juice",
+       "ipa": "",
+       "meaning": "عصير",
+       "ex": "I want some juice, please."
+      },
+      {
+       "must": 1,
+       "term": "milk",
+       "ipa": "",
+       "meaning": "حليب",
+       "ex": "milk"
+      },
+      {
+       "must": 0,
+       "term": "tea",
+       "ipa": "",
+       "meaning": "شاي",
+       "ex": "tea"
+      },
+      {
+       "must": 0,
+       "term": "lemonade",
+       "ipa": "",
+       "meaning": "ليمونادة",
+       "ex": "lemonade"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "What do you want to ___ ?",
+       "a": "drink",
+       "o": [
+        "drink",
+        "drinks"
+       ],
+       "why": ""
+      },
+      {
+       "q": "I want ___ juice.",
+       "a": "some",
+       "o": [
+        "some",
+        "a"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Do you ___ tea?",
+       "a": "want",
+       "o": [
+        "want",
+        "wants"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى lemonade؟",
+       "a": "ليمونادة",
+       "o": [
+        "ليمونادة",
+        "ماء",
+        "عصير"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى milk؟",
+       "a": "حليب",
+       "o": [
+        "حليب",
+        "ماء",
+        "عصير"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "What do you want to drink?",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "What do you want to drink?",
+       "o": [
+        "What do you want to drink?",
+        "I want some juice, please."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

@@ -1,0 +1,287 @@
+{
+ "id": "en-4-u6-l5",
+ "grade": 4,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 6 · Lesson 5: At the Cinema",
+ "titleAr": "ذهبنا إلى السينما.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "ذهبنا إلى السينما.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "cinema",
+       "ar": "سينما",
+       "em": "🎬"
+      },
+      {
+       "id": "v1",
+       "en": "film",
+       "ar": "فيلم",
+       "em": "🎞️"
+      },
+      {
+       "id": "v2",
+       "en": "popcorn",
+       "ar": "فشار",
+       "em": "🍿"
+      },
+      {
+       "id": "v3",
+       "en": "funny",
+       "ar": "مضحك",
+       "em": "😂"
+      },
+      {
+       "id": "v4",
+       "en": "exciting",
+       "ar": "مثير",
+       "em": "🤩"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 94⁠–⁠95 · كتاب النشاط ص 80⁠–⁠81"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Past simple irregular",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">We <b>went</b> to the cinema.</div><div class=\"ex\">The film <b>was</b> funny.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "We went to the cinema. The film was funny."
+      }
+     ]
+    }
+   ],
+   "lead": "go → went, see → saw, have → had.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "We ___ to the cinema.",
+           "a": "went",
+           "o": [
+            "went",
+            "goed"
+           ]
+          },
+          {
+           "s": "The film ___ funny.",
+           "a": "was",
+           "o": [
+            "was",
+            "were"
+           ]
+          },
+          {
+           "s": "We ___ popcorn.",
+           "a": "had",
+           "o": [
+            "had",
+            "haved"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "We went to the cinema.",
+          "The film was funny."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "We went to the cinema.",
+           "o": [
+            "We went to the cinema.",
+            "The film was funny."
+           ]
+          },
+          {
+           "a": "The film was funny.",
+           "o": [
+            "The film was funny.",
+            "We went to the cinema."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "cinema",
+       "ipa": "",
+       "meaning": "سينما",
+       "ex": "We went to the cinema."
+      },
+      {
+       "must": 1,
+       "term": "film",
+       "ipa": "",
+       "meaning": "فيلم",
+       "ex": "The film was funny."
+      },
+      {
+       "must": 1,
+       "term": "popcorn",
+       "ipa": "",
+       "meaning": "فشار",
+       "ex": "popcorn"
+      },
+      {
+       "must": 0,
+       "term": "funny",
+       "ipa": "",
+       "meaning": "مضحك",
+       "ex": "The film was funny."
+      },
+      {
+       "must": 0,
+       "term": "exciting",
+       "ipa": "",
+       "meaning": "مثير",
+       "ex": "exciting"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "We ___ to the cinema.",
+       "a": "went",
+       "o": [
+        "went",
+        "goed"
+       ],
+       "why": ""
+      },
+      {
+       "q": "The film ___ funny.",
+       "a": "was",
+       "o": [
+        "was",
+        "were"
+       ],
+       "why": ""
+      },
+      {
+       "q": "We ___ popcorn.",
+       "a": "had",
+       "o": [
+        "had",
+        "haved"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى popcorn؟",
+       "a": "فشار",
+       "o": [
+        "فشار",
+        "سينما",
+        "فيلم"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى funny؟",
+       "a": "مضحك",
+       "o": [
+        "مضحك",
+        "سينما",
+        "فيلم"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "We went to the cinema.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "We went to the cinema.",
+       "o": [
+        "We went to the cinema.",
+        "The film was funny."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

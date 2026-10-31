@@ -1,0 +1,315 @@
+{
+ "id": "en-3-u3-l6",
+ "grade": 3,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "Ben's Afternoon",
+ "titleAr": "الإنجليزية — الصف الثالث",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "Ben's Afternoon",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "afternoon",
+       "em": "🌤️",
+       "say": "afternoon",
+       "sub": "بعد الظهر",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "lunch",
+       "em": "🍽️",
+       "say": "lunch",
+       "sub": "غداء",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "park",
+       "em": "🌳",
+       "say": "park",
+       "sub": "حديقة",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "watch TV",
+       "em": "📺",
+       "say": "watch TV",
+       "sub": "يشاهد التلفاز",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "read",
+       "em": "📖",
+       "say": "read",
+       "sub": "يقرأ",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك "
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "Ben has lunch at two.",
+       "em": "🍽️",
+       "say": "Ben has lunch at two.",
+       "sub": "يتناول بن الغداء في الثانية.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "Then he goes to the park.",
+       "em": "🌳",
+       "say": "Then he goes to the park.",
+       "sub": "ثم يذهب إلى الحديقة.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "afternoon",
+       "o": [
+        "🌤️",
+        "🍽️",
+        "📖"
+       ],
+       "a": "🌤️",
+       "lang": "en"
+      },
+      {
+       "say": "lunch",
+       "o": [
+        "🍽️",
+        "📖",
+        "📺"
+       ],
+       "a": "🍽️",
+       "lang": "en"
+      },
+      {
+       "say": "park",
+       "o": [
+        "🌳",
+        "🌤️",
+        "📖"
+       ],
+       "a": "🌳",
+       "lang": "en"
+      },
+      {
+       "say": "watch TV",
+       "o": [
+        "📺",
+        "🌳",
+        "🌤️"
+       ],
+       "a": "📺",
+       "lang": "en"
+      },
+      {
+       "say": "read",
+       "o": [
+        "📖",
+        "🌳",
+        "🍽️"
+       ],
+       "a": "📖",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "Ben has lunch at two.",
+       "o": [
+        "يتناول بن الغداء في الثانية.",
+        "ثم يذهب إلى الحديقة."
+       ],
+       "a": "يتناول بن الغداء في الثانية.",
+       "lang": "en"
+      },
+      {
+       "say": "Then he goes to the park.",
+       "o": [
+        "ثم يذهب إلى الحديقة.",
+        "يتناول بن الغداء في الثانية."
+       ],
+       "a": "ثم يذهب إلى الحديقة.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "أكمل",
+   "eyebrow": "الخطوة ٥ — أكمل",
+   "heading": "اختر الكلمة الناقصة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "Ben has lunch at two.",
+       "o": [
+        "has",
+        "have"
+       ],
+       "a": "has",
+       "sayQ": false,
+       "show": "Ben ___ lunch at two.",
+       "lang": "en"
+      },
+      {
+       "say": "He goes to the park.",
+       "o": [
+        "goes",
+        "go"
+       ],
+       "a": "goes",
+       "sayQ": false,
+       "show": "He ___ to the park.",
+       "lang": "en"
+      },
+      {
+       "say": "She reads a book.",
+       "o": [
+        "reads",
+        "read"
+       ],
+       "a": "reads",
+       "sayQ": false,
+       "show": "She ___ a book.",
+       "lang": "en"
+      }
+     ],
+     "q": "اختر الكلمة المناسبة",
+     "lang": "en"
+    }
+   ],
+   "lead": "مع he و she نضيف s للفعل: he goes, he reads."
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "afternoon",
+       "o": [
+        "🌤️",
+        "🌳",
+        "📖"
+       ],
+       "a": "🌤️",
+       "lang": "en"
+      },
+      {
+       "say": "lunch",
+       "o": [
+        "🍽️",
+        "🌤️",
+        "📺"
+       ],
+       "a": "🍽️",
+       "lang": "en"
+      },
+      {
+       "say": "park",
+       "o": [
+        "🌳",
+        "🌤️",
+        "📺"
+       ],
+       "a": "🌳",
+       "lang": "en"
+      },
+      {
+       "say": "watch TV",
+       "o": [
+        "📺",
+        "🌤️",
+        "📖"
+       ],
+       "a": "📺",
+       "lang": "en"
+      },
+      {
+       "say": "Ben has lunch at two.",
+       "o": [
+        "يتناول بن الغداء في الثانية.",
+        "ثم يذهب إلى الحديقة."
+       ],
+       "a": "يتناول بن الغداء في الثانية.",
+       "lang": "en"
+      },
+      {
+       "say": "Then he goes to the park.",
+       "o": [
+        "ثم يذهب إلى الحديقة.",
+        "يتناول بن الغداء في الثانية."
+       ],
+       "a": "ثم يذهب إلى الحديقة.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

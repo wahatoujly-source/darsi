@@ -1,0 +1,315 @@
+{
+ "id": "en-3-u4-l2",
+ "grade": 3,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "My Big Family",
+ "titleAr": "الإنجليزية — الصف الثالث",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "My Big Family",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "uncle",
+       "em": "👨",
+       "say": "uncle",
+       "sub": "عم/خال",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "aunt",
+       "em": "👩",
+       "say": "aunt",
+       "sub": "عمة/خالة",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "cousin",
+       "em": "🧒",
+       "say": "cousin",
+       "sub": "ابن العم",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "baby",
+       "em": "👶",
+       "say": "baby",
+       "sub": "رضيع",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "family",
+       "em": "👨‍👩‍👧‍👦",
+       "say": "family",
+       "sub": "عائلة",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك "
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "I have a big family.",
+       "em": "👨‍👩‍👧‍👦",
+       "say": "I have a big family.",
+       "sub": "لدي عائلة كبيرة.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "My uncle has two children.",
+       "em": "👨",
+       "say": "My uncle has two children.",
+       "sub": "لعمي طفلان.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "uncle",
+       "o": [
+        "👨",
+        "🧒",
+        "👨‍👩‍👧‍👦"
+       ],
+       "a": "👨",
+       "lang": "en"
+      },
+      {
+       "say": "aunt",
+       "o": [
+        "👩",
+        "👶",
+        "👨"
+       ],
+       "a": "👩",
+       "lang": "en"
+      },
+      {
+       "say": "cousin",
+       "o": [
+        "🧒",
+        "👩",
+        "👨"
+       ],
+       "a": "🧒",
+       "lang": "en"
+      },
+      {
+       "say": "baby",
+       "o": [
+        "👶",
+        "🧒",
+        "👨‍👩‍👧‍👦"
+       ],
+       "a": "👶",
+       "lang": "en"
+      },
+      {
+       "say": "family",
+       "o": [
+        "👨‍👩‍👧‍👦",
+        "👨",
+        "👶"
+       ],
+       "a": "👨‍👩‍👧‍👦",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "I have a big family.",
+       "o": [
+        "لدي عائلة كبيرة.",
+        "لعمي طفلان."
+       ],
+       "a": "لدي عائلة كبيرة.",
+       "lang": "en"
+      },
+      {
+       "say": "My uncle has two children.",
+       "o": [
+        "لعمي طفلان.",
+        "لدي عائلة كبيرة."
+       ],
+       "a": "لعمي طفلان.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "أكمل",
+   "eyebrow": "الخطوة ٥ — أكمل",
+   "heading": "اختر الكلمة الناقصة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "I have a big family .",
+       "o": [
+        "family",
+        "baby"
+       ],
+       "a": "family",
+       "sayQ": false,
+       "show": "I have a big ___ .",
+       "lang": "en"
+      },
+      {
+       "say": "My uncle's son is my cousin .",
+       "o": [
+        "cousin",
+        "aunt"
+       ],
+       "a": "cousin",
+       "sayQ": false,
+       "show": "My uncle's son is my ___ .",
+       "lang": "en"
+      },
+      {
+       "say": "My mother's sister is my aunt .",
+       "o": [
+        "aunt",
+        "uncle"
+       ],
+       "a": "aunt",
+       "sayQ": false,
+       "show": "My mother's sister is my ___ .",
+       "lang": "en"
+      }
+     ],
+     "q": "اختر الكلمة المناسبة",
+     "lang": "en"
+    }
+   ],
+   "lead": "My uncle's son = ابن عمي."
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "uncle",
+       "o": [
+        "👨",
+        "👶",
+        "👨‍👩‍👧‍👦"
+       ],
+       "a": "👨",
+       "lang": "en"
+      },
+      {
+       "say": "aunt",
+       "o": [
+        "👩",
+        "🧒",
+        "👶"
+       ],
+       "a": "👩",
+       "lang": "en"
+      },
+      {
+       "say": "cousin",
+       "o": [
+        "🧒",
+        "👨",
+        "👩"
+       ],
+       "a": "🧒",
+       "lang": "en"
+      },
+      {
+       "say": "baby",
+       "o": [
+        "👶",
+        "👨",
+        "👨‍👩‍👧‍👦"
+       ],
+       "a": "👶",
+       "lang": "en"
+      },
+      {
+       "say": "I have a big family.",
+       "o": [
+        "لدي عائلة كبيرة.",
+        "لعمي طفلان."
+       ],
+       "a": "لدي عائلة كبيرة.",
+       "lang": "en"
+      },
+      {
+       "say": "My uncle has two children.",
+       "o": [
+        "لعمي طفلان.",
+        "لدي عائلة كبيرة."
+       ],
+       "a": "لعمي طفلان.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

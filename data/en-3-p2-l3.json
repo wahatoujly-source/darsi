@@ -1,0 +1,337 @@
+{
+ "id": "en-3-p2-l3",
+ "grade": 3,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "Are they the same?",
+ "titleAr": "الإنجليزية — الصف الثالث",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "Are they the same?",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "same",
+       "em": "🟰",
+       "say": "same",
+       "sub": "نفس الشيء",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "different",
+       "em": "↔️",
+       "say": "different",
+       "sub": "مختلف",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "big",
+       "em": "🐘",
+       "say": "big",
+       "sub": "كبير",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "small",
+       "em": "🐭",
+       "say": "small",
+       "sub": "صغير",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "colour",
+       "em": "🎨",
+       "say": "colour",
+       "sub": "لون",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك كتاب التلميذ ص 30⁠–⁠31"
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "Are they the same?",
+       "em": "🟰",
+       "say": "Are they the same?",
+       "sub": "هل هما متشابهان؟",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "No, they're different.",
+       "em": "↔️",
+       "say": "No, they're different.",
+       "sub": "لا، هما مختلفان.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "This one is big. That one is small.",
+       "em": "🐘",
+       "say": "This one is big. That one is small.",
+       "sub": "هذا كبير. ذاك صغير.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "same",
+       "o": [
+        "🟰",
+        "↔️",
+        "🎨"
+       ],
+       "a": "🟰",
+       "lang": "en"
+      },
+      {
+       "say": "different",
+       "o": [
+        "↔️",
+        "🐘",
+        "🟰"
+       ],
+       "a": "↔️",
+       "lang": "en"
+      },
+      {
+       "say": "big",
+       "o": [
+        "🐘",
+        "🎨",
+        "🐭"
+       ],
+       "a": "🐘",
+       "lang": "en"
+      },
+      {
+       "say": "small",
+       "o": [
+        "🐭",
+        "🐘",
+        "🟰"
+       ],
+       "a": "🐭",
+       "lang": "en"
+      },
+      {
+       "say": "colour",
+       "o": [
+        "🎨",
+        "↔️",
+        "🐘"
+       ],
+       "a": "🎨",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "Are they the same?",
+       "o": [
+        "هل هما متشابهان؟",
+        "لا، هما مختلفان.",
+        "هذا كبير. ذاك صغير."
+       ],
+       "a": "هل هما متشابهان؟",
+       "lang": "en"
+      },
+      {
+       "say": "No, they're different.",
+       "o": [
+        "لا، هما مختلفان.",
+        "هل هما متشابهان؟",
+        "هذا كبير. ذاك صغير."
+       ],
+       "a": "لا، هما مختلفان.",
+       "lang": "en"
+      },
+      {
+       "say": "This one is big. That one is small.",
+       "o": [
+        "هذا كبير. ذاك صغير.",
+        "هل هما متشابهان؟",
+        "لا، هما مختلفان."
+       ],
+       "a": "هذا كبير. ذاك صغير.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "أكمل",
+   "eyebrow": "الخطوة ٥ — أكمل",
+   "heading": "اختر الكلمة الناقصة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "Are they the same ?",
+       "o": [
+        "same",
+        "small"
+       ],
+       "a": "same",
+       "sayQ": false,
+       "show": "Are they the ___ ?",
+       "lang": "en"
+      },
+      {
+       "say": "No, they're different .",
+       "o": [
+        "different",
+        "same"
+       ],
+       "a": "different",
+       "sayQ": false,
+       "show": "No, they're ___ .",
+       "lang": "en"
+      },
+      {
+       "say": "This one is big. That one is small .",
+       "o": [
+        "small",
+        "big"
+       ],
+       "a": "small",
+       "sayQ": false,
+       "show": "This one is big. That one is ___ .",
+       "lang": "en"
+      }
+     ],
+     "q": "اختر الكلمة المناسبة",
+     "lang": "en"
+    }
+   ],
+   "lead": "نقارن بين شيئين بـ the same أو different."
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "same",
+       "o": [
+        "🟰",
+        "🐭",
+        "↔️"
+       ],
+       "a": "🟰",
+       "lang": "en"
+      },
+      {
+       "say": "different",
+       "o": [
+        "↔️",
+        "🐘",
+        "🟰"
+       ],
+       "a": "↔️",
+       "lang": "en"
+      },
+      {
+       "say": "big",
+       "o": [
+        "🐘",
+        "🐭",
+        "↔️"
+       ],
+       "a": "🐘",
+       "lang": "en"
+      },
+      {
+       "say": "small",
+       "o": [
+        "🐭",
+        "🟰",
+        "↔️"
+       ],
+       "a": "🐭",
+       "lang": "en"
+      },
+      {
+       "say": "Are they the same?",
+       "o": [
+        "هل هما متشابهان؟",
+        "لا، هما مختلفان.",
+        "هذا كبير. ذاك صغير."
+       ],
+       "a": "هل هما متشابهان؟",
+       "lang": "en"
+      },
+      {
+       "say": "No, they're different.",
+       "o": [
+        "لا، هما مختلفان.",
+        "هل هما متشابهان؟",
+        "هذا كبير. ذاك صغير."
+       ],
+       "a": "لا، هما مختلفان.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}
