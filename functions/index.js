@@ -406,8 +406,12 @@ exports.getLesson = onCall({memory: "512MiB"}, async (req) => {
 
 // ===================== لوحة الإدارة =====================
 // المدير: من يوجد معرّفه (uid) في المستند config/admins داخل الحقل uids (يُضاف من كونسول Firebase مرة واحدة).
+// حسابات Google الخاصة بالمالك: من يدخل بها (بحساب Google) يصبح مديراً تلقائياً
+const OWNER_EMAILS = ["wahatoujly@gmail.com", "laffatkly@gmail.com"];
 async function needAdmin(req) {
   const uid = needUser(req);
+  const tok = req.auth.token || {};
+  if (tok.email && tok.email_verified === true && OWNER_EMAILS.includes(String(tok.email).toLowerCase())) return uid;
   const a = await db.collection("config").doc("admins").get();
   const list = (a.exists && Array.isArray(a.data().uids)) ? a.data().uids : [];
   if (!list.includes(uid)) throw new HttpsError("permission-denied", "هذه الصفحة للإدارة فقط");
