@@ -1,0 +1,246 @@
+{
+ "id": "en-1-u5-l5",
+ "grade": 1,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "sh, fish, shelf — How many …?",
+ "titleAr": "الإنجليزية — الصف الأول",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "sh, fish, shelf — How many …?",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "sh",
+       "say": "sh",
+       "c": "#E8590C",
+       "lang": "en",
+       "must": 1,
+       "big": true
+      },
+      {
+       "t": "fish",
+       "em": "🐟",
+       "say": "fish",
+       "sub": "سمكة",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "shelf",
+       "em": "🗄️",
+       "say": "shelf",
+       "sub": "رف",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "ship",
+       "em": "🚢",
+       "say": "ship",
+       "sub": "سفينة",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك كتاب التلميذ ص 52"
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "How many fish?",
+       "em": "🐟🐟🐟",
+       "say": "How many fish?",
+       "sub": "كم سمكة؟",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "Three fish.",
+       "em": "3️⃣",
+       "say": "Three fish.",
+       "sub": "ثلاث سمكات.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "fish",
+       "o": [
+        "🐟",
+        "🗄️",
+        "🚢"
+       ],
+       "a": "🐟",
+       "lang": "en"
+      },
+      {
+       "say": "shelf",
+       "o": [
+        "🗄️",
+        "🚢",
+        "🐟"
+       ],
+       "a": "🗄️",
+       "lang": "en"
+      },
+      {
+       "say": "ship",
+       "o": [
+        "🚢",
+        "🗄️",
+        "🐟"
+       ],
+       "a": "🚢",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "How many fish?",
+       "o": [
+        "كم سمكة؟",
+        "ثلاث سمكات."
+       ],
+       "a": "كم سمكة؟",
+       "lang": "en"
+      },
+      {
+       "say": "Three fish.",
+       "o": [
+        "ثلاث سمكات.",
+        "كم سمكة؟"
+       ],
+       "a": "ثلاث سمكات.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "تتبّع",
+   "eyebrow": "الخطوة ٥ — تتبّع",
+   "heading": "اكتب الحرف",
+   "blocks": [
+    {
+     "type": "trace",
+     "star": true,
+     "items": [
+      {
+       "t": "sh",
+       "say": "sh"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "fish",
+       "o": [
+        "🐟",
+        "🗄️",
+        "🚢"
+       ],
+       "a": "🐟",
+       "lang": "en"
+      },
+      {
+       "say": "shelf",
+       "o": [
+        "🗄️",
+        "🐟",
+        "🚢"
+       ],
+       "a": "🗄️",
+       "lang": "en"
+      },
+      {
+       "say": "ship",
+       "o": [
+        "🚢",
+        "🐟",
+        "🗄️"
+       ],
+       "a": "🚢",
+       "lang": "en"
+      },
+      {
+       "say": "How many fish?",
+       "o": [
+        "كم سمكة؟",
+        "ثلاث سمكات."
+       ],
+       "a": "كم سمكة؟",
+       "lang": "en"
+      },
+      {
+       "say": "Three fish.",
+       "o": [
+        "ثلاث سمكات.",
+        "كم سمكة؟"
+       ],
+       "a": "ثلاث سمكات.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

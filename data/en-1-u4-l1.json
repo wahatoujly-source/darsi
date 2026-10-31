@@ -1,0 +1,299 @@
+{
+ "id": "en-1-u4-l1",
+ "grade": 1,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "j, jam, juice — Is it a …?",
+ "titleAr": "الإنجليزية — الصف الأول",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "j, jam, juice — Is it a …?",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "Jj",
+       "say": "j",
+       "c": "#E8590C",
+       "lang": "en",
+       "must": 1,
+       "big": true
+      },
+      {
+       "t": "jam",
+       "em": "🍓",
+       "say": "jam",
+       "sub": "مربى",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "juice",
+       "em": "🧃",
+       "say": "juice",
+       "sub": "عصير",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "jug",
+       "em": "🫗",
+       "say": "jug",
+       "sub": "إبريق",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك كتاب التلميذ ص 38"
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "Is it a jug?",
+       "em": "❓",
+       "say": "Is it a jug?",
+       "sub": "هل هو إبريق؟",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "Yes, it is.",
+       "em": "✅",
+       "say": "Yes, it is.",
+       "sub": "نعم، هو كذلك.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "No, it isn't.",
+       "em": "❌",
+       "say": "No, it isn't.",
+       "sub": "لا، ليس كذلك.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "jam",
+       "o": [
+        "🍓",
+        "🫗",
+        "🧃"
+       ],
+       "a": "🍓",
+       "lang": "en"
+      },
+      {
+       "say": "juice",
+       "o": [
+        "🧃",
+        "🍓",
+        "🫗"
+       ],
+       "a": "🧃",
+       "lang": "en"
+      },
+      {
+       "say": "jug",
+       "o": [
+        "🫗",
+        "🧃",
+        "🍓"
+       ],
+       "a": "🫗",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "Is it a jug?",
+       "o": [
+        "هل هو إبريق؟",
+        "نعم، هو كذلك.",
+        "لا، ليس كذلك."
+       ],
+       "a": "هل هو إبريق؟",
+       "lang": "en"
+      },
+      {
+       "say": "Yes, it is.",
+       "o": [
+        "نعم، هو كذلك.",
+        "هل هو إبريق؟",
+        "لا، ليس كذلك."
+       ],
+       "a": "نعم، هو كذلك.",
+       "lang": "en"
+      },
+      {
+       "say": "No, it isn't.",
+       "o": [
+        "لا، ليس كذلك.",
+        "هل هو إبريق؟",
+        "نعم، هو كذلك."
+       ],
+       "a": "لا، ليس كذلك.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "تتبّع",
+   "eyebrow": "الخطوة ٥ — تتبّع",
+   "heading": "اكتب الحرف",
+   "blocks": [
+    {
+     "type": "trace",
+     "star": true,
+     "items": [
+      {
+       "t": "J",
+       "say": "J"
+      },
+      {
+       "t": "j",
+       "say": "j"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "فرقع",
+   "eyebrow": "الخطوة ٦ — فرقع",
+   "heading": "بالونات الحرف j",
+   "blocks": [
+    {
+     "type": "pop",
+     "star": true,
+     "target": "j",
+     "pool": [
+      "j",
+      "j",
+      "s",
+      "a",
+      "t",
+      "p",
+      "i",
+      "n",
+      "m"
+     ],
+     "need": 6,
+     "say": "j",
+     "q": "فرقع البالونات التي فيها الحرف",
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٧ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "jam",
+       "o": [
+        "🍓",
+        "🫗",
+        "🧃"
+       ],
+       "a": "🍓",
+       "lang": "en"
+      },
+      {
+       "say": "juice",
+       "o": [
+        "🧃",
+        "🫗",
+        "🍓"
+       ],
+       "a": "🧃",
+       "lang": "en"
+      },
+      {
+       "say": "jug",
+       "o": [
+        "🫗",
+        "🧃",
+        "🍓"
+       ],
+       "a": "🫗",
+       "lang": "en"
+      },
+      {
+       "say": "Is it a jug?",
+       "o": [
+        "هل هو إبريق؟",
+        "نعم، هو كذلك.",
+        "لا، ليس كذلك."
+       ],
+       "a": "هل هو إبريق؟",
+       "lang": "en"
+      },
+      {
+       "say": "Yes, it is.",
+       "o": [
+        "نعم، هو كذلك.",
+        "هل هو إبريق؟",
+        "لا، ليس كذلك."
+       ],
+       "a": "نعم، هو كذلك.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

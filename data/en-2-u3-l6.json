@@ -1,0 +1,248 @@
+{
+ "id": "en-2-u3-l6",
+ "grade": 2,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "On Saturday, I watch TV",
+ "titleAr": "الإنجليزية — الصف الثاني",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "On Saturday, I watch TV",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "watch TV",
+       "em": "📺",
+       "say": "watch TV",
+       "sub": "أشاهد التلفاز",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "play football",
+       "em": "⚽",
+       "say": "play football",
+       "sub": "ألعب كرة القدم",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "read",
+       "em": "📖",
+       "say": "read",
+       "sub": "أقرأ",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "ride my bike",
+       "em": "🚲",
+       "say": "ride my bike",
+       "sub": "أركب دراجتي",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك كتاب التلميذ ص 35"
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "On Saturday, I watch TV.",
+       "em": "📺",
+       "say": "On Saturday, I watch TV.",
+       "sub": "يوم السبت أشاهد التلفاز.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "On Monday, I play football.",
+       "em": "⚽",
+       "say": "On Monday, I play football.",
+       "sub": "يوم الاثنين ألعب كرة القدم.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "watch TV",
+       "o": [
+        "📺",
+        "⚽",
+        "📖"
+       ],
+       "a": "📺",
+       "lang": "en"
+      },
+      {
+       "say": "play football",
+       "o": [
+        "⚽",
+        "🚲",
+        "📺"
+       ],
+       "a": "⚽",
+       "lang": "en"
+      },
+      {
+       "say": "read",
+       "o": [
+        "📖",
+        "🚲",
+        "⚽"
+       ],
+       "a": "📖",
+       "lang": "en"
+      },
+      {
+       "say": "ride my bike",
+       "o": [
+        "🚲",
+        "📺",
+        "⚽"
+       ],
+       "a": "🚲",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "On Saturday, I watch TV.",
+       "o": [
+        "يوم السبت أشاهد التلفاز.",
+        "يوم الاثنين ألعب كرة القدم."
+       ],
+       "a": "يوم السبت أشاهد التلفاز.",
+       "lang": "en"
+      },
+      {
+       "say": "On Monday, I play football.",
+       "o": [
+        "يوم الاثنين ألعب كرة القدم.",
+        "يوم السبت أشاهد التلفاز."
+       ],
+       "a": "يوم الاثنين ألعب كرة القدم.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "watch TV",
+       "o": [
+        "📺",
+        "📖",
+        "⚽"
+       ],
+       "a": "📺",
+       "lang": "en"
+      },
+      {
+       "say": "play football",
+       "o": [
+        "⚽",
+        "📺",
+        "🚲"
+       ],
+       "a": "⚽",
+       "lang": "en"
+      },
+      {
+       "say": "read",
+       "o": [
+        "📖",
+        "📺",
+        "⚽"
+       ],
+       "a": "📖",
+       "lang": "en"
+      },
+      {
+       "say": "ride my bike",
+       "o": [
+        "🚲",
+        "📖",
+        "📺"
+       ],
+       "a": "🚲",
+       "lang": "en"
+      },
+      {
+       "say": "On Saturday, I watch TV.",
+       "o": [
+        "يوم السبت أشاهد التلفاز.",
+        "يوم الاثنين ألعب كرة القدم."
+       ],
+       "a": "يوم السبت أشاهد التلفاز.",
+       "lang": "en"
+      },
+      {
+       "say": "On Monday, I play football.",
+       "o": [
+        "يوم الاثنين ألعب كرة القدم.",
+        "يوم السبت أشاهد التلفاز."
+       ],
+       "a": "يوم الاثنين ألعب كرة القدم.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

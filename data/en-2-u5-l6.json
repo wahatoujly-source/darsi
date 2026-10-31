@@ -1,0 +1,220 @@
+{
+ "id": "en-2-u5-l6",
+ "grade": 2,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "What's the time?",
+ "titleAr": "الإنجليزية — الصف الثاني",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "What's the time?",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "o'clock",
+       "em": "🕐",
+       "say": "o'clock",
+       "sub": "تماماً",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "time",
+       "em": "⏰",
+       "say": "time",
+       "sub": "الوقت",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "clock",
+       "em": "🕰️",
+       "say": "clock",
+       "sub": "ساعة",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك كتاب التلميذ ص 68⁠–⁠69"
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "What's the time?",
+       "em": "⏰",
+       "say": "What's the time?",
+       "sub": "كم الساعة؟",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "It's three o'clock.",
+       "em": "🕒",
+       "say": "It's three o'clock.",
+       "sub": "الساعة الثالثة تماماً.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "o'clock",
+       "o": [
+        "🕐",
+        "🕰️",
+        "⏰"
+       ],
+       "a": "🕐",
+       "lang": "en"
+      },
+      {
+       "say": "time",
+       "o": [
+        "⏰",
+        "🕐",
+        "🕰️"
+       ],
+       "a": "⏰",
+       "lang": "en"
+      },
+      {
+       "say": "clock",
+       "o": [
+        "🕰️",
+        "🕐",
+        "⏰"
+       ],
+       "a": "🕰️",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "What's the time?",
+       "o": [
+        "كم الساعة؟",
+        "الساعة الثالثة تماماً."
+       ],
+       "a": "كم الساعة؟",
+       "lang": "en"
+      },
+      {
+       "say": "It's three o'clock.",
+       "o": [
+        "الساعة الثالثة تماماً.",
+        "كم الساعة؟"
+       ],
+       "a": "الساعة الثالثة تماماً.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "o'clock",
+       "o": [
+        "🕐",
+        "🕰️",
+        "⏰"
+       ],
+       "a": "🕐",
+       "lang": "en"
+      },
+      {
+       "say": "time",
+       "o": [
+        "⏰",
+        "🕐",
+        "🕰️"
+       ],
+       "a": "⏰",
+       "lang": "en"
+      },
+      {
+       "say": "clock",
+       "o": [
+        "🕰️",
+        "🕐",
+        "⏰"
+       ],
+       "a": "🕰️",
+       "lang": "en"
+      },
+      {
+       "say": "What's the time?",
+       "o": [
+        "كم الساعة؟",
+        "الساعة الثالثة تماماً."
+       ],
+       "a": "كم الساعة؟",
+       "lang": "en"
+      },
+      {
+       "say": "It's three o'clock.",
+       "o": [
+        "الساعة الثالثة تماماً.",
+        "كم الساعة؟"
+       ],
+       "a": "الساعة الثالثة تماماً.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

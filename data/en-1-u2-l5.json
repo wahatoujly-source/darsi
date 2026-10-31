@@ -1,0 +1,242 @@
+{
+ "id": "en-1-u2-l5",
+ "grade": 1,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "m, mouth, moon, ear, eye, face",
+ "titleAr": "الإنجليزية — الصف الأول",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "m, mouth, moon, ear, eye, face",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "Mm",
+       "say": "m",
+       "c": "#E8590C",
+       "lang": "en",
+       "must": 1,
+       "big": true
+      },
+      {
+       "t": "mouth",
+       "em": "👄",
+       "say": "mouth",
+       "sub": "فم",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "moon",
+       "em": "🌙",
+       "say": "moon",
+       "sub": "قمر",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "ear",
+       "em": "👂",
+       "say": "ear",
+       "sub": "أذن",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "eye",
+       "em": "👁️",
+       "say": "eye",
+       "sub": "عين",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "face",
+       "em": "🙂",
+       "say": "face",
+       "sub": "وجه",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك كتاب التلميذ ص 22"
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٢ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "mouth",
+       "o": [
+        "👄",
+        "🙂",
+        "🌙"
+       ],
+       "a": "👄",
+       "lang": "en"
+      },
+      {
+       "say": "moon",
+       "o": [
+        "🌙",
+        "👂",
+        "👄"
+       ],
+       "a": "🌙",
+       "lang": "en"
+      },
+      {
+       "say": "ear",
+       "o": [
+        "👂",
+        "🙂",
+        "🌙"
+       ],
+       "a": "👂",
+       "lang": "en"
+      },
+      {
+       "say": "eye",
+       "o": [
+        "👁️",
+        "👄",
+        "👂"
+       ],
+       "a": "👁️",
+       "lang": "en"
+      },
+      {
+       "say": "face",
+       "o": [
+        "🙂",
+        "🌙",
+        "👂"
+       ],
+       "a": "🙂",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "تتبّع",
+   "eyebrow": "الخطوة ٣ — تتبّع",
+   "heading": "اكتب الحرف",
+   "blocks": [
+    {
+     "type": "trace",
+     "star": true,
+     "items": [
+      {
+       "t": "M",
+       "say": "M"
+      },
+      {
+       "t": "m",
+       "say": "m"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "فرقع",
+   "eyebrow": "الخطوة ٤ — فرقع",
+   "heading": "بالونات الحرف m",
+   "blocks": [
+    {
+     "type": "pop",
+     "star": true,
+     "target": "m",
+     "pool": [
+      "m",
+      "m",
+      "s",
+      "a",
+      "t",
+      "p",
+      "i",
+      "n",
+      "d"
+     ],
+     "need": 6,
+     "say": "m",
+     "q": "فرقع البالونات التي فيها الحرف",
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "mouth",
+       "o": [
+        "👄",
+        "👂",
+        "👁️"
+       ],
+       "a": "👄",
+       "lang": "en"
+      },
+      {
+       "say": "moon",
+       "o": [
+        "🌙",
+        "👁️",
+        "👂"
+       ],
+       "a": "🌙",
+       "lang": "en"
+      },
+      {
+       "say": "ear",
+       "o": [
+        "👂",
+        "👄",
+        "🙂"
+       ],
+       "a": "👂",
+       "lang": "en"
+      },
+      {
+       "say": "eye",
+       "o": [
+        "👁️",
+        "🙂",
+        "👄"
+       ],
+       "a": "👁️",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

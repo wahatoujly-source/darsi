@@ -1,0 +1,240 @@
+{
+ "id": "en-1-u2-l1",
+ "grade": 1,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "c, car, cat, k, key, kite",
+ "titleAr": "الإنجليزية — الصف الأول",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "c, car, cat, k, key, kite",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "Cc",
+       "say": "c",
+       "c": "#E8590C",
+       "lang": "en",
+       "must": 1,
+       "big": true
+      },
+      {
+       "t": "Kk",
+       "say": "k",
+       "c": "#E8590C",
+       "lang": "en",
+       "must": 1,
+       "big": true
+      },
+      {
+       "t": "car",
+       "em": "🚗",
+       "say": "car",
+       "sub": "سيارة",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "cat",
+       "em": "🐈",
+       "say": "cat",
+       "sub": "قطة",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "key",
+       "em": "🔑",
+       "say": "key",
+       "sub": "مفتاح",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "kite",
+       "em": "🪁",
+       "say": "kite",
+       "sub": "طائرة ورقية",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك كتاب التلميذ ص 18"
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٢ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "car",
+       "o": [
+        "🚗",
+        "🔑",
+        "🐈"
+       ],
+       "a": "🚗",
+       "lang": "en"
+      },
+      {
+       "say": "cat",
+       "o": [
+        "🐈",
+        "🔑",
+        "🪁"
+       ],
+       "a": "🐈",
+       "lang": "en"
+      },
+      {
+       "say": "key",
+       "o": [
+        "🔑",
+        "🚗",
+        "🪁"
+       ],
+       "a": "🔑",
+       "lang": "en"
+      },
+      {
+       "say": "kite",
+       "o": [
+        "🪁",
+        "🚗",
+        "🔑"
+       ],
+       "a": "🪁",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "تتبّع",
+   "eyebrow": "الخطوة ٣ — تتبّع",
+   "heading": "اكتب الحرف",
+   "blocks": [
+    {
+     "type": "trace",
+     "star": true,
+     "items": [
+      {
+       "t": "C",
+       "say": "C"
+      },
+      {
+       "t": "c",
+       "say": "c"
+      },
+      {
+       "t": "K",
+       "say": "K"
+      },
+      {
+       "t": "k",
+       "say": "k"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "فرقع",
+   "eyebrow": "الخطوة ٤ — فرقع",
+   "heading": "بالونات الحرف c",
+   "blocks": [
+    {
+     "type": "pop",
+     "star": true,
+     "target": "c",
+     "pool": [
+      "c",
+      "c",
+      "s",
+      "a",
+      "t",
+      "p",
+      "i",
+      "n",
+      "m"
+     ],
+     "need": 6,
+     "say": "c",
+     "q": "فرقع البالونات التي فيها الحرف",
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "car",
+       "o": [
+        "🚗",
+        "🪁",
+        "🔑"
+       ],
+       "a": "🚗",
+       "lang": "en"
+      },
+      {
+       "say": "cat",
+       "o": [
+        "🐈",
+        "🔑",
+        "🚗"
+       ],
+       "a": "🐈",
+       "lang": "en"
+      },
+      {
+       "say": "key",
+       "o": [
+        "🔑",
+        "🚗",
+        "🪁"
+       ],
+       "a": "🔑",
+       "lang": "en"
+      },
+      {
+       "say": "kite",
+       "o": [
+        "🪁",
+        "🐈",
+        "🔑"
+       ],
+       "a": "🪁",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

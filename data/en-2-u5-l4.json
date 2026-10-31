@@ -1,0 +1,248 @@
+{
+ "id": "en-2-u5-l4",
+ "grade": 2,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "My day",
+ "titleAr": "الإنجليزية — الصف الثاني",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "My day",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "get up",
+       "em": "⏰",
+       "say": "get up",
+       "sub": "أستيقظ",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "have breakfast",
+       "em": "🥣",
+       "say": "have breakfast",
+       "sub": "أتناول الفطور",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "go to school",
+       "em": "🏫",
+       "say": "go to school",
+       "sub": "أذهب إلى المدرسة",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "go to bed",
+       "em": "🛌",
+       "say": "go to bed",
+       "sub": "أذهب إلى النوم",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك كتاب التلميذ ص 64⁠–⁠65"
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "I get up at seven.",
+       "em": "⏰",
+       "say": "I get up at seven.",
+       "sub": "أستيقظ في السابعة.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "I go to bed at nine.",
+       "em": "🛌",
+       "say": "I go to bed at nine.",
+       "sub": "أنام في التاسعة.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "get up",
+       "o": [
+        "⏰",
+        "🏫",
+        "🛌"
+       ],
+       "a": "⏰",
+       "lang": "en"
+      },
+      {
+       "say": "have breakfast",
+       "o": [
+        "🥣",
+        "🏫",
+        "⏰"
+       ],
+       "a": "🥣",
+       "lang": "en"
+      },
+      {
+       "say": "go to school",
+       "o": [
+        "🏫",
+        "⏰",
+        "🥣"
+       ],
+       "a": "🏫",
+       "lang": "en"
+      },
+      {
+       "say": "go to bed",
+       "o": [
+        "🛌",
+        "🏫",
+        "🥣"
+       ],
+       "a": "🛌",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "I get up at seven.",
+       "o": [
+        "أستيقظ في السابعة.",
+        "أنام في التاسعة."
+       ],
+       "a": "أستيقظ في السابعة.",
+       "lang": "en"
+      },
+      {
+       "say": "I go to bed at nine.",
+       "o": [
+        "أنام في التاسعة.",
+        "أستيقظ في السابعة."
+       ],
+       "a": "أنام في التاسعة.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "get up",
+       "o": [
+        "⏰",
+        "🛌",
+        "🏫"
+       ],
+       "a": "⏰",
+       "lang": "en"
+      },
+      {
+       "say": "have breakfast",
+       "o": [
+        "🥣",
+        "⏰",
+        "🏫"
+       ],
+       "a": "🥣",
+       "lang": "en"
+      },
+      {
+       "say": "go to school",
+       "o": [
+        "🏫",
+        "🛌",
+        "🥣"
+       ],
+       "a": "🏫",
+       "lang": "en"
+      },
+      {
+       "say": "go to bed",
+       "o": [
+        "🛌",
+        "🏫",
+        "🥣"
+       ],
+       "a": "🛌",
+       "lang": "en"
+      },
+      {
+       "say": "I get up at seven.",
+       "o": [
+        "أستيقظ في السابعة.",
+        "أنام في التاسعة."
+       ],
+       "a": "أستيقظ في السابعة.",
+       "lang": "en"
+      },
+      {
+       "say": "I go to bed at nine.",
+       "o": [
+        "أنام في التاسعة.",
+        "أستيقظ في السابعة."
+       ],
+       "a": "أنام في التاسعة.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

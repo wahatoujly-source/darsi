@@ -1,0 +1,248 @@
+{
+ "id": "en-2-u2-l7",
+ "grade": 2,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "It's long. They're short.",
+ "titleAr": "الإنجليزية — الصف الثاني",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "It's long. They're short.",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "long",
+       "em": "📏",
+       "say": "long",
+       "sub": "طويل",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "short",
+       "em": "✂️",
+       "say": "short",
+       "sub": "قصير",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "scarf",
+       "em": "🧣",
+       "say": "scarf",
+       "sub": "وشاح",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "gloves",
+       "em": "🧤",
+       "say": "gloves",
+       "sub": "قفازات",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك كتاب التلميذ ص 25"
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "It's long.",
+       "em": "🧣",
+       "say": "It's long.",
+       "sub": "إنه طويل.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "They're short.",
+       "em": "🧤",
+       "say": "They're short.",
+       "sub": "إنها قصيرة.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "long",
+       "o": [
+        "📏",
+        "✂️",
+        "🧤"
+       ],
+       "a": "📏",
+       "lang": "en"
+      },
+      {
+       "say": "short",
+       "o": [
+        "✂️",
+        "📏",
+        "🧣"
+       ],
+       "a": "✂️",
+       "lang": "en"
+      },
+      {
+       "say": "scarf",
+       "o": [
+        "🧣",
+        "📏",
+        "🧤"
+       ],
+       "a": "🧣",
+       "lang": "en"
+      },
+      {
+       "say": "gloves",
+       "o": [
+        "🧤",
+        "✂️",
+        "🧣"
+       ],
+       "a": "🧤",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "It's long.",
+       "o": [
+        "إنه طويل.",
+        "إنها قصيرة."
+       ],
+       "a": "إنه طويل.",
+       "lang": "en"
+      },
+      {
+       "say": "They're short.",
+       "o": [
+        "إنها قصيرة.",
+        "إنه طويل."
+       ],
+       "a": "إنها قصيرة.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "long",
+       "o": [
+        "📏",
+        "🧣",
+        "🧤"
+       ],
+       "a": "📏",
+       "lang": "en"
+      },
+      {
+       "say": "short",
+       "o": [
+        "✂️",
+        "📏",
+        "🧤"
+       ],
+       "a": "✂️",
+       "lang": "en"
+      },
+      {
+       "say": "scarf",
+       "o": [
+        "🧣",
+        "🧤",
+        "✂️"
+       ],
+       "a": "🧣",
+       "lang": "en"
+      },
+      {
+       "say": "gloves",
+       "o": [
+        "🧤",
+        "🧣",
+        "✂️"
+       ],
+       "a": "🧤",
+       "lang": "en"
+      },
+      {
+       "say": "It's long.",
+       "o": [
+        "إنه طويل.",
+        "إنها قصيرة."
+       ],
+       "a": "إنه طويل.",
+       "lang": "en"
+      },
+      {
+       "say": "They're short.",
+       "o": [
+        "إنها قصيرة.",
+        "إنه طويل."
+       ],
+       "a": "إنها قصيرة.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

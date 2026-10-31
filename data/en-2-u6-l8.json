@@ -1,0 +1,248 @@
+{
+ "id": "en-2-u6-l8",
+ "grade": 2,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "How tall is the rabbit?",
+ "titleAr": "الإنجليزية — الصف الثاني",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "How tall is the rabbit?",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "tall",
+       "em": "🦒",
+       "say": "tall",
+       "sub": "طويل",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "short",
+       "em": "🐇",
+       "say": "short",
+       "sub": "قصير",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "rabbit",
+       "em": "🐇",
+       "say": "rabbit",
+       "sub": "أرنب",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "giraffe",
+       "em": "🦒",
+       "say": "giraffe",
+       "sub": "زرافة",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك كتاب التلميذ ص 88⁠–⁠89"
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "How tall is the rabbit?",
+       "em": "🐇",
+       "say": "How tall is the rabbit?",
+       "sub": "كم طول الأرنب؟",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "The giraffe is very tall.",
+       "em": "🦒",
+       "say": "The giraffe is very tall.",
+       "sub": "الزرافة طويلة جداً.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "tall",
+       "o": [
+        "🦒",
+        "🐇",
+        "🐇"
+       ],
+       "a": "🦒",
+       "lang": "en"
+      },
+      {
+       "say": "short",
+       "o": [
+        "🐇",
+        "🦒",
+        "🦒"
+       ],
+       "a": "🐇",
+       "lang": "en"
+      },
+      {
+       "say": "rabbit",
+       "o": [
+        "🐇",
+        "🦒",
+        "🦒"
+       ],
+       "a": "🐇",
+       "lang": "en"
+      },
+      {
+       "say": "giraffe",
+       "o": [
+        "🦒",
+        "🐇",
+        "🐇"
+       ],
+       "a": "🦒",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "How tall is the rabbit?",
+       "o": [
+        "كم طول الأرنب؟",
+        "الزرافة طويلة جداً."
+       ],
+       "a": "كم طول الأرنب؟",
+       "lang": "en"
+      },
+      {
+       "say": "The giraffe is very tall.",
+       "o": [
+        "الزرافة طويلة جداً.",
+        "كم طول الأرنب؟"
+       ],
+       "a": "الزرافة طويلة جداً.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "tall",
+       "o": [
+        "🦒",
+        "🐇",
+        "🐇"
+       ],
+       "a": "🦒",
+       "lang": "en"
+      },
+      {
+       "say": "short",
+       "o": [
+        "🐇",
+        "🦒",
+        "🦒"
+       ],
+       "a": "🐇",
+       "lang": "en"
+      },
+      {
+       "say": "rabbit",
+       "o": [
+        "🐇",
+        "🦒",
+        "🦒"
+       ],
+       "a": "🐇",
+       "lang": "en"
+      },
+      {
+       "say": "giraffe",
+       "o": [
+        "🦒",
+        "🐇",
+        "🐇"
+       ],
+       "a": "🦒",
+       "lang": "en"
+      },
+      {
+       "say": "How tall is the rabbit?",
+       "o": [
+        "كم طول الأرنب؟",
+        "الزرافة طويلة جداً."
+       ],
+       "a": "كم طول الأرنب؟",
+       "lang": "en"
+      },
+      {
+       "say": "The giraffe is very tall.",
+       "o": [
+        "الزرافة طويلة جداً.",
+        "كم طول الأرنب؟"
+       ],
+       "a": "الزرافة طويلة جداً.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

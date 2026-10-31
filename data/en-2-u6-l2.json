@@ -1,0 +1,248 @@
+{
+ "id": "en-2-u6-l2",
+ "grade": 2,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "Do you wash …?",
+ "titleAr": "الإنجليزية — الصف الثاني",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "Do you wash …?",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "hands",
+       "em": "🙌",
+       "say": "hands",
+       "sub": "يدان",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "soap",
+       "em": "🧼",
+       "say": "soap",
+       "sub": "صابون",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "water",
+       "em": "💧",
+       "say": "water",
+       "sub": "ماء",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "towel",
+       "em": "🧻",
+       "say": "towel",
+       "sub": "منشفة",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك كتاب التلميذ ص 76⁠–⁠77"
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "Do you wash your hands?",
+       "em": "🙌",
+       "say": "Do you wash your hands?",
+       "sub": "هل تغسل يديك؟",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "Yes, I do.",
+       "em": "✅",
+       "say": "Yes, I do.",
+       "sub": "نعم.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "hands",
+       "o": [
+        "🙌",
+        "🧻",
+        "🧼"
+       ],
+       "a": "🙌",
+       "lang": "en"
+      },
+      {
+       "say": "soap",
+       "o": [
+        "🧼",
+        "🧻",
+        "🙌"
+       ],
+       "a": "🧼",
+       "lang": "en"
+      },
+      {
+       "say": "water",
+       "o": [
+        "💧",
+        "🧼",
+        "🙌"
+       ],
+       "a": "💧",
+       "lang": "en"
+      },
+      {
+       "say": "towel",
+       "o": [
+        "🧻",
+        "🧼",
+        "🙌"
+       ],
+       "a": "🧻",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "Do you wash your hands?",
+       "o": [
+        "هل تغسل يديك؟",
+        "نعم."
+       ],
+       "a": "هل تغسل يديك؟",
+       "lang": "en"
+      },
+      {
+       "say": "Yes, I do.",
+       "o": [
+        "نعم.",
+        "هل تغسل يديك؟"
+       ],
+       "a": "نعم.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "hands",
+       "o": [
+        "🙌",
+        "💧",
+        "🧻"
+       ],
+       "a": "🙌",
+       "lang": "en"
+      },
+      {
+       "say": "soap",
+       "o": [
+        "🧼",
+        "🙌",
+        "🧻"
+       ],
+       "a": "🧼",
+       "lang": "en"
+      },
+      {
+       "say": "water",
+       "o": [
+        "💧",
+        "🙌",
+        "🧻"
+       ],
+       "a": "💧",
+       "lang": "en"
+      },
+      {
+       "say": "towel",
+       "o": [
+        "🧻",
+        "💧",
+        "🧼"
+       ],
+       "a": "🧻",
+       "lang": "en"
+      },
+      {
+       "say": "Do you wash your hands?",
+       "o": [
+        "هل تغسل يديك؟",
+        "نعم."
+       ],
+       "a": "هل تغسل يديك؟",
+       "lang": "en"
+      },
+      {
+       "say": "Yes, I do.",
+       "o": [
+        "نعم.",
+        "هل تغسل يديك؟"
+       ],
+       "a": "نعم.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

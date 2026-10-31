@@ -1,0 +1,266 @@
+{
+ "id": "en-2-u2-l2",
+ "grade": 2,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "My Bedroom",
+ "titleAr": "الإنجليزية — الصف الثاني",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "My Bedroom",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "bed",
+       "em": "🛏️",
+       "say": "bed",
+       "sub": "سرير",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "lamp",
+       "em": "💡",
+       "say": "lamp",
+       "sub": "مصباح",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "cupboard",
+       "em": "🗄️",
+       "say": "cupboard",
+       "sub": "خزانة",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "rug",
+       "em": "🟫",
+       "say": "rug",
+       "sub": "سجادة صغيرة",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "window",
+       "em": "🪟",
+       "say": "window",
+       "sub": "نافذة",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك كتاب التلميذ ص 19"
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "This is my bedroom.",
+       "em": "🛏️",
+       "say": "This is my bedroom.",
+       "sub": "هذه غرفة نومي.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "I have a lamp.",
+       "em": "💡",
+       "say": "I have a lamp.",
+       "sub": "لدي مصباح.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "bed",
+       "o": [
+        "🛏️",
+        "🗄️",
+        "💡"
+       ],
+       "a": "🛏️",
+       "lang": "en"
+      },
+      {
+       "say": "lamp",
+       "o": [
+        "💡",
+        "🟫",
+        "🗄️"
+       ],
+       "a": "💡",
+       "lang": "en"
+      },
+      {
+       "say": "cupboard",
+       "o": [
+        "🗄️",
+        "🟫",
+        "🪟"
+       ],
+       "a": "🗄️",
+       "lang": "en"
+      },
+      {
+       "say": "rug",
+       "o": [
+        "🟫",
+        "🗄️",
+        "🪟"
+       ],
+       "a": "🟫",
+       "lang": "en"
+      },
+      {
+       "say": "window",
+       "o": [
+        "🪟",
+        "🛏️",
+        "💡"
+       ],
+       "a": "🪟",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "This is my bedroom.",
+       "o": [
+        "هذه غرفة نومي.",
+        "لدي مصباح."
+       ],
+       "a": "هذه غرفة نومي.",
+       "lang": "en"
+      },
+      {
+       "say": "I have a lamp.",
+       "o": [
+        "لدي مصباح.",
+        "هذه غرفة نومي."
+       ],
+       "a": "لدي مصباح.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "bed",
+       "o": [
+        "🛏️",
+        "🟫",
+        "💡"
+       ],
+       "a": "🛏️",
+       "lang": "en"
+      },
+      {
+       "say": "lamp",
+       "o": [
+        "💡",
+        "🟫",
+        "🛏️"
+       ],
+       "a": "💡",
+       "lang": "en"
+      },
+      {
+       "say": "cupboard",
+       "o": [
+        "🗄️",
+        "🛏️",
+        "💡"
+       ],
+       "a": "🗄️",
+       "lang": "en"
+      },
+      {
+       "say": "rug",
+       "o": [
+        "🟫",
+        "🗄️",
+        "🛏️"
+       ],
+       "a": "🟫",
+       "lang": "en"
+      },
+      {
+       "say": "This is my bedroom.",
+       "o": [
+        "هذه غرفة نومي.",
+        "لدي مصباح."
+       ],
+       "a": "هذه غرفة نومي.",
+       "lang": "en"
+      },
+      {
+       "say": "I have a lamp.",
+       "o": [
+        "لدي مصباح.",
+        "هذه غرفة نومي."
+       ],
+       "a": "لدي مصباح.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

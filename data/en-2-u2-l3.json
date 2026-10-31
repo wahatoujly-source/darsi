@@ -1,0 +1,248 @@
+{
+ "id": "en-2-u2-l3",
+ "grade": 2,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "Here's my house",
+ "titleAr": "الإنجليزية — الصف الثاني",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "Here's my house",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "house",
+       "em": "🏠",
+       "say": "house",
+       "sub": "بيت",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "kitchen",
+       "em": "🍳",
+       "say": "kitchen",
+       "sub": "مطبخ",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "living room",
+       "em": "🛋️",
+       "say": "living room",
+       "sub": "غرفة الجلوس",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "bathroom",
+       "em": "🛁",
+       "say": "bathroom",
+       "sub": "حمام",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك كتاب التلميذ ص 20⁠–⁠21"
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "Here's my house.",
+       "em": "🏠",
+       "say": "Here's my house.",
+       "sub": "هذا بيتي.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "Here's the kitchen.",
+       "em": "🍳",
+       "say": "Here's the kitchen.",
+       "sub": "هذا المطبخ.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "house",
+       "o": [
+        "🏠",
+        "🍳",
+        "🛋️"
+       ],
+       "a": "🏠",
+       "lang": "en"
+      },
+      {
+       "say": "kitchen",
+       "o": [
+        "🍳",
+        "🛁",
+        "🛋️"
+       ],
+       "a": "🍳",
+       "lang": "en"
+      },
+      {
+       "say": "living room",
+       "o": [
+        "🛋️",
+        "🛁",
+        "🍳"
+       ],
+       "a": "🛋️",
+       "lang": "en"
+      },
+      {
+       "say": "bathroom",
+       "o": [
+        "🛁",
+        "🛋️",
+        "🍳"
+       ],
+       "a": "🛁",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "Here's my house.",
+       "o": [
+        "هذا بيتي.",
+        "هذا المطبخ."
+       ],
+       "a": "هذا بيتي.",
+       "lang": "en"
+      },
+      {
+       "say": "Here's the kitchen.",
+       "o": [
+        "هذا المطبخ.",
+        "هذا بيتي."
+       ],
+       "a": "هذا المطبخ.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "house",
+       "o": [
+        "🏠",
+        "🛁",
+        "🛋️"
+       ],
+       "a": "🏠",
+       "lang": "en"
+      },
+      {
+       "say": "kitchen",
+       "o": [
+        "🍳",
+        "🏠",
+        "🛁"
+       ],
+       "a": "🍳",
+       "lang": "en"
+      },
+      {
+       "say": "living room",
+       "o": [
+        "🛋️",
+        "🏠",
+        "🍳"
+       ],
+       "a": "🛋️",
+       "lang": "en"
+      },
+      {
+       "say": "bathroom",
+       "o": [
+        "🛁",
+        "🍳",
+        "🛋️"
+       ],
+       "a": "🛁",
+       "lang": "en"
+      },
+      {
+       "say": "Here's my house.",
+       "o": [
+        "هذا بيتي.",
+        "هذا المطبخ."
+       ],
+       "a": "هذا بيتي.",
+       "lang": "en"
+      },
+      {
+       "say": "Here's the kitchen.",
+       "o": [
+        "هذا المطبخ.",
+        "هذا بيتي."
+       ],
+       "a": "هذا المطبخ.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

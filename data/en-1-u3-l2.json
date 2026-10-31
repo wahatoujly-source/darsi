@@ -1,0 +1,224 @@
+{
+ "id": "en-1-u3-l2",
+ "grade": 1,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "o, orange, olive, carpet, blanket",
+ "titleAr": "الإنجليزية — الصف الأول",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "o, orange, olive, carpet, blanket",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "Oo",
+       "say": "o",
+       "c": "#E8590C",
+       "lang": "en",
+       "must": 1,
+       "big": true
+      },
+      {
+       "t": "orange",
+       "em": "🍊",
+       "say": "orange",
+       "sub": "برتقالة",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "olive",
+       "em": "🫒",
+       "say": "olive",
+       "sub": "زيتونة",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "carpet",
+       "em": "🟫",
+       "say": "carpet",
+       "sub": "سجادة",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "blanket",
+       "em": "🛏️",
+       "say": "blanket",
+       "sub": "بطانية",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك كتاب التلميذ ص 29"
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٢ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "orange",
+       "o": [
+        "🍊",
+        "🟫",
+        "🛏️"
+       ],
+       "a": "🍊",
+       "lang": "en"
+      },
+      {
+       "say": "olive",
+       "o": [
+        "🫒",
+        "🛏️",
+        "🟫"
+       ],
+       "a": "🫒",
+       "lang": "en"
+      },
+      {
+       "say": "carpet",
+       "o": [
+        "🟫",
+        "🍊",
+        "🫒"
+       ],
+       "a": "🟫",
+       "lang": "en"
+      },
+      {
+       "say": "blanket",
+       "o": [
+        "🛏️",
+        "🍊",
+        "🟫"
+       ],
+       "a": "🛏️",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "تتبّع",
+   "eyebrow": "الخطوة ٣ — تتبّع",
+   "heading": "اكتب الحرف",
+   "blocks": [
+    {
+     "type": "trace",
+     "star": true,
+     "items": [
+      {
+       "t": "O",
+       "say": "O"
+      },
+      {
+       "t": "o",
+       "say": "o"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "فرقع",
+   "eyebrow": "الخطوة ٤ — فرقع",
+   "heading": "بالونات الحرف o",
+   "blocks": [
+    {
+     "type": "pop",
+     "star": true,
+     "target": "o",
+     "pool": [
+      "o",
+      "o",
+      "s",
+      "a",
+      "t",
+      "p",
+      "i",
+      "n",
+      "m"
+     ],
+     "need": 6,
+     "say": "o",
+     "q": "فرقع البالونات التي فيها الحرف",
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "orange",
+       "o": [
+        "🍊",
+        "🟫",
+        "🛏️"
+       ],
+       "a": "🍊",
+       "lang": "en"
+      },
+      {
+       "say": "olive",
+       "o": [
+        "🫒",
+        "🛏️",
+        "🟫"
+       ],
+       "a": "🫒",
+       "lang": "en"
+      },
+      {
+       "say": "carpet",
+       "o": [
+        "🟫",
+        "🍊",
+        "🛏️"
+       ],
+       "a": "🟫",
+       "lang": "en"
+      },
+      {
+       "say": "blanket",
+       "o": [
+        "🛏️",
+        "🍊",
+        "🫒"
+       ],
+       "a": "🛏️",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

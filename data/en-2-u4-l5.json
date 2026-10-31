@@ -1,0 +1,226 @@
+{
+ "id": "en-2-u4-l5",
+ "grade": 2,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "Numbers 1–10",
+ "titleAr": "الإنجليزية — الصف الثاني",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "Numbers 1–10",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "one",
+       "em": "1️⃣",
+       "say": "one",
+       "sub": "واحد",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "two",
+       "em": "2️⃣",
+       "say": "two",
+       "sub": "اثنان",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "three",
+       "em": "3️⃣",
+       "say": "three",
+       "sub": "ثلاثة",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "five",
+       "em": "5️⃣",
+       "say": "five",
+       "sub": "خمسة",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "eight",
+       "em": "8️⃣",
+       "say": "eight",
+       "sub": "ثمانية",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "ten",
+       "em": "🔟",
+       "say": "ten",
+       "sub": "عشرة",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك كتاب التلميذ ص 48⁠–⁠49"
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "Count to ten.",
+       "em": "🔟",
+       "say": "Count to ten.",
+       "sub": "عُدّ إلى عشرة.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "one",
+       "o": [
+        "1️⃣",
+        "🔟",
+        "8️⃣"
+       ],
+       "a": "1️⃣",
+       "lang": "en"
+      },
+      {
+       "say": "two",
+       "o": [
+        "2️⃣",
+        "3️⃣",
+        "8️⃣"
+       ],
+       "a": "2️⃣",
+       "lang": "en"
+      },
+      {
+       "say": "three",
+       "o": [
+        "3️⃣",
+        "🔟",
+        "1️⃣"
+       ],
+       "a": "3️⃣",
+       "lang": "en"
+      },
+      {
+       "say": "five",
+       "o": [
+        "5️⃣",
+        "2️⃣",
+        "1️⃣"
+       ],
+       "a": "5️⃣",
+       "lang": "en"
+      },
+      {
+       "say": "eight",
+       "o": [
+        "8️⃣",
+        "🔟",
+        "2️⃣"
+       ],
+       "a": "8️⃣",
+       "lang": "en"
+      },
+      {
+       "say": "ten",
+       "o": [
+        "🔟",
+        "8️⃣",
+        "5️⃣"
+       ],
+       "a": "🔟",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٤ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "one",
+       "o": [
+        "1️⃣",
+        "3️⃣",
+        "5️⃣"
+       ],
+       "a": "1️⃣",
+       "lang": "en"
+      },
+      {
+       "say": "two",
+       "o": [
+        "2️⃣",
+        "5️⃣",
+        "1️⃣"
+       ],
+       "a": "2️⃣",
+       "lang": "en"
+      },
+      {
+       "say": "three",
+       "o": [
+        "3️⃣",
+        "2️⃣",
+        "🔟"
+       ],
+       "a": "3️⃣",
+       "lang": "en"
+      },
+      {
+       "say": "five",
+       "o": [
+        "5️⃣",
+        "8️⃣",
+        "3️⃣"
+       ],
+       "a": "5️⃣",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

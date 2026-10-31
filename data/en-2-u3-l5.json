@@ -1,0 +1,248 @@
+{
+ "id": "en-2-u3-l5",
+ "grade": 2,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "My Week",
+ "titleAr": "الإنجليزية — الصف الثاني",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "My Week",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "school",
+       "em": "🏫",
+       "say": "school",
+       "sub": "مدرسة",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "mosque",
+       "em": "🕌",
+       "say": "mosque",
+       "sub": "مسجد",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "park",
+       "em": "🏞️",
+       "say": "park",
+       "sub": "منتزه",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "shop",
+       "em": "🏪",
+       "say": "shop",
+       "sub": "متجر",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك كتاب التلميذ ص 33⁠–⁠34"
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "On Sunday, I go to school.",
+       "em": "🏫",
+       "say": "On Sunday, I go to school.",
+       "sub": "يوم الأحد أذهب إلى المدرسة.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "On Friday, I go to the mosque.",
+       "em": "🕌",
+       "say": "On Friday, I go to the mosque.",
+       "sub": "يوم الجمعة أذهب إلى المسجد.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "school",
+       "o": [
+        "🏫",
+        "🕌",
+        "🏪"
+       ],
+       "a": "🏫",
+       "lang": "en"
+      },
+      {
+       "say": "mosque",
+       "o": [
+        "🕌",
+        "🏫",
+        "🏞️"
+       ],
+       "a": "🕌",
+       "lang": "en"
+      },
+      {
+       "say": "park",
+       "o": [
+        "🏞️",
+        "🕌",
+        "🏪"
+       ],
+       "a": "🏞️",
+       "lang": "en"
+      },
+      {
+       "say": "shop",
+       "o": [
+        "🏪",
+        "🏞️",
+        "🏫"
+       ],
+       "a": "🏪",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "On Sunday, I go to school.",
+       "o": [
+        "يوم الأحد أذهب إلى المدرسة.",
+        "يوم الجمعة أذهب إلى المسجد."
+       ],
+       "a": "يوم الأحد أذهب إلى المدرسة.",
+       "lang": "en"
+      },
+      {
+       "say": "On Friday, I go to the mosque.",
+       "o": [
+        "يوم الجمعة أذهب إلى المسجد.",
+        "يوم الأحد أذهب إلى المدرسة."
+       ],
+       "a": "يوم الجمعة أذهب إلى المسجد.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "school",
+       "o": [
+        "🏫",
+        "🕌",
+        "🏞️"
+       ],
+       "a": "🏫",
+       "lang": "en"
+      },
+      {
+       "say": "mosque",
+       "o": [
+        "🕌",
+        "🏪",
+        "🏞️"
+       ],
+       "a": "🕌",
+       "lang": "en"
+      },
+      {
+       "say": "park",
+       "o": [
+        "🏞️",
+        "🏪",
+        "🏫"
+       ],
+       "a": "🏞️",
+       "lang": "en"
+      },
+      {
+       "say": "shop",
+       "o": [
+        "🏪",
+        "🕌",
+        "🏫"
+       ],
+       "a": "🏪",
+       "lang": "en"
+      },
+      {
+       "say": "On Sunday, I go to school.",
+       "o": [
+        "يوم الأحد أذهب إلى المدرسة.",
+        "يوم الجمعة أذهب إلى المسجد."
+       ],
+       "a": "يوم الأحد أذهب إلى المدرسة.",
+       "lang": "en"
+      },
+      {
+       "say": "On Friday, I go to the mosque.",
+       "o": [
+        "يوم الجمعة أذهب إلى المسجد.",
+        "يوم الأحد أذهب إلى المدرسة."
+       ],
+       "a": "يوم الجمعة أذهب إلى المسجد.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

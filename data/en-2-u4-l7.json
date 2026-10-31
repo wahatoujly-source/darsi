@@ -1,0 +1,248 @@
+{
+ "id": "en-2-u4-l7",
+ "grade": 2,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "How many …?",
+ "titleAr": "الإنجليزية — الصف الثاني",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "How many …?",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "books",
+       "em": "📚",
+       "say": "books",
+       "sub": "كتب",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "pens",
+       "em": "🖊️",
+       "say": "pens",
+       "sub": "أقلام",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "chairs",
+       "em": "🪑",
+       "say": "chairs",
+       "sub": "كراسٍ",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "children",
+       "em": "🧒",
+       "say": "children",
+       "sub": "أطفال",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك كتاب التلميذ ص 52⁠–⁠53"
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "How many books?",
+       "em": "📚",
+       "say": "How many books?",
+       "sub": "كم كتاباً؟",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "Four books.",
+       "em": "4️⃣",
+       "say": "Four books.",
+       "sub": "أربعة كتب.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "books",
+       "o": [
+        "📚",
+        "🖊️",
+        "🧒"
+       ],
+       "a": "📚",
+       "lang": "en"
+      },
+      {
+       "say": "pens",
+       "o": [
+        "🖊️",
+        "🧒",
+        "📚"
+       ],
+       "a": "🖊️",
+       "lang": "en"
+      },
+      {
+       "say": "chairs",
+       "o": [
+        "🪑",
+        "🧒",
+        "📚"
+       ],
+       "a": "🪑",
+       "lang": "en"
+      },
+      {
+       "say": "children",
+       "o": [
+        "🧒",
+        "📚",
+        "🪑"
+       ],
+       "a": "🧒",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "How many books?",
+       "o": [
+        "كم كتاباً؟",
+        "أربعة كتب."
+       ],
+       "a": "كم كتاباً؟",
+       "lang": "en"
+      },
+      {
+       "say": "Four books.",
+       "o": [
+        "أربعة كتب.",
+        "كم كتاباً؟"
+       ],
+       "a": "أربعة كتب.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "books",
+       "o": [
+        "📚",
+        "🧒",
+        "🪑"
+       ],
+       "a": "📚",
+       "lang": "en"
+      },
+      {
+       "say": "pens",
+       "o": [
+        "🖊️",
+        "🪑",
+        "🧒"
+       ],
+       "a": "🖊️",
+       "lang": "en"
+      },
+      {
+       "say": "chairs",
+       "o": [
+        "🪑",
+        "🧒",
+        "🖊️"
+       ],
+       "a": "🪑",
+       "lang": "en"
+      },
+      {
+       "say": "children",
+       "o": [
+        "🧒",
+        "🖊️",
+        "🪑"
+       ],
+       "a": "🧒",
+       "lang": "en"
+      },
+      {
+       "say": "How many books?",
+       "o": [
+        "كم كتاباً؟",
+        "أربعة كتب."
+       ],
+       "a": "كم كتاباً؟",
+       "lang": "en"
+      },
+      {
+       "say": "Four books.",
+       "o": [
+        "أربعة كتب.",
+        "كم كتاباً؟"
+       ],
+       "a": "أربعة كتب.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,248 @@
+{
+ "id": "en-2-u6-l5",
+ "grade": 2,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "My house has …",
+ "titleAr": "الإنجليزية — الصف الثاني",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "My house has …",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "stairs",
+       "em": "🪜",
+       "say": "stairs",
+       "sub": "درج",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "roof",
+       "em": "🏠",
+       "say": "roof",
+       "sub": "سطح",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "garden",
+       "em": "🌳",
+       "say": "garden",
+       "sub": "حديقة",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "rooms",
+       "em": "🚪",
+       "say": "rooms",
+       "sub": "غرف",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك كتاب التلميذ ص 82⁠–⁠83"
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "My house has two floors.",
+       "em": "🏠",
+       "say": "My house has two floors.",
+       "sub": "بيتي له طابقان.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "My house has a garden.",
+       "em": "🌳",
+       "say": "My house has a garden.",
+       "sub": "بيتي فيه حديقة.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "stairs",
+       "o": [
+        "🪜",
+        "🌳",
+        "🚪"
+       ],
+       "a": "🪜",
+       "lang": "en"
+      },
+      {
+       "say": "roof",
+       "o": [
+        "🏠",
+        "🪜",
+        "🚪"
+       ],
+       "a": "🏠",
+       "lang": "en"
+      },
+      {
+       "say": "garden",
+       "o": [
+        "🌳",
+        "🚪",
+        "🪜"
+       ],
+       "a": "🌳",
+       "lang": "en"
+      },
+      {
+       "say": "rooms",
+       "o": [
+        "🚪",
+        "🌳",
+        "🏠"
+       ],
+       "a": "🚪",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "My house has two floors.",
+       "o": [
+        "بيتي له طابقان.",
+        "بيتي فيه حديقة."
+       ],
+       "a": "بيتي له طابقان.",
+       "lang": "en"
+      },
+      {
+       "say": "My house has a garden.",
+       "o": [
+        "بيتي فيه حديقة.",
+        "بيتي له طابقان."
+       ],
+       "a": "بيتي فيه حديقة.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "stairs",
+       "o": [
+        "🪜",
+        "🏠",
+        "🌳"
+       ],
+       "a": "🪜",
+       "lang": "en"
+      },
+      {
+       "say": "roof",
+       "o": [
+        "🏠",
+        "🪜",
+        "🌳"
+       ],
+       "a": "🏠",
+       "lang": "en"
+      },
+      {
+       "say": "garden",
+       "o": [
+        "🌳",
+        "🚪",
+        "🪜"
+       ],
+       "a": "🌳",
+       "lang": "en"
+      },
+      {
+       "say": "rooms",
+       "o": [
+        "🚪",
+        "🏠",
+        "🌳"
+       ],
+       "a": "🚪",
+       "lang": "en"
+      },
+      {
+       "say": "My house has two floors.",
+       "o": [
+        "بيتي له طابقان.",
+        "بيتي فيه حديقة."
+       ],
+       "a": "بيتي له طابقان.",
+       "lang": "en"
+      },
+      {
+       "say": "My house has a garden.",
+       "o": [
+        "بيتي فيه حديقة.",
+        "بيتي له طابقان."
+       ],
+       "a": "بيتي فيه حديقة.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

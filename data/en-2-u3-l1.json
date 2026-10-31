@@ -1,0 +1,248 @@
+{
+ "id": "en-2-u3-l1",
+ "grade": 2,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "Mum's Birthday",
+ "titleAr": "الإنجليزية — الصف الثاني",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "Mum's Birthday",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "birthday",
+       "em": "🎂",
+       "say": "birthday",
+       "sub": "عيد ميلاد",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "cake",
+       "em": "🍰",
+       "say": "cake",
+       "sub": "كعكة",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "present",
+       "em": "🎁",
+       "say": "present",
+       "sub": "هدية",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "card",
+       "em": "💌",
+       "say": "card",
+       "sub": "بطاقة",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك كتاب التلميذ ص 28⁠–⁠29"
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "Happy birthday, Mum!",
+       "em": "🎂",
+       "say": "Happy birthday, Mum!",
+       "sub": "عيد ميلاد سعيد يا أمي!",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "This is for you.",
+       "em": "🎁",
+       "say": "This is for you.",
+       "sub": "هذه لك.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "birthday",
+       "o": [
+        "🎂",
+        "🍰",
+        "💌"
+       ],
+       "a": "🎂",
+       "lang": "en"
+      },
+      {
+       "say": "cake",
+       "o": [
+        "🍰",
+        "🎂",
+        "💌"
+       ],
+       "a": "🍰",
+       "lang": "en"
+      },
+      {
+       "say": "present",
+       "o": [
+        "🎁",
+        "💌",
+        "🎂"
+       ],
+       "a": "🎁",
+       "lang": "en"
+      },
+      {
+       "say": "card",
+       "o": [
+        "💌",
+        "🎂",
+        "🎁"
+       ],
+       "a": "💌",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "Happy birthday, Mum!",
+       "o": [
+        "عيد ميلاد سعيد يا أمي!",
+        "هذه لك."
+       ],
+       "a": "عيد ميلاد سعيد يا أمي!",
+       "lang": "en"
+      },
+      {
+       "say": "This is for you.",
+       "o": [
+        "هذه لك.",
+        "عيد ميلاد سعيد يا أمي!"
+       ],
+       "a": "هذه لك.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "birthday",
+       "o": [
+        "🎂",
+        "💌",
+        "🍰"
+       ],
+       "a": "🎂",
+       "lang": "en"
+      },
+      {
+       "say": "cake",
+       "o": [
+        "🍰",
+        "🎁",
+        "🎂"
+       ],
+       "a": "🍰",
+       "lang": "en"
+      },
+      {
+       "say": "present",
+       "o": [
+        "🎁",
+        "🎂",
+        "💌"
+       ],
+       "a": "🎁",
+       "lang": "en"
+      },
+      {
+       "say": "card",
+       "o": [
+        "💌",
+        "🎂",
+        "🎁"
+       ],
+       "a": "💌",
+       "lang": "en"
+      },
+      {
+       "say": "Happy birthday, Mum!",
+       "o": [
+        "عيد ميلاد سعيد يا أمي!",
+        "هذه لك."
+       ],
+       "a": "عيد ميلاد سعيد يا أمي!",
+       "lang": "en"
+      },
+      {
+       "say": "This is for you.",
+       "o": [
+        "هذه لك.",
+        "عيد ميلاد سعيد يا أمي!"
+       ],
+       "a": "هذه لك.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

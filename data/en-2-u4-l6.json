@@ -1,0 +1,266 @@
+{
+ "id": "en-2-u4-l6",
+ "grade": 2,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "Hair, eyes, nose …",
+ "titleAr": "الإنجليزية — الصف الثاني",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "Hair, eyes, nose …",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "hair",
+       "em": "💇",
+       "say": "hair",
+       "sub": "شعر",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "eyes",
+       "em": "👀",
+       "say": "eyes",
+       "sub": "عيون",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "nose",
+       "em": "👃",
+       "say": "nose",
+       "sub": "أنف",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "mouth",
+       "em": "👄",
+       "say": "mouth",
+       "sub": "فم",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "ears",
+       "em": "👂",
+       "say": "ears",
+       "sub": "آذان",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك كتاب التلميذ ص 50⁠–⁠51"
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "She has long hair.",
+       "em": "💇",
+       "say": "She has long hair.",
+       "sub": "لديها شعر طويل.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "He has brown eyes.",
+       "em": "👀",
+       "say": "He has brown eyes.",
+       "sub": "لديه عينان بنيتان.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "hair",
+       "o": [
+        "💇",
+        "👃",
+        "👀"
+       ],
+       "a": "💇",
+       "lang": "en"
+      },
+      {
+       "say": "eyes",
+       "o": [
+        "👀",
+        "👂",
+        "👄"
+       ],
+       "a": "👀",
+       "lang": "en"
+      },
+      {
+       "say": "nose",
+       "o": [
+        "👃",
+        "👄",
+        "💇"
+       ],
+       "a": "👃",
+       "lang": "en"
+      },
+      {
+       "say": "mouth",
+       "o": [
+        "👄",
+        "👀",
+        "👃"
+       ],
+       "a": "👄",
+       "lang": "en"
+      },
+      {
+       "say": "ears",
+       "o": [
+        "👂",
+        "👃",
+        "👀"
+       ],
+       "a": "👂",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "She has long hair.",
+       "o": [
+        "لديها شعر طويل.",
+        "لديه عينان بنيتان."
+       ],
+       "a": "لديها شعر طويل.",
+       "lang": "en"
+      },
+      {
+       "say": "He has brown eyes.",
+       "o": [
+        "لديه عينان بنيتان.",
+        "لديها شعر طويل."
+       ],
+       "a": "لديه عينان بنيتان.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "hair",
+       "o": [
+        "💇",
+        "👂",
+        "👄"
+       ],
+       "a": "💇",
+       "lang": "en"
+      },
+      {
+       "say": "eyes",
+       "o": [
+        "👀",
+        "👃",
+        "👂"
+       ],
+       "a": "👀",
+       "lang": "en"
+      },
+      {
+       "say": "nose",
+       "o": [
+        "👃",
+        "👄",
+        "👂"
+       ],
+       "a": "👃",
+       "lang": "en"
+      },
+      {
+       "say": "mouth",
+       "o": [
+        "👄",
+        "👀",
+        "👃"
+       ],
+       "a": "👄",
+       "lang": "en"
+      },
+      {
+       "say": "She has long hair.",
+       "o": [
+        "لديها شعر طويل.",
+        "لديه عينان بنيتان."
+       ],
+       "a": "لديها شعر طويل.",
+       "lang": "en"
+      },
+      {
+       "say": "He has brown eyes.",
+       "o": [
+        "لديه عينان بنيتان.",
+        "لديها شعر طويل."
+       ],
+       "a": "لديه عينان بنيتان.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

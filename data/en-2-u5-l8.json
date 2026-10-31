@@ -1,0 +1,248 @@
+{
+ "id": "en-2-u5-l8",
+ "grade": 2,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "Story: Rami's Busy Day",
+ "titleAr": "الإنجليزية — الصف الثاني",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "Story: Rami's Busy Day",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "busy",
+       "em": "🏃",
+       "say": "busy",
+       "sub": "مشغول",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "morning",
+       "em": "🌅",
+       "say": "morning",
+       "sub": "صباح",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "evening",
+       "em": "🌆",
+       "say": "evening",
+       "sub": "مساء",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "tired",
+       "em": "😴",
+       "say": "tired",
+       "sub": "متعب",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك كتاب التلميذ ص 72⁠–⁠73"
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "Rami gets up early.",
+       "em": "⏰",
+       "say": "Rami gets up early.",
+       "sub": "رامي يستيقظ مبكراً.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "In the evening, Rami is tired.",
+       "em": "😴",
+       "say": "In the evening, Rami is tired.",
+       "sub": "في المساء رامي متعب.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "busy",
+       "o": [
+        "🏃",
+        "🌅",
+        "😴"
+       ],
+       "a": "🏃",
+       "lang": "en"
+      },
+      {
+       "say": "morning",
+       "o": [
+        "🌅",
+        "🌆",
+        "🏃"
+       ],
+       "a": "🌅",
+       "lang": "en"
+      },
+      {
+       "say": "evening",
+       "o": [
+        "🌆",
+        "🏃",
+        "🌅"
+       ],
+       "a": "🌆",
+       "lang": "en"
+      },
+      {
+       "say": "tired",
+       "o": [
+        "😴",
+        "🏃",
+        "🌆"
+       ],
+       "a": "😴",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "Rami gets up early.",
+       "o": [
+        "رامي يستيقظ مبكراً.",
+        "في المساء رامي متعب."
+       ],
+       "a": "رامي يستيقظ مبكراً.",
+       "lang": "en"
+      },
+      {
+       "say": "In the evening, Rami is tired.",
+       "o": [
+        "في المساء رامي متعب.",
+        "رامي يستيقظ مبكراً."
+       ],
+       "a": "في المساء رامي متعب.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "busy",
+       "o": [
+        "🏃",
+        "🌅",
+        "😴"
+       ],
+       "a": "🏃",
+       "lang": "en"
+      },
+      {
+       "say": "morning",
+       "o": [
+        "🌅",
+        "🌆",
+        "😴"
+       ],
+       "a": "🌅",
+       "lang": "en"
+      },
+      {
+       "say": "evening",
+       "o": [
+        "🌆",
+        "😴",
+        "🏃"
+       ],
+       "a": "🌆",
+       "lang": "en"
+      },
+      {
+       "say": "tired",
+       "o": [
+        "😴",
+        "🌆",
+        "🌅"
+       ],
+       "a": "😴",
+       "lang": "en"
+      },
+      {
+       "say": "Rami gets up early.",
+       "o": [
+        "رامي يستيقظ مبكراً.",
+        "في المساء رامي متعب."
+       ],
+       "a": "رامي يستيقظ مبكراً.",
+       "lang": "en"
+      },
+      {
+       "say": "In the evening, Rami is tired.",
+       "o": [
+        "في المساء رامي متعب.",
+        "رامي يستيقظ مبكراً."
+       ],
+       "a": "في المساء رامي متعب.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

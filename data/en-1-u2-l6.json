@@ -1,0 +1,277 @@
+{
+ "id": "en-1-u2-l6",
+ "grade": 1,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "d, dog, duck — My nose. My eyes.",
+ "titleAr": "الإنجليزية — الصف الأول",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "d, dog, duck — My nose. My eyes.",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "Dd",
+       "say": "d",
+       "c": "#E8590C",
+       "lang": "en",
+       "must": 1,
+       "big": true
+      },
+      {
+       "t": "dog",
+       "em": "🐕",
+       "say": "dog",
+       "sub": "كلب",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "duck",
+       "em": "🦆",
+       "say": "duck",
+       "sub": "بطة",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "nose",
+       "em": "👃",
+       "say": "nose",
+       "sub": "أنف",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك كتاب التلميذ ص 23"
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "This is my nose.",
+       "em": "👃",
+       "say": "This is my nose.",
+       "sub": "هذا أنفي.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "These are my eyes.",
+       "em": "👀",
+       "say": "These are my eyes.",
+       "sub": "هاتان عيناي.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "dog",
+       "o": [
+        "🐕",
+        "🦆",
+        "👃"
+       ],
+       "a": "🐕",
+       "lang": "en"
+      },
+      {
+       "say": "duck",
+       "o": [
+        "🦆",
+        "👃",
+        "🐕"
+       ],
+       "a": "🦆",
+       "lang": "en"
+      },
+      {
+       "say": "nose",
+       "o": [
+        "👃",
+        "🐕",
+        "🦆"
+       ],
+       "a": "👃",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "This is my nose.",
+       "o": [
+        "هذا أنفي.",
+        "هاتان عيناي."
+       ],
+       "a": "هذا أنفي.",
+       "lang": "en"
+      },
+      {
+       "say": "These are my eyes.",
+       "o": [
+        "هاتان عيناي.",
+        "هذا أنفي."
+       ],
+       "a": "هاتان عيناي.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "تتبّع",
+   "eyebrow": "الخطوة ٥ — تتبّع",
+   "heading": "اكتب الحرف",
+   "blocks": [
+    {
+     "type": "trace",
+     "star": true,
+     "items": [
+      {
+       "t": "D",
+       "say": "D"
+      },
+      {
+       "t": "d",
+       "say": "d"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "فرقع",
+   "eyebrow": "الخطوة ٦ — فرقع",
+   "heading": "بالونات الحرف d",
+   "blocks": [
+    {
+     "type": "pop",
+     "star": true,
+     "target": "d",
+     "pool": [
+      "d",
+      "d",
+      "s",
+      "a",
+      "t",
+      "p",
+      "i",
+      "n",
+      "m"
+     ],
+     "need": 6,
+     "say": "d",
+     "q": "فرقع البالونات التي فيها الحرف",
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٧ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "dog",
+       "o": [
+        "🐕",
+        "🦆",
+        "👃"
+       ],
+       "a": "🐕",
+       "lang": "en"
+      },
+      {
+       "say": "duck",
+       "o": [
+        "🦆",
+        "👃",
+        "🐕"
+       ],
+       "a": "🦆",
+       "lang": "en"
+      },
+      {
+       "say": "nose",
+       "o": [
+        "👃",
+        "🦆",
+        "🐕"
+       ],
+       "a": "👃",
+       "lang": "en"
+      },
+      {
+       "say": "This is my nose.",
+       "o": [
+        "هذا أنفي.",
+        "هاتان عيناي."
+       ],
+       "a": "هذا أنفي.",
+       "lang": "en"
+      },
+      {
+       "say": "These are my eyes.",
+       "o": [
+        "هاتان عيناي.",
+        "هذا أنفي."
+       ],
+       "a": "هاتان عيناي.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

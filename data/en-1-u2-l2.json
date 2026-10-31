@@ -1,0 +1,245 @@
+{
+ "id": "en-1-u2-l2",
+ "grade": 1,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "e, egg, elbow — What is it? It's a …",
+ "titleAr": "الإنجليزية — الصف الأول",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "e, egg, elbow — What is it? It's a …",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "Ee",
+       "say": "e",
+       "c": "#E8590C",
+       "lang": "en",
+       "must": 1,
+       "big": true
+      },
+      {
+       "t": "egg",
+       "em": "🥚",
+       "say": "egg",
+       "sub": "بيضة",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "elbow",
+       "em": "💪",
+       "say": "elbow",
+       "sub": "مرفق",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك كتاب التلميذ ص 19"
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "What is it?",
+       "em": "❓",
+       "say": "What is it?",
+       "sub": "ما هذا؟",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "It's an egg.",
+       "em": "🥚",
+       "say": "It's an egg.",
+       "sub": "إنها بيضة.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "egg",
+       "o": [
+        "🥚",
+        "💪"
+       ],
+       "a": "🥚",
+       "lang": "en"
+      },
+      {
+       "say": "elbow",
+       "o": [
+        "💪",
+        "🥚"
+       ],
+       "a": "💪",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "What is it?",
+       "o": [
+        "ما هذا؟",
+        "إنها بيضة."
+       ],
+       "a": "ما هذا؟",
+       "lang": "en"
+      },
+      {
+       "say": "It's an egg.",
+       "o": [
+        "إنها بيضة.",
+        "ما هذا؟"
+       ],
+       "a": "إنها بيضة.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "تتبّع",
+   "eyebrow": "الخطوة ٥ — تتبّع",
+   "heading": "اكتب الحرف",
+   "blocks": [
+    {
+     "type": "trace",
+     "star": true,
+     "items": [
+      {
+       "t": "E",
+       "say": "E"
+      },
+      {
+       "t": "e",
+       "say": "e"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "فرقع",
+   "eyebrow": "الخطوة ٦ — فرقع",
+   "heading": "بالونات الحرف e",
+   "blocks": [
+    {
+     "type": "pop",
+     "star": true,
+     "target": "e",
+     "pool": [
+      "e",
+      "e",
+      "s",
+      "a",
+      "t",
+      "p",
+      "i",
+      "n",
+      "m"
+     ],
+     "need": 6,
+     "say": "e",
+     "q": "فرقع البالونات التي فيها الحرف",
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٧ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "egg",
+       "o": [
+        "🥚",
+        "💪"
+       ],
+       "a": "🥚",
+       "lang": "en"
+      },
+      {
+       "say": "elbow",
+       "o": [
+        "💪",
+        "🥚"
+       ],
+       "a": "💪",
+       "lang": "en"
+      },
+      {
+       "say": "What is it?",
+       "o": [
+        "ما هذا؟",
+        "إنها بيضة."
+       ],
+       "a": "ما هذا؟",
+       "lang": "en"
+      },
+      {
+       "say": "It's an egg.",
+       "o": [
+        "إنها بيضة.",
+        "ما هذا؟"
+       ],
+       "a": "إنها بيضة.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

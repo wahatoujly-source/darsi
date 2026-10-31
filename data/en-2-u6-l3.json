@@ -1,0 +1,288 @@
+{
+ "id": "en-2-u6-l3",
+ "grade": 2,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "Do we have any rice?",
+ "titleAr": "الإنجليزية — الصف الثاني",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "Do we have any rice?",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "rice",
+       "em": "🍚",
+       "say": "rice",
+       "sub": "أرز",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "bread",
+       "em": "🍞",
+       "say": "bread",
+       "sub": "خبز",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "milk",
+       "em": "🥛",
+       "say": "milk",
+       "sub": "حليب",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "eggs",
+       "em": "🥚",
+       "say": "eggs",
+       "sub": "بيض",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "apples",
+       "em": "🍎",
+       "say": "apples",
+       "sub": "تفاح",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك كتاب التلميذ ص 78⁠–⁠79"
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "Do we have any rice?",
+       "em": "🍚",
+       "say": "Do we have any rice?",
+       "sub": "هل لدينا أرز؟",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "Yes, we do.",
+       "em": "✅",
+       "say": "Yes, we do.",
+       "sub": "نعم لدينا.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "No, we don't.",
+       "em": "❌",
+       "say": "No, we don't.",
+       "sub": "لا، ليس لدينا.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "rice",
+       "o": [
+        "🍚",
+        "🥛",
+        "🍞"
+       ],
+       "a": "🍚",
+       "lang": "en"
+      },
+      {
+       "say": "bread",
+       "o": [
+        "🍞",
+        "🍎",
+        "🥛"
+       ],
+       "a": "🍞",
+       "lang": "en"
+      },
+      {
+       "say": "milk",
+       "o": [
+        "🥛",
+        "🥚",
+        "🍞"
+       ],
+       "a": "🥛",
+       "lang": "en"
+      },
+      {
+       "say": "eggs",
+       "o": [
+        "🥚",
+        "🥛",
+        "🍚"
+       ],
+       "a": "🥚",
+       "lang": "en"
+      },
+      {
+       "say": "apples",
+       "o": [
+        "🍎",
+        "🍚",
+        "🍞"
+       ],
+       "a": "🍎",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "Do we have any rice?",
+       "o": [
+        "هل لدينا أرز؟",
+        "نعم لدينا.",
+        "لا، ليس لدينا."
+       ],
+       "a": "هل لدينا أرز؟",
+       "lang": "en"
+      },
+      {
+       "say": "Yes, we do.",
+       "o": [
+        "نعم لدينا.",
+        "هل لدينا أرز؟",
+        "لا، ليس لدينا."
+       ],
+       "a": "نعم لدينا.",
+       "lang": "en"
+      },
+      {
+       "say": "No, we don't.",
+       "o": [
+        "لا، ليس لدينا.",
+        "هل لدينا أرز؟",
+        "نعم لدينا."
+       ],
+       "a": "لا، ليس لدينا.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "rice",
+       "o": [
+        "🍚",
+        "🥛",
+        "🍞"
+       ],
+       "a": "🍚",
+       "lang": "en"
+      },
+      {
+       "say": "bread",
+       "o": [
+        "🍞",
+        "🥚",
+        "🍚"
+       ],
+       "a": "🍞",
+       "lang": "en"
+      },
+      {
+       "say": "milk",
+       "o": [
+        "🥛",
+        "🍎",
+        "🥚"
+       ],
+       "a": "🥛",
+       "lang": "en"
+      },
+      {
+       "say": "eggs",
+       "o": [
+        "🥚",
+        "🥛",
+        "🍚"
+       ],
+       "a": "🥚",
+       "lang": "en"
+      },
+      {
+       "say": "Do we have any rice?",
+       "o": [
+        "هل لدينا أرز؟",
+        "نعم لدينا.",
+        "لا، ليس لدينا."
+       ],
+       "a": "هل لدينا أرز؟",
+       "lang": "en"
+      },
+      {
+       "say": "Yes, we do.",
+       "o": [
+        "نعم لدينا.",
+        "هل لدينا أرز؟",
+        "لا، ليس لدينا."
+       ],
+       "a": "نعم لدينا.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

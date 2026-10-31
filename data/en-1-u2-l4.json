@@ -1,0 +1,224 @@
+{
+ "id": "en-1-u2-l4",
+ "grade": 1,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "r, red, rabbit — body words",
+ "titleAr": "الإنجليزية — الصف الأول",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "r, red, rabbit — body words",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "Rr",
+       "say": "r",
+       "c": "#E8590C",
+       "lang": "en",
+       "must": 1,
+       "big": true
+      },
+      {
+       "t": "red",
+       "em": "🔴",
+       "say": "red",
+       "sub": "أحمر",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "rabbit",
+       "em": "🐇",
+       "say": "rabbit",
+       "sub": "أرنب",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "arm",
+       "em": "💪",
+       "say": "arm",
+       "sub": "ذراع",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "leg",
+       "em": "🦵",
+       "say": "leg",
+       "sub": "ساق",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك كتاب التلميذ ص 21"
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٢ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "red",
+       "o": [
+        "🔴",
+        "💪",
+        "🐇"
+       ],
+       "a": "🔴",
+       "lang": "en"
+      },
+      {
+       "say": "rabbit",
+       "o": [
+        "🐇",
+        "🦵",
+        "🔴"
+       ],
+       "a": "🐇",
+       "lang": "en"
+      },
+      {
+       "say": "arm",
+       "o": [
+        "💪",
+        "🐇",
+        "🦵"
+       ],
+       "a": "💪",
+       "lang": "en"
+      },
+      {
+       "say": "leg",
+       "o": [
+        "🦵",
+        "🔴",
+        "🐇"
+       ],
+       "a": "🦵",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "تتبّع",
+   "eyebrow": "الخطوة ٣ — تتبّع",
+   "heading": "اكتب الحرف",
+   "blocks": [
+    {
+     "type": "trace",
+     "star": true,
+     "items": [
+      {
+       "t": "R",
+       "say": "R"
+      },
+      {
+       "t": "r",
+       "say": "r"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "فرقع",
+   "eyebrow": "الخطوة ٤ — فرقع",
+   "heading": "بالونات الحرف r",
+   "blocks": [
+    {
+     "type": "pop",
+     "star": true,
+     "target": "r",
+     "pool": [
+      "r",
+      "r",
+      "s",
+      "a",
+      "t",
+      "p",
+      "i",
+      "n",
+      "m"
+     ],
+     "need": 6,
+     "say": "r",
+     "q": "فرقع البالونات التي فيها الحرف",
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "red",
+       "o": [
+        "🔴",
+        "💪",
+        "🐇"
+       ],
+       "a": "🔴",
+       "lang": "en"
+      },
+      {
+       "say": "rabbit",
+       "o": [
+        "🐇",
+        "🔴",
+        "💪"
+       ],
+       "a": "🐇",
+       "lang": "en"
+      },
+      {
+       "say": "arm",
+       "o": [
+        "💪",
+        "🔴",
+        "🐇"
+       ],
+       "a": "💪",
+       "lang": "en"
+      },
+      {
+       "say": "leg",
+       "o": [
+        "🦵",
+        "🐇",
+        "🔴"
+       ],
+       "a": "🦵",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,190 @@
+{
+ "id": "en-2-u5-l1",
+ "grade": 2,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "My bedroom things",
+ "titleAr": "الإنجليزية — الصف الثاني",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "My bedroom things",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "pillow",
+       "em": "🛏️",
+       "say": "pillow",
+       "sub": "وسادة",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "blanket",
+       "em": "🧣",
+       "say": "blanket",
+       "sub": "بطانية",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "clock",
+       "em": "⏰",
+       "say": "clock",
+       "sub": "ساعة",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "toy box",
+       "em": "🧸",
+       "say": "toy box",
+       "sub": "صندوق ألعاب",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك كتاب التلميذ ص 58⁠–⁠59"
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "This is my pillow.",
+       "em": "🛏️",
+       "say": "This is my pillow.",
+       "sub": "هذه وسادتي.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "pillow",
+       "o": [
+        "🛏️",
+        "🧣",
+        "🧸"
+       ],
+       "a": "🛏️",
+       "lang": "en"
+      },
+      {
+       "say": "blanket",
+       "o": [
+        "🧣",
+        "⏰",
+        "🛏️"
+       ],
+       "a": "🧣",
+       "lang": "en"
+      },
+      {
+       "say": "clock",
+       "o": [
+        "⏰",
+        "🛏️",
+        "🧸"
+       ],
+       "a": "⏰",
+       "lang": "en"
+      },
+      {
+       "say": "toy box",
+       "o": [
+        "🧸",
+        "🛏️",
+        "⏰"
+       ],
+       "a": "🧸",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٤ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "pillow",
+       "o": [
+        "🛏️",
+        "⏰",
+        "🧸"
+       ],
+       "a": "🛏️",
+       "lang": "en"
+      },
+      {
+       "say": "blanket",
+       "o": [
+        "🧣",
+        "🧸",
+        "🛏️"
+       ],
+       "a": "🧣",
+       "lang": "en"
+      },
+      {
+       "say": "clock",
+       "o": [
+        "⏰",
+        "🛏️",
+        "🧣"
+       ],
+       "a": "⏰",
+       "lang": "en"
+      },
+      {
+       "say": "toy box",
+       "o": [
+        "🧸",
+        "🛏️",
+        "🧣"
+       ],
+       "a": "🧸",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

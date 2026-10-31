@@ -1,0 +1,248 @@
+{
+ "id": "en-2-u5-l7",
+ "grade": 2,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "I go to school by …",
+ "titleAr": "الإنجليزية — الصف الثاني",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "I go to school by …",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "bus",
+       "em": "🚌",
+       "say": "bus",
+       "sub": "حافلة",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "car",
+       "em": "🚗",
+       "say": "car",
+       "sub": "سيارة",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "bike",
+       "em": "🚲",
+       "say": "bike",
+       "sub": "دراجة",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "on foot",
+       "em": "🚶",
+       "say": "on foot",
+       "sub": "مشياً",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك كتاب التلميذ ص 70⁠–⁠71"
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "I go to school by bus.",
+       "em": "🚌",
+       "say": "I go to school by bus.",
+       "sub": "أذهب إلى المدرسة بالحافلة.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "I walk to school.",
+       "em": "🚶",
+       "say": "I walk to school.",
+       "sub": "أمشي إلى المدرسة.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "bus",
+       "o": [
+        "🚌",
+        "🚗",
+        "🚲"
+       ],
+       "a": "🚌",
+       "lang": "en"
+      },
+      {
+       "say": "car",
+       "o": [
+        "🚗",
+        "🚶",
+        "🚲"
+       ],
+       "a": "🚗",
+       "lang": "en"
+      },
+      {
+       "say": "bike",
+       "o": [
+        "🚲",
+        "🚶",
+        "🚌"
+       ],
+       "a": "🚲",
+       "lang": "en"
+      },
+      {
+       "say": "on foot",
+       "o": [
+        "🚶",
+        "🚗",
+        "🚲"
+       ],
+       "a": "🚶",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "I go to school by bus.",
+       "o": [
+        "أذهب إلى المدرسة بالحافلة.",
+        "أمشي إلى المدرسة."
+       ],
+       "a": "أذهب إلى المدرسة بالحافلة.",
+       "lang": "en"
+      },
+      {
+       "say": "I walk to school.",
+       "o": [
+        "أمشي إلى المدرسة.",
+        "أذهب إلى المدرسة بالحافلة."
+       ],
+       "a": "أمشي إلى المدرسة.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "bus",
+       "o": [
+        "🚌",
+        "🚲",
+        "🚶"
+       ],
+       "a": "🚌",
+       "lang": "en"
+      },
+      {
+       "say": "car",
+       "o": [
+        "🚗",
+        "🚌",
+        "🚲"
+       ],
+       "a": "🚗",
+       "lang": "en"
+      },
+      {
+       "say": "bike",
+       "o": [
+        "🚲",
+        "🚗",
+        "🚌"
+       ],
+       "a": "🚲",
+       "lang": "en"
+      },
+      {
+       "say": "on foot",
+       "o": [
+        "🚶",
+        "🚗",
+        "🚲"
+       ],
+       "a": "🚶",
+       "lang": "en"
+      },
+      {
+       "say": "I go to school by bus.",
+       "o": [
+        "أذهب إلى المدرسة بالحافلة.",
+        "أمشي إلى المدرسة."
+       ],
+       "a": "أذهب إلى المدرسة بالحافلة.",
+       "lang": "en"
+      },
+      {
+       "say": "I walk to school.",
+       "o": [
+        "أمشي إلى المدرسة.",
+        "أذهب إلى المدرسة بالحافلة."
+       ],
+       "a": "أمشي إلى المدرسة.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

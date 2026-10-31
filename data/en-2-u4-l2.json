@@ -1,0 +1,208 @@
+{
+ "id": "en-2-u4-l2",
+ "grade": 2,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "Classroom things",
+ "titleAr": "الإنجليزية — الصف الثاني",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "Classroom things",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "board",
+       "em": "🧑‍🏫",
+       "say": "board",
+       "sub": "سبورة",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "pencil",
+       "em": "✏️",
+       "say": "pencil",
+       "sub": "قلم رصاص",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "rubber",
+       "em": "🧽",
+       "say": "rubber",
+       "sub": "ممحاة",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "ruler",
+       "em": "📏",
+       "say": "ruler",
+       "sub": "مسطرة",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "bag",
+       "em": "🎒",
+       "say": "bag",
+       "sub": "حقيبة",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك كتاب التلميذ ص 42⁠–⁠43"
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "This is my ruler.",
+       "em": "📏",
+       "say": "This is my ruler.",
+       "sub": "هذه مسطرتي.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "board",
+       "o": [
+        "🧑‍🏫",
+        "🧽",
+        "🎒"
+       ],
+       "a": "🧑‍🏫",
+       "lang": "en"
+      },
+      {
+       "say": "pencil",
+       "o": [
+        "✏️",
+        "📏",
+        "🧽"
+       ],
+       "a": "✏️",
+       "lang": "en"
+      },
+      {
+       "say": "rubber",
+       "o": [
+        "🧽",
+        "✏️",
+        "🧑‍🏫"
+       ],
+       "a": "🧽",
+       "lang": "en"
+      },
+      {
+       "say": "ruler",
+       "o": [
+        "📏",
+        "🧽",
+        "🧑‍🏫"
+       ],
+       "a": "📏",
+       "lang": "en"
+      },
+      {
+       "say": "bag",
+       "o": [
+        "🎒",
+        "🧽",
+        "📏"
+       ],
+       "a": "🎒",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٤ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "board",
+       "o": [
+        "🧑‍🏫",
+        "📏",
+        "🎒"
+       ],
+       "a": "🧑‍🏫",
+       "lang": "en"
+      },
+      {
+       "say": "pencil",
+       "o": [
+        "✏️",
+        "🧽",
+        "📏"
+       ],
+       "a": "✏️",
+       "lang": "en"
+      },
+      {
+       "say": "rubber",
+       "o": [
+        "🧽",
+        "📏",
+        "🧑‍🏫"
+       ],
+       "a": "🧽",
+       "lang": "en"
+      },
+      {
+       "say": "ruler",
+       "o": [
+        "📏",
+        "🧑‍🏫",
+        "🎒"
+       ],
+       "a": "📏",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

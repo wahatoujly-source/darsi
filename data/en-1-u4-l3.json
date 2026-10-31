@@ -1,0 +1,245 @@
+{
+ "id": "en-1-u4-l3",
+ "grade": 1,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "w, window, watch — stand up, sit down",
+ "titleAr": "الإنجليزية — الصف الأول",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "w, window, watch — stand up, sit down",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "Ww",
+       "say": "w",
+       "c": "#E8590C",
+       "lang": "en",
+       "must": 1,
+       "big": true
+      },
+      {
+       "t": "window",
+       "em": "🪟",
+       "say": "window",
+       "sub": "نافذة",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "watch",
+       "em": "⌚",
+       "say": "watch",
+       "sub": "ساعة يد",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك كتاب التلميذ ص 40"
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "Stand up.",
+       "em": "🧍",
+       "say": "Stand up.",
+       "sub": "قف.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "Sit down.",
+       "em": "🪑",
+       "say": "Sit down.",
+       "sub": "اجلس.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "window",
+       "o": [
+        "🪟",
+        "⌚"
+       ],
+       "a": "🪟",
+       "lang": "en"
+      },
+      {
+       "say": "watch",
+       "o": [
+        "⌚",
+        "🪟"
+       ],
+       "a": "⌚",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "Stand up.",
+       "o": [
+        "قف.",
+        "اجلس."
+       ],
+       "a": "قف.",
+       "lang": "en"
+      },
+      {
+       "say": "Sit down.",
+       "o": [
+        "اجلس.",
+        "قف."
+       ],
+       "a": "اجلس.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "تتبّع",
+   "eyebrow": "الخطوة ٥ — تتبّع",
+   "heading": "اكتب الحرف",
+   "blocks": [
+    {
+     "type": "trace",
+     "star": true,
+     "items": [
+      {
+       "t": "W",
+       "say": "W"
+      },
+      {
+       "t": "w",
+       "say": "w"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "فرقع",
+   "eyebrow": "الخطوة ٦ — فرقع",
+   "heading": "بالونات الحرف w",
+   "blocks": [
+    {
+     "type": "pop",
+     "star": true,
+     "target": "w",
+     "pool": [
+      "w",
+      "w",
+      "s",
+      "a",
+      "t",
+      "p",
+      "i",
+      "n",
+      "m"
+     ],
+     "need": 6,
+     "say": "w",
+     "q": "فرقع البالونات التي فيها الحرف",
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٧ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "window",
+       "o": [
+        "🪟",
+        "⌚"
+       ],
+       "a": "🪟",
+       "lang": "en"
+      },
+      {
+       "say": "watch",
+       "o": [
+        "⌚",
+        "🪟"
+       ],
+       "a": "⌚",
+       "lang": "en"
+      },
+      {
+       "say": "Stand up.",
+       "o": [
+        "قف.",
+        "اجلس."
+       ],
+       "a": "قف.",
+       "lang": "en"
+      },
+      {
+       "say": "Sit down.",
+       "o": [
+        "اجلس.",
+        "قف."
+       ],
+       "a": "اجلس.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

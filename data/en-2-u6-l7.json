@@ -1,0 +1,266 @@
+{
+ "id": "en-2-u6-l7",
+ "grade": 2,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "This is my town",
+ "titleAr": "الإنجليزية — الصف الثاني",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "This is my town",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "town",
+       "em": "🏙️",
+       "say": "town",
+       "sub": "مدينة",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "hospital",
+       "em": "🏥",
+       "say": "hospital",
+       "sub": "مستشفى",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "mosque",
+       "em": "🕌",
+       "say": "mosque",
+       "sub": "مسجد",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "market",
+       "em": "🛒",
+       "say": "market",
+       "sub": "سوق",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "park",
+       "em": "🏞️",
+       "say": "park",
+       "sub": "منتزه",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك كتاب التلميذ ص 86⁠–⁠87"
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "This is my town.",
+       "em": "🏙️",
+       "say": "This is my town.",
+       "sub": "هذه مدينتي.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "There's a big park.",
+       "em": "🏞️",
+       "say": "There's a big park.",
+       "sub": "يوجد منتزه كبير.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "town",
+       "o": [
+        "🏙️",
+        "🕌",
+        "🏥"
+       ],
+       "a": "🏙️",
+       "lang": "en"
+      },
+      {
+       "say": "hospital",
+       "o": [
+        "🏥",
+        "🕌",
+        "🏙️"
+       ],
+       "a": "🏥",
+       "lang": "en"
+      },
+      {
+       "say": "mosque",
+       "o": [
+        "🕌",
+        "🏥",
+        "🛒"
+       ],
+       "a": "🕌",
+       "lang": "en"
+      },
+      {
+       "say": "market",
+       "o": [
+        "🛒",
+        "🏥",
+        "🏙️"
+       ],
+       "a": "🛒",
+       "lang": "en"
+      },
+      {
+       "say": "park",
+       "o": [
+        "🏞️",
+        "🛒",
+        "🏙️"
+       ],
+       "a": "🏞️",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "This is my town.",
+       "o": [
+        "هذه مدينتي.",
+        "يوجد منتزه كبير."
+       ],
+       "a": "هذه مدينتي.",
+       "lang": "en"
+      },
+      {
+       "say": "There's a big park.",
+       "o": [
+        "يوجد منتزه كبير.",
+        "هذه مدينتي."
+       ],
+       "a": "يوجد منتزه كبير.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "town",
+       "o": [
+        "🏙️",
+        "🏞️",
+        "🛒"
+       ],
+       "a": "🏙️",
+       "lang": "en"
+      },
+      {
+       "say": "hospital",
+       "o": [
+        "🏥",
+        "🏙️",
+        "🛒"
+       ],
+       "a": "🏥",
+       "lang": "en"
+      },
+      {
+       "say": "mosque",
+       "o": [
+        "🕌",
+        "🏥",
+        "🛒"
+       ],
+       "a": "🕌",
+       "lang": "en"
+      },
+      {
+       "say": "market",
+       "o": [
+        "🛒",
+        "🏥",
+        "🕌"
+       ],
+       "a": "🛒",
+       "lang": "en"
+      },
+      {
+       "say": "This is my town.",
+       "o": [
+        "هذه مدينتي.",
+        "يوجد منتزه كبير."
+       ],
+       "a": "هذه مدينتي.",
+       "lang": "en"
+      },
+      {
+       "say": "There's a big park.",
+       "o": [
+        "يوجد منتزه كبير.",
+        "هذه مدينتي."
+       ],
+       "a": "يوجد منتزه كبير.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

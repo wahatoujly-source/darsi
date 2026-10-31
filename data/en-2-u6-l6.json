@@ -1,0 +1,270 @@
+{
+ "id": "en-2-u6-l6",
+ "grade": 2,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "Look left. Look right.",
+ "titleAr": "الإنجليزية — الصف الثاني",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "Look left. Look right.",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "left",
+       "em": "⬅️",
+       "say": "left",
+       "sub": "يسار",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "right",
+       "em": "➡️",
+       "say": "right",
+       "sub": "يمين",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "road",
+       "em": "🛣️",
+       "say": "road",
+       "sub": "طريق",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "car",
+       "em": "🚗",
+       "say": "car",
+       "sub": "سيارة",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك كتاب التلميذ ص 84⁠–⁠85"
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "Look left.",
+       "em": "⬅️",
+       "say": "Look left.",
+       "sub": "انظر يساراً.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "Look right.",
+       "em": "➡️",
+       "say": "Look right.",
+       "sub": "انظر يميناً.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "Cross the road.",
+       "em": "🚸",
+       "say": "Cross the road.",
+       "sub": "اعبر الطريق.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "left",
+       "o": [
+        "⬅️",
+        "🚗",
+        "🛣️"
+       ],
+       "a": "⬅️",
+       "lang": "en"
+      },
+      {
+       "say": "right",
+       "o": [
+        "➡️",
+        "🚗",
+        "🛣️"
+       ],
+       "a": "➡️",
+       "lang": "en"
+      },
+      {
+       "say": "road",
+       "o": [
+        "🛣️",
+        "➡️",
+        "⬅️"
+       ],
+       "a": "🛣️",
+       "lang": "en"
+      },
+      {
+       "say": "car",
+       "o": [
+        "🚗",
+        "➡️",
+        "⬅️"
+       ],
+       "a": "🚗",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "Look left.",
+       "o": [
+        "انظر يساراً.",
+        "انظر يميناً.",
+        "اعبر الطريق."
+       ],
+       "a": "انظر يساراً.",
+       "lang": "en"
+      },
+      {
+       "say": "Look right.",
+       "o": [
+        "انظر يميناً.",
+        "انظر يساراً.",
+        "اعبر الطريق."
+       ],
+       "a": "انظر يميناً.",
+       "lang": "en"
+      },
+      {
+       "say": "Cross the road.",
+       "o": [
+        "اعبر الطريق.",
+        "انظر يساراً.",
+        "انظر يميناً."
+       ],
+       "a": "اعبر الطريق.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "left",
+       "o": [
+        "⬅️",
+        "🚗",
+        "🛣️"
+       ],
+       "a": "⬅️",
+       "lang": "en"
+      },
+      {
+       "say": "right",
+       "o": [
+        "➡️",
+        "🛣️",
+        "⬅️"
+       ],
+       "a": "➡️",
+       "lang": "en"
+      },
+      {
+       "say": "road",
+       "o": [
+        "🛣️",
+        "⬅️",
+        "➡️"
+       ],
+       "a": "🛣️",
+       "lang": "en"
+      },
+      {
+       "say": "car",
+       "o": [
+        "🚗",
+        "⬅️",
+        "🛣️"
+       ],
+       "a": "🚗",
+       "lang": "en"
+      },
+      {
+       "say": "Look left.",
+       "o": [
+        "انظر يساراً.",
+        "انظر يميناً.",
+        "اعبر الطريق."
+       ],
+       "a": "انظر يساراً.",
+       "lang": "en"
+      },
+      {
+       "say": "Look right.",
+       "o": [
+        "انظر يميناً.",
+        "انظر يساراً.",
+        "اعبر الطريق."
+       ],
+       "a": "انظر يميناً.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

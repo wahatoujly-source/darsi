@@ -1,0 +1,308 @@
+{
+ "id": "en-1-u3-l8",
+ "grade": 1,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "Review: g, o, u, l, f, b",
+ "titleAr": "الإنجليزية — الصف الأول",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "Review: g, o, u, l, f, b",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "Gg",
+       "say": "g",
+       "c": "#E8590C",
+       "lang": "en",
+       "must": 1,
+       "big": true
+      },
+      {
+       "t": "Oo",
+       "say": "o",
+       "c": "#E8590C",
+       "lang": "en",
+       "must": 1,
+       "big": true
+      },
+      {
+       "t": "Uu",
+       "say": "u",
+       "c": "#E8590C",
+       "lang": "en",
+       "must": 1,
+       "big": true
+      },
+      {
+       "t": "Ll",
+       "say": "l",
+       "c": "#E8590C",
+       "lang": "en",
+       "must": 1,
+       "big": true
+      },
+      {
+       "t": "gate",
+       "em": "🚪",
+       "say": "gate",
+       "sub": "بوابة",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "orange",
+       "em": "🍊",
+       "say": "orange",
+       "sub": "برتقالة",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "umbrella",
+       "em": "☂️",
+       "say": "umbrella",
+       "sub": "مظلة",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "lion",
+       "em": "🦁",
+       "say": "lion",
+       "sub": "أسد",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "fish",
+       "em": "🐟",
+       "say": "fish",
+       "sub": "سمكة",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "ball",
+       "em": "⚽",
+       "say": "ball",
+       "sub": "كرة",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك كتاب التلميذ ص 35"
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٢ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "gate",
+       "o": [
+        "🚪",
+        "☂️",
+        "⚽"
+       ],
+       "a": "🚪",
+       "lang": "en"
+      },
+      {
+       "say": "orange",
+       "o": [
+        "🍊",
+        "⚽",
+        "🐟"
+       ],
+       "a": "🍊",
+       "lang": "en"
+      },
+      {
+       "say": "umbrella",
+       "o": [
+        "☂️",
+        "⚽",
+        "🐟"
+       ],
+       "a": "☂️",
+       "lang": "en"
+      },
+      {
+       "say": "lion",
+       "o": [
+        "🦁",
+        "🍊",
+        "🐟"
+       ],
+       "a": "🦁",
+       "lang": "en"
+      },
+      {
+       "say": "fish",
+       "o": [
+        "🐟",
+        "🦁",
+        "⚽"
+       ],
+       "a": "🐟",
+       "lang": "en"
+      },
+      {
+       "say": "ball",
+       "o": [
+        "⚽",
+        "🚪",
+        "🍊"
+       ],
+       "a": "⚽",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "تتبّع",
+   "eyebrow": "الخطوة ٣ — تتبّع",
+   "heading": "اكتب الحرف",
+   "blocks": [
+    {
+     "type": "trace",
+     "star": true,
+     "items": [
+      {
+       "t": "G",
+       "say": "G"
+      },
+      {
+       "t": "g",
+       "say": "g"
+      },
+      {
+       "t": "O",
+       "say": "O"
+      },
+      {
+       "t": "o",
+       "say": "o"
+      },
+      {
+       "t": "U",
+       "say": "U"
+      },
+      {
+       "t": "u",
+       "say": "u"
+      },
+      {
+       "t": "L",
+       "say": "L"
+      },
+      {
+       "t": "l",
+       "say": "l"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "فرقع",
+   "eyebrow": "الخطوة ٤ — فرقع",
+   "heading": "بالونات الحرف g",
+   "blocks": [
+    {
+     "type": "pop",
+     "star": true,
+     "target": "g",
+     "pool": [
+      "g",
+      "g",
+      "s",
+      "a",
+      "t",
+      "p",
+      "i",
+      "n",
+      "m"
+     ],
+     "need": 6,
+     "say": "g",
+     "q": "فرقع البالونات التي فيها الحرف",
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "gate",
+       "o": [
+        "🚪",
+        "⚽",
+        "🍊"
+       ],
+       "a": "🚪",
+       "lang": "en"
+      },
+      {
+       "say": "orange",
+       "o": [
+        "🍊",
+        "🐟",
+        "🦁"
+       ],
+       "a": "🍊",
+       "lang": "en"
+      },
+      {
+       "say": "umbrella",
+       "o": [
+        "☂️",
+        "🦁",
+        "🍊"
+       ],
+       "a": "☂️",
+       "lang": "en"
+      },
+      {
+       "say": "lion",
+       "o": [
+        "🦁",
+        "☂️",
+        "🐟"
+       ],
+       "a": "🦁",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

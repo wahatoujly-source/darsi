@@ -1,0 +1,266 @@
+{
+ "id": "en-2-u3-l2",
+ "grade": 2,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "Tom's Family",
+ "titleAr": "الإنجليزية — الصف الثاني",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "Tom's Family",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "grandma",
+       "em": "👵",
+       "say": "grandma",
+       "sub": "جدة",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "grandpa",
+       "em": "👴",
+       "say": "grandpa",
+       "sub": "جد",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "brother",
+       "em": "👦",
+       "say": "brother",
+       "sub": "أخ",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "sister",
+       "em": "👧",
+       "say": "sister",
+       "sub": "أخت",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "baby",
+       "em": "👶",
+       "say": "baby",
+       "sub": "رضيع",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك كتاب التلميذ ص 30"
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "This is Tom's grandma.",
+       "em": "👵",
+       "say": "This is Tom's grandma.",
+       "sub": "هذه جدة توم.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "He has one sister.",
+       "em": "👧",
+       "say": "He has one sister.",
+       "sub": "لديه أخت واحدة.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "grandma",
+       "o": [
+        "👵",
+        "👧",
+        "👶"
+       ],
+       "a": "👵",
+       "lang": "en"
+      },
+      {
+       "say": "grandpa",
+       "o": [
+        "👴",
+        "👧",
+        "👵"
+       ],
+       "a": "👴",
+       "lang": "en"
+      },
+      {
+       "say": "brother",
+       "o": [
+        "👦",
+        "👧",
+        "👴"
+       ],
+       "a": "👦",
+       "lang": "en"
+      },
+      {
+       "say": "sister",
+       "o": [
+        "👧",
+        "👶",
+        "👴"
+       ],
+       "a": "👧",
+       "lang": "en"
+      },
+      {
+       "say": "baby",
+       "o": [
+        "👶",
+        "👴",
+        "👦"
+       ],
+       "a": "👶",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "This is Tom's grandma.",
+       "o": [
+        "هذه جدة توم.",
+        "لديه أخت واحدة."
+       ],
+       "a": "هذه جدة توم.",
+       "lang": "en"
+      },
+      {
+       "say": "He has one sister.",
+       "o": [
+        "لديه أخت واحدة.",
+        "هذه جدة توم."
+       ],
+       "a": "لديه أخت واحدة.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "grandma",
+       "o": [
+        "👵",
+        "👦",
+        "👶"
+       ],
+       "a": "👵",
+       "lang": "en"
+      },
+      {
+       "say": "grandpa",
+       "o": [
+        "👴",
+        "👵",
+        "👶"
+       ],
+       "a": "👴",
+       "lang": "en"
+      },
+      {
+       "say": "brother",
+       "o": [
+        "👦",
+        "👴",
+        "👶"
+       ],
+       "a": "👦",
+       "lang": "en"
+      },
+      {
+       "say": "sister",
+       "o": [
+        "👧",
+        "👦",
+        "👵"
+       ],
+       "a": "👧",
+       "lang": "en"
+      },
+      {
+       "say": "This is Tom's grandma.",
+       "o": [
+        "هذه جدة توم.",
+        "لديه أخت واحدة."
+       ],
+       "a": "هذه جدة توم.",
+       "lang": "en"
+      },
+      {
+       "say": "He has one sister.",
+       "o": [
+        "لديه أخت واحدة.",
+        "هذه جدة توم."
+       ],
+       "a": "لديه أخت واحدة.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

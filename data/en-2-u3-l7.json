@@ -1,0 +1,248 @@
+{
+ "id": "en-2-u3-l7",
+ "grade": 2,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "Sam's Afternoon",
+ "titleAr": "الإنجليزية — الصف الثاني",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "Sam's Afternoon",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "afternoon",
+       "em": "🌇",
+       "say": "afternoon",
+       "sub": "بعد الظهر",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "lunch",
+       "em": "🍲",
+       "say": "lunch",
+       "sub": "غداء",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "homework",
+       "em": "📝",
+       "say": "homework",
+       "sub": "واجب منزلي",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "play",
+       "em": "🤸",
+       "say": "play",
+       "sub": "يلعب",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك كتاب التلميذ ص 36"
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "Sam has lunch.",
+       "em": "🍲",
+       "say": "Sam has lunch.",
+       "sub": "سام يتناول الغداء.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "Sam does his homework.",
+       "em": "📝",
+       "say": "Sam does his homework.",
+       "sub": "سام يؤدي واجبه.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "afternoon",
+       "o": [
+        "🌇",
+        "🤸",
+        "📝"
+       ],
+       "a": "🌇",
+       "lang": "en"
+      },
+      {
+       "say": "lunch",
+       "o": [
+        "🍲",
+        "🌇",
+        "🤸"
+       ],
+       "a": "🍲",
+       "lang": "en"
+      },
+      {
+       "say": "homework",
+       "o": [
+        "📝",
+        "🍲",
+        "🌇"
+       ],
+       "a": "📝",
+       "lang": "en"
+      },
+      {
+       "say": "play",
+       "o": [
+        "🤸",
+        "🍲",
+        "📝"
+       ],
+       "a": "🤸",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "Sam has lunch.",
+       "o": [
+        "سام يتناول الغداء.",
+        "سام يؤدي واجبه."
+       ],
+       "a": "سام يتناول الغداء.",
+       "lang": "en"
+      },
+      {
+       "say": "Sam does his homework.",
+       "o": [
+        "سام يؤدي واجبه.",
+        "سام يتناول الغداء."
+       ],
+       "a": "سام يؤدي واجبه.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "afternoon",
+       "o": [
+        "🌇",
+        "🍲",
+        "📝"
+       ],
+       "a": "🌇",
+       "lang": "en"
+      },
+      {
+       "say": "lunch",
+       "o": [
+        "🍲",
+        "🌇",
+        "📝"
+       ],
+       "a": "🍲",
+       "lang": "en"
+      },
+      {
+       "say": "homework",
+       "o": [
+        "📝",
+        "🌇",
+        "🤸"
+       ],
+       "a": "📝",
+       "lang": "en"
+      },
+      {
+       "say": "play",
+       "o": [
+        "🤸",
+        "🍲",
+        "📝"
+       ],
+       "a": "🤸",
+       "lang": "en"
+      },
+      {
+       "say": "Sam has lunch.",
+       "o": [
+        "سام يتناول الغداء.",
+        "سام يؤدي واجبه."
+       ],
+       "a": "سام يتناول الغداء.",
+       "lang": "en"
+      },
+      {
+       "say": "Sam does his homework.",
+       "o": [
+        "سام يؤدي واجبه.",
+        "سام يتناول الغداء."
+       ],
+       "a": "سام يؤدي واجبه.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

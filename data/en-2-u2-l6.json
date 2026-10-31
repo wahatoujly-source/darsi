@@ -1,0 +1,248 @@
+{
+ "id": "en-2-u2-l6",
+ "grade": 2,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "My shoes are big.",
+ "titleAr": "الإنجليزية — الصف الثاني",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "My shoes are big.",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "big",
+       "em": "🐘",
+       "say": "big",
+       "sub": "كبير",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "small",
+       "em": "🐭",
+       "say": "small",
+       "sub": "صغير",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "shoes",
+       "em": "👟",
+       "say": "shoes",
+       "sub": "حذاء",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "socks",
+       "em": "🧦",
+       "say": "socks",
+       "sub": "جوارب",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك كتاب التلميذ ص 24"
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "My shoes are big.",
+       "em": "👟",
+       "say": "My shoes are big.",
+       "sub": "حذائي كبير.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "My socks are small.",
+       "em": "🧦",
+       "say": "My socks are small.",
+       "sub": "جواربي صغيرة.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "big",
+       "o": [
+        "🐘",
+        "🐭",
+        "👟"
+       ],
+       "a": "🐘",
+       "lang": "en"
+      },
+      {
+       "say": "small",
+       "o": [
+        "🐭",
+        "👟",
+        "🐘"
+       ],
+       "a": "🐭",
+       "lang": "en"
+      },
+      {
+       "say": "shoes",
+       "o": [
+        "👟",
+        "🧦",
+        "🐘"
+       ],
+       "a": "👟",
+       "lang": "en"
+      },
+      {
+       "say": "socks",
+       "o": [
+        "🧦",
+        "🐭",
+        "🐘"
+       ],
+       "a": "🧦",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "My shoes are big.",
+       "o": [
+        "حذائي كبير.",
+        "جواربي صغيرة."
+       ],
+       "a": "حذائي كبير.",
+       "lang": "en"
+      },
+      {
+       "say": "My socks are small.",
+       "o": [
+        "جواربي صغيرة.",
+        "حذائي كبير."
+       ],
+       "a": "جواربي صغيرة.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "big",
+       "o": [
+        "🐘",
+        "🐭",
+        "👟"
+       ],
+       "a": "🐘",
+       "lang": "en"
+      },
+      {
+       "say": "small",
+       "o": [
+        "🐭",
+        "🐘",
+        "🧦"
+       ],
+       "a": "🐭",
+       "lang": "en"
+      },
+      {
+       "say": "shoes",
+       "o": [
+        "👟",
+        "🧦",
+        "🐭"
+       ],
+       "a": "👟",
+       "lang": "en"
+      },
+      {
+       "say": "socks",
+       "o": [
+        "🧦",
+        "🐭",
+        "🐘"
+       ],
+       "a": "🧦",
+       "lang": "en"
+      },
+      {
+       "say": "My shoes are big.",
+       "o": [
+        "حذائي كبير.",
+        "جواربي صغيرة."
+       ],
+       "a": "حذائي كبير.",
+       "lang": "en"
+      },
+      {
+       "say": "My socks are small.",
+       "o": [
+        "جواربي صغيرة.",
+        "حذائي كبير."
+       ],
+       "a": "جواربي صغيرة.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

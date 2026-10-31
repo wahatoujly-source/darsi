@@ -1,0 +1,248 @@
+{
+ "id": "en-2-u5-l5",
+ "grade": 2,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "I do my homework",
+ "titleAr": "الإنجليزية — الصف الثاني",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "I do my homework",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "homework",
+       "em": "📝",
+       "say": "homework",
+       "sub": "واجب منزلي",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "wash",
+       "em": "🧼",
+       "say": "wash",
+       "sub": "أغسل",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "help",
+       "em": "🤝",
+       "say": "help",
+       "sub": "أساعد",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "eat",
+       "em": "🍽️",
+       "say": "eat",
+       "sub": "آكل",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك كتاب التلميذ ص 66⁠–⁠67"
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "I do my homework.",
+       "em": "📝",
+       "say": "I do my homework.",
+       "sub": "أؤدي واجبي.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "I help my mum.",
+       "em": "🤝",
+       "say": "I help my mum.",
+       "sub": "أساعد أمي.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "homework",
+       "o": [
+        "📝",
+        "🍽️",
+        "🧼"
+       ],
+       "a": "📝",
+       "lang": "en"
+      },
+      {
+       "say": "wash",
+       "o": [
+        "🧼",
+        "🍽️",
+        "📝"
+       ],
+       "a": "🧼",
+       "lang": "en"
+      },
+      {
+       "say": "help",
+       "o": [
+        "🤝",
+        "🍽️",
+        "📝"
+       ],
+       "a": "🤝",
+       "lang": "en"
+      },
+      {
+       "say": "eat",
+       "o": [
+        "🍽️",
+        "🤝",
+        "🧼"
+       ],
+       "a": "🍽️",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "I do my homework.",
+       "o": [
+        "أؤدي واجبي.",
+        "أساعد أمي."
+       ],
+       "a": "أؤدي واجبي.",
+       "lang": "en"
+      },
+      {
+       "say": "I help my mum.",
+       "o": [
+        "أساعد أمي.",
+        "أؤدي واجبي."
+       ],
+       "a": "أساعد أمي.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "homework",
+       "o": [
+        "📝",
+        "🧼",
+        "🍽️"
+       ],
+       "a": "📝",
+       "lang": "en"
+      },
+      {
+       "say": "wash",
+       "o": [
+        "🧼",
+        "🤝",
+        "📝"
+       ],
+       "a": "🧼",
+       "lang": "en"
+      },
+      {
+       "say": "help",
+       "o": [
+        "🤝",
+        "🍽️",
+        "📝"
+       ],
+       "a": "🤝",
+       "lang": "en"
+      },
+      {
+       "say": "eat",
+       "o": [
+        "🍽️",
+        "🤝",
+        "🧼"
+       ],
+       "a": "🍽️",
+       "lang": "en"
+      },
+      {
+       "say": "I do my homework.",
+       "o": [
+        "أؤدي واجبي.",
+        "أساعد أمي."
+       ],
+       "a": "أؤدي واجبي.",
+       "lang": "en"
+      },
+      {
+       "say": "I help my mum.",
+       "o": [
+        "أساعد أمي.",
+        "أؤدي واجبي."
+       ],
+       "a": "أساعد أمي.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

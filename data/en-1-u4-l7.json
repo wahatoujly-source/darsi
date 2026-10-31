@@ -1,0 +1,266 @@
+{
+ "id": "en-1-u4-l7",
+ "grade": 1,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "Things around us",
+ "titleAr": "الإنجليزية — الصف الأول",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "Things around us",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "pen",
+       "em": "🖊️",
+       "say": "pen",
+       "sub": "قلم",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "bag",
+       "em": "🎒",
+       "say": "bag",
+       "sub": "حقيبة",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "clock",
+       "em": "🕐",
+       "say": "clock",
+       "sub": "ساعة حائط",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "lamp",
+       "em": "💡",
+       "say": "lamp",
+       "sub": "مصباح",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "phone",
+       "em": "📱",
+       "say": "phone",
+       "sub": "هاتف",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك كتاب التلميذ ص 44"
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "What is it?",
+       "em": "❓",
+       "say": "What is it?",
+       "sub": "ما هذا؟",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "It's a clock.",
+       "em": "🕐",
+       "say": "It's a clock.",
+       "sub": "إنها ساعة.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "pen",
+       "o": [
+        "🖊️",
+        "💡",
+        "🎒"
+       ],
+       "a": "🖊️",
+       "lang": "en"
+      },
+      {
+       "say": "bag",
+       "o": [
+        "🎒",
+        "📱",
+        "🕐"
+       ],
+       "a": "🎒",
+       "lang": "en"
+      },
+      {
+       "say": "clock",
+       "o": [
+        "🕐",
+        "💡",
+        "🎒"
+       ],
+       "a": "🕐",
+       "lang": "en"
+      },
+      {
+       "say": "lamp",
+       "o": [
+        "💡",
+        "🎒",
+        "📱"
+       ],
+       "a": "💡",
+       "lang": "en"
+      },
+      {
+       "say": "phone",
+       "o": [
+        "📱",
+        "💡",
+        "🕐"
+       ],
+       "a": "📱",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "What is it?",
+       "o": [
+        "ما هذا؟",
+        "إنها ساعة."
+       ],
+       "a": "ما هذا؟",
+       "lang": "en"
+      },
+      {
+       "say": "It's a clock.",
+       "o": [
+        "إنها ساعة.",
+        "ما هذا؟"
+       ],
+       "a": "إنها ساعة.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "pen",
+       "o": [
+        "🖊️",
+        "🕐",
+        "💡"
+       ],
+       "a": "🖊️",
+       "lang": "en"
+      },
+      {
+       "say": "bag",
+       "o": [
+        "🎒",
+        "📱",
+        "🖊️"
+       ],
+       "a": "🎒",
+       "lang": "en"
+      },
+      {
+       "say": "clock",
+       "o": [
+        "🕐",
+        "🖊️",
+        "💡"
+       ],
+       "a": "🕐",
+       "lang": "en"
+      },
+      {
+       "say": "lamp",
+       "o": [
+        "💡",
+        "🎒",
+        "📱"
+       ],
+       "a": "💡",
+       "lang": "en"
+      },
+      {
+       "say": "What is it?",
+       "o": [
+        "ما هذا؟",
+        "إنها ساعة."
+       ],
+       "a": "ما هذا؟",
+       "lang": "en"
+      },
+      {
+       "say": "It's a clock.",
+       "o": [
+        "إنها ساعة.",
+        "ما هذا؟"
+       ],
+       "a": "إنها ساعة.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

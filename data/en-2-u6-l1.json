@@ -1,0 +1,266 @@
+{
+ "id": "en-2-u6-l1",
+ "grade": 2,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "This is the way I wash my face",
+ "titleAr": "الإنجليزية — الصف الثاني",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "This is the way I wash my face",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "wash",
+       "em": "🧼",
+       "say": "wash",
+       "sub": "أغسل",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "face",
+       "em": "🙂",
+       "say": "face",
+       "sub": "وجه",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "brush",
+       "em": "🪥",
+       "say": "brush",
+       "sub": "أفرش",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "teeth",
+       "em": "🦷",
+       "say": "teeth",
+       "sub": "أسنان",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "comb",
+       "em": "🪮",
+       "say": "comb",
+       "sub": "أمشط",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك كتاب التلميذ ص 74⁠–⁠75"
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "This is the way I wash my face.",
+       "em": "🧼",
+       "say": "This is the way I wash my face.",
+       "sub": "هكذا أغسل وجهي.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "This is the way I brush my teeth.",
+       "em": "🪥",
+       "say": "This is the way I brush my teeth.",
+       "sub": "هكذا أنظف أسناني.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "wash",
+       "o": [
+        "🧼",
+        "🦷",
+        "🪥"
+       ],
+       "a": "🧼",
+       "lang": "en"
+      },
+      {
+       "say": "face",
+       "o": [
+        "🙂",
+        "🦷",
+        "🪮"
+       ],
+       "a": "🙂",
+       "lang": "en"
+      },
+      {
+       "say": "brush",
+       "o": [
+        "🪥",
+        "🪮",
+        "🧼"
+       ],
+       "a": "🪥",
+       "lang": "en"
+      },
+      {
+       "say": "teeth",
+       "o": [
+        "🦷",
+        "🪥",
+        "🧼"
+       ],
+       "a": "🦷",
+       "lang": "en"
+      },
+      {
+       "say": "comb",
+       "o": [
+        "🪮",
+        "🧼",
+        "🦷"
+       ],
+       "a": "🪮",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "This is the way I wash my face.",
+       "o": [
+        "هكذا أغسل وجهي.",
+        "هكذا أنظف أسناني."
+       ],
+       "a": "هكذا أغسل وجهي.",
+       "lang": "en"
+      },
+      {
+       "say": "This is the way I brush my teeth.",
+       "o": [
+        "هكذا أنظف أسناني.",
+        "هكذا أغسل وجهي."
+       ],
+       "a": "هكذا أنظف أسناني.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "wash",
+       "o": [
+        "🧼",
+        "🪥",
+        "🪮"
+       ],
+       "a": "🧼",
+       "lang": "en"
+      },
+      {
+       "say": "face",
+       "o": [
+        "🙂",
+        "🦷",
+        "🪥"
+       ],
+       "a": "🙂",
+       "lang": "en"
+      },
+      {
+       "say": "brush",
+       "o": [
+        "🪥",
+        "🧼",
+        "🪮"
+       ],
+       "a": "🪥",
+       "lang": "en"
+      },
+      {
+       "say": "teeth",
+       "o": [
+        "🦷",
+        "🪮",
+        "🧼"
+       ],
+       "a": "🦷",
+       "lang": "en"
+      },
+      {
+       "say": "This is the way I wash my face.",
+       "o": [
+        "هكذا أغسل وجهي.",
+        "هكذا أنظف أسناني."
+       ],
+       "a": "هكذا أغسل وجهي.",
+       "lang": "en"
+      },
+      {
+       "say": "This is the way I brush my teeth.",
+       "o": [
+        "هكذا أنظف أسناني.",
+        "هكذا أغسل وجهي."
+       ],
+       "a": "هكذا أنظف أسناني.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

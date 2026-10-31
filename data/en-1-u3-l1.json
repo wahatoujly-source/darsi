@@ -1,0 +1,247 @@
+{
+ "id": "en-1-u3-l1",
+ "grade": 1,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "g, gate, garden — Colours",
+ "titleAr": "الإنجليزية — الصف الأول",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "g, gate, garden — Colours",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "Gg",
+       "say": "g",
+       "c": "#E8590C",
+       "lang": "en",
+       "must": 1,
+       "big": true
+      },
+      {
+       "t": "gate",
+       "em": "🚪",
+       "say": "gate",
+       "sub": "بوابة",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "garden",
+       "em": "🌳",
+       "say": "garden",
+       "sub": "حديقة",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "green",
+       "em": "🟢",
+       "say": "green",
+       "sub": "أخضر",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "blue",
+       "em": "🔵",
+       "say": "blue",
+       "sub": "أزرق",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك كتاب التلميذ ص 28"
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "The gate is green.",
+       "em": "🟢",
+       "say": "The gate is green.",
+       "sub": "البوابة خضراء.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "gate",
+       "o": [
+        "🚪",
+        "🟢",
+        "🌳"
+       ],
+       "a": "🚪",
+       "lang": "en"
+      },
+      {
+       "say": "garden",
+       "o": [
+        "🌳",
+        "🟢",
+        "🔵"
+       ],
+       "a": "🌳",
+       "lang": "en"
+      },
+      {
+       "say": "green",
+       "o": [
+        "🟢",
+        "🌳",
+        "🚪"
+       ],
+       "a": "🟢",
+       "lang": "en"
+      },
+      {
+       "say": "blue",
+       "o": [
+        "🔵",
+        "🟢",
+        "🚪"
+       ],
+       "a": "🔵",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "تتبّع",
+   "eyebrow": "الخطوة ٤ — تتبّع",
+   "heading": "اكتب الحرف",
+   "blocks": [
+    {
+     "type": "trace",
+     "star": true,
+     "items": [
+      {
+       "t": "G",
+       "say": "G"
+      },
+      {
+       "t": "g",
+       "say": "g"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "فرقع",
+   "eyebrow": "الخطوة ٥ — فرقع",
+   "heading": "بالونات الحرف g",
+   "blocks": [
+    {
+     "type": "pop",
+     "star": true,
+     "target": "g",
+     "pool": [
+      "g",
+      "g",
+      "s",
+      "a",
+      "t",
+      "p",
+      "i",
+      "n",
+      "m"
+     ],
+     "need": 6,
+     "say": "g",
+     "q": "فرقع البالونات التي فيها الحرف",
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "gate",
+       "o": [
+        "🚪",
+        "🟢",
+        "🔵"
+       ],
+       "a": "🚪",
+       "lang": "en"
+      },
+      {
+       "say": "garden",
+       "o": [
+        "🌳",
+        "🚪",
+        "🔵"
+       ],
+       "a": "🌳",
+       "lang": "en"
+      },
+      {
+       "say": "green",
+       "o": [
+        "🟢",
+        "🌳",
+        "🚪"
+       ],
+       "a": "🟢",
+       "lang": "en"
+      },
+      {
+       "say": "blue",
+       "o": [
+        "🔵",
+        "🚪",
+        "🌳"
+       ],
+       "a": "🔵",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

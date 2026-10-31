@@ -1,0 +1,302 @@
+{
+ "id": "en-2-u3-l3",
+ "grade": 2,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "Days Of The Week",
+ "titleAr": "الإنجليزية — الصف الثاني",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "Days Of The Week",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "Saturday",
+       "em": "6️⃣",
+       "say": "Saturday",
+       "sub": "السبت",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "Sunday",
+       "em": "7️⃣",
+       "say": "Sunday",
+       "sub": "الأحد",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "Monday",
+       "em": "1️⃣",
+       "say": "Monday",
+       "sub": "الاثنين",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "Tuesday",
+       "em": "2️⃣",
+       "say": "Tuesday",
+       "sub": "الثلاثاء",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "Wednesday",
+       "em": "3️⃣",
+       "say": "Wednesday",
+       "sub": "الأربعاء",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "Thursday",
+       "em": "4️⃣",
+       "say": "Thursday",
+       "sub": "الخميس",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "Friday",
+       "em": "5️⃣",
+       "say": "Friday",
+       "sub": "الجمعة",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك كتاب التلميذ ص 31"
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "What day is it today?",
+       "em": "📅",
+       "say": "What day is it today?",
+       "sub": "ما اليوم؟",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "It's Sunday.",
+       "em": "7️⃣",
+       "say": "It's Sunday.",
+       "sub": "إنه الأحد.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "Saturday",
+       "o": [
+        "6️⃣",
+        "7️⃣",
+        "5️⃣"
+       ],
+       "a": "6️⃣",
+       "lang": "en"
+      },
+      {
+       "say": "Sunday",
+       "o": [
+        "7️⃣",
+        "6️⃣",
+        "1️⃣"
+       ],
+       "a": "7️⃣",
+       "lang": "en"
+      },
+      {
+       "say": "Monday",
+       "o": [
+        "1️⃣",
+        "7️⃣",
+        "4️⃣"
+       ],
+       "a": "1️⃣",
+       "lang": "en"
+      },
+      {
+       "say": "Tuesday",
+       "o": [
+        "2️⃣",
+        "4️⃣",
+        "3️⃣"
+       ],
+       "a": "2️⃣",
+       "lang": "en"
+      },
+      {
+       "say": "Wednesday",
+       "o": [
+        "3️⃣",
+        "1️⃣",
+        "5️⃣"
+       ],
+       "a": "3️⃣",
+       "lang": "en"
+      },
+      {
+       "say": "Thursday",
+       "o": [
+        "4️⃣",
+        "2️⃣",
+        "6️⃣"
+       ],
+       "a": "4️⃣",
+       "lang": "en"
+      },
+      {
+       "say": "Friday",
+       "o": [
+        "5️⃣",
+        "7️⃣",
+        "4️⃣"
+       ],
+       "a": "5️⃣",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "What day is it today?",
+       "o": [
+        "ما اليوم؟",
+        "إنه الأحد."
+       ],
+       "a": "ما اليوم؟",
+       "lang": "en"
+      },
+      {
+       "say": "It's Sunday.",
+       "o": [
+        "إنه الأحد.",
+        "ما اليوم؟"
+       ],
+       "a": "إنه الأحد.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "Saturday",
+       "o": [
+        "6️⃣",
+        "1️⃣",
+        "2️⃣"
+       ],
+       "a": "6️⃣",
+       "lang": "en"
+      },
+      {
+       "say": "Sunday",
+       "o": [
+        "7️⃣",
+        "4️⃣",
+        "3️⃣"
+       ],
+       "a": "7️⃣",
+       "lang": "en"
+      },
+      {
+       "say": "Monday",
+       "o": [
+        "1️⃣",
+        "2️⃣",
+        "6️⃣"
+       ],
+       "a": "1️⃣",
+       "lang": "en"
+      },
+      {
+       "say": "Tuesday",
+       "o": [
+        "2️⃣",
+        "6️⃣",
+        "7️⃣"
+       ],
+       "a": "2️⃣",
+       "lang": "en"
+      },
+      {
+       "say": "What day is it today?",
+       "o": [
+        "ما اليوم؟",
+        "إنه الأحد."
+       ],
+       "a": "ما اليوم؟",
+       "lang": "en"
+      },
+      {
+       "say": "It's Sunday.",
+       "o": [
+        "إنه الأحد.",
+        "ما اليوم؟"
+       ],
+       "a": "إنه الأحد.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

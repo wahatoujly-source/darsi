@@ -384,42 +384,58 @@
          {
           "n": 1,
           "title": "c, car, cat, k, key, kite",
-          "ref": "كتاب التلميذ ص 18"
+          "ref": "كتاب التلميذ ص 18",
+          "id": "en-1-u2-l1",
+          "ready": true
          },
          {
           "n": 2,
           "title": "e, egg, elbow — What is it? It's a …",
-          "ref": "كتاب التلميذ ص 19"
+          "ref": "كتاب التلميذ ص 19",
+          "id": "en-1-u2-l2",
+          "ready": true
          },
          {
           "n": 3,
           "title": "h, hand, hair, head — How many?",
-          "ref": "كتاب التلميذ ص 20"
+          "ref": "كتاب التلميذ ص 20",
+          "id": "en-1-u2-l3",
+          "ready": true
          },
          {
           "n": 4,
           "title": "r, red, rabbit — body words",
-          "ref": "كتاب التلميذ ص 21"
+          "ref": "كتاب التلميذ ص 21",
+          "id": "en-1-u2-l4",
+          "ready": true
          },
          {
           "n": 5,
           "title": "m, mouth, moon, ear, eye, face",
-          "ref": "كتاب التلميذ ص 22"
+          "ref": "كتاب التلميذ ص 22",
+          "id": "en-1-u2-l5",
+          "ready": true
          },
          {
           "n": 6,
           "title": "d, dog, duck — My nose. My eyes.",
-          "ref": "كتاب التلميذ ص 23"
+          "ref": "كتاب التلميذ ص 23",
+          "id": "en-1-u2-l6",
+          "ready": true
          },
          {
           "n": 7,
           "title": "I wash my face. I brush my teeth.",
-          "ref": "كتاب التلميذ ص 24"
+          "ref": "كتاب التلميذ ص 24",
+          "id": "en-1-u2-l7",
+          "ready": true
          },
          {
           "n": 8,
           "title": "Review: c, e, h, d, k, m, r",
-          "ref": "كتاب التلميذ ص 25"
+          "ref": "كتاب التلميذ ص 25",
+          "id": "en-1-u2-l8",
+          "ready": true
          }
         ],
         "titleAr": "جسمي"
@@ -431,42 +447,58 @@
          {
           "n": 1,
           "title": "g, gate, garden — Colours",
-          "ref": "كتاب التلميذ ص 28"
+          "ref": "كتاب التلميذ ص 28",
+          "id": "en-1-u3-l1",
+          "ready": true
          },
          {
           "n": 2,
           "title": "o, orange, olive, carpet, blanket",
-          "ref": "كتاب التلميذ ص 29"
+          "ref": "كتاب التلميذ ص 29",
+          "id": "en-1-u3-l2",
+          "ready": true
          },
          {
           "n": 3,
           "title": "u, umbrella, under — We have a …",
-          "ref": "كتاب التلميذ ص 30"
+          "ref": "كتاب التلميذ ص 30",
+          "id": "en-1-u3-l3",
+          "ready": true
          },
          {
           "n": 4,
           "title": "l, lemon, lion — I have a green …",
-          "ref": "كتاب التلميذ ص 31"
+          "ref": "كتاب التلميذ ص 31",
+          "id": "en-1-u3-l4",
+          "ready": true
          },
          {
           "n": 5,
           "title": "f, flower, fish, roof, window, door",
-          "ref": "كتاب التلميذ ص 32"
+          "ref": "كتاب التلميذ ص 32",
+          "id": "en-1-u3-l5",
+          "ready": true
          },
          {
           "n": 6,
           "title": "b, ball, bed, table, chair, desk",
-          "ref": "كتاب التلميذ ص 33"
+          "ref": "كتاب التلميذ ص 33",
+          "id": "en-1-u3-l6",
+          "ready": true
          },
          {
           "n": 7,
           "title": "My house",
-          "ref": "كتاب التلميذ ص 34"
+          "ref": "كتاب التلميذ ص 34",
+          "id": "en-1-u3-l7",
+          "ready": true
          },
          {
           "n": 8,
           "title": "Review: g, o, u, l, f, b",
-          "ref": "كتاب التلميذ ص 35"
+          "ref": "كتاب التلميذ ص 35",
+          "id": "en-1-u3-l8",
+          "ready": true
          }
         ],
         "titleAr": "بيتي"
@@ -478,42 +510,58 @@
          {
           "n": 1,
           "title": "j, jam, juice — Is it a …?",
-          "ref": "كتاب التلميذ ص 38"
+          "ref": "كتاب التلميذ ص 38",
+          "id": "en-1-u4-l1",
+          "ready": true
          },
          {
           "n": 2,
           "title": "z, zebra, zero — open, draw, close",
-          "ref": "كتاب التلميذ ص 39"
+          "ref": "كتاب التلميذ ص 39",
+          "id": "en-1-u4-l2",
+          "ready": true
          },
          {
           "n": 3,
           "title": "w, window, watch — stand up, sit down",
-          "ref": "كتاب التلميذ ص 40"
+          "ref": "كتاب التلميذ ص 40",
+          "id": "en-1-u4-l3",
+          "ready": true
          },
          {
           "n": 4,
           "title": "v, van, violin",
-          "ref": "كتاب التلميذ ص 41"
+          "ref": "كتاب التلميذ ص 41",
+          "id": "en-1-u4-l4",
+          "ready": true
          },
          {
           "n": 5,
           "title": "y, yo-yo, yellow — toys",
-          "ref": "كتاب التلميذ ص 42"
+          "ref": "كتاب التلميذ ص 42",
+          "id": "en-1-u4-l5",
+          "ready": true
          },
          {
           "n": 6,
           "title": "x, x-ray, box, fox, six",
-          "ref": "كتاب التلميذ ص 43"
+          "ref": "كتاب التلميذ ص 43",
+          "id": "en-1-u4-l6",
+          "ready": true
          },
          {
           "n": 7,
           "title": "Things around us",
-          "ref": "كتاب التلميذ ص 44"
+          "ref": "كتاب التلميذ ص 44",
+          "id": "en-1-u4-l7",
+          "ready": true
          },
          {
           "n": 8,
           "title": "Review: j, z, w, v, y, x",
-          "ref": "كتاب التلميذ ص 45"
+          "ref": "كتاب التلميذ ص 45",
+          "id": "en-1-u4-l8",
+          "ready": true
          }
         ],
         "titleAr": "أشياء من حولنا"
@@ -525,42 +573,58 @@
          {
           "n": 1,
           "title": "ng, king, ring — classroom things",
-          "ref": "كتاب التلميذ ص 48"
+          "ref": "كتاب التلميذ ص 48",
+          "id": "en-1-u5-l1",
+          "ready": true
          },
          {
           "n": 2,
           "title": "oo, spoon, zoo",
-          "ref": "كتاب التلميذ ص 49"
+          "ref": "كتاب التلميذ ص 49",
+          "id": "en-1-u5-l2",
+          "ready": true
          },
          {
           "n": 3,
           "title": "oo, foot, book",
-          "ref": "كتاب التلميذ ص 50"
+          "ref": "كتاب التلميذ ص 50",
+          "id": "en-1-u5-l3",
+          "ready": true
          },
          {
           "n": 4,
           "title": "ch, chicken, cheese",
-          "ref": "كتاب التلميذ ص 51"
+          "ref": "كتاب التلميذ ص 51",
+          "id": "en-1-u5-l4",
+          "ready": true
          },
          {
           "n": 5,
           "title": "sh, fish, shelf — How many …?",
-          "ref": "كتاب التلميذ ص 52"
+          "ref": "كتاب التلميذ ص 52",
+          "id": "en-1-u5-l5",
+          "ready": true
          },
          {
           "n": 6,
           "title": "th, mouth, three, thank you",
-          "ref": "كتاب التلميذ ص 53"
+          "ref": "كتاب التلميذ ص 53",
+          "id": "en-1-u5-l6",
+          "ready": true
          },
          {
           "n": 7,
           "title": "th, father, mother, this, that",
-          "ref": "كتاب التلميذ ص 54"
+          "ref": "كتاب التلميذ ص 54",
+          "id": "en-1-u5-l7",
+          "ready": true
          },
          {
           "n": 8,
           "title": "What's this? It's a …",
-          "ref": "كتاب التلميذ ص 55"
+          "ref": "كتاب التلميذ ص 55",
+          "id": "en-1-u5-l8",
+          "ready": true
          }
         ],
         "titleAr": "صفي"
@@ -572,42 +636,58 @@
          {
           "n": 1,
           "title": "ai, train, tail",
-          "ref": "كتاب التلميذ ص 58"
+          "ref": "كتاب التلميذ ص 58",
+          "id": "en-1-u6-l1",
+          "ready": true
          },
          {
           "n": 2,
           "title": "oa, boat, coat — Numbers, Colours",
-          "ref": "كتاب التلميذ ص 59"
+          "ref": "كتاب التلميذ ص 59",
+          "id": "en-1-u6-l2",
+          "ready": true
          },
          {
           "n": 3,
           "title": "ie, pie, tie — How many …?",
-          "ref": "كتاب التلميذ ص 60"
+          "ref": "كتاب التلميذ ص 60",
+          "id": "en-1-u6-l3",
+          "ready": true
          },
          {
           "n": 4,
           "title": "ee, bee, tree — How many boats?",
-          "ref": "كتاب التلميذ ص 61"
+          "ref": "كتاب التلميذ ص 61",
+          "id": "en-1-u6-l4",
+          "ready": true
          },
          {
           "n": 5,
           "title": "or, fork, popcorn — What colour is …?",
-          "ref": "كتاب التلميذ ص 62"
+          "ref": "كتاب التلميذ ص 62",
+          "id": "en-1-u6-l5",
+          "ready": true
          },
          {
           "n": 6,
           "title": "qu, question, queen, animals",
-          "ref": "كتاب التلميذ ص 63"
+          "ref": "كتاب التلميذ ص 63",
+          "id": "en-1-u6-l6",
+          "ready": true
          },
          {
           "n": 7,
           "title": "ou, mouse, mountain, animals",
-          "ref": "كتاب التلميذ ص 64"
+          "ref": "كتاب التلميذ ص 64",
+          "id": "en-1-u6-l7",
+          "ready": true
          },
          {
           "n": 8,
           "title": "oi, point, oil, animals",
-          "ref": "كتاب التلميذ ص 65"
+          "ref": "كتاب التلميذ ص 65",
+          "id": "en-1-u6-l8",
+          "ready": true
          }
         ],
         "titleAr": "ألعابي"
@@ -1519,42 +1599,58 @@
          {
           "n": 1,
           "title": "Where's the monkey?",
-          "ref": "كتاب التلميذ ص 18"
+          "ref": "كتاب التلميذ ص 18",
+          "id": "en-2-u2-l1",
+          "ready": true
          },
          {
           "n": 2,
           "title": "My Bedroom",
-          "ref": "كتاب التلميذ ص 19"
+          "ref": "كتاب التلميذ ص 19",
+          "id": "en-2-u2-l2",
+          "ready": true
          },
          {
           "n": 3,
           "title": "Here's my house",
-          "ref": "كتاب التلميذ ص 20⁠–⁠21"
+          "ref": "كتاب التلميذ ص 20⁠–⁠21",
+          "id": "en-2-u2-l3",
+          "ready": true
          },
          {
           "n": 4,
           "title": "What's in your bedroom?",
-          "ref": "كتاب التلميذ ص 22"
+          "ref": "كتاب التلميذ ص 22",
+          "id": "en-2-u2-l4",
+          "ready": true
          },
          {
           "n": 5,
           "title": "I'm wearing …",
-          "ref": "كتاب التلميذ ص 23"
+          "ref": "كتاب التلميذ ص 23",
+          "id": "en-2-u2-l5",
+          "ready": true
          },
          {
           "n": 6,
           "title": "My shoes are big.",
-          "ref": "كتاب التلميذ ص 24"
+          "ref": "كتاب التلميذ ص 24",
+          "id": "en-2-u2-l6",
+          "ready": true
          },
          {
           "n": 7,
           "title": "It's long. They're short.",
-          "ref": "كتاب التلميذ ص 25"
+          "ref": "كتاب التلميذ ص 25",
+          "id": "en-2-u2-l7",
+          "ready": true
          },
          {
           "n": 8,
           "title": "Muna Has A Kite",
-          "ref": "كتاب التلميذ ص 26"
+          "ref": "كتاب التلميذ ص 26",
+          "id": "en-2-u2-l8",
+          "ready": true
          }
         ],
         "titleAr": "بيتي"
@@ -1566,42 +1662,58 @@
          {
           "n": 1,
           "title": "Mum's Birthday",
-          "ref": "كتاب التلميذ ص 28⁠–⁠29"
+          "ref": "كتاب التلميذ ص 28⁠–⁠29",
+          "id": "en-2-u3-l1",
+          "ready": true
          },
          {
           "n": 2,
           "title": "Tom's Family",
-          "ref": "كتاب التلميذ ص 30"
+          "ref": "كتاب التلميذ ص 30",
+          "id": "en-2-u3-l2",
+          "ready": true
          },
          {
           "n": 3,
           "title": "Days Of The Week",
-          "ref": "كتاب التلميذ ص 31"
+          "ref": "كتاب التلميذ ص 31",
+          "id": "en-2-u3-l3",
+          "ready": true
          },
          {
           "n": 4,
           "title": "Where are mum and dad?",
-          "ref": "كتاب التلميذ ص 32"
+          "ref": "كتاب التلميذ ص 32",
+          "id": "en-2-u3-l4",
+          "ready": true
          },
          {
           "n": 5,
           "title": "My Week",
-          "ref": "كتاب التلميذ ص 33⁠–⁠34"
+          "ref": "كتاب التلميذ ص 33⁠–⁠34",
+          "id": "en-2-u3-l5",
+          "ready": true
          },
          {
           "n": 6,
           "title": "On Saturday, I watch TV",
-          "ref": "كتاب التلميذ ص 35"
+          "ref": "كتاب التلميذ ص 35",
+          "id": "en-2-u3-l6",
+          "ready": true
          },
          {
           "n": 7,
           "title": "Sam's Afternoon",
-          "ref": "كتاب التلميذ ص 36"
+          "ref": "كتاب التلميذ ص 36",
+          "id": "en-2-u3-l7",
+          "ready": true
          },
          {
           "n": 8,
           "title": "I can …",
-          "ref": "كتاب التلميذ ص 37"
+          "ref": "كتاب التلميذ ص 37",
+          "id": "en-2-u3-l8",
+          "ready": true
          }
         ],
         "titleAr": "شجرة العائلة"
@@ -1613,42 +1725,58 @@
          {
           "n": 1,
           "title": "Hello, what's your name?",
-          "ref": "كتاب التلميذ ص 40⁠–⁠41"
+          "ref": "كتاب التلميذ ص 40⁠–⁠41",
+          "id": "en-2-u4-l1",
+          "ready": true
          },
          {
           "n": 2,
           "title": "Classroom things",
-          "ref": "كتاب التلميذ ص 42⁠–⁠43"
+          "ref": "كتاب التلميذ ص 42⁠–⁠43",
+          "id": "en-2-u4-l2",
+          "ready": true
          },
          {
           "n": 3,
           "title": "Where's the pencil?",
-          "ref": "كتاب التلميذ ص 44⁠–⁠45"
+          "ref": "كتاب التلميذ ص 44⁠–⁠45",
+          "id": "en-2-u4-l3",
+          "ready": true
          },
          {
           "n": 4,
           "title": "My body",
-          "ref": "كتاب التلميذ ص 46⁠–⁠47"
+          "ref": "كتاب التلميذ ص 46⁠–⁠47",
+          "id": "en-2-u4-l4",
+          "ready": true
          },
          {
           "n": 5,
           "title": "Numbers 1–10",
-          "ref": "كتاب التلميذ ص 48⁠–⁠49"
+          "ref": "كتاب التلميذ ص 48⁠–⁠49",
+          "id": "en-2-u4-l5",
+          "ready": true
          },
          {
           "n": 6,
           "title": "Hair, eyes, nose …",
-          "ref": "كتاب التلميذ ص 50⁠–⁠51"
+          "ref": "كتاب التلميذ ص 50⁠–⁠51",
+          "id": "en-2-u4-l6",
+          "ready": true
          },
          {
           "n": 7,
           "title": "How many …?",
-          "ref": "كتاب التلميذ ص 52⁠–⁠53"
+          "ref": "كتاب التلميذ ص 52⁠–⁠53",
+          "id": "en-2-u4-l7",
+          "ready": true
          },
          {
           "n": 8,
           "title": "Story",
-          "ref": "كتاب التلميذ ص 54⁠–⁠55"
+          "ref": "كتاب التلميذ ص 54⁠–⁠55",
+          "id": "en-2-u4-l8",
+          "ready": true
          }
         ],
         "titleAr": "في المدرسة"
@@ -1660,42 +1788,58 @@
          {
           "n": 1,
           "title": "My bedroom things",
-          "ref": "كتاب التلميذ ص 58⁠–⁠59"
+          "ref": "كتاب التلميذ ص 58⁠–⁠59",
+          "id": "en-2-u5-l1",
+          "ready": true
          },
          {
           "n": 2,
           "title": "How many lights are there?",
-          "ref": "كتاب التلميذ ص 60⁠–⁠61"
+          "ref": "كتاب التلميذ ص 60⁠–⁠61",
+          "id": "en-2-u5-l2",
+          "ready": true
          },
          {
           "n": 3,
           "title": "I draw / play / read …",
-          "ref": "كتاب التلميذ ص 62⁠–⁠63"
+          "ref": "كتاب التلميذ ص 62⁠–⁠63",
+          "id": "en-2-u5-l3",
+          "ready": true
          },
          {
           "n": 4,
           "title": "My day",
-          "ref": "كتاب التلميذ ص 64⁠–⁠65"
+          "ref": "كتاب التلميذ ص 64⁠–⁠65",
+          "id": "en-2-u5-l4",
+          "ready": true
          },
          {
           "n": 5,
           "title": "I do my homework",
-          "ref": "كتاب التلميذ ص 66⁠–⁠67"
+          "ref": "كتاب التلميذ ص 66⁠–⁠67",
+          "id": "en-2-u5-l5",
+          "ready": true
          },
          {
           "n": 6,
           "title": "What's the time?",
-          "ref": "كتاب التلميذ ص 68⁠–⁠69"
+          "ref": "كتاب التلميذ ص 68⁠–⁠69",
+          "id": "en-2-u5-l6",
+          "ready": true
          },
          {
           "n": 7,
           "title": "I go to school by …",
-          "ref": "كتاب التلميذ ص 70⁠–⁠71"
+          "ref": "كتاب التلميذ ص 70⁠–⁠71",
+          "id": "en-2-u5-l7",
+          "ready": true
          },
          {
           "n": 8,
           "title": "Story",
-          "ref": "كتاب التلميذ ص 72⁠–⁠73"
+          "ref": "كتاب التلميذ ص 72⁠–⁠73",
+          "id": "en-2-u5-l8",
+          "ready": true
          }
         ],
         "titleAr": "في البيت"
@@ -1707,42 +1851,58 @@
          {
           "n": 1,
           "title": "This is the way I wash my face",
-          "ref": "كتاب التلميذ ص 74⁠–⁠75"
+          "ref": "كتاب التلميذ ص 74⁠–⁠75",
+          "id": "en-2-u6-l1",
+          "ready": true
          },
          {
           "n": 2,
           "title": "Do you wash …?",
-          "ref": "كتاب التلميذ ص 76⁠–⁠77"
+          "ref": "كتاب التلميذ ص 76⁠–⁠77",
+          "id": "en-2-u6-l2",
+          "ready": true
          },
          {
           "n": 3,
           "title": "Do we have any rice?",
-          "ref": "كتاب التلميذ ص 78⁠–⁠79"
+          "ref": "كتاب التلميذ ص 78⁠–⁠79",
+          "id": "en-2-u6-l3",
+          "ready": true
          },
          {
           "n": 4,
           "title": "What's your favourite lesson?",
-          "ref": "كتاب التلميذ ص 80⁠–⁠81"
+          "ref": "كتاب التلميذ ص 80⁠–⁠81",
+          "id": "en-2-u6-l4",
+          "ready": true
          },
          {
           "n": 5,
           "title": "My house has …",
-          "ref": "كتاب التلميذ ص 82⁠–⁠83"
+          "ref": "كتاب التلميذ ص 82⁠–⁠83",
+          "id": "en-2-u6-l5",
+          "ready": true
          },
          {
           "n": 6,
           "title": "Look left. Look right.",
-          "ref": "كتاب التلميذ ص 84⁠–⁠85"
+          "ref": "كتاب التلميذ ص 84⁠–⁠85",
+          "id": "en-2-u6-l6",
+          "ready": true
          },
          {
           "n": 7,
           "title": "This is my town",
-          "ref": "كتاب التلميذ ص 86⁠–⁠87"
+          "ref": "كتاب التلميذ ص 86⁠–⁠87",
+          "id": "en-2-u6-l7",
+          "ready": true
          },
          {
           "n": 8,
           "title": "How tall is the rabbit?",
-          "ref": "كتاب التلميذ ص 88⁠–⁠89"
+          "ref": "كتاب التلميذ ص 88⁠–⁠89",
+          "id": "en-2-u6-l8",
+          "ready": true
          }
         ],
         "titleAr": "عادات صحية"

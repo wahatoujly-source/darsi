@@ -1,0 +1,156 @@
+{
+ "id": "en-1-u5-l6",
+ "grade": 1,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "th, mouth, three, thank you",
+ "titleAr": "الإنجليزية — الصف الأول",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "th, mouth, three, thank you",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "th",
+       "say": "th",
+       "c": "#E8590C",
+       "lang": "en",
+       "must": 1,
+       "big": true
+      },
+      {
+       "t": "mouth",
+       "em": "👄",
+       "say": "mouth",
+       "sub": "فم",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "three",
+       "em": "3️⃣",
+       "say": "three",
+       "sub": "ثلاثة",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك كتاب التلميذ ص 53"
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "Thank you.",
+       "em": "🙏",
+       "say": "Thank you.",
+       "sub": "شكراً لك.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "mouth",
+       "o": [
+        "👄",
+        "3️⃣"
+       ],
+       "a": "👄",
+       "lang": "en"
+      },
+      {
+       "say": "three",
+       "o": [
+        "3️⃣",
+        "👄"
+       ],
+       "a": "3️⃣",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "تتبّع",
+   "eyebrow": "الخطوة ٤ — تتبّع",
+   "heading": "اكتب الحرف",
+   "blocks": [
+    {
+     "type": "trace",
+     "star": true,
+     "items": [
+      {
+       "t": "th",
+       "say": "th"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "mouth",
+       "o": [
+        "👄",
+        "3️⃣"
+       ],
+       "a": "👄",
+       "lang": "en"
+      },
+      {
+       "say": "three",
+       "o": [
+        "3️⃣",
+        "👄"
+       ],
+       "a": "3️⃣",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

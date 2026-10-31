@@ -1,0 +1,270 @@
+{
+ "id": "en-2-u4-l3",
+ "grade": 2,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "Where's the pencil?",
+ "titleAr": "الإنجليزية — الصف الثاني",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "Where's the pencil?",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "pencil",
+       "em": "✏️",
+       "say": "pencil",
+       "sub": "قلم رصاص",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "desk",
+       "em": "🗄️",
+       "say": "desk",
+       "sub": "مكتب",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "bag",
+       "em": "🎒",
+       "say": "bag",
+       "sub": "حقيبة",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "pencil case",
+       "em": "👝",
+       "say": "pencil case",
+       "sub": "مقلمة",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك كتاب التلميذ ص 44⁠–⁠45"
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "Where's the pencil?",
+       "em": "✏️",
+       "say": "Where's the pencil?",
+       "sub": "أين القلم؟",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "It's on the desk.",
+       "em": "🗄️",
+       "say": "It's on the desk.",
+       "sub": "إنه على المكتب.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "It's in the bag.",
+       "em": "🎒",
+       "say": "It's in the bag.",
+       "sub": "إنه في الحقيبة.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "pencil",
+       "o": [
+        "✏️",
+        "🎒",
+        "👝"
+       ],
+       "a": "✏️",
+       "lang": "en"
+      },
+      {
+       "say": "desk",
+       "o": [
+        "🗄️",
+        "✏️",
+        "🎒"
+       ],
+       "a": "🗄️",
+       "lang": "en"
+      },
+      {
+       "say": "bag",
+       "o": [
+        "🎒",
+        "👝",
+        "✏️"
+       ],
+       "a": "🎒",
+       "lang": "en"
+      },
+      {
+       "say": "pencil case",
+       "o": [
+        "👝",
+        "🎒",
+        "✏️"
+       ],
+       "a": "👝",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "Where's the pencil?",
+       "o": [
+        "أين القلم؟",
+        "إنه على المكتب.",
+        "إنه في الحقيبة."
+       ],
+       "a": "أين القلم؟",
+       "lang": "en"
+      },
+      {
+       "say": "It's on the desk.",
+       "o": [
+        "إنه على المكتب.",
+        "أين القلم؟",
+        "إنه في الحقيبة."
+       ],
+       "a": "إنه على المكتب.",
+       "lang": "en"
+      },
+      {
+       "say": "It's in the bag.",
+       "o": [
+        "إنه في الحقيبة.",
+        "أين القلم؟",
+        "إنه على المكتب."
+       ],
+       "a": "إنه في الحقيبة.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "pencil",
+       "o": [
+        "✏️",
+        "🗄️",
+        "👝"
+       ],
+       "a": "✏️",
+       "lang": "en"
+      },
+      {
+       "say": "desk",
+       "o": [
+        "🗄️",
+        "✏️",
+        "👝"
+       ],
+       "a": "🗄️",
+       "lang": "en"
+      },
+      {
+       "say": "bag",
+       "o": [
+        "🎒",
+        "🗄️",
+        "✏️"
+       ],
+       "a": "🎒",
+       "lang": "en"
+      },
+      {
+       "say": "pencil case",
+       "o": [
+        "👝",
+        "✏️",
+        "🎒"
+       ],
+       "a": "👝",
+       "lang": "en"
+      },
+      {
+       "say": "Where's the pencil?",
+       "o": [
+        "أين القلم؟",
+        "إنه على المكتب.",
+        "إنه في الحقيبة."
+       ],
+       "a": "أين القلم؟",
+       "lang": "en"
+      },
+      {
+       "say": "It's on the desk.",
+       "o": [
+        "إنه على المكتب.",
+        "أين القلم؟",
+        "إنه في الحقيبة."
+       ],
+       "a": "إنه على المكتب.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

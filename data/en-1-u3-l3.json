@@ -1,0 +1,277 @@
+{
+ "id": "en-1-u3-l3",
+ "grade": 1,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "u, umbrella, under — We have a …",
+ "titleAr": "الإنجليزية — الصف الأول",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "u, umbrella, under — We have a …",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "Uu",
+       "say": "u",
+       "c": "#E8590C",
+       "lang": "en",
+       "must": 1,
+       "big": true
+      },
+      {
+       "t": "umbrella",
+       "em": "☂️",
+       "say": "umbrella",
+       "sub": "مظلة",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "under",
+       "em": "⬇️",
+       "say": "under",
+       "sub": "تحت",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "table",
+       "em": "🪑",
+       "say": "table",
+       "sub": "طاولة",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك كتاب التلميذ ص 30"
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "We have a table.",
+       "em": "🪑",
+       "say": "We have a table.",
+       "sub": "لدينا طاولة.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "The cat is under the table.",
+       "em": "🐈",
+       "say": "The cat is under the table.",
+       "sub": "القطة تحت الطاولة.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "umbrella",
+       "o": [
+        "☂️",
+        "🪑",
+        "⬇️"
+       ],
+       "a": "☂️",
+       "lang": "en"
+      },
+      {
+       "say": "under",
+       "o": [
+        "⬇️",
+        "☂️",
+        "🪑"
+       ],
+       "a": "⬇️",
+       "lang": "en"
+      },
+      {
+       "say": "table",
+       "o": [
+        "🪑",
+        "☂️",
+        "⬇️"
+       ],
+       "a": "🪑",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "We have a table.",
+       "o": [
+        "لدينا طاولة.",
+        "القطة تحت الطاولة."
+       ],
+       "a": "لدينا طاولة.",
+       "lang": "en"
+      },
+      {
+       "say": "The cat is under the table.",
+       "o": [
+        "القطة تحت الطاولة.",
+        "لدينا طاولة."
+       ],
+       "a": "القطة تحت الطاولة.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "تتبّع",
+   "eyebrow": "الخطوة ٥ — تتبّع",
+   "heading": "اكتب الحرف",
+   "blocks": [
+    {
+     "type": "trace",
+     "star": true,
+     "items": [
+      {
+       "t": "U",
+       "say": "U"
+      },
+      {
+       "t": "u",
+       "say": "u"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "فرقع",
+   "eyebrow": "الخطوة ٦ — فرقع",
+   "heading": "بالونات الحرف u",
+   "blocks": [
+    {
+     "type": "pop",
+     "star": true,
+     "target": "u",
+     "pool": [
+      "u",
+      "u",
+      "s",
+      "a",
+      "t",
+      "p",
+      "i",
+      "n",
+      "m"
+     ],
+     "need": 6,
+     "say": "u",
+     "q": "فرقع البالونات التي فيها الحرف",
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٧ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "umbrella",
+       "o": [
+        "☂️",
+        "⬇️",
+        "🪑"
+       ],
+       "a": "☂️",
+       "lang": "en"
+      },
+      {
+       "say": "under",
+       "o": [
+        "⬇️",
+        "🪑",
+        "☂️"
+       ],
+       "a": "⬇️",
+       "lang": "en"
+      },
+      {
+       "say": "table",
+       "o": [
+        "🪑",
+        "☂️",
+        "⬇️"
+       ],
+       "a": "🪑",
+       "lang": "en"
+      },
+      {
+       "say": "We have a table.",
+       "o": [
+        "لدينا طاولة.",
+        "القطة تحت الطاولة."
+       ],
+       "a": "لدينا طاولة.",
+       "lang": "en"
+      },
+      {
+       "say": "The cat is under the table.",
+       "o": [
+        "القطة تحت الطاولة.",
+        "لدينا طاولة."
+       ],
+       "a": "القطة تحت الطاولة.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

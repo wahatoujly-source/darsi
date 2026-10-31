@@ -1,0 +1,266 @@
+{
+ "id": "en-2-u4-l4",
+ "grade": 2,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "My body",
+ "titleAr": "الإنجليزية — الصف الثاني",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "My body",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "head",
+       "em": "🧑",
+       "say": "head",
+       "sub": "رأس",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "arm",
+       "em": "💪",
+       "say": "arm",
+       "sub": "ذراع",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "leg",
+       "em": "🦵",
+       "say": "leg",
+       "sub": "ساق",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "hand",
+       "em": "✋",
+       "say": "hand",
+       "sub": "يد",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "foot",
+       "em": "🦶",
+       "say": "foot",
+       "sub": "قدم",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك كتاب التلميذ ص 46⁠–⁠47"
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "Touch your head.",
+       "em": "🧑",
+       "say": "Touch your head.",
+       "sub": "المس رأسك.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "Clap your hands.",
+       "em": "👏",
+       "say": "Clap your hands.",
+       "sub": "صفّق بيديك.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "head",
+       "o": [
+        "🧑",
+        "✋",
+        "🦶"
+       ],
+       "a": "🧑",
+       "lang": "en"
+      },
+      {
+       "say": "arm",
+       "o": [
+        "💪",
+        "🦵",
+        "✋"
+       ],
+       "a": "💪",
+       "lang": "en"
+      },
+      {
+       "say": "leg",
+       "o": [
+        "🦵",
+        "💪",
+        "✋"
+       ],
+       "a": "🦵",
+       "lang": "en"
+      },
+      {
+       "say": "hand",
+       "o": [
+        "✋",
+        "🦵",
+        "🧑"
+       ],
+       "a": "✋",
+       "lang": "en"
+      },
+      {
+       "say": "foot",
+       "o": [
+        "🦶",
+        "✋",
+        "💪"
+       ],
+       "a": "🦶",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "Touch your head.",
+       "o": [
+        "المس رأسك.",
+        "صفّق بيديك."
+       ],
+       "a": "المس رأسك.",
+       "lang": "en"
+      },
+      {
+       "say": "Clap your hands.",
+       "o": [
+        "صفّق بيديك.",
+        "المس رأسك."
+       ],
+       "a": "صفّق بيديك.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "head",
+       "o": [
+        "🧑",
+        "🦶",
+        "💪"
+       ],
+       "a": "🧑",
+       "lang": "en"
+      },
+      {
+       "say": "arm",
+       "o": [
+        "💪",
+        "🦵",
+        "✋"
+       ],
+       "a": "💪",
+       "lang": "en"
+      },
+      {
+       "say": "leg",
+       "o": [
+        "🦵",
+        "✋",
+        "🧑"
+       ],
+       "a": "🦵",
+       "lang": "en"
+      },
+      {
+       "say": "hand",
+       "o": [
+        "✋",
+        "💪",
+        "🦵"
+       ],
+       "a": "✋",
+       "lang": "en"
+      },
+      {
+       "say": "Touch your head.",
+       "o": [
+        "المس رأسك.",
+        "صفّق بيديك."
+       ],
+       "a": "المس رأسك.",
+       "lang": "en"
+      },
+      {
+       "say": "Clap your hands.",
+       "o": [
+        "صفّق بيديك.",
+        "المس رأسك."
+       ],
+       "a": "صفّق بيديك.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

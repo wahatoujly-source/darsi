@@ -1,0 +1,270 @@
+{
+ "id": "en-2-u4-l8",
+ "grade": 2,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "Story: The Lost Bag",
+ "titleAr": "الإنجليزية — الصف الثاني",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "Story: The Lost Bag",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "bag",
+       "em": "🎒",
+       "say": "bag",
+       "sub": "حقيبة",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "lost",
+       "em": "❓",
+       "say": "lost",
+       "sub": "مفقود",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "find",
+       "em": "🔍",
+       "say": "find",
+       "sub": "يجد",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "teacher",
+       "em": "🧑‍🏫",
+       "say": "teacher",
+       "sub": "معلم",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك كتاب التلميذ ص 54⁠–⁠55"
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "Where's my bag?",
+       "em": "🎒",
+       "say": "Where's my bag?",
+       "sub": "أين حقيبتي؟",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "Here it is!",
+       "em": "✅",
+       "say": "Here it is!",
+       "sub": "ها هي!",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "Thank you!",
+       "em": "🙏",
+       "say": "Thank you!",
+       "sub": "شكراً!",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "bag",
+       "o": [
+        "🎒",
+        "❓",
+        "🧑‍🏫"
+       ],
+       "a": "🎒",
+       "lang": "en"
+      },
+      {
+       "say": "lost",
+       "o": [
+        "❓",
+        "🎒",
+        "🔍"
+       ],
+       "a": "❓",
+       "lang": "en"
+      },
+      {
+       "say": "find",
+       "o": [
+        "🔍",
+        "🎒",
+        "🧑‍🏫"
+       ],
+       "a": "🔍",
+       "lang": "en"
+      },
+      {
+       "say": "teacher",
+       "o": [
+        "🧑‍🏫",
+        "🔍",
+        "❓"
+       ],
+       "a": "🧑‍🏫",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "Where's my bag?",
+       "o": [
+        "أين حقيبتي؟",
+        "ها هي!",
+        "شكراً!"
+       ],
+       "a": "أين حقيبتي؟",
+       "lang": "en"
+      },
+      {
+       "say": "Here it is!",
+       "o": [
+        "ها هي!",
+        "أين حقيبتي؟",
+        "شكراً!"
+       ],
+       "a": "ها هي!",
+       "lang": "en"
+      },
+      {
+       "say": "Thank you!",
+       "o": [
+        "شكراً!",
+        "أين حقيبتي؟",
+        "ها هي!"
+       ],
+       "a": "شكراً!",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "bag",
+       "o": [
+        "🎒",
+        "🧑‍🏫",
+        "🔍"
+       ],
+       "a": "🎒",
+       "lang": "en"
+      },
+      {
+       "say": "lost",
+       "o": [
+        "❓",
+        "🧑‍🏫",
+        "🎒"
+       ],
+       "a": "❓",
+       "lang": "en"
+      },
+      {
+       "say": "find",
+       "o": [
+        "🔍",
+        "🎒",
+        "❓"
+       ],
+       "a": "🔍",
+       "lang": "en"
+      },
+      {
+       "say": "teacher",
+       "o": [
+        "🧑‍🏫",
+        "🔍",
+        "🎒"
+       ],
+       "a": "🧑‍🏫",
+       "lang": "en"
+      },
+      {
+       "say": "Where's my bag?",
+       "o": [
+        "أين حقيبتي؟",
+        "ها هي!",
+        "شكراً!"
+       ],
+       "a": "أين حقيبتي؟",
+       "lang": "en"
+      },
+      {
+       "say": "Here it is!",
+       "o": [
+        "ها هي!",
+        "أين حقيبتي؟",
+        "شكراً!"
+       ],
+       "a": "ها هي!",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

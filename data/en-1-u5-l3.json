@@ -1,0 +1,165 @@
+{
+ "id": "en-1-u5-l3",
+ "grade": 1,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "oo, foot, book",
+ "titleAr": "الإنجليزية — الصف الأول",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "oo, foot, book",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "oo",
+       "say": "oo",
+       "c": "#E8590C",
+       "lang": "en",
+       "must": 1,
+       "big": true
+      },
+      {
+       "t": "foot",
+       "em": "🦶",
+       "say": "foot",
+       "sub": "قدم",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "book",
+       "em": "📖",
+       "say": "book",
+       "sub": "كتاب",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "cook",
+       "em": "🧑‍🍳",
+       "say": "cook",
+       "sub": "طباخ",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك كتاب التلميذ ص 50"
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٢ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "foot",
+       "o": [
+        "🦶",
+        "📖",
+        "🧑‍🍳"
+       ],
+       "a": "🦶",
+       "lang": "en"
+      },
+      {
+       "say": "book",
+       "o": [
+        "📖",
+        "🧑‍🍳",
+        "🦶"
+       ],
+       "a": "📖",
+       "lang": "en"
+      },
+      {
+       "say": "cook",
+       "o": [
+        "🧑‍🍳",
+        "🦶",
+        "📖"
+       ],
+       "a": "🧑‍🍳",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "تتبّع",
+   "eyebrow": "الخطوة ٣ — تتبّع",
+   "heading": "اكتب الحرف",
+   "blocks": [
+    {
+     "type": "trace",
+     "star": true,
+     "items": [
+      {
+       "t": "oo",
+       "say": "oo"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٤ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "foot",
+       "o": [
+        "🦶",
+        "📖",
+        "🧑‍🍳"
+       ],
+       "a": "🦶",
+       "lang": "en"
+      },
+      {
+       "say": "book",
+       "o": [
+        "📖",
+        "🦶",
+        "🧑‍🍳"
+       ],
+       "a": "📖",
+       "lang": "en"
+      },
+      {
+       "say": "cook",
+       "o": [
+        "🧑‍🍳",
+        "📖",
+        "🦶"
+       ],
+       "a": "🧑‍🍳",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

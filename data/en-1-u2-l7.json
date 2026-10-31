@@ -1,0 +1,270 @@
+{
+ "id": "en-1-u2-l7",
+ "grade": 1,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "I wash my face. I brush my teeth.",
+ "titleAr": "الإنجليزية — الصف الأول",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "I wash my face. I brush my teeth.",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "face",
+       "em": "🙂",
+       "say": "face",
+       "sub": "وجه",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "teeth",
+       "em": "🦷",
+       "say": "teeth",
+       "sub": "أسنان",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "hands",
+       "em": "🙌",
+       "say": "hands",
+       "sub": "يدان",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "soap",
+       "em": "🧼",
+       "say": "soap",
+       "sub": "صابون",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك كتاب التلميذ ص 24"
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "I wash my face.",
+       "em": "🧼",
+       "say": "I wash my face.",
+       "sub": "أغسل وجهي.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "I brush my teeth.",
+       "em": "🪥",
+       "say": "I brush my teeth.",
+       "sub": "أنظف أسناني.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "I wash my hands.",
+       "em": "🙌",
+       "say": "I wash my hands.",
+       "sub": "أغسل يديّ.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "face",
+       "o": [
+        "🙂",
+        "🧼",
+        "🙌"
+       ],
+       "a": "🙂",
+       "lang": "en"
+      },
+      {
+       "say": "teeth",
+       "o": [
+        "🦷",
+        "🧼",
+        "🙂"
+       ],
+       "a": "🦷",
+       "lang": "en"
+      },
+      {
+       "say": "hands",
+       "o": [
+        "🙌",
+        "🧼",
+        "🙂"
+       ],
+       "a": "🙌",
+       "lang": "en"
+      },
+      {
+       "say": "soap",
+       "o": [
+        "🧼",
+        "🦷",
+        "🙌"
+       ],
+       "a": "🧼",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "I wash my face.",
+       "o": [
+        "أغسل وجهي.",
+        "أنظف أسناني.",
+        "أغسل يديّ."
+       ],
+       "a": "أغسل وجهي.",
+       "lang": "en"
+      },
+      {
+       "say": "I brush my teeth.",
+       "o": [
+        "أنظف أسناني.",
+        "أغسل وجهي.",
+        "أغسل يديّ."
+       ],
+       "a": "أنظف أسناني.",
+       "lang": "en"
+      },
+      {
+       "say": "I wash my hands.",
+       "o": [
+        "أغسل يديّ.",
+        "أغسل وجهي.",
+        "أنظف أسناني."
+       ],
+       "a": "أغسل يديّ.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "face",
+       "o": [
+        "🙂",
+        "🙌",
+        "🧼"
+       ],
+       "a": "🙂",
+       "lang": "en"
+      },
+      {
+       "say": "teeth",
+       "o": [
+        "🦷",
+        "🧼",
+        "🙌"
+       ],
+       "a": "🦷",
+       "lang": "en"
+      },
+      {
+       "say": "hands",
+       "o": [
+        "🙌",
+        "🧼",
+        "🙂"
+       ],
+       "a": "🙌",
+       "lang": "en"
+      },
+      {
+       "say": "soap",
+       "o": [
+        "🧼",
+        "🙂",
+        "🦷"
+       ],
+       "a": "🧼",
+       "lang": "en"
+      },
+      {
+       "say": "I wash my face.",
+       "o": [
+        "أغسل وجهي.",
+        "أنظف أسناني.",
+        "أغسل يديّ."
+       ],
+       "a": "أغسل وجهي.",
+       "lang": "en"
+      },
+      {
+       "say": "I brush my teeth.",
+       "o": [
+        "أنظف أسناني.",
+        "أغسل وجهي.",
+        "أغسل يديّ."
+       ],
+       "a": "أنظف أسناني.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

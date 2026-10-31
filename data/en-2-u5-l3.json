@@ -1,0 +1,248 @@
+{
+ "id": "en-2-u5-l3",
+ "grade": 2,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "I draw / play / read …",
+ "titleAr": "الإنجليزية — الصف الثاني",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "I draw / play / read …",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "draw",
+       "em": "🖍️",
+       "say": "draw",
+       "sub": "أرسم",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "play",
+       "em": "🤸",
+       "say": "play",
+       "sub": "ألعب",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "read",
+       "em": "📖",
+       "say": "read",
+       "sub": "أقرأ",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "write",
+       "em": "✍️",
+       "say": "write",
+       "sub": "أكتب",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك كتاب التلميذ ص 62⁠–⁠63"
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "I draw a picture.",
+       "em": "🖍️",
+       "say": "I draw a picture.",
+       "sub": "أرسم صورة.",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "I read a book.",
+       "em": "📖",
+       "say": "I read a book.",
+       "sub": "أقرأ كتاباً.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "draw",
+       "o": [
+        "🖍️",
+        "📖",
+        "🤸"
+       ],
+       "a": "🖍️",
+       "lang": "en"
+      },
+      {
+       "say": "play",
+       "o": [
+        "🤸",
+        "✍️",
+        "🖍️"
+       ],
+       "a": "🤸",
+       "lang": "en"
+      },
+      {
+       "say": "read",
+       "o": [
+        "📖",
+        "🤸",
+        "✍️"
+       ],
+       "a": "📖",
+       "lang": "en"
+      },
+      {
+       "say": "write",
+       "o": [
+        "✍️",
+        "📖",
+        "🤸"
+       ],
+       "a": "✍️",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "I draw a picture.",
+       "o": [
+        "أرسم صورة.",
+        "أقرأ كتاباً."
+       ],
+       "a": "أرسم صورة.",
+       "lang": "en"
+      },
+      {
+       "say": "I read a book.",
+       "o": [
+        "أقرأ كتاباً.",
+        "أرسم صورة."
+       ],
+       "a": "أقرأ كتاباً.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "draw",
+       "o": [
+        "🖍️",
+        "📖",
+        "✍️"
+       ],
+       "a": "🖍️",
+       "lang": "en"
+      },
+      {
+       "say": "play",
+       "o": [
+        "🤸",
+        "✍️",
+        "📖"
+       ],
+       "a": "🤸",
+       "lang": "en"
+      },
+      {
+       "say": "read",
+       "o": [
+        "📖",
+        "🤸",
+        "✍️"
+       ],
+       "a": "📖",
+       "lang": "en"
+      },
+      {
+       "say": "write",
+       "o": [
+        "✍️",
+        "🤸",
+        "📖"
+       ],
+       "a": "✍️",
+       "lang": "en"
+      },
+      {
+       "say": "I draw a picture.",
+       "o": [
+        "أرسم صورة.",
+        "أقرأ كتاباً."
+       ],
+       "a": "أرسم صورة.",
+       "lang": "en"
+      },
+      {
+       "say": "I read a book.",
+       "o": [
+        "أقرأ كتاباً.",
+        "أرسم صورة."
+       ],
+       "a": "أقرأ كتاباً.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}

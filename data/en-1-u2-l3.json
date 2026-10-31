@@ -1,0 +1,277 @@
+{
+ "id": "en-1-u2-l3",
+ "grade": 1,
+ "subject": "en",
+ "stage": "primary-1-3",
+ "lang": "en",
+ "title": "h, hand, hair, head — How many?",
+ "titleAr": "الإنجليزية — الصف الأول",
+ "steps": [
+  {
+   "title": "أتعرّف",
+   "eyebrow": "الخطوة ١ — أتعرّف",
+   "heading": "h, hand, hair, head — How many?",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "Hh",
+       "say": "h",
+       "c": "#E8590C",
+       "lang": "en",
+       "must": 1,
+       "big": true
+      },
+      {
+       "t": "hand",
+       "em": "✋",
+       "say": "hand",
+       "sub": "يد",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "hair",
+       "em": "💇",
+       "say": "hair",
+       "sub": "شعر",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "head",
+       "em": "🧑",
+       "say": "head",
+       "sub": "رأس",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اضغط على كل بطاقة واسمع. كتابك كتاب التلميذ ص 20"
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "جمل الدرس",
+   "blocks": [
+    {
+     "type": "cards",
+     "star": true,
+     "items": [
+      {
+       "t": "How many hands?",
+       "em": "✋✋",
+       "say": "How many hands?",
+       "sub": "كم يداً؟",
+       "lang": "en",
+       "must": 1
+      },
+      {
+       "t": "Two hands.",
+       "em": "2️⃣",
+       "say": "Two hands.",
+       "sub": "يدان اثنتان.",
+       "lang": "en",
+       "must": 1
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع الجملة وردّدها."
+  },
+  {
+   "title": "العب",
+   "eyebrow": "الخطوة ٣ — العب",
+   "heading": "اسمع واختر الصورة",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "hand",
+       "o": [
+        "✋",
+        "🧑",
+        "💇"
+       ],
+       "a": "✋",
+       "lang": "en"
+      },
+      {
+       "say": "hair",
+       "o": [
+        "💇",
+        "✋",
+        "🧑"
+       ],
+       "a": "💇",
+       "lang": "en"
+      },
+      {
+       "say": "head",
+       "o": [
+        "🧑",
+        "✋",
+        "💇"
+       ],
+       "a": "🧑",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "افهم",
+   "eyebrow": "الخطوة ٤ — افهم",
+   "heading": "ما معنى الجملة؟",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "How many hands?",
+       "o": [
+        "كم يداً؟",
+        "يدان اثنتان."
+       ],
+       "a": "كم يداً؟",
+       "lang": "en"
+      },
+      {
+       "say": "Two hands.",
+       "o": [
+        "يدان اثنتان.",
+        "كم يداً؟"
+       ],
+       "a": "يدان اثنتان.",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "تتبّع",
+   "eyebrow": "الخطوة ٥ — تتبّع",
+   "heading": "اكتب الحرف",
+   "blocks": [
+    {
+     "type": "trace",
+     "star": true,
+     "items": [
+      {
+       "t": "H",
+       "say": "H"
+      },
+      {
+       "t": "h",
+       "say": "h"
+      }
+     ],
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "فرقع",
+   "eyebrow": "الخطوة ٦ — فرقع",
+   "heading": "بالونات الحرف h",
+   "blocks": [
+    {
+     "type": "pop",
+     "star": true,
+     "target": "h",
+     "pool": [
+      "h",
+      "h",
+      "s",
+      "a",
+      "t",
+      "p",
+      "i",
+      "n",
+      "m"
+     ],
+     "need": 6,
+     "say": "h",
+     "q": "فرقع البالونات التي فيها الحرف",
+     "lang": "en"
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٧ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "hand",
+       "o": [
+        "✋",
+        "🧑",
+        "💇"
+       ],
+       "a": "✋",
+       "lang": "en"
+      },
+      {
+       "say": "hair",
+       "o": [
+        "💇",
+        "🧑",
+        "✋"
+       ],
+       "a": "💇",
+       "lang": "en"
+      },
+      {
+       "say": "head",
+       "o": [
+        "🧑",
+        "✋",
+        "💇"
+       ],
+       "a": "🧑",
+       "lang": "en"
+      },
+      {
+       "say": "How many hands?",
+       "o": [
+        "كم يداً؟",
+        "يدان اثنتان."
+       ],
+       "a": "كم يداً؟",
+       "lang": "en"
+      },
+      {
+       "say": "Two hands.",
+       "o": [
+        "يدان اثنتان.",
+        "كم يداً؟"
+       ],
+       "a": "يدان اثنتان.",
+       "lang": "en"
+      }
+     ],
+     "final": true,
+     "lang": "en"
+    }
+   ]
+  }
+ ]
+}
