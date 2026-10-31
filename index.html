@@ -1470,7 +1470,7 @@ function installCard(){
 }
 
 const GRADE_NOTE={'1':'نتعلّم الحروف والأعداد','2':'نقرأ ونكتب ونحسب','3':'نكبر ونكتشف','4':'نبدأ رحلة العلوم','5':'نفكّر ونبحث','6':'نختم المرحلة الابتدائية','7':'أول الإعدادي','8':'نتعمّق أكثر','9':'شهادة التعليم الأساسي'};
-const AR_NUM=n=>String(n).replace(/\d/g,d=>'٠١٢٣٤٥٦٧٨٩'[d]);
+const AR_NUM=n=>String(n); // في ليبيا تُستعمل الأرقام 1 2 3
 function renderHome(){
   const c=App.catalog;root.innerHTML='';
   root.append(bar(null,null,null,subPill()));
@@ -1519,7 +1519,7 @@ function renderSubscribe(){
   root.innerHTML='';root.append(bar('الاشتراك','افتح كل الدروس والاختبارات',App.after?App.after:'home'));
   const sec=el('section',{class:'stack'});
   if(App.sub)sec.append(el('div',{class:'feedback ok',text:'✓ اشتراكك مفعّل على هذا الجهاز. كل الدروس مفتوحة.'}));
-  const plans=[['term','فصل دراسي','كل المواد لصف واحد حتى نهاية الفصل'],['year','سنة دراسية كاملة','الفصلان معاً بسعر أقل'],['family','باقة العائلة','حتى ٣ أبناء في صفوف مختلفة']];
+  const plans=[['term','فصل دراسي','كل المواد لصف واحد حتى نهاية الفصل'],['year','سنة دراسية كاملة','الفصلان معاً بسعر أقل'],['family','باقة العائلة','حتى 3 أبناء في صفوف مختلفة']];
   let chosen='year';const pg=el('div',{class:'plans'});
   const drawPlans=()=>{pg.innerHTML='';plans.forEach(([id,n,d])=>pg.append(el('button',{class:'plan','aria-pressed':String(id===chosen),onclick:()=>{chosen=id;drawPlans();}},el('b',{text:n}),el('span',{class:'note',text:d}),el('div',{class:'tag sun',style:'margin-top:6px',text:'السعر يحدده المالك'}))));};drawPlans();
   const msg=el('div');
@@ -1546,7 +1546,7 @@ async function renderLesson(id){
   root.innerHTML='';root.append(el('p',{class:'note',style:'padding:30px 0',text:'جارٍ تحميل الدرس…'}));
   let L;try{L=await getJSON('data/'+id+'.json');}catch(e){root.innerHTML='';root.append(el('div',{class:'err'},el('p',{text:e&&e.userMsg?e.userMsg:'تعذّر تحميل الدرس. تحقق من الاتصال وحاول مرة أخرى.'}),el('button',{class:'btn',text:'أعد المحاولة',onclick:route})));return;}
   QR.reg=L.quran||[];const kids=L.stage==='primary-1-3';document.body.classList.toggle('kids',kids);TTS.age=AGE_PROFILES[L.stage]||AGE_PROFILES['prep-7-9'];TTS.rate=TTS.age.rate;assignVoices(L.characters||{});FX.lang=L.lang==='en'?'en':'ar';
-  const backTo='g'+info.grade+'-'+info.subject.id,N=L.steps.length,AR='١٢٣٤٥٦٧٨٩';
+  const backTo='g'+info.grade+'-'+info.subject.id,N=L.steps.length,AR='123456789';
   const done=new Set(store.get('done_'+id,[]));
   const stars=el('span',{class:'pill'}),nav=el('nav',{class:'steps','aria-label':'خطوات الدرس'});
   const snd=el('button',{class:'pill','aria-label':'أصوات التشجيع',onclick:()=>{FX.on=!FX.on;store.set('sound',FX.on);snd.textContent=FX.on?'🔊':'🔇';if(FX.on)cheer('right',{say:false});}},FX.on?'🔊':'🔇');
@@ -1668,7 +1668,7 @@ async function renderExamEditor(subj,key,g){
   const dl=el('datalist',{id:'titles'});TITLE_PRESETS.forEach(t=>dl.append(el('option',{value:t})));
   const optChk=(label,k)=>{const id='to-'+k;const c=el('input',{type:'checkbox',id});c.checked=!!st.opts[k];c.onchange=()=>{st.opts[k]=c.checked;refresh();};return el('label',{class:'chk',for:id},c,label);};
   const fontSel=el('select',{id:'to-font'});[[13,'صغير'],[15,'متوسط'],[17,'كبير']].forEach(([v,t])=>{const o=el('option',{value:v,text:'حجم الخط: '+t});if(+st.opts.font===v)o.selected=true;fontSel.append(o);});fontSel.onchange=()=>{st.opts.font=+fontSel.value;refresh();};
-  wrap.append(el('div',{class:'panel'},el('h3',{class:'h3',style:'margin-top:0',text:'١. بيانات الاختبار'}),
+  wrap.append(el('div',{class:'panel'},el('h3',{class:'h3',style:'margin-top:0',text:'1. بيانات الاختبار'}),
     el('div',{class:'fgrid'},F('اسم المدرسة','school',{placeholder:'مثال: مدرسة الأمل للتعليم الأساسي'}),F('العام الدراسي','year'),F('اسم المعلم','teacher'),F('عنوان / نوع الاختبار','title',{list:'titles',placeholder:'شهري، نهائي، أو أي عنوان'}),F('المادة','subject'),F('الصف','grade'),F('الفصل / الشعبة','klass',{placeholder:'مثال: 7/أ'}),F('زمن الاختبار','duration'),F('التاريخ','date',{placeholder:'مثال: 2025/11/15'})),dl,
     el('div',{class:'row',style:'margin-top:10px;gap:16px'},optChk('خانة اسم الطالب','student'),optChk('إظهار نموذج الإجابة','answers'),fontSel)));
 
@@ -1710,7 +1710,7 @@ async function renderExamEditor(subj,key,g){
   lf.onchange=drawBank;tfSel.onchange=drawBank;
   bankBox.append(el('div',{class:'row'},lf,tfSel),el('p',{class:'note',style:'margin:6px 0',text:bank.length+' سؤالاً في البنك: من الاختبارات الجاهزة ومن تمارين الدروس.'}),bl);
   const bankBtn=el('button',{class:'btn sun',text:'📚 بنك الأسئلة',onclick:()=>{bankBox.hidden=!bankBox.hidden;bankBtn.textContent=bankBox.hidden?'📚 بنك الأسئلة':'إغلاق البنك';if(!bankBox.hidden)drawBank();}});
-  wrap.append(el('div',{class:'panel'},el('div',{class:'row',style:'justify-content:space-between'},el('h3',{class:'h3',style:'margin:0',text:'٢. الأسئلة'}),qcount),
+  wrap.append(el('div',{class:'panel'},el('div',{class:'row',style:'justify-content:space-between'},el('h3',{class:'h3',style:'margin:0',text:'2. الأسئلة'}),qcount),
     el('p',{class:'note',style:'margin:4px 0 8px',text:'أزل علامة ✓ لاستبعاد سؤال من الطباعة دون حذفه. عدّل النص والدرجة كما تشاء.'}),bankBtn,bankBox,qlist,addBar));
   if(key==='new'&&!st.items.length){bankBox.hidden=false;bankBtn.textContent='إغلاق البنك';}
 
@@ -1722,7 +1722,7 @@ async function renderExamEditor(subj,key,g){
     el('button',{class:'btn ghost',text:st.opts.answers?'📄 ورقة الطالب':'🔑 نموذج الإجابة',onclick:e=>{st.opts.answers=!st.opts.answers;e.currentTarget.textContent=st.opts.answers?'📄 ورقة الطالب':'🔑 نموذج الإجابة';const c=$('#to-answers');if(c)c.checked=st.opts.answers;refresh();}}),
     el('button',{class:'btn ghost',text:'💾 حفظ في اختباراتي',onclick:()=>{const mine=store.get('myexams',{});const k=saved?key:'s'+Date.now();mine[k]={title:st.meta.title,subj,g:TG.g,savedAt:Date.now(),state:st};store.set('myexams',mine);toast('✓ حُفظ الاختبار في «اختباراتي»');if(!saved)history.replaceState(null,'','#'+txh(subj,k));}}),
     el('button',{class:'btn ghost',text:'↺ ابدأ من جديد',onclick:e=>{if(e.currentTarget.dataset.c!=='1'){e.currentTarget.dataset.c='1';e.currentTarget.textContent='اضغط مرة أخرى للتأكيد';return;}store.set(draftKey,null);st=fresh();renderExamEditor(subj,key,TG.g);}}));
-  sheetWrap.append(el('h3',{class:'h3',text:'٣. المعاينة والطباعة'}),el('div',{class:'feedback info',style:'margin:0 0 8px'},el('b',{text:'لحفظ الاختبار ملف PDF: '}),'اضغط «طباعة / حفظ PDF»، ثم اختر من قائمة الطابعات «حفظ بتنسيق PDF» (Save as PDF). على الجوال: افتح الموقع في Chrome، والخيار نفسه موجود في نافذة الطباعة.'),actions,sheet);
+  sheetWrap.append(el('h3',{class:'h3',text:'3. المعاينة والطباعة'}),el('div',{class:'feedback info',style:'margin:0 0 8px'},el('b',{text:'لحفظ الاختبار ملف PDF: '}),'اضغط «طباعة / حفظ PDF»، ثم اختر من قائمة الطابعات «حفظ بتنسيق PDF» (Save as PDF). على الجوال: افتح الموقع في Chrome، والخيار نفسه موجود في نافذة الطباعة.'),actions,sheet);
   root.append(sheetWrap);
 
   function drawSheet(){
