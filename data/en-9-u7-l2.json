@@ -1,0 +1,287 @@
+{
+ "id": "en-9-u7-l2",
+ "grade": 9,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 7 · Lesson 2: Different Countries, Different Customs",
+ "titleAr": "في بعض البلدان من الوقاحة الأكل باليد اليسرى.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "في بعض البلدان من الوقاحة الأكل باليد اليسرى.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "custom",
+       "ar": "عادة",
+       "em": "🎎"
+      },
+      {
+       "id": "v1",
+       "en": "greet",
+       "ar": "يحيّي",
+       "em": "👋"
+      },
+      {
+       "id": "v2",
+       "en": "rude",
+       "ar": "وقح",
+       "em": "😠"
+      },
+      {
+       "id": "v3",
+       "en": "gift",
+       "ar": "هدية",
+       "em": "🎁"
+      },
+      {
+       "id": "v4",
+       "en": "polite",
+       "ar": "مهذب",
+       "em": "🙂"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 86⁠–⁠87"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "It's + adjective + to …",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">In some countries it's <b>rude</b> to eat with your left hand.</div><div class=\"ex\">In Japan, people take <b>off</b> their shoes indoors.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "In some countries it's rude to eat with your left hand. In Japan, people take off their shoes indoors."
+      }
+     ]
+    }
+   ],
+   "lead": "It's rude to … / It's polite to …",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "It's ___ to arrive late.",
+           "a": "rude",
+           "o": [
+            "rude",
+            "polite"
+           ]
+          },
+          {
+           "s": "People take ___ their shoes.",
+           "a": "off",
+           "o": [
+            "off",
+            "of"
+           ]
+          },
+          {
+           "s": "It's polite ___ bring a gift.",
+           "a": "to",
+           "o": [
+            "to",
+            "for"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "In some countries it's rude to eat with your left hand.",
+          "In Japan, people take off their shoes indoors."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "In some countries it's rude to eat with your left hand.",
+           "o": [
+            "In some countries it's rude to eat with your left hand.",
+            "In Japan, people take off their shoes indoors."
+           ]
+          },
+          {
+           "a": "In Japan, people take off their shoes indoors.",
+           "o": [
+            "In Japan, people take off their shoes indoors.",
+            "In some countries it's rude to eat with your left hand."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "custom",
+       "ipa": "",
+       "meaning": "عادة",
+       "ex": "custom"
+      },
+      {
+       "must": 1,
+       "term": "greet",
+       "ipa": "",
+       "meaning": "يحيّي",
+       "ex": "greet"
+      },
+      {
+       "must": 1,
+       "term": "rude",
+       "ipa": "",
+       "meaning": "وقح",
+       "ex": "In some countries it's rude to eat with your left hand."
+      },
+      {
+       "must": 0,
+       "term": "gift",
+       "ipa": "",
+       "meaning": "هدية",
+       "ex": "gift"
+      },
+      {
+       "must": 0,
+       "term": "polite",
+       "ipa": "",
+       "meaning": "مهذب",
+       "ex": "polite"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "It's ___ to arrive late.",
+       "a": "rude",
+       "o": [
+        "rude",
+        "polite"
+       ],
+       "why": ""
+      },
+      {
+       "q": "People take ___ their shoes.",
+       "a": "off",
+       "o": [
+        "off",
+        "of"
+       ],
+       "why": ""
+      },
+      {
+       "q": "It's polite ___ bring a gift.",
+       "a": "to",
+       "o": [
+        "to",
+        "for"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى polite؟",
+       "a": "مهذب",
+       "o": [
+        "مهذب",
+        "عادة",
+        "يحيّي"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى gift؟",
+       "a": "هدية",
+       "o": [
+        "هدية",
+        "عادة",
+        "يحيّي"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "In some countries it's rude to eat with your left hand.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "In some countries it's rude to eat with your left hand.",
+       "o": [
+        "In some countries it's rude to eat with your left hand.",
+        "In Japan, people take off their shoes indoors."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

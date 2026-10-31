@@ -1,0 +1,287 @@
+{
+ "id": "en-9-u5-l8",
+ "grade": 9,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 5 · Lesson 8: A Powerful Lesson for …",
+ "titleAr": "شارك إشاعة دون التحقق من الحقائق.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "شارك إشاعة دون التحقق من الحقائق.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "lesson",
+       "ar": "درس",
+       "em": "📘"
+      },
+      {
+       "id": "v1",
+       "en": "powerful",
+       "ar": "قوي التأثير",
+       "em": "💥"
+      },
+      {
+       "id": "v2",
+       "en": "learn",
+       "ar": "يتعلم",
+       "em": "🧠"
+      },
+      {
+       "id": "v3",
+       "en": "rumour",
+       "ar": "إشاعة",
+       "em": "🗣️"
+      },
+      {
+       "id": "v4",
+       "en": "check facts",
+       "ar": "يتحقق من الحقائق",
+       "em": "✅"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 69⁠–⁠71"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "without + -ing",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">He shared a rumour without <b>checking</b> the facts.</div><div class=\"ex\">He <b>learnt</b> a powerful lesson.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "He shared a rumour without checking the facts. He learnt a powerful lesson."
+      }
+     ]
+    }
+   ],
+   "lead": "without checking / without asking",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "He shared it without ___ .",
+           "a": "checking",
+           "o": [
+            "checking",
+            "check"
+           ]
+          },
+          {
+           "s": "He ___ a powerful lesson.",
+           "a": "learnt",
+           "o": [
+            "learnt",
+            "learned it"
+           ]
+          },
+          {
+           "s": "Don't believe every ___ .",
+           "a": "rumour",
+           "o": [
+            "rumour",
+            "lesson"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "He shared a rumour without checking the facts.",
+          "He learnt a powerful lesson."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "He shared a rumour without checking the facts.",
+           "o": [
+            "He shared a rumour without checking the facts.",
+            "He learnt a powerful lesson."
+           ]
+          },
+          {
+           "a": "He learnt a powerful lesson.",
+           "o": [
+            "He learnt a powerful lesson.",
+            "He shared a rumour without checking the facts."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "lesson",
+       "ipa": "",
+       "meaning": "درس",
+       "ex": "He learnt a powerful lesson."
+      },
+      {
+       "must": 1,
+       "term": "powerful",
+       "ipa": "",
+       "meaning": "قوي التأثير",
+       "ex": "He learnt a powerful lesson."
+      },
+      {
+       "must": 1,
+       "term": "learn",
+       "ipa": "",
+       "meaning": "يتعلم",
+       "ex": "He learnt a powerful lesson."
+      },
+      {
+       "must": 0,
+       "term": "rumour",
+       "ipa": "",
+       "meaning": "إشاعة",
+       "ex": "He shared a rumour without checking the facts."
+      },
+      {
+       "must": 0,
+       "term": "check facts",
+       "ipa": "",
+       "meaning": "يتحقق من الحقائق",
+       "ex": "He shared a rumour without checking the facts."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "He shared it without ___ .",
+       "a": "checking",
+       "o": [
+        "checking",
+        "check"
+       ],
+       "why": ""
+      },
+      {
+       "q": "He ___ a powerful lesson.",
+       "a": "learnt",
+       "o": [
+        "learnt",
+        "learned it"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Don't believe every ___ .",
+       "a": "rumour",
+       "o": [
+        "rumour",
+        "lesson"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى lesson؟",
+       "a": "درس",
+       "o": [
+        "درس",
+        "قوي التأثير",
+        "يتعلم"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى check facts؟",
+       "a": "يتحقق من الحقائق",
+       "o": [
+        "يتحقق من الحقائق",
+        "درس",
+        "قوي التأثير"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "He shared a rumour without checking the facts.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "He shared a rumour without checking the facts.",
+       "o": [
+        "He shared a rumour without checking the facts.",
+        "He learnt a powerful lesson."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

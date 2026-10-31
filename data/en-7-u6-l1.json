@@ -1,0 +1,287 @@
+{
+ "id": "en-7-u6-l1",
+ "grade": 7,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 6 · Lesson 1: Making New Friends",
+ "titleAr": "دعني أعرّفك بصديقتي يوكي.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "دعني أعرّفك بصديقتي يوكي.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "introduce",
+       "ar": "يعرّف",
+       "em": "🤝"
+      },
+      {
+       "id": "v1",
+       "en": "pen friend",
+       "ar": "صديق بالمراسلة",
+       "em": "✉️"
+      },
+      {
+       "id": "v2",
+       "en": "hobby",
+       "ar": "هواية",
+       "em": "🎨"
+      },
+      {
+       "id": "v3",
+       "en": "interested in",
+       "ar": "مهتم بـ",
+       "em": "🤔"
+      },
+      {
+       "id": "v4",
+       "en": "get on well",
+       "ar": "يتفق جيداً",
+       "em": "😊"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 64"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "interested in + -ing",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Let me <b>introduce</b> my friend Yuki.</div><div class=\"ex\">She's interested <b>in</b> drawing.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Let me introduce my friend Yuki. She's interested in drawing."
+      }
+     ]
+    }
+   ],
+   "lead": "She's interested in drawing.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "She's interested ___ drawing.",
+           "a": "in",
+           "o": [
+            "in",
+            "on"
+           ]
+          },
+          {
+           "s": "Let me ___ my friend.",
+           "a": "introduce",
+           "o": [
+            "introduce",
+            "introduces"
+           ]
+          },
+          {
+           "s": "We get ___ well.",
+           "a": "on",
+           "o": [
+            "on",
+            "in"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Let me introduce my friend Yuki.",
+          "She's interested in drawing."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Let me introduce my friend Yuki.",
+           "o": [
+            "Let me introduce my friend Yuki.",
+            "She's interested in drawing."
+           ]
+          },
+          {
+           "a": "She's interested in drawing.",
+           "o": [
+            "She's interested in drawing.",
+            "Let me introduce my friend Yuki."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "introduce",
+       "ipa": "",
+       "meaning": "يعرّف",
+       "ex": "Let me introduce my friend Yuki."
+      },
+      {
+       "must": 1,
+       "term": "pen friend",
+       "ipa": "",
+       "meaning": "صديق بالمراسلة",
+       "ex": "pen friend"
+      },
+      {
+       "must": 1,
+       "term": "hobby",
+       "ipa": "",
+       "meaning": "هواية",
+       "ex": "hobby"
+      },
+      {
+       "must": 0,
+       "term": "interested in",
+       "ipa": "",
+       "meaning": "مهتم بـ",
+       "ex": "She's interested in drawing."
+      },
+      {
+       "must": 0,
+       "term": "get on well",
+       "ipa": "",
+       "meaning": "يتفق جيداً",
+       "ex": "get on well"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "She's interested ___ drawing.",
+       "a": "in",
+       "o": [
+        "in",
+        "on"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Let me ___ my friend.",
+       "a": "introduce",
+       "o": [
+        "introduce",
+        "introduces"
+       ],
+       "why": ""
+      },
+      {
+       "q": "We get ___ well.",
+       "a": "on",
+       "o": [
+        "on",
+        "in"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى pen friend؟",
+       "a": "صديق بالمراسلة",
+       "o": [
+        "صديق بالمراسلة",
+        "يعرّف",
+        "هواية"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى get on well؟",
+       "a": "يتفق جيداً",
+       "o": [
+        "يتفق جيداً",
+        "يعرّف",
+        "صديق بالمراسلة"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Let me introduce my friend Yuki.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Let me introduce my friend Yuki.",
+       "o": [
+        "Let me introduce my friend Yuki.",
+        "She's interested in drawing."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

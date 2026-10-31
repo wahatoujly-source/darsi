@@ -1,0 +1,287 @@
+{
+ "id": "en-8-u5-l2",
+ "grade": 8,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 5 · Lesson 2: Accessing Information",
+ "titleAr": "يمكنك إيجاد المعلومات في الموسوعة أو على الإنترنت.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "يمكنك إيجاد المعلومات في الموسوعة أو على الإنترنت.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "search engine",
+       "ar": "محرك بحث",
+       "em": "🔍"
+      },
+      {
+       "id": "v1",
+       "en": "encyclopedia",
+       "ar": "موسوعة",
+       "em": "📚"
+      },
+      {
+       "id": "v2",
+       "en": "reliable",
+       "ar": "موثوق",
+       "em": "✅"
+      },
+      {
+       "id": "v3",
+       "en": "source",
+       "ar": "مصدر",
+       "em": "📄"
+      },
+      {
+       "id": "v4",
+       "en": "check",
+       "ar": "يتحقق",
+       "em": "✔️"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 58"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "can / could for possibility",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">You <b>can</b> find information in an encyclopedia or online.</div><div class=\"ex\">Always check that the source is <b>reliable</b>.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "You can find information in an encyclopedia or online. Always check that the source is reliable."
+      }
+     ]
+    }
+   ],
+   "lead": "You can find … / You could use …",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "Check that the source is ___ .",
+           "a": "reliable",
+           "o": [
+            "reliable",
+            "really"
+           ]
+          },
+          {
+           "s": "Use a search ___ .",
+           "a": "engine",
+           "o": [
+            "engine",
+            "engineer"
+           ]
+          },
+          {
+           "s": "You ___ find it online.",
+           "a": "can",
+           "o": [
+            "can",
+            "must"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "You can find information in an encyclopedia or online.",
+          "Always check that the source is reliable."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "You can find information in an encyclopedia or online.",
+           "o": [
+            "You can find information in an encyclopedia or online.",
+            "Always check that the source is reliable."
+           ]
+          },
+          {
+           "a": "Always check that the source is reliable.",
+           "o": [
+            "Always check that the source is reliable.",
+            "You can find information in an encyclopedia or online."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "search engine",
+       "ipa": "",
+       "meaning": "محرك بحث",
+       "ex": "search engine"
+      },
+      {
+       "must": 1,
+       "term": "encyclopedia",
+       "ipa": "",
+       "meaning": "موسوعة",
+       "ex": "You can find information in an encyclopedia or online."
+      },
+      {
+       "must": 1,
+       "term": "reliable",
+       "ipa": "",
+       "meaning": "موثوق",
+       "ex": "Always check that the source is reliable."
+      },
+      {
+       "must": 0,
+       "term": "source",
+       "ipa": "",
+       "meaning": "مصدر",
+       "ex": "Always check that the source is reliable."
+      },
+      {
+       "must": 0,
+       "term": "check",
+       "ipa": "",
+       "meaning": "يتحقق",
+       "ex": "Always check that the source is reliable."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "Check that the source is ___ .",
+       "a": "reliable",
+       "o": [
+        "reliable",
+        "really"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Use a search ___ .",
+       "a": "engine",
+       "o": [
+        "engine",
+        "engineer"
+       ],
+       "why": ""
+      },
+      {
+       "q": "You ___ find it online.",
+       "a": "can",
+       "o": [
+        "can",
+        "must"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى reliable؟",
+       "a": "موثوق",
+       "o": [
+        "موثوق",
+        "محرك بحث",
+        "موسوعة"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى search engine؟",
+       "a": "محرك بحث",
+       "o": [
+        "محرك بحث",
+        "موسوعة",
+        "موثوق"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "You can find information in an encyclopedia or online.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "You can find information in an encyclopedia or online.",
+       "o": [
+        "You can find information in an encyclopedia or online.",
+        "Always check that the source is reliable."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

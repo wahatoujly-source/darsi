@@ -1,0 +1,299 @@
+{
+ "id": "en-7-u6-l2",
+ "grade": 7,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 6 · Lesson 2: Staying Safe Online",
+ "titleAr": "لا تخبر أحداً بكلمة مرورك أبداً.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "لا تخبر أحداً بكلمة مرورك أبداً.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "password",
+       "ar": "كلمة مرور",
+       "em": "🔑"
+      },
+      {
+       "id": "v1",
+       "en": "private",
+       "ar": "خاص",
+       "em": "🔒"
+      },
+      {
+       "id": "v2",
+       "en": "stranger",
+       "ar": "غريب",
+       "em": "👤"
+      },
+      {
+       "id": "v3",
+       "en": "report",
+       "ar": "يبلّغ",
+       "em": "🚩"
+      },
+      {
+       "id": "v4",
+       "en": "block",
+       "ar": "يحظر",
+       "em": "⛔"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 65"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Imperatives for advice",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\"><b>Never</b> tell anyone your password.</div><div class=\"ex\">Keep your address <b>private</b>.</div><div class=\"ex\"><b>Block</b> and report strangers.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Never tell anyone your password. Keep your address private. Block and report strangers."
+      }
+     ]
+    }
+   ],
+   "lead": "Never … / Keep … / Block …",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "___ tell anyone your password.",
+           "a": "Never",
+           "o": [
+            "Never",
+            "Always"
+           ]
+          },
+          {
+           "s": "Keep your address ___ .",
+           "a": "private",
+           "o": [
+            "private",
+            "public"
+           ]
+          },
+          {
+           "s": "___ and report strangers.",
+           "a": "Block",
+           "o": [
+            "Block",
+            "Blocks"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Never tell anyone your password.",
+          "Keep your address private.",
+          "Block and report strangers."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Never tell anyone your password.",
+           "o": [
+            "Never tell anyone your password.",
+            "Keep your address private.",
+            "Block and report strangers."
+           ]
+          },
+          {
+           "a": "Keep your address private.",
+           "o": [
+            "Keep your address private.",
+            "Never tell anyone your password.",
+            "Block and report strangers."
+           ]
+          },
+          {
+           "a": "Block and report strangers.",
+           "o": [
+            "Block and report strangers.",
+            "Never tell anyone your password.",
+            "Keep your address private."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "password",
+       "ipa": "",
+       "meaning": "كلمة مرور",
+       "ex": "Never tell anyone your password."
+      },
+      {
+       "must": 1,
+       "term": "private",
+       "ipa": "",
+       "meaning": "خاص",
+       "ex": "Keep your address private."
+      },
+      {
+       "must": 1,
+       "term": "stranger",
+       "ipa": "",
+       "meaning": "غريب",
+       "ex": "Block and report strangers."
+      },
+      {
+       "must": 0,
+       "term": "report",
+       "ipa": "",
+       "meaning": "يبلّغ",
+       "ex": "Block and report strangers."
+      },
+      {
+       "must": 0,
+       "term": "block",
+       "ipa": "",
+       "meaning": "يحظر",
+       "ex": "Block and report strangers."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "___ tell anyone your password.",
+       "a": "Never",
+       "o": [
+        "Never",
+        "Always"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Keep your address ___ .",
+       "a": "private",
+       "o": [
+        "private",
+        "public"
+       ],
+       "why": ""
+      },
+      {
+       "q": "___ and report strangers.",
+       "a": "Block",
+       "o": [
+        "Block",
+        "Blocks"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى block؟",
+       "a": "يحظر",
+       "o": [
+        "يحظر",
+        "كلمة مرور",
+        "خاص"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى report؟",
+       "a": "يبلّغ",
+       "o": [
+        "يبلّغ",
+        "كلمة مرور",
+        "خاص"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Never tell anyone your password.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Never tell anyone your password.",
+       "o": [
+        "Never tell anyone your password.",
+        "Keep your address private.",
+        "Block and report strangers."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

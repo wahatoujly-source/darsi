@@ -1,0 +1,287 @@
+{
+ "id": "en-8-u7-l4",
+ "grade": 8,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 7 · Lesson 4: Please keep the rivers clean!",
+ "titleAr": "من فضلك لا ترمِ النفايات في النهر.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "من فضلك لا ترمِ النفايات في النهر.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "river",
+       "ar": "نهر",
+       "em": "🏞️"
+      },
+      {
+       "id": "v1",
+       "en": "rubbish",
+       "ar": "نفايات",
+       "em": "🗑️"
+      },
+      {
+       "id": "v2",
+       "en": "throw away",
+       "ar": "يرمي",
+       "em": "🚮"
+      },
+      {
+       "id": "v3",
+       "en": "fish",
+       "ar": "أسماك",
+       "em": "🐟"
+      },
+      {
+       "id": "v4",
+       "en": "poison",
+       "ar": "يسمم",
+       "em": "☠️"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 86"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Please don't …",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Please <b>don't</b> throw rubbish into the river.</div><div class=\"ex\">Chemicals <b>poison</b> the fish.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Please don't throw rubbish into the river. Chemicals poison the fish."
+      }
+     ]
+    }
+   ],
+   "lead": "طلب مهذب للمنع.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "Please ___ throw rubbish.",
+           "a": "don't",
+           "o": [
+            "don't",
+            "not"
+           ]
+          },
+          {
+           "s": "Chemicals ___ the fish.",
+           "a": "poison",
+           "o": [
+            "poison",
+            "poisons"
+           ]
+          },
+          {
+           "s": "Keep the rivers ___ .",
+           "a": "clean",
+           "o": [
+            "clean",
+            "cleanly"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Please don't throw rubbish into the river.",
+          "Chemicals poison the fish."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Please don't throw rubbish into the river.",
+           "o": [
+            "Please don't throw rubbish into the river.",
+            "Chemicals poison the fish."
+           ]
+          },
+          {
+           "a": "Chemicals poison the fish.",
+           "o": [
+            "Chemicals poison the fish.",
+            "Please don't throw rubbish into the river."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "river",
+       "ipa": "",
+       "meaning": "نهر",
+       "ex": "Please don't throw rubbish into the river."
+      },
+      {
+       "must": 1,
+       "term": "rubbish",
+       "ipa": "",
+       "meaning": "نفايات",
+       "ex": "Please don't throw rubbish into the river."
+      },
+      {
+       "must": 1,
+       "term": "throw away",
+       "ipa": "",
+       "meaning": "يرمي",
+       "ex": "Please don't throw rubbish into the river."
+      },
+      {
+       "must": 0,
+       "term": "fish",
+       "ipa": "",
+       "meaning": "أسماك",
+       "ex": "Chemicals poison the fish."
+      },
+      {
+       "must": 0,
+       "term": "poison",
+       "ipa": "",
+       "meaning": "يسمم",
+       "ex": "Chemicals poison the fish."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "Please ___ throw rubbish.",
+       "a": "don't",
+       "o": [
+        "don't",
+        "not"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Chemicals ___ the fish.",
+       "a": "poison",
+       "o": [
+        "poison",
+        "poisons"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Keep the rivers ___ .",
+       "a": "clean",
+       "o": [
+        "clean",
+        "cleanly"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى rubbish؟",
+       "a": "نفايات",
+       "o": [
+        "نفايات",
+        "نهر",
+        "يرمي"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى river؟",
+       "a": "نهر",
+       "o": [
+        "نهر",
+        "نفايات",
+        "يرمي"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Please don't throw rubbish into the river.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Please don't throw rubbish into the river.",
+       "o": [
+        "Please don't throw rubbish into the river.",
+        "Chemicals poison the fish."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

@@ -1,0 +1,287 @@
+{
+ "id": "en-9-u2-l4",
+ "grade": 9,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 2 · Lesson 4: Work or play?",
+ "titleAr": "يجب أن أقوم بالأعمال المنزلية قبل أن ألعب.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "يجب أن أقوم بالأعمال المنزلية قبل أن ألعب.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "chores",
+       "ar": "أعمال منزلية",
+       "em": "🧹"
+      },
+      {
+       "id": "v1",
+       "en": "leisure",
+       "ar": "ترفيه",
+       "em": "🎮"
+      },
+      {
+       "id": "v2",
+       "en": "balance",
+       "ar": "توازن",
+       "em": "⚖️"
+      },
+      {
+       "id": "v3",
+       "en": "busy",
+       "ar": "مشغول",
+       "em": "📅"
+      },
+      {
+       "id": "v4",
+       "en": "free",
+       "ar": "حر",
+       "em": "🆓"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 26⁠–⁠27"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "It's important to …",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">I have <b>to</b> do chores before I can play.</div><div class=\"ex\">It's important <b>to</b> balance work and play.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "I have to do chores before I can play. It's important to balance work and play."
+      }
+     ]
+    }
+   ],
+   "lead": "It's + adjective + to + verb",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "It's important ___ balance work and play.",
+           "a": "to",
+           "o": [
+            "to",
+            "for"
+           ]
+          },
+          {
+           "s": "I have to do ___ first.",
+           "a": "chores",
+           "o": [
+            "chores",
+            "leisure"
+           ]
+          },
+          {
+           "s": "I'm ___ on Saturdays.",
+           "a": "busy",
+           "o": [
+            "busy",
+            "business"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "I have to do chores before I can play.",
+          "It's important to balance work and play."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "I have to do chores before I can play.",
+           "o": [
+            "I have to do chores before I can play.",
+            "It's important to balance work and play."
+           ]
+          },
+          {
+           "a": "It's important to balance work and play.",
+           "o": [
+            "It's important to balance work and play.",
+            "I have to do chores before I can play."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "chores",
+       "ipa": "",
+       "meaning": "أعمال منزلية",
+       "ex": "I have to do chores before I can play."
+      },
+      {
+       "must": 1,
+       "term": "leisure",
+       "ipa": "",
+       "meaning": "ترفيه",
+       "ex": "leisure"
+      },
+      {
+       "must": 1,
+       "term": "balance",
+       "ipa": "",
+       "meaning": "توازن",
+       "ex": "It's important to balance work and play."
+      },
+      {
+       "must": 0,
+       "term": "busy",
+       "ipa": "",
+       "meaning": "مشغول",
+       "ex": "busy"
+      },
+      {
+       "must": 0,
+       "term": "free",
+       "ipa": "",
+       "meaning": "حر",
+       "ex": "free"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "It's important ___ balance work and play.",
+       "a": "to",
+       "o": [
+        "to",
+        "for"
+       ],
+       "why": ""
+      },
+      {
+       "q": "I have to do ___ first.",
+       "a": "chores",
+       "o": [
+        "chores",
+        "leisure"
+       ],
+       "why": ""
+      },
+      {
+       "q": "I'm ___ on Saturdays.",
+       "a": "busy",
+       "o": [
+        "busy",
+        "business"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى free؟",
+       "a": "حر",
+       "o": [
+        "حر",
+        "أعمال منزلية",
+        "ترفيه"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى busy؟",
+       "a": "مشغول",
+       "o": [
+        "مشغول",
+        "أعمال منزلية",
+        "ترفيه"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "I have to do chores before I can play.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "I have to do chores before I can play.",
+       "o": [
+        "I have to do chores before I can play.",
+        "It's important to balance work and play."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

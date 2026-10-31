@@ -5,70 +5,101 @@
  "stage": "primary-4-6",
  "lang": "en",
  "title": "Unit 1 · Lesson 4: What's in my school bag?",
- "titleAr": "ماذا في حقيبتك المدرسية؟",
+ "titleAr": "الوحدة الأولى: مدرستنا — الدرس الرابع: ماذا في حقيبتي؟",
+ "characters": {},
  "steps": [
   {
    "title": "المفردات",
    "eyebrow": "الخطوة ١ — المفردات",
-   "heading": "ماذا في حقيبتك المدرسية؟",
+   "heading": "أدوات المدرسة",
    "blocks": [
     {
      "type": "vocab",
      "items": [
       {
        "id": "v0",
-       "en": "school bag",
-       "ar": "حقيبة مدرسية",
-       "em": "🎒"
+       "en": "rubber",
+       "ar": "ممحاة",
+       "em": "🧽"
       },
       {
        "id": "v1",
-       "en": "pencil case",
-       "ar": "مقلمة",
+       "en": "pencil",
+       "ar": "قلم رصاص",
        "em": "✏️"
       },
       {
        "id": "v2",
+       "en": "ruler",
+       "ar": "مسطرة",
+       "em": "📏"
+      },
+      {
+       "id": "v3",
        "en": "notebook",
        "ar": "دفتر",
        "em": "📓"
       },
       {
-       "id": "v3",
-       "en": "sharpener",
+       "id": "v4",
+       "en": "pencil sharpener",
        "ar": "مبراة",
-       "em": "✏️"
+       "em": "🔪"
       },
       {
-       "id": "v4",
-       "en": "lunch box",
-       "ar": "علبة الغداء",
-       "em": "🍱"
+       "id": "v5",
+       "en": "crayons",
+       "ar": "أقلام تلوين",
+       "em": "🖍️"
+      },
+      {
+       "id": "v6",
+       "en": "markers",
+       "ar": "أقلام تخطيط",
+       "em": "🖊️"
+      },
+      {
+       "id": "v7",
+       "en": "paper",
+       "ar": "ورق",
+       "em": "📄"
       }
      ]
     }
    ],
-   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 14⁠–⁠15 · كتاب النشاط ص 10⁠–⁠11"
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتابك ص 14–15."
   },
   {
    "title": "القاعدة",
    "eyebrow": "الخطوة ٢ — القاعدة",
-   "heading": "What's in …?",
+   "heading": "There is a … / There are some …",
    "blocks": [
     {
      "type": "panel",
-     "title": "أمثلة",
-     "html": "<div class=\"ex\">What's <b>in</b> your school bag?</div><div class=\"ex\">There's a notebook and a <b>pencil case</b>.</div>",
+     "title": "١. There is / There are",
+     "html": "<div class=\"ex\">In my bag, there <b>is a</b> ruler.</div><div class=\"ex\">There <b>are some</b> crayons.</div><div class=\"ex\">There <b>is some</b> paper.</div>",
      "blocks": [
       {
        "type": "say",
        "label": "▶ اسمع",
-       "text": "What's in your school bag? There's a notebook and a pencil case."
+       "text": "In my bag, there is a ruler. There are some crayons. There is some paper."
+      }
+     ]
+    },
+    {
+     "type": "panel",
+     "title": "٢. الصفات المتضادة",
+     "html": "<div class=\"ex\">long ↔ short · big ↔ small · tall ↔ short · old ↔ young</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "long, short. big, small. tall, short. old, young."
       }
      ]
     }
    ],
-   "lead": "السؤال عن المحتويات: What's in …?",
+   "lead": "There is للمفرد، و There are some للجمع. ونصف الأشياء بالصفات المتضادة.",
    "starOnVisit": true
   },
   {
@@ -81,34 +112,50 @@
      "star": true,
      "tabs": [
       {
-       "label": "اختر الكلمة",
+       "label": "is أم are",
        "blocks": [
         {
          "type": "mcq",
          "mode": "gap",
          "items": [
           {
-           "s": "What's ___ your bag?",
-           "a": "in",
+           "s": "There ___ a rubber and a pencil.",
+           "a": "is",
            "o": [
-            "in",
-            "on"
+            "is",
+            "are"
            ]
           },
           {
-           "s": "I keep pencils in my ___ .",
-           "a": "pencil case",
+           "s": "There ___ some books.",
+           "a": "are",
            "o": [
-            "pencil case",
-            "lunch box"
+            "are",
+            "is"
            ]
           },
           {
-           "s": "I write in my ___ .",
-           "a": "notebook",
+           "s": "There is ___ paper.",
+           "a": "some",
            "o": [
-            "notebook",
-            "sharpener"
+            "some",
+            "a"
+           ]
+          },
+          {
+           "s": "There ___ some crayons.",
+           "a": "are",
+           "o": [
+            "are",
+            "is"
+           ]
+          },
+          {
+           "s": "There is ___ notebook.",
+           "a": "a",
+           "o": [
+            "a",
+            "some"
            ]
           }
          ]
@@ -116,13 +163,52 @@
        ]
       },
       {
-       "label": "رتّب الجملة",
+       "label": "الضد",
        "blocks": [
         {
-         "type": "order",
-         "sentences": [
-          "What's in your school bag?",
-          "There's a notebook and a pencil case."
+         "type": "choice",
+         "star": false,
+         "items": [
+          {
+           "q": "long ↔",
+           "a": "short",
+           "o": [
+            "short",
+            "big",
+            "old"
+           ],
+           "why": ""
+          },
+          {
+           "q": "big ↔",
+           "a": "small",
+           "o": [
+            "small",
+            "tall",
+            "young"
+           ],
+           "why": ""
+          },
+          {
+           "q": "old ↔",
+           "a": "young",
+           "o": [
+            "young",
+            "short",
+            "small"
+           ],
+           "why": ""
+          },
+          {
+           "q": "tall ↔",
+           "a": "short",
+           "o": [
+            "short",
+            "long",
+            "big"
+           ],
+           "why": ""
+          }
          ]
         }
        ]
@@ -135,17 +221,19 @@
          "mode": "listen",
          "items": [
           {
-           "a": "What's in your school bag?",
+           "a": "There are some crayons.",
            "o": [
-            "What's in your school bag?",
-            "There's a notebook and a pencil case."
+            "There are some crayons.",
+            "There is a ruler.",
+            "There is some paper."
            ]
           },
           {
-           "a": "There's a notebook and a pencil case.",
+           "a": "There is a pencil sharpener.",
            "o": [
-            "There's a notebook and a pencil case.",
-            "What's in your school bag?"
+            "There is a pencil sharpener.",
+            "There are some markers.",
+            "There is a notebook."
            ]
           }
          ]
@@ -170,38 +258,38 @@
      "items": [
       {
        "must": 1,
-       "term": "school bag",
-       "ipa": "",
-       "meaning": "حقيبة مدرسية",
-       "ex": "What's in your school bag?"
+       "term": "There is",
+       "ipa": "/ðeər ɪz/",
+       "meaning": "يوجد (مفرد)",
+       "ex": "There is a ruler."
       },
       {
        "must": 1,
-       "term": "pencil case",
-       "ipa": "",
-       "meaning": "مقلمة",
-       "ex": "There's a notebook and a pencil case."
+       "term": "There are",
+       "ipa": "/ðeər ɑː/",
+       "meaning": "يوجد (جمع)",
+       "ex": "There are some books."
       },
       {
        "must": 1,
-       "term": "notebook",
-       "ipa": "",
-       "meaning": "دفتر",
-       "ex": "There's a notebook and a pencil case."
+       "term": "rubber",
+       "ipa": "/ˈrʌbə/",
+       "meaning": "ممحاة",
+       "ex": "There is a rubber."
       },
       {
-       "must": 0,
-       "term": "sharpener",
-       "ipa": "",
+       "must": 1,
+       "term": "pencil sharpener",
+       "ipa": "/ˈpensl ˈʃɑːpnə/",
        "meaning": "مبراة",
-       "ex": "sharpener"
+       "ex": "There is a pencil sharpener."
       },
       {
        "must": 0,
-       "term": "lunch box",
-       "ipa": "",
-       "meaning": "علبة الغداء",
-       "ex": "lunch box"
+       "term": "crayons",
+       "ipa": "/ˈkreɪɒnz/",
+       "meaning": "أقلام تلوين",
+       "ex": "There are some crayons."
       }
      ]
     }
@@ -218,62 +306,61 @@
      "pass": 5,
      "items": [
       {
-       "q": "What's ___ your bag?",
-       "a": "in",
+       "q": "There ___ some pens.",
+       "a": "are",
        "o": [
-        "in",
-        "on"
+        "are",
+        "is"
        ],
        "why": ""
       },
       {
-       "q": "I keep pencils in my ___ .",
-       "a": "pencil case",
+       "q": "ما معنى ruler؟",
+       "a": "مسطرة",
        "o": [
-        "pencil case",
-        "lunch box"
-       ],
-       "why": ""
-      },
-      {
-       "q": "I write in my ___ .",
-       "a": "notebook",
-       "o": [
-        "notebook",
-        "sharpener"
-       ],
-       "why": ""
-      },
-      {
-       "q": "ما معنى school bag؟",
-       "a": "حقيبة مدرسية",
-       "o": [
-        "حقيبة مدرسية",
-        "مقلمة",
+        "مسطرة",
+        "ممحاة",
         "دفتر"
        ],
        "why": "",
        "ar": true
       },
       {
-       "q": "ما معنى notebook؟",
-       "a": "دفتر",
+       "type": "listen",
+       "say": "There is some paper.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "There is some paper.",
        "o": [
-        "دفتر",
-        "حقيبة مدرسية",
-        "مقلمة"
+        "There is some paper.",
+        "There are some markers.",
+        "There is a rubber."
        ],
-       "why": "",
-       "ar": true
+       "why": ""
       },
       {
-       "type": "listen",
-       "say": "What's in your school bag?",
-       "q": "استمع: ماذا قال المتحدث؟",
-       "a": "What's in your school bag?",
+       "q": "big ↔",
+       "a": "small",
        "o": [
-        "What's in your school bag?",
-        "There's a notebook and a pencil case."
+        "small",
+        "tall"
+       ],
+       "why": ""
+      },
+      {
+       "q": "I'm 40. She's 8. I'm old, she's …",
+       "a": "young",
+       "o": [
+        "young",
+        "short"
+       ],
+       "why": ""
+      },
+      {
+       "q": "There is ___ notebook.",
+       "a": "a",
+       "o": [
+        "a",
+        "some"
        ],
        "why": ""
       }
@@ -282,6 +369,5 @@
    ],
    "lead": "6 أسئلة. تنجح بـ 5 من 6."
   }
- ],
- "characters": {}
+ ]
 }

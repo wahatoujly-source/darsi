@@ -1,0 +1,337 @@
+{
+ "id": "en-7-u5-lR",
+ "grade": 7,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 5 · Lesson R: Round up",
+ "titleAr": "مراجعة الوحدة — Around the World",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "مراجعة الوحدة — Around the World",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "country",
+       "ar": "بلد",
+       "em": "🌍"
+      },
+      {
+       "id": "v1",
+       "en": "continent",
+       "ar": "قارة",
+       "em": "🗺️"
+      },
+      {
+       "id": "v2",
+       "en": "traveller",
+       "ar": "مسافر",
+       "em": "🧳"
+      },
+      {
+       "id": "v3",
+       "en": "ever",
+       "ar": "من قبل",
+       "em": "❓"
+      },
+      {
+       "id": "v4",
+       "en": "everywhere",
+       "ar": "في كل مكان",
+       "em": "🌐"
+      },
+      {
+       "id": "v5",
+       "en": "seen",
+       "ar": "رأى",
+       "em": "👀"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 61"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Unit review",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Japan is a country <b>in</b> Asia.</div><div class=\"ex\">Big Bill has <b>been</b> to many countries.</div><div class=\"ex\">We've <b>been</b> everywhere!</div><div class=\"ex\">Algeria is the biggest country <b>in</b> Africa.</div><div class=\"ex\">Have you ever <b>been</b> to Indonesia?</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Japan is a country in Asia. Big Bill has been to many countries. We've been everywhere! Algeria is the biggest country in Africa. Have you ever been to Indonesia?"
+      }
+     ]
+    }
+   ],
+   "lead": "نراجع أهم قواعد الوحدة وكلماتها: اقرأ الأمثلة بصوت عالٍ ثم حلّ التمارين.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "Japan is ___ Asia.",
+           "a": "in",
+           "o": [
+            "in",
+            "on"
+           ]
+          },
+          {
+           "s": "He has ___ to many countries.",
+           "a": "been",
+           "o": [
+            "been",
+            "gone"
+           ]
+          },
+          {
+           "s": "We've ___ the pyramids.",
+           "a": "seen",
+           "o": [
+            "seen",
+            "saw"
+           ]
+          },
+          {
+           "s": "Libya is ___ than Tunisia.",
+           "a": "bigger",
+           "o": [
+            "bigger",
+            "biggest"
+           ]
+          },
+          {
+           "s": "Have you ___ been to Indonesia?",
+           "a": "ever",
+           "o": [
+            "ever",
+            "never"
+           ]
+          },
+          {
+           "s": "Egypt is ___ the east of Libya.",
+           "a": "to",
+           "o": [
+            "to",
+            "at"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Japan is a country in Asia.",
+          "Big Bill has been to many countries.",
+          "We've been everywhere!",
+          "Algeria is the biggest country in Africa."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Japan is a country in Asia.",
+           "o": [
+            "Japan is a country in Asia.",
+            "Big Bill has been to many countries.",
+            "We've been everywhere!"
+           ]
+          },
+          {
+           "a": "Big Bill has been to many countries.",
+           "o": [
+            "Big Bill has been to many countries.",
+            "Japan is a country in Asia.",
+            "We've been everywhere!"
+           ]
+          },
+          {
+           "a": "We've been everywhere!",
+           "o": [
+            "We've been everywhere!",
+            "Japan is a country in Asia.",
+            "Big Bill has been to many countries."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "country",
+       "ipa": "",
+       "meaning": "بلد",
+       "ex": "Japan is a country in Asia."
+      },
+      {
+       "must": 1,
+       "term": "continent",
+       "ipa": "",
+       "meaning": "قارة",
+       "ex": "continent"
+      },
+      {
+       "must": 1,
+       "term": "traveller",
+       "ipa": "",
+       "meaning": "مسافر",
+       "ex": "traveller"
+      },
+      {
+       "must": 0,
+       "term": "ever",
+       "ipa": "",
+       "meaning": "من قبل",
+       "ex": "We've been everywhere!"
+      },
+      {
+       "must": 0,
+       "term": "everywhere",
+       "ipa": "",
+       "meaning": "في كل مكان",
+       "ex": "We've been everywhere!"
+      },
+      {
+       "must": 0,
+       "term": "seen",
+       "ipa": "",
+       "meaning": "رأى",
+       "ex": "seen"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "Japan is ___ Asia.",
+       "a": "in",
+       "o": [
+        "in",
+        "on"
+       ],
+       "why": ""
+      },
+      {
+       "q": "He has ___ to many countries.",
+       "a": "been",
+       "o": [
+        "been",
+        "gone"
+       ],
+       "why": ""
+      },
+      {
+       "q": "We've ___ the pyramids.",
+       "a": "seen",
+       "o": [
+        "seen",
+        "saw"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى everywhere؟",
+       "a": "في كل مكان",
+       "o": [
+        "في كل مكان",
+        "بلد",
+        "قارة"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى seen؟",
+       "a": "رأى",
+       "o": [
+        "رأى",
+        "بلد",
+        "قارة"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Japan is a country in Asia.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Japan is a country in Asia.",
+       "o": [
+        "Japan is a country in Asia.",
+        "Big Bill has been to many countries.",
+        "We've been everywhere!"
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

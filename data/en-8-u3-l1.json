@@ -1,0 +1,287 @@
+{
+ "id": "en-8-u3-l1",
+ "grade": 8,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 3 · Lesson 1: The Sports Centre",
+ "titleAr": "يفتح المركز الرياضي في الثامنة صباحاً.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "يفتح المركز الرياضي في الثامنة صباحاً.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "sports centre",
+       "ar": "مركز رياضي",
+       "em": "🏟️"
+      },
+      {
+       "id": "v1",
+       "en": "swimming pool",
+       "ar": "مسبح",
+       "em": "🏊"
+      },
+      {
+       "id": "v2",
+       "en": "court",
+       "ar": "ملعب",
+       "em": "🎾"
+      },
+      {
+       "id": "v3",
+       "en": "open",
+       "ar": "مفتوح",
+       "em": "🟢"
+      },
+      {
+       "id": "v4",
+       "en": "membership",
+       "ar": "عضوية",
+       "em": "🪪"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 36"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Present simple for timetables",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">The sports centre <b>opens</b> at 8 a.m.</div><div class=\"ex\">It has a swimming pool and two tennis <b>courts</b>.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "The sports centre opens at 8 a.m. It has a swimming pool and two tennis courts."
+      }
+     ]
+    }
+   ],
+   "lead": "It opens at … / It closes at …",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "The centre ___ at 8 a.m.",
+           "a": "opens",
+           "o": [
+            "opens",
+            "open"
+           ]
+          },
+          {
+           "s": "There are two tennis ___ .",
+           "a": "courts",
+           "o": [
+            "courts",
+            "court"
+           ]
+          },
+          {
+           "s": "Swim in the swimming ___ .",
+           "a": "pool",
+           "o": [
+            "pool",
+            "centre"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "The sports centre opens at 8 a.m.",
+          "It has a swimming pool and two tennis courts."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "The sports centre opens at 8 a.m.",
+           "o": [
+            "The sports centre opens at 8 a.m.",
+            "It has a swimming pool and two tennis courts."
+           ]
+          },
+          {
+           "a": "It has a swimming pool and two tennis courts.",
+           "o": [
+            "It has a swimming pool and two tennis courts.",
+            "The sports centre opens at 8 a.m."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "sports centre",
+       "ipa": "",
+       "meaning": "مركز رياضي",
+       "ex": "The sports centre opens at 8 a.m."
+      },
+      {
+       "must": 1,
+       "term": "swimming pool",
+       "ipa": "",
+       "meaning": "مسبح",
+       "ex": "It has a swimming pool and two tennis courts."
+      },
+      {
+       "must": 1,
+       "term": "court",
+       "ipa": "",
+       "meaning": "ملعب",
+       "ex": "It has a swimming pool and two tennis courts."
+      },
+      {
+       "must": 0,
+       "term": "open",
+       "ipa": "",
+       "meaning": "مفتوح",
+       "ex": "The sports centre opens at 8 a.m."
+      },
+      {
+       "must": 0,
+       "term": "membership",
+       "ipa": "",
+       "meaning": "عضوية",
+       "ex": "membership"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "The centre ___ at 8 a.m.",
+       "a": "opens",
+       "o": [
+        "opens",
+        "open"
+       ],
+       "why": ""
+      },
+      {
+       "q": "There are two tennis ___ .",
+       "a": "courts",
+       "o": [
+        "courts",
+        "court"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Swim in the swimming ___ .",
+       "a": "pool",
+       "o": [
+        "pool",
+        "centre"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى swimming pool؟",
+       "a": "مسبح",
+       "o": [
+        "مسبح",
+        "مركز رياضي",
+        "ملعب"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى sports centre؟",
+       "a": "مركز رياضي",
+       "o": [
+        "مركز رياضي",
+        "مسبح",
+        "ملعب"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "The sports centre opens at 8 a.m.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "The sports centre opens at 8 a.m.",
+       "o": [
+        "The sports centre opens at 8 a.m.",
+        "It has a swimming pool and two tennis courts."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

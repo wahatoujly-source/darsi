@@ -1,0 +1,287 @@
+{
+ "id": "en-9-u3-l7",
+ "grade": 9,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 3 · Lesson 7: Different Animals",
+ "titleAr": "للطيور ريش وتبيض.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "للطيور ريش وتبيض.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "feathers",
+       "ar": "ريش",
+       "em": "🪶"
+      },
+      {
+       "id": "v1",
+       "en": "scales",
+       "ar": "حراشف",
+       "em": "🐟"
+      },
+      {
+       "id": "v2",
+       "en": "fur",
+       "ar": "فرو",
+       "em": "🐻"
+      },
+      {
+       "id": "v3",
+       "en": "lay eggs",
+       "ar": "يبيض",
+       "em": "🥚"
+      },
+      {
+       "id": "v4",
+       "en": "give birth",
+       "ar": "يلد",
+       "em": "🐣"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 44⁠–⁠45"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Classifying",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Birds have <b>feathers</b> and lay eggs.</div><div class=\"ex\">Most mammals give <b>birth</b> to live young.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Birds have feathers and lay eggs. Most mammals give birth to live young."
+      }
+     ]
+    }
+   ],
+   "lead": "have + body covering / lay eggs / give birth",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "Birds have ___ .",
+           "a": "feathers",
+           "o": [
+            "feathers",
+            "scales"
+           ]
+          },
+          {
+           "s": "Fish have ___ .",
+           "a": "scales",
+           "o": [
+            "scales",
+            "fur"
+           ]
+          },
+          {
+           "s": "Mammals give ___ to live young.",
+           "a": "birth",
+           "o": [
+            "birth",
+            "born"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Birds have feathers and lay eggs.",
+          "Most mammals give birth to live young."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Birds have feathers and lay eggs.",
+           "o": [
+            "Birds have feathers and lay eggs.",
+            "Most mammals give birth to live young."
+           ]
+          },
+          {
+           "a": "Most mammals give birth to live young.",
+           "o": [
+            "Most mammals give birth to live young.",
+            "Birds have feathers and lay eggs."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "feathers",
+       "ipa": "",
+       "meaning": "ريش",
+       "ex": "Birds have feathers and lay eggs."
+      },
+      {
+       "must": 1,
+       "term": "scales",
+       "ipa": "",
+       "meaning": "حراشف",
+       "ex": "scales"
+      },
+      {
+       "must": 1,
+       "term": "fur",
+       "ipa": "",
+       "meaning": "فرو",
+       "ex": "fur"
+      },
+      {
+       "must": 0,
+       "term": "lay eggs",
+       "ipa": "",
+       "meaning": "يبيض",
+       "ex": "Birds have feathers and lay eggs."
+      },
+      {
+       "must": 0,
+       "term": "give birth",
+       "ipa": "",
+       "meaning": "يلد",
+       "ex": "Most mammals give birth to live young."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "Birds have ___ .",
+       "a": "feathers",
+       "o": [
+        "feathers",
+        "scales"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Fish have ___ .",
+       "a": "scales",
+       "o": [
+        "scales",
+        "fur"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Mammals give ___ to live young.",
+       "a": "birth",
+       "o": [
+        "birth",
+        "born"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى give birth؟",
+       "a": "يلد",
+       "o": [
+        "يلد",
+        "ريش",
+        "حراشف"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى scales؟",
+       "a": "حراشف",
+       "o": [
+        "حراشف",
+        "ريش",
+        "فرو"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Birds have feathers and lay eggs.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Birds have feathers and lay eggs.",
+       "o": [
+        "Birds have feathers and lay eggs.",
+        "Most mammals give birth to live young."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

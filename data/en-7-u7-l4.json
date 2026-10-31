@@ -1,0 +1,299 @@
+{
+ "id": "en-7-u7-l4",
+ "grade": 7,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 7 · Lesson 4: Going Fishing",
+ "titleAr": "ذهبنا للصيد مع عمي.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "ذهبنا للصيد مع عمي.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "fishing rod",
+       "ar": "صنارة",
+       "em": "🎣"
+      },
+      {
+       "id": "v1",
+       "en": "boat",
+       "ar": "قارب",
+       "em": "🚤"
+      },
+      {
+       "id": "v2",
+       "en": "life jacket",
+       "ar": "سترة نجاة",
+       "em": "🦺"
+      },
+      {
+       "id": "v3",
+       "en": "catch",
+       "ar": "يصطاد",
+       "em": "🐟"
+      },
+      {
+       "id": "v4",
+       "en": "waves",
+       "ar": "أمواج",
+       "em": "🌊"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 79"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "go + -ing",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">We went <b>fishing</b> with my uncle.</div><div class=\"ex\">We wore life jackets on the boat.</div><div class=\"ex\">I <b>caught</b> three fish!</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "We went fishing with my uncle. We wore life jackets on the boat. I caught three fish!"
+      }
+     ]
+    }
+   ],
+   "lead": "go fishing / go swimming",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "We went ___ .",
+           "a": "fishing",
+           "o": [
+            "fishing",
+            "fish"
+           ]
+          },
+          {
+           "s": "Wear a life ___ .",
+           "a": "jacket",
+           "o": [
+            "jacket",
+            "rod"
+           ]
+          },
+          {
+           "s": "I ___ three fish.",
+           "a": "caught",
+           "o": [
+            "caught",
+            "catched"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "We went fishing with my uncle.",
+          "We wore life jackets on the boat.",
+          "I caught three fish!"
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "We went fishing with my uncle.",
+           "o": [
+            "We went fishing with my uncle.",
+            "We wore life jackets on the boat.",
+            "I caught three fish!"
+           ]
+          },
+          {
+           "a": "We wore life jackets on the boat.",
+           "o": [
+            "We wore life jackets on the boat.",
+            "We went fishing with my uncle.",
+            "I caught three fish!"
+           ]
+          },
+          {
+           "a": "I caught three fish!",
+           "o": [
+            "I caught three fish!",
+            "We went fishing with my uncle.",
+            "We wore life jackets on the boat."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "fishing rod",
+       "ipa": "",
+       "meaning": "صنارة",
+       "ex": "We went fishing with my uncle."
+      },
+      {
+       "must": 1,
+       "term": "boat",
+       "ipa": "",
+       "meaning": "قارب",
+       "ex": "We wore life jackets on the boat."
+      },
+      {
+       "must": 1,
+       "term": "life jacket",
+       "ipa": "",
+       "meaning": "سترة نجاة",
+       "ex": "We wore life jackets on the boat."
+      },
+      {
+       "must": 0,
+       "term": "catch",
+       "ipa": "",
+       "meaning": "يصطاد",
+       "ex": "catch"
+      },
+      {
+       "must": 0,
+       "term": "waves",
+       "ipa": "",
+       "meaning": "أمواج",
+       "ex": "waves"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "We went ___ .",
+       "a": "fishing",
+       "o": [
+        "fishing",
+        "fish"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Wear a life ___ .",
+       "a": "jacket",
+       "o": [
+        "jacket",
+        "rod"
+       ],
+       "why": ""
+      },
+      {
+       "q": "I ___ three fish.",
+       "a": "caught",
+       "o": [
+        "caught",
+        "catched"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى life jacket؟",
+       "a": "سترة نجاة",
+       "o": [
+        "سترة نجاة",
+        "صنارة",
+        "قارب"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى catch؟",
+       "a": "يصطاد",
+       "o": [
+        "يصطاد",
+        "صنارة",
+        "قارب"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "We went fishing with my uncle.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "We went fishing with my uncle.",
+       "o": [
+        "We went fishing with my uncle.",
+        "We wore life jackets on the boat.",
+        "I caught three fish!"
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

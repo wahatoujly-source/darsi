@@ -1,0 +1,319 @@
+{
+ "id": "en-7-u3-l5",
+ "grade": 7,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 3 · Lesson 5: The Hungry Fox",
+ "titleAr": "رأى الثعلب الجائع بعض العنب.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "رأى الثعلب الجائع بعض العنب.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "fox",
+       "ar": "ثعلب",
+       "em": "🦊"
+      },
+      {
+       "id": "v1",
+       "en": "grapes",
+       "ar": "عنب",
+       "em": "🍇"
+      },
+      {
+       "id": "v2",
+       "en": "reach",
+       "ar": "يصل إلى",
+       "em": "🙌"
+      },
+      {
+       "id": "v3",
+       "en": "sour",
+       "ar": "حامض",
+       "em": "🍋"
+      },
+      {
+       "id": "v4",
+       "en": "jump",
+       "ar": "يقفز",
+       "em": "🦘"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 37"
+  },
+  {
+   "title": "اقرأ",
+   "eyebrow": "الخطوة ٢ — اقرأ",
+   "heading": "اقرأ واستمع",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "📖 The Hungry Fox",
+     "html": "<div class=\"ex\">The hungry fox saw some grapes.</div><div class=\"ex\">He jumped but he couldn't reach them.</div><div class=\"ex\">'They're sour anyway,' he said.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "The hungry fox saw some grapes. He jumped but he couldn't reach them. 'They're sour anyway,' he said."
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط ▶ لتسمع النص."
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٣ — القاعدة",
+   "heading": "could / couldn't",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">The hungry fox saw some grapes.</div><div class=\"ex\">He jumped but he <b>couldn't</b> reach them.</div><div class=\"ex\">'They're <b>sour</b> anyway,' he said.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "The hungry fox saw some grapes. He jumped but he couldn't reach them. 'They're sour anyway,' he said."
+      }
+     ]
+    }
+   ],
+   "lead": "الماضي من can هو could.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٤ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "He ___ reach the grapes.",
+           "a": "couldn't",
+           "o": [
+            "couldn't",
+            "can't"
+           ]
+          },
+          {
+           "s": "The fox ___ very high.",
+           "a": "jumped",
+           "o": [
+            "jumped",
+            "jump"
+           ]
+          },
+          {
+           "s": "He said the grapes were ___ .",
+           "a": "sour",
+           "o": [
+            "sour",
+            "sweet"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "The hungry fox saw some grapes.",
+          "He jumped but he couldn't reach them.",
+          "'They're sour anyway,' he said."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "The hungry fox saw some grapes.",
+           "o": [
+            "The hungry fox saw some grapes.",
+            "He jumped but he couldn't reach them.",
+            "'They're sour anyway,' he said."
+           ]
+          },
+          {
+           "a": "He jumped but he couldn't reach them.",
+           "o": [
+            "He jumped but he couldn't reach them.",
+            "The hungry fox saw some grapes.",
+            "'They're sour anyway,' he said."
+           ]
+          },
+          {
+           "a": "'They're sour anyway,' he said.",
+           "o": [
+            "'They're sour anyway,' he said.",
+            "The hungry fox saw some grapes.",
+            "He jumped but he couldn't reach them."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٥ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "fox",
+       "ipa": "",
+       "meaning": "ثعلب",
+       "ex": "The hungry fox saw some grapes."
+      },
+      {
+       "must": 1,
+       "term": "grapes",
+       "ipa": "",
+       "meaning": "عنب",
+       "ex": "The hungry fox saw some grapes."
+      },
+      {
+       "must": 1,
+       "term": "reach",
+       "ipa": "",
+       "meaning": "يصل إلى",
+       "ex": "He jumped but he couldn't reach them."
+      },
+      {
+       "must": 0,
+       "term": "sour",
+       "ipa": "",
+       "meaning": "حامض",
+       "ex": "'They're sour anyway,' he said."
+      },
+      {
+       "must": 0,
+       "term": "jump",
+       "ipa": "",
+       "meaning": "يقفز",
+       "ex": "He jumped but he couldn't reach them."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "He ___ reach the grapes.",
+       "a": "couldn't",
+       "o": [
+        "couldn't",
+        "can't"
+       ],
+       "why": ""
+      },
+      {
+       "q": "The fox ___ very high.",
+       "a": "jumped",
+       "o": [
+        "jumped",
+        "jump"
+       ],
+       "why": ""
+      },
+      {
+       "q": "He said the grapes were ___ .",
+       "a": "sour",
+       "o": [
+        "sour",
+        "sweet"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى jump؟",
+       "a": "يقفز",
+       "o": [
+        "يقفز",
+        "ثعلب",
+        "عنب"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى sour؟",
+       "a": "حامض",
+       "o": [
+        "حامض",
+        "ثعلب",
+        "عنب"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "The hungry fox saw some grapes.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "The hungry fox saw some grapes.",
+       "o": [
+        "The hungry fox saw some grapes.",
+        "He jumped but he couldn't reach them.",
+        "'They're sour anyway,' he said."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

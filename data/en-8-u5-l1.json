@@ -1,0 +1,287 @@
+{
+ "id": "en-8-u5-l1",
+ "grade": 8,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 5 · Lesson 1: Old Ways of Sending Information",
+ "titleAr": "قديماً أرسل الناس الرسائل بالحمام.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "قديماً أرسل الناس الرسائل بالحمام.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "messenger",
+       "ar": "رسول",
+       "em": "🏃"
+      },
+      {
+       "id": "v1",
+       "en": "pigeon",
+       "ar": "حمام زاجل",
+       "em": "🕊️"
+      },
+      {
+       "id": "v2",
+       "en": "smoke signal",
+       "ar": "إشارة دخان",
+       "em": "💨"
+      },
+      {
+       "id": "v3",
+       "en": "drum",
+       "ar": "طبل",
+       "em": "🥁"
+      },
+      {
+       "id": "v4",
+       "en": "letter",
+       "ar": "رسالة",
+       "em": "✉️"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 56⁠–⁠57"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Past passive",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Long ago, people sent messages with <b>pigeons</b>.</div><div class=\"ex\">Messages <b>were</b> carried by messengers on horses.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Long ago, people sent messages with pigeons. Messages were carried by messengers on horses."
+      }
+     ]
+    }
+   ],
+   "lead": "was/were + past participle",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "Messages ___ carried by messengers.",
+           "a": "were",
+           "o": [
+            "were",
+            "was"
+           ]
+          },
+          {
+           "s": "People sent messages with ___ .",
+           "a": "pigeons",
+           "o": [
+            "pigeons",
+            "drums"
+           ]
+          },
+          {
+           "s": "Letters ___ written by hand.",
+           "a": "were",
+           "o": [
+            "were",
+            "are"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Long ago, people sent messages with pigeons.",
+          "Messages were carried by messengers on horses."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Long ago, people sent messages with pigeons.",
+           "o": [
+            "Long ago, people sent messages with pigeons.",
+            "Messages were carried by messengers on horses."
+           ]
+          },
+          {
+           "a": "Messages were carried by messengers on horses.",
+           "o": [
+            "Messages were carried by messengers on horses.",
+            "Long ago, people sent messages with pigeons."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "messenger",
+       "ipa": "",
+       "meaning": "رسول",
+       "ex": "Messages were carried by messengers on horses."
+      },
+      {
+       "must": 1,
+       "term": "pigeon",
+       "ipa": "",
+       "meaning": "حمام زاجل",
+       "ex": "Long ago, people sent messages with pigeons."
+      },
+      {
+       "must": 1,
+       "term": "smoke signal",
+       "ipa": "",
+       "meaning": "إشارة دخان",
+       "ex": "smoke signal"
+      },
+      {
+       "must": 0,
+       "term": "drum",
+       "ipa": "",
+       "meaning": "طبل",
+       "ex": "drum"
+      },
+      {
+       "must": 0,
+       "term": "letter",
+       "ipa": "",
+       "meaning": "رسالة",
+       "ex": "letter"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "Messages ___ carried by messengers.",
+       "a": "were",
+       "o": [
+        "were",
+        "was"
+       ],
+       "why": ""
+      },
+      {
+       "q": "People sent messages with ___ .",
+       "a": "pigeons",
+       "o": [
+        "pigeons",
+        "drums"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Letters ___ written by hand.",
+       "a": "were",
+       "o": [
+        "were",
+        "are"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى messenger؟",
+       "a": "رسول",
+       "o": [
+        "رسول",
+        "حمام زاجل",
+        "إشارة دخان"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى pigeon؟",
+       "a": "حمام زاجل",
+       "o": [
+        "حمام زاجل",
+        "رسول",
+        "إشارة دخان"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Long ago, people sent messages with pigeons.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Long ago, people sent messages with pigeons.",
+       "o": [
+        "Long ago, people sent messages with pigeons.",
+        "Messages were carried by messengers on horses."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

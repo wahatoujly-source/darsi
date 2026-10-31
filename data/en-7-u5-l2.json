@@ -1,0 +1,287 @@
+{
+ "id": "en-7-u5-l2",
+ "grade": 7,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 5 · Lesson 2: Big Bill",
+ "titleAr": "لقد زار بيل الكبير بلداناً كثيرة.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "لقد زار بيل الكبير بلداناً كثيرة.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "traveller",
+       "ar": "مسافر",
+       "em": "🧳"
+      },
+      {
+       "id": "v1",
+       "en": "ever",
+       "ar": "من قبل",
+       "em": "❓"
+      },
+      {
+       "id": "v2",
+       "en": "never",
+       "ar": "أبداً",
+       "em": "🚫"
+      },
+      {
+       "id": "v3",
+       "en": "been to",
+       "ar": "زار",
+       "em": "📍"
+      },
+      {
+       "id": "v4",
+       "en": "visited",
+       "ar": "زار",
+       "em": "🏛️"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 52–53"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Present perfect with been",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Big Bill has <b>been</b> to many countries.</div><div class=\"ex\">He has never <b>been</b> to Libya.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Big Bill has been to many countries. He has never been to Libya."
+      }
+     ]
+    }
+   ],
+   "lead": "has been to = زار وعاد.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "He has ___ to many countries.",
+           "a": "been",
+           "o": [
+            "been",
+            "gone"
+           ]
+          },
+          {
+           "s": "He has ___ been to Libya.",
+           "a": "never",
+           "o": [
+            "never",
+            "ever"
+           ]
+          },
+          {
+           "s": "Bill is a great ___ .",
+           "a": "traveller",
+           "o": [
+            "traveller",
+            "travel"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Big Bill has been to many countries.",
+          "He has never been to Libya."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Big Bill has been to many countries.",
+           "o": [
+            "Big Bill has been to many countries.",
+            "He has never been to Libya."
+           ]
+          },
+          {
+           "a": "He has never been to Libya.",
+           "o": [
+            "He has never been to Libya.",
+            "Big Bill has been to many countries."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "traveller",
+       "ipa": "",
+       "meaning": "مسافر",
+       "ex": "traveller"
+      },
+      {
+       "must": 1,
+       "term": "ever",
+       "ipa": "",
+       "meaning": "من قبل",
+       "ex": "He has never been to Libya."
+      },
+      {
+       "must": 1,
+       "term": "never",
+       "ipa": "",
+       "meaning": "أبداً",
+       "ex": "He has never been to Libya."
+      },
+      {
+       "must": 0,
+       "term": "been to",
+       "ipa": "",
+       "meaning": "زار",
+       "ex": "Big Bill has been to many countries."
+      },
+      {
+       "must": 0,
+       "term": "visited",
+       "ipa": "",
+       "meaning": "زار",
+       "ex": "visited"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "He has ___ to many countries.",
+       "a": "been",
+       "o": [
+        "been",
+        "gone"
+       ],
+       "why": ""
+      },
+      {
+       "q": "He has ___ been to Libya.",
+       "a": "never",
+       "o": [
+        "never",
+        "ever"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Bill is a great ___ .",
+       "a": "traveller",
+       "o": [
+        "traveller",
+        "travel"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى traveller؟",
+       "a": "مسافر",
+       "o": [
+        "مسافر",
+        "من قبل",
+        "أبداً"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى been to؟",
+       "a": "زار",
+       "o": [
+        "زار",
+        "مسافر",
+        "من قبل"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Big Bill has been to many countries.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Big Bill has been to many countries.",
+       "o": [
+        "Big Bill has been to many countries.",
+        "He has never been to Libya."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

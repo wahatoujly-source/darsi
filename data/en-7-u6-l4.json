@@ -1,0 +1,287 @@
+{
+ "id": "en-7-u6-l4",
+ "grade": 7,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 6 · Lesson 4: Fawzi Meets Yuki",
+ "titleAr": "في اليابان ينحني الناس عند اللقاء.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "في اليابان ينحني الناس عند اللقاء.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "meet",
+       "ar": "يقابل",
+       "em": "🤝"
+      },
+      {
+       "id": "v1",
+       "en": "bow",
+       "ar": "ينحني",
+       "em": "🙇"
+      },
+      {
+       "id": "v2",
+       "en": "shake hands",
+       "ar": "يصافح",
+       "em": "🤝"
+      },
+      {
+       "id": "v3",
+       "en": "polite",
+       "ar": "مهذب",
+       "em": "🙂"
+      },
+      {
+       "id": "v4",
+       "en": "Japan",
+       "ar": "اليابان",
+       "em": "🇯🇵"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 67"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "when + clause",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">In Japan, people <b>bow</b> when they meet.</div><div class=\"ex\">In Libya, we shake <b>hands</b>.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "In Japan, people bow when they meet. In Libya, we shake hands."
+      }
+     ]
+    }
+   ],
+   "lead": "People bow when they meet.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "People ___ when they meet in Japan.",
+           "a": "bow",
+           "o": [
+            "bow",
+            "bows"
+           ]
+          },
+          {
+           "s": "In Libya, we shake ___ .",
+           "a": "hands",
+           "o": [
+            "hands",
+            "hand"
+           ]
+          },
+          {
+           "s": "It's ___ to say thank you.",
+           "a": "polite",
+           "o": [
+            "polite",
+            "police"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "In Japan, people bow when they meet.",
+          "In Libya, we shake hands."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "In Japan, people bow when they meet.",
+           "o": [
+            "In Japan, people bow when they meet.",
+            "In Libya, we shake hands."
+           ]
+          },
+          {
+           "a": "In Libya, we shake hands.",
+           "o": [
+            "In Libya, we shake hands.",
+            "In Japan, people bow when they meet."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "meet",
+       "ipa": "",
+       "meaning": "يقابل",
+       "ex": "In Japan, people bow when they meet."
+      },
+      {
+       "must": 1,
+       "term": "bow",
+       "ipa": "",
+       "meaning": "ينحني",
+       "ex": "In Japan, people bow when they meet."
+      },
+      {
+       "must": 1,
+       "term": "shake hands",
+       "ipa": "",
+       "meaning": "يصافح",
+       "ex": "In Libya, we shake hands."
+      },
+      {
+       "must": 0,
+       "term": "polite",
+       "ipa": "",
+       "meaning": "مهذب",
+       "ex": "polite"
+      },
+      {
+       "must": 0,
+       "term": "Japan",
+       "ipa": "",
+       "meaning": "اليابان",
+       "ex": "In Japan, people bow when they meet."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "People ___ when they meet in Japan.",
+       "a": "bow",
+       "o": [
+        "bow",
+        "bows"
+       ],
+       "why": ""
+      },
+      {
+       "q": "In Libya, we shake ___ .",
+       "a": "hands",
+       "o": [
+        "hands",
+        "hand"
+       ],
+       "why": ""
+      },
+      {
+       "q": "It's ___ to say thank you.",
+       "a": "polite",
+       "o": [
+        "polite",
+        "police"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى polite؟",
+       "a": "مهذب",
+       "o": [
+        "مهذب",
+        "يقابل",
+        "ينحني"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى Japan؟",
+       "a": "اليابان",
+       "o": [
+        "اليابان",
+        "يقابل",
+        "ينحني"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "In Japan, people bow when they meet.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "In Japan, people bow when they meet.",
+       "o": [
+        "In Japan, people bow when they meet.",
+        "In Libya, we shake hands."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

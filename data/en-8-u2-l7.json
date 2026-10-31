@@ -1,0 +1,287 @@
+{
+ "id": "en-8-u2-l7",
+ "grade": 8,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 2 · Lesson 7: Limericks",
+ "titleAr": "للّيمريك خمسة أسطر.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "للّيمريك خمسة أسطر.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "limerick",
+       "ar": "قصيدة فكاهية قصيرة",
+       "em": "😄"
+      },
+      {
+       "id": "v1",
+       "en": "rhyme",
+       "ar": "قافية",
+       "em": "🎵"
+      },
+      {
+       "id": "v2",
+       "en": "line",
+       "ar": "سطر",
+       "em": "➖"
+      },
+      {
+       "id": "v3",
+       "en": "rhythm",
+       "ar": "إيقاع",
+       "em": "🥁"
+      },
+      {
+       "id": "v4",
+       "en": "funny",
+       "ar": "مضحك",
+       "em": "😂"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 30"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Rhyme",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">A limerick has <b>five</b> lines.</div><div class=\"ex\">Lines one, two and <b>five</b> rhyme.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "A limerick has five lines. Lines one, two and five rhyme."
+      }
+     ]
+    }
+   ],
+   "lead": "الكلمات المتقافية تنتهي بالصوت نفسه: cat / hat, day / play.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "A limerick has ___ lines.",
+           "a": "five",
+           "o": [
+            "five",
+            "four"
+           ]
+          },
+          {
+           "s": "'day' rhymes with ___ .",
+           "a": "play",
+           "o": [
+            "play",
+            "dog"
+           ]
+          },
+          {
+           "s": "Limericks are ___ poems.",
+           "a": "funny",
+           "o": [
+            "funny",
+            "sad"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "A limerick has five lines.",
+          "Lines one, two and five rhyme."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "A limerick has five lines.",
+           "o": [
+            "A limerick has five lines.",
+            "Lines one, two and five rhyme."
+           ]
+          },
+          {
+           "a": "Lines one, two and five rhyme.",
+           "o": [
+            "Lines one, two and five rhyme.",
+            "A limerick has five lines."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "limerick",
+       "ipa": "",
+       "meaning": "قصيدة فكاهية قصيرة",
+       "ex": "A limerick has five lines."
+      },
+      {
+       "must": 1,
+       "term": "rhyme",
+       "ipa": "",
+       "meaning": "قافية",
+       "ex": "Lines one, two and five rhyme."
+      },
+      {
+       "must": 1,
+       "term": "line",
+       "ipa": "",
+       "meaning": "سطر",
+       "ex": "A limerick has five lines."
+      },
+      {
+       "must": 0,
+       "term": "rhythm",
+       "ipa": "",
+       "meaning": "إيقاع",
+       "ex": "rhythm"
+      },
+      {
+       "must": 0,
+       "term": "funny",
+       "ipa": "",
+       "meaning": "مضحك",
+       "ex": "funny"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "A limerick has ___ lines.",
+       "a": "five",
+       "o": [
+        "five",
+        "four"
+       ],
+       "why": ""
+      },
+      {
+       "q": "'day' rhymes with ___ .",
+       "a": "play",
+       "o": [
+        "play",
+        "dog"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Limericks are ___ poems.",
+       "a": "funny",
+       "o": [
+        "funny",
+        "sad"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى limerick؟",
+       "a": "قصيدة فكاهية قصيرة",
+       "o": [
+        "قصيدة فكاهية قصيرة",
+        "قافية",
+        "سطر"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى funny؟",
+       "a": "مضحك",
+       "o": [
+        "مضحك",
+        "قصيدة فكاهية قصيرة",
+        "قافية"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "A limerick has five lines.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "A limerick has five lines.",
+       "o": [
+        "A limerick has five lines.",
+        "Lines one, two and five rhyme."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

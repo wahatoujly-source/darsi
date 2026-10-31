@@ -1,0 +1,357 @@
+{
+ "id": "en-9-u8-l3",
+ "grade": 9,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 8 · Lesson 3: Reading",
+ "titleAr": "مهارة القراءة — Fun with English 2",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "مهارة القراءة — Fun with English 2",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "headline",
+       "ar": "عنوان رئيسي",
+       "em": "📰"
+      },
+      {
+       "id": "v1",
+       "en": "newspaper",
+       "ar": "صحيفة",
+       "em": "🗞️"
+      },
+      {
+       "id": "v2",
+       "en": "website",
+       "ar": "موقع إلكتروني",
+       "em": "🌐"
+      },
+      {
+       "id": "v3",
+       "en": "design",
+       "ar": "يصمم",
+       "em": "🎨"
+      },
+      {
+       "id": "v4",
+       "en": "virtual",
+       "ar": "افتراضي",
+       "em": "🥽"
+      },
+      {
+       "id": "v5",
+       "en": "tablet",
+       "ar": "جهاز لوحي",
+       "em": "📱"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 100⁠–⁠101"
+  },
+  {
+   "title": "اقرأ",
+   "eyebrow": "الخطوة ٢ — اقرأ",
+   "heading": "اقرأ واستمع",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "📖 Reading",
+     "html": "<div class=\"ex\">The headline on the front page was about the flood.</div><div class=\"ex\">I'm designing a website about Libyan history.</div><div class=\"ex\">In the future, students will probably use tablets instead of books.</div><div class=\"ex\">Our project topic is renewable energy.</div><div class=\"ex\">We explored the caves of the Akakus mountains.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "The headline on the front page was about the flood. I'm designing a website about Libyan history. In the future, students will probably use tablets instead of books. Our project topic is renewable energy. We explored the caves of the Akakus mountains."
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط ▶ لتسمع النص."
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٣ — القاعدة",
+   "heading": "Reading",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">The <b>headline</b> on the front page was about the flood.</div><div class=\"ex\">I'm <b>designing</b> a website about Libyan history.</div><div class=\"ex\">In the future, students <b>will</b> probably use tablets instead of books.</div><div class=\"ex\">Our project <b>topic</b> is renewable energy.</div><div class=\"ex\">We explored the caves of the Akakus mountains.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "The headline on the front page was about the flood. I'm designing a website about Libyan history. In the future, students will probably use tablets instead of books. Our project topic is renewable energy. We explored the caves of the Akakus mountains."
+      }
+     ]
+    }
+   ],
+   "lead": "اقرأ الجمل بصوت عالٍ وانتبه إلى الكلمات المميّزة، ثم حلّ التمارين.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٤ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "The ___ was on the front page.",
+           "a": "headline",
+           "o": [
+            "headline",
+            "report"
+           ]
+          },
+          {
+           "s": "I'm ___ a website.",
+           "a": "designing",
+           "o": [
+            "designing",
+            "design"
+           ]
+          },
+          {
+           "s": "Students ___ use tablets.",
+           "a": "will",
+           "o": [
+            "will",
+            "would"
+           ]
+          },
+          {
+           "s": "Our project ___ is energy.",
+           "a": "topic",
+           "o": [
+            "topic",
+            "title page"
+           ]
+          },
+          {
+           "s": "We ___ already seen the paintings.",
+           "a": "had",
+           "o": [
+            "had",
+            "have"
+           ]
+          },
+          {
+           "s": "Phones ___ produced in factories.",
+           "a": "are",
+           "o": [
+            "are",
+            "is"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "The headline on the front page was about the flood.",
+          "I'm designing a website about Libyan history.",
+          "In the future, students will probably use tablets instead of books.",
+          "Our project topic is renewable energy."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "The headline on the front page was about the flood.",
+           "o": [
+            "The headline on the front page was about the flood.",
+            "I'm designing a website about Libyan history.",
+            "In the future, students will probably use tablets instead of books."
+           ]
+          },
+          {
+           "a": "I'm designing a website about Libyan history.",
+           "o": [
+            "I'm designing a website about Libyan history.",
+            "The headline on the front page was about the flood.",
+            "In the future, students will probably use tablets instead of books."
+           ]
+          },
+          {
+           "a": "In the future, students will probably use tablets instead of books.",
+           "o": [
+            "In the future, students will probably use tablets instead of books.",
+            "The headline on the front page was about the flood.",
+            "I'm designing a website about Libyan history."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٥ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "headline",
+       "ipa": "",
+       "meaning": "عنوان رئيسي",
+       "ex": "The headline on the front page was about the flood."
+      },
+      {
+       "must": 1,
+       "term": "newspaper",
+       "ipa": "",
+       "meaning": "صحيفة",
+       "ex": "newspaper"
+      },
+      {
+       "must": 1,
+       "term": "website",
+       "ipa": "",
+       "meaning": "موقع إلكتروني",
+       "ex": "I'm designing a website about Libyan history."
+      },
+      {
+       "must": 0,
+       "term": "design",
+       "ipa": "",
+       "meaning": "يصمم",
+       "ex": "I'm designing a website about Libyan history."
+      },
+      {
+       "must": 0,
+       "term": "virtual",
+       "ipa": "",
+       "meaning": "افتراضي",
+       "ex": "virtual"
+      },
+      {
+       "must": 0,
+       "term": "tablet",
+       "ipa": "",
+       "meaning": "جهاز لوحي",
+       "ex": "In the future, students will probably use tablets instead of books."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "The ___ was on the front page.",
+       "a": "headline",
+       "o": [
+        "headline",
+        "report"
+       ],
+       "why": ""
+      },
+      {
+       "q": "I'm ___ a website.",
+       "a": "designing",
+       "o": [
+        "designing",
+        "design"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Students ___ use tablets.",
+       "a": "will",
+       "o": [
+        "will",
+        "would"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى headline؟",
+       "a": "عنوان رئيسي",
+       "o": [
+        "عنوان رئيسي",
+        "صحيفة",
+        "موقع إلكتروني"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى website؟",
+       "a": "موقع إلكتروني",
+       "o": [
+        "موقع إلكتروني",
+        "عنوان رئيسي",
+        "صحيفة"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "The headline on the front page was about the flood.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "The headline on the front page was about the flood.",
+       "o": [
+        "The headline on the front page was about the flood.",
+        "I'm designing a website about Libyan history.",
+        "In the future, students will probably use tablets instead of books."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

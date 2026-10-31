@@ -1,0 +1,299 @@
+{
+ "id": "en-8-u2-l6",
+ "grade": 8,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 2 · Lesson 6: 'Get well' Cards",
+ "titleAr": "أتمنى لك الشفاء العاجل!",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "أتمنى لك الشفاء العاجل!",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "get well",
+       "ar": "تمنيات الشفاء",
+       "em": "💐"
+      },
+      {
+       "id": "v1",
+       "en": "hope",
+       "ar": "يأمل",
+       "em": "🙏"
+      },
+      {
+       "id": "v2",
+       "en": "soon",
+       "ar": "قريباً",
+       "em": "⏳"
+      },
+      {
+       "id": "v3",
+       "en": "feel",
+       "ar": "يشعر",
+       "em": "🙂"
+      },
+      {
+       "id": "v4",
+       "en": "miss",
+       "ar": "يفتقد",
+       "em": "🥺"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 29"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "hope + clause",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Get <b>well</b> soon!</div><div class=\"ex\">I <b>hope</b> you feel better soon.</div><div class=\"ex\">We all <b>miss</b> you at school.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Get well soon! I hope you feel better soon. We all miss you at school."
+      }
+     ]
+    }
+   ],
+   "lead": "I hope you feel better.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "Get ___ soon!",
+           "a": "well",
+           "o": [
+            "well",
+            "good"
+           ]
+          },
+          {
+           "s": "I ___ you feel better.",
+           "a": "hope",
+           "o": [
+            "hope",
+            "hopes"
+           ]
+          },
+          {
+           "s": "We all ___ you.",
+           "a": "miss",
+           "o": [
+            "miss",
+            "misses"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Get well soon!",
+          "I hope you feel better soon.",
+          "We all miss you at school."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Get well soon!",
+           "o": [
+            "Get well soon!",
+            "I hope you feel better soon.",
+            "We all miss you at school."
+           ]
+          },
+          {
+           "a": "I hope you feel better soon.",
+           "o": [
+            "I hope you feel better soon.",
+            "Get well soon!",
+            "We all miss you at school."
+           ]
+          },
+          {
+           "a": "We all miss you at school.",
+           "o": [
+            "We all miss you at school.",
+            "Get well soon!",
+            "I hope you feel better soon."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "get well",
+       "ipa": "",
+       "meaning": "تمنيات الشفاء",
+       "ex": "Get well soon!"
+      },
+      {
+       "must": 1,
+       "term": "hope",
+       "ipa": "",
+       "meaning": "يأمل",
+       "ex": "I hope you feel better soon."
+      },
+      {
+       "must": 1,
+       "term": "soon",
+       "ipa": "",
+       "meaning": "قريباً",
+       "ex": "Get well soon!"
+      },
+      {
+       "must": 0,
+       "term": "feel",
+       "ipa": "",
+       "meaning": "يشعر",
+       "ex": "I hope you feel better soon."
+      },
+      {
+       "must": 0,
+       "term": "miss",
+       "ipa": "",
+       "meaning": "يفتقد",
+       "ex": "We all miss you at school."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "Get ___ soon!",
+       "a": "well",
+       "o": [
+        "well",
+        "good"
+       ],
+       "why": ""
+      },
+      {
+       "q": "I ___ you feel better.",
+       "a": "hope",
+       "o": [
+        "hope",
+        "hopes"
+       ],
+       "why": ""
+      },
+      {
+       "q": "We all ___ you.",
+       "a": "miss",
+       "o": [
+        "miss",
+        "misses"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى hope؟",
+       "a": "يأمل",
+       "o": [
+        "يأمل",
+        "تمنيات الشفاء",
+        "قريباً"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى get well؟",
+       "a": "تمنيات الشفاء",
+       "o": [
+        "تمنيات الشفاء",
+        "يأمل",
+        "قريباً"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Get well soon!",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Get well soon!",
+       "o": [
+        "Get well soon!",
+        "I hope you feel better soon.",
+        "We all miss you at school."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

@@ -1,0 +1,319 @@
+{
+ "id": "en-7-u3-l8",
+ "grade": 7,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 3 · Lesson 8: Khalid and the Key",
+ "titleAr": "لم يستطع خالد إيجاد مفتاحه.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "لم يستطع خالد إيجاد مفتاحه.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "key",
+       "ar": "مفتاح",
+       "em": "🔑"
+      },
+      {
+       "id": "v1",
+       "en": "lock",
+       "ar": "يقفل",
+       "em": "🔒"
+      },
+      {
+       "id": "v2",
+       "en": "door",
+       "ar": "باب",
+       "em": "🚪"
+      },
+      {
+       "id": "v3",
+       "en": "pocket",
+       "ar": "جيب",
+       "em": "👖"
+      },
+      {
+       "id": "v4",
+       "en": "look for",
+       "ar": "يبحث عن",
+       "em": "🔍"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 40"
+  },
+  {
+   "title": "اقرأ",
+   "eyebrow": "الخطوة ٢ — اقرأ",
+   "heading": "اقرأ واستمع",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "📖 Khalid and the Key",
+     "html": "<div class=\"ex\">Khalid couldn't find his key.</div><div class=\"ex\">He looked for it everywhere.</div><div class=\"ex\">It was in his pocket!</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Khalid couldn't find his key. He looked for it everywhere. It was in his pocket!"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط ▶ لتسمع النص."
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٣ — القاعدة",
+   "heading": "Past simple story",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Khalid couldn't <b>find</b> his key.</div><div class=\"ex\">He <b>looked</b> for it everywhere.</div><div class=\"ex\">It was in his <b>pocket</b>!</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Khalid couldn't find his key. He looked for it everywhere. It was in his pocket!"
+      }
+     ]
+    }
+   ],
+   "lead": "looked, found, was",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٤ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "He ___ for it everywhere.",
+           "a": "looked",
+           "o": [
+            "looked",
+            "look"
+           ]
+          },
+          {
+           "s": "It was in his ___ !",
+           "a": "pocket",
+           "o": [
+            "pocket",
+            "door"
+           ]
+          },
+          {
+           "s": "He couldn't ___ his key.",
+           "a": "find",
+           "o": [
+            "find",
+            "found"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Khalid couldn't find his key.",
+          "He looked for it everywhere.",
+          "It was in his pocket!"
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Khalid couldn't find his key.",
+           "o": [
+            "Khalid couldn't find his key.",
+            "He looked for it everywhere.",
+            "It was in his pocket!"
+           ]
+          },
+          {
+           "a": "He looked for it everywhere.",
+           "o": [
+            "He looked for it everywhere.",
+            "Khalid couldn't find his key.",
+            "It was in his pocket!"
+           ]
+          },
+          {
+           "a": "It was in his pocket!",
+           "o": [
+            "It was in his pocket!",
+            "Khalid couldn't find his key.",
+            "He looked for it everywhere."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٥ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "key",
+       "ipa": "",
+       "meaning": "مفتاح",
+       "ex": "Khalid couldn't find his key."
+      },
+      {
+       "must": 1,
+       "term": "lock",
+       "ipa": "",
+       "meaning": "يقفل",
+       "ex": "lock"
+      },
+      {
+       "must": 1,
+       "term": "door",
+       "ipa": "",
+       "meaning": "باب",
+       "ex": "door"
+      },
+      {
+       "must": 0,
+       "term": "pocket",
+       "ipa": "",
+       "meaning": "جيب",
+       "ex": "It was in his pocket!"
+      },
+      {
+       "must": 0,
+       "term": "look for",
+       "ipa": "",
+       "meaning": "يبحث عن",
+       "ex": "He looked for it everywhere."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "He ___ for it everywhere.",
+       "a": "looked",
+       "o": [
+        "looked",
+        "look"
+       ],
+       "why": ""
+      },
+      {
+       "q": "It was in his ___ !",
+       "a": "pocket",
+       "o": [
+        "pocket",
+        "door"
+       ],
+       "why": ""
+      },
+      {
+       "q": "He couldn't ___ his key.",
+       "a": "find",
+       "o": [
+        "find",
+        "found"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى lock؟",
+       "a": "يقفل",
+       "o": [
+        "يقفل",
+        "مفتاح",
+        "باب"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى pocket؟",
+       "a": "جيب",
+       "o": [
+        "جيب",
+        "مفتاح",
+        "يقفل"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Khalid couldn't find his key.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Khalid couldn't find his key.",
+       "o": [
+        "Khalid couldn't find his key.",
+        "He looked for it everywhere.",
+        "It was in his pocket!"
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

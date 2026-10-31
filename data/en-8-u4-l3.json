@@ -1,0 +1,337 @@
+{
+ "id": "en-8-u4-l3",
+ "grade": 8,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 4 · Lesson 3: Speaking",
+ "titleAr": "مهارة التحدث — Fun with English 1",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "مهارة التحدث — Fun with English 1",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "interview",
+       "ar": "مقابلة",
+       "em": "🎙️"
+      },
+      {
+       "id": "v1",
+       "en": "ask",
+       "ar": "يسأل",
+       "em": "❓"
+      },
+      {
+       "id": "v2",
+       "en": "personality",
+       "ar": "شخصية",
+       "em": "⭐"
+      },
+      {
+       "id": "v3",
+       "en": "famous",
+       "ar": "مشهور",
+       "em": "🌟"
+      },
+      {
+       "id": "v4",
+       "en": "menu",
+       "ar": "قائمة الطعام",
+       "em": "📋"
+      },
+      {
+       "id": "v5",
+       "en": "order",
+       "ar": "يطلب",
+       "em": "🛎️"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 52"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Speaking",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">How long have you worked here? For ten years.</div><div class=\"ex\">She <b>was</b> born in Misrata in 1980.</div><div class=\"ex\">Are you ready to <b>order</b>?</div><div class=\"ex\">A limerick has <b>five</b> lines.</div><div class=\"ex\">I'd like <b>to</b> book swimming lessons, please.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "How long have you worked here? For ten years. She was born in Misrata in 1980. Are you ready to order? A limerick has five lines. I'd like to book swimming lessons, please."
+      }
+     ]
+    }
+   ],
+   "lead": "ردّد الجمل بصوت واضح مع زميلك، واستخدمها لتتحدث عن نفسك.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "I've worked here ___ ten years.",
+           "a": "for",
+           "o": [
+            "for",
+            "since"
+           ]
+          },
+          {
+           "s": "She ___ born in Misrata.",
+           "a": "was",
+           "o": [
+            "was",
+            "is"
+           ]
+          },
+          {
+           "s": "Are you ready to ___ ?",
+           "a": "order",
+           "o": [
+            "order",
+            "orders"
+           ]
+          },
+          {
+           "s": "A limerick has ___ lines.",
+           "a": "five",
+           "o": [
+            "five",
+            "four"
+           ]
+          },
+          {
+           "s": "I'd like ___ book lessons.",
+           "a": "to",
+           "o": [
+            "to",
+            "for"
+           ]
+          },
+          {
+           "s": "The Olympic flag has five ___ .",
+           "a": "rings",
+           "o": [
+            "rings",
+            "ring"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "How long have you worked here? For ten years.",
+          "She was born in Misrata in 1980.",
+          "Are you ready to order?",
+          "A limerick has five lines."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "How long have you worked here? For ten years.",
+           "o": [
+            "How long have you worked here? For ten years.",
+            "She was born in Misrata in 1980.",
+            "Are you ready to order?"
+           ]
+          },
+          {
+           "a": "She was born in Misrata in 1980.",
+           "o": [
+            "She was born in Misrata in 1980.",
+            "How long have you worked here? For ten years.",
+            "Are you ready to order?"
+           ]
+          },
+          {
+           "a": "Are you ready to order?",
+           "o": [
+            "Are you ready to order?",
+            "How long have you worked here? For ten years.",
+            "She was born in Misrata in 1980."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "interview",
+       "ipa": "",
+       "meaning": "مقابلة",
+       "ex": "interview"
+      },
+      {
+       "must": 1,
+       "term": "ask",
+       "ipa": "",
+       "meaning": "يسأل",
+       "ex": "ask"
+      },
+      {
+       "must": 1,
+       "term": "personality",
+       "ipa": "",
+       "meaning": "شخصية",
+       "ex": "personality"
+      },
+      {
+       "must": 0,
+       "term": "famous",
+       "ipa": "",
+       "meaning": "مشهور",
+       "ex": "famous"
+      },
+      {
+       "must": 0,
+       "term": "menu",
+       "ipa": "",
+       "meaning": "قائمة الطعام",
+       "ex": "menu"
+      },
+      {
+       "must": 0,
+       "term": "order",
+       "ipa": "",
+       "meaning": "يطلب",
+       "ex": "Are you ready to order?"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "I've worked here ___ ten years.",
+       "a": "for",
+       "o": [
+        "for",
+        "since"
+       ],
+       "why": ""
+      },
+      {
+       "q": "She ___ born in Misrata.",
+       "a": "was",
+       "o": [
+        "was",
+        "is"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Are you ready to ___ ?",
+       "a": "order",
+       "o": [
+        "order",
+        "orders"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى ask؟",
+       "a": "يسأل",
+       "o": [
+        "يسأل",
+        "مقابلة",
+        "شخصية"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى famous؟",
+       "a": "مشهور",
+       "o": [
+        "مشهور",
+        "مقابلة",
+        "يسأل"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "How long have you worked here? For ten years.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "How long have you worked here? For ten years.",
+       "o": [
+        "How long have you worked here? For ten years.",
+        "She was born in Misrata in 1980.",
+        "Are you ready to order?"
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

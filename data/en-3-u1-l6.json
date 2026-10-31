@@ -4,32 +4,30 @@
  "subject": "en",
  "stage": "primary-1-3",
  "lang": "en",
- "title": "My Head",
- "titleAr": "الإنجليزية — الصف الثالث",
+ "title": "Unit 1 · Lesson 6: My Head",
+ "titleAr": "الوحدة الأولى: في المدرسة — الدرس السادس: رأسي ووجهي",
  "steps": [
   {
-   "title": "أتعرّف",
-   "eyebrow": "الخطوة ١ — أتعرّف",
-   "heading": "My Head",
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "My face",
    "blocks": [
     {
      "type": "cards",
      "star": true,
      "items": [
       {
-       "t": "eyes",
-       "em": "👀",
-       "say": "eyes",
-       "sub": "عينان",
-       "lang": "en",
+       "t": "hair",
+       "em": "💇",
+       "say": "hair",
+       "sub": "شعر",
        "must": 1
       },
       {
-       "t": "ears",
-       "em": "👂",
-       "say": "ears",
-       "sub": "أذنان",
-       "lang": "en",
+       "t": "eye",
+       "em": "👁️",
+       "say": "eye",
+       "sub": "عين",
        "must": 1
       },
       {
@@ -37,7 +35,6 @@
        "em": "👃",
        "say": "nose",
        "sub": "أنف",
-       "lang": "en",
        "must": 1
       },
       {
@@ -45,202 +42,218 @@
        "em": "👄",
        "say": "mouth",
        "sub": "فم",
-       "lang": "en",
        "must": 1
       },
       {
-       "t": "hair",
-       "em": "💇",
-       "say": "hair",
-       "sub": "شعر",
-       "lang": "en",
+       "t": "ear",
+       "em": "👂",
+       "say": "ear",
+       "sub": "أذن",
+       "must": 1
+      },
+      {
+       "t": "teeth",
+       "em": "🦷",
+       "say": "teeth",
+       "sub": "أسنان",
+       "must": 1
+      },
+      {
+       "t": "tongue",
+       "em": "👅",
+       "say": "tongue",
+       "sub": "لسان",
        "must": 1
       }
      ],
      "lang": "en"
     }
    ],
-   "lead": "اضغط على كل بطاقة واسمع. كتابك كتاب النشاط ص 19⁠–⁠21"
+   "lead": "اضغط واسمع. كتاب النشاط ص 19–21."
   },
   {
-   "title": "استمع",
-   "eyebrow": "الخطوة ٢ — استمع",
-   "heading": "جمل الدرس",
+   "title": "تكلّم",
+   "eyebrow": "الخطوة ٢ — تكلّم",
+   "heading": "I have …",
    "blocks": [
     {
      "type": "cards",
      "star": true,
      "items": [
       {
-       "t": "I see with my eyes.",
-       "em": "👀",
-       "say": "I see with my eyes.",
-       "sub": "أرى بعيني.",
-       "lang": "en",
+       "t": "I have short hair.",
+       "em": "💇",
+       "say": "I have short hair.",
+       "sub": "لديّ شعر قصير",
        "must": 1
       },
       {
-       "t": "I hear with my ears.",
+       "t": "I have a small nose.",
+       "em": "👃",
+       "say": "I have a small nose.",
+       "sub": "لديّ أنف صغير",
+       "must": 1
+      },
+      {
+       "t": "I have big ears.",
        "em": "👂",
-       "say": "I hear with my ears.",
-       "sub": "أسمع بأذني.",
-       "lang": "en",
-       "must": 1
+       "say": "I have big ears.",
+       "sub": "لديّ أذنان كبيرتان"
+      },
+      {
+       "t": "I have ten toes.",
+       "em": "🦶",
+       "say": "I have ten toes.",
+       "sub": "لديّ عشرة أصابع في قدميّ"
+      },
+      {
+       "t": "She has big eyes.",
+       "em": "👧👁️",
+       "say": "She has big eyes.",
+       "sub": "لديها عينان كبيرتان"
+      },
+      {
+       "t": "He has a small mouth.",
+       "em": "👦👄",
+       "say": "He has a small mouth.",
+       "sub": "لديه فم صغير"
       }
      ],
      "lang": "en"
     }
    ],
-   "lead": "اسمع الجملة وردّدها."
+   "lead": "اسمع وردّد."
   },
   {
-   "title": "العب",
-   "eyebrow": "الخطوة ٣ — العب",
-   "heading": "اسمع واختر الصورة",
+   "title": "الضد",
+   "eyebrow": "الخطوة ٣ — الضد",
+   "heading": "big / small · long / short",
    "blocks": [
     {
      "type": "game",
      "star": true,
      "items": [
       {
-       "say": "eyes",
+       "q": "big ↔",
        "o": [
-        "👀",
-        "💇",
-        "👂"
+        "small",
+        "long"
        ],
-       "a": "👀",
-       "lang": "en"
+       "a": "small",
+       "show": "🐘↔🐭"
       },
       {
-       "say": "ears",
+       "q": "long ↔",
        "o": [
-        "👂",
-        "💇",
-        "👄"
+        "short",
+        "big"
        ],
-       "a": "👂",
-       "lang": "en"
+       "a": "short",
+       "show": "📏↔✂️"
       },
       {
-       "say": "nose",
+       "q": "small ↔",
        "o": [
-        "👃",
-        "💇",
-        "👄"
+        "big",
+        "short"
        ],
-       "a": "👃",
-       "lang": "en"
-      },
-      {
-       "say": "mouth",
-       "o": [
-        "👄",
-        "👀",
-        "💇"
-       ],
-       "a": "👄",
-       "lang": "en"
-      },
-      {
-       "say": "hair",
-       "o": [
-        "💇",
-        "👄",
-        "👂"
-       ],
-       "a": "💇",
-       "lang": "en"
+       "a": "big",
+       "show": "🐭↔🐘"
       }
      ],
-     "lang": "en"
+     "q": "ما الضد؟"
     }
-   ]
+   ],
+   "lead": "اختر الضد."
   },
   {
-   "title": "افهم",
-   "eyebrow": "الخطوة ٤ — افهم",
-   "heading": "ما معنى الجملة؟",
+   "title": "الأعداد",
+   "eyebrow": "الخطوة ٤ — الأعداد",
+   "heading": "Numbers 1–10",
    "blocks": [
     {
      "type": "game",
      "star": true,
      "items": [
       {
-       "say": "I see with my eyes.",
+       "say": "four",
        "o": [
-        "أرى بعيني.",
-        "أسمع بأذني."
+        "4",
+        "5",
+        "8"
        ],
-       "a": "أرى بعيني.",
+       "a": "4",
        "lang": "en"
       },
       {
-       "say": "I hear with my ears.",
+       "say": "five",
        "o": [
-        "أسمع بأذني.",
-        "أرى بعيني."
+        "5",
+        "6",
+        "9"
        ],
-       "a": "أسمع بأذني.",
+       "a": "5",
+       "lang": "en"
+      },
+      {
+       "say": "six",
+       "o": [
+        "6",
+        "7",
+        "10"
+       ],
+       "a": "6",
+       "lang": "en"
+      },
+      {
+       "say": "seven",
+       "o": [
+        "7",
+        "8",
+        "1"
+       ],
+       "a": "7",
+       "lang": "en"
+      },
+      {
+       "say": "eight",
+       "o": [
+        "8",
+        "9",
+        "2"
+       ],
+       "a": "8",
+       "lang": "en"
+      },
+      {
+       "say": "nine",
+       "o": [
+        "9",
+        "10",
+        "3"
+       ],
+       "a": "9",
+       "lang": "en"
+      },
+      {
+       "say": "ten",
+       "o": [
+        "10",
+        "1",
+        "4"
+       ],
+       "a": "10",
        "lang": "en"
       }
      ],
-     "lang": "en"
-    }
-   ]
-  },
-  {
-   "title": "أكمل",
-   "eyebrow": "الخطوة ٥ — أكمل",
-   "heading": "اختر الكلمة الناقصة",
-   "blocks": [
-    {
-     "type": "game",
-     "star": true,
-     "items": [
-      {
-       "say": "I see with my eyes .",
-       "o": [
-        "eyes",
-        "ears"
-       ],
-       "a": "eyes",
-       "sayQ": false,
-       "show": "I see with my ___ .",
-       "lang": "en"
-      },
-      {
-       "say": "I hear with my ears .",
-       "o": [
-        "ears",
-        "nose"
-       ],
-       "a": "ears",
-       "sayQ": false,
-       "show": "I hear with my ___ .",
-       "lang": "en"
-      },
-      {
-       "say": "I smell with my nose .",
-       "o": [
-        "nose",
-        "mouth"
-       ],
-       "a": "nose",
-       "sayQ": false,
-       "show": "I smell with my ___ .",
-       "lang": "en"
-      }
-     ],
-     "q": "اختر الكلمة المناسبة",
      "lang": "en"
     }
    ],
-   "lead": "I see with my eyes."
+   "lead": "اسمع العدد واضغط عليه."
   },
   {
    "title": "اختبار",
-   "eyebrow": "الخطوة ٦ — اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
    "heading": "اختبر نفسك",
    "blocks": [
     {
@@ -248,66 +261,57 @@
      "star": true,
      "items": [
       {
-       "say": "eyes",
-       "o": [
-        "👀",
-        "👃",
-        "👂"
-       ],
-       "a": "👀",
-       "lang": "en"
-      },
-      {
-       "say": "ears",
-       "o": [
-        "👂",
-        "👃",
-        "👀"
-       ],
-       "a": "👂",
-       "lang": "en"
-      },
-      {
        "say": "nose",
        "o": [
         "👃",
-        "👂",
-        "👄"
+        "👄",
+        "👂"
        ],
        "a": "👃",
        "lang": "en"
       },
       {
-       "say": "mouth",
+       "say": "teeth",
        "o": [
-        "👄",
+        "🦷",
+        "👅",
+        "👁️"
+       ],
+       "a": "🦷",
+       "lang": "en"
+      },
+      {
+       "say": "ear",
+       "o": [
+        "👂",
         "👃",
-        "👂"
+        "💇"
        ],
-       "a": "👄",
+       "a": "👂",
        "lang": "en"
       },
       {
-       "say": "I see with my eyes.",
+       "say": "seven",
        "o": [
-        "أرى بعيني.",
-        "أسمع بأذني."
+        "7",
+        "1",
+        "9"
        ],
-       "a": "أرى بعيني.",
+       "a": "7",
        "lang": "en"
       },
       {
-       "say": "I hear with my ears.",
+       "q": "big ↔",
        "o": [
-        "أسمع بأذني.",
-        "أرى بعيني."
+        "small",
+        "long"
        ],
-       "a": "أسمع بأذني.",
-       "lang": "en"
+       "a": "small"
       }
      ],
      "final": true,
-     "lang": "en"
+     "lang": "en",
+     "pass": 3
     }
    ]
   }

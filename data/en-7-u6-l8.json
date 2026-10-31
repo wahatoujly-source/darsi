@@ -1,0 +1,307 @@
+{
+ "id": "en-7-u6-l8",
+ "grade": 7,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 6 · Lesson 8: A Wolf in the Forest",
+ "titleAr": "صرخ الراعي ذئب! ولم يكن هناك ذئب.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "صرخ الراعي ذئب! ولم يكن هناك ذئب.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "wolf",
+       "ar": "ذئب",
+       "em": "🐺"
+      },
+      {
+       "id": "v1",
+       "en": "shepherd",
+       "ar": "راعٍ",
+       "em": "🧑‍🌾"
+      },
+      {
+       "id": "v2",
+       "en": "sheep",
+       "ar": "أغنام",
+       "em": "🐑"
+      },
+      {
+       "id": "v3",
+       "en": "shout",
+       "ar": "يصرخ",
+       "em": "📢"
+      },
+      {
+       "id": "v4",
+       "en": "believe",
+       "ar": "يصدّق",
+       "em": "🤔"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 72"
+  },
+  {
+   "title": "اقرأ",
+   "eyebrow": "الخطوة ٢ — اقرأ",
+   "heading": "اقرأ واستمع",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "📖 A Wolf in the Forest",
+     "html": "<div class=\"ex\">The shepherd boy shouted 'Wolf!' but there was no wolf.</div><div class=\"ex\">Later a real wolf came, but nobody believed him.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "The shepherd boy shouted 'Wolf!' but there was no wolf. Later a real wolf came, but nobody believed him."
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط ▶ لتسمع النص."
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٣ — القاعدة",
+   "heading": "Story moral",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">The shepherd boy <b>shouted</b> 'Wolf!' but there was no wolf.</div><div class=\"ex\">Later a real wolf came, but nobody <b>believed</b> him.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "The shepherd boy shouted 'Wolf!' but there was no wolf. Later a real wolf came, but nobody believed him."
+      }
+     ]
+    }
+   ],
+   "lead": "Don't tell lies — nobody will believe you.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٤ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "The boy ___ 'Wolf!'",
+           "a": "shouted",
+           "o": [
+            "shouted",
+            "shout"
+           ]
+          },
+          {
+           "s": "Nobody ___ him.",
+           "a": "believed",
+           "o": [
+            "believed",
+            "believe"
+           ]
+          },
+          {
+           "s": "The wolf ate the ___ .",
+           "a": "sheep",
+           "o": [
+            "sheep",
+            "sheeps"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "The shepherd boy shouted 'Wolf!' but there was no wolf.",
+          "Later a real wolf came, but nobody believed him."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "The shepherd boy shouted 'Wolf!' but there was no wolf.",
+           "o": [
+            "The shepherd boy shouted 'Wolf!' but there was no wolf.",
+            "Later a real wolf came, but nobody believed him."
+           ]
+          },
+          {
+           "a": "Later a real wolf came, but nobody believed him.",
+           "o": [
+            "Later a real wolf came, but nobody believed him.",
+            "The shepherd boy shouted 'Wolf!' but there was no wolf."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٥ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "wolf",
+       "ipa": "",
+       "meaning": "ذئب",
+       "ex": "The shepherd boy shouted 'Wolf!' but there was no wolf."
+      },
+      {
+       "must": 1,
+       "term": "shepherd",
+       "ipa": "",
+       "meaning": "راعٍ",
+       "ex": "The shepherd boy shouted 'Wolf!' but there was no wolf."
+      },
+      {
+       "must": 1,
+       "term": "sheep",
+       "ipa": "",
+       "meaning": "أغنام",
+       "ex": "sheep"
+      },
+      {
+       "must": 0,
+       "term": "shout",
+       "ipa": "",
+       "meaning": "يصرخ",
+       "ex": "The shepherd boy shouted 'Wolf!' but there was no wolf."
+      },
+      {
+       "must": 0,
+       "term": "believe",
+       "ipa": "",
+       "meaning": "يصدّق",
+       "ex": "Later a real wolf came, but nobody believed him."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "The boy ___ 'Wolf!'",
+       "a": "shouted",
+       "o": [
+        "shouted",
+        "shout"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Nobody ___ him.",
+       "a": "believed",
+       "o": [
+        "believed",
+        "believe"
+       ],
+       "why": ""
+      },
+      {
+       "q": "The wolf ate the ___ .",
+       "a": "sheep",
+       "o": [
+        "sheep",
+        "sheeps"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى shepherd؟",
+       "a": "راعٍ",
+       "o": [
+        "راعٍ",
+        "ذئب",
+        "أغنام"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى sheep؟",
+       "a": "أغنام",
+       "o": [
+        "أغنام",
+        "ذئب",
+        "راعٍ"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "The shepherd boy shouted 'Wolf!' but there was no wolf.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "The shepherd boy shouted 'Wolf!' but there was no wolf.",
+       "o": [
+        "The shepherd boy shouted 'Wolf!' but there was no wolf.",
+        "Later a real wolf came, but nobody believed him."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

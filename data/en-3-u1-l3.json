@@ -4,243 +4,204 @@
  "subject": "en",
  "stage": "primary-1-3",
  "lang": "en",
- "title": "At School",
- "titleAr": "الإنجليزية — الصف الثالث",
+ "title": "Unit 1 · Lesson 3: At School",
+ "titleAr": "الوحدة الأولى: في المدرسة — الدرس الثالث: في المدرسة",
  "steps": [
   {
-   "title": "أتعرّف",
-   "eyebrow": "الخطوة ١ — أتعرّف",
-   "heading": "At School",
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "Where is it?",
    "blocks": [
     {
      "type": "cards",
      "star": true,
      "items": [
       {
-       "t": "teacher",
-       "em": "🧑‍🏫",
-       "say": "teacher",
-       "sub": "معلم",
-       "lang": "en",
+       "t": "on",
+       "em": "⬆️",
+       "say": "It's on the table.",
+       "sub": "على",
        "must": 1
       },
       {
-       "t": "pupil",
-       "em": "🧒",
-       "say": "pupil",
-       "sub": "تلميذ",
-       "lang": "en",
+       "t": "under",
+       "em": "⬇️",
+       "say": "It's under the table.",
+       "sub": "تحت",
        "must": 1
       },
       {
-       "t": "school",
-       "em": "🏫",
-       "say": "school",
-       "sub": "مدرسة",
-       "lang": "en",
+       "t": "in",
+       "em": "📥",
+       "say": "It's in the table.",
+       "sub": "في",
        "must": 1
       },
       {
-       "t": "library",
-       "em": "📚",
-       "say": "library",
-       "sub": "مكتبة",
-       "lang": "en",
+       "t": "next to",
+       "em": "↔️",
+       "say": "It's next to the table.",
+       "sub": "بجانب",
        "must": 1
       },
       {
-       "t": "playground",
-       "em": "🛝",
-       "say": "playground",
-       "sub": "ساحة لعب",
-       "lang": "en",
+       "t": "between",
+       "em": "⏸️",
+       "say": "It's between the ruler and the rubber.",
+       "sub": "بين",
        "must": 1
       }
      ],
      "lang": "en"
     }
    ],
-   "lead": "اضغط على كل بطاقة واسمع. كتابك كتاب النشاط ص 10⁠–⁠12"
+   "lead": "اضغط واسمع. كتاب النشاط ص 10–12."
   },
   {
-   "title": "استمع",
-   "eyebrow": "الخطوة ٢ — استمع",
-   "heading": "جمل الدرس",
+   "title": "تكلّم",
+   "eyebrow": "الخطوة ٢ — تكلّم",
+   "heading": "Where's the pencil?",
    "blocks": [
     {
      "type": "cards",
      "star": true,
      "items": [
       {
-       "t": "I go to school.",
-       "em": "🏫",
-       "say": "I go to school.",
-       "sub": "أذهب إلى المدرسة.",
-       "lang": "en",
+       "t": "Where's the pencil?",
+       "em": "✏️❓",
+       "say": "Where's the pencil?",
+       "sub": "أين القلم؟",
        "must": 1
       },
       {
-       "t": "We play in the playground.",
-       "em": "🛝",
-       "say": "We play in the playground.",
-       "sub": "نلعب في ساحة اللعب.",
-       "lang": "en",
-       "must": 1
+       "t": "It's on the table.",
+       "em": "✏️⬆️",
+       "say": "It's on the table.",
+       "sub": "إنه على الطاولة"
+      },
+      {
+       "t": "It's under the table.",
+       "em": "✏️⬇️",
+       "say": "It's under the table.",
+       "sub": "إنه تحت الطاولة"
+      },
+      {
+       "t": "It's in the book.",
+       "em": "✏️📕",
+       "say": "It's in the book.",
+       "sub": "إنه في الكتاب"
+      },
+      {
+       "t": "It's next to the table.",
+       "em": "✏️↔️",
+       "say": "It's next to the table.",
+       "sub": "إنه بجانب الطاولة"
       }
      ],
      "lang": "en"
     }
    ],
-   "lead": "اسمع الجملة وردّدها."
+   "lead": "اسمع السؤال والجواب وردّد."
   },
   {
    "title": "العب",
    "eyebrow": "الخطوة ٣ — العب",
-   "heading": "اسمع واختر الصورة",
+   "heading": "on, under, in …",
    "blocks": [
     {
      "type": "game",
      "star": true,
      "items": [
       {
-       "say": "teacher",
+       "q": "🐱 الطاولة فوق القطة:",
        "o": [
-        "🧑‍🏫",
-        "📚",
-        "🛝"
+        "under",
+        "on"
        ],
-       "a": "🧑‍🏫",
-       "lang": "en"
+       "a": "under",
+       "show": "🐱⬇️"
       },
       {
-       "say": "pupil",
+       "q": "الكتاب فوق الطاولة:",
        "o": [
-        "🧒",
-        "🏫",
-        "🛝"
-       ],
-       "a": "🧒",
-       "lang": "en"
-      },
-      {
-       "say": "school",
-       "o": [
-        "🏫",
-        "🧒",
-        "🧑‍🏫"
-       ],
-       "a": "🏫",
-       "lang": "en"
-      },
-      {
-       "say": "library",
-       "o": [
-        "📚",
-        "🏫",
-        "🛝"
-       ],
-       "a": "📚",
-       "lang": "en"
-      },
-      {
-       "say": "playground",
-       "o": [
-        "🛝",
-        "🏫",
-        "🧑‍🏫"
-       ],
-       "a": "🛝",
-       "lang": "en"
-      }
-     ],
-     "lang": "en"
-    }
-   ]
-  },
-  {
-   "title": "افهم",
-   "eyebrow": "الخطوة ٤ — افهم",
-   "heading": "ما معنى الجملة؟",
-   "blocks": [
-    {
-     "type": "game",
-     "star": true,
-     "items": [
-      {
-       "say": "I go to school.",
-       "o": [
-        "أذهب إلى المدرسة.",
-        "نلعب في ساحة اللعب."
-       ],
-       "a": "أذهب إلى المدرسة.",
-       "lang": "en"
-      },
-      {
-       "say": "We play in the playground.",
-       "o": [
-        "نلعب في ساحة اللعب.",
-        "أذهب إلى المدرسة."
-       ],
-       "a": "نلعب في ساحة اللعب.",
-       "lang": "en"
-      }
-     ],
-     "lang": "en"
-    }
-   ]
-  },
-  {
-   "title": "أكمل",
-   "eyebrow": "الخطوة ٥ — أكمل",
-   "heading": "اختر الكلمة الناقصة",
-   "blocks": [
-    {
-     "type": "game",
-     "star": true,
-     "items": [
-      {
-       "say": "I go to school.",
-       "o": [
-        "to",
+        "on",
         "in"
        ],
-       "a": "to",
-       "sayQ": false,
-       "show": "I go ___ school.",
-       "lang": "en"
+       "a": "on",
+       "show": "📕⬆️"
       },
       {
-       "say": "We read books in the library .",
+       "q": "القلم داخل الحقيبة:",
        "o": [
-        "library",
-        "playground"
+        "in",
+        "next to"
        ],
-       "a": "library",
-       "sayQ": false,
-       "show": "We read books in the ___ .",
-       "lang": "en"
+       "a": "in",
+       "show": "✏️🎒"
       },
       {
-       "say": "My teacher is kind.",
+       "q": "المسطرة بين القلم والممحاة:",
        "o": [
-        "teacher",
-        "school"
+        "between",
+        "under"
        ],
-       "a": "teacher",
-       "sayQ": false,
-       "show": "My ___ is kind.",
-       "lang": "en"
+       "a": "between",
+       "show": "✏️📏🧽"
+      },
+      {
+       "q": "الكرسي بجانب المكتب:",
+       "o": [
+        "next to",
+        "on"
+       ],
+       "a": "next to",
+       "show": "🪑🗄️"
       }
      ],
-     "q": "اختر الكلمة المناسبة",
+     "q": "اختر الكلمة"
+    }
+   ],
+   "lead": "اختر الكلمة المناسبة."
+  },
+  {
+   "title": "اكتب",
+   "eyebrow": "الخطوة ٤ — اكتب",
+   "heading": "Letters i–l",
+   "blocks": [
+    {
+     "type": "trace",
+     "star": true,
+     "items": [
+      {
+       "t": "i",
+       "say": "i",
+       "size": 120
+      },
+      {
+       "t": "j",
+       "say": "j",
+       "size": 120
+      },
+      {
+       "t": "k",
+       "say": "k",
+       "size": 120
+      },
+      {
+       "t": "l",
+       "say": "l",
+       "size": 120
+      }
+     ],
+     "need": 4,
      "lang": "en"
     }
    ],
-   "lead": "نتحدث عن الأماكن: I go to school."
+   "lead": "مرّر إصبعك فوق الحرف واسمعه."
   },
   {
    "title": "اختبار",
-   "eyebrow": "الخطوة ٦ — اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
    "heading": "اختبر نفسك",
    "blocks": [
     {
@@ -248,66 +209,47 @@
      "star": true,
      "items": [
       {
-       "say": "teacher",
+       "say": "under",
        "o": [
-        "🧑‍🏫",
-        "🏫",
-        "🛝"
+        "⬇️",
+        "⬆️",
+        "↔️"
        ],
-       "a": "🧑‍🏫",
+       "a": "⬇️",
        "lang": "en"
       },
       {
-       "say": "pupil",
+       "say": "on",
        "o": [
-        "🧒",
-        "🧑‍🏫",
-        "🏫"
+        "⬆️",
+        "⬇️",
+        "📥"
        ],
-       "a": "🧒",
+       "a": "⬆️",
        "lang": "en"
       },
       {
-       "say": "school",
+       "say": "between",
        "o": [
-        "🏫",
-        "🛝",
-        "🧒"
+        "⏸️",
+        "↔️",
+        "📥"
        ],
-       "a": "🏫",
+       "a": "⏸️",
        "lang": "en"
       },
       {
-       "say": "library",
+       "q": "Where's the pencil?",
        "o": [
-        "📚",
-        "🏫",
-        "🛝"
+        "It's on the table.",
+        "I'm 8."
        ],
-       "a": "📚",
-       "lang": "en"
-      },
-      {
-       "say": "I go to school.",
-       "o": [
-        "أذهب إلى المدرسة.",
-        "نلعب في ساحة اللعب."
-       ],
-       "a": "أذهب إلى المدرسة.",
-       "lang": "en"
-      },
-      {
-       "say": "We play in the playground.",
-       "o": [
-        "نلعب في ساحة اللعب.",
-        "أذهب إلى المدرسة."
-       ],
-       "a": "نلعب في ساحة اللعب.",
-       "lang": "en"
+       "a": "It's on the table."
       }
      ],
      "final": true,
-     "lang": "en"
+     "lang": "en",
+     "pass": 3
     }
    ]
   }

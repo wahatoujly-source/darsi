@@ -1,0 +1,299 @@
+{
+ "id": "en-7-u7-l1",
+ "grade": 7,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 7 · Lesson 1: Instructions",
+ "titleAr": "وصّل الحاسوب بالكهرباء.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "وصّل الحاسوب بالكهرباء.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "press",
+       "ar": "يضغط",
+       "em": "👆"
+      },
+      {
+       "id": "v1",
+       "en": "switch on",
+       "ar": "يشغّل",
+       "em": "🔛"
+      },
+      {
+       "id": "v2",
+       "en": "plug in",
+       "ar": "يوصل بالكهرباء",
+       "em": "🔌"
+      },
+      {
+       "id": "v3",
+       "en": "turn off",
+       "ar": "يطفئ",
+       "em": "📴"
+      },
+      {
+       "id": "v4",
+       "en": "button",
+       "ar": "زر",
+       "em": "🔘"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 76"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Phrasal verbs",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Plug in the computer.</div><div class=\"ex\">Press the <b>button</b> to switch it on.</div><div class=\"ex\">Turn it <b>off</b> when you finish.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Plug in the computer. Press the button to switch it on. Turn it off when you finish."
+      }
+     ]
+    }
+   ],
+   "lead": "switch on / turn off / plug in",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "Press the ___ .",
+           "a": "button",
+           "o": [
+            "button",
+            "plug"
+           ]
+          },
+          {
+           "s": "Switch ___ the light.",
+           "a": "on",
+           "o": [
+            "on",
+            "in"
+           ]
+          },
+          {
+           "s": "Turn ___ the TV.",
+           "a": "off",
+           "o": [
+            "off",
+            "of"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Plug in the computer.",
+          "Press the button to switch it on.",
+          "Turn it off when you finish."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Plug in the computer.",
+           "o": [
+            "Plug in the computer.",
+            "Press the button to switch it on.",
+            "Turn it off when you finish."
+           ]
+          },
+          {
+           "a": "Press the button to switch it on.",
+           "o": [
+            "Press the button to switch it on.",
+            "Plug in the computer.",
+            "Turn it off when you finish."
+           ]
+          },
+          {
+           "a": "Turn it off when you finish.",
+           "o": [
+            "Turn it off when you finish.",
+            "Plug in the computer.",
+            "Press the button to switch it on."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "press",
+       "ipa": "",
+       "meaning": "يضغط",
+       "ex": "Press the button to switch it on."
+      },
+      {
+       "must": 1,
+       "term": "switch on",
+       "ipa": "",
+       "meaning": "يشغّل",
+       "ex": "Press the button to switch it on."
+      },
+      {
+       "must": 1,
+       "term": "plug in",
+       "ipa": "",
+       "meaning": "يوصل بالكهرباء",
+       "ex": "Plug in the computer."
+      },
+      {
+       "must": 0,
+       "term": "turn off",
+       "ipa": "",
+       "meaning": "يطفئ",
+       "ex": "Turn it off when you finish."
+      },
+      {
+       "must": 0,
+       "term": "button",
+       "ipa": "",
+       "meaning": "زر",
+       "ex": "Press the button to switch it on."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "Press the ___ .",
+       "a": "button",
+       "o": [
+        "button",
+        "plug"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Switch ___ the light.",
+       "a": "on",
+       "o": [
+        "on",
+        "in"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Turn ___ the TV.",
+       "a": "off",
+       "o": [
+        "off",
+        "of"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى switch on؟",
+       "a": "يشغّل",
+       "o": [
+        "يشغّل",
+        "يضغط",
+        "يوصل بالكهرباء"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى press؟",
+       "a": "يضغط",
+       "o": [
+        "يضغط",
+        "يشغّل",
+        "يوصل بالكهرباء"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Plug in the computer.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Plug in the computer.",
+       "o": [
+        "Plug in the computer.",
+        "Press the button to switch it on.",
+        "Turn it off when you finish."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

@@ -1,0 +1,319 @@
+{
+ "id": "en-8-u2-l8",
+ "grade": 8,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 2 · Lesson 8: Bob and Bashir – The Eggs",
+ "titleAr": "كان بوب يحمل سلة بيض.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "كان بوب يحمل سلة بيض.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "eggs",
+       "ar": "بيض",
+       "em": "🥚"
+      },
+      {
+       "id": "v1",
+       "en": "basket",
+       "ar": "سلة",
+       "em": "🧺"
+      },
+      {
+       "id": "v2",
+       "en": "drop",
+       "ar": "يُسقط",
+       "em": "⬇️"
+      },
+      {
+       "id": "v3",
+       "en": "broken",
+       "ar": "مكسور",
+       "em": "💔"
+      },
+      {
+       "id": "v4",
+       "en": "careful",
+       "ar": "حذر",
+       "em": "⚠️"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 31⁠–⁠32"
+  },
+  {
+   "title": "اقرأ",
+   "eyebrow": "الخطوة ٢ — اقرأ",
+   "heading": "اقرأ واستمع",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "📖 Bob and Bashir – The Eggs",
+     "html": "<div class=\"ex\">Bob was carrying a basket of eggs.</div><div class=\"ex\">He dropped it and all the eggs broke.</div><div class=\"ex\">Bashir said, 'You should be more careful!'</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Bob was carrying a basket of eggs. He dropped it and all the eggs broke. Bashir said, 'You should be more careful!'"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط ▶ لتسمع النص."
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٣ — القاعدة",
+   "heading": "Past continuous + past simple",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Bob <b>was</b> carrying a basket of eggs.</div><div class=\"ex\">He <b>dropped</b> it and all the eggs broke.</div><div class=\"ex\">Bashir said, 'You should be more <b>careful</b>!'</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Bob was carrying a basket of eggs. He dropped it and all the eggs broke. Bashir said, 'You should be more careful!'"
+      }
+     ]
+    }
+   ],
+   "lead": "was carrying … dropped",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٤ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "Bob ___ carrying a basket.",
+           "a": "was",
+           "o": [
+            "was",
+            "were"
+           ]
+          },
+          {
+           "s": "He ___ it.",
+           "a": "dropped",
+           "o": [
+            "dropped",
+            "droped"
+           ]
+          },
+          {
+           "s": "You should be more ___ .",
+           "a": "careful",
+           "o": [
+            "careful",
+            "carefully"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Bob was carrying a basket of eggs.",
+          "He dropped it and all the eggs broke.",
+          "Bashir said, 'You should be more careful!'"
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Bob was carrying a basket of eggs.",
+           "o": [
+            "Bob was carrying a basket of eggs.",
+            "He dropped it and all the eggs broke.",
+            "Bashir said, 'You should be more careful!'"
+           ]
+          },
+          {
+           "a": "He dropped it and all the eggs broke.",
+           "o": [
+            "He dropped it and all the eggs broke.",
+            "Bob was carrying a basket of eggs.",
+            "Bashir said, 'You should be more careful!'"
+           ]
+          },
+          {
+           "a": "Bashir said, 'You should be more careful!'",
+           "o": [
+            "Bashir said, 'You should be more careful!'",
+            "Bob was carrying a basket of eggs.",
+            "He dropped it and all the eggs broke."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٥ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "eggs",
+       "ipa": "",
+       "meaning": "بيض",
+       "ex": "Bob was carrying a basket of eggs."
+      },
+      {
+       "must": 1,
+       "term": "basket",
+       "ipa": "",
+       "meaning": "سلة",
+       "ex": "Bob was carrying a basket of eggs."
+      },
+      {
+       "must": 1,
+       "term": "drop",
+       "ipa": "",
+       "meaning": "يُسقط",
+       "ex": "He dropped it and all the eggs broke."
+      },
+      {
+       "must": 0,
+       "term": "broken",
+       "ipa": "",
+       "meaning": "مكسور",
+       "ex": "broken"
+      },
+      {
+       "must": 0,
+       "term": "careful",
+       "ipa": "",
+       "meaning": "حذر",
+       "ex": "Bashir said, 'You should be more careful!'"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "Bob ___ carrying a basket.",
+       "a": "was",
+       "o": [
+        "was",
+        "were"
+       ],
+       "why": ""
+      },
+      {
+       "q": "He ___ it.",
+       "a": "dropped",
+       "o": [
+        "dropped",
+        "droped"
+       ],
+       "why": ""
+      },
+      {
+       "q": "You should be more ___ .",
+       "a": "careful",
+       "o": [
+        "careful",
+        "carefully"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى drop؟",
+       "a": "يُسقط",
+       "o": [
+        "يُسقط",
+        "بيض",
+        "سلة"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى careful؟",
+       "a": "حذر",
+       "o": [
+        "حذر",
+        "بيض",
+        "سلة"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Bob was carrying a basket of eggs.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Bob was carrying a basket of eggs.",
+       "o": [
+        "Bob was carrying a basket of eggs.",
+        "He dropped it and all the eggs broke.",
+        "Bashir said, 'You should be more careful!'"
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

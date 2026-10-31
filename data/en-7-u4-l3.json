@@ -1,0 +1,319 @@
+{
+ "id": "en-7-u4-l3",
+ "grade": 7,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 4 · Lesson 3: The Monkey in the Café",
+ "titleAr": "ركض قرد إلى المقهى.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "ركض قرد إلى المقهى.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "monkey",
+       "ar": "قرد",
+       "em": "🐒"
+      },
+      {
+       "id": "v1",
+       "en": "café",
+       "ar": "مقهى",
+       "em": "☕"
+      },
+      {
+       "id": "v2",
+       "en": "waiter",
+       "ar": "نادل",
+       "em": "🤵"
+      },
+      {
+       "id": "v3",
+       "en": "banana",
+       "ar": "موزة",
+       "em": "🍌"
+      },
+      {
+       "id": "v4",
+       "en": "steal",
+       "ar": "يسرق",
+       "em": "🫳"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 46"
+  },
+  {
+   "title": "اقرأ",
+   "eyebrow": "الخطوة ٢ — اقرأ",
+   "heading": "اقرأ واستمع",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "📖 The Monkey in the Café",
+     "html": "<div class=\"ex\">A monkey ran into the café.</div><div class=\"ex\">It took a banana from the table.</div><div class=\"ex\">The waiter was very surprised.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "A monkey ran into the café. It took a banana from the table. The waiter was very surprised."
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط ▶ لتسمع النص."
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٣ — القاعدة",
+   "heading": "Past simple narrative",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">A monkey <b>ran</b> into the café.</div><div class=\"ex\">It <b>took</b> a banana from the table.</div><div class=\"ex\">The <b>waiter</b> was very surprised.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "A monkey ran into the café. It took a banana from the table. The waiter was very surprised."
+      }
+     ]
+    }
+   ],
+   "lead": "ran, took, was",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٤ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "A monkey ___ into the café.",
+           "a": "ran",
+           "o": [
+            "ran",
+            "runned"
+           ]
+          },
+          {
+           "s": "It ___ a banana.",
+           "a": "took",
+           "o": [
+            "took",
+            "taked"
+           ]
+          },
+          {
+           "s": "The ___ was surprised.",
+           "a": "waiter",
+           "o": [
+            "waiter",
+            "monkey"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "A monkey ran into the café.",
+          "It took a banana from the table.",
+          "The waiter was very surprised."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "A monkey ran into the café.",
+           "o": [
+            "A monkey ran into the café.",
+            "It took a banana from the table.",
+            "The waiter was very surprised."
+           ]
+          },
+          {
+           "a": "It took a banana from the table.",
+           "o": [
+            "It took a banana from the table.",
+            "A monkey ran into the café.",
+            "The waiter was very surprised."
+           ]
+          },
+          {
+           "a": "The waiter was very surprised.",
+           "o": [
+            "The waiter was very surprised.",
+            "A monkey ran into the café.",
+            "It took a banana from the table."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٥ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "monkey",
+       "ipa": "",
+       "meaning": "قرد",
+       "ex": "A monkey ran into the café."
+      },
+      {
+       "must": 1,
+       "term": "café",
+       "ipa": "",
+       "meaning": "مقهى",
+       "ex": "A monkey ran into the café."
+      },
+      {
+       "must": 1,
+       "term": "waiter",
+       "ipa": "",
+       "meaning": "نادل",
+       "ex": "The waiter was very surprised."
+      },
+      {
+       "must": 0,
+       "term": "banana",
+       "ipa": "",
+       "meaning": "موزة",
+       "ex": "It took a banana from the table."
+      },
+      {
+       "must": 0,
+       "term": "steal",
+       "ipa": "",
+       "meaning": "يسرق",
+       "ex": "steal"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "A monkey ___ into the café.",
+       "a": "ran",
+       "o": [
+        "ran",
+        "runned"
+       ],
+       "why": ""
+      },
+      {
+       "q": "It ___ a banana.",
+       "a": "took",
+       "o": [
+        "took",
+        "taked"
+       ],
+       "why": ""
+      },
+      {
+       "q": "The ___ was surprised.",
+       "a": "waiter",
+       "o": [
+        "waiter",
+        "monkey"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى café؟",
+       "a": "مقهى",
+       "o": [
+        "مقهى",
+        "قرد",
+        "نادل"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى waiter؟",
+       "a": "نادل",
+       "o": [
+        "نادل",
+        "قرد",
+        "مقهى"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "A monkey ran into the café.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "A monkey ran into the café.",
+       "o": [
+        "A monkey ran into the café.",
+        "It took a banana from the table.",
+        "The waiter was very surprised."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

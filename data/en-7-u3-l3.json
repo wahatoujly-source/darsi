@@ -1,0 +1,287 @@
+{
+ "id": "en-7-u3-l3",
+ "grade": 7,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 3 · Lesson 3: What's the matter?",
+ "titleAr": "ما الأمر؟ لقد أضعت مفتاحي.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "ما الأمر؟ لقد أضعت مفتاحي.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "broken",
+       "ar": "مكسور",
+       "em": "💔"
+      },
+      {
+       "id": "v1",
+       "en": "lost",
+       "ar": "فقد",
+       "em": "❓"
+      },
+      {
+       "id": "v2",
+       "en": "matter",
+       "ar": "أمر",
+       "em": "❔"
+      },
+      {
+       "id": "v3",
+       "en": "key",
+       "ar": "مفتاح",
+       "em": "🔑"
+      },
+      {
+       "id": "v4",
+       "en": "worried",
+       "ar": "قلق",
+       "em": "😟"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 34"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Present perfect for news",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">What's the matter? I've <b>lost</b> my key.</div><div class=\"ex\">My bike is <b>broken</b>.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "What's the matter? I've lost my key. My bike is broken."
+      }
+     ]
+    }
+   ],
+   "lead": "I've lost … / He's broken …",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "I've ___ my key.",
+           "a": "lost",
+           "o": [
+            "lost",
+            "lose"
+           ]
+          },
+          {
+           "s": "What's the ___ ?",
+           "a": "matter",
+           "o": [
+            "matter",
+            "matters"
+           ]
+          },
+          {
+           "s": "He's ___ his arm.",
+           "a": "broken",
+           "o": [
+            "broken",
+            "broke"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "What's the matter? I've lost my key.",
+          "My bike is broken."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "What's the matter? I've lost my key.",
+           "o": [
+            "What's the matter? I've lost my key.",
+            "My bike is broken."
+           ]
+          },
+          {
+           "a": "My bike is broken.",
+           "o": [
+            "My bike is broken.",
+            "What's the matter? I've lost my key."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "broken",
+       "ipa": "",
+       "meaning": "مكسور",
+       "ex": "My bike is broken."
+      },
+      {
+       "must": 1,
+       "term": "lost",
+       "ipa": "",
+       "meaning": "فقد",
+       "ex": "What's the matter? I've lost my key."
+      },
+      {
+       "must": 1,
+       "term": "matter",
+       "ipa": "",
+       "meaning": "أمر",
+       "ex": "What's the matter? I've lost my key."
+      },
+      {
+       "must": 0,
+       "term": "key",
+       "ipa": "",
+       "meaning": "مفتاح",
+       "ex": "What's the matter? I've lost my key."
+      },
+      {
+       "must": 0,
+       "term": "worried",
+       "ipa": "",
+       "meaning": "قلق",
+       "ex": "worried"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "I've ___ my key.",
+       "a": "lost",
+       "o": [
+        "lost",
+        "lose"
+       ],
+       "why": ""
+      },
+      {
+       "q": "What's the ___ ?",
+       "a": "matter",
+       "o": [
+        "matter",
+        "matters"
+       ],
+       "why": ""
+      },
+      {
+       "q": "He's ___ his arm.",
+       "a": "broken",
+       "o": [
+        "broken",
+        "broke"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى lost؟",
+       "a": "فقد",
+       "o": [
+        "فقد",
+        "مكسور",
+        "أمر"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى matter؟",
+       "a": "أمر",
+       "o": [
+        "أمر",
+        "مكسور",
+        "فقد"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "What's the matter? I've lost my key.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "What's the matter? I've lost my key.",
+       "o": [
+        "What's the matter? I've lost my key.",
+        "My bike is broken."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

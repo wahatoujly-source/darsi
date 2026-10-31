@@ -1,0 +1,337 @@
+{
+ "id": "en-7-u6-lR",
+ "grade": 7,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 6 · Lesson R: Round up",
+ "titleAr": "مراجعة الوحدة — Friends Abroad",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "مراجعة الوحدة — Friends Abroad",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "introduce",
+       "ar": "يعرّف",
+       "em": "🤝"
+      },
+      {
+       "id": "v1",
+       "en": "pen friend",
+       "ar": "صديق بالمراسلة",
+       "em": "✉️"
+      },
+      {
+       "id": "v2",
+       "en": "password",
+       "ar": "كلمة مرور",
+       "em": "🔑"
+      },
+      {
+       "id": "v3",
+       "en": "private",
+       "ar": "خاص",
+       "em": "🔒"
+      },
+      {
+       "id": "v4",
+       "en": "tall",
+       "ar": "طويلة",
+       "em": "📏"
+      },
+      {
+       "id": "v5",
+       "en": "long hair",
+       "ar": "شعر طويل",
+       "em": "💇‍♀️"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 73"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Unit review",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Let me introduce my friend Yuki.</div><div class=\"ex\"><b>Never</b> tell anyone your password.</div><div class=\"ex\">Which one is Yuki?</div><div class=\"ex\">In Japan, people <b>bow</b> when they meet.</div><div class=\"ex\">Fawzi ate <b>with</b> chopsticks for the first time.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Let me introduce my friend Yuki. Never tell anyone your password. Which one is Yuki? In Japan, people bow when they meet. Fawzi ate with chopsticks for the first time."
+      }
+     ]
+    }
+   ],
+   "lead": "نراجع أهم قواعد الوحدة وكلماتها: اقرأ الأمثلة بصوت عالٍ ثم حلّ التمارين.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "She's interested ___ drawing.",
+           "a": "in",
+           "o": [
+            "in",
+            "on"
+           ]
+          },
+          {
+           "s": "___ tell anyone your password.",
+           "a": "Never",
+           "o": [
+            "Never",
+            "Always"
+           ]
+          },
+          {
+           "s": "She's the one ___ long hair.",
+           "a": "with",
+           "o": [
+            "with",
+            "has"
+           ]
+          },
+          {
+           "s": "People ___ when they meet in Japan.",
+           "a": "bow",
+           "o": [
+            "bow",
+            "bows"
+           ]
+          },
+          {
+           "s": "He ate with ___ .",
+           "a": "chopsticks",
+           "o": [
+            "chopsticks",
+            "forks"
+           ]
+          },
+          {
+           "s": "I ___ in Tokyo safely.",
+           "a": "arrived",
+           "o": [
+            "arrived",
+            "arrive"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Let me introduce my friend Yuki.",
+          "Never tell anyone your password.",
+          "Which one is Yuki?",
+          "In Japan, people bow when they meet."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Let me introduce my friend Yuki.",
+           "o": [
+            "Let me introduce my friend Yuki.",
+            "Never tell anyone your password.",
+            "Which one is Yuki?"
+           ]
+          },
+          {
+           "a": "Never tell anyone your password.",
+           "o": [
+            "Never tell anyone your password.",
+            "Let me introduce my friend Yuki.",
+            "Which one is Yuki?"
+           ]
+          },
+          {
+           "a": "Which one is Yuki?",
+           "o": [
+            "Which one is Yuki?",
+            "Let me introduce my friend Yuki.",
+            "Never tell anyone your password."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "introduce",
+       "ipa": "",
+       "meaning": "يعرّف",
+       "ex": "Let me introduce my friend Yuki."
+      },
+      {
+       "must": 1,
+       "term": "pen friend",
+       "ipa": "",
+       "meaning": "صديق بالمراسلة",
+       "ex": "pen friend"
+      },
+      {
+       "must": 1,
+       "term": "password",
+       "ipa": "",
+       "meaning": "كلمة مرور",
+       "ex": "Never tell anyone your password."
+      },
+      {
+       "must": 0,
+       "term": "private",
+       "ipa": "",
+       "meaning": "خاص",
+       "ex": "private"
+      },
+      {
+       "must": 0,
+       "term": "tall",
+       "ipa": "",
+       "meaning": "طويلة",
+       "ex": "tall"
+      },
+      {
+       "must": 0,
+       "term": "long hair",
+       "ipa": "",
+       "meaning": "شعر طويل",
+       "ex": "long hair"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "She's interested ___ drawing.",
+       "a": "in",
+       "o": [
+        "in",
+        "on"
+       ],
+       "why": ""
+      },
+      {
+       "q": "___ tell anyone your password.",
+       "a": "Never",
+       "o": [
+        "Never",
+        "Always"
+       ],
+       "why": ""
+      },
+      {
+       "q": "She's the one ___ long hair.",
+       "a": "with",
+       "o": [
+        "with",
+        "has"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى introduce؟",
+       "a": "يعرّف",
+       "o": [
+        "يعرّف",
+        "صديق بالمراسلة",
+        "كلمة مرور"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى pen friend؟",
+       "a": "صديق بالمراسلة",
+       "o": [
+        "صديق بالمراسلة",
+        "يعرّف",
+        "كلمة مرور"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Let me introduce my friend Yuki.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Let me introduce my friend Yuki.",
+       "o": [
+        "Let me introduce my friend Yuki.",
+        "Never tell anyone your password.",
+        "Which one is Yuki?"
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

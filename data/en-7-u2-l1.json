@@ -1,0 +1,287 @@
+{
+ "id": "en-7-u2-l1",
+ "grade": 7,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 2 · Lesson 1: The Seasons of the Year",
+ "titleAr": "في الربيع تهب رياح القبلي في ليبيا.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "في الربيع تهب رياح القبلي في ليبيا.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "spring",
+       "ar": "الربيع",
+       "em": "🌸"
+      },
+      {
+       "id": "v1",
+       "en": "summer",
+       "ar": "الصيف",
+       "em": "☀️"
+      },
+      {
+       "id": "v2",
+       "en": "autumn",
+       "ar": "الخريف",
+       "em": "🍂"
+      },
+      {
+       "id": "v3",
+       "en": "winter",
+       "ar": "الشتاء",
+       "em": "❄️"
+      },
+      {
+       "id": "v4",
+       "en": "ghibli",
+       "ar": "القبلي (رياح حارة)",
+       "em": "🌬️"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 20"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "in + season",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\"><b>In</b> spring, the ghibli wind blows in Libya.</div><div class=\"ex\">Winter is cool and rainy <b>in</b> the north.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "In spring, the ghibli wind blows in Libya. Winter is cool and rainy in the north."
+      }
+     ]
+    }
+   ],
+   "lead": "in spring / in winter",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "___ summer it's very hot.",
+           "a": "In",
+           "o": [
+            "In",
+            "On"
+           ]
+          },
+          {
+           "s": "The ___ is a hot, dusty wind.",
+           "a": "ghibli",
+           "o": [
+            "ghibli",
+            "winter"
+           ]
+          },
+          {
+           "s": "Leaves fall ___ autumn.",
+           "a": "in",
+           "o": [
+            "in",
+            "at"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "In spring, the ghibli wind blows in Libya.",
+          "Winter is cool and rainy in the north."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "In spring, the ghibli wind blows in Libya.",
+           "o": [
+            "In spring, the ghibli wind blows in Libya.",
+            "Winter is cool and rainy in the north."
+           ]
+          },
+          {
+           "a": "Winter is cool and rainy in the north.",
+           "o": [
+            "Winter is cool and rainy in the north.",
+            "In spring, the ghibli wind blows in Libya."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "spring",
+       "ipa": "",
+       "meaning": "الربيع",
+       "ex": "In spring, the ghibli wind blows in Libya."
+      },
+      {
+       "must": 1,
+       "term": "summer",
+       "ipa": "",
+       "meaning": "الصيف",
+       "ex": "summer"
+      },
+      {
+       "must": 1,
+       "term": "autumn",
+       "ipa": "",
+       "meaning": "الخريف",
+       "ex": "autumn"
+      },
+      {
+       "must": 0,
+       "term": "winter",
+       "ipa": "",
+       "meaning": "الشتاء",
+       "ex": "Winter is cool and rainy in the north."
+      },
+      {
+       "must": 0,
+       "term": "ghibli",
+       "ipa": "",
+       "meaning": "القبلي (رياح حارة)",
+       "ex": "In spring, the ghibli wind blows in Libya."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "___ summer it's very hot.",
+       "a": "In",
+       "o": [
+        "In",
+        "On"
+       ],
+       "why": ""
+      },
+      {
+       "q": "The ___ is a hot, dusty wind.",
+       "a": "ghibli",
+       "o": [
+        "ghibli",
+        "winter"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Leaves fall ___ autumn.",
+       "a": "in",
+       "o": [
+        "in",
+        "at"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى summer؟",
+       "a": "الصيف",
+       "o": [
+        "الصيف",
+        "الربيع",
+        "الخريف"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى winter؟",
+       "a": "الشتاء",
+       "o": [
+        "الشتاء",
+        "الربيع",
+        "الصيف"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "In spring, the ghibli wind blows in Libya.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "In spring, the ghibli wind blows in Libya.",
+       "o": [
+        "In spring, the ghibli wind blows in Libya.",
+        "Winter is cool and rainy in the north."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

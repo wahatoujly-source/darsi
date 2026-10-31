@@ -5,70 +5,89 @@
  "stage": "primary-4-6",
  "lang": "en",
  "title": "Unit 1 · Lesson 5: Learning English",
- "titleAr": "أتحدث العربية والإنجليزية.",
+ "titleAr": "الوحدة الأولى: عالمنا — الدرس الخامس: لماذا نتعلم الإنجليزية؟",
+ "characters": {},
  "steps": [
   {
    "title": "المفردات",
    "eyebrow": "الخطوة ١ — المفردات",
-   "heading": "أتحدث العربية والإنجليزية.",
+   "heading": "لماذا نتعلم الإنجليزية؟",
    "blocks": [
     {
      "type": "vocab",
      "items": [
       {
        "id": "v0",
-       "en": "language",
-       "ar": "لغة",
-       "em": "🗣️"
+       "en": "I want to study in the English language.",
+       "ar": "أريد أن أدرس باللغة الإنجليزية",
+       "em": "🎓"
       },
       {
        "id": "v1",
-       "en": "speak",
-       "ar": "يتحدث",
-       "em": "💬"
-      },
-      {
-       "id": "v2",
-       "en": "learn",
-       "ar": "يتعلم",
+       "en": "There are lots of books in English.",
+       "ar": "توجد كتب كثيرة بالإنجليزية",
        "em": "📚"
       },
       {
+       "id": "v2",
+       "en": "Lots of people in the world speak English.",
+       "ar": "كثير من الناس في العالم يتكلمون الإنجليزية",
+       "em": "🌍"
+      },
+      {
        "id": "v3",
-       "en": "understand",
-       "ar": "يفهم",
-       "em": "💡"
+       "en": "There are lots of songs in English.",
+       "ar": "توجد أغانٍ كثيرة بالإنجليزية",
+       "em": "🎧"
       },
       {
        "id": "v4",
-       "en": "practise",
-       "ar": "يتدرب",
-       "em": "🔁"
+       "en": "I want to travel to other countries.",
+       "ar": "أريد أن أسافر إلى بلدان أخرى",
+       "em": "✈️"
+      },
+      {
+       "id": "v5",
+       "en": "There is a lot of English on the internet.",
+       "ar": "توجد إنجليزية كثيرة على الإنترنت",
+       "em": "💻"
       }
      ]
     }
    ],
-   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 16⁠–⁠17 · كتاب النشاط ص 12⁠–⁠13"
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتابك ص 16–17."
   },
   {
    "title": "القاعدة",
    "eyebrow": "الخطوة ٢ — القاعدة",
-   "heading": "Present simple",
+   "heading": "I want to … / There are lots of …",
    "blocks": [
     {
      "type": "panel",
-     "title": "أمثلة",
-     "html": "<div class=\"ex\">I <b>speak</b> Arabic and English.</div><div class=\"ex\">We <b>learn</b> English at school.</div>",
+     "title": "I want to …",
+     "html": "<div class=\"ex\">I <b>want to</b> travel to other countries.</div><div class=\"ex\">I <b>want to</b> study in the English language.</div>",
      "blocks": [
       {
        "type": "say",
        "label": "▶ اسمع",
-       "text": "I speak Arabic and English. We learn English at school."
+       "text": "I want to travel to other countries."
+      }
+     ]
+    },
+    {
+     "type": "panel",
+     "title": "There is / There are",
+     "html": "<div class=\"ex\">There <b>are</b> lots of books in English.</div><div class=\"ex\">There <b>is</b> a lot of English on the internet.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "There are lots of books in English. There is a lot of English on the internet."
       }
      ]
     }
    ],
-   "lead": "I speak / She speaks",
+   "lead": "نعبّر عن رغبتنا بـ I want to + فعل، ونقول There are lots of … عن أشياء كثيرة.",
    "starOnVisit": true
   },
   {
@@ -81,6 +100,62 @@
      "star": true,
      "tabs": [
       {
+       "label": "طابق",
+       "blocks": [
+        {
+         "type": "choice",
+         "star": false,
+         "items": [
+          {
+           "q": "🌍 الصورة c",
+           "a": "Lots of people in the world speak English.",
+           "o": [
+            "Lots of people in the world speak English.",
+            "There are lots of songs in English."
+           ],
+           "why": ""
+          },
+          {
+           "q": "💻 الصورة a: www",
+           "a": "There is a lot of English on the internet.",
+           "o": [
+            "There is a lot of English on the internet.",
+            "I want to travel to other countries."
+           ],
+           "why": ""
+          },
+          {
+           "q": "🎧 الصورة b",
+           "a": "There are lots of songs in English.",
+           "o": [
+            "There are lots of songs in English.",
+            "There are lots of books in English."
+           ],
+           "why": ""
+          },
+          {
+           "q": "📚 الصورة e",
+           "a": "There are lots of books in English.",
+           "o": [
+            "There are lots of books in English.",
+            "I want to study in the English language."
+           ],
+           "why": ""
+          },
+          {
+           "q": "✈️ الصورة d",
+           "a": "I want to travel to other countries.",
+           "o": [
+            "I want to travel to other countries.",
+            "Lots of people speak English."
+           ],
+           "why": ""
+          }
+         ]
+        }
+       ]
+      },
+      {
        "label": "اختر الكلمة",
        "blocks": [
         {
@@ -88,23 +163,32 @@
          "mode": "gap",
          "items": [
           {
-           "s": "She ___ English.",
-           "a": "speaks",
+           "s": "I want ___ travel to other countries.",
+           "a": "to",
            "o": [
-            "speaks",
-            "speak"
+            "to",
+            "for",
+            "at"
            ]
           },
           {
-           "s": "We ___ English at school.",
-           "a": "learn",
+           "s": "There ___ lots of books in English.",
+           "a": "are",
            "o": [
-            "learn",
-            "learns"
+            "are",
+            "is"
            ]
           },
           {
-           "s": "I ___ Arabic.",
+           "s": "There ___ a lot of English on the internet.",
+           "a": "is",
+           "o": [
+            "is",
+            "are"
+           ]
+          },
+          {
+           "s": "Lots of people in the world ___ English.",
            "a": "speak",
            "o": [
             "speak",
@@ -121,33 +205,8 @@
         {
          "type": "order",
          "sentences": [
-          "I speak Arabic and English.",
-          "We learn English at school."
-         ]
-        }
-       ]
-      },
-      {
-       "label": "استمع واختر",
-       "blocks": [
-        {
-         "type": "mcq",
-         "mode": "listen",
-         "items": [
-          {
-           "a": "I speak Arabic and English.",
-           "o": [
-            "I speak Arabic and English.",
-            "We learn English at school."
-           ]
-          },
-          {
-           "a": "We learn English at school.",
-           "o": [
-            "We learn English at school.",
-            "I speak Arabic and English."
-           ]
-          }
+          "I want to travel to other countries.",
+          "There are lots of songs in English."
          ]
         }
        ]
@@ -170,38 +229,45 @@
      "items": [
       {
        "must": 1,
-       "term": "language",
-       "ipa": "",
-       "meaning": "لغة",
-       "ex": "language"
+       "term": "I want to …",
+       "ipa": "/aɪ wɒnt tuː/",
+       "meaning": "أريد أن …",
+       "ex": "I want to travel."
       },
       {
        "must": 1,
+       "term": "travel",
+       "ipa": "/ˈtrævl/",
+       "meaning": "يسافر",
+       "ex": "I want to travel to other countries."
+      },
+      {
+       "must": 1,
+       "term": "study",
+       "ipa": "/ˈstʌdi/",
+       "meaning": "يدرس",
+       "ex": "I want to study in English."
+      },
+      {
+       "must": 1,
+       "term": "lots of",
+       "ipa": "/lɒts ɒv/",
+       "meaning": "كثير من",
+       "ex": "There are lots of books."
+      },
+      {
+       "must": 0,
+       "term": "internet",
+       "ipa": "/ˈɪntənet/",
+       "meaning": "الإنترنت",
+       "ex": "There is a lot of English on the internet."
+      },
+      {
+       "must": 0,
        "term": "speak",
-       "ipa": "",
-       "meaning": "يتحدث",
-       "ex": "I speak Arabic and English."
-      },
-      {
-       "must": 1,
-       "term": "learn",
-       "ipa": "",
-       "meaning": "يتعلم",
-       "ex": "We learn English at school."
-      },
-      {
-       "must": 0,
-       "term": "understand",
-       "ipa": "",
-       "meaning": "يفهم",
-       "ex": "understand"
-      },
-      {
-       "must": 0,
-       "term": "practise",
-       "ipa": "",
-       "meaning": "يتدرب",
-       "ex": "practise"
+       "ipa": "/spiːk/",
+       "meaning": "يتكلم",
+       "ex": "Lots of people speak English."
       }
      ]
     }
@@ -218,62 +284,62 @@
      "pass": 5,
      "items": [
       {
-       "q": "She ___ English.",
-       "a": "speaks",
+       "q": "I want ___ study in English.",
+       "a": "to",
        "o": [
-        "speaks",
-        "speak"
+        "to",
+        "at"
        ],
        "why": ""
       },
       {
-       "q": "We ___ English at school.",
-       "a": "learn",
+       "q": "There ___ lots of songs in English.",
+       "a": "are",
        "o": [
-        "learn",
-        "learns"
+        "are",
+        "is"
        ],
        "why": ""
       },
       {
-       "q": "I ___ Arabic.",
+       "type": "listen",
+       "say": "I want to travel to other countries.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "I want to travel to other countries.",
+       "o": [
+        "I want to travel to other countries.",
+        "I want to study.",
+        "There are lots of books."
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى travel؟",
+       "a": "يسافر",
+       "o": [
+        "يسافر",
+        "يدرس",
+        "يتكلم"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى lots of؟",
+       "a": "كثير من",
+       "o": [
+        "كثير من",
+        "قليل من"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "Lots of people in the world ___ English.",
        "a": "speak",
        "o": [
         "speak",
         "speaks"
-       ],
-       "why": ""
-      },
-      {
-       "q": "ما معنى language؟",
-       "a": "لغة",
-       "o": [
-        "لغة",
-        "يتحدث",
-        "يتعلم"
-       ],
-       "why": "",
-       "ar": true
-      },
-      {
-       "q": "ما معنى speak؟",
-       "a": "يتحدث",
-       "o": [
-        "يتحدث",
-        "لغة",
-        "يتعلم"
-       ],
-       "why": "",
-       "ar": true
-      },
-      {
-       "type": "listen",
-       "say": "I speak Arabic and English.",
-       "q": "استمع: ماذا قال المتحدث؟",
-       "a": "I speak Arabic and English.",
-       "o": [
-        "I speak Arabic and English.",
-        "We learn English at school."
        ],
        "why": ""
       }
@@ -282,6 +348,5 @@
    ],
    "lead": "6 أسئلة. تنجح بـ 5 من 6."
   }
- ],
- "characters": {}
+ ]
 }

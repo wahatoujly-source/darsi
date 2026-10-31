@@ -1,0 +1,357 @@
+{
+ "id": "en-9-u4-l2",
+ "grade": 9,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 4 · Lesson 2: Reading",
+ "titleAr": "مهارة القراءة — Fun with English 1",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "مهارة القراءة — Fun with English 1",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "hurry up",
+       "ar": "أسرِع",
+       "em": "🏃"
+      },
+      {
+       "id": "v1",
+       "en": "late",
+       "ar": "متأخر",
+       "em": "⏰"
+      },
+      {
+       "id": "v2",
+       "en": "look like",
+       "ar": "يبدو",
+       "em": "👀"
+      },
+      {
+       "id": "v3",
+       "en": "round",
+       "ar": "مستدير",
+       "em": "⚪"
+      },
+      {
+       "id": "v4",
+       "en": "spare time",
+       "ar": "وقت الفراغ",
+       "em": "⏳"
+      },
+      {
+       "id": "v5",
+       "en": "hobby",
+       "ar": "هواية",
+       "em": "🎨"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 52⁠–⁠53"
+  },
+  {
+   "title": "اقرأ",
+   "eyebrow": "الخطوة ٢ — اقرأ",
+   "heading": "اقرأ واستمع",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "📖 Reading",
+     "html": "<div class=\"ex\">Hurry up! It's time to go!</div><div class=\"ex\">What does it look like? It's round and made of metal.</div><div class=\"ex\">In my spare time, I enjoy reading.</div><div class=\"ex\">I watched an episode of a comedy series.</div><div class=\"ex\">The world's population has increased to over eight billion.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Hurry up! It's time to go! What does it look like? It's round and made of metal. In my spare time, I enjoy reading. I watched an episode of a comedy series. The world's population has increased to over eight billion."
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط ▶ لتسمع النص."
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٣ — القاعدة",
+   "heading": "Reading",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Hurry up! It's time <b>to</b> go!</div><div class=\"ex\">What does it look <b>like</b>? It's round and made of metal.</div><div class=\"ex\">In my spare time, I enjoy <b>reading</b>.</div><div class=\"ex\">I watched an episode of a comedy series.</div><div class=\"ex\">The world's population has increased <b>to</b> over eight billion.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Hurry up! It's time to go! What does it look like? It's round and made of metal. In my spare time, I enjoy reading. I watched an episode of a comedy series. The world's population has increased to over eight billion."
+      }
+     ]
+    }
+   ],
+   "lead": "اقرأ الجمل بصوت عالٍ وانتبه إلى الكلمات المميّزة، ثم حلّ التمارين.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٤ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "It's time ___ go.",
+           "a": "to",
+           "o": [
+            "to",
+            "for"
+           ]
+          },
+          {
+           "s": "What does it look ___ ?",
+           "a": "like",
+           "o": [
+            "like",
+            "likes"
+           ]
+          },
+          {
+           "s": "I enjoy ___ .",
+           "a": "reading",
+           "o": [
+            "reading",
+            "to read"
+           ]
+          },
+          {
+           "s": "The character was ___ . (very funny)",
+           "a": "hilarious",
+           "o": [
+            "hilarious",
+            "funny"
+           ]
+          },
+          {
+           "s": "The population ___ increased.",
+           "a": "has",
+           "o": [
+            "has",
+            "have"
+           ]
+          },
+          {
+           "s": "Do you care ___ animals?",
+           "a": "about",
+           "o": [
+            "about",
+            "for"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Hurry up! It's time to go!",
+          "What does it look like? It's round and made of metal.",
+          "In my spare time, I enjoy reading.",
+          "I watched an episode of a comedy series."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Hurry up! It's time to go!",
+           "o": [
+            "Hurry up! It's time to go!",
+            "What does it look like? It's round and made of metal.",
+            "In my spare time, I enjoy reading."
+           ]
+          },
+          {
+           "a": "What does it look like? It's round and made of metal.",
+           "o": [
+            "What does it look like? It's round and made of metal.",
+            "Hurry up! It's time to go!",
+            "In my spare time, I enjoy reading."
+           ]
+          },
+          {
+           "a": "In my spare time, I enjoy reading.",
+           "o": [
+            "In my spare time, I enjoy reading.",
+            "Hurry up! It's time to go!",
+            "What does it look like? It's round and made of metal."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٥ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "hurry up",
+       "ipa": "",
+       "meaning": "أسرِع",
+       "ex": "Hurry up! It's time to go!"
+      },
+      {
+       "must": 1,
+       "term": "late",
+       "ipa": "",
+       "meaning": "متأخر",
+       "ex": "late"
+      },
+      {
+       "must": 1,
+       "term": "look like",
+       "ipa": "",
+       "meaning": "يبدو",
+       "ex": "What does it look like? It's round and made of metal."
+      },
+      {
+       "must": 0,
+       "term": "round",
+       "ipa": "",
+       "meaning": "مستدير",
+       "ex": "What does it look like? It's round and made of metal."
+      },
+      {
+       "must": 0,
+       "term": "spare time",
+       "ipa": "",
+       "meaning": "وقت الفراغ",
+       "ex": "In my spare time, I enjoy reading."
+      },
+      {
+       "must": 0,
+       "term": "hobby",
+       "ipa": "",
+       "meaning": "هواية",
+       "ex": "hobby"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "It's time ___ go.",
+       "a": "to",
+       "o": [
+        "to",
+        "for"
+       ],
+       "why": ""
+      },
+      {
+       "q": "What does it look ___ ?",
+       "a": "like",
+       "o": [
+        "like",
+        "likes"
+       ],
+       "why": ""
+      },
+      {
+       "q": "I enjoy ___ .",
+       "a": "reading",
+       "o": [
+        "reading",
+        "to read"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى spare time؟",
+       "a": "وقت الفراغ",
+       "o": [
+        "وقت الفراغ",
+        "أسرِع",
+        "متأخر"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى look like؟",
+       "a": "يبدو",
+       "o": [
+        "يبدو",
+        "أسرِع",
+        "متأخر"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Hurry up! It's time to go!",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Hurry up! It's time to go!",
+       "o": [
+        "Hurry up! It's time to go!",
+        "What does it look like? It's round and made of metal.",
+        "In my spare time, I enjoy reading."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

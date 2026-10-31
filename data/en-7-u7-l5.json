@@ -1,0 +1,287 @@
+{
+ "id": "en-7-u7-l5",
+ "grade": 7,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 7 · Lesson 5: Danger!",
+ "titleAr": "إذا حدث حريق، غادر المبنى.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "إذا حدث حريق، غادر المبنى.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "danger",
+       "ar": "خطر",
+       "em": "⚠️"
+      },
+      {
+       "id": "v1",
+       "en": "fire",
+       "ar": "حريق",
+       "em": "🔥"
+      },
+      {
+       "id": "v2",
+       "en": "emergency",
+       "ar": "طوارئ",
+       "em": "🚨"
+      },
+      {
+       "id": "v3",
+       "en": "escape",
+       "ar": "يهرب",
+       "em": "🏃"
+      },
+      {
+       "id": "v4",
+       "en": "call",
+       "ar": "يتصل",
+       "em": "📞"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 80"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "First conditional (if)",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\"><b>If</b> there's a fire, leave the building.</div><div class=\"ex\">Call 193 in an <b>emergency</b>.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "If there's a fire, leave the building. Call 193 in an emergency."
+      }
+     ]
+    }
+   ],
+   "lead": "If + present, imperative / will",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "___ there's a fire, leave the building.",
+           "a": "If",
+           "o": [
+            "If",
+            "When's"
+           ]
+          },
+          {
+           "s": "Call for help in an ___ .",
+           "a": "emergency",
+           "o": [
+            "emergency",
+            "escape"
+           ]
+          },
+          {
+           "s": "Don't use the lift if there's a ___ .",
+           "a": "fire",
+           "o": [
+            "fire",
+            "danger"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "If there's a fire, leave the building.",
+          "Call 193 in an emergency."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "If there's a fire, leave the building.",
+           "o": [
+            "If there's a fire, leave the building.",
+            "Call 193 in an emergency."
+           ]
+          },
+          {
+           "a": "Call 193 in an emergency.",
+           "o": [
+            "Call 193 in an emergency.",
+            "If there's a fire, leave the building."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "danger",
+       "ipa": "",
+       "meaning": "خطر",
+       "ex": "danger"
+      },
+      {
+       "must": 1,
+       "term": "fire",
+       "ipa": "",
+       "meaning": "حريق",
+       "ex": "If there's a fire, leave the building."
+      },
+      {
+       "must": 1,
+       "term": "emergency",
+       "ipa": "",
+       "meaning": "طوارئ",
+       "ex": "Call 193 in an emergency."
+      },
+      {
+       "must": 0,
+       "term": "escape",
+       "ipa": "",
+       "meaning": "يهرب",
+       "ex": "escape"
+      },
+      {
+       "must": 0,
+       "term": "call",
+       "ipa": "",
+       "meaning": "يتصل",
+       "ex": "Call 193 in an emergency."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "___ there's a fire, leave the building.",
+       "a": "If",
+       "o": [
+        "If",
+        "When's"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Call for help in an ___ .",
+       "a": "emergency",
+       "o": [
+        "emergency",
+        "escape"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Don't use the lift if there's a ___ .",
+       "a": "fire",
+       "o": [
+        "fire",
+        "danger"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى escape؟",
+       "a": "يهرب",
+       "o": [
+        "يهرب",
+        "خطر",
+        "حريق"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى call؟",
+       "a": "يتصل",
+       "o": [
+        "يتصل",
+        "خطر",
+        "حريق"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "If there's a fire, leave the building.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "If there's a fire, leave the building.",
+       "o": [
+        "If there's a fire, leave the building.",
+        "Call 193 in an emergency."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

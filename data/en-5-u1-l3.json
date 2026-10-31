@@ -5,12 +5,26 @@
  "stage": "primary-4-6",
  "lang": "en",
  "title": "Unit 1 · Lesson 3: My Nationality",
- "titleAr": "أنا من ليبيا. أنا ليبي.",
+ "titleAr": "الوحدة الأولى: عالمنا — الدرس الثالث: جنسيتي",
+ "characters": {
+  "Kareem": {
+   "ar": "كريم",
+   "color": "--c1",
+   "g": "m",
+   "pitch": 1.4
+  },
+  "Jena": {
+   "ar": "جنى",
+   "color": "--c4",
+   "g": "f",
+   "pitch": 1.6
+  }
+ },
  "steps": [
   {
    "title": "المفردات",
    "eyebrow": "الخطوة ١ — المفردات",
-   "heading": "أنا من ليبيا. أنا ليبي.",
+   "heading": "الجنسيات",
    "blocks": [
     {
      "type": "vocab",
@@ -29,57 +43,170 @@
       },
       {
        "id": "v2",
-       "en": "Tunisian",
-       "ar": "تونسي",
-       "em": "🇹🇳"
+       "en": "Turkish",
+       "ar": "تركي",
+       "em": "🇹🇷"
       },
       {
        "id": "v3",
-       "en": "British",
-       "ar": "بريطاني",
-       "em": "🇬🇧"
+       "en": "Italian",
+       "ar": "إيطالي",
+       "em": "🇮🇹"
       },
       {
        "id": "v4",
-       "en": "nationality",
-       "ar": "جنسية",
-       "em": "🪪"
+       "en": "French",
+       "ar": "فرنسي",
+       "em": "🇫🇷"
+      },
+      {
+       "id": "v5",
+       "en": "English",
+       "ar": "إنجليزي",
+       "em": "🏴"
+      },
+      {
+       "id": "v6",
+       "en": "Japanese",
+       "ar": "ياباني",
+       "em": "🇯🇵"
+      },
+      {
+       "id": "v7",
+       "en": "Thai",
+       "ar": "تايلاندي",
+       "em": "🇹🇭"
       }
      ]
     }
    ],
-   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 12⁠–⁠13 · كتاب النشاط ص 8⁠–⁠9"
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتابك ص 12–13."
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "استمع إلى الحوار",
+   "blocks": [
+    {
+     "type": "dialogue",
+     "star": true
+    }
+   ],
+   "lead": "شغّل الحوار وتابع الكلمات المضيئة، واضغط على أي جملة لتعيدها."
   },
   {
    "title": "القاعدة",
-   "eyebrow": "الخطوة ٢ — القاعدة",
-   "heading": "Country → nationality",
+   "eyebrow": "الخطوة ٣ — القاعدة",
+   "heading": "What nationality …?",
    "blocks": [
     {
      "type": "panel",
-     "title": "أمثلة",
-     "html": "<div class=\"ex\">I'm from Libya. I'm <b>Libyan</b>.</div><div class=\"ex\">She's from Egypt. She's Egyptian.</div>",
+     "title": "البلد ← الجنسية",
+     "html": "<div class=\"ex\">Libya → Libyan &nbsp;·&nbsp; Egypt → Egyptian &nbsp;·&nbsp; Italy → Italian</div><div class=\"ex\">Japan → Japanese &nbsp;·&nbsp; Turkey → Turkish &nbsp;·&nbsp; England → English</div><div class=\"ex\">France → French &nbsp;·&nbsp; Thailand → Thai</div>",
      "blocks": [
       {
        "type": "say",
        "label": "▶ اسمع",
-       "text": "I'm from Libya. I'm Libyan. She's from Egypt. She's Egyptian."
+       "text": "Libya, Libyan. Egypt, Egyptian. Japan, Japanese. France, French. Thailand, Thai."
+      }
+     ]
+    },
+    {
+     "type": "panel",
+     "title": "السؤال عن الجنسية",
+     "html": "<div class=\"ex\">What nationality <b>are</b> you? — I'm Libyan.</div><div class=\"ex\">What nationality <b>is</b> he? — He's Japanese.</div><div class=\"ex\">What nationality <b>are</b> they? — They're French.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "What nationality are you? I'm Libyan. What nationality is he? He's Japanese."
       }
      ]
     }
    ],
-   "lead": "Libya → Libyan, Egypt → Egyptian, Tunisia → Tunisian.",
+   "lead": "البلد Country، والجنسية Nationality.",
    "starOnVisit": true
   },
   {
    "title": "تدرّب",
-   "eyebrow": "الخطوة ٣ — تدرّب",
+   "eyebrow": "الخطوة ٤ — تدرّب",
    "heading": "تمارين تُصحَّح فوراً",
    "blocks": [
     {
      "type": "tabs",
      "star": true,
      "tabs": [
+      {
+       "label": "طابق",
+       "blocks": [
+        {
+         "type": "choice",
+         "star": false,
+         "items": [
+          {
+           "q": "Libya →",
+           "a": "Libyan",
+           "o": [
+            "Libyan",
+            "Libyish",
+            "Libyese"
+           ],
+           "why": ""
+          },
+          {
+           "q": "Japan →",
+           "a": "Japanese",
+           "o": [
+            "Japanese",
+            "Japanish",
+            "Japanian"
+           ],
+           "why": ""
+          },
+          {
+           "q": "Turkey →",
+           "a": "Turkish",
+           "o": [
+            "Turkish",
+            "Turkese",
+            "Turkian"
+           ],
+           "why": ""
+          },
+          {
+           "q": "France →",
+           "a": "French",
+           "o": [
+            "French",
+            "Francish",
+            "Francian"
+           ],
+           "why": ""
+          },
+          {
+           "q": "Thailand →",
+           "a": "Thai",
+           "o": [
+            "Thai",
+            "Thailish",
+            "Thailandese"
+           ],
+           "why": ""
+          },
+          {
+           "q": "Egypt →",
+           "a": "Egyptian",
+           "o": [
+            "Egyptian",
+            "Egyptish",
+            "Egyptese"
+           ],
+           "why": ""
+          }
+         ]
+        }
+       ]
+      },
       {
        "label": "اختر الكلمة",
        "blocks": [
@@ -88,7 +215,16 @@
          "mode": "gap",
          "items": [
           {
-           "s": "I'm from Libya. I'm ___ .",
+           "s": "What ___ are you?",
+           "a": "nationality",
+           "o": [
+            "nationality",
+            "country",
+            "name"
+           ]
+          },
+          {
+           "s": "I'm ___ . I'm from Libya.",
            "a": "Libyan",
            "o": [
             "Libyan",
@@ -96,33 +232,29 @@
            ]
           },
           {
-           "s": "He's from Tunisia. He's ___ .",
-           "a": "Tunisian",
+           "s": "We're ___ . We're from Turkey.",
+           "a": "Turkish",
            "o": [
-            "Tunisian",
-            "Tunisia"
+            "Turkish",
+            "Turkey"
            ]
           },
           {
-           "s": "What's your ___ ?",
-           "a": "nationality",
+           "s": "Enzo is ___ .",
+           "a": "Italian",
            "o": [
-            "nationality",
-            "country"
+            "Italian",
+            "Italy"
+           ]
+          },
+          {
+           "s": "What nationality ___ he?",
+           "a": "is",
+           "o": [
+            "is",
+            "are"
            ]
           }
-         ]
-        }
-       ]
-      },
-      {
-       "label": "رتّب الجملة",
-       "blocks": [
-        {
-         "type": "order",
-         "sentences": [
-          "I'm from Libya. I'm Libyan.",
-          "She's from Egypt. She's Egyptian."
          ]
         }
        ]
@@ -135,17 +267,27 @@
          "mode": "listen",
          "items": [
           {
-           "a": "I'm from Libya. I'm Libyan.",
+           "a": "I'm Thai.",
            "o": [
-            "I'm from Libya. I'm Libyan.",
-            "She's from Egypt. She's Egyptian."
+            "I'm Thai.",
+            "I'm Italian.",
+            "I'm Libyan."
            ]
           },
           {
-           "a": "She's from Egypt. She's Egyptian.",
+           "a": "We're Turkish.",
            "o": [
-            "She's from Egypt. She's Egyptian.",
-            "I'm from Libya. I'm Libyan."
+            "We're Turkish.",
+            "We're French.",
+            "We're English."
+           ]
+          },
+          {
+           "a": "What nationality are you?",
+           "o": [
+            "What nationality are you?",
+            "Where are you from?",
+            "What's your name?"
            ]
           }
          ]
@@ -159,7 +301,7 @@
   },
   {
    "title": "احفظ",
-   "eyebrow": "الخطوة ٤ — احفظ",
+   "eyebrow": "الخطوة ٥ — احفظ",
    "heading": "كلمات يجب أن تحفظها",
    "blocks": [
     {
@@ -170,38 +312,45 @@
      "items": [
       {
        "must": 1,
+       "term": "nationality",
+       "ipa": "/ˌnæʃəˈnæləti/",
+       "meaning": "الجنسية",
+       "ex": "What nationality are you?"
+      },
+      {
+       "must": 1,
        "term": "Libyan",
-       "ipa": "",
+       "ipa": "/ˈlɪbiən/",
        "meaning": "ليبي",
-       "ex": "I'm from Libya. I'm Libyan."
+       "ex": "I'm Libyan."
       },
       {
        "must": 1,
        "term": "Egyptian",
-       "ipa": "",
+       "ipa": "/iˈdʒɪpʃn/",
        "meaning": "مصري",
-       "ex": "She's from Egypt. She's Egyptian."
-      },
-      {
-       "must": 1,
-       "term": "Tunisian",
-       "ipa": "",
-       "meaning": "تونسي",
-       "ex": "Tunisian"
+       "ex": "Dalia is Egyptian."
       },
       {
        "must": 0,
-       "term": "British",
-       "ipa": "",
-       "meaning": "بريطاني",
-       "ex": "British"
+       "term": "Japanese",
+       "ipa": "/ˌdʒæpəˈniːz/",
+       "meaning": "ياباني",
+       "ex": "Hiroshi is Japanese."
       },
       {
        "must": 0,
-       "term": "nationality",
-       "ipa": "",
-       "meaning": "جنسية",
-       "ex": "nationality"
+       "term": "French",
+       "ipa": "/frentʃ/",
+       "meaning": "فرنسي",
+       "ex": "Amy and Joy are French."
+      },
+      {
+       "must": 0,
+       "term": "Thai",
+       "ipa": "/taɪ/",
+       "meaning": "تايلاندي",
+       "ex": "Kanda is Thai."
       }
      ]
     }
@@ -209,79 +358,140 @@
   },
   {
    "title": "اختبار",
-   "eyebrow": "الخطوة ٥ — اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
    "heading": "اختبر نفسك",
    "blocks": [
     {
      "type": "quiz",
      "star": true,
-     "pass": 5,
+     "pass": 6,
      "items": [
       {
-       "q": "I'm from Libya. I'm ___ .",
-       "a": "Libyan",
+       "q": "What nationality are you? (Libya)",
+       "a": "I'm Libyan.",
        "o": [
-        "Libyan",
-        "Libya"
+        "I'm Libyan.",
+        "I'm Libya."
        ],
        "why": ""
       },
       {
-       "q": "He's from Tunisia. He's ___ .",
-       "a": "Tunisian",
+       "q": "France → ؟",
+       "a": "French",
        "o": [
-        "Tunisian",
-        "Tunisia"
+        "French",
+        "Francish"
        ],
        "why": ""
       },
       {
-       "q": "What's your ___ ?",
-       "a": "nationality",
+       "q": "Enzo is from Italy. He's …",
+       "a": "Italian",
        "o": [
-        "nationality",
-        "country"
+        "Italian",
+        "Italy"
        ],
        "why": ""
-      },
-      {
-       "q": "ما معنى British؟",
-       "a": "بريطاني",
-       "o": [
-        "بريطاني",
-        "ليبي",
-        "مصري"
-       ],
-       "why": "",
-       "ar": true
-      },
-      {
-       "q": "ما معنى nationality؟",
-       "a": "جنسية",
-       "o": [
-        "جنسية",
-        "ليبي",
-        "مصري"
-       ],
-       "why": "",
-       "ar": true
       },
       {
        "type": "listen",
-       "say": "I'm from Libya. I'm Libyan.",
+       "say": "We're Turkish.",
        "q": "استمع: ماذا قال المتحدث؟",
-       "a": "I'm from Libya. I'm Libyan.",
+       "a": "We're Turkish.",
        "o": [
-        "I'm from Libya. I'm Libyan.",
-        "She's from Egypt. She's Egyptian."
+        "We're Turkish.",
+        "We're from Turkey.",
+        "We're Thai."
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى nationality؟",
+       "a": "الجنسية",
+       "o": [
+        "الجنسية",
+        "البلد",
+        "العلم"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "Is Peter Turkish?",
+       "a": "No, he isn't. He's English.",
+       "o": [
+        "No, he isn't. He's English.",
+        "Yes, he is."
+       ],
+       "why": ""
+      },
+      {
+       "q": "Kanda is from Thailand. She's …",
+       "a": "Thai",
+       "o": [
+        "Thai",
+        "Thailandish"
+       ],
+       "why": ""
+      },
+      {
+       "q": "What nationality ___ they?",
+       "a": "are",
+       "o": [
+        "are",
+        "is"
        ],
        "why": ""
       }
      ]
     }
    ],
-   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+   "lead": "8 أسئلة. تنجح بـ 6 من 8."
   }
  ],
- "characters": {}
+ "dialogue": [
+  [
+   "Jena",
+   "What nationality are you?"
+  ],
+  [
+   "Kareem",
+   "I'm Libyan."
+  ],
+  [
+   "Jena",
+   "What nationality is Kanda?"
+  ],
+  [
+   "Kareem",
+   "She's Thai."
+  ],
+  [
+   "Jena",
+   "What nationality are Murad and Ali?"
+  ],
+  [
+   "Kareem",
+   "They're Turkish."
+  ],
+  [
+   "Jena",
+   "Is Peter Turkish?"
+  ],
+  [
+   "Kareem",
+   "No, he isn't. He's English."
+  ],
+  [
+   "Jena",
+   "Are Amy and Joy French?"
+  ],
+  [
+   "Kareem",
+   "Yes, they are."
+  ]
+ ],
+ "left": [
+  "Jena"
+ ]
 }

@@ -1,0 +1,337 @@
+{
+ "id": "en-9-u4-l1",
+ "grade": 9,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 4 · Lesson 1: Listening",
+ "titleAr": "مهارة الاستماع — Fun with English 1",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "مهارة الاستماع — Fun with English 1",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "department store",
+       "ar": "متجر متعدد الأقسام",
+       "em": "🏬"
+      },
+      {
+       "id": "v1",
+       "en": "sale",
+       "ar": "تخفيضات",
+       "em": "🏷️"
+      },
+      {
+       "id": "v2",
+       "en": "used for",
+       "ar": "يُستخدم لـ",
+       "em": "🔧"
+      },
+      {
+       "id": "v3",
+       "en": "screwdriver",
+       "ar": "مفك",
+       "em": "🪛"
+      },
+      {
+       "id": "v4",
+       "en": "perfect",
+       "ar": "مثالي",
+       "em": "✨"
+      },
+      {
+       "id": "v5",
+       "en": "resort",
+       "ar": "منتجع",
+       "em": "🏨"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 50⁠–⁠51"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Listening",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">There's a sale at the department store.</div><div class=\"ex\">What are scissors used for? They're used for <b>cutting</b>.</div><div class=\"ex\">If I <b>could</b> go anywhere, I would go to the Maldives.</div><div class=\"ex\">Why don't we go to the beach?</div><div class=\"ex\">There are millions of species on Earth.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "There's a sale at the department store. What are scissors used for? They're used for cutting. If I could go anywhere, I would go to the Maldives. Why don't we go to the beach? There are millions of species on Earth."
+      }
+     ]
+    }
+   ],
+   "lead": "استمع إلى الجمل جيداً: ركّز أولاً على الفكرة العامة ثم على التفاصيل، وأعد الاستماع عند الحاجة.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "There's a 50% ___ .",
+           "a": "discount",
+           "o": [
+            "discount",
+            "receipt"
+           ]
+          },
+          {
+           "s": "Scissors are used for ___ .",
+           "a": "cutting",
+           "o": [
+            "cutting",
+            "cut"
+           ]
+          },
+          {
+           "s": "If I ___ go anywhere, I'd go to Japan.",
+           "a": "could",
+           "o": [
+            "could",
+            "can"
+           ]
+          },
+          {
+           "s": "How about ___ to the museum?",
+           "a": "going",
+           "o": [
+            "going",
+            "go"
+           ]
+          },
+          {
+           "s": "Frogs are ___ .",
+           "a": "amphibians",
+           "o": [
+            "amphibians",
+            "reptiles"
+           ]
+          },
+          {
+           "s": "The cheetah is the ___ land animal.",
+           "a": "fastest",
+           "o": [
+            "fastest",
+            "faster"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "There's a sale at the department store.",
+          "What are scissors used for? They're used for cutting.",
+          "If I could go anywhere, I would go to the Maldives.",
+          "Why don't we go to the beach?"
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "There's a sale at the department store.",
+           "o": [
+            "There's a sale at the department store.",
+            "What are scissors used for? They're used for cutting.",
+            "If I could go anywhere, I would go to the Maldives."
+           ]
+          },
+          {
+           "a": "What are scissors used for? They're used for cutting.",
+           "o": [
+            "What are scissors used for? They're used for cutting.",
+            "There's a sale at the department store.",
+            "If I could go anywhere, I would go to the Maldives."
+           ]
+          },
+          {
+           "a": "If I could go anywhere, I would go to the Maldives.",
+           "o": [
+            "If I could go anywhere, I would go to the Maldives.",
+            "There's a sale at the department store.",
+            "What are scissors used for? They're used for cutting."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "department store",
+       "ipa": "",
+       "meaning": "متجر متعدد الأقسام",
+       "ex": "There's a sale at the department store."
+      },
+      {
+       "must": 1,
+       "term": "sale",
+       "ipa": "",
+       "meaning": "تخفيضات",
+       "ex": "There's a sale at the department store."
+      },
+      {
+       "must": 1,
+       "term": "used for",
+       "ipa": "",
+       "meaning": "يُستخدم لـ",
+       "ex": "What are scissors used for? They're used for cutting."
+      },
+      {
+       "must": 0,
+       "term": "screwdriver",
+       "ipa": "",
+       "meaning": "مفك",
+       "ex": "screwdriver"
+      },
+      {
+       "must": 0,
+       "term": "perfect",
+       "ipa": "",
+       "meaning": "مثالي",
+       "ex": "perfect"
+      },
+      {
+       "must": 0,
+       "term": "resort",
+       "ipa": "",
+       "meaning": "منتجع",
+       "ex": "resort"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "There's a 50% ___ .",
+       "a": "discount",
+       "o": [
+        "discount",
+        "receipt"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Scissors are used for ___ .",
+       "a": "cutting",
+       "o": [
+        "cutting",
+        "cut"
+       ],
+       "why": ""
+      },
+      {
+       "q": "If I ___ go anywhere, I'd go to Japan.",
+       "a": "could",
+       "o": [
+        "could",
+        "can"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى sale؟",
+       "a": "تخفيضات",
+       "o": [
+        "تخفيضات",
+        "متجر متعدد الأقسام",
+        "يُستخدم لـ"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى department store؟",
+       "a": "متجر متعدد الأقسام",
+       "o": [
+        "متجر متعدد الأقسام",
+        "تخفيضات",
+        "يُستخدم لـ"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "There's a sale at the department store.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "There's a sale at the department store.",
+       "o": [
+        "There's a sale at the department store.",
+        "What are scissors used for? They're used for cutting.",
+        "If I could go anywhere, I would go to the Maldives."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

@@ -1,0 +1,337 @@
+{
+ "id": "en-7-u1-lR",
+ "grade": 7,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 1 · Lesson R: Round up",
+ "titleAr": "مراجعة الوحدة — My Spare Time",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "مراجعة الوحدة — My Spare Time",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "holiday",
+       "ar": "عطلة",
+       "em": "🏖️"
+      },
+      {
+       "id": "v1",
+       "en": "abroad",
+       "ar": "في الخارج",
+       "em": "✈️"
+      },
+      {
+       "id": "v2",
+       "en": "album",
+       "ar": "ألبوم",
+       "em": "📔"
+      },
+      {
+       "id": "v3",
+       "en": "photo",
+       "ar": "صورة",
+       "em": "📷"
+      },
+      {
+       "id": "v4",
+       "en": "whose",
+       "ar": "لمن",
+       "em": "❓"
+      },
+      {
+       "id": "v5",
+       "en": "scrapbook",
+       "ar": "دفتر قصاصات",
+       "em": "📒"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 17"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Unit review",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Where do you usually go on holiday?</div><div class=\"ex\">This is a photo of Joe at the castle.</div><div class=\"ex\"><b>Whose</b> scrapbook is this? It's mine.</div><div class=\"ex\">How <b>often</b> do you visit the museum? Once a year.</div><div class=\"ex\">Adam <b>collects</b> tickets and stamps.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Where do you usually go on holiday? This is a photo of Joe at the castle. Whose scrapbook is this? It's mine. How often do you visit the museum? Once a year. Adam collects tickets and stamps."
+      }
+     ]
+    }
+   ],
+   "lead": "نراجع أهم قواعد الوحدة وكلماتها: اقرأ الأمثلة بصوت عالٍ ثم حلّ التمارين.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "We usually ___ with our relatives.",
+           "a": "stay",
+           "o": [
+            "stay",
+            "stays"
+           ]
+          },
+          {
+           "s": "He ___ this photo last summer.",
+           "a": "took",
+           "o": [
+            "took",
+            "taked"
+           ]
+          },
+          {
+           "s": "___ bag is this?",
+           "a": "Whose",
+           "o": [
+            "Whose",
+            "Who's"
+           ]
+          },
+          {
+           "s": "How ___ do you swim?",
+           "a": "often",
+           "o": [
+            "often",
+            "much"
+           ]
+          },
+          {
+           "s": "Adam ___ stamps.",
+           "a": "collects",
+           "o": [
+            "collects",
+            "collect"
+           ]
+          },
+          {
+           "s": "___ , choose a cover.",
+           "a": "First",
+           "o": [
+            "First",
+            "Finally"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Where do you usually go on holiday?",
+          "This is a photo of Joe at the castle.",
+          "Whose scrapbook is this? It's mine.",
+          "How often do you visit the museum? Once a year."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Where do you usually go on holiday?",
+           "o": [
+            "Where do you usually go on holiday?",
+            "This is a photo of Joe at the castle.",
+            "Whose scrapbook is this? It's mine."
+           ]
+          },
+          {
+           "a": "This is a photo of Joe at the castle.",
+           "o": [
+            "This is a photo of Joe at the castle.",
+            "Where do you usually go on holiday?",
+            "Whose scrapbook is this? It's mine."
+           ]
+          },
+          {
+           "a": "Whose scrapbook is this? It's mine.",
+           "o": [
+            "Whose scrapbook is this? It's mine.",
+            "Where do you usually go on holiday?",
+            "This is a photo of Joe at the castle."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "holiday",
+       "ipa": "",
+       "meaning": "عطلة",
+       "ex": "Where do you usually go on holiday?"
+      },
+      {
+       "must": 1,
+       "term": "abroad",
+       "ipa": "",
+       "meaning": "في الخارج",
+       "ex": "abroad"
+      },
+      {
+       "must": 1,
+       "term": "album",
+       "ipa": "",
+       "meaning": "ألبوم",
+       "ex": "album"
+      },
+      {
+       "must": 0,
+       "term": "photo",
+       "ipa": "",
+       "meaning": "صورة",
+       "ex": "This is a photo of Joe at the castle."
+      },
+      {
+       "must": 0,
+       "term": "whose",
+       "ipa": "",
+       "meaning": "لمن",
+       "ex": "Whose scrapbook is this? It's mine."
+      },
+      {
+       "must": 0,
+       "term": "scrapbook",
+       "ipa": "",
+       "meaning": "دفتر قصاصات",
+       "ex": "Whose scrapbook is this? It's mine."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "We usually ___ with our relatives.",
+       "a": "stay",
+       "o": [
+        "stay",
+        "stays"
+       ],
+       "why": ""
+      },
+      {
+       "q": "He ___ this photo last summer.",
+       "a": "took",
+       "o": [
+        "took",
+        "taked"
+       ],
+       "why": ""
+      },
+      {
+       "q": "___ bag is this?",
+       "a": "Whose",
+       "o": [
+        "Whose",
+        "Who's"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى abroad؟",
+       "a": "في الخارج",
+       "o": [
+        "في الخارج",
+        "عطلة",
+        "ألبوم"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى scrapbook؟",
+       "a": "دفتر قصاصات",
+       "o": [
+        "دفتر قصاصات",
+        "عطلة",
+        "في الخارج"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Where do you usually go on holiday?",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Where do you usually go on holiday?",
+       "o": [
+        "Where do you usually go on holiday?",
+        "This is a photo of Joe at the castle.",
+        "Whose scrapbook is this? It's mine."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

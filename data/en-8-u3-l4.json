@@ -1,0 +1,287 @@
+{
+ "id": "en-8-u3-l4",
+ "grade": 8,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 3 · Lesson 4: The Basketball Game",
+ "titleAr": "فاز فريقنا عليهم ٦٤–٥٨.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "فاز فريقنا عليهم ٦٤–٥٨.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "basketball",
+       "ar": "كرة السلة",
+       "em": "🏀"
+      },
+      {
+       "id": "v1",
+       "en": "score",
+       "ar": "يسجل",
+       "em": "🔢"
+      },
+      {
+       "id": "v2",
+       "en": "point",
+       "ar": "نقطة",
+       "em": "➕"
+      },
+      {
+       "id": "v3",
+       "en": "half-time",
+       "ar": "استراحة الشوطين",
+       "em": "⏸️"
+      },
+      {
+       "id": "v4",
+       "en": "beat",
+       "ar": "يهزم",
+       "em": "🏆"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 39"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Past simple: irregular",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Our team <b>beat</b> them 64–58.</div><div class=\"ex\">Omar <b>scored</b> twenty points.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Our team beat them 64–58. Omar scored twenty points."
+      }
+     ]
+    }
+   ],
+   "lead": "beat → beat, win → won",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "Our team ___ them.",
+           "a": "beat",
+           "o": [
+            "beat",
+            "beated"
+           ]
+          },
+          {
+           "s": "Omar ___ twenty points.",
+           "a": "scored",
+           "o": [
+            "scored",
+            "score"
+           ]
+          },
+          {
+           "s": "At ___ , the score was 30–30.",
+           "a": "half-time",
+           "o": [
+            "half-time",
+            "point"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Our team beat them 64–58.",
+          "Omar scored twenty points."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Our team beat them 64–58.",
+           "o": [
+            "Our team beat them 64–58.",
+            "Omar scored twenty points."
+           ]
+          },
+          {
+           "a": "Omar scored twenty points.",
+           "o": [
+            "Omar scored twenty points.",
+            "Our team beat them 64–58."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "basketball",
+       "ipa": "",
+       "meaning": "كرة السلة",
+       "ex": "basketball"
+      },
+      {
+       "must": 1,
+       "term": "score",
+       "ipa": "",
+       "meaning": "يسجل",
+       "ex": "Omar scored twenty points."
+      },
+      {
+       "must": 1,
+       "term": "point",
+       "ipa": "",
+       "meaning": "نقطة",
+       "ex": "Omar scored twenty points."
+      },
+      {
+       "must": 0,
+       "term": "half-time",
+       "ipa": "",
+       "meaning": "استراحة الشوطين",
+       "ex": "half-time"
+      },
+      {
+       "must": 0,
+       "term": "beat",
+       "ipa": "",
+       "meaning": "يهزم",
+       "ex": "Our team beat them 64–58."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "Our team ___ them.",
+       "a": "beat",
+       "o": [
+        "beat",
+        "beated"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Omar ___ twenty points.",
+       "a": "scored",
+       "o": [
+        "scored",
+        "score"
+       ],
+       "why": ""
+      },
+      {
+       "q": "At ___ , the score was 30–30.",
+       "a": "half-time",
+       "o": [
+        "half-time",
+        "point"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى half-time؟",
+       "a": "استراحة الشوطين",
+       "o": [
+        "استراحة الشوطين",
+        "كرة السلة",
+        "يسجل"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى beat؟",
+       "a": "يهزم",
+       "o": [
+        "يهزم",
+        "كرة السلة",
+        "يسجل"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Our team beat them 64–58.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Our team beat them 64–58.",
+       "o": [
+        "Our team beat them 64–58.",
+        "Omar scored twenty points."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

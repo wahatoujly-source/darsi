@@ -1,0 +1,287 @@
+{
+ "id": "en-8-u5-l5",
+ "grade": 8,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 5 · Lesson 5: Great Inventions",
+ "titleAr": "اخترع ألكسندر غراهام بيل الهاتف.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "اخترع ألكسندر غراهام بيل الهاتف.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "telephone",
+       "ar": "هاتف",
+       "em": "☎️"
+      },
+      {
+       "id": "v1",
+       "en": "printing press",
+       "ar": "آلة الطباعة",
+       "em": "🖨️"
+      },
+      {
+       "id": "v2",
+       "en": "light bulb",
+       "ar": "مصباح كهربائي",
+       "em": "💡"
+      },
+      {
+       "id": "v3",
+       "en": "invented",
+       "ar": "اخترع",
+       "em": "🧠"
+      },
+      {
+       "id": "v4",
+       "en": "by",
+       "ar": "بواسطة",
+       "em": "👤"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 62"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Passive with by",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">The telephone was invented <b>by</b> Alexander Graham Bell.</div><div class=\"ex\">The printing <b>press</b> changed the world.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "The telephone was invented by Alexander Graham Bell. The printing press changed the world."
+      }
+     ]
+    }
+   ],
+   "lead": "was invented by …",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "The telephone was invented ___ Bell.",
+           "a": "by",
+           "o": [
+            "by",
+            "from"
+           ]
+          },
+          {
+           "s": "The light bulb ___ invented in 1879.",
+           "a": "was",
+           "o": [
+            "was",
+            "were"
+           ]
+          },
+          {
+           "s": "The printing ___ changed the world.",
+           "a": "press",
+           "o": [
+            "press",
+            "print"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "The telephone was invented by Alexander Graham Bell.",
+          "The printing press changed the world."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "The telephone was invented by Alexander Graham Bell.",
+           "o": [
+            "The telephone was invented by Alexander Graham Bell.",
+            "The printing press changed the world."
+           ]
+          },
+          {
+           "a": "The printing press changed the world.",
+           "o": [
+            "The printing press changed the world.",
+            "The telephone was invented by Alexander Graham Bell."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "telephone",
+       "ipa": "",
+       "meaning": "هاتف",
+       "ex": "The telephone was invented by Alexander Graham Bell."
+      },
+      {
+       "must": 1,
+       "term": "printing press",
+       "ipa": "",
+       "meaning": "آلة الطباعة",
+       "ex": "The printing press changed the world."
+      },
+      {
+       "must": 1,
+       "term": "light bulb",
+       "ipa": "",
+       "meaning": "مصباح كهربائي",
+       "ex": "light bulb"
+      },
+      {
+       "must": 0,
+       "term": "invented",
+       "ipa": "",
+       "meaning": "اخترع",
+       "ex": "The telephone was invented by Alexander Graham Bell."
+      },
+      {
+       "must": 0,
+       "term": "by",
+       "ipa": "",
+       "meaning": "بواسطة",
+       "ex": "The telephone was invented by Alexander Graham Bell."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "The telephone was invented ___ Bell.",
+       "a": "by",
+       "o": [
+        "by",
+        "from"
+       ],
+       "why": ""
+      },
+      {
+       "q": "The light bulb ___ invented in 1879.",
+       "a": "was",
+       "o": [
+        "was",
+        "were"
+       ],
+       "why": ""
+      },
+      {
+       "q": "The printing ___ changed the world.",
+       "a": "press",
+       "o": [
+        "press",
+        "print"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى printing press؟",
+       "a": "آلة الطباعة",
+       "o": [
+        "آلة الطباعة",
+        "هاتف",
+        "مصباح كهربائي"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى telephone؟",
+       "a": "هاتف",
+       "o": [
+        "هاتف",
+        "آلة الطباعة",
+        "مصباح كهربائي"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "The telephone was invented by Alexander Graham Bell.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "The telephone was invented by Alexander Graham Bell.",
+       "o": [
+        "The telephone was invented by Alexander Graham Bell.",
+        "The printing press changed the world."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

@@ -1,0 +1,287 @@
+{
+ "id": "en-8-u6-l1",
+ "grade": 8,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 6 · Lesson 1: What do they do?",
+ "titleAr": "يحضّر الصيدلي الأدوية.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "يحضّر الصيدلي الأدوية.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "surgeon",
+       "ar": "جرّاح",
+       "em": "🧑‍⚕️"
+      },
+      {
+       "id": "v1",
+       "en": "pharmacist",
+       "ar": "صيدلي",
+       "em": "💊"
+      },
+      {
+       "id": "v2",
+       "en": "lawyer",
+       "ar": "محامٍ",
+       "em": "⚖️"
+      },
+      {
+       "id": "v3",
+       "en": "journalist",
+       "ar": "صحفي",
+       "em": "📰"
+      },
+      {
+       "id": "v4",
+       "en": "electrician",
+       "ar": "كهربائي",
+       "em": "💡"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 70"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Present simple: jobs",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">A pharmacist <b>prepares</b> medicines.</div><div class=\"ex\">A lawyer helps people with the law.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "A pharmacist prepares medicines. A lawyer helps people with the law."
+      }
+     ]
+    }
+   ],
+   "lead": "He/She + verb-s",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "A pharmacist ___ medicines.",
+           "a": "prepares",
+           "o": [
+            "prepares",
+            "prepare"
+           ]
+          },
+          {
+           "s": "A ___ writes news.",
+           "a": "journalist",
+           "o": [
+            "journalist",
+            "lawyer"
+           ]
+          },
+          {
+           "s": "An ___ repairs lights.",
+           "a": "electrician",
+           "o": [
+            "electrician",
+            "surgeon"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "A pharmacist prepares medicines.",
+          "A lawyer helps people with the law."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "A pharmacist prepares medicines.",
+           "o": [
+            "A pharmacist prepares medicines.",
+            "A lawyer helps people with the law."
+           ]
+          },
+          {
+           "a": "A lawyer helps people with the law.",
+           "o": [
+            "A lawyer helps people with the law.",
+            "A pharmacist prepares medicines."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "surgeon",
+       "ipa": "",
+       "meaning": "جرّاح",
+       "ex": "surgeon"
+      },
+      {
+       "must": 1,
+       "term": "pharmacist",
+       "ipa": "",
+       "meaning": "صيدلي",
+       "ex": "A pharmacist prepares medicines."
+      },
+      {
+       "must": 1,
+       "term": "lawyer",
+       "ipa": "",
+       "meaning": "محامٍ",
+       "ex": "A lawyer helps people with the law."
+      },
+      {
+       "must": 0,
+       "term": "journalist",
+       "ipa": "",
+       "meaning": "صحفي",
+       "ex": "journalist"
+      },
+      {
+       "must": 0,
+       "term": "electrician",
+       "ipa": "",
+       "meaning": "كهربائي",
+       "ex": "electrician"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "A pharmacist ___ medicines.",
+       "a": "prepares",
+       "o": [
+        "prepares",
+        "prepare"
+       ],
+       "why": ""
+      },
+      {
+       "q": "A ___ writes news.",
+       "a": "journalist",
+       "o": [
+        "journalist",
+        "lawyer"
+       ],
+       "why": ""
+      },
+      {
+       "q": "An ___ repairs lights.",
+       "a": "electrician",
+       "o": [
+        "electrician",
+        "surgeon"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى pharmacist؟",
+       "a": "صيدلي",
+       "o": [
+        "صيدلي",
+        "جرّاح",
+        "محامٍ"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى surgeon؟",
+       "a": "جرّاح",
+       "o": [
+        "جرّاح",
+        "صيدلي",
+        "محامٍ"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "A pharmacist prepares medicines.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "A pharmacist prepares medicines.",
+       "o": [
+        "A pharmacist prepares medicines.",
+        "A lawyer helps people with the law."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

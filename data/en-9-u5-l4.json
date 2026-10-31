@@ -1,0 +1,287 @@
+{
+ "id": "en-9-u5-l4",
+ "grade": 9,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 5 · Lesson 4: Where can I find it?",
+ "titleAr": "أين أجد النشرة الجوية؟ في الصفحة ١٢.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "أين أجد النشرة الجوية؟ في الصفحة ١٢.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "section",
+       "ar": "قسم",
+       "em": "🗂️"
+      },
+      {
+       "id": "v1",
+       "en": "sports page",
+       "ar": "صفحة الرياضة",
+       "em": "⚽"
+      },
+      {
+       "id": "v2",
+       "en": "weather forecast",
+       "ar": "النشرة الجوية",
+       "em": "🌤️"
+      },
+      {
+       "id": "v3",
+       "en": "index",
+       "ar": "فهرس",
+       "em": "🔤"
+      },
+      {
+       "id": "v4",
+       "en": "page",
+       "ar": "صفحة",
+       "em": "📄"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 64"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "on page …",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Where can I find the weather forecast? It's <b>on</b> page 12.</div><div class=\"ex\">Look <b>in</b> the index.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Where can I find the weather forecast? It's on page 12. Look in the index."
+      }
+     ]
+    }
+   ],
+   "lead": "on page 12 / in the sports section",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "It's ___ page 12.",
+           "a": "on",
+           "o": [
+            "on",
+            "in"
+           ]
+          },
+          {
+           "s": "It's ___ the sports section.",
+           "a": "in",
+           "o": [
+            "in",
+            "on"
+           ]
+          },
+          {
+           "s": "Look in the ___ .",
+           "a": "index",
+           "o": [
+            "index",
+            "forecast"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Where can I find the weather forecast? It's on page 12.",
+          "Look in the index."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Where can I find the weather forecast? It's on page 12.",
+           "o": [
+            "Where can I find the weather forecast? It's on page 12.",
+            "Look in the index."
+           ]
+          },
+          {
+           "a": "Look in the index.",
+           "o": [
+            "Look in the index.",
+            "Where can I find the weather forecast? It's on page 12."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "section",
+       "ipa": "",
+       "meaning": "قسم",
+       "ex": "section"
+      },
+      {
+       "must": 1,
+       "term": "sports page",
+       "ipa": "",
+       "meaning": "صفحة الرياضة",
+       "ex": "sports page"
+      },
+      {
+       "must": 1,
+       "term": "weather forecast",
+       "ipa": "",
+       "meaning": "النشرة الجوية",
+       "ex": "Where can I find the weather forecast? It's on page 12."
+      },
+      {
+       "must": 0,
+       "term": "index",
+       "ipa": "",
+       "meaning": "فهرس",
+       "ex": "Look in the index."
+      },
+      {
+       "must": 0,
+       "term": "page",
+       "ipa": "",
+       "meaning": "صفحة",
+       "ex": "Where can I find the weather forecast? It's on page 12."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "It's ___ page 12.",
+       "a": "on",
+       "o": [
+        "on",
+        "in"
+       ],
+       "why": ""
+      },
+      {
+       "q": "It's ___ the sports section.",
+       "a": "in",
+       "o": [
+        "in",
+        "on"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Look in the ___ .",
+       "a": "index",
+       "o": [
+        "index",
+        "forecast"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى section؟",
+       "a": "قسم",
+       "o": [
+        "قسم",
+        "صفحة الرياضة",
+        "النشرة الجوية"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى sports page؟",
+       "a": "صفحة الرياضة",
+       "o": [
+        "صفحة الرياضة",
+        "قسم",
+        "النشرة الجوية"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Where can I find the weather forecast? It's on page 12.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Where can I find the weather forecast? It's on page 12.",
+       "o": [
+        "Where can I find the weather forecast? It's on page 12.",
+        "Look in the index."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

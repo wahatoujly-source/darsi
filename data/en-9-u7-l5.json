@@ -1,0 +1,299 @@
+{
+ "id": "en-9-u7-l5",
+ "grade": 9,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 7 · Lesson 5: I'm sorry.",
+ "titleAr": "آسف على التأخير. فاتتني الحافلة.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "آسف على التأخير. فاتتني الحافلة.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "apologise",
+       "ar": "يعتذر",
+       "em": "🙏"
+      },
+      {
+       "id": "v1",
+       "en": "excuse",
+       "ar": "عذر",
+       "em": "💬"
+      },
+      {
+       "id": "v2",
+       "en": "forgive",
+       "ar": "يسامح",
+       "em": "🤝"
+      },
+      {
+       "id": "v3",
+       "en": "on purpose",
+       "ar": "عمداً",
+       "em": "🎯"
+      },
+      {
+       "id": "v4",
+       "en": "accident",
+       "ar": "صدفة",
+       "em": "🤷"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 90"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Apologising",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">I'm <b>sorry</b> I'm late. I missed the bus.</div><div class=\"ex\">I didn't do it on <b>purpose</b>.</div><div class=\"ex\">Don't worry. It was an <b>accident</b>.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "I'm sorry I'm late. I missed the bus. I didn't do it on purpose. Don't worry. It was an accident."
+      }
+     ]
+    }
+   ],
+   "lead": "I'm sorry (that) … / I didn't mean to …",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "I'm ___ I'm late.",
+           "a": "sorry",
+           "o": [
+            "sorry",
+            "sorrow"
+           ]
+          },
+          {
+           "s": "I didn't do it on ___ .",
+           "a": "purpose",
+           "o": [
+            "purpose",
+            "propose"
+           ]
+          },
+          {
+           "s": "It was an ___ .",
+           "a": "accident",
+           "o": [
+            "accident",
+            "excuse"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "I'm sorry I'm late. I missed the bus.",
+          "I didn't do it on purpose.",
+          "Don't worry. It was an accident."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "I'm sorry I'm late. I missed the bus.",
+           "o": [
+            "I'm sorry I'm late. I missed the bus.",
+            "I didn't do it on purpose.",
+            "Don't worry. It was an accident."
+           ]
+          },
+          {
+           "a": "I didn't do it on purpose.",
+           "o": [
+            "I didn't do it on purpose.",
+            "I'm sorry I'm late. I missed the bus.",
+            "Don't worry. It was an accident."
+           ]
+          },
+          {
+           "a": "Don't worry. It was an accident.",
+           "o": [
+            "Don't worry. It was an accident.",
+            "I'm sorry I'm late. I missed the bus.",
+            "I didn't do it on purpose."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "apologise",
+       "ipa": "",
+       "meaning": "يعتذر",
+       "ex": "apologise"
+      },
+      {
+       "must": 1,
+       "term": "excuse",
+       "ipa": "",
+       "meaning": "عذر",
+       "ex": "excuse"
+      },
+      {
+       "must": 1,
+       "term": "forgive",
+       "ipa": "",
+       "meaning": "يسامح",
+       "ex": "forgive"
+      },
+      {
+       "must": 0,
+       "term": "on purpose",
+       "ipa": "",
+       "meaning": "عمداً",
+       "ex": "I didn't do it on purpose."
+      },
+      {
+       "must": 0,
+       "term": "accident",
+       "ipa": "",
+       "meaning": "صدفة",
+       "ex": "Don't worry. It was an accident."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "I'm ___ I'm late.",
+       "a": "sorry",
+       "o": [
+        "sorry",
+        "sorrow"
+       ],
+       "why": ""
+      },
+      {
+       "q": "I didn't do it on ___ .",
+       "a": "purpose",
+       "o": [
+        "purpose",
+        "propose"
+       ],
+       "why": ""
+      },
+      {
+       "q": "It was an ___ .",
+       "a": "accident",
+       "o": [
+        "accident",
+        "excuse"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى accident؟",
+       "a": "صدفة",
+       "o": [
+        "صدفة",
+        "يعتذر",
+        "عذر"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى forgive؟",
+       "a": "يسامح",
+       "o": [
+        "يسامح",
+        "يعتذر",
+        "عذر"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "I'm sorry I'm late. I missed the bus.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "I'm sorry I'm late. I missed the bus.",
+       "o": [
+        "I'm sorry I'm late. I missed the bus.",
+        "I didn't do it on purpose.",
+        "Don't worry. It was an accident."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

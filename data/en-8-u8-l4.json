@@ -1,0 +1,337 @@
+{
+ "id": "en-8-u8-l4",
+ "grade": 8,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 8 · Lesson 4: Writing",
+ "titleAr": "مهارة الكتابة — Fun with English 2",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "مهارة الكتابة — Fun with English 2",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "journey",
+       "ar": "رحلة",
+       "em": "🛣️"
+      },
+      {
+       "id": "v1",
+       "en": "coast road",
+       "ar": "الطريق الساحلي",
+       "em": "🌊"
+      },
+      {
+       "id": "v2",
+       "en": "ants",
+       "ar": "نمل",
+       "em": "🐜"
+      },
+      {
+       "id": "v3",
+       "en": "picnic",
+       "ar": "نزهة",
+       "em": "🧺"
+      },
+      {
+       "id": "v4",
+       "en": "uniform",
+       "ar": "زي",
+       "em": "👔"
+      },
+      {
+       "id": "v5",
+       "en": "tools",
+       "ar": "أدوات",
+       "em": "🧰"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 99"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Writing",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">The journey from Cairo to Tripoli is about 2,000 kilometres.</div><div class=\"ex\">Bob left the sugar open at the picnic.</div><div class=\"ex\">I wear a uniform and I work with animals. What's my job?</div><div class=\"ex\">Bob <b>threw</b> the ball, but he missed the hoop.</div><div class=\"ex\">Please <b>don't</b> throw rubbish into the river.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "The journey from Cairo to Tripoli is about 2,000 kilometres. Bob left the sugar open at the picnic. I wear a uniform and I work with animals. What's my job? Bob threw the ball, but he missed the hoop. Please don't throw rubbish into the river."
+      }
+     ]
+    }
+   ],
+   "lead": "لاحظ ترتيب الكلمات في الجمل الإنجليزية: الفاعل ثم الفعل ثم المفعول. رتّب الجمل واكتبها في دفترك.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "We drove ___ the coast road.",
+           "a": "along",
+           "o": [
+            "along",
+            "across"
+           ]
+          },
+          {
+           "s": "Soon there ___ ants everywhere.",
+           "a": "were",
+           "o": [
+            "were",
+            "was"
+           ]
+          },
+          {
+           "s": "___ you wear a uniform?",
+           "a": "Do",
+           "o": [
+            "Do",
+            "Does"
+           ]
+          },
+          {
+           "s": "Bob ___ the ball.",
+           "a": "threw",
+           "o": [
+            "threw",
+            "throwed"
+           ]
+          },
+          {
+           "s": "Please ___ throw rubbish.",
+           "a": "don't",
+           "o": [
+            "don't",
+            "not"
+           ]
+          },
+          {
+           "s": "Bob won a silver ___ .",
+           "a": "one",
+           "o": [
+            "one",
+            "ones"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "The journey from Cairo to Tripoli is about 2,000 kilometres.",
+          "Bob left the sugar open at the picnic.",
+          "I wear a uniform and I work with animals. What's my job?",
+          "Bob threw the ball, but he missed the hoop."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "The journey from Cairo to Tripoli is about 2,000 kilometres.",
+           "o": [
+            "The journey from Cairo to Tripoli is about 2,000 kilometres.",
+            "Bob left the sugar open at the picnic.",
+            "I wear a uniform and I work with animals. What's my job?"
+           ]
+          },
+          {
+           "a": "Bob left the sugar open at the picnic.",
+           "o": [
+            "Bob left the sugar open at the picnic.",
+            "The journey from Cairo to Tripoli is about 2,000 kilometres.",
+            "I wear a uniform and I work with animals. What's my job?"
+           ]
+          },
+          {
+           "a": "I wear a uniform and I work with animals. What's my job?",
+           "o": [
+            "I wear a uniform and I work with animals. What's my job?",
+            "The journey from Cairo to Tripoli is about 2,000 kilometres.",
+            "Bob left the sugar open at the picnic."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "journey",
+       "ipa": "",
+       "meaning": "رحلة",
+       "ex": "The journey from Cairo to Tripoli is about 2,000 kilometres."
+      },
+      {
+       "must": 1,
+       "term": "coast road",
+       "ipa": "",
+       "meaning": "الطريق الساحلي",
+       "ex": "coast road"
+      },
+      {
+       "must": 1,
+       "term": "ants",
+       "ipa": "",
+       "meaning": "نمل",
+       "ex": "ants"
+      },
+      {
+       "must": 0,
+       "term": "picnic",
+       "ipa": "",
+       "meaning": "نزهة",
+       "ex": "Bob left the sugar open at the picnic."
+      },
+      {
+       "must": 0,
+       "term": "uniform",
+       "ipa": "",
+       "meaning": "زي",
+       "ex": "I wear a uniform and I work with animals. What's my job?"
+      },
+      {
+       "must": 0,
+       "term": "tools",
+       "ipa": "",
+       "meaning": "أدوات",
+       "ex": "tools"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "We drove ___ the coast road.",
+       "a": "along",
+       "o": [
+        "along",
+        "across"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Soon there ___ ants everywhere.",
+       "a": "were",
+       "o": [
+        "were",
+        "was"
+       ],
+       "why": ""
+      },
+      {
+       "q": "___ you wear a uniform?",
+       "a": "Do",
+       "o": [
+        "Do",
+        "Does"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى picnic؟",
+       "a": "نزهة",
+       "o": [
+        "نزهة",
+        "رحلة",
+        "الطريق الساحلي"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى uniform؟",
+       "a": "زي",
+       "o": [
+        "زي",
+        "رحلة",
+        "الطريق الساحلي"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "The journey from Cairo to Tripoli is about 2,000 kilometres.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "The journey from Cairo to Tripoli is about 2,000 kilometres.",
+       "o": [
+        "The journey from Cairo to Tripoli is about 2,000 kilometres.",
+        "Bob left the sugar open at the picnic.",
+        "I wear a uniform and I work with animals. What's my job?"
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

@@ -1,0 +1,319 @@
+{
+ "id": "en-8-u6-l8",
+ "grade": 8,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 6 · Lesson 8: Bob and Bashir – The Basketball",
+ "titleAr": "رمى بوب الكرة لكنه أخطأ السلة.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "رمى بوب الكرة لكنه أخطأ السلة.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "hoop",
+       "ar": "سلة",
+       "em": "🏀"
+      },
+      {
+       "id": "v1",
+       "en": "throw",
+       "ar": "يرمي",
+       "em": "🤾"
+      },
+      {
+       "id": "v2",
+       "en": "miss",
+       "ar": "يخطئ الهدف",
+       "em": "❌"
+      },
+      {
+       "id": "v3",
+       "en": "practise",
+       "ar": "يتدرب",
+       "em": "🔁"
+      },
+      {
+       "id": "v4",
+       "en": "finally",
+       "ar": "أخيراً",
+       "em": "🏁"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 78"
+  },
+  {
+   "title": "اقرأ",
+   "eyebrow": "الخطوة ٢ — اقرأ",
+   "heading": "اقرأ واستمع",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "📖 Bob and Bashir – The Basketball",
+     "html": "<div class=\"ex\">Bob threw the ball, but he missed the hoop.</div><div class=\"ex\">He practised every day.</div><div class=\"ex\">Finally, he scored!</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Bob threw the ball, but he missed the hoop. He practised every day. Finally, he scored!"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط ▶ لتسمع النص."
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٣ — القاعدة",
+   "heading": "Past simple: practise → practised",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Bob <b>threw</b> the ball, but he missed the hoop.</div><div class=\"ex\">He <b>practised</b> every day.</div><div class=\"ex\"><b>Finally</b>, he scored!</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Bob threw the ball, but he missed the hoop. He practised every day. Finally, he scored!"
+      }
+     ]
+    }
+   ],
+   "lead": "نضيف d للأفعال المنتهية بـ e.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٤ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "Bob ___ the ball.",
+           "a": "threw",
+           "o": [
+            "threw",
+            "throwed"
+           ]
+          },
+          {
+           "s": "He ___ every day.",
+           "a": "practised",
+           "o": [
+            "practised",
+            "practise"
+           ]
+          },
+          {
+           "s": "___ , he scored!",
+           "a": "Finally",
+           "o": [
+            "Finally",
+            "First"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Bob threw the ball, but he missed the hoop.",
+          "He practised every day.",
+          "Finally, he scored!"
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Bob threw the ball, but he missed the hoop.",
+           "o": [
+            "Bob threw the ball, but he missed the hoop.",
+            "He practised every day.",
+            "Finally, he scored!"
+           ]
+          },
+          {
+           "a": "He practised every day.",
+           "o": [
+            "He practised every day.",
+            "Bob threw the ball, but he missed the hoop.",
+            "Finally, he scored!"
+           ]
+          },
+          {
+           "a": "Finally, he scored!",
+           "o": [
+            "Finally, he scored!",
+            "Bob threw the ball, but he missed the hoop.",
+            "He practised every day."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٥ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "hoop",
+       "ipa": "",
+       "meaning": "سلة",
+       "ex": "Bob threw the ball, but he missed the hoop."
+      },
+      {
+       "must": 1,
+       "term": "throw",
+       "ipa": "",
+       "meaning": "يرمي",
+       "ex": "throw"
+      },
+      {
+       "must": 1,
+       "term": "miss",
+       "ipa": "",
+       "meaning": "يخطئ الهدف",
+       "ex": "Bob threw the ball, but he missed the hoop."
+      },
+      {
+       "must": 0,
+       "term": "practise",
+       "ipa": "",
+       "meaning": "يتدرب",
+       "ex": "He practised every day."
+      },
+      {
+       "must": 0,
+       "term": "finally",
+       "ipa": "",
+       "meaning": "أخيراً",
+       "ex": "Finally, he scored!"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "Bob ___ the ball.",
+       "a": "threw",
+       "o": [
+        "threw",
+        "throwed"
+       ],
+       "why": ""
+      },
+      {
+       "q": "He ___ every day.",
+       "a": "practised",
+       "o": [
+        "practised",
+        "practise"
+       ],
+       "why": ""
+      },
+      {
+       "q": "___ , he scored!",
+       "a": "Finally",
+       "o": [
+        "Finally",
+        "First"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى practise؟",
+       "a": "يتدرب",
+       "o": [
+        "يتدرب",
+        "سلة",
+        "يرمي"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى throw؟",
+       "a": "يرمي",
+       "o": [
+        "يرمي",
+        "سلة",
+        "يخطئ الهدف"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Bob threw the ball, but he missed the hoop.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Bob threw the ball, but he missed the hoop.",
+       "o": [
+        "Bob threw the ball, but he missed the hoop.",
+        "He practised every day.",
+        "Finally, he scored!"
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

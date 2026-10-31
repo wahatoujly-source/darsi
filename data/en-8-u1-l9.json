@@ -1,0 +1,337 @@
+{
+ "id": "en-8-u1-l9",
+ "grade": 8,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 1 · Lesson 9: Round up",
+ "titleAr": "مراجعة الوحدة — A School Magazine",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "مراجعة الوحدة — A School Magazine",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "magazine",
+       "ar": "مجلة",
+       "em": "📰"
+      },
+      {
+       "id": "v1",
+       "en": "article",
+       "ar": "مقال",
+       "em": "📄"
+      },
+      {
+       "id": "v2",
+       "en": "project",
+       "ar": "مشروع",
+       "em": "🗂️"
+      },
+      {
+       "id": "v3",
+       "en": "plan",
+       "ar": "يخطط",
+       "em": "📋"
+      },
+      {
+       "id": "v4",
+       "en": "interview",
+       "ar": "مقابلة",
+       "em": "🎙️"
+      },
+      {
+       "id": "v5",
+       "en": "ask",
+       "ar": "يسأل",
+       "em": "❓"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 21"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Unit review",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Our school magazine <b>is</b> published every month.</div><div class=\"ex\">We're <b>going</b> to start a new project.</div><div class=\"ex\">How long have you worked here? For ten years.</div><div class=\"ex\">My neighbours are noisy. What should I do?</div><div class=\"ex\">I <b>was</b> walking into class when I fell over.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Our school magazine is published every month. We're going to start a new project. How long have you worked here? For ten years. My neighbours are noisy. What should I do? I was walking into class when I fell over."
+      }
+     ]
+    }
+   ],
+   "lead": "نراجع أهم قواعد الوحدة وكلماتها: اقرأ الأمثلة بصوت عالٍ ثم حلّ التمارين.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "The magazine ___ published every month.",
+           "a": "is",
+           "o": [
+            "is",
+            "are"
+           ]
+          },
+          {
+           "s": "We're ___ to start a new project.",
+           "a": "going",
+           "o": [
+            "going",
+            "go"
+           ]
+          },
+          {
+           "s": "I've worked here ___ ten years.",
+           "a": "for",
+           "o": [
+            "for",
+            "since"
+           ]
+          },
+          {
+           "s": "You ought ___ talk to them.",
+           "a": "to",
+           "o": [
+            "to",
+            "for"
+           ]
+          },
+          {
+           "s": "I ___ walking when I fell.",
+           "a": "was",
+           "o": [
+            "was",
+            "were"
+           ]
+          },
+          {
+           "s": "They ___ in tents.",
+           "a": "slept",
+           "o": [
+            "slept",
+            "sleeped"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Our school magazine is published every month.",
+          "We're going to start a new project.",
+          "How long have you worked here? For ten years.",
+          "My neighbours are noisy. What should I do?"
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Our school magazine is published every month.",
+           "o": [
+            "Our school magazine is published every month.",
+            "We're going to start a new project.",
+            "How long have you worked here? For ten years."
+           ]
+          },
+          {
+           "a": "We're going to start a new project.",
+           "o": [
+            "We're going to start a new project.",
+            "Our school magazine is published every month.",
+            "How long have you worked here? For ten years."
+           ]
+          },
+          {
+           "a": "How long have you worked here? For ten years.",
+           "o": [
+            "How long have you worked here? For ten years.",
+            "Our school magazine is published every month.",
+            "We're going to start a new project."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "magazine",
+       "ipa": "",
+       "meaning": "مجلة",
+       "ex": "Our school magazine is published every month."
+      },
+      {
+       "must": 1,
+       "term": "article",
+       "ipa": "",
+       "meaning": "مقال",
+       "ex": "article"
+      },
+      {
+       "must": 1,
+       "term": "project",
+       "ipa": "",
+       "meaning": "مشروع",
+       "ex": "We're going to start a new project."
+      },
+      {
+       "must": 0,
+       "term": "plan",
+       "ipa": "",
+       "meaning": "يخطط",
+       "ex": "plan"
+      },
+      {
+       "must": 0,
+       "term": "interview",
+       "ipa": "",
+       "meaning": "مقابلة",
+       "ex": "interview"
+      },
+      {
+       "must": 0,
+       "term": "ask",
+       "ipa": "",
+       "meaning": "يسأل",
+       "ex": "ask"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "The magazine ___ published every month.",
+       "a": "is",
+       "o": [
+        "is",
+        "are"
+       ],
+       "why": ""
+      },
+      {
+       "q": "We're ___ to start a new project.",
+       "a": "going",
+       "o": [
+        "going",
+        "go"
+       ],
+       "why": ""
+      },
+      {
+       "q": "I've worked here ___ ten years.",
+       "a": "for",
+       "o": [
+        "for",
+        "since"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى project؟",
+       "a": "مشروع",
+       "o": [
+        "مشروع",
+        "مجلة",
+        "مقال"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى ask؟",
+       "a": "يسأل",
+       "o": [
+        "يسأل",
+        "مجلة",
+        "مقال"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Our school magazine is published every month.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Our school magazine is published every month.",
+       "o": [
+        "Our school magazine is published every month.",
+        "We're going to start a new project.",
+        "How long have you worked here? For ten years."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

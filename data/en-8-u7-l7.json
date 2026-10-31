@@ -1,0 +1,287 @@
+{
+ "id": "en-8-u7-l7",
+ "grade": 8,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 7 · Lesson 7: The Moving Desert",
+ "titleAr": "الصحراء تزحف نحو الأراضي الزراعية.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "الصحراء تزحف نحو الأراضي الزراعية.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "desertification",
+       "ar": "التصحر",
+       "em": "🏜️"
+      },
+      {
+       "id": "v1",
+       "en": "sand dunes",
+       "ar": "كثبان رملية",
+       "em": "⛰️"
+      },
+      {
+       "id": "v2",
+       "en": "plant",
+       "ar": "يزرع",
+       "em": "🌳"
+      },
+      {
+       "id": "v3",
+       "en": "spread",
+       "ar": "ينتشر",
+       "em": "↔️"
+      },
+      {
+       "id": "v4",
+       "en": "farmland",
+       "ar": "أراضٍ زراعية",
+       "em": "🌾"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 90"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Present continuous for change",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">The desert <b>is</b> spreading into farmland.</div><div class=\"ex\">Planting <b>trees</b> can stop the sand dunes.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "The desert is spreading into farmland. Planting trees can stop the sand dunes."
+      }
+     ]
+    }
+   ],
+   "lead": "is spreading / are growing",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "The desert ___ spreading.",
+           "a": "is",
+           "o": [
+            "is",
+            "are"
+           ]
+          },
+          {
+           "s": "Planting ___ can stop the sand.",
+           "a": "trees",
+           "o": [
+            "trees",
+            "tree"
+           ]
+          },
+          {
+           "s": "Sand ___ move with the wind.",
+           "a": "dunes",
+           "o": [
+            "dunes",
+            "dune"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "The desert is spreading into farmland.",
+          "Planting trees can stop the sand dunes."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "The desert is spreading into farmland.",
+           "o": [
+            "The desert is spreading into farmland.",
+            "Planting trees can stop the sand dunes."
+           ]
+          },
+          {
+           "a": "Planting trees can stop the sand dunes.",
+           "o": [
+            "Planting trees can stop the sand dunes.",
+            "The desert is spreading into farmland."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "desertification",
+       "ipa": "",
+       "meaning": "التصحر",
+       "ex": "desertification"
+      },
+      {
+       "must": 1,
+       "term": "sand dunes",
+       "ipa": "",
+       "meaning": "كثبان رملية",
+       "ex": "Planting trees can stop the sand dunes."
+      },
+      {
+       "must": 1,
+       "term": "plant",
+       "ipa": "",
+       "meaning": "يزرع",
+       "ex": "Planting trees can stop the sand dunes."
+      },
+      {
+       "must": 0,
+       "term": "spread",
+       "ipa": "",
+       "meaning": "ينتشر",
+       "ex": "The desert is spreading into farmland."
+      },
+      {
+       "must": 0,
+       "term": "farmland",
+       "ipa": "",
+       "meaning": "أراضٍ زراعية",
+       "ex": "The desert is spreading into farmland."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "The desert ___ spreading.",
+       "a": "is",
+       "o": [
+        "is",
+        "are"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Planting ___ can stop the sand.",
+       "a": "trees",
+       "o": [
+        "trees",
+        "tree"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Sand ___ move with the wind.",
+       "a": "dunes",
+       "o": [
+        "dunes",
+        "dune"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى spread؟",
+       "a": "ينتشر",
+       "o": [
+        "ينتشر",
+        "التصحر",
+        "كثبان رملية"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى plant؟",
+       "a": "يزرع",
+       "o": [
+        "يزرع",
+        "التصحر",
+        "كثبان رملية"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "The desert is spreading into farmland.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "The desert is spreading into farmland.",
+       "o": [
+        "The desert is spreading into farmland.",
+        "Planting trees can stop the sand dunes."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

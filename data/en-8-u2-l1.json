@@ -1,0 +1,287 @@
+{
+ "id": "en-8-u2-l1",
+ "grade": 8,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 2 · Lesson 1: Keep fit!",
+ "titleAr": "لتبقى لائقاً يجب أن تتمرن ثلاث مرات أسبوعياً.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "لتبقى لائقاً يجب أن تتمرن ثلاث مرات أسبوعياً.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "fit",
+       "ar": "لائق",
+       "em": "💪"
+      },
+      {
+       "id": "v1",
+       "en": "exercise",
+       "ar": "تمرين",
+       "em": "🏋️"
+      },
+      {
+       "id": "v2",
+       "en": "jogging",
+       "ar": "الهرولة",
+       "em": "🏃"
+      },
+      {
+       "id": "v3",
+       "en": "stretch",
+       "ar": "يمدد",
+       "em": "🤸"
+      },
+      {
+       "id": "v4",
+       "en": "gym",
+       "ar": "صالة رياضية",
+       "em": "🏟️"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 24"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "to + verb (purpose)",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\"><b>To</b> keep fit, you should exercise three times a week.</div><div class=\"ex\">Always <b>stretch</b> before jogging.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "To keep fit, you should exercise three times a week. Always stretch before jogging."
+      }
+     ]
+    }
+   ],
+   "lead": "To keep fit, … = لكي تبقى لائقاً",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "___ keep fit, exercise often.",
+           "a": "To",
+           "o": [
+            "To",
+            "For"
+           ]
+          },
+          {
+           "s": "Always ___ before jogging.",
+           "a": "stretch",
+           "o": [
+            "stretch",
+            "stretches"
+           ]
+          },
+          {
+           "s": "I go ___ every morning.",
+           "a": "jogging",
+           "o": [
+            "jogging",
+            "jog"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "To keep fit, you should exercise three times a week.",
+          "Always stretch before jogging."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "To keep fit, you should exercise three times a week.",
+           "o": [
+            "To keep fit, you should exercise three times a week.",
+            "Always stretch before jogging."
+           ]
+          },
+          {
+           "a": "Always stretch before jogging.",
+           "o": [
+            "Always stretch before jogging.",
+            "To keep fit, you should exercise three times a week."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "fit",
+       "ipa": "",
+       "meaning": "لائق",
+       "ex": "To keep fit, you should exercise three times a week."
+      },
+      {
+       "must": 1,
+       "term": "exercise",
+       "ipa": "",
+       "meaning": "تمرين",
+       "ex": "To keep fit, you should exercise three times a week."
+      },
+      {
+       "must": 1,
+       "term": "jogging",
+       "ipa": "",
+       "meaning": "الهرولة",
+       "ex": "Always stretch before jogging."
+      },
+      {
+       "must": 0,
+       "term": "stretch",
+       "ipa": "",
+       "meaning": "يمدد",
+       "ex": "Always stretch before jogging."
+      },
+      {
+       "must": 0,
+       "term": "gym",
+       "ipa": "",
+       "meaning": "صالة رياضية",
+       "ex": "gym"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "___ keep fit, exercise often.",
+       "a": "To",
+       "o": [
+        "To",
+        "For"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Always ___ before jogging.",
+       "a": "stretch",
+       "o": [
+        "stretch",
+        "stretches"
+       ],
+       "why": ""
+      },
+      {
+       "q": "I go ___ every morning.",
+       "a": "jogging",
+       "o": [
+        "jogging",
+        "jog"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى fit؟",
+       "a": "لائق",
+       "o": [
+        "لائق",
+        "تمرين",
+        "الهرولة"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى stretch؟",
+       "a": "يمدد",
+       "o": [
+        "يمدد",
+        "لائق",
+        "تمرين"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "To keep fit, you should exercise three times a week.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "To keep fit, you should exercise three times a week.",
+       "o": [
+        "To keep fit, you should exercise three times a week.",
+        "Always stretch before jogging."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

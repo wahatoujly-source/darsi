@@ -1,0 +1,299 @@
+{
+ "id": "en-7-u5-l5",
+ "grade": 7,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 5 · Lesson 5: Have you ever been to Indonesia?",
+ "titleAr": "هل زرت إندونيسيا من قبل؟",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "هل زرت إندونيسيا من قبل؟",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "Indonesia",
+       "ar": "إندونيسيا",
+       "em": "🇮🇩"
+      },
+      {
+       "id": "v1",
+       "en": "island",
+       "ar": "جزيرة",
+       "em": "🏝️"
+      },
+      {
+       "id": "v2",
+       "en": "volcano",
+       "ar": "بركان",
+       "em": "🌋"
+      },
+      {
+       "id": "v3",
+       "en": "rainforest",
+       "ar": "غابة مطيرة",
+       "em": "🌳"
+      },
+      {
+       "id": "v4",
+       "en": "ever",
+       "ar": "من قبل",
+       "em": "❓"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 57"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Have you ever …?",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Have you <b>ever</b> been to Indonesia?</div><div class=\"ex\">Yes, I have. / No, I <b>haven't</b>.</div><div class=\"ex\">Indonesia has thousands of <b>islands</b>.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Have you ever been to Indonesia? Yes, I have. / No, I haven't. Indonesia has thousands of islands."
+      }
+     ]
+    }
+   ],
+   "lead": "للسؤال عن التجارب: Yes, I have / No, I haven't.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "Have you ___ been to Indonesia?",
+           "a": "ever",
+           "o": [
+            "ever",
+            "never"
+           ]
+          },
+          {
+           "s": "No, I ___ .",
+           "a": "haven't",
+           "o": [
+            "haven't",
+            "hasn't"
+           ]
+          },
+          {
+           "s": "Indonesia has many ___ .",
+           "a": "islands",
+           "o": [
+            "islands",
+            "island"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Have you ever been to Indonesia?",
+          "Yes, I have. / No, I haven't.",
+          "Indonesia has thousands of islands."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Have you ever been to Indonesia?",
+           "o": [
+            "Have you ever been to Indonesia?",
+            "Yes, I have. / No, I haven't.",
+            "Indonesia has thousands of islands."
+           ]
+          },
+          {
+           "a": "Yes, I have. / No, I haven't.",
+           "o": [
+            "Yes, I have. / No, I haven't.",
+            "Have you ever been to Indonesia?",
+            "Indonesia has thousands of islands."
+           ]
+          },
+          {
+           "a": "Indonesia has thousands of islands.",
+           "o": [
+            "Indonesia has thousands of islands.",
+            "Have you ever been to Indonesia?",
+            "Yes, I have. / No, I haven't."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "Indonesia",
+       "ipa": "",
+       "meaning": "إندونيسيا",
+       "ex": "Have you ever been to Indonesia?"
+      },
+      {
+       "must": 1,
+       "term": "island",
+       "ipa": "",
+       "meaning": "جزيرة",
+       "ex": "Indonesia has thousands of islands."
+      },
+      {
+       "must": 1,
+       "term": "volcano",
+       "ipa": "",
+       "meaning": "بركان",
+       "ex": "volcano"
+      },
+      {
+       "must": 0,
+       "term": "rainforest",
+       "ipa": "",
+       "meaning": "غابة مطيرة",
+       "ex": "rainforest"
+      },
+      {
+       "must": 0,
+       "term": "ever",
+       "ipa": "",
+       "meaning": "من قبل",
+       "ex": "Have you ever been to Indonesia?"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "Have you ___ been to Indonesia?",
+       "a": "ever",
+       "o": [
+        "ever",
+        "never"
+       ],
+       "why": ""
+      },
+      {
+       "q": "No, I ___ .",
+       "a": "haven't",
+       "o": [
+        "haven't",
+        "hasn't"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Indonesia has many ___ .",
+       "a": "islands",
+       "o": [
+        "islands",
+        "island"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى Indonesia؟",
+       "a": "إندونيسيا",
+       "o": [
+        "إندونيسيا",
+        "جزيرة",
+        "بركان"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى island؟",
+       "a": "جزيرة",
+       "o": [
+        "جزيرة",
+        "إندونيسيا",
+        "بركان"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Have you ever been to Indonesia?",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Have you ever been to Indonesia?",
+       "o": [
+        "Have you ever been to Indonesia?",
+        "Yes, I have. / No, I haven't.",
+        "Indonesia has thousands of islands."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

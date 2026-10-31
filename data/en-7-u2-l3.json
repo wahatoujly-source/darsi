@@ -1,0 +1,287 @@
+{
+ "id": "en-7-u2-l3",
+ "grade": 7,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 2 · Lesson 3: What's the date?",
+ "titleAr": "ما تاريخ اليوم؟ الثالث من مايو.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "ما تاريخ اليوم؟ الثالث من مايو.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "first",
+       "ar": "الأول",
+       "em": "1st"
+      },
+      {
+       "id": "v1",
+       "en": "second",
+       "ar": "الثاني",
+       "em": "2nd"
+      },
+      {
+       "id": "v2",
+       "en": "third",
+       "ar": "الثالث",
+       "em": "3rd"
+      },
+      {
+       "id": "v3",
+       "en": "twentieth",
+       "ar": "العشرون",
+       "em": "20th"
+      },
+      {
+       "id": "v4",
+       "en": "date",
+       "ar": "تاريخ",
+       "em": "📅"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 22"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "on + date",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">What's the date today? It's the <b>third</b> of May.</div><div class=\"ex\">My birthday is <b>on</b> the twentieth of June.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "What's the date today? It's the third of May. My birthday is on the twentieth of June."
+      }
+     ]
+    }
+   ],
+   "lead": "on the 3rd of May",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "My birthday is ___ the 20th of June.",
+           "a": "on",
+           "o": [
+            "on",
+            "in"
+           ]
+          },
+          {
+           "s": "1st = ___",
+           "a": "first",
+           "o": [
+            "first",
+            "one"
+           ]
+          },
+          {
+           "s": "3rd = ___",
+           "a": "third",
+           "o": [
+            "third",
+            "three"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "What's the date today? It's the third of May.",
+          "My birthday is on the twentieth of June."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "What's the date today? It's the third of May.",
+           "o": [
+            "What's the date today? It's the third of May.",
+            "My birthday is on the twentieth of June."
+           ]
+          },
+          {
+           "a": "My birthday is on the twentieth of June.",
+           "o": [
+            "My birthday is on the twentieth of June.",
+            "What's the date today? It's the third of May."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "first",
+       "ipa": "",
+       "meaning": "الأول",
+       "ex": "first"
+      },
+      {
+       "must": 1,
+       "term": "second",
+       "ipa": "",
+       "meaning": "الثاني",
+       "ex": "second"
+      },
+      {
+       "must": 1,
+       "term": "third",
+       "ipa": "",
+       "meaning": "الثالث",
+       "ex": "What's the date today? It's the third of May."
+      },
+      {
+       "must": 0,
+       "term": "twentieth",
+       "ipa": "",
+       "meaning": "العشرون",
+       "ex": "My birthday is on the twentieth of June."
+      },
+      {
+       "must": 0,
+       "term": "date",
+       "ipa": "",
+       "meaning": "تاريخ",
+       "ex": "What's the date today? It's the third of May."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "My birthday is ___ the 20th of June.",
+       "a": "on",
+       "o": [
+        "on",
+        "in"
+       ],
+       "why": ""
+      },
+      {
+       "q": "1st = ___",
+       "a": "first",
+       "o": [
+        "first",
+        "one"
+       ],
+       "why": ""
+      },
+      {
+       "q": "3rd = ___",
+       "a": "third",
+       "o": [
+        "third",
+        "three"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى twentieth؟",
+       "a": "العشرون",
+       "o": [
+        "العشرون",
+        "الأول",
+        "الثاني"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى third؟",
+       "a": "الثالث",
+       "o": [
+        "الثالث",
+        "الأول",
+        "الثاني"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "What's the date today? It's the third of May.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "What's the date today? It's the third of May.",
+       "o": [
+        "What's the date today? It's the third of May.",
+        "My birthday is on the twentieth of June."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

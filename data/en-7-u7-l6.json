@@ -1,0 +1,287 @@
+{
+ "id": "en-7-u7-l6",
+ "grade": 7,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 7 · Lesson 6: Road Safety",
+ "titleAr": "ينبغي على المشاة استخدام المعبر.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "ينبغي على المشاة استخدام المعبر.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "pedestrian",
+       "ar": "مشاة",
+       "em": "🚶"
+      },
+      {
+       "id": "v1",
+       "en": "crossing",
+       "ar": "معبر",
+       "em": "🚸"
+      },
+      {
+       "id": "v2",
+       "en": "speed",
+       "ar": "سرعة",
+       "em": "💨"
+      },
+      {
+       "id": "v3",
+       "en": "seat belt",
+       "ar": "حزام الأمان",
+       "em": "🪢"
+      },
+      {
+       "id": "v4",
+       "en": "accident",
+       "ar": "حادث",
+       "em": "💥"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 81"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "should / shouldn't",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Pedestrians <b>should</b> use the crossing.</div><div class=\"ex\">Drivers shouldn't <b>drive</b> too fast.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Pedestrians should use the crossing. Drivers shouldn't drive too fast."
+      }
+     ]
+    }
+   ],
+   "lead": "للنصيحة والقواعد.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "Pedestrians ___ use the crossing.",
+           "a": "should",
+           "o": [
+            "should",
+            "shouldn't"
+           ]
+          },
+          {
+           "s": "Drivers shouldn't ___ too fast.",
+           "a": "drive",
+           "o": [
+            "drive",
+            "drives"
+           ]
+          },
+          {
+           "s": "Always wear a seat ___ .",
+           "a": "belt",
+           "o": [
+            "belt",
+            "bell"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Pedestrians should use the crossing.",
+          "Drivers shouldn't drive too fast."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Pedestrians should use the crossing.",
+           "o": [
+            "Pedestrians should use the crossing.",
+            "Drivers shouldn't drive too fast."
+           ]
+          },
+          {
+           "a": "Drivers shouldn't drive too fast.",
+           "o": [
+            "Drivers shouldn't drive too fast.",
+            "Pedestrians should use the crossing."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "pedestrian",
+       "ipa": "",
+       "meaning": "مشاة",
+       "ex": "Pedestrians should use the crossing."
+      },
+      {
+       "must": 1,
+       "term": "crossing",
+       "ipa": "",
+       "meaning": "معبر",
+       "ex": "Pedestrians should use the crossing."
+      },
+      {
+       "must": 1,
+       "term": "speed",
+       "ipa": "",
+       "meaning": "سرعة",
+       "ex": "speed"
+      },
+      {
+       "must": 0,
+       "term": "seat belt",
+       "ipa": "",
+       "meaning": "حزام الأمان",
+       "ex": "seat belt"
+      },
+      {
+       "must": 0,
+       "term": "accident",
+       "ipa": "",
+       "meaning": "حادث",
+       "ex": "accident"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "Pedestrians ___ use the crossing.",
+       "a": "should",
+       "o": [
+        "should",
+        "shouldn't"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Drivers shouldn't ___ too fast.",
+       "a": "drive",
+       "o": [
+        "drive",
+        "drives"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Always wear a seat ___ .",
+       "a": "belt",
+       "o": [
+        "belt",
+        "bell"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى crossing؟",
+       "a": "معبر",
+       "o": [
+        "معبر",
+        "مشاة",
+        "سرعة"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى accident؟",
+       "a": "حادث",
+       "o": [
+        "حادث",
+        "مشاة",
+        "معبر"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Pedestrians should use the crossing.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Pedestrians should use the crossing.",
+       "o": [
+        "Pedestrians should use the crossing.",
+        "Drivers shouldn't drive too fast."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

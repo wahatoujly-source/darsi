@@ -1,0 +1,287 @@
+{
+ "id": "en-8-u7-l5",
+ "grade": 8,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 7 · Lesson 5: A Warmer World",
+ "titleAr": "إذا ارتفعت الحرارة سيذوب الجليد.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "إذا ارتفعت الحرارة سيذوب الجليد.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "temperature",
+       "ar": "درجة الحرارة",
+       "em": "🌡️"
+      },
+      {
+       "id": "v1",
+       "en": "ice",
+       "ar": "جليد",
+       "em": "🧊"
+      },
+      {
+       "id": "v2",
+       "en": "sea level",
+       "ar": "مستوى البحر",
+       "em": "🌊"
+      },
+      {
+       "id": "v3",
+       "en": "rise",
+       "ar": "يرتفع",
+       "em": "⬆️"
+      },
+      {
+       "id": "v4",
+       "en": "melt",
+       "ar": "يذوب",
+       "em": "💧"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 87"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "First conditional",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">If the temperature rises, the ice <b>will</b> melt.</div><div class=\"ex\">If the ice melts, sea levels <b>will</b> rise.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "If the temperature rises, the ice will melt. If the ice melts, sea levels will rise."
+      }
+     ]
+    }
+   ],
+   "lead": "If + present, will + verb",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "If the ice melts, sea levels ___ rise.",
+           "a": "will",
+           "o": [
+            "will",
+            "would"
+           ]
+          },
+          {
+           "s": "If the temperature ___ , the ice will melt.",
+           "a": "rises",
+           "o": [
+            "rises",
+            "will rise"
+           ]
+          },
+          {
+           "s": "The ice is ___ .",
+           "a": "melting",
+           "o": [
+            "melting",
+            "melt"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "If the temperature rises, the ice will melt.",
+          "If the ice melts, sea levels will rise."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "If the temperature rises, the ice will melt.",
+           "o": [
+            "If the temperature rises, the ice will melt.",
+            "If the ice melts, sea levels will rise."
+           ]
+          },
+          {
+           "a": "If the ice melts, sea levels will rise.",
+           "o": [
+            "If the ice melts, sea levels will rise.",
+            "If the temperature rises, the ice will melt."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "temperature",
+       "ipa": "",
+       "meaning": "درجة الحرارة",
+       "ex": "If the temperature rises, the ice will melt."
+      },
+      {
+       "must": 1,
+       "term": "ice",
+       "ipa": "",
+       "meaning": "جليد",
+       "ex": "If the temperature rises, the ice will melt."
+      },
+      {
+       "must": 1,
+       "term": "sea level",
+       "ipa": "",
+       "meaning": "مستوى البحر",
+       "ex": "If the ice melts, sea levels will rise."
+      },
+      {
+       "must": 0,
+       "term": "rise",
+       "ipa": "",
+       "meaning": "يرتفع",
+       "ex": "If the temperature rises, the ice will melt."
+      },
+      {
+       "must": 0,
+       "term": "melt",
+       "ipa": "",
+       "meaning": "يذوب",
+       "ex": "If the temperature rises, the ice will melt."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "If the ice melts, sea levels ___ rise.",
+       "a": "will",
+       "o": [
+        "will",
+        "would"
+       ],
+       "why": ""
+      },
+      {
+       "q": "If the temperature ___ , the ice will melt.",
+       "a": "rises",
+       "o": [
+        "rises",
+        "will rise"
+       ],
+       "why": ""
+      },
+      {
+       "q": "The ice is ___ .",
+       "a": "melting",
+       "o": [
+        "melting",
+        "melt"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى sea level؟",
+       "a": "مستوى البحر",
+       "o": [
+        "مستوى البحر",
+        "درجة الحرارة",
+        "جليد"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى temperature؟",
+       "a": "درجة الحرارة",
+       "o": [
+        "درجة الحرارة",
+        "جليد",
+        "مستوى البحر"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "If the temperature rises, the ice will melt.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "If the temperature rises, the ice will melt.",
+       "o": [
+        "If the temperature rises, the ice will melt.",
+        "If the ice melts, sea levels will rise."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

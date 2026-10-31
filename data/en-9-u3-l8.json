@@ -1,0 +1,287 @@
+{
+ "id": "en-9-u3-l8",
+ "grade": 9,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 3 · Lesson 8: Things happen in …",
+ "titleAr": "تحدث الزلازل في اليابان.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "تحدث الزلازل في اليابان.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "earthquake",
+       "ar": "زلزال",
+       "em": "🌋"
+      },
+      {
+       "id": "v1",
+       "en": "flood",
+       "ar": "فيضان",
+       "em": "🌊"
+      },
+      {
+       "id": "v2",
+       "en": "hurricane",
+       "ar": "إعصار",
+       "em": "🌀"
+      },
+      {
+       "id": "v3",
+       "en": "happen",
+       "ar": "يحدث",
+       "em": "❗"
+      },
+      {
+       "id": "v4",
+       "en": "natural disaster",
+       "ar": "كارثة طبيعية",
+       "em": "⚠️"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 46⁠–⁠49"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Present simple vs past simple",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Earthquakes <b>happen</b> in Japan.</div><div class=\"ex\">In 2023, floods <b>hit</b> Derna in Libya.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Earthquakes happen in Japan. In 2023, floods hit Derna in Libya."
+      }
+     ]
+    }
+   ],
+   "lead": "happen (عادة) / hit (حدث في الماضي)",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "Earthquakes often ___ in Japan.",
+           "a": "happen",
+           "o": [
+            "happen",
+            "happened"
+           ]
+          },
+          {
+           "s": "In 2023, floods ___ Derna.",
+           "a": "hit",
+           "o": [
+            "hit",
+            "hits"
+           ]
+          },
+          {
+           "s": "A ___ is a very strong storm.",
+           "a": "hurricane",
+           "o": [
+            "hurricane",
+            "flood"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Earthquakes happen in Japan.",
+          "In 2023, floods hit Derna in Libya."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Earthquakes happen in Japan.",
+           "o": [
+            "Earthquakes happen in Japan.",
+            "In 2023, floods hit Derna in Libya."
+           ]
+          },
+          {
+           "a": "In 2023, floods hit Derna in Libya.",
+           "o": [
+            "In 2023, floods hit Derna in Libya.",
+            "Earthquakes happen in Japan."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "earthquake",
+       "ipa": "",
+       "meaning": "زلزال",
+       "ex": "Earthquakes happen in Japan."
+      },
+      {
+       "must": 1,
+       "term": "flood",
+       "ipa": "",
+       "meaning": "فيضان",
+       "ex": "In 2023, floods hit Derna in Libya."
+      },
+      {
+       "must": 1,
+       "term": "hurricane",
+       "ipa": "",
+       "meaning": "إعصار",
+       "ex": "hurricane"
+      },
+      {
+       "must": 0,
+       "term": "happen",
+       "ipa": "",
+       "meaning": "يحدث",
+       "ex": "Earthquakes happen in Japan."
+      },
+      {
+       "must": 0,
+       "term": "natural disaster",
+       "ipa": "",
+       "meaning": "كارثة طبيعية",
+       "ex": "natural disaster"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "Earthquakes often ___ in Japan.",
+       "a": "happen",
+       "o": [
+        "happen",
+        "happened"
+       ],
+       "why": ""
+      },
+      {
+       "q": "In 2023, floods ___ Derna.",
+       "a": "hit",
+       "o": [
+        "hit",
+        "hits"
+       ],
+       "why": ""
+      },
+      {
+       "q": "A ___ is a very strong storm.",
+       "a": "hurricane",
+       "o": [
+        "hurricane",
+        "flood"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى flood؟",
+       "a": "فيضان",
+       "o": [
+        "فيضان",
+        "زلزال",
+        "إعصار"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى earthquake؟",
+       "a": "زلزال",
+       "o": [
+        "زلزال",
+        "فيضان",
+        "إعصار"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Earthquakes happen in Japan.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Earthquakes happen in Japan.",
+       "o": [
+        "Earthquakes happen in Japan.",
+        "In 2023, floods hit Derna in Libya."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

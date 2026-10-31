@@ -1,0 +1,287 @@
+{
+ "id": "en-9-u6-l1",
+ "grade": 9,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 6 · Lesson 1: Jobs and Workplaces",
+ "titleAr": "يعمل العالم في مختبر.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "يعمل العالم في مختبر.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "workplace",
+       "ar": "مكان العمل",
+       "em": "🏢"
+      },
+      {
+       "id": "v1",
+       "en": "laboratory",
+       "ar": "مختبر",
+       "em": "🧪"
+      },
+      {
+       "id": "v2",
+       "en": "court",
+       "ar": "محكمة",
+       "em": "⚖️"
+      },
+      {
+       "id": "v3",
+       "en": "studio",
+       "ar": "استوديو",
+       "em": "🎙️"
+      },
+      {
+       "id": "v4",
+       "en": "oil field",
+       "ar": "حقل نفط",
+       "em": "🛢️"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 72"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "in / on / at + workplace",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">A scientist works in a <b>laboratory</b>.</div><div class=\"ex\">Many Libyans work in the oil <b>fields</b>.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "A scientist works in a laboratory. Many Libyans work in the oil fields."
+      }
+     ]
+    }
+   ],
+   "lead": "in a laboratory, in a court, at a studio, on an oil field",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "A scientist works in a ___ .",
+           "a": "laboratory",
+           "o": [
+            "laboratory",
+            "court"
+           ]
+          },
+          {
+           "s": "A judge works in a ___ .",
+           "a": "court",
+           "o": [
+            "court",
+            "studio"
+           ]
+          },
+          {
+           "s": "Engineers work in the oil ___ .",
+           "a": "fields",
+           "o": [
+            "fields",
+            "field's"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "A scientist works in a laboratory.",
+          "Many Libyans work in the oil fields."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "A scientist works in a laboratory.",
+           "o": [
+            "A scientist works in a laboratory.",
+            "Many Libyans work in the oil fields."
+           ]
+          },
+          {
+           "a": "Many Libyans work in the oil fields.",
+           "o": [
+            "Many Libyans work in the oil fields.",
+            "A scientist works in a laboratory."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "workplace",
+       "ipa": "",
+       "meaning": "مكان العمل",
+       "ex": "workplace"
+      },
+      {
+       "must": 1,
+       "term": "laboratory",
+       "ipa": "",
+       "meaning": "مختبر",
+       "ex": "A scientist works in a laboratory."
+      },
+      {
+       "must": 1,
+       "term": "court",
+       "ipa": "",
+       "meaning": "محكمة",
+       "ex": "court"
+      },
+      {
+       "must": 0,
+       "term": "studio",
+       "ipa": "",
+       "meaning": "استوديو",
+       "ex": "studio"
+      },
+      {
+       "must": 0,
+       "term": "oil field",
+       "ipa": "",
+       "meaning": "حقل نفط",
+       "ex": "Many Libyans work in the oil fields."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "A scientist works in a ___ .",
+       "a": "laboratory",
+       "o": [
+        "laboratory",
+        "court"
+       ],
+       "why": ""
+      },
+      {
+       "q": "A judge works in a ___ .",
+       "a": "court",
+       "o": [
+        "court",
+        "studio"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Engineers work in the oil ___ .",
+       "a": "fields",
+       "o": [
+        "fields",
+        "field's"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى court؟",
+       "a": "محكمة",
+       "o": [
+        "محكمة",
+        "مكان العمل",
+        "مختبر"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى oil field؟",
+       "a": "حقل نفط",
+       "o": [
+        "حقل نفط",
+        "مكان العمل",
+        "مختبر"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "A scientist works in a laboratory.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "A scientist works in a laboratory.",
+       "o": [
+        "A scientist works in a laboratory.",
+        "Many Libyans work in the oil fields."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

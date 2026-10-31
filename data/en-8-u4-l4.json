@@ -1,0 +1,337 @@
+{
+ "id": "en-8-u4-l4",
+ "grade": 8,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 4 · Lesson 4: Writing",
+ "titleAr": "مهارة الكتابة — Fun with English 1",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "مهارة الكتابة — Fun with English 1",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "problem",
+       "ar": "مشكلة",
+       "em": "❗"
+      },
+      {
+       "id": "v1",
+       "en": "solve",
+       "ar": "يحل",
+       "em": "🧩"
+      },
+      {
+       "id": "v2",
+       "en": "Bob",
+       "ar": "بوب",
+       "em": "🧑"
+      },
+      {
+       "id": "v3",
+       "en": "Bashir",
+       "ar": "بشير",
+       "em": "🧑🏽"
+      },
+      {
+       "id": "v4",
+       "en": "earache",
+       "ar": "ألم أذن",
+       "em": "👂"
+      },
+      {
+       "id": "v5",
+       "en": "backache",
+       "ar": "ألم ظهر",
+       "em": "🧍"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 53"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Writing",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">My neighbours are noisy. What should I do?</div><div class=\"ex\">Bob and Bashir are good friends.</div><div class=\"ex\">I've got a sore throat.</div><div class=\"ex\">Bob <b>was</b> carrying a basket of eggs.</div><div class=\"ex\">Our team <b>beat</b> them 64–58.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "My neighbours are noisy. What should I do? Bob and Bashir are good friends. I've got a sore throat. Bob was carrying a basket of eggs. Our team beat them 64–58."
+      }
+     ]
+    }
+   ],
+   "lead": "لاحظ ترتيب الكلمات في الجمل الإنجليزية: الفاعل ثم الفعل ثم المفعول. رتّب الجمل واكتبها في دفترك.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "You ought ___ talk to them.",
+           "a": "to",
+           "o": [
+            "to",
+            "for"
+           ]
+          },
+          {
+           "s": "Bob makes funny ___ .",
+           "a": "mistakes",
+           "o": [
+            "mistakes",
+            "mistake"
+           ]
+          },
+          {
+           "s": "I've got ___ earache.",
+           "a": "an",
+           "o": [
+            "an",
+            "a"
+           ]
+          },
+          {
+           "s": "Bob ___ carrying a basket.",
+           "a": "was",
+           "o": [
+            "was",
+            "were"
+           ]
+          },
+          {
+           "s": "Our team ___ them.",
+           "a": "beat",
+           "o": [
+            "beat",
+            "beated"
+           ]
+          },
+          {
+           "s": "It was hot, ___ he bought ice-cream.",
+           "a": "so",
+           "o": [
+            "so",
+            "because"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "My neighbours are noisy. What should I do?",
+          "Bob and Bashir are good friends.",
+          "I've got a sore throat.",
+          "Bob was carrying a basket of eggs."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "My neighbours are noisy. What should I do?",
+           "o": [
+            "My neighbours are noisy. What should I do?",
+            "Bob and Bashir are good friends.",
+            "I've got a sore throat."
+           ]
+          },
+          {
+           "a": "Bob and Bashir are good friends.",
+           "o": [
+            "Bob and Bashir are good friends.",
+            "My neighbours are noisy. What should I do?",
+            "I've got a sore throat."
+           ]
+          },
+          {
+           "a": "I've got a sore throat.",
+           "o": [
+            "I've got a sore throat.",
+            "My neighbours are noisy. What should I do?",
+            "Bob and Bashir are good friends."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "problem",
+       "ipa": "",
+       "meaning": "مشكلة",
+       "ex": "problem"
+      },
+      {
+       "must": 1,
+       "term": "solve",
+       "ipa": "",
+       "meaning": "يحل",
+       "ex": "solve"
+      },
+      {
+       "must": 1,
+       "term": "Bob",
+       "ipa": "",
+       "meaning": "بوب",
+       "ex": "Bob and Bashir are good friends."
+      },
+      {
+       "must": 0,
+       "term": "Bashir",
+       "ipa": "",
+       "meaning": "بشير",
+       "ex": "Bob and Bashir are good friends."
+      },
+      {
+       "must": 0,
+       "term": "earache",
+       "ipa": "",
+       "meaning": "ألم أذن",
+       "ex": "earache"
+      },
+      {
+       "must": 0,
+       "term": "backache",
+       "ipa": "",
+       "meaning": "ألم ظهر",
+       "ex": "backache"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "You ought ___ talk to them.",
+       "a": "to",
+       "o": [
+        "to",
+        "for"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Bob makes funny ___ .",
+       "a": "mistakes",
+       "o": [
+        "mistakes",
+        "mistake"
+       ],
+       "why": ""
+      },
+      {
+       "q": "I've got ___ earache.",
+       "a": "an",
+       "o": [
+        "an",
+        "a"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى solve؟",
+       "a": "يحل",
+       "o": [
+        "يحل",
+        "مشكلة",
+        "بوب"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى Bob؟",
+       "a": "بوب",
+       "o": [
+        "بوب",
+        "مشكلة",
+        "يحل"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "My neighbours are noisy. What should I do?",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "My neighbours are noisy. What should I do?",
+       "o": [
+        "My neighbours are noisy. What should I do?",
+        "Bob and Bashir are good friends.",
+        "I've got a sore throat."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

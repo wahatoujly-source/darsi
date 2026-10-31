@@ -1,0 +1,337 @@
+{
+ "id": "en-9-u8-l1",
+ "grade": 9,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 8 · Lesson 1: Listening",
+ "titleAr": "مهارة الاستماع — Fun with English 2",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "مهارة الاستماع — Fun with English 2",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "match",
+       "ar": "مباراة",
+       "em": "⚽"
+      },
+      {
+       "id": "v1",
+       "en": "referee",
+       "ar": "حكم",
+       "em": "🧑‍⚖️"
+      },
+      {
+       "id": "v2",
+       "en": "price",
+       "ar": "سعر",
+       "em": "💰"
+      },
+      {
+       "id": "v3",
+       "en": "offer",
+       "ar": "عرض",
+       "em": "🤝"
+      },
+      {
+       "id": "v4",
+       "en": "workplace",
+       "ar": "مكان العمل",
+       "em": "🏢"
+      },
+      {
+       "id": "v5",
+       "en": "laboratory",
+       "ar": "مختبر",
+       "em": "🧪"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 96⁠–⁠97"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Listening",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">The match ended in a <b>draw</b>.</div><div class=\"ex\">It's too expensive. Would you take <b>less</b>?</div><div class=\"ex\">A scientist works in a <b>laboratory</b>.</div><div class=\"ex\">How do you get <b>to</b> school? I take the bus.</div><div class=\"ex\">China and India have the <b>largest</b> populations.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "The match ended in a draw. It's too expensive. Would you take less? A scientist works in a laboratory. How do you get to school? I take the bus. China and India have the largest populations."
+      }
+     ]
+    }
+   ],
+   "lead": "استمع إلى الجمل جيداً: ركّز أولاً على الفكرة العامة ثم على التفاصيل، وأعد الاستماع عند الحاجة.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "The match ended in a ___ .",
+           "a": "draw",
+           "o": [
+            "draw",
+            "drew"
+           ]
+          },
+          {
+           "s": "Would you take ___ ?",
+           "a": "less",
+           "o": [
+            "less",
+            "fewer"
+           ]
+          },
+          {
+           "s": "A scientist works in a ___ .",
+           "a": "laboratory",
+           "o": [
+            "laboratory",
+            "court"
+           ]
+          },
+          {
+           "s": "How do you get ___ school?",
+           "a": "to",
+           "o": [
+            "to",
+            "at"
+           ]
+          },
+          {
+           "s": "India has one of the ___ populations.",
+           "a": "largest",
+           "o": [
+            "largest",
+            "larger"
+           ]
+          },
+          {
+           "s": "I'm ___ I'm late.",
+           "a": "sorry",
+           "o": [
+            "sorry",
+            "sorrow"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "The match ended in a draw.",
+          "It's too expensive. Would you take less?",
+          "A scientist works in a laboratory.",
+          "How do you get to school? I take the bus."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "The match ended in a draw.",
+           "o": [
+            "The match ended in a draw.",
+            "It's too expensive. Would you take less?",
+            "A scientist works in a laboratory."
+           ]
+          },
+          {
+           "a": "It's too expensive. Would you take less?",
+           "o": [
+            "It's too expensive. Would you take less?",
+            "The match ended in a draw.",
+            "A scientist works in a laboratory."
+           ]
+          },
+          {
+           "a": "A scientist works in a laboratory.",
+           "o": [
+            "A scientist works in a laboratory.",
+            "The match ended in a draw.",
+            "It's too expensive. Would you take less?"
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "match",
+       "ipa": "",
+       "meaning": "مباراة",
+       "ex": "The match ended in a draw."
+      },
+      {
+       "must": 1,
+       "term": "referee",
+       "ipa": "",
+       "meaning": "حكم",
+       "ex": "referee"
+      },
+      {
+       "must": 1,
+       "term": "price",
+       "ipa": "",
+       "meaning": "سعر",
+       "ex": "price"
+      },
+      {
+       "must": 0,
+       "term": "offer",
+       "ipa": "",
+       "meaning": "عرض",
+       "ex": "offer"
+      },
+      {
+       "must": 0,
+       "term": "workplace",
+       "ipa": "",
+       "meaning": "مكان العمل",
+       "ex": "workplace"
+      },
+      {
+       "must": 0,
+       "term": "laboratory",
+       "ipa": "",
+       "meaning": "مختبر",
+       "ex": "A scientist works in a laboratory."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "The match ended in a ___ .",
+       "a": "draw",
+       "o": [
+        "draw",
+        "drew"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Would you take ___ ?",
+       "a": "less",
+       "o": [
+        "less",
+        "fewer"
+       ],
+       "why": ""
+      },
+      {
+       "q": "A scientist works in a ___ .",
+       "a": "laboratory",
+       "o": [
+        "laboratory",
+        "court"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى workplace؟",
+       "a": "مكان العمل",
+       "o": [
+        "مكان العمل",
+        "مباراة",
+        "حكم"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى match؟",
+       "a": "مباراة",
+       "o": [
+        "مباراة",
+        "حكم",
+        "سعر"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "The match ended in a draw.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "The match ended in a draw.",
+       "o": [
+        "The match ended in a draw.",
+        "It's too expensive. Would you take less?",
+        "A scientist works in a laboratory."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

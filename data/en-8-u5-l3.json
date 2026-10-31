@@ -1,0 +1,287 @@
+{
+ "id": "en-8-u5-l3",
+ "grade": 8,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 5 · Lesson 3: Working Out Meanings",
+ "titleAr": "استخدم السياق لتخمين المعنى.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "استخدم السياق لتخمين المعنى.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "guess",
+       "ar": "يخمّن",
+       "em": "🤔"
+      },
+      {
+       "id": "v1",
+       "en": "context",
+       "ar": "السياق",
+       "em": "🧩"
+      },
+      {
+       "id": "v2",
+       "en": "dictionary",
+       "ar": "قاموس",
+       "em": "📖"
+      },
+      {
+       "id": "v3",
+       "en": "meaning",
+       "ar": "معنى",
+       "em": "💡"
+      },
+      {
+       "id": "v4",
+       "en": "unknown",
+       "ar": "غير معروف",
+       "em": "❓"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 59"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "look up",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Use the <b>context</b> to guess the meaning.</div><div class=\"ex\">If you're not sure, look it <b>up</b> in a dictionary.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Use the context to guess the meaning. If you're not sure, look it up in a dictionary."
+      }
+     ]
+    }
+   ],
+   "lead": "phrasal verb: look it up in a dictionary",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "Use the ___ to guess.",
+           "a": "context",
+           "o": [
+            "context",
+            "contest"
+           ]
+          },
+          {
+           "s": "Look it ___ in a dictionary.",
+           "a": "up",
+           "o": [
+            "up",
+            "at"
+           ]
+          },
+          {
+           "s": "Guess the ___ of the word.",
+           "a": "meaning",
+           "o": [
+            "meaning",
+            "mean"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Use the context to guess the meaning.",
+          "If you're not sure, look it up in a dictionary."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Use the context to guess the meaning.",
+           "o": [
+            "Use the context to guess the meaning.",
+            "If you're not sure, look it up in a dictionary."
+           ]
+          },
+          {
+           "a": "If you're not sure, look it up in a dictionary.",
+           "o": [
+            "If you're not sure, look it up in a dictionary.",
+            "Use the context to guess the meaning."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "guess",
+       "ipa": "",
+       "meaning": "يخمّن",
+       "ex": "Use the context to guess the meaning."
+      },
+      {
+       "must": 1,
+       "term": "context",
+       "ipa": "",
+       "meaning": "السياق",
+       "ex": "Use the context to guess the meaning."
+      },
+      {
+       "must": 1,
+       "term": "dictionary",
+       "ipa": "",
+       "meaning": "قاموس",
+       "ex": "If you're not sure, look it up in a dictionary."
+      },
+      {
+       "must": 0,
+       "term": "meaning",
+       "ipa": "",
+       "meaning": "معنى",
+       "ex": "Use the context to guess the meaning."
+      },
+      {
+       "must": 0,
+       "term": "unknown",
+       "ipa": "",
+       "meaning": "غير معروف",
+       "ex": "unknown"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "Use the ___ to guess.",
+       "a": "context",
+       "o": [
+        "context",
+        "contest"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Look it ___ in a dictionary.",
+       "a": "up",
+       "o": [
+        "up",
+        "at"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Guess the ___ of the word.",
+       "a": "meaning",
+       "o": [
+        "meaning",
+        "mean"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى guess؟",
+       "a": "يخمّن",
+       "o": [
+        "يخمّن",
+        "السياق",
+        "قاموس"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى unknown؟",
+       "a": "غير معروف",
+       "o": [
+        "غير معروف",
+        "يخمّن",
+        "السياق"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Use the context to guess the meaning.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Use the context to guess the meaning.",
+       "o": [
+        "Use the context to guess the meaning.",
+        "If you're not sure, look it up in a dictionary."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

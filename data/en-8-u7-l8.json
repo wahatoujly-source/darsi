@@ -1,0 +1,307 @@
+{
+ "id": "en-8-u7-l8",
+ "grade": 8,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 7 · Lesson 8: Bob and Bashir – The Medals",
+ "titleAr": "فاز بشير بميدالية ذهبية وبوب بفضية.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "فاز بشير بميدالية ذهبية وبوب بفضية.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "medal",
+       "ar": "ميدالية",
+       "em": "🏅"
+      },
+      {
+       "id": "v1",
+       "en": "race",
+       "ar": "سباق",
+       "em": "🏁"
+      },
+      {
+       "id": "v2",
+       "en": "silver",
+       "ar": "فضي",
+       "em": "🥈"
+      },
+      {
+       "id": "v3",
+       "en": "gold",
+       "ar": "ذهبي",
+       "em": "🥇"
+      },
+      {
+       "id": "v4",
+       "en": "proud",
+       "ar": "فخور",
+       "em": "😊"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 91⁠–⁠92"
+  },
+  {
+   "title": "اقرأ",
+   "eyebrow": "الخطوة ٢ — اقرأ",
+   "heading": "اقرأ واستمع",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "📖 Bob and Bashir – The Medals",
+     "html": "<div class=\"ex\">Bashir won a gold medal and Bob won a silver one.</div><div class=\"ex\">They were both very proud.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Bashir won a gold medal and Bob won a silver one. They were both very proud."
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط ▶ لتسمع النص."
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٣ — القاعدة",
+   "heading": "one / ones",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Bashir won a gold medal and Bob won a silver <b>one</b>.</div><div class=\"ex\">They were both very <b>proud</b>.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Bashir won a gold medal and Bob won a silver one. They were both very proud."
+      }
+     ]
+    }
+   ],
+   "lead": "نستخدم one لتجنب التكرار: a silver one.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٤ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "Bob won a silver ___ .",
+           "a": "one",
+           "o": [
+            "one",
+            "ones"
+           ]
+          },
+          {
+           "s": "They were both ___ .",
+           "a": "proud",
+           "o": [
+            "proud",
+            "pride"
+           ]
+          },
+          {
+           "s": "Bashir won a ___ medal.",
+           "a": "gold",
+           "o": [
+            "gold",
+            "golden"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Bashir won a gold medal and Bob won a silver one.",
+          "They were both very proud."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Bashir won a gold medal and Bob won a silver one.",
+           "o": [
+            "Bashir won a gold medal and Bob won a silver one.",
+            "They were both very proud."
+           ]
+          },
+          {
+           "a": "They were both very proud.",
+           "o": [
+            "They were both very proud.",
+            "Bashir won a gold medal and Bob won a silver one."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٥ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "medal",
+       "ipa": "",
+       "meaning": "ميدالية",
+       "ex": "Bashir won a gold medal and Bob won a silver one."
+      },
+      {
+       "must": 1,
+       "term": "race",
+       "ipa": "",
+       "meaning": "سباق",
+       "ex": "race"
+      },
+      {
+       "must": 1,
+       "term": "silver",
+       "ipa": "",
+       "meaning": "فضي",
+       "ex": "Bashir won a gold medal and Bob won a silver one."
+      },
+      {
+       "must": 0,
+       "term": "gold",
+       "ipa": "",
+       "meaning": "ذهبي",
+       "ex": "Bashir won a gold medal and Bob won a silver one."
+      },
+      {
+       "must": 0,
+       "term": "proud",
+       "ipa": "",
+       "meaning": "فخور",
+       "ex": "They were both very proud."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "Bob won a silver ___ .",
+       "a": "one",
+       "o": [
+        "one",
+        "ones"
+       ],
+       "why": ""
+      },
+      {
+       "q": "They were both ___ .",
+       "a": "proud",
+       "o": [
+        "proud",
+        "pride"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Bashir won a ___ medal.",
+       "a": "gold",
+       "o": [
+        "gold",
+        "golden"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى proud؟",
+       "a": "فخور",
+       "o": [
+        "فخور",
+        "ميدالية",
+        "سباق"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى gold؟",
+       "a": "ذهبي",
+       "o": [
+        "ذهبي",
+        "ميدالية",
+        "سباق"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Bashir won a gold medal and Bob won a silver one.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Bashir won a gold medal and Bob won a silver one.",
+       "o": [
+        "Bashir won a gold medal and Bob won a silver one.",
+        "They were both very proud."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

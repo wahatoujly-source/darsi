@@ -1,0 +1,287 @@
+{
+ "id": "en-9-u3-l3",
+ "grade": 9,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 3 · Lesson 3: I hate spiders!",
+ "titleAr": "أكره العناكب! أخاف منها.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "أكره العناكب! أخاف منها.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "hate",
+       "ar": "يكره",
+       "em": "😖"
+      },
+      {
+       "id": "v1",
+       "en": "scared of",
+       "ar": "خائف من",
+       "em": "😱"
+      },
+      {
+       "id": "v2",
+       "en": "can't stand",
+       "ar": "لا يطيق",
+       "em": "🙅"
+      },
+      {
+       "id": "v3",
+       "en": "harmless",
+       "ar": "غير مؤذٍ",
+       "em": "🙂"
+      },
+      {
+       "id": "v4",
+       "en": "poisonous",
+       "ar": "سام",
+       "em": "☠️"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 39"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Verbs of feeling + -ing",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">I hate spiders! I'm scared <b>of</b> them.</div><div class=\"ex\">Most spiders are <b>harmless</b>.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "I hate spiders! I'm scared of them. Most spiders are harmless."
+      }
+     ]
+    }
+   ],
+   "lead": "I hate / can't stand / love + -ing",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "I'm scared ___ spiders.",
+           "a": "of",
+           "o": [
+            "of",
+            "from"
+           ]
+          },
+          {
+           "s": "I can't stand ___ snakes.",
+           "a": "seeing",
+           "o": [
+            "seeing",
+            "see"
+           ]
+          },
+          {
+           "s": "Most spiders are ___ .",
+           "a": "harmless",
+           "o": [
+            "harmless",
+            "poisonous"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "I hate spiders! I'm scared of them.",
+          "Most spiders are harmless."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "I hate spiders! I'm scared of them.",
+           "o": [
+            "I hate spiders! I'm scared of them.",
+            "Most spiders are harmless."
+           ]
+          },
+          {
+           "a": "Most spiders are harmless.",
+           "o": [
+            "Most spiders are harmless.",
+            "I hate spiders! I'm scared of them."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "hate",
+       "ipa": "",
+       "meaning": "يكره",
+       "ex": "I hate spiders! I'm scared of them."
+      },
+      {
+       "must": 1,
+       "term": "scared of",
+       "ipa": "",
+       "meaning": "خائف من",
+       "ex": "I hate spiders! I'm scared of them."
+      },
+      {
+       "must": 1,
+       "term": "can't stand",
+       "ipa": "",
+       "meaning": "لا يطيق",
+       "ex": "can't stand"
+      },
+      {
+       "must": 0,
+       "term": "harmless",
+       "ipa": "",
+       "meaning": "غير مؤذٍ",
+       "ex": "Most spiders are harmless."
+      },
+      {
+       "must": 0,
+       "term": "poisonous",
+       "ipa": "",
+       "meaning": "سام",
+       "ex": "poisonous"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "I'm scared ___ spiders.",
+       "a": "of",
+       "o": [
+        "of",
+        "from"
+       ],
+       "why": ""
+      },
+      {
+       "q": "I can't stand ___ snakes.",
+       "a": "seeing",
+       "o": [
+        "seeing",
+        "see"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Most spiders are ___ .",
+       "a": "harmless",
+       "o": [
+        "harmless",
+        "poisonous"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى hate؟",
+       "a": "يكره",
+       "o": [
+        "يكره",
+        "خائف من",
+        "لا يطيق"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى harmless؟",
+       "a": "غير مؤذٍ",
+       "o": [
+        "غير مؤذٍ",
+        "يكره",
+        "خائف من"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "I hate spiders! I'm scared of them.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "I hate spiders! I'm scared of them.",
+       "o": [
+        "I hate spiders! I'm scared of them.",
+        "Most spiders are harmless."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

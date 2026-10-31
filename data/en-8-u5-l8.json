@@ -1,0 +1,319 @@
+{
+ "id": "en-8-u5-l8",
+ "grade": 8,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 5 · Lesson 8: Bob and Bashir – The Ants",
+ "titleAr": "ترك بوب السكر مفتوحاً في النزهة.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "ترك بوب السكر مفتوحاً في النزهة.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "ants",
+       "ar": "نمل",
+       "em": "🐜"
+      },
+      {
+       "id": "v1",
+       "en": "picnic",
+       "ar": "نزهة",
+       "em": "🧺"
+      },
+      {
+       "id": "v2",
+       "en": "sugar",
+       "ar": "سكر",
+       "em": "🍬"
+      },
+      {
+       "id": "v3",
+       "en": "everywhere",
+       "ar": "في كل مكان",
+       "em": "🌐"
+      },
+      {
+       "id": "v4",
+       "en": "lid",
+       "ar": "غطاء",
+       "em": "🫙"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 65⁠–⁠66"
+  },
+  {
+   "title": "اقرأ",
+   "eyebrow": "الخطوة ٢ — اقرأ",
+   "heading": "اقرأ واستمع",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "📖 Bob and Bashir – The Ants",
+     "html": "<div class=\"ex\">Bob left the sugar open at the picnic.</div><div class=\"ex\">Soon there were ants everywhere!</div><div class=\"ex\">Bashir said, 'You should have closed the lid.'</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Bob left the sugar open at the picnic. Soon there were ants everywhere! Bashir said, 'You should have closed the lid.'"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط ▶ لتسمع النص."
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٣ — القاعدة",
+   "heading": "There were …",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Bob <b>left</b> the sugar open at the picnic.</div><div class=\"ex\">Soon there <b>were</b> ants everywhere!</div><div class=\"ex\">Bashir said, 'You should have closed the <b>lid</b>.'</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Bob left the sugar open at the picnic. Soon there were ants everywhere! Bashir said, 'You should have closed the lid.'"
+      }
+     ]
+    }
+   ],
+   "lead": "There was/were للماضي.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٤ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "Soon there ___ ants everywhere.",
+           "a": "were",
+           "o": [
+            "were",
+            "was"
+           ]
+          },
+          {
+           "s": "Bob ___ the sugar open.",
+           "a": "left",
+           "o": [
+            "left",
+            "leaved"
+           ]
+          },
+          {
+           "s": "Close the ___ .",
+           "a": "lid",
+           "o": [
+            "lid",
+            "sugar"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Bob left the sugar open at the picnic.",
+          "Soon there were ants everywhere!",
+          "Bashir said, 'You should have closed the lid.'"
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Bob left the sugar open at the picnic.",
+           "o": [
+            "Bob left the sugar open at the picnic.",
+            "Soon there were ants everywhere!",
+            "Bashir said, 'You should have closed the lid.'"
+           ]
+          },
+          {
+           "a": "Soon there were ants everywhere!",
+           "o": [
+            "Soon there were ants everywhere!",
+            "Bob left the sugar open at the picnic.",
+            "Bashir said, 'You should have closed the lid.'"
+           ]
+          },
+          {
+           "a": "Bashir said, 'You should have closed the lid.'",
+           "o": [
+            "Bashir said, 'You should have closed the lid.'",
+            "Bob left the sugar open at the picnic.",
+            "Soon there were ants everywhere!"
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٥ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "ants",
+       "ipa": "",
+       "meaning": "نمل",
+       "ex": "Soon there were ants everywhere!"
+      },
+      {
+       "must": 1,
+       "term": "picnic",
+       "ipa": "",
+       "meaning": "نزهة",
+       "ex": "Bob left the sugar open at the picnic."
+      },
+      {
+       "must": 1,
+       "term": "sugar",
+       "ipa": "",
+       "meaning": "سكر",
+       "ex": "Bob left the sugar open at the picnic."
+      },
+      {
+       "must": 0,
+       "term": "everywhere",
+       "ipa": "",
+       "meaning": "في كل مكان",
+       "ex": "Soon there were ants everywhere!"
+      },
+      {
+       "must": 0,
+       "term": "lid",
+       "ipa": "",
+       "meaning": "غطاء",
+       "ex": "Bashir said, 'You should have closed the lid.'"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "Soon there ___ ants everywhere.",
+       "a": "were",
+       "o": [
+        "were",
+        "was"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Bob ___ the sugar open.",
+       "a": "left",
+       "o": [
+        "left",
+        "leaved"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Close the ___ .",
+       "a": "lid",
+       "o": [
+        "lid",
+        "sugar"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى sugar؟",
+       "a": "سكر",
+       "o": [
+        "سكر",
+        "نمل",
+        "نزهة"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى everywhere؟",
+       "a": "في كل مكان",
+       "o": [
+        "في كل مكان",
+        "نمل",
+        "نزهة"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Bob left the sugar open at the picnic.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Bob left the sugar open at the picnic.",
+       "o": [
+        "Bob left the sugar open at the picnic.",
+        "Soon there were ants everywhere!",
+        "Bashir said, 'You should have closed the lid.'"
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

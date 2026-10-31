@@ -1,0 +1,287 @@
+{
+ "id": "en-9-u5-l3",
+ "grade": 9,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 5 · Lesson 3: Read all about it!",
+ "titleAr": "كان العنوان الرئيسي عن الفيضان.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "كان العنوان الرئيسي عن الفيضان.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "headline",
+       "ar": "عنوان رئيسي",
+       "em": "📰"
+      },
+      {
+       "id": "v1",
+       "en": "newspaper",
+       "ar": "صحيفة",
+       "em": "🗞️"
+      },
+      {
+       "id": "v2",
+       "en": "front page",
+       "ar": "الصفحة الأولى",
+       "em": "📄"
+      },
+      {
+       "id": "v3",
+       "en": "report",
+       "ar": "تقرير",
+       "em": "📝"
+      },
+      {
+       "id": "v4",
+       "en": "latest",
+       "ar": "الأحدث",
+       "em": "🆕"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 62⁠–⁠63"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "News language",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">The <b>headline</b> on the front page was about the flood.</div><div class=\"ex\">Read the <b>latest</b> news online.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "The headline on the front page was about the flood. Read the latest news online."
+      }
+     ]
+    }
+   ],
+   "lead": "Headlines use short words and present tense.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "The ___ was on the front page.",
+           "a": "headline",
+           "o": [
+            "headline",
+            "report"
+           ]
+          },
+          {
+           "s": "Read the ___ news.",
+           "a": "latest",
+           "o": [
+            "latest",
+            "last"
+           ]
+          },
+          {
+           "s": "I read a ___ every day.",
+           "a": "newspaper",
+           "o": [
+            "newspaper",
+            "news"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "The headline on the front page was about the flood.",
+          "Read the latest news online."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "The headline on the front page was about the flood.",
+           "o": [
+            "The headline on the front page was about the flood.",
+            "Read the latest news online."
+           ]
+          },
+          {
+           "a": "Read the latest news online.",
+           "o": [
+            "Read the latest news online.",
+            "The headline on the front page was about the flood."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "headline",
+       "ipa": "",
+       "meaning": "عنوان رئيسي",
+       "ex": "The headline on the front page was about the flood."
+      },
+      {
+       "must": 1,
+       "term": "newspaper",
+       "ipa": "",
+       "meaning": "صحيفة",
+       "ex": "newspaper"
+      },
+      {
+       "must": 1,
+       "term": "front page",
+       "ipa": "",
+       "meaning": "الصفحة الأولى",
+       "ex": "The headline on the front page was about the flood."
+      },
+      {
+       "must": 0,
+       "term": "report",
+       "ipa": "",
+       "meaning": "تقرير",
+       "ex": "report"
+      },
+      {
+       "must": 0,
+       "term": "latest",
+       "ipa": "",
+       "meaning": "الأحدث",
+       "ex": "Read the latest news online."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "The ___ was on the front page.",
+       "a": "headline",
+       "o": [
+        "headline",
+        "report"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Read the ___ news.",
+       "a": "latest",
+       "o": [
+        "latest",
+        "last"
+       ],
+       "why": ""
+      },
+      {
+       "q": "I read a ___ every day.",
+       "a": "newspaper",
+       "o": [
+        "newspaper",
+        "news"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى front page؟",
+       "a": "الصفحة الأولى",
+       "o": [
+        "الصفحة الأولى",
+        "عنوان رئيسي",
+        "صحيفة"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى latest؟",
+       "a": "الأحدث",
+       "o": [
+        "الأحدث",
+        "عنوان رئيسي",
+        "صحيفة"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "The headline on the front page was about the flood.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "The headline on the front page was about the flood.",
+       "o": [
+        "The headline on the front page was about the flood.",
+        "Read the latest news online."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

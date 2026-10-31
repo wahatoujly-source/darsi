@@ -1,0 +1,287 @@
+{
+ "id": "en-8-u6-l5",
+ "grade": 8,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 6 · Lesson 5: A School Timetable",
+ "titleAr": "لدينا ثلاث حصص قبل الاستراحة.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "لدينا ثلاث حصص قبل الاستراحة.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "period",
+       "ar": "حصة",
+       "em": "🕐"
+      },
+      {
+       "id": "v1",
+       "en": "break",
+       "ar": "استراحة",
+       "em": "☕"
+      },
+      {
+       "id": "v2",
+       "en": "science",
+       "ar": "علوم",
+       "em": "🔬"
+      },
+      {
+       "id": "v3",
+       "en": "history",
+       "ar": "تاريخ",
+       "em": "📜"
+      },
+      {
+       "id": "v4",
+       "en": "PE",
+       "ar": "تربية بدنية",
+       "em": "⚽"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 74"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "before / after",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">We have three periods <b>before</b> the break.</div><div class=\"ex\">On Tuesday, the first <b>period</b> is science.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "We have three periods before the break. On Tuesday, the first period is science."
+      }
+     ]
+    }
+   ],
+   "lead": "before the break / after lunch",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "We have three periods ___ the break.",
+           "a": "before",
+           "o": [
+            "before",
+            "after"
+           ]
+          },
+          {
+           "s": "The first ___ is science.",
+           "a": "period",
+           "o": [
+            "period",
+            "break"
+           ]
+          },
+          {
+           "s": "We play football in ___ .",
+           "a": "PE",
+           "o": [
+            "PE",
+            "history"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "We have three periods before the break.",
+          "On Tuesday, the first period is science."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "We have three periods before the break.",
+           "o": [
+            "We have three periods before the break.",
+            "On Tuesday, the first period is science."
+           ]
+          },
+          {
+           "a": "On Tuesday, the first period is science.",
+           "o": [
+            "On Tuesday, the first period is science.",
+            "We have three periods before the break."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "period",
+       "ipa": "",
+       "meaning": "حصة",
+       "ex": "We have three periods before the break."
+      },
+      {
+       "must": 1,
+       "term": "break",
+       "ipa": "",
+       "meaning": "استراحة",
+       "ex": "We have three periods before the break."
+      },
+      {
+       "must": 1,
+       "term": "science",
+       "ipa": "",
+       "meaning": "علوم",
+       "ex": "On Tuesday, the first period is science."
+      },
+      {
+       "must": 0,
+       "term": "history",
+       "ipa": "",
+       "meaning": "تاريخ",
+       "ex": "history"
+      },
+      {
+       "must": 0,
+       "term": "PE",
+       "ipa": "",
+       "meaning": "تربية بدنية",
+       "ex": "We have three periods before the break."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "We have three periods ___ the break.",
+       "a": "before",
+       "o": [
+        "before",
+        "after"
+       ],
+       "why": ""
+      },
+      {
+       "q": "The first ___ is science.",
+       "a": "period",
+       "o": [
+        "period",
+        "break"
+       ],
+       "why": ""
+      },
+      {
+       "q": "We play football in ___ .",
+       "a": "PE",
+       "o": [
+        "PE",
+        "history"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى PE؟",
+       "a": "تربية بدنية",
+       "o": [
+        "تربية بدنية",
+        "حصة",
+        "استراحة"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى science؟",
+       "a": "علوم",
+       "o": [
+        "علوم",
+        "حصة",
+        "استراحة"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "We have three periods before the break.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "We have three periods before the break.",
+       "o": [
+        "We have three periods before the break.",
+        "On Tuesday, the first period is science."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

@@ -1,0 +1,337 @@
+{
+ "id": "en-8-u4-l1",
+ "grade": 8,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 4 · Lesson 1: Listening",
+ "titleAr": "مهارة الاستماع — Fun with English 1",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "مهارة الاستماع — Fun with English 1",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "magazine",
+       "ar": "مجلة",
+       "em": "📰"
+      },
+      {
+       "id": "v1",
+       "en": "article",
+       "ar": "مقال",
+       "em": "📄"
+      },
+      {
+       "id": "v2",
+       "en": "embarrassed",
+       "ar": "محرج",
+       "em": "😳"
+      },
+      {
+       "id": "v3",
+       "en": "embarrassing",
+       "ar": "مُحرِج",
+       "em": "🙈"
+      },
+      {
+       "id": "v4",
+       "en": "fit",
+       "ar": "لائق",
+       "em": "💪"
+      },
+      {
+       "id": "v5",
+       "en": "exercise",
+       "ar": "تمرين",
+       "em": "🏋️"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 50"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Listening",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Our school magazine <b>is</b> published every month.</div><div class=\"ex\">I <b>was</b> walking into class when I fell over.</div><div class=\"ex\"><b>To</b> keep fit, you should exercise three times a week.</div><div class=\"ex\">Jalal <b>was</b> riding his bike when he had an accident.</div><div class=\"ex\">The sports centre <b>opens</b> at 8 a.m.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Our school magazine is published every month. I was walking into class when I fell over. To keep fit, you should exercise three times a week. Jalal was riding his bike when he had an accident. The sports centre opens at 8 a.m."
+      }
+     ]
+    }
+   ],
+   "lead": "استمع إلى الجمل جيداً: ركّز أولاً على الفكرة العامة ثم على التفاصيل، وأعد الاستماع عند الحاجة.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "The magazine ___ published every month.",
+           "a": "is",
+           "o": [
+            "is",
+            "are"
+           ]
+          },
+          {
+           "s": "I ___ walking when I fell.",
+           "a": "was",
+           "o": [
+            "was",
+            "were"
+           ]
+          },
+          {
+           "s": "___ keep fit, exercise often.",
+           "a": "To",
+           "o": [
+            "To",
+            "For"
+           ]
+          },
+          {
+           "s": "He ___ riding his bike.",
+           "a": "was",
+           "o": [
+            "was",
+            "were"
+           ]
+          },
+          {
+           "s": "The centre ___ at 8 a.m.",
+           "a": "opens",
+           "o": [
+            "opens",
+            "open"
+           ]
+          },
+          {
+           "s": "London ___ the Olympics in 2012.",
+           "a": "hosted",
+           "o": [
+            "hosted",
+            "host"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Our school magazine is published every month.",
+          "I was walking into class when I fell over.",
+          "To keep fit, you should exercise three times a week.",
+          "Jalal was riding his bike when he had an accident."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Our school magazine is published every month.",
+           "o": [
+            "Our school magazine is published every month.",
+            "I was walking into class when I fell over.",
+            "To keep fit, you should exercise three times a week."
+           ]
+          },
+          {
+           "a": "I was walking into class when I fell over.",
+           "o": [
+            "I was walking into class when I fell over.",
+            "Our school magazine is published every month.",
+            "To keep fit, you should exercise three times a week."
+           ]
+          },
+          {
+           "a": "To keep fit, you should exercise three times a week.",
+           "o": [
+            "To keep fit, you should exercise three times a week.",
+            "Our school magazine is published every month.",
+            "I was walking into class when I fell over."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "magazine",
+       "ipa": "",
+       "meaning": "مجلة",
+       "ex": "Our school magazine is published every month."
+      },
+      {
+       "must": 1,
+       "term": "article",
+       "ipa": "",
+       "meaning": "مقال",
+       "ex": "article"
+      },
+      {
+       "must": 1,
+       "term": "embarrassed",
+       "ipa": "",
+       "meaning": "محرج",
+       "ex": "embarrassed"
+      },
+      {
+       "must": 0,
+       "term": "embarrassing",
+       "ipa": "",
+       "meaning": "مُحرِج",
+       "ex": "embarrassing"
+      },
+      {
+       "must": 0,
+       "term": "fit",
+       "ipa": "",
+       "meaning": "لائق",
+       "ex": "To keep fit, you should exercise three times a week."
+      },
+      {
+       "must": 0,
+       "term": "exercise",
+       "ipa": "",
+       "meaning": "تمرين",
+       "ex": "To keep fit, you should exercise three times a week."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "The magazine ___ published every month.",
+       "a": "is",
+       "o": [
+        "is",
+        "are"
+       ],
+       "why": ""
+      },
+      {
+       "q": "I ___ walking when I fell.",
+       "a": "was",
+       "o": [
+        "was",
+        "were"
+       ],
+       "why": ""
+      },
+      {
+       "q": "___ keep fit, exercise often.",
+       "a": "To",
+       "o": [
+        "To",
+        "For"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى embarrassed؟",
+       "a": "محرج",
+       "o": [
+        "محرج",
+        "مجلة",
+        "مقال"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى fit؟",
+       "a": "لائق",
+       "o": [
+        "لائق",
+        "مجلة",
+        "مقال"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Our school magazine is published every month.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Our school magazine is published every month.",
+       "o": [
+        "Our school magazine is published every month.",
+        "I was walking into class when I fell over.",
+        "To keep fit, you should exercise three times a week."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

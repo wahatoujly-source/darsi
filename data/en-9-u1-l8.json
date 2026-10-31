@@ -1,0 +1,287 @@
+{
+ "id": "en-9-u1-l8",
+ "grade": 9,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 1 · Lesson 8: Sold out!",
+ "titleAr": "وقفنا في الطابور ساعة لكن التذاكر نفدت.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "وقفنا في الطابور ساعة لكن التذاكر نفدت.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "sold out",
+       "ar": "نفدت الكمية",
+       "em": "🚫"
+      },
+      {
+       "id": "v1",
+       "en": "ticket",
+       "ar": "تذكرة",
+       "em": "🎟️"
+      },
+      {
+       "id": "v2",
+       "en": "queue",
+       "ar": "طابور",
+       "em": "🧍‍🧍"
+      },
+      {
+       "id": "v3",
+       "en": "disappointed",
+       "ar": "خائب الأمل",
+       "em": "😞"
+      },
+      {
+       "id": "v4",
+       "en": "next time",
+       "ar": "في المرة القادمة",
+       "em": "🔁"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 18⁠–⁠21"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "-ed / -ing adjectives",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">We queued for an hour, but the tickets were sold <b>out</b>.</div><div class=\"ex\">We were very <b>disappointed</b>.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "We queued for an hour, but the tickets were sold out. We were very disappointed."
+      }
+     ]
+    }
+   ],
+   "lead": "disappointed (الشعور) / disappointing (السبب)",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "The tickets were sold ___ .",
+           "a": "out",
+           "o": [
+            "out",
+            "off"
+           ]
+          },
+          {
+           "s": "We were ___ .",
+           "a": "disappointed",
+           "o": [
+            "disappointed",
+            "disappointing"
+           ]
+          },
+          {
+           "s": "We ___ for an hour.",
+           "a": "queued",
+           "o": [
+            "queued",
+            "queue"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "We queued for an hour, but the tickets were sold out.",
+          "We were very disappointed."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "We queued for an hour, but the tickets were sold out.",
+           "o": [
+            "We queued for an hour, but the tickets were sold out.",
+            "We were very disappointed."
+           ]
+          },
+          {
+           "a": "We were very disappointed.",
+           "o": [
+            "We were very disappointed.",
+            "We queued for an hour, but the tickets were sold out."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "sold out",
+       "ipa": "",
+       "meaning": "نفدت الكمية",
+       "ex": "We queued for an hour, but the tickets were sold out."
+      },
+      {
+       "must": 1,
+       "term": "ticket",
+       "ipa": "",
+       "meaning": "تذكرة",
+       "ex": "We queued for an hour, but the tickets were sold out."
+      },
+      {
+       "must": 1,
+       "term": "queue",
+       "ipa": "",
+       "meaning": "طابور",
+       "ex": "We queued for an hour, but the tickets were sold out."
+      },
+      {
+       "must": 0,
+       "term": "disappointed",
+       "ipa": "",
+       "meaning": "خائب الأمل",
+       "ex": "We were very disappointed."
+      },
+      {
+       "must": 0,
+       "term": "next time",
+       "ipa": "",
+       "meaning": "في المرة القادمة",
+       "ex": "next time"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "The tickets were sold ___ .",
+       "a": "out",
+       "o": [
+        "out",
+        "off"
+       ],
+       "why": ""
+      },
+      {
+       "q": "We were ___ .",
+       "a": "disappointed",
+       "o": [
+        "disappointed",
+        "disappointing"
+       ],
+       "why": ""
+      },
+      {
+       "q": "We ___ for an hour.",
+       "a": "queued",
+       "o": [
+        "queued",
+        "queue"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى sold out؟",
+       "a": "نفدت الكمية",
+       "o": [
+        "نفدت الكمية",
+        "تذكرة",
+        "طابور"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى ticket؟",
+       "a": "تذكرة",
+       "o": [
+        "تذكرة",
+        "نفدت الكمية",
+        "طابور"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "We queued for an hour, but the tickets were sold out.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "We queued for an hour, but the tickets were sold out.",
+       "o": [
+        "We queued for an hour, but the tickets were sold out.",
+        "We were very disappointed."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

@@ -1,0 +1,287 @@
+{
+ "id": "en-8-u2-l4",
+ "grade": 8,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 2 · Lesson 4: Aches and Pains",
+ "titleAr": "عندي التهاب في الحلق.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "عندي التهاب في الحلق.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "earache",
+       "ar": "ألم أذن",
+       "em": "👂"
+      },
+      {
+       "id": "v1",
+       "en": "backache",
+       "ar": "ألم ظهر",
+       "em": "🧍"
+      },
+      {
+       "id": "v2",
+       "en": "sore throat",
+       "ar": "التهاب حلق",
+       "em": "🗣️"
+      },
+      {
+       "id": "v3",
+       "en": "temperature",
+       "ar": "حرارة",
+       "em": "🌡️"
+      },
+      {
+       "id": "v4",
+       "en": "hurt",
+       "ar": "يؤلم",
+       "em": "🤕"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 27"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "have got + illness",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">I've got a sore throat.</div><div class=\"ex\">My back <b>hurts</b>.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "I've got a sore throat. My back hurts."
+      }
+     ]
+    }
+   ],
+   "lead": "I've got a headache / an earache.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "I've got ___ earache.",
+           "a": "an",
+           "o": [
+            "an",
+            "a"
+           ]
+          },
+          {
+           "s": "My back ___ .",
+           "a": "hurts",
+           "o": [
+            "hurts",
+            "hurt"
+           ]
+          },
+          {
+           "s": "She's got a high ___ .",
+           "a": "temperature",
+           "o": [
+            "temperature",
+            "throat"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "I've got a sore throat.",
+          "My back hurts."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "I've got a sore throat.",
+           "o": [
+            "I've got a sore throat.",
+            "My back hurts."
+           ]
+          },
+          {
+           "a": "My back hurts.",
+           "o": [
+            "My back hurts.",
+            "I've got a sore throat."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "earache",
+       "ipa": "",
+       "meaning": "ألم أذن",
+       "ex": "earache"
+      },
+      {
+       "must": 1,
+       "term": "backache",
+       "ipa": "",
+       "meaning": "ألم ظهر",
+       "ex": "backache"
+      },
+      {
+       "must": 1,
+       "term": "sore throat",
+       "ipa": "",
+       "meaning": "التهاب حلق",
+       "ex": "I've got a sore throat."
+      },
+      {
+       "must": 0,
+       "term": "temperature",
+       "ipa": "",
+       "meaning": "حرارة",
+       "ex": "temperature"
+      },
+      {
+       "must": 0,
+       "term": "hurt",
+       "ipa": "",
+       "meaning": "يؤلم",
+       "ex": "My back hurts."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "I've got ___ earache.",
+       "a": "an",
+       "o": [
+        "an",
+        "a"
+       ],
+       "why": ""
+      },
+      {
+       "q": "My back ___ .",
+       "a": "hurts",
+       "o": [
+        "hurts",
+        "hurt"
+       ],
+       "why": ""
+      },
+      {
+       "q": "She's got a high ___ .",
+       "a": "temperature",
+       "o": [
+        "temperature",
+        "throat"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى sore throat؟",
+       "a": "التهاب حلق",
+       "o": [
+        "التهاب حلق",
+        "ألم أذن",
+        "ألم ظهر"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى hurt؟",
+       "a": "يؤلم",
+       "o": [
+        "يؤلم",
+        "ألم أذن",
+        "ألم ظهر"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "I've got a sore throat.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "I've got a sore throat.",
+       "o": [
+        "I've got a sore throat.",
+        "My back hurts."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

@@ -1,0 +1,287 @@
+{
+ "id": "en-9-u1-l6",
+ "grade": 9,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 1 · Lesson 6: What do they look like?",
+ "titleAr": "كيف يبدو؟ مستدير ومصنوع من المعدن.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "كيف يبدو؟ مستدير ومصنوع من المعدن.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "look like",
+       "ar": "يبدو",
+       "em": "👀"
+      },
+      {
+       "id": "v1",
+       "en": "round",
+       "ar": "مستدير",
+       "em": "⚪"
+      },
+      {
+       "id": "v2",
+       "en": "square",
+       "ar": "مربع",
+       "em": "⬜"
+      },
+      {
+       "id": "v3",
+       "en": "made of",
+       "ar": "مصنوع من",
+       "em": "🧱"
+      },
+      {
+       "id": "v4",
+       "en": "shape",
+       "ar": "شكل",
+       "em": "🔷"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 15"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "look like + noun",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">What does it look <b>like</b>? It's round and made of metal.</div><div class=\"ex\">It looks <b>like</b> a small box.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "What does it look like? It's round and made of metal. It looks like a small box."
+      }
+     ]
+    }
+   ],
+   "lead": "It looks like a box. / What does it look like?",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "What does it look ___ ?",
+           "a": "like",
+           "o": [
+            "like",
+            "likes"
+           ]
+          },
+          {
+           "s": "It's ___ of metal.",
+           "a": "made",
+           "o": [
+            "made",
+            "make"
+           ]
+          },
+          {
+           "s": "A ball is ___ .",
+           "a": "round",
+           "o": [
+            "round",
+            "square"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "What does it look like? It's round and made of metal.",
+          "It looks like a small box."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "What does it look like? It's round and made of metal.",
+           "o": [
+            "What does it look like? It's round and made of metal.",
+            "It looks like a small box."
+           ]
+          },
+          {
+           "a": "It looks like a small box.",
+           "o": [
+            "It looks like a small box.",
+            "What does it look like? It's round and made of metal."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "look like",
+       "ipa": "",
+       "meaning": "يبدو",
+       "ex": "What does it look like? It's round and made of metal."
+      },
+      {
+       "must": 1,
+       "term": "round",
+       "ipa": "",
+       "meaning": "مستدير",
+       "ex": "What does it look like? It's round and made of metal."
+      },
+      {
+       "must": 1,
+       "term": "square",
+       "ipa": "",
+       "meaning": "مربع",
+       "ex": "square"
+      },
+      {
+       "must": 0,
+       "term": "made of",
+       "ipa": "",
+       "meaning": "مصنوع من",
+       "ex": "What does it look like? It's round and made of metal."
+      },
+      {
+       "must": 0,
+       "term": "shape",
+       "ipa": "",
+       "meaning": "شكل",
+       "ex": "shape"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "What does it look ___ ?",
+       "a": "like",
+       "o": [
+        "like",
+        "likes"
+       ],
+       "why": ""
+      },
+      {
+       "q": "It's ___ of metal.",
+       "a": "made",
+       "o": [
+        "made",
+        "make"
+       ],
+       "why": ""
+      },
+      {
+       "q": "A ball is ___ .",
+       "a": "round",
+       "o": [
+        "round",
+        "square"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى square؟",
+       "a": "مربع",
+       "o": [
+        "مربع",
+        "يبدو",
+        "مستدير"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى look like؟",
+       "a": "يبدو",
+       "o": [
+        "يبدو",
+        "مستدير",
+        "مربع"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "What does it look like? It's round and made of metal.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "What does it look like? It's round and made of metal.",
+       "o": [
+        "What does it look like? It's round and made of metal.",
+        "It looks like a small box."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

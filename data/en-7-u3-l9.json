@@ -1,0 +1,337 @@
+{
+ "id": "en-7-u3-l9",
+ "grade": 7,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 3 · Lesson R: Round up",
+ "titleAr": "مراجعة الوحدة — Great Inventions",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "مراجعة الوحدة — Great Inventions",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "finished",
+       "ar": "انتهى",
+       "em": "✅"
+      },
+      {
+       "id": "v1",
+       "en": "already",
+       "ar": "بالفعل",
+       "em": "✔️"
+      },
+      {
+       "id": "v2",
+       "en": "lazy",
+       "ar": "كسول",
+       "em": "😴"
+      },
+      {
+       "id": "v3",
+       "en": "hard-working",
+       "ar": "مجتهد",
+       "em": "💪"
+      },
+      {
+       "id": "v4",
+       "en": "broken",
+       "ar": "مكسور",
+       "em": "💔"
+      },
+      {
+       "id": "v5",
+       "en": "lost",
+       "ar": "فقد",
+       "em": "❓"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 41"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Unit review",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">I've finished my homework.</div><div class=\"ex\">Gwen has tidied her room.</div><div class=\"ex\">What's the matter? I've <b>lost</b> my key.</div><div class=\"ex\">Mad Mack is an inventor.</div><div class=\"ex\">The hungry fox saw some grapes.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "I've finished my homework. Gwen has tidied her room. What's the matter? I've lost my key. Mad Mack is an inventor. The hungry fox saw some grapes."
+      }
+     ]
+    }
+   ],
+   "lead": "نراجع أهم قواعد الوحدة وكلماتها: اقرأ الأمثلة بصوت عالٍ ثم حلّ التمارين.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "I ___ finished my work.",
+           "a": "have",
+           "o": [
+            "have",
+            "has"
+           ]
+          },
+          {
+           "s": "Len ___ tidied his room.",
+           "a": "hasn't",
+           "o": [
+            "hasn't",
+            "haven't"
+           ]
+          },
+          {
+           "s": "I've ___ my key.",
+           "a": "lost",
+           "o": [
+            "lost",
+            "lose"
+           ]
+          },
+          {
+           "s": "He has ___ a machine.",
+           "a": "invented",
+           "o": [
+            "invented",
+            "invent"
+           ]
+          },
+          {
+           "s": "He ___ reach the grapes.",
+           "a": "couldn't",
+           "o": [
+            "couldn't",
+            "can't"
+           ]
+          },
+          {
+           "s": "The wheel ___ invented long ago.",
+           "a": "was",
+           "o": [
+            "was",
+            "were"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "I've finished my homework.",
+          "Gwen has tidied her room.",
+          "What's the matter? I've lost my key.",
+          "Mad Mack is an inventor."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "I've finished my homework.",
+           "o": [
+            "I've finished my homework.",
+            "Gwen has tidied her room.",
+            "What's the matter? I've lost my key."
+           ]
+          },
+          {
+           "a": "Gwen has tidied her room.",
+           "o": [
+            "Gwen has tidied her room.",
+            "I've finished my homework.",
+            "What's the matter? I've lost my key."
+           ]
+          },
+          {
+           "a": "What's the matter? I've lost my key.",
+           "o": [
+            "What's the matter? I've lost my key.",
+            "I've finished my homework.",
+            "Gwen has tidied her room."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "finished",
+       "ipa": "",
+       "meaning": "انتهى",
+       "ex": "I've finished my homework."
+      },
+      {
+       "must": 1,
+       "term": "already",
+       "ipa": "",
+       "meaning": "بالفعل",
+       "ex": "already"
+      },
+      {
+       "must": 1,
+       "term": "lazy",
+       "ipa": "",
+       "meaning": "كسول",
+       "ex": "lazy"
+      },
+      {
+       "must": 0,
+       "term": "hard-working",
+       "ipa": "",
+       "meaning": "مجتهد",
+       "ex": "hard-working"
+      },
+      {
+       "must": 0,
+       "term": "broken",
+       "ipa": "",
+       "meaning": "مكسور",
+       "ex": "broken"
+      },
+      {
+       "must": 0,
+       "term": "lost",
+       "ipa": "",
+       "meaning": "فقد",
+       "ex": "What's the matter? I've lost my key."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "I ___ finished my work.",
+       "a": "have",
+       "o": [
+        "have",
+        "has"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Len ___ tidied his room.",
+       "a": "hasn't",
+       "o": [
+        "hasn't",
+        "haven't"
+       ],
+       "why": ""
+      },
+      {
+       "q": "I've ___ my key.",
+       "a": "lost",
+       "o": [
+        "lost",
+        "lose"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى lost؟",
+       "a": "فقد",
+       "o": [
+        "فقد",
+        "انتهى",
+        "بالفعل"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى already؟",
+       "a": "بالفعل",
+       "o": [
+        "بالفعل",
+        "انتهى",
+        "كسول"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "I've finished my homework.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "I've finished my homework.",
+       "o": [
+        "I've finished my homework.",
+        "Gwen has tidied her room.",
+        "What's the matter? I've lost my key."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

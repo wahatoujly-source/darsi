@@ -1,0 +1,319 @@
+{
+ "id": "en-7-u6-l6",
+ "grade": 7,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 6 · Lesson 6: An Email from Fawzi",
+ "titleAr": "أمي العزيزة، وصلت إلى طوكيو بسلام.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "أمي العزيزة، وصلت إلى طوكيو بسلام.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "Dear",
+       "ar": "عزيزي",
+       "em": "💌"
+      },
+      {
+       "id": "v1",
+       "en": "arrived",
+       "ar": "وصل",
+       "em": "🛬"
+      },
+      {
+       "id": "v2",
+       "en": "host family",
+       "ar": "العائلة المضيفة",
+       "em": "🏠"
+      },
+      {
+       "id": "v3",
+       "en": "miss",
+       "ar": "يشتاق",
+       "em": "🥺"
+      },
+      {
+       "id": "v4",
+       "en": "see you soon",
+       "ar": "أراك قريباً",
+       "em": "👋"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 70"
+  },
+  {
+   "title": "اقرأ",
+   "eyebrow": "الخطوة ٢ — اقرأ",
+   "heading": "اقرأ واستمع",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "📖 An Email from Fawzi",
+     "html": "<div class=\"ex\">Dear Mum, I arrived in Tokyo safely.</div><div class=\"ex\">My host family is very kind.</div><div class=\"ex\">I miss you. See you soon!</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Dear Mum, I arrived in Tokyo safely. My host family is very kind. I miss you. See you soon!"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط ▶ لتسمع النص."
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٣ — القاعدة",
+   "heading": "Email to family",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Dear Mum, I <b>arrived</b> in Tokyo safely.</div><div class=\"ex\">My <b>host</b> family is very kind.</div><div class=\"ex\">I <b>miss</b> you. See you soon!</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Dear Mum, I arrived in Tokyo safely. My host family is very kind. I miss you. See you soon!"
+      }
+     ]
+    }
+   ],
+   "lead": "Dear … / I miss you / See you soon",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٤ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "I ___ in Tokyo safely.",
+           "a": "arrived",
+           "o": [
+            "arrived",
+            "arrive"
+           ]
+          },
+          {
+           "s": "My ___ family is kind.",
+           "a": "host",
+           "o": [
+            "host",
+            "home"
+           ]
+          },
+          {
+           "s": "I ___ you.",
+           "a": "miss",
+           "o": [
+            "miss",
+            "misses"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Dear Mum, I arrived in Tokyo safely.",
+          "My host family is very kind.",
+          "I miss you. See you soon!"
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Dear Mum, I arrived in Tokyo safely.",
+           "o": [
+            "Dear Mum, I arrived in Tokyo safely.",
+            "My host family is very kind.",
+            "I miss you. See you soon!"
+           ]
+          },
+          {
+           "a": "My host family is very kind.",
+           "o": [
+            "My host family is very kind.",
+            "Dear Mum, I arrived in Tokyo safely.",
+            "I miss you. See you soon!"
+           ]
+          },
+          {
+           "a": "I miss you. See you soon!",
+           "o": [
+            "I miss you. See you soon!",
+            "Dear Mum, I arrived in Tokyo safely.",
+            "My host family is very kind."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٥ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "Dear",
+       "ipa": "",
+       "meaning": "عزيزي",
+       "ex": "Dear Mum, I arrived in Tokyo safely."
+      },
+      {
+       "must": 1,
+       "term": "arrived",
+       "ipa": "",
+       "meaning": "وصل",
+       "ex": "Dear Mum, I arrived in Tokyo safely."
+      },
+      {
+       "must": 1,
+       "term": "host family",
+       "ipa": "",
+       "meaning": "العائلة المضيفة",
+       "ex": "My host family is very kind."
+      },
+      {
+       "must": 0,
+       "term": "miss",
+       "ipa": "",
+       "meaning": "يشتاق",
+       "ex": "I miss you. See you soon!"
+      },
+      {
+       "must": 0,
+       "term": "see you soon",
+       "ipa": "",
+       "meaning": "أراك قريباً",
+       "ex": "I miss you. See you soon!"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "I ___ in Tokyo safely.",
+       "a": "arrived",
+       "o": [
+        "arrived",
+        "arrive"
+       ],
+       "why": ""
+      },
+      {
+       "q": "My ___ family is kind.",
+       "a": "host",
+       "o": [
+        "host",
+        "home"
+       ],
+       "why": ""
+      },
+      {
+       "q": "I ___ you.",
+       "a": "miss",
+       "o": [
+        "miss",
+        "misses"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى see you soon؟",
+       "a": "أراك قريباً",
+       "o": [
+        "أراك قريباً",
+        "عزيزي",
+        "وصل"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى Dear؟",
+       "a": "عزيزي",
+       "o": [
+        "عزيزي",
+        "وصل",
+        "العائلة المضيفة"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Dear Mum, I arrived in Tokyo safely.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Dear Mum, I arrived in Tokyo safely.",
+       "o": [
+        "Dear Mum, I arrived in Tokyo safely.",
+        "My host family is very kind.",
+        "I miss you. See you soon!"
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

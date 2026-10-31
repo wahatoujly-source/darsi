@@ -1,0 +1,287 @@
+{
+ "id": "en-8-u6-l4",
+ "grade": 8,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 6 · Lesson 4: What's my job?",
+ "titleAr": "أرتدي زياً وأعمل مع الحيوانات. ما وظيفتي؟",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "أرتدي زياً وأعمل مع الحيوانات. ما وظيفتي؟",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "uniform",
+       "ar": "زي",
+       "em": "👔"
+      },
+      {
+       "id": "v1",
+       "en": "tools",
+       "ar": "أدوات",
+       "em": "🧰"
+      },
+      {
+       "id": "v2",
+       "en": "customers",
+       "ar": "زبائن",
+       "em": "👥"
+      },
+      {
+       "id": "v3",
+       "en": "guess",
+       "ar": "يخمّن",
+       "em": "🤔"
+      },
+      {
+       "id": "v4",
+       "en": "work with",
+       "ar": "يعمل مع",
+       "em": "🤝"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 73"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Questions in present simple",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">I wear a uniform and I work with animals. What's my job?</div><div class=\"ex\">You're a vet!</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "I wear a uniform and I work with animals. What's my job? You're a vet!"
+      }
+     ]
+    }
+   ],
+   "lead": "Do you …? / Does he …?",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "___ you wear a uniform?",
+           "a": "Do",
+           "o": [
+            "Do",
+            "Does"
+           ]
+          },
+          {
+           "s": "___ she work with animals?",
+           "a": "Does",
+           "o": [
+            "Does",
+            "Do"
+           ]
+          },
+          {
+           "s": "I use ___ to fix cars.",
+           "a": "tools",
+           "o": [
+            "tools",
+            "customers"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "I wear a uniform and I work with animals. What's my job?",
+          "You're a vet!"
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "I wear a uniform and I work with animals. What's my job?",
+           "o": [
+            "I wear a uniform and I work with animals. What's my job?",
+            "You're a vet!"
+           ]
+          },
+          {
+           "a": "You're a vet!",
+           "o": [
+            "You're a vet!",
+            "I wear a uniform and I work with animals. What's my job?"
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "uniform",
+       "ipa": "",
+       "meaning": "زي",
+       "ex": "I wear a uniform and I work with animals. What's my job?"
+      },
+      {
+       "must": 1,
+       "term": "tools",
+       "ipa": "",
+       "meaning": "أدوات",
+       "ex": "tools"
+      },
+      {
+       "must": 1,
+       "term": "customers",
+       "ipa": "",
+       "meaning": "زبائن",
+       "ex": "customers"
+      },
+      {
+       "must": 0,
+       "term": "guess",
+       "ipa": "",
+       "meaning": "يخمّن",
+       "ex": "guess"
+      },
+      {
+       "must": 0,
+       "term": "work with",
+       "ipa": "",
+       "meaning": "يعمل مع",
+       "ex": "I wear a uniform and I work with animals. What's my job?"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "___ you wear a uniform?",
+       "a": "Do",
+       "o": [
+        "Do",
+        "Does"
+       ],
+       "why": ""
+      },
+      {
+       "q": "___ she work with animals?",
+       "a": "Does",
+       "o": [
+        "Does",
+        "Do"
+       ],
+       "why": ""
+      },
+      {
+       "q": "I use ___ to fix cars.",
+       "a": "tools",
+       "o": [
+        "tools",
+        "customers"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى customers؟",
+       "a": "زبائن",
+       "o": [
+        "زبائن",
+        "زي",
+        "أدوات"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى uniform؟",
+       "a": "زي",
+       "o": [
+        "زي",
+        "أدوات",
+        "زبائن"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "I wear a uniform and I work with animals. What's my job?",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "I wear a uniform and I work with animals. What's my job?",
+       "o": [
+        "I wear a uniform and I work with animals. What's my job?",
+        "You're a vet!"
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

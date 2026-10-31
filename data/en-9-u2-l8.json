@@ -1,0 +1,287 @@
+{
+ "id": "en-9-u2-l8",
+ "grade": 9,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 2 · Lesson 8: What is your hobby?",
+ "titleAr": "هوايتي الخط العربي.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "هوايتي الخط العربي.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "photography",
+       "ar": "التصوير",
+       "em": "📷"
+      },
+      {
+       "id": "v1",
+       "en": "gardening",
+       "ar": "البستنة",
+       "em": "🪴"
+      },
+      {
+       "id": "v2",
+       "en": "chess",
+       "ar": "الشطرنج",
+       "em": "♟️"
+      },
+      {
+       "id": "v3",
+       "en": "calligraphy",
+       "ar": "الخط العربي",
+       "em": "🖋️"
+      },
+      {
+       "id": "v4",
+       "en": "since",
+       "ar": "منذ",
+       "em": "📅"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 32⁠–⁠35"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Present perfect continuous",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">My hobby is calligraphy.</div><div class=\"ex\">I've <b>been</b> doing it since I was nine.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "My hobby is calligraphy. I've been doing it since I was nine."
+      }
+     ]
+    }
+   ],
+   "lead": "have been + -ing لنشاط بدأ في الماضي ومستمر.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "I've ___ doing it since I was nine.",
+           "a": "been",
+           "o": [
+            "been",
+            "be"
+           ]
+          },
+          {
+           "s": "I have been ___ chess for years.",
+           "a": "playing",
+           "o": [
+            "playing",
+            "played"
+           ]
+          },
+          {
+           "s": "She's been doing photography ___ 2020.",
+           "a": "since",
+           "o": [
+            "since",
+            "for"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "My hobby is calligraphy.",
+          "I've been doing it since I was nine."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "My hobby is calligraphy.",
+           "o": [
+            "My hobby is calligraphy.",
+            "I've been doing it since I was nine."
+           ]
+          },
+          {
+           "a": "I've been doing it since I was nine.",
+           "o": [
+            "I've been doing it since I was nine.",
+            "My hobby is calligraphy."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "photography",
+       "ipa": "",
+       "meaning": "التصوير",
+       "ex": "photography"
+      },
+      {
+       "must": 1,
+       "term": "gardening",
+       "ipa": "",
+       "meaning": "البستنة",
+       "ex": "gardening"
+      },
+      {
+       "must": 1,
+       "term": "chess",
+       "ipa": "",
+       "meaning": "الشطرنج",
+       "ex": "chess"
+      },
+      {
+       "must": 0,
+       "term": "calligraphy",
+       "ipa": "",
+       "meaning": "الخط العربي",
+       "ex": "My hobby is calligraphy."
+      },
+      {
+       "must": 0,
+       "term": "since",
+       "ipa": "",
+       "meaning": "منذ",
+       "ex": "I've been doing it since I was nine."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "I've ___ doing it since I was nine.",
+       "a": "been",
+       "o": [
+        "been",
+        "be"
+       ],
+       "why": ""
+      },
+      {
+       "q": "I have been ___ chess for years.",
+       "a": "playing",
+       "o": [
+        "playing",
+        "played"
+       ],
+       "why": ""
+      },
+      {
+       "q": "She's been doing photography ___ 2020.",
+       "a": "since",
+       "o": [
+        "since",
+        "for"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى gardening؟",
+       "a": "البستنة",
+       "o": [
+        "البستنة",
+        "التصوير",
+        "الشطرنج"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى chess؟",
+       "a": "الشطرنج",
+       "o": [
+        "الشطرنج",
+        "التصوير",
+        "البستنة"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "My hobby is calligraphy.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "My hobby is calligraphy.",
+       "o": [
+        "My hobby is calligraphy.",
+        "I've been doing it since I was nine."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

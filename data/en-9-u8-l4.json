@@ -1,0 +1,337 @@
+{
+ "id": "en-9-u8-l4",
+ "grade": 9,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 8 · Lesson 4: Writing",
+ "titleAr": "مهارة الكتابة — Fun with English 2",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "مهارة الكتابة — Fun with English 2",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "section",
+       "ar": "قسم",
+       "em": "🗂️"
+      },
+      {
+       "id": "v1",
+       "en": "sports page",
+       "ar": "صفحة الرياضة",
+       "em": "⚽"
+      },
+      {
+       "id": "v2",
+       "en": "lesson",
+       "ar": "درس",
+       "em": "📘"
+      },
+      {
+       "id": "v3",
+       "en": "powerful",
+       "ar": "قوي التأثير",
+       "em": "💥"
+      },
+      {
+       "id": "v4",
+       "en": "a",
+       "ar": "أداة نكرة",
+       "em": "1️⃣"
+      },
+      {
+       "id": "v5",
+       "en": "an",
+       "ar": "أداة نكرة قبل متحرك",
+       "em": "🅰️"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 102⁠–⁠104"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Writing",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Where can I find the weather forecast? It's <b>on</b> page 12.</div><div class=\"ex\">He shared a rumour without <b>checking</b> the facts.</div><div class=\"ex\">I saw a man. The man was <b>an</b> engineer.</div><div class=\"ex\">I can't decide. What <b>should</b> I do?</div><div class=\"ex\">Can you tell me where the station <b>is</b>?</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Where can I find the weather forecast? It's on page 12. He shared a rumour without checking the facts. I saw a man. The man was an engineer. I can't decide. What should I do? Can you tell me where the station is?"
+      }
+     ]
+    }
+   ],
+   "lead": "لاحظ ترتيب الكلمات في الجمل الإنجليزية: الفاعل ثم الفعل ثم المفعول. رتّب الجمل واكتبها في دفترك.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "It's ___ page 12.",
+           "a": "on",
+           "o": [
+            "on",
+            "in"
+           ]
+          },
+          {
+           "s": "He shared it without ___ .",
+           "a": "checking",
+           "o": [
+            "checking",
+            "check"
+           ]
+          },
+          {
+           "s": "I saw ___ elephant.",
+           "a": "an",
+           "o": [
+            "an",
+            "a"
+           ]
+          },
+          {
+           "s": "What ___ I do?",
+           "a": "should",
+           "o": [
+            "should",
+            "shall to"
+           ]
+          },
+          {
+           "s": "Can you tell me where the station ___ ?",
+           "a": "is",
+           "o": [
+            "is",
+            "does"
+           ]
+          },
+          {
+           "s": "He's as brave ___ a lion.",
+           "a": "as",
+           "o": [
+            "as",
+            "like"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Where can I find the weather forecast? It's on page 12.",
+          "He shared a rumour without checking the facts.",
+          "I saw a man. The man was an engineer.",
+          "I can't decide. What should I do?"
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Where can I find the weather forecast? It's on page 12.",
+           "o": [
+            "Where can I find the weather forecast? It's on page 12.",
+            "He shared a rumour without checking the facts.",
+            "I saw a man. The man was an engineer."
+           ]
+          },
+          {
+           "a": "He shared a rumour without checking the facts.",
+           "o": [
+            "He shared a rumour without checking the facts.",
+            "Where can I find the weather forecast? It's on page 12.",
+            "I saw a man. The man was an engineer."
+           ]
+          },
+          {
+           "a": "I saw a man. The man was an engineer.",
+           "o": [
+            "I saw a man. The man was an engineer.",
+            "Where can I find the weather forecast? It's on page 12.",
+            "He shared a rumour without checking the facts."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "section",
+       "ipa": "",
+       "meaning": "قسم",
+       "ex": "section"
+      },
+      {
+       "must": 1,
+       "term": "sports page",
+       "ipa": "",
+       "meaning": "صفحة الرياضة",
+       "ex": "sports page"
+      },
+      {
+       "must": 1,
+       "term": "lesson",
+       "ipa": "",
+       "meaning": "درس",
+       "ex": "lesson"
+      },
+      {
+       "must": 0,
+       "term": "powerful",
+       "ipa": "",
+       "meaning": "قوي التأثير",
+       "ex": "powerful"
+      },
+      {
+       "must": 0,
+       "term": "a",
+       "ipa": "",
+       "meaning": "أداة نكرة",
+       "ex": "Where can I find the weather forecast? It's on page 12."
+      },
+      {
+       "must": 0,
+       "term": "an",
+       "ipa": "",
+       "meaning": "أداة نكرة قبل متحرك",
+       "ex": "Where can I find the weather forecast? It's on page 12."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "It's ___ page 12.",
+       "a": "on",
+       "o": [
+        "on",
+        "in"
+       ],
+       "why": ""
+      },
+      {
+       "q": "He shared it without ___ .",
+       "a": "checking",
+       "o": [
+        "checking",
+        "check"
+       ],
+       "why": ""
+      },
+      {
+       "q": "I saw ___ elephant.",
+       "a": "an",
+       "o": [
+        "an",
+        "a"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى a؟",
+       "a": "أداة نكرة",
+       "o": [
+        "أداة نكرة",
+        "قسم",
+        "صفحة الرياضة"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى section؟",
+       "a": "قسم",
+       "o": [
+        "قسم",
+        "صفحة الرياضة",
+        "درس"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Where can I find the weather forecast? It's on page 12.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Where can I find the weather forecast? It's on page 12.",
+       "o": [
+        "Where can I find the weather forecast? It's on page 12.",
+        "He shared a rumour without checking the facts.",
+        "I saw a man. The man was an engineer."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

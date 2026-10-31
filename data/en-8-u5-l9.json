@@ -1,0 +1,337 @@
+{
+ "id": "en-8-u5-l9",
+ "grade": 8,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 5 · Lesson 9: Round up",
+ "titleAr": "مراجعة الوحدة — Communication and Sharing Information",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "مراجعة الوحدة — Communication and Sharing Information",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "messenger",
+       "ar": "رسول",
+       "em": "🏃"
+      },
+      {
+       "id": "v1",
+       "en": "pigeon",
+       "ar": "حمام زاجل",
+       "em": "🕊️"
+      },
+      {
+       "id": "v2",
+       "en": "search engine",
+       "ar": "محرك بحث",
+       "em": "🔍"
+      },
+      {
+       "id": "v3",
+       "en": "encyclopedia",
+       "ar": "موسوعة",
+       "em": "📚"
+      },
+      {
+       "id": "v4",
+       "en": "guess",
+       "ar": "يخمّن",
+       "em": "🤔"
+      },
+      {
+       "id": "v5",
+       "en": "context",
+       "ar": "السياق",
+       "em": "🧩"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 67"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Unit review",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Long ago, people sent messages with pigeons.</div><div class=\"ex\">You can find information in an encyclopedia or online.</div><div class=\"ex\">Use the <b>context</b> to guess the meaning.</div><div class=\"ex\">The journey from Cairo to Tripoli is about 2,000 kilometres.</div><div class=\"ex\">The telephone was invented <b>by</b> Alexander Graham Bell.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Long ago, people sent messages with pigeons. You can find information in an encyclopedia or online. Use the context to guess the meaning. The journey from Cairo to Tripoli is about 2,000 kilometres. The telephone was invented by Alexander Graham Bell."
+      }
+     ]
+    }
+   ],
+   "lead": "نراجع أهم قواعد الوحدة وكلماتها: اقرأ الأمثلة بصوت عالٍ ثم حلّ التمارين.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "Messages ___ carried by messengers.",
+           "a": "were",
+           "o": [
+            "were",
+            "was"
+           ]
+          },
+          {
+           "s": "Check that the source is ___ .",
+           "a": "reliable",
+           "o": [
+            "reliable",
+            "really"
+           ]
+          },
+          {
+           "s": "Use the ___ to guess.",
+           "a": "context",
+           "o": [
+            "context",
+            "contest"
+           ]
+          },
+          {
+           "s": "We drove ___ the coast road.",
+           "a": "along",
+           "o": [
+            "along",
+            "across"
+           ]
+          },
+          {
+           "s": "The telephone was invented ___ Bell.",
+           "a": "by",
+           "o": [
+            "by",
+            "from"
+           ]
+          },
+          {
+           "s": "Phones have become ___ .",
+           "a": "smaller",
+           "o": [
+            "smaller",
+            "more small"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Long ago, people sent messages with pigeons.",
+          "You can find information in an encyclopedia or online.",
+          "Use the context to guess the meaning.",
+          "The journey from Cairo to Tripoli is about 2,000 kilometres."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Long ago, people sent messages with pigeons.",
+           "o": [
+            "Long ago, people sent messages with pigeons.",
+            "You can find information in an encyclopedia or online.",
+            "Use the context to guess the meaning."
+           ]
+          },
+          {
+           "a": "You can find information in an encyclopedia or online.",
+           "o": [
+            "You can find information in an encyclopedia or online.",
+            "Long ago, people sent messages with pigeons.",
+            "Use the context to guess the meaning."
+           ]
+          },
+          {
+           "a": "Use the context to guess the meaning.",
+           "o": [
+            "Use the context to guess the meaning.",
+            "Long ago, people sent messages with pigeons.",
+            "You can find information in an encyclopedia or online."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "messenger",
+       "ipa": "",
+       "meaning": "رسول",
+       "ex": "messenger"
+      },
+      {
+       "must": 1,
+       "term": "pigeon",
+       "ipa": "",
+       "meaning": "حمام زاجل",
+       "ex": "Long ago, people sent messages with pigeons."
+      },
+      {
+       "must": 1,
+       "term": "search engine",
+       "ipa": "",
+       "meaning": "محرك بحث",
+       "ex": "search engine"
+      },
+      {
+       "must": 0,
+       "term": "encyclopedia",
+       "ipa": "",
+       "meaning": "موسوعة",
+       "ex": "You can find information in an encyclopedia or online."
+      },
+      {
+       "must": 0,
+       "term": "guess",
+       "ipa": "",
+       "meaning": "يخمّن",
+       "ex": "Use the context to guess the meaning."
+      },
+      {
+       "must": 0,
+       "term": "context",
+       "ipa": "",
+       "meaning": "السياق",
+       "ex": "Use the context to guess the meaning."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "Messages ___ carried by messengers.",
+       "a": "were",
+       "o": [
+        "were",
+        "was"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Check that the source is ___ .",
+       "a": "reliable",
+       "o": [
+        "reliable",
+        "really"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Use the ___ to guess.",
+       "a": "context",
+       "o": [
+        "context",
+        "contest"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى search engine؟",
+       "a": "محرك بحث",
+       "o": [
+        "محرك بحث",
+        "رسول",
+        "حمام زاجل"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى guess؟",
+       "a": "يخمّن",
+       "o": [
+        "يخمّن",
+        "رسول",
+        "حمام زاجل"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Long ago, people sent messages with pigeons.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Long ago, people sent messages with pigeons.",
+       "o": [
+        "Long ago, people sent messages with pigeons.",
+        "You can find information in an encyclopedia or online.",
+        "Use the context to guess the meaning."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

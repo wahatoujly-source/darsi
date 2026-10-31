@@ -1,0 +1,287 @@
+{
+ "id": "en-8-u5-l6",
+ "grade": 8,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 5 · Lesson 6: Telephones",
+ "titleAr": "أصبحت الهواتف أصغر وأذكى.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "أصبحت الهواتف أصغر وأذكى.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "mobile",
+       "ar": "هاتف محمول",
+       "em": "📱"
+      },
+      {
+       "id": "v1",
+       "en": "landline",
+       "ar": "هاتف أرضي",
+       "em": "☎️"
+      },
+      {
+       "id": "v2",
+       "en": "call",
+       "ar": "مكالمة",
+       "em": "📞"
+      },
+      {
+       "id": "v3",
+       "en": "text",
+       "ar": "رسالة نصية",
+       "em": "💬"
+      },
+      {
+       "id": "v4",
+       "en": "battery",
+       "ar": "بطارية",
+       "em": "🔋"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 63"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Comparatives -er",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Mobile phones have become <b>smaller</b> and smarter.</div><div class=\"ex\">My <b>battery</b> is low. I need to charge it.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Mobile phones have become smaller and smarter. My battery is low. I need to charge it."
+      }
+     ]
+    }
+   ],
+   "lead": "small → smaller, smart → smarter",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "Phones have become ___ .",
+           "a": "smaller",
+           "o": [
+            "smaller",
+            "more small"
+           ]
+          },
+          {
+           "s": "My ___ is low.",
+           "a": "battery",
+           "o": [
+            "battery",
+            "text"
+           ]
+          },
+          {
+           "s": "Send me a ___ .",
+           "a": "text",
+           "o": [
+            "text",
+            "landline"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Mobile phones have become smaller and smarter.",
+          "My battery is low. I need to charge it."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Mobile phones have become smaller and smarter.",
+           "o": [
+            "Mobile phones have become smaller and smarter.",
+            "My battery is low. I need to charge it."
+           ]
+          },
+          {
+           "a": "My battery is low. I need to charge it.",
+           "o": [
+            "My battery is low. I need to charge it.",
+            "Mobile phones have become smaller and smarter."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "mobile",
+       "ipa": "",
+       "meaning": "هاتف محمول",
+       "ex": "Mobile phones have become smaller and smarter."
+      },
+      {
+       "must": 1,
+       "term": "landline",
+       "ipa": "",
+       "meaning": "هاتف أرضي",
+       "ex": "landline"
+      },
+      {
+       "must": 1,
+       "term": "call",
+       "ipa": "",
+       "meaning": "مكالمة",
+       "ex": "call"
+      },
+      {
+       "must": 0,
+       "term": "text",
+       "ipa": "",
+       "meaning": "رسالة نصية",
+       "ex": "text"
+      },
+      {
+       "must": 0,
+       "term": "battery",
+       "ipa": "",
+       "meaning": "بطارية",
+       "ex": "My battery is low. I need to charge it."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "Phones have become ___ .",
+       "a": "smaller",
+       "o": [
+        "smaller",
+        "more small"
+       ],
+       "why": ""
+      },
+      {
+       "q": "My ___ is low.",
+       "a": "battery",
+       "o": [
+        "battery",
+        "text"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Send me a ___ .",
+       "a": "text",
+       "o": [
+        "text",
+        "landline"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى text؟",
+       "a": "رسالة نصية",
+       "o": [
+        "رسالة نصية",
+        "هاتف محمول",
+        "هاتف أرضي"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى call؟",
+       "a": "مكالمة",
+       "o": [
+        "مكالمة",
+        "هاتف محمول",
+        "هاتف أرضي"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Mobile phones have become smaller and smarter.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Mobile phones have become smaller and smarter.",
+       "o": [
+        "Mobile phones have become smaller and smarter.",
+        "My battery is low. I need to charge it."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

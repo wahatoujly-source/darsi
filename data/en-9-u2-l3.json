@@ -1,0 +1,287 @@
+{
+ "id": "en-9-u2-l3",
+ "grade": 9,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 2 · Lesson 3: Books and Films",
+ "titleAr": "الفيلم مبني على رواية مشهورة.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "الفيلم مبني على رواية مشهورة.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "novel",
+       "ar": "رواية",
+       "em": "📖"
+      },
+      {
+       "id": "v1",
+       "en": "author",
+       "ar": "مؤلف",
+       "em": "✍️"
+      },
+      {
+       "id": "v2",
+       "en": "plot",
+       "ar": "حبكة",
+       "em": "🧵"
+      },
+      {
+       "id": "v3",
+       "en": "director",
+       "ar": "مخرج",
+       "em": "🎬"
+      },
+      {
+       "id": "v4",
+       "en": "based on",
+       "ar": "مبني على",
+       "em": "📚"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 25"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Reviewing",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">The film is based <b>on</b> a famous novel.</div><div class=\"ex\">The <b>plot</b> was exciting, but the ending was sad.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "The film is based on a famous novel. The plot was exciting, but the ending was sad."
+      }
+     ]
+    }
+   ],
+   "lead": "The plot was … / I'd recommend it.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "The film is based ___ a novel.",
+           "a": "on",
+           "o": [
+            "on",
+            "in"
+           ]
+          },
+          {
+           "s": "The ___ wrote the novel.",
+           "a": "author",
+           "o": [
+            "author",
+            "director"
+           ]
+          },
+          {
+           "s": "The ___ was exciting.",
+           "a": "plot",
+           "o": [
+            "plot",
+            "plant"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "The film is based on a famous novel.",
+          "The plot was exciting, but the ending was sad."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "The film is based on a famous novel.",
+           "o": [
+            "The film is based on a famous novel.",
+            "The plot was exciting, but the ending was sad."
+           ]
+          },
+          {
+           "a": "The plot was exciting, but the ending was sad.",
+           "o": [
+            "The plot was exciting, but the ending was sad.",
+            "The film is based on a famous novel."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "novel",
+       "ipa": "",
+       "meaning": "رواية",
+       "ex": "The film is based on a famous novel."
+      },
+      {
+       "must": 1,
+       "term": "author",
+       "ipa": "",
+       "meaning": "مؤلف",
+       "ex": "author"
+      },
+      {
+       "must": 1,
+       "term": "plot",
+       "ipa": "",
+       "meaning": "حبكة",
+       "ex": "The plot was exciting, but the ending was sad."
+      },
+      {
+       "must": 0,
+       "term": "director",
+       "ipa": "",
+       "meaning": "مخرج",
+       "ex": "director"
+      },
+      {
+       "must": 0,
+       "term": "based on",
+       "ipa": "",
+       "meaning": "مبني على",
+       "ex": "The film is based on a famous novel."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "The film is based ___ a novel.",
+       "a": "on",
+       "o": [
+        "on",
+        "in"
+       ],
+       "why": ""
+      },
+      {
+       "q": "The ___ wrote the novel.",
+       "a": "author",
+       "o": [
+        "author",
+        "director"
+       ],
+       "why": ""
+      },
+      {
+       "q": "The ___ was exciting.",
+       "a": "plot",
+       "o": [
+        "plot",
+        "plant"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى based on؟",
+       "a": "مبني على",
+       "o": [
+        "مبني على",
+        "رواية",
+        "مؤلف"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى author؟",
+       "a": "مؤلف",
+       "o": [
+        "مؤلف",
+        "رواية",
+        "حبكة"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "The film is based on a famous novel.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "The film is based on a famous novel.",
+       "o": [
+        "The film is based on a famous novel.",
+        "The plot was exciting, but the ending was sad."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

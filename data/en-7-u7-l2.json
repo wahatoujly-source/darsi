@@ -1,0 +1,299 @@
+{
+ "id": "en-7-u7-l2",
+ "grade": 7,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 7 · Lesson 2: Warnings to Children",
+ "titleAr": "احذر! المكواة ساخنة.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "احذر! المكواة ساخنة.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "careful",
+       "ar": "احذر",
+       "em": "⚠️"
+      },
+      {
+       "id": "v1",
+       "en": "hot",
+       "ar": "ساخن",
+       "em": "🔥"
+      },
+      {
+       "id": "v2",
+       "en": "sharp",
+       "ar": "حاد",
+       "em": "🔪"
+      },
+      {
+       "id": "v3",
+       "en": "don't touch",
+       "ar": "لا تلمس",
+       "em": "✋"
+      },
+      {
+       "id": "v4",
+       "en": "could",
+       "ar": "قد",
+       "em": "❗"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 77"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Warnings",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Be <b>careful</b>! The iron is hot.</div><div class=\"ex\">Don't <b>touch</b> the knife. It's sharp.</div><div class=\"ex\">You <b>could</b> hurt yourself.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Be careful! The iron is hot. Don't touch the knife. It's sharp. You could hurt yourself."
+      }
+     ]
+    }
+   ],
+   "lead": "Be careful! / Don't … / You could …",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "Be ___ ! It's hot.",
+           "a": "careful",
+           "o": [
+            "careful",
+            "care"
+           ]
+          },
+          {
+           "s": "Don't ___ the knife.",
+           "a": "touch",
+           "o": [
+            "touch",
+            "touches"
+           ]
+          },
+          {
+           "s": "You ___ hurt yourself.",
+           "a": "could",
+           "o": [
+            "could",
+            "can't"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Be careful! The iron is hot.",
+          "Don't touch the knife. It's sharp.",
+          "You could hurt yourself."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Be careful! The iron is hot.",
+           "o": [
+            "Be careful! The iron is hot.",
+            "Don't touch the knife. It's sharp.",
+            "You could hurt yourself."
+           ]
+          },
+          {
+           "a": "Don't touch the knife. It's sharp.",
+           "o": [
+            "Don't touch the knife. It's sharp.",
+            "Be careful! The iron is hot.",
+            "You could hurt yourself."
+           ]
+          },
+          {
+           "a": "You could hurt yourself.",
+           "o": [
+            "You could hurt yourself.",
+            "Be careful! The iron is hot.",
+            "Don't touch the knife. It's sharp."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "careful",
+       "ipa": "",
+       "meaning": "احذر",
+       "ex": "Be careful! The iron is hot."
+      },
+      {
+       "must": 1,
+       "term": "hot",
+       "ipa": "",
+       "meaning": "ساخن",
+       "ex": "Be careful! The iron is hot."
+      },
+      {
+       "must": 1,
+       "term": "sharp",
+       "ipa": "",
+       "meaning": "حاد",
+       "ex": "Don't touch the knife. It's sharp."
+      },
+      {
+       "must": 0,
+       "term": "don't touch",
+       "ipa": "",
+       "meaning": "لا تلمس",
+       "ex": "Don't touch the knife. It's sharp."
+      },
+      {
+       "must": 0,
+       "term": "could",
+       "ipa": "",
+       "meaning": "قد",
+       "ex": "You could hurt yourself."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "Be ___ ! It's hot.",
+       "a": "careful",
+       "o": [
+        "careful",
+        "care"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Don't ___ the knife.",
+       "a": "touch",
+       "o": [
+        "touch",
+        "touches"
+       ],
+       "why": ""
+      },
+      {
+       "q": "You ___ hurt yourself.",
+       "a": "could",
+       "o": [
+        "could",
+        "can't"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى sharp؟",
+       "a": "حاد",
+       "o": [
+        "حاد",
+        "احذر",
+        "ساخن"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى don't touch؟",
+       "a": "لا تلمس",
+       "o": [
+        "لا تلمس",
+        "احذر",
+        "ساخن"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Be careful! The iron is hot.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Be careful! The iron is hot.",
+       "o": [
+        "Be careful! The iron is hot.",
+        "Don't touch the knife. It's sharp.",
+        "You could hurt yourself."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

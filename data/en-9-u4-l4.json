@@ -1,0 +1,337 @@
+{
+ "id": "en-9-u4-l4",
+ "grade": 9,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 4 · Lesson 4: Writing",
+ "titleAr": "مهارة الكتابة — Fun with English 1",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "مهارة الكتابة — Fun with English 1",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "buyer",
+       "ar": "مشترٍ",
+       "em": "🛒"
+      },
+      {
+       "id": "v1",
+       "en": "seller",
+       "ar": "بائع",
+       "em": "🧑‍💼"
+      },
+      {
+       "id": "v2",
+       "en": "sold out",
+       "ar": "نفدت الكمية",
+       "em": "🚫"
+      },
+      {
+       "id": "v3",
+       "en": "ticket",
+       "ar": "تذكرة",
+       "em": "🎟️"
+      },
+      {
+       "id": "v4",
+       "en": "chores",
+       "ar": "أعمال منزلية",
+       "em": "🧹"
+      },
+      {
+       "id": "v5",
+       "en": "leisure",
+       "ar": "ترفيه",
+       "em": "🎮"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 56⁠–⁠57"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Writing",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">I'm <b>selling</b> my second-hand bike. It's in good condition.</div><div class=\"ex\">We queued for an hour, but the tickets were sold <b>out</b>.</div><div class=\"ex\">I have <b>to</b> do chores before I can play.</div><div class=\"ex\">My hobby is calligraphy.</div><div class=\"ex\">If we didn't have electricity, life <b>would</b> be difficult.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "I'm selling my second-hand bike. It's in good condition. We queued for an hour, but the tickets were sold out. I have to do chores before I can play. My hobby is calligraphy. If we didn't have electricity, life would be difficult."
+      }
+     ]
+    }
+   ],
+   "lead": "لاحظ ترتيب الكلمات في الجمل الإنجليزية: الفاعل ثم الفعل ثم المفعول. رتّب الجمل واكتبها في دفترك.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "I'm ___ my old bike.",
+           "a": "selling",
+           "o": [
+            "selling",
+            "sell"
+           ]
+          },
+          {
+           "s": "The tickets were sold ___ .",
+           "a": "out",
+           "o": [
+            "out",
+            "off"
+           ]
+          },
+          {
+           "s": "It's important ___ balance work and play.",
+           "a": "to",
+           "o": [
+            "to",
+            "for"
+           ]
+          },
+          {
+           "s": "I've ___ doing it since I was nine.",
+           "a": "been",
+           "o": [
+            "been",
+            "be"
+           ]
+          },
+          {
+           "s": "If we didn't have water, we ___ die.",
+           "a": "would",
+           "o": [
+            "would",
+            "will"
+           ]
+          },
+          {
+           "s": "Earthquakes often ___ in Japan.",
+           "a": "happen",
+           "o": [
+            "happen",
+            "happened"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "I'm selling my second-hand bike. It's in good condition.",
+          "We queued for an hour, but the tickets were sold out.",
+          "I have to do chores before I can play.",
+          "My hobby is calligraphy."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "I'm selling my second-hand bike. It's in good condition.",
+           "o": [
+            "I'm selling my second-hand bike. It's in good condition.",
+            "We queued for an hour, but the tickets were sold out.",
+            "I have to do chores before I can play."
+           ]
+          },
+          {
+           "a": "We queued for an hour, but the tickets were sold out.",
+           "o": [
+            "We queued for an hour, but the tickets were sold out.",
+            "I'm selling my second-hand bike. It's in good condition.",
+            "I have to do chores before I can play."
+           ]
+          },
+          {
+           "a": "I have to do chores before I can play.",
+           "o": [
+            "I have to do chores before I can play.",
+            "I'm selling my second-hand bike. It's in good condition.",
+            "We queued for an hour, but the tickets were sold out."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "buyer",
+       "ipa": "",
+       "meaning": "مشترٍ",
+       "ex": "buyer"
+      },
+      {
+       "must": 1,
+       "term": "seller",
+       "ipa": "",
+       "meaning": "بائع",
+       "ex": "seller"
+      },
+      {
+       "must": 1,
+       "term": "sold out",
+       "ipa": "",
+       "meaning": "نفدت الكمية",
+       "ex": "We queued for an hour, but the tickets were sold out."
+      },
+      {
+       "must": 0,
+       "term": "ticket",
+       "ipa": "",
+       "meaning": "تذكرة",
+       "ex": "We queued for an hour, but the tickets were sold out."
+      },
+      {
+       "must": 0,
+       "term": "chores",
+       "ipa": "",
+       "meaning": "أعمال منزلية",
+       "ex": "I have to do chores before I can play."
+      },
+      {
+       "must": 0,
+       "term": "leisure",
+       "ipa": "",
+       "meaning": "ترفيه",
+       "ex": "leisure"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "I'm ___ my old bike.",
+       "a": "selling",
+       "o": [
+        "selling",
+        "sell"
+       ],
+       "why": ""
+      },
+      {
+       "q": "The tickets were sold ___ .",
+       "a": "out",
+       "o": [
+        "out",
+        "off"
+       ],
+       "why": ""
+      },
+      {
+       "q": "It's important ___ balance work and play.",
+       "a": "to",
+       "o": [
+        "to",
+        "for"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى sold out؟",
+       "a": "نفدت الكمية",
+       "o": [
+        "نفدت الكمية",
+        "مشترٍ",
+        "بائع"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى ticket؟",
+       "a": "تذكرة",
+       "o": [
+        "تذكرة",
+        "مشترٍ",
+        "بائع"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "I'm selling my second-hand bike. It's in good condition.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "I'm selling my second-hand bike. It's in good condition.",
+       "o": [
+        "I'm selling my second-hand bike. It's in good condition.",
+        "We queued for an hour, but the tickets were sold out.",
+        "I have to do chores before I can play."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

@@ -1,0 +1,287 @@
+{
+ "id": "en-9-u6-l2",
+ "grade": 9,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 6 · Lesson 2: Careers Advice",
+ "titleAr": "لو كنت مكانك لدرست الهندسة.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "لو كنت مكانك لدرست الهندسة.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "advice",
+       "ar": "نصيحة",
+       "em": "💡"
+      },
+      {
+       "id": "v1",
+       "en": "skills",
+       "ar": "مهارات",
+       "em": "🛠️"
+      },
+      {
+       "id": "v2",
+       "en": "strengths",
+       "ar": "نقاط القوة",
+       "em": "💪"
+      },
+      {
+       "id": "v3",
+       "en": "training",
+       "ar": "تدريب",
+       "em": "📚"
+      },
+      {
+       "id": "v4",
+       "en": "if I were you",
+       "ar": "لو كنت مكانك",
+       "em": "🫵"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 73"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "If I were you, I'd …",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">If I <b>were</b> you, I'd study engineering.</div><div class=\"ex\">Think about your skills and <b>strengths</b>.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "If I were you, I'd study engineering. Think about your skills and strengths."
+      }
+     ]
+    }
+   ],
+   "lead": "للنصيحة بأسلوب الشرط الثاني.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "If I ___ you, I'd study hard.",
+           "a": "were",
+           "o": [
+            "were",
+            "was"
+           ]
+          },
+          {
+           "s": "I'd ___ a course.",
+           "a": "take",
+           "o": [
+            "take",
+            "took"
+           ]
+          },
+          {
+           "s": "Think about your ___ .",
+           "a": "strengths",
+           "o": [
+            "strengths",
+            "strength's"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "If I were you, I'd study engineering.",
+          "Think about your skills and strengths."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "If I were you, I'd study engineering.",
+           "o": [
+            "If I were you, I'd study engineering.",
+            "Think about your skills and strengths."
+           ]
+          },
+          {
+           "a": "Think about your skills and strengths.",
+           "o": [
+            "Think about your skills and strengths.",
+            "If I were you, I'd study engineering."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "advice",
+       "ipa": "",
+       "meaning": "نصيحة",
+       "ex": "advice"
+      },
+      {
+       "must": 1,
+       "term": "skills",
+       "ipa": "",
+       "meaning": "مهارات",
+       "ex": "Think about your skills and strengths."
+      },
+      {
+       "must": 1,
+       "term": "strengths",
+       "ipa": "",
+       "meaning": "نقاط القوة",
+       "ex": "Think about your skills and strengths."
+      },
+      {
+       "must": 0,
+       "term": "training",
+       "ipa": "",
+       "meaning": "تدريب",
+       "ex": "training"
+      },
+      {
+       "must": 0,
+       "term": "if I were you",
+       "ipa": "",
+       "meaning": "لو كنت مكانك",
+       "ex": "If I were you, I'd study engineering."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "If I ___ you, I'd study hard.",
+       "a": "were",
+       "o": [
+        "were",
+        "was"
+       ],
+       "why": ""
+      },
+      {
+       "q": "I'd ___ a course.",
+       "a": "take",
+       "o": [
+        "take",
+        "took"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Think about your ___ .",
+       "a": "strengths",
+       "o": [
+        "strengths",
+        "strength's"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى training؟",
+       "a": "تدريب",
+       "o": [
+        "تدريب",
+        "نصيحة",
+        "مهارات"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى strengths؟",
+       "a": "نقاط القوة",
+       "o": [
+        "نقاط القوة",
+        "نصيحة",
+        "مهارات"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "If I were you, I'd study engineering.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "If I were you, I'd study engineering.",
+       "o": [
+        "If I were you, I'd study engineering.",
+        "Think about your skills and strengths."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

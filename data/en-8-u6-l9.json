@@ -1,0 +1,337 @@
+{
+ "id": "en-8-u6-l9",
+ "grade": 8,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 6 · Lesson 9: Round up",
+ "titleAr": "مراجعة الوحدة — Jobs and Professions",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "مراجعة الوحدة — Jobs and Professions",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "surgeon",
+       "ar": "جرّاح",
+       "em": "🧑‍⚕️"
+      },
+      {
+       "id": "v1",
+       "en": "pharmacist",
+       "ar": "صيدلي",
+       "em": "💊"
+      },
+      {
+       "id": "v2",
+       "en": "shift",
+       "ar": "مناوبة",
+       "em": "🕐"
+      },
+      {
+       "id": "v3",
+       "en": "salary",
+       "ar": "راتب",
+       "em": "💵"
+      },
+      {
+       "id": "v4",
+       "en": "firefighter",
+       "ar": "رجل إطفاء",
+       "em": "🧑‍🚒"
+      },
+      {
+       "id": "v5",
+       "en": "fire engine",
+       "ar": "سيارة إطفاء",
+       "em": "🚒"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 79"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Unit review",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">A pharmacist <b>prepares</b> medicines.</div><div class=\"ex\">A nurse works in shifts, whereas a teacher works in the day.</div><div class=\"ex\">When the alarm rings, firefighters jump into the fire engine.</div><div class=\"ex\">I wear a uniform and I work with animals. What's my job?</div><div class=\"ex\">We <b>have</b> three periods before the break.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "A pharmacist prepares medicines. A nurse works in shifts, whereas a teacher works in the day. When the alarm rings, firefighters jump into the fire engine. I wear a uniform and I work with animals. What's my job? We have three periods before the break."
+      }
+     ]
+    }
+   ],
+   "lead": "نراجع أهم قواعد الوحدة وكلماتها: اقرأ الأمثلة بصوت عالٍ ثم حلّ التمارين.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "A pharmacist ___ medicines.",
+           "a": "prepares",
+           "o": [
+            "prepares",
+            "prepare"
+           ]
+          },
+          {
+           "s": "A farmer works ___ .",
+           "a": "outdoors",
+           "o": [
+            "outdoors",
+            "indoors"
+           ]
+          },
+          {
+           "s": "They ___ to be brave.",
+           "a": "have",
+           "o": [
+            "have",
+            "has"
+           ]
+          },
+          {
+           "s": "___ you wear a uniform?",
+           "a": "Do",
+           "o": [
+            "Do",
+            "Does"
+           ]
+          },
+          {
+           "s": "We have three periods ___ the break.",
+           "a": "before",
+           "o": [
+            "before",
+            "after"
+           ]
+          },
+          {
+           "s": "She's going ___ be an engineer.",
+           "a": "to",
+           "o": [
+            "to",
+            "for"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "A pharmacist prepares medicines.",
+          "A nurse works in shifts, whereas a teacher works in the day.",
+          "When the alarm rings, firefighters jump into the fire engine.",
+          "I wear a uniform and I work with animals. What's my job?"
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "A pharmacist prepares medicines.",
+           "o": [
+            "A pharmacist prepares medicines.",
+            "A nurse works in shifts, whereas a teacher works in the day.",
+            "When the alarm rings, firefighters jump into the fire engine."
+           ]
+          },
+          {
+           "a": "A nurse works in shifts, whereas a teacher works in the day.",
+           "o": [
+            "A nurse works in shifts, whereas a teacher works in the day.",
+            "A pharmacist prepares medicines.",
+            "When the alarm rings, firefighters jump into the fire engine."
+           ]
+          },
+          {
+           "a": "When the alarm rings, firefighters jump into the fire engine.",
+           "o": [
+            "When the alarm rings, firefighters jump into the fire engine.",
+            "A pharmacist prepares medicines.",
+            "A nurse works in shifts, whereas a teacher works in the day."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "surgeon",
+       "ipa": "",
+       "meaning": "جرّاح",
+       "ex": "surgeon"
+      },
+      {
+       "must": 1,
+       "term": "pharmacist",
+       "ipa": "",
+       "meaning": "صيدلي",
+       "ex": "A pharmacist prepares medicines."
+      },
+      {
+       "must": 1,
+       "term": "shift",
+       "ipa": "",
+       "meaning": "مناوبة",
+       "ex": "A nurse works in shifts, whereas a teacher works in the day."
+      },
+      {
+       "must": 0,
+       "term": "salary",
+       "ipa": "",
+       "meaning": "راتب",
+       "ex": "salary"
+      },
+      {
+       "must": 0,
+       "term": "firefighter",
+       "ipa": "",
+       "meaning": "رجل إطفاء",
+       "ex": "When the alarm rings, firefighters jump into the fire engine."
+      },
+      {
+       "must": 0,
+       "term": "fire engine",
+       "ipa": "",
+       "meaning": "سيارة إطفاء",
+       "ex": "When the alarm rings, firefighters jump into the fire engine."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "A pharmacist ___ medicines.",
+       "a": "prepares",
+       "o": [
+        "prepares",
+        "prepare"
+       ],
+       "why": ""
+      },
+      {
+       "q": "A farmer works ___ .",
+       "a": "outdoors",
+       "o": [
+        "outdoors",
+        "indoors"
+       ],
+       "why": ""
+      },
+      {
+       "q": "They ___ to be brave.",
+       "a": "have",
+       "o": [
+        "have",
+        "has"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى firefighter؟",
+       "a": "رجل إطفاء",
+       "o": [
+        "رجل إطفاء",
+        "جرّاح",
+        "صيدلي"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى salary؟",
+       "a": "راتب",
+       "o": [
+        "راتب",
+        "جرّاح",
+        "صيدلي"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "A pharmacist prepares medicines.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "A pharmacist prepares medicines.",
+       "o": [
+        "A pharmacist prepares medicines.",
+        "A nurse works in shifts, whereas a teacher works in the day.",
+        "When the alarm rings, firefighters jump into the fire engine."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

@@ -1,0 +1,299 @@
+{
+ "id": "en-9-u5-l5",
+ "grade": 9,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 5 · Lesson 5: Would you take less?",
+ "titleAr": "إنه غالٍ جداً. هل تقبل أقل؟",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "إنه غالٍ جداً. هل تقبل أقل؟",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "price",
+       "ar": "سعر",
+       "em": "💰"
+      },
+      {
+       "id": "v1",
+       "en": "offer",
+       "ar": "عرض",
+       "em": "🤝"
+      },
+      {
+       "id": "v2",
+       "en": "take less",
+       "ar": "يقبل أقل",
+       "em": "⬇️"
+      },
+      {
+       "id": "v3",
+       "en": "deal",
+       "ar": "صفقة",
+       "em": "🤝"
+      },
+      {
+       "id": "v4",
+       "en": "expensive",
+       "ar": "غالٍ",
+       "em": "💸"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 65"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Bargaining language",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">It's too expensive. Would you take <b>less</b>?</div><div class=\"ex\">I'll <b>offer</b> you fifty dinars.</div><div class=\"ex\">OK, it's a <b>deal</b>!</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "It's too expensive. Would you take less? I'll offer you fifty dinars. OK, it's a deal!"
+      }
+     ]
+    }
+   ],
+   "lead": "Would you take …? / I'll offer … / It's a deal.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "Would you take ___ ?",
+           "a": "less",
+           "o": [
+            "less",
+            "fewer"
+           ]
+          },
+          {
+           "s": "I'll ___ you fifty dinars.",
+           "a": "offer",
+           "o": [
+            "offer",
+            "offers"
+           ]
+          },
+          {
+           "s": "OK, it's a ___ !",
+           "a": "deal",
+           "o": [
+            "deal",
+            "price"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "It's too expensive. Would you take less?",
+          "I'll offer you fifty dinars.",
+          "OK, it's a deal!"
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "It's too expensive. Would you take less?",
+           "o": [
+            "It's too expensive. Would you take less?",
+            "I'll offer you fifty dinars.",
+            "OK, it's a deal!"
+           ]
+          },
+          {
+           "a": "I'll offer you fifty dinars.",
+           "o": [
+            "I'll offer you fifty dinars.",
+            "It's too expensive. Would you take less?",
+            "OK, it's a deal!"
+           ]
+          },
+          {
+           "a": "OK, it's a deal!",
+           "o": [
+            "OK, it's a deal!",
+            "It's too expensive. Would you take less?",
+            "I'll offer you fifty dinars."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "price",
+       "ipa": "",
+       "meaning": "سعر",
+       "ex": "price"
+      },
+      {
+       "must": 1,
+       "term": "offer",
+       "ipa": "",
+       "meaning": "عرض",
+       "ex": "I'll offer you fifty dinars."
+      },
+      {
+       "must": 1,
+       "term": "take less",
+       "ipa": "",
+       "meaning": "يقبل أقل",
+       "ex": "It's too expensive. Would you take less?"
+      },
+      {
+       "must": 0,
+       "term": "deal",
+       "ipa": "",
+       "meaning": "صفقة",
+       "ex": "OK, it's a deal!"
+      },
+      {
+       "must": 0,
+       "term": "expensive",
+       "ipa": "",
+       "meaning": "غالٍ",
+       "ex": "It's too expensive. Would you take less?"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "Would you take ___ ?",
+       "a": "less",
+       "o": [
+        "less",
+        "fewer"
+       ],
+       "why": ""
+      },
+      {
+       "q": "I'll ___ you fifty dinars.",
+       "a": "offer",
+       "o": [
+        "offer",
+        "offers"
+       ],
+       "why": ""
+      },
+      {
+       "q": "OK, it's a ___ !",
+       "a": "deal",
+       "o": [
+        "deal",
+        "price"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى price؟",
+       "a": "سعر",
+       "o": [
+        "سعر",
+        "عرض",
+        "يقبل أقل"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى offer؟",
+       "a": "عرض",
+       "o": [
+        "عرض",
+        "سعر",
+        "يقبل أقل"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "It's too expensive. Would you take less?",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "It's too expensive. Would you take less?",
+       "o": [
+        "It's too expensive. Would you take less?",
+        "I'll offer you fifty dinars.",
+        "OK, it's a deal!"
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

@@ -1,0 +1,357 @@
+{
+ "id": "en-8-u4-l2",
+ "grade": 8,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 4 · Lesson 2: Reading",
+ "titleAr": "مهارة القراءة — Fun with English 1",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "مهارة القراءة — Fun with English 1",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "project",
+       "ar": "مشروع",
+       "em": "🗂️"
+      },
+      {
+       "id": "v1",
+       "en": "plan",
+       "ar": "يخطط",
+       "em": "📋"
+      },
+      {
+       "id": "v2",
+       "en": "camp",
+       "ar": "مخيم",
+       "em": "⛺"
+      },
+      {
+       "id": "v3",
+       "en": "youth",
+       "ar": "شباب",
+       "em": "🧑‍🤝‍🧑"
+      },
+      {
+       "id": "v4",
+       "en": "protein",
+       "ar": "بروتين",
+       "em": "🥩"
+      },
+      {
+       "id": "v5",
+       "en": "vitamins",
+       "ar": "فيتامينات",
+       "em": "🍊"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 51"
+  },
+  {
+   "title": "اقرأ",
+   "eyebrow": "الخطوة ٢ — اقرأ",
+   "heading": "اقرأ واستمع",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "📖 Reading",
+     "html": "<div class=\"ex\">We're going to start a new project.</div><div class=\"ex\">Young people from fifty countries came to the camp.</div><div class=\"ex\">Fruit and vegetables contain vitamins.</div><div class=\"ex\">Get well soon!</div><div class=\"ex\">Swimming classes are from 4 to 5 on Mondays.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "We're going to start a new project. Young people from fifty countries came to the camp. Fruit and vegetables contain vitamins. Get well soon! Swimming classes are from 4 to 5 on Mondays."
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط ▶ لتسمع النص."
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٣ — القاعدة",
+   "heading": "Reading",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">We're <b>going</b> to start a new project.</div><div class=\"ex\">Young people from fifty countries came to the camp.</div><div class=\"ex\">Fruit and vegetables contain vitamins.</div><div class=\"ex\">Get <b>well</b> soon!</div><div class=\"ex\">Swimming classes are from 4 to 5 <b>on</b> Mondays.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "We're going to start a new project. Young people from fifty countries came to the camp. Fruit and vegetables contain vitamins. Get well soon! Swimming classes are from 4 to 5 on Mondays."
+      }
+     ]
+    }
+   ],
+   "lead": "اقرأ الجمل بصوت عالٍ وانتبه إلى الكلمات المميّزة، ثم حلّ التمارين.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٤ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "We're ___ to start a new project.",
+           "a": "going",
+           "o": [
+            "going",
+            "go"
+           ]
+          },
+          {
+           "s": "They ___ in tents.",
+           "a": "slept",
+           "o": [
+            "slept",
+            "sleeped"
+           ]
+          },
+          {
+           "s": "Avoid too ___ sugar.",
+           "a": "much",
+           "o": [
+            "much",
+            "many"
+           ]
+          },
+          {
+           "s": "Get ___ soon!",
+           "a": "well",
+           "o": [
+            "well",
+            "good"
+           ]
+          },
+          {
+           "s": "Classes are ___ Mondays.",
+           "a": "on",
+           "o": [
+            "on",
+            "in"
+           ]
+          },
+          {
+           "s": "Athletes ___ to run in simple shoes.",
+           "a": "used",
+           "o": [
+            "used",
+            "use"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "We're going to start a new project.",
+          "Young people from fifty countries came to the camp.",
+          "Fruit and vegetables contain vitamins.",
+          "Get well soon!"
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "We're going to start a new project.",
+           "o": [
+            "We're going to start a new project.",
+            "Young people from fifty countries came to the camp.",
+            "Fruit and vegetables contain vitamins."
+           ]
+          },
+          {
+           "a": "Young people from fifty countries came to the camp.",
+           "o": [
+            "Young people from fifty countries came to the camp.",
+            "We're going to start a new project.",
+            "Fruit and vegetables contain vitamins."
+           ]
+          },
+          {
+           "a": "Fruit and vegetables contain vitamins.",
+           "o": [
+            "Fruit and vegetables contain vitamins.",
+            "We're going to start a new project.",
+            "Young people from fifty countries came to the camp."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٥ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "project",
+       "ipa": "",
+       "meaning": "مشروع",
+       "ex": "We're going to start a new project."
+      },
+      {
+       "must": 1,
+       "term": "plan",
+       "ipa": "",
+       "meaning": "يخطط",
+       "ex": "plan"
+      },
+      {
+       "must": 1,
+       "term": "camp",
+       "ipa": "",
+       "meaning": "مخيم",
+       "ex": "Young people from fifty countries came to the camp."
+      },
+      {
+       "must": 0,
+       "term": "youth",
+       "ipa": "",
+       "meaning": "شباب",
+       "ex": "youth"
+      },
+      {
+       "must": 0,
+       "term": "protein",
+       "ipa": "",
+       "meaning": "بروتين",
+       "ex": "protein"
+      },
+      {
+       "must": 0,
+       "term": "vitamins",
+       "ipa": "",
+       "meaning": "فيتامينات",
+       "ex": "Fruit and vegetables contain vitamins."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "We're ___ to start a new project.",
+       "a": "going",
+       "o": [
+        "going",
+        "go"
+       ],
+       "why": ""
+      },
+      {
+       "q": "They ___ in tents.",
+       "a": "slept",
+       "o": [
+        "slept",
+        "sleeped"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Avoid too ___ sugar.",
+       "a": "much",
+       "o": [
+        "much",
+        "many"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى youth؟",
+       "a": "شباب",
+       "o": [
+        "شباب",
+        "مشروع",
+        "يخطط"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى project؟",
+       "a": "مشروع",
+       "o": [
+        "مشروع",
+        "يخطط",
+        "مخيم"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "We're going to start a new project.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "We're going to start a new project.",
+       "o": [
+        "We're going to start a new project.",
+        "Young people from fifty countries came to the camp.",
+        "Fruit and vegetables contain vitamins."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

@@ -1,0 +1,287 @@
+{
+ "id": "en-7-u2-l2",
+ "grade": 7,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 2 · Lesson 2: The Months of the Year",
+ "titleAr": "في السنة اثنا عشر شهراً.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "في السنة اثنا عشر شهراً.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "January",
+       "ar": "يناير",
+       "em": "1️⃣"
+      },
+      {
+       "id": "v1",
+       "en": "March",
+       "ar": "مارس",
+       "em": "3️⃣"
+      },
+      {
+       "id": "v2",
+       "en": "June",
+       "ar": "يونيو",
+       "em": "6️⃣"
+      },
+      {
+       "id": "v3",
+       "en": "September",
+       "ar": "سبتمبر",
+       "em": "9️⃣"
+      },
+      {
+       "id": "v4",
+       "en": "December",
+       "ar": "ديسمبر",
+       "em": "🔟"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 21"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "in + month",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">There are twelve months <b>in</b> a year.</div><div class=\"ex\">School starts <b>in</b> September.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "There are twelve months in a year. School starts in September."
+      }
+     ]
+    }
+   ],
+   "lead": "in March / in September — والشهور تبدأ بحرف كبير.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "School starts ___ September.",
+           "a": "in",
+           "o": [
+            "in",
+            "on"
+           ]
+          },
+          {
+           "s": "The first month is ___ .",
+           "a": "January",
+           "o": [
+            "January",
+            "June"
+           ]
+          },
+          {
+           "s": "The last month is ___ .",
+           "a": "December",
+           "o": [
+            "December",
+            "September"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "There are twelve months in a year.",
+          "School starts in September."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "There are twelve months in a year.",
+           "o": [
+            "There are twelve months in a year.",
+            "School starts in September."
+           ]
+          },
+          {
+           "a": "School starts in September.",
+           "o": [
+            "School starts in September.",
+            "There are twelve months in a year."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "January",
+       "ipa": "",
+       "meaning": "يناير",
+       "ex": "January"
+      },
+      {
+       "must": 1,
+       "term": "March",
+       "ipa": "",
+       "meaning": "مارس",
+       "ex": "March"
+      },
+      {
+       "must": 1,
+       "term": "June",
+       "ipa": "",
+       "meaning": "يونيو",
+       "ex": "June"
+      },
+      {
+       "must": 0,
+       "term": "September",
+       "ipa": "",
+       "meaning": "سبتمبر",
+       "ex": "School starts in September."
+      },
+      {
+       "must": 0,
+       "term": "December",
+       "ipa": "",
+       "meaning": "ديسمبر",
+       "ex": "December"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "School starts ___ September.",
+       "a": "in",
+       "o": [
+        "in",
+        "on"
+       ],
+       "why": ""
+      },
+      {
+       "q": "The first month is ___ .",
+       "a": "January",
+       "o": [
+        "January",
+        "June"
+       ],
+       "why": ""
+      },
+      {
+       "q": "The last month is ___ .",
+       "a": "December",
+       "o": [
+        "December",
+        "September"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى September؟",
+       "a": "سبتمبر",
+       "o": [
+        "سبتمبر",
+        "يناير",
+        "مارس"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى March؟",
+       "a": "مارس",
+       "o": [
+        "مارس",
+        "يناير",
+        "يونيو"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "There are twelve months in a year.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "There are twelve months in a year.",
+       "o": [
+        "There are twelve months in a year.",
+        "School starts in September."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

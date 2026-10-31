@@ -4,263 +4,168 @@
  "subject": "en",
  "stage": "primary-1-3",
  "lang": "en",
- "title": "My Friends",
- "titleAr": "الإنجليزية — الصف الثالث",
+ "title": "Unit 1 · Lesson 1: My Friends",
+ "titleAr": "الوحدة الأولى: في المدرسة — الدرس الأول: أصدقائي",
  "steps": [
   {
-   "title": "أتعرّف",
-   "eyebrow": "الخطوة ١ — أتعرّف",
-   "heading": "My Friends",
+   "title": "استمع",
+   "eyebrow": "الخطوة ١ — استمع",
+   "heading": "Hello!",
    "blocks": [
     {
-     "type": "cards",
-     "star": true,
-     "items": [
-      {
-       "t": "friend",
-       "em": "🧑‍🤝‍🧑",
-       "say": "friend",
-       "sub": "صديق",
-       "lang": "en",
-       "must": 1
-      },
-      {
-       "t": "name",
-       "em": "📛",
-       "say": "name",
-       "sub": "اسم",
-       "lang": "en",
-       "must": 1
-      },
-      {
-       "t": "boy",
-       "em": "👦",
-       "say": "boy",
-       "sub": "ولد",
-       "lang": "en",
-       "must": 1
-      },
-      {
-       "t": "girl",
-       "em": "👧",
-       "say": "girl",
-       "sub": "بنت",
-       "lang": "en",
-       "must": 1
-      },
-      {
-       "t": "hello",
-       "em": "👋",
-       "say": "hello",
-       "sub": "مرحباً",
-       "lang": "en",
-       "must": 1
-      }
-     ],
-     "lang": "en"
+     "type": "dialogue",
+     "star": true
     }
    ],
-   "lead": "اضغط على كل بطاقة واسمع. كتابك كتاب النشاط ص 4⁠–⁠6"
+   "lead": "شغّل الحوار وتابع الكلمات المضيئة. كتاب النشاط ص 4–6."
   },
   {
-   "title": "استمع",
-   "eyebrow": "الخطوة ٢ — استمع",
-   "heading": "جمل الدرس",
+   "title": "تكلّم",
+   "eyebrow": "الخطوة ٢ — تكلّم",
+   "heading": "Ask and answer",
    "blocks": [
     {
      "type": "cards",
      "star": true,
      "items": [
       {
-       "t": "Hello! What's your name?",
-       "em": "📛",
-       "say": "Hello! What's your name?",
-       "sub": "مرحباً! ما اسمك؟",
-       "lang": "en",
+       "t": "Hello, what's your name?",
+       "em": "👋",
+       "say": "Hello, what's your name?",
+       "sub": "مرحباً، ما اسمك؟",
        "must": 1
       },
       {
-       "t": "My name is Sami.",
-       "em": "📛",
-       "say": "My name is Sami.",
-       "sub": "اسمي سامي.",
-       "lang": "en",
+       "t": "My name's Omar.",
+       "em": "👦",
+       "say": "My name's Omar.",
+       "sub": "اسمي عمر",
        "must": 1
       },
       {
-       "t": "This is my friend Huda.",
-       "em": "🧑‍🤝‍🧑",
-       "say": "This is my friend Huda.",
-       "sub": "هذه صديقتي هدى.",
-       "lang": "en",
+       "t": "How are you?",
+       "em": "🙂",
+       "say": "Hello, how are you?",
+       "sub": "كيف حالك؟",
+       "must": 1
+      },
+      {
+       "t": "I'm fine, thank you.",
+       "em": "😄",
+       "say": "I'm fine, thank you.",
+       "sub": "أنا بخير، شكراً",
+       "must": 1
+      },
+      {
+       "t": "How old are you?",
+       "em": "🎂",
+       "say": "How old are you?",
+       "sub": "كم عمرك؟",
+       "must": 1
+      },
+      {
+       "t": "I'm 8.",
+       "em": "8️⃣",
+       "say": "I'm eight.",
+       "sub": "عمري 8 سنوات",
        "must": 1
       }
      ],
      "lang": "en"
     }
    ],
-   "lead": "اسمع الجملة وردّدها."
+   "lead": "اضغط على البطاقة واسمع، ثم ردّد بصوت عالٍ."
   },
   {
    "title": "العب",
    "eyebrow": "الخطوة ٣ — العب",
-   "heading": "اسمع واختر الصورة",
+   "heading": "What do you say?",
    "blocks": [
     {
      "type": "game",
      "star": true,
      "items": [
       {
-       "say": "friend",
+       "q": "What's your name?",
        "o": [
-        "🧑‍🤝‍🧑",
-        "👋",
-        "📛"
+        "My name's Reem.",
+        "I'm 8."
        ],
-       "a": "🧑‍🤝‍🧑",
-       "lang": "en"
+       "a": "My name's Reem.",
+       "show": "👧"
       },
       {
-       "say": "name",
+       "q": "How are you?",
        "o": [
-        "📛",
-        "👧",
-        "🧑‍🤝‍🧑"
+        "I'm fine, thank you.",
+        "My name's Omar."
        ],
-       "a": "📛",
-       "lang": "en"
+       "a": "I'm fine, thank you.",
+       "show": "🙂"
       },
       {
-       "say": "boy",
+       "q": "How old are you?",
        "o": [
-        "👦",
-        "📛",
-        "👧"
+        "I'm 8.",
+        "I'm fine."
        ],
-       "a": "👦",
-       "lang": "en"
+       "a": "I'm 8.",
+       "show": "🎂"
       },
       {
-       "say": "girl",
+       "q": "Hello!",
        "o": [
-        "👧",
-        "👋",
-        "👦"
+        "Hello!",
+        "Goodbye!"
        ],
-       "a": "👧",
-       "lang": "en"
-      },
-      {
-       "say": "hello",
-       "o": [
-        "👋",
-        "👧",
-        "🧑‍🤝‍🧑"
-       ],
-       "a": "👋",
-       "lang": "en"
+       "a": "Hello!",
+       "show": "👋"
       }
      ],
-     "lang": "en"
+     "q": "ماذا تقول؟"
     }
-   ]
+   ],
+   "lead": "اختر الجواب المناسب."
   },
   {
-   "title": "افهم",
-   "eyebrow": "الخطوة ٤ — افهم",
-   "heading": "ما معنى الجملة؟",
+   "title": "اكتب",
+   "eyebrow": "الخطوة ٤ — اكتب",
+   "heading": "Letters a–d",
    "blocks": [
     {
-     "type": "game",
+     "type": "trace",
      "star": true,
      "items": [
       {
-       "say": "Hello! What's your name?",
-       "o": [
-        "مرحباً! ما اسمك؟",
-        "اسمي سامي.",
-        "هذه صديقتي هدى."
-       ],
-       "a": "مرحباً! ما اسمك؟",
-       "lang": "en"
+       "t": "a",
+       "say": "a",
+       "size": 120
       },
       {
-       "say": "My name is Sami.",
-       "o": [
-        "اسمي سامي.",
-        "مرحباً! ما اسمك؟",
-        "هذه صديقتي هدى."
-       ],
-       "a": "اسمي سامي.",
-       "lang": "en"
+       "t": "b",
+       "say": "b",
+       "size": 120
       },
       {
-       "say": "This is my friend Huda.",
-       "o": [
-        "هذه صديقتي هدى.",
-        "مرحباً! ما اسمك؟",
-        "اسمي سامي."
-       ],
-       "a": "هذه صديقتي هدى.",
-       "lang": "en"
+       "t": "c",
+       "say": "c",
+       "size": 120
+      },
+      {
+       "t": "d",
+       "say": "d",
+       "size": 120
       }
      ],
-     "lang": "en"
-    }
-   ]
-  },
-  {
-   "title": "أكمل",
-   "eyebrow": "الخطوة ٥ — أكمل",
-   "heading": "اختر الكلمة الناقصة",
-   "blocks": [
-    {
-     "type": "game",
-     "star": true,
-     "items": [
-      {
-       "say": "What's your name ?",
-       "o": [
-        "name",
-        "friend"
-       ],
-       "a": "name",
-       "sayQ": false,
-       "show": "What's your ___ ?",
-       "lang": "en"
-      },
-      {
-       "say": "My name is Sami.",
-       "o": [
-        "is",
-        "are"
-       ],
-       "a": "is",
-       "sayQ": false,
-       "show": "My name ___ Sami.",
-       "lang": "en"
-      },
-      {
-       "say": "This is my friend Huda.",
-       "o": [
-        "friend",
-        "name"
-       ],
-       "a": "friend",
-       "sayQ": false,
-       "show": "This is my ___ Huda.",
-       "lang": "en"
-      }
-     ],
-     "q": "اختر الكلمة المناسبة",
+     "need": 4,
      "lang": "en"
     }
    ],
-   "lead": "نسأل عن الاسم ونجيب My name is …"
+   "lead": "مرّر إصبعك فوق الحرف واسمعه."
   },
   {
    "title": "اختبار",
-   "eyebrow": "الخطوة ٦ — اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
    "heading": "اختبر نفسك",
    "blocks": [
     {
@@ -268,70 +173,98 @@
      "star": true,
      "items": [
       {
-       "say": "friend",
+       "say": "How old are you?",
        "o": [
-        "🧑‍🤝‍🧑",
-        "👦",
-        "👋"
-       ],
-       "a": "🧑‍🤝‍🧑",
-       "lang": "en"
-      },
-      {
-       "say": "name",
-       "o": [
-        "📛",
+        "🎂",
         "👋",
-        "👧"
+        "🙂"
        ],
-       "a": "📛",
+       "a": "🎂",
        "lang": "en"
       },
       {
-       "say": "boy",
+       "say": "I'm fine, thank you.",
        "o": [
-        "👦",
-        "🧑‍🤝‍🧑",
-        "📛"
+        "😄",
+        "🎂",
+        "👦"
        ],
-       "a": "👦",
+       "a": "😄",
        "lang": "en"
       },
       {
-       "say": "girl",
+       "q": "What's your name?",
        "o": [
-        "👧",
-        "🧑‍🤝‍🧑",
-        "👋"
+        "My name's Omar.",
+        "I'm fine."
        ],
-       "a": "👧",
+       "a": "My name's Omar."
+      },
+      {
+       "say": "b",
+       "o": [
+        "b",
+        "d",
+        "p"
+       ],
+       "a": "b",
        "lang": "en"
       },
       {
-       "say": "Hello! What's your name?",
+       "say": "d",
        "o": [
-        "مرحباً! ما اسمك؟",
-        "اسمي سامي.",
-        "هذه صديقتي هدى."
+        "d",
+        "b",
+        "a"
        ],
-       "a": "مرحباً! ما اسمك؟",
-       "lang": "en"
-      },
-      {
-       "say": "My name is Sami.",
-       "o": [
-        "اسمي سامي.",
-        "مرحباً! ما اسمك؟",
-        "هذه صديقتي هدى."
-       ],
-       "a": "اسمي سامي.",
+       "a": "d",
        "lang": "en"
       }
      ],
      "final": true,
-     "lang": "en"
+     "lang": "en",
+     "pass": 3
     }
    ]
   }
+ ],
+ "characters": {
+  "Omar": {
+   "ar": "عمر",
+   "color": "--c2",
+   "g": "m",
+   "pitch": 1.45
+  },
+  "Reem": {
+   "ar": "ريم",
+   "color": "--c4",
+   "g": "f",
+   "pitch": 1.6
+  }
+ },
+ "dialogue": [
+  [
+   "Omar",
+   "Hello, what's your name?"
+  ],
+  [
+   "Reem",
+   "My name's Reem. What's your name?"
+  ],
+  [
+   "Omar",
+   "My name's Omar. How are you?"
+  ],
+  [
+   "Reem",
+   "I'm fine, thank you. How old are you?"
+  ],
+  [
+   "Omar",
+   "I'm 8."
+  ]
+ ],
+ "left": [
+  "Omar"
  ]
 }

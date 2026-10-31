@@ -1,0 +1,287 @@
+{
+ "id": "en-7-u5-l7",
+ "grade": 7,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 5 · Lesson 7: Different Countries",
+ "titleAr": "لكل بلد عاداته.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "لكل بلد عاداته.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "custom",
+       "ar": "عادة",
+       "em": "🎎"
+      },
+      {
+       "id": "v1",
+       "en": "food",
+       "ar": "طعام",
+       "em": "🍲"
+      },
+      {
+       "id": "v2",
+       "en": "famous",
+       "ar": "مشهور",
+       "em": "⭐"
+      },
+      {
+       "id": "v3",
+       "en": "culture",
+       "ar": "ثقافة",
+       "em": "🎭"
+      },
+      {
+       "id": "v4",
+       "en": "tradition",
+       "ar": "تقليد",
+       "em": "🏺"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 59"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "famous for",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Each country has its own <b>customs</b>.</div><div class=\"ex\">Libya is famous <b>for</b> couscous and bazeen.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Each country has its own customs. Libya is famous for couscous and bazeen."
+      }
+     ]
+    }
+   ],
+   "lead": "X is famous for …",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "Libya is famous ___ bazeen.",
+           "a": "for",
+           "o": [
+            "for",
+            "of"
+           ]
+          },
+          {
+           "s": "Every country has its own ___ .",
+           "a": "customs",
+           "o": [
+            "customs",
+            "custom's"
+           ]
+          },
+          {
+           "s": "Japan's ___ is very old.",
+           "a": "culture",
+           "o": [
+            "culture",
+            "cultural"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Each country has its own customs.",
+          "Libya is famous for couscous and bazeen."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Each country has its own customs.",
+           "o": [
+            "Each country has its own customs.",
+            "Libya is famous for couscous and bazeen."
+           ]
+          },
+          {
+           "a": "Libya is famous for couscous and bazeen.",
+           "o": [
+            "Libya is famous for couscous and bazeen.",
+            "Each country has its own customs."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "custom",
+       "ipa": "",
+       "meaning": "عادة",
+       "ex": "Each country has its own customs."
+      },
+      {
+       "must": 1,
+       "term": "food",
+       "ipa": "",
+       "meaning": "طعام",
+       "ex": "food"
+      },
+      {
+       "must": 1,
+       "term": "famous",
+       "ipa": "",
+       "meaning": "مشهور",
+       "ex": "Libya is famous for couscous and bazeen."
+      },
+      {
+       "must": 0,
+       "term": "culture",
+       "ipa": "",
+       "meaning": "ثقافة",
+       "ex": "culture"
+      },
+      {
+       "must": 0,
+       "term": "tradition",
+       "ipa": "",
+       "meaning": "تقليد",
+       "ex": "tradition"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "Libya is famous ___ bazeen.",
+       "a": "for",
+       "o": [
+        "for",
+        "of"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Every country has its own ___ .",
+       "a": "customs",
+       "o": [
+        "customs",
+        "custom's"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Japan's ___ is very old.",
+       "a": "culture",
+       "o": [
+        "culture",
+        "cultural"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى food؟",
+       "a": "طعام",
+       "o": [
+        "طعام",
+        "عادة",
+        "مشهور"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى culture؟",
+       "a": "ثقافة",
+       "o": [
+        "ثقافة",
+        "عادة",
+        "طعام"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Each country has its own customs.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Each country has its own customs.",
+       "o": [
+        "Each country has its own customs.",
+        "Libya is famous for couscous and bazeen."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

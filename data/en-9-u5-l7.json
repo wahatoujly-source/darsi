@@ -1,0 +1,287 @@
+{
+ "id": "en-9-u5-l7",
+ "grade": 9,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 5 · Lesson 7: A Website for Me",
+ "titleAr": "أصمم موقعاً عن تاريخ ليبيا.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "أصمم موقعاً عن تاريخ ليبيا.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "website",
+       "ar": "موقع إلكتروني",
+       "em": "🌐"
+      },
+      {
+       "id": "v1",
+       "en": "design",
+       "ar": "يصمم",
+       "em": "🎨"
+      },
+      {
+       "id": "v2",
+       "en": "homepage",
+       "ar": "الصفحة الرئيسية",
+       "em": "🏠"
+      },
+      {
+       "id": "v3",
+       "en": "link",
+       "ar": "رابط",
+       "em": "🔗"
+      },
+      {
+       "id": "v4",
+       "en": "update",
+       "ar": "يحدّث",
+       "em": "🔄"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 68"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Present continuous for current projects",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">I'm <b>designing</b> a website about Libyan history.</div><div class=\"ex\">The <b>homepage</b> has links to five pages.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "I'm designing a website about Libyan history. The homepage has links to five pages."
+      }
+     ]
+    }
+   ],
+   "lead": "I'm designing … / We're updating …",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "I'm ___ a website.",
+           "a": "designing",
+           "o": [
+            "designing",
+            "design"
+           ]
+          },
+          {
+           "s": "The ___ has five links.",
+           "a": "homepage",
+           "o": [
+            "homepage",
+            "website"
+           ]
+          },
+          {
+           "s": "I ___ it every week.",
+           "a": "update",
+           "o": [
+            "update",
+            "updates"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "I'm designing a website about Libyan history.",
+          "The homepage has links to five pages."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "I'm designing a website about Libyan history.",
+           "o": [
+            "I'm designing a website about Libyan history.",
+            "The homepage has links to five pages."
+           ]
+          },
+          {
+           "a": "The homepage has links to five pages.",
+           "o": [
+            "The homepage has links to five pages.",
+            "I'm designing a website about Libyan history."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "website",
+       "ipa": "",
+       "meaning": "موقع إلكتروني",
+       "ex": "I'm designing a website about Libyan history."
+      },
+      {
+       "must": 1,
+       "term": "design",
+       "ipa": "",
+       "meaning": "يصمم",
+       "ex": "I'm designing a website about Libyan history."
+      },
+      {
+       "must": 1,
+       "term": "homepage",
+       "ipa": "",
+       "meaning": "الصفحة الرئيسية",
+       "ex": "The homepage has links to five pages."
+      },
+      {
+       "must": 0,
+       "term": "link",
+       "ipa": "",
+       "meaning": "رابط",
+       "ex": "The homepage has links to five pages."
+      },
+      {
+       "must": 0,
+       "term": "update",
+       "ipa": "",
+       "meaning": "يحدّث",
+       "ex": "update"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "I'm ___ a website.",
+       "a": "designing",
+       "o": [
+        "designing",
+        "design"
+       ],
+       "why": ""
+      },
+      {
+       "q": "The ___ has five links.",
+       "a": "homepage",
+       "o": [
+        "homepage",
+        "website"
+       ],
+       "why": ""
+      },
+      {
+       "q": "I ___ it every week.",
+       "a": "update",
+       "o": [
+        "update",
+        "updates"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى design؟",
+       "a": "يصمم",
+       "o": [
+        "يصمم",
+        "موقع إلكتروني",
+        "الصفحة الرئيسية"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى website؟",
+       "a": "موقع إلكتروني",
+       "o": [
+        "موقع إلكتروني",
+        "يصمم",
+        "الصفحة الرئيسية"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "I'm designing a website about Libyan history.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "I'm designing a website about Libyan history.",
+       "o": [
+        "I'm designing a website about Libyan history.",
+        "The homepage has links to five pages."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

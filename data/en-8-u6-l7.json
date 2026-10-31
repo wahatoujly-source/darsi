@@ -1,0 +1,287 @@
+{
+ "id": "en-8-u6-l7",
+ "grade": 8,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 6 · Lesson 7: Career Plans",
+ "titleAr": "بعد الجامعة سأتقدم لوظيفة.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "بعد الجامعة سأتقدم لوظيفة.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "career",
+       "ar": "مهنة",
+       "em": "💼"
+      },
+      {
+       "id": "v1",
+       "en": "experience",
+       "ar": "خبرة",
+       "em": "🧠"
+      },
+      {
+       "id": "v2",
+       "en": "qualifications",
+       "ar": "مؤهلات",
+       "em": "🎓"
+      },
+      {
+       "id": "v3",
+       "en": "apply",
+       "ar": "يتقدّم",
+       "em": "📝"
+      },
+      {
+       "id": "v4",
+       "en": "will",
+       "ar": "سوف",
+       "em": "🔮"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 76⁠–⁠77"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "will vs going to",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">After university, I <b>will</b> apply for a job.</div><div class=\"ex\">You need good <b>qualifications</b> and experience.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "After university, I will apply for a job. You need good qualifications and experience."
+      }
+     ]
+    }
+   ],
+   "lead": "will للتنبؤ والقرار، going to للخطة.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "I ___ apply for a job.",
+           "a": "will",
+           "o": [
+            "will",
+            "am"
+           ]
+          },
+          {
+           "s": "You need good ___ .",
+           "a": "qualifications",
+           "o": [
+            "qualifications",
+            "qualification's"
+           ]
+          },
+          {
+           "s": "___ for the job online.",
+           "a": "Apply",
+           "o": [
+            "Apply",
+            "Applies"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "After university, I will apply for a job.",
+          "You need good qualifications and experience."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "After university, I will apply for a job.",
+           "o": [
+            "After university, I will apply for a job.",
+            "You need good qualifications and experience."
+           ]
+          },
+          {
+           "a": "You need good qualifications and experience.",
+           "o": [
+            "You need good qualifications and experience.",
+            "After university, I will apply for a job."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "career",
+       "ipa": "",
+       "meaning": "مهنة",
+       "ex": "career"
+      },
+      {
+       "must": 1,
+       "term": "experience",
+       "ipa": "",
+       "meaning": "خبرة",
+       "ex": "You need good qualifications and experience."
+      },
+      {
+       "must": 1,
+       "term": "qualifications",
+       "ipa": "",
+       "meaning": "مؤهلات",
+       "ex": "You need good qualifications and experience."
+      },
+      {
+       "must": 0,
+       "term": "apply",
+       "ipa": "",
+       "meaning": "يتقدّم",
+       "ex": "After university, I will apply for a job."
+      },
+      {
+       "must": 0,
+       "term": "will",
+       "ipa": "",
+       "meaning": "سوف",
+       "ex": "After university, I will apply for a job."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "I ___ apply for a job.",
+       "a": "will",
+       "o": [
+        "will",
+        "am"
+       ],
+       "why": ""
+      },
+      {
+       "q": "You need good ___ .",
+       "a": "qualifications",
+       "o": [
+        "qualifications",
+        "qualification's"
+       ],
+       "why": ""
+      },
+      {
+       "q": "___ for the job online.",
+       "a": "Apply",
+       "o": [
+        "Apply",
+        "Applies"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى apply؟",
+       "a": "يتقدّم",
+       "o": [
+        "يتقدّم",
+        "مهنة",
+        "خبرة"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى experience؟",
+       "a": "خبرة",
+       "o": [
+        "خبرة",
+        "مهنة",
+        "مؤهلات"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "After university, I will apply for a job.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "After university, I will apply for a job.",
+       "o": [
+        "After university, I will apply for a job.",
+        "You need good qualifications and experience."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

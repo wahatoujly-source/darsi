@@ -1,0 +1,287 @@
+{
+ "id": "en-9-u3-l1",
+ "grade": 9,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 3 · Lesson 1: Creatures in Our World",
+ "titleAr": "هناك ملايين الأنواع على الأرض.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "هناك ملايين الأنواع على الأرض.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "creature",
+       "ar": "مخلوق",
+       "em": "🦎"
+      },
+      {
+       "id": "v1",
+       "en": "species",
+       "ar": "نوع",
+       "em": "🧬"
+      },
+      {
+       "id": "v2",
+       "en": "mammal",
+       "ar": "ثدييات",
+       "em": "🐋"
+      },
+      {
+       "id": "v3",
+       "en": "reptile",
+       "ar": "زواحف",
+       "em": "🐢"
+      },
+      {
+       "id": "v4",
+       "en": "amphibian",
+       "ar": "برمائيات",
+       "em": "🐸"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 36⁠–⁠37"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Plural nouns",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">There are millions of <b>species</b> on Earth.</div><div class=\"ex\">Frogs are <b>amphibians</b>; they live on land and in water.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "There are millions of species on Earth. Frogs are amphibians; they live on land and in water."
+      }
+     ]
+    }
+   ],
+   "lead": "species (مفرد وجمع)، creature → creatures",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "Frogs are ___ .",
+           "a": "amphibians",
+           "o": [
+            "amphibians",
+            "reptiles"
+           ]
+          },
+          {
+           "s": "Whales are ___ .",
+           "a": "mammals",
+           "o": [
+            "mammals",
+            "reptiles"
+           ]
+          },
+          {
+           "s": "There are millions of ___ .",
+           "a": "species",
+           "o": [
+            "species",
+            "specie"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "There are millions of species on Earth.",
+          "Frogs are amphibians; they live on land and in water."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "There are millions of species on Earth.",
+           "o": [
+            "There are millions of species on Earth.",
+            "Frogs are amphibians; they live on land and in water."
+           ]
+          },
+          {
+           "a": "Frogs are amphibians; they live on land and in water.",
+           "o": [
+            "Frogs are amphibians; they live on land and in water.",
+            "There are millions of species on Earth."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "creature",
+       "ipa": "",
+       "meaning": "مخلوق",
+       "ex": "creature"
+      },
+      {
+       "must": 1,
+       "term": "species",
+       "ipa": "",
+       "meaning": "نوع",
+       "ex": "There are millions of species on Earth."
+      },
+      {
+       "must": 1,
+       "term": "mammal",
+       "ipa": "",
+       "meaning": "ثدييات",
+       "ex": "mammal"
+      },
+      {
+       "must": 0,
+       "term": "reptile",
+       "ipa": "",
+       "meaning": "زواحف",
+       "ex": "reptile"
+      },
+      {
+       "must": 0,
+       "term": "amphibian",
+       "ipa": "",
+       "meaning": "برمائيات",
+       "ex": "Frogs are amphibians; they live on land and in water."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "Frogs are ___ .",
+       "a": "amphibians",
+       "o": [
+        "amphibians",
+        "reptiles"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Whales are ___ .",
+       "a": "mammals",
+       "o": [
+        "mammals",
+        "reptiles"
+       ],
+       "why": ""
+      },
+      {
+       "q": "There are millions of ___ .",
+       "a": "species",
+       "o": [
+        "species",
+        "specie"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى reptile؟",
+       "a": "زواحف",
+       "o": [
+        "زواحف",
+        "مخلوق",
+        "نوع"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى species؟",
+       "a": "نوع",
+       "o": [
+        "نوع",
+        "مخلوق",
+        "ثدييات"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "There are millions of species on Earth.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "There are millions of species on Earth.",
+       "o": [
+        "There are millions of species on Earth.",
+        "Frogs are amphibians; they live on land and in water."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

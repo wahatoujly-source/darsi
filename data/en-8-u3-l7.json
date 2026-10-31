@@ -1,0 +1,287 @@
+{
+ "id": "en-8-u3-l7",
+ "grade": 8,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 3 · Lesson 7: Olympic Facts and Figures",
+ "titleAr": "للعلم الأولمبي خمس حلقات.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "للعلم الأولمبي خمس حلقات.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "million",
+       "ar": "مليون",
+       "em": "🔢"
+      },
+      {
+       "id": "v1",
+       "en": "percent",
+       "ar": "بالمئة",
+       "em": "%"
+      },
+      {
+       "id": "v2",
+       "en": "about",
+       "ar": "حوالي",
+       "em": "≈"
+      },
+      {
+       "id": "v3",
+       "en": "rings",
+       "ar": "حلقات",
+       "em": "⭕"
+      },
+      {
+       "id": "v4",
+       "en": "ancient",
+       "ar": "قديم",
+       "em": "🏛️"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 43"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Numbers and facts",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">The Olympic flag has five <b>rings</b>.</div><div class=\"ex\">The first Olympics took place in <b>ancient</b> Greece.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "The Olympic flag has five rings. The first Olympics took place in ancient Greece."
+      }
+     ]
+    }
+   ],
+   "lead": "about + رقم = تقريباً",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "The Olympic flag has five ___ .",
+           "a": "rings",
+           "o": [
+            "rings",
+            "ring"
+           ]
+          },
+          {
+           "s": "The first Olympics were in ___ Greece.",
+           "a": "ancient",
+           "o": [
+            "ancient",
+            "modern"
+           ]
+          },
+          {
+           "s": "___ 10,000 athletes took part. (تقريباً)",
+           "a": "About",
+           "o": [
+            "About",
+            "Above"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "The Olympic flag has five rings.",
+          "The first Olympics took place in ancient Greece."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "The Olympic flag has five rings.",
+           "o": [
+            "The Olympic flag has five rings.",
+            "The first Olympics took place in ancient Greece."
+           ]
+          },
+          {
+           "a": "The first Olympics took place in ancient Greece.",
+           "o": [
+            "The first Olympics took place in ancient Greece.",
+            "The Olympic flag has five rings."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "million",
+       "ipa": "",
+       "meaning": "مليون",
+       "ex": "million"
+      },
+      {
+       "must": 1,
+       "term": "percent",
+       "ipa": "",
+       "meaning": "بالمئة",
+       "ex": "percent"
+      },
+      {
+       "must": 1,
+       "term": "about",
+       "ipa": "",
+       "meaning": "حوالي",
+       "ex": "about"
+      },
+      {
+       "must": 0,
+       "term": "rings",
+       "ipa": "",
+       "meaning": "حلقات",
+       "ex": "The Olympic flag has five rings."
+      },
+      {
+       "must": 0,
+       "term": "ancient",
+       "ipa": "",
+       "meaning": "قديم",
+       "ex": "The first Olympics took place in ancient Greece."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "The Olympic flag has five ___ .",
+       "a": "rings",
+       "o": [
+        "rings",
+        "ring"
+       ],
+       "why": ""
+      },
+      {
+       "q": "The first Olympics were in ___ Greece.",
+       "a": "ancient",
+       "o": [
+        "ancient",
+        "modern"
+       ],
+       "why": ""
+      },
+      {
+       "q": "___ 10,000 athletes took part. (تقريباً)",
+       "a": "About",
+       "o": [
+        "About",
+        "Above"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى ancient؟",
+       "a": "قديم",
+       "o": [
+        "قديم",
+        "مليون",
+        "بالمئة"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى about؟",
+       "a": "حوالي",
+       "o": [
+        "حوالي",
+        "مليون",
+        "بالمئة"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "The Olympic flag has five rings.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "The Olympic flag has five rings.",
+       "o": [
+        "The Olympic flag has five rings.",
+        "The first Olympics took place in ancient Greece."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

@@ -1,0 +1,337 @@
+{
+ "id": "en-8-u8-l1",
+ "grade": 8,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 8 · Lesson 1: Listening",
+ "titleAr": "مهارة الاستماع — Fun with English 2",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "مهارة الاستماع — Fun with English 2",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "messenger",
+       "ar": "رسول",
+       "em": "🏃"
+      },
+      {
+       "id": "v1",
+       "en": "pigeon",
+       "ar": "حمام زاجل",
+       "em": "🕊️"
+      },
+      {
+       "id": "v2",
+       "en": "telephone",
+       "ar": "هاتف",
+       "em": "☎️"
+      },
+      {
+       "id": "v3",
+       "en": "printing press",
+       "ar": "آلة الطباعة",
+       "em": "🖨️"
+      },
+      {
+       "id": "v4",
+       "en": "surgeon",
+       "ar": "جرّاح",
+       "em": "🧑‍⚕️"
+      },
+      {
+       "id": "v5",
+       "en": "pharmacist",
+       "ar": "صيدلي",
+       "em": "💊"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 96"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Listening",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Long ago, people sent messages with pigeons.</div><div class=\"ex\">The telephone was invented <b>by</b> Alexander Graham Bell.</div><div class=\"ex\">A pharmacist <b>prepares</b> medicines.</div><div class=\"ex\">We have three periods <b>before</b> the break.</div><div class=\"ex\">Pollution is a big problem in many cities.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Long ago, people sent messages with pigeons. The telephone was invented by Alexander Graham Bell. A pharmacist prepares medicines. We have three periods before the break. Pollution is a big problem in many cities."
+      }
+     ]
+    }
+   ],
+   "lead": "استمع إلى الجمل جيداً: ركّز أولاً على الفكرة العامة ثم على التفاصيل، وأعد الاستماع عند الحاجة.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "Messages ___ carried by messengers.",
+           "a": "were",
+           "o": [
+            "were",
+            "was"
+           ]
+          },
+          {
+           "s": "The telephone was invented ___ Bell.",
+           "a": "by",
+           "o": [
+            "by",
+            "from"
+           ]
+          },
+          {
+           "s": "A pharmacist ___ medicines.",
+           "a": "prepares",
+           "o": [
+            "prepares",
+            "prepare"
+           ]
+          },
+          {
+           "s": "We have three periods ___ the break.",
+           "a": "before",
+           "o": [
+            "before",
+            "after"
+           ]
+          },
+          {
+           "s": "Drought ___ hunger.",
+           "a": "causes",
+           "o": [
+            "causes",
+            "cause"
+           ]
+          },
+          {
+           "s": "If the ice melts, sea levels ___ rise.",
+           "a": "will",
+           "o": [
+            "will",
+            "would"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Long ago, people sent messages with pigeons.",
+          "The telephone was invented by Alexander Graham Bell.",
+          "A pharmacist prepares medicines.",
+          "We have three periods before the break."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Long ago, people sent messages with pigeons.",
+           "o": [
+            "Long ago, people sent messages with pigeons.",
+            "The telephone was invented by Alexander Graham Bell.",
+            "A pharmacist prepares medicines."
+           ]
+          },
+          {
+           "a": "The telephone was invented by Alexander Graham Bell.",
+           "o": [
+            "The telephone was invented by Alexander Graham Bell.",
+            "Long ago, people sent messages with pigeons.",
+            "A pharmacist prepares medicines."
+           ]
+          },
+          {
+           "a": "A pharmacist prepares medicines.",
+           "o": [
+            "A pharmacist prepares medicines.",
+            "Long ago, people sent messages with pigeons.",
+            "The telephone was invented by Alexander Graham Bell."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "messenger",
+       "ipa": "",
+       "meaning": "رسول",
+       "ex": "messenger"
+      },
+      {
+       "must": 1,
+       "term": "pigeon",
+       "ipa": "",
+       "meaning": "حمام زاجل",
+       "ex": "Long ago, people sent messages with pigeons."
+      },
+      {
+       "must": 1,
+       "term": "telephone",
+       "ipa": "",
+       "meaning": "هاتف",
+       "ex": "The telephone was invented by Alexander Graham Bell."
+      },
+      {
+       "must": 0,
+       "term": "printing press",
+       "ipa": "",
+       "meaning": "آلة الطباعة",
+       "ex": "printing press"
+      },
+      {
+       "must": 0,
+       "term": "surgeon",
+       "ipa": "",
+       "meaning": "جرّاح",
+       "ex": "surgeon"
+      },
+      {
+       "must": 0,
+       "term": "pharmacist",
+       "ipa": "",
+       "meaning": "صيدلي",
+       "ex": "A pharmacist prepares medicines."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "Messages ___ carried by messengers.",
+       "a": "were",
+       "o": [
+        "were",
+        "was"
+       ],
+       "why": ""
+      },
+      {
+       "q": "The telephone was invented ___ Bell.",
+       "a": "by",
+       "o": [
+        "by",
+        "from"
+       ],
+       "why": ""
+      },
+      {
+       "q": "A pharmacist ___ medicines.",
+       "a": "prepares",
+       "o": [
+        "prepares",
+        "prepare"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى messenger؟",
+       "a": "رسول",
+       "o": [
+        "رسول",
+        "حمام زاجل",
+        "هاتف"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى pigeon؟",
+       "a": "حمام زاجل",
+       "o": [
+        "حمام زاجل",
+        "رسول",
+        "هاتف"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Long ago, people sent messages with pigeons.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Long ago, people sent messages with pigeons.",
+       "o": [
+        "Long ago, people sent messages with pigeons.",
+        "The telephone was invented by Alexander Graham Bell.",
+        "A pharmacist prepares medicines."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

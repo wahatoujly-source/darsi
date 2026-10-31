@@ -1,0 +1,287 @@
+{
+ "id": "en-8-u3-l5",
+ "grade": 8,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 3 · Lesson 5: London 2012",
+ "titleAr": "استضافت لندن الألعاب الأولمبية عام ٢٠١٢.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "استضافت لندن الألعاب الأولمبية عام ٢٠١٢.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "Olympic Games",
+       "ar": "الألعاب الأولمبية",
+       "em": "🏅"
+      },
+      {
+       "id": "v1",
+       "en": "medal",
+       "ar": "ميدالية",
+       "em": "🥇"
+      },
+      {
+       "id": "v2",
+       "en": "athlete",
+       "ar": "رياضي",
+       "em": "🏃"
+      },
+      {
+       "id": "v3",
+       "en": "host",
+       "ar": "يستضيف",
+       "em": "🏟️"
+      },
+      {
+       "id": "v4",
+       "en": "record",
+       "ar": "رقم قياسي",
+       "em": "📊"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 40⁠–⁠41"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Past simple: take part",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">London <b>hosted</b> the Olympic Games in 2012.</div><div class=\"ex\">Athletes from 204 countries <b>took</b> part.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "London hosted the Olympic Games in 2012. Athletes from 204 countries took part."
+      }
+     ]
+    }
+   ],
+   "lead": "take part → took part",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "London ___ the Olympics in 2012.",
+           "a": "hosted",
+           "o": [
+            "hosted",
+            "host"
+           ]
+          },
+          {
+           "s": "Athletes ___ part.",
+           "a": "took",
+           "o": [
+            "took",
+            "taked"
+           ]
+          },
+          {
+           "s": "She won a gold ___ .",
+           "a": "medal",
+           "o": [
+            "medal",
+            "record"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "London hosted the Olympic Games in 2012.",
+          "Athletes from 204 countries took part."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "London hosted the Olympic Games in 2012.",
+           "o": [
+            "London hosted the Olympic Games in 2012.",
+            "Athletes from 204 countries took part."
+           ]
+          },
+          {
+           "a": "Athletes from 204 countries took part.",
+           "o": [
+            "Athletes from 204 countries took part.",
+            "London hosted the Olympic Games in 2012."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "Olympic Games",
+       "ipa": "",
+       "meaning": "الألعاب الأولمبية",
+       "ex": "London hosted the Olympic Games in 2012."
+      },
+      {
+       "must": 1,
+       "term": "medal",
+       "ipa": "",
+       "meaning": "ميدالية",
+       "ex": "medal"
+      },
+      {
+       "must": 1,
+       "term": "athlete",
+       "ipa": "",
+       "meaning": "رياضي",
+       "ex": "Athletes from 204 countries took part."
+      },
+      {
+       "must": 0,
+       "term": "host",
+       "ipa": "",
+       "meaning": "يستضيف",
+       "ex": "London hosted the Olympic Games in 2012."
+      },
+      {
+       "must": 0,
+       "term": "record",
+       "ipa": "",
+       "meaning": "رقم قياسي",
+       "ex": "record"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "London ___ the Olympics in 2012.",
+       "a": "hosted",
+       "o": [
+        "hosted",
+        "host"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Athletes ___ part.",
+       "a": "took",
+       "o": [
+        "took",
+        "taked"
+       ],
+       "why": ""
+      },
+      {
+       "q": "She won a gold ___ .",
+       "a": "medal",
+       "o": [
+        "medal",
+        "record"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى record؟",
+       "a": "رقم قياسي",
+       "o": [
+        "رقم قياسي",
+        "الألعاب الأولمبية",
+        "ميدالية"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى medal؟",
+       "a": "ميدالية",
+       "o": [
+        "ميدالية",
+        "الألعاب الأولمبية",
+        "رياضي"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "London hosted the Olympic Games in 2012.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "London hosted the Olympic Games in 2012.",
+       "o": [
+        "London hosted the Olympic Games in 2012.",
+        "Athletes from 204 countries took part."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

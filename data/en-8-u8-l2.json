@@ -1,0 +1,337 @@
+{
+ "id": "en-8-u8-l2",
+ "grade": 8,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 8 · Lesson 2: Speaking",
+ "titleAr": "مهارة التحدث — Fun with English 2",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "مهارة التحدث — Fun with English 2",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "search engine",
+       "ar": "محرك بحث",
+       "em": "🔍"
+      },
+      {
+       "id": "v1",
+       "en": "encyclopedia",
+       "ar": "موسوعة",
+       "em": "📚"
+      },
+      {
+       "id": "v2",
+       "en": "mobile",
+       "ar": "هاتف محمول",
+       "em": "📱"
+      },
+      {
+       "id": "v3",
+       "en": "landline",
+       "ar": "هاتف أرضي",
+       "em": "☎️"
+      },
+      {
+       "id": "v4",
+       "en": "shift",
+       "ar": "مناوبة",
+       "em": "🕐"
+      },
+      {
+       "id": "v5",
+       "en": "salary",
+       "ar": "راتب",
+       "em": "💵"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 97"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Speaking",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">You can find information in an encyclopedia or online.</div><div class=\"ex\">Mobile phones have become <b>smaller</b> and smarter.</div><div class=\"ex\">A nurse works in shifts, whereas a teacher works in the day.</div><div class=\"ex\">Sara is going <b>to</b> be an engineer.</div><div class=\"ex\">We can <b>recycle</b> paper and plastic.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "You can find information in an encyclopedia or online. Mobile phones have become smaller and smarter. A nurse works in shifts, whereas a teacher works in the day. Sara is going to be an engineer. We can recycle paper and plastic."
+      }
+     ]
+    }
+   ],
+   "lead": "ردّد الجمل بصوت واضح مع زميلك، واستخدمها لتتحدث عن نفسك.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "Check that the source is ___ .",
+           "a": "reliable",
+           "o": [
+            "reliable",
+            "really"
+           ]
+          },
+          {
+           "s": "Phones have become ___ .",
+           "a": "smaller",
+           "o": [
+            "smaller",
+            "more small"
+           ]
+          },
+          {
+           "s": "A farmer works ___ .",
+           "a": "outdoors",
+           "o": [
+            "outdoors",
+            "indoors"
+           ]
+          },
+          {
+           "s": "She's going ___ be an engineer.",
+           "a": "to",
+           "o": [
+            "to",
+            "for"
+           ]
+          },
+          {
+           "s": "We can ___ plastic bottles.",
+           "a": "recycle",
+           "o": [
+            "recycle",
+            "recycles"
+           ]
+          },
+          {
+           "s": "Food waste can ___ turned into compost.",
+           "a": "be",
+           "o": [
+            "be",
+            "is"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "You can find information in an encyclopedia or online.",
+          "Mobile phones have become smaller and smarter.",
+          "A nurse works in shifts, whereas a teacher works in the day.",
+          "Sara is going to be an engineer."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "You can find information in an encyclopedia or online.",
+           "o": [
+            "You can find information in an encyclopedia or online.",
+            "Mobile phones have become smaller and smarter.",
+            "A nurse works in shifts, whereas a teacher works in the day."
+           ]
+          },
+          {
+           "a": "Mobile phones have become smaller and smarter.",
+           "o": [
+            "Mobile phones have become smaller and smarter.",
+            "You can find information in an encyclopedia or online.",
+            "A nurse works in shifts, whereas a teacher works in the day."
+           ]
+          },
+          {
+           "a": "A nurse works in shifts, whereas a teacher works in the day.",
+           "o": [
+            "A nurse works in shifts, whereas a teacher works in the day.",
+            "You can find information in an encyclopedia or online.",
+            "Mobile phones have become smaller and smarter."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "search engine",
+       "ipa": "",
+       "meaning": "محرك بحث",
+       "ex": "search engine"
+      },
+      {
+       "must": 1,
+       "term": "encyclopedia",
+       "ipa": "",
+       "meaning": "موسوعة",
+       "ex": "You can find information in an encyclopedia or online."
+      },
+      {
+       "must": 1,
+       "term": "mobile",
+       "ipa": "",
+       "meaning": "هاتف محمول",
+       "ex": "Mobile phones have become smaller and smarter."
+      },
+      {
+       "must": 0,
+       "term": "landline",
+       "ipa": "",
+       "meaning": "هاتف أرضي",
+       "ex": "landline"
+      },
+      {
+       "must": 0,
+       "term": "shift",
+       "ipa": "",
+       "meaning": "مناوبة",
+       "ex": "A nurse works in shifts, whereas a teacher works in the day."
+      },
+      {
+       "must": 0,
+       "term": "salary",
+       "ipa": "",
+       "meaning": "راتب",
+       "ex": "salary"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "Check that the source is ___ .",
+       "a": "reliable",
+       "o": [
+        "reliable",
+        "really"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Phones have become ___ .",
+       "a": "smaller",
+       "o": [
+        "smaller",
+        "more small"
+       ],
+       "why": ""
+      },
+      {
+       "q": "A farmer works ___ .",
+       "a": "outdoors",
+       "o": [
+        "outdoors",
+        "indoors"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى search engine؟",
+       "a": "محرك بحث",
+       "o": [
+        "محرك بحث",
+        "موسوعة",
+        "هاتف محمول"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى landline؟",
+       "a": "هاتف أرضي",
+       "o": [
+        "هاتف أرضي",
+        "محرك بحث",
+        "موسوعة"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "You can find information in an encyclopedia or online.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "You can find information in an encyclopedia or online.",
+       "o": [
+        "You can find information in an encyclopedia or online.",
+        "Mobile phones have become smaller and smarter.",
+        "A nurse works in shifts, whereas a teacher works in the day."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

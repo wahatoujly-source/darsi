@@ -1,0 +1,287 @@
+{
+ "id": "en-7-u5-l8",
+ "grade": 7,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 5 · Lesson 8: Where have you been?",
+ "titleAr": "أين كنت؟ كنت في المكتبة.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "أين كنت؟ كنت في المكتبة.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "where",
+       "ar": "أين",
+       "em": "📍"
+      },
+      {
+       "id": "v1",
+       "en": "been",
+       "ar": "كان",
+       "em": "🔁"
+      },
+      {
+       "id": "v2",
+       "en": "worried",
+       "ar": "قلق",
+       "em": "😟"
+      },
+      {
+       "id": "v3",
+       "en": "library",
+       "ar": "مكتبة",
+       "em": "📚"
+      },
+      {
+       "id": "v4",
+       "en": "all day",
+       "ar": "طوال اليوم",
+       "em": "☀️"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 60"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Where have you been?",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Where <b>have</b> you been? I've been at the library.</div><div class=\"ex\">We've <b>been</b> worried about you!</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Where have you been? I've been at the library. We've been worried about you!"
+      }
+     ]
+    }
+   ],
+   "lead": "سؤال بالمضارع التام.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "Where ___ you been?",
+           "a": "have",
+           "o": [
+            "have",
+            "has"
+           ]
+          },
+          {
+           "s": "I've ___ at the library.",
+           "a": "been",
+           "o": [
+            "been",
+            "be"
+           ]
+          },
+          {
+           "s": "We've been ___ about you.",
+           "a": "worried",
+           "o": [
+            "worried",
+            "worry"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Where have you been? I've been at the library.",
+          "We've been worried about you!"
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Where have you been? I've been at the library.",
+           "o": [
+            "Where have you been? I've been at the library.",
+            "We've been worried about you!"
+           ]
+          },
+          {
+           "a": "We've been worried about you!",
+           "o": [
+            "We've been worried about you!",
+            "Where have you been? I've been at the library."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "where",
+       "ipa": "",
+       "meaning": "أين",
+       "ex": "Where have you been? I've been at the library."
+      },
+      {
+       "must": 1,
+       "term": "been",
+       "ipa": "",
+       "meaning": "كان",
+       "ex": "Where have you been? I've been at the library."
+      },
+      {
+       "must": 1,
+       "term": "worried",
+       "ipa": "",
+       "meaning": "قلق",
+       "ex": "We've been worried about you!"
+      },
+      {
+       "must": 0,
+       "term": "library",
+       "ipa": "",
+       "meaning": "مكتبة",
+       "ex": "Where have you been? I've been at the library."
+      },
+      {
+       "must": 0,
+       "term": "all day",
+       "ipa": "",
+       "meaning": "طوال اليوم",
+       "ex": "all day"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "Where ___ you been?",
+       "a": "have",
+       "o": [
+        "have",
+        "has"
+       ],
+       "why": ""
+      },
+      {
+       "q": "I've ___ at the library.",
+       "a": "been",
+       "o": [
+        "been",
+        "be"
+       ],
+       "why": ""
+      },
+      {
+       "q": "We've been ___ about you.",
+       "a": "worried",
+       "o": [
+        "worried",
+        "worry"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى been؟",
+       "a": "كان",
+       "o": [
+        "كان",
+        "أين",
+        "قلق"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى worried؟",
+       "a": "قلق",
+       "o": [
+        "قلق",
+        "أين",
+        "كان"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Where have you been? I've been at the library.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Where have you been? I've been at the library.",
+       "o": [
+        "Where have you been? I've been at the library.",
+        "We've been worried about you!"
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

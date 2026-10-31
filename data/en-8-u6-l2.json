@@ -1,0 +1,287 @@
+{
+ "id": "en-8-u6-l2",
+ "grade": 8,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 6 · Lesson 2: Two Jobs",
+ "titleAr": "تعمل الممرضة بمناوبات بينما يعمل المعلم نهاراً.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "تعمل الممرضة بمناوبات بينما يعمل المعلم نهاراً.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "shift",
+       "ar": "مناوبة",
+       "em": "🕐"
+      },
+      {
+       "id": "v1",
+       "en": "salary",
+       "ar": "راتب",
+       "em": "💵"
+      },
+      {
+       "id": "v2",
+       "en": "indoors",
+       "ar": "داخل المباني",
+       "em": "🏢"
+      },
+      {
+       "id": "v3",
+       "en": "outdoors",
+       "ar": "في الهواء الطلق",
+       "em": "🌳"
+      },
+      {
+       "id": "v4",
+       "en": "whereas",
+       "ar": "بينما",
+       "em": "⚖️"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 71"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "whereas for contrast",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">A nurse works in <b>shifts</b>, whereas a teacher works in the day.</div><div class=\"ex\">A farmer works <b>outdoors</b>.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "A nurse works in shifts, whereas a teacher works in the day. A farmer works outdoors."
+      }
+     ]
+    }
+   ],
+   "lead": "نقارن بين وظيفتين.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "A farmer works ___ .",
+           "a": "outdoors",
+           "o": [
+            "outdoors",
+            "indoors"
+           ]
+          },
+          {
+           "s": "Nurses work in ___ .",
+           "a": "shifts",
+           "o": [
+            "shifts",
+            "salary"
+           ]
+          },
+          {
+           "s": "He works indoors, ___ she works outdoors.",
+           "a": "whereas",
+           "o": [
+            "whereas",
+            "because"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "A nurse works in shifts, whereas a teacher works in the day.",
+          "A farmer works outdoors."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "A nurse works in shifts, whereas a teacher works in the day.",
+           "o": [
+            "A nurse works in shifts, whereas a teacher works in the day.",
+            "A farmer works outdoors."
+           ]
+          },
+          {
+           "a": "A farmer works outdoors.",
+           "o": [
+            "A farmer works outdoors.",
+            "A nurse works in shifts, whereas a teacher works in the day."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "shift",
+       "ipa": "",
+       "meaning": "مناوبة",
+       "ex": "A nurse works in shifts, whereas a teacher works in the day."
+      },
+      {
+       "must": 1,
+       "term": "salary",
+       "ipa": "",
+       "meaning": "راتب",
+       "ex": "salary"
+      },
+      {
+       "must": 1,
+       "term": "indoors",
+       "ipa": "",
+       "meaning": "داخل المباني",
+       "ex": "indoors"
+      },
+      {
+       "must": 0,
+       "term": "outdoors",
+       "ipa": "",
+       "meaning": "في الهواء الطلق",
+       "ex": "A farmer works outdoors."
+      },
+      {
+       "must": 0,
+       "term": "whereas",
+       "ipa": "",
+       "meaning": "بينما",
+       "ex": "A nurse works in shifts, whereas a teacher works in the day."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "A farmer works ___ .",
+       "a": "outdoors",
+       "o": [
+        "outdoors",
+        "indoors"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Nurses work in ___ .",
+       "a": "shifts",
+       "o": [
+        "shifts",
+        "salary"
+       ],
+       "why": ""
+      },
+      {
+       "q": "He works indoors, ___ she works outdoors.",
+       "a": "whereas",
+       "o": [
+        "whereas",
+        "because"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى indoors؟",
+       "a": "داخل المباني",
+       "o": [
+        "داخل المباني",
+        "مناوبة",
+        "راتب"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى shift؟",
+       "a": "مناوبة",
+       "o": [
+        "مناوبة",
+        "راتب",
+        "داخل المباني"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "A nurse works in shifts, whereas a teacher works in the day.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "A nurse works in shifts, whereas a teacher works in the day.",
+       "o": [
+        "A nurse works in shifts, whereas a teacher works in the day.",
+        "A farmer works outdoors."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

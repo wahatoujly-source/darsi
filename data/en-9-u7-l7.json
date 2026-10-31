@@ -1,0 +1,287 @@
+{
+ "id": "en-9-u7-l7",
+ "grade": 9,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 7 · Lesson 7: How many mobile phones are produced …?",
+ "titleAr": "تُنتج ملايين الهواتف كل سنة.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "تُنتج ملايين الهواتف كل سنة.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "produce",
+       "ar": "ينتج",
+       "em": "🏭"
+      },
+      {
+       "id": "v1",
+       "en": "export",
+       "ar": "يصدّر",
+       "em": "🚢"
+      },
+      {
+       "id": "v2",
+       "en": "import",
+       "ar": "يستورد",
+       "em": "📦"
+      },
+      {
+       "id": "v3",
+       "en": "factory",
+       "ar": "مصنع",
+       "em": "🏭"
+      },
+      {
+       "id": "v4",
+       "en": "every year",
+       "ar": "كل سنة",
+       "em": "📅"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 92"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Present simple passive",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Millions of mobile phones <b>are</b> produced every year.</div><div class=\"ex\">Libyan oil is <b>exported</b> to Europe.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Millions of mobile phones are produced every year. Libyan oil is exported to Europe."
+      }
+     ]
+    }
+   ],
+   "lead": "are produced / is exported",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "Phones ___ produced in factories.",
+           "a": "are",
+           "o": [
+            "are",
+            "is"
+           ]
+          },
+          {
+           "s": "Oil is ___ to Europe.",
+           "a": "exported",
+           "o": [
+            "exported",
+            "export"
+           ]
+          },
+          {
+           "s": "Libya ___ many cars.",
+           "a": "imports",
+           "o": [
+            "imports",
+            "import"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Millions of mobile phones are produced every year.",
+          "Libyan oil is exported to Europe."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Millions of mobile phones are produced every year.",
+           "o": [
+            "Millions of mobile phones are produced every year.",
+            "Libyan oil is exported to Europe."
+           ]
+          },
+          {
+           "a": "Libyan oil is exported to Europe.",
+           "o": [
+            "Libyan oil is exported to Europe.",
+            "Millions of mobile phones are produced every year."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "produce",
+       "ipa": "",
+       "meaning": "ينتج",
+       "ex": "Millions of mobile phones are produced every year."
+      },
+      {
+       "must": 1,
+       "term": "export",
+       "ipa": "",
+       "meaning": "يصدّر",
+       "ex": "Libyan oil is exported to Europe."
+      },
+      {
+       "must": 1,
+       "term": "import",
+       "ipa": "",
+       "meaning": "يستورد",
+       "ex": "import"
+      },
+      {
+       "must": 0,
+       "term": "factory",
+       "ipa": "",
+       "meaning": "مصنع",
+       "ex": "factory"
+      },
+      {
+       "must": 0,
+       "term": "every year",
+       "ipa": "",
+       "meaning": "كل سنة",
+       "ex": "Millions of mobile phones are produced every year."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "Phones ___ produced in factories.",
+       "a": "are",
+       "o": [
+        "are",
+        "is"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Oil is ___ to Europe.",
+       "a": "exported",
+       "o": [
+        "exported",
+        "export"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Libya ___ many cars.",
+       "a": "imports",
+       "o": [
+        "imports",
+        "import"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى export؟",
+       "a": "يصدّر",
+       "o": [
+        "يصدّر",
+        "ينتج",
+        "يستورد"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى import؟",
+       "a": "يستورد",
+       "o": [
+        "يستورد",
+        "ينتج",
+        "يصدّر"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Millions of mobile phones are produced every year.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Millions of mobile phones are produced every year.",
+       "o": [
+        "Millions of mobile phones are produced every year.",
+        "Libyan oil is exported to Europe."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

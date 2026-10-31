@@ -1,0 +1,299 @@
+{
+ "id": "en-8-u5-l7",
+ "grade": 8,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 5 · Lesson 7: On the Phone",
+ "titleAr": "مرحباً، هل يمكنني التحدث مع سامي؟",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "مرحباً، هل يمكنني التحدث مع سامي؟",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "hold on",
+       "ar": "انتظر",
+       "em": "⏸️"
+      },
+      {
+       "id": "v1",
+       "en": "speak to",
+       "ar": "يتحدث مع",
+       "em": "🗣️"
+      },
+      {
+       "id": "v2",
+       "en": "message",
+       "ar": "رسالة",
+       "em": "📝"
+      },
+      {
+       "id": "v3",
+       "en": "call back",
+       "ar": "يعاود الاتصال",
+       "em": "🔁"
+      },
+      {
+       "id": "v4",
+       "en": "this is",
+       "ar": "معك",
+       "em": "🙋"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 64"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Telephone language",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Hello, can I <b>speak</b> to Sami, please?</div><div class=\"ex\"><b>Hold</b> on, please.</div><div class=\"ex\">Can I take a <b>message</b>?</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Hello, can I speak to Sami, please? Hold on, please. Can I take a message?"
+      }
+     ]
+    }
+   ],
+   "lead": "This is … / Can I speak to …? / Hold on.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "Can I ___ to Sami, please?",
+           "a": "speak",
+           "o": [
+            "speak",
+            "say"
+           ]
+          },
+          {
+           "s": "___ on, please.",
+           "a": "Hold",
+           "o": [
+            "Hold",
+            "Hand"
+           ]
+          },
+          {
+           "s": "Can I take a ___ ?",
+           "a": "message",
+           "o": [
+            "message",
+            "massage"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Hello, can I speak to Sami, please?",
+          "Hold on, please.",
+          "Can I take a message?"
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Hello, can I speak to Sami, please?",
+           "o": [
+            "Hello, can I speak to Sami, please?",
+            "Hold on, please.",
+            "Can I take a message?"
+           ]
+          },
+          {
+           "a": "Hold on, please.",
+           "o": [
+            "Hold on, please.",
+            "Hello, can I speak to Sami, please?",
+            "Can I take a message?"
+           ]
+          },
+          {
+           "a": "Can I take a message?",
+           "o": [
+            "Can I take a message?",
+            "Hello, can I speak to Sami, please?",
+            "Hold on, please."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "hold on",
+       "ipa": "",
+       "meaning": "انتظر",
+       "ex": "Hold on, please."
+      },
+      {
+       "must": 1,
+       "term": "speak to",
+       "ipa": "",
+       "meaning": "يتحدث مع",
+       "ex": "Hello, can I speak to Sami, please?"
+      },
+      {
+       "must": 1,
+       "term": "message",
+       "ipa": "",
+       "meaning": "رسالة",
+       "ex": "Can I take a message?"
+      },
+      {
+       "must": 0,
+       "term": "call back",
+       "ipa": "",
+       "meaning": "يعاود الاتصال",
+       "ex": "call back"
+      },
+      {
+       "must": 0,
+       "term": "this is",
+       "ipa": "",
+       "meaning": "معك",
+       "ex": "this is"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "Can I ___ to Sami, please?",
+       "a": "speak",
+       "o": [
+        "speak",
+        "say"
+       ],
+       "why": ""
+      },
+      {
+       "q": "___ on, please.",
+       "a": "Hold",
+       "o": [
+        "Hold",
+        "Hand"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Can I take a ___ ?",
+       "a": "message",
+       "o": [
+        "message",
+        "massage"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى speak to؟",
+       "a": "يتحدث مع",
+       "o": [
+        "يتحدث مع",
+        "انتظر",
+        "رسالة"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى hold on؟",
+       "a": "انتظر",
+       "o": [
+        "انتظر",
+        "يتحدث مع",
+        "رسالة"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Hello, can I speak to Sami, please?",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Hello, can I speak to Sami, please?",
+       "o": [
+        "Hello, can I speak to Sami, please?",
+        "Hold on, please.",
+        "Can I take a message?"
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

@@ -1,0 +1,287 @@
+{
+ "id": "en-9-u6-l3",
+ "grade": 9,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 6 · Lesson 3: The School of the Future",
+ "titleAr": "في المستقبل سيستخدم الطلاب الأجهزة اللوحية بدل الكتب.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "في المستقبل سيستخدم الطلاب الأجهزة اللوحية بدل الكتب.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "virtual",
+       "ar": "افتراضي",
+       "em": "🥽"
+      },
+      {
+       "id": "v1",
+       "en": "tablet",
+       "ar": "جهاز لوحي",
+       "em": "📱"
+      },
+      {
+       "id": "v2",
+       "en": "robot teacher",
+       "ar": "معلم روبوت",
+       "em": "🤖"
+      },
+      {
+       "id": "v3",
+       "en": "will probably",
+       "ar": "سوف على الأرجح",
+       "em": "🔮"
+      },
+      {
+       "id": "v4",
+       "en": "online",
+       "ar": "على الإنترنت",
+       "em": "🌐"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 74⁠–⁠75"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "will for predictions",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">In the future, students <b>will</b> probably use tablets instead of books.</div><div class=\"ex\">Some lessons <b>will</b> take place online.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "In the future, students will probably use tablets instead of books. Some lessons will take place online."
+      }
+     ]
+    }
+   ],
+   "lead": "will + verb / will probably",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "Students ___ use tablets.",
+           "a": "will",
+           "o": [
+            "will",
+            "would"
+           ]
+          },
+          {
+           "s": "Lessons will take ___ online.",
+           "a": "place",
+           "o": [
+            "place",
+            "part"
+           ]
+          },
+          {
+           "s": "We'll have ___ classrooms.",
+           "a": "virtual",
+           "o": [
+            "virtual",
+            "virtually"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "In the future, students will probably use tablets instead of books.",
+          "Some lessons will take place online."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "In the future, students will probably use tablets instead of books.",
+           "o": [
+            "In the future, students will probably use tablets instead of books.",
+            "Some lessons will take place online."
+           ]
+          },
+          {
+           "a": "Some lessons will take place online.",
+           "o": [
+            "Some lessons will take place online.",
+            "In the future, students will probably use tablets instead of books."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "virtual",
+       "ipa": "",
+       "meaning": "افتراضي",
+       "ex": "virtual"
+      },
+      {
+       "must": 1,
+       "term": "tablet",
+       "ipa": "",
+       "meaning": "جهاز لوحي",
+       "ex": "In the future, students will probably use tablets instead of books."
+      },
+      {
+       "must": 1,
+       "term": "robot teacher",
+       "ipa": "",
+       "meaning": "معلم روبوت",
+       "ex": "robot teacher"
+      },
+      {
+       "must": 0,
+       "term": "will probably",
+       "ipa": "",
+       "meaning": "سوف على الأرجح",
+       "ex": "In the future, students will probably use tablets instead of books."
+      },
+      {
+       "must": 0,
+       "term": "online",
+       "ipa": "",
+       "meaning": "على الإنترنت",
+       "ex": "Some lessons will take place online."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "Students ___ use tablets.",
+       "a": "will",
+       "o": [
+        "will",
+        "would"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Lessons will take ___ online.",
+       "a": "place",
+       "o": [
+        "place",
+        "part"
+       ],
+       "why": ""
+      },
+      {
+       "q": "We'll have ___ classrooms.",
+       "a": "virtual",
+       "o": [
+        "virtual",
+        "virtually"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى virtual؟",
+       "a": "افتراضي",
+       "o": [
+        "افتراضي",
+        "جهاز لوحي",
+        "معلم روبوت"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى will probably؟",
+       "a": "سوف على الأرجح",
+       "o": [
+        "سوف على الأرجح",
+        "افتراضي",
+        "جهاز لوحي"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "In the future, students will probably use tablets instead of books.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "In the future, students will probably use tablets instead of books.",
+       "o": [
+        "In the future, students will probably use tablets instead of books.",
+        "Some lessons will take place online."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

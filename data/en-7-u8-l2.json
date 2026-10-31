@@ -1,0 +1,287 @@
+{
+ "id": "en-7-u8-l2",
+ "grade": 7,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 8 · Lesson 2: Social Networking",
+ "titleAr": "فكّر قبل أن تنشر.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "فكّر قبل أن تنشر.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "post",
+       "ar": "ينشر",
+       "em": "📝"
+      },
+      {
+       "id": "v1",
+       "en": "share",
+       "ar": "يشارك",
+       "em": "🔗"
+      },
+      {
+       "id": "v2",
+       "en": "followers",
+       "ar": "متابعون",
+       "em": "👥"
+      },
+      {
+       "id": "v3",
+       "en": "profile",
+       "ar": "ملف شخصي",
+       "em": "🪪"
+      },
+      {
+       "id": "v4",
+       "en": "like",
+       "ar": "إعجاب",
+       "em": "👍"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 89"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "before / without + -ing",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Think before you <b>post</b>.</div><div class=\"ex\">Don't share photos of other people without <b>asking</b>.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Think before you post. Don't share photos of other people without asking."
+      }
+     ]
+    }
+   ],
+   "lead": "without asking / before posting",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "Think before you ___ .",
+           "a": "post",
+           "o": [
+            "post",
+            "posts"
+           ]
+          },
+          {
+           "s": "Don't share photos without ___ .",
+           "a": "asking",
+           "o": [
+            "asking",
+            "ask"
+           ]
+          },
+          {
+           "s": "Keep your ___ private.",
+           "a": "profile",
+           "o": [
+            "profile",
+            "followers"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Think before you post.",
+          "Don't share photos of other people without asking."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Think before you post.",
+           "o": [
+            "Think before you post.",
+            "Don't share photos of other people without asking."
+           ]
+          },
+          {
+           "a": "Don't share photos of other people without asking.",
+           "o": [
+            "Don't share photos of other people without asking.",
+            "Think before you post."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "post",
+       "ipa": "",
+       "meaning": "ينشر",
+       "ex": "Think before you post."
+      },
+      {
+       "must": 1,
+       "term": "share",
+       "ipa": "",
+       "meaning": "يشارك",
+       "ex": "Don't share photos of other people without asking."
+      },
+      {
+       "must": 1,
+       "term": "followers",
+       "ipa": "",
+       "meaning": "متابعون",
+       "ex": "followers"
+      },
+      {
+       "must": 0,
+       "term": "profile",
+       "ipa": "",
+       "meaning": "ملف شخصي",
+       "ex": "profile"
+      },
+      {
+       "must": 0,
+       "term": "like",
+       "ipa": "",
+       "meaning": "إعجاب",
+       "ex": "like"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "Think before you ___ .",
+       "a": "post",
+       "o": [
+        "post",
+        "posts"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Don't share photos without ___ .",
+       "a": "asking",
+       "o": [
+        "asking",
+        "ask"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Keep your ___ private.",
+       "a": "profile",
+       "o": [
+        "profile",
+        "followers"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى post؟",
+       "a": "ينشر",
+       "o": [
+        "ينشر",
+        "يشارك",
+        "متابعون"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى followers؟",
+       "a": "متابعون",
+       "o": [
+        "متابعون",
+        "ينشر",
+        "يشارك"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Think before you post.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Think before you post.",
+       "o": [
+        "Think before you post.",
+        "Don't share photos of other people without asking."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

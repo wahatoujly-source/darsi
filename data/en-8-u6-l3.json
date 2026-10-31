@@ -1,0 +1,287 @@
+{
+ "id": "en-8-u6-l3",
+ "grade": 8,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 6 · Lesson 3: A Day in the Life of a Firefighter",
+ "titleAr": "عندما يرن الإنذار يقفز رجال الإطفاء إلى السيارة.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "عندما يرن الإنذار يقفز رجال الإطفاء إلى السيارة.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "firefighter",
+       "ar": "رجل إطفاء",
+       "em": "🧑‍🚒"
+      },
+      {
+       "id": "v1",
+       "en": "fire engine",
+       "ar": "سيارة إطفاء",
+       "em": "🚒"
+      },
+      {
+       "id": "v2",
+       "en": "hose",
+       "ar": "خرطوم",
+       "em": "🧯"
+      },
+      {
+       "id": "v3",
+       "en": "alarm",
+       "ar": "إنذار",
+       "em": "🚨"
+      },
+      {
+       "id": "v4",
+       "en": "brave",
+       "ar": "شجاع",
+       "em": "🦁"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 72"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "have to",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">When the <b>alarm</b> rings, firefighters jump into the fire engine.</div><div class=\"ex\">They <b>have</b> to be brave and fit.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "When the alarm rings, firefighters jump into the fire engine. They have to be brave and fit."
+      }
+     ]
+    }
+   ],
+   "lead": "للإلزام: They have to …",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "They ___ to be brave.",
+           "a": "have",
+           "o": [
+            "have",
+            "has"
+           ]
+          },
+          {
+           "s": "When the ___ rings, they go.",
+           "a": "alarm",
+           "o": [
+            "alarm",
+            "hose"
+           ]
+          },
+          {
+           "s": "He ___ to wear a helmet.",
+           "a": "has",
+           "o": [
+            "has",
+            "have"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "When the alarm rings, firefighters jump into the fire engine.",
+          "They have to be brave and fit."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "When the alarm rings, firefighters jump into the fire engine.",
+           "o": [
+            "When the alarm rings, firefighters jump into the fire engine.",
+            "They have to be brave and fit."
+           ]
+          },
+          {
+           "a": "They have to be brave and fit.",
+           "o": [
+            "They have to be brave and fit.",
+            "When the alarm rings, firefighters jump into the fire engine."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "firefighter",
+       "ipa": "",
+       "meaning": "رجل إطفاء",
+       "ex": "When the alarm rings, firefighters jump into the fire engine."
+      },
+      {
+       "must": 1,
+       "term": "fire engine",
+       "ipa": "",
+       "meaning": "سيارة إطفاء",
+       "ex": "When the alarm rings, firefighters jump into the fire engine."
+      },
+      {
+       "must": 1,
+       "term": "hose",
+       "ipa": "",
+       "meaning": "خرطوم",
+       "ex": "hose"
+      },
+      {
+       "must": 0,
+       "term": "alarm",
+       "ipa": "",
+       "meaning": "إنذار",
+       "ex": "When the alarm rings, firefighters jump into the fire engine."
+      },
+      {
+       "must": 0,
+       "term": "brave",
+       "ipa": "",
+       "meaning": "شجاع",
+       "ex": "They have to be brave and fit."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "They ___ to be brave.",
+       "a": "have",
+       "o": [
+        "have",
+        "has"
+       ],
+       "why": ""
+      },
+      {
+       "q": "When the ___ rings, they go.",
+       "a": "alarm",
+       "o": [
+        "alarm",
+        "hose"
+       ],
+       "why": ""
+      },
+      {
+       "q": "He ___ to wear a helmet.",
+       "a": "has",
+       "o": [
+        "has",
+        "have"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى firefighter؟",
+       "a": "رجل إطفاء",
+       "o": [
+        "رجل إطفاء",
+        "سيارة إطفاء",
+        "خرطوم"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى hose؟",
+       "a": "خرطوم",
+       "o": [
+        "خرطوم",
+        "رجل إطفاء",
+        "سيارة إطفاء"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "When the alarm rings, firefighters jump into the fire engine.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "When the alarm rings, firefighters jump into the fire engine.",
+       "o": [
+        "When the alarm rings, firefighters jump into the fire engine.",
+        "They have to be brave and fit."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

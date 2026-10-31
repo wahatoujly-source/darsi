@@ -1,0 +1,287 @@
+{
+ "id": "en-7-u5-l3",
+ "grade": 7,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 5 · Lesson 3: We've been everywhere!",
+ "titleAr": "لقد زرنا كل مكان!",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "لقد زرنا كل مكان!",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "everywhere",
+       "ar": "في كل مكان",
+       "em": "🌐"
+      },
+      {
+       "id": "v1",
+       "en": "seen",
+       "ar": "رأى",
+       "em": "👀"
+      },
+      {
+       "id": "v2",
+       "en": "climbed",
+       "ar": "تسلق",
+       "em": "🧗"
+      },
+      {
+       "id": "v3",
+       "en": "tried",
+       "ar": "جرّب",
+       "em": "🍽️"
+      },
+      {
+       "id": "v4",
+       "en": "amazing",
+       "ar": "مدهش",
+       "em": "🤩"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 54"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Past participles",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">We've been everywhere!</div><div class=\"ex\">We've <b>seen</b> the pyramids and we've climbed mountains.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "We've been everywhere! We've seen the pyramids and we've climbed mountains."
+      }
+     ]
+    }
+   ],
+   "lead": "see → seen, climb → climbed, try → tried",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "We've ___ the pyramids.",
+           "a": "seen",
+           "o": [
+            "seen",
+            "saw"
+           ]
+          },
+          {
+           "s": "We've ___ mountains.",
+           "a": "climbed",
+           "o": [
+            "climbed",
+            "climb"
+           ]
+          },
+          {
+           "s": "We've ___ new food.",
+           "a": "tried",
+           "o": [
+            "tried",
+            "tryed"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "We've been everywhere!",
+          "We've seen the pyramids and we've climbed mountains."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "We've been everywhere!",
+           "o": [
+            "We've been everywhere!",
+            "We've seen the pyramids and we've climbed mountains."
+           ]
+          },
+          {
+           "a": "We've seen the pyramids and we've climbed mountains.",
+           "o": [
+            "We've seen the pyramids and we've climbed mountains.",
+            "We've been everywhere!"
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "everywhere",
+       "ipa": "",
+       "meaning": "في كل مكان",
+       "ex": "We've been everywhere!"
+      },
+      {
+       "must": 1,
+       "term": "seen",
+       "ipa": "",
+       "meaning": "رأى",
+       "ex": "We've seen the pyramids and we've climbed mountains."
+      },
+      {
+       "must": 1,
+       "term": "climbed",
+       "ipa": "",
+       "meaning": "تسلق",
+       "ex": "We've seen the pyramids and we've climbed mountains."
+      },
+      {
+       "must": 0,
+       "term": "tried",
+       "ipa": "",
+       "meaning": "جرّب",
+       "ex": "tried"
+      },
+      {
+       "must": 0,
+       "term": "amazing",
+       "ipa": "",
+       "meaning": "مدهش",
+       "ex": "amazing"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "We've ___ the pyramids.",
+       "a": "seen",
+       "o": [
+        "seen",
+        "saw"
+       ],
+       "why": ""
+      },
+      {
+       "q": "We've ___ mountains.",
+       "a": "climbed",
+       "o": [
+        "climbed",
+        "climb"
+       ],
+       "why": ""
+      },
+      {
+       "q": "We've ___ new food.",
+       "a": "tried",
+       "o": [
+        "tried",
+        "tryed"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى seen؟",
+       "a": "رأى",
+       "o": [
+        "رأى",
+        "في كل مكان",
+        "تسلق"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى climbed؟",
+       "a": "تسلق",
+       "o": [
+        "تسلق",
+        "في كل مكان",
+        "رأى"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "We've been everywhere!",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "We've been everywhere!",
+       "o": [
+        "We've been everywhere!",
+        "We've seen the pyramids and we've climbed mountains."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

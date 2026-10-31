@@ -1,0 +1,287 @@
+{
+ "id": "en-7-u4-l4",
+ "grade": 7,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 4 · Lesson 4: Writing a Story",
+ "titleAr": "للقصة الجيدة بداية ووسط ونهاية.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "للقصة الجيدة بداية ووسط ونهاية.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "beginning",
+       "ar": "البداية",
+       "em": "🟢"
+      },
+      {
+       "id": "v1",
+       "en": "middle",
+       "ar": "الوسط",
+       "em": "🟡"
+      },
+      {
+       "id": "v2",
+       "en": "ending",
+       "ar": "النهاية",
+       "em": "🔴"
+      },
+      {
+       "id": "v3",
+       "en": "character",
+       "ar": "شخصية",
+       "em": "🧑"
+      },
+      {
+       "id": "v4",
+       "en": "title",
+       "ar": "عنوان",
+       "em": "🏷️"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 47"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Linking words",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">A good story has a beginning, a middle and an <b>ending</b>.</div><div class=\"ex\">First, choose your <b>characters</b>.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "A good story has a beginning, a middle and an ending. First, choose your characters."
+      }
+     ]
+    }
+   ],
+   "lead": "First, then, after that, finally",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "A story has a beginning, a middle and an ___ .",
+           "a": "ending",
+           "o": [
+            "ending",
+            "end of"
+           ]
+          },
+          {
+           "s": "Choose your ___ .",
+           "a": "characters",
+           "o": [
+            "characters",
+            "character's"
+           ]
+          },
+          {
+           "s": "___ that, write the middle.",
+           "a": "After",
+           "o": [
+            "After",
+            "Then"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "A good story has a beginning, a middle and an ending.",
+          "First, choose your characters."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "A good story has a beginning, a middle and an ending.",
+           "o": [
+            "A good story has a beginning, a middle and an ending.",
+            "First, choose your characters."
+           ]
+          },
+          {
+           "a": "First, choose your characters.",
+           "o": [
+            "First, choose your characters.",
+            "A good story has a beginning, a middle and an ending."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "beginning",
+       "ipa": "",
+       "meaning": "البداية",
+       "ex": "A good story has a beginning, a middle and an ending."
+      },
+      {
+       "must": 1,
+       "term": "middle",
+       "ipa": "",
+       "meaning": "الوسط",
+       "ex": "A good story has a beginning, a middle and an ending."
+      },
+      {
+       "must": 1,
+       "term": "ending",
+       "ipa": "",
+       "meaning": "النهاية",
+       "ex": "A good story has a beginning, a middle and an ending."
+      },
+      {
+       "must": 0,
+       "term": "character",
+       "ipa": "",
+       "meaning": "شخصية",
+       "ex": "First, choose your characters."
+      },
+      {
+       "must": 0,
+       "term": "title",
+       "ipa": "",
+       "meaning": "عنوان",
+       "ex": "title"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "A story has a beginning, a middle and an ___ .",
+       "a": "ending",
+       "o": [
+        "ending",
+        "end of"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Choose your ___ .",
+       "a": "characters",
+       "o": [
+        "characters",
+        "character's"
+       ],
+       "why": ""
+      },
+      {
+       "q": "___ that, write the middle.",
+       "a": "After",
+       "o": [
+        "After",
+        "Then"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى title؟",
+       "a": "عنوان",
+       "o": [
+        "عنوان",
+        "البداية",
+        "الوسط"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى middle؟",
+       "a": "الوسط",
+       "o": [
+        "الوسط",
+        "البداية",
+        "النهاية"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "A good story has a beginning, a middle and an ending.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "A good story has a beginning, a middle and an ending.",
+       "o": [
+        "A good story has a beginning, a middle and an ending.",
+        "First, choose your characters."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

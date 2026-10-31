@@ -1,0 +1,307 @@
+{
+ "id": "en-7-u7-l8",
+ "grade": 7,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 7 · Lesson 8: Danger at Sea",
+ "titleAr": "ضربت عاصفة القارب الصغير.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "ضربت عاصفة القارب الصغير.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "storm",
+       "ar": "عاصفة",
+       "em": "⛈️"
+      },
+      {
+       "id": "v1",
+       "en": "rescue",
+       "ar": "ينقذ",
+       "em": "🛟"
+      },
+      {
+       "id": "v2",
+       "en": "sailor",
+       "ar": "بحار",
+       "em": "🧑‍✈️"
+      },
+      {
+       "id": "v3",
+       "en": "sink",
+       "ar": "يغرق",
+       "em": "🛳️"
+      },
+      {
+       "id": "v4",
+       "en": "coast guard",
+       "ar": "خفر السواحل",
+       "em": "🚤"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 83"
+  },
+  {
+   "title": "اقرأ",
+   "eyebrow": "الخطوة ٢ — اقرأ",
+   "heading": "اقرأ واستمع",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "📖 Danger at Sea",
+     "html": "<div class=\"ex\">A storm hit the small boat.</div><div class=\"ex\">The coast guard rescued the sailors.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "A storm hit the small boat. The coast guard rescued the sailors."
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط ▶ لتسمع النص."
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٣ — القاعدة",
+   "heading": "Past simple: regular and irregular",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">A storm <b>hit</b> the small boat.</div><div class=\"ex\">The coast guard <b>rescued</b> the sailors.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "A storm hit the small boat. The coast guard rescued the sailors."
+      }
+     ]
+    }
+   ],
+   "lead": "hit, rescued, sank",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٤ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "A storm ___ the boat.",
+           "a": "hit",
+           "o": [
+            "hit",
+            "hitted"
+           ]
+          },
+          {
+           "s": "The coast guard ___ the sailors.",
+           "a": "rescued",
+           "o": [
+            "rescued",
+            "rescue"
+           ]
+          },
+          {
+           "s": "The boat nearly ___ .",
+           "a": "sank",
+           "o": [
+            "sank",
+            "sinked"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "A storm hit the small boat.",
+          "The coast guard rescued the sailors."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "A storm hit the small boat.",
+           "o": [
+            "A storm hit the small boat.",
+            "The coast guard rescued the sailors."
+           ]
+          },
+          {
+           "a": "The coast guard rescued the sailors.",
+           "o": [
+            "The coast guard rescued the sailors.",
+            "A storm hit the small boat."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٥ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "storm",
+       "ipa": "",
+       "meaning": "عاصفة",
+       "ex": "A storm hit the small boat."
+      },
+      {
+       "must": 1,
+       "term": "rescue",
+       "ipa": "",
+       "meaning": "ينقذ",
+       "ex": "The coast guard rescued the sailors."
+      },
+      {
+       "must": 1,
+       "term": "sailor",
+       "ipa": "",
+       "meaning": "بحار",
+       "ex": "The coast guard rescued the sailors."
+      },
+      {
+       "must": 0,
+       "term": "sink",
+       "ipa": "",
+       "meaning": "يغرق",
+       "ex": "sink"
+      },
+      {
+       "must": 0,
+       "term": "coast guard",
+       "ipa": "",
+       "meaning": "خفر السواحل",
+       "ex": "The coast guard rescued the sailors."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "A storm ___ the boat.",
+       "a": "hit",
+       "o": [
+        "hit",
+        "hitted"
+       ],
+       "why": ""
+      },
+      {
+       "q": "The coast guard ___ the sailors.",
+       "a": "rescued",
+       "o": [
+        "rescued",
+        "rescue"
+       ],
+       "why": ""
+      },
+      {
+       "q": "The boat nearly ___ .",
+       "a": "sank",
+       "o": [
+        "sank",
+        "sinked"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى storm؟",
+       "a": "عاصفة",
+       "o": [
+        "عاصفة",
+        "ينقذ",
+        "بحار"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى sailor؟",
+       "a": "بحار",
+       "o": [
+        "بحار",
+        "عاصفة",
+        "ينقذ"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "A storm hit the small boat.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "A storm hit the small boat.",
+       "o": [
+        "A storm hit the small boat.",
+        "The coast guard rescued the sailors."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

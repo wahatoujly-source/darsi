@@ -5,81 +5,198 @@
  "stage": "primary-4-6",
  "lang": "en",
  "title": "Unit 1 · Lesson 2: This is my flag.",
- "titleAr": "العلم الليبي أحمر وأسود وأخضر.",
+ "titleAr": "الوحدة الأولى: عالمنا — الدرس الثاني: هذا علمي",
+ "characters": {
+  "Kareem": {
+   "ar": "كريم",
+   "color": "--c1",
+   "g": "m",
+   "pitch": 1.4
+  },
+  "Jena": {
+   "ar": "جنى",
+   "color": "--c4",
+   "g": "f",
+   "pitch": 1.6
+  }
+ },
  "steps": [
   {
    "title": "المفردات",
    "eyebrow": "الخطوة ١ — المفردات",
-   "heading": "العلم الليبي أحمر وأسود وأخضر.",
+   "heading": "الأطفال وبلدانهم",
    "blocks": [
     {
      "type": "vocab",
      "items": [
       {
        "id": "v0",
-       "en": "flag",
-       "ar": "علم",
-       "em": "🏳️"
+       "en": "Peter is from England.",
+       "ar": "بيتر من إنجلترا",
+       "em": "🏴"
       },
       {
        "id": "v1",
-       "en": "star",
-       "ar": "نجمة",
-       "em": "⭐"
+       "en": "Enzo is from Italy.",
+       "ar": "إنزو من إيطاليا",
+       "em": "🇮🇹"
       },
       {
        "id": "v2",
-       "en": "crescent",
-       "ar": "هلال",
-       "em": "🌙"
+       "en": "Hiroshi and Minoru are from Japan.",
+       "ar": "هيروشي ومينورو من اليابان",
+       "em": "🇯🇵"
       },
       {
        "id": "v3",
-       "en": "stripe",
-       "ar": "شريط",
-       "em": "➖"
+       "en": "Dalia is from Egypt.",
+       "ar": "داليا من مصر",
+       "em": "🇪🇬"
       },
       {
        "id": "v4",
-       "en": "colours",
-       "ar": "ألوان",
-       "em": "🎨"
+       "en": "Kanda is from Thailand.",
+       "ar": "كاندا من تايلاند",
+       "em": "🇹🇭"
+      },
+      {
+       "id": "v5",
+       "en": "Amy and Joy are from France.",
+       "ar": "إيمي وجوي من فرنسا",
+       "em": "🇫🇷"
+      },
+      {
+       "id": "v6",
+       "en": "This is my flag.",
+       "ar": "هذا علمي",
+       "em": "🇱🇾"
+      },
+      {
+       "id": "v7",
+       "en": "I love my country.",
+       "ar": "أنا أحب بلدي",
+       "em": "❤️"
       }
      ]
     }
    ],
-   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 10⁠–⁠11 · كتاب النشاط ص 6⁠–⁠7"
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتابك ص 10–11."
+  },
+  {
+   "title": "استمع",
+   "eyebrow": "الخطوة ٢ — استمع",
+   "heading": "استمع إلى الحوار",
+   "blocks": [
+    {
+     "type": "dialogue",
+     "star": true
+    }
+   ],
+   "lead": "شغّل الحوار وتابع الكلمات المضيئة، واضغط على أي جملة لتعيدها."
   },
   {
    "title": "القاعدة",
-   "eyebrow": "الخطوة ٢ — القاعدة",
-   "heading": "It has …",
+   "eyebrow": "الخطوة ٣ — القاعدة",
+   "heading": "Where is …from? / Where are … from?",
    "blocks": [
     {
      "type": "panel",
-     "title": "أمثلة",
-     "html": "<div class=\"ex\">The Libyan flag is red, black and <b>green</b>.</div><div class=\"ex\">It <b>has</b> a white crescent and a star.</div>",
+     "title": "السؤال عن البلد",
+     "html": "<div class=\"ex\">Where <b>is</b> Kanda from? — She<b>'s</b> from Thailand.</div><div class=\"ex\">Where <b>are</b> Amy and Joy from? — They<b>'re</b> from France.</div><div class=\"ex\">Where <b>are</b> you from? — I<b>'m</b> from Libya.</div>",
      "blocks": [
       {
        "type": "say",
        "label": "▶ اسمع",
-       "text": "The Libyan flag is red, black and green. It has a white crescent and a star."
+       "text": "Where is Kanda from? She's from Thailand. Where are you from? I'm from Libya."
+      }
+     ]
+    },
+    {
+     "type": "panel",
+     "title": "تحدّث عن نفسك",
+     "html": "<div class=\"ex\">This is my flag.</div><div class=\"ex\">I'm from Libya.</div><div class=\"ex\">I love my country.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "This is my flag. I'm from Libya. I love my country."
       }
      ]
     }
    ],
-   "lead": "نصف العلم بـ It has … و It is …",
+   "lead": "نسأل عن بلد شخص واحد بـ Where is، وعن أكثر من شخص أو عن «you» بـ Where are.",
    "starOnVisit": true
   },
   {
    "title": "تدرّب",
-   "eyebrow": "الخطوة ٣ — تدرّب",
+   "eyebrow": "الخطوة ٤ — تدرّب",
    "heading": "تمارين تُصحَّح فوراً",
    "blocks": [
     {
      "type": "tabs",
      "star": true,
      "tabs": [
+      {
+       "label": "من أين؟",
+       "blocks": [
+        {
+         "type": "choice",
+         "star": false,
+         "items": [
+          {
+           "q": "Where is Peter from?",
+           "a": "England",
+           "o": [
+            "England",
+            "France",
+            "Italy"
+           ],
+           "why": ""
+          },
+          {
+           "q": "Where is Enzo from?",
+           "a": "Italy",
+           "o": [
+            "Italy",
+            "Japan",
+            "Egypt"
+           ],
+           "why": ""
+          },
+          {
+           "q": "Where are Hiroshi and Minoru from?",
+           "a": "Japan",
+           "o": [
+            "Japan",
+            "Thailand",
+            "Turkey"
+           ],
+           "why": ""
+          },
+          {
+           "q": "Where is Dalia from?",
+           "a": "Egypt",
+           "o": [
+            "Egypt",
+            "Libya",
+            "England"
+           ],
+           "why": ""
+          },
+          {
+           "q": "Where are Amy and Joy from?",
+           "a": "France",
+           "o": [
+            "France",
+            "Italy",
+            "England"
+           ],
+           "why": ""
+          }
+         ]
+        }
+       ]
+      },
       {
        "label": "اختر الكلمة",
        "blocks": [
@@ -88,27 +205,45 @@
          "mode": "gap",
          "items": [
           {
-           "s": "The flag ___ a crescent and a star.",
-           "a": "has",
+           "s": "Where ___ Kanda from?",
+           "a": "is",
            "o": [
-            "has",
-            "have"
+            "is",
+            "are"
            ]
           },
           {
-           "s": "The Libyan flag is red, black and ___ .",
-           "a": "green",
+           "s": "Where ___ you from?",
+           "a": "are",
            "o": [
-            "green",
-            "blue"
+            "are",
+            "is"
            ]
           },
           {
-           "s": "There is a white ___ .",
-           "a": "crescent",
+           "s": "Peter isn't from France. ___ from England.",
+           "a": "He's",
            "o": [
-            "crescent",
-            "stripe"
+            "He's",
+            "She's",
+            "They're"
+           ]
+          },
+          {
+           "s": "Amy and Joy ___ from France.",
+           "a": "are",
+           "o": [
+            "are",
+            "is"
+           ]
+          },
+          {
+           "s": "This is my ___ .",
+           "a": "flag",
+           "o": [
+            "flag",
+            "from",
+            "love"
            ]
           }
          ]
@@ -121,33 +256,10 @@
         {
          "type": "order",
          "sentences": [
-          "The Libyan flag is red, black and green.",
-          "It has a white crescent and a star."
-         ]
-        }
-       ]
-      },
-      {
-       "label": "استمع واختر",
-       "blocks": [
-        {
-         "type": "mcq",
-         "mode": "listen",
-         "items": [
-          {
-           "a": "The Libyan flag is red, black and green.",
-           "o": [
-            "The Libyan flag is red, black and green.",
-            "It has a white crescent and a star."
-           ]
-          },
-          {
-           "a": "It has a white crescent and a star.",
-           "o": [
-            "It has a white crescent and a star.",
-            "The Libyan flag is red, black and green."
-           ]
-          }
+          "This is my flag.",
+          "I love my country.",
+          "Where are you from?",
+          "Dalia isn't from Japan."
          ]
         }
        ]
@@ -159,7 +271,7 @@
   },
   {
    "title": "احفظ",
-   "eyebrow": "الخطوة ٤ — احفظ",
+   "eyebrow": "الخطوة ٥ — احفظ",
    "heading": "كلمات يجب أن تحفظها",
    "blocks": [
     {
@@ -171,37 +283,30 @@
       {
        "must": 1,
        "term": "flag",
-       "ipa": "",
-       "meaning": "علم",
-       "ex": "The Libyan flag is red, black and green."
+       "ipa": "/flæɡ/",
+       "meaning": "عَلَم / راية",
+       "ex": "This is my flag."
       },
       {
        "must": 1,
-       "term": "star",
-       "ipa": "",
-       "meaning": "نجمة",
-       "ex": "It has a white crescent and a star."
+       "term": "Where are you from?",
+       "ipa": "/weər ɑː juː frɒm/",
+       "meaning": "من أين أنت؟",
+       "ex": "Where are you from? — I'm from Libya."
       },
       {
        "must": 1,
-       "term": "crescent",
-       "ipa": "",
-       "meaning": "هلال",
-       "ex": "It has a white crescent and a star."
+       "term": "I love my country.",
+       "ipa": "/aɪ lʌv maɪ ˈkʌntri/",
+       "meaning": "أنا أحب بلدي",
+       "ex": "This is my flag. I love my country."
       },
       {
        "must": 0,
-       "term": "stripe",
+       "term": "Talk about yourself.",
        "ipa": "",
-       "meaning": "شريط",
-       "ex": "stripe"
-      },
-      {
-       "must": 0,
-       "term": "colours",
-       "ipa": "",
-       "meaning": "ألوان",
-       "ex": "colours"
+       "meaning": "تحدّث عن نفسك",
+       "ex": ""
       }
      ]
     }
@@ -209,79 +314,134 @@
   },
   {
    "title": "اختبار",
-   "eyebrow": "الخطوة ٥ — اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
    "heading": "اختبر نفسك",
    "blocks": [
     {
      "type": "quiz",
      "star": true,
-     "pass": 5,
+     "pass": 6,
      "items": [
       {
-       "q": "The flag ___ a crescent and a star.",
-       "a": "has",
+       "q": "Where is Kanda from?",
+       "a": "Thailand",
        "o": [
-        "has",
-        "have"
+        "Thailand",
+        "Japan",
+        "Egypt"
        ],
        "why": ""
       },
       {
-       "q": "The Libyan flag is red, black and ___ .",
-       "a": "green",
+       "q": "Where ___ Amy and Joy from?",
+       "a": "are",
        "o": [
-        "green",
-        "blue"
+        "are",
+        "is"
        ],
        "why": ""
       },
       {
-       "q": "There is a white ___ .",
-       "a": "crescent",
+       "q": "Peter is from …",
+       "a": "England",
        "o": [
-        "crescent",
-        "stripe"
+        "England",
+        "France"
        ],
        "why": ""
-      },
-      {
-       "q": "ما معنى stripe؟",
-       "a": "شريط",
-       "o": [
-        "شريط",
-        "علم",
-        "نجمة"
-       ],
-       "why": "",
-       "ar": true
-      },
-      {
-       "q": "ما معنى crescent؟",
-       "a": "هلال",
-       "o": [
-        "هلال",
-        "علم",
-        "نجمة"
-       ],
-       "why": "",
-       "ar": true
       },
       {
        "type": "listen",
-       "say": "The Libyan flag is red, black and green.",
+       "say": "I love my country.",
        "q": "استمع: ماذا قال المتحدث؟",
-       "a": "The Libyan flag is red, black and green.",
+       "a": "I love my country.",
        "o": [
-        "The Libyan flag is red, black and green.",
-        "It has a white crescent and a star."
+        "I love my country.",
+        "This is my flag.",
+        "I'm from Libya."
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى flag؟",
+       "a": "عَلَم",
+       "o": [
+        "عَلَم",
+        "بلد",
+        "جنسية"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "Are Hiroshi and Minoru from Thailand?",
+       "a": "No, they aren't.",
+       "o": [
+        "No, they aren't.",
+        "Yes, they are."
+       ],
+       "why": "هما من اليابان."
+      },
+      {
+       "q": "Where are you from?",
+       "a": "I'm from Libya.",
+       "o": [
+        "I'm from Libya.",
+        "She's from Libya.",
+        "Yes, I am."
+       ],
+       "why": ""
+      },
+      {
+       "q": "Dalia is from …",
+       "a": "Egypt",
+       "o": [
+        "Egypt",
+        "Italy"
        ],
        "why": ""
       }
      ]
     }
    ],
-   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+   "lead": "8 أسئلة. تنجح بـ 6 من 8."
   }
  ],
- "characters": {}
+ "dialogue": [
+  [
+   "Jena",
+   "Is Dalia from Egypt?"
+  ],
+  [
+   "Kareem",
+   "Yes, she is."
+  ],
+  [
+   "Jena",
+   "Are Hiroshi and Minoru from Thailand?"
+  ],
+  [
+   "Kareem",
+   "No, they aren't. They're from Japan."
+  ],
+  [
+   "Jena",
+   "Where is Kanda from?"
+  ],
+  [
+   "Kareem",
+   "She's from Thailand."
+  ],
+  [
+   "Jena",
+   "Where are you from?"
+  ],
+  [
+   "Kareem",
+   "I'm from Libya. This is my flag. I love my country."
+  ]
+ ],
+ "left": [
+  "Jena"
+ ]
 }

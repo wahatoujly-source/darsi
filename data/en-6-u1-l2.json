@@ -5,12 +5,13 @@
  "stage": "primary-4-6",
  "lang": "en",
  "title": "Unit 1 · Lesson 2: Jobs",
- "titleAr": "ماذا يعمل والدك؟ مهندس.",
+ "titleAr": "الوحدة الأولى: العائلة والعمل — الدرس الثاني: المهن",
+ "characters": {},
  "steps": [
   {
    "title": "المفردات",
    "eyebrow": "الخطوة ١ — المفردات",
-   "heading": "ماذا يعمل والدك؟ مهندس.",
+   "heading": "المهن",
    "blocks": [
     {
      "type": "vocab",
@@ -19,62 +20,86 @@
        "id": "v0",
        "en": "doctor",
        "ar": "طبيب",
-       "em": "🧑‍⚕️"
+       "em": "🩺"
       },
       {
        "id": "v1",
+       "en": "nurse",
+       "ar": "ممرض/ة",
+       "em": "👩‍⚕️"
+      },
+      {
+       "id": "v2",
+       "en": "teacher",
+       "ar": "معلم/ة",
+       "em": "🧑‍🏫"
+      },
+      {
+       "id": "v3",
        "en": "engineer",
        "ar": "مهندس",
        "em": "👷"
       },
       {
-       "id": "v2",
+       "id": "v4",
        "en": "farmer",
        "ar": "مزارع",
        "em": "🧑‍🌾"
       },
       {
-       "id": "v3",
-       "en": "pilot",
-       "ar": "طيار",
-       "em": "🧑‍✈️"
-      },
-      {
-       "id": "v4",
-       "en": "nurse",
-       "ar": "ممرض",
-       "em": "🩺"
-      },
-      {
        "id": "v5",
-       "en": "teacher",
-       "ar": "معلم",
-       "em": "🧑‍🏫"
+       "en": "bus driver",
+       "ar": "سائق حافلة",
+       "em": "🚌"
+      },
+      {
+       "id": "v6",
+       "en": "waiter",
+       "ar": "نادل",
+       "em": "🤵"
+      },
+      {
+       "id": "v7",
+       "en": "shop assistant",
+       "ar": "بائع/ة",
+       "em": "🛒"
+      },
+      {
+       "id": "v8",
+       "en": "IT programmer",
+       "ar": "مبرمج حاسوب",
+       "em": "💻"
+      },
+      {
+       "id": "v9",
+       "en": "housewife",
+       "ar": "ربة بيت",
+       "em": "🏠"
       }
      ]
     }
    ],
-   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 10⁠–⁠11 · كتاب النشاط ص 6⁠–⁠7"
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتابك ص 10–11."
   },
   {
    "title": "القاعدة",
    "eyebrow": "الخطوة ٢ — القاعدة",
-   "heading": "a / an + job",
+   "heading": "What's your dad's job? — He's an engineer.",
    "blocks": [
     {
      "type": "panel",
-     "title": "أمثلة",
-     "html": "<div class=\"ex\">What does your father do? He's <b>an</b> engineer.</div><div class=\"ex\">She's <b>a</b> nurse.</div>",
+     "title": "السؤال عن المهنة",
+     "html": "<div class=\"ex\">What's your dad's job? — He's <b>an</b> engineer.</div><div class=\"ex\">What's your mum's job? — She's <b>a</b> teacher.</div><p class=\"note\">an engineer · an IT programmer · a doctor · a nurse</p>",
      "blocks": [
       {
        "type": "say",
        "label": "▶ اسمع",
-       "text": "What does your father do? He's an engineer. She's a nurse."
+       "text": "What's your dad's job? He's an engineer. What's your mum's job? She's a teacher."
       }
      ]
     }
    ],
-   "lead": "He's an engineer. She's a doctor.",
+   "lead": "نستخدم a قبل المهنة التي تبدأ بصوت ساكن، و an قبل التي تبدأ بصوت متحرك.",
    "starOnVisit": true
   },
   {
@@ -87,7 +112,68 @@
      "star": true,
      "tabs": [
       {
-       "label": "اختر الكلمة",
+       "label": "من هو؟",
+       "blocks": [
+        {
+         "type": "choice",
+         "star": false,
+         "items": [
+          {
+           "q": "He helps people when they are ill.",
+           "a": "doctor",
+           "o": [
+            "doctor",
+            "farmer",
+            "waiter"
+           ],
+           "why": ""
+          },
+          {
+           "q": "She works with children and helps them learn.",
+           "a": "teacher",
+           "o": [
+            "teacher",
+            "nurse",
+            "engineer"
+           ],
+           "why": ""
+          },
+          {
+           "q": "He grows vegetables on a farm.",
+           "a": "farmer",
+           "o": [
+            "farmer",
+            "bus driver",
+            "shop assistant"
+           ],
+           "why": ""
+          },
+          {
+           "q": "He makes computer programs.",
+           "a": "IT programmer",
+           "o": [
+            "IT programmer",
+            "waiter",
+            "teacher"
+           ],
+           "why": ""
+          },
+          {
+           "q": "He drives a bus.",
+           "a": "bus driver",
+           "o": [
+            "bus driver",
+            "engineer",
+            "doctor"
+           ],
+           "why": ""
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "a أم an",
        "blocks": [
         {
          "type": "mcq",
@@ -102,7 +188,7 @@
            ]
           },
           {
-           "s": "She's ___ doctor.",
+           "s": "She's ___ teacher.",
            "a": "a",
            "o": [
             "a",
@@ -110,25 +196,21 @@
            ]
           },
           {
-           "s": "What ___ your father do?",
-           "a": "does",
+           "s": "He's ___ IT programmer.",
+           "a": "an",
            "o": [
-            "does",
-            "do"
+            "an",
+            "a"
+           ]
+          },
+          {
+           "s": "She's ___ nurse.",
+           "a": "a",
+           "o": [
+            "a",
+            "an"
            ]
           }
-         ]
-        }
-       ]
-      },
-      {
-       "label": "رتّب الجملة",
-       "blocks": [
-        {
-         "type": "order",
-         "sentences": [
-          "What does your father do? He's an engineer.",
-          "She's a nurse."
          ]
         }
        ]
@@ -141,17 +223,19 @@
          "mode": "listen",
          "items": [
           {
-           "a": "What does your father do? He's an engineer.",
+           "a": "What's your mum's job?",
            "o": [
-            "What does your father do? He's an engineer.",
-            "She's a nurse."
+            "What's your mum's job?",
+            "What's your dad's job?",
+            "Where's your mum?"
            ]
           },
           {
-           "a": "She's a nurse.",
+           "a": "He's an engineer.",
            "o": [
-            "She's a nurse.",
-            "What does your father do? He's an engineer."
+            "He's an engineer.",
+            "He's a farmer.",
+            "She's a nurse."
            ]
           }
          ]
@@ -176,45 +260,38 @@
      "items": [
       {
        "must": 1,
-       "term": "doctor",
-       "ipa": "",
-       "meaning": "طبيب",
-       "ex": "doctor"
+       "term": "job",
+       "ipa": "/dʒɒb/",
+       "meaning": "مهنة / وظيفة",
+       "ex": "What's your dad's job?"
       },
       {
        "must": 1,
        "term": "engineer",
-       "ipa": "",
+       "ipa": "/ˌendʒɪˈnɪə/",
        "meaning": "مهندس",
-       "ex": "What does your father do? He's an engineer."
+       "ex": "He's an engineer."
+      },
+      {
+       "must": 1,
+       "term": "nurse",
+       "ipa": "/nɜːs/",
+       "meaning": "ممرض/ة",
+       "ex": "She's a nurse."
       },
       {
        "must": 1,
        "term": "farmer",
-       "ipa": "",
+       "ipa": "/ˈfɑːmə/",
        "meaning": "مزارع",
-       "ex": "farmer"
+       "ex": "My grandfather is a farmer."
       },
       {
        "must": 0,
-       "term": "pilot",
-       "ipa": "",
-       "meaning": "طيار",
-       "ex": "pilot"
-      },
-      {
-       "must": 0,
-       "term": "nurse",
-       "ipa": "",
-       "meaning": "ممرض",
-       "ex": "She's a nurse."
-      },
-      {
-       "must": 0,
-       "term": "teacher",
-       "ipa": "",
-       "meaning": "معلم",
-       "ex": "teacher"
+       "term": "IT programmer",
+       "ipa": "/ˌaɪ ˈtiː ˈprəʊɡræmə/",
+       "meaning": "مبرمج حاسوب",
+       "ex": "He's an IT programmer."
       }
      ]
     }
@@ -228,7 +305,7 @@
     {
      "type": "quiz",
      "star": true,
-     "pass": 5,
+     "pass": 4,
      "items": [
       {
        "q": "He's ___ engineer.",
@@ -240,40 +317,11 @@
        "why": ""
       },
       {
-       "q": "She's ___ doctor.",
-       "a": "a",
+       "q": "ما معنى waiter؟",
+       "a": "نادل",
        "o": [
-        "a",
-        "an"
-       ],
-       "why": ""
-      },
-      {
-       "q": "What ___ your father do?",
-       "a": "does",
-       "o": [
-        "does",
-        "do"
-       ],
-       "why": ""
-      },
-      {
-       "q": "ما معنى pilot؟",
-       "a": "طيار",
-       "o": [
-        "طيار",
-        "طبيب",
-        "مهندس"
-       ],
-       "why": "",
-       "ar": true
-      },
-      {
-       "q": "ما معنى engineer؟",
-       "a": "مهندس",
-       "o": [
-        "مهندس",
-        "طبيب",
+        "نادل",
+        "سائق",
         "مزارع"
        ],
        "why": "",
@@ -281,20 +329,40 @@
       },
       {
        "type": "listen",
-       "say": "What does your father do? He's an engineer.",
+       "say": "She's a teacher.",
        "q": "استمع: ماذا قال المتحدث؟",
-       "a": "What does your father do? He's an engineer.",
+       "a": "She's a teacher.",
        "o": [
-        "What does your father do? He's an engineer.",
-        "She's a nurse."
+        "She's a teacher.",
+        "She's a nurse.",
+        "He's a doctor."
+       ],
+       "why": ""
+      },
+      {
+       "q": "Who works in a hospital?",
+       "a": "a nurse",
+       "o": [
+        "a nurse",
+        "a farmer",
+        "a bus driver"
+       ],
+       "why": ""
+      },
+      {
+       "q": "What's your dad's ___ ?",
+       "a": "job",
+       "o": [
+        "job",
+        "work job",
+        "jobs"
        ],
        "why": ""
       }
      ]
     }
    ],
-   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+   "lead": "5 أسئلة. تنجح بـ 4 من 5."
   }
- ],
- "characters": {}
+ ]
 }

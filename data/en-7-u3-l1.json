@@ -1,0 +1,299 @@
+{
+ "id": "en-7-u3-l1",
+ "grade": 7,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 3 · Lesson 1: I've Finished my Work",
+ "titleAr": "لقد أنهيت واجبي.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "لقد أنهيت واجبي.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "finished",
+       "ar": "انتهى",
+       "em": "✅"
+      },
+      {
+       "id": "v1",
+       "en": "already",
+       "ar": "بالفعل",
+       "em": "✔️"
+      },
+      {
+       "id": "v2",
+       "en": "yet",
+       "ar": "بعد",
+       "em": "⏳"
+      },
+      {
+       "id": "v3",
+       "en": "just",
+       "ar": "للتو",
+       "em": "🆕"
+      },
+      {
+       "id": "v4",
+       "en": "homework",
+       "ar": "الواجب",
+       "em": "📝"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 32"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Present perfect",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">I've finished my homework.</div><div class=\"ex\">Have you cleaned your room <b>yet</b>?</div><div class=\"ex\">She has <b>just</b> arrived.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "I've finished my homework. Have you cleaned your room yet? She has just arrived."
+      }
+     ]
+    }
+   ],
+   "lead": "have/has + past participle: I've finished, she has done.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "I ___ finished my work.",
+           "a": "have",
+           "o": [
+            "have",
+            "has"
+           ]
+          },
+          {
+           "s": "She has ___ arrived.",
+           "a": "just",
+           "o": [
+            "just",
+            "yet"
+           ]
+          },
+          {
+           "s": "Have you done it ___ ?",
+           "a": "yet",
+           "o": [
+            "yet",
+            "already"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "I've finished my homework.",
+          "Have you cleaned your room yet?",
+          "She has just arrived."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "I've finished my homework.",
+           "o": [
+            "I've finished my homework.",
+            "Have you cleaned your room yet?",
+            "She has just arrived."
+           ]
+          },
+          {
+           "a": "Have you cleaned your room yet?",
+           "o": [
+            "Have you cleaned your room yet?",
+            "I've finished my homework.",
+            "She has just arrived."
+           ]
+          },
+          {
+           "a": "She has just arrived.",
+           "o": [
+            "She has just arrived.",
+            "I've finished my homework.",
+            "Have you cleaned your room yet?"
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "finished",
+       "ipa": "",
+       "meaning": "انتهى",
+       "ex": "I've finished my homework."
+      },
+      {
+       "must": 1,
+       "term": "already",
+       "ipa": "",
+       "meaning": "بالفعل",
+       "ex": "already"
+      },
+      {
+       "must": 1,
+       "term": "yet",
+       "ipa": "",
+       "meaning": "بعد",
+       "ex": "Have you cleaned your room yet?"
+      },
+      {
+       "must": 0,
+       "term": "just",
+       "ipa": "",
+       "meaning": "للتو",
+       "ex": "She has just arrived."
+      },
+      {
+       "must": 0,
+       "term": "homework",
+       "ipa": "",
+       "meaning": "الواجب",
+       "ex": "I've finished my homework."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "I ___ finished my work.",
+       "a": "have",
+       "o": [
+        "have",
+        "has"
+       ],
+       "why": ""
+      },
+      {
+       "q": "She has ___ arrived.",
+       "a": "just",
+       "o": [
+        "just",
+        "yet"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Have you done it ___ ?",
+       "a": "yet",
+       "o": [
+        "yet",
+        "already"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى finished؟",
+       "a": "انتهى",
+       "o": [
+        "انتهى",
+        "بالفعل",
+        "بعد"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى homework؟",
+       "a": "الواجب",
+       "o": [
+        "الواجب",
+        "انتهى",
+        "بالفعل"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "I've finished my homework.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "I've finished my homework.",
+       "o": [
+        "I've finished my homework.",
+        "Have you cleaned your room yet?",
+        "She has just arrived."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

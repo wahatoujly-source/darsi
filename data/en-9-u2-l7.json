@@ -1,0 +1,299 @@
+{
+ "id": "en-9-u2-l7",
+ "grade": 9,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 2 · Lesson 7: Invitations",
+ "titleAr": "هل تود أن تأتي إلى حفلتي؟",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "هل تود أن تأتي إلى حفلتي؟",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "invite",
+       "ar": "يدعو",
+       "em": "💌"
+      },
+      {
+       "id": "v1",
+       "en": "accept",
+       "ar": "يقبل",
+       "em": "✅"
+      },
+      {
+       "id": "v2",
+       "en": "refuse",
+       "ar": "يرفض",
+       "em": "❌"
+      },
+      {
+       "id": "v3",
+       "en": "would you like to",
+       "ar": "هل تود أن",
+       "em": "🙂"
+      },
+      {
+       "id": "v4",
+       "en": "I'm afraid",
+       "ar": "أخشى أن",
+       "em": "😕"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 30⁠–⁠31"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Inviting, accepting, refusing",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Would you like <b>to</b> come to my party?</div><div class=\"ex\">I'd love <b>to</b>, thanks.</div><div class=\"ex\">I'm <b>afraid</b> I can't. I'm busy.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Would you like to come to my party? I'd love to, thanks. I'm afraid I can't. I'm busy."
+      }
+     ]
+    }
+   ],
+   "lead": "Would you like to …? / I'd love to / I'm afraid I can't",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "Would you like ___ come?",
+           "a": "to",
+           "o": [
+            "to",
+            "for"
+           ]
+          },
+          {
+           "s": "I'd ___ to, thanks.",
+           "a": "love",
+           "o": [
+            "love",
+            "like it"
+           ]
+          },
+          {
+           "s": "I'm ___ I can't.",
+           "a": "afraid",
+           "o": [
+            "afraid",
+            "sorry that"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Would you like to come to my party?",
+          "I'd love to, thanks.",
+          "I'm afraid I can't. I'm busy."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Would you like to come to my party?",
+           "o": [
+            "Would you like to come to my party?",
+            "I'd love to, thanks.",
+            "I'm afraid I can't. I'm busy."
+           ]
+          },
+          {
+           "a": "I'd love to, thanks.",
+           "o": [
+            "I'd love to, thanks.",
+            "Would you like to come to my party?",
+            "I'm afraid I can't. I'm busy."
+           ]
+          },
+          {
+           "a": "I'm afraid I can't. I'm busy.",
+           "o": [
+            "I'm afraid I can't. I'm busy.",
+            "Would you like to come to my party?",
+            "I'd love to, thanks."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "invite",
+       "ipa": "",
+       "meaning": "يدعو",
+       "ex": "invite"
+      },
+      {
+       "must": 1,
+       "term": "accept",
+       "ipa": "",
+       "meaning": "يقبل",
+       "ex": "accept"
+      },
+      {
+       "must": 1,
+       "term": "refuse",
+       "ipa": "",
+       "meaning": "يرفض",
+       "ex": "refuse"
+      },
+      {
+       "must": 0,
+       "term": "would you like to",
+       "ipa": "",
+       "meaning": "هل تود أن",
+       "ex": "Would you like to come to my party?"
+      },
+      {
+       "must": 0,
+       "term": "I'm afraid",
+       "ipa": "",
+       "meaning": "أخشى أن",
+       "ex": "I'm afraid I can't. I'm busy."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "Would you like ___ come?",
+       "a": "to",
+       "o": [
+        "to",
+        "for"
+       ],
+       "why": ""
+      },
+      {
+       "q": "I'd ___ to, thanks.",
+       "a": "love",
+       "o": [
+        "love",
+        "like it"
+       ],
+       "why": ""
+      },
+      {
+       "q": "I'm ___ I can't.",
+       "a": "afraid",
+       "o": [
+        "afraid",
+        "sorry that"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى I'm afraid؟",
+       "a": "أخشى أن",
+       "o": [
+        "أخشى أن",
+        "يدعو",
+        "يقبل"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى accept؟",
+       "a": "يقبل",
+       "o": [
+        "يقبل",
+        "يدعو",
+        "يرفض"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Would you like to come to my party?",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Would you like to come to my party?",
+       "o": [
+        "Would you like to come to my party?",
+        "I'd love to, thanks.",
+        "I'm afraid I can't. I'm busy."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

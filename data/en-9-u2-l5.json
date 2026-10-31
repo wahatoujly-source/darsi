@@ -1,0 +1,299 @@
+{
+ "id": "en-9-u2-l5",
+ "grade": 9,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 2 · Lesson 5: Two Conversations",
+ "titleAr": "لماذا لا نذهب إلى الشاطئ؟",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "لماذا لا نذهب إلى الشاطئ؟",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "suggest",
+       "ar": "يقترح",
+       "em": "💡"
+      },
+      {
+       "id": "v1",
+       "en": "Why don't we …?",
+       "ar": "لماذا لا …؟",
+       "em": "🤔"
+      },
+      {
+       "id": "v2",
+       "en": "How about …?",
+       "ar": "ما رأيك في …؟",
+       "em": "💭"
+      },
+      {
+       "id": "v3",
+       "en": "good idea",
+       "ar": "فكرة جيدة",
+       "em": "👍"
+      },
+      {
+       "id": "v4",
+       "en": "I'd rather",
+       "ar": "أفضّل",
+       "em": "🙂"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 28"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Suggestions",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Why don't we <b>go</b> to the beach?</div><div class=\"ex\">How about <b>going</b> to the museum instead?</div><div class=\"ex\">That's a good <b>idea</b>!</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Why don't we go to the beach? How about going to the museum instead? That's a good idea!"
+      }
+     ]
+    }
+   ],
+   "lead": "Why don't we + verb? / How about + -ing?",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "How about ___ to the museum?",
+           "a": "going",
+           "o": [
+            "going",
+            "go"
+           ]
+          },
+          {
+           "s": "Why don't we ___ to the beach?",
+           "a": "go",
+           "o": [
+            "go",
+            "going"
+           ]
+          },
+          {
+           "s": "That's a good ___ !",
+           "a": "idea",
+           "o": [
+            "idea",
+            "ideas"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Why don't we go to the beach?",
+          "How about going to the museum instead?",
+          "That's a good idea!"
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Why don't we go to the beach?",
+           "o": [
+            "Why don't we go to the beach?",
+            "How about going to the museum instead?",
+            "That's a good idea!"
+           ]
+          },
+          {
+           "a": "How about going to the museum instead?",
+           "o": [
+            "How about going to the museum instead?",
+            "Why don't we go to the beach?",
+            "That's a good idea!"
+           ]
+          },
+          {
+           "a": "That's a good idea!",
+           "o": [
+            "That's a good idea!",
+            "Why don't we go to the beach?",
+            "How about going to the museum instead?"
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "suggest",
+       "ipa": "",
+       "meaning": "يقترح",
+       "ex": "suggest"
+      },
+      {
+       "must": 1,
+       "term": "Why don't we …?",
+       "ipa": "",
+       "meaning": "لماذا لا …؟",
+       "ex": "Why don't we go to the beach?"
+      },
+      {
+       "must": 1,
+       "term": "How about …?",
+       "ipa": "",
+       "meaning": "ما رأيك في …؟",
+       "ex": "How about going to the museum instead?"
+      },
+      {
+       "must": 0,
+       "term": "good idea",
+       "ipa": "",
+       "meaning": "فكرة جيدة",
+       "ex": "That's a good idea!"
+      },
+      {
+       "must": 0,
+       "term": "I'd rather",
+       "ipa": "",
+       "meaning": "أفضّل",
+       "ex": "I'd rather"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "How about ___ to the museum?",
+       "a": "going",
+       "o": [
+        "going",
+        "go"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Why don't we ___ to the beach?",
+       "a": "go",
+       "o": [
+        "go",
+        "going"
+       ],
+       "why": ""
+      },
+      {
+       "q": "That's a good ___ !",
+       "a": "idea",
+       "o": [
+        "idea",
+        "ideas"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى good idea؟",
+       "a": "فكرة جيدة",
+       "o": [
+        "فكرة جيدة",
+        "يقترح",
+        "لماذا لا …؟"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى Why don't we …?؟",
+       "a": "لماذا لا …؟",
+       "o": [
+        "لماذا لا …؟",
+        "يقترح",
+        "ما رأيك في …؟"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Why don't we go to the beach?",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Why don't we go to the beach?",
+       "o": [
+        "Why don't we go to the beach?",
+        "How about going to the museum instead?",
+        "That's a good idea!"
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

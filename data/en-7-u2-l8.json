@@ -1,0 +1,287 @@
+{
+ "id": "en-7-u2-l8",
+ "grade": 7,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 2 · Lesson 8: New Year's Day in London",
+ "titleAr": "يشاهد الناس الألعاب النارية في منتصف الليل.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "يشاهد الناس الألعاب النارية في منتصف الليل.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "fireworks",
+       "ar": "ألعاب نارية",
+       "em": "🎆"
+      },
+      {
+       "id": "v1",
+       "en": "midnight",
+       "ar": "منتصف الليل",
+       "em": "🕛"
+      },
+      {
+       "id": "v2",
+       "en": "crowd",
+       "ar": "حشد",
+       "em": "👥"
+      },
+      {
+       "id": "v3",
+       "en": "river",
+       "ar": "نهر",
+       "em": "🌉"
+      },
+      {
+       "id": "v4",
+       "en": "count down",
+       "ar": "العد التنازلي",
+       "em": "🔟"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 27"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "at + time",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">People watch fireworks <b>at</b> midnight.</div><div class=\"ex\">Big <b>crowds</b> stand by the River Thames.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "People watch fireworks at midnight. Big crowds stand by the River Thames."
+      }
+     ]
+    }
+   ],
+   "lead": "at midnight / at twelve o'clock",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "Fireworks start ___ midnight.",
+           "a": "at",
+           "o": [
+            "at",
+            "in"
+           ]
+          },
+          {
+           "s": "Big ___ watch them.",
+           "a": "crowds",
+           "o": [
+            "crowds",
+            "crowd"
+           ]
+          },
+          {
+           "s": "People ___ down from ten.",
+           "a": "count",
+           "o": [
+            "count",
+            "counts"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "People watch fireworks at midnight.",
+          "Big crowds stand by the River Thames."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "People watch fireworks at midnight.",
+           "o": [
+            "People watch fireworks at midnight.",
+            "Big crowds stand by the River Thames."
+           ]
+          },
+          {
+           "a": "Big crowds stand by the River Thames.",
+           "o": [
+            "Big crowds stand by the River Thames.",
+            "People watch fireworks at midnight."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "fireworks",
+       "ipa": "",
+       "meaning": "ألعاب نارية",
+       "ex": "People watch fireworks at midnight."
+      },
+      {
+       "must": 1,
+       "term": "midnight",
+       "ipa": "",
+       "meaning": "منتصف الليل",
+       "ex": "People watch fireworks at midnight."
+      },
+      {
+       "must": 1,
+       "term": "crowd",
+       "ipa": "",
+       "meaning": "حشد",
+       "ex": "Big crowds stand by the River Thames."
+      },
+      {
+       "must": 0,
+       "term": "river",
+       "ipa": "",
+       "meaning": "نهر",
+       "ex": "Big crowds stand by the River Thames."
+      },
+      {
+       "must": 0,
+       "term": "count down",
+       "ipa": "",
+       "meaning": "العد التنازلي",
+       "ex": "count down"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "Fireworks start ___ midnight.",
+       "a": "at",
+       "o": [
+        "at",
+        "in"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Big ___ watch them.",
+       "a": "crowds",
+       "o": [
+        "crowds",
+        "crowd"
+       ],
+       "why": ""
+      },
+      {
+       "q": "People ___ down from ten.",
+       "a": "count",
+       "o": [
+        "count",
+        "counts"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى crowd؟",
+       "a": "حشد",
+       "o": [
+        "حشد",
+        "ألعاب نارية",
+        "منتصف الليل"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى river؟",
+       "a": "نهر",
+       "o": [
+        "نهر",
+        "ألعاب نارية",
+        "منتصف الليل"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "People watch fireworks at midnight.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "People watch fireworks at midnight.",
+       "o": [
+        "People watch fireworks at midnight.",
+        "Big crowds stand by the River Thames."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

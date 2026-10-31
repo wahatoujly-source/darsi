@@ -1,0 +1,299 @@
+{
+ "id": "en-7-u3-l7",
+ "grade": 7,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 3 · Lesson 7: Once Upon a Time …",
+ "titleAr": "كان يا ما كان، كان هناك مزارع فقير.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "كان يا ما كان، كان هناك مزارع فقير.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "once upon a time",
+       "ar": "كان يا ما كان",
+       "em": "📖"
+      },
+      {
+       "id": "v1",
+       "en": "prince",
+       "ar": "أمير",
+       "em": "🤴"
+      },
+      {
+       "id": "v2",
+       "en": "forest",
+       "ar": "غابة",
+       "em": "🌲"
+      },
+      {
+       "id": "v3",
+       "en": "suddenly",
+       "ar": "فجأة",
+       "em": "⚡"
+      },
+      {
+       "id": "v4",
+       "en": "in the end",
+       "ar": "في النهاية",
+       "em": "🏁"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 39"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Story openers",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\"><b>Once</b> upon a time, there was a poor farmer.</div><div class=\"ex\"><b>Suddenly</b>, he found a golden key.</div><div class=\"ex\">In the <b>end</b>, he lived happily.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Once upon a time, there was a poor farmer. Suddenly, he found a golden key. In the end, he lived happily."
+      }
+     ]
+    }
+   ],
+   "lead": "Once upon a time … / Suddenly … / In the end …",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "___ upon a time …",
+           "a": "Once",
+           "o": [
+            "Once",
+            "One"
+           ]
+          },
+          {
+           "s": "___ , he heard a noise.",
+           "a": "Suddenly",
+           "o": [
+            "Suddenly",
+            "Sudden"
+           ]
+          },
+          {
+           "s": "In the ___ , they were happy.",
+           "a": "end",
+           "o": [
+            "end",
+            "finish"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Once upon a time, there was a poor farmer.",
+          "Suddenly, he found a golden key.",
+          "In the end, he lived happily."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Once upon a time, there was a poor farmer.",
+           "o": [
+            "Once upon a time, there was a poor farmer.",
+            "Suddenly, he found a golden key.",
+            "In the end, he lived happily."
+           ]
+          },
+          {
+           "a": "Suddenly, he found a golden key.",
+           "o": [
+            "Suddenly, he found a golden key.",
+            "Once upon a time, there was a poor farmer.",
+            "In the end, he lived happily."
+           ]
+          },
+          {
+           "a": "In the end, he lived happily.",
+           "o": [
+            "In the end, he lived happily.",
+            "Once upon a time, there was a poor farmer.",
+            "Suddenly, he found a golden key."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "once upon a time",
+       "ipa": "",
+       "meaning": "كان يا ما كان",
+       "ex": "Once upon a time, there was a poor farmer."
+      },
+      {
+       "must": 1,
+       "term": "prince",
+       "ipa": "",
+       "meaning": "أمير",
+       "ex": "prince"
+      },
+      {
+       "must": 1,
+       "term": "forest",
+       "ipa": "",
+       "meaning": "غابة",
+       "ex": "forest"
+      },
+      {
+       "must": 0,
+       "term": "suddenly",
+       "ipa": "",
+       "meaning": "فجأة",
+       "ex": "Suddenly, he found a golden key."
+      },
+      {
+       "must": 0,
+       "term": "in the end",
+       "ipa": "",
+       "meaning": "في النهاية",
+       "ex": "In the end, he lived happily."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "___ upon a time …",
+       "a": "Once",
+       "o": [
+        "Once",
+        "One"
+       ],
+       "why": ""
+      },
+      {
+       "q": "___ , he heard a noise.",
+       "a": "Suddenly",
+       "o": [
+        "Suddenly",
+        "Sudden"
+       ],
+       "why": ""
+      },
+      {
+       "q": "In the ___ , they were happy.",
+       "a": "end",
+       "o": [
+        "end",
+        "finish"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى once upon a time؟",
+       "a": "كان يا ما كان",
+       "o": [
+        "كان يا ما كان",
+        "أمير",
+        "غابة"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى forest؟",
+       "a": "غابة",
+       "o": [
+        "غابة",
+        "كان يا ما كان",
+        "أمير"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Once upon a time, there was a poor farmer.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Once upon a time, there was a poor farmer.",
+       "o": [
+        "Once upon a time, there was a poor farmer.",
+        "Suddenly, he found a golden key.",
+        "In the end, he lived happily."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

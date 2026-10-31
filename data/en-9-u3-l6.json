@@ -1,0 +1,287 @@
+{
+ "id": "en-9-u3-l6",
+ "grade": 9,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 3 · Lesson 6: Do you care about …?",
+ "titleAr": "هل تهتم بالبيئة؟",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "هل تهتم بالبيئة؟",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "care about",
+       "ar": "يهتم بـ",
+       "em": "❤️"
+      },
+      {
+       "id": "v1",
+       "en": "climate",
+       "ar": "المناخ",
+       "em": "🌡️"
+      },
+      {
+       "id": "v2",
+       "en": "volunteer",
+       "ar": "متطوع",
+       "em": "🙋"
+      },
+      {
+       "id": "v3",
+       "en": "charity",
+       "ar": "جمعية خيرية",
+       "em": "🤲"
+      },
+      {
+       "id": "v4",
+       "en": "campaign",
+       "ar": "حملة",
+       "em": "📣"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 43"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Relative clause: that/which",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Do you care <b>about</b> the environment?</div><div class=\"ex\">I volunteer for a charity <b>that</b> plants trees.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Do you care about the environment? I volunteer for a charity that plants trees."
+      }
+     ]
+    }
+   ],
+   "lead": "a charity that plants trees",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "Do you care ___ animals?",
+           "a": "about",
+           "o": [
+            "about",
+            "for"
+           ]
+          },
+          {
+           "s": "a charity ___ plants trees",
+           "a": "that",
+           "o": [
+            "that",
+            "who"
+           ]
+          },
+          {
+           "s": "We started a ___ to clean the beach.",
+           "a": "campaign",
+           "o": [
+            "campaign",
+            "climate"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Do you care about the environment?",
+          "I volunteer for a charity that plants trees."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Do you care about the environment?",
+           "o": [
+            "Do you care about the environment?",
+            "I volunteer for a charity that plants trees."
+           ]
+          },
+          {
+           "a": "I volunteer for a charity that plants trees.",
+           "o": [
+            "I volunteer for a charity that plants trees.",
+            "Do you care about the environment?"
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "care about",
+       "ipa": "",
+       "meaning": "يهتم بـ",
+       "ex": "Do you care about the environment?"
+      },
+      {
+       "must": 1,
+       "term": "climate",
+       "ipa": "",
+       "meaning": "المناخ",
+       "ex": "climate"
+      },
+      {
+       "must": 1,
+       "term": "volunteer",
+       "ipa": "",
+       "meaning": "متطوع",
+       "ex": "I volunteer for a charity that plants trees."
+      },
+      {
+       "must": 0,
+       "term": "charity",
+       "ipa": "",
+       "meaning": "جمعية خيرية",
+       "ex": "I volunteer for a charity that plants trees."
+      },
+      {
+       "must": 0,
+       "term": "campaign",
+       "ipa": "",
+       "meaning": "حملة",
+       "ex": "campaign"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "Do you care ___ animals?",
+       "a": "about",
+       "o": [
+        "about",
+        "for"
+       ],
+       "why": ""
+      },
+      {
+       "q": "a charity ___ plants trees",
+       "a": "that",
+       "o": [
+        "that",
+        "who"
+       ],
+       "why": ""
+      },
+      {
+       "q": "We started a ___ to clean the beach.",
+       "a": "campaign",
+       "o": [
+        "campaign",
+        "climate"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى charity؟",
+       "a": "جمعية خيرية",
+       "o": [
+        "جمعية خيرية",
+        "يهتم بـ",
+        "المناخ"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى climate؟",
+       "a": "المناخ",
+       "o": [
+        "المناخ",
+        "يهتم بـ",
+        "متطوع"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Do you care about the environment?",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Do you care about the environment?",
+       "o": [
+        "Do you care about the environment?",
+        "I volunteer for a charity that plants trees."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

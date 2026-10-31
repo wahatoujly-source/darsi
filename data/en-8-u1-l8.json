@@ -1,0 +1,319 @@
+{
+ "id": "en-8-u1-l8",
+ "grade": 8,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 1 · Lesson 8: Bob and Bashir",
+ "titleAr": "بوب وبشير صديقان حميمان.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "بوب وبشير صديقان حميمان.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "Bob",
+       "ar": "بوب",
+       "em": "🧑"
+      },
+      {
+       "id": "v1",
+       "en": "Bashir",
+       "ar": "بشير",
+       "em": "🧑🏽"
+      },
+      {
+       "id": "v2",
+       "en": "friends",
+       "ar": "أصدقاء",
+       "em": "🤝"
+      },
+      {
+       "id": "v3",
+       "en": "funny",
+       "ar": "مضحك",
+       "em": "😂"
+      },
+      {
+       "id": "v4",
+       "en": "mistake",
+       "ar": "خطأ",
+       "em": "❌"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 19⁠–⁠20"
+  },
+  {
+   "title": "اقرأ",
+   "eyebrow": "الخطوة ٢ — اقرأ",
+   "heading": "اقرأ واستمع",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "📖 Bob and Bashir",
+     "html": "<div class=\"ex\">Bob and Bashir are good friends.</div><div class=\"ex\">Bob always makes funny mistakes.</div><div class=\"ex\">Bashir helps him.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Bob and Bashir are good friends. Bob always makes funny mistakes. Bashir helps him."
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط ▶ لتسمع النص."
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٣ — القاعدة",
+   "heading": "make a mistake",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Bob and Bashir are good friends.</div><div class=\"ex\">Bob always makes funny <b>mistakes</b>.</div><div class=\"ex\">Bashir <b>helps</b> him.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Bob and Bashir are good friends. Bob always makes funny mistakes. Bashir helps him."
+      }
+     ]
+    }
+   ],
+   "lead": "نقول make a mistake وليس do a mistake.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٤ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "Bob makes funny ___ .",
+           "a": "mistakes",
+           "o": [
+            "mistakes",
+            "mistake"
+           ]
+          },
+          {
+           "s": "Bob ___ makes mistakes.",
+           "a": "always",
+           "o": [
+            "always",
+            "never"
+           ]
+          },
+          {
+           "s": "Bashir ___ him.",
+           "a": "helps",
+           "o": [
+            "helps",
+            "help"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Bob and Bashir are good friends.",
+          "Bob always makes funny mistakes.",
+          "Bashir helps him."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Bob and Bashir are good friends.",
+           "o": [
+            "Bob and Bashir are good friends.",
+            "Bob always makes funny mistakes.",
+            "Bashir helps him."
+           ]
+          },
+          {
+           "a": "Bob always makes funny mistakes.",
+           "o": [
+            "Bob always makes funny mistakes.",
+            "Bob and Bashir are good friends.",
+            "Bashir helps him."
+           ]
+          },
+          {
+           "a": "Bashir helps him.",
+           "o": [
+            "Bashir helps him.",
+            "Bob and Bashir are good friends.",
+            "Bob always makes funny mistakes."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٥ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "Bob",
+       "ipa": "",
+       "meaning": "بوب",
+       "ex": "Bob and Bashir are good friends."
+      },
+      {
+       "must": 1,
+       "term": "Bashir",
+       "ipa": "",
+       "meaning": "بشير",
+       "ex": "Bob and Bashir are good friends."
+      },
+      {
+       "must": 1,
+       "term": "friends",
+       "ipa": "",
+       "meaning": "أصدقاء",
+       "ex": "Bob and Bashir are good friends."
+      },
+      {
+       "must": 0,
+       "term": "funny",
+       "ipa": "",
+       "meaning": "مضحك",
+       "ex": "Bob always makes funny mistakes."
+      },
+      {
+       "must": 0,
+       "term": "mistake",
+       "ipa": "",
+       "meaning": "خطأ",
+       "ex": "Bob always makes funny mistakes."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "Bob makes funny ___ .",
+       "a": "mistakes",
+       "o": [
+        "mistakes",
+        "mistake"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Bob ___ makes mistakes.",
+       "a": "always",
+       "o": [
+        "always",
+        "never"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Bashir ___ him.",
+       "a": "helps",
+       "o": [
+        "helps",
+        "help"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى friends؟",
+       "a": "أصدقاء",
+       "o": [
+        "أصدقاء",
+        "بوب",
+        "بشير"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى mistake؟",
+       "a": "خطأ",
+       "o": [
+        "خطأ",
+        "بوب",
+        "بشير"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Bob and Bashir are good friends.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Bob and Bashir are good friends.",
+       "o": [
+        "Bob and Bashir are good friends.",
+        "Bob always makes funny mistakes.",
+        "Bashir helps him."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

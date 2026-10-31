@@ -1,0 +1,287 @@
+{
+ "id": "en-7-u7-l3",
+ "grade": 7,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 7 · Lesson 3: Warnings to Parents",
+ "titleAr": "احفظ الأدوية بعيداً عن متناول الأطفال.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "احفظ الأدوية بعيداً عن متناول الأطفال.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "medicine",
+       "ar": "دواء",
+       "em": "💊"
+      },
+      {
+       "id": "v1",
+       "en": "reach",
+       "ar": "متناول",
+       "em": "🙌"
+      },
+      {
+       "id": "v2",
+       "en": "lock",
+       "ar": "يقفل",
+       "em": "🔒"
+      },
+      {
+       "id": "v3",
+       "en": "cleaning products",
+       "ar": "منظفات",
+       "em": "🧴"
+      },
+      {
+       "id": "v4",
+       "en": "supervise",
+       "ar": "يراقب",
+       "em": "👀"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 78"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Keep … out of …",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Keep medicines out of children's <b>reach</b>.</div><div class=\"ex\"><b>Lock</b> cleaning products in a cupboard.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Keep medicines out of children's reach. Lock cleaning products in a cupboard."
+      }
+     ]
+    }
+   ],
+   "lead": "Keep medicines out of reach.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "Keep medicines out of children's ___ .",
+           "a": "reach",
+           "o": [
+            "reach",
+            "reaches"
+           ]
+          },
+          {
+           "s": "___ cleaning products in a cupboard.",
+           "a": "Lock",
+           "o": [
+            "Lock",
+            "Locks"
+           ]
+          },
+          {
+           "s": "Always ___ young children.",
+           "a": "supervise",
+           "o": [
+            "supervise",
+            "supervises"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Keep medicines out of children's reach.",
+          "Lock cleaning products in a cupboard."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Keep medicines out of children's reach.",
+           "o": [
+            "Keep medicines out of children's reach.",
+            "Lock cleaning products in a cupboard."
+           ]
+          },
+          {
+           "a": "Lock cleaning products in a cupboard.",
+           "o": [
+            "Lock cleaning products in a cupboard.",
+            "Keep medicines out of children's reach."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "medicine",
+       "ipa": "",
+       "meaning": "دواء",
+       "ex": "Keep medicines out of children's reach."
+      },
+      {
+       "must": 1,
+       "term": "reach",
+       "ipa": "",
+       "meaning": "متناول",
+       "ex": "Keep medicines out of children's reach."
+      },
+      {
+       "must": 1,
+       "term": "lock",
+       "ipa": "",
+       "meaning": "يقفل",
+       "ex": "Lock cleaning products in a cupboard."
+      },
+      {
+       "must": 0,
+       "term": "cleaning products",
+       "ipa": "",
+       "meaning": "منظفات",
+       "ex": "Lock cleaning products in a cupboard."
+      },
+      {
+       "must": 0,
+       "term": "supervise",
+       "ipa": "",
+       "meaning": "يراقب",
+       "ex": "supervise"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "Keep medicines out of children's ___ .",
+       "a": "reach",
+       "o": [
+        "reach",
+        "reaches"
+       ],
+       "why": ""
+      },
+      {
+       "q": "___ cleaning products in a cupboard.",
+       "a": "Lock",
+       "o": [
+        "Lock",
+        "Locks"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Always ___ young children.",
+       "a": "supervise",
+       "o": [
+        "supervise",
+        "supervises"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى medicine؟",
+       "a": "دواء",
+       "o": [
+        "دواء",
+        "متناول",
+        "يقفل"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى supervise؟",
+       "a": "يراقب",
+       "o": [
+        "يراقب",
+        "دواء",
+        "متناول"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Keep medicines out of children's reach.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Keep medicines out of children's reach.",
+       "o": [
+        "Keep medicines out of children's reach.",
+        "Lock cleaning products in a cupboard."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

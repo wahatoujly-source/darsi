@@ -1,0 +1,337 @@
+{
+ "id": "en-7-u7-lR",
+ "grade": 7,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 7 · Lesson R: Round up",
+ "titleAr": "مراجعة الوحدة — Danger!",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "مراجعة الوحدة — Danger!",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "press",
+       "ar": "يضغط",
+       "em": "👆"
+      },
+      {
+       "id": "v1",
+       "en": "switch on",
+       "ar": "يشغّل",
+       "em": "🔛"
+      },
+      {
+       "id": "v2",
+       "en": "careful",
+       "ar": "احذر",
+       "em": "⚠️"
+      },
+      {
+       "id": "v3",
+       "en": "hot",
+       "ar": "ساخن",
+       "em": "🔥"
+      },
+      {
+       "id": "v4",
+       "en": "medicine",
+       "ar": "دواء",
+       "em": "💊"
+      },
+      {
+       "id": "v5",
+       "en": "reach",
+       "ar": "متناول",
+       "em": "🙌"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 84"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Unit review",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Plug in the computer.</div><div class=\"ex\">Be <b>careful</b>! The iron is hot.</div><div class=\"ex\">Keep medicines out of children's <b>reach</b>.</div><div class=\"ex\">We went <b>fishing</b> with my uncle.</div><div class=\"ex\"><b>If</b> there's a fire, leave the building.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Plug in the computer. Be careful! The iron is hot. Keep medicines out of children's reach. We went fishing with my uncle. If there's a fire, leave the building."
+      }
+     ]
+    }
+   ],
+   "lead": "نراجع أهم قواعد الوحدة وكلماتها: اقرأ الأمثلة بصوت عالٍ ثم حلّ التمارين.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "Press the ___ .",
+           "a": "button",
+           "o": [
+            "button",
+            "plug"
+           ]
+          },
+          {
+           "s": "Be ___ ! It's hot.",
+           "a": "careful",
+           "o": [
+            "careful",
+            "care"
+           ]
+          },
+          {
+           "s": "Keep medicines out of children's ___ .",
+           "a": "reach",
+           "o": [
+            "reach",
+            "reaches"
+           ]
+          },
+          {
+           "s": "We went ___ .",
+           "a": "fishing",
+           "o": [
+            "fishing",
+            "fish"
+           ]
+          },
+          {
+           "s": "___ there's a fire, leave the building.",
+           "a": "If",
+           "o": [
+            "If",
+            "When's"
+           ]
+          },
+          {
+           "s": "Pedestrians ___ use the crossing.",
+           "a": "should",
+           "o": [
+            "should",
+            "shouldn't"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Plug in the computer.",
+          "Be careful! The iron is hot.",
+          "Keep medicines out of children's reach.",
+          "We went fishing with my uncle."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Plug in the computer.",
+           "o": [
+            "Plug in the computer.",
+            "Be careful! The iron is hot.",
+            "Keep medicines out of children's reach."
+           ]
+          },
+          {
+           "a": "Be careful! The iron is hot.",
+           "o": [
+            "Be careful! The iron is hot.",
+            "Plug in the computer.",
+            "Keep medicines out of children's reach."
+           ]
+          },
+          {
+           "a": "Keep medicines out of children's reach.",
+           "o": [
+            "Keep medicines out of children's reach.",
+            "Plug in the computer.",
+            "Be careful! The iron is hot."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "press",
+       "ipa": "",
+       "meaning": "يضغط",
+       "ex": "press"
+      },
+      {
+       "must": 1,
+       "term": "switch on",
+       "ipa": "",
+       "meaning": "يشغّل",
+       "ex": "switch on"
+      },
+      {
+       "must": 1,
+       "term": "careful",
+       "ipa": "",
+       "meaning": "احذر",
+       "ex": "Be careful! The iron is hot."
+      },
+      {
+       "must": 0,
+       "term": "hot",
+       "ipa": "",
+       "meaning": "ساخن",
+       "ex": "Be careful! The iron is hot."
+      },
+      {
+       "must": 0,
+       "term": "medicine",
+       "ipa": "",
+       "meaning": "دواء",
+       "ex": "Keep medicines out of children's reach."
+      },
+      {
+       "must": 0,
+       "term": "reach",
+       "ipa": "",
+       "meaning": "متناول",
+       "ex": "Keep medicines out of children's reach."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "Press the ___ .",
+       "a": "button",
+       "o": [
+        "button",
+        "plug"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Be ___ ! It's hot.",
+       "a": "careful",
+       "o": [
+        "careful",
+        "care"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Keep medicines out of children's ___ .",
+       "a": "reach",
+       "o": [
+        "reach",
+        "reaches"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى hot؟",
+       "a": "ساخن",
+       "o": [
+        "ساخن",
+        "يضغط",
+        "يشغّل"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى switch on؟",
+       "a": "يشغّل",
+       "o": [
+        "يشغّل",
+        "يضغط",
+        "احذر"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Plug in the computer.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Plug in the computer.",
+       "o": [
+        "Plug in the computer.",
+        "Be careful! The iron is hot.",
+        "Keep medicines out of children's reach."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

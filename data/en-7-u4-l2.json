@@ -1,0 +1,319 @@
+{
+ "id": "en-7-u4-l2",
+ "grade": 7,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 4 · Lesson 2: Khalid's Birthday Present",
+ "titleAr": "أعطاه والده هدية.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "أعطاه والده هدية.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "present",
+       "ar": "هدية",
+       "em": "🎁"
+      },
+      {
+       "id": "v1",
+       "en": "wrap",
+       "ar": "يغلف",
+       "em": "🎀"
+      },
+      {
+       "id": "v2",
+       "en": "surprise",
+       "ar": "مفاجأة",
+       "em": "😲"
+      },
+      {
+       "id": "v3",
+       "en": "open",
+       "ar": "يفتح",
+       "em": "📦"
+      },
+      {
+       "id": "v4",
+       "en": "watch",
+       "ar": "ساعة يد",
+       "em": "⌚"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 45"
+  },
+  {
+   "title": "اقرأ",
+   "eyebrow": "الخطوة ٢ — اقرأ",
+   "heading": "اقرأ واستمع",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "📖 Khalid's Birthday Present",
+     "html": "<div class=\"ex\">Khalid's father gave him a present.</div><div class=\"ex\">He opened it. It was a new watch!</div><div class=\"ex\">What a surprise!</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Khalid's father gave him a present. He opened it. It was a new watch! What a surprise!"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط ▶ لتسمع النص."
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٣ — القاعدة",
+   "heading": "What a …!",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Khalid's father <b>gave</b> him a present.</div><div class=\"ex\">He <b>opened</b> it. It was a new watch!</div><div class=\"ex\"><b>What</b> a surprise!</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Khalid's father gave him a present. He opened it. It was a new watch! What a surprise!"
+      }
+     ]
+    }
+   ],
+   "lead": "للتعجب: What a surprise! / What a nice watch!",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٤ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "___ a surprise!",
+           "a": "What",
+           "o": [
+            "What",
+            "How"
+           ]
+          },
+          {
+           "s": "He ___ the present.",
+           "a": "opened",
+           "o": [
+            "opened",
+            "open"
+           ]
+          },
+          {
+           "s": "His father ___ him a watch.",
+           "a": "gave",
+           "o": [
+            "gave",
+            "gived"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Khalid's father gave him a present.",
+          "He opened it. It was a new watch!",
+          "What a surprise!"
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Khalid's father gave him a present.",
+           "o": [
+            "Khalid's father gave him a present.",
+            "He opened it. It was a new watch!",
+            "What a surprise!"
+           ]
+          },
+          {
+           "a": "He opened it. It was a new watch!",
+           "o": [
+            "He opened it. It was a new watch!",
+            "Khalid's father gave him a present.",
+            "What a surprise!"
+           ]
+          },
+          {
+           "a": "What a surprise!",
+           "o": [
+            "What a surprise!",
+            "Khalid's father gave him a present.",
+            "He opened it. It was a new watch!"
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٥ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "present",
+       "ipa": "",
+       "meaning": "هدية",
+       "ex": "Khalid's father gave him a present."
+      },
+      {
+       "must": 1,
+       "term": "wrap",
+       "ipa": "",
+       "meaning": "يغلف",
+       "ex": "wrap"
+      },
+      {
+       "must": 1,
+       "term": "surprise",
+       "ipa": "",
+       "meaning": "مفاجأة",
+       "ex": "What a surprise!"
+      },
+      {
+       "must": 0,
+       "term": "open",
+       "ipa": "",
+       "meaning": "يفتح",
+       "ex": "He opened it. It was a new watch!"
+      },
+      {
+       "must": 0,
+       "term": "watch",
+       "ipa": "",
+       "meaning": "ساعة يد",
+       "ex": "He opened it. It was a new watch!"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "___ a surprise!",
+       "a": "What",
+       "o": [
+        "What",
+        "How"
+       ],
+       "why": ""
+      },
+      {
+       "q": "He ___ the present.",
+       "a": "opened",
+       "o": [
+        "opened",
+        "open"
+       ],
+       "why": ""
+      },
+      {
+       "q": "His father ___ him a watch.",
+       "a": "gave",
+       "o": [
+        "gave",
+        "gived"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى open؟",
+       "a": "يفتح",
+       "o": [
+        "يفتح",
+        "هدية",
+        "يغلف"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى present؟",
+       "a": "هدية",
+       "o": [
+        "هدية",
+        "يغلف",
+        "مفاجأة"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Khalid's father gave him a present.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Khalid's father gave him a present.",
+       "o": [
+        "Khalid's father gave him a present.",
+        "He opened it. It was a new watch!",
+        "What a surprise!"
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

@@ -1,0 +1,287 @@
+{
+ "id": "en-8-u1-l6",
+ "grade": 8,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 1 · Lesson 6: The World Youth Camp",
+ "titleAr": "جاء شباب من خمسين دولة إلى المخيم.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "جاء شباب من خمسين دولة إلى المخيم.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "camp",
+       "ar": "مخيم",
+       "em": "⛺"
+      },
+      {
+       "id": "v1",
+       "en": "youth",
+       "ar": "شباب",
+       "em": "🧑‍🤝‍🧑"
+      },
+      {
+       "id": "v2",
+       "en": "activities",
+       "ar": "أنشطة",
+       "em": "🎯"
+      },
+      {
+       "id": "v3",
+       "en": "countries",
+       "ar": "دول",
+       "em": "🌍"
+      },
+      {
+       "id": "v4",
+       "en": "tent",
+       "ar": "خيمة",
+       "em": "⛺"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 16⁠–⁠17"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Past simple irregular",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Young people from fifty countries <b>came</b> to the camp.</div><div class=\"ex\">They <b>slept</b> in tents and did many activities.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Young people from fifty countries came to the camp. They slept in tents and did many activities."
+      }
+     ]
+    }
+   ],
+   "lead": "come → came, sleep → slept, do → did",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "They ___ in tents.",
+           "a": "slept",
+           "o": [
+            "slept",
+            "sleeped"
+           ]
+          },
+          {
+           "s": "Young people ___ from fifty countries.",
+           "a": "came",
+           "o": [
+            "came",
+            "comed"
+           ]
+          },
+          {
+           "s": "They ___ many activities.",
+           "a": "did",
+           "o": [
+            "did",
+            "done"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Young people from fifty countries came to the camp.",
+          "They slept in tents and did many activities."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Young people from fifty countries came to the camp.",
+           "o": [
+            "Young people from fifty countries came to the camp.",
+            "They slept in tents and did many activities."
+           ]
+          },
+          {
+           "a": "They slept in tents and did many activities.",
+           "o": [
+            "They slept in tents and did many activities.",
+            "Young people from fifty countries came to the camp."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "camp",
+       "ipa": "",
+       "meaning": "مخيم",
+       "ex": "Young people from fifty countries came to the camp."
+      },
+      {
+       "must": 1,
+       "term": "youth",
+       "ipa": "",
+       "meaning": "شباب",
+       "ex": "youth"
+      },
+      {
+       "must": 1,
+       "term": "activities",
+       "ipa": "",
+       "meaning": "أنشطة",
+       "ex": "They slept in tents and did many activities."
+      },
+      {
+       "must": 0,
+       "term": "countries",
+       "ipa": "",
+       "meaning": "دول",
+       "ex": "Young people from fifty countries came to the camp."
+      },
+      {
+       "must": 0,
+       "term": "tent",
+       "ipa": "",
+       "meaning": "خيمة",
+       "ex": "They slept in tents and did many activities."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "They ___ in tents.",
+       "a": "slept",
+       "o": [
+        "slept",
+        "sleeped"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Young people ___ from fifty countries.",
+       "a": "came",
+       "o": [
+        "came",
+        "comed"
+       ],
+       "why": ""
+      },
+      {
+       "q": "They ___ many activities.",
+       "a": "did",
+       "o": [
+        "did",
+        "done"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى activities؟",
+       "a": "أنشطة",
+       "o": [
+        "أنشطة",
+        "مخيم",
+        "شباب"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى camp؟",
+       "a": "مخيم",
+       "o": [
+        "مخيم",
+        "شباب",
+        "أنشطة"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Young people from fifty countries came to the camp.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Young people from fifty countries came to the camp.",
+       "o": [
+        "Young people from fifty countries came to the camp.",
+        "They slept in tents and did many activities."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

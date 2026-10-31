@@ -1,0 +1,287 @@
+{
+ "id": "en-8-u3-l6",
+ "grade": 8,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 3 · Lesson 6: Changes",
+ "titleAr": "كان الرياضيون يجرون بأحذية بسيطة.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "كان الرياضيون يجرون بأحذية بسيطة.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "used to",
+       "ar": "اعتاد",
+       "em": "🔙"
+      },
+      {
+       "id": "v1",
+       "en": "now",
+       "ar": "الآن",
+       "em": "⏺️"
+      },
+      {
+       "id": "v2",
+       "en": "change",
+       "ar": "يتغير",
+       "em": "🔄"
+      },
+      {
+       "id": "v3",
+       "en": "modern",
+       "ar": "حديث",
+       "em": "🏙️"
+      },
+      {
+       "id": "v4",
+       "en": "equipment",
+       "ar": "معدات",
+       "em": "🎽"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 42"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "used to + verb",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Athletes <b>used</b> to run in simple shoes.</div><div class=\"ex\">Now they use modern <b>equipment</b>.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Athletes used to run in simple shoes. Now they use modern equipment."
+      }
+     ]
+    }
+   ],
+   "lead": "لعادة في الماضي لم تعد موجودة.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "Athletes ___ to run in simple shoes.",
+           "a": "used",
+           "o": [
+            "used",
+            "use"
+           ]
+          },
+          {
+           "s": "They used to ___ outside.",
+           "a": "train",
+           "o": [
+            "train",
+            "trained"
+           ]
+          },
+          {
+           "s": "Now they use modern ___ .",
+           "a": "equipment",
+           "o": [
+            "equipment",
+            "equipments"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Athletes used to run in simple shoes.",
+          "Now they use modern equipment."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Athletes used to run in simple shoes.",
+           "o": [
+            "Athletes used to run in simple shoes.",
+            "Now they use modern equipment."
+           ]
+          },
+          {
+           "a": "Now they use modern equipment.",
+           "o": [
+            "Now they use modern equipment.",
+            "Athletes used to run in simple shoes."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "used to",
+       "ipa": "",
+       "meaning": "اعتاد",
+       "ex": "Athletes used to run in simple shoes."
+      },
+      {
+       "must": 1,
+       "term": "now",
+       "ipa": "",
+       "meaning": "الآن",
+       "ex": "Now they use modern equipment."
+      },
+      {
+       "must": 1,
+       "term": "change",
+       "ipa": "",
+       "meaning": "يتغير",
+       "ex": "change"
+      },
+      {
+       "must": 0,
+       "term": "modern",
+       "ipa": "",
+       "meaning": "حديث",
+       "ex": "Now they use modern equipment."
+      },
+      {
+       "must": 0,
+       "term": "equipment",
+       "ipa": "",
+       "meaning": "معدات",
+       "ex": "Now they use modern equipment."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "Athletes ___ to run in simple shoes.",
+       "a": "used",
+       "o": [
+        "used",
+        "use"
+       ],
+       "why": ""
+      },
+      {
+       "q": "They used to ___ outside.",
+       "a": "train",
+       "o": [
+        "train",
+        "trained"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Now they use modern ___ .",
+       "a": "equipment",
+       "o": [
+        "equipment",
+        "equipments"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى now؟",
+       "a": "الآن",
+       "o": [
+        "الآن",
+        "اعتاد",
+        "يتغير"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى change؟",
+       "a": "يتغير",
+       "o": [
+        "يتغير",
+        "اعتاد",
+        "الآن"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Athletes used to run in simple shoes.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Athletes used to run in simple shoes.",
+       "o": [
+        "Athletes used to run in simple shoes.",
+        "Now they use modern equipment."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

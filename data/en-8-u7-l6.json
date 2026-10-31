@@ -1,0 +1,287 @@
+{
+ "id": "en-8-u7-l6",
+ "grade": 8,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 7 · Lesson 6: Throwing Things Away",
+ "titleAr": "نرمي الكثير من مواد التغليف.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "نرمي الكثير من مواد التغليف.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "waste",
+       "ar": "نفايات",
+       "em": "🗑️"
+      },
+      {
+       "id": "v1",
+       "en": "landfill",
+       "ar": "مكب نفايات",
+       "em": "🏔️"
+      },
+      {
+       "id": "v2",
+       "en": "compost",
+       "ar": "سماد",
+       "em": "🌱"
+      },
+      {
+       "id": "v3",
+       "en": "packaging",
+       "ar": "تغليف",
+       "em": "📦"
+      },
+      {
+       "id": "v4",
+       "en": "bin",
+       "ar": "سلة",
+       "em": "🚮"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 88⁠–⁠89"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "can be + p.p.",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">We throw <b>away</b> too much packaging.</div><div class=\"ex\">Food waste can <b>be</b> turned into compost.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "We throw away too much packaging. Food waste can be turned into compost."
+      }
+     ]
+    }
+   ],
+   "lead": "Passive with modal: can be recycled / can be turned",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "Food waste can ___ turned into compost.",
+           "a": "be",
+           "o": [
+            "be",
+            "is"
+           ]
+          },
+          {
+           "s": "Glass can be ___ .",
+           "a": "recycled",
+           "o": [
+            "recycled",
+            "recycle"
+           ]
+          },
+          {
+           "s": "We throw ___ too much.",
+           "a": "away",
+           "o": [
+            "away",
+            "out of"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "We throw away too much packaging.",
+          "Food waste can be turned into compost."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "We throw away too much packaging.",
+           "o": [
+            "We throw away too much packaging.",
+            "Food waste can be turned into compost."
+           ]
+          },
+          {
+           "a": "Food waste can be turned into compost.",
+           "o": [
+            "Food waste can be turned into compost.",
+            "We throw away too much packaging."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "waste",
+       "ipa": "",
+       "meaning": "نفايات",
+       "ex": "Food waste can be turned into compost."
+      },
+      {
+       "must": 1,
+       "term": "landfill",
+       "ipa": "",
+       "meaning": "مكب نفايات",
+       "ex": "landfill"
+      },
+      {
+       "must": 1,
+       "term": "compost",
+       "ipa": "",
+       "meaning": "سماد",
+       "ex": "Food waste can be turned into compost."
+      },
+      {
+       "must": 0,
+       "term": "packaging",
+       "ipa": "",
+       "meaning": "تغليف",
+       "ex": "We throw away too much packaging."
+      },
+      {
+       "must": 0,
+       "term": "bin",
+       "ipa": "",
+       "meaning": "سلة",
+       "ex": "bin"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "Food waste can ___ turned into compost.",
+       "a": "be",
+       "o": [
+        "be",
+        "is"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Glass can be ___ .",
+       "a": "recycled",
+       "o": [
+        "recycled",
+        "recycle"
+       ],
+       "why": ""
+      },
+      {
+       "q": "We throw ___ too much.",
+       "a": "away",
+       "o": [
+        "away",
+        "out of"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى compost؟",
+       "a": "سماد",
+       "o": [
+        "سماد",
+        "نفايات",
+        "مكب نفايات"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى waste؟",
+       "a": "نفايات",
+       "o": [
+        "نفايات",
+        "مكب نفايات",
+        "سماد"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "We throw away too much packaging.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "We throw away too much packaging.",
+       "o": [
+        "We throw away too much packaging.",
+        "Food waste can be turned into compost."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

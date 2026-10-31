@@ -1,0 +1,287 @@
+{
+ "id": "en-9-u7-l8",
+ "grade": 9,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 7 · Lesson 8: Life is Like a Cup of Coffee",
+ "titleAr": "الحياة كفنجان قهوة: استمتع بها لا بالفنجان.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "الحياة كفنجان قهوة: استمتع بها لا بالفنجان.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "simile",
+       "ar": "تشبيه",
+       "em": "🔗"
+      },
+      {
+       "id": "v1",
+       "en": "like",
+       "ar": "مثل",
+       "em": "🟰"
+      },
+      {
+       "id": "v2",
+       "en": "as … as",
+       "ar": "بقدر",
+       "em": "⚖️"
+      },
+      {
+       "id": "v3",
+       "en": "value",
+       "ar": "قيمة",
+       "em": "💎"
+      },
+      {
+       "id": "v4",
+       "en": "enjoy",
+       "ar": "يستمتع",
+       "em": "😊"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 93⁠–⁠95"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "like / as … as",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Life is <b>like</b> a cup of coffee: enjoy it, not the cup.</div><div class=\"ex\">He's <b>as</b> brave as a lion.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Life is like a cup of coffee: enjoy it, not the cup. He's as brave as a lion."
+      }
+     ]
+    }
+   ],
+   "lead": "Similes: like + noun / as + adj + as",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "He's as brave ___ a lion.",
+           "a": "as",
+           "o": [
+            "as",
+            "like"
+           ]
+          },
+          {
+           "s": "Life is ___ a cup of coffee.",
+           "a": "like",
+           "o": [
+            "like",
+            "as"
+           ]
+          },
+          {
+           "s": "___ the coffee, not the cup.",
+           "a": "Enjoy",
+           "o": [
+            "Enjoy",
+            "Enjoys"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Life is like a cup of coffee: enjoy it, not the cup.",
+          "He's as brave as a lion."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Life is like a cup of coffee: enjoy it, not the cup.",
+           "o": [
+            "Life is like a cup of coffee: enjoy it, not the cup.",
+            "He's as brave as a lion."
+           ]
+          },
+          {
+           "a": "He's as brave as a lion.",
+           "o": [
+            "He's as brave as a lion.",
+            "Life is like a cup of coffee: enjoy it, not the cup."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "simile",
+       "ipa": "",
+       "meaning": "تشبيه",
+       "ex": "simile"
+      },
+      {
+       "must": 1,
+       "term": "like",
+       "ipa": "",
+       "meaning": "مثل",
+       "ex": "Life is like a cup of coffee: enjoy it, not the cup."
+      },
+      {
+       "must": 1,
+       "term": "as … as",
+       "ipa": "",
+       "meaning": "بقدر",
+       "ex": "He's as brave as a lion."
+      },
+      {
+       "must": 0,
+       "term": "value",
+       "ipa": "",
+       "meaning": "قيمة",
+       "ex": "value"
+      },
+      {
+       "must": 0,
+       "term": "enjoy",
+       "ipa": "",
+       "meaning": "يستمتع",
+       "ex": "Life is like a cup of coffee: enjoy it, not the cup."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "He's as brave ___ a lion.",
+       "a": "as",
+       "o": [
+        "as",
+        "like"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Life is ___ a cup of coffee.",
+       "a": "like",
+       "o": [
+        "like",
+        "as"
+       ],
+       "why": ""
+      },
+      {
+       "q": "___ the coffee, not the cup.",
+       "a": "Enjoy",
+       "o": [
+        "Enjoy",
+        "Enjoys"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى simile؟",
+       "a": "تشبيه",
+       "o": [
+        "تشبيه",
+        "مثل",
+        "بقدر"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى as … as؟",
+       "a": "بقدر",
+       "o": [
+        "بقدر",
+        "تشبيه",
+        "مثل"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Life is like a cup of coffee: enjoy it, not the cup.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Life is like a cup of coffee: enjoy it, not the cup.",
+       "o": [
+        "Life is like a cup of coffee: enjoy it, not the cup.",
+        "He's as brave as a lion."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

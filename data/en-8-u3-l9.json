@@ -1,0 +1,337 @@
+{
+ "id": "en-8-u3-l9",
+ "grade": 8,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 3 · Lesson 9: Round up",
+ "titleAr": "مراجعة الوحدة — Olympic Sports and Games",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "مراجعة الوحدة — Olympic Sports and Games",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "sports centre",
+       "ar": "مركز رياضي",
+       "em": "🏟️"
+      },
+      {
+       "id": "v1",
+       "en": "swimming pool",
+       "ar": "مسبح",
+       "em": "🏊"
+      },
+      {
+       "id": "v2",
+       "en": "timetable",
+       "ar": "جدول",
+       "em": "🗓️"
+      },
+      {
+       "id": "v3",
+       "en": "from … to",
+       "ar": "من … إلى",
+       "em": "↔️"
+      },
+      {
+       "id": "v4",
+       "en": "book",
+       "ar": "يحجز",
+       "em": "📅"
+      },
+      {
+       "id": "v5",
+       "en": "lesson",
+       "ar": "درس",
+       "em": "🏊"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 46⁠–⁠47"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Unit review",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">The sports centre <b>opens</b> at 8 a.m.</div><div class=\"ex\">Swimming classes are from 4 to 5 <b>on</b> Mondays.</div><div class=\"ex\">I'd like <b>to</b> book swimming lessons, please.</div><div class=\"ex\">Our team <b>beat</b> them 64–58.</div><div class=\"ex\">London <b>hosted</b> the Olympic Games in 2012.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "The sports centre opens at 8 a.m. Swimming classes are from 4 to 5 on Mondays. I'd like to book swimming lessons, please. Our team beat them 64–58. London hosted the Olympic Games in 2012."
+      }
+     ]
+    }
+   ],
+   "lead": "نراجع أهم قواعد الوحدة وكلماتها: اقرأ الأمثلة بصوت عالٍ ثم حلّ التمارين.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "The centre ___ at 8 a.m.",
+           "a": "opens",
+           "o": [
+            "opens",
+            "open"
+           ]
+          },
+          {
+           "s": "Classes are ___ Mondays.",
+           "a": "on",
+           "o": [
+            "on",
+            "in"
+           ]
+          },
+          {
+           "s": "I'd like ___ book lessons.",
+           "a": "to",
+           "o": [
+            "to",
+            "for"
+           ]
+          },
+          {
+           "s": "Our team ___ them.",
+           "a": "beat",
+           "o": [
+            "beat",
+            "beated"
+           ]
+          },
+          {
+           "s": "London ___ the Olympics in 2012.",
+           "a": "hosted",
+           "o": [
+            "hosted",
+            "host"
+           ]
+          },
+          {
+           "s": "Athletes ___ to run in simple shoes.",
+           "a": "used",
+           "o": [
+            "used",
+            "use"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "The sports centre opens at 8 a.m.",
+          "Swimming classes are from 4 to 5 on Mondays.",
+          "I'd like to book swimming lessons, please.",
+          "Our team beat them 64–58."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "The sports centre opens at 8 a.m.",
+           "o": [
+            "The sports centre opens at 8 a.m.",
+            "Swimming classes are from 4 to 5 on Mondays.",
+            "I'd like to book swimming lessons, please."
+           ]
+          },
+          {
+           "a": "Swimming classes are from 4 to 5 on Mondays.",
+           "o": [
+            "Swimming classes are from 4 to 5 on Mondays.",
+            "The sports centre opens at 8 a.m.",
+            "I'd like to book swimming lessons, please."
+           ]
+          },
+          {
+           "a": "I'd like to book swimming lessons, please.",
+           "o": [
+            "I'd like to book swimming lessons, please.",
+            "The sports centre opens at 8 a.m.",
+            "Swimming classes are from 4 to 5 on Mondays."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "sports centre",
+       "ipa": "",
+       "meaning": "مركز رياضي",
+       "ex": "The sports centre opens at 8 a.m."
+      },
+      {
+       "must": 1,
+       "term": "swimming pool",
+       "ipa": "",
+       "meaning": "مسبح",
+       "ex": "Swimming classes are from 4 to 5 on Mondays."
+      },
+      {
+       "must": 1,
+       "term": "timetable",
+       "ipa": "",
+       "meaning": "جدول",
+       "ex": "timetable"
+      },
+      {
+       "must": 0,
+       "term": "from … to",
+       "ipa": "",
+       "meaning": "من … إلى",
+       "ex": "Swimming classes are from 4 to 5 on Mondays."
+      },
+      {
+       "must": 0,
+       "term": "book",
+       "ipa": "",
+       "meaning": "يحجز",
+       "ex": "I'd like to book swimming lessons, please."
+      },
+      {
+       "must": 0,
+       "term": "lesson",
+       "ipa": "",
+       "meaning": "درس",
+       "ex": "I'd like to book swimming lessons, please."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "The centre ___ at 8 a.m.",
+       "a": "opens",
+       "o": [
+        "opens",
+        "open"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Classes are ___ Mondays.",
+       "a": "on",
+       "o": [
+        "on",
+        "in"
+       ],
+       "why": ""
+      },
+      {
+       "q": "I'd like ___ book lessons.",
+       "a": "to",
+       "o": [
+        "to",
+        "for"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى swimming pool؟",
+       "a": "مسبح",
+       "o": [
+        "مسبح",
+        "مركز رياضي",
+        "جدول"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى book؟",
+       "a": "يحجز",
+       "o": [
+        "يحجز",
+        "مركز رياضي",
+        "مسبح"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "The sports centre opens at 8 a.m.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "The sports centre opens at 8 a.m.",
+       "o": [
+        "The sports centre opens at 8 a.m.",
+        "Swimming classes are from 4 to 5 on Mondays.",
+        "I'd like to book swimming lessons, please."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

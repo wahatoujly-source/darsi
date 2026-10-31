@@ -1,0 +1,287 @@
+{
+ "id": "en-7-u5-l4",
+ "grade": 7,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 5 · Lesson 4: Four Countries",
+ "titleAr": "الجزائر أكبر بلد في أفريقيا.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "الجزائر أكبر بلد في أفريقيا.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "capital",
+       "ar": "عاصمة",
+       "em": "🏙️"
+      },
+      {
+       "id": "v1",
+       "en": "population",
+       "ar": "سكان",
+       "em": "👥"
+      },
+      {
+       "id": "v2",
+       "en": "language",
+       "ar": "لغة",
+       "em": "🗣️"
+      },
+      {
+       "id": "v3",
+       "en": "bigger",
+       "ar": "أكبر",
+       "em": "⬆️"
+      },
+      {
+       "id": "v4",
+       "en": "biggest",
+       "ar": "الأكبر",
+       "em": "🔝"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 55–56"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Comparatives / superlatives",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Algeria is the <b>biggest</b> country in Africa.</div><div class=\"ex\">Libya is <b>bigger</b> than Egypt.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Algeria is the biggest country in Africa. Libya is bigger than Egypt."
+      }
+     ]
+    }
+   ],
+   "lead": "bigger than / the biggest",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "Libya is ___ than Tunisia.",
+           "a": "bigger",
+           "o": [
+            "bigger",
+            "biggest"
+           ]
+          },
+          {
+           "s": "Algeria is the ___ country in Africa.",
+           "a": "biggest",
+           "o": [
+            "biggest",
+            "bigger"
+           ]
+          },
+          {
+           "s": "The ___ of Egypt is Cairo.",
+           "a": "capital",
+           "o": [
+            "capital",
+            "language"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Algeria is the biggest country in Africa.",
+          "Libya is bigger than Egypt."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Algeria is the biggest country in Africa.",
+           "o": [
+            "Algeria is the biggest country in Africa.",
+            "Libya is bigger than Egypt."
+           ]
+          },
+          {
+           "a": "Libya is bigger than Egypt.",
+           "o": [
+            "Libya is bigger than Egypt.",
+            "Algeria is the biggest country in Africa."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "capital",
+       "ipa": "",
+       "meaning": "عاصمة",
+       "ex": "capital"
+      },
+      {
+       "must": 1,
+       "term": "population",
+       "ipa": "",
+       "meaning": "سكان",
+       "ex": "population"
+      },
+      {
+       "must": 1,
+       "term": "language",
+       "ipa": "",
+       "meaning": "لغة",
+       "ex": "language"
+      },
+      {
+       "must": 0,
+       "term": "bigger",
+       "ipa": "",
+       "meaning": "أكبر",
+       "ex": "Libya is bigger than Egypt."
+      },
+      {
+       "must": 0,
+       "term": "biggest",
+       "ipa": "",
+       "meaning": "الأكبر",
+       "ex": "Algeria is the biggest country in Africa."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "Libya is ___ than Tunisia.",
+       "a": "bigger",
+       "o": [
+        "bigger",
+        "biggest"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Algeria is the ___ country in Africa.",
+       "a": "biggest",
+       "o": [
+        "biggest",
+        "bigger"
+       ],
+       "why": ""
+      },
+      {
+       "q": "The ___ of Egypt is Cairo.",
+       "a": "capital",
+       "o": [
+        "capital",
+        "language"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى population؟",
+       "a": "سكان",
+       "o": [
+        "سكان",
+        "عاصمة",
+        "لغة"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى biggest؟",
+       "a": "الأكبر",
+       "o": [
+        "الأكبر",
+        "عاصمة",
+        "سكان"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Algeria is the biggest country in Africa.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Algeria is the biggest country in Africa.",
+       "o": [
+        "Algeria is the biggest country in Africa.",
+        "Libya is bigger than Egypt."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

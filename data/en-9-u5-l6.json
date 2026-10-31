@@ -1,0 +1,287 @@
+{
+ "id": "en-9-u5-l6",
+ "grade": 9,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 5 · Lesson 6: What's happening …?",
+ "titleAr": "ماذا يحدث الآن في المدينة؟",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "ماذا يحدث الآن في المدينة؟",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "live",
+       "ar": "مباشر",
+       "em": "🔴"
+      },
+      {
+       "id": "v1",
+       "en": "broadcast",
+       "ar": "يبث",
+       "em": "📡"
+      },
+      {
+       "id": "v2",
+       "en": "happening",
+       "ar": "يحدث",
+       "em": "⏺️"
+      },
+      {
+       "id": "v3",
+       "en": "right now",
+       "ar": "الآن",
+       "em": "⏱️"
+      },
+      {
+       "id": "v4",
+       "en": "news",
+       "ar": "أخبار",
+       "em": "📺"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 66⁠–⁠67"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Present continuous passive",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">What's <b>happening</b> right now in the city?</div><div class=\"ex\">The news is <b>being</b> broadcast live.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "What's happening right now in the city? The news is being broadcast live."
+      }
+     ]
+    }
+   ],
+   "lead": "is being + p.p.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "What's ___ right now?",
+           "a": "happening",
+           "o": [
+            "happening",
+            "happen"
+           ]
+          },
+          {
+           "s": "The news is ___ broadcast live.",
+           "a": "being",
+           "o": [
+            "being",
+            "been"
+           ]
+          },
+          {
+           "s": "It's a ___ broadcast.",
+           "a": "live",
+           "o": [
+            "live",
+            "life"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "What's happening right now in the city?",
+          "The news is being broadcast live."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "What's happening right now in the city?",
+           "o": [
+            "What's happening right now in the city?",
+            "The news is being broadcast live."
+           ]
+          },
+          {
+           "a": "The news is being broadcast live.",
+           "o": [
+            "The news is being broadcast live.",
+            "What's happening right now in the city?"
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "live",
+       "ipa": "",
+       "meaning": "مباشر",
+       "ex": "The news is being broadcast live."
+      },
+      {
+       "must": 1,
+       "term": "broadcast",
+       "ipa": "",
+       "meaning": "يبث",
+       "ex": "The news is being broadcast live."
+      },
+      {
+       "must": 1,
+       "term": "happening",
+       "ipa": "",
+       "meaning": "يحدث",
+       "ex": "What's happening right now in the city?"
+      },
+      {
+       "must": 0,
+       "term": "right now",
+       "ipa": "",
+       "meaning": "الآن",
+       "ex": "What's happening right now in the city?"
+      },
+      {
+       "must": 0,
+       "term": "news",
+       "ipa": "",
+       "meaning": "أخبار",
+       "ex": "The news is being broadcast live."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "What's ___ right now?",
+       "a": "happening",
+       "o": [
+        "happening",
+        "happen"
+       ],
+       "why": ""
+      },
+      {
+       "q": "The news is ___ broadcast live.",
+       "a": "being",
+       "o": [
+        "being",
+        "been"
+       ],
+       "why": ""
+      },
+      {
+       "q": "It's a ___ broadcast.",
+       "a": "live",
+       "o": [
+        "live",
+        "life"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى happening؟",
+       "a": "يحدث",
+       "o": [
+        "يحدث",
+        "مباشر",
+        "يبث"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى live؟",
+       "a": "مباشر",
+       "o": [
+        "مباشر",
+        "يبث",
+        "يحدث"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "What's happening right now in the city?",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "What's happening right now in the city?",
+       "o": [
+        "What's happening right now in the city?",
+        "The news is being broadcast live."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

@@ -1,0 +1,287 @@
+{
+ "id": "en-9-u6-l8",
+ "grade": 9,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 6 · Lesson 8: What should I do?",
+ "titleAr": "لا أستطيع أن أقرر. ماذا أفعل؟",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "لا أستطيع أن أقرر. ماذا أفعل؟",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "dilemma",
+       "ar": "حيرة",
+       "em": "🤔"
+      },
+      {
+       "id": "v1",
+       "en": "decision",
+       "ar": "قرار",
+       "em": "✅"
+      },
+      {
+       "id": "v2",
+       "en": "pros and cons",
+       "ar": "إيجابيات وسلبيات",
+       "em": "⚖️"
+      },
+      {
+       "id": "v3",
+       "en": "should",
+       "ar": "ينبغي",
+       "em": "👍"
+      },
+      {
+       "id": "v4",
+       "en": "choose",
+       "ar": "يختار",
+       "em": "👉"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 81⁠–⁠83"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "should for advice",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">I can't decide. What <b>should</b> I do?</div><div class=\"ex\">Write down the pros and <b>cons</b>.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "I can't decide. What should I do? Write down the pros and cons."
+      }
+     ]
+    }
+   ],
+   "lead": "What should I do? / You should …",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "What ___ I do?",
+           "a": "should",
+           "o": [
+            "should",
+            "shall to"
+           ]
+          },
+          {
+           "s": "Write down the pros and ___ .",
+           "a": "cons",
+           "o": [
+            "cons",
+            "cones"
+           ]
+          },
+          {
+           "s": "I need to make a ___ .",
+           "a": "decision",
+           "o": [
+            "decision",
+            "decide"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "I can't decide. What should I do?",
+          "Write down the pros and cons."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "I can't decide. What should I do?",
+           "o": [
+            "I can't decide. What should I do?",
+            "Write down the pros and cons."
+           ]
+          },
+          {
+           "a": "Write down the pros and cons.",
+           "o": [
+            "Write down the pros and cons.",
+            "I can't decide. What should I do?"
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "dilemma",
+       "ipa": "",
+       "meaning": "حيرة",
+       "ex": "dilemma"
+      },
+      {
+       "must": 1,
+       "term": "decision",
+       "ipa": "",
+       "meaning": "قرار",
+       "ex": "decision"
+      },
+      {
+       "must": 1,
+       "term": "pros and cons",
+       "ipa": "",
+       "meaning": "إيجابيات وسلبيات",
+       "ex": "Write down the pros and cons."
+      },
+      {
+       "must": 0,
+       "term": "should",
+       "ipa": "",
+       "meaning": "ينبغي",
+       "ex": "I can't decide. What should I do?"
+      },
+      {
+       "must": 0,
+       "term": "choose",
+       "ipa": "",
+       "meaning": "يختار",
+       "ex": "choose"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "What ___ I do?",
+       "a": "should",
+       "o": [
+        "should",
+        "shall to"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Write down the pros and ___ .",
+       "a": "cons",
+       "o": [
+        "cons",
+        "cones"
+       ],
+       "why": ""
+      },
+      {
+       "q": "I need to make a ___ .",
+       "a": "decision",
+       "o": [
+        "decision",
+        "decide"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى should؟",
+       "a": "ينبغي",
+       "o": [
+        "ينبغي",
+        "حيرة",
+        "قرار"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى pros and cons؟",
+       "a": "إيجابيات وسلبيات",
+       "o": [
+        "إيجابيات وسلبيات",
+        "حيرة",
+        "قرار"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "I can't decide. What should I do?",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "I can't decide. What should I do?",
+       "o": [
+        "I can't decide. What should I do?",
+        "Write down the pros and cons."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

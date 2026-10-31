@@ -1,0 +1,287 @@
+{
+ "id": "en-7-u8-l3",
+ "grade": 7,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 8 · Lesson 3: Keep Listening!",
+ "titleAr": "استمع للفكرة الرئيسية أولاً.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "استمع للفكرة الرئيسية أولاً.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "listen",
+       "ar": "يستمع",
+       "em": "👂"
+      },
+      {
+       "id": "v1",
+       "en": "carefully",
+       "ar": "بعناية",
+       "em": "🎯"
+      },
+      {
+       "id": "v2",
+       "en": "main idea",
+       "ar": "الفكرة الرئيسية",
+       "em": "💡"
+      },
+      {
+       "id": "v3",
+       "en": "detail",
+       "ar": "تفصيل",
+       "em": "🔍"
+      },
+      {
+       "id": "v4",
+       "en": "note",
+       "ar": "ملاحظة",
+       "em": "📝"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 90"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Listening tips",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Listen for the main <b>idea</b> first.</div><div class=\"ex\">Then listen <b>again</b> for details.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Listen for the main idea first. Then listen again for details."
+      }
+     ]
+    }
+   ],
+   "lead": "Listen for … / Take notes / Listen again",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "Listen for the main ___ .",
+           "a": "idea",
+           "o": [
+            "idea",
+            "ideas"
+           ]
+          },
+          {
+           "s": "Then listen ___ for details.",
+           "a": "again",
+           "o": [
+            "again",
+            "agin"
+           ]
+          },
+          {
+           "s": "Take ___ while you listen.",
+           "a": "notes",
+           "o": [
+            "notes",
+            "note's"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Listen for the main idea first.",
+          "Then listen again for details."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Listen for the main idea first.",
+           "o": [
+            "Listen for the main idea first.",
+            "Then listen again for details."
+           ]
+          },
+          {
+           "a": "Then listen again for details.",
+           "o": [
+            "Then listen again for details.",
+            "Listen for the main idea first."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "listen",
+       "ipa": "",
+       "meaning": "يستمع",
+       "ex": "Listen for the main idea first."
+      },
+      {
+       "must": 1,
+       "term": "carefully",
+       "ipa": "",
+       "meaning": "بعناية",
+       "ex": "carefully"
+      },
+      {
+       "must": 1,
+       "term": "main idea",
+       "ipa": "",
+       "meaning": "الفكرة الرئيسية",
+       "ex": "Listen for the main idea first."
+      },
+      {
+       "must": 0,
+       "term": "detail",
+       "ipa": "",
+       "meaning": "تفصيل",
+       "ex": "Then listen again for details."
+      },
+      {
+       "must": 0,
+       "term": "note",
+       "ipa": "",
+       "meaning": "ملاحظة",
+       "ex": "note"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "Listen for the main ___ .",
+       "a": "idea",
+       "o": [
+        "idea",
+        "ideas"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Then listen ___ for details.",
+       "a": "again",
+       "o": [
+        "again",
+        "agin"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Take ___ while you listen.",
+       "a": "notes",
+       "o": [
+        "notes",
+        "note's"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى note؟",
+       "a": "ملاحظة",
+       "o": [
+        "ملاحظة",
+        "يستمع",
+        "بعناية"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى carefully؟",
+       "a": "بعناية",
+       "o": [
+        "بعناية",
+        "يستمع",
+        "الفكرة الرئيسية"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Listen for the main idea first.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Listen for the main idea first.",
+       "o": [
+        "Listen for the main idea first.",
+        "Then listen again for details."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

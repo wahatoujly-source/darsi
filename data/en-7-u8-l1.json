@@ -1,0 +1,287 @@
+{
+ "id": "en-7-u8-l1",
+ "grade": 7,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 8 · Lesson 1: Questions and Answers",
+ "titleAr": "كم تستغرق الرحلة؟ ساعتين.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "كم تستغرق الرحلة؟ ساعتين.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "question word",
+       "ar": "أداة استفهام",
+       "em": "❓"
+      },
+      {
+       "id": "v1",
+       "en": "who",
+       "ar": "من",
+       "em": "🧑"
+      },
+      {
+       "id": "v2",
+       "en": "which",
+       "ar": "أي",
+       "em": "👉"
+      },
+      {
+       "id": "v3",
+       "en": "how long",
+       "ar": "كم من الوقت",
+       "em": "⏳"
+      },
+      {
+       "id": "v4",
+       "en": "how far",
+       "ar": "كم المسافة",
+       "em": "📏"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 88"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "How long / How far",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">How <b>long</b> does the journey take? Two hours.</div><div class=\"ex\">How <b>far</b> is Misrata from Tripoli? About 200 km.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "How long does the journey take? Two hours. How far is Misrata from Tripoli? About 200 km."
+      }
+     ]
+    }
+   ],
+   "lead": "للمدة والمسافة.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "How ___ is it from Tripoli? 200 km.",
+           "a": "far",
+           "o": [
+            "far",
+            "long"
+           ]
+          },
+          {
+           "s": "How ___ does it take? Two hours.",
+           "a": "long",
+           "o": [
+            "long",
+            "far"
+           ]
+          },
+          {
+           "s": "___ book is yours?",
+           "a": "Which",
+           "o": [
+            "Which",
+            "Who"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "How long does the journey take? Two hours.",
+          "How far is Misrata from Tripoli? About 200 km."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "How long does the journey take? Two hours.",
+           "o": [
+            "How long does the journey take? Two hours.",
+            "How far is Misrata from Tripoli? About 200 km."
+           ]
+          },
+          {
+           "a": "How far is Misrata from Tripoli? About 200 km.",
+           "o": [
+            "How far is Misrata from Tripoli? About 200 km.",
+            "How long does the journey take? Two hours."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "question word",
+       "ipa": "",
+       "meaning": "أداة استفهام",
+       "ex": "question word"
+      },
+      {
+       "must": 1,
+       "term": "who",
+       "ipa": "",
+       "meaning": "من",
+       "ex": "who"
+      },
+      {
+       "must": 1,
+       "term": "which",
+       "ipa": "",
+       "meaning": "أي",
+       "ex": "which"
+      },
+      {
+       "must": 0,
+       "term": "how long",
+       "ipa": "",
+       "meaning": "كم من الوقت",
+       "ex": "How long does the journey take? Two hours."
+      },
+      {
+       "must": 0,
+       "term": "how far",
+       "ipa": "",
+       "meaning": "كم المسافة",
+       "ex": "How long does the journey take? Two hours."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "How ___ is it from Tripoli? 200 km.",
+       "a": "far",
+       "o": [
+        "far",
+        "long"
+       ],
+       "why": ""
+      },
+      {
+       "q": "How ___ does it take? Two hours.",
+       "a": "long",
+       "o": [
+        "long",
+        "far"
+       ],
+       "why": ""
+      },
+      {
+       "q": "___ book is yours?",
+       "a": "Which",
+       "o": [
+        "Which",
+        "Who"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى who؟",
+       "a": "من",
+       "o": [
+        "من",
+        "أداة استفهام",
+        "أي"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى how far؟",
+       "a": "كم المسافة",
+       "o": [
+        "كم المسافة",
+        "أداة استفهام",
+        "من"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "How long does the journey take? Two hours.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "How long does the journey take? Two hours.",
+       "o": [
+        "How long does the journey take? Two hours.",
+        "How far is Misrata from Tripoli? About 200 km."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

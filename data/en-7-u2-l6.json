@@ -1,0 +1,287 @@
+{
+ "id": "en-7-u2-l6",
+ "grade": 7,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 2 · Lesson 6: Different Schools",
+ "titleAr": "في ليبيا يبدأ الأسبوع الدراسي يوم الأحد.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "في ليبيا يبدأ الأسبوع الدراسي يوم الأحد.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "uniform",
+       "ar": "زي مدرسي",
+       "em": "👔"
+      },
+      {
+       "id": "v1",
+       "en": "subject",
+       "ar": "مادة",
+       "em": "📚"
+      },
+      {
+       "id": "v2",
+       "en": "term",
+       "ar": "فصل دراسي",
+       "em": "📅"
+      },
+      {
+       "id": "v3",
+       "en": "boarding school",
+       "ar": "مدرسة داخلية",
+       "em": "🏫"
+      },
+      {
+       "id": "v4",
+       "en": "whereas",
+       "ar": "بينما",
+       "em": "⚖️"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 25"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Comparing with whereas / but",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">In Libya, the school week starts <b>on</b> Sunday.</div><div class=\"ex\">In the UK, it starts <b>on</b> Monday.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "In Libya, the school week starts on Sunday. In the UK, it starts on Monday."
+      }
+     ]
+    }
+   ],
+   "lead": "نقارن بين نظامين.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "In Libya, school starts ___ Sunday.",
+           "a": "on",
+           "o": [
+            "on",
+            "in"
+           ]
+          },
+          {
+           "s": "Students wear a ___ .",
+           "a": "uniform",
+           "o": [
+            "uniform",
+            "term"
+           ]
+          },
+          {
+           "s": "There are three ___ in a year.",
+           "a": "terms",
+           "o": [
+            "terms",
+            "subjects"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "In Libya, the school week starts on Sunday.",
+          "In the UK, it starts on Monday."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "In Libya, the school week starts on Sunday.",
+           "o": [
+            "In Libya, the school week starts on Sunday.",
+            "In the UK, it starts on Monday."
+           ]
+          },
+          {
+           "a": "In the UK, it starts on Monday.",
+           "o": [
+            "In the UK, it starts on Monday.",
+            "In Libya, the school week starts on Sunday."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "uniform",
+       "ipa": "",
+       "meaning": "زي مدرسي",
+       "ex": "uniform"
+      },
+      {
+       "must": 1,
+       "term": "subject",
+       "ipa": "",
+       "meaning": "مادة",
+       "ex": "subject"
+      },
+      {
+       "must": 1,
+       "term": "term",
+       "ipa": "",
+       "meaning": "فصل دراسي",
+       "ex": "term"
+      },
+      {
+       "must": 0,
+       "term": "boarding school",
+       "ipa": "",
+       "meaning": "مدرسة داخلية",
+       "ex": "boarding school"
+      },
+      {
+       "must": 0,
+       "term": "whereas",
+       "ipa": "",
+       "meaning": "بينما",
+       "ex": "whereas"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "In Libya, school starts ___ Sunday.",
+       "a": "on",
+       "o": [
+        "on",
+        "in"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Students wear a ___ .",
+       "a": "uniform",
+       "o": [
+        "uniform",
+        "term"
+       ],
+       "why": ""
+      },
+      {
+       "q": "There are three ___ in a year.",
+       "a": "terms",
+       "o": [
+        "terms",
+        "subjects"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى whereas؟",
+       "a": "بينما",
+       "o": [
+        "بينما",
+        "زي مدرسي",
+        "مادة"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى subject؟",
+       "a": "مادة",
+       "o": [
+        "مادة",
+        "زي مدرسي",
+        "فصل دراسي"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "In Libya, the school week starts on Sunday.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "In Libya, the school week starts on Sunday.",
+       "o": [
+        "In Libya, the school week starts on Sunday.",
+        "In the UK, it starts on Monday."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

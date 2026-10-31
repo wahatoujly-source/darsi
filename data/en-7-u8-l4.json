@@ -1,0 +1,319 @@
+{
+ "id": "en-7-u8-l4",
+ "grade": 7,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 8 · Lesson 4: A Different Kind of Holiday",
+ "titleAr": "الصيف الماضي تطوعت في مخيم.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "الصيف الماضي تطوعت في مخيم.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "volunteer",
+       "ar": "متطوع",
+       "em": "🙋"
+      },
+      {
+       "id": "v1",
+       "en": "camp",
+       "ar": "مخيم",
+       "em": "⛺"
+      },
+      {
+       "id": "v2",
+       "en": "plant trees",
+       "ar": "يزرع أشجاراً",
+       "em": "🌳"
+      },
+      {
+       "id": "v3",
+       "en": "help",
+       "ar": "يساعد",
+       "em": "🤝"
+      },
+      {
+       "id": "v4",
+       "en": "experience",
+       "ar": "تجربة",
+       "em": "✨"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 91"
+  },
+  {
+   "title": "اقرأ",
+   "eyebrow": "الخطوة ٢ — اقرأ",
+   "heading": "اقرأ واستمع",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "📖 A Different Kind of Holiday",
+     "html": "<div class=\"ex\">Last summer, I volunteered at a camp.</div><div class=\"ex\">We planted trees and helped old people.</div><div class=\"ex\">It was a great experience.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Last summer, I volunteered at a camp. We planted trees and helped old people. It was a great experience."
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط ▶ لتسمع النص."
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٣ — القاعدة",
+   "heading": "Past simple: regular -ed",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Last summer, I <b>volunteered</b> at a camp.</div><div class=\"ex\">We <b>planted</b> trees and helped old people.</div><div class=\"ex\">It was a great <b>experience</b>.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Last summer, I volunteered at a camp. We planted trees and helped old people. It was a great experience."
+      }
+     ]
+    }
+   ],
+   "lead": "volunteer → volunteered, plant → planted",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٤ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "I ___ at a camp.",
+           "a": "volunteered",
+           "o": [
+            "volunteered",
+            "volunteer"
+           ]
+          },
+          {
+           "s": "We ___ trees.",
+           "a": "planted",
+           "o": [
+            "planted",
+            "plant"
+           ]
+          },
+          {
+           "s": "It was a great ___ .",
+           "a": "experience",
+           "o": [
+            "experience",
+            "experiment"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Last summer, I volunteered at a camp.",
+          "We planted trees and helped old people.",
+          "It was a great experience."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Last summer, I volunteered at a camp.",
+           "o": [
+            "Last summer, I volunteered at a camp.",
+            "We planted trees and helped old people.",
+            "It was a great experience."
+           ]
+          },
+          {
+           "a": "We planted trees and helped old people.",
+           "o": [
+            "We planted trees and helped old people.",
+            "Last summer, I volunteered at a camp.",
+            "It was a great experience."
+           ]
+          },
+          {
+           "a": "It was a great experience.",
+           "o": [
+            "It was a great experience.",
+            "Last summer, I volunteered at a camp.",
+            "We planted trees and helped old people."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٥ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "volunteer",
+       "ipa": "",
+       "meaning": "متطوع",
+       "ex": "Last summer, I volunteered at a camp."
+      },
+      {
+       "must": 1,
+       "term": "camp",
+       "ipa": "",
+       "meaning": "مخيم",
+       "ex": "Last summer, I volunteered at a camp."
+      },
+      {
+       "must": 1,
+       "term": "plant trees",
+       "ipa": "",
+       "meaning": "يزرع أشجاراً",
+       "ex": "We planted trees and helped old people."
+      },
+      {
+       "must": 0,
+       "term": "help",
+       "ipa": "",
+       "meaning": "يساعد",
+       "ex": "We planted trees and helped old people."
+      },
+      {
+       "must": 0,
+       "term": "experience",
+       "ipa": "",
+       "meaning": "تجربة",
+       "ex": "It was a great experience."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "I ___ at a camp.",
+       "a": "volunteered",
+       "o": [
+        "volunteered",
+        "volunteer"
+       ],
+       "why": ""
+      },
+      {
+       "q": "We ___ trees.",
+       "a": "planted",
+       "o": [
+        "planted",
+        "plant"
+       ],
+       "why": ""
+      },
+      {
+       "q": "It was a great ___ .",
+       "a": "experience",
+       "o": [
+        "experience",
+        "experiment"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى plant trees؟",
+       "a": "يزرع أشجاراً",
+       "o": [
+        "يزرع أشجاراً",
+        "متطوع",
+        "مخيم"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى help؟",
+       "a": "يساعد",
+       "o": [
+        "يساعد",
+        "متطوع",
+        "مخيم"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Last summer, I volunteered at a camp.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Last summer, I volunteered at a camp.",
+       "o": [
+        "Last summer, I volunteered at a camp.",
+        "We planted trees and helped old people.",
+        "It was a great experience."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

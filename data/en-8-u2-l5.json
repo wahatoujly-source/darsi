@@ -1,0 +1,287 @@
+{
+ "id": "en-8-u2-l5",
+ "grade": 8,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 2 · Lesson 5: Jalal's Story",
+ "titleAr": "كان جلال يركب دراجته عندما تعرض لحادث.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "كان جلال يركب دراجته عندما تعرض لحادث.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "accident",
+       "ar": "حادث",
+       "em": "🚑"
+      },
+      {
+       "id": "v1",
+       "en": "ambulance",
+       "ar": "إسعاف",
+       "em": "🚑"
+      },
+      {
+       "id": "v2",
+       "en": "broke",
+       "ar": "كسر",
+       "em": "🦴"
+      },
+      {
+       "id": "v3",
+       "en": "plaster",
+       "ar": "جبيرة",
+       "em": "🩹"
+      },
+      {
+       "id": "v4",
+       "en": "recover",
+       "ar": "يتعافى",
+       "em": "💪"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 28"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Past continuous interrupted",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Jalal <b>was</b> riding his bike when he had an accident.</div><div class=\"ex\">He <b>broke</b> his leg and had a plaster for six weeks.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Jalal was riding his bike when he had an accident. He broke his leg and had a plaster for six weeks."
+      }
+     ]
+    }
+   ],
+   "lead": "was riding … when he had …",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "He ___ riding his bike.",
+           "a": "was",
+           "o": [
+            "was",
+            "were"
+           ]
+          },
+          {
+           "s": "He ___ his leg.",
+           "a": "broke",
+           "o": [
+            "broke",
+            "breaked"
+           ]
+          },
+          {
+           "s": "He had a ___ for six weeks.",
+           "a": "plaster",
+           "o": [
+            "plaster",
+            "ambulance"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Jalal was riding his bike when he had an accident.",
+          "He broke his leg and had a plaster for six weeks."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Jalal was riding his bike when he had an accident.",
+           "o": [
+            "Jalal was riding his bike when he had an accident.",
+            "He broke his leg and had a plaster for six weeks."
+           ]
+          },
+          {
+           "a": "He broke his leg and had a plaster for six weeks.",
+           "o": [
+            "He broke his leg and had a plaster for six weeks.",
+            "Jalal was riding his bike when he had an accident."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "accident",
+       "ipa": "",
+       "meaning": "حادث",
+       "ex": "Jalal was riding his bike when he had an accident."
+      },
+      {
+       "must": 1,
+       "term": "ambulance",
+       "ipa": "",
+       "meaning": "إسعاف",
+       "ex": "ambulance"
+      },
+      {
+       "must": 1,
+       "term": "broke",
+       "ipa": "",
+       "meaning": "كسر",
+       "ex": "He broke his leg and had a plaster for six weeks."
+      },
+      {
+       "must": 0,
+       "term": "plaster",
+       "ipa": "",
+       "meaning": "جبيرة",
+       "ex": "He broke his leg and had a plaster for six weeks."
+      },
+      {
+       "must": 0,
+       "term": "recover",
+       "ipa": "",
+       "meaning": "يتعافى",
+       "ex": "recover"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "He ___ riding his bike.",
+       "a": "was",
+       "o": [
+        "was",
+        "were"
+       ],
+       "why": ""
+      },
+      {
+       "q": "He ___ his leg.",
+       "a": "broke",
+       "o": [
+        "broke",
+        "breaked"
+       ],
+       "why": ""
+      },
+      {
+       "q": "He had a ___ for six weeks.",
+       "a": "plaster",
+       "o": [
+        "plaster",
+        "ambulance"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى recover؟",
+       "a": "يتعافى",
+       "o": [
+        "يتعافى",
+        "حادث",
+        "إسعاف"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى accident؟",
+       "a": "حادث",
+       "o": [
+        "حادث",
+        "إسعاف",
+        "كسر"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Jalal was riding his bike when he had an accident.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Jalal was riding his bike when he had an accident.",
+       "o": [
+        "Jalal was riding his bike when he had an accident.",
+        "He broke his leg and had a plaster for six weeks."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

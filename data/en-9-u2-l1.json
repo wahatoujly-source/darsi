@@ -1,0 +1,287 @@
+{
+ "id": "en-9-u2-l1",
+ "grade": 9,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 2 · Lesson 1: A Perfect Holiday",
+ "titleAr": "لو استطعت الذهاب إلى أي مكان لذهبت إلى المالديف.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "لو استطعت الذهاب إلى أي مكان لذهبت إلى المالديف.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "perfect",
+       "ar": "مثالي",
+       "em": "✨"
+      },
+      {
+       "id": "v1",
+       "en": "resort",
+       "ar": "منتجع",
+       "em": "🏨"
+      },
+      {
+       "id": "v2",
+       "en": "would",
+       "ar": "سوف (شرطي)",
+       "em": "💭"
+      },
+      {
+       "id": "v3",
+       "en": "if I could",
+       "ar": "لو استطعت",
+       "em": "🌠"
+      },
+      {
+       "id": "v4",
+       "en": "relaxing",
+       "ar": "مريح",
+       "em": "🏝️"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 22⁠–⁠23"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Second conditional",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">If I <b>could</b> go anywhere, I would go to the Maldives.</div><div class=\"ex\">My perfect holiday <b>would</b> be relaxing.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "If I could go anywhere, I would go to the Maldives. My perfect holiday would be relaxing."
+      }
+     ]
+    }
+   ],
+   "lead": "If + past, would + verb — لموقف خيالي.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "If I ___ go anywhere, I'd go to Japan.",
+           "a": "could",
+           "o": [
+            "could",
+            "can"
+           ]
+          },
+          {
+           "s": "I ___ stay in a resort.",
+           "a": "would",
+           "o": [
+            "would",
+            "will"
+           ]
+          },
+          {
+           "s": "It would be very ___ .",
+           "a": "relaxing",
+           "o": [
+            "relaxing",
+            "relaxed"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "If I could go anywhere, I would go to the Maldives.",
+          "My perfect holiday would be relaxing."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "If I could go anywhere, I would go to the Maldives.",
+           "o": [
+            "If I could go anywhere, I would go to the Maldives.",
+            "My perfect holiday would be relaxing."
+           ]
+          },
+          {
+           "a": "My perfect holiday would be relaxing.",
+           "o": [
+            "My perfect holiday would be relaxing.",
+            "If I could go anywhere, I would go to the Maldives."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "perfect",
+       "ipa": "",
+       "meaning": "مثالي",
+       "ex": "My perfect holiday would be relaxing."
+      },
+      {
+       "must": 1,
+       "term": "resort",
+       "ipa": "",
+       "meaning": "منتجع",
+       "ex": "resort"
+      },
+      {
+       "must": 1,
+       "term": "would",
+       "ipa": "",
+       "meaning": "سوف (شرطي)",
+       "ex": "If I could go anywhere, I would go to the Maldives."
+      },
+      {
+       "must": 0,
+       "term": "if I could",
+       "ipa": "",
+       "meaning": "لو استطعت",
+       "ex": "If I could go anywhere, I would go to the Maldives."
+      },
+      {
+       "must": 0,
+       "term": "relaxing",
+       "ipa": "",
+       "meaning": "مريح",
+       "ex": "My perfect holiday would be relaxing."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "If I ___ go anywhere, I'd go to Japan.",
+       "a": "could",
+       "o": [
+        "could",
+        "can"
+       ],
+       "why": ""
+      },
+      {
+       "q": "I ___ stay in a resort.",
+       "a": "would",
+       "o": [
+        "would",
+        "will"
+       ],
+       "why": ""
+      },
+      {
+       "q": "It would be very ___ .",
+       "a": "relaxing",
+       "o": [
+        "relaxing",
+        "relaxed"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى relaxing؟",
+       "a": "مريح",
+       "o": [
+        "مريح",
+        "مثالي",
+        "منتجع"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى resort؟",
+       "a": "منتجع",
+       "o": [
+        "منتجع",
+        "مثالي",
+        "سوف (شرطي)"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "If I could go anywhere, I would go to the Maldives.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "If I could go anywhere, I would go to the Maldives.",
+       "o": [
+        "If I could go anywhere, I would go to the Maldives.",
+        "My perfect holiday would be relaxing."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

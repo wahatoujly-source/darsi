@@ -1,0 +1,287 @@
+{
+ "id": "en-8-u7-l2",
+ "grade": 8,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 7 · Lesson 2: How can we help?",
+ "titleAr": "يمكننا إعادة تدوير الورق والبلاستيك.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "يمكننا إعادة تدوير الورق والبلاستيك.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "recycle",
+       "ar": "يعيد التدوير",
+       "em": "♻️"
+      },
+      {
+       "id": "v1",
+       "en": "save",
+       "ar": "يوفر",
+       "em": "💧"
+      },
+      {
+       "id": "v2",
+       "en": "reduce",
+       "ar": "يقلل",
+       "em": "⬇️"
+      },
+      {
+       "id": "v3",
+       "en": "reuse",
+       "ar": "يعيد الاستخدام",
+       "em": "🔁"
+      },
+      {
+       "id": "v4",
+       "en": "energy",
+       "ar": "طاقة",
+       "em": "⚡"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 83"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Reduce, Reuse, Recycle",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">We can <b>recycle</b> paper and plastic.</div><div class=\"ex\">We should <b>save</b> water and energy.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "We can recycle paper and plastic. We should save water and energy."
+      }
+     ]
+    }
+   ],
+   "lead": "can / should + verb",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "We can ___ plastic bottles.",
+           "a": "recycle",
+           "o": [
+            "recycle",
+            "recycles"
+           ]
+          },
+          {
+           "s": "We should ___ water.",
+           "a": "save",
+           "o": [
+            "save",
+            "saves"
+           ]
+          },
+          {
+           "s": "Turn off lights to save ___ .",
+           "a": "energy",
+           "o": [
+            "energy",
+            "energies"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "We can recycle paper and plastic.",
+          "We should save water and energy."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "We can recycle paper and plastic.",
+           "o": [
+            "We can recycle paper and plastic.",
+            "We should save water and energy."
+           ]
+          },
+          {
+           "a": "We should save water and energy.",
+           "o": [
+            "We should save water and energy.",
+            "We can recycle paper and plastic."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "recycle",
+       "ipa": "",
+       "meaning": "يعيد التدوير",
+       "ex": "We can recycle paper and plastic."
+      },
+      {
+       "must": 1,
+       "term": "save",
+       "ipa": "",
+       "meaning": "يوفر",
+       "ex": "We should save water and energy."
+      },
+      {
+       "must": 1,
+       "term": "reduce",
+       "ipa": "",
+       "meaning": "يقلل",
+       "ex": "reduce"
+      },
+      {
+       "must": 0,
+       "term": "reuse",
+       "ipa": "",
+       "meaning": "يعيد الاستخدام",
+       "ex": "reuse"
+      },
+      {
+       "must": 0,
+       "term": "energy",
+       "ipa": "",
+       "meaning": "طاقة",
+       "ex": "We should save water and energy."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "We can ___ plastic bottles.",
+       "a": "recycle",
+       "o": [
+        "recycle",
+        "recycles"
+       ],
+       "why": ""
+      },
+      {
+       "q": "We should ___ water.",
+       "a": "save",
+       "o": [
+        "save",
+        "saves"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Turn off lights to save ___ .",
+       "a": "energy",
+       "o": [
+        "energy",
+        "energies"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى energy؟",
+       "a": "طاقة",
+       "o": [
+        "طاقة",
+        "يعيد التدوير",
+        "يوفر"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى save؟",
+       "a": "يوفر",
+       "o": [
+        "يوفر",
+        "يعيد التدوير",
+        "يقلل"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "We can recycle paper and plastic.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "We can recycle paper and plastic.",
+       "o": [
+        "We can recycle paper and plastic.",
+        "We should save water and energy."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

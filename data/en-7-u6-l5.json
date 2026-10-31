@@ -1,0 +1,307 @@
+{
+ "id": "en-7-u6-l5",
+ "grade": 7,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 6 · Lesson 5: Fawzi's First Meal in Japan",
+ "titleAr": "أكل فوزي بالعيدان لأول مرة.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "أكل فوزي بالعيدان لأول مرة.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "chopsticks",
+       "ar": "عيدان الأكل",
+       "em": "🥢"
+      },
+      {
+       "id": "v1",
+       "en": "sushi",
+       "ar": "سوشي",
+       "em": "🍣"
+      },
+      {
+       "id": "v2",
+       "en": "noodles",
+       "ar": "نودلز",
+       "em": "🍜"
+      },
+      {
+       "id": "v3",
+       "en": "taste",
+       "ar": "يتذوق",
+       "em": "👅"
+      },
+      {
+       "id": "v4",
+       "en": "strange",
+       "ar": "غريب",
+       "em": "🤔"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 68–69"
+  },
+  {
+   "title": "اقرأ",
+   "eyebrow": "الخطوة ٢ — اقرأ",
+   "heading": "اقرأ واستمع",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "📖 Fawzi's First Meal in Japan",
+     "html": "<div class=\"ex\">Fawzi ate with chopsticks for the first time.</div><div class=\"ex\">The noodles tasted delicious.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Fawzi ate with chopsticks for the first time. The noodles tasted delicious."
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط ▶ لتسمع النص."
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٣ — القاعدة",
+   "heading": "for the first time",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Fawzi ate with <b>chopsticks</b> for the first time.</div><div class=\"ex\">The noodles <b>tasted</b> delicious.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Fawzi ate with chopsticks for the first time. The noodles tasted delicious."
+      }
+     ]
+    }
+   ],
+   "lead": "لأول مرة",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٤ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "He ate with ___ .",
+           "a": "chopsticks",
+           "o": [
+            "chopsticks",
+            "forks"
+           ]
+          },
+          {
+           "s": "The noodles ___ delicious.",
+           "a": "tasted",
+           "o": [
+            "tasted",
+            "taste"
+           ]
+          },
+          {
+           "s": "for the first ___",
+           "a": "time",
+           "o": [
+            "time",
+            "times"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Fawzi ate with chopsticks for the first time.",
+          "The noodles tasted delicious."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Fawzi ate with chopsticks for the first time.",
+           "o": [
+            "Fawzi ate with chopsticks for the first time.",
+            "The noodles tasted delicious."
+           ]
+          },
+          {
+           "a": "The noodles tasted delicious.",
+           "o": [
+            "The noodles tasted delicious.",
+            "Fawzi ate with chopsticks for the first time."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٥ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "chopsticks",
+       "ipa": "",
+       "meaning": "عيدان الأكل",
+       "ex": "Fawzi ate with chopsticks for the first time."
+      },
+      {
+       "must": 1,
+       "term": "sushi",
+       "ipa": "",
+       "meaning": "سوشي",
+       "ex": "sushi"
+      },
+      {
+       "must": 1,
+       "term": "noodles",
+       "ipa": "",
+       "meaning": "نودلز",
+       "ex": "The noodles tasted delicious."
+      },
+      {
+       "must": 0,
+       "term": "taste",
+       "ipa": "",
+       "meaning": "يتذوق",
+       "ex": "The noodles tasted delicious."
+      },
+      {
+       "must": 0,
+       "term": "strange",
+       "ipa": "",
+       "meaning": "غريب",
+       "ex": "strange"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "He ate with ___ .",
+       "a": "chopsticks",
+       "o": [
+        "chopsticks",
+        "forks"
+       ],
+       "why": ""
+      },
+      {
+       "q": "The noodles ___ delicious.",
+       "a": "tasted",
+       "o": [
+        "tasted",
+        "taste"
+       ],
+       "why": ""
+      },
+      {
+       "q": "for the first ___",
+       "a": "time",
+       "o": [
+        "time",
+        "times"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى strange؟",
+       "a": "غريب",
+       "o": [
+        "غريب",
+        "عيدان الأكل",
+        "سوشي"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى noodles؟",
+       "a": "نودلز",
+       "o": [
+        "نودلز",
+        "عيدان الأكل",
+        "سوشي"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Fawzi ate with chopsticks for the first time.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Fawzi ate with chopsticks for the first time.",
+       "o": [
+        "Fawzi ate with chopsticks for the first time.",
+        "The noodles tasted delicious."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

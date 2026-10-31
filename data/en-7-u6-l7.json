@@ -1,0 +1,287 @@
+{
+ "id": "en-7-u6-l7",
+ "grade": 7,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 6 · Lesson 7: Laws in the UK",
+ "titleAr": "في بريطانيا يمكنك القيادة في سن ١٧.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "في بريطانيا يمكنك القيادة في سن ١٧.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "law",
+       "ar": "قانون",
+       "em": "⚖️"
+      },
+      {
+       "id": "v1",
+       "en": "allowed",
+       "ar": "مسموح",
+       "em": "✅"
+      },
+      {
+       "id": "v2",
+       "en": "not allowed",
+       "ar": "ممنوع",
+       "em": "🚫"
+      },
+      {
+       "id": "v3",
+       "en": "age",
+       "ar": "عمر",
+       "em": "🎂"
+      },
+      {
+       "id": "v4",
+       "en": "drive",
+       "ar": "يقود",
+       "em": "🚗"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 71"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "be allowed to",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">In the UK, you <b>can</b> drive at 17.</div><div class=\"ex\">You aren't <b>allowed</b> to work under 13.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "In the UK, you can drive at 17. You aren't allowed to work under 13."
+      }
+     ]
+    }
+   ],
+   "lead": "You are (not) allowed to …",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "You aren't ___ to work under 13.",
+           "a": "allowed",
+           "o": [
+            "allowed",
+            "allow"
+           ]
+          },
+          {
+           "s": "You ___ drive at 17.",
+           "a": "can",
+           "o": [
+            "can",
+            "must"
+           ]
+          },
+          {
+           "s": "Every country has ___ .",
+           "a": "laws",
+           "o": [
+            "laws",
+            "law's"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "In the UK, you can drive at 17.",
+          "You aren't allowed to work under 13."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "In the UK, you can drive at 17.",
+           "o": [
+            "In the UK, you can drive at 17.",
+            "You aren't allowed to work under 13."
+           ]
+          },
+          {
+           "a": "You aren't allowed to work under 13.",
+           "o": [
+            "You aren't allowed to work under 13.",
+            "In the UK, you can drive at 17."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "law",
+       "ipa": "",
+       "meaning": "قانون",
+       "ex": "law"
+      },
+      {
+       "must": 1,
+       "term": "allowed",
+       "ipa": "",
+       "meaning": "مسموح",
+       "ex": "You aren't allowed to work under 13."
+      },
+      {
+       "must": 1,
+       "term": "not allowed",
+       "ipa": "",
+       "meaning": "ممنوع",
+       "ex": "not allowed"
+      },
+      {
+       "must": 0,
+       "term": "age",
+       "ipa": "",
+       "meaning": "عمر",
+       "ex": "age"
+      },
+      {
+       "must": 0,
+       "term": "drive",
+       "ipa": "",
+       "meaning": "يقود",
+       "ex": "In the UK, you can drive at 17."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "You aren't ___ to work under 13.",
+       "a": "allowed",
+       "o": [
+        "allowed",
+        "allow"
+       ],
+       "why": ""
+      },
+      {
+       "q": "You ___ drive at 17.",
+       "a": "can",
+       "o": [
+        "can",
+        "must"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Every country has ___ .",
+       "a": "laws",
+       "o": [
+        "laws",
+        "law's"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى age؟",
+       "a": "عمر",
+       "o": [
+        "عمر",
+        "قانون",
+        "مسموح"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى allowed؟",
+       "a": "مسموح",
+       "o": [
+        "مسموح",
+        "قانون",
+        "ممنوع"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "In the UK, you can drive at 17.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "In the UK, you can drive at 17.",
+       "o": [
+        "In the UK, you can drive at 17.",
+        "You aren't allowed to work under 13."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

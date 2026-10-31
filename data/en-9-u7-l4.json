@@ -1,0 +1,287 @@
+{
+ "id": "en-9-u7-l4",
+ "grade": 9,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 7 · Lesson 4: How? Where? When?",
+ "titleAr": "هل تخبرني أين المحطة؟",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "هل تخبرني أين المحطة؟",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "how",
+       "ar": "كيف",
+       "em": "❓"
+      },
+      {
+       "id": "v1",
+       "en": "where",
+       "ar": "أين",
+       "em": "📍"
+      },
+      {
+       "id": "v2",
+       "en": "when",
+       "ar": "متى",
+       "em": "⏰"
+      },
+      {
+       "id": "v3",
+       "en": "why",
+       "ar": "لماذا",
+       "em": "🤔"
+      },
+      {
+       "id": "v4",
+       "en": "indirect question",
+       "ar": "سؤال غير مباشر",
+       "em": "💬"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 89"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Indirect questions",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Can you tell me where the station <b>is</b>?</div><div class=\"ex\">Do you know when the train <b>leaves</b>?</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Can you tell me where the station is? Do you know when the train leaves?"
+      }
+     ]
+    }
+   ],
+   "lead": "Can you tell me where the station is? — الفاعل قبل الفعل.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "Can you tell me where the station ___ ?",
+           "a": "is",
+           "o": [
+            "is",
+            "does"
+           ]
+          },
+          {
+           "s": "Do you know when the train ___ ?",
+           "a": "leaves",
+           "o": [
+            "leaves",
+            "does leave"
+           ]
+          },
+          {
+           "s": "Tell me ___ you are late.",
+           "a": "why",
+           "o": [
+            "why",
+            "what"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Can you tell me where the station is?",
+          "Do you know when the train leaves?"
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Can you tell me where the station is?",
+           "o": [
+            "Can you tell me where the station is?",
+            "Do you know when the train leaves?"
+           ]
+          },
+          {
+           "a": "Do you know when the train leaves?",
+           "o": [
+            "Do you know when the train leaves?",
+            "Can you tell me where the station is?"
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "how",
+       "ipa": "",
+       "meaning": "كيف",
+       "ex": "how"
+      },
+      {
+       "must": 1,
+       "term": "where",
+       "ipa": "",
+       "meaning": "أين",
+       "ex": "Can you tell me where the station is?"
+      },
+      {
+       "must": 1,
+       "term": "when",
+       "ipa": "",
+       "meaning": "متى",
+       "ex": "Do you know when the train leaves?"
+      },
+      {
+       "must": 0,
+       "term": "why",
+       "ipa": "",
+       "meaning": "لماذا",
+       "ex": "why"
+      },
+      {
+       "must": 0,
+       "term": "indirect question",
+       "ipa": "",
+       "meaning": "سؤال غير مباشر",
+       "ex": "indirect question"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "Can you tell me where the station ___ ?",
+       "a": "is",
+       "o": [
+        "is",
+        "does"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Do you know when the train ___ ?",
+       "a": "leaves",
+       "o": [
+        "leaves",
+        "does leave"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Tell me ___ you are late.",
+       "a": "why",
+       "o": [
+        "why",
+        "what"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى indirect question؟",
+       "a": "سؤال غير مباشر",
+       "o": [
+        "سؤال غير مباشر",
+        "كيف",
+        "أين"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى where؟",
+       "a": "أين",
+       "o": [
+        "أين",
+        "كيف",
+        "متى"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Can you tell me where the station is?",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Can you tell me where the station is?",
+       "o": [
+        "Can you tell me where the station is?",
+        "Do you know when the train leaves?"
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

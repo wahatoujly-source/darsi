@@ -4,339 +4,334 @@
  "subject": "en",
  "stage": "prep-7-9",
  "lang": "en",
- "title": "Unit 1 · Round up",
- "titleAr": "الوحدة الأولى — مراجعة الوحدة",
+ "title": "Unit 1 · Lesson R: Round up",
+ "titleAr": "مراجعة الوحدة — My Spare Time",
  "steps": [
   {
-   "title": "ماذا تعلّمت؟",
-   "eyebrow": "الخطوة ١ — ماذا تعلّمت؟",
-   "heading": "مراجعة الوحدة الأولى",
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "مراجعة الوحدة — My Spare Time",
    "blocks": [
     {
-     "type": "panel",
-     "title": "١. التحدث عن العطلة (الماضي البسيط)",
-     "html": "<div class=\"ex\">I went swimming every day. I stayed at home.</div><div class=\"ex\">Did you visit your friends? — Yes, I did. / No, I didn't.</div>",
-     "blocks": [
+     "type": "vocab",
+     "items": [
       {
-       "type": "say",
-       "label": "▶ اسمع",
-       "text": "I went swimming every day. Did you visit your friends? Yes, I did."
-      }
-     ]
-    },
-    {
-     "type": "panel",
-     "title": "٢. الهوايات",
-     "html": "<div class=\"ex\">I enjoy collecting stamps. I'm interested in planes.</div>"
-    },
-    {
-     "type": "panel",
-     "title": "٣. كم مرة؟",
-     "html": "<div class=\"ex\">always – usually – often – sometimes – never</div><div class=\"ex\">How often do you help at home? — I always help at home.</div>"
-    },
-    {
-     "type": "panel",
-     "title": "٤. الربط بـ and / but / or",
-     "html": "<div class=\"ex\">He plays football <b>and</b> tennis. ← إضافة</div><div class=\"ex\">He doesn't like water, <b>but</b> he can swim. ← عكس</div><div class=\"ex\">Do you wake up early <b>or</b> late? ← اختيار</div>",
-     "blocks": [
+       "id": "v0",
+       "en": "holiday",
+       "ar": "عطلة",
+       "em": "🏖️"
+      },
       {
-       "type": "say",
-       "label": "▶ اسمع",
-       "text": "He plays football and tennis. He doesn't like water, but he can swim. Do you wake up early or late?"
+       "id": "v1",
+       "en": "abroad",
+       "ar": "في الخارج",
+       "em": "✈️"
+      },
+      {
+       "id": "v2",
+       "en": "album",
+       "ar": "ألبوم",
+       "em": "📔"
+      },
+      {
+       "id": "v3",
+       "en": "photo",
+       "ar": "صورة",
+       "em": "📷"
+      },
+      {
+       "id": "v4",
+       "en": "whose",
+       "ar": "لمن",
+       "em": "❓"
+      },
+      {
+       "id": "v5",
+       "en": "scrapbook",
+       "ar": "دفتر قصاصات",
+       "em": "📒"
       }
      ]
     }
    ],
-   "lead": "هذا ما تعلمته في الوحدة. اقرأ واسمع الأمثلة.",
-   "starOnVisit": true
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 17"
   },
   {
-   "title": "and / but / or",
-   "eyebrow": "الخطوة ٢ — and / but / or",
-   "heading": "اختر أداة الربط",
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Unit review",
    "blocks": [
     {
-     "type": "choice",
-     "star": true,
-     "items": [
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Where do you usually go on holiday?</div><div class=\"ex\">This is a photo of Joe at the castle.</div><div class=\"ex\"><b>Whose</b> scrapbook is this? It's mine.</div><div class=\"ex\">How <b>often</b> do you visit the museum? Once a year.</div><div class=\"ex\">Adam <b>collects</b> tickets and stamps.</div>",
+     "blocks": [
       {
-       "q": "I like reading ___ drawing.",
-       "a": "and",
-       "o": [
-        "and",
-        "but",
-        "or"
-       ],
-       "why": "إضافة: and."
-      },
-      {
-       "q": "She is tired, ___ she is happy.",
-       "a": "but",
-       "o": [
-        "but",
-        "and",
-        "or"
-       ],
-       "why": "عكس: but."
-      },
-      {
-       "q": "Do you want tea ___ juice?",
-       "a": "or",
-       "o": [
-        "or",
-        "and",
-        "but"
-       ],
-       "why": "اختيار: or."
-      },
-      {
-       "q": "He can't swim, ___ he loves the sea.",
-       "a": "but",
-       "o": [
-        "but",
-        "or",
-        "and"
-       ],
-       "why": "عكس: but."
-      },
-      {
-       "q": "We went to the zoo ___ the museum.",
-       "a": "and",
-       "o": [
-        "and",
-        "or",
-        "but"
-       ],
-       "why": "إضافة: and."
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Where do you usually go on holiday? This is a photo of Joe at the castle. Whose scrapbook is this? It's mine. How often do you visit the museum? Once a year. Adam collects tickets and stamps."
       }
      ]
     }
-   ]
+   ],
+   "lead": "نراجع أهم قواعد الوحدة وكلماتها: اقرأ الأمثلة بصوت عالٍ ثم حلّ التمارين.",
+   "starOnVisit": true
   },
   {
    "title": "تدرّب",
    "eyebrow": "الخطوة ٣ — تدرّب",
-   "heading": "تدريب شامل",
+   "heading": "تمارين تُصحَّح فوراً",
    "blocks": [
     {
-     "type": "mcq",
+     "type": "tabs",
      "star": true,
-     "mode": "gap",
-     "items": [
+     "tabs": [
       {
-       "s": "Last summer, I ___ to Ghadames.",
-       "a": "went",
-       "o": [
-        "went",
-        "go",
-        "goes"
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "We usually ___ with our relatives.",
+           "a": "stay",
+           "o": [
+            "stay",
+            "stays"
+           ]
+          },
+          {
+           "s": "He ___ this photo last summer.",
+           "a": "took",
+           "o": [
+            "took",
+            "taked"
+           ]
+          },
+          {
+           "s": "___ bag is this?",
+           "a": "Whose",
+           "o": [
+            "Whose",
+            "Who's"
+           ]
+          },
+          {
+           "s": "How ___ do you swim?",
+           "a": "often",
+           "o": [
+            "often",
+            "much"
+           ]
+          },
+          {
+           "s": "Adam ___ stamps.",
+           "a": "collects",
+           "o": [
+            "collects",
+            "collect"
+           ]
+          },
+          {
+           "s": "___ , choose a cover.",
+           "a": "First",
+           "o": [
+            "First",
+            "Finally"
+           ]
+          }
+         ]
+        }
        ]
       },
       {
-       "s": "I'm interested ___ birds.",
-       "a": "in",
-       "o": [
-        "in",
-        "on",
-        "at"
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Where do you usually go on holiday?",
+          "This is a photo of Joe at the castle.",
+          "Whose scrapbook is this? It's mine.",
+          "How often do you visit the museum? Once a year."
+         ]
+        }
        ]
       },
       {
-       "s": "She ___ late for school.",
-       "a": "is never",
-       "o": [
-        "is never",
-        "never is",
-        "never"
-       ]
-      },
-      {
-       "s": "It ___ an amazing trip.",
-       "a": "was",
-       "o": [
-        "was",
-        "were",
-        "are"
-       ]
-      },
-      {
-       "s": "___ the paper between the covers.",
-       "a": "Put",
-       "o": [
-        "Put",
-        "Puts",
-        "Putting"
-       ]
-      },
-      {
-       "s": "The bird ___ away.",
-       "a": "flew",
-       "o": [
-        "flew",
-        "flied",
-        "flying"
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Where do you usually go on holiday?",
+           "o": [
+            "Where do you usually go on holiday?",
+            "This is a photo of Joe at the castle.",
+            "Whose scrapbook is this? It's mine."
+           ]
+          },
+          {
+           "a": "This is a photo of Joe at the castle.",
+           "o": [
+            "This is a photo of Joe at the castle.",
+            "Where do you usually go on holiday?",
+            "Whose scrapbook is this? It's mine."
+           ]
+          },
+          {
+           "a": "Whose scrapbook is this? It's mine.",
+           "o": [
+            "Whose scrapbook is this? It's mine.",
+            "Where do you usually go on holiday?",
+            "This is a photo of Joe at the castle."
+           ]
+          }
+         ]
+        }
        ]
       }
      ]
     }
    ],
-   "lead": "أسئلة من كل دروس الوحدة."
+   "lead": "أكمل التمارين لتأخذ النجمة."
   },
   {
-   "title": "قل",
-   "eyebrow": "الخطوة ٤ — قل",
-   "heading": "عبارة الوحدة",
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
    "blocks": [
     {
-     "type": "speakLine",
+     "type": "keywords",
      "star": true,
-     "text": "She sells sea shells on the sea shore. The shells she sells are sea shells, I'm sure."
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "holiday",
+       "ipa": "",
+       "meaning": "عطلة",
+       "ex": "Where do you usually go on holiday?"
+      },
+      {
+       "must": 1,
+       "term": "abroad",
+       "ipa": "",
+       "meaning": "في الخارج",
+       "ex": "abroad"
+      },
+      {
+       "must": 1,
+       "term": "album",
+       "ipa": "",
+       "meaning": "ألبوم",
+       "ex": "album"
+      },
+      {
+       "must": 0,
+       "term": "photo",
+       "ipa": "",
+       "meaning": "صورة",
+       "ex": "This is a photo of Joe at the castle."
+      },
+      {
+       "must": 0,
+       "term": "whose",
+       "ipa": "",
+       "meaning": "لمن",
+       "ex": "Whose scrapbook is this? It's mine."
+      },
+      {
+       "must": 0,
+       "term": "scrapbook",
+       "ipa": "",
+       "meaning": "دفتر قصاصات",
+       "ex": "Whose scrapbook is this? It's mine."
+      }
+     ]
     }
    ]
   },
   {
-   "title": "اختبار الوحدة",
-   "eyebrow": "الخطوة ٥ — اختبار الوحدة",
-   "heading": "اختبار الوحدة الأولى",
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
    "blocks": [
     {
      "type": "quiz",
      "star": true,
-     "pass": 8,
+     "pass": 5,
      "items": [
       {
-       "q": "Did you go away in the holidays? — No, I ___.",
-       "a": "didn't",
+       "q": "We usually ___ with our relatives.",
+       "a": "stay",
        "o": [
-        "didn't",
-        "don't",
-        "wasn't"
+        "stay",
+        "stays"
        ],
-       "why": "No, I didn't.",
-       "gap": true
+       "why": ""
       },
       {
-       "q": "The past of see is:",
-       "a": "saw",
+       "q": "He ___ this photo last summer.",
+       "a": "took",
        "o": [
-        "saw",
-        "seed",
-        "seen"
+        "took",
+        "taked"
        ],
-       "why": "see → saw."
+       "why": ""
       },
       {
-       "q": "I enjoy ___ photos.",
-       "a": "taking",
+       "q": "___ bag is this?",
+       "a": "Whose",
        "o": [
-        "taking",
-        "take",
-        "to taking"
+        "Whose",
+        "Who's"
        ],
-       "why": "enjoy + ing.",
-       "gap": true
+       "why": ""
       },
       {
-       "q": "Choose the correct sentence.",
-       "a": "We usually visit our grandparents.",
+       "q": "ما معنى holiday؟",
+       "a": "عطلة",
        "o": [
-        "We usually visit our grandparents.",
-        "We visit usually our grandparents."
+        "عطلة",
+        "في الخارج",
+        "ألبوم"
        ],
-       "why": "قبل الفعل."
-      },
-      {
-       "q": "ما معنى never؟",
-       "a": "أبداً",
-       "o": [
-        "أبداً",
-        "دائماً",
-        "غالباً"
-       ],
-       "why": "never = أبداً.",
+       "why": "",
        "ar": true
       },
       {
-       "q": "There ___ hundreds of birds.",
-       "a": "were",
+       "q": "ما معنى photo؟",
+       "a": "صورة",
        "o": [
-        "were",
-        "was",
-        "is"
+        "صورة",
+        "عطلة",
+        "في الخارج"
        ],
-       "why": "جمع في الماضي: were.",
-       "gap": true
-      },
-      {
-       "q": "Do you like tea ___ coffee?",
-       "a": "or",
-       "o": [
-        "or",
-        "but",
-        "and"
-       ],
-       "why": "اختيار: or.",
-       "gap": true
-      },
-      {
-       "q": "___ use too much glue.",
-       "a": "Don't",
-       "o": [
-        "Don't",
-        "No",
-        "Not"
-       ],
-       "why": "النهي: Don't.",
-       "gap": true
-      },
-      {
-       "q": "How do we end an email to a friend?",
-       "a": "Bye for now,",
-       "o": [
-        "Bye for now,",
-        "Dear …,",
-        "Hello,"
-       ],
-       "why": "Bye for now."
-      },
-      {
-       "q": "ما معنى exciting؟",
-       "a": "مثير",
-       "o": [
-        "مثير",
-        "ممل",
-        "هادئ"
-       ],
-       "why": "exciting = مثير.",
+       "why": "",
        "ar": true
       },
       {
        "type": "listen",
-       "say": "I always get up before seven o'clock.",
-       "q": "استمع: كم مرة يستيقظ قبل السابعة؟",
-       "a": "always",
+       "say": "Where do you usually go on holiday?",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Where do you usually go on holiday?",
        "o": [
-        "always",
-        "sometimes",
-        "never"
+        "Where do you usually go on holiday?",
+        "This is a photo of Joe at the castle.",
+        "Whose scrapbook is this? It's mine."
        ],
-       "why": "always = دائماً."
-      },
-      {
-       "q": "What are you doing? — I ___ my homework.",
-       "a": "am doing",
-       "o": [
-        "am doing",
-        "do",
-        "did"
-       ],
-       "why": "am + ing لشيء يحدث الآن.",
-       "gap": true
+       "why": ""
       }
      ]
     }
    ],
-   "lead": "12 سؤالاً من كل الوحدة. تنجح بـ 8 من 12."
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
   }
- ]
+ ],
+ "characters": {}
 }

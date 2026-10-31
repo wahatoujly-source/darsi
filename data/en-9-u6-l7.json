@@ -1,0 +1,287 @@
+{
+ "id": "en-9-u6-l7",
+ "grade": 9,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 6 · Lesson 7: A School Project",
+ "titleAr": "موضوع مشروعنا الطاقة المتجددة.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "موضوع مشروعنا الطاقة المتجددة.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "topic",
+       "ar": "موضوع",
+       "em": "📝"
+      },
+      {
+       "id": "v1",
+       "en": "present",
+       "ar": "يقدّم",
+       "em": "📊"
+      },
+      {
+       "id": "v2",
+       "en": "slides",
+       "ar": "شرائح",
+       "em": "🖥️"
+      },
+      {
+       "id": "v3",
+       "en": "teamwork",
+       "ar": "عمل جماعي",
+       "em": "🤝"
+      },
+      {
+       "id": "v4",
+       "en": "conclusion",
+       "ar": "خاتمة",
+       "em": "🏁"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 80"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Project language",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Our project <b>topic</b> is renewable energy.</div><div class=\"ex\">We'll <b>present</b> it with slides.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Our project topic is renewable energy. We'll present it with slides."
+      }
+     ]
+    }
+   ],
+   "lead": "Our topic is … / We'll present … / In conclusion, …",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "Our project ___ is energy.",
+           "a": "topic",
+           "o": [
+            "topic",
+            "title page"
+           ]
+          },
+          {
+           "s": "We'll ___ it with slides.",
+           "a": "present",
+           "o": [
+            "present",
+            "presents"
+           ]
+          },
+          {
+           "s": "In ___ , solar energy is the future.",
+           "a": "conclusion",
+           "o": [
+            "conclusion",
+            "conclude"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Our project topic is renewable energy.",
+          "We'll present it with slides."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Our project topic is renewable energy.",
+           "o": [
+            "Our project topic is renewable energy.",
+            "We'll present it with slides."
+           ]
+          },
+          {
+           "a": "We'll present it with slides.",
+           "o": [
+            "We'll present it with slides.",
+            "Our project topic is renewable energy."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "topic",
+       "ipa": "",
+       "meaning": "موضوع",
+       "ex": "Our project topic is renewable energy."
+      },
+      {
+       "must": 1,
+       "term": "present",
+       "ipa": "",
+       "meaning": "يقدّم",
+       "ex": "We'll present it with slides."
+      },
+      {
+       "must": 1,
+       "term": "slides",
+       "ipa": "",
+       "meaning": "شرائح",
+       "ex": "We'll present it with slides."
+      },
+      {
+       "must": 0,
+       "term": "teamwork",
+       "ipa": "",
+       "meaning": "عمل جماعي",
+       "ex": "teamwork"
+      },
+      {
+       "must": 0,
+       "term": "conclusion",
+       "ipa": "",
+       "meaning": "خاتمة",
+       "ex": "conclusion"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "Our project ___ is energy.",
+       "a": "topic",
+       "o": [
+        "topic",
+        "title page"
+       ],
+       "why": ""
+      },
+      {
+       "q": "We'll ___ it with slides.",
+       "a": "present",
+       "o": [
+        "present",
+        "presents"
+       ],
+       "why": ""
+      },
+      {
+       "q": "In ___ , solar energy is the future.",
+       "a": "conclusion",
+       "o": [
+        "conclusion",
+        "conclude"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى teamwork؟",
+       "a": "عمل جماعي",
+       "o": [
+        "عمل جماعي",
+        "موضوع",
+        "يقدّم"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى slides؟",
+       "a": "شرائح",
+       "o": [
+        "شرائح",
+        "موضوع",
+        "يقدّم"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Our project topic is renewable energy.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Our project topic is renewable energy.",
+       "o": [
+        "Our project topic is renewable energy.",
+        "We'll present it with slides."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

@@ -1,0 +1,287 @@
+{
+ "id": "en-7-u5-l6",
+ "grade": 7,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 5 · Lesson 6: Countries of the World",
+ "titleAr": "تحد مصر ليبيا من الشرق.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "تحد مصر ليبيا من الشرق.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "flag",
+       "ar": "علم",
+       "em": "🏳️"
+      },
+      {
+       "id": "v1",
+       "en": "north",
+       "ar": "شمال",
+       "em": "⬆️"
+      },
+      {
+       "id": "v2",
+       "en": "south",
+       "ar": "جنوب",
+       "em": "⬇️"
+      },
+      {
+       "id": "v3",
+       "en": "border",
+       "ar": "حدود",
+       "em": "🛂"
+      },
+      {
+       "id": "v4",
+       "en": "neighbour",
+       "ar": "جار",
+       "em": "🏘️"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 58"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "to the + direction",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Libya borders Egypt <b>to</b> the east.</div><div class=\"ex\">Tunisia is Libya's neighbour <b>to</b> the north-west.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Libya borders Egypt to the east. Tunisia is Libya's neighbour to the north-west."
+      }
+     ]
+    }
+   ],
+   "lead": "to the east / to the south",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "Egypt is ___ the east of Libya.",
+           "a": "to",
+           "o": [
+            "to",
+            "at"
+           ]
+          },
+          {
+           "s": "Chad is to the ___ of Libya.",
+           "a": "south",
+           "o": [
+            "south",
+            "north"
+           ]
+          },
+          {
+           "s": "Tunisia is Libya's ___ .",
+           "a": "neighbour",
+           "o": [
+            "neighbour",
+            "border"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Libya borders Egypt to the east.",
+          "Tunisia is Libya's neighbour to the north-west."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Libya borders Egypt to the east.",
+           "o": [
+            "Libya borders Egypt to the east.",
+            "Tunisia is Libya's neighbour to the north-west."
+           ]
+          },
+          {
+           "a": "Tunisia is Libya's neighbour to the north-west.",
+           "o": [
+            "Tunisia is Libya's neighbour to the north-west.",
+            "Libya borders Egypt to the east."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "flag",
+       "ipa": "",
+       "meaning": "علم",
+       "ex": "flag"
+      },
+      {
+       "must": 1,
+       "term": "north",
+       "ipa": "",
+       "meaning": "شمال",
+       "ex": "Tunisia is Libya's neighbour to the north-west."
+      },
+      {
+       "must": 1,
+       "term": "south",
+       "ipa": "",
+       "meaning": "جنوب",
+       "ex": "south"
+      },
+      {
+       "must": 0,
+       "term": "border",
+       "ipa": "",
+       "meaning": "حدود",
+       "ex": "Libya borders Egypt to the east."
+      },
+      {
+       "must": 0,
+       "term": "neighbour",
+       "ipa": "",
+       "meaning": "جار",
+       "ex": "Tunisia is Libya's neighbour to the north-west."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "Egypt is ___ the east of Libya.",
+       "a": "to",
+       "o": [
+        "to",
+        "at"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Chad is to the ___ of Libya.",
+       "a": "south",
+       "o": [
+        "south",
+        "north"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Tunisia is Libya's ___ .",
+       "a": "neighbour",
+       "o": [
+        "neighbour",
+        "border"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى flag؟",
+       "a": "علم",
+       "o": [
+        "علم",
+        "شمال",
+        "جنوب"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى north؟",
+       "a": "شمال",
+       "o": [
+        "شمال",
+        "علم",
+        "جنوب"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Libya borders Egypt to the east.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Libya borders Egypt to the east.",
+       "o": [
+        "Libya borders Egypt to the east.",
+        "Tunisia is Libya's neighbour to the north-west."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

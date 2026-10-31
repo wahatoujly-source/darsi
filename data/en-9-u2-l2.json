@@ -1,0 +1,287 @@
+{
+ "id": "en-9-u2-l2",
+ "grade": 9,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 2 · Lesson 2: Spare Time",
+ "titleAr": "في وقت فراغي أستمتع بالقراءة.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "في وقت فراغي أستمتع بالقراءة.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "spare time",
+       "ar": "وقت الفراغ",
+       "em": "⏳"
+      },
+      {
+       "id": "v1",
+       "en": "hobby",
+       "ar": "هواية",
+       "em": "🎨"
+      },
+      {
+       "id": "v2",
+       "en": "enjoy",
+       "ar": "يستمتع",
+       "em": "😊"
+      },
+      {
+       "id": "v3",
+       "en": "keen on",
+       "ar": "مولع بـ",
+       "em": "❤️"
+      },
+      {
+       "id": "v4",
+       "en": "prefer",
+       "ar": "يفضّل",
+       "em": "👍"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 24"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "enjoy / keen on + -ing",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">In my spare time, I enjoy <b>reading</b>.</div><div class=\"ex\">I prefer football <b>to</b> basketball.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "In my spare time, I enjoy reading. I prefer football to basketball."
+      }
+     ]
+    }
+   ],
+   "lead": "I enjoy reading. I'm keen on drawing.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "I enjoy ___ .",
+           "a": "reading",
+           "o": [
+            "reading",
+            "to read"
+           ]
+          },
+          {
+           "s": "I'm keen ___ drawing.",
+           "a": "on",
+           "o": [
+            "on",
+            "in"
+           ]
+          },
+          {
+           "s": "I prefer football ___ basketball.",
+           "a": "to",
+           "o": [
+            "to",
+            "than"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "In my spare time, I enjoy reading.",
+          "I prefer football to basketball."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "In my spare time, I enjoy reading.",
+           "o": [
+            "In my spare time, I enjoy reading.",
+            "I prefer football to basketball."
+           ]
+          },
+          {
+           "a": "I prefer football to basketball.",
+           "o": [
+            "I prefer football to basketball.",
+            "In my spare time, I enjoy reading."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "spare time",
+       "ipa": "",
+       "meaning": "وقت الفراغ",
+       "ex": "In my spare time, I enjoy reading."
+      },
+      {
+       "must": 1,
+       "term": "hobby",
+       "ipa": "",
+       "meaning": "هواية",
+       "ex": "hobby"
+      },
+      {
+       "must": 1,
+       "term": "enjoy",
+       "ipa": "",
+       "meaning": "يستمتع",
+       "ex": "In my spare time, I enjoy reading."
+      },
+      {
+       "must": 0,
+       "term": "keen on",
+       "ipa": "",
+       "meaning": "مولع بـ",
+       "ex": "keen on"
+      },
+      {
+       "must": 0,
+       "term": "prefer",
+       "ipa": "",
+       "meaning": "يفضّل",
+       "ex": "I prefer football to basketball."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "I enjoy ___ .",
+       "a": "reading",
+       "o": [
+        "reading",
+        "to read"
+       ],
+       "why": ""
+      },
+      {
+       "q": "I'm keen ___ drawing.",
+       "a": "on",
+       "o": [
+        "on",
+        "in"
+       ],
+       "why": ""
+      },
+      {
+       "q": "I prefer football ___ basketball.",
+       "a": "to",
+       "o": [
+        "to",
+        "than"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى spare time؟",
+       "a": "وقت الفراغ",
+       "o": [
+        "وقت الفراغ",
+        "هواية",
+        "يستمتع"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى prefer؟",
+       "a": "يفضّل",
+       "o": [
+        "يفضّل",
+        "وقت الفراغ",
+        "هواية"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "In my spare time, I enjoy reading.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "In my spare time, I enjoy reading.",
+       "o": [
+        "In my spare time, I enjoy reading.",
+        "I prefer football to basketball."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

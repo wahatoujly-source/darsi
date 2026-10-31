@@ -4,12 +4,12 @@
  "subject": "en",
  "stage": "primary-1-3",
  "lang": "en",
- "title": "I can …",
- "titleAr": "الإنجليزية — الصف الثالث",
+ "title": "Unit 1 · Lesson 1: Hello! I can …",
+ "titleAr": "الوحدة الأولى: في الحديقة — الدرس الأول: أستطيع …",
  "steps": [
   {
-   "title": "أتعرّف",
-   "eyebrow": "الخطوة ١ — أتعرّف",
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
    "heading": "I can …",
    "blocks": [
     {
@@ -17,230 +17,229 @@
      "star": true,
      "items": [
       {
-       "t": "run",
-       "em": "🏃",
-       "say": "run",
-       "sub": "يجري",
-       "lang": "en",
+       "t": "jump",
+       "em": "🦘",
+       "say": "I can jump.",
+       "sub": "يقفز",
        "must": 1
       },
       {
-       "t": "jump",
-       "em": "🤸",
-       "say": "jump",
-       "sub": "يقفز",
-       "lang": "en",
+       "t": "hop",
+       "em": "🐇",
+       "say": "I can hop.",
+       "sub": "يحجل (على رجل واحدة)",
        "must": 1
       },
       {
        "t": "swim",
        "em": "🏊",
-       "say": "swim",
+       "say": "I can swim.",
        "sub": "يسبح",
-       "lang": "en",
        "must": 1
       },
       {
-       "t": "climb",
-       "em": "🧗",
-       "say": "climb",
-       "sub": "يتسلق",
-       "lang": "en",
+       "t": "sing",
+       "em": "🎤",
+       "say": "I can sing.",
+       "sub": "يغني",
        "must": 1
       },
       {
-       "t": "ride a bike",
+       "t": "cycle",
        "em": "🚲",
-       "say": "ride a bike",
-       "sub": "يركب دراجة",
-       "lang": "en",
+       "say": "I can cycle.",
+       "sub": "يركب الدراجة",
+       "must": 1
+      },
+      {
+       "t": "skip",
+       "em": "🪢",
+       "say": "I can skip.",
+       "sub": "ينط الحبل",
+       "must": 1
+      },
+      {
+       "t": "run",
+       "em": "🏃",
+       "say": "I can run.",
+       "sub": "يجري",
        "must": 1
       }
      ],
      "lang": "en"
     }
    ],
-   "lead": "اضغط على كل بطاقة واسمع. كتابك كتاب التلميذ ص 8⁠–⁠9"
+   "lead": "اضغط على كل صورة واسمع، ثم قل: I can … كتابك ص 8."
   },
   {
-   "title": "استمع",
-   "eyebrow": "الخطوة ٢ — استمع",
-   "heading": "جمل الدرس",
+   "title": "العب",
+   "eyebrow": "الخطوة ٢ — العب",
+   "heading": "What can they do?",
+   "blocks": [
+    {
+     "type": "game",
+     "star": true,
+     "items": [
+      {
+       "say": "I can jump.",
+       "o": [
+        "🦘",
+        "🐇",
+        "🏊"
+       ],
+       "a": "🦘",
+       "lang": "en"
+      },
+      {
+       "say": "I can hop.",
+       "o": [
+        "🐇",
+        "🏊",
+        "🎤"
+       ],
+       "a": "🐇",
+       "lang": "en"
+      },
+      {
+       "say": "I can swim.",
+       "o": [
+        "🏊",
+        "🎤",
+        "🚲"
+       ],
+       "a": "🏊",
+       "lang": "en"
+      },
+      {
+       "say": "I can sing.",
+       "o": [
+        "🎤",
+        "🚲",
+        "🪢"
+       ],
+       "a": "🎤",
+       "lang": "en"
+      },
+      {
+       "say": "I can cycle.",
+       "o": [
+        "🚲",
+        "🦘",
+        "🐇"
+       ],
+       "a": "🚲",
+       "lang": "en"
+      },
+      {
+       "say": "I can skip.",
+       "o": [
+        "🪢",
+        "🐇",
+        "🏊"
+       ],
+       "a": "🪢",
+       "lang": "en"
+      },
+      {
+       "say": "I can run.",
+       "o": [
+        "🏃",
+        "🏊",
+        "🎤"
+       ],
+       "a": "🏃",
+       "lang": "en"
+      }
+     ],
+     "lang": "en"
+    }
+   ],
+   "lead": "اسمع واضغط على الصورة."
+  },
+  {
+   "title": "تكلّم",
+   "eyebrow": "الخطوة ٣ — تكلّم",
+   "heading": "She can swim and run.",
    "blocks": [
     {
      "type": "cards",
      "star": true,
      "items": [
       {
-       "t": "I can run.",
-       "em": "🏃",
-       "say": "I can run.",
-       "sub": "أستطيع أن أجري.",
-       "lang": "en",
+       "t": "She can swim and run.",
+       "em": "👧🏊🏃",
+       "say": "She can swim and run.",
+       "sub": "هي تستطيع السباحة والجري",
        "must": 1
       },
       {
-       "t": "I can swim.",
-       "em": "🏊",
-       "say": "I can swim.",
-       "sub": "أستطيع أن أسبح.",
-       "lang": "en",
+       "t": "He can cycle.",
+       "em": "👦🚲",
+       "say": "He can cycle.",
+       "sub": "هو يستطيع ركوب الدراجة",
        "must": 1
+      },
+      {
+       "t": "Who can hop?",
+       "em": "❓🐇",
+       "say": "Who can hop?",
+       "sub": "من يستطيع الحجل؟"
+      },
+      {
+       "t": "Reem.",
+       "em": "👧",
+       "say": "Reem.",
+       "sub": "ريم"
       }
      ],
      "lang": "en"
     }
    ],
-   "lead": "اسمع الجملة وردّدها."
+   "lead": "She للبنت و He للولد. كتابك ص 9."
   },
   {
-   "title": "العب",
-   "eyebrow": "الخطوة ٣ — العب",
-   "heading": "اسمع واختر الصورة",
+   "title": "صِل",
+   "eyebrow": "الخطوة ٤ — صِل",
+   "heading": "Match",
    "blocks": [
     {
-     "type": "game",
+     "type": "match",
      "star": true,
-     "items": [
-      {
-       "say": "run",
-       "o": [
-        "🏃",
-        "🤸",
-        "🧗"
-       ],
-       "a": "🏃",
-       "lang": "en"
-      },
-      {
-       "say": "jump",
-       "o": [
-        "🤸",
-        "🏊",
-        "🧗"
-       ],
-       "a": "🤸",
-       "lang": "en"
-      },
-      {
-       "say": "swim",
-       "o": [
-        "🏊",
-        "🧗",
-        "🤸"
-       ],
-       "a": "🏊",
-       "lang": "en"
-      },
-      {
-       "say": "climb",
-       "o": [
-        "🧗",
-        "🤸",
-        "🏊"
-       ],
-       "a": "🧗",
-       "lang": "en"
-      },
-      {
-       "say": "ride a bike",
-       "o": [
-        "🚲",
-        "🏊",
-        "🤸"
-       ],
-       "a": "🚲",
-       "lang": "en"
-      }
+     "pairs": [
+      [
+       "jump",
+       "🦘",
+       "jump"
+      ],
+      [
+       "hop",
+       "🐇",
+       "hop"
+      ],
+      [
+       "swim",
+       "🏊",
+       "swim"
+      ],
+      [
+       "sing",
+       "🎤",
+       "sing"
+      ],
+      [
+       "cycle",
+       "🚲",
+       "cycle"
+      ]
      ],
-     "lang": "en"
-    }
-   ]
-  },
-  {
-   "title": "افهم",
-   "eyebrow": "الخطوة ٤ — افهم",
-   "heading": "ما معنى الجملة؟",
-   "blocks": [
-    {
-     "type": "game",
-     "star": true,
-     "items": [
-      {
-       "say": "I can run.",
-       "o": [
-        "أستطيع أن أجري.",
-        "أستطيع أن أسبح."
-       ],
-       "a": "أستطيع أن أجري.",
-       "lang": "en"
-      },
-      {
-       "say": "I can swim.",
-       "o": [
-        "أستطيع أن أسبح.",
-        "أستطيع أن أجري."
-       ],
-       "a": "أستطيع أن أسبح.",
-       "lang": "en"
-      }
-     ],
-     "lang": "en"
-    }
-   ]
-  },
-  {
-   "title": "أكمل",
-   "eyebrow": "الخطوة ٥ — أكمل",
-   "heading": "اختر الكلمة الناقصة",
-   "blocks": [
-    {
-     "type": "game",
-     "star": true,
-     "items": [
-      {
-       "say": "I can run fast.",
-       "o": [
-        "can",
-        "am"
-       ],
-       "a": "can",
-       "sayQ": false,
-       "show": "I ___ run fast.",
-       "lang": "en"
-      },
-      {
-       "say": "I can ride a bike.",
-       "o": [
-        "ride",
-        "rides"
-       ],
-       "a": "ride",
-       "sayQ": false,
-       "show": "I can ___ a bike.",
-       "lang": "en"
-      },
-      {
-       "say": "Fish can swim .",
-       "o": [
-        "swim",
-        "climb"
-       ],
-       "a": "swim",
-       "sayQ": false,
-       "show": "Fish can ___ .",
-       "lang": "en"
-      }
-     ],
-     "q": "اختر الكلمة المناسبة",
      "lang": "en"
     }
    ],
-   "lead": "can + فعل للتعبير عن القدرة."
+   "lead": "اضغط على الكلمة ثم صورتها."
   },
   {
    "title": "اختبار",
-   "eyebrow": "الخطوة ٦ — اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
    "heading": "اختبر نفسك",
    "blocks": [
     {
@@ -248,66 +247,58 @@
      "star": true,
      "items": [
       {
-       "say": "run",
-       "o": [
-        "🏃",
-        "🏊",
-        "🧗"
-       ],
-       "a": "🏃",
-       "lang": "en"
-      },
-      {
-       "say": "jump",
-       "o": [
-        "🤸",
-        "🚲",
-        "🧗"
-       ],
-       "a": "🤸",
-       "lang": "en"
-      },
-      {
        "say": "swim",
        "o": [
         "🏊",
-        "🧗",
-        "🚲"
+        "🚲",
+        "🎤"
        ],
        "a": "🏊",
        "lang": "en"
       },
       {
-       "say": "climb",
+       "say": "skip",
        "o": [
-        "🧗",
-        "🏃",
-        "🏊"
+        "🪢",
+        "🦘",
+        "🏃"
        ],
-       "a": "🧗",
+       "a": "🪢",
        "lang": "en"
       },
       {
-       "say": "I can run.",
+       "say": "sing",
        "o": [
-        "أستطيع أن أجري.",
-        "أستطيع أن أسبح."
+        "🎤",
+        "🏊",
+        "🐇"
        ],
-       "a": "أستطيع أن أجري.",
+       "a": "🎤",
        "lang": "en"
       },
       {
-       "say": "I can swim.",
+       "q": "👧 ... can run.",
        "o": [
-        "أستطيع أن أسبح.",
-        "أستطيع أن أجري."
+        "She",
+        "He"
        ],
-       "a": "أستطيع أن أسبح.",
+       "a": "She",
+       "show": "👧🏃"
+      },
+      {
+       "say": "cycle",
+       "o": [
+        "🚲",
+        "🪢",
+        "🦘"
+       ],
+       "a": "🚲",
        "lang": "en"
       }
      ],
      "final": true,
-     "lang": "en"
+     "lang": "en",
+     "pass": 3
     }
    ]
   }

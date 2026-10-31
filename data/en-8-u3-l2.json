@@ -1,0 +1,287 @@
+{
+ "id": "en-8-u3-l2",
+ "grade": 8,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 3 · Lesson 2: The Timetable",
+ "titleAr": "حصص السباحة من ٤ إلى ٥ أيام الاثنين.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "حصص السباحة من ٤ إلى ٥ أيام الاثنين.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "timetable",
+       "ar": "جدول",
+       "em": "🗓️"
+      },
+      {
+       "id": "v1",
+       "en": "from … to",
+       "ar": "من … إلى",
+       "em": "↔️"
+      },
+      {
+       "id": "v2",
+       "en": "class",
+       "ar": "حصة",
+       "em": "🏫"
+      },
+      {
+       "id": "v3",
+       "en": "weekday",
+       "ar": "يوم عمل",
+       "em": "📅"
+      },
+      {
+       "id": "v4",
+       "en": "available",
+       "ar": "متاح",
+       "em": "✅"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 37"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "on + days",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Swimming classes are from 4 to 5 <b>on</b> Mondays.</div><div class=\"ex\">The pool isn't available <b>on</b> Fridays.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Swimming classes are from 4 to 5 on Mondays. The pool isn't available on Fridays."
+      }
+     ]
+    }
+   ],
+   "lead": "on Mondays = كل يوم اثنين",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "Classes are ___ Mondays.",
+           "a": "on",
+           "o": [
+            "on",
+            "in"
+           ]
+          },
+          {
+           "s": "from 4 ___ 5",
+           "a": "to",
+           "o": [
+            "to",
+            "at"
+           ]
+          },
+          {
+           "s": "The pool isn't ___ on Fridays.",
+           "a": "available",
+           "o": [
+            "available",
+            "avoid"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Swimming classes are from 4 to 5 on Mondays.",
+          "The pool isn't available on Fridays."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Swimming classes are from 4 to 5 on Mondays.",
+           "o": [
+            "Swimming classes are from 4 to 5 on Mondays.",
+            "The pool isn't available on Fridays."
+           ]
+          },
+          {
+           "a": "The pool isn't available on Fridays.",
+           "o": [
+            "The pool isn't available on Fridays.",
+            "Swimming classes are from 4 to 5 on Mondays."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "timetable",
+       "ipa": "",
+       "meaning": "جدول",
+       "ex": "timetable"
+      },
+      {
+       "must": 1,
+       "term": "from … to",
+       "ipa": "",
+       "meaning": "من … إلى",
+       "ex": "Swimming classes are from 4 to 5 on Mondays."
+      },
+      {
+       "must": 1,
+       "term": "class",
+       "ipa": "",
+       "meaning": "حصة",
+       "ex": "Swimming classes are from 4 to 5 on Mondays."
+      },
+      {
+       "must": 0,
+       "term": "weekday",
+       "ipa": "",
+       "meaning": "يوم عمل",
+       "ex": "weekday"
+      },
+      {
+       "must": 0,
+       "term": "available",
+       "ipa": "",
+       "meaning": "متاح",
+       "ex": "The pool isn't available on Fridays."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "Classes are ___ Mondays.",
+       "a": "on",
+       "o": [
+        "on",
+        "in"
+       ],
+       "why": ""
+      },
+      {
+       "q": "from 4 ___ 5",
+       "a": "to",
+       "o": [
+        "to",
+        "at"
+       ],
+       "why": ""
+      },
+      {
+       "q": "The pool isn't ___ on Fridays.",
+       "a": "available",
+       "o": [
+        "available",
+        "avoid"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى timetable؟",
+       "a": "جدول",
+       "o": [
+        "جدول",
+        "من … إلى",
+        "حصة"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى weekday؟",
+       "a": "يوم عمل",
+       "o": [
+        "يوم عمل",
+        "جدول",
+        "من … إلى"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Swimming classes are from 4 to 5 on Mondays.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Swimming classes are from 4 to 5 on Mondays.",
+       "o": [
+        "Swimming classes are from 4 to 5 on Mondays.",
+        "The pool isn't available on Fridays."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

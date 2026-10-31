@@ -1,0 +1,299 @@
+{
+ "id": "en-8-u2-l3",
+ "grade": 8,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 2 · Lesson 3: In a Restaurant",
+ "titleAr": "هل أنت مستعد للطلب؟",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "هل أنت مستعد للطلب؟",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "menu",
+       "ar": "قائمة الطعام",
+       "em": "📋"
+      },
+      {
+       "id": "v1",
+       "en": "order",
+       "ar": "يطلب",
+       "em": "🛎️"
+      },
+      {
+       "id": "v2",
+       "en": "bill",
+       "ar": "فاتورة",
+       "em": "🧾"
+      },
+      {
+       "id": "v3",
+       "en": "starter",
+       "ar": "مقبلات",
+       "em": "🥗"
+      },
+      {
+       "id": "v4",
+       "en": "main course",
+       "ar": "الطبق الرئيسي",
+       "em": "🍛"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 26"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "I'd like / Could we …?",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Are you ready to <b>order</b>?</div><div class=\"ex\"><b>I'd</b> like the fish soup, please.</div><div class=\"ex\">Could we have the <b>bill</b>, please?</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Are you ready to order? I'd like the fish soup, please. Could we have the bill, please?"
+      }
+     ]
+    }
+   ],
+   "lead": "طلبات مهذبة في المطعم.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "Are you ready to ___ ?",
+           "a": "order",
+           "o": [
+            "order",
+            "orders"
+           ]
+          },
+          {
+           "s": "___ like the soup, please.",
+           "a": "I'd",
+           "o": [
+            "I'd",
+            "I"
+           ]
+          },
+          {
+           "s": "Could we have the ___ , please?",
+           "a": "bill",
+           "o": [
+            "bill",
+            "menu"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Are you ready to order?",
+          "I'd like the fish soup, please.",
+          "Could we have the bill, please?"
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Are you ready to order?",
+           "o": [
+            "Are you ready to order?",
+            "I'd like the fish soup, please.",
+            "Could we have the bill, please?"
+           ]
+          },
+          {
+           "a": "I'd like the fish soup, please.",
+           "o": [
+            "I'd like the fish soup, please.",
+            "Are you ready to order?",
+            "Could we have the bill, please?"
+           ]
+          },
+          {
+           "a": "Could we have the bill, please?",
+           "o": [
+            "Could we have the bill, please?",
+            "Are you ready to order?",
+            "I'd like the fish soup, please."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "menu",
+       "ipa": "",
+       "meaning": "قائمة الطعام",
+       "ex": "menu"
+      },
+      {
+       "must": 1,
+       "term": "order",
+       "ipa": "",
+       "meaning": "يطلب",
+       "ex": "Are you ready to order?"
+      },
+      {
+       "must": 1,
+       "term": "bill",
+       "ipa": "",
+       "meaning": "فاتورة",
+       "ex": "Could we have the bill, please?"
+      },
+      {
+       "must": 0,
+       "term": "starter",
+       "ipa": "",
+       "meaning": "مقبلات",
+       "ex": "starter"
+      },
+      {
+       "must": 0,
+       "term": "main course",
+       "ipa": "",
+       "meaning": "الطبق الرئيسي",
+       "ex": "main course"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "Are you ready to ___ ?",
+       "a": "order",
+       "o": [
+        "order",
+        "orders"
+       ],
+       "why": ""
+      },
+      {
+       "q": "___ like the soup, please.",
+       "a": "I'd",
+       "o": [
+        "I'd",
+        "I"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Could we have the ___ , please?",
+       "a": "bill",
+       "o": [
+        "bill",
+        "menu"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى starter؟",
+       "a": "مقبلات",
+       "o": [
+        "مقبلات",
+        "قائمة الطعام",
+        "يطلب"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى menu؟",
+       "a": "قائمة الطعام",
+       "o": [
+        "قائمة الطعام",
+        "يطلب",
+        "فاتورة"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Are you ready to order?",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Are you ready to order?",
+       "o": [
+        "Are you ready to order?",
+        "I'd like the fish soup, please.",
+        "Could we have the bill, please?"
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

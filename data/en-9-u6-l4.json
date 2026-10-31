@@ -1,0 +1,287 @@
+{
+ "id": "en-9-u6-l4",
+ "grade": 9,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 6 · Lesson 4: A, an or the?",
+ "titleAr": "رأيت رجلاً. كان الرجل مهندساً.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "رأيت رجلاً. كان الرجل مهندساً.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "a",
+       "ar": "أداة نكرة",
+       "em": "1️⃣"
+      },
+      {
+       "id": "v1",
+       "en": "an",
+       "ar": "أداة نكرة قبل متحرك",
+       "em": "🅰️"
+      },
+      {
+       "id": "v2",
+       "en": "the",
+       "ar": "أداة تعريف",
+       "em": "👉"
+      },
+      {
+       "id": "v3",
+       "en": "unique",
+       "ar": "فريد",
+       "em": "⭐"
+      },
+      {
+       "id": "v4",
+       "en": "first mention",
+       "ar": "أول ذكر",
+       "em": "🆕"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 76"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Articles",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">I saw a man. The man was <b>an</b> engineer.</div><div class=\"ex\"><b>The</b> sun rises in the east.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "I saw a man. The man was an engineer. The sun rises in the east."
+      }
+     ]
+    }
+   ],
+   "lead": "a/an لأول ذكر، the لما سبق ذكره وللأشياء الفريدة.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "I saw ___ elephant.",
+           "a": "an",
+           "o": [
+            "an",
+            "a"
+           ]
+          },
+          {
+           "s": "___ sun is hot.",
+           "a": "The",
+           "o": [
+            "The",
+            "A"
+           ]
+          },
+          {
+           "s": "She's ___ doctor.",
+           "a": "a",
+           "o": [
+            "a",
+            "the"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "I saw a man. The man was an engineer.",
+          "The sun rises in the east."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "I saw a man. The man was an engineer.",
+           "o": [
+            "I saw a man. The man was an engineer.",
+            "The sun rises in the east."
+           ]
+          },
+          {
+           "a": "The sun rises in the east.",
+           "o": [
+            "The sun rises in the east.",
+            "I saw a man. The man was an engineer."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "a",
+       "ipa": "",
+       "meaning": "أداة نكرة",
+       "ex": "I saw a man. The man was an engineer."
+      },
+      {
+       "must": 1,
+       "term": "an",
+       "ipa": "",
+       "meaning": "أداة نكرة قبل متحرك",
+       "ex": "I saw a man. The man was an engineer."
+      },
+      {
+       "must": 1,
+       "term": "the",
+       "ipa": "",
+       "meaning": "أداة تعريف",
+       "ex": "I saw a man. The man was an engineer."
+      },
+      {
+       "must": 0,
+       "term": "unique",
+       "ipa": "",
+       "meaning": "فريد",
+       "ex": "unique"
+      },
+      {
+       "must": 0,
+       "term": "first mention",
+       "ipa": "",
+       "meaning": "أول ذكر",
+       "ex": "first mention"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "I saw ___ elephant.",
+       "a": "an",
+       "o": [
+        "an",
+        "a"
+       ],
+       "why": ""
+      },
+      {
+       "q": "___ sun is hot.",
+       "a": "The",
+       "o": [
+        "The",
+        "A"
+       ],
+       "why": ""
+      },
+      {
+       "q": "She's ___ doctor.",
+       "a": "a",
+       "o": [
+        "a",
+        "the"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى the؟",
+       "a": "أداة تعريف",
+       "o": [
+        "أداة تعريف",
+        "أداة نكرة",
+        "أداة نكرة قبل متحرك"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى an؟",
+       "a": "أداة نكرة قبل متحرك",
+       "o": [
+        "أداة نكرة قبل متحرك",
+        "أداة نكرة",
+        "أداة تعريف"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "I saw a man. The man was an engineer.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "I saw a man. The man was an engineer.",
+       "o": [
+        "I saw a man. The man was an engineer.",
+        "The sun rises in the east."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

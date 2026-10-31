@@ -1,0 +1,337 @@
+{
+ "id": "en-9-u4-l3",
+ "grade": 9,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 4 · Lesson 3: Speaking",
+ "titleAr": "مهارة التحدث — Fun with English 1",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "مهارة التحدث — Fun with English 1",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "fuel",
+       "ar": "وقود",
+       "em": "⛽"
+      },
+      {
+       "id": "v1",
+       "en": "speed",
+       "ar": "سرعة",
+       "em": "🏎️"
+      },
+      {
+       "id": "v2",
+       "en": "loyal",
+       "ar": "وفي",
+       "em": "🤝"
+      },
+      {
+       "id": "v3",
+       "en": "honest",
+       "ar": "صادق",
+       "em": "✅"
+      },
+      {
+       "id": "v4",
+       "en": "novel",
+       "ar": "رواية",
+       "em": "📖"
+      },
+      {
+       "id": "v5",
+       "en": "author",
+       "ar": "مؤلف",
+       "em": "✍️"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 54⁠–⁠55"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Speaking",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">This is the most economical car <b>of</b> the year.</div><div class=\"ex\">A good friend is someone <b>who</b> is loyal and honest.</div><div class=\"ex\">The film is based <b>on</b> a famous novel.</div><div class=\"ex\">Would you like <b>to</b> come to my party?</div><div class=\"ex\">I hate spiders! I'm scared <b>of</b> them.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "This is the most economical car of the year. A good friend is someone who is loyal and honest. The film is based on a famous novel. Would you like to come to my party? I hate spiders! I'm scared of them."
+      }
+     ]
+    }
+   ],
+   "lead": "ردّد الجمل بصوت واضح مع زميلك، واستخدمها لتتحدث عن نفسك.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "It's ___ comfortable than the old one.",
+           "a": "more",
+           "o": [
+            "more",
+            "most"
+           ]
+          },
+          {
+           "s": "A friend is someone ___ is honest.",
+           "a": "who",
+           "o": [
+            "who",
+            "which"
+           ]
+          },
+          {
+           "s": "The film is based ___ a novel.",
+           "a": "on",
+           "o": [
+            "on",
+            "in"
+           ]
+          },
+          {
+           "s": "Would you like ___ come?",
+           "a": "to",
+           "o": [
+            "to",
+            "for"
+           ]
+          },
+          {
+           "s": "I'm scared ___ spiders.",
+           "a": "of",
+           "o": [
+            "of",
+            "from"
+           ]
+          },
+          {
+           "s": "Birds have ___ .",
+           "a": "feathers",
+           "o": [
+            "feathers",
+            "scales"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "This is the most economical car of the year.",
+          "A good friend is someone who is loyal and honest.",
+          "The film is based on a famous novel.",
+          "Would you like to come to my party?"
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "This is the most economical car of the year.",
+           "o": [
+            "This is the most economical car of the year.",
+            "A good friend is someone who is loyal and honest.",
+            "The film is based on a famous novel."
+           ]
+          },
+          {
+           "a": "A good friend is someone who is loyal and honest.",
+           "o": [
+            "A good friend is someone who is loyal and honest.",
+            "This is the most economical car of the year.",
+            "The film is based on a famous novel."
+           ]
+          },
+          {
+           "a": "The film is based on a famous novel.",
+           "o": [
+            "The film is based on a famous novel.",
+            "This is the most economical car of the year.",
+            "A good friend is someone who is loyal and honest."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "fuel",
+       "ipa": "",
+       "meaning": "وقود",
+       "ex": "fuel"
+      },
+      {
+       "must": 1,
+       "term": "speed",
+       "ipa": "",
+       "meaning": "سرعة",
+       "ex": "speed"
+      },
+      {
+       "must": 1,
+       "term": "loyal",
+       "ipa": "",
+       "meaning": "وفي",
+       "ex": "A good friend is someone who is loyal and honest."
+      },
+      {
+       "must": 0,
+       "term": "honest",
+       "ipa": "",
+       "meaning": "صادق",
+       "ex": "A good friend is someone who is loyal and honest."
+      },
+      {
+       "must": 0,
+       "term": "novel",
+       "ipa": "",
+       "meaning": "رواية",
+       "ex": "The film is based on a famous novel."
+      },
+      {
+       "must": 0,
+       "term": "author",
+       "ipa": "",
+       "meaning": "مؤلف",
+       "ex": "author"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "It's ___ comfortable than the old one.",
+       "a": "more",
+       "o": [
+        "more",
+        "most"
+       ],
+       "why": ""
+      },
+      {
+       "q": "A friend is someone ___ is honest.",
+       "a": "who",
+       "o": [
+        "who",
+        "which"
+       ],
+       "why": ""
+      },
+      {
+       "q": "The film is based ___ a novel.",
+       "a": "on",
+       "o": [
+        "on",
+        "in"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى novel؟",
+       "a": "رواية",
+       "o": [
+        "رواية",
+        "وقود",
+        "سرعة"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى speed؟",
+       "a": "سرعة",
+       "o": [
+        "سرعة",
+        "وقود",
+        "وفي"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "This is the most economical car of the year.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "This is the most economical car of the year.",
+       "o": [
+        "This is the most economical car of the year.",
+        "A good friend is someone who is loyal and honest.",
+        "The film is based on a famous novel."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

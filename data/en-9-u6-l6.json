@@ -1,0 +1,287 @@
+{
+ "id": "en-9-u6-l6",
+ "grade": 9,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 6 · Lesson 6: A Famous Career",
+ "titleAr": "كانت زها حديد معمارية مشهورة.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "كانت زها حديد معمارية مشهورة.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "famous",
+       "ar": "مشهور",
+       "em": "⭐"
+      },
+      {
+       "id": "v1",
+       "en": "achieve",
+       "ar": "يحقق",
+       "em": "🏆"
+      },
+      {
+       "id": "v2",
+       "en": "award",
+       "ar": "جائزة",
+       "em": "🏅"
+      },
+      {
+       "id": "v3",
+       "en": "career",
+       "ar": "مسيرة",
+       "em": "📈"
+      },
+      {
+       "id": "v4",
+       "en": "inspire",
+       "ar": "يلهم",
+       "em": "✨"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 78⁠–⁠79"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Past simple biography",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Zaha Hadid <b>was</b> a famous architect.</div><div class=\"ex\">She <b>achieved</b> many awards and inspired young people.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Zaha Hadid was a famous architect. She achieved many awards and inspired young people."
+      }
+     ]
+    }
+   ],
+   "lead": "was born, studied, achieved, died",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "She ___ a famous architect.",
+           "a": "was",
+           "o": [
+            "was",
+            "is"
+           ]
+          },
+          {
+           "s": "She ___ many awards.",
+           "a": "achieved",
+           "o": [
+            "achieved",
+            "achieve"
+           ]
+          },
+          {
+           "s": "She ___ young people.",
+           "a": "inspired",
+           "o": [
+            "inspired",
+            "inspire"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Zaha Hadid was a famous architect.",
+          "She achieved many awards and inspired young people."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Zaha Hadid was a famous architect.",
+           "o": [
+            "Zaha Hadid was a famous architect.",
+            "She achieved many awards and inspired young people."
+           ]
+          },
+          {
+           "a": "She achieved many awards and inspired young people.",
+           "o": [
+            "She achieved many awards and inspired young people.",
+            "Zaha Hadid was a famous architect."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "famous",
+       "ipa": "",
+       "meaning": "مشهور",
+       "ex": "Zaha Hadid was a famous architect."
+      },
+      {
+       "must": 1,
+       "term": "achieve",
+       "ipa": "",
+       "meaning": "يحقق",
+       "ex": "She achieved many awards and inspired young people."
+      },
+      {
+       "must": 1,
+       "term": "award",
+       "ipa": "",
+       "meaning": "جائزة",
+       "ex": "She achieved many awards and inspired young people."
+      },
+      {
+       "must": 0,
+       "term": "career",
+       "ipa": "",
+       "meaning": "مسيرة",
+       "ex": "career"
+      },
+      {
+       "must": 0,
+       "term": "inspire",
+       "ipa": "",
+       "meaning": "يلهم",
+       "ex": "She achieved many awards and inspired young people."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "She ___ a famous architect.",
+       "a": "was",
+       "o": [
+        "was",
+        "is"
+       ],
+       "why": ""
+      },
+      {
+       "q": "She ___ many awards.",
+       "a": "achieved",
+       "o": [
+        "achieved",
+        "achieve"
+       ],
+       "why": ""
+      },
+      {
+       "q": "She ___ young people.",
+       "a": "inspired",
+       "o": [
+        "inspired",
+        "inspire"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى award؟",
+       "a": "جائزة",
+       "o": [
+        "جائزة",
+        "مشهور",
+        "يحقق"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى achieve؟",
+       "a": "يحقق",
+       "o": [
+        "يحقق",
+        "مشهور",
+        "جائزة"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Zaha Hadid was a famous architect.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Zaha Hadid was a famous architect.",
+       "o": [
+        "Zaha Hadid was a famous architect.",
+        "She achieved many awards and inspired young people."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

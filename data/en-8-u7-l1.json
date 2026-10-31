@@ -1,0 +1,287 @@
+{
+ "id": "en-8-u7-l1",
+ "grade": 8,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 7 · Lesson 1: World Problems",
+ "titleAr": "التلوث مشكلة كبيرة في مدن كثيرة.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "التلوث مشكلة كبيرة في مدن كثيرة.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "pollution",
+       "ar": "تلوث",
+       "em": "🏭"
+      },
+      {
+       "id": "v1",
+       "en": "global warming",
+       "ar": "الاحترار العالمي",
+       "em": "🌡️"
+      },
+      {
+       "id": "v2",
+       "en": "hunger",
+       "ar": "جوع",
+       "em": "🍽️"
+      },
+      {
+       "id": "v3",
+       "en": "drought",
+       "ar": "جفاف",
+       "em": "🏜️"
+      },
+      {
+       "id": "v4",
+       "en": "environment",
+       "ar": "بيئة",
+       "em": "🌍"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 82"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "cause",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Pollution is a big problem in many cities.</div><div class=\"ex\">Drought <b>causes</b> hunger in some countries.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Pollution is a big problem in many cities. Drought causes hunger in some countries."
+      }
+     ]
+    }
+   ],
+   "lead": "X causes Y = يسبب",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "Drought ___ hunger.",
+           "a": "causes",
+           "o": [
+            "causes",
+            "cause"
+           ]
+          },
+          {
+           "s": "Factories cause ___ .",
+           "a": "pollution",
+           "o": [
+            "pollution",
+            "drought"
+           ]
+          },
+          {
+           "s": "We must protect the ___ .",
+           "a": "environment",
+           "o": [
+            "environment",
+            "enviroment"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Pollution is a big problem in many cities.",
+          "Drought causes hunger in some countries."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Pollution is a big problem in many cities.",
+           "o": [
+            "Pollution is a big problem in many cities.",
+            "Drought causes hunger in some countries."
+           ]
+          },
+          {
+           "a": "Drought causes hunger in some countries.",
+           "o": [
+            "Drought causes hunger in some countries.",
+            "Pollution is a big problem in many cities."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "pollution",
+       "ipa": "",
+       "meaning": "تلوث",
+       "ex": "Pollution is a big problem in many cities."
+      },
+      {
+       "must": 1,
+       "term": "global warming",
+       "ipa": "",
+       "meaning": "الاحترار العالمي",
+       "ex": "global warming"
+      },
+      {
+       "must": 1,
+       "term": "hunger",
+       "ipa": "",
+       "meaning": "جوع",
+       "ex": "Drought causes hunger in some countries."
+      },
+      {
+       "must": 0,
+       "term": "drought",
+       "ipa": "",
+       "meaning": "جفاف",
+       "ex": "Drought causes hunger in some countries."
+      },
+      {
+       "must": 0,
+       "term": "environment",
+       "ipa": "",
+       "meaning": "بيئة",
+       "ex": "environment"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "Drought ___ hunger.",
+       "a": "causes",
+       "o": [
+        "causes",
+        "cause"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Factories cause ___ .",
+       "a": "pollution",
+       "o": [
+        "pollution",
+        "drought"
+       ],
+       "why": ""
+      },
+      {
+       "q": "We must protect the ___ .",
+       "a": "environment",
+       "o": [
+        "environment",
+        "enviroment"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى environment؟",
+       "a": "بيئة",
+       "o": [
+        "بيئة",
+        "تلوث",
+        "الاحترار العالمي"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى hunger؟",
+       "a": "جوع",
+       "o": [
+        "جوع",
+        "تلوث",
+        "الاحترار العالمي"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Pollution is a big problem in many cities.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Pollution is a big problem in many cities.",
+       "o": [
+        "Pollution is a big problem in many cities.",
+        "Drought causes hunger in some countries."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

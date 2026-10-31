@@ -1,0 +1,337 @@
+{
+ "id": "en-8-u7-l9",
+ "grade": 8,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 7 · Lesson 9: Round up",
+ "titleAr": "مراجعة الوحدة — Saving Our World",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "مراجعة الوحدة — Saving Our World",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "pollution",
+       "ar": "تلوث",
+       "em": "🏭"
+      },
+      {
+       "id": "v1",
+       "en": "global warming",
+       "ar": "الاحترار العالمي",
+       "em": "🌡️"
+      },
+      {
+       "id": "v2",
+       "en": "recycle",
+       "ar": "يعيد التدوير",
+       "em": "♻️"
+      },
+      {
+       "id": "v3",
+       "en": "save",
+       "ar": "يوفر",
+       "em": "💧"
+      },
+      {
+       "id": "v4",
+       "en": "endangered",
+       "ar": "مهدد بالانقراض",
+       "em": "⚠️"
+      },
+      {
+       "id": "v5",
+       "en": "extinct",
+       "ar": "منقرض",
+       "em": "🦤"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 93"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Unit review",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Pollution is a big problem in many cities.</div><div class=\"ex\">We can <b>recycle</b> paper and plastic.</div><div class=\"ex\">The Barbary lion is extinct in North Africa.</div><div class=\"ex\">Please <b>don't</b> throw rubbish into the river.</div><div class=\"ex\">If the temperature rises, the ice <b>will</b> melt.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Pollution is a big problem in many cities. We can recycle paper and plastic. The Barbary lion is extinct in North Africa. Please don't throw rubbish into the river. If the temperature rises, the ice will melt."
+      }
+     ]
+    }
+   ],
+   "lead": "نراجع أهم قواعد الوحدة وكلماتها: اقرأ الأمثلة بصوت عالٍ ثم حلّ التمارين.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "Drought ___ hunger.",
+           "a": "causes",
+           "o": [
+            "causes",
+            "cause"
+           ]
+          },
+          {
+           "s": "We can ___ plastic bottles.",
+           "a": "recycle",
+           "o": [
+            "recycle",
+            "recycles"
+           ]
+          },
+          {
+           "s": "Many animals are ___ .",
+           "a": "endangered",
+           "o": [
+            "endangered",
+            "danger"
+           ]
+          },
+          {
+           "s": "Please ___ throw rubbish.",
+           "a": "don't",
+           "o": [
+            "don't",
+            "not"
+           ]
+          },
+          {
+           "s": "If the ice melts, sea levels ___ rise.",
+           "a": "will",
+           "o": [
+            "will",
+            "would"
+           ]
+          },
+          {
+           "s": "Food waste can ___ turned into compost.",
+           "a": "be",
+           "o": [
+            "be",
+            "is"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Pollution is a big problem in many cities.",
+          "We can recycle paper and plastic.",
+          "The Barbary lion is extinct in North Africa.",
+          "Please don't throw rubbish into the river."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Pollution is a big problem in many cities.",
+           "o": [
+            "Pollution is a big problem in many cities.",
+            "We can recycle paper and plastic.",
+            "The Barbary lion is extinct in North Africa."
+           ]
+          },
+          {
+           "a": "We can recycle paper and plastic.",
+           "o": [
+            "We can recycle paper and plastic.",
+            "Pollution is a big problem in many cities.",
+            "The Barbary lion is extinct in North Africa."
+           ]
+          },
+          {
+           "a": "The Barbary lion is extinct in North Africa.",
+           "o": [
+            "The Barbary lion is extinct in North Africa.",
+            "Pollution is a big problem in many cities.",
+            "We can recycle paper and plastic."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "pollution",
+       "ipa": "",
+       "meaning": "تلوث",
+       "ex": "Pollution is a big problem in many cities."
+      },
+      {
+       "must": 1,
+       "term": "global warming",
+       "ipa": "",
+       "meaning": "الاحترار العالمي",
+       "ex": "global warming"
+      },
+      {
+       "must": 1,
+       "term": "recycle",
+       "ipa": "",
+       "meaning": "يعيد التدوير",
+       "ex": "We can recycle paper and plastic."
+      },
+      {
+       "must": 0,
+       "term": "save",
+       "ipa": "",
+       "meaning": "يوفر",
+       "ex": "save"
+      },
+      {
+       "must": 0,
+       "term": "endangered",
+       "ipa": "",
+       "meaning": "مهدد بالانقراض",
+       "ex": "endangered"
+      },
+      {
+       "must": 0,
+       "term": "extinct",
+       "ipa": "",
+       "meaning": "منقرض",
+       "ex": "The Barbary lion is extinct in North Africa."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "Drought ___ hunger.",
+       "a": "causes",
+       "o": [
+        "causes",
+        "cause"
+       ],
+       "why": ""
+      },
+      {
+       "q": "We can ___ plastic bottles.",
+       "a": "recycle",
+       "o": [
+        "recycle",
+        "recycles"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Many animals are ___ .",
+       "a": "endangered",
+       "o": [
+        "endangered",
+        "danger"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى pollution؟",
+       "a": "تلوث",
+       "o": [
+        "تلوث",
+        "الاحترار العالمي",
+        "يعيد التدوير"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى extinct؟",
+       "a": "منقرض",
+       "o": [
+        "منقرض",
+        "تلوث",
+        "الاحترار العالمي"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Pollution is a big problem in many cities.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Pollution is a big problem in many cities.",
+       "o": [
+        "Pollution is a big problem in many cities.",
+        "We can recycle paper and plastic.",
+        "The Barbary lion is extinct in North Africa."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

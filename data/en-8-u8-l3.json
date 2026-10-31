@@ -1,0 +1,357 @@
+{
+ "id": "en-8-u8-l3",
+ "grade": 8,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 8 · Lesson 3: Reading",
+ "titleAr": "مهارة القراءة — Fun with English 2",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "مهارة القراءة — Fun with English 2",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "guess",
+       "ar": "يخمّن",
+       "em": "🤔"
+      },
+      {
+       "id": "v1",
+       "en": "context",
+       "ar": "السياق",
+       "em": "🧩"
+      },
+      {
+       "id": "v2",
+       "en": "hold on",
+       "ar": "انتظر",
+       "em": "⏸️"
+      },
+      {
+       "id": "v3",
+       "en": "speak to",
+       "ar": "يتحدث مع",
+       "em": "🗣️"
+      },
+      {
+       "id": "v4",
+       "en": "firefighter",
+       "ar": "رجل إطفاء",
+       "em": "🧑‍🚒"
+      },
+      {
+       "id": "v5",
+       "en": "fire engine",
+       "ar": "سيارة إطفاء",
+       "em": "🚒"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 98"
+  },
+  {
+   "title": "اقرأ",
+   "eyebrow": "الخطوة ٢ — اقرأ",
+   "heading": "اقرأ واستمع",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "📖 Reading",
+     "html": "<div class=\"ex\">Use the context to guess the meaning.</div><div class=\"ex\">Hello, can I speak to Sami, please?</div><div class=\"ex\">When the alarm rings, firefighters jump into the fire engine.</div><div class=\"ex\">After university, I will apply for a job.</div><div class=\"ex\">The Barbary lion is extinct in North Africa.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Use the context to guess the meaning. Hello, can I speak to Sami, please? When the alarm rings, firefighters jump into the fire engine. After university, I will apply for a job. The Barbary lion is extinct in North Africa."
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط ▶ لتسمع النص."
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٣ — القاعدة",
+   "heading": "Reading",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Use the <b>context</b> to guess the meaning.</div><div class=\"ex\">Hello, can I <b>speak</b> to Sami, please?</div><div class=\"ex\">When the alarm rings, firefighters jump into the fire engine.</div><div class=\"ex\">After university, I <b>will</b> apply for a job.</div><div class=\"ex\">The Barbary lion <b>is</b> extinct in North Africa.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Use the context to guess the meaning. Hello, can I speak to Sami, please? When the alarm rings, firefighters jump into the fire engine. After university, I will apply for a job. The Barbary lion is extinct in North Africa."
+      }
+     ]
+    }
+   ],
+   "lead": "اقرأ الجمل بصوت عالٍ وانتبه إلى الكلمات المميّزة، ثم حلّ التمارين.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٤ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "Use the ___ to guess.",
+           "a": "context",
+           "o": [
+            "context",
+            "contest"
+           ]
+          },
+          {
+           "s": "Can I ___ to Sami, please?",
+           "a": "speak",
+           "o": [
+            "speak",
+            "say"
+           ]
+          },
+          {
+           "s": "They ___ to be brave.",
+           "a": "have",
+           "o": [
+            "have",
+            "has"
+           ]
+          },
+          {
+           "s": "I ___ apply for a job.",
+           "a": "will",
+           "o": [
+            "will",
+            "am"
+           ]
+          },
+          {
+           "s": "Many animals are ___ .",
+           "a": "endangered",
+           "o": [
+            "endangered",
+            "danger"
+           ]
+          },
+          {
+           "s": "The desert ___ spreading.",
+           "a": "is",
+           "o": [
+            "is",
+            "are"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Use the context to guess the meaning.",
+          "Hello, can I speak to Sami, please?",
+          "When the alarm rings, firefighters jump into the fire engine.",
+          "After university, I will apply for a job."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Use the context to guess the meaning.",
+           "o": [
+            "Use the context to guess the meaning.",
+            "Hello, can I speak to Sami, please?",
+            "When the alarm rings, firefighters jump into the fire engine."
+           ]
+          },
+          {
+           "a": "Hello, can I speak to Sami, please?",
+           "o": [
+            "Hello, can I speak to Sami, please?",
+            "Use the context to guess the meaning.",
+            "When the alarm rings, firefighters jump into the fire engine."
+           ]
+          },
+          {
+           "a": "When the alarm rings, firefighters jump into the fire engine.",
+           "o": [
+            "When the alarm rings, firefighters jump into the fire engine.",
+            "Use the context to guess the meaning.",
+            "Hello, can I speak to Sami, please?"
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٥ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "guess",
+       "ipa": "",
+       "meaning": "يخمّن",
+       "ex": "Use the context to guess the meaning."
+      },
+      {
+       "must": 1,
+       "term": "context",
+       "ipa": "",
+       "meaning": "السياق",
+       "ex": "Use the context to guess the meaning."
+      },
+      {
+       "must": 1,
+       "term": "hold on",
+       "ipa": "",
+       "meaning": "انتظر",
+       "ex": "hold on"
+      },
+      {
+       "must": 0,
+       "term": "speak to",
+       "ipa": "",
+       "meaning": "يتحدث مع",
+       "ex": "Hello, can I speak to Sami, please?"
+      },
+      {
+       "must": 0,
+       "term": "firefighter",
+       "ipa": "",
+       "meaning": "رجل إطفاء",
+       "ex": "When the alarm rings, firefighters jump into the fire engine."
+      },
+      {
+       "must": 0,
+       "term": "fire engine",
+       "ipa": "",
+       "meaning": "سيارة إطفاء",
+       "ex": "When the alarm rings, firefighters jump into the fire engine."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "Use the ___ to guess.",
+       "a": "context",
+       "o": [
+        "context",
+        "contest"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Can I ___ to Sami, please?",
+       "a": "speak",
+       "o": [
+        "speak",
+        "say"
+       ],
+       "why": ""
+      },
+      {
+       "q": "They ___ to be brave.",
+       "a": "have",
+       "o": [
+        "have",
+        "has"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى fire engine؟",
+       "a": "سيارة إطفاء",
+       "o": [
+        "سيارة إطفاء",
+        "يخمّن",
+        "السياق"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى hold on؟",
+       "a": "انتظر",
+       "o": [
+        "انتظر",
+        "يخمّن",
+        "السياق"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Use the context to guess the meaning.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Use the context to guess the meaning.",
+       "o": [
+        "Use the context to guess the meaning.",
+        "Hello, can I speak to Sami, please?",
+        "When the alarm rings, firefighters jump into the fire engine."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

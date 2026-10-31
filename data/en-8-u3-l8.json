@@ -1,0 +1,319 @@
+{
+ "id": "en-8-u3-l8",
+ "grade": 8,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 3 · Lesson 8: Bob and Bashir – The Ice-creams",
+ "titleAr": "كان يوماً حاراً فاشترى بوب بوظتين.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "كان يوماً حاراً فاشترى بوب بوظتين.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "ice-cream",
+       "ar": "بوظة",
+       "em": "🍦"
+      },
+      {
+       "id": "v1",
+       "en": "melt",
+       "ar": "يذوب",
+       "em": "💧"
+      },
+      {
+       "id": "v2",
+       "en": "hot",
+       "ar": "حار",
+       "em": "🥵"
+      },
+      {
+       "id": "v3",
+       "en": "quickly",
+       "ar": "بسرعة",
+       "em": "⚡"
+      },
+      {
+       "id": "v4",
+       "en": "sticky",
+       "ar": "لزج",
+       "em": "🍯"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 44⁠–⁠45"
+  },
+  {
+   "title": "اقرأ",
+   "eyebrow": "الخطوة ٢ — اقرأ",
+   "heading": "اقرأ واستمع",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "📖 Bob and Bashir – The Ice-creams",
+     "html": "<div class=\"ex\">It was a hot day, so Bob bought two ice-creams.</div><div class=\"ex\">He walked slowly and they melted.</div><div class=\"ex\">His hands were sticky!</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "It was a hot day, so Bob bought two ice-creams. He walked slowly and they melted. His hands were sticky!"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط ▶ لتسمع النص."
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٣ — القاعدة",
+   "heading": "so (result)",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">It was a hot day, <b>so</b> Bob bought two ice-creams.</div><div class=\"ex\">He walked slowly and they <b>melted</b>.</div><div class=\"ex\">His hands were sticky!</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "It was a hot day, so Bob bought two ice-creams. He walked slowly and they melted. His hands were sticky!"
+      }
+     ]
+    }
+   ],
+   "lead": "It was hot, so he bought ice-cream.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٤ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "It was hot, ___ he bought ice-cream.",
+           "a": "so",
+           "o": [
+            "so",
+            "because"
+           ]
+          },
+          {
+           "s": "The ice-creams ___ .",
+           "a": "melted",
+           "o": [
+            "melted",
+            "melt"
+           ]
+          },
+          {
+           "s": "He walked ___ .",
+           "a": "slowly",
+           "o": [
+            "slowly",
+            "slow"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "It was a hot day, so Bob bought two ice-creams.",
+          "He walked slowly and they melted.",
+          "His hands were sticky!"
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "It was a hot day, so Bob bought two ice-creams.",
+           "o": [
+            "It was a hot day, so Bob bought two ice-creams.",
+            "He walked slowly and they melted.",
+            "His hands were sticky!"
+           ]
+          },
+          {
+           "a": "He walked slowly and they melted.",
+           "o": [
+            "He walked slowly and they melted.",
+            "It was a hot day, so Bob bought two ice-creams.",
+            "His hands were sticky!"
+           ]
+          },
+          {
+           "a": "His hands were sticky!",
+           "o": [
+            "His hands were sticky!",
+            "It was a hot day, so Bob bought two ice-creams.",
+            "He walked slowly and they melted."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٥ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "ice-cream",
+       "ipa": "",
+       "meaning": "بوظة",
+       "ex": "It was a hot day, so Bob bought two ice-creams."
+      },
+      {
+       "must": 1,
+       "term": "melt",
+       "ipa": "",
+       "meaning": "يذوب",
+       "ex": "He walked slowly and they melted."
+      },
+      {
+       "must": 1,
+       "term": "hot",
+       "ipa": "",
+       "meaning": "حار",
+       "ex": "It was a hot day, so Bob bought two ice-creams."
+      },
+      {
+       "must": 0,
+       "term": "quickly",
+       "ipa": "",
+       "meaning": "بسرعة",
+       "ex": "quickly"
+      },
+      {
+       "must": 0,
+       "term": "sticky",
+       "ipa": "",
+       "meaning": "لزج",
+       "ex": "His hands were sticky!"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "It was hot, ___ he bought ice-cream.",
+       "a": "so",
+       "o": [
+        "so",
+        "because"
+       ],
+       "why": ""
+      },
+      {
+       "q": "The ice-creams ___ .",
+       "a": "melted",
+       "o": [
+        "melted",
+        "melt"
+       ],
+       "why": ""
+      },
+      {
+       "q": "He walked ___ .",
+       "a": "slowly",
+       "o": [
+        "slowly",
+        "slow"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى quickly؟",
+       "a": "بسرعة",
+       "o": [
+        "بسرعة",
+        "بوظة",
+        "يذوب"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى hot؟",
+       "a": "حار",
+       "o": [
+        "حار",
+        "بوظة",
+        "يذوب"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "It was a hot day, so Bob bought two ice-creams.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "It was a hot day, so Bob bought two ice-creams.",
+       "o": [
+        "It was a hot day, so Bob bought two ice-creams.",
+        "He walked slowly and they melted.",
+        "His hands were sticky!"
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

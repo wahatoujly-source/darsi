@@ -1,0 +1,287 @@
+{
+ "id": "en-8-u6-l6",
+ "grade": 8,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 6 · Lesson 6: What are they going to be?",
+ "titleAr": "سارة ستصبح مهندسة.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "سارة ستصبح مهندسة.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "future",
+       "ar": "المستقبل",
+       "em": "🔮"
+      },
+      {
+       "id": "v1",
+       "en": "ambition",
+       "ar": "طموح",
+       "em": "🎯"
+      },
+      {
+       "id": "v2",
+       "en": "university",
+       "ar": "جامعة",
+       "em": "🎓"
+      },
+      {
+       "id": "v3",
+       "en": "study",
+       "ar": "يدرس",
+       "em": "📚"
+      },
+      {
+       "id": "v4",
+       "en": "become",
+       "ar": "يصبح",
+       "em": "🌱"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 75"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "going to for intentions",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Sara is going <b>to</b> be an engineer.</div><div class=\"ex\">She's going <b>to</b> study at university.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Sara is going to be an engineer. She's going to study at university."
+      }
+     ]
+    }
+   ],
+   "lead": "is going to be / are going to study",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "She's going ___ be an engineer.",
+           "a": "to",
+           "o": [
+            "to",
+            "for"
+           ]
+          },
+          {
+           "s": "They're going to ___ medicine.",
+           "a": "study",
+           "o": [
+            "study",
+            "studies"
+           ]
+          },
+          {
+           "s": "My ___ is to become a pilot.",
+           "a": "ambition",
+           "o": [
+            "ambition",
+            "university"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Sara is going to be an engineer.",
+          "She's going to study at university."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Sara is going to be an engineer.",
+           "o": [
+            "Sara is going to be an engineer.",
+            "She's going to study at university."
+           ]
+          },
+          {
+           "a": "She's going to study at university.",
+           "o": [
+            "She's going to study at university.",
+            "Sara is going to be an engineer."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "future",
+       "ipa": "",
+       "meaning": "المستقبل",
+       "ex": "future"
+      },
+      {
+       "must": 1,
+       "term": "ambition",
+       "ipa": "",
+       "meaning": "طموح",
+       "ex": "ambition"
+      },
+      {
+       "must": 1,
+       "term": "university",
+       "ipa": "",
+       "meaning": "جامعة",
+       "ex": "She's going to study at university."
+      },
+      {
+       "must": 0,
+       "term": "study",
+       "ipa": "",
+       "meaning": "يدرس",
+       "ex": "She's going to study at university."
+      },
+      {
+       "must": 0,
+       "term": "become",
+       "ipa": "",
+       "meaning": "يصبح",
+       "ex": "become"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "She's going ___ be an engineer.",
+       "a": "to",
+       "o": [
+        "to",
+        "for"
+       ],
+       "why": ""
+      },
+      {
+       "q": "They're going to ___ medicine.",
+       "a": "study",
+       "o": [
+        "study",
+        "studies"
+       ],
+       "why": ""
+      },
+      {
+       "q": "My ___ is to become a pilot.",
+       "a": "ambition",
+       "o": [
+        "ambition",
+        "university"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى ambition؟",
+       "a": "طموح",
+       "o": [
+        "طموح",
+        "المستقبل",
+        "جامعة"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى future؟",
+       "a": "المستقبل",
+       "o": [
+        "المستقبل",
+        "طموح",
+        "جامعة"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Sara is going to be an engineer.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Sara is going to be an engineer.",
+       "o": [
+        "Sara is going to be an engineer.",
+        "She's going to study at university."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

@@ -1,0 +1,287 @@
+{
+ "id": "en-7-u3-l6",
+ "grade": 7,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 3 · Lesson 6: Transport",
+ "titleAr": "اختُرعت العجلة منذ آلاف السنين.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "اختُرعت العجلة منذ آلاف السنين.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "invention",
+       "ar": "اختراع",
+       "em": "💡"
+      },
+      {
+       "id": "v1",
+       "en": "wheel",
+       "ar": "عجلة",
+       "em": "🛞"
+      },
+      {
+       "id": "v2",
+       "en": "engine",
+       "ar": "محرك",
+       "em": "⚙️"
+      },
+      {
+       "id": "v3",
+       "en": "aeroplane",
+       "ar": "طائرة",
+       "em": "✈️"
+      },
+      {
+       "id": "v4",
+       "en": "steam train",
+       "ar": "قطار بخاري",
+       "em": "🚂"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 38"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "was invented (passive)",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">The wheel <b>was</b> invented thousands of years ago.</div><div class=\"ex\">The first aeroplane <b>flew</b> in 1903.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "The wheel was invented thousands of years ago. The first aeroplane flew in 1903."
+      }
+     ]
+    }
+   ],
+   "lead": "نستخدم was/were + past participle عندما لا يهم الفاعل.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "The wheel ___ invented long ago.",
+           "a": "was",
+           "o": [
+            "was",
+            "were"
+           ]
+          },
+          {
+           "s": "Cars have an ___ .",
+           "a": "engine",
+           "o": [
+            "engine",
+            "wheel"
+           ]
+          },
+          {
+           "s": "The first plane ___ in 1903.",
+           "a": "flew",
+           "o": [
+            "flew",
+            "flied"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "The wheel was invented thousands of years ago.",
+          "The first aeroplane flew in 1903."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "The wheel was invented thousands of years ago.",
+           "o": [
+            "The wheel was invented thousands of years ago.",
+            "The first aeroplane flew in 1903."
+           ]
+          },
+          {
+           "a": "The first aeroplane flew in 1903.",
+           "o": [
+            "The first aeroplane flew in 1903.",
+            "The wheel was invented thousands of years ago."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "invention",
+       "ipa": "",
+       "meaning": "اختراع",
+       "ex": "invention"
+      },
+      {
+       "must": 1,
+       "term": "wheel",
+       "ipa": "",
+       "meaning": "عجلة",
+       "ex": "The wheel was invented thousands of years ago."
+      },
+      {
+       "must": 1,
+       "term": "engine",
+       "ipa": "",
+       "meaning": "محرك",
+       "ex": "engine"
+      },
+      {
+       "must": 0,
+       "term": "aeroplane",
+       "ipa": "",
+       "meaning": "طائرة",
+       "ex": "The first aeroplane flew in 1903."
+      },
+      {
+       "must": 0,
+       "term": "steam train",
+       "ipa": "",
+       "meaning": "قطار بخاري",
+       "ex": "steam train"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "The wheel ___ invented long ago.",
+       "a": "was",
+       "o": [
+        "was",
+        "were"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Cars have an ___ .",
+       "a": "engine",
+       "o": [
+        "engine",
+        "wheel"
+       ],
+       "why": ""
+      },
+      {
+       "q": "The first plane ___ in 1903.",
+       "a": "flew",
+       "o": [
+        "flew",
+        "flied"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى engine؟",
+       "a": "محرك",
+       "o": [
+        "محرك",
+        "اختراع",
+        "عجلة"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى wheel؟",
+       "a": "عجلة",
+       "o": [
+        "عجلة",
+        "اختراع",
+        "محرك"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "The wheel was invented thousands of years ago.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "The wheel was invented thousands of years ago.",
+       "o": [
+        "The wheel was invented thousands of years ago.",
+        "The first aeroplane flew in 1903."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

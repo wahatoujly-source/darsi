@@ -1,0 +1,287 @@
+{
+ "id": "en-9-u7-l6",
+ "grade": 9,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 7 · Lesson 6: Two African Countries",
+ "titleAr": "كل من كينيا ونيجيريا في أفريقيا.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "كل من كينيا ونيجيريا في أفريقيا.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "Kenya",
+       "ar": "كينيا",
+       "em": "🇰🇪"
+      },
+      {
+       "id": "v1",
+       "en": "Nigeria",
+       "ar": "نيجيريا",
+       "em": "🇳🇬"
+      },
+      {
+       "id": "v2",
+       "en": "safari",
+       "ar": "رحلة سفاري",
+       "em": "🦒"
+      },
+      {
+       "id": "v3",
+       "en": "both … and",
+       "ar": "كلاً من … و",
+       "em": "👯"
+      },
+      {
+       "id": "v4",
+       "en": "neither … nor",
+       "ar": "لا … ولا",
+       "em": "🚫"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 91"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "both … and / neither … nor",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\"><b>Both</b> Kenya and Nigeria are in Africa.</div><div class=\"ex\"><b>Neither</b> of them is in the north.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Both Kenya and Nigeria are in Africa. Neither of them is in the north."
+      }
+     ]
+    }
+   ],
+   "lead": "للمقارنة بين بلدين.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "___ Kenya and Nigeria are in Africa.",
+           "a": "Both",
+           "o": [
+            "Both",
+            "Neither"
+           ]
+          },
+          {
+           "s": "___ Kenya nor Nigeria is in Asia.",
+           "a": "Neither",
+           "o": [
+            "Neither",
+            "Both"
+           ]
+          },
+          {
+           "s": "Tourists go on ___ in Kenya.",
+           "a": "safari",
+           "o": [
+            "safari",
+            "Nigeria"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Both Kenya and Nigeria are in Africa.",
+          "Neither of them is in the north."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Both Kenya and Nigeria are in Africa.",
+           "o": [
+            "Both Kenya and Nigeria are in Africa.",
+            "Neither of them is in the north."
+           ]
+          },
+          {
+           "a": "Neither of them is in the north.",
+           "o": [
+            "Neither of them is in the north.",
+            "Both Kenya and Nigeria are in Africa."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "Kenya",
+       "ipa": "",
+       "meaning": "كينيا",
+       "ex": "Both Kenya and Nigeria are in Africa."
+      },
+      {
+       "must": 1,
+       "term": "Nigeria",
+       "ipa": "",
+       "meaning": "نيجيريا",
+       "ex": "Both Kenya and Nigeria are in Africa."
+      },
+      {
+       "must": 1,
+       "term": "safari",
+       "ipa": "",
+       "meaning": "رحلة سفاري",
+       "ex": "safari"
+      },
+      {
+       "must": 0,
+       "term": "both … and",
+       "ipa": "",
+       "meaning": "كلاً من … و",
+       "ex": "Both Kenya and Nigeria are in Africa."
+      },
+      {
+       "must": 0,
+       "term": "neither … nor",
+       "ipa": "",
+       "meaning": "لا … ولا",
+       "ex": "Neither of them is in the north."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "___ Kenya and Nigeria are in Africa.",
+       "a": "Both",
+       "o": [
+        "Both",
+        "Neither"
+       ],
+       "why": ""
+      },
+      {
+       "q": "___ Kenya nor Nigeria is in Asia.",
+       "a": "Neither",
+       "o": [
+        "Neither",
+        "Both"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Tourists go on ___ in Kenya.",
+       "a": "safari",
+       "o": [
+        "safari",
+        "Nigeria"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى Nigeria؟",
+       "a": "نيجيريا",
+       "o": [
+        "نيجيريا",
+        "كينيا",
+        "رحلة سفاري"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى safari؟",
+       "a": "رحلة سفاري",
+       "o": [
+        "رحلة سفاري",
+        "كينيا",
+        "نيجيريا"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Both Kenya and Nigeria are in Africa.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Both Kenya and Nigeria are in Africa.",
+       "o": [
+        "Both Kenya and Nigeria are in Africa.",
+        "Neither of them is in the north."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

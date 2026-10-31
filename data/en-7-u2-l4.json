@@ -1,0 +1,287 @@
+{
+ "id": "en-7-u2-l4",
+ "grade": 7,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 2 · Lesson 4: Nature",
+ "titleAr": "توجد واحة جميلة في غدامس.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "توجد واحة جميلة في غدامس.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "river",
+       "ar": "نهر",
+       "em": "🏞️"
+      },
+      {
+       "id": "v1",
+       "en": "valley",
+       "ar": "وادٍ",
+       "em": "⛰️"
+      },
+      {
+       "id": "v2",
+       "en": "oasis",
+       "ar": "واحة",
+       "em": "🌴"
+      },
+      {
+       "id": "v3",
+       "en": "hill",
+       "ar": "تل",
+       "em": "⛰️"
+      },
+      {
+       "id": "v4",
+       "en": "wildlife",
+       "ar": "الحياة البرية",
+       "em": "🦌"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 23"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "must for duty",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">There's a beautiful <b>oasis</b> in Ghadames.</div><div class=\"ex\">We <b>must</b> protect wildlife.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "There's a beautiful oasis in Ghadames. We must protect wildlife."
+      }
+     ]
+    }
+   ],
+   "lead": "We must protect …",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "We ___ protect wildlife.",
+           "a": "must",
+           "o": [
+            "must",
+            "musts"
+           ]
+          },
+          {
+           "s": "There are palm trees in the ___ .",
+           "a": "oasis",
+           "o": [
+            "oasis",
+            "river"
+           ]
+          },
+          {
+           "s": "Water runs in the ___ after rain.",
+           "a": "valley",
+           "o": [
+            "valley",
+            "hill"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "There's a beautiful oasis in Ghadames.",
+          "We must protect wildlife."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "There's a beautiful oasis in Ghadames.",
+           "o": [
+            "There's a beautiful oasis in Ghadames.",
+            "We must protect wildlife."
+           ]
+          },
+          {
+           "a": "We must protect wildlife.",
+           "o": [
+            "We must protect wildlife.",
+            "There's a beautiful oasis in Ghadames."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "river",
+       "ipa": "",
+       "meaning": "نهر",
+       "ex": "river"
+      },
+      {
+       "must": 1,
+       "term": "valley",
+       "ipa": "",
+       "meaning": "وادٍ",
+       "ex": "valley"
+      },
+      {
+       "must": 1,
+       "term": "oasis",
+       "ipa": "",
+       "meaning": "واحة",
+       "ex": "There's a beautiful oasis in Ghadames."
+      },
+      {
+       "must": 0,
+       "term": "hill",
+       "ipa": "",
+       "meaning": "تل",
+       "ex": "hill"
+      },
+      {
+       "must": 0,
+       "term": "wildlife",
+       "ipa": "",
+       "meaning": "الحياة البرية",
+       "ex": "We must protect wildlife."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "We ___ protect wildlife.",
+       "a": "must",
+       "o": [
+        "must",
+        "musts"
+       ],
+       "why": ""
+      },
+      {
+       "q": "There are palm trees in the ___ .",
+       "a": "oasis",
+       "o": [
+        "oasis",
+        "river"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Water runs in the ___ after rain.",
+       "a": "valley",
+       "o": [
+        "valley",
+        "hill"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى valley؟",
+       "a": "وادٍ",
+       "o": [
+        "وادٍ",
+        "نهر",
+        "واحة"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى oasis؟",
+       "a": "واحة",
+       "o": [
+        "واحة",
+        "نهر",
+        "وادٍ"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "There's a beautiful oasis in Ghadames.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "There's a beautiful oasis in Ghadames.",
+       "o": [
+        "There's a beautiful oasis in Ghadames.",
+        "We must protect wildlife."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

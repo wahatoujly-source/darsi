@@ -1,0 +1,319 @@
+{
+ "id": "en-7-u4-l1",
+ "grade": 7,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 4 · Lesson 1: Lazy Len's Day",
+ "titleAr": "غلب النوم لين فتأخر عن المدرسة.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "غلب النوم لين فتأخر عن المدرسة.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "oversleep",
+       "ar": "يغلبه النوم",
+       "em": "😴"
+      },
+      {
+       "id": "v1",
+       "en": "late",
+       "ar": "متأخر",
+       "em": "⏰"
+      },
+      {
+       "id": "v2",
+       "en": "miss",
+       "ar": "يفوته",
+       "em": "🚌"
+      },
+      {
+       "id": "v3",
+       "en": "forget",
+       "ar": "ينسى",
+       "em": "🤦"
+      },
+      {
+       "id": "v4",
+       "en": "excuse",
+       "ar": "عذر",
+       "em": "🙊"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 44"
+  },
+  {
+   "title": "اقرأ",
+   "eyebrow": "الخطوة ٢ — اقرأ",
+   "heading": "اقرأ واستمع",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "📖 Lazy Len's Day",
+     "html": "<div class=\"ex\">Len overslept and was late for school.</div><div class=\"ex\">He missed the bus.</div><div class=\"ex\">He forgot his homework.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Len overslept and was late for school. He missed the bus. He forgot his homework."
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط ▶ لتسمع النص."
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٣ — القاعدة",
+   "heading": "Irregular past",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Len <b>overslept</b> and was late for school.</div><div class=\"ex\">He <b>missed</b> the bus.</div><div class=\"ex\">He <b>forgot</b> his homework.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Len overslept and was late for school. He missed the bus. He forgot his homework."
+      }
+     ]
+    }
+   ],
+   "lead": "oversleep → overslept, forget → forgot",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٤ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "Len ___ and was late.",
+           "a": "overslept",
+           "o": [
+            "overslept",
+            "oversleeped"
+           ]
+          },
+          {
+           "s": "He ___ the bus.",
+           "a": "missed",
+           "o": [
+            "missed",
+            "miss"
+           ]
+          },
+          {
+           "s": "He ___ his homework.",
+           "a": "forgot",
+           "o": [
+            "forgot",
+            "forgetted"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Len overslept and was late for school.",
+          "He missed the bus.",
+          "He forgot his homework."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Len overslept and was late for school.",
+           "o": [
+            "Len overslept and was late for school.",
+            "He missed the bus.",
+            "He forgot his homework."
+           ]
+          },
+          {
+           "a": "He missed the bus.",
+           "o": [
+            "He missed the bus.",
+            "Len overslept and was late for school.",
+            "He forgot his homework."
+           ]
+          },
+          {
+           "a": "He forgot his homework.",
+           "o": [
+            "He forgot his homework.",
+            "Len overslept and was late for school.",
+            "He missed the bus."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٥ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "oversleep",
+       "ipa": "",
+       "meaning": "يغلبه النوم",
+       "ex": "oversleep"
+      },
+      {
+       "must": 1,
+       "term": "late",
+       "ipa": "",
+       "meaning": "متأخر",
+       "ex": "Len overslept and was late for school."
+      },
+      {
+       "must": 1,
+       "term": "miss",
+       "ipa": "",
+       "meaning": "يفوته",
+       "ex": "He missed the bus."
+      },
+      {
+       "must": 0,
+       "term": "forget",
+       "ipa": "",
+       "meaning": "ينسى",
+       "ex": "forget"
+      },
+      {
+       "must": 0,
+       "term": "excuse",
+       "ipa": "",
+       "meaning": "عذر",
+       "ex": "excuse"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "Len ___ and was late.",
+       "a": "overslept",
+       "o": [
+        "overslept",
+        "oversleeped"
+       ],
+       "why": ""
+      },
+      {
+       "q": "He ___ the bus.",
+       "a": "missed",
+       "o": [
+        "missed",
+        "miss"
+       ],
+       "why": ""
+      },
+      {
+       "q": "He ___ his homework.",
+       "a": "forgot",
+       "o": [
+        "forgot",
+        "forgetted"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى excuse؟",
+       "a": "عذر",
+       "o": [
+        "عذر",
+        "يغلبه النوم",
+        "متأخر"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى miss؟",
+       "a": "يفوته",
+       "o": [
+        "يفوته",
+        "يغلبه النوم",
+        "متأخر"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Len overslept and was late for school.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Len overslept and was late for school.",
+       "o": [
+        "Len overslept and was late for school.",
+        "He missed the bus.",
+        "He forgot his homework."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

@@ -1,0 +1,287 @@
+{
+ "id": "en-9-u6-l5",
+ "grade": 9,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 6 · Lesson 5: How do you get to …?",
+ "titleAr": "كيف تصل إلى المدرسة؟ آخذ الحافلة.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "كيف تصل إلى المدرسة؟ آخذ الحافلة.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "get to",
+       "ar": "يصل إلى",
+       "em": "📍"
+      },
+      {
+       "id": "v1",
+       "en": "take",
+       "ar": "يأخذ (وسيلة)",
+       "em": "🚌"
+      },
+      {
+       "id": "v2",
+       "en": "change",
+       "ar": "يغيّر",
+       "em": "🔄"
+      },
+      {
+       "id": "v3",
+       "en": "stop",
+       "ar": "محطة",
+       "em": "🚏"
+      },
+      {
+       "id": "v4",
+       "en": "on foot",
+       "ar": "سيراً",
+       "em": "🚶"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 77"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "get on / get off",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">How do you get <b>to</b> school? I take the bus.</div><div class=\"ex\">Get <b>off</b> at the third stop.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "How do you get to school? I take the bus. Get off at the third stop."
+      }
+     ]
+    }
+   ],
+   "lead": "get on the bus / get off at the stop",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "How do you get ___ school?",
+           "a": "to",
+           "o": [
+            "to",
+            "at"
+           ]
+          },
+          {
+           "s": "Get ___ at the third stop.",
+           "a": "off",
+           "o": [
+            "off",
+            "out"
+           ]
+          },
+          {
+           "s": "I ___ the bus every day.",
+           "a": "take",
+           "o": [
+            "take",
+            "takes"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "How do you get to school? I take the bus.",
+          "Get off at the third stop."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "How do you get to school? I take the bus.",
+           "o": [
+            "How do you get to school? I take the bus.",
+            "Get off at the third stop."
+           ]
+          },
+          {
+           "a": "Get off at the third stop.",
+           "o": [
+            "Get off at the third stop.",
+            "How do you get to school? I take the bus."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "get to",
+       "ipa": "",
+       "meaning": "يصل إلى",
+       "ex": "How do you get to school? I take the bus."
+      },
+      {
+       "must": 1,
+       "term": "take",
+       "ipa": "",
+       "meaning": "يأخذ (وسيلة)",
+       "ex": "How do you get to school? I take the bus."
+      },
+      {
+       "must": 1,
+       "term": "change",
+       "ipa": "",
+       "meaning": "يغيّر",
+       "ex": "change"
+      },
+      {
+       "must": 0,
+       "term": "stop",
+       "ipa": "",
+       "meaning": "محطة",
+       "ex": "Get off at the third stop."
+      },
+      {
+       "must": 0,
+       "term": "on foot",
+       "ipa": "",
+       "meaning": "سيراً",
+       "ex": "on foot"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "How do you get ___ school?",
+       "a": "to",
+       "o": [
+        "to",
+        "at"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Get ___ at the third stop.",
+       "a": "off",
+       "o": [
+        "off",
+        "out"
+       ],
+       "why": ""
+      },
+      {
+       "q": "I ___ the bus every day.",
+       "a": "take",
+       "o": [
+        "take",
+        "takes"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى change؟",
+       "a": "يغيّر",
+       "o": [
+        "يغيّر",
+        "يصل إلى",
+        "يأخذ (وسيلة)"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى on foot؟",
+       "a": "سيراً",
+       "o": [
+        "سيراً",
+        "يصل إلى",
+        "يأخذ (وسيلة)"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "How do you get to school? I take the bus.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "How do you get to school? I take the bus.",
+       "o": [
+        "How do you get to school? I take the bus.",
+        "Get off at the third stop."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

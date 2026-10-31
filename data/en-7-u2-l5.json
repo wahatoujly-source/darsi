@@ -1,0 +1,287 @@
+{
+ "id": "en-7-u2-l5",
+ "grade": 7,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 2 · Lesson 5: I Will Be Walking …",
+ "titleAr": "في مثل هذا الوقت غداً سأكون أمشي في الجبال.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "في مثل هذا الوقت غداً سأكون أمشي في الجبال.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "will be",
+       "ar": "سوف يكون",
+       "em": "🔮"
+      },
+      {
+       "id": "v1",
+       "en": "walking",
+       "ar": "يمشي",
+       "em": "🚶"
+      },
+      {
+       "id": "v2",
+       "en": "this time tomorrow",
+       "ar": "في مثل هذا الوقت غداً",
+       "em": "⏰"
+      },
+      {
+       "id": "v3",
+       "en": "hiking",
+       "ar": "التنزه سيراً",
+       "em": "🥾"
+      },
+      {
+       "id": "v4",
+       "en": "mountain",
+       "ar": "جبل",
+       "em": "⛰️"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 24"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Future continuous",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">This time tomorrow, I will be <b>walking</b> in the mountains.</div><div class=\"ex\">We will <b>be</b> having lunch at one o'clock.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "This time tomorrow, I will be walking in the mountains. We will be having lunch at one o'clock."
+      }
+     ]
+    }
+   ],
+   "lead": "will be + -ing لفعل مستمر في وقت محدد في المستقبل.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "I will be ___ in the mountains.",
+           "a": "walking",
+           "o": [
+            "walking",
+            "walk"
+           ]
+          },
+          {
+           "s": "We will ___ having lunch.",
+           "a": "be",
+           "o": [
+            "be",
+            "being"
+           ]
+          },
+          {
+           "s": "This time ___ , I'll be hiking.",
+           "a": "tomorrow",
+           "o": [
+            "tomorrow",
+            "yesterday"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "This time tomorrow, I will be walking in the mountains.",
+          "We will be having lunch at one o'clock."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "This time tomorrow, I will be walking in the mountains.",
+           "o": [
+            "This time tomorrow, I will be walking in the mountains.",
+            "We will be having lunch at one o'clock."
+           ]
+          },
+          {
+           "a": "We will be having lunch at one o'clock.",
+           "o": [
+            "We will be having lunch at one o'clock.",
+            "This time tomorrow, I will be walking in the mountains."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "will be",
+       "ipa": "",
+       "meaning": "سوف يكون",
+       "ex": "This time tomorrow, I will be walking in the mountains."
+      },
+      {
+       "must": 1,
+       "term": "walking",
+       "ipa": "",
+       "meaning": "يمشي",
+       "ex": "This time tomorrow, I will be walking in the mountains."
+      },
+      {
+       "must": 1,
+       "term": "this time tomorrow",
+       "ipa": "",
+       "meaning": "في مثل هذا الوقت غداً",
+       "ex": "This time tomorrow, I will be walking in the mountains."
+      },
+      {
+       "must": 0,
+       "term": "hiking",
+       "ipa": "",
+       "meaning": "التنزه سيراً",
+       "ex": "hiking"
+      },
+      {
+       "must": 0,
+       "term": "mountain",
+       "ipa": "",
+       "meaning": "جبل",
+       "ex": "This time tomorrow, I will be walking in the mountains."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "I will be ___ in the mountains.",
+       "a": "walking",
+       "o": [
+        "walking",
+        "walk"
+       ],
+       "why": ""
+      },
+      {
+       "q": "We will ___ having lunch.",
+       "a": "be",
+       "o": [
+        "be",
+        "being"
+       ],
+       "why": ""
+      },
+      {
+       "q": "This time ___ , I'll be hiking.",
+       "a": "tomorrow",
+       "o": [
+        "tomorrow",
+        "yesterday"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى hiking؟",
+       "a": "التنزه سيراً",
+       "o": [
+        "التنزه سيراً",
+        "سوف يكون",
+        "يمشي"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى mountain؟",
+       "a": "جبل",
+       "o": [
+        "جبل",
+        "سوف يكون",
+        "يمشي"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "This time tomorrow, I will be walking in the mountains.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "This time tomorrow, I will be walking in the mountains.",
+       "o": [
+        "This time tomorrow, I will be walking in the mountains.",
+        "We will be having lunch at one o'clock."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

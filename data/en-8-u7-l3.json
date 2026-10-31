@@ -1,0 +1,287 @@
+{
+ "id": "en-8-u7-l3",
+ "grade": 8,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 7 · Lesson 3: Animals in Danger",
+ "titleAr": "انقرض أسد الأطلس في شمال أفريقيا.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "انقرض أسد الأطلس في شمال أفريقيا.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "endangered",
+       "ar": "مهدد بالانقراض",
+       "em": "⚠️"
+      },
+      {
+       "id": "v1",
+       "en": "extinct",
+       "ar": "منقرض",
+       "em": "🦤"
+      },
+      {
+       "id": "v2",
+       "en": "habitat",
+       "ar": "موطن",
+       "em": "🌳"
+      },
+      {
+       "id": "v3",
+       "en": "hunt",
+       "ar": "يصطاد",
+       "em": "🎯"
+      },
+      {
+       "id": "v4",
+       "en": "protect",
+       "ar": "يحمي",
+       "em": "🛡️"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 84⁠–⁠85"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "because",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">The Barbary lion is <b>extinct</b> in North Africa.</div><div class=\"ex\">Many animals are <b>endangered</b> because people destroy their habitats.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "The Barbary lion is extinct in North Africa. Many animals are endangered because people destroy their habitats."
+      }
+     ]
+    }
+   ],
+   "lead": "نعطي السبب بـ because.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "Many animals are ___ .",
+           "a": "endangered",
+           "o": [
+            "endangered",
+            "danger"
+           ]
+          },
+          {
+           "s": "The dodo is ___ .",
+           "a": "extinct",
+           "o": [
+            "extinct",
+            "endangered"
+           ]
+          },
+          {
+           "s": "People destroy their ___ .",
+           "a": "habitats",
+           "o": [
+            "habitats",
+            "habit"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "The Barbary lion is extinct in North Africa.",
+          "Many animals are endangered because people destroy their habitats."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "The Barbary lion is extinct in North Africa.",
+           "o": [
+            "The Barbary lion is extinct in North Africa.",
+            "Many animals are endangered because people destroy their habitats."
+           ]
+          },
+          {
+           "a": "Many animals are endangered because people destroy their habitats.",
+           "o": [
+            "Many animals are endangered because people destroy their habitats.",
+            "The Barbary lion is extinct in North Africa."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "endangered",
+       "ipa": "",
+       "meaning": "مهدد بالانقراض",
+       "ex": "Many animals are endangered because people destroy their habitats."
+      },
+      {
+       "must": 1,
+       "term": "extinct",
+       "ipa": "",
+       "meaning": "منقرض",
+       "ex": "The Barbary lion is extinct in North Africa."
+      },
+      {
+       "must": 1,
+       "term": "habitat",
+       "ipa": "",
+       "meaning": "موطن",
+       "ex": "Many animals are endangered because people destroy their habitats."
+      },
+      {
+       "must": 0,
+       "term": "hunt",
+       "ipa": "",
+       "meaning": "يصطاد",
+       "ex": "hunt"
+      },
+      {
+       "must": 0,
+       "term": "protect",
+       "ipa": "",
+       "meaning": "يحمي",
+       "ex": "protect"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "Many animals are ___ .",
+       "a": "endangered",
+       "o": [
+        "endangered",
+        "danger"
+       ],
+       "why": ""
+      },
+      {
+       "q": "The dodo is ___ .",
+       "a": "extinct",
+       "o": [
+        "extinct",
+        "endangered"
+       ],
+       "why": ""
+      },
+      {
+       "q": "People destroy their ___ .",
+       "a": "habitats",
+       "o": [
+        "habitats",
+        "habit"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى extinct؟",
+       "a": "منقرض",
+       "o": [
+        "منقرض",
+        "مهدد بالانقراض",
+        "موطن"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى hunt؟",
+       "a": "يصطاد",
+       "o": [
+        "يصطاد",
+        "مهدد بالانقراض",
+        "منقرض"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "The Barbary lion is extinct in North Africa.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "The Barbary lion is extinct in North Africa.",
+       "o": [
+        "The Barbary lion is extinct in North Africa.",
+        "Many animals are endangered because people destroy their habitats."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

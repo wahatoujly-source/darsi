@@ -1,0 +1,337 @@
+{
+ "id": "en-7-u2-lR",
+ "grade": 7,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 2 · Lesson R: Round up",
+ "titleAr": "مراجعة الوحدة — Seasons and Nature",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "مراجعة الوحدة — Seasons and Nature",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "spring",
+       "ar": "الربيع",
+       "em": "🌸"
+      },
+      {
+       "id": "v1",
+       "en": "summer",
+       "ar": "الصيف",
+       "em": "☀️"
+      },
+      {
+       "id": "v2",
+       "en": "January",
+       "ar": "يناير",
+       "em": "1️⃣"
+      },
+      {
+       "id": "v3",
+       "en": "March",
+       "ar": "مارس",
+       "em": "3️⃣"
+      },
+      {
+       "id": "v4",
+       "en": "first",
+       "ar": "الأول",
+       "em": "1st"
+      },
+      {
+       "id": "v5",
+       "en": "second",
+       "ar": "الثاني",
+       "em": "2nd"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 28"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Unit review",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\"><b>In</b> spring, the ghibli wind blows in Libya.</div><div class=\"ex\">There are twelve months <b>in</b> a year.</div><div class=\"ex\">What's the date today? It's the third of May.</div><div class=\"ex\">There's a beautiful oasis <b>in</b> Ghadames.</div><div class=\"ex\">This time tomorrow, I will be walking <b>in</b> the mountains.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "In spring, the ghibli wind blows in Libya. There are twelve months in a year. What's the date today? It's the third of May. There's a beautiful oasis in Ghadames. This time tomorrow, I will be walking in the mountains."
+      }
+     ]
+    }
+   ],
+   "lead": "نراجع أهم قواعد الوحدة وكلماتها: اقرأ الأمثلة بصوت عالٍ ثم حلّ التمارين.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "___ summer it's very hot.",
+           "a": "In",
+           "o": [
+            "In",
+            "On"
+           ]
+          },
+          {
+           "s": "School starts ___ September.",
+           "a": "in",
+           "o": [
+            "in",
+            "on"
+           ]
+          },
+          {
+           "s": "My birthday is ___ the 20th of June.",
+           "a": "on",
+           "o": [
+            "on",
+            "in"
+           ]
+          },
+          {
+           "s": "We ___ protect wildlife.",
+           "a": "must",
+           "o": [
+            "must",
+            "musts"
+           ]
+          },
+          {
+           "s": "I will be ___ in the mountains.",
+           "a": "walking",
+           "o": [
+            "walking",
+            "walk"
+           ]
+          },
+          {
+           "s": "In Libya, school starts ___ Sunday.",
+           "a": "on",
+           "o": [
+            "on",
+            "in"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "In spring, the ghibli wind blows in Libya.",
+          "There are twelve months in a year.",
+          "What's the date today? It's the third of May.",
+          "There's a beautiful oasis in Ghadames."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "In spring, the ghibli wind blows in Libya.",
+           "o": [
+            "In spring, the ghibli wind blows in Libya.",
+            "There are twelve months in a year.",
+            "What's the date today? It's the third of May."
+           ]
+          },
+          {
+           "a": "There are twelve months in a year.",
+           "o": [
+            "There are twelve months in a year.",
+            "In spring, the ghibli wind blows in Libya.",
+            "What's the date today? It's the third of May."
+           ]
+          },
+          {
+           "a": "What's the date today? It's the third of May.",
+           "o": [
+            "What's the date today? It's the third of May.",
+            "In spring, the ghibli wind blows in Libya.",
+            "There are twelve months in a year."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "spring",
+       "ipa": "",
+       "meaning": "الربيع",
+       "ex": "In spring, the ghibli wind blows in Libya."
+      },
+      {
+       "must": 1,
+       "term": "summer",
+       "ipa": "",
+       "meaning": "الصيف",
+       "ex": "summer"
+      },
+      {
+       "must": 1,
+       "term": "January",
+       "ipa": "",
+       "meaning": "يناير",
+       "ex": "January"
+      },
+      {
+       "must": 0,
+       "term": "March",
+       "ipa": "",
+       "meaning": "مارس",
+       "ex": "March"
+      },
+      {
+       "must": 0,
+       "term": "first",
+       "ipa": "",
+       "meaning": "الأول",
+       "ex": "first"
+      },
+      {
+       "must": 0,
+       "term": "second",
+       "ipa": "",
+       "meaning": "الثاني",
+       "ex": "second"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "___ summer it's very hot.",
+       "a": "In",
+       "o": [
+        "In",
+        "On"
+       ],
+       "why": ""
+      },
+      {
+       "q": "School starts ___ September.",
+       "a": "in",
+       "o": [
+        "in",
+        "on"
+       ],
+       "why": ""
+      },
+      {
+       "q": "My birthday is ___ the 20th of June.",
+       "a": "on",
+       "o": [
+        "on",
+        "in"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى first؟",
+       "a": "الأول",
+       "o": [
+        "الأول",
+        "الربيع",
+        "الصيف"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى March؟",
+       "a": "مارس",
+       "o": [
+        "مارس",
+        "الربيع",
+        "الصيف"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "In spring, the ghibli wind blows in Libya.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "In spring, the ghibli wind blows in Libya.",
+       "o": [
+        "In spring, the ghibli wind blows in Libya.",
+        "There are twelve months in a year.",
+        "What's the date today? It's the third of May."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

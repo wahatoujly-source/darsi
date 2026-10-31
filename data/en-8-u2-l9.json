@@ -1,0 +1,337 @@
+{
+ "id": "en-8-u2-l9",
+ "grade": 8,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 2 · Lesson 9: Round up",
+ "titleAr": "مراجعة الوحدة — Health Matters",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "مراجعة الوحدة — Health Matters",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "fit",
+       "ar": "لائق",
+       "em": "💪"
+      },
+      {
+       "id": "v1",
+       "en": "exercise",
+       "ar": "تمرين",
+       "em": "🏋️"
+      },
+      {
+       "id": "v2",
+       "en": "protein",
+       "ar": "بروتين",
+       "em": "🥩"
+      },
+      {
+       "id": "v3",
+       "en": "vitamins",
+       "ar": "فيتامينات",
+       "em": "🍊"
+      },
+      {
+       "id": "v4",
+       "en": "menu",
+       "ar": "قائمة الطعام",
+       "em": "📋"
+      },
+      {
+       "id": "v5",
+       "en": "order",
+       "ar": "يطلب",
+       "em": "🛎️"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 33"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Unit review",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\"><b>To</b> keep fit, you should exercise three times a week.</div><div class=\"ex\">Fruit and vegetables contain vitamins.</div><div class=\"ex\">Are you ready to <b>order</b>?</div><div class=\"ex\">I've got a sore throat.</div><div class=\"ex\">Jalal was riding his bike when he had <b>an</b> accident.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "To keep fit, you should exercise three times a week. Fruit and vegetables contain vitamins. Are you ready to order? I've got a sore throat. Jalal was riding his bike when he had an accident."
+      }
+     ]
+    }
+   ],
+   "lead": "نراجع أهم قواعد الوحدة وكلماتها: اقرأ الأمثلة بصوت عالٍ ثم حلّ التمارين.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "___ keep fit, exercise often.",
+           "a": "To",
+           "o": [
+            "To",
+            "For"
+           ]
+          },
+          {
+           "s": "Avoid too ___ sugar.",
+           "a": "much",
+           "o": [
+            "much",
+            "many"
+           ]
+          },
+          {
+           "s": "Are you ready to ___ ?",
+           "a": "order",
+           "o": [
+            "order",
+            "orders"
+           ]
+          },
+          {
+           "s": "I've got ___ earache.",
+           "a": "an",
+           "o": [
+            "an",
+            "a"
+           ]
+          },
+          {
+           "s": "He ___ riding his bike.",
+           "a": "was",
+           "o": [
+            "was",
+            "were"
+           ]
+          },
+          {
+           "s": "Get ___ soon!",
+           "a": "well",
+           "o": [
+            "well",
+            "good"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "To keep fit, you should exercise three times a week.",
+          "Fruit and vegetables contain vitamins.",
+          "Are you ready to order?",
+          "I've got a sore throat."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "To keep fit, you should exercise three times a week.",
+           "o": [
+            "To keep fit, you should exercise three times a week.",
+            "Fruit and vegetables contain vitamins.",
+            "Are you ready to order?"
+           ]
+          },
+          {
+           "a": "Fruit and vegetables contain vitamins.",
+           "o": [
+            "Fruit and vegetables contain vitamins.",
+            "To keep fit, you should exercise three times a week.",
+            "Are you ready to order?"
+           ]
+          },
+          {
+           "a": "Are you ready to order?",
+           "o": [
+            "Are you ready to order?",
+            "To keep fit, you should exercise three times a week.",
+            "Fruit and vegetables contain vitamins."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "fit",
+       "ipa": "",
+       "meaning": "لائق",
+       "ex": "To keep fit, you should exercise three times a week."
+      },
+      {
+       "must": 1,
+       "term": "exercise",
+       "ipa": "",
+       "meaning": "تمرين",
+       "ex": "To keep fit, you should exercise three times a week."
+      },
+      {
+       "must": 1,
+       "term": "protein",
+       "ipa": "",
+       "meaning": "بروتين",
+       "ex": "protein"
+      },
+      {
+       "must": 0,
+       "term": "vitamins",
+       "ipa": "",
+       "meaning": "فيتامينات",
+       "ex": "Fruit and vegetables contain vitamins."
+      },
+      {
+       "must": 0,
+       "term": "menu",
+       "ipa": "",
+       "meaning": "قائمة الطعام",
+       "ex": "menu"
+      },
+      {
+       "must": 0,
+       "term": "order",
+       "ipa": "",
+       "meaning": "يطلب",
+       "ex": "Are you ready to order?"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "___ keep fit, exercise often.",
+       "a": "To",
+       "o": [
+        "To",
+        "For"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Avoid too ___ sugar.",
+       "a": "much",
+       "o": [
+        "much",
+        "many"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Are you ready to ___ ?",
+       "a": "order",
+       "o": [
+        "order",
+        "orders"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى order؟",
+       "a": "يطلب",
+       "o": [
+        "يطلب",
+        "لائق",
+        "تمرين"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى vitamins؟",
+       "a": "فيتامينات",
+       "o": [
+        "فيتامينات",
+        "لائق",
+        "تمرين"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "To keep fit, you should exercise three times a week.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "To keep fit, you should exercise three times a week.",
+       "o": [
+        "To keep fit, you should exercise three times a week.",
+        "Fruit and vegetables contain vitamins.",
+        "Are you ready to order?"
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

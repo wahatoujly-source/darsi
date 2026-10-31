@@ -1,0 +1,319 @@
+{
+ "id": "en-7-u3-l2",
+ "grade": 7,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 3 · Lesson 2: Good Gwen and Lazy Len",
+ "titleAr": "رتبت جوين غرفتها.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "رتبت جوين غرفتها.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "lazy",
+       "ar": "كسول",
+       "em": "😴"
+      },
+      {
+       "id": "v1",
+       "en": "hard-working",
+       "ar": "مجتهد",
+       "em": "💪"
+      },
+      {
+       "id": "v2",
+       "en": "tidy",
+       "ar": "يرتب",
+       "em": "🧹"
+      },
+      {
+       "id": "v3",
+       "en": "still",
+       "ar": "لا يزال",
+       "em": "⏸️"
+      },
+      {
+       "id": "v4",
+       "en": "not … yet",
+       "ar": "لم … بعد",
+       "em": "⏳"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 33"
+  },
+  {
+   "title": "اقرأ",
+   "eyebrow": "الخطوة ٢ — اقرأ",
+   "heading": "اقرأ واستمع",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "📖 Good Gwen and Lazy Len",
+     "html": "<div class=\"ex\">Gwen has tidied her room.</div><div class=\"ex\">Len hasn't tidied his room yet.</div><div class=\"ex\">He is still in bed!</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Gwen has tidied her room. Len hasn't tidied his room yet. He is still in bed!"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط ▶ لتسمع النص."
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٣ — القاعدة",
+   "heading": "Present perfect negative",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Gwen has tidied her room.</div><div class=\"ex\">Len <b>hasn't</b> tidied his room yet.</div><div class=\"ex\">He is <b>still</b> in bed!</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Gwen has tidied her room. Len hasn't tidied his room yet. He is still in bed!"
+      }
+     ]
+    }
+   ],
+   "lead": "hasn't / haven't + past participle",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٤ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "Len ___ tidied his room.",
+           "a": "hasn't",
+           "o": [
+            "hasn't",
+            "haven't"
+           ]
+          },
+          {
+           "s": "Gwen is ___ .",
+           "a": "hard-working",
+           "o": [
+            "hard-working",
+            "lazy"
+           ]
+          },
+          {
+           "s": "He is ___ in bed.",
+           "a": "still",
+           "o": [
+            "still",
+            "yet"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Gwen has tidied her room.",
+          "Len hasn't tidied his room yet.",
+          "He is still in bed!"
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Gwen has tidied her room.",
+           "o": [
+            "Gwen has tidied her room.",
+            "Len hasn't tidied his room yet.",
+            "He is still in bed!"
+           ]
+          },
+          {
+           "a": "Len hasn't tidied his room yet.",
+           "o": [
+            "Len hasn't tidied his room yet.",
+            "Gwen has tidied her room.",
+            "He is still in bed!"
+           ]
+          },
+          {
+           "a": "He is still in bed!",
+           "o": [
+            "He is still in bed!",
+            "Gwen has tidied her room.",
+            "Len hasn't tidied his room yet."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٥ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "lazy",
+       "ipa": "",
+       "meaning": "كسول",
+       "ex": "lazy"
+      },
+      {
+       "must": 1,
+       "term": "hard-working",
+       "ipa": "",
+       "meaning": "مجتهد",
+       "ex": "hard-working"
+      },
+      {
+       "must": 1,
+       "term": "tidy",
+       "ipa": "",
+       "meaning": "يرتب",
+       "ex": "tidy"
+      },
+      {
+       "must": 0,
+       "term": "still",
+       "ipa": "",
+       "meaning": "لا يزال",
+       "ex": "He is still in bed!"
+      },
+      {
+       "must": 0,
+       "term": "not … yet",
+       "ipa": "",
+       "meaning": "لم … بعد",
+       "ex": "not … yet"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "Len ___ tidied his room.",
+       "a": "hasn't",
+       "o": [
+        "hasn't",
+        "haven't"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Gwen is ___ .",
+       "a": "hard-working",
+       "o": [
+        "hard-working",
+        "lazy"
+       ],
+       "why": ""
+      },
+      {
+       "q": "He is ___ in bed.",
+       "a": "still",
+       "o": [
+        "still",
+        "yet"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى tidy؟",
+       "a": "يرتب",
+       "o": [
+        "يرتب",
+        "كسول",
+        "مجتهد"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى lazy؟",
+       "a": "كسول",
+       "o": [
+        "كسول",
+        "مجتهد",
+        "يرتب"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Gwen has tidied her room.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Gwen has tidied her room.",
+       "o": [
+        "Gwen has tidied her room.",
+        "Len hasn't tidied his room yet.",
+        "He is still in bed!"
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

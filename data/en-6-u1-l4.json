@@ -5,70 +5,89 @@
  "stage": "primary-4-6",
  "lang": "en",
  "title": "Unit 1 · Lesson 4: Our Daily Routine",
- "titleAr": "أستيقظ في الخامسة والنصف وأصلي.",
+ "titleAr": "الوحدة الأولى: العائلة والعمل — الدرس الرابع: روتيننا اليومي",
+ "characters": {},
  "steps": [
   {
    "title": "المفردات",
    "eyebrow": "الخطوة ١ — المفردات",
-   "heading": "أستيقظ في الخامسة والنصف وأصلي.",
+   "heading": "كلمات النص",
    "blocks": [
     {
      "type": "vocab",
      "items": [
       {
        "id": "v0",
-       "en": "wake up",
-       "ar": "يستيقظ",
-       "em": "⏰"
+       "en": "routine",
+       "ar": "روتين يومي",
+       "em": "🔁"
       },
       {
        "id": "v1",
-       "en": "pray",
-       "ar": "يصلي",
-       "em": "🕌"
+       "en": "leave home",
+       "ar": "يغادر البيت",
+       "em": "🚪"
       },
       {
        "id": "v2",
-       "en": "catch the bus",
-       "ar": "يركب الحافلة",
+       "en": "by bus",
+       "ar": "بالحافلة",
        "em": "🚌"
       },
       {
        "id": "v3",
-       "en": "have dinner",
-       "ar": "يتعشى",
-       "em": "🍽️"
+       "en": "drives to work",
+       "ar": "يقود السيارة إلى العمل",
+       "em": "🚗"
       },
       {
        "id": "v4",
-       "en": "routine",
-       "ar": "روتين",
-       "em": "🔁"
+       "en": "five days a week",
+       "ar": "خمسة أيام في الأسبوع",
+       "em": "📅"
+      },
+      {
+       "id": "v5",
+       "en": "it takes more than an hour",
+       "ar": "يستغرق أكثر من ساعة",
+       "em": "⏳"
       }
      ]
     }
    ],
-   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 14⁠–⁠15 · كتاب النشاط ص 10⁠–⁠11"
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتابك ص 14–15."
   },
   {
    "title": "القاعدة",
    "eyebrow": "الخطوة ٢ — القاعدة",
-   "heading": "Present simple: he/she",
+   "heading": "Present simple: He works / She works",
    "blocks": [
     {
      "type": "panel",
-     "title": "أمثلة",
-     "html": "<div class=\"ex\">I <b>wake</b> up at half past five and pray.</div><div class=\"ex\">My father <b>catches</b> the bus at seven.</div>",
+     "title": "📖 My family routine — By Anwer",
+     "html": "<div class=\"ex\" dir=\"ltr\">My mum is a nurse and my dad works in an office. He's an IT programmer.<br>My sister, Dania, and I go to school by bus. We leave home at 7.30. My grandma takes our little brother to school.<br>My dad drives to work and he takes our mum to the hospital first. They leave home at 6.45.<br>My dad works five days a week, but my mum only works three days a week. When she is not working in the hospital, she is a housewife at home. She has two jobs.</div>",
      "blocks": [
       {
        "type": "say",
        "label": "▶ اسمع",
-       "text": "I wake up at half past five and pray. My father catches the bus at seven."
+       "text": "My mum is a nurse and my dad works in an office. He's an IT programmer. My sister, Dania, and I go to school by bus. We leave home at 7.30. My grandma takes our little brother to school. My dad drives to work and he takes our mum to the hospital first. They leave home at 6.45. My dad works five days a week, but my mum only works three days a week. She has two jobs."
+      }
+     ]
+    },
+    {
+     "type": "panel",
+     "title": "قاعدة s",
+     "html": "<div class=\"ex\">I work → he work<b>s</b> · I drive → she drive<b>s</b> · I go → he go<b>es</b> · I have → she <b>has</b></div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "I work, he works. I go, he goes. I have, she has."
       }
      ]
     }
    ],
-   "lead": "catch → catches, go → goes, have → has",
+   "lead": "مع he / she / it نضيف s للفعل في المضارع البسيط.",
    "starOnVisit": true
   },
   {
@@ -81,71 +100,105 @@
      "star": true,
      "tabs": [
       {
-       "label": "اختر الكلمة",
+       "label": "افهم النص",
        "blocks": [
         {
-         "type": "mcq",
-         "mode": "gap",
+         "type": "choice",
+         "star": false,
          "items": [
           {
-           "s": "He ___ the bus at seven.",
-           "a": "catches",
+           "q": "Where does Anwer's father work?",
+           "a": "In an office.",
            "o": [
-            "catches",
-            "catch"
-           ]
+            "In an office.",
+            "In a hospital.",
+            "On a farm."
+           ],
+           "why": ""
           },
           {
-           "s": "She ___ dinner at eight.",
-           "a": "has",
+           "q": "Who is a nurse?",
+           "a": "Anwer's mum",
            "o": [
-            "has",
-            "haves"
-           ]
+            "Anwer's mum",
+            "Dania",
+            "Anwer's grandma"
+           ],
+           "why": ""
           },
           {
-           "s": "I ___ up early.",
-           "a": "wake",
+           "q": "What time does Dania leave home?",
+           "a": "At 7.30.",
            "o": [
-            "wake",
-            "wakes"
-           ]
+            "At 7.30.",
+            "At 6.45.",
+            "At 8.00."
+           ],
+           "why": ""
+          },
+          {
+           "q": "How many days a week does Anwer's mother work?",
+           "a": "Three",
+           "o": [
+            "Three",
+            "Five",
+            "Seven"
+           ],
+           "why": ""
+          },
+          {
+           "q": "How do Anwer and Dania go to school?",
+           "a": "By bus.",
+           "o": [
+            "By bus.",
+            "By car.",
+            "On foot."
+           ],
+           "why": ""
           }
          ]
         }
        ]
       },
       {
-       "label": "رتّب الجملة",
-       "blocks": [
-        {
-         "type": "order",
-         "sentences": [
-          "I wake up at half past five and pray.",
-          "My father catches the bus at seven."
-         ]
-        }
-       ]
-      },
-      {
-       "label": "استمع واختر",
+       "label": "اختر الفعل",
        "blocks": [
         {
          "type": "mcq",
-         "mode": "listen",
+         "mode": "gap",
          "items": [
           {
-           "a": "I wake up at half past five and pray.",
+           "s": "My dad ___ in an office.",
+           "a": "works",
            "o": [
-            "I wake up at half past five and pray.",
-            "My father catches the bus at seven."
+            "works",
+            "work",
+            "working"
            ]
           },
           {
-           "a": "My father catches the bus at seven.",
+           "s": "She ___ two jobs.",
+           "a": "has",
            "o": [
-            "My father catches the bus at seven.",
-            "I wake up at half past five and pray."
+            "has",
+            "have",
+            "haves"
+           ]
+          },
+          {
+           "s": "We ___ home at 7.30.",
+           "a": "leave",
+           "o": [
+            "leave",
+            "leaves"
+           ]
+          },
+          {
+           "s": "My grandma ___ our brother to school.",
+           "a": "takes",
+           "o": [
+            "takes",
+            "take"
            ]
           }
          ]
@@ -170,38 +223,38 @@
      "items": [
       {
        "must": 1,
-       "term": "wake up",
-       "ipa": "",
-       "meaning": "يستيقظ",
-       "ex": "I wake up at half past five and pray."
-      },
-      {
-       "must": 1,
-       "term": "pray",
-       "ipa": "",
-       "meaning": "يصلي",
-       "ex": "I wake up at half past five and pray."
-      },
-      {
-       "must": 1,
-       "term": "catch the bus",
-       "ipa": "",
-       "meaning": "يركب الحافلة",
-       "ex": "My father catches the bus at seven."
-      },
-      {
-       "must": 0,
-       "term": "have dinner",
-       "ipa": "",
-       "meaning": "يتعشى",
-       "ex": "have dinner"
-      },
-      {
-       "must": 0,
        "term": "routine",
-       "ipa": "",
-       "meaning": "روتين",
-       "ex": "routine"
+       "ipa": "/ruːˈtiːn/",
+       "meaning": "روتين يومي",
+       "ex": "My family routine."
+      },
+      {
+       "must": 1,
+       "term": "leave home",
+       "ipa": "/liːv həʊm/",
+       "meaning": "يغادر البيت",
+       "ex": "We leave home at 7.30."
+      },
+      {
+       "must": 1,
+       "term": "by bus",
+       "ipa": "/baɪ bʌs/",
+       "meaning": "بالحافلة",
+       "ex": "We go to school by bus."
+      },
+      {
+       "must": 1,
+       "term": "a week",
+       "ipa": "/ə wiːk/",
+       "meaning": "في الأسبوع",
+       "ex": "He works five days a week."
+      },
+      {
+       "must": 0,
+       "term": "housewife",
+       "ipa": "/ˈhaʊswaɪf/",
+       "meaning": "ربة بيت",
+       "ex": "She is a housewife at home."
       }
      ]
     }
@@ -215,73 +268,59 @@
     {
      "type": "quiz",
      "star": true,
-     "pass": 5,
+     "pass": 4,
      "items": [
       {
-       "q": "He ___ the bus at seven.",
-       "a": "catches",
+       "q": "He ___ in an office.",
+       "a": "works",
        "o": [
-        "catches",
-        "catch"
+        "works",
+        "work"
        ],
        "why": ""
       },
       {
-       "q": "She ___ dinner at eight.",
+       "q": "Anwer's mum works ___ days a week.",
+       "a": "three",
+       "o": [
+        "three",
+        "five"
+       ],
+       "why": ""
+      },
+      {
+       "q": "They leave home at …",
+       "a": "6.45",
+       "o": [
+        "6.45",
+        "7.30"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى routine؟",
+       "a": "روتين يومي",
+       "o": [
+        "روتين يومي",
+        "رحلة",
+        "عطلة"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "She ___ two jobs.",
        "a": "has",
        "o": [
         "has",
-        "haves"
-       ],
-       "why": ""
-      },
-      {
-       "q": "I ___ up early.",
-       "a": "wake",
-       "o": [
-        "wake",
-        "wakes"
-       ],
-       "why": ""
-      },
-      {
-       "q": "ما معنى have dinner؟",
-       "a": "يتعشى",
-       "o": [
-        "يتعشى",
-        "يستيقظ",
-        "يصلي"
-       ],
-       "why": "",
-       "ar": true
-      },
-      {
-       "q": "ما معنى pray؟",
-       "a": "يصلي",
-       "o": [
-        "يصلي",
-        "يستيقظ",
-        "يركب الحافلة"
-       ],
-       "why": "",
-       "ar": true
-      },
-      {
-       "type": "listen",
-       "say": "I wake up at half past five and pray.",
-       "q": "استمع: ماذا قال المتحدث؟",
-       "a": "I wake up at half past five and pray.",
-       "o": [
-        "I wake up at half past five and pray.",
-        "My father catches the bus at seven."
+        "have"
        ],
        "why": ""
       }
      ]
     }
    ],
-   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+   "lead": "5 أسئلة. تنجح بـ 4 من 5."
   }
- ],
- "characters": {}
+ ]
 }

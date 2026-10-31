@@ -1,0 +1,287 @@
+{
+ "id": "en-8-u5-l4",
+ "grade": 8,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 5 · Lesson 4: From Cairo to Tripoli",
+ "titleAr": "المسافة من القاهرة إلى طرابلس حوالي ٢٠٠٠ كم.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "المسافة من القاهرة إلى طرابلس حوالي ٢٠٠٠ كم.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "journey",
+       "ar": "رحلة",
+       "em": "🛣️"
+      },
+      {
+       "id": "v1",
+       "en": "coast road",
+       "ar": "الطريق الساحلي",
+       "em": "🌊"
+      },
+      {
+       "id": "v2",
+       "en": "border",
+       "ar": "حدود",
+       "em": "🛂"
+      },
+      {
+       "id": "v3",
+       "en": "kilometres",
+       "ar": "كيلومترات",
+       "em": "📏"
+      },
+      {
+       "id": "v4",
+       "en": "arrive",
+       "ar": "يصل",
+       "em": "🏁"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 60⁠–⁠61"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "along / across / through",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">The journey from Cairo to Tripoli is about 2,000 <b>kilometres</b>.</div><div class=\"ex\">We drove <b>along</b> the coast road.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "The journey from Cairo to Tripoli is about 2,000 kilometres. We drove along the coast road."
+      }
+     ]
+    }
+   ],
+   "lead": "along the coast, across the desert, through the city",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "We drove ___ the coast road.",
+           "a": "along",
+           "o": [
+            "along",
+            "across"
+           ]
+          },
+          {
+           "s": "It's about 2,000 ___ .",
+           "a": "kilometres",
+           "o": [
+            "kilometres",
+            "kilometre"
+           ]
+          },
+          {
+           "s": "We crossed the ___ at Musaid.",
+           "a": "border",
+           "o": [
+            "border",
+            "journey"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "The journey from Cairo to Tripoli is about 2,000 kilometres.",
+          "We drove along the coast road."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "The journey from Cairo to Tripoli is about 2,000 kilometres.",
+           "o": [
+            "The journey from Cairo to Tripoli is about 2,000 kilometres.",
+            "We drove along the coast road."
+           ]
+          },
+          {
+           "a": "We drove along the coast road.",
+           "o": [
+            "We drove along the coast road.",
+            "The journey from Cairo to Tripoli is about 2,000 kilometres."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "journey",
+       "ipa": "",
+       "meaning": "رحلة",
+       "ex": "The journey from Cairo to Tripoli is about 2,000 kilometres."
+      },
+      {
+       "must": 1,
+       "term": "coast road",
+       "ipa": "",
+       "meaning": "الطريق الساحلي",
+       "ex": "We drove along the coast road."
+      },
+      {
+       "must": 1,
+       "term": "border",
+       "ipa": "",
+       "meaning": "حدود",
+       "ex": "border"
+      },
+      {
+       "must": 0,
+       "term": "kilometres",
+       "ipa": "",
+       "meaning": "كيلومترات",
+       "ex": "The journey from Cairo to Tripoli is about 2,000 kilometres."
+      },
+      {
+       "must": 0,
+       "term": "arrive",
+       "ipa": "",
+       "meaning": "يصل",
+       "ex": "arrive"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "We drove ___ the coast road.",
+       "a": "along",
+       "o": [
+        "along",
+        "across"
+       ],
+       "why": ""
+      },
+      {
+       "q": "It's about 2,000 ___ .",
+       "a": "kilometres",
+       "o": [
+        "kilometres",
+        "kilometre"
+       ],
+       "why": ""
+      },
+      {
+       "q": "We crossed the ___ at Musaid.",
+       "a": "border",
+       "o": [
+        "border",
+        "journey"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى arrive؟",
+       "a": "يصل",
+       "o": [
+        "يصل",
+        "رحلة",
+        "الطريق الساحلي"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى kilometres؟",
+       "a": "كيلومترات",
+       "o": [
+        "كيلومترات",
+        "رحلة",
+        "الطريق الساحلي"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "The journey from Cairo to Tripoli is about 2,000 kilometres.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "The journey from Cairo to Tripoli is about 2,000 kilometres.",
+       "o": [
+        "The journey from Cairo to Tripoli is about 2,000 kilometres.",
+        "We drove along the coast road."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

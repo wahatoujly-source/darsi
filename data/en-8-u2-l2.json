@@ -1,0 +1,287 @@
+{
+ "id": "en-8-u2-l2",
+ "grade": 8,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 2 · Lesson 2: Eat the Right Food",
+ "titleAr": "تحتوي الفواكه والخضروات على فيتامينات.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "تحتوي الفواكه والخضروات على فيتامينات.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "protein",
+       "ar": "بروتين",
+       "em": "🥩"
+      },
+      {
+       "id": "v1",
+       "en": "vitamins",
+       "ar": "فيتامينات",
+       "em": "🍊"
+      },
+      {
+       "id": "v2",
+       "en": "fat",
+       "ar": "دهون",
+       "em": "🧈"
+      },
+      {
+       "id": "v3",
+       "en": "balanced diet",
+       "ar": "نظام غذائي متوازن",
+       "em": "🥗"
+      },
+      {
+       "id": "v4",
+       "en": "avoid",
+       "ar": "يتجنب",
+       "em": "🚫"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 25"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "too much / too many / enough",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Fruit and vegetables contain vitamins.</div><div class=\"ex\">You should avoid too <b>much</b> fat and sugar.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Fruit and vegetables contain vitamins. You should avoid too much fat and sugar."
+      }
+     ]
+    }
+   ],
+   "lead": "too much fat, too many sweets, enough water",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "Avoid too ___ sugar.",
+           "a": "much",
+           "o": [
+            "much",
+            "many"
+           ]
+          },
+          {
+           "s": "Eat a balanced ___ .",
+           "a": "diet",
+           "o": [
+            "diet",
+            "died"
+           ]
+          },
+          {
+           "s": "Fish contains ___ .",
+           "a": "protein",
+           "o": [
+            "protein",
+            "fat"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Fruit and vegetables contain vitamins.",
+          "You should avoid too much fat and sugar."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Fruit and vegetables contain vitamins.",
+           "o": [
+            "Fruit and vegetables contain vitamins.",
+            "You should avoid too much fat and sugar."
+           ]
+          },
+          {
+           "a": "You should avoid too much fat and sugar.",
+           "o": [
+            "You should avoid too much fat and sugar.",
+            "Fruit and vegetables contain vitamins."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "protein",
+       "ipa": "",
+       "meaning": "بروتين",
+       "ex": "protein"
+      },
+      {
+       "must": 1,
+       "term": "vitamins",
+       "ipa": "",
+       "meaning": "فيتامينات",
+       "ex": "Fruit and vegetables contain vitamins."
+      },
+      {
+       "must": 1,
+       "term": "fat",
+       "ipa": "",
+       "meaning": "دهون",
+       "ex": "You should avoid too much fat and sugar."
+      },
+      {
+       "must": 0,
+       "term": "balanced diet",
+       "ipa": "",
+       "meaning": "نظام غذائي متوازن",
+       "ex": "balanced diet"
+      },
+      {
+       "must": 0,
+       "term": "avoid",
+       "ipa": "",
+       "meaning": "يتجنب",
+       "ex": "You should avoid too much fat and sugar."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "Avoid too ___ sugar.",
+       "a": "much",
+       "o": [
+        "much",
+        "many"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Eat a balanced ___ .",
+       "a": "diet",
+       "o": [
+        "diet",
+        "died"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Fish contains ___ .",
+       "a": "protein",
+       "o": [
+        "protein",
+        "fat"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى protein؟",
+       "a": "بروتين",
+       "o": [
+        "بروتين",
+        "فيتامينات",
+        "دهون"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى fat؟",
+       "a": "دهون",
+       "o": [
+        "دهون",
+        "بروتين",
+        "فيتامينات"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Fruit and vegetables contain vitamins.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Fruit and vegetables contain vitamins.",
+       "o": [
+        "Fruit and vegetables contain vitamins.",
+        "You should avoid too much fat and sugar."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

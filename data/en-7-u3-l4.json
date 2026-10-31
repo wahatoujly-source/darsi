@@ -1,0 +1,319 @@
+{
+ "id": "en-7-u3-l4",
+ "grade": 7,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 3 · Lesson 4: Mad Mack",
+ "titleAr": "ماك المجنون مخترع.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "ماك المجنون مخترع.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "inventor",
+       "ar": "مخترع",
+       "em": "🧑‍🔬"
+      },
+      {
+       "id": "v1",
+       "en": "machine",
+       "ar": "آلة",
+       "em": "⚙️"
+      },
+      {
+       "id": "v2",
+       "en": "invent",
+       "ar": "يخترع",
+       "em": "💡"
+      },
+      {
+       "id": "v3",
+       "en": "strange",
+       "ar": "غريب",
+       "em": "🤪"
+      },
+      {
+       "id": "v4",
+       "en": "work",
+       "ar": "يعمل",
+       "em": "🔧"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 35–36"
+  },
+  {
+   "title": "اقرأ",
+   "eyebrow": "الخطوة ٢ — اقرأ",
+   "heading": "اقرأ واستمع",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "📖 Mad Mack",
+     "html": "<div class=\"ex\">Mad Mack is an inventor.</div><div class=\"ex\">He has invented a strange machine.</div><div class=\"ex\">Does it work? Not yet!</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Mad Mack is an inventor. He has invented a strange machine. Does it work? Not yet!"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط ▶ لتسمع النص."
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٣ — القاعدة",
+   "heading": "Present perfect: regular -ed",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Mad Mack is an <b>inventor</b>.</div><div class=\"ex\">He has <b>invented</b> a strange machine.</div><div class=\"ex\">Does it work? Not yet!</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Mad Mack is an inventor. He has invented a strange machine. Does it work? Not yet!"
+      }
+     ]
+    }
+   ],
+   "lead": "invent → invented, try → tried",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٤ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "He has ___ a machine.",
+           "a": "invented",
+           "o": [
+            "invented",
+            "invent"
+           ]
+          },
+          {
+           "s": "Mack is an ___ .",
+           "a": "inventor",
+           "o": [
+            "inventor",
+            "invent"
+           ]
+          },
+          {
+           "s": "It's a very ___ machine.",
+           "a": "strange",
+           "o": [
+            "strange",
+            "strong"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Mad Mack is an inventor.",
+          "He has invented a strange machine.",
+          "Does it work? Not yet!"
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Mad Mack is an inventor.",
+           "o": [
+            "Mad Mack is an inventor.",
+            "He has invented a strange machine.",
+            "Does it work? Not yet!"
+           ]
+          },
+          {
+           "a": "He has invented a strange machine.",
+           "o": [
+            "He has invented a strange machine.",
+            "Mad Mack is an inventor.",
+            "Does it work? Not yet!"
+           ]
+          },
+          {
+           "a": "Does it work? Not yet!",
+           "o": [
+            "Does it work? Not yet!",
+            "Mad Mack is an inventor.",
+            "He has invented a strange machine."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٥ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "inventor",
+       "ipa": "",
+       "meaning": "مخترع",
+       "ex": "Mad Mack is an inventor."
+      },
+      {
+       "must": 1,
+       "term": "machine",
+       "ipa": "",
+       "meaning": "آلة",
+       "ex": "He has invented a strange machine."
+      },
+      {
+       "must": 1,
+       "term": "invent",
+       "ipa": "",
+       "meaning": "يخترع",
+       "ex": "Mad Mack is an inventor."
+      },
+      {
+       "must": 0,
+       "term": "strange",
+       "ipa": "",
+       "meaning": "غريب",
+       "ex": "He has invented a strange machine."
+      },
+      {
+       "must": 0,
+       "term": "work",
+       "ipa": "",
+       "meaning": "يعمل",
+       "ex": "Does it work? Not yet!"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "He has ___ a machine.",
+       "a": "invented",
+       "o": [
+        "invented",
+        "invent"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Mack is an ___ .",
+       "a": "inventor",
+       "o": [
+        "inventor",
+        "invent"
+       ],
+       "why": ""
+      },
+      {
+       "q": "It's a very ___ machine.",
+       "a": "strange",
+       "o": [
+        "strange",
+        "strong"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى invent؟",
+       "a": "يخترع",
+       "o": [
+        "يخترع",
+        "مخترع",
+        "آلة"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى work؟",
+       "a": "يعمل",
+       "o": [
+        "يعمل",
+        "مخترع",
+        "آلة"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Mad Mack is an inventor.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Mad Mack is an inventor.",
+       "o": [
+        "Mad Mack is an inventor.",
+        "He has invented a strange machine.",
+        "Does it work? Not yet!"
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

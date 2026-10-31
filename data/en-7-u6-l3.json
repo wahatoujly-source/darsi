@@ -1,0 +1,299 @@
+{
+ "id": "en-7-u6-l3",
+ "grade": 7,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 6 · Lesson 3: Which one is Yuki?",
+ "titleAr": "أيهن يوكي؟",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "أيهن يوكي؟",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "tall",
+       "ar": "طويلة",
+       "em": "📏"
+      },
+      {
+       "id": "v1",
+       "en": "long hair",
+       "ar": "شعر طويل",
+       "em": "💇‍♀️"
+      },
+      {
+       "id": "v2",
+       "en": "glasses",
+       "ar": "نظارة",
+       "em": "👓"
+      },
+      {
+       "id": "v3",
+       "en": "wearing",
+       "ar": "ترتدي",
+       "em": "👗"
+      },
+      {
+       "id": "v4",
+       "en": "the one",
+       "ar": "التي",
+       "em": "👉"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 66"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Describing people",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\"><b>Which</b> one is Yuki?</div><div class=\"ex\">She's the one <b>with</b> long hair and glasses.</div><div class=\"ex\">She's <b>wearing</b> a blue dress.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Which one is Yuki? She's the one with long hair and glasses. She's wearing a blue dress."
+      }
+     ]
+    }
+   ],
+   "lead": "with + feature / wearing + clothes",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "She's the one ___ long hair.",
+           "a": "with",
+           "o": [
+            "with",
+            "has"
+           ]
+          },
+          {
+           "s": "She's ___ a blue dress.",
+           "a": "wearing",
+           "o": [
+            "wearing",
+            "wear"
+           ]
+          },
+          {
+           "s": "___ one is Yuki?",
+           "a": "Which",
+           "o": [
+            "Which",
+            "What"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Which one is Yuki?",
+          "She's the one with long hair and glasses.",
+          "She's wearing a blue dress."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Which one is Yuki?",
+           "o": [
+            "Which one is Yuki?",
+            "She's the one with long hair and glasses.",
+            "She's wearing a blue dress."
+           ]
+          },
+          {
+           "a": "She's the one with long hair and glasses.",
+           "o": [
+            "She's the one with long hair and glasses.",
+            "Which one is Yuki?",
+            "She's wearing a blue dress."
+           ]
+          },
+          {
+           "a": "She's wearing a blue dress.",
+           "o": [
+            "She's wearing a blue dress.",
+            "Which one is Yuki?",
+            "She's the one with long hair and glasses."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "tall",
+       "ipa": "",
+       "meaning": "طويلة",
+       "ex": "tall"
+      },
+      {
+       "must": 1,
+       "term": "long hair",
+       "ipa": "",
+       "meaning": "شعر طويل",
+       "ex": "She's the one with long hair and glasses."
+      },
+      {
+       "must": 1,
+       "term": "glasses",
+       "ipa": "",
+       "meaning": "نظارة",
+       "ex": "She's the one with long hair and glasses."
+      },
+      {
+       "must": 0,
+       "term": "wearing",
+       "ipa": "",
+       "meaning": "ترتدي",
+       "ex": "She's wearing a blue dress."
+      },
+      {
+       "must": 0,
+       "term": "the one",
+       "ipa": "",
+       "meaning": "التي",
+       "ex": "She's the one with long hair and glasses."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "She's the one ___ long hair.",
+       "a": "with",
+       "o": [
+        "with",
+        "has"
+       ],
+       "why": ""
+      },
+      {
+       "q": "She's ___ a blue dress.",
+       "a": "wearing",
+       "o": [
+        "wearing",
+        "wear"
+       ],
+       "why": ""
+      },
+      {
+       "q": "___ one is Yuki?",
+       "a": "Which",
+       "o": [
+        "Which",
+        "What"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى glasses؟",
+       "a": "نظارة",
+       "o": [
+        "نظارة",
+        "طويلة",
+        "شعر طويل"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى the one؟",
+       "a": "التي",
+       "o": [
+        "التي",
+        "طويلة",
+        "شعر طويل"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Which one is Yuki?",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Which one is Yuki?",
+       "o": [
+        "Which one is Yuki?",
+        "She's the one with long hair and glasses.",
+        "She's wearing a blue dress."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

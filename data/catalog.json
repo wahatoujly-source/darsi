@@ -11926,47 +11926,65 @@
          {
           "n": 1,
           "title": "The Seasons of the Year",
-          "ref": "كتاب الطالب ص 20"
+          "ref": "كتاب الطالب ص 20",
+          "id": "en-7-u2-l1",
+          "ready": true
          },
          {
           "n": 2,
           "title": "The Months of the Year",
-          "ref": "كتاب الطالب ص 21"
+          "ref": "كتاب الطالب ص 21",
+          "id": "en-7-u2-l2",
+          "ready": true
          },
          {
           "n": 3,
           "title": "What's the date?",
-          "ref": "كتاب الطالب ص 22"
+          "ref": "كتاب الطالب ص 22",
+          "id": "en-7-u2-l3",
+          "ready": true
          },
          {
           "n": 4,
           "title": "Nature",
-          "ref": "كتاب الطالب ص 23"
+          "ref": "كتاب الطالب ص 23",
+          "id": "en-7-u2-l4",
+          "ready": true
          },
          {
           "n": 5,
           "title": "I Will Be Walking …",
-          "ref": "كتاب الطالب ص 24"
+          "ref": "كتاب الطالب ص 24",
+          "id": "en-7-u2-l5",
+          "ready": true
          },
          {
           "n": 6,
           "title": "Different Schools",
-          "ref": "كتاب الطالب ص 25"
+          "ref": "كتاب الطالب ص 25",
+          "id": "en-7-u2-l6",
+          "ready": true
          },
          {
           "n": 7,
           "title": "Eid Alfitr",
-          "ref": "كتاب الطالب ص 26"
+          "ref": "كتاب الطالب ص 26",
+          "id": "en-7-u2-l7",
+          "ready": true
          },
          {
           "n": 8,
           "title": "New Year's Day in London",
-          "ref": "كتاب الطالب ص 27"
+          "ref": "كتاب الطالب ص 27",
+          "id": "en-7-u2-l8",
+          "ready": true
          },
          {
           "n": "R",
           "title": "Round up",
-          "ref": "كتاب الطالب ص 28"
+          "ref": "كتاب الطالب ص 28",
+          "id": "en-7-u2-l9",
+          "ready": true
          }
         ]
        },
@@ -11978,47 +11996,65 @@
          {
           "n": 1,
           "title": "I've Finished my Work",
-          "ref": "كتاب الطالب ص 32"
+          "ref": "كتاب الطالب ص 32",
+          "id": "en-7-u3-l1",
+          "ready": true
          },
          {
           "n": 2,
           "title": "Good Gwen and Lazy Len",
-          "ref": "كتاب الطالب ص 33"
+          "ref": "كتاب الطالب ص 33",
+          "id": "en-7-u3-l2",
+          "ready": true
          },
          {
           "n": 3,
           "title": "What's the matter?",
-          "ref": "كتاب الطالب ص 34"
+          "ref": "كتاب الطالب ص 34",
+          "id": "en-7-u3-l3",
+          "ready": true
          },
          {
           "n": 4,
           "title": "Mad Mack",
-          "ref": "كتاب الطالب ص 35–36"
+          "ref": "كتاب الطالب ص 35–36",
+          "id": "en-7-u3-l4",
+          "ready": true
          },
          {
           "n": 5,
           "title": "The Hungry Fox",
-          "ref": "كتاب الطالب ص 37"
+          "ref": "كتاب الطالب ص 37",
+          "id": "en-7-u3-l5",
+          "ready": true
          },
          {
           "n": 6,
           "title": "Transport",
-          "ref": "كتاب الطالب ص 38"
+          "ref": "كتاب الطالب ص 38",
+          "id": "en-7-u3-l6",
+          "ready": true
          },
          {
           "n": 7,
           "title": "Once Upon a Time …",
-          "ref": "كتاب الطالب ص 39"
+          "ref": "كتاب الطالب ص 39",
+          "id": "en-7-u3-l7",
+          "ready": true
          },
          {
           "n": 8,
           "title": "Khalid and the Key",
-          "ref": "كتاب الطالب ص 40"
+          "ref": "كتاب الطالب ص 40",
+          "id": "en-7-u3-l8",
+          "ready": true
          },
          {
           "n": "R",
           "title": "Round up",
-          "ref": "كتاب الطالب ص 41"
+          "ref": "كتاب الطالب ص 41",
+          "id": "en-7-u3-l9",
+          "ready": true
          }
         ]
        },
@@ -12030,22 +12066,30 @@
          {
           "n": 1,
           "title": "Lazy Len's Day",
-          "ref": "كتاب الطالب ص 44"
+          "ref": "كتاب الطالب ص 44",
+          "id": "en-7-u4-l1",
+          "ready": true
          },
          {
           "n": 2,
           "title": "Khalid's Birthday Present",
-          "ref": "كتاب الطالب ص 45"
+          "ref": "كتاب الطالب ص 45",
+          "id": "en-7-u4-l2",
+          "ready": true
          },
          {
           "n": 3,
           "title": "The Monkey in the Café",
-          "ref": "كتاب الطالب ص 46"
+          "ref": "كتاب الطالب ص 46",
+          "id": "en-7-u4-l3",
+          "ready": true
          },
          {
           "n": 4,
           "title": "Writing a Story",
-          "ref": "كتاب الطالب ص 47"
+          "ref": "كتاب الطالب ص 47",
+          "id": "en-7-u4-l4",
+          "ready": true
          }
         ]
        },
@@ -12057,47 +12101,65 @@
          {
           "n": 1,
           "title": "Other Countries",
-          "ref": "كتاب الطالب ص 50–51"
+          "ref": "كتاب الطالب ص 50–51",
+          "id": "en-7-u5-l1",
+          "ready": true
          },
          {
           "n": 2,
           "title": "Big Bill",
-          "ref": "كتاب الطالب ص 52–53"
+          "ref": "كتاب الطالب ص 52–53",
+          "id": "en-7-u5-l2",
+          "ready": true
          },
          {
           "n": 3,
           "title": "We've been everywhere!",
-          "ref": "كتاب الطالب ص 54"
+          "ref": "كتاب الطالب ص 54",
+          "id": "en-7-u5-l3",
+          "ready": true
          },
          {
           "n": 4,
           "title": "Four Countries",
-          "ref": "كتاب الطالب ص 55–56"
+          "ref": "كتاب الطالب ص 55–56",
+          "id": "en-7-u5-l4",
+          "ready": true
          },
          {
           "n": 5,
           "title": "Have you ever been to Indonesia?",
-          "ref": "كتاب الطالب ص 57"
+          "ref": "كتاب الطالب ص 57",
+          "id": "en-7-u5-l5",
+          "ready": true
          },
          {
           "n": 6,
           "title": "Countries of the World",
-          "ref": "كتاب الطالب ص 58"
+          "ref": "كتاب الطالب ص 58",
+          "id": "en-7-u5-l6",
+          "ready": true
          },
          {
           "n": 7,
           "title": "Different Countries",
-          "ref": "كتاب الطالب ص 59"
+          "ref": "كتاب الطالب ص 59",
+          "id": "en-7-u5-l7",
+          "ready": true
          },
          {
           "n": 8,
           "title": "Where have you been?",
-          "ref": "كتاب الطالب ص 60"
+          "ref": "كتاب الطالب ص 60",
+          "id": "en-7-u5-l8",
+          "ready": true
          },
          {
           "n": "R",
           "title": "Round up",
-          "ref": "كتاب الطالب ص 61"
+          "ref": "كتاب الطالب ص 61",
+          "id": "en-7-u5-l9",
+          "ready": true
          }
         ]
        },
@@ -12109,47 +12171,65 @@
          {
           "n": 1,
           "title": "Making New Friends",
-          "ref": "كتاب الطالب ص 64"
+          "ref": "كتاب الطالب ص 64",
+          "id": "en-7-u6-l1",
+          "ready": true
          },
          {
           "n": 2,
           "title": "Staying Safe Online",
-          "ref": "كتاب الطالب ص 65"
+          "ref": "كتاب الطالب ص 65",
+          "id": "en-7-u6-l2",
+          "ready": true
          },
          {
           "n": 3,
           "title": "Which one is Yuki?",
-          "ref": "كتاب الطالب ص 66"
+          "ref": "كتاب الطالب ص 66",
+          "id": "en-7-u6-l3",
+          "ready": true
          },
          {
           "n": 4,
           "title": "Fawzi Meets Yuki",
-          "ref": "كتاب الطالب ص 67"
+          "ref": "كتاب الطالب ص 67",
+          "id": "en-7-u6-l4",
+          "ready": true
          },
          {
           "n": 5,
           "title": "Fawzi's First Meal in Japan",
-          "ref": "كتاب الطالب ص 68–69"
+          "ref": "كتاب الطالب ص 68–69",
+          "id": "en-7-u6-l5",
+          "ready": true
          },
          {
           "n": 6,
           "title": "An Email from Fawzi",
-          "ref": "كتاب الطالب ص 70"
+          "ref": "كتاب الطالب ص 70",
+          "id": "en-7-u6-l6",
+          "ready": true
          },
          {
           "n": 7,
           "title": "Laws in the UK",
-          "ref": "كتاب الطالب ص 71"
+          "ref": "كتاب الطالب ص 71",
+          "id": "en-7-u6-l7",
+          "ready": true
          },
          {
           "n": 8,
           "title": "A Wolf in the Forest",
-          "ref": "كتاب الطالب ص 72"
+          "ref": "كتاب الطالب ص 72",
+          "id": "en-7-u6-l8",
+          "ready": true
          },
          {
           "n": "R",
           "title": "Round up",
-          "ref": "كتاب الطالب ص 73"
+          "ref": "كتاب الطالب ص 73",
+          "id": "en-7-u6-l9",
+          "ready": true
          }
         ]
        },
@@ -12161,47 +12241,65 @@
          {
           "n": 1,
           "title": "Instructions",
-          "ref": "كتاب الطالب ص 76"
+          "ref": "كتاب الطالب ص 76",
+          "id": "en-7-u7-l1",
+          "ready": true
          },
          {
           "n": 2,
           "title": "Warnings to Children",
-          "ref": "كتاب الطالب ص 77"
+          "ref": "كتاب الطالب ص 77",
+          "id": "en-7-u7-l2",
+          "ready": true
          },
          {
           "n": 3,
           "title": "Warnings to Parents",
-          "ref": "كتاب الطالب ص 78"
+          "ref": "كتاب الطالب ص 78",
+          "id": "en-7-u7-l3",
+          "ready": true
          },
          {
           "n": 4,
           "title": "Going Fishing",
-          "ref": "كتاب الطالب ص 79"
+          "ref": "كتاب الطالب ص 79",
+          "id": "en-7-u7-l4",
+          "ready": true
          },
          {
           "n": 5,
           "title": "Danger!",
-          "ref": "كتاب الطالب ص 80"
+          "ref": "كتاب الطالب ص 80",
+          "id": "en-7-u7-l5",
+          "ready": true
          },
          {
           "n": 6,
           "title": "Road Safety",
-          "ref": "كتاب الطالب ص 81"
+          "ref": "كتاب الطالب ص 81",
+          "id": "en-7-u7-l6",
+          "ready": true
          },
          {
           "n": 7,
           "title": "Stay Safe and Healthy",
-          "ref": "كتاب الطالب ص 82"
+          "ref": "كتاب الطالب ص 82",
+          "id": "en-7-u7-l7",
+          "ready": true
          },
          {
           "n": 8,
           "title": "Danger at Sea",
-          "ref": "كتاب الطالب ص 83"
+          "ref": "كتاب الطالب ص 83",
+          "id": "en-7-u7-l8",
+          "ready": true
          },
          {
           "n": "R",
           "title": "Round up",
-          "ref": "كتاب الطالب ص 84"
+          "ref": "كتاب الطالب ص 84",
+          "id": "en-7-u7-l9",
+          "ready": true
          }
         ]
        },
@@ -12213,22 +12311,30 @@
          {
           "n": 1,
           "title": "Questions and Answers",
-          "ref": "كتاب الطالب ص 88"
+          "ref": "كتاب الطالب ص 88",
+          "id": "en-7-u8-l1",
+          "ready": true
          },
          {
           "n": 2,
           "title": "Social Networking",
-          "ref": "كتاب الطالب ص 89"
+          "ref": "كتاب الطالب ص 89",
+          "id": "en-7-u8-l2",
+          "ready": true
          },
          {
           "n": 3,
           "title": "Keep Listening!",
-          "ref": "كتاب الطالب ص 90"
+          "ref": "كتاب الطالب ص 90",
+          "id": "en-7-u8-l3",
+          "ready": true
          },
          {
           "n": 4,
           "title": "A Different Kind of Holiday",
-          "ref": "كتاب الطالب ص 91"
+          "ref": "كتاب الطالب ص 91",
+          "id": "en-7-u8-l4",
+          "ready": true
          }
         ]
        }
@@ -14561,22 +14667,30 @@
          {
           "n": 6,
           "title": "The World Youth Camp",
-          "ref": "كتاب الطالب ص 16⁠–⁠17"
+          "ref": "كتاب الطالب ص 16⁠–⁠17",
+          "id": "en-8-u1-l6",
+          "ready": true
          },
          {
           "n": 7,
           "title": "Meet a Local Personality",
-          "ref": "كتاب الطالب ص 18"
+          "ref": "كتاب الطالب ص 18",
+          "id": "en-8-u1-l7",
+          "ready": true
          },
          {
           "n": 8,
           "title": "Bob and Bashir",
-          "ref": "كتاب الطالب ص 19⁠–⁠20"
+          "ref": "كتاب الطالب ص 19⁠–⁠20",
+          "id": "en-8-u1-l8",
+          "ready": true
          },
          {
           "n": 9,
           "title": "Round up",
-          "ref": "كتاب الطالب ص 21"
+          "ref": "كتاب الطالب ص 21",
+          "id": "en-8-u1-l9",
+          "ready": true
          }
         ],
         "titleAr": "مجلة المدرسة"
@@ -14588,47 +14702,65 @@
          {
           "n": 1,
           "title": "Keep fit!",
-          "ref": "كتاب الطالب ص 24"
+          "ref": "كتاب الطالب ص 24",
+          "id": "en-8-u2-l1",
+          "ready": true
          },
          {
           "n": 2,
           "title": "Eat the Right Food",
-          "ref": "كتاب الطالب ص 25"
+          "ref": "كتاب الطالب ص 25",
+          "id": "en-8-u2-l2",
+          "ready": true
          },
          {
           "n": 3,
           "title": "In a Restaurant",
-          "ref": "كتاب الطالب ص 26"
+          "ref": "كتاب الطالب ص 26",
+          "id": "en-8-u2-l3",
+          "ready": true
          },
          {
           "n": 4,
           "title": "Aches and Pains",
-          "ref": "كتاب الطالب ص 27"
+          "ref": "كتاب الطالب ص 27",
+          "id": "en-8-u2-l4",
+          "ready": true
          },
          {
           "n": 5,
           "title": "Jalal’s Story",
-          "ref": "كتاب الطالب ص 28"
+          "ref": "كتاب الطالب ص 28",
+          "id": "en-8-u2-l5",
+          "ready": true
          },
          {
           "n": 6,
           "title": "‘Get well’ Cards",
-          "ref": "كتاب الطالب ص 29"
+          "ref": "كتاب الطالب ص 29",
+          "id": "en-8-u2-l6",
+          "ready": true
          },
          {
           "n": 7,
           "title": "Limericks",
-          "ref": "كتاب الطالب ص 30"
+          "ref": "كتاب الطالب ص 30",
+          "id": "en-8-u2-l7",
+          "ready": true
          },
          {
           "n": 8,
           "title": "Bob and Bashir – The Eggs",
-          "ref": "كتاب الطالب ص 31⁠–⁠32"
+          "ref": "كتاب الطالب ص 31⁠–⁠32",
+          "id": "en-8-u2-l8",
+          "ready": true
          },
          {
           "n": 9,
           "title": "Round up",
-          "ref": "كتاب الطالب ص 33"
+          "ref": "كتاب الطالب ص 33",
+          "id": "en-8-u2-l9",
+          "ready": true
          }
         ],
         "titleAr": "الصحة"
@@ -14640,47 +14772,65 @@
          {
           "n": 1,
           "title": "The Sports Centre",
-          "ref": "كتاب الطالب ص 36"
+          "ref": "كتاب الطالب ص 36",
+          "id": "en-8-u3-l1",
+          "ready": true
          },
          {
           "n": 2,
           "title": "The Timetable",
-          "ref": "كتاب الطالب ص 37"
+          "ref": "كتاب الطالب ص 37",
+          "id": "en-8-u3-l2",
+          "ready": true
          },
          {
           "n": 3,
           "title": "Booking Lessons",
-          "ref": "كتاب الطالب ص 38"
+          "ref": "كتاب الطالب ص 38",
+          "id": "en-8-u3-l3",
+          "ready": true
          },
          {
           "n": 4,
           "title": "The Basketball Game",
-          "ref": "كتاب الطالب ص 39"
+          "ref": "كتاب الطالب ص 39",
+          "id": "en-8-u3-l4",
+          "ready": true
          },
          {
           "n": 5,
           "title": "London 2012",
-          "ref": "كتاب الطالب ص 40⁠–⁠41"
+          "ref": "كتاب الطالب ص 40⁠–⁠41",
+          "id": "en-8-u3-l5",
+          "ready": true
          },
          {
           "n": 6,
           "title": "Changes",
-          "ref": "كتاب الطالب ص 42"
+          "ref": "كتاب الطالب ص 42",
+          "id": "en-8-u3-l6",
+          "ready": true
          },
          {
           "n": 7,
           "title": "Olympic Facts and Figures",
-          "ref": "كتاب الطالب ص 43"
+          "ref": "كتاب الطالب ص 43",
+          "id": "en-8-u3-l7",
+          "ready": true
          },
          {
           "n": 8,
           "title": "Bob and Bashir – The Ice-creams",
-          "ref": "كتاب الطالب ص 44⁠–⁠45"
+          "ref": "كتاب الطالب ص 44⁠–⁠45",
+          "id": "en-8-u3-l8",
+          "ready": true
          },
          {
           "n": 9,
           "title": "Round up",
-          "ref": "كتاب الطالب ص 46⁠–⁠47"
+          "ref": "كتاب الطالب ص 46⁠–⁠47",
+          "id": "en-8-u3-l9",
+          "ready": true
          }
         ],
         "titleAr": "الرياضات والألعاب الأولمبية"
@@ -14692,22 +14842,30 @@
          {
           "n": 1,
           "title": "Listening",
-          "ref": "كتاب الطالب ص 50"
+          "ref": "كتاب الطالب ص 50",
+          "id": "en-8-u4-l1",
+          "ready": true
          },
          {
           "n": 2,
           "title": "Reading",
-          "ref": "كتاب الطالب ص 51"
+          "ref": "كتاب الطالب ص 51",
+          "id": "en-8-u4-l2",
+          "ready": true
          },
          {
           "n": 3,
           "title": "Speaking",
-          "ref": "كتاب الطالب ص 52"
+          "ref": "كتاب الطالب ص 52",
+          "id": "en-8-u4-l3",
+          "ready": true
          },
          {
           "n": 4,
           "title": "Writing",
-          "ref": "كتاب الطالب ص 53"
+          "ref": "كتاب الطالب ص 53",
+          "id": "en-8-u4-l4",
+          "ready": true
          }
         ],
         "titleAr": "متعة الإنجليزية 1"
@@ -14719,47 +14877,65 @@
          {
           "n": 1,
           "title": "Old Ways of Sending Information",
-          "ref": "كتاب الطالب ص 56⁠–⁠57"
+          "ref": "كتاب الطالب ص 56⁠–⁠57",
+          "id": "en-8-u5-l1",
+          "ready": true
          },
          {
           "n": 2,
           "title": "Accessing Information",
-          "ref": "كتاب الطالب ص 58"
+          "ref": "كتاب الطالب ص 58",
+          "id": "en-8-u5-l2",
+          "ready": true
          },
          {
           "n": 3,
           "title": "Working Out Meanings",
-          "ref": "كتاب الطالب ص 59"
+          "ref": "كتاب الطالب ص 59",
+          "id": "en-8-u5-l3",
+          "ready": true
          },
          {
           "n": 4,
           "title": "From Cairo to Tripoli",
-          "ref": "كتاب الطالب ص 60⁠–⁠61"
+          "ref": "كتاب الطالب ص 60⁠–⁠61",
+          "id": "en-8-u5-l4",
+          "ready": true
          },
          {
           "n": 5,
           "title": "Great Inventions",
-          "ref": "كتاب الطالب ص 62"
+          "ref": "كتاب الطالب ص 62",
+          "id": "en-8-u5-l5",
+          "ready": true
          },
          {
           "n": 6,
           "title": "Telephones",
-          "ref": "كتاب الطالب ص 63"
+          "ref": "كتاب الطالب ص 63",
+          "id": "en-8-u5-l6",
+          "ready": true
          },
          {
           "n": 7,
           "title": "On the Phone",
-          "ref": "كتاب الطالب ص 64"
+          "ref": "كتاب الطالب ص 64",
+          "id": "en-8-u5-l7",
+          "ready": true
          },
          {
           "n": 8,
           "title": "Bob and Bashir – The Ants",
-          "ref": "كتاب الطالب ص 65⁠–⁠66"
+          "ref": "كتاب الطالب ص 65⁠–⁠66",
+          "id": "en-8-u5-l8",
+          "ready": true
          },
          {
           "n": 9,
           "title": "Round up",
-          "ref": "كتاب الطالب ص 67"
+          "ref": "كتاب الطالب ص 67",
+          "id": "en-8-u5-l9",
+          "ready": true
          }
         ],
         "titleAr": "الاتصال وتبادل المعلومات"
@@ -14771,47 +14947,65 @@
          {
           "n": 1,
           "title": "What do they do?",
-          "ref": "كتاب الطالب ص 70"
+          "ref": "كتاب الطالب ص 70",
+          "id": "en-8-u6-l1",
+          "ready": true
          },
          {
           "n": 2,
           "title": "Two Jobs",
-          "ref": "كتاب الطالب ص 71"
+          "ref": "كتاب الطالب ص 71",
+          "id": "en-8-u6-l2",
+          "ready": true
          },
          {
           "n": 3,
           "title": "A Day in the Life of a Firefighter",
-          "ref": "كتاب الطالب ص 72"
+          "ref": "كتاب الطالب ص 72",
+          "id": "en-8-u6-l3",
+          "ready": true
          },
          {
           "n": 4,
           "title": "What’s my job?",
-          "ref": "كتاب الطالب ص 73"
+          "ref": "كتاب الطالب ص 73",
+          "id": "en-8-u6-l4",
+          "ready": true
          },
          {
           "n": 5,
           "title": "A School Timetable",
-          "ref": "كتاب الطالب ص 74"
+          "ref": "كتاب الطالب ص 74",
+          "id": "en-8-u6-l5",
+          "ready": true
          },
          {
           "n": 6,
           "title": "What are they going to be?",
-          "ref": "كتاب الطالب ص 75"
+          "ref": "كتاب الطالب ص 75",
+          "id": "en-8-u6-l6",
+          "ready": true
          },
          {
           "n": 7,
           "title": "Career Plans",
-          "ref": "كتاب الطالب ص 76⁠–⁠77"
+          "ref": "كتاب الطالب ص 76⁠–⁠77",
+          "id": "en-8-u6-l7",
+          "ready": true
          },
          {
           "n": 8,
           "title": "Bob and Bashir – The Basketball",
-          "ref": "كتاب الطالب ص 78"
+          "ref": "كتاب الطالب ص 78",
+          "id": "en-8-u6-l8",
+          "ready": true
          },
          {
           "n": 9,
           "title": "Round up",
-          "ref": "كتاب الطالب ص 79"
+          "ref": "كتاب الطالب ص 79",
+          "id": "en-8-u6-l9",
+          "ready": true
          }
         ],
         "titleAr": "الوظائف والمهن"
@@ -14823,47 +15017,65 @@
          {
           "n": 1,
           "title": "World Problems",
-          "ref": "كتاب الطالب ص 82"
+          "ref": "كتاب الطالب ص 82",
+          "id": "en-8-u7-l1",
+          "ready": true
          },
          {
           "n": 2,
           "title": "How can we help?",
-          "ref": "كتاب الطالب ص 83"
+          "ref": "كتاب الطالب ص 83",
+          "id": "en-8-u7-l2",
+          "ready": true
          },
          {
           "n": 3,
           "title": "Animals in Danger",
-          "ref": "كتاب الطالب ص 84⁠–⁠85"
+          "ref": "كتاب الطالب ص 84⁠–⁠85",
+          "id": "en-8-u7-l3",
+          "ready": true
          },
          {
           "n": 4,
           "title": "Please keep the rivers clean!",
-          "ref": "كتاب الطالب ص 86"
+          "ref": "كتاب الطالب ص 86",
+          "id": "en-8-u7-l4",
+          "ready": true
          },
          {
           "n": 5,
           "title": "A Warmer World",
-          "ref": "كتاب الطالب ص 87"
+          "ref": "كتاب الطالب ص 87",
+          "id": "en-8-u7-l5",
+          "ready": true
          },
          {
           "n": 6,
           "title": "Throwing Things Away",
-          "ref": "كتاب الطالب ص 88⁠–⁠89"
+          "ref": "كتاب الطالب ص 88⁠–⁠89",
+          "id": "en-8-u7-l6",
+          "ready": true
          },
          {
           "n": 7,
           "title": "The Moving Desert",
-          "ref": "كتاب الطالب ص 90"
+          "ref": "كتاب الطالب ص 90",
+          "id": "en-8-u7-l7",
+          "ready": true
          },
          {
           "n": 8,
           "title": "Bob and Bashir – The Medals",
-          "ref": "كتاب الطالب ص 91⁠–⁠92"
+          "ref": "كتاب الطالب ص 91⁠–⁠92",
+          "id": "en-8-u7-l8",
+          "ready": true
          },
          {
           "n": 9,
           "title": "Round up",
-          "ref": "كتاب الطالب ص 93"
+          "ref": "كتاب الطالب ص 93",
+          "id": "en-8-u7-l9",
+          "ready": true
          }
         ],
         "titleAr": "لننقذ عالمنا"
@@ -14875,22 +15087,30 @@
          {
           "n": 1,
           "title": "Listening",
-          "ref": "كتاب الطالب ص 96"
+          "ref": "كتاب الطالب ص 96",
+          "id": "en-8-u8-l1",
+          "ready": true
          },
          {
           "n": 2,
           "title": "Speaking",
-          "ref": "كتاب الطالب ص 97"
+          "ref": "كتاب الطالب ص 97",
+          "id": "en-8-u8-l2",
+          "ready": true
          },
          {
           "n": 3,
           "title": "Reading",
-          "ref": "كتاب الطالب ص 98"
+          "ref": "كتاب الطالب ص 98",
+          "id": "en-8-u8-l3",
+          "ready": true
          },
          {
           "n": 4,
           "title": "Writing",
-          "ref": "كتاب الطالب ص 99"
+          "ref": "كتاب الطالب ص 99",
+          "id": "en-8-u8-l4",
+          "ready": true
          }
         ],
         "titleAr": "متعة الإنجليزية 2"
@@ -17480,17 +17700,23 @@
          {
           "n": 6,
           "title": "What do they look like?",
-          "ref": "كتاب الطالب ص 15"
+          "ref": "كتاب الطالب ص 15",
+          "id": "en-9-u1-l6",
+          "ready": true
          },
          {
           "n": 7,
           "title": "Good Friends",
-          "ref": "كتاب الطالب ص 16⁠–⁠17"
+          "ref": "كتاب الطالب ص 16⁠–⁠17",
+          "id": "en-9-u1-l7",
+          "ready": true
          },
          {
           "n": 8,
           "title": "Sold out!",
-          "ref": "كتاب الطالب ص 18⁠–⁠21"
+          "ref": "كتاب الطالب ص 18⁠–⁠21",
+          "id": "en-9-u1-l8",
+          "ready": true
          }
         ],
         "titleAr": "وصف الأشياء"
@@ -17502,42 +17728,58 @@
          {
           "n": 1,
           "title": "A Perfect Holiday",
-          "ref": "كتاب الطالب ص 22⁠–⁠23"
+          "ref": "كتاب الطالب ص 22⁠–⁠23",
+          "id": "en-9-u2-l1",
+          "ready": true
          },
          {
           "n": 2,
           "title": "Spare Time",
-          "ref": "كتاب الطالب ص 24"
+          "ref": "كتاب الطالب ص 24",
+          "id": "en-9-u2-l2",
+          "ready": true
          },
          {
           "n": 3,
           "title": "Books and Films",
-          "ref": "كتاب الطالب ص 25"
+          "ref": "كتاب الطالب ص 25",
+          "id": "en-9-u2-l3",
+          "ready": true
          },
          {
           "n": 4,
           "title": "Work or play?",
-          "ref": "كتاب الطالب ص 26⁠–⁠27"
+          "ref": "كتاب الطالب ص 26⁠–⁠27",
+          "id": "en-9-u2-l4",
+          "ready": true
          },
          {
           "n": 5,
           "title": "Two Conversations",
-          "ref": "كتاب الطالب ص 28"
+          "ref": "كتاب الطالب ص 28",
+          "id": "en-9-u2-l5",
+          "ready": true
          },
          {
           "n": 6,
           "title": "A TV Comedy",
-          "ref": "كتاب الطالب ص 29"
+          "ref": "كتاب الطالب ص 29",
+          "id": "en-9-u2-l6",
+          "ready": true
          },
          {
           "n": 7,
           "title": "Invitations",
-          "ref": "كتاب الطالب ص 30⁠–⁠31"
+          "ref": "كتاب الطالب ص 30⁠–⁠31",
+          "id": "en-9-u2-l7",
+          "ready": true
          },
          {
           "n": 8,
           "title": "What is your hobby?",
-          "ref": "كتاب الطالب ص 32⁠–⁠35"
+          "ref": "كتاب الطالب ص 32⁠–⁠35",
+          "id": "en-9-u2-l8",
+          "ready": true
          }
         ],
         "titleAr": "أنشطة وقت الفراغ"
@@ -17549,42 +17791,58 @@
          {
           "n": 1,
           "title": "Creatures in Our World",
-          "ref": "كتاب الطالب ص 36⁠–⁠37"
+          "ref": "كتاب الطالب ص 36⁠–⁠37",
+          "id": "en-9-u3-l1",
+          "ready": true
          },
          {
           "n": 2,
           "title": "Our Growing World",
-          "ref": "كتاب الطالب ص 38"
+          "ref": "كتاب الطالب ص 38",
+          "id": "en-9-u3-l2",
+          "ready": true
          },
          {
           "n": 3,
           "title": "I hate spiders!",
-          "ref": "كتاب الطالب ص 39"
+          "ref": "كتاب الطالب ص 39",
+          "id": "en-9-u3-l3",
+          "ready": true
          },
          {
           "n": 4,
           "title": "If we didn’t have …",
-          "ref": "كتاب الطالب ص 40⁠–⁠41"
+          "ref": "كتاب الطالب ص 40⁠–⁠41",
+          "id": "en-9-u3-l4",
+          "ready": true
          },
          {
           "n": 5,
           "title": "The Fastest Living Things",
-          "ref": "كتاب الطالب ص 42"
+          "ref": "كتاب الطالب ص 42",
+          "id": "en-9-u3-l5",
+          "ready": true
          },
          {
           "n": 6,
           "title": "Do you care about …?",
-          "ref": "كتاب الطالب ص 43"
+          "ref": "كتاب الطالب ص 43",
+          "id": "en-9-u3-l6",
+          "ready": true
          },
          {
           "n": 7,
           "title": "Different Animals",
-          "ref": "كتاب الطالب ص 44⁠–⁠45"
+          "ref": "كتاب الطالب ص 44⁠–⁠45",
+          "id": "en-9-u3-l7",
+          "ready": true
          },
          {
           "n": 8,
           "title": "Things happen in …",
-          "ref": "كتاب الطالب ص 46⁠–⁠49"
+          "ref": "كتاب الطالب ص 46⁠–⁠49",
+          "id": "en-9-u3-l8",
+          "ready": true
          }
         ],
         "titleAr": "عالمنا"
@@ -17596,22 +17854,30 @@
          {
           "n": 1,
           "title": "Listening",
-          "ref": "كتاب الطالب ص 50⁠–⁠51"
+          "ref": "كتاب الطالب ص 50⁠–⁠51",
+          "id": "en-9-u4-l1",
+          "ready": true
          },
          {
           "n": 2,
           "title": "Reading",
-          "ref": "كتاب الطالب ص 52⁠–⁠53"
+          "ref": "كتاب الطالب ص 52⁠–⁠53",
+          "id": "en-9-u4-l2",
+          "ready": true
          },
          {
           "n": 3,
           "title": "Speaking",
-          "ref": "كتاب الطالب ص 54⁠–⁠55"
+          "ref": "كتاب الطالب ص 54⁠–⁠55",
+          "id": "en-9-u4-l3",
+          "ready": true
          },
          {
           "n": 4,
           "title": "Writing",
-          "ref": "كتاب الطالب ص 56⁠–⁠57"
+          "ref": "كتاب الطالب ص 56⁠–⁠57",
+          "id": "en-9-u4-l4",
+          "ready": true
          }
         ],
         "titleAr": "متعة الإنجليزية 1"
@@ -17623,42 +17889,58 @@
          {
           "n": 1,
           "title": "Watching the Match",
-          "ref": "كتاب الطالب ص 58⁠–⁠59"
+          "ref": "كتاب الطالب ص 58⁠–⁠59",
+          "id": "en-9-u5-l1",
+          "ready": true
          },
          {
           "n": 2,
           "title": "Lina Fakroun Talks to …",
-          "ref": "كتاب الطالب ص 60⁠–⁠61"
+          "ref": "كتاب الطالب ص 60⁠–⁠61",
+          "id": "en-9-u5-l2",
+          "ready": true
          },
          {
           "n": 3,
           "title": "Read all about it!",
-          "ref": "كتاب الطالب ص 62⁠–⁠63"
+          "ref": "كتاب الطالب ص 62⁠–⁠63",
+          "id": "en-9-u5-l3",
+          "ready": true
          },
          {
           "n": 4,
           "title": "Where can I find it?",
-          "ref": "كتاب الطالب ص 64"
+          "ref": "كتاب الطالب ص 64",
+          "id": "en-9-u5-l4",
+          "ready": true
          },
          {
           "n": 5,
           "title": "Would you take less?",
-          "ref": "كتاب الطالب ص 65"
+          "ref": "كتاب الطالب ص 65",
+          "id": "en-9-u5-l5",
+          "ready": true
          },
          {
           "n": 6,
           "title": "What’s happening …?",
-          "ref": "كتاب الطالب ص 66⁠–⁠67"
+          "ref": "كتاب الطالب ص 66⁠–⁠67",
+          "id": "en-9-u5-l6",
+          "ready": true
          },
          {
           "n": 7,
           "title": "A Website for Me",
-          "ref": "كتاب الطالب ص 68"
+          "ref": "كتاب الطالب ص 68",
+          "id": "en-9-u5-l7",
+          "ready": true
          },
          {
           "n": 8,
           "title": "A Powerful Lesson for …",
-          "ref": "كتاب الطالب ص 69⁠–⁠71"
+          "ref": "كتاب الطالب ص 69⁠–⁠71",
+          "id": "en-9-u5-l8",
+          "ready": true
          }
         ],
         "titleAr": "وسائل الإعلام"
@@ -17670,42 +17952,58 @@
          {
           "n": 1,
           "title": "Jobs and Workplaces",
-          "ref": "كتاب الطالب ص 72"
+          "ref": "كتاب الطالب ص 72",
+          "id": "en-9-u6-l1",
+          "ready": true
          },
          {
           "n": 2,
           "title": "Careers Advice",
-          "ref": "كتاب الطالب ص 73"
+          "ref": "كتاب الطالب ص 73",
+          "id": "en-9-u6-l2",
+          "ready": true
          },
          {
           "n": 3,
           "title": "The School of the Future",
-          "ref": "كتاب الطالب ص 74⁠–⁠75"
+          "ref": "كتاب الطالب ص 74⁠–⁠75",
+          "id": "en-9-u6-l3",
+          "ready": true
          },
          {
           "n": 4,
           "title": "A, an or the?",
-          "ref": "كتاب الطالب ص 76"
+          "ref": "كتاب الطالب ص 76",
+          "id": "en-9-u6-l4",
+          "ready": true
          },
          {
           "n": 5,
           "title": "How do you get to …?",
-          "ref": "كتاب الطالب ص 77"
+          "ref": "كتاب الطالب ص 77",
+          "id": "en-9-u6-l5",
+          "ready": true
          },
          {
           "n": 6,
           "title": "A Famous Career",
-          "ref": "كتاب الطالب ص 78⁠–⁠79"
+          "ref": "كتاب الطالب ص 78⁠–⁠79",
+          "id": "en-9-u6-l6",
+          "ready": true
          },
          {
           "n": 7,
           "title": "A School Project",
-          "ref": "كتاب الطالب ص 80"
+          "ref": "كتاب الطالب ص 80",
+          "id": "en-9-u6-l7",
+          "ready": true
          },
          {
           "n": 8,
           "title": "What should I do?",
-          "ref": "كتاب الطالب ص 81⁠–⁠83"
+          "ref": "كتاب الطالب ص 81⁠–⁠83",
+          "id": "en-9-u6-l8",
+          "ready": true
          }
         ],
         "titleAr": "الوظائف والمهن"
@@ -17717,42 +18015,58 @@
          {
           "n": 1,
           "title": "Countries of the World",
-          "ref": "كتاب الطالب ص 84⁠–⁠85"
+          "ref": "كتاب الطالب ص 84⁠–⁠85",
+          "id": "en-9-u7-l1",
+          "ready": true
          },
          {
           "n": 2,
           "title": "Different Countries, Different Customs",
-          "ref": "كتاب الطالب ص 86⁠–⁠87"
+          "ref": "كتاب الطالب ص 86⁠–⁠87",
+          "id": "en-9-u7-l2",
+          "ready": true
          },
          {
           "n": 3,
           "title": "Travel Adventures",
-          "ref": "كتاب الطالب ص 88"
+          "ref": "كتاب الطالب ص 88",
+          "id": "en-9-u7-l3",
+          "ready": true
          },
          {
           "n": 4,
           "title": "How? Where? When?",
-          "ref": "كتاب الطالب ص 89"
+          "ref": "كتاب الطالب ص 89",
+          "id": "en-9-u7-l4",
+          "ready": true
          },
          {
           "n": 5,
           "title": "I’m sorry.",
-          "ref": "كتاب الطالب ص 90"
+          "ref": "كتاب الطالب ص 90",
+          "id": "en-9-u7-l5",
+          "ready": true
          },
          {
           "n": 6,
           "title": "Two African Countries",
-          "ref": "كتاب الطالب ص 91"
+          "ref": "كتاب الطالب ص 91",
+          "id": "en-9-u7-l6",
+          "ready": true
          },
          {
           "n": 7,
           "title": "How many mobile phones are produced …?",
-          "ref": "كتاب الطالب ص 92"
+          "ref": "كتاب الطالب ص 92",
+          "id": "en-9-u7-l7",
+          "ready": true
          },
          {
           "n": 8,
           "title": "Life is Like a Cup of Coffee",
-          "ref": "كتاب الطالب ص 93⁠–⁠95"
+          "ref": "كتاب الطالب ص 93⁠–⁠95",
+          "id": "en-9-u7-l8",
+          "ready": true
          }
         ],
         "titleAr": "بلدان أخرى"
@@ -17764,22 +18078,30 @@
          {
           "n": 1,
           "title": "Listening",
-          "ref": "كتاب الطالب ص 96⁠–⁠97"
+          "ref": "كتاب الطالب ص 96⁠–⁠97",
+          "id": "en-9-u8-l1",
+          "ready": true
          },
          {
           "n": 2,
           "title": "Speaking",
-          "ref": "كتاب الطالب ص 98⁠–⁠99"
+          "ref": "كتاب الطالب ص 98⁠–⁠99",
+          "id": "en-9-u8-l2",
+          "ready": true
          },
          {
           "n": 3,
           "title": "Reading",
-          "ref": "كتاب الطالب ص 100⁠–⁠101"
+          "ref": "كتاب الطالب ص 100⁠–⁠101",
+          "id": "en-9-u8-l3",
+          "ready": true
          },
          {
           "n": 4,
           "title": "Writing",
-          "ref": "كتاب الطالب ص 102⁠–⁠104"
+          "ref": "كتاب الطالب ص 102⁠–⁠104",
+          "id": "en-9-u8-l4",
+          "ready": true
          }
         ],
         "titleAr": "متعة الإنجليزية 2"

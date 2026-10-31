@@ -1,0 +1,287 @@
+{
+ "id": "en-9-u5-l2",
+ "grade": 9,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 5 · Lesson 2: Lina Fakroun Talks to …",
+ "titleAr": "قالت: أحب عملي.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "قالت: أحب عملي.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "interviewer",
+       "ar": "محاور",
+       "em": "🎙️"
+      },
+      {
+       "id": "v1",
+       "en": "guest",
+       "ar": "ضيف",
+       "em": "🧑"
+      },
+      {
+       "id": "v2",
+       "en": "asked",
+       "ar": "سأل",
+       "em": "❓"
+      },
+      {
+       "id": "v3",
+       "en": "said",
+       "ar": "قال",
+       "em": "💬"
+      },
+      {
+       "id": "v4",
+       "en": "told",
+       "ar": "أخبر",
+       "em": "🗣️"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 60⁠–⁠61"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Reported speech",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">'I love my job,' she said.</div><div class=\"ex\">She said that she <b>loved</b> her job.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "'I love my job,' she said. She said that she loved her job."
+      }
+     ]
+    }
+   ],
+   "lead": "said that + الفعل يرجع خطوة للماضي: love → loved",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "She said that she ___ her job.",
+           "a": "loved",
+           "o": [
+            "loved",
+            "loves"
+           ]
+          },
+          {
+           "s": "He ___ me that he was tired.",
+           "a": "told",
+           "o": [
+            "told",
+            "said"
+           ]
+          },
+          {
+           "s": "The ___ asked many questions.",
+           "a": "interviewer",
+           "o": [
+            "interviewer",
+            "guest"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "'I love my job,' she said.",
+          "She said that she loved her job."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "'I love my job,' she said.",
+           "o": [
+            "'I love my job,' she said.",
+            "She said that she loved her job."
+           ]
+          },
+          {
+           "a": "She said that she loved her job.",
+           "o": [
+            "She said that she loved her job.",
+            "'I love my job,' she said."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "interviewer",
+       "ipa": "",
+       "meaning": "محاور",
+       "ex": "interviewer"
+      },
+      {
+       "must": 1,
+       "term": "guest",
+       "ipa": "",
+       "meaning": "ضيف",
+       "ex": "guest"
+      },
+      {
+       "must": 1,
+       "term": "asked",
+       "ipa": "",
+       "meaning": "سأل",
+       "ex": "asked"
+      },
+      {
+       "must": 0,
+       "term": "said",
+       "ipa": "",
+       "meaning": "قال",
+       "ex": "'I love my job,' she said."
+      },
+      {
+       "must": 0,
+       "term": "told",
+       "ipa": "",
+       "meaning": "أخبر",
+       "ex": "told"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "She said that she ___ her job.",
+       "a": "loved",
+       "o": [
+        "loved",
+        "loves"
+       ],
+       "why": ""
+      },
+      {
+       "q": "He ___ me that he was tired.",
+       "a": "told",
+       "o": [
+        "told",
+        "said"
+       ],
+       "why": ""
+      },
+      {
+       "q": "The ___ asked many questions.",
+       "a": "interviewer",
+       "o": [
+        "interviewer",
+        "guest"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى guest؟",
+       "a": "ضيف",
+       "o": [
+        "ضيف",
+        "محاور",
+        "سأل"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى told؟",
+       "a": "أخبر",
+       "o": [
+        "أخبر",
+        "محاور",
+        "ضيف"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "'I love my job,' she said.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "'I love my job,' she said.",
+       "o": [
+        "'I love my job,' she said.",
+        "She said that she loved her job."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

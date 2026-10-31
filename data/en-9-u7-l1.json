@@ -1,0 +1,287 @@
+{
+ "id": "en-9-u7-l1",
+ "grade": 9,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 7 · Lesson 1: Countries of the World",
+ "titleAr": "للصين والهند أكبر عدد من السكان.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "للصين والهند أكبر عدد من السكان.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "Brazil",
+       "ar": "البرازيل",
+       "em": "🇧🇷"
+      },
+      {
+       "id": "v1",
+       "en": "China",
+       "ar": "الصين",
+       "em": "🇨🇳"
+      },
+      {
+       "id": "v2",
+       "en": "India",
+       "ar": "الهند",
+       "em": "🇮🇳"
+      },
+      {
+       "id": "v3",
+       "en": "Canada",
+       "ar": "كندا",
+       "em": "🇨🇦"
+      },
+      {
+       "id": "v4",
+       "en": "population",
+       "ar": "سكان",
+       "em": "👥"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 84⁠–⁠85"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Comparatives and superlatives",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">China and India have the <b>largest</b> populations.</div><div class=\"ex\">Canada is <b>larger</b> than the USA.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "China and India have the largest populations. Canada is larger than the USA."
+      }
+     ]
+    }
+   ],
+   "lead": "larger than / the largest",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "India has one of the ___ populations.",
+           "a": "largest",
+           "o": [
+            "largest",
+            "larger"
+           ]
+          },
+          {
+           "s": "Canada is ___ than the USA.",
+           "a": "larger",
+           "o": [
+            "larger",
+            "largest"
+           ]
+          },
+          {
+           "s": "Brazil is in South ___ .",
+           "a": "America",
+           "o": [
+            "America",
+            "Asia"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "China and India have the largest populations.",
+          "Canada is larger than the USA."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "China and India have the largest populations.",
+           "o": [
+            "China and India have the largest populations.",
+            "Canada is larger than the USA."
+           ]
+          },
+          {
+           "a": "Canada is larger than the USA.",
+           "o": [
+            "Canada is larger than the USA.",
+            "China and India have the largest populations."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "Brazil",
+       "ipa": "",
+       "meaning": "البرازيل",
+       "ex": "Brazil"
+      },
+      {
+       "must": 1,
+       "term": "China",
+       "ipa": "",
+       "meaning": "الصين",
+       "ex": "China and India have the largest populations."
+      },
+      {
+       "must": 1,
+       "term": "India",
+       "ipa": "",
+       "meaning": "الهند",
+       "ex": "China and India have the largest populations."
+      },
+      {
+       "must": 0,
+       "term": "Canada",
+       "ipa": "",
+       "meaning": "كندا",
+       "ex": "Canada is larger than the USA."
+      },
+      {
+       "must": 0,
+       "term": "population",
+       "ipa": "",
+       "meaning": "سكان",
+       "ex": "China and India have the largest populations."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "India has one of the ___ populations.",
+       "a": "largest",
+       "o": [
+        "largest",
+        "larger"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Canada is ___ than the USA.",
+       "a": "larger",
+       "o": [
+        "larger",
+        "largest"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Brazil is in South ___ .",
+       "a": "America",
+       "o": [
+        "America",
+        "Asia"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى population؟",
+       "a": "سكان",
+       "o": [
+        "سكان",
+        "البرازيل",
+        "الصين"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى China؟",
+       "a": "الصين",
+       "o": [
+        "الصين",
+        "البرازيل",
+        "الهند"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "China and India have the largest populations.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "China and India have the largest populations.",
+       "o": [
+        "China and India have the largest populations.",
+        "Canada is larger than the USA."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

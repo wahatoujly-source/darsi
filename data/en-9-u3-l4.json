@@ -1,0 +1,287 @@
+{
+ "id": "en-9-u3-l4",
+ "grade": 9,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 3 · Lesson 4: If we didn't have …",
+ "titleAr": "لو لم تكن لدينا كهرباء لكانت الحياة صعبة.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "لو لم تكن لدينا كهرباء لكانت الحياة صعبة.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "electricity",
+       "ar": "الكهرباء",
+       "em": "⚡"
+      },
+      {
+       "id": "v1",
+       "en": "internet",
+       "ar": "الإنترنت",
+       "em": "🌐"
+      },
+      {
+       "id": "v2",
+       "en": "imagine",
+       "ar": "يتخيل",
+       "em": "💭"
+      },
+      {
+       "id": "v3",
+       "en": "life",
+       "ar": "الحياة",
+       "em": "🌍"
+      },
+      {
+       "id": "v4",
+       "en": "difficult",
+       "ar": "صعب",
+       "em": "😓"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 40⁠–⁠41"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Second conditional",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">If we didn't have electricity, life <b>would</b> be difficult.</div><div class=\"ex\"><b>Imagine</b> life without the internet!</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "If we didn't have electricity, life would be difficult. Imagine life without the internet!"
+      }
+     ]
+    }
+   ],
+   "lead": "If + past simple, would + verb",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "If we didn't have water, we ___ die.",
+           "a": "would",
+           "o": [
+            "would",
+            "will"
+           ]
+          },
+          {
+           "s": "If we ___ have the internet, …",
+           "a": "didn't",
+           "o": [
+            "didn't",
+            "don't"
+           ]
+          },
+          {
+           "s": "___ life without phones!",
+           "a": "Imagine",
+           "o": [
+            "Imagine",
+            "Imagines"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "If we didn't have electricity, life would be difficult.",
+          "Imagine life without the internet!"
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "If we didn't have electricity, life would be difficult.",
+           "o": [
+            "If we didn't have electricity, life would be difficult.",
+            "Imagine life without the internet!"
+           ]
+          },
+          {
+           "a": "Imagine life without the internet!",
+           "o": [
+            "Imagine life without the internet!",
+            "If we didn't have electricity, life would be difficult."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "electricity",
+       "ipa": "",
+       "meaning": "الكهرباء",
+       "ex": "If we didn't have electricity, life would be difficult."
+      },
+      {
+       "must": 1,
+       "term": "internet",
+       "ipa": "",
+       "meaning": "الإنترنت",
+       "ex": "Imagine life without the internet!"
+      },
+      {
+       "must": 1,
+       "term": "imagine",
+       "ipa": "",
+       "meaning": "يتخيل",
+       "ex": "Imagine life without the internet!"
+      },
+      {
+       "must": 0,
+       "term": "life",
+       "ipa": "",
+       "meaning": "الحياة",
+       "ex": "If we didn't have electricity, life would be difficult."
+      },
+      {
+       "must": 0,
+       "term": "difficult",
+       "ipa": "",
+       "meaning": "صعب",
+       "ex": "If we didn't have electricity, life would be difficult."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "If we didn't have water, we ___ die.",
+       "a": "would",
+       "o": [
+        "would",
+        "will"
+       ],
+       "why": ""
+      },
+      {
+       "q": "If we ___ have the internet, …",
+       "a": "didn't",
+       "o": [
+        "didn't",
+        "don't"
+       ],
+       "why": ""
+      },
+      {
+       "q": "___ life without phones!",
+       "a": "Imagine",
+       "o": [
+        "Imagine",
+        "Imagines"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى life؟",
+       "a": "الحياة",
+       "o": [
+        "الحياة",
+        "الكهرباء",
+        "الإنترنت"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى difficult؟",
+       "a": "صعب",
+       "o": [
+        "صعب",
+        "الكهرباء",
+        "الإنترنت"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "If we didn't have electricity, life would be difficult.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "If we didn't have electricity, life would be difficult.",
+       "o": [
+        "If we didn't have electricity, life would be difficult.",
+        "Imagine life without the internet!"
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

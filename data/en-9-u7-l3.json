@@ -1,0 +1,287 @@
+{
+ "id": "en-9-u7-l3",
+ "grade": 9,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 7 · Lesson 3: Travel Adventures",
+ "titleAr": "استكشفنا كهوف جبال أكاكوس.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "استكشفنا كهوف جبال أكاكوس.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "adventure",
+       "ar": "مغامرة",
+       "em": "🧗"
+      },
+      {
+       "id": "v1",
+       "en": "explore",
+       "ar": "يستكشف",
+       "em": "🧭"
+      },
+      {
+       "id": "v2",
+       "en": "cave",
+       "ar": "كهف",
+       "em": "🕳️"
+      },
+      {
+       "id": "v3",
+       "en": "guide",
+       "ar": "مرشد",
+       "em": "🧑‍🏫"
+      },
+      {
+       "id": "v4",
+       "en": "unforgettable",
+       "ar": "لا يُنسى",
+       "em": "✨"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 88"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Past perfect",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">We <b>explored</b> the caves of the Akakus mountains.</div><div class=\"ex\">We <b>had</b> already seen the rock paintings when the storm came.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "We explored the caves of the Akakus mountains. We had already seen the rock paintings when the storm came."
+      }
+     ]
+    }
+   ],
+   "lead": "had + p.p. لحدث وقع قبل حدث آخر في الماضي.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "We ___ already seen the paintings.",
+           "a": "had",
+           "o": [
+            "had",
+            "have"
+           ]
+          },
+          {
+           "s": "We ___ the caves.",
+           "a": "explored",
+           "o": [
+            "explored",
+            "explore"
+           ]
+          },
+          {
+           "s": "It was an ___ trip.",
+           "a": "unforgettable",
+           "o": [
+            "unforgettable",
+            "unforgotten"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "We explored the caves of the Akakus mountains.",
+          "We had already seen the rock paintings when the storm came."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "We explored the caves of the Akakus mountains.",
+           "o": [
+            "We explored the caves of the Akakus mountains.",
+            "We had already seen the rock paintings when the storm came."
+           ]
+          },
+          {
+           "a": "We had already seen the rock paintings when the storm came.",
+           "o": [
+            "We had already seen the rock paintings when the storm came.",
+            "We explored the caves of the Akakus mountains."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "adventure",
+       "ipa": "",
+       "meaning": "مغامرة",
+       "ex": "adventure"
+      },
+      {
+       "must": 1,
+       "term": "explore",
+       "ipa": "",
+       "meaning": "يستكشف",
+       "ex": "We explored the caves of the Akakus mountains."
+      },
+      {
+       "must": 1,
+       "term": "cave",
+       "ipa": "",
+       "meaning": "كهف",
+       "ex": "We explored the caves of the Akakus mountains."
+      },
+      {
+       "must": 0,
+       "term": "guide",
+       "ipa": "",
+       "meaning": "مرشد",
+       "ex": "guide"
+      },
+      {
+       "must": 0,
+       "term": "unforgettable",
+       "ipa": "",
+       "meaning": "لا يُنسى",
+       "ex": "unforgettable"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "We ___ already seen the paintings.",
+       "a": "had",
+       "o": [
+        "had",
+        "have"
+       ],
+       "why": ""
+      },
+      {
+       "q": "We ___ the caves.",
+       "a": "explored",
+       "o": [
+        "explored",
+        "explore"
+       ],
+       "why": ""
+      },
+      {
+       "q": "It was an ___ trip.",
+       "a": "unforgettable",
+       "o": [
+        "unforgettable",
+        "unforgotten"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى cave؟",
+       "a": "كهف",
+       "o": [
+        "كهف",
+        "مغامرة",
+        "يستكشف"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى explore؟",
+       "a": "يستكشف",
+       "o": [
+        "يستكشف",
+        "مغامرة",
+        "كهف"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "We explored the caves of the Akakus mountains.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "We explored the caves of the Akakus mountains.",
+       "o": [
+        "We explored the caves of the Akakus mountains.",
+        "We had already seen the rock paintings when the storm came."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

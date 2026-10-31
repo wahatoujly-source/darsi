@@ -1,0 +1,287 @@
+{
+ "id": "en-7-u2-l7",
+ "grade": 7,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 2 · Lesson 7: Eid Alfitr",
+ "titleAr": "يصوم المسلمون في رمضان.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "يصوم المسلمون في رمضان.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "Ramadan",
+       "ar": "رمضان",
+       "em": "🌙"
+      },
+      {
+       "id": "v1",
+       "en": "fast",
+       "ar": "يصوم",
+       "em": "🍽️"
+      },
+      {
+       "id": "v2",
+       "en": "celebrate",
+       "ar": "يحتفل",
+       "em": "🎉"
+      },
+      {
+       "id": "v3",
+       "en": "new clothes",
+       "ar": "ملابس جديدة",
+       "em": "👕"
+      },
+      {
+       "id": "v4",
+       "en": "sweets",
+       "ar": "حلويات",
+       "em": "🍬"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 26"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Present simple for customs",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Muslims <b>fast</b> during Ramadan.</div><div class=\"ex\">At Eid, we wear new clothes and visit relatives.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Muslims fast during Ramadan. At Eid, we wear new clothes and visit relatives."
+      }
+     ]
+    }
+   ],
+   "lead": "We wear … / We visit …",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "Muslims ___ during Ramadan.",
+           "a": "fast",
+           "o": [
+            "fast",
+            "fasts"
+           ]
+          },
+          {
+           "s": "We ___ Eid with our families.",
+           "a": "celebrate",
+           "o": [
+            "celebrate",
+            "celebrates"
+           ]
+          },
+          {
+           "s": "Children get ___ and money.",
+           "a": "sweets",
+           "o": [
+            "sweets",
+            "sweet"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Muslims fast during Ramadan.",
+          "At Eid, we wear new clothes and visit relatives."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Muslims fast during Ramadan.",
+           "o": [
+            "Muslims fast during Ramadan.",
+            "At Eid, we wear new clothes and visit relatives."
+           ]
+          },
+          {
+           "a": "At Eid, we wear new clothes and visit relatives.",
+           "o": [
+            "At Eid, we wear new clothes and visit relatives.",
+            "Muslims fast during Ramadan."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "Ramadan",
+       "ipa": "",
+       "meaning": "رمضان",
+       "ex": "Muslims fast during Ramadan."
+      },
+      {
+       "must": 1,
+       "term": "fast",
+       "ipa": "",
+       "meaning": "يصوم",
+       "ex": "Muslims fast during Ramadan."
+      },
+      {
+       "must": 1,
+       "term": "celebrate",
+       "ipa": "",
+       "meaning": "يحتفل",
+       "ex": "celebrate"
+      },
+      {
+       "must": 0,
+       "term": "new clothes",
+       "ipa": "",
+       "meaning": "ملابس جديدة",
+       "ex": "At Eid, we wear new clothes and visit relatives."
+      },
+      {
+       "must": 0,
+       "term": "sweets",
+       "ipa": "",
+       "meaning": "حلويات",
+       "ex": "sweets"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "Muslims ___ during Ramadan.",
+       "a": "fast",
+       "o": [
+        "fast",
+        "fasts"
+       ],
+       "why": ""
+      },
+      {
+       "q": "We ___ Eid with our families.",
+       "a": "celebrate",
+       "o": [
+        "celebrate",
+        "celebrates"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Children get ___ and money.",
+       "a": "sweets",
+       "o": [
+        "sweets",
+        "sweet"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى fast؟",
+       "a": "يصوم",
+       "o": [
+        "يصوم",
+        "رمضان",
+        "يحتفل"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى new clothes؟",
+       "a": "ملابس جديدة",
+       "o": [
+        "ملابس جديدة",
+        "رمضان",
+        "يصوم"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Muslims fast during Ramadan.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Muslims fast during Ramadan.",
+       "o": [
+        "Muslims fast during Ramadan.",
+        "At Eid, we wear new clothes and visit relatives."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

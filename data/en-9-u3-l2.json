@@ -1,0 +1,287 @@
+{
+ "id": "en-9-u3-l2",
+ "grade": 9,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 3 · Lesson 2: Our Growing World",
+ "titleAr": "ازداد عدد سكان العالم إلى أكثر من ثمانية مليارات.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "ازداد عدد سكان العالم إلى أكثر من ثمانية مليارات.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "population",
+       "ar": "سكان",
+       "em": "👥"
+      },
+      {
+       "id": "v1",
+       "en": "increase",
+       "ar": "يزداد",
+       "em": "📈"
+      },
+      {
+       "id": "v2",
+       "en": "billion",
+       "ar": "مليار",
+       "em": "🔢"
+      },
+      {
+       "id": "v3",
+       "en": "resources",
+       "ar": "موارد",
+       "em": "⛏️"
+      },
+      {
+       "id": "v4",
+       "en": "crowded",
+       "ar": "مزدحم",
+       "em": "🏙️"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 38"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Present perfect for change",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">The world's population <b>has</b> increased to over eight billion.</div><div class=\"ex\">Cities are becoming more <b>crowded</b>.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "The world's population has increased to over eight billion. Cities are becoming more crowded."
+      }
+     ]
+    }
+   ],
+   "lead": "has increased / have grown",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "The population ___ increased.",
+           "a": "has",
+           "o": [
+            "has",
+            "have"
+           ]
+          },
+          {
+           "s": "Cities are becoming more ___ .",
+           "a": "crowded",
+           "o": [
+            "crowded",
+            "crowd"
+           ]
+          },
+          {
+           "s": "We must use our ___ carefully.",
+           "a": "resources",
+           "o": [
+            "resources",
+            "resource"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "The world's population has increased to over eight billion.",
+          "Cities are becoming more crowded."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "The world's population has increased to over eight billion.",
+           "o": [
+            "The world's population has increased to over eight billion.",
+            "Cities are becoming more crowded."
+           ]
+          },
+          {
+           "a": "Cities are becoming more crowded.",
+           "o": [
+            "Cities are becoming more crowded.",
+            "The world's population has increased to over eight billion."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "population",
+       "ipa": "",
+       "meaning": "سكان",
+       "ex": "The world's population has increased to over eight billion."
+      },
+      {
+       "must": 1,
+       "term": "increase",
+       "ipa": "",
+       "meaning": "يزداد",
+       "ex": "The world's population has increased to over eight billion."
+      },
+      {
+       "must": 1,
+       "term": "billion",
+       "ipa": "",
+       "meaning": "مليار",
+       "ex": "The world's population has increased to over eight billion."
+      },
+      {
+       "must": 0,
+       "term": "resources",
+       "ipa": "",
+       "meaning": "موارد",
+       "ex": "resources"
+      },
+      {
+       "must": 0,
+       "term": "crowded",
+       "ipa": "",
+       "meaning": "مزدحم",
+       "ex": "Cities are becoming more crowded."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "The population ___ increased.",
+       "a": "has",
+       "o": [
+        "has",
+        "have"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Cities are becoming more ___ .",
+       "a": "crowded",
+       "o": [
+        "crowded",
+        "crowd"
+       ],
+       "why": ""
+      },
+      {
+       "q": "We must use our ___ carefully.",
+       "a": "resources",
+       "o": [
+        "resources",
+        "resource"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى resources؟",
+       "a": "موارد",
+       "o": [
+        "موارد",
+        "سكان",
+        "يزداد"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى population؟",
+       "a": "سكان",
+       "o": [
+        "سكان",
+        "يزداد",
+        "مليار"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "The world's population has increased to over eight billion.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "The world's population has increased to over eight billion.",
+       "o": [
+        "The world's population has increased to over eight billion.",
+        "Cities are becoming more crowded."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

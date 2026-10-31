@@ -1,0 +1,299 @@
+{
+ "id": "en-8-u3-l3",
+ "grade": 8,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 3 · Lesson 3: Booking Lessons",
+ "titleAr": "أود حجز دروس سباحة من فضلك.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "أود حجز دروس سباحة من فضلك.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "book",
+       "ar": "يحجز",
+       "em": "📅"
+      },
+      {
+       "id": "v1",
+       "en": "lesson",
+       "ar": "درس",
+       "em": "🏊"
+      },
+      {
+       "id": "v2",
+       "en": "price",
+       "ar": "سعر",
+       "em": "💰"
+      },
+      {
+       "id": "v3",
+       "en": "each",
+       "ar": "لكل",
+       "em": "1️⃣"
+      },
+      {
+       "id": "v4",
+       "en": "form",
+       "ar": "استمارة",
+       "em": "📝"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 38"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "I'd like to …",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">I'd like <b>to</b> book swimming lessons, please.</div><div class=\"ex\">How much <b>does</b> each lesson cost?</div><div class=\"ex\">Please fill <b>in</b> this form.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "I'd like to book swimming lessons, please. How much does each lesson cost? Please fill in this form."
+      }
+     ]
+    }
+   ],
+   "lead": "طلب مهذب.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "I'd like ___ book lessons.",
+           "a": "to",
+           "o": [
+            "to",
+            "for"
+           ]
+          },
+          {
+           "s": "How much ___ each lesson cost?",
+           "a": "does",
+           "o": [
+            "does",
+            "do"
+           ]
+          },
+          {
+           "s": "Please fill ___ this form.",
+           "a": "in",
+           "o": [
+            "in",
+            "on"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "I'd like to book swimming lessons, please.",
+          "How much does each lesson cost?",
+          "Please fill in this form."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "I'd like to book swimming lessons, please.",
+           "o": [
+            "I'd like to book swimming lessons, please.",
+            "How much does each lesson cost?",
+            "Please fill in this form."
+           ]
+          },
+          {
+           "a": "How much does each lesson cost?",
+           "o": [
+            "How much does each lesson cost?",
+            "I'd like to book swimming lessons, please.",
+            "Please fill in this form."
+           ]
+          },
+          {
+           "a": "Please fill in this form.",
+           "o": [
+            "Please fill in this form.",
+            "I'd like to book swimming lessons, please.",
+            "How much does each lesson cost?"
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "book",
+       "ipa": "",
+       "meaning": "يحجز",
+       "ex": "I'd like to book swimming lessons, please."
+      },
+      {
+       "must": 1,
+       "term": "lesson",
+       "ipa": "",
+       "meaning": "درس",
+       "ex": "I'd like to book swimming lessons, please."
+      },
+      {
+       "must": 1,
+       "term": "price",
+       "ipa": "",
+       "meaning": "سعر",
+       "ex": "price"
+      },
+      {
+       "must": 0,
+       "term": "each",
+       "ipa": "",
+       "meaning": "لكل",
+       "ex": "How much does each lesson cost?"
+      },
+      {
+       "must": 0,
+       "term": "form",
+       "ipa": "",
+       "meaning": "استمارة",
+       "ex": "Please fill in this form."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "I'd like ___ book lessons.",
+       "a": "to",
+       "o": [
+        "to",
+        "for"
+       ],
+       "why": ""
+      },
+      {
+       "q": "How much ___ each lesson cost?",
+       "a": "does",
+       "o": [
+        "does",
+        "do"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Please fill ___ this form.",
+       "a": "in",
+       "o": [
+        "in",
+        "on"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى lesson؟",
+       "a": "درس",
+       "o": [
+        "درس",
+        "يحجز",
+        "سعر"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى form؟",
+       "a": "استمارة",
+       "o": [
+        "استمارة",
+        "يحجز",
+        "درس"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "I'd like to book swimming lessons, please.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "I'd like to book swimming lessons, please.",
+       "o": [
+        "I'd like to book swimming lessons, please.",
+        "How much does each lesson cost?",
+        "Please fill in this form."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

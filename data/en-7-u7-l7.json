@@ -1,0 +1,287 @@
+{
+ "id": "en-7-u7-l7",
+ "grade": 7,
+ "subject": "en",
+ "stage": "prep-7-9",
+ "lang": "en",
+ "title": "Unit 7 · Lesson 7: Stay Safe and Healthy",
+ "titleAr": "اشرب الكثير من الماء في الصيف.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "اشرب الكثير من الماء في الصيف.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "sun",
+       "ar": "شمس",
+       "em": "☀️"
+      },
+      {
+       "id": "v1",
+       "en": "drink",
+       "ar": "يشرب",
+       "em": "💧"
+      },
+      {
+       "id": "v2",
+       "en": "hat",
+       "ar": "قبعة",
+       "em": "👒"
+      },
+      {
+       "id": "v3",
+       "en": "sleep",
+       "ar": "نوم",
+       "em": "😴"
+      },
+      {
+       "id": "v4",
+       "en": "wash",
+       "ar": "يغسل",
+       "em": "🧼"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب الطالب ص 82"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "plenty of",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Drink <b>plenty</b> of water in summer.</div><div class=\"ex\">Wear a <b>hat</b> in the sun.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Drink plenty of water in summer. Wear a hat in the sun."
+      }
+     ]
+    }
+   ],
+   "lead": "كثير من: plenty of water",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "Drink ___ of water.",
+           "a": "plenty",
+           "o": [
+            "plenty",
+            "many"
+           ]
+          },
+          {
+           "s": "Wear a ___ in the sun.",
+           "a": "hat",
+           "o": [
+            "hat",
+            "coat"
+           ]
+          },
+          {
+           "s": "___ your hands before meals.",
+           "a": "Wash",
+           "o": [
+            "Wash",
+            "Washes"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Drink plenty of water in summer.",
+          "Wear a hat in the sun."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Drink plenty of water in summer.",
+           "o": [
+            "Drink plenty of water in summer.",
+            "Wear a hat in the sun."
+           ]
+          },
+          {
+           "a": "Wear a hat in the sun.",
+           "o": [
+            "Wear a hat in the sun.",
+            "Drink plenty of water in summer."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "sun",
+       "ipa": "",
+       "meaning": "شمس",
+       "ex": "Wear a hat in the sun."
+      },
+      {
+       "must": 1,
+       "term": "drink",
+       "ipa": "",
+       "meaning": "يشرب",
+       "ex": "Drink plenty of water in summer."
+      },
+      {
+       "must": 1,
+       "term": "hat",
+       "ipa": "",
+       "meaning": "قبعة",
+       "ex": "Wear a hat in the sun."
+      },
+      {
+       "must": 0,
+       "term": "sleep",
+       "ipa": "",
+       "meaning": "نوم",
+       "ex": "sleep"
+      },
+      {
+       "must": 0,
+       "term": "wash",
+       "ipa": "",
+       "meaning": "يغسل",
+       "ex": "wash"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "Drink ___ of water.",
+       "a": "plenty",
+       "o": [
+        "plenty",
+        "many"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Wear a ___ in the sun.",
+       "a": "hat",
+       "o": [
+        "hat",
+        "coat"
+       ],
+       "why": ""
+      },
+      {
+       "q": "___ your hands before meals.",
+       "a": "Wash",
+       "o": [
+        "Wash",
+        "Washes"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى wash؟",
+       "a": "يغسل",
+       "o": [
+        "يغسل",
+        "شمس",
+        "يشرب"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى drink؟",
+       "a": "يشرب",
+       "o": [
+        "يشرب",
+        "شمس",
+        "قبعة"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Drink plenty of water in summer.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Drink plenty of water in summer.",
+       "o": [
+        "Drink plenty of water in summer.",
+        "Wear a hat in the sun."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}
