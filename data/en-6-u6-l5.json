@@ -1,0 +1,287 @@
+{
+ "id": "en-6-u6-l5",
+ "grade": 6,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 6 · Lesson 5: Let's be safe at home.",
+ "titleAr": "لا تلعب بأعواد الثقاب.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "لا تلعب بأعواد الثقاب.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "plug",
+       "ar": "قابس",
+       "em": "🔌"
+      },
+      {
+       "id": "v1",
+       "en": "medicine",
+       "ar": "دواء",
+       "em": "💊"
+      },
+      {
+       "id": "v2",
+       "en": "matches",
+       "ar": "أعواد ثقاب",
+       "em": "🔥"
+      },
+      {
+       "id": "v3",
+       "en": "stairs",
+       "ar": "درج",
+       "em": "🪜"
+      },
+      {
+       "id": "v4",
+       "en": "dangerous",
+       "ar": "خطير",
+       "em": "⚠️"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 94⁠–⁠95 · كتاب النشاط ص 80⁠–⁠81"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Don't + verb",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\"><b>Don't</b> play with matches.</div><div class=\"ex\"><b>Don't</b> touch plugs with wet hands.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Don't play with matches. Don't touch plugs with wet hands."
+      }
+     ]
+    }
+   ],
+   "lead": "النهي للسلامة.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "___ play with matches.",
+           "a": "Don't",
+           "o": [
+            "Don't",
+            "Do"
+           ]
+          },
+          {
+           "s": "Plugs and water are ___ .",
+           "a": "dangerous",
+           "o": [
+            "dangerous",
+            "safe"
+           ]
+          },
+          {
+           "s": "Keep ___ away from children.",
+           "a": "medicine",
+           "o": [
+            "medicine",
+            "stairs"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Don't play with matches.",
+          "Don't touch plugs with wet hands."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Don't play with matches.",
+           "o": [
+            "Don't play with matches.",
+            "Don't touch plugs with wet hands."
+           ]
+          },
+          {
+           "a": "Don't touch plugs with wet hands.",
+           "o": [
+            "Don't touch plugs with wet hands.",
+            "Don't play with matches."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "plug",
+       "ipa": "",
+       "meaning": "قابس",
+       "ex": "Don't touch plugs with wet hands."
+      },
+      {
+       "must": 1,
+       "term": "medicine",
+       "ipa": "",
+       "meaning": "دواء",
+       "ex": "medicine"
+      },
+      {
+       "must": 1,
+       "term": "matches",
+       "ipa": "",
+       "meaning": "أعواد ثقاب",
+       "ex": "Don't play with matches."
+      },
+      {
+       "must": 0,
+       "term": "stairs",
+       "ipa": "",
+       "meaning": "درج",
+       "ex": "stairs"
+      },
+      {
+       "must": 0,
+       "term": "dangerous",
+       "ipa": "",
+       "meaning": "خطير",
+       "ex": "dangerous"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "___ play with matches.",
+       "a": "Don't",
+       "o": [
+        "Don't",
+        "Do"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Plugs and water are ___ .",
+       "a": "dangerous",
+       "o": [
+        "dangerous",
+        "safe"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Keep ___ away from children.",
+       "a": "medicine",
+       "o": [
+        "medicine",
+        "stairs"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى stairs؟",
+       "a": "درج",
+       "o": [
+        "درج",
+        "قابس",
+        "دواء"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى plug؟",
+       "a": "قابس",
+       "o": [
+        "قابس",
+        "دواء",
+        "أعواد ثقاب"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Don't play with matches.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Don't play with matches.",
+       "o": [
+        "Don't play with matches.",
+        "Don't touch plugs with wet hands."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

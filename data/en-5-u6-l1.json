@@ -1,0 +1,287 @@
+{
+ "id": "en-5-u6-l1",
+ "grade": 5,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 6 · Lesson 1: In the City",
+ "titleAr": "يوجد مصرف في وسط المدينة.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "يوجد مصرف في وسط المدينة.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "bank",
+       "ar": "مصرف",
+       "em": "🏦"
+      },
+      {
+       "id": "v1",
+       "en": "post office",
+       "ar": "مكتب البريد",
+       "em": "🏤"
+      },
+      {
+       "id": "v2",
+       "en": "pharmacy",
+       "ar": "صيدلية",
+       "em": "💊"
+      },
+      {
+       "id": "v3",
+       "en": "restaurant",
+       "ar": "مطعم",
+       "em": "🍽️"
+      },
+      {
+       "id": "v4",
+       "en": "traffic lights",
+       "ar": "إشارة مرور",
+       "em": "🚦"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 86⁠–⁠87 · كتاب النشاط ص 72⁠–⁠73"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Places in the city",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">There's a bank in the city centre.</div><div class=\"ex\">Stop at the traffic <b>lights</b>.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "There's a bank in the city centre. Stop at the traffic lights."
+      }
+     ]
+    }
+   ],
+   "lead": "نستخدم There's / There are لوصف المدينة.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "We buy medicine at the ___ .",
+           "a": "pharmacy",
+           "o": [
+            "pharmacy",
+            "bank"
+           ]
+          },
+          {
+           "s": "We send letters at the ___ .",
+           "a": "post office",
+           "o": [
+            "post office",
+            "restaurant"
+           ]
+          },
+          {
+           "s": "Stop at the traffic ___ .",
+           "a": "lights",
+           "o": [
+            "lights",
+            "light"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "There's a bank in the city centre.",
+          "Stop at the traffic lights."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "There's a bank in the city centre.",
+           "o": [
+            "There's a bank in the city centre.",
+            "Stop at the traffic lights."
+           ]
+          },
+          {
+           "a": "Stop at the traffic lights.",
+           "o": [
+            "Stop at the traffic lights.",
+            "There's a bank in the city centre."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "bank",
+       "ipa": "",
+       "meaning": "مصرف",
+       "ex": "There's a bank in the city centre."
+      },
+      {
+       "must": 1,
+       "term": "post office",
+       "ipa": "",
+       "meaning": "مكتب البريد",
+       "ex": "post office"
+      },
+      {
+       "must": 1,
+       "term": "pharmacy",
+       "ipa": "",
+       "meaning": "صيدلية",
+       "ex": "pharmacy"
+      },
+      {
+       "must": 0,
+       "term": "restaurant",
+       "ipa": "",
+       "meaning": "مطعم",
+       "ex": "restaurant"
+      },
+      {
+       "must": 0,
+       "term": "traffic lights",
+       "ipa": "",
+       "meaning": "إشارة مرور",
+       "ex": "Stop at the traffic lights."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "We buy medicine at the ___ .",
+       "a": "pharmacy",
+       "o": [
+        "pharmacy",
+        "bank"
+       ],
+       "why": ""
+      },
+      {
+       "q": "We send letters at the ___ .",
+       "a": "post office",
+       "o": [
+        "post office",
+        "restaurant"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Stop at the traffic ___ .",
+       "a": "lights",
+       "o": [
+        "lights",
+        "light"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى post office؟",
+       "a": "مكتب البريد",
+       "o": [
+        "مكتب البريد",
+        "مصرف",
+        "صيدلية"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى pharmacy؟",
+       "a": "صيدلية",
+       "o": [
+        "صيدلية",
+        "مصرف",
+        "مكتب البريد"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "There's a bank in the city centre.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "There's a bank in the city centre.",
+       "o": [
+        "There's a bank in the city centre.",
+        "Stop at the traffic lights."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

@@ -1,0 +1,337 @@
+{
+ "id": "en-6-u8-l4",
+ "grade": 6,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 8 · Lesson 4: Let's sing!",
+ "titleAr": "نردّد بإيقاع — Revision (2)",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "نردّد بإيقاع — Revision (2)",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "thank you",
+       "ar": "شكراً",
+       "em": "🙏"
+      },
+      {
+       "id": "v1",
+       "en": "teacher",
+       "ar": "معلم",
+       "em": "🧑‍🏫"
+      },
+      {
+       "id": "v2",
+       "en": "fold",
+       "ar": "يطوي",
+       "em": "📄"
+      },
+      {
+       "id": "v3",
+       "en": "glue",
+       "ar": "يلصق",
+       "em": "🧴"
+      },
+      {
+       "id": "v4",
+       "en": "Saturday",
+       "ar": "السبت",
+       "em": "📅"
+      },
+      {
+       "id": "v5",
+       "en": "clean",
+       "ar": "ينظف",
+       "em": "🧹"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 125 · كتاب النشاط ص 107"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Chant",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Thank you for <b>teaching</b> us.</div><div class=\"ex\"><b>Fold</b> the paper in half.</div><div class=\"ex\"><b>On</b> Saturday morning, I clean my room.</div><div class=\"ex\">A chef is a person <b>who</b> cooks food.</div><div class=\"ex\">I'm going to <b>give</b> my mother flowers.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Thank you for teaching us. Fold the paper in half. On Saturday morning, I clean my room. A chef is a person who cooks food. I'm going to give my mother flowers."
+      }
+     ]
+    }
+   ],
+   "lead": "نردّد جمل الوحدة بإيقاع ونصفّق مع المقاطع المنبورة — يمكنك الاستماع إلى أغنية الكتاب مع معلمك.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "Thank you for ___ us.",
+           "a": "teaching",
+           "o": [
+            "teaching",
+            "teach"
+           ]
+          },
+          {
+           "s": "___ the paper in half.",
+           "a": "Fold",
+           "o": [
+            "Fold",
+            "Folds"
+           ]
+          },
+          {
+           "s": "___ Saturday morning, I clean my room.",
+           "a": "On",
+           "o": [
+            "On",
+            "In"
+           ]
+          },
+          {
+           "s": "A chef is a person ___ cooks.",
+           "a": "who",
+           "o": [
+            "who",
+            "which"
+           ]
+          },
+          {
+           "s": "I'm going to ___ my mother flowers.",
+           "a": "give",
+           "o": [
+            "give",
+            "gives"
+           ]
+          },
+          {
+           "s": "How ___ plates do we need?",
+           "a": "many",
+           "o": [
+            "many",
+            "much"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Thank you for teaching us.",
+          "Fold the paper in half.",
+          "On Saturday morning, I clean my room.",
+          "A chef is a person who cooks food."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Thank you for teaching us.",
+           "o": [
+            "Thank you for teaching us.",
+            "Fold the paper in half.",
+            "On Saturday morning, I clean my room."
+           ]
+          },
+          {
+           "a": "Fold the paper in half.",
+           "o": [
+            "Fold the paper in half.",
+            "Thank you for teaching us.",
+            "On Saturday morning, I clean my room."
+           ]
+          },
+          {
+           "a": "On Saturday morning, I clean my room.",
+           "o": [
+            "On Saturday morning, I clean my room.",
+            "Thank you for teaching us.",
+            "Fold the paper in half."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "thank you",
+       "ipa": "",
+       "meaning": "شكراً",
+       "ex": "Thank you for teaching us."
+      },
+      {
+       "must": 1,
+       "term": "teacher",
+       "ipa": "",
+       "meaning": "معلم",
+       "ex": "teacher"
+      },
+      {
+       "must": 1,
+       "term": "fold",
+       "ipa": "",
+       "meaning": "يطوي",
+       "ex": "Fold the paper in half."
+      },
+      {
+       "must": 0,
+       "term": "glue",
+       "ipa": "",
+       "meaning": "يلصق",
+       "ex": "glue"
+      },
+      {
+       "must": 0,
+       "term": "Saturday",
+       "ipa": "",
+       "meaning": "السبت",
+       "ex": "On Saturday morning, I clean my room."
+      },
+      {
+       "must": 0,
+       "term": "clean",
+       "ipa": "",
+       "meaning": "ينظف",
+       "ex": "On Saturday morning, I clean my room."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "Thank you for ___ us.",
+       "a": "teaching",
+       "o": [
+        "teaching",
+        "teach"
+       ],
+       "why": ""
+      },
+      {
+       "q": "___ the paper in half.",
+       "a": "Fold",
+       "o": [
+        "Fold",
+        "Folds"
+       ],
+       "why": ""
+      },
+      {
+       "q": "___ Saturday morning, I clean my room.",
+       "a": "On",
+       "o": [
+        "On",
+        "In"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى clean؟",
+       "a": "ينظف",
+       "o": [
+        "ينظف",
+        "شكراً",
+        "معلم"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى teacher؟",
+       "a": "معلم",
+       "o": [
+        "معلم",
+        "شكراً",
+        "يطوي"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Thank you for teaching us.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Thank you for teaching us.",
+       "o": [
+        "Thank you for teaching us.",
+        "Fold the paper in half.",
+        "On Saturday morning, I clean my room."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

@@ -1,0 +1,319 @@
+{
+ "id": "en-5-u7-l8",
+ "grade": 5,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 7 · Lesson 8: Kareem's Dream",
+ "titleAr": "لدى كريم حلم.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "لدى كريم حلم.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "dream",
+       "ar": "حلم",
+       "em": "💭"
+      },
+      {
+       "id": "v1",
+       "en": "pilot",
+       "ar": "طيار",
+       "em": "🧑‍✈️"
+      },
+      {
+       "id": "v2",
+       "en": "fly",
+       "ar": "يطير",
+       "em": "✈️"
+      },
+      {
+       "id": "v3",
+       "en": "one day",
+       "ar": "يوماً ما",
+       "em": "🌅"
+      },
+      {
+       "id": "v4",
+       "en": "world",
+       "ar": "العالم",
+       "em": "🌍"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 118⁠–⁠119 · كتاب النشاط ص 102⁠–⁠103"
+  },
+  {
+   "title": "اقرأ",
+   "eyebrow": "الخطوة ٢ — اقرأ",
+   "heading": "اقرأ واستمع",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "📖 Kareem's Dream",
+     "html": "<div class=\"ex\">Kareem has a dream.</div><div class=\"ex\">He wants to be a pilot.</div><div class=\"ex\">One day he's going to fly around the world.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Kareem has a dream. He wants to be a pilot. One day he's going to fly around the world."
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط ▶ لتسمع النص."
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٣ — القاعدة",
+   "heading": "want to be",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Kareem has a dream.</div><div class=\"ex\">He wants <b>to</b> be a pilot.</div><div class=\"ex\">One day he's going <b>to</b> fly around the world.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Kareem has a dream. He wants to be a pilot. One day he's going to fly around the world."
+      }
+     ]
+    }
+   ],
+   "lead": "He wants to be a pilot.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٤ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "He wants ___ be a pilot.",
+           "a": "to",
+           "o": [
+            "to",
+            "be"
+           ]
+          },
+          {
+           "s": "A ___ flies planes.",
+           "a": "pilot",
+           "o": [
+            "pilot",
+            "dream"
+           ]
+          },
+          {
+           "s": "One day he's going to ___ .",
+           "a": "fly",
+           "o": [
+            "fly",
+            "flies"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Kareem has a dream.",
+          "He wants to be a pilot.",
+          "One day he's going to fly around the world."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Kareem has a dream.",
+           "o": [
+            "Kareem has a dream.",
+            "He wants to be a pilot.",
+            "One day he's going to fly around the world."
+           ]
+          },
+          {
+           "a": "He wants to be a pilot.",
+           "o": [
+            "He wants to be a pilot.",
+            "Kareem has a dream.",
+            "One day he's going to fly around the world."
+           ]
+          },
+          {
+           "a": "One day he's going to fly around the world.",
+           "o": [
+            "One day he's going to fly around the world.",
+            "Kareem has a dream.",
+            "He wants to be a pilot."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٥ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "dream",
+       "ipa": "",
+       "meaning": "حلم",
+       "ex": "Kareem has a dream."
+      },
+      {
+       "must": 1,
+       "term": "pilot",
+       "ipa": "",
+       "meaning": "طيار",
+       "ex": "He wants to be a pilot."
+      },
+      {
+       "must": 1,
+       "term": "fly",
+       "ipa": "",
+       "meaning": "يطير",
+       "ex": "One day he's going to fly around the world."
+      },
+      {
+       "must": 0,
+       "term": "one day",
+       "ipa": "",
+       "meaning": "يوماً ما",
+       "ex": "One day he's going to fly around the world."
+      },
+      {
+       "must": 0,
+       "term": "world",
+       "ipa": "",
+       "meaning": "العالم",
+       "ex": "One day he's going to fly around the world."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "He wants ___ be a pilot.",
+       "a": "to",
+       "o": [
+        "to",
+        "be"
+       ],
+       "why": ""
+      },
+      {
+       "q": "A ___ flies planes.",
+       "a": "pilot",
+       "o": [
+        "pilot",
+        "dream"
+       ],
+       "why": ""
+      },
+      {
+       "q": "One day he's going to ___ .",
+       "a": "fly",
+       "o": [
+        "fly",
+        "flies"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى one day؟",
+       "a": "يوماً ما",
+       "o": [
+        "يوماً ما",
+        "حلم",
+        "طيار"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى dream؟",
+       "a": "حلم",
+       "o": [
+        "حلم",
+        "طيار",
+        "يطير"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Kareem has a dream.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Kareem has a dream.",
+       "o": [
+        "Kareem has a dream.",
+        "He wants to be a pilot.",
+        "One day he's going to fly around the world."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

@@ -1,0 +1,287 @@
+{
+ "id": "en-5-u3-l4",
+ "grade": 5,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 3 · Lesson 4: At the Weekend",
+ "titleAr": "في العطلة أزور أقاربي.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "في العطلة أزور أقاربي.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "weekend",
+       "ar": "عطلة نهاية الأسبوع",
+       "em": "📅"
+      },
+      {
+       "id": "v1",
+       "en": "visit",
+       "ar": "يزور",
+       "em": "🏠"
+      },
+      {
+       "id": "v2",
+       "en": "relatives",
+       "ar": "أقارب",
+       "em": "👨‍👩‍👦"
+      },
+      {
+       "id": "v3",
+       "en": "relax",
+       "ar": "يسترخي",
+       "em": "😌"
+      },
+      {
+       "id": "v4",
+       "en": "picnic",
+       "ar": "نزهة",
+       "em": "🧺"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 50⁠–⁠51 · كتاب النشاط ص 42⁠–⁠43"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "at the weekend",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\"><b>At</b> the weekend, I visit my relatives.</div><div class=\"ex\">We sometimes have a <b>picnic</b>.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "At the weekend, I visit my relatives. We sometimes have a picnic."
+      }
+     ]
+    }
+   ],
+   "lead": "نستخدم at مع the weekend.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "___ the weekend, I relax.",
+           "a": "At",
+           "o": [
+            "At",
+            "In"
+           ]
+          },
+          {
+           "s": "I visit my ___ .",
+           "a": "relatives",
+           "o": [
+            "relatives",
+            "picnic"
+           ]
+          },
+          {
+           "s": "We have a ___ by the sea.",
+           "a": "picnic",
+           "o": [
+            "picnic",
+            "weekend"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "At the weekend, I visit my relatives.",
+          "We sometimes have a picnic."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "At the weekend, I visit my relatives.",
+           "o": [
+            "At the weekend, I visit my relatives.",
+            "We sometimes have a picnic."
+           ]
+          },
+          {
+           "a": "We sometimes have a picnic.",
+           "o": [
+            "We sometimes have a picnic.",
+            "At the weekend, I visit my relatives."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "weekend",
+       "ipa": "",
+       "meaning": "عطلة نهاية الأسبوع",
+       "ex": "At the weekend, I visit my relatives."
+      },
+      {
+       "must": 1,
+       "term": "visit",
+       "ipa": "",
+       "meaning": "يزور",
+       "ex": "At the weekend, I visit my relatives."
+      },
+      {
+       "must": 1,
+       "term": "relatives",
+       "ipa": "",
+       "meaning": "أقارب",
+       "ex": "At the weekend, I visit my relatives."
+      },
+      {
+       "must": 0,
+       "term": "relax",
+       "ipa": "",
+       "meaning": "يسترخي",
+       "ex": "relax"
+      },
+      {
+       "must": 0,
+       "term": "picnic",
+       "ipa": "",
+       "meaning": "نزهة",
+       "ex": "We sometimes have a picnic."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "___ the weekend, I relax.",
+       "a": "At",
+       "o": [
+        "At",
+        "In"
+       ],
+       "why": ""
+      },
+      {
+       "q": "I visit my ___ .",
+       "a": "relatives",
+       "o": [
+        "relatives",
+        "picnic"
+       ],
+       "why": ""
+      },
+      {
+       "q": "We have a ___ by the sea.",
+       "a": "picnic",
+       "o": [
+        "picnic",
+        "weekend"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى weekend؟",
+       "a": "عطلة نهاية الأسبوع",
+       "o": [
+        "عطلة نهاية الأسبوع",
+        "يزور",
+        "أقارب"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى relatives؟",
+       "a": "أقارب",
+       "o": [
+        "أقارب",
+        "عطلة نهاية الأسبوع",
+        "يزور"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "At the weekend, I visit my relatives.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "At the weekend, I visit my relatives.",
+       "o": [
+        "At the weekend, I visit my relatives.",
+        "We sometimes have a picnic."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

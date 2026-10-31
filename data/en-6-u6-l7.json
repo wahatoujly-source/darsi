@@ -1,0 +1,337 @@
+{
+ "id": "en-6-u6-l7",
+ "grade": 6,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 6 · Lesson 7: Check my Understanding",
+ "titleAr": "مراجعة الوحدة — Food and Drink",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "مراجعة الوحدة — Food and Drink",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "mix",
+       "ar": "يخلط",
+       "em": "🥣"
+      },
+      {
+       "id": "v1",
+       "en": "cut",
+       "ar": "يقطع",
+       "em": "🔪"
+      },
+      {
+       "id": "v2",
+       "en": "yourself",
+       "ar": "بنفسك",
+       "em": "🫵"
+      },
+      {
+       "id": "v3",
+       "en": "lemonade",
+       "ar": "ليمونادة",
+       "em": "🍋"
+      },
+      {
+       "id": "v4",
+       "en": "kitchen",
+       "ar": "مطبخ",
+       "em": "🍳"
+      },
+      {
+       "id": "v5",
+       "en": "oven",
+       "ar": "فرن",
+       "em": "♨️"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 98⁠–⁠99 · كتاب النشاط ص 84⁠–⁠85"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Review",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\"><b>First</b>, cut the tomatoes.</div><div class=\"ex\"><b>Squeeze</b> two lemons.</div><div class=\"ex\">My grandma <b>is</b> cooking bazeen.</div><div class=\"ex\">Cross at the zebra <b>crossing</b>.</div><div class=\"ex\"><b>Don't</b> play with matches.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "First, cut the tomatoes. Squeeze two lemons. My grandma is cooking bazeen. Cross at the zebra crossing. Don't play with matches."
+      }
+     ]
+    }
+   ],
+   "lead": "نراجع أهم قواعد الوحدة وكلماتها: اقرأ الأمثلة بصوت عالٍ ثم حلّ التمارين.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "___ , cut the tomatoes.",
+           "a": "First",
+           "o": [
+            "First",
+            "Last"
+           ]
+          },
+          {
+           "s": "___ two lemons.",
+           "a": "Squeeze",
+           "o": [
+            "Squeeze",
+            "Squeezes"
+           ]
+          },
+          {
+           "s": "Grandma ___ cooking.",
+           "a": "is",
+           "o": [
+            "is",
+            "are"
+           ]
+          },
+          {
+           "s": "Cross at the zebra ___ .",
+           "a": "crossing",
+           "o": [
+            "crossing",
+            "cross"
+           ]
+          },
+          {
+           "s": "___ play with matches.",
+           "a": "Don't",
+           "o": [
+            "Don't",
+            "Do"
+           ]
+          },
+          {
+           "s": "___ wear a helmet.",
+           "a": "Always",
+           "o": [
+            "Always",
+            "Never"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "First, cut the tomatoes.",
+          "Squeeze two lemons.",
+          "My grandma is cooking bazeen.",
+          "Cross at the zebra crossing."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "First, cut the tomatoes.",
+           "o": [
+            "First, cut the tomatoes.",
+            "Squeeze two lemons.",
+            "My grandma is cooking bazeen."
+           ]
+          },
+          {
+           "a": "Squeeze two lemons.",
+           "o": [
+            "Squeeze two lemons.",
+            "First, cut the tomatoes.",
+            "My grandma is cooking bazeen."
+           ]
+          },
+          {
+           "a": "My grandma is cooking bazeen.",
+           "o": [
+            "My grandma is cooking bazeen.",
+            "First, cut the tomatoes.",
+            "Squeeze two lemons."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "mix",
+       "ipa": "",
+       "meaning": "يخلط",
+       "ex": "mix"
+      },
+      {
+       "must": 1,
+       "term": "cut",
+       "ipa": "",
+       "meaning": "يقطع",
+       "ex": "First, cut the tomatoes."
+      },
+      {
+       "must": 1,
+       "term": "yourself",
+       "ipa": "",
+       "meaning": "بنفسك",
+       "ex": "yourself"
+      },
+      {
+       "must": 0,
+       "term": "lemonade",
+       "ipa": "",
+       "meaning": "ليمونادة",
+       "ex": "lemonade"
+      },
+      {
+       "must": 0,
+       "term": "kitchen",
+       "ipa": "",
+       "meaning": "مطبخ",
+       "ex": "kitchen"
+      },
+      {
+       "must": 0,
+       "term": "oven",
+       "ipa": "",
+       "meaning": "فرن",
+       "ex": "oven"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "___ , cut the tomatoes.",
+       "a": "First",
+       "o": [
+        "First",
+        "Last"
+       ],
+       "why": ""
+      },
+      {
+       "q": "___ two lemons.",
+       "a": "Squeeze",
+       "o": [
+        "Squeeze",
+        "Squeezes"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Grandma ___ cooking.",
+       "a": "is",
+       "o": [
+        "is",
+        "are"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى lemonade؟",
+       "a": "ليمونادة",
+       "o": [
+        "ليمونادة",
+        "يخلط",
+        "يقطع"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى cut؟",
+       "a": "يقطع",
+       "o": [
+        "يقطع",
+        "يخلط",
+        "بنفسك"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "First, cut the tomatoes.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "First, cut the tomatoes.",
+       "o": [
+        "First, cut the tomatoes.",
+        "Squeeze two lemons.",
+        "My grandma is cooking bazeen."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

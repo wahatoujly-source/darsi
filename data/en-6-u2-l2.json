@@ -1,0 +1,287 @@
+{
+ "id": "en-6-u2-l2",
+ "grade": 6,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 2 · Lesson 2: At the Mall",
+ "titleAr": "هيا نذهب إلى المجمع التجاري.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "هيا نذهب إلى المجمع التجاري.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "mall",
+       "ar": "مجمع تجاري",
+       "em": "🏬"
+      },
+      {
+       "id": "v1",
+       "en": "clothes shop",
+       "ar": "متجر ملابس",
+       "em": "👗"
+      },
+      {
+       "id": "v2",
+       "en": "bookshop",
+       "ar": "مكتبة لبيع الكتب",
+       "em": "📚"
+      },
+      {
+       "id": "v3",
+       "en": "toy shop",
+       "ar": "متجر ألعاب",
+       "em": "🧸"
+      },
+      {
+       "id": "v4",
+       "en": "escalator",
+       "ar": "سلم كهربائي",
+       "em": "↗️"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 28⁠–⁠29 · كتاب النشاط ص 22⁠–⁠23"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "on the … floor",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Let's go to the mall.</div><div class=\"ex\">The bookshop is <b>on</b> the first floor.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Let's go to the mall. The bookshop is on the first floor."
+      }
+     ]
+    }
+   ],
+   "lead": "on the ground / first / second floor",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "The bookshop is ___ the first floor.",
+           "a": "on",
+           "o": [
+            "on",
+            "in"
+           ]
+          },
+          {
+           "s": "We buy books at the ___ .",
+           "a": "bookshop",
+           "o": [
+            "bookshop",
+            "toy shop"
+           ]
+          },
+          {
+           "s": "Take the ___ upstairs.",
+           "a": "escalator",
+           "o": [
+            "escalator",
+            "mall"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Let's go to the mall.",
+          "The bookshop is on the first floor."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Let's go to the mall.",
+           "o": [
+            "Let's go to the mall.",
+            "The bookshop is on the first floor."
+           ]
+          },
+          {
+           "a": "The bookshop is on the first floor.",
+           "o": [
+            "The bookshop is on the first floor.",
+            "Let's go to the mall."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "mall",
+       "ipa": "",
+       "meaning": "مجمع تجاري",
+       "ex": "Let's go to the mall."
+      },
+      {
+       "must": 1,
+       "term": "clothes shop",
+       "ipa": "",
+       "meaning": "متجر ملابس",
+       "ex": "clothes shop"
+      },
+      {
+       "must": 1,
+       "term": "bookshop",
+       "ipa": "",
+       "meaning": "مكتبة لبيع الكتب",
+       "ex": "The bookshop is on the first floor."
+      },
+      {
+       "must": 0,
+       "term": "toy shop",
+       "ipa": "",
+       "meaning": "متجر ألعاب",
+       "ex": "toy shop"
+      },
+      {
+       "must": 0,
+       "term": "escalator",
+       "ipa": "",
+       "meaning": "سلم كهربائي",
+       "ex": "escalator"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "The bookshop is ___ the first floor.",
+       "a": "on",
+       "o": [
+        "on",
+        "in"
+       ],
+       "why": ""
+      },
+      {
+       "q": "We buy books at the ___ .",
+       "a": "bookshop",
+       "o": [
+        "bookshop",
+        "toy shop"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Take the ___ upstairs.",
+       "a": "escalator",
+       "o": [
+        "escalator",
+        "mall"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى bookshop؟",
+       "a": "مكتبة لبيع الكتب",
+       "o": [
+        "مكتبة لبيع الكتب",
+        "مجمع تجاري",
+        "متجر ملابس"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى mall؟",
+       "a": "مجمع تجاري",
+       "o": [
+        "مجمع تجاري",
+        "متجر ملابس",
+        "مكتبة لبيع الكتب"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Let's go to the mall.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Let's go to the mall.",
+       "o": [
+        "Let's go to the mall.",
+        "The bookshop is on the first floor."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

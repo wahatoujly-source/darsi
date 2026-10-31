@@ -1,0 +1,287 @@
+{
+ "id": "en-5-u3-l5",
+ "grade": 5,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 3 · Lesson 5: A Class Survey",
+ "titleAr": "عشرة تلاميذ يحبون الكرة.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "عشرة تلاميذ يحبون الكرة.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "survey",
+       "ar": "استبيان",
+       "em": "📋"
+      },
+      {
+       "id": "v1",
+       "en": "most",
+       "ar": "معظم",
+       "em": "📊"
+      },
+      {
+       "id": "v2",
+       "en": "pupils",
+       "ar": "تلاميذ",
+       "em": "🧒"
+      },
+      {
+       "id": "v3",
+       "en": "favourite",
+       "ar": "مفضل",
+       "em": "⭐"
+      },
+      {
+       "id": "v4",
+       "en": "chart",
+       "ar": "مخطط",
+       "em": "📈"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 52⁠–⁠53 · كتاب النشاط ص 44⁠–⁠45"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Reporting numbers",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\"><b>Ten</b> pupils like football.</div><div class=\"ex\"><b>Most</b> pupils like swimming.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Ten pupils like football. Most pupils like swimming."
+      }
+     ]
+    }
+   ],
+   "lead": "Ten pupils like … / Most pupils …",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "___ pupils like football.",
+           "a": "Ten",
+           "o": [
+            "Ten",
+            "Tenth"
+           ]
+          },
+          {
+           "s": "___ pupils like swimming.",
+           "a": "Most",
+           "o": [
+            "Most",
+            "More"
+           ]
+          },
+          {
+           "s": "We show results in a ___ .",
+           "a": "chart",
+           "o": [
+            "chart",
+            "survey"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Ten pupils like football.",
+          "Most pupils like swimming."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Ten pupils like football.",
+           "o": [
+            "Ten pupils like football.",
+            "Most pupils like swimming."
+           ]
+          },
+          {
+           "a": "Most pupils like swimming.",
+           "o": [
+            "Most pupils like swimming.",
+            "Ten pupils like football."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "survey",
+       "ipa": "",
+       "meaning": "استبيان",
+       "ex": "survey"
+      },
+      {
+       "must": 1,
+       "term": "most",
+       "ipa": "",
+       "meaning": "معظم",
+       "ex": "Most pupils like swimming."
+      },
+      {
+       "must": 1,
+       "term": "pupils",
+       "ipa": "",
+       "meaning": "تلاميذ",
+       "ex": "Ten pupils like football."
+      },
+      {
+       "must": 0,
+       "term": "favourite",
+       "ipa": "",
+       "meaning": "مفضل",
+       "ex": "favourite"
+      },
+      {
+       "must": 0,
+       "term": "chart",
+       "ipa": "",
+       "meaning": "مخطط",
+       "ex": "chart"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "___ pupils like football.",
+       "a": "Ten",
+       "o": [
+        "Ten",
+        "Tenth"
+       ],
+       "why": ""
+      },
+      {
+       "q": "___ pupils like swimming.",
+       "a": "Most",
+       "o": [
+        "Most",
+        "More"
+       ],
+       "why": ""
+      },
+      {
+       "q": "We show results in a ___ .",
+       "a": "chart",
+       "o": [
+        "chart",
+        "survey"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى pupils؟",
+       "a": "تلاميذ",
+       "o": [
+        "تلاميذ",
+        "استبيان",
+        "معظم"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى survey؟",
+       "a": "استبيان",
+       "o": [
+        "استبيان",
+        "معظم",
+        "تلاميذ"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Ten pupils like football.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Ten pupils like football.",
+       "o": [
+        "Ten pupils like football.",
+        "Most pupils like swimming."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

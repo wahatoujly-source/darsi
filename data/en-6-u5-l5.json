@@ -1,0 +1,299 @@
+{
+ "id": "en-6-u5-l5",
+ "grade": 6,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 5 · Lesson 5: Space",
+ "titleAr": "الأرض كوكب.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "الأرض كوكب.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "planet",
+       "ar": "كوكب",
+       "em": "🪐"
+      },
+      {
+       "id": "v1",
+       "en": "Earth",
+       "ar": "الأرض",
+       "em": "🌍"
+      },
+      {
+       "id": "v2",
+       "en": "Moon",
+       "ar": "القمر",
+       "em": "🌙"
+      },
+      {
+       "id": "v3",
+       "en": "star",
+       "ar": "نجم",
+       "em": "⭐"
+      },
+      {
+       "id": "v4",
+       "en": "astronaut",
+       "ar": "رائد فضاء",
+       "em": "👩‍🚀"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 76⁠–⁠77 · كتاب النشاط ص 64⁠–⁠65"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "the + unique things",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">The Earth is a <b>planet</b>.</div><div class=\"ex\">The Sun is a <b>star</b>.</div><div class=\"ex\">Astronauts travel into space.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "The Earth is a planet. The Sun is a star. Astronauts travel into space."
+      }
+     ]
+    }
+   ],
+   "lead": "the Sun, the Moon, the Earth",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "The Sun is a ___ .",
+           "a": "star",
+           "o": [
+            "star",
+            "planet"
+           ]
+          },
+          {
+           "s": "The Earth is a ___ .",
+           "a": "planet",
+           "o": [
+            "planet",
+            "star"
+           ]
+          },
+          {
+           "s": "An ___ travels into space.",
+           "a": "astronaut",
+           "o": [
+            "astronaut",
+            "planet"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "The Earth is a planet.",
+          "The Sun is a star.",
+          "Astronauts travel into space."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "The Earth is a planet.",
+           "o": [
+            "The Earth is a planet.",
+            "The Sun is a star.",
+            "Astronauts travel into space."
+           ]
+          },
+          {
+           "a": "The Sun is a star.",
+           "o": [
+            "The Sun is a star.",
+            "The Earth is a planet.",
+            "Astronauts travel into space."
+           ]
+          },
+          {
+           "a": "Astronauts travel into space.",
+           "o": [
+            "Astronauts travel into space.",
+            "The Earth is a planet.",
+            "The Sun is a star."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "planet",
+       "ipa": "",
+       "meaning": "كوكب",
+       "ex": "The Earth is a planet."
+      },
+      {
+       "must": 1,
+       "term": "Earth",
+       "ipa": "",
+       "meaning": "الأرض",
+       "ex": "The Earth is a planet."
+      },
+      {
+       "must": 1,
+       "term": "Moon",
+       "ipa": "",
+       "meaning": "القمر",
+       "ex": "Moon"
+      },
+      {
+       "must": 0,
+       "term": "star",
+       "ipa": "",
+       "meaning": "نجم",
+       "ex": "The Sun is a star."
+      },
+      {
+       "must": 0,
+       "term": "astronaut",
+       "ipa": "",
+       "meaning": "رائد فضاء",
+       "ex": "Astronauts travel into space."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "The Sun is a ___ .",
+       "a": "star",
+       "o": [
+        "star",
+        "planet"
+       ],
+       "why": ""
+      },
+      {
+       "q": "The Earth is a ___ .",
+       "a": "planet",
+       "o": [
+        "planet",
+        "star"
+       ],
+       "why": ""
+      },
+      {
+       "q": "An ___ travels into space.",
+       "a": "astronaut",
+       "o": [
+        "astronaut",
+        "planet"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى star؟",
+       "a": "نجم",
+       "o": [
+        "نجم",
+        "كوكب",
+        "الأرض"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى planet؟",
+       "a": "كوكب",
+       "o": [
+        "كوكب",
+        "الأرض",
+        "القمر"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "The Earth is a planet.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "The Earth is a planet.",
+       "o": [
+        "The Earth is a planet.",
+        "The Sun is a star.",
+        "Astronauts travel into space."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

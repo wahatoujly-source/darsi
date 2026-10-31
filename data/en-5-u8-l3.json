@@ -1,0 +1,319 @@
+{
+ "id": "en-5-u8-l3",
+ "grade": 5,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 8 · Lesson 3: Rayan's Holiday Quiz",
+ "titleAr": "أين ذهب ريان؟ ذهب إلى مصر.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "أين ذهب ريان؟ ذهب إلى مصر.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "quiz",
+       "ar": "مسابقة",
+       "em": "❓"
+      },
+      {
+       "id": "v1",
+       "en": "went",
+       "ar": "ذهب",
+       "em": "➡️"
+      },
+      {
+       "id": "v2",
+       "en": "stayed",
+       "ar": "أقام",
+       "em": "🏨"
+      },
+      {
+       "id": "v3",
+       "en": "visited",
+       "ar": "زار",
+       "em": "🏛️"
+      },
+      {
+       "id": "v4",
+       "en": "bought",
+       "ar": "اشترى",
+       "em": "🛍️"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 124 · كتاب النشاط ص 106"
+  },
+  {
+   "title": "اقرأ",
+   "eyebrow": "الخطوة ٢ — اقرأ",
+   "heading": "اقرأ واستمع",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "📖 Rayan's Holiday Quiz",
+     "html": "<div class=\"ex\">Where did Rayan go? He went to Egypt.</div><div class=\"ex\">He visited the pyramids.</div><div class=\"ex\">He bought souvenirs.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Where did Rayan go? He went to Egypt. He visited the pyramids. He bought souvenirs."
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط ▶ لتسمع النص."
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٣ — القاعدة",
+   "heading": "Did … ? / Where did …?",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Where <b>did</b> Rayan go? He went to Egypt.</div><div class=\"ex\">He <b>visited</b> the pyramids.</div><div class=\"ex\">He <b>bought</b> souvenirs.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Where did Rayan go? He went to Egypt. He visited the pyramids. He bought souvenirs."
+      }
+     ]
+    }
+   ],
+   "lead": "السؤال في الماضي بـ did + فعل مجرد.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٤ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "Where ___ Rayan go?",
+           "a": "did",
+           "o": [
+            "did",
+            "does"
+           ]
+          },
+          {
+           "s": "He ___ the pyramids.",
+           "a": "visited",
+           "o": [
+            "visited",
+            "visit"
+           ]
+          },
+          {
+           "s": "He ___ souvenirs.",
+           "a": "bought",
+           "o": [
+            "bought",
+            "buyed"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Where did Rayan go? He went to Egypt.",
+          "He visited the pyramids.",
+          "He bought souvenirs."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Where did Rayan go? He went to Egypt.",
+           "o": [
+            "Where did Rayan go? He went to Egypt.",
+            "He visited the pyramids.",
+            "He bought souvenirs."
+           ]
+          },
+          {
+           "a": "He visited the pyramids.",
+           "o": [
+            "He visited the pyramids.",
+            "Where did Rayan go? He went to Egypt.",
+            "He bought souvenirs."
+           ]
+          },
+          {
+           "a": "He bought souvenirs.",
+           "o": [
+            "He bought souvenirs.",
+            "Where did Rayan go? He went to Egypt.",
+            "He visited the pyramids."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٥ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "quiz",
+       "ipa": "",
+       "meaning": "مسابقة",
+       "ex": "quiz"
+      },
+      {
+       "must": 1,
+       "term": "went",
+       "ipa": "",
+       "meaning": "ذهب",
+       "ex": "Where did Rayan go? He went to Egypt."
+      },
+      {
+       "must": 1,
+       "term": "stayed",
+       "ipa": "",
+       "meaning": "أقام",
+       "ex": "stayed"
+      },
+      {
+       "must": 0,
+       "term": "visited",
+       "ipa": "",
+       "meaning": "زار",
+       "ex": "He visited the pyramids."
+      },
+      {
+       "must": 0,
+       "term": "bought",
+       "ipa": "",
+       "meaning": "اشترى",
+       "ex": "He bought souvenirs."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "Where ___ Rayan go?",
+       "a": "did",
+       "o": [
+        "did",
+        "does"
+       ],
+       "why": ""
+      },
+      {
+       "q": "He ___ the pyramids.",
+       "a": "visited",
+       "o": [
+        "visited",
+        "visit"
+       ],
+       "why": ""
+      },
+      {
+       "q": "He ___ souvenirs.",
+       "a": "bought",
+       "o": [
+        "bought",
+        "buyed"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى quiz؟",
+       "a": "مسابقة",
+       "o": [
+        "مسابقة",
+        "ذهب",
+        "أقام"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى went؟",
+       "a": "ذهب",
+       "o": [
+        "ذهب",
+        "مسابقة",
+        "أقام"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Where did Rayan go? He went to Egypt.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Where did Rayan go? He went to Egypt.",
+       "o": [
+        "Where did Rayan go? He went to Egypt.",
+        "He visited the pyramids.",
+        "He bought souvenirs."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

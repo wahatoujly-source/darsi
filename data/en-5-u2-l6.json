@@ -1,0 +1,299 @@
+{
+ "id": "en-5-u2-l6",
+ "grade": 5,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 2 · Lesson 6: Insects in Our Life",
+ "titleAr": "النحل يصنع العسل.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "النحل يصنع العسل.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "bee",
+       "ar": "نحلة",
+       "em": "🐝"
+      },
+      {
+       "id": "v1",
+       "en": "honey",
+       "ar": "عسل",
+       "em": "🍯"
+      },
+      {
+       "id": "v2",
+       "en": "butterfly",
+       "ar": "فراشة",
+       "em": "🦋"
+      },
+      {
+       "id": "v3",
+       "en": "ant",
+       "ar": "نملة",
+       "em": "🐜"
+      },
+      {
+       "id": "v4",
+       "en": "fly",
+       "ar": "ذبابة",
+       "em": "🪰"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 36⁠–⁠37 · كتاب النشاط ص 30⁠–⁠31"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Present simple facts",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Bees <b>make</b> honey.</div><div class=\"ex\">Butterflies help flowers.</div><div class=\"ex\">Flies carry <b>germs</b>.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Bees make honey. Butterflies help flowers. Flies carry germs."
+      }
+     ]
+    }
+   ],
+   "lead": "نستخدم المضارع البسيط للحقائق.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "Bees ___ honey.",
+           "a": "make",
+           "o": [
+            "make",
+            "makes"
+           ]
+          },
+          {
+           "s": "A bee ___ honey.",
+           "a": "makes",
+           "o": [
+            "makes",
+            "make"
+           ]
+          },
+          {
+           "s": "Flies carry ___ .",
+           "a": "germs",
+           "o": [
+            "germs",
+            "honey"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Bees make honey.",
+          "Butterflies help flowers.",
+          "Flies carry germs."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Bees make honey.",
+           "o": [
+            "Bees make honey.",
+            "Butterflies help flowers.",
+            "Flies carry germs."
+           ]
+          },
+          {
+           "a": "Butterflies help flowers.",
+           "o": [
+            "Butterflies help flowers.",
+            "Bees make honey.",
+            "Flies carry germs."
+           ]
+          },
+          {
+           "a": "Flies carry germs.",
+           "o": [
+            "Flies carry germs.",
+            "Bees make honey.",
+            "Butterflies help flowers."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "bee",
+       "ipa": "",
+       "meaning": "نحلة",
+       "ex": "Bees make honey."
+      },
+      {
+       "must": 1,
+       "term": "honey",
+       "ipa": "",
+       "meaning": "عسل",
+       "ex": "Bees make honey."
+      },
+      {
+       "must": 1,
+       "term": "butterfly",
+       "ipa": "",
+       "meaning": "فراشة",
+       "ex": "butterfly"
+      },
+      {
+       "must": 0,
+       "term": "ant",
+       "ipa": "",
+       "meaning": "نملة",
+       "ex": "ant"
+      },
+      {
+       "must": 0,
+       "term": "fly",
+       "ipa": "",
+       "meaning": "ذبابة",
+       "ex": "fly"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "Bees ___ honey.",
+       "a": "make",
+       "o": [
+        "make",
+        "makes"
+       ],
+       "why": ""
+      },
+      {
+       "q": "A bee ___ honey.",
+       "a": "makes",
+       "o": [
+        "makes",
+        "make"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Flies carry ___ .",
+       "a": "germs",
+       "o": [
+        "germs",
+        "honey"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى honey؟",
+       "a": "عسل",
+       "o": [
+        "عسل",
+        "نحلة",
+        "فراشة"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى butterfly؟",
+       "a": "فراشة",
+       "o": [
+        "فراشة",
+        "نحلة",
+        "عسل"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Bees make honey.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Bees make honey.",
+       "o": [
+        "Bees make honey.",
+        "Butterflies help flowers.",
+        "Flies carry germs."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

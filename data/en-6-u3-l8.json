@@ -1,0 +1,319 @@
+{
+ "id": "en-6-u3-l8",
+ "grade": 6,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 3 · Lesson 8: Looking After Ali",
+ "titleAr": "علي مريض في سريره.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "علي مريض في سريره.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "look after",
+       "ar": "يعتني بـ",
+       "em": "🤲"
+      },
+      {
+       "id": "v1",
+       "en": "sick",
+       "ar": "مريض",
+       "em": "🤒"
+      },
+      {
+       "id": "v2",
+       "en": "soup",
+       "ar": "شوربة",
+       "em": "🥣"
+      },
+      {
+       "id": "v3",
+       "en": "bed",
+       "ar": "سرير",
+       "em": "🛏️"
+      },
+      {
+       "id": "v4",
+       "en": "better",
+       "ar": "أفضل",
+       "em": "😊"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 58⁠–⁠59 · كتاب النشاط ص 50⁠–⁠51"
+  },
+  {
+   "title": "اقرأ",
+   "eyebrow": "الخطوة ٢ — اقرأ",
+   "heading": "اقرأ واستمع",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "📖 Looking After Ali",
+     "html": "<div class=\"ex\">Ali is sick in bed.</div><div class=\"ex\">His mother made him soup.</div><div class=\"ex\">Now he feels better.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Ali is sick in bed. His mother made him soup. Now he feels better."
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط ▶ لتسمع النص."
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٣ — القاعدة",
+   "heading": "feel + adjective",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Ali is <b>sick</b> in bed.</div><div class=\"ex\">His mother <b>made</b> him soup.</div><div class=\"ex\">Now he feels <b>better</b>.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Ali is sick in bed. His mother made him soup. Now he feels better."
+      }
+     ]
+    }
+   ],
+   "lead": "He feels better / I feel ill.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٤ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "Ali is ___ in bed.",
+           "a": "sick",
+           "o": [
+            "sick",
+            "better"
+           ]
+          },
+          {
+           "s": "His mother ___ him soup.",
+           "a": "made",
+           "o": [
+            "made",
+            "make"
+           ]
+          },
+          {
+           "s": "Now he feels ___ .",
+           "a": "better",
+           "o": [
+            "better",
+            "good"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Ali is sick in bed.",
+          "His mother made him soup.",
+          "Now he feels better."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Ali is sick in bed.",
+           "o": [
+            "Ali is sick in bed.",
+            "His mother made him soup.",
+            "Now he feels better."
+           ]
+          },
+          {
+           "a": "His mother made him soup.",
+           "o": [
+            "His mother made him soup.",
+            "Ali is sick in bed.",
+            "Now he feels better."
+           ]
+          },
+          {
+           "a": "Now he feels better.",
+           "o": [
+            "Now he feels better.",
+            "Ali is sick in bed.",
+            "His mother made him soup."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٥ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "look after",
+       "ipa": "",
+       "meaning": "يعتني بـ",
+       "ex": "look after"
+      },
+      {
+       "must": 1,
+       "term": "sick",
+       "ipa": "",
+       "meaning": "مريض",
+       "ex": "Ali is sick in bed."
+      },
+      {
+       "must": 1,
+       "term": "soup",
+       "ipa": "",
+       "meaning": "شوربة",
+       "ex": "His mother made him soup."
+      },
+      {
+       "must": 0,
+       "term": "bed",
+       "ipa": "",
+       "meaning": "سرير",
+       "ex": "Ali is sick in bed."
+      },
+      {
+       "must": 0,
+       "term": "better",
+       "ipa": "",
+       "meaning": "أفضل",
+       "ex": "Now he feels better."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "Ali is ___ in bed.",
+       "a": "sick",
+       "o": [
+        "sick",
+        "better"
+       ],
+       "why": ""
+      },
+      {
+       "q": "His mother ___ him soup.",
+       "a": "made",
+       "o": [
+        "made",
+        "make"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Now he feels ___ .",
+       "a": "better",
+       "o": [
+        "better",
+        "good"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى soup؟",
+       "a": "شوربة",
+       "o": [
+        "شوربة",
+        "يعتني بـ",
+        "مريض"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى look after؟",
+       "a": "يعتني بـ",
+       "o": [
+        "يعتني بـ",
+        "مريض",
+        "شوربة"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Ali is sick in bed.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Ali is sick in bed.",
+       "o": [
+        "Ali is sick in bed.",
+        "His mother made him soup.",
+        "Now he feels better."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

@@ -1,0 +1,307 @@
+{
+ "id": "en-6-u1-l6",
+ "grade": 6,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 1 · Lesson 6: Two Families",
+ "titleAr": "عائلة هدى كبيرة لكن عائلة سارة صغيرة.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "عائلة هدى كبيرة لكن عائلة سارة صغيرة.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "big",
+       "ar": "كبيرة",
+       "em": "👨‍👩‍👧‍👦"
+      },
+      {
+       "id": "v1",
+       "en": "small",
+       "ar": "صغيرة",
+       "em": "👪"
+      },
+      {
+       "id": "v2",
+       "en": "both",
+       "ar": "كلاهما",
+       "em": "👯"
+      },
+      {
+       "id": "v3",
+       "en": "whereas",
+       "ar": "بينما",
+       "em": "⚖️"
+      },
+      {
+       "id": "v4",
+       "en": "live",
+       "ar": "يعيش",
+       "em": "🏠"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 18⁠–⁠19 · كتاب النشاط ص 14⁠–⁠15"
+  },
+  {
+   "title": "اقرأ",
+   "eyebrow": "الخطوة ٢ — اقرأ",
+   "heading": "اقرأ واستمع",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "📖 Two Families",
+     "html": "<div class=\"ex\">Huda's family is big, but Sara's family is small.</div><div class=\"ex\">Both families live in Benghazi.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Huda's family is big, but Sara's family is small. Both families live in Benghazi."
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط ▶ لتسمع النص."
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٣ — القاعدة",
+   "heading": "Comparing: but / both",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Huda's family is big, <b>but</b> Sara's family is small.</div><div class=\"ex\"><b>Both</b> families live in Benghazi.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Huda's family is big, but Sara's family is small. Both families live in Benghazi."
+      }
+     ]
+    }
+   ],
+   "lead": "نقارن بـ but ونجمع بـ both.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٤ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "___ families live in Benghazi.",
+           "a": "Both",
+           "o": [
+            "Both",
+            "But"
+           ]
+          },
+          {
+           "s": "Huda's family is big, ___ Sara's is small.",
+           "a": "but",
+           "o": [
+            "but",
+            "both"
+           ]
+          },
+          {
+           "s": "They ___ in Benghazi.",
+           "a": "live",
+           "o": [
+            "live",
+            "lives"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Huda's family is big, but Sara's family is small.",
+          "Both families live in Benghazi."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Huda's family is big, but Sara's family is small.",
+           "o": [
+            "Huda's family is big, but Sara's family is small.",
+            "Both families live in Benghazi."
+           ]
+          },
+          {
+           "a": "Both families live in Benghazi.",
+           "o": [
+            "Both families live in Benghazi.",
+            "Huda's family is big, but Sara's family is small."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٥ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "big",
+       "ipa": "",
+       "meaning": "كبيرة",
+       "ex": "Huda's family is big, but Sara's family is small."
+      },
+      {
+       "must": 1,
+       "term": "small",
+       "ipa": "",
+       "meaning": "صغيرة",
+       "ex": "Huda's family is big, but Sara's family is small."
+      },
+      {
+       "must": 1,
+       "term": "both",
+       "ipa": "",
+       "meaning": "كلاهما",
+       "ex": "Both families live in Benghazi."
+      },
+      {
+       "must": 0,
+       "term": "whereas",
+       "ipa": "",
+       "meaning": "بينما",
+       "ex": "whereas"
+      },
+      {
+       "must": 0,
+       "term": "live",
+       "ipa": "",
+       "meaning": "يعيش",
+       "ex": "Both families live in Benghazi."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "___ families live in Benghazi.",
+       "a": "Both",
+       "o": [
+        "Both",
+        "But"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Huda's family is big, ___ Sara's is small.",
+       "a": "but",
+       "o": [
+        "but",
+        "both"
+       ],
+       "why": ""
+      },
+      {
+       "q": "They ___ in Benghazi.",
+       "a": "live",
+       "o": [
+        "live",
+        "lives"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى whereas؟",
+       "a": "بينما",
+       "o": [
+        "بينما",
+        "كبيرة",
+        "صغيرة"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى big؟",
+       "a": "كبيرة",
+       "o": [
+        "كبيرة",
+        "صغيرة",
+        "كلاهما"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Huda's family is big, but Sara's family is small.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Huda's family is big, but Sara's family is small.",
+       "o": [
+        "Huda's family is big, but Sara's family is small.",
+        "Both families live in Benghazi."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

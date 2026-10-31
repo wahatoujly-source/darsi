@@ -1,0 +1,287 @@
+{
+ "id": "en-6-u3-l2",
+ "grade": 6,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 3 · Lesson 2: You should …",
+ "titleAr": "ينبغي أن تزور طبيب الأسنان.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "ينبغي أن تزور طبيب الأسنان.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "should",
+       "ar": "ينبغي",
+       "em": "👍"
+      },
+      {
+       "id": "v1",
+       "en": "shouldn't",
+       "ar": "لا ينبغي",
+       "em": "👎"
+      },
+      {
+       "id": "v2",
+       "en": "rest",
+       "ar": "يرتاح",
+       "em": "🛌"
+      },
+      {
+       "id": "v3",
+       "en": "medicine",
+       "ar": "دواء",
+       "em": "💊"
+      },
+      {
+       "id": "v4",
+       "en": "dentist",
+       "ar": "طبيب أسنان",
+       "em": "🦷"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 46⁠–⁠47 · كتاب النشاط ص 38⁠–⁠39"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "should / shouldn't + verb",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">You <b>should</b> see a dentist.</div><div class=\"ex\">You <b>shouldn't</b> eat sweets.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "You should see a dentist. You shouldn't eat sweets."
+      }
+     ]
+    }
+   ],
+   "lead": "للنصيحة.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "You ___ rest. (نصيحة)",
+           "a": "should",
+           "o": [
+            "should",
+            "shouldn't"
+           ]
+          },
+          {
+           "s": "You ___ eat too many sweets.",
+           "a": "shouldn't",
+           "o": [
+            "shouldn't",
+            "should"
+           ]
+          },
+          {
+           "s": "You should ___ a dentist.",
+           "a": "see",
+           "o": [
+            "see",
+            "sees"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "You should see a dentist.",
+          "You shouldn't eat sweets."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "You should see a dentist.",
+           "o": [
+            "You should see a dentist.",
+            "You shouldn't eat sweets."
+           ]
+          },
+          {
+           "a": "You shouldn't eat sweets.",
+           "o": [
+            "You shouldn't eat sweets.",
+            "You should see a dentist."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "should",
+       "ipa": "",
+       "meaning": "ينبغي",
+       "ex": "You should see a dentist."
+      },
+      {
+       "must": 1,
+       "term": "shouldn't",
+       "ipa": "",
+       "meaning": "لا ينبغي",
+       "ex": "You shouldn't eat sweets."
+      },
+      {
+       "must": 1,
+       "term": "rest",
+       "ipa": "",
+       "meaning": "يرتاح",
+       "ex": "rest"
+      },
+      {
+       "must": 0,
+       "term": "medicine",
+       "ipa": "",
+       "meaning": "دواء",
+       "ex": "medicine"
+      },
+      {
+       "must": 0,
+       "term": "dentist",
+       "ipa": "",
+       "meaning": "طبيب أسنان",
+       "ex": "You should see a dentist."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "You ___ rest. (نصيحة)",
+       "a": "should",
+       "o": [
+        "should",
+        "shouldn't"
+       ],
+       "why": ""
+      },
+      {
+       "q": "You ___ eat too many sweets.",
+       "a": "shouldn't",
+       "o": [
+        "shouldn't",
+        "should"
+       ],
+       "why": ""
+      },
+      {
+       "q": "You should ___ a dentist.",
+       "a": "see",
+       "o": [
+        "see",
+        "sees"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى shouldn't؟",
+       "a": "لا ينبغي",
+       "o": [
+        "لا ينبغي",
+        "ينبغي",
+        "يرتاح"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى should؟",
+       "a": "ينبغي",
+       "o": [
+        "ينبغي",
+        "لا ينبغي",
+        "يرتاح"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "You should see a dentist.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "You should see a dentist.",
+       "o": [
+        "You should see a dentist.",
+        "You shouldn't eat sweets."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

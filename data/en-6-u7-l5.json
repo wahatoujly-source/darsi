@@ -1,0 +1,287 @@
+{
+ "id": "en-6-u7-l5",
+ "grade": 6,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 7 · Lesson 5: Saturday Morning",
+ "titleAr": "صباح السبت أنظف غرفتي.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "صباح السبت أنظف غرفتي.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "Saturday",
+       "ar": "السبت",
+       "em": "📅"
+      },
+      {
+       "id": "v1",
+       "en": "clean",
+       "ar": "ينظف",
+       "em": "🧹"
+      },
+      {
+       "id": "v2",
+       "en": "market",
+       "ar": "سوق",
+       "em": "🏪"
+      },
+      {
+       "id": "v3",
+       "en": "visit",
+       "ar": "يزور",
+       "em": "🏠"
+      },
+      {
+       "id": "v4",
+       "en": "morning",
+       "ar": "صباح",
+       "em": "🌅"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 112⁠–⁠113 · كتاب النشاط ص 96⁠–⁠97"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "on + day + morning",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\"><b>On</b> Saturday morning, I clean my room.</div><div class=\"ex\">Then I go to the <b>market</b> with my father.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "On Saturday morning, I clean my room. Then I go to the market with my father."
+      }
+     ]
+    }
+   ],
+   "lead": "on Saturday morning",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "___ Saturday morning, I clean my room.",
+           "a": "On",
+           "o": [
+            "On",
+            "In"
+           ]
+          },
+          {
+           "s": "I go to the ___ with my father.",
+           "a": "market",
+           "o": [
+            "market",
+            "morning"
+           ]
+          },
+          {
+           "s": "Then I ___ my grandparents.",
+           "a": "visit",
+           "o": [
+            "visit",
+            "visits"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "On Saturday morning, I clean my room.",
+          "Then I go to the market with my father."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "On Saturday morning, I clean my room.",
+           "o": [
+            "On Saturday morning, I clean my room.",
+            "Then I go to the market with my father."
+           ]
+          },
+          {
+           "a": "Then I go to the market with my father.",
+           "o": [
+            "Then I go to the market with my father.",
+            "On Saturday morning, I clean my room."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "Saturday",
+       "ipa": "",
+       "meaning": "السبت",
+       "ex": "On Saturday morning, I clean my room."
+      },
+      {
+       "must": 1,
+       "term": "clean",
+       "ipa": "",
+       "meaning": "ينظف",
+       "ex": "On Saturday morning, I clean my room."
+      },
+      {
+       "must": 1,
+       "term": "market",
+       "ipa": "",
+       "meaning": "سوق",
+       "ex": "Then I go to the market with my father."
+      },
+      {
+       "must": 0,
+       "term": "visit",
+       "ipa": "",
+       "meaning": "يزور",
+       "ex": "visit"
+      },
+      {
+       "must": 0,
+       "term": "morning",
+       "ipa": "",
+       "meaning": "صباح",
+       "ex": "On Saturday morning, I clean my room."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "___ Saturday morning, I clean my room.",
+       "a": "On",
+       "o": [
+        "On",
+        "In"
+       ],
+       "why": ""
+      },
+      {
+       "q": "I go to the ___ with my father.",
+       "a": "market",
+       "o": [
+        "market",
+        "morning"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Then I ___ my grandparents.",
+       "a": "visit",
+       "o": [
+        "visit",
+        "visits"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى Saturday؟",
+       "a": "السبت",
+       "o": [
+        "السبت",
+        "ينظف",
+        "سوق"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى visit؟",
+       "a": "يزور",
+       "o": [
+        "يزور",
+        "السبت",
+        "ينظف"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "On Saturday morning, I clean my room.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "On Saturday morning, I clean my room.",
+       "o": [
+        "On Saturday morning, I clean my room.",
+        "Then I go to the market with my father."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

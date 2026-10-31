@@ -1,0 +1,299 @@
+{
+ "id": "en-6-u6-l1",
+ "grade": 6,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 6 · Lesson 1: Let's cook!",
+ "titleAr": "أولاً قطّع الطماطم.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "أولاً قطّع الطماطم.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "mix",
+       "ar": "يخلط",
+       "em": "🥣"
+      },
+      {
+       "id": "v1",
+       "en": "cut",
+       "ar": "يقطع",
+       "em": "🔪"
+      },
+      {
+       "id": "v2",
+       "en": "boil",
+       "ar": "يغلي",
+       "em": "♨️"
+      },
+      {
+       "id": "v3",
+       "en": "fry",
+       "ar": "يقلي",
+       "em": "🍳"
+      },
+      {
+       "id": "v4",
+       "en": "recipe",
+       "ar": "وصفة",
+       "em": "📜"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 86⁠–⁠87 · كتاب النشاط ص 72⁠–⁠73"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Recipe instructions",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\"><b>First</b>, cut the tomatoes.</div><div class=\"ex\">Then mix them with oil.</div><div class=\"ex\"><b>Boil</b> the pasta for ten minutes.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "First, cut the tomatoes. Then mix them with oil. Boil the pasta for ten minutes."
+      }
+     ]
+    }
+   ],
+   "lead": "Cut / Mix / Boil — الأمر مع first, then.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "___ , cut the tomatoes.",
+           "a": "First",
+           "o": [
+            "First",
+            "Last"
+           ]
+          },
+          {
+           "s": "___ the pasta for ten minutes.",
+           "a": "Boil",
+           "o": [
+            "Boil",
+            "Boils"
+           ]
+          },
+          {
+           "s": "Follow the ___ .",
+           "a": "recipe",
+           "o": [
+            "recipe",
+            "mix"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "First, cut the tomatoes.",
+          "Then mix them with oil.",
+          "Boil the pasta for ten minutes."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "First, cut the tomatoes.",
+           "o": [
+            "First, cut the tomatoes.",
+            "Then mix them with oil.",
+            "Boil the pasta for ten minutes."
+           ]
+          },
+          {
+           "a": "Then mix them with oil.",
+           "o": [
+            "Then mix them with oil.",
+            "First, cut the tomatoes.",
+            "Boil the pasta for ten minutes."
+           ]
+          },
+          {
+           "a": "Boil the pasta for ten minutes.",
+           "o": [
+            "Boil the pasta for ten minutes.",
+            "First, cut the tomatoes.",
+            "Then mix them with oil."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "mix",
+       "ipa": "",
+       "meaning": "يخلط",
+       "ex": "Then mix them with oil."
+      },
+      {
+       "must": 1,
+       "term": "cut",
+       "ipa": "",
+       "meaning": "يقطع",
+       "ex": "First, cut the tomatoes."
+      },
+      {
+       "must": 1,
+       "term": "boil",
+       "ipa": "",
+       "meaning": "يغلي",
+       "ex": "Boil the pasta for ten minutes."
+      },
+      {
+       "must": 0,
+       "term": "fry",
+       "ipa": "",
+       "meaning": "يقلي",
+       "ex": "fry"
+      },
+      {
+       "must": 0,
+       "term": "recipe",
+       "ipa": "",
+       "meaning": "وصفة",
+       "ex": "recipe"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "___ , cut the tomatoes.",
+       "a": "First",
+       "o": [
+        "First",
+        "Last"
+       ],
+       "why": ""
+      },
+      {
+       "q": "___ the pasta for ten minutes.",
+       "a": "Boil",
+       "o": [
+        "Boil",
+        "Boils"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Follow the ___ .",
+       "a": "recipe",
+       "o": [
+        "recipe",
+        "mix"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى mix؟",
+       "a": "يخلط",
+       "o": [
+        "يخلط",
+        "يقطع",
+        "يغلي"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى cut؟",
+       "a": "يقطع",
+       "o": [
+        "يقطع",
+        "يخلط",
+        "يغلي"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "First, cut the tomatoes.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "First, cut the tomatoes.",
+       "o": [
+        "First, cut the tomatoes.",
+        "Then mix them with oil.",
+        "Boil the pasta for ten minutes."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

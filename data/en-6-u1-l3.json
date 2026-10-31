@@ -5,13 +5,12 @@
  "stage": "primary-4-6",
  "lang": "en",
  "title": "Unit 1 · Lesson 3: Where do they work?",
- "titleAr": "الوحدة الأولى: العائلة والعمل — الدرس الثالث: أين يعملون؟",
- "characters": {},
+ "titleAr": "يعمل الطبيب في مستشفى.",
  "steps": [
   {
    "title": "المفردات",
    "eyebrow": "الخطوة ١ — المفردات",
-   "heading": "أماكن العمل",
+   "heading": "يعمل الطبيب في مستشفى.",
    "blocks": [
     {
      "type": "vocab",
@@ -24,82 +23,52 @@
       },
       {
        "id": "v1",
-       "en": "office",
-       "ar": "مكتب",
-       "em": "🏢"
-      },
-      {
-       "id": "v2",
-       "en": "restaurant",
-       "ar": "مطعم",
-       "em": "🍽️"
-      },
-      {
-       "id": "v3",
-       "en": "oil refinery",
-       "ar": "مصفاة نفط",
-       "em": "🏭"
-      },
-      {
-       "id": "v4",
-       "en": "building site",
-       "ar": "موقع بناء",
-       "em": "🏗️"
-      },
-      {
-       "id": "v5",
        "en": "farm",
        "ar": "مزرعة",
        "em": "🚜"
       },
       {
-       "id": "v6",
-       "en": "roads",
-       "ar": "الطرق",
-       "em": "🛣️"
+       "id": "v2",
+       "en": "school",
+       "ar": "مدرسة",
+       "em": "🏫"
       },
       {
-       "id": "v7",
-       "en": "home",
-       "ar": "البيت",
-       "em": "🏠"
+       "id": "v3",
+       "en": "office",
+       "ar": "مكتب",
+       "em": "🏢"
+      },
+      {
+       "id": "v4",
+       "en": "factory",
+       "ar": "مصنع",
+       "em": "🏭"
       }
      ]
     }
    ],
-   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتابك ص 12–13."
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 12⁠–⁠13 · كتاب النشاط ص 8⁠–⁠9"
   },
   {
    "title": "القاعدة",
    "eyebrow": "الخطوة ٢ — القاعدة",
-   "heading": "in / on / at",
+   "heading": "in / on",
    "blocks": [
     {
      "type": "panel",
-     "title": "حروف الجر مع أماكن العمل",
-     "html": "<div class=\"ex\"><b>in</b> a hospital · <b>in</b> an office · <b>in</b> a restaurant · <b>in</b> an oil refinery</div><div class=\"ex\"><b>on</b> the roads · <b>on</b> a building site · <b>on</b> a farm</div><div class=\"ex\"><b>at</b> home</div>",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">A doctor works in a <b>hospital</b>.</div><div class=\"ex\">A farmer works <b>on</b> a farm.</div>",
      "blocks": [
       {
        "type": "say",
        "label": "▶ اسمع",
-       "text": "A doctor works in a hospital. A farmer works on a farm. A housewife works at home."
-      }
-     ]
-    },
-    {
-     "type": "panel",
-     "title": "Where does … work?",
-     "html": "<div class=\"ex\">Where <b>does</b> a doctor <b>work</b>? — In a hospital.</div><div class=\"ex\">A farmer <b>works</b> on a farm.</div>",
-     "blocks": [
-      {
-       "type": "say",
-       "label": "▶ اسمع",
-       "text": "Where does a doctor work? In a hospital. A farmer works on a farm."
+       "text": "A doctor works in a hospital. A farmer works on a farm."
       }
      ]
     }
    ],
-   "lead": "in a hospital / an office / a restaurant / an oil refinery · on the roads / a building site / a farm · at home",
+   "lead": "in a hospital, in an office — on a farm.",
    "starOnVisit": true
   },
   {
@@ -112,55 +81,34 @@
      "star": true,
      "tabs": [
       {
-       "label": "in / on / at",
+       "label": "اختر الكلمة",
        "blocks": [
         {
          "type": "mcq",
          "mode": "gap",
          "items": [
           {
-           "s": "My uncle is a chef. He works ___ a big restaurant.",
-           "a": "in",
-           "o": [
-            "in",
-            "on",
-            "at"
-           ]
-          },
-          {
-           "s": "My aunt is a nurse. She works ___ a hospital.",
-           "a": "in",
-           "o": [
-            "in",
-            "on",
-            "at"
-           ]
-          },
-          {
-           "s": "He is a farmer. He works ___ a farm.",
+           "s": "A farmer works ___ a farm.",
            "a": "on",
            "o": [
             "on",
-            "in",
-            "at"
+            "in"
            ]
           },
           {
-           "s": "My cousin drives a bus. He works ___ the roads.",
-           "a": "on",
+           "s": "A nurse works in a ___ .",
+           "a": "hospital",
            "o": [
-            "on",
-            "in",
-            "at"
+            "hospital",
+            "farm"
            ]
           },
           {
-           "s": "A housewife works ___ home.",
-           "a": "at",
+           "s": "Workers make cars in a ___ .",
+           "a": "factory",
            "o": [
-            "at",
-            "in",
-            "on"
+            "factory",
+            "office"
            ]
           }
          ]
@@ -168,51 +116,37 @@
        ]
       },
       {
-       "label": "صِل",
+       "label": "رتّب الجملة",
        "blocks": [
         {
-         "type": "choice",
-         "star": false,
+         "type": "order",
+         "sentences": [
+          "A doctor works in a hospital.",
+          "A farmer works on a farm."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
          "items": [
           {
-           "q": "waiter →",
-           "a": "restaurant",
+           "a": "A doctor works in a hospital.",
            "o": [
-            "restaurant",
-            "farm",
-            "office"
-           ],
-           "why": ""
+            "A doctor works in a hospital.",
+            "A farmer works on a farm."
+           ]
           },
           {
-           "q": "engineer →",
-           "a": "building site",
+           "a": "A farmer works on a farm.",
            "o": [
-            "building site",
-            "restaurant",
-            "home"
-           ],
-           "why": ""
-          },
-          {
-           "q": "IT programmer →",
-           "a": "office",
-           "o": [
-            "office",
-            "farm",
-            "roads"
-           ],
-           "why": ""
-          },
-          {
-           "q": "builder →",
-           "a": "building site",
-           "o": [
-            "building site",
-            "hospital",
-            "office"
-           ],
-           "why": ""
+            "A farmer works on a farm.",
+            "A doctor works in a hospital."
+           ]
           }
          ]
         }
@@ -236,38 +170,38 @@
      "items": [
       {
        "must": 1,
-       "term": "in a hospital",
-       "ipa": "/ɪn ə ˈhɒspɪtl/",
-       "meaning": "في مستشفى",
-       "ex": "She works in a hospital."
+       "term": "hospital",
+       "ipa": "",
+       "meaning": "مستشفى",
+       "ex": "A doctor works in a hospital."
       },
       {
        "must": 1,
-       "term": "on a farm",
-       "ipa": "/ɒn ə fɑːm/",
-       "meaning": "في مزرعة",
-       "ex": "He works on a farm."
+       "term": "farm",
+       "ipa": "",
+       "meaning": "مزرعة",
+       "ex": "A farmer works on a farm."
       },
       {
        "must": 1,
-       "term": "at home",
-       "ipa": "/ət həʊm/",
-       "meaning": "في البيت",
-       "ex": "A housewife works at home."
-      },
-      {
-       "must": 1,
-       "term": "office",
-       "ipa": "/ˈɒfɪs/",
-       "meaning": "مكتب",
-       "ex": "My dad works in an office."
+       "term": "school",
+       "ipa": "",
+       "meaning": "مدرسة",
+       "ex": "school"
       },
       {
        "must": 0,
-       "term": "oil refinery",
-       "ipa": "/ɔɪl rɪˈfaɪnəri/",
-       "meaning": "مصفاة نفط",
-       "ex": "Who works in an oil refinery?"
+       "term": "office",
+       "ipa": "",
+       "meaning": "مكتب",
+       "ex": "office"
+      },
+      {
+       "must": 0,
+       "term": "factory",
+       "ipa": "",
+       "meaning": "مصنع",
+       "ex": "factory"
       }
      ]
     }
@@ -281,65 +215,73 @@
     {
      "type": "quiz",
      "star": true,
-     "pass": 4,
+     "pass": 5,
      "items": [
-      {
-       "q": "A housewife works ___ home.",
-       "a": "at",
-       "o": [
-        "at",
-        "in",
-        "on"
-       ],
-       "why": ""
-      },
       {
        "q": "A farmer works ___ a farm.",
        "a": "on",
        "o": [
         "on",
-        "in",
-        "at"
+        "in"
        ],
        "why": ""
       },
       {
-       "q": "Where does a doctor work?",
-       "a": "In a hospital.",
+       "q": "A nurse works in a ___ .",
+       "a": "hospital",
        "o": [
-        "In a hospital.",
-        "On a farm.",
-        "At home."
+        "hospital",
+        "farm"
        ],
        "why": ""
       },
       {
-       "q": "ما معنى building site؟",
-       "a": "موقع بناء",
+       "q": "Workers make cars in a ___ .",
+       "a": "factory",
        "o": [
-        "موقع بناء",
-        "مطعم",
-        "مكتب"
+        "factory",
+        "office"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى farm؟",
+       "a": "مزرعة",
+       "o": [
+        "مزرعة",
+        "مستشفى",
+        "مدرسة"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى school؟",
+       "a": "مدرسة",
+       "o": [
+        "مدرسة",
+        "مستشفى",
+        "مزرعة"
        ],
        "why": "",
        "ar": true
       },
       {
        "type": "listen",
-       "say": "Where does an IT programmer work?",
+       "say": "A doctor works in a hospital.",
        "q": "استمع: ماذا قال المتحدث؟",
-       "a": "Where does an IT programmer work?",
+       "a": "A doctor works in a hospital.",
        "o": [
-        "Where does an IT programmer work?",
-        "Who works in an oil refinery?",
-        "Where does a doctor work?"
+        "A doctor works in a hospital.",
+        "A farmer works on a farm."
        ],
        "why": ""
       }
      ]
     }
    ],
-   "lead": "5 أسئلة. تنجح بـ 4 من 5."
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
   }
- ]
+ ],
+ "characters": {}
 }

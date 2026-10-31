@@ -1,0 +1,287 @@
+{
+ "id": "en-5-u5-l4",
+ "grade": 5,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 5 · Lesson 4: Are you healthy?",
+ "titleAr": "الخضروات صحية.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "الخضروات صحية.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "healthy",
+       "ar": "صحي",
+       "em": "🥦"
+      },
+      {
+       "id": "v1",
+       "en": "unhealthy",
+       "ar": "غير صحي",
+       "em": "🍟"
+      },
+      {
+       "id": "v2",
+       "en": "sugar",
+       "ar": "سكر",
+       "em": "🍬"
+      },
+      {
+       "id": "v3",
+       "en": "vegetables",
+       "ar": "خضروات",
+       "em": "🥕"
+      },
+      {
+       "id": "v4",
+       "en": "exercise",
+       "ar": "تمارين",
+       "em": "🏃"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 74⁠–⁠75 · كتاب النشاط ص 62⁠–⁠63"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "too much / too many",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Vegetables are <b>healthy</b>.</div><div class=\"ex\">Too <b>much</b> sugar is unhealthy.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Vegetables are healthy. Too much sugar is unhealthy."
+      }
+     ]
+    }
+   ],
+   "lead": "too much مع غير المعدود و too many مع المعدود.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "Too ___ sugar is bad.",
+           "a": "much",
+           "o": [
+            "much",
+            "many"
+           ]
+          },
+          {
+           "s": "Too ___ sweets are bad.",
+           "a": "many",
+           "o": [
+            "many",
+            "much"
+           ]
+          },
+          {
+           "s": "Vegetables are ___ .",
+           "a": "healthy",
+           "o": [
+            "healthy",
+            "unhealthy"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Vegetables are healthy.",
+          "Too much sugar is unhealthy."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Vegetables are healthy.",
+           "o": [
+            "Vegetables are healthy.",
+            "Too much sugar is unhealthy."
+           ]
+          },
+          {
+           "a": "Too much sugar is unhealthy.",
+           "o": [
+            "Too much sugar is unhealthy.",
+            "Vegetables are healthy."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "healthy",
+       "ipa": "",
+       "meaning": "صحي",
+       "ex": "Vegetables are healthy."
+      },
+      {
+       "must": 1,
+       "term": "unhealthy",
+       "ipa": "",
+       "meaning": "غير صحي",
+       "ex": "Too much sugar is unhealthy."
+      },
+      {
+       "must": 1,
+       "term": "sugar",
+       "ipa": "",
+       "meaning": "سكر",
+       "ex": "Too much sugar is unhealthy."
+      },
+      {
+       "must": 0,
+       "term": "vegetables",
+       "ipa": "",
+       "meaning": "خضروات",
+       "ex": "Vegetables are healthy."
+      },
+      {
+       "must": 0,
+       "term": "exercise",
+       "ipa": "",
+       "meaning": "تمارين",
+       "ex": "exercise"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "Too ___ sugar is bad.",
+       "a": "much",
+       "o": [
+        "much",
+        "many"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Too ___ sweets are bad.",
+       "a": "many",
+       "o": [
+        "many",
+        "much"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Vegetables are ___ .",
+       "a": "healthy",
+       "o": [
+        "healthy",
+        "unhealthy"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى vegetables؟",
+       "a": "خضروات",
+       "o": [
+        "خضروات",
+        "صحي",
+        "غير صحي"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى unhealthy؟",
+       "a": "غير صحي",
+       "o": [
+        "غير صحي",
+        "صحي",
+        "سكر"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Vegetables are healthy.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Vegetables are healthy.",
+       "o": [
+        "Vegetables are healthy.",
+        "Too much sugar is unhealthy."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

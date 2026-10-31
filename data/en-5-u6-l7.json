@@ -1,0 +1,337 @@
+{
+ "id": "en-5-u6-l7",
+ "grade": 5,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 6 · Lesson 7: Check my Understanding",
+ "titleAr": "مراجعة الوحدة — Out and About",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "مراجعة الوحدة — Out and About",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "bank",
+       "ar": "مصرف",
+       "em": "🏦"
+      },
+      {
+       "id": "v1",
+       "en": "post office",
+       "ar": "مكتب البريد",
+       "em": "🏤"
+      },
+      {
+       "id": "v2",
+       "en": "excuse me",
+       "ar": "عفواً",
+       "em": "🙋"
+      },
+      {
+       "id": "v3",
+       "en": "turn left",
+       "ar": "انعطف يساراً",
+       "em": "⬅️"
+      },
+      {
+       "id": "v4",
+       "en": "tidy",
+       "ar": "يرتب",
+       "em": "🧹"
+      },
+      {
+       "id": "v5",
+       "en": "wash the dishes",
+       "ar": "يغسل الصحون",
+       "em": "🍽️"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 98⁠–⁠99 · كتاب النشاط ص 84⁠–⁠85"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Review",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">There's a bank in the city centre.</div><div class=\"ex\"><b>Excuse</b> me. Where's the museum?</div><div class=\"ex\">I help Mum at home.</div><div class=\"ex\">The roller coaster is <b>scary</b>!</div><div class=\"ex\">How much is this key ring?</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "There's a bank in the city centre. Excuse me. Where's the museum? I help Mum at home. The roller coaster is scary! How much is this key ring?"
+      }
+     ]
+    }
+   ],
+   "lead": "نراجع أهم قواعد الوحدة وكلماتها: اقرأ الأمثلة بصوت عالٍ ثم حلّ التمارين.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "We buy medicine at the ___ .",
+           "a": "pharmacy",
+           "o": [
+            "pharmacy",
+            "bank"
+           ]
+          },
+          {
+           "s": "___ me. Where's the bank?",
+           "a": "Excuse",
+           "o": [
+            "Excuse",
+            "Sorry"
+           ]
+          },
+          {
+           "s": "I'm ___ the dishes.",
+           "a": "washing",
+           "o": [
+            "washing",
+            "wash"
+           ]
+          },
+          {
+           "s": "The roller coaster is ___ !",
+           "a": "scary",
+           "o": [
+            "scary",
+            "scared"
+           ]
+          },
+          {
+           "s": "It's only two dinars. It's ___ .",
+           "a": "cheap",
+           "o": [
+            "cheap",
+            "expensive"
+           ]
+          },
+          {
+           "s": "We ___ lions.",
+           "a": "saw",
+           "o": [
+            "saw",
+            "seed"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "There's a bank in the city centre.",
+          "Excuse me. Where's the museum?",
+          "I help Mum at home.",
+          "The roller coaster is scary!"
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "There's a bank in the city centre.",
+           "o": [
+            "There's a bank in the city centre.",
+            "Excuse me. Where's the museum?",
+            "I help Mum at home."
+           ]
+          },
+          {
+           "a": "Excuse me. Where's the museum?",
+           "o": [
+            "Excuse me. Where's the museum?",
+            "There's a bank in the city centre.",
+            "I help Mum at home."
+           ]
+          },
+          {
+           "a": "I help Mum at home.",
+           "o": [
+            "I help Mum at home.",
+            "There's a bank in the city centre.",
+            "Excuse me. Where's the museum?"
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "bank",
+       "ipa": "",
+       "meaning": "مصرف",
+       "ex": "There's a bank in the city centre."
+      },
+      {
+       "must": 1,
+       "term": "post office",
+       "ipa": "",
+       "meaning": "مكتب البريد",
+       "ex": "post office"
+      },
+      {
+       "must": 1,
+       "term": "excuse me",
+       "ipa": "",
+       "meaning": "عفواً",
+       "ex": "Excuse me. Where's the museum?"
+      },
+      {
+       "must": 0,
+       "term": "turn left",
+       "ipa": "",
+       "meaning": "انعطف يساراً",
+       "ex": "turn left"
+      },
+      {
+       "must": 0,
+       "term": "tidy",
+       "ipa": "",
+       "meaning": "يرتب",
+       "ex": "tidy"
+      },
+      {
+       "must": 0,
+       "term": "wash the dishes",
+       "ipa": "",
+       "meaning": "يغسل الصحون",
+       "ex": "wash the dishes"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "We buy medicine at the ___ .",
+       "a": "pharmacy",
+       "o": [
+        "pharmacy",
+        "bank"
+       ],
+       "why": ""
+      },
+      {
+       "q": "___ me. Where's the bank?",
+       "a": "Excuse",
+       "o": [
+        "Excuse",
+        "Sorry"
+       ],
+       "why": ""
+      },
+      {
+       "q": "I'm ___ the dishes.",
+       "a": "washing",
+       "o": [
+        "washing",
+        "wash"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى bank؟",
+       "a": "مصرف",
+       "o": [
+        "مصرف",
+        "مكتب البريد",
+        "عفواً"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى turn left؟",
+       "a": "انعطف يساراً",
+       "o": [
+        "انعطف يساراً",
+        "مصرف",
+        "مكتب البريد"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "There's a bank in the city centre.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "There's a bank in the city centre.",
+       "o": [
+        "There's a bank in the city centre.",
+        "Excuse me. Where's the museum?",
+        "I help Mum at home."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

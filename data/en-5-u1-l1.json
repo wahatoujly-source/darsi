@@ -5,38 +5,12 @@
  "stage": "primary-4-6",
  "lang": "en",
  "title": "Unit 1 · Lesson 1: I'm from …",
- "titleAr": "الوحدة الأولى: عالمنا — الدرس الأول: أنا من …",
- "characters": {
-  "Murad": {
-   "ar": "مراد",
-   "color": "--c2",
-   "g": "m",
-   "pitch": 1.3
-  },
-  "Asma": {
-   "ar": "أسماء",
-   "color": "--c3",
-   "g": "f",
-   "pitch": 1.5
-  },
-  "Kareem": {
-   "ar": "كريم",
-   "color": "--c1",
-   "g": "m",
-   "pitch": 1.4
-  },
-  "Jena": {
-   "ar": "جنى",
-   "color": "--c4",
-   "g": "f",
-   "pitch": 1.6
-  }
- },
+ "titleAr": "من أين أنت؟ أنا من الجزائر.",
  "steps": [
   {
    "title": "المفردات",
    "eyebrow": "الخطوة ١ — المفردات",
-   "heading": "الدول",
+   "heading": "من أين أنت؟ أنا من الجزائر.",
    "blocks": [
     {
      "type": "vocab",
@@ -55,93 +29,51 @@
       },
       {
        "id": "v2",
-       "en": "Turkey",
-       "ar": "تركيا",
-       "em": "🇹🇷"
+       "en": "Algeria",
+       "ar": "الجزائر",
+       "em": "🇩🇿"
       },
       {
        "id": "v3",
-       "en": "Italy",
-       "ar": "إيطاليا",
-       "em": "🇮🇹"
+       "en": "Sudan",
+       "ar": "السودان",
+       "em": "🇸🇩"
       },
       {
        "id": "v4",
-       "en": "France",
-       "ar": "فرنسا",
-       "em": "🇫🇷"
-      },
-      {
-       "id": "v5",
-       "en": "England",
-       "ar": "إنجلترا",
-       "em": "🏴"
-      },
-      {
-       "id": "v6",
-       "en": "Japan",
-       "ar": "اليابان",
-       "em": "🇯🇵"
-      },
-      {
-       "id": "v7",
-       "en": "Thailand",
-       "ar": "تايلاند",
-       "em": "🇹🇭"
+       "en": "Morocco",
+       "ar": "المغرب",
+       "em": "🇲🇦"
       }
      ]
     }
    ],
-   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتابك ص 8–9."
-  },
-  {
-   "title": "استمع",
-   "eyebrow": "الخطوة ٢ — استمع",
-   "heading": "استمع إلى الحوار",
-   "blocks": [
-    {
-     "type": "dialogue",
-     "star": true
-    }
-   ],
-   "lead": "شغّل الحوار وتابع الكلمات المضيئة، واضغط على أي جملة لتعيدها."
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 8⁠–⁠9 · كتاب النشاط ص 4⁠–⁠5"
   },
   {
    "title": "القاعدة",
-   "eyebrow": "الخطوة ٣ — القاعدة",
-   "heading": "Is he from …? / Are they from …?",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "be from",
    "blocks": [
     {
      "type": "panel",
-     "title": "١. الإثبات والنفي",
-     "html": "<div class=\"ex\">He<b>'s</b> from Libya. = He <b>is</b> from Libya.</div><div class=\"ex\">He <b>isn't</b> from Japan.</div><div class=\"ex\">We<b>'re</b> from Turkey. We <b>aren't</b> from Italy.</div><p class=\"note\">isn't = is not &nbsp;·&nbsp; aren't = are not</p>",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Where are you <b>from</b>? I'm from Algeria.</div><div class=\"ex\">Where <b>is</b> he from? He's from Sudan.</div>",
      "blocks": [
       {
        "type": "say",
        "label": "▶ اسمع",
-       "text": "He's from Libya. He isn't from Japan. We're from Turkey. We aren't from Italy."
-      }
-     ]
-    },
-    {
-     "type": "panel",
-     "title": "٢. السؤال والجواب",
-     "html": "<div class=\"ex\"><b>Is</b> he / she from Libya? — Yes, he <b>is</b>. / No, she <b>isn't</b>.</div><div class=\"ex\"><b>Are</b> we / you / they from Libya? — Yes, they <b>are</b>. / No, they <b>aren't</b>.</div>",
-     "blocks": [
-      {
-       "type": "say",
-       "label": "▶ اسمع",
-       "text": "Is she from Libya? Yes, she is. Are they from Turkey? No, they aren't."
+       "text": "Where are you from? I'm from Algeria. Where is he from? He's from Sudan."
       }
      ]
     }
    ],
-   "lead": "نسأل عن بلد شخص بـ Is للمفرد و Are للجمع.",
+   "lead": "I'm from … / He's from … / They're from …",
    "starOnVisit": true
   },
   {
    "title": "تدرّب",
-   "eyebrow": "الخطوة ٤ — تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
    "heading": "تمارين تُصحَّح فوراً",
    "blocks": [
     {
@@ -156,57 +88,27 @@
          "mode": "gap",
          "items": [
           {
-           "s": "___ Asma from England?",
-           "a": "Is",
+           "s": "Where ___ he from?",
+           "a": "is",
            "o": [
-            "Is",
-            "Are",
-            "Am"
-           ]
-          },
-          {
-           "s": "___ Murad and Ali from Turkey?",
-           "a": "Are",
-           "o": [
-            "Are",
-            "Is",
-            "Am"
-           ]
-          },
-          {
-           "s": "No, she ___ . She's from Libya.",
-           "a": "isn't",
-           "o": [
-            "isn't",
-            "aren't",
-            "not"
-           ]
-          },
-          {
-           "s": "We ___ from Italy. We're from Turkey.",
-           "a": "aren't",
-           "o": [
-            "aren't",
-            "isn't",
-            "not"
-           ]
-          },
-          {
-           "s": "Yes, they ___ .",
-           "a": "are",
-           "o": [
-            "are",
             "is",
-            "am"
+            "are"
            ]
           },
           {
-           "s": "My name's Asma. I'm ___ Libya.",
+           "s": "They're ___ Morocco.",
            "a": "from",
            "o": [
             "from",
-            "in",
-            "at"
+            "in"
+           ]
+          },
+          {
+           "s": "I ___ from Libya.",
+           "a": "am",
+           "o": [
+            "am",
+            "is"
            ]
           }
          ]
@@ -219,10 +121,8 @@
         {
          "type": "order",
          "sentences": [
-          "I'm from Libya.",
-          "Where's Thailand?",
-          "He isn't from Japan.",
-          "Are they from Turkey?"
+          "Where are you from? I'm from Algeria.",
+          "Where is he from? He's from Sudan."
          ]
         }
        ]
@@ -235,27 +135,17 @@
          "mode": "listen",
          "items": [
           {
-           "a": "I'm from Libya.",
+           "a": "Where are you from? I'm from Algeria.",
            "o": [
-            "I'm from Libya.",
-            "I'm from Italy.",
-            "I'm from Egypt."
+            "Where are you from? I'm from Algeria.",
+            "Where is he from? He's from Sudan."
            ]
           },
           {
-           "a": "Where's Thailand?",
+           "a": "Where is he from? He's from Sudan.",
            "o": [
-            "Where's Thailand?",
-            "Where's Turkey?",
-            "Where's Japan?"
-           ]
-          },
-          {
-           "a": "No, she isn't.",
-           "o": [
-            "No, she isn't.",
-            "Yes, she is.",
-            "No, they aren't."
+            "Where is he from? He's from Sudan.",
+            "Where are you from? I'm from Algeria."
            ]
           }
          ]
@@ -269,7 +159,7 @@
   },
   {
    "title": "احفظ",
-   "eyebrow": "الخطوة ٥ — احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
    "heading": "كلمات يجب أن تحفظها",
    "blocks": [
     {
@@ -280,45 +170,38 @@
      "items": [
       {
        "must": 1,
-       "term": "I'm from …",
-       "ipa": "/aɪm frɒm/",
-       "meaning": "أنا من …",
-       "ex": "I'm from Libya."
+       "term": "Libya",
+       "ipa": "",
+       "meaning": "ليبيا",
+       "ex": "Libya"
       },
       {
        "must": 1,
-       "term": "Where's …?",
-       "ipa": "/weəz/",
-       "meaning": "أين …؟",
-       "ex": "Where's Libya?"
+       "term": "Egypt",
+       "ipa": "",
+       "meaning": "مصر",
+       "ex": "Egypt"
       },
       {
        "must": 1,
-       "term": "Here it is.",
-       "ipa": "/hɪər ɪt ɪz/",
-       "meaning": "ها هي.",
-       "ex": "Where's Libya? — Here it is."
-      },
-      {
-       "must": 1,
-       "term": "country",
-       "ipa": "/ˈkʌntri/",
-       "meaning": "بلد / دولة",
-       "ex": "Libya is my country."
+       "term": "Algeria",
+       "ipa": "",
+       "meaning": "الجزائر",
+       "ex": "Where are you from? I'm from Algeria."
       },
       {
        "must": 0,
-       "term": "isn't",
-       "ipa": "/ˈɪznt/",
-       "meaning": "ليس",
-       "ex": "Fawzi isn't from Japan."
+       "term": "Sudan",
+       "ipa": "",
+       "meaning": "السودان",
+       "ex": "Where is he from? He's from Sudan."
       },
       {
        "must": 0,
-       "term": "aren't",
-       "ipa": "/ɑːnt/",
-       "meaning": "ليسوا",
-       "ex": "We aren't from Italy."
+       "term": "Morocco",
+       "ipa": "",
+       "meaning": "المغرب",
+       "ex": "Morocco"
       }
      ]
     }
@@ -326,151 +209,79 @@
   },
   {
    "title": "اختبار",
-   "eyebrow": "الخطوة ٦ — اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
    "heading": "اختبر نفسك",
    "blocks": [
     {
      "type": "quiz",
      "star": true,
-     "pass": 6,
+     "pass": 5,
      "items": [
       {
-       "type": "listen",
-       "say": "I'm from Libya.",
-       "q": "استمع: ماذا قال المتحدث؟",
-       "a": "I'm from Libya.",
+       "q": "Where ___ he from?",
+       "a": "is",
        "o": [
-        "I'm from Libya.",
-        "I'm from Egypt.",
-        "I'm from France."
+        "is",
+        "are"
        ],
        "why": ""
       },
       {
-       "q": "ما معنى Where's Libya?",
-       "a": "أين ليبيا؟",
+       "q": "They're ___ Morocco.",
+       "a": "from",
        "o": [
-        "أين ليبيا؟",
-        "هذه ليبيا.",
-        "أنا من ليبيا."
+        "from",
+        "in"
+       ],
+       "why": ""
+      },
+      {
+       "q": "I ___ from Libya.",
+       "a": "am",
+       "o": [
+        "am",
+        "is"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى Libya؟",
+       "a": "ليبيا",
+       "o": [
+        "ليبيا",
+        "مصر",
+        "الجزائر"
        ],
        "why": "",
        "ar": true
       },
       {
-       "q": "___ Asma from Libya?",
-       "a": "Is",
+       "q": "ما معنى Algeria؟",
+       "a": "الجزائر",
        "o": [
-        "Is",
-        "Are"
-       ],
-       "why": ""
-      },
-      {
-       "q": "Are Murad and Ali from Turkey?",
-       "a": "Yes, they are.",
-       "o": [
-        "Yes, they are.",
-        "Yes, he is.",
-        "Yes, I am."
-       ],
-       "why": ""
-      },
-      {
-       "q": "Is Asma from England?",
-       "a": "No, she isn't.",
-       "o": [
-        "No, she isn't.",
-        "Yes, she is."
-       ],
-       "why": "أسماء من ليبيا."
-      },
-      {
-       "q": "Japan بالعربية:",
-       "a": "اليابان",
-       "o": [
-        "اليابان",
-        "تايلاند",
-        "تركيا"
+        "الجزائر",
+        "ليبيا",
+        "مصر"
        ],
        "why": "",
        "ar": true
       },
       {
        "type": "listen",
-       "say": "Here it is.",
+       "say": "Where are you from? I'm from Algeria.",
        "q": "استمع: ماذا قال المتحدث؟",
-       "a": "Here it is.",
+       "a": "Where are you from? I'm from Algeria.",
        "o": [
-        "Here it is.",
-        "Where is it?",
-        "That's right."
-       ],
-       "why": ""
-      },
-      {
-       "q": "We ___ from Italy.",
-       "a": "aren't",
-       "o": [
-        "aren't",
-        "isn't"
+        "Where are you from? I'm from Algeria.",
+        "Where is he from? He's from Sudan."
        ],
        "why": ""
       }
      ]
     }
    ],
-   "lead": "8 أسئلة. تنجح بـ 6 من 8."
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
   }
  ],
- "dialogue": [
-  [
-   "Asma",
-   "My name's Asma. I'm from Libya."
-  ],
-  [
-   "Kareem",
-   "Where's Libya?"
-  ],
-  [
-   "Jena",
-   "Here it is. Where's Thailand?"
-  ],
-  [
-   "Kareem",
-   "Here it is."
-  ],
-  [
-   "Jena",
-   "Yes, that's right."
-  ],
-  [
-   "Asma",
-   "Fawzi isn't from Japan. He's from Libya."
-  ],
-  [
-   "Murad",
-   "Hi! We are Murad and Ali. We aren't from Italy. We're from Turkey."
-  ],
-  [
-   "Kareem",
-   "Is Asma from England?"
-  ],
-  [
-   "Jena",
-   "No, she isn't. She's from Libya."
-  ],
-  [
-   "Jena",
-   "Are Murad and Ali from Turkey?"
-  ],
-  [
-   "Kareem",
-   "Yes, they are."
-  ]
- ],
- "left": [
-  "Asma",
-  "Kareem"
- ]
+ "characters": {}
 }

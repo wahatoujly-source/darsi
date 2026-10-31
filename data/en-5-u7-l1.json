@@ -1,0 +1,299 @@
+{
+ "id": "en-5-u7-l1",
+ "grade": 5,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 7 · Lesson 1: The Seasons",
+ "titleAr": "هناك أربعة فصول.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "هناك أربعة فصول.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "spring",
+       "ar": "الربيع",
+       "em": "🌸"
+      },
+      {
+       "id": "v1",
+       "en": "summer",
+       "ar": "الصيف",
+       "em": "☀️"
+      },
+      {
+       "id": "v2",
+       "en": "autumn",
+       "ar": "الخريف",
+       "em": "🍂"
+      },
+      {
+       "id": "v3",
+       "en": "winter",
+       "ar": "الشتاء",
+       "em": "❄️"
+      },
+      {
+       "id": "v4",
+       "en": "season",
+       "ar": "فصل",
+       "em": "🔄"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 104⁠–⁠105 · كتاب النشاط ص 88⁠–⁠89"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "in + season",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">There are four seasons.</div><div class=\"ex\"><b>In</b> winter it's cold and rainy.</div><div class=\"ex\"><b>In</b> summer it's hot.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "There are four seasons. In winter it's cold and rainy. In summer it's hot."
+      }
+     ]
+    }
+   ],
+   "lead": "in winter / in summer",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "___ winter it's cold.",
+           "a": "In",
+           "o": [
+            "In",
+            "On"
+           ]
+          },
+          {
+           "s": "It's hot in ___ .",
+           "a": "summer",
+           "o": [
+            "summer",
+            "winter"
+           ]
+          },
+          {
+           "s": "Leaves fall in ___ .",
+           "a": "autumn",
+           "o": [
+            "autumn",
+            "spring"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "There are four seasons.",
+          "In winter it's cold and rainy.",
+          "In summer it's hot."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "There are four seasons.",
+           "o": [
+            "There are four seasons.",
+            "In winter it's cold and rainy.",
+            "In summer it's hot."
+           ]
+          },
+          {
+           "a": "In winter it's cold and rainy.",
+           "o": [
+            "In winter it's cold and rainy.",
+            "There are four seasons.",
+            "In summer it's hot."
+           ]
+          },
+          {
+           "a": "In summer it's hot.",
+           "o": [
+            "In summer it's hot.",
+            "There are four seasons.",
+            "In winter it's cold and rainy."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "spring",
+       "ipa": "",
+       "meaning": "الربيع",
+       "ex": "spring"
+      },
+      {
+       "must": 1,
+       "term": "summer",
+       "ipa": "",
+       "meaning": "الصيف",
+       "ex": "In summer it's hot."
+      },
+      {
+       "must": 1,
+       "term": "autumn",
+       "ipa": "",
+       "meaning": "الخريف",
+       "ex": "autumn"
+      },
+      {
+       "must": 0,
+       "term": "winter",
+       "ipa": "",
+       "meaning": "الشتاء",
+       "ex": "In winter it's cold and rainy."
+      },
+      {
+       "must": 0,
+       "term": "season",
+       "ipa": "",
+       "meaning": "فصل",
+       "ex": "There are four seasons."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "___ winter it's cold.",
+       "a": "In",
+       "o": [
+        "In",
+        "On"
+       ],
+       "why": ""
+      },
+      {
+       "q": "It's hot in ___ .",
+       "a": "summer",
+       "o": [
+        "summer",
+        "winter"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Leaves fall in ___ .",
+       "a": "autumn",
+       "o": [
+        "autumn",
+        "spring"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى autumn؟",
+       "a": "الخريف",
+       "o": [
+        "الخريف",
+        "الربيع",
+        "الصيف"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى spring؟",
+       "a": "الربيع",
+       "o": [
+        "الربيع",
+        "الصيف",
+        "الخريف"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "There are four seasons.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "There are four seasons.",
+       "o": [
+        "There are four seasons.",
+        "In winter it's cold and rainy.",
+        "In summer it's hot."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

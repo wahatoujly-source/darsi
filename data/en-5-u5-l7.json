@@ -1,0 +1,337 @@
+{
+ "id": "en-5-u5-l7",
+ "grade": 5,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 5 · Lesson 7: Check my Understanding",
+ "titleAr": "مراجعة الوحدة — Food and Drink",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "مراجعة الوحدة — Food and Drink",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "lunch",
+       "ar": "غداء",
+       "em": "🍽️"
+      },
+      {
+       "id": "v1",
+       "en": "couscous",
+       "ar": "كسكسي",
+       "em": "🍲"
+      },
+      {
+       "id": "v2",
+       "en": "countable",
+       "ar": "معدود",
+       "em": "🔢"
+      },
+      {
+       "id": "v3",
+       "en": "uncountable",
+       "ar": "غير معدود",
+       "em": "💧"
+      },
+      {
+       "id": "v4",
+       "en": "would like",
+       "ar": "يود",
+       "em": "🙂"
+      },
+      {
+       "id": "v5",
+       "en": "please",
+       "ar": "من فضلك",
+       "em": "🙏"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 80⁠–⁠81 · كتاب النشاط ص 68⁠–⁠69"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Review",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\"><b>Let's</b> eat lunch!</div><div class=\"ex\">I can count apples: one apple, two apples.</div><div class=\"ex\"><b>Would</b> you like some juice?</div><div class=\"ex\">Vegetables are healthy.</div><div class=\"ex\">In my lunchbox there <b>is</b> a sandwich.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Let's eat lunch! I can count apples: one apple, two apples. Would you like some juice? Vegetables are healthy. In my lunchbox there is a sandwich."
+      }
+     ]
+    }
+   ],
+   "lead": "نراجع أهم قواعد الوحدة وكلماتها: اقرأ الأمثلة بصوت عالٍ ثم حلّ التمارين.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "___ eat lunch!",
+           "a": "Let's",
+           "o": [
+            "Let's",
+            "Lets"
+           ]
+          },
+          {
+           "s": "___ apple",
+           "a": "an",
+           "o": [
+            "an",
+            "some"
+           ]
+          },
+          {
+           "s": "___ you like some tea?",
+           "a": "Would",
+           "o": [
+            "Would",
+            "Do"
+           ]
+          },
+          {
+           "s": "Too ___ sugar is bad.",
+           "a": "much",
+           "o": [
+            "much",
+            "many"
+           ]
+          },
+          {
+           "s": "There ___ a sandwich.",
+           "a": "is",
+           "o": [
+            "is",
+            "are"
+           ]
+          },
+          {
+           "s": "We ___ a picnic.",
+           "a": "had",
+           "o": [
+            "had",
+            "have"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Let's eat lunch!",
+          "I can count apples: one apple, two apples.",
+          "Would you like some juice?",
+          "Vegetables are healthy."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Let's eat lunch!",
+           "o": [
+            "Let's eat lunch!",
+            "I can count apples: one apple, two apples.",
+            "Would you like some juice?"
+           ]
+          },
+          {
+           "a": "I can count apples: one apple, two apples.",
+           "o": [
+            "I can count apples: one apple, two apples.",
+            "Let's eat lunch!",
+            "Would you like some juice?"
+           ]
+          },
+          {
+           "a": "Would you like some juice?",
+           "o": [
+            "Would you like some juice?",
+            "Let's eat lunch!",
+            "I can count apples: one apple, two apples."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "lunch",
+       "ipa": "",
+       "meaning": "غداء",
+       "ex": "Let's eat lunch!"
+      },
+      {
+       "must": 1,
+       "term": "couscous",
+       "ipa": "",
+       "meaning": "كسكسي",
+       "ex": "couscous"
+      },
+      {
+       "must": 1,
+       "term": "countable",
+       "ipa": "",
+       "meaning": "معدود",
+       "ex": "countable"
+      },
+      {
+       "must": 0,
+       "term": "uncountable",
+       "ipa": "",
+       "meaning": "غير معدود",
+       "ex": "uncountable"
+      },
+      {
+       "must": 0,
+       "term": "would like",
+       "ipa": "",
+       "meaning": "يود",
+       "ex": "Would you like some juice?"
+      },
+      {
+       "must": 0,
+       "term": "please",
+       "ipa": "",
+       "meaning": "من فضلك",
+       "ex": "please"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "___ eat lunch!",
+       "a": "Let's",
+       "o": [
+        "Let's",
+        "Lets"
+       ],
+       "why": ""
+      },
+      {
+       "q": "___ apple",
+       "a": "an",
+       "o": [
+        "an",
+        "some"
+       ],
+       "why": ""
+      },
+      {
+       "q": "___ you like some tea?",
+       "a": "Would",
+       "o": [
+        "Would",
+        "Do"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى countable؟",
+       "a": "معدود",
+       "o": [
+        "معدود",
+        "غداء",
+        "كسكسي"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى would like؟",
+       "a": "يود",
+       "o": [
+        "يود",
+        "غداء",
+        "كسكسي"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Let's eat lunch!",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Let's eat lunch!",
+       "o": [
+        "Let's eat lunch!",
+        "I can count apples: one apple, two apples.",
+        "Would you like some juice?"
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

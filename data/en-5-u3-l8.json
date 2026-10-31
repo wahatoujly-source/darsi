@@ -1,0 +1,287 @@
+{
+ "id": "en-5-u3-l8",
+ "grade": 5,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 3 · Lesson 8: Our Sports Club",
+ "titleAr": "انضم إلى نادينا الرياضي!",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "انضم إلى نادينا الرياضي!",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "club",
+       "ar": "نادٍ",
+       "em": "🏟️"
+      },
+      {
+       "id": "v1",
+       "en": "join",
+       "ar": "ينضم",
+       "em": "🤝"
+      },
+      {
+       "id": "v2",
+       "en": "member",
+       "ar": "عضو",
+       "em": "🪪"
+      },
+      {
+       "id": "v3",
+       "en": "coach",
+       "ar": "مدرب",
+       "em": "🧑‍🏫"
+      },
+      {
+       "id": "v4",
+       "en": "training",
+       "ar": "تدريب",
+       "em": "🏃"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 58⁠–⁠59 · كتاب النشاط ص 50⁠–⁠51"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Advert language",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\"><b>Join</b> our sports club!</div><div class=\"ex\">Training is <b>on</b> Monday and Wednesday.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Join our sports club! Training is on Monday and Wednesday."
+      }
+     ]
+    }
+   ],
+   "lead": "Join … / Come and … / Training is on …",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "___ our sports club!",
+           "a": "Join",
+           "o": [
+            "Join",
+            "Joins"
+           ]
+          },
+          {
+           "s": "Training is ___ Monday.",
+           "a": "on",
+           "o": [
+            "on",
+            "in"
+           ]
+          },
+          {
+           "s": "Our ___ helps us.",
+           "a": "coach",
+           "o": [
+            "coach",
+            "club"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Join our sports club!",
+          "Training is on Monday and Wednesday."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Join our sports club!",
+           "o": [
+            "Join our sports club!",
+            "Training is on Monday and Wednesday."
+           ]
+          },
+          {
+           "a": "Training is on Monday and Wednesday.",
+           "o": [
+            "Training is on Monday and Wednesday.",
+            "Join our sports club!"
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "club",
+       "ipa": "",
+       "meaning": "نادٍ",
+       "ex": "Join our sports club!"
+      },
+      {
+       "must": 1,
+       "term": "join",
+       "ipa": "",
+       "meaning": "ينضم",
+       "ex": "Join our sports club!"
+      },
+      {
+       "must": 1,
+       "term": "member",
+       "ipa": "",
+       "meaning": "عضو",
+       "ex": "member"
+      },
+      {
+       "must": 0,
+       "term": "coach",
+       "ipa": "",
+       "meaning": "مدرب",
+       "ex": "coach"
+      },
+      {
+       "must": 0,
+       "term": "training",
+       "ipa": "",
+       "meaning": "تدريب",
+       "ex": "Training is on Monday and Wednesday."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "___ our sports club!",
+       "a": "Join",
+       "o": [
+        "Join",
+        "Joins"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Training is ___ Monday.",
+       "a": "on",
+       "o": [
+        "on",
+        "in"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Our ___ helps us.",
+       "a": "coach",
+       "o": [
+        "coach",
+        "club"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى coach؟",
+       "a": "مدرب",
+       "o": [
+        "مدرب",
+        "نادٍ",
+        "ينضم"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى club؟",
+       "a": "نادٍ",
+       "o": [
+        "نادٍ",
+        "ينضم",
+        "عضو"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Join our sports club!",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Join our sports club!",
+       "o": [
+        "Join our sports club!",
+        "Training is on Monday and Wednesday."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

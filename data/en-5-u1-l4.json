@@ -5,149 +5,75 @@
  "stage": "primary-4-6",
  "lang": "en",
  "title": "Unit 1 · Lesson 4: Where's it from?",
- "titleAr": "الوحدة الأولى: عالمنا — الدرس الرابع: من أين هو؟",
- "characters": {
-  "Kareem": {
-   "ar": "كريم",
-   "color": "--c1",
-   "g": "m",
-   "pitch": 1.4
-  },
-  "Jena": {
-   "ar": "جنى",
-   "color": "--c4",
-   "g": "f",
-   "pitch": 1.6
-  }
- },
+ "titleAr": "من أين هذا الشاي؟ من الصين.",
  "steps": [
   {
    "title": "المفردات",
    "eyebrow": "الخطوة ١ — المفردات",
-   "heading": "أشياء وحيوانات من بلدان العالم",
+   "heading": "من أين هذا الشاي؟ من الصين.",
    "blocks": [
     {
      "type": "vocab",
      "items": [
       {
        "id": "v0",
+       "en": "dates",
+       "ar": "تمر",
+       "em": "🌴"
+      },
+      {
+       "id": "v1",
+       "en": "tea",
+       "ar": "شاي",
+       "em": "🍵"
+      },
+      {
+       "id": "v2",
        "en": "pizza",
        "ar": "بيتزا",
        "em": "🍕"
       },
       {
-       "id": "v1",
-       "en": "macaroni",
-       "ar": "مكرونة",
-       "em": "🍝"
-      },
-      {
-       "id": "v2",
-       "en": "pandas",
-       "ar": "حيوانات الباندا",
-       "em": "🐼"
-      },
-      {
        "id": "v3",
-       "en": "elephants",
-       "ar": "فيلة",
-       "em": "🐘"
+       "en": "carpet",
+       "ar": "سجاد",
+       "em": "🟥"
       },
       {
        "id": "v4",
-       "en": "curry",
-       "ar": "الكاري",
-       "em": "🍛"
-      },
-      {
-       "id": "v5",
-       "en": "kangaroos",
-       "ar": "كناغر",
-       "em": "🦘"
-      },
-      {
-       "id": "v6",
-       "en": "India",
-       "ar": "الهند",
-       "em": "🇮🇳"
-      },
-      {
-       "id": "v7",
-       "en": "China",
-       "ar": "الصين",
-       "em": "🇨🇳"
-      },
-      {
-       "id": "v8",
-       "en": "Australia",
-       "ar": "أستراليا",
-       "em": "🇦🇺"
-      },
-      {
-       "id": "v9",
-       "en": "Africa",
-       "ar": "أفريقيا",
-       "em": "🌍"
-      },
-      {
-       "id": "v10",
-       "en": "Asia",
-       "ar": "آسيا",
-       "em": "🌏"
+       "en": "made in",
+       "ar": "صُنع في",
+       "em": "🏭"
       }
      ]
     }
    ],
-   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتابك ص 14–15."
-  },
-  {
-   "title": "استمع",
-   "eyebrow": "الخطوة ٢ — استمع",
-   "heading": "استمع إلى الحوار",
-   "blocks": [
-    {
-     "type": "dialogue",
-     "star": true
-    }
-   ],
-   "lead": "شغّل الحوار وتابع الكلمات المضيئة، واضغط على أي جملة لتعيدها."
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 14⁠–⁠15 · كتاب النشاط ص 10⁠–⁠11"
   },
   {
    "title": "القاعدة",
-   "eyebrow": "الخطوة ٣ — القاعدة",
-   "heading": "Where is … from? / Where are … from?",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Where's it from? / Where are they from?",
    "blocks": [
     {
      "type": "panel",
-     "title": "is أم are؟",
-     "html": "<div class=\"ex\">Where <b>is</b> pizza from? — <b>It's</b> from Italy.</div><div class=\"ex\">Where <b>are</b> pandas from? — <b>They're</b> from China.</div><p class=\"note\">pandas, elephants, kangaroos جمع لأنها تنتهي بـ s.</p>",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Where's this tea <b>from</b>? It's from China.</div><div class=\"ex\">These dates are <b>from</b> Libya.</div>",
      "blocks": [
       {
        "type": "say",
        "label": "▶ اسمع",
-       "text": "Where is pizza from? It's from Italy. Where are pandas from? They're from China."
-      }
-     ]
-    },
-    {
-     "type": "panel",
-     "title": "المشروع الصحيح",
-     "html": "<div class=\"ex\">Mubatan batata is a famous <b>Libyan</b> dish. It is made from potato wedges stuffed with minced meat.</div><div class=\"ex\">Curry is from <b>India</b>. A famous <b>Italian</b> food is macaroni.</div><div class=\"ex\">Elephants are from <b>Africa</b> and Asia. Pandas are from <b>China</b>.</div>",
-     "blocks": [
-      {
-       "type": "say",
-       "label": "▶ اسمع",
-       "text": "Mubatan batata is a famous Libyan dish. Curry is from India. Pandas are from China."
+       "text": "Where's this tea from? It's from China. These dates are from Libya."
       }
      ]
     }
    ],
-   "lead": "نستخدم is مع المفرد، و are مع الجمع.",
+   "lead": "للمفرد is وللجمع are.",
    "starOnVisit": true
   },
   {
    "title": "تدرّب",
-   "eyebrow": "الخطوة ٤ — تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
    "heading": "تمارين تُصحَّح فوراً",
    "blocks": [
     {
@@ -155,93 +81,22 @@
      "star": true,
      "tabs": [
       {
-       "label": "من أين؟",
-       "blocks": [
-        {
-         "type": "choice",
-         "star": false,
-         "items": [
-          {
-           "q": "Where is pizza from?",
-           "a": "Italy",
-           "o": [
-            "Italy",
-            "China",
-            "India"
-           ],
-           "why": ""
-          },
-          {
-           "q": "Where are pandas from?",
-           "a": "China",
-           "o": [
-            "China",
-            "Australia",
-            "Libya"
-           ],
-           "why": ""
-          },
-          {
-           "q": "Where is curry from?",
-           "a": "India",
-           "o": [
-            "India",
-            "France",
-            "Japan"
-           ],
-           "why": ""
-          },
-          {
-           "q": "Where are kangaroos from?",
-           "a": "Australia",
-           "o": [
-            "Australia",
-            "Africa",
-            "Italy"
-           ],
-           "why": ""
-          },
-          {
-           "q": "Mubatan batata is a famous … dish.",
-           "a": "Libyan",
-           "o": [
-            "Libyan",
-            "English",
-            "Japanese"
-           ],
-           "why": ""
-          },
-          {
-           "q": "Where are elephants from?",
-           "a": "Africa and Asia",
-           "o": [
-            "Africa and Asia",
-            "England",
-            "Italy"
-           ],
-           "why": ""
-          }
-         ]
-        }
-       ]
-      },
-      {
-       "label": "is أم are",
+       "label": "اختر الكلمة",
        "blocks": [
         {
          "type": "mcq",
          "mode": "gap",
          "items": [
           {
-           "s": "Where ___ pizza from?",
-           "a": "is",
+           "s": "Where's this pizza ___ ?",
+           "a": "from",
            "o": [
-            "is",
-            "are"
+            "from",
+            "in"
            ]
           },
           {
-           "s": "Where ___ pandas from?",
+           "s": "Where ___ these dates from?",
            "a": "are",
            "o": [
             "are",
@@ -249,27 +104,11 @@
            ]
           },
           {
-           "s": "Where ___ elephants from?",
-           "a": "are",
+           "s": "This tea is ___ China.",
+           "a": "from",
            "o": [
-            "are",
-            "is"
-           ]
-          },
-          {
-           "s": "Where ___ curry from?",
-           "a": "is",
-           "o": [
-            "is",
-            "are"
-           ]
-          },
-          {
-           "s": "___ from Australia. (kangaroos)",
-           "a": "They're",
-           "o": [
-            "They're",
-            "It's"
+            "from",
+            "at"
            ]
           }
          ]
@@ -282,9 +121,33 @@
         {
          "type": "order",
          "sentences": [
-          "Where is pizza from?",
-          "Pandas are from China.",
-          "Curry is from India."
+          "Where's this tea from? It's from China.",
+          "These dates are from Libya."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Where's this tea from? It's from China.",
+           "o": [
+            "Where's this tea from? It's from China.",
+            "These dates are from Libya."
+           ]
+          },
+          {
+           "a": "These dates are from Libya.",
+           "o": [
+            "These dates are from Libya.",
+            "Where's this tea from? It's from China."
+           ]
+          }
          ]
         }
        ]
@@ -296,7 +159,7 @@
   },
   {
    "title": "احفظ",
-   "eyebrow": "الخطوة ٥ — احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
    "heading": "كلمات يجب أن تحفظها",
    "blocks": [
     {
@@ -307,38 +170,38 @@
      "items": [
       {
        "must": 1,
-       "term": "Where is it from?",
-       "ipa": "/weər ɪz ɪt frɒm/",
-       "meaning": "من أين هو؟",
-       "ex": "Where is pizza from? It's from Italy."
+       "term": "dates",
+       "ipa": "",
+       "meaning": "تمر",
+       "ex": "These dates are from Libya."
       },
       {
        "must": 1,
-       "term": "famous",
-       "ipa": "/ˈfeɪməs/",
-       "meaning": "مشهور",
-       "ex": "Mubatan batata is a famous Libyan dish."
+       "term": "tea",
+       "ipa": "",
+       "meaning": "شاي",
+       "ex": "Where's this tea from? It's from China."
       },
       {
        "must": 1,
-       "term": "dish",
-       "ipa": "/dɪʃ/",
-       "meaning": "طبق (أكلة)",
-       "ex": "a famous Libyan dish"
+       "term": "pizza",
+       "ipa": "",
+       "meaning": "بيتزا",
+       "ex": "pizza"
       },
       {
        "must": 0,
-       "term": "survey",
-       "ipa": "/ˈsɜːveɪ/",
-       "meaning": "استطلاع / استبيان",
-       "ex": "This is a survey."
+       "term": "carpet",
+       "ipa": "",
+       "meaning": "سجاد",
+       "ex": "carpet"
       },
       {
        "must": 0,
-       "term": "partner",
-       "ipa": "/ˈpɑːtnə/",
-       "meaning": "زميل / شريك",
-       "ex": "Ask your partner."
+       "term": "made in",
+       "ipa": "",
+       "meaning": "صُنع في",
+       "ex": "made in"
       }
      ]
     }
@@ -346,75 +209,25 @@
   },
   {
    "title": "اختبار",
-   "eyebrow": "الخطوة ٦ — اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
    "heading": "اختبر نفسك",
    "blocks": [
     {
      "type": "quiz",
      "star": true,
-     "pass": 6,
+     "pass": 5,
      "items": [
       {
-       "q": "Where are pandas from?",
-       "a": "China",
+       "q": "Where's this pizza ___ ?",
+       "a": "from",
        "o": [
-        "China",
-        "Italy"
+        "from",
+        "in"
        ],
        "why": ""
       },
       {
-       "q": "Where ___ curry from?",
-       "a": "is",
-       "o": [
-        "is",
-        "are"
-       ],
-       "why": ""
-      },
-      {
-       "q": "Kangaroos are from …",
-       "a": "Australia",
-       "o": [
-        "Australia",
-        "Africa"
-       ],
-       "why": ""
-      },
-      {
-       "type": "listen",
-       "say": "Where is pizza from?",
-       "q": "استمع: ماذا قال المتحدث؟",
-       "a": "Where is pizza from?",
-       "o": [
-        "Where is pizza from?",
-        "Where are pandas from?",
-        "Where is curry from?"
-       ],
-       "why": ""
-      },
-      {
-       "q": "ما معنى famous؟",
-       "a": "مشهور",
-       "o": [
-        "مشهور",
-        "لذيذ",
-        "كبير"
-       ],
-       "why": "",
-       "ar": true
-      },
-      {
-       "q": "Mubatan batata is from …",
-       "a": "Libya",
-       "o": [
-        "Libya",
-        "England"
-       ],
-       "why": "مبطن بطاطا طبق ليبي مشهور."
-      },
-      {
-       "q": "Where ___ elephants from?",
+       "q": "Where ___ these dates from?",
        "a": "are",
        "o": [
         "are",
@@ -423,63 +236,52 @@
        "why": ""
       },
       {
-       "q": "A famous Italian food is …",
-       "a": "macaroni",
+       "q": "This tea is ___ China.",
+       "a": "from",
        "o": [
-        "macaroni",
-        "curry"
+        "from",
+        "at"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى dates؟",
+       "a": "تمر",
+       "o": [
+        "تمر",
+        "شاي",
+        "بيتزا"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى pizza؟",
+       "a": "بيتزا",
+       "o": [
+        "بيتزا",
+        "تمر",
+        "شاي"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Where's this tea from? It's from China.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Where's this tea from? It's from China.",
+       "o": [
+        "Where's this tea from? It's from China.",
+        "These dates are from Libya."
        ],
        "why": ""
       }
      ]
     }
    ],
-   "lead": "8 أسئلة. تنجح بـ 6 من 8."
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
   }
  ],
- "dialogue": [
-  [
-   "Jena",
-   "Where is pizza from?"
-  ],
-  [
-   "Kareem",
-   "It's from Italy."
-  ],
-  [
-   "Jena",
-   "Where are pandas from?"
-  ],
-  [
-   "Kareem",
-   "They're from China."
-  ],
-  [
-   "Jena",
-   "Where is curry from?"
-  ],
-  [
-   "Kareem",
-   "It's from India. But we eat curry in Libya too."
-  ],
-  [
-   "Jena",
-   "Where are kangaroos from?"
-  ],
-  [
-   "Kareem",
-   "They're from Australia."
-  ],
-  [
-   "Jena",
-   "And mubatan batata?"
-  ],
-  [
-   "Kareem",
-   "It's a famous Libyan dish!"
-  ]
- ],
- "left": [
-  "Jena"
- ]
+ "characters": {}
 }

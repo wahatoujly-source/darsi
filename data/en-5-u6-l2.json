@@ -1,0 +1,299 @@
+{
+ "id": "en-5-u6-l2",
+ "grade": 5,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 6 · Lesson 2: Excuse me. Where's …?",
+ "titleAr": "عفواً، أين المتحف؟",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "عفواً، أين المتحف؟",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "excuse me",
+       "ar": "عفواً",
+       "em": "🙋"
+      },
+      {
+       "id": "v1",
+       "en": "turn left",
+       "ar": "انعطف يساراً",
+       "em": "⬅️"
+      },
+      {
+       "id": "v2",
+       "en": "turn right",
+       "ar": "انعطف يميناً",
+       "em": "➡️"
+      },
+      {
+       "id": "v3",
+       "en": "go straight",
+       "ar": "سر مباشرة",
+       "em": "⬆️"
+      },
+      {
+       "id": "v4",
+       "en": "corner",
+       "ar": "زاوية",
+       "em": "↩️"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 88⁠–⁠89 · كتاب النشاط ص 74⁠–⁠75"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Directions",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\"><b>Excuse</b> me. Where's the museum?</div><div class=\"ex\">Go straight on and turn <b>left</b>.</div><div class=\"ex\">It's on the <b>corner</b>.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Excuse me. Where's the museum? Go straight on and turn left. It's on the corner."
+      }
+     ]
+    }
+   ],
+   "lead": "Go straight / Turn left / Turn right.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "___ me. Where's the bank?",
+           "a": "Excuse",
+           "o": [
+            "Excuse",
+            "Sorry"
+           ]
+          },
+          {
+           "s": "Turn ___ . ⬅️",
+           "a": "left",
+           "o": [
+            "left",
+            "right"
+           ]
+          },
+          {
+           "s": "It's on the ___ .",
+           "a": "corner",
+           "o": [
+            "corner",
+            "straight"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Excuse me. Where's the museum?",
+          "Go straight on and turn left.",
+          "It's on the corner."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Excuse me. Where's the museum?",
+           "o": [
+            "Excuse me. Where's the museum?",
+            "Go straight on and turn left.",
+            "It's on the corner."
+           ]
+          },
+          {
+           "a": "Go straight on and turn left.",
+           "o": [
+            "Go straight on and turn left.",
+            "Excuse me. Where's the museum?",
+            "It's on the corner."
+           ]
+          },
+          {
+           "a": "It's on the corner.",
+           "o": [
+            "It's on the corner.",
+            "Excuse me. Where's the museum?",
+            "Go straight on and turn left."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "excuse me",
+       "ipa": "",
+       "meaning": "عفواً",
+       "ex": "Excuse me. Where's the museum?"
+      },
+      {
+       "must": 1,
+       "term": "turn left",
+       "ipa": "",
+       "meaning": "انعطف يساراً",
+       "ex": "Go straight on and turn left."
+      },
+      {
+       "must": 1,
+       "term": "turn right",
+       "ipa": "",
+       "meaning": "انعطف يميناً",
+       "ex": "Go straight on and turn left."
+      },
+      {
+       "must": 0,
+       "term": "go straight",
+       "ipa": "",
+       "meaning": "سر مباشرة",
+       "ex": "Go straight on and turn left."
+      },
+      {
+       "must": 0,
+       "term": "corner",
+       "ipa": "",
+       "meaning": "زاوية",
+       "ex": "It's on the corner."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "___ me. Where's the bank?",
+       "a": "Excuse",
+       "o": [
+        "Excuse",
+        "Sorry"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Turn ___ . ⬅️",
+       "a": "left",
+       "o": [
+        "left",
+        "right"
+       ],
+       "why": ""
+      },
+      {
+       "q": "It's on the ___ .",
+       "a": "corner",
+       "o": [
+        "corner",
+        "straight"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى corner؟",
+       "a": "زاوية",
+       "o": [
+        "زاوية",
+        "عفواً",
+        "انعطف يساراً"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى excuse me؟",
+       "a": "عفواً",
+       "o": [
+        "عفواً",
+        "انعطف يساراً",
+        "انعطف يميناً"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Excuse me. Where's the museum?",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Excuse me. Where's the museum?",
+       "o": [
+        "Excuse me. Where's the museum?",
+        "Go straight on and turn left.",
+        "It's on the corner."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

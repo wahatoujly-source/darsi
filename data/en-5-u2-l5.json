@@ -1,0 +1,299 @@
+{
+ "id": "en-5-u2-l5",
+ "grade": 5,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 2 · Lesson 5: Thinking About Animals",
+ "titleAr": "للحشرات ست أرجل.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "للحشرات ست أرجل.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "mammal",
+       "ar": "ثديي",
+       "em": "🐄"
+      },
+      {
+       "id": "v1",
+       "en": "reptile",
+       "ar": "زاحف",
+       "em": "🦎"
+      },
+      {
+       "id": "v2",
+       "en": "insect",
+       "ar": "حشرة",
+       "em": "🐞"
+      },
+      {
+       "id": "v3",
+       "en": "legs",
+       "ar": "أرجل",
+       "em": "🦵"
+      },
+      {
+       "id": "v4",
+       "en": "wings",
+       "ar": "أجنحة",
+       "em": "🪽"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 34⁠–⁠35 · كتاب النشاط ص 28⁠–⁠29"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "have / has",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Insects <b>have</b> six legs.</div><div class=\"ex\">A lizard is a <b>reptile</b>.</div><div class=\"ex\">Camels are mammals.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Insects have six legs. A lizard is a reptile. Camels are mammals."
+      }
+     ]
+    }
+   ],
+   "lead": "Insects have … / A spider has …",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "Insects ___ six legs.",
+           "a": "have",
+           "o": [
+            "have",
+            "has"
+           ]
+          },
+          {
+           "s": "A spider ___ eight legs.",
+           "a": "has",
+           "o": [
+            "has",
+            "have"
+           ]
+          },
+          {
+           "s": "A lizard is a ___ .",
+           "a": "reptile",
+           "o": [
+            "reptile",
+            "mammal"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Insects have six legs.",
+          "A lizard is a reptile.",
+          "Camels are mammals."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Insects have six legs.",
+           "o": [
+            "Insects have six legs.",
+            "A lizard is a reptile.",
+            "Camels are mammals."
+           ]
+          },
+          {
+           "a": "A lizard is a reptile.",
+           "o": [
+            "A lizard is a reptile.",
+            "Insects have six legs.",
+            "Camels are mammals."
+           ]
+          },
+          {
+           "a": "Camels are mammals.",
+           "o": [
+            "Camels are mammals.",
+            "Insects have six legs.",
+            "A lizard is a reptile."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "mammal",
+       "ipa": "",
+       "meaning": "ثديي",
+       "ex": "Camels are mammals."
+      },
+      {
+       "must": 1,
+       "term": "reptile",
+       "ipa": "",
+       "meaning": "زاحف",
+       "ex": "A lizard is a reptile."
+      },
+      {
+       "must": 1,
+       "term": "insect",
+       "ipa": "",
+       "meaning": "حشرة",
+       "ex": "Insects have six legs."
+      },
+      {
+       "must": 0,
+       "term": "legs",
+       "ipa": "",
+       "meaning": "أرجل",
+       "ex": "Insects have six legs."
+      },
+      {
+       "must": 0,
+       "term": "wings",
+       "ipa": "",
+       "meaning": "أجنحة",
+       "ex": "wings"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "Insects ___ six legs.",
+       "a": "have",
+       "o": [
+        "have",
+        "has"
+       ],
+       "why": ""
+      },
+      {
+       "q": "A spider ___ eight legs.",
+       "a": "has",
+       "o": [
+        "has",
+        "have"
+       ],
+       "why": ""
+      },
+      {
+       "q": "A lizard is a ___ .",
+       "a": "reptile",
+       "o": [
+        "reptile",
+        "mammal"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى wings؟",
+       "a": "أجنحة",
+       "o": [
+        "أجنحة",
+        "ثديي",
+        "زاحف"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى legs؟",
+       "a": "أرجل",
+       "o": [
+        "أرجل",
+        "ثديي",
+        "زاحف"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Insects have six legs.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Insects have six legs.",
+       "o": [
+        "Insects have six legs.",
+        "A lizard is a reptile.",
+        "Camels are mammals."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

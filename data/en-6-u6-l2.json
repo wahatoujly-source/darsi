@@ -1,0 +1,299 @@
+{
+ "id": "en-6-u6-l2",
+ "grade": 6,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 6 · Lesson 2: Make it Yourself",
+ "titleAr": "اعصر ليمونتين.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "اعصر ليمونتين.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "yourself",
+       "ar": "بنفسك",
+       "em": "🫵"
+      },
+      {
+       "id": "v1",
+       "en": "lemonade",
+       "ar": "ليمونادة",
+       "em": "🍋"
+      },
+      {
+       "id": "v2",
+       "en": "squeeze",
+       "ar": "يعصر",
+       "em": "🍋"
+      },
+      {
+       "id": "v3",
+       "en": "add",
+       "ar": "يضيف",
+       "em": "➕"
+      },
+      {
+       "id": "v4",
+       "en": "stir",
+       "ar": "يحرك",
+       "em": "🥄"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 88⁠–⁠89 · كتاب النشاط ص 74⁠–⁠75"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Imperatives",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\"><b>Squeeze</b> two lemons.</div><div class=\"ex\"><b>Add</b> water and sugar.</div><div class=\"ex\"><b>Stir</b> and enjoy!</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Squeeze two lemons. Add water and sugar. Stir and enjoy!"
+      }
+     ]
+    }
+   ],
+   "lead": "Squeeze / Add / Stir",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "___ two lemons.",
+           "a": "Squeeze",
+           "o": [
+            "Squeeze",
+            "Squeezes"
+           ]
+          },
+          {
+           "s": "___ water and sugar.",
+           "a": "Add",
+           "o": [
+            "Add",
+            "Adds"
+           ]
+          },
+          {
+           "s": "___ and enjoy!",
+           "a": "Stir",
+           "o": [
+            "Stir",
+            "Stirs"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Squeeze two lemons.",
+          "Add water and sugar.",
+          "Stir and enjoy!"
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Squeeze two lemons.",
+           "o": [
+            "Squeeze two lemons.",
+            "Add water and sugar.",
+            "Stir and enjoy!"
+           ]
+          },
+          {
+           "a": "Add water and sugar.",
+           "o": [
+            "Add water and sugar.",
+            "Squeeze two lemons.",
+            "Stir and enjoy!"
+           ]
+          },
+          {
+           "a": "Stir and enjoy!",
+           "o": [
+            "Stir and enjoy!",
+            "Squeeze two lemons.",
+            "Add water and sugar."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "yourself",
+       "ipa": "",
+       "meaning": "بنفسك",
+       "ex": "yourself"
+      },
+      {
+       "must": 1,
+       "term": "lemonade",
+       "ipa": "",
+       "meaning": "ليمونادة",
+       "ex": "lemonade"
+      },
+      {
+       "must": 1,
+       "term": "squeeze",
+       "ipa": "",
+       "meaning": "يعصر",
+       "ex": "Squeeze two lemons."
+      },
+      {
+       "must": 0,
+       "term": "add",
+       "ipa": "",
+       "meaning": "يضيف",
+       "ex": "Add water and sugar."
+      },
+      {
+       "must": 0,
+       "term": "stir",
+       "ipa": "",
+       "meaning": "يحرك",
+       "ex": "Stir and enjoy!"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "___ two lemons.",
+       "a": "Squeeze",
+       "o": [
+        "Squeeze",
+        "Squeezes"
+       ],
+       "why": ""
+      },
+      {
+       "q": "___ water and sugar.",
+       "a": "Add",
+       "o": [
+        "Add",
+        "Adds"
+       ],
+       "why": ""
+      },
+      {
+       "q": "___ and enjoy!",
+       "a": "Stir",
+       "o": [
+        "Stir",
+        "Stirs"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى yourself؟",
+       "a": "بنفسك",
+       "o": [
+        "بنفسك",
+        "ليمونادة",
+        "يعصر"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى add؟",
+       "a": "يضيف",
+       "o": [
+        "يضيف",
+        "بنفسك",
+        "ليمونادة"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Squeeze two lemons.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Squeeze two lemons.",
+       "o": [
+        "Squeeze two lemons.",
+        "Add water and sugar.",
+        "Stir and enjoy!"
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

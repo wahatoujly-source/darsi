@@ -1,0 +1,319 @@
+{
+ "id": "en-6-u8-l3",
+ "grade": 6,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 8 · Lesson 3: An Email to My Grandparents",
+ "titleAr": "جدتي وجدي الأعزاء،",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "جدتي وجدي الأعزاء،",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "Dear",
+       "ar": "عزيزي",
+       "em": "💌"
+      },
+      {
+       "id": "v1",
+       "en": "miss",
+       "ar": "يشتاق",
+       "em": "🥺"
+      },
+      {
+       "id": "v2",
+       "en": "visit",
+       "ar": "يزور",
+       "em": "🏠"
+      },
+      {
+       "id": "v3",
+       "en": "Love",
+       "ar": "مع حبي",
+       "em": "❤️"
+      },
+      {
+       "id": "v4",
+       "en": "news",
+       "ar": "أخبار",
+       "em": "📰"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 124 · كتاب النشاط ص 106"
+  },
+  {
+   "title": "اقرأ",
+   "eyebrow": "الخطوة ٢ — اقرأ",
+   "heading": "اقرأ واستمع",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "📖 An Email to My Grandparents",
+     "html": "<div class=\"ex\">Dear Grandma and Grandpa,</div><div class=\"ex\">I miss you a lot.</div><div class=\"ex\">Love, Mona</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Dear Grandma and Grandpa, I miss you a lot. Love, Mona"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط ▶ لتسمع النص."
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٣ — القاعدة",
+   "heading": "Email to family",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\"><b>Dear</b> Grandma and Grandpa,</div><div class=\"ex\">I <b>miss</b> you a lot.</div><div class=\"ex\"><b>Love</b>, Mona</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Dear Grandma and Grandpa, I miss you a lot. Love, Mona"
+      }
+     ]
+    }
+   ],
+   "lead": "Dear … / I miss you / Love, …",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٤ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "___ Grandma and Grandpa,",
+           "a": "Dear",
+           "o": [
+            "Dear",
+            "Hello to"
+           ]
+          },
+          {
+           "s": "I ___ you a lot.",
+           "a": "miss",
+           "o": [
+            "miss",
+            "misses"
+           ]
+          },
+          {
+           "s": "___ , Mona",
+           "a": "Love",
+           "o": [
+            "Love",
+            "Loves"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Dear Grandma and Grandpa,",
+          "I miss you a lot.",
+          "Love, Mona"
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Dear Grandma and Grandpa,",
+           "o": [
+            "Dear Grandma and Grandpa,",
+            "I miss you a lot.",
+            "Love, Mona"
+           ]
+          },
+          {
+           "a": "I miss you a lot.",
+           "o": [
+            "I miss you a lot.",
+            "Dear Grandma and Grandpa,",
+            "Love, Mona"
+           ]
+          },
+          {
+           "a": "Love, Mona",
+           "o": [
+            "Love, Mona",
+            "Dear Grandma and Grandpa,",
+            "I miss you a lot."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٥ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "Dear",
+       "ipa": "",
+       "meaning": "عزيزي",
+       "ex": "Dear Grandma and Grandpa,"
+      },
+      {
+       "must": 1,
+       "term": "miss",
+       "ipa": "",
+       "meaning": "يشتاق",
+       "ex": "I miss you a lot."
+      },
+      {
+       "must": 1,
+       "term": "visit",
+       "ipa": "",
+       "meaning": "يزور",
+       "ex": "visit"
+      },
+      {
+       "must": 0,
+       "term": "Love",
+       "ipa": "",
+       "meaning": "مع حبي",
+       "ex": "Love, Mona"
+      },
+      {
+       "must": 0,
+       "term": "news",
+       "ipa": "",
+       "meaning": "أخبار",
+       "ex": "news"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "___ Grandma and Grandpa,",
+       "a": "Dear",
+       "o": [
+        "Dear",
+        "Hello to"
+       ],
+       "why": ""
+      },
+      {
+       "q": "I ___ you a lot.",
+       "a": "miss",
+       "o": [
+        "miss",
+        "misses"
+       ],
+       "why": ""
+      },
+      {
+       "q": "___ , Mona",
+       "a": "Love",
+       "o": [
+        "Love",
+        "Loves"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى news؟",
+       "a": "أخبار",
+       "o": [
+        "أخبار",
+        "عزيزي",
+        "يشتاق"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى visit؟",
+       "a": "يزور",
+       "o": [
+        "يزور",
+        "عزيزي",
+        "يشتاق"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Dear Grandma and Grandpa,",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Dear Grandma and Grandpa,",
+       "o": [
+        "Dear Grandma and Grandpa,",
+        "I miss you a lot.",
+        "Love, Mona"
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

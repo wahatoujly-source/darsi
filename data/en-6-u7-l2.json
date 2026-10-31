@@ -1,0 +1,287 @@
+{
+ "id": "en-6-u7-l2",
+ "grade": 6,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 7 · Lesson 2: Shopping for Our Party",
+ "titleAr": "كم كوباً نحتاج؟",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "كم كوباً نحتاج؟",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "juice",
+       "ar": "عصير",
+       "em": "🧃"
+      },
+      {
+       "id": "v1",
+       "en": "cups",
+       "ar": "أكواب",
+       "em": "🥤"
+      },
+      {
+       "id": "v2",
+       "en": "plates",
+       "ar": "صحون",
+       "em": "🍽️"
+      },
+      {
+       "id": "v3",
+       "en": "how many",
+       "ar": "كم (عدد)",
+       "em": "🔢"
+      },
+      {
+       "id": "v4",
+       "en": "how much",
+       "ar": "كم (كمية)",
+       "em": "⚖️"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 106⁠–⁠107 · كتاب النشاط ص 90⁠–⁠91"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "How many / How much",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">How <b>many</b> cups do we need?</div><div class=\"ex\">How <b>much</b> juice do we need?</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "How many cups do we need? How much juice do we need?"
+      }
+     ]
+    }
+   ],
+   "lead": "many للمعدود و much لغير المعدود.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "How ___ plates do we need?",
+           "a": "many",
+           "o": [
+            "many",
+            "much"
+           ]
+          },
+          {
+           "s": "How ___ juice do we need?",
+           "a": "much",
+           "o": [
+            "much",
+            "many"
+           ]
+          },
+          {
+           "s": "We need twenty ___ .",
+           "a": "cups",
+           "o": [
+            "cups",
+            "cup"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "How many cups do we need?",
+          "How much juice do we need?"
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "How many cups do we need?",
+           "o": [
+            "How many cups do we need?",
+            "How much juice do we need?"
+           ]
+          },
+          {
+           "a": "How much juice do we need?",
+           "o": [
+            "How much juice do we need?",
+            "How many cups do we need?"
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "juice",
+       "ipa": "",
+       "meaning": "عصير",
+       "ex": "How much juice do we need?"
+      },
+      {
+       "must": 1,
+       "term": "cups",
+       "ipa": "",
+       "meaning": "أكواب",
+       "ex": "How many cups do we need?"
+      },
+      {
+       "must": 1,
+       "term": "plates",
+       "ipa": "",
+       "meaning": "صحون",
+       "ex": "plates"
+      },
+      {
+       "must": 0,
+       "term": "how many",
+       "ipa": "",
+       "meaning": "كم (عدد)",
+       "ex": "How many cups do we need?"
+      },
+      {
+       "must": 0,
+       "term": "how much",
+       "ipa": "",
+       "meaning": "كم (كمية)",
+       "ex": "How many cups do we need?"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "How ___ plates do we need?",
+       "a": "many",
+       "o": [
+        "many",
+        "much"
+       ],
+       "why": ""
+      },
+      {
+       "q": "How ___ juice do we need?",
+       "a": "much",
+       "o": [
+        "much",
+        "many"
+       ],
+       "why": ""
+      },
+      {
+       "q": "We need twenty ___ .",
+       "a": "cups",
+       "o": [
+        "cups",
+        "cup"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى how much؟",
+       "a": "كم (كمية)",
+       "o": [
+        "كم (كمية)",
+        "عصير",
+        "أكواب"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى plates؟",
+       "a": "صحون",
+       "o": [
+        "صحون",
+        "عصير",
+        "أكواب"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "How many cups do we need?",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "How many cups do we need?",
+       "o": [
+        "How many cups do we need?",
+        "How much juice do we need?"
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

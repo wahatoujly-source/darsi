@@ -1,0 +1,287 @@
+{
+ "id": "en-6-u3-l5",
+ "grade": 6,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 3 · Lesson 5: Going Online",
+ "titleAr": "سجّل الدخول بكلمة المرور.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "سجّل الدخول بكلمة المرور.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "password",
+       "ar": "كلمة مرور",
+       "em": "🔑"
+      },
+      {
+       "id": "v1",
+       "en": "log in",
+       "ar": "يسجل الدخول",
+       "em": "🔓"
+      },
+      {
+       "id": "v2",
+       "en": "screen",
+       "ar": "شاشة",
+       "em": "🖥️"
+      },
+      {
+       "id": "v3",
+       "en": "click",
+       "ar": "ينقر",
+       "em": "🖱️"
+      },
+      {
+       "id": "v4",
+       "en": "email",
+       "ar": "بريد إلكتروني",
+       "em": "📧"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 52⁠–⁠53 · كتاب النشاط ص 44⁠–⁠45"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Instructions",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\"><b>Log</b> in with your password.</div><div class=\"ex\"><b>Click</b> on the link.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Log in with your password. Click on the link."
+      }
+     ]
+    }
+   ],
+   "lead": "Log in / Click / Type",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "___ in with your password.",
+           "a": "Log",
+           "o": [
+            "Log",
+            "Logs"
+           ]
+          },
+          {
+           "s": "___ on the link.",
+           "a": "Click",
+           "o": [
+            "Click",
+            "Clicks"
+           ]
+          },
+          {
+           "s": "Don't share your ___ .",
+           "a": "password",
+           "o": [
+            "password",
+            "screen"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Log in with your password.",
+          "Click on the link."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Log in with your password.",
+           "o": [
+            "Log in with your password.",
+            "Click on the link."
+           ]
+          },
+          {
+           "a": "Click on the link.",
+           "o": [
+            "Click on the link.",
+            "Log in with your password."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "password",
+       "ipa": "",
+       "meaning": "كلمة مرور",
+       "ex": "Log in with your password."
+      },
+      {
+       "must": 1,
+       "term": "log in",
+       "ipa": "",
+       "meaning": "يسجل الدخول",
+       "ex": "Log in with your password."
+      },
+      {
+       "must": 1,
+       "term": "screen",
+       "ipa": "",
+       "meaning": "شاشة",
+       "ex": "screen"
+      },
+      {
+       "must": 0,
+       "term": "click",
+       "ipa": "",
+       "meaning": "ينقر",
+       "ex": "Click on the link."
+      },
+      {
+       "must": 0,
+       "term": "email",
+       "ipa": "",
+       "meaning": "بريد إلكتروني",
+       "ex": "email"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "___ in with your password.",
+       "a": "Log",
+       "o": [
+        "Log",
+        "Logs"
+       ],
+       "why": ""
+      },
+      {
+       "q": "___ on the link.",
+       "a": "Click",
+       "o": [
+        "Click",
+        "Clicks"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Don't share your ___ .",
+       "a": "password",
+       "o": [
+        "password",
+        "screen"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى password؟",
+       "a": "كلمة مرور",
+       "o": [
+        "كلمة مرور",
+        "يسجل الدخول",
+        "شاشة"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى click؟",
+       "a": "ينقر",
+       "o": [
+        "ينقر",
+        "كلمة مرور",
+        "يسجل الدخول"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Log in with your password.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Log in with your password.",
+       "o": [
+        "Log in with your password.",
+        "Click on the link."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

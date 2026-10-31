@@ -1,0 +1,337 @@
+{
+ "id": "en-6-u4-l2",
+ "grade": 6,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 4 · Lesson 2: My Progress",
+ "titleAr": "تقدّمي — Revision (1)",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "تقدّمي — Revision (1)",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "parents",
+       "ar": "والدان",
+       "em": "👨‍👩"
+      },
+      {
+       "id": "v1",
+       "en": "grandparents",
+       "ar": "أجداد",
+       "em": "👴👵"
+      },
+      {
+       "id": "v2",
+       "en": "hospital",
+       "ar": "مستشفى",
+       "em": "🏥"
+      },
+      {
+       "id": "v3",
+       "en": "farm",
+       "ar": "مزرعة",
+       "em": "🚜"
+      },
+      {
+       "id": "v4",
+       "en": "help people",
+       "ar": "يساعد الناس",
+       "em": "🤝"
+      },
+      {
+       "id": "v5",
+       "en": "interesting",
+       "ar": "ممتع",
+       "em": "🤔"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 63 · كتاب النشاط ص 53"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "My progress",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">I live with my parents and my grandparents.</div><div class=\"ex\">A doctor works in a hospital.</div><div class=\"ex\">My favourite job is a vet <b>because</b> I love animals.</div><div class=\"ex\">When I grow up, I <b>will</b> be a scientist.</div><div class=\"ex\">Let's go to the mall.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "I live with my parents and my grandparents. A doctor works in a hospital. My favourite job is a vet because I love animals. When I grow up, I will be a scientist. Let's go to the mall."
+      }
+     ]
+    }
+   ],
+   "lead": "قيّم نفسك: ماذا أستطيع أن أفعل الآن بالإنجليزية؟",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "My uncle's son is my ___ .",
+           "a": "cousin",
+           "o": [
+            "cousin",
+            "brother"
+           ]
+          },
+          {
+           "s": "A farmer works ___ a farm.",
+           "a": "on",
+           "o": [
+            "on",
+            "in"
+           ]
+          },
+          {
+           "s": "I want to be a vet ___ I love animals.",
+           "a": "because",
+           "o": [
+            "because",
+            "but"
+           ]
+          },
+          {
+           "s": "I ___ be a scientist.",
+           "a": "will",
+           "o": [
+            "will",
+            "am"
+           ]
+          },
+          {
+           "s": "The bookshop is ___ the first floor.",
+           "a": "on",
+           "o": [
+            "on",
+            "in"
+           ]
+          },
+          {
+           "s": "The opposite of heavy is ___ .",
+           "a": "light",
+           "o": [
+            "light",
+            "hard"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "I live with my parents and my grandparents.",
+          "A doctor works in a hospital.",
+          "My favourite job is a vet because I love animals.",
+          "When I grow up, I will be a scientist."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "I live with my parents and my grandparents.",
+           "o": [
+            "I live with my parents and my grandparents.",
+            "A doctor works in a hospital.",
+            "My favourite job is a vet because I love animals."
+           ]
+          },
+          {
+           "a": "A doctor works in a hospital.",
+           "o": [
+            "A doctor works in a hospital.",
+            "I live with my parents and my grandparents.",
+            "My favourite job is a vet because I love animals."
+           ]
+          },
+          {
+           "a": "My favourite job is a vet because I love animals.",
+           "o": [
+            "My favourite job is a vet because I love animals.",
+            "I live with my parents and my grandparents.",
+            "A doctor works in a hospital."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "parents",
+       "ipa": "",
+       "meaning": "والدان",
+       "ex": "I live with my parents and my grandparents."
+      },
+      {
+       "must": 1,
+       "term": "grandparents",
+       "ipa": "",
+       "meaning": "أجداد",
+       "ex": "I live with my parents and my grandparents."
+      },
+      {
+       "must": 1,
+       "term": "hospital",
+       "ipa": "",
+       "meaning": "مستشفى",
+       "ex": "A doctor works in a hospital."
+      },
+      {
+       "must": 0,
+       "term": "farm",
+       "ipa": "",
+       "meaning": "مزرعة",
+       "ex": "farm"
+      },
+      {
+       "must": 0,
+       "term": "help people",
+       "ipa": "",
+       "meaning": "يساعد الناس",
+       "ex": "help people"
+      },
+      {
+       "must": 0,
+       "term": "interesting",
+       "ipa": "",
+       "meaning": "ممتع",
+       "ex": "interesting"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "My uncle's son is my ___ .",
+       "a": "cousin",
+       "o": [
+        "cousin",
+        "brother"
+       ],
+       "why": ""
+      },
+      {
+       "q": "A farmer works ___ a farm.",
+       "a": "on",
+       "o": [
+        "on",
+        "in"
+       ],
+       "why": ""
+      },
+      {
+       "q": "I want to be a vet ___ I love animals.",
+       "a": "because",
+       "o": [
+        "because",
+        "but"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى parents؟",
+       "a": "والدان",
+       "o": [
+        "والدان",
+        "أجداد",
+        "مستشفى"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى grandparents؟",
+       "a": "أجداد",
+       "o": [
+        "أجداد",
+        "والدان",
+        "مستشفى"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "I live with my parents and my grandparents.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "I live with my parents and my grandparents.",
+       "o": [
+        "I live with my parents and my grandparents.",
+        "A doctor works in a hospital.",
+        "My favourite job is a vet because I love animals."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

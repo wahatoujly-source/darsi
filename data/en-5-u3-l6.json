@@ -1,0 +1,287 @@
+{
+ "id": "en-5-u3-l6",
+ "grade": 5,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 3 · Lesson 6: Sports are great!",
+ "titleAr": "الرياضة تبقينا لائقين وأصحاء.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "الرياضة تبقينا لائقين وأصحاء.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "healthy",
+       "ar": "صحي",
+       "em": "💪"
+      },
+      {
+       "id": "v1",
+       "en": "fit",
+       "ar": "لائق بدنياً",
+       "em": "🏋️"
+      },
+      {
+       "id": "v2",
+       "en": "team",
+       "ar": "فريق",
+       "em": "👥"
+      },
+      {
+       "id": "v3",
+       "en": "fun",
+       "ar": "ممتع",
+       "em": "😄"
+      },
+      {
+       "id": "v4",
+       "en": "heart",
+       "ar": "قلب",
+       "em": "❤️"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 54⁠–⁠55 · كتاب النشاط ص 46⁠–⁠47"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "keep + adjective",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Sports keep us <b>fit</b> and healthy.</div><div class=\"ex\">Playing in a <b>team</b> is fun.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Sports keep us fit and healthy. Playing in a team is fun."
+      }
+     ]
+    }
+   ],
+   "lead": "Sports keep us fit.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "Sports keep us ___ .",
+           "a": "fit",
+           "o": [
+            "fit",
+            "fat"
+           ]
+          },
+          {
+           "s": "Playing in a ___ is fun.",
+           "a": "team",
+           "o": [
+            "team",
+            "heart"
+           ]
+          },
+          {
+           "s": "Exercise is good for your ___ .",
+           "a": "heart",
+           "o": [
+            "heart",
+            "team"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Sports keep us fit and healthy.",
+          "Playing in a team is fun."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Sports keep us fit and healthy.",
+           "o": [
+            "Sports keep us fit and healthy.",
+            "Playing in a team is fun."
+           ]
+          },
+          {
+           "a": "Playing in a team is fun.",
+           "o": [
+            "Playing in a team is fun.",
+            "Sports keep us fit and healthy."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "healthy",
+       "ipa": "",
+       "meaning": "صحي",
+       "ex": "Sports keep us fit and healthy."
+      },
+      {
+       "must": 1,
+       "term": "fit",
+       "ipa": "",
+       "meaning": "لائق بدنياً",
+       "ex": "Sports keep us fit and healthy."
+      },
+      {
+       "must": 1,
+       "term": "team",
+       "ipa": "",
+       "meaning": "فريق",
+       "ex": "Playing in a team is fun."
+      },
+      {
+       "must": 0,
+       "term": "fun",
+       "ipa": "",
+       "meaning": "ممتع",
+       "ex": "Playing in a team is fun."
+      },
+      {
+       "must": 0,
+       "term": "heart",
+       "ipa": "",
+       "meaning": "قلب",
+       "ex": "heart"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "Sports keep us ___ .",
+       "a": "fit",
+       "o": [
+        "fit",
+        "fat"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Playing in a ___ is fun.",
+       "a": "team",
+       "o": [
+        "team",
+        "heart"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Exercise is good for your ___ .",
+       "a": "heart",
+       "o": [
+        "heart",
+        "team"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى heart؟",
+       "a": "قلب",
+       "o": [
+        "قلب",
+        "صحي",
+        "لائق بدنياً"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى fun؟",
+       "a": "ممتع",
+       "o": [
+        "ممتع",
+        "صحي",
+        "لائق بدنياً"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Sports keep us fit and healthy.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Sports keep us fit and healthy.",
+       "o": [
+        "Sports keep us fit and healthy.",
+        "Playing in a team is fun."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

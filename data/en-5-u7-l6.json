@@ -1,0 +1,287 @@
+{
+ "id": "en-5-u7-l6",
+ "grade": 5,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 7 · Lesson 6: How We Travel",
+ "titleAr": "كيف تذهب إلى المدرسة؟ بالحافلة.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "كيف تذهب إلى المدرسة؟ بالحافلة.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "by car",
+       "ar": "بالسيارة",
+       "em": "🚗"
+      },
+      {
+       "id": "v1",
+       "en": "by plane",
+       "ar": "بالطائرة",
+       "em": "✈️"
+      },
+      {
+       "id": "v2",
+       "en": "by boat",
+       "ar": "بالقارب",
+       "em": "⛴️"
+      },
+      {
+       "id": "v3",
+       "en": "by train",
+       "ar": "بالقطار",
+       "em": "🚆"
+      },
+      {
+       "id": "v4",
+       "en": "on foot",
+       "ar": "سيراً",
+       "em": "🚶"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 114⁠–⁠115 · كتاب النشاط ص 98⁠–⁠99"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "by / on foot",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">How do you <b>travel</b> to school? By bus.</div><div class=\"ex\">We went to Malta <b>by</b> boat.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "How do you travel to school? By bus. We went to Malta by boat."
+      }
+     ]
+    }
+   ],
+   "lead": "by + وسيلة، ولكن on foot.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "We went ___ plane.",
+           "a": "by",
+           "o": [
+            "by",
+            "on"
+           ]
+          },
+          {
+           "s": "I walk. I go on ___ .",
+           "a": "foot",
+           "o": [
+            "foot",
+            "feet"
+           ]
+          },
+          {
+           "s": "How do you ___ to school?",
+           "a": "travel",
+           "o": [
+            "travel",
+            "travels"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "How do you travel to school? By bus.",
+          "We went to Malta by boat."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "How do you travel to school? By bus.",
+           "o": [
+            "How do you travel to school? By bus.",
+            "We went to Malta by boat."
+           ]
+          },
+          {
+           "a": "We went to Malta by boat.",
+           "o": [
+            "We went to Malta by boat.",
+            "How do you travel to school? By bus."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "by car",
+       "ipa": "",
+       "meaning": "بالسيارة",
+       "ex": "How do you travel to school? By bus."
+      },
+      {
+       "must": 1,
+       "term": "by plane",
+       "ipa": "",
+       "meaning": "بالطائرة",
+       "ex": "How do you travel to school? By bus."
+      },
+      {
+       "must": 1,
+       "term": "by boat",
+       "ipa": "",
+       "meaning": "بالقارب",
+       "ex": "How do you travel to school? By bus."
+      },
+      {
+       "must": 0,
+       "term": "by train",
+       "ipa": "",
+       "meaning": "بالقطار",
+       "ex": "How do you travel to school? By bus."
+      },
+      {
+       "must": 0,
+       "term": "on foot",
+       "ipa": "",
+       "meaning": "سيراً",
+       "ex": "on foot"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "We went ___ plane.",
+       "a": "by",
+       "o": [
+        "by",
+        "on"
+       ],
+       "why": ""
+      },
+      {
+       "q": "I walk. I go on ___ .",
+       "a": "foot",
+       "o": [
+        "foot",
+        "feet"
+       ],
+       "why": ""
+      },
+      {
+       "q": "How do you ___ to school?",
+       "a": "travel",
+       "o": [
+        "travel",
+        "travels"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى by car؟",
+       "a": "بالسيارة",
+       "o": [
+        "بالسيارة",
+        "بالطائرة",
+        "بالقارب"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى by train؟",
+       "a": "بالقطار",
+       "o": [
+        "بالقطار",
+        "بالسيارة",
+        "بالطائرة"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "How do you travel to school? By bus.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "How do you travel to school? By bus.",
+       "o": [
+        "How do you travel to school? By bus.",
+        "We went to Malta by boat."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

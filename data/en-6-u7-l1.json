@@ -1,0 +1,287 @@
+{
+ "id": "en-6-u7-l1",
+ "grade": 6,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 7 · Lesson 1: Getting Ready for Our Party",
+ "titleAr": "نحن نزين الصف.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "نحن نزين الصف.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "party",
+       "ar": "حفلة",
+       "em": "🎉"
+      },
+      {
+       "id": "v1",
+       "en": "balloons",
+       "ar": "بالونات",
+       "em": "🎈"
+      },
+      {
+       "id": "v2",
+       "en": "decorate",
+       "ar": "يزين",
+       "em": "🎀"
+      },
+      {
+       "id": "v3",
+       "en": "invite",
+       "ar": "يدعو",
+       "em": "💌"
+      },
+      {
+       "id": "v4",
+       "en": "guests",
+       "ar": "ضيوف",
+       "em": "👥"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 104⁠–⁠105 · كتاب النشاط ص 88⁠–⁠89"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "going to for plans",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">We're <b>decorating</b> the classroom.</div><div class=\"ex\">We're going to <b>invite</b> our parents.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "We're decorating the classroom. We're going to invite our parents."
+      }
+     ]
+    }
+   ],
+   "lead": "We're going to invite …",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "We're going to ___ our parents.",
+           "a": "invite",
+           "o": [
+            "invite",
+            "invites"
+           ]
+          },
+          {
+           "s": "We're ___ the classroom.",
+           "a": "decorating",
+           "o": [
+            "decorating",
+            "decorate"
+           ]
+          },
+          {
+           "s": "Let's blow up the ___ !",
+           "a": "balloons",
+           "o": [
+            "balloons",
+            "guests"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "We're decorating the classroom.",
+          "We're going to invite our parents."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "We're decorating the classroom.",
+           "o": [
+            "We're decorating the classroom.",
+            "We're going to invite our parents."
+           ]
+          },
+          {
+           "a": "We're going to invite our parents.",
+           "o": [
+            "We're going to invite our parents.",
+            "We're decorating the classroom."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "party",
+       "ipa": "",
+       "meaning": "حفلة",
+       "ex": "party"
+      },
+      {
+       "must": 1,
+       "term": "balloons",
+       "ipa": "",
+       "meaning": "بالونات",
+       "ex": "balloons"
+      },
+      {
+       "must": 1,
+       "term": "decorate",
+       "ipa": "",
+       "meaning": "يزين",
+       "ex": "decorate"
+      },
+      {
+       "must": 0,
+       "term": "invite",
+       "ipa": "",
+       "meaning": "يدعو",
+       "ex": "We're going to invite our parents."
+      },
+      {
+       "must": 0,
+       "term": "guests",
+       "ipa": "",
+       "meaning": "ضيوف",
+       "ex": "guests"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "We're going to ___ our parents.",
+       "a": "invite",
+       "o": [
+        "invite",
+        "invites"
+       ],
+       "why": ""
+      },
+      {
+       "q": "We're ___ the classroom.",
+       "a": "decorating",
+       "o": [
+        "decorating",
+        "decorate"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Let's blow up the ___ !",
+       "a": "balloons",
+       "o": [
+        "balloons",
+        "guests"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى balloons؟",
+       "a": "بالونات",
+       "o": [
+        "بالونات",
+        "حفلة",
+        "يزين"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى decorate؟",
+       "a": "يزين",
+       "o": [
+        "يزين",
+        "حفلة",
+        "بالونات"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "We're decorating the classroom.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "We're decorating the classroom.",
+       "o": [
+        "We're decorating the classroom.",
+        "We're going to invite our parents."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

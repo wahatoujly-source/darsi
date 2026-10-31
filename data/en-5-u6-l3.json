@@ -1,0 +1,287 @@
+{
+ "id": "en-5-u6-l3",
+ "grade": 5,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 6 · Lesson 3: Helping Mum",
+ "titleAr": "أساعد أمي في البيت.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "أساعد أمي في البيت.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "tidy",
+       "ar": "يرتب",
+       "em": "🧹"
+      },
+      {
+       "id": "v1",
+       "en": "wash the dishes",
+       "ar": "يغسل الصحون",
+       "em": "🍽️"
+      },
+      {
+       "id": "v2",
+       "en": "lay the table",
+       "ar": "يجهز المائدة",
+       "em": "🍴"
+      },
+      {
+       "id": "v3",
+       "en": "water the plants",
+       "ar": "يسقي النباتات",
+       "em": "🪴"
+      },
+      {
+       "id": "v4",
+       "en": "help",
+       "ar": "يساعد",
+       "em": "🤝"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 90⁠–⁠91 · كتاب النشاط ص 76⁠–⁠77"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Present continuous",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">I help Mum at home.</div><div class=\"ex\">I'm <b>washing</b> the dishes now.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "I help Mum at home. I'm washing the dishes now."
+      }
+     ]
+    }
+   ],
+   "lead": "I'm washing / She's tidying",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "I'm ___ the dishes.",
+           "a": "washing",
+           "o": [
+            "washing",
+            "wash"
+           ]
+          },
+          {
+           "s": "She's ___ the table.",
+           "a": "laying",
+           "o": [
+            "laying",
+            "lay"
+           ]
+          },
+          {
+           "s": "He ___ watering the plants.",
+           "a": "is",
+           "o": [
+            "is",
+            "are"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "I help Mum at home.",
+          "I'm washing the dishes now."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "I help Mum at home.",
+           "o": [
+            "I help Mum at home.",
+            "I'm washing the dishes now."
+           ]
+          },
+          {
+           "a": "I'm washing the dishes now.",
+           "o": [
+            "I'm washing the dishes now.",
+            "I help Mum at home."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "tidy",
+       "ipa": "",
+       "meaning": "يرتب",
+       "ex": "tidy"
+      },
+      {
+       "must": 1,
+       "term": "wash the dishes",
+       "ipa": "",
+       "meaning": "يغسل الصحون",
+       "ex": "I'm washing the dishes now."
+      },
+      {
+       "must": 1,
+       "term": "lay the table",
+       "ipa": "",
+       "meaning": "يجهز المائدة",
+       "ex": "lay the table"
+      },
+      {
+       "must": 0,
+       "term": "water the plants",
+       "ipa": "",
+       "meaning": "يسقي النباتات",
+       "ex": "water the plants"
+      },
+      {
+       "must": 0,
+       "term": "help",
+       "ipa": "",
+       "meaning": "يساعد",
+       "ex": "I help Mum at home."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "I'm ___ the dishes.",
+       "a": "washing",
+       "o": [
+        "washing",
+        "wash"
+       ],
+       "why": ""
+      },
+      {
+       "q": "She's ___ the table.",
+       "a": "laying",
+       "o": [
+        "laying",
+        "lay"
+       ],
+       "why": ""
+      },
+      {
+       "q": "He ___ watering the plants.",
+       "a": "is",
+       "o": [
+        "is",
+        "are"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى help؟",
+       "a": "يساعد",
+       "o": [
+        "يساعد",
+        "يرتب",
+        "يغسل الصحون"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى lay the table؟",
+       "a": "يجهز المائدة",
+       "o": [
+        "يجهز المائدة",
+        "يرتب",
+        "يغسل الصحون"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "I help Mum at home.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "I help Mum at home.",
+       "o": [
+        "I help Mum at home.",
+        "I'm washing the dishes now."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

@@ -1,0 +1,287 @@
+{
+ "id": "en-5-u6-l5",
+ "grade": 5,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 6 · Lesson 5: Souvenirs",
+ "titleAr": "بكم هذه الميدالية؟",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "بكم هذه الميدالية؟",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "souvenir",
+       "ar": "تذكار",
+       "em": "🎁"
+      },
+      {
+       "id": "v1",
+       "en": "key ring",
+       "ar": "ميدالية مفاتيح",
+       "em": "🔑"
+      },
+      {
+       "id": "v2",
+       "en": "postcard",
+       "ar": "بطاقة بريدية",
+       "em": "🖼️"
+      },
+      {
+       "id": "v3",
+       "en": "cheap",
+       "ar": "رخيص",
+       "em": "🪙"
+      },
+      {
+       "id": "v4",
+       "en": "expensive",
+       "ar": "غالٍ",
+       "em": "💰"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 94⁠–⁠95 · كتاب النشاط ص 80⁠–⁠81"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "cheap / expensive",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">How <b>much</b> is this key ring?</div><div class=\"ex\">It's <b>cheap</b>. It's only two dinars.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "How much is this key ring? It's cheap. It's only two dinars."
+      }
+     ]
+    }
+   ],
+   "lead": "نصف الأسعار.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "It's only two dinars. It's ___ .",
+           "a": "cheap",
+           "o": [
+            "cheap",
+            "expensive"
+           ]
+          },
+          {
+           "s": "I buy a ___ for my friend.",
+           "a": "souvenir",
+           "o": [
+            "souvenir",
+            "ticket"
+           ]
+          },
+          {
+           "s": "How ___ is this postcard?",
+           "a": "much",
+           "o": [
+            "much",
+            "many"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "How much is this key ring?",
+          "It's cheap. It's only two dinars."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "How much is this key ring?",
+           "o": [
+            "How much is this key ring?",
+            "It's cheap. It's only two dinars."
+           ]
+          },
+          {
+           "a": "It's cheap. It's only two dinars.",
+           "o": [
+            "It's cheap. It's only two dinars.",
+            "How much is this key ring?"
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "souvenir",
+       "ipa": "",
+       "meaning": "تذكار",
+       "ex": "souvenir"
+      },
+      {
+       "must": 1,
+       "term": "key ring",
+       "ipa": "",
+       "meaning": "ميدالية مفاتيح",
+       "ex": "How much is this key ring?"
+      },
+      {
+       "must": 1,
+       "term": "postcard",
+       "ipa": "",
+       "meaning": "بطاقة بريدية",
+       "ex": "postcard"
+      },
+      {
+       "must": 0,
+       "term": "cheap",
+       "ipa": "",
+       "meaning": "رخيص",
+       "ex": "It's cheap. It's only two dinars."
+      },
+      {
+       "must": 0,
+       "term": "expensive",
+       "ipa": "",
+       "meaning": "غالٍ",
+       "ex": "expensive"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "It's only two dinars. It's ___ .",
+       "a": "cheap",
+       "o": [
+        "cheap",
+        "expensive"
+       ],
+       "why": ""
+      },
+      {
+       "q": "I buy a ___ for my friend.",
+       "a": "souvenir",
+       "o": [
+        "souvenir",
+        "ticket"
+       ],
+       "why": ""
+      },
+      {
+       "q": "How ___ is this postcard?",
+       "a": "much",
+       "o": [
+        "much",
+        "many"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى cheap؟",
+       "a": "رخيص",
+       "o": [
+        "رخيص",
+        "تذكار",
+        "ميدالية مفاتيح"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى expensive؟",
+       "a": "غالٍ",
+       "o": [
+        "غالٍ",
+        "تذكار",
+        "ميدالية مفاتيح"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "How much is this key ring?",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "How much is this key ring?",
+       "o": [
+        "How much is this key ring?",
+        "It's cheap. It's only two dinars."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

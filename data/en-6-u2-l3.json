@@ -1,0 +1,299 @@
+{
+ "id": "en-6-u2-l3",
+ "grade": 6,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 2 · Lesson 3: Can I help you?",
+ "titleAr": "هل يمكنني مساعدتك؟",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "هل يمكنني مساعدتك؟",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "size",
+       "ar": "مقاس",
+       "em": "📏"
+      },
+      {
+       "id": "v1",
+       "en": "try on",
+       "ar": "يجرّب",
+       "em": "👕"
+      },
+      {
+       "id": "v2",
+       "en": "fit",
+       "ar": "يناسب المقاس",
+       "em": "👌"
+      },
+      {
+       "id": "v3",
+       "en": "too big",
+       "ar": "كبير جداً",
+       "em": "🔼"
+      },
+      {
+       "id": "v4",
+       "en": "too small",
+       "ar": "صغير جداً",
+       "em": "🔽"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 30⁠–⁠31 · كتاب النشاط ص 24⁠–⁠25"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "too + adjective",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Can I <b>help</b> you?</div><div class=\"ex\">Can I try <b>on</b> this jacket?</div><div class=\"ex\">It's <b>too</b> small. Have you got a bigger size?</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Can I help you? Can I try on this jacket? It's too small. Have you got a bigger size?"
+      }
+     ]
+    }
+   ],
+   "lead": "too big / too small",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "Can I ___ you?",
+           "a": "help",
+           "o": [
+            "help",
+            "helps"
+           ]
+          },
+          {
+           "s": "Can I try ___ this shirt?",
+           "a": "on",
+           "o": [
+            "on",
+            "in"
+           ]
+          },
+          {
+           "s": "It's ___ small.",
+           "a": "too",
+           "o": [
+            "too",
+            "to"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Can I help you?",
+          "Can I try on this jacket?",
+          "It's too small. Have you got a bigger size?"
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Can I help you?",
+           "o": [
+            "Can I help you?",
+            "Can I try on this jacket?",
+            "It's too small. Have you got a bigger size?"
+           ]
+          },
+          {
+           "a": "Can I try on this jacket?",
+           "o": [
+            "Can I try on this jacket?",
+            "Can I help you?",
+            "It's too small. Have you got a bigger size?"
+           ]
+          },
+          {
+           "a": "It's too small. Have you got a bigger size?",
+           "o": [
+            "It's too small. Have you got a bigger size?",
+            "Can I help you?",
+            "Can I try on this jacket?"
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "size",
+       "ipa": "",
+       "meaning": "مقاس",
+       "ex": "It's too small. Have you got a bigger size?"
+      },
+      {
+       "must": 1,
+       "term": "try on",
+       "ipa": "",
+       "meaning": "يجرّب",
+       "ex": "Can I try on this jacket?"
+      },
+      {
+       "must": 1,
+       "term": "fit",
+       "ipa": "",
+       "meaning": "يناسب المقاس",
+       "ex": "fit"
+      },
+      {
+       "must": 0,
+       "term": "too big",
+       "ipa": "",
+       "meaning": "كبير جداً",
+       "ex": "It's too small. Have you got a bigger size?"
+      },
+      {
+       "must": 0,
+       "term": "too small",
+       "ipa": "",
+       "meaning": "صغير جداً",
+       "ex": "It's too small. Have you got a bigger size?"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "Can I ___ you?",
+       "a": "help",
+       "o": [
+        "help",
+        "helps"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Can I try ___ this shirt?",
+       "a": "on",
+       "o": [
+        "on",
+        "in"
+       ],
+       "why": ""
+      },
+      {
+       "q": "It's ___ small.",
+       "a": "too",
+       "o": [
+        "too",
+        "to"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى too small؟",
+       "a": "صغير جداً",
+       "o": [
+        "صغير جداً",
+        "مقاس",
+        "يجرّب"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى try on؟",
+       "a": "يجرّب",
+       "o": [
+        "يجرّب",
+        "مقاس",
+        "يناسب المقاس"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Can I help you?",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Can I help you?",
+       "o": [
+        "Can I help you?",
+        "Can I try on this jacket?",
+        "It's too small. Have you got a bigger size?"
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

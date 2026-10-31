@@ -1,0 +1,337 @@
+{
+ "id": "en-6-u3-l7",
+ "grade": 6,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 3 · Lesson 7: Check my Understanding",
+ "titleAr": "مراجعة الوحدة — Health and Fitness",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "مراجعة الوحدة — Health and Fitness",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "fine",
+       "ar": "بخير",
+       "em": "🙂"
+      },
+      {
+       "id": "v1",
+       "en": "ill",
+       "ar": "مريض",
+       "em": "🤒"
+      },
+      {
+       "id": "v2",
+       "en": "should",
+       "ar": "ينبغي",
+       "em": "👍"
+      },
+      {
+       "id": "v3",
+       "en": "shouldn't",
+       "ar": "لا ينبغي",
+       "em": "👎"
+      },
+      {
+       "id": "v4",
+       "en": "worried",
+       "ar": "قلق",
+       "em": "😟"
+      },
+      {
+       "id": "v5",
+       "en": "upset",
+       "ar": "منزعج",
+       "em": "😢"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 56⁠–⁠57 · كتاب النشاط ص 48⁠–⁠49"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Review",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">How are you? I'm not well.</div><div class=\"ex\">You <b>should</b> see a dentist.</div><div class=\"ex\">My friend is <b>worried</b> about the test.</div><div class=\"ex\">I use the internet <b>to</b> search for information.</div><div class=\"ex\"><b>Log</b> in with your password.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "How are you? I'm not well. You should see a dentist. My friend is worried about the test. I use the internet to search for information. Log in with your password."
+      }
+     ]
+    }
+   ],
+   "lead": "نراجع أهم قواعد الوحدة وكلماتها: اقرأ الأمثلة بصوت عالٍ ثم حلّ التمارين.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "What's the ___ ?",
+           "a": "matter",
+           "o": [
+            "matter",
+            "wrong"
+           ]
+          },
+          {
+           "s": "You ___ rest. (نصيحة)",
+           "a": "should",
+           "o": [
+            "should",
+            "shouldn't"
+           ]
+          },
+          {
+           "s": "My friend is ___ about the test.",
+           "a": "worried",
+           "o": [
+            "worried",
+            "worry"
+           ]
+          },
+          {
+           "s": "I use the internet ___ search.",
+           "a": "to",
+           "o": [
+            "to",
+            "for"
+           ]
+          },
+          {
+           "s": "___ in with your password.",
+           "a": "Log",
+           "o": [
+            "Log",
+            "Logs"
+           ]
+          },
+          {
+           "s": "Don't share ___ information.",
+           "a": "personal",
+           "o": [
+            "personal",
+            "safe"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "How are you? I'm not well.",
+          "You should see a dentist.",
+          "My friend is worried about the test.",
+          "I use the internet to search for information."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "How are you? I'm not well.",
+           "o": [
+            "How are you? I'm not well.",
+            "You should see a dentist.",
+            "My friend is worried about the test."
+           ]
+          },
+          {
+           "a": "You should see a dentist.",
+           "o": [
+            "You should see a dentist.",
+            "How are you? I'm not well.",
+            "My friend is worried about the test."
+           ]
+          },
+          {
+           "a": "My friend is worried about the test.",
+           "o": [
+            "My friend is worried about the test.",
+            "How are you? I'm not well.",
+            "You should see a dentist."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "fine",
+       "ipa": "",
+       "meaning": "بخير",
+       "ex": "fine"
+      },
+      {
+       "must": 1,
+       "term": "ill",
+       "ipa": "",
+       "meaning": "مريض",
+       "ex": "ill"
+      },
+      {
+       "must": 1,
+       "term": "should",
+       "ipa": "",
+       "meaning": "ينبغي",
+       "ex": "You should see a dentist."
+      },
+      {
+       "must": 0,
+       "term": "shouldn't",
+       "ipa": "",
+       "meaning": "لا ينبغي",
+       "ex": "shouldn't"
+      },
+      {
+       "must": 0,
+       "term": "worried",
+       "ipa": "",
+       "meaning": "قلق",
+       "ex": "My friend is worried about the test."
+      },
+      {
+       "must": 0,
+       "term": "upset",
+       "ipa": "",
+       "meaning": "منزعج",
+       "ex": "upset"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "What's the ___ ?",
+       "a": "matter",
+       "o": [
+        "matter",
+        "wrong"
+       ],
+       "why": ""
+      },
+      {
+       "q": "You ___ rest. (نصيحة)",
+       "a": "should",
+       "o": [
+        "should",
+        "shouldn't"
+       ],
+       "why": ""
+      },
+      {
+       "q": "My friend is ___ about the test.",
+       "a": "worried",
+       "o": [
+        "worried",
+        "worry"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى upset؟",
+       "a": "منزعج",
+       "o": [
+        "منزعج",
+        "بخير",
+        "مريض"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى should؟",
+       "a": "ينبغي",
+       "o": [
+        "ينبغي",
+        "بخير",
+        "مريض"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "How are you? I'm not well.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "How are you? I'm not well.",
+       "o": [
+        "How are you? I'm not well.",
+        "You should see a dentist.",
+        "My friend is worried about the test."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

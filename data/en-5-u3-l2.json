@@ -1,0 +1,299 @@
+{
+ "id": "en-5-u3-l2",
+ "grade": 5,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 3 · Lesson 2: Play or go or do?",
+ "titleAr": "ألعب الكرة أيام السبت.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "ألعب الكرة أيام السبت.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "play football",
+       "ar": "يلعب الكرة",
+       "em": "⚽"
+      },
+      {
+       "id": "v1",
+       "en": "go swimming",
+       "ar": "يذهب للسباحة",
+       "em": "🏊"
+      },
+      {
+       "id": "v2",
+       "en": "do karate",
+       "ar": "يمارس الكاراتيه",
+       "em": "🥋"
+      },
+      {
+       "id": "v3",
+       "en": "go cycling",
+       "ar": "يركب الدراجة",
+       "em": "🚴"
+      },
+      {
+       "id": "v4",
+       "en": "play tennis",
+       "ar": "يلعب التنس",
+       "em": "🎾"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 46⁠–⁠47 · كتاب النشاط ص 38⁠–⁠39"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "play / go / do",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">I <b>play</b> football on Saturdays.</div><div class=\"ex\">We <b>go</b> swimming in summer.</div><div class=\"ex\">She <b>does</b> karate.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "I play football on Saturdays. We go swimming in summer. She does karate."
+      }
+     ]
+    }
+   ],
+   "lead": "play مع ألعاب الكرة، go مع ‎-ing، do مع الفنون القتالية.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "I ___ football.",
+           "a": "play",
+           "o": [
+            "play",
+            "go"
+           ]
+          },
+          {
+           "s": "We ___ swimming.",
+           "a": "go",
+           "o": [
+            "go",
+            "play"
+           ]
+          },
+          {
+           "s": "She ___ karate.",
+           "a": "does",
+           "o": [
+            "does",
+            "plays"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "I play football on Saturdays.",
+          "We go swimming in summer.",
+          "She does karate."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "I play football on Saturdays.",
+           "o": [
+            "I play football on Saturdays.",
+            "We go swimming in summer.",
+            "She does karate."
+           ]
+          },
+          {
+           "a": "We go swimming in summer.",
+           "o": [
+            "We go swimming in summer.",
+            "I play football on Saturdays.",
+            "She does karate."
+           ]
+          },
+          {
+           "a": "She does karate.",
+           "o": [
+            "She does karate.",
+            "I play football on Saturdays.",
+            "We go swimming in summer."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "play football",
+       "ipa": "",
+       "meaning": "يلعب الكرة",
+       "ex": "I play football on Saturdays."
+      },
+      {
+       "must": 1,
+       "term": "go swimming",
+       "ipa": "",
+       "meaning": "يذهب للسباحة",
+       "ex": "We go swimming in summer."
+      },
+      {
+       "must": 1,
+       "term": "do karate",
+       "ipa": "",
+       "meaning": "يمارس الكاراتيه",
+       "ex": "She does karate."
+      },
+      {
+       "must": 0,
+       "term": "go cycling",
+       "ipa": "",
+       "meaning": "يركب الدراجة",
+       "ex": "We go swimming in summer."
+      },
+      {
+       "must": 0,
+       "term": "play tennis",
+       "ipa": "",
+       "meaning": "يلعب التنس",
+       "ex": "I play football on Saturdays."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "I ___ football.",
+       "a": "play",
+       "o": [
+        "play",
+        "go"
+       ],
+       "why": ""
+      },
+      {
+       "q": "We ___ swimming.",
+       "a": "go",
+       "o": [
+        "go",
+        "play"
+       ],
+       "why": ""
+      },
+      {
+       "q": "She ___ karate.",
+       "a": "does",
+       "o": [
+        "does",
+        "plays"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى play tennis؟",
+       "a": "يلعب التنس",
+       "o": [
+        "يلعب التنس",
+        "يلعب الكرة",
+        "يذهب للسباحة"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى go swimming؟",
+       "a": "يذهب للسباحة",
+       "o": [
+        "يذهب للسباحة",
+        "يلعب الكرة",
+        "يمارس الكاراتيه"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "I play football on Saturdays.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "I play football on Saturdays.",
+       "o": [
+        "I play football on Saturdays.",
+        "We go swimming in summer.",
+        "She does karate."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

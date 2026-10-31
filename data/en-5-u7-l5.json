@@ -1,0 +1,287 @@
+{
+ "id": "en-5-u7-l5",
+ "grade": 5,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 7 · Lesson 5: Holiday Weather",
+ "titleAr": "كان الجو مشمساً كل يوم.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "كان الجو مشمساً كل يوم.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "sunny",
+       "ar": "مشمس",
+       "em": "☀️"
+      },
+      {
+       "id": "v1",
+       "en": "stormy",
+       "ar": "عاصف",
+       "em": "⛈️"
+      },
+      {
+       "id": "v2",
+       "en": "foggy",
+       "ar": "ضبابي",
+       "em": "🌫️"
+      },
+      {
+       "id": "v3",
+       "en": "snowy",
+       "ar": "مثلج",
+       "em": "🌨️"
+      },
+      {
+       "id": "v4",
+       "en": "temperature",
+       "ar": "درجة الحرارة",
+       "em": "🌡️"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 112⁠–⁠113 · كتاب النشاط ص 96⁠–⁠97"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "It was …",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">It <b>was</b> sunny every day.</div><div class=\"ex\">The temperature <b>was</b> 30 degrees.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "It was sunny every day. The temperature was 30 degrees."
+      }
+     ]
+    }
+   ],
+   "lead": "نصف طقس العطلة بالماضي: It was sunny.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "It ___ sunny yesterday.",
+           "a": "was",
+           "o": [
+            "was",
+            "is"
+           ]
+          },
+          {
+           "s": "The ___ was 30 degrees.",
+           "a": "temperature",
+           "o": [
+            "temperature",
+            "weather"
+           ]
+          },
+          {
+           "s": "It was ___ . We couldn't see. 🌫️",
+           "a": "foggy",
+           "o": [
+            "foggy",
+            "sunny"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "It was sunny every day.",
+          "The temperature was 30 degrees."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "It was sunny every day.",
+           "o": [
+            "It was sunny every day.",
+            "The temperature was 30 degrees."
+           ]
+          },
+          {
+           "a": "The temperature was 30 degrees.",
+           "o": [
+            "The temperature was 30 degrees.",
+            "It was sunny every day."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "sunny",
+       "ipa": "",
+       "meaning": "مشمس",
+       "ex": "It was sunny every day."
+      },
+      {
+       "must": 1,
+       "term": "stormy",
+       "ipa": "",
+       "meaning": "عاصف",
+       "ex": "stormy"
+      },
+      {
+       "must": 1,
+       "term": "foggy",
+       "ipa": "",
+       "meaning": "ضبابي",
+       "ex": "foggy"
+      },
+      {
+       "must": 0,
+       "term": "snowy",
+       "ipa": "",
+       "meaning": "مثلج",
+       "ex": "snowy"
+      },
+      {
+       "must": 0,
+       "term": "temperature",
+       "ipa": "",
+       "meaning": "درجة الحرارة",
+       "ex": "The temperature was 30 degrees."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "It ___ sunny yesterday.",
+       "a": "was",
+       "o": [
+        "was",
+        "is"
+       ],
+       "why": ""
+      },
+      {
+       "q": "The ___ was 30 degrees.",
+       "a": "temperature",
+       "o": [
+        "temperature",
+        "weather"
+       ],
+       "why": ""
+      },
+      {
+       "q": "It was ___ . We couldn't see. 🌫️",
+       "a": "foggy",
+       "o": [
+        "foggy",
+        "sunny"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى foggy؟",
+       "a": "ضبابي",
+       "o": [
+        "ضبابي",
+        "مشمس",
+        "عاصف"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى stormy؟",
+       "a": "عاصف",
+       "o": [
+        "عاصف",
+        "مشمس",
+        "ضبابي"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "It was sunny every day.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "It was sunny every day.",
+       "o": [
+        "It was sunny every day.",
+        "The temperature was 30 degrees."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

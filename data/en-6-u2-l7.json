@@ -1,0 +1,337 @@
+{
+ "id": "en-6-u2-l7",
+ "grade": 6,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 2 · Lesson 7: Check my Understanding",
+ "titleAr": "مراجعة الوحدة — What is it?",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "مراجعة الوحدة — What is it?",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "wood",
+       "ar": "خشب",
+       "em": "🪵"
+      },
+      {
+       "id": "v1",
+       "en": "metal",
+       "ar": "معدن",
+       "em": "🔩"
+      },
+      {
+       "id": "v2",
+       "en": "mall",
+       "ar": "مجمع تجاري",
+       "em": "🏬"
+      },
+      {
+       "id": "v3",
+       "en": "clothes shop",
+       "ar": "متجر ملابس",
+       "em": "👗"
+      },
+      {
+       "id": "v4",
+       "en": "size",
+       "ar": "مقاس",
+       "em": "📏"
+      },
+      {
+       "id": "v5",
+       "en": "try on",
+       "ar": "يجرّب",
+       "em": "👕"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 38⁠–⁠39 · كتاب النشاط ص 32⁠–⁠33"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Review",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">The table is made <b>of</b> wood.</div><div class=\"ex\">Let's go to the mall.</div><div class=\"ex\">Can I <b>help</b> you?</div><div class=\"ex\">A stone is hard, but a pillow is soft.</div><div class=\"ex\">My shirt is made <b>of</b> cotton.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "The table is made of wood. Let's go to the mall. Can I help you? A stone is hard, but a pillow is soft. My shirt is made of cotton."
+      }
+     ]
+    }
+   ],
+   "lead": "نراجع أهم قواعد الوحدة وكلماتها: اقرأ الأمثلة بصوت عالٍ ثم حلّ التمارين.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "The table is made ___ wood.",
+           "a": "of",
+           "o": [
+            "of",
+            "from"
+           ]
+          },
+          {
+           "s": "The bookshop is ___ the first floor.",
+           "a": "on",
+           "o": [
+            "on",
+            "in"
+           ]
+          },
+          {
+           "s": "Can I ___ you?",
+           "a": "help",
+           "o": [
+            "help",
+            "helps"
+           ]
+          },
+          {
+           "s": "The opposite of heavy is ___ .",
+           "a": "light",
+           "o": [
+            "light",
+            "hard"
+           ]
+          },
+          {
+           "s": "Shoes are often made of ___ .",
+           "a": "leather",
+           "o": [
+            "leather",
+            "cotton"
+           ]
+          },
+          {
+           "s": "I write a ___ about my school.",
+           "a": "blog",
+           "o": [
+            "blog",
+            "comment"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "The table is made of wood.",
+          "Let's go to the mall.",
+          "Can I help you?",
+          "A stone is hard, but a pillow is soft."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "The table is made of wood.",
+           "o": [
+            "The table is made of wood.",
+            "Let's go to the mall.",
+            "Can I help you?"
+           ]
+          },
+          {
+           "a": "Let's go to the mall.",
+           "o": [
+            "Let's go to the mall.",
+            "The table is made of wood.",
+            "Can I help you?"
+           ]
+          },
+          {
+           "a": "Can I help you?",
+           "o": [
+            "Can I help you?",
+            "The table is made of wood.",
+            "Let's go to the mall."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "wood",
+       "ipa": "",
+       "meaning": "خشب",
+       "ex": "The table is made of wood."
+      },
+      {
+       "must": 1,
+       "term": "metal",
+       "ipa": "",
+       "meaning": "معدن",
+       "ex": "metal"
+      },
+      {
+       "must": 1,
+       "term": "mall",
+       "ipa": "",
+       "meaning": "مجمع تجاري",
+       "ex": "Let's go to the mall."
+      },
+      {
+       "must": 0,
+       "term": "clothes shop",
+       "ipa": "",
+       "meaning": "متجر ملابس",
+       "ex": "clothes shop"
+      },
+      {
+       "must": 0,
+       "term": "size",
+       "ipa": "",
+       "meaning": "مقاس",
+       "ex": "size"
+      },
+      {
+       "must": 0,
+       "term": "try on",
+       "ipa": "",
+       "meaning": "يجرّب",
+       "ex": "try on"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "The table is made ___ wood.",
+       "a": "of",
+       "o": [
+        "of",
+        "from"
+       ],
+       "why": ""
+      },
+      {
+       "q": "The bookshop is ___ the first floor.",
+       "a": "on",
+       "o": [
+        "on",
+        "in"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Can I ___ you?",
+       "a": "help",
+       "o": [
+        "help",
+        "helps"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى mall؟",
+       "a": "مجمع تجاري",
+       "o": [
+        "مجمع تجاري",
+        "خشب",
+        "معدن"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى clothes shop؟",
+       "a": "متجر ملابس",
+       "o": [
+        "متجر ملابس",
+        "خشب",
+        "معدن"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "The table is made of wood.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "The table is made of wood.",
+       "o": [
+        "The table is made of wood.",
+        "Let's go to the mall.",
+        "Can I help you?"
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

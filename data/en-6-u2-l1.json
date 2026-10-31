@@ -1,0 +1,300 @@
+{
+ "id": "en-6-u2-l1",
+ "grade": 6,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 2 · Lesson 1: It's made of …",
+ "titleAr": "الطاولة مصنوعة من الخشب.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "الطاولة مصنوعة من الخشب.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "wood",
+       "ar": "خشب",
+       "em": "🪵"
+      },
+      {
+       "id": "v1",
+       "en": "metal",
+       "ar": "معدن",
+       "em": "🔩"
+      },
+      {
+       "id": "v2",
+       "en": "glass",
+       "ar": "زجاج",
+       "em": "🥛"
+      },
+      {
+       "id": "v3",
+       "en": "plastic",
+       "ar": "بلاستيك",
+       "em": "🧴"
+      },
+      {
+       "id": "v4",
+       "en": "paper",
+       "ar": "ورق",
+       "em": "📄"
+      },
+      {
+       "id": "v5",
+       "en": "wool",
+       "ar": "صوف",
+       "em": "🧶"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 26⁠–⁠27 · كتاب النشاط ص 20⁠–⁠21"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "be made of",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">The table is made <b>of</b> wood.</div><div class=\"ex\">The window is made <b>of</b> glass.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "The table is made of wood. The window is made of glass."
+      }
+     ]
+    }
+   ],
+   "lead": "It's made of … / They're made of …",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "The table is made ___ wood.",
+           "a": "of",
+           "o": [
+            "of",
+            "from"
+           ]
+          },
+          {
+           "s": "The bottle is made of ___ .",
+           "a": "plastic",
+           "o": [
+            "plastic",
+            "wool"
+           ]
+          },
+          {
+           "s": "Spoons are made of ___ .",
+           "a": "metal",
+           "o": [
+            "metal",
+            "paper"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "The table is made of wood.",
+          "The window is made of glass."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "The table is made of wood.",
+           "o": [
+            "The table is made of wood.",
+            "The window is made of glass."
+           ]
+          },
+          {
+           "a": "The window is made of glass.",
+           "o": [
+            "The window is made of glass.",
+            "The table is made of wood."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "wood",
+       "ipa": "",
+       "meaning": "خشب",
+       "ex": "The table is made of wood."
+      },
+      {
+       "must": 1,
+       "term": "metal",
+       "ipa": "",
+       "meaning": "معدن",
+       "ex": "metal"
+      },
+      {
+       "must": 1,
+       "term": "glass",
+       "ipa": "",
+       "meaning": "زجاج",
+       "ex": "The window is made of glass."
+      },
+      {
+       "must": 0,
+       "term": "plastic",
+       "ipa": "",
+       "meaning": "بلاستيك",
+       "ex": "plastic"
+      },
+      {
+       "must": 0,
+       "term": "paper",
+       "ipa": "",
+       "meaning": "ورق",
+       "ex": "paper"
+      },
+      {
+       "must": 0,
+       "term": "wool",
+       "ipa": "",
+       "meaning": "صوف",
+       "ex": "wool"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "The table is made ___ wood.",
+       "a": "of",
+       "o": [
+        "of",
+        "from"
+       ],
+       "why": ""
+      },
+      {
+       "q": "The bottle is made of ___ .",
+       "a": "plastic",
+       "o": [
+        "plastic",
+        "wool"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Spoons are made of ___ .",
+       "a": "metal",
+       "o": [
+        "metal",
+        "paper"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى metal؟",
+       "a": "معدن",
+       "o": [
+        "معدن",
+        "خشب",
+        "زجاج"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى wool؟",
+       "a": "صوف",
+       "o": [
+        "صوف",
+        "خشب",
+        "معدن"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "The table is made of wood.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "The table is made of wood.",
+       "o": [
+        "The table is made of wood.",
+        "The window is made of glass."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

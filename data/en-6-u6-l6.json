@@ -1,0 +1,299 @@
+{
+ "id": "en-6-u6-l6",
+ "grade": 6,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 6 · Lesson 6: Stay safe on your bike!",
+ "titleAr": "ارتدِ الخوذة دائماً.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "ارتدِ الخوذة دائماً.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "helmet",
+       "ar": "خوذة",
+       "em": "⛑️"
+      },
+      {
+       "id": "v1",
+       "en": "brakes",
+       "ar": "فرامل",
+       "em": "🛑"
+      },
+      {
+       "id": "v2",
+       "en": "lights",
+       "ar": "أضواء",
+       "em": "💡"
+      },
+      {
+       "id": "v3",
+       "en": "check",
+       "ar": "يتفقد",
+       "em": "✔️"
+      },
+      {
+       "id": "v4",
+       "en": "pavement",
+       "ar": "رصيف",
+       "em": "🚶"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 96⁠–⁠97 · كتاب النشاط ص 82⁠–⁠83"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "always / never",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\"><b>Always</b> wear a helmet.</div><div class=\"ex\">Check your <b>brakes</b>.</div><div class=\"ex\">Use <b>lights</b> at night.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Always wear a helmet. Check your brakes. Use lights at night."
+      }
+     ]
+    }
+   ],
+   "lead": "Always wear … / Never ride …",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "___ wear a helmet.",
+           "a": "Always",
+           "o": [
+            "Always",
+            "Never"
+           ]
+          },
+          {
+           "s": "Check your ___ .",
+           "a": "brakes",
+           "o": [
+            "brakes",
+            "helmet"
+           ]
+          },
+          {
+           "s": "Use ___ at night.",
+           "a": "lights",
+           "o": [
+            "lights",
+            "brakes"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Always wear a helmet.",
+          "Check your brakes.",
+          "Use lights at night."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Always wear a helmet.",
+           "o": [
+            "Always wear a helmet.",
+            "Check your brakes.",
+            "Use lights at night."
+           ]
+          },
+          {
+           "a": "Check your brakes.",
+           "o": [
+            "Check your brakes.",
+            "Always wear a helmet.",
+            "Use lights at night."
+           ]
+          },
+          {
+           "a": "Use lights at night.",
+           "o": [
+            "Use lights at night.",
+            "Always wear a helmet.",
+            "Check your brakes."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "helmet",
+       "ipa": "",
+       "meaning": "خوذة",
+       "ex": "Always wear a helmet."
+      },
+      {
+       "must": 1,
+       "term": "brakes",
+       "ipa": "",
+       "meaning": "فرامل",
+       "ex": "Check your brakes."
+      },
+      {
+       "must": 1,
+       "term": "lights",
+       "ipa": "",
+       "meaning": "أضواء",
+       "ex": "Use lights at night."
+      },
+      {
+       "must": 0,
+       "term": "check",
+       "ipa": "",
+       "meaning": "يتفقد",
+       "ex": "Check your brakes."
+      },
+      {
+       "must": 0,
+       "term": "pavement",
+       "ipa": "",
+       "meaning": "رصيف",
+       "ex": "pavement"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "___ wear a helmet.",
+       "a": "Always",
+       "o": [
+        "Always",
+        "Never"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Check your ___ .",
+       "a": "brakes",
+       "o": [
+        "brakes",
+        "helmet"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Use ___ at night.",
+       "a": "lights",
+       "o": [
+        "lights",
+        "brakes"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى lights؟",
+       "a": "أضواء",
+       "o": [
+        "أضواء",
+        "خوذة",
+        "فرامل"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى helmet؟",
+       "a": "خوذة",
+       "o": [
+        "خوذة",
+        "فرامل",
+        "أضواء"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Always wear a helmet.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Always wear a helmet.",
+       "o": [
+        "Always wear a helmet.",
+        "Check your brakes.",
+        "Use lights at night."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

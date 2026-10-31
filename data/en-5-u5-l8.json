@@ -1,0 +1,287 @@
+{
+ "id": "en-5-u5-l8",
+ "grade": 5,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 5 · Lesson 8: Is there? Are there?",
+ "titleAr": "هل يوجد حليب في الثلاجة؟ نعم.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "هل يوجد حليب في الثلاجة؟ نعم.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "is there",
+       "ar": "هل يوجد",
+       "em": "❓"
+      },
+      {
+       "id": "v1",
+       "en": "are there",
+       "ar": "هل توجد",
+       "em": "❓"
+      },
+      {
+       "id": "v2",
+       "en": "any",
+       "ar": "أي",
+       "em": "🔍"
+      },
+      {
+       "id": "v3",
+       "en": "fridge",
+       "ar": "ثلاجة",
+       "em": "🧊"
+      },
+      {
+       "id": "v4",
+       "en": "cupboard",
+       "ar": "خزانة",
+       "em": "🗄️"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 82⁠–⁠83 · كتاب النشاط ص 70⁠–⁠71"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Is there …? / Are there …?",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\"><b>Is</b> there any milk in the fridge? Yes, there is.</div><div class=\"ex\"><b>Are</b> there any eggs? No, there aren't.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Is there any milk in the fridge? Yes, there is. Are there any eggs? No, there aren't."
+      }
+     ]
+    }
+   ],
+   "lead": "للسؤال عن الوجود.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "___ there any milk?",
+           "a": "Is",
+           "o": [
+            "Is",
+            "Are"
+           ]
+          },
+          {
+           "s": "___ there any eggs?",
+           "a": "Are",
+           "o": [
+            "Are",
+            "Is"
+           ]
+          },
+          {
+           "s": "No, there ___ .",
+           "a": "aren't",
+           "o": [
+            "aren't",
+            "isn't"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Is there any milk in the fridge? Yes, there is.",
+          "Are there any eggs? No, there aren't."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Is there any milk in the fridge? Yes, there is.",
+           "o": [
+            "Is there any milk in the fridge? Yes, there is.",
+            "Are there any eggs? No, there aren't."
+           ]
+          },
+          {
+           "a": "Are there any eggs? No, there aren't.",
+           "o": [
+            "Are there any eggs? No, there aren't.",
+            "Is there any milk in the fridge? Yes, there is."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "is there",
+       "ipa": "",
+       "meaning": "هل يوجد",
+       "ex": "Is there any milk in the fridge? Yes, there is."
+      },
+      {
+       "must": 1,
+       "term": "are there",
+       "ipa": "",
+       "meaning": "هل توجد",
+       "ex": "Are there any eggs? No, there aren't."
+      },
+      {
+       "must": 1,
+       "term": "any",
+       "ipa": "",
+       "meaning": "أي",
+       "ex": "Is there any milk in the fridge? Yes, there is."
+      },
+      {
+       "must": 0,
+       "term": "fridge",
+       "ipa": "",
+       "meaning": "ثلاجة",
+       "ex": "Is there any milk in the fridge? Yes, there is."
+      },
+      {
+       "must": 0,
+       "term": "cupboard",
+       "ipa": "",
+       "meaning": "خزانة",
+       "ex": "cupboard"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "___ there any milk?",
+       "a": "Is",
+       "o": [
+        "Is",
+        "Are"
+       ],
+       "why": ""
+      },
+      {
+       "q": "___ there any eggs?",
+       "a": "Are",
+       "o": [
+        "Are",
+        "Is"
+       ],
+       "why": ""
+      },
+      {
+       "q": "No, there ___ .",
+       "a": "aren't",
+       "o": [
+        "aren't",
+        "isn't"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى is there؟",
+       "a": "هل يوجد",
+       "o": [
+        "هل يوجد",
+        "هل توجد",
+        "أي"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى cupboard؟",
+       "a": "خزانة",
+       "o": [
+        "خزانة",
+        "هل يوجد",
+        "هل توجد"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Is there any milk in the fridge? Yes, there is.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Is there any milk in the fridge? Yes, there is.",
+       "o": [
+        "Is there any milk in the fridge? Yes, there is.",
+        "Are there any eggs? No, there aren't."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

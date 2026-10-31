@@ -1,0 +1,287 @@
+{
+ "id": "en-5-u5-l2",
+ "grade": 5,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 5 · Lesson 2: What can you count?",
+ "titleAr": "أستطيع عدّ التفاح.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "أستطيع عدّ التفاح.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "countable",
+       "ar": "معدود",
+       "em": "🔢"
+      },
+      {
+       "id": "v1",
+       "en": "uncountable",
+       "ar": "غير معدود",
+       "em": "💧"
+      },
+      {
+       "id": "v2",
+       "en": "an apple",
+       "ar": "تفاحة",
+       "em": "🍎"
+      },
+      {
+       "id": "v3",
+       "en": "some water",
+       "ar": "بعض الماء",
+       "em": "💧"
+      },
+      {
+       "id": "v4",
+       "en": "some bread",
+       "ar": "بعض الخبز",
+       "em": "🍞"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 70⁠–⁠71 · كتاب النشاط ص 58⁠–⁠59"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Countable / uncountable",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">I can count apples: one apple, two apples.</div><div class=\"ex\">I can't count water. I say <b>some</b> water.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "I can count apples: one apple, two apples. I can't count water. I say some water."
+      }
+     ]
+    }
+   ],
+   "lead": "المعدود يأخذ a/an والجمع، وغير المعدود يأخذ some.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "___ apple",
+           "a": "an",
+           "o": [
+            "an",
+            "some"
+           ]
+          },
+          {
+           "s": "___ water",
+           "a": "some",
+           "o": [
+            "some",
+            "a"
+           ]
+          },
+          {
+           "s": "two ___",
+           "a": "bananas",
+           "o": [
+            "bananas",
+            "breads"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "I can count apples: one apple, two apples.",
+          "I can't count water. I say some water."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "I can count apples: one apple, two apples.",
+           "o": [
+            "I can count apples: one apple, two apples.",
+            "I can't count water. I say some water."
+           ]
+          },
+          {
+           "a": "I can't count water. I say some water.",
+           "o": [
+            "I can't count water. I say some water.",
+            "I can count apples: one apple, two apples."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "countable",
+       "ipa": "",
+       "meaning": "معدود",
+       "ex": "countable"
+      },
+      {
+       "must": 1,
+       "term": "uncountable",
+       "ipa": "",
+       "meaning": "غير معدود",
+       "ex": "uncountable"
+      },
+      {
+       "must": 1,
+       "term": "an apple",
+       "ipa": "",
+       "meaning": "تفاحة",
+       "ex": "I can count apples: one apple, two apples."
+      },
+      {
+       "must": 0,
+       "term": "some water",
+       "ipa": "",
+       "meaning": "بعض الماء",
+       "ex": "I can't count water. I say some water."
+      },
+      {
+       "must": 0,
+       "term": "some bread",
+       "ipa": "",
+       "meaning": "بعض الخبز",
+       "ex": "I can't count water. I say some water."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "___ apple",
+       "a": "an",
+       "o": [
+        "an",
+        "some"
+       ],
+       "why": ""
+      },
+      {
+       "q": "___ water",
+       "a": "some",
+       "o": [
+        "some",
+        "a"
+       ],
+       "why": ""
+      },
+      {
+       "q": "two ___",
+       "a": "bananas",
+       "o": [
+        "bananas",
+        "breads"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى an apple؟",
+       "a": "تفاحة",
+       "o": [
+        "تفاحة",
+        "معدود",
+        "غير معدود"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى uncountable؟",
+       "a": "غير معدود",
+       "o": [
+        "غير معدود",
+        "معدود",
+        "تفاحة"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "I can count apples: one apple, two apples.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "I can count apples: one apple, two apples.",
+       "o": [
+        "I can count apples: one apple, two apples.",
+        "I can't count water. I say some water."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

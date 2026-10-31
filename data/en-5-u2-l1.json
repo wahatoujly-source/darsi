@@ -1,0 +1,286 @@
+{
+ "id": "en-5-u2-l1",
+ "grade": 5,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 2 · Lesson 1: About Time",
+ "titleAr": "كم الساعة؟",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "كم الساعة؟",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "o'clock",
+       "ar": "تماماً",
+       "em": "🕐"
+      },
+      {
+       "id": "v1",
+       "en": "half past",
+       "ar": "والنصف",
+       "em": "🕧"
+      },
+      {
+       "id": "v2",
+       "en": "quarter past",
+       "ar": "والربع",
+       "em": "🕒"
+      },
+      {
+       "id": "v3",
+       "en": "quarter to",
+       "ar": "إلا ربعاً",
+       "em": "🕘"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 26⁠–⁠27 · كتاب النشاط ص 20⁠–⁠21"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Telling the time",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">What's the time?</div><div class=\"ex\">It's <b>half</b> past seven.</div><div class=\"ex\">It's quarter <b>to</b> nine.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "What's the time? It's half past seven. It's quarter to nine."
+      }
+     ]
+    }
+   ],
+   "lead": "o'clock للساعة تماماً، half past للنصف، quarter past/to للربع.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "It's seven ___ .",
+           "a": "o'clock",
+           "o": [
+            "o'clock",
+            "half"
+           ]
+          },
+          {
+           "s": "It's ___ past seven. (7:30)",
+           "a": "half",
+           "o": [
+            "half",
+            "quarter"
+           ]
+          },
+          {
+           "s": "8:45 = It's quarter ___ nine.",
+           "a": "to",
+           "o": [
+            "to",
+            "past"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "What's the time?",
+          "It's half past seven.",
+          "It's quarter to nine."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "What's the time?",
+           "o": [
+            "What's the time?",
+            "It's half past seven.",
+            "It's quarter to nine."
+           ]
+          },
+          {
+           "a": "It's half past seven.",
+           "o": [
+            "It's half past seven.",
+            "What's the time?",
+            "It's quarter to nine."
+           ]
+          },
+          {
+           "a": "It's quarter to nine.",
+           "o": [
+            "It's quarter to nine.",
+            "What's the time?",
+            "It's half past seven."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "o'clock",
+       "ipa": "",
+       "meaning": "تماماً",
+       "ex": "o'clock"
+      },
+      {
+       "must": 1,
+       "term": "half past",
+       "ipa": "",
+       "meaning": "والنصف",
+       "ex": "It's half past seven."
+      },
+      {
+       "must": 1,
+       "term": "quarter past",
+       "ipa": "",
+       "meaning": "والربع",
+       "ex": "It's quarter to nine."
+      },
+      {
+       "must": 0,
+       "term": "quarter to",
+       "ipa": "",
+       "meaning": "إلا ربعاً",
+       "ex": "It's quarter to nine."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "It's seven ___ .",
+       "a": "o'clock",
+       "o": [
+        "o'clock",
+        "half"
+       ],
+       "why": ""
+      },
+      {
+       "q": "It's ___ past seven. (7:30)",
+       "a": "half",
+       "o": [
+        "half",
+        "quarter"
+       ],
+       "why": ""
+      },
+      {
+       "q": "8:45 = It's quarter ___ nine.",
+       "a": "to",
+       "o": [
+        "to",
+        "past"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى quarter to؟",
+       "a": "إلا ربعاً",
+       "o": [
+        "إلا ربعاً",
+        "تماماً",
+        "والنصف"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى o'clock؟",
+       "a": "تماماً",
+       "o": [
+        "تماماً",
+        "والنصف",
+        "والربع"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "What's the time?",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "What's the time?",
+       "o": [
+        "What's the time?",
+        "It's half past seven.",
+        "It's quarter to nine."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

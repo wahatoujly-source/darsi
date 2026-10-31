@@ -1,0 +1,287 @@
+{
+ "id": "en-6-u6-l3",
+ "grade": 6,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 6 · Lesson 3: Cooking at Home",
+ "titleAr": "جدتي تطبخ البازين.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "جدتي تطبخ البازين.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "kitchen",
+       "ar": "مطبخ",
+       "em": "🍳"
+      },
+      {
+       "id": "v1",
+       "en": "oven",
+       "ar": "فرن",
+       "em": "♨️"
+      },
+      {
+       "id": "v2",
+       "en": "bazeen",
+       "ar": "بازين",
+       "em": "🍲"
+      },
+      {
+       "id": "v3",
+       "en": "sharp",
+       "ar": "حاد",
+       "em": "🔪"
+      },
+      {
+       "id": "v4",
+       "en": "careful",
+       "ar": "حذر",
+       "em": "⚠️"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 90⁠–⁠91 · كتاب النشاط ص 76⁠–⁠77"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Present continuous",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">My grandma <b>is</b> cooking bazeen.</div><div class=\"ex\">Be careful! The oven <b>is</b> hot.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "My grandma is cooking bazeen. Be careful! The oven is hot."
+      }
+     ]
+    }
+   ],
+   "lead": "She is cooking / They are helping",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "Grandma ___ cooking.",
+           "a": "is",
+           "o": [
+            "is",
+            "are"
+           ]
+          },
+          {
+           "s": "Be ___ ! The knife is sharp.",
+           "a": "careful",
+           "o": [
+            "careful",
+            "care"
+           ]
+          },
+          {
+           "s": "The ___ is hot.",
+           "a": "oven",
+           "o": [
+            "oven",
+            "kitchen"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "My grandma is cooking bazeen.",
+          "Be careful! The oven is hot."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "My grandma is cooking bazeen.",
+           "o": [
+            "My grandma is cooking bazeen.",
+            "Be careful! The oven is hot."
+           ]
+          },
+          {
+           "a": "Be careful! The oven is hot.",
+           "o": [
+            "Be careful! The oven is hot.",
+            "My grandma is cooking bazeen."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "kitchen",
+       "ipa": "",
+       "meaning": "مطبخ",
+       "ex": "kitchen"
+      },
+      {
+       "must": 1,
+       "term": "oven",
+       "ipa": "",
+       "meaning": "فرن",
+       "ex": "Be careful! The oven is hot."
+      },
+      {
+       "must": 1,
+       "term": "bazeen",
+       "ipa": "",
+       "meaning": "بازين",
+       "ex": "My grandma is cooking bazeen."
+      },
+      {
+       "must": 0,
+       "term": "sharp",
+       "ipa": "",
+       "meaning": "حاد",
+       "ex": "sharp"
+      },
+      {
+       "must": 0,
+       "term": "careful",
+       "ipa": "",
+       "meaning": "حذر",
+       "ex": "Be careful! The oven is hot."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "Grandma ___ cooking.",
+       "a": "is",
+       "o": [
+        "is",
+        "are"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Be ___ ! The knife is sharp.",
+       "a": "careful",
+       "o": [
+        "careful",
+        "care"
+       ],
+       "why": ""
+      },
+      {
+       "q": "The ___ is hot.",
+       "a": "oven",
+       "o": [
+        "oven",
+        "kitchen"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى kitchen؟",
+       "a": "مطبخ",
+       "o": [
+        "مطبخ",
+        "فرن",
+        "بازين"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى bazeen؟",
+       "a": "بازين",
+       "o": [
+        "بازين",
+        "مطبخ",
+        "فرن"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "My grandma is cooking bazeen.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "My grandma is cooking bazeen.",
+       "o": [
+        "My grandma is cooking bazeen.",
+        "Be careful! The oven is hot."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

@@ -1,0 +1,299 @@
+{
+ "id": "en-6-u5-l1",
+ "grade": 6,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 5 · Lesson 1: Past, Present and Future",
+ "titleAr": "في الماضي سافر الناس بالجمال.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "في الماضي سافر الناس بالجمال.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "past",
+       "ar": "الماضي",
+       "em": "⏪"
+      },
+      {
+       "id": "v1",
+       "en": "present",
+       "ar": "الحاضر",
+       "em": "⏺️"
+      },
+      {
+       "id": "v2",
+       "en": "future",
+       "ar": "المستقبل",
+       "em": "⏩"
+      },
+      {
+       "id": "v3",
+       "en": "was",
+       "ar": "كان",
+       "em": "🔙"
+      },
+      {
+       "id": "v4",
+       "en": "will be",
+       "ar": "سيكون",
+       "em": "🔮"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 68⁠–⁠69 · كتاب النشاط ص 56⁠–⁠57"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Three tenses",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">In the past, people <b>travelled</b> by camel.</div><div class=\"ex\">Now we <b>travel</b> by car.</div><div class=\"ex\">In the future, we will <b>travel</b> by flying car.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "In the past, people travelled by camel. Now we travel by car. In the future, we will travel by flying car."
+      }
+     ]
+    }
+   ],
+   "lead": "travelled (past) / travel (present) / will travel (future).",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "In the past, people ___ by camel.",
+           "a": "travelled",
+           "o": [
+            "travelled",
+            "travel"
+           ]
+          },
+          {
+           "s": "Now we ___ by car.",
+           "a": "travel",
+           "o": [
+            "travel",
+            "will travel"
+           ]
+          },
+          {
+           "s": "In the future, we ___ travel by flying car.",
+           "a": "will",
+           "o": [
+            "will",
+            "did"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "In the past, people travelled by camel.",
+          "Now we travel by car.",
+          "In the future, we will travel by flying car."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "In the past, people travelled by camel.",
+           "o": [
+            "In the past, people travelled by camel.",
+            "Now we travel by car.",
+            "In the future, we will travel by flying car."
+           ]
+          },
+          {
+           "a": "Now we travel by car.",
+           "o": [
+            "Now we travel by car.",
+            "In the past, people travelled by camel.",
+            "In the future, we will travel by flying car."
+           ]
+          },
+          {
+           "a": "In the future, we will travel by flying car.",
+           "o": [
+            "In the future, we will travel by flying car.",
+            "In the past, people travelled by camel.",
+            "Now we travel by car."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "past",
+       "ipa": "",
+       "meaning": "الماضي",
+       "ex": "In the past, people travelled by camel."
+      },
+      {
+       "must": 1,
+       "term": "present",
+       "ipa": "",
+       "meaning": "الحاضر",
+       "ex": "present"
+      },
+      {
+       "must": 1,
+       "term": "future",
+       "ipa": "",
+       "meaning": "المستقبل",
+       "ex": "In the future, we will travel by flying car."
+      },
+      {
+       "must": 0,
+       "term": "was",
+       "ipa": "",
+       "meaning": "كان",
+       "ex": "was"
+      },
+      {
+       "must": 0,
+       "term": "will be",
+       "ipa": "",
+       "meaning": "سيكون",
+       "ex": "In the future, we will travel by flying car."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "In the past, people ___ by camel.",
+       "a": "travelled",
+       "o": [
+        "travelled",
+        "travel"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Now we ___ by car.",
+       "a": "travel",
+       "o": [
+        "travel",
+        "will travel"
+       ],
+       "why": ""
+      },
+      {
+       "q": "In the future, we ___ travel by flying car.",
+       "a": "will",
+       "o": [
+        "will",
+        "did"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى past؟",
+       "a": "الماضي",
+       "o": [
+        "الماضي",
+        "الحاضر",
+        "المستقبل"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى present؟",
+       "a": "الحاضر",
+       "o": [
+        "الحاضر",
+        "الماضي",
+        "المستقبل"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "In the past, people travelled by camel.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "In the past, people travelled by camel.",
+       "o": [
+        "In the past, people travelled by camel.",
+        "Now we travel by car.",
+        "In the future, we will travel by flying car."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

@@ -1,0 +1,299 @@
+{
+ "id": "en-6-u3-l6",
+ "grade": 6,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 3 · Lesson 6: Staying Safe Online",
+ "titleAr": "لا تشارك معلوماتك الشخصية.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "لا تشارك معلوماتك الشخصية.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "stranger",
+       "ar": "غريب",
+       "em": "👤"
+      },
+      {
+       "id": "v1",
+       "en": "personal",
+       "ar": "شخصي",
+       "em": "🔒"
+      },
+      {
+       "id": "v2",
+       "en": "safe",
+       "ar": "آمن",
+       "em": "🛡️"
+      },
+      {
+       "id": "v3",
+       "en": "tell",
+       "ar": "يخبر",
+       "em": "🗣️"
+      },
+      {
+       "id": "v4",
+       "en": "adult",
+       "ar": "شخص بالغ",
+       "em": "🧑"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 54⁠–⁠55 · كتاب النشاط ص 46⁠–⁠47"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Safety rules",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Don't share <b>personal</b> information.</div><div class=\"ex\"><b>Never</b> meet a stranger from the internet.</div><div class=\"ex\">Tell an <b>adult</b> if something is wrong.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Don't share personal information. Never meet a stranger from the internet. Tell an adult if something is wrong."
+      }
+     ]
+    }
+   ],
+   "lead": "Don't … / Never … / Always tell …",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "Don't share ___ information.",
+           "a": "personal",
+           "o": [
+            "personal",
+            "safe"
+           ]
+          },
+          {
+           "s": "___ meet a stranger online.",
+           "a": "Never",
+           "o": [
+            "Never",
+            "Always"
+           ]
+          },
+          {
+           "s": "Tell an ___ .",
+           "a": "adult",
+           "o": [
+            "adult",
+            "stranger"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Don't share personal information.",
+          "Never meet a stranger from the internet.",
+          "Tell an adult if something is wrong."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Don't share personal information.",
+           "o": [
+            "Don't share personal information.",
+            "Never meet a stranger from the internet.",
+            "Tell an adult if something is wrong."
+           ]
+          },
+          {
+           "a": "Never meet a stranger from the internet.",
+           "o": [
+            "Never meet a stranger from the internet.",
+            "Don't share personal information.",
+            "Tell an adult if something is wrong."
+           ]
+          },
+          {
+           "a": "Tell an adult if something is wrong.",
+           "o": [
+            "Tell an adult if something is wrong.",
+            "Don't share personal information.",
+            "Never meet a stranger from the internet."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "stranger",
+       "ipa": "",
+       "meaning": "غريب",
+       "ex": "Never meet a stranger from the internet."
+      },
+      {
+       "must": 1,
+       "term": "personal",
+       "ipa": "",
+       "meaning": "شخصي",
+       "ex": "Don't share personal information."
+      },
+      {
+       "must": 1,
+       "term": "safe",
+       "ipa": "",
+       "meaning": "آمن",
+       "ex": "safe"
+      },
+      {
+       "must": 0,
+       "term": "tell",
+       "ipa": "",
+       "meaning": "يخبر",
+       "ex": "Tell an adult if something is wrong."
+      },
+      {
+       "must": 0,
+       "term": "adult",
+       "ipa": "",
+       "meaning": "شخص بالغ",
+       "ex": "Tell an adult if something is wrong."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "Don't share ___ information.",
+       "a": "personal",
+       "o": [
+        "personal",
+        "safe"
+       ],
+       "why": ""
+      },
+      {
+       "q": "___ meet a stranger online.",
+       "a": "Never",
+       "o": [
+        "Never",
+        "Always"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Tell an ___ .",
+       "a": "adult",
+       "o": [
+        "adult",
+        "stranger"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى safe؟",
+       "a": "آمن",
+       "o": [
+        "آمن",
+        "غريب",
+        "شخصي"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى stranger؟",
+       "a": "غريب",
+       "o": [
+        "غريب",
+        "شخصي",
+        "آمن"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Don't share personal information.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Don't share personal information.",
+       "o": [
+        "Don't share personal information.",
+        "Never meet a stranger from the internet.",
+        "Tell an adult if something is wrong."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

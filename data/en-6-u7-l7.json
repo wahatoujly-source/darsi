@@ -1,0 +1,337 @@
+{
+ "id": "en-6-u7-l7",
+ "grade": 6,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 7 · Lesson 7: Check my Understanding",
+ "titleAr": "مراجعة الوحدة — Celebrate!",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "مراجعة الوحدة — Celebrate!",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "party",
+       "ar": "حفلة",
+       "em": "🎉"
+      },
+      {
+       "id": "v1",
+       "en": "balloons",
+       "ar": "بالونات",
+       "em": "🎈"
+      },
+      {
+       "id": "v2",
+       "en": "juice",
+       "ar": "عصير",
+       "em": "🧃"
+      },
+      {
+       "id": "v3",
+       "en": "cups",
+       "ar": "أكواب",
+       "em": "🥤"
+      },
+      {
+       "id": "v4",
+       "en": "Mother's Day",
+       "ar": "عيد الأم",
+       "em": "💐"
+      },
+      {
+       "id": "v5",
+       "en": "flowers",
+       "ar": "زهور",
+       "em": "💐"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 116⁠–⁠117 · كتاب النشاط ص 100⁠–⁠101"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Review",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">We're decorating the classroom.</div><div class=\"ex\">How <b>many</b> cups do we need?</div><div class=\"ex\">I'm going to <b>give</b> my mother flowers.</div><div class=\"ex\">A chef is a person <b>who</b> cooks food.</div><div class=\"ex\"><b>On</b> Saturday morning, I clean my room.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "We're decorating the classroom. How many cups do we need? I'm going to give my mother flowers. A chef is a person who cooks food. On Saturday morning, I clean my room."
+      }
+     ]
+    }
+   ],
+   "lead": "نراجع أهم قواعد الوحدة وكلماتها: اقرأ الأمثلة بصوت عالٍ ثم حلّ التمارين.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "We're going to ___ our parents.",
+           "a": "invite",
+           "o": [
+            "invite",
+            "invites"
+           ]
+          },
+          {
+           "s": "How ___ plates do we need?",
+           "a": "many",
+           "o": [
+            "many",
+            "much"
+           ]
+          },
+          {
+           "s": "I'm going to ___ my mother flowers.",
+           "a": "give",
+           "o": [
+            "give",
+            "gives"
+           ]
+          },
+          {
+           "s": "A chef is a person ___ cooks.",
+           "a": "who",
+           "o": [
+            "who",
+            "which"
+           ]
+          },
+          {
+           "s": "___ Saturday morning, I clean my room.",
+           "a": "On",
+           "o": [
+            "On",
+            "In"
+           ]
+          },
+          {
+           "s": "___ the paper in half.",
+           "a": "Fold",
+           "o": [
+            "Fold",
+            "Folds"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "We're decorating the classroom.",
+          "How many cups do we need?",
+          "I'm going to give my mother flowers.",
+          "A chef is a person who cooks food."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "We're decorating the classroom.",
+           "o": [
+            "We're decorating the classroom.",
+            "How many cups do we need?",
+            "I'm going to give my mother flowers."
+           ]
+          },
+          {
+           "a": "How many cups do we need?",
+           "o": [
+            "How many cups do we need?",
+            "We're decorating the classroom.",
+            "I'm going to give my mother flowers."
+           ]
+          },
+          {
+           "a": "I'm going to give my mother flowers.",
+           "o": [
+            "I'm going to give my mother flowers.",
+            "We're decorating the classroom.",
+            "How many cups do we need?"
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "party",
+       "ipa": "",
+       "meaning": "حفلة",
+       "ex": "party"
+      },
+      {
+       "must": 1,
+       "term": "balloons",
+       "ipa": "",
+       "meaning": "بالونات",
+       "ex": "balloons"
+      },
+      {
+       "must": 1,
+       "term": "juice",
+       "ipa": "",
+       "meaning": "عصير",
+       "ex": "juice"
+      },
+      {
+       "must": 0,
+       "term": "cups",
+       "ipa": "",
+       "meaning": "أكواب",
+       "ex": "How many cups do we need?"
+      },
+      {
+       "must": 0,
+       "term": "Mother's Day",
+       "ipa": "",
+       "meaning": "عيد الأم",
+       "ex": "Mother's Day"
+      },
+      {
+       "must": 0,
+       "term": "flowers",
+       "ipa": "",
+       "meaning": "زهور",
+       "ex": "I'm going to give my mother flowers."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "We're going to ___ our parents.",
+       "a": "invite",
+       "o": [
+        "invite",
+        "invites"
+       ],
+       "why": ""
+      },
+      {
+       "q": "How ___ plates do we need?",
+       "a": "many",
+       "o": [
+        "many",
+        "much"
+       ],
+       "why": ""
+      },
+      {
+       "q": "I'm going to ___ my mother flowers.",
+       "a": "give",
+       "o": [
+        "give",
+        "gives"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى cups؟",
+       "a": "أكواب",
+       "o": [
+        "أكواب",
+        "حفلة",
+        "بالونات"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى juice؟",
+       "a": "عصير",
+       "o": [
+        "عصير",
+        "حفلة",
+        "بالونات"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "We're decorating the classroom.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "We're decorating the classroom.",
+       "o": [
+        "We're decorating the classroom.",
+        "How many cups do we need?",
+        "I'm going to give my mother flowers."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

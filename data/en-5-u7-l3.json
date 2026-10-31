@@ -1,0 +1,287 @@
+{
+ "id": "en-5-u7-l3",
+ "grade": 5,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 7 · Lesson 3: At the Airport",
+ "titleAr": "هل يمكنني رؤية جوازك؟",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "هل يمكنني رؤية جوازك؟",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "airport",
+       "ar": "مطار",
+       "em": "🛫"
+      },
+      {
+       "id": "v1",
+       "en": "passport",
+       "ar": "جواز سفر",
+       "em": "🛂"
+      },
+      {
+       "id": "v2",
+       "en": "plane",
+       "ar": "طائرة",
+       "em": "✈️"
+      },
+      {
+       "id": "v3",
+       "en": "gate",
+       "ar": "بوابة",
+       "em": "🚪"
+      },
+      {
+       "id": "v4",
+       "en": "boarding pass",
+       "ar": "بطاقة صعود",
+       "em": "🎫"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 108⁠–⁠109 · كتاب النشاط ص 92⁠–⁠93"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Polite requests",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Can I see your <b>passport</b>, please?</div><div class=\"ex\">The plane leaves from <b>gate</b> 5.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Can I see your passport, please? The plane leaves from gate 5."
+      }
+     ]
+    }
+   ],
+   "lead": "Can I see … , please?",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "Can I see your ___ , please?",
+           "a": "passport",
+           "o": [
+            "passport",
+            "plane"
+           ]
+          },
+          {
+           "s": "The plane leaves from ___ 5.",
+           "a": "gate",
+           "o": [
+            "gate",
+            "airport"
+           ]
+          },
+          {
+           "s": "___ I see your ticket?",
+           "a": "Can",
+           "o": [
+            "Can",
+            "Do"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Can I see your passport, please?",
+          "The plane leaves from gate 5."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Can I see your passport, please?",
+           "o": [
+            "Can I see your passport, please?",
+            "The plane leaves from gate 5."
+           ]
+          },
+          {
+           "a": "The plane leaves from gate 5.",
+           "o": [
+            "The plane leaves from gate 5.",
+            "Can I see your passport, please?"
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "airport",
+       "ipa": "",
+       "meaning": "مطار",
+       "ex": "airport"
+      },
+      {
+       "must": 1,
+       "term": "passport",
+       "ipa": "",
+       "meaning": "جواز سفر",
+       "ex": "Can I see your passport, please?"
+      },
+      {
+       "must": 1,
+       "term": "plane",
+       "ipa": "",
+       "meaning": "طائرة",
+       "ex": "The plane leaves from gate 5."
+      },
+      {
+       "must": 0,
+       "term": "gate",
+       "ipa": "",
+       "meaning": "بوابة",
+       "ex": "The plane leaves from gate 5."
+      },
+      {
+       "must": 0,
+       "term": "boarding pass",
+       "ipa": "",
+       "meaning": "بطاقة صعود",
+       "ex": "boarding pass"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "Can I see your ___ , please?",
+       "a": "passport",
+       "o": [
+        "passport",
+        "plane"
+       ],
+       "why": ""
+      },
+      {
+       "q": "The plane leaves from ___ 5.",
+       "a": "gate",
+       "o": [
+        "gate",
+        "airport"
+       ],
+       "why": ""
+      },
+      {
+       "q": "___ I see your ticket?",
+       "a": "Can",
+       "o": [
+        "Can",
+        "Do"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى gate؟",
+       "a": "بوابة",
+       "o": [
+        "بوابة",
+        "مطار",
+        "جواز سفر"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى airport؟",
+       "a": "مطار",
+       "o": [
+        "مطار",
+        "جواز سفر",
+        "طائرة"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Can I see your passport, please?",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Can I see your passport, please?",
+       "o": [
+        "Can I see your passport, please?",
+        "The plane leaves from gate 5."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

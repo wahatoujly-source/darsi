@@ -1,0 +1,337 @@
+{
+ "id": "en-5-u2-l8",
+ "grade": 5,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 2 · Lesson 8: Let's sing!",
+ "titleAr": "نردّد بإيقاع — Different Lives",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "نردّد بإيقاع — Different Lives",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "bee",
+       "ar": "نحلة",
+       "em": "🐝"
+      },
+      {
+       "id": "v1",
+       "en": "honey",
+       "ar": "عسل",
+       "em": "🍯"
+      },
+      {
+       "id": "v2",
+       "en": "mammal",
+       "ar": "ثديي",
+       "em": "🐄"
+      },
+      {
+       "id": "v3",
+       "en": "reptile",
+       "ar": "زاحف",
+       "em": "🦎"
+      },
+      {
+       "id": "v4",
+       "en": "fast",
+       "ar": "سريع",
+       "em": "🐆"
+      },
+      {
+       "id": "v5",
+       "en": "slow",
+       "ar": "بطيء",
+       "em": "🐢"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 40⁠–⁠41 · كتاب النشاط ص 34⁠–⁠35"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Chant",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Bees <b>make</b> honey.</div><div class=\"ex\">Insects <b>have</b> six legs.</div><div class=\"ex\">What's a cheetah <b>like</b>? It's very fast.</div><div class=\"ex\">I <b>always</b> brush my teeth.</div><div class=\"ex\">Mr Dan <b>gets</b> up at six o'clock.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Bees make honey. Insects have six legs. What's a cheetah like? It's very fast. I always brush my teeth. Mr Dan gets up at six o'clock."
+      }
+     ]
+    }
+   ],
+   "lead": "نردّد جمل الوحدة بإيقاع ونصفّق مع المقاطع المنبورة — يمكنك الاستماع إلى أغنية الكتاب مع معلمك.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "Bees ___ honey.",
+           "a": "make",
+           "o": [
+            "make",
+            "makes"
+           ]
+          },
+          {
+           "s": "Insects ___ six legs.",
+           "a": "have",
+           "o": [
+            "have",
+            "has"
+           ]
+          },
+          {
+           "s": "What's a tortoise ___ ?",
+           "a": "like",
+           "o": [
+            "like",
+            "likes"
+           ]
+          },
+          {
+           "s": "I ___ brush my teeth. (100%)",
+           "a": "always",
+           "o": [
+            "always",
+            "never"
+           ]
+          },
+          {
+           "s": "Mr Dan ___ up at six.",
+           "a": "gets",
+           "o": [
+            "gets",
+            "get"
+           ]
+          },
+          {
+           "s": "It's seven ___ .",
+           "a": "o'clock",
+           "o": [
+            "o'clock",
+            "half"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Bees make honey.",
+          "Insects have six legs.",
+          "What's a cheetah like? It's very fast.",
+          "I always brush my teeth."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Bees make honey.",
+           "o": [
+            "Bees make honey.",
+            "Insects have six legs.",
+            "What's a cheetah like? It's very fast."
+           ]
+          },
+          {
+           "a": "Insects have six legs.",
+           "o": [
+            "Insects have six legs.",
+            "Bees make honey.",
+            "What's a cheetah like? It's very fast."
+           ]
+          },
+          {
+           "a": "What's a cheetah like? It's very fast.",
+           "o": [
+            "What's a cheetah like? It's very fast.",
+            "Bees make honey.",
+            "Insects have six legs."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "bee",
+       "ipa": "",
+       "meaning": "نحلة",
+       "ex": "Bees make honey."
+      },
+      {
+       "must": 1,
+       "term": "honey",
+       "ipa": "",
+       "meaning": "عسل",
+       "ex": "Bees make honey."
+      },
+      {
+       "must": 1,
+       "term": "mammal",
+       "ipa": "",
+       "meaning": "ثديي",
+       "ex": "mammal"
+      },
+      {
+       "must": 0,
+       "term": "reptile",
+       "ipa": "",
+       "meaning": "زاحف",
+       "ex": "reptile"
+      },
+      {
+       "must": 0,
+       "term": "fast",
+       "ipa": "",
+       "meaning": "سريع",
+       "ex": "What's a cheetah like? It's very fast."
+      },
+      {
+       "must": 0,
+       "term": "slow",
+       "ipa": "",
+       "meaning": "بطيء",
+       "ex": "slow"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "Bees ___ honey.",
+       "a": "make",
+       "o": [
+        "make",
+        "makes"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Insects ___ six legs.",
+       "a": "have",
+       "o": [
+        "have",
+        "has"
+       ],
+       "why": ""
+      },
+      {
+       "q": "What's a tortoise ___ ?",
+       "a": "like",
+       "o": [
+        "like",
+        "likes"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى honey؟",
+       "a": "عسل",
+       "o": [
+        "عسل",
+        "نحلة",
+        "ثديي"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى slow؟",
+       "a": "بطيء",
+       "o": [
+        "بطيء",
+        "نحلة",
+        "عسل"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Bees make honey.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Bees make honey.",
+       "o": [
+        "Bees make honey.",
+        "Insects have six legs.",
+        "What's a cheetah like? It's very fast."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

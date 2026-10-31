@@ -1,0 +1,287 @@
+{
+ "id": "en-6-u5-l6",
+ "grade": 6,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 5 · Lesson 6: Space Travel",
+ "titleAr": "عام ١٩٦٩ هبط رواد الفضاء على القمر.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "عام ١٩٦٩ هبط رواد الفضاء على القمر.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "rocket",
+       "ar": "صاروخ",
+       "em": "🚀"
+      },
+      {
+       "id": "v1",
+       "en": "land",
+       "ar": "يهبط",
+       "em": "🛬"
+      },
+      {
+       "id": "v2",
+       "en": "orbit",
+       "ar": "مدار",
+       "em": "🔄"
+      },
+      {
+       "id": "v3",
+       "en": "first",
+       "ar": "الأول",
+       "em": "🥇"
+      },
+      {
+       "id": "v4",
+       "en": "1969",
+       "ar": "١٩٦٩",
+       "em": "📅"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 78⁠–⁠79 · كتاب النشاط ص 66⁠–⁠67"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "in + year",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">In 1969, astronauts <b>landed</b> on the Moon.</div><div class=\"ex\">The <b>rocket</b> went into orbit.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "In 1969, astronauts landed on the Moon. The rocket went into orbit."
+      }
+     ]
+    }
+   ],
+   "lead": "in 1969",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "Astronauts ___ on the Moon in 1969.",
+           "a": "landed",
+           "o": [
+            "landed",
+            "land"
+           ]
+          },
+          {
+           "s": "The ___ went into orbit.",
+           "a": "rocket",
+           "o": [
+            "rocket",
+            "orbit"
+           ]
+          },
+          {
+           "s": "___ 1969",
+           "a": "In",
+           "o": [
+            "In",
+            "On"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "In 1969, astronauts landed on the Moon.",
+          "The rocket went into orbit."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "In 1969, astronauts landed on the Moon.",
+           "o": [
+            "In 1969, astronauts landed on the Moon.",
+            "The rocket went into orbit."
+           ]
+          },
+          {
+           "a": "The rocket went into orbit.",
+           "o": [
+            "The rocket went into orbit.",
+            "In 1969, astronauts landed on the Moon."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "rocket",
+       "ipa": "",
+       "meaning": "صاروخ",
+       "ex": "The rocket went into orbit."
+      },
+      {
+       "must": 1,
+       "term": "land",
+       "ipa": "",
+       "meaning": "يهبط",
+       "ex": "In 1969, astronauts landed on the Moon."
+      },
+      {
+       "must": 1,
+       "term": "orbit",
+       "ipa": "",
+       "meaning": "مدار",
+       "ex": "The rocket went into orbit."
+      },
+      {
+       "must": 0,
+       "term": "first",
+       "ipa": "",
+       "meaning": "الأول",
+       "ex": "first"
+      },
+      {
+       "must": 0,
+       "term": "1969",
+       "ipa": "",
+       "meaning": "١٩٦٩",
+       "ex": "In 1969, astronauts landed on the Moon."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "Astronauts ___ on the Moon in 1969.",
+       "a": "landed",
+       "o": [
+        "landed",
+        "land"
+       ],
+       "why": ""
+      },
+      {
+       "q": "The ___ went into orbit.",
+       "a": "rocket",
+       "o": [
+        "rocket",
+        "orbit"
+       ],
+       "why": ""
+      },
+      {
+       "q": "___ 1969",
+       "a": "In",
+       "o": [
+        "In",
+        "On"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى orbit؟",
+       "a": "مدار",
+       "o": [
+        "مدار",
+        "صاروخ",
+        "يهبط"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى 1969؟",
+       "a": "١٩٦٩",
+       "o": [
+        "١٩٦٩",
+        "صاروخ",
+        "يهبط"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "In 1969, astronauts landed on the Moon.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "In 1969, astronauts landed on the Moon.",
+       "o": [
+        "In 1969, astronauts landed on the Moon.",
+        "The rocket went into orbit."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

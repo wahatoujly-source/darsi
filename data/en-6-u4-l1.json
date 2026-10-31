@@ -1,0 +1,337 @@
+{
+ "id": "en-6-u4-l1",
+ "grade": 6,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 4 · Lesson 1: The Challenge",
+ "titleAr": "التحدي — Revision (1)",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "التحدي — Revision (1)",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "doctor",
+       "ar": "طبيب",
+       "em": "🧑‍⚕️"
+      },
+      {
+       "id": "v1",
+       "en": "engineer",
+       "ar": "مهندس",
+       "em": "👷"
+      },
+      {
+       "id": "v2",
+       "en": "wake up",
+       "ar": "يستيقظ",
+       "em": "⏰"
+      },
+      {
+       "id": "v3",
+       "en": "pray",
+       "ar": "يصلي",
+       "em": "🕌"
+      },
+      {
+       "id": "v4",
+       "en": "big",
+       "ar": "كبيرة",
+       "em": "👨‍👩‍👧‍👦"
+      },
+      {
+       "id": "v5",
+       "en": "small",
+       "ar": "صغيرة",
+       "em": "👪"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 62 · كتاب النشاط ص 52"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Challenge",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">What does your father do? He's <b>an</b> engineer.</div><div class=\"ex\">I wake up at half past five and pray.</div><div class=\"ex\">Huda's family is big, but Sara's family is small.</div><div class=\"ex\">The table is made <b>of</b> wood.</div><div class=\"ex\">Can I <b>help</b> you?</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "What does your father do? He's an engineer. I wake up at half past five and pray. Huda's family is big, but Sara's family is small. The table is made of wood. Can I help you?"
+      }
+     ]
+    }
+   ],
+   "lead": "تحدٍّ يراجع الوحدات السابقة: كم نقطة تستطيع أن تجمع؟",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "He's ___ engineer.",
+           "a": "an",
+           "o": [
+            "an",
+            "a"
+           ]
+          },
+          {
+           "s": "He ___ the bus at seven.",
+           "a": "catches",
+           "o": [
+            "catches",
+            "catch"
+           ]
+          },
+          {
+           "s": "___ families live in Benghazi.",
+           "a": "Both",
+           "o": [
+            "Both",
+            "But"
+           ]
+          },
+          {
+           "s": "The table is made ___ wood.",
+           "a": "of",
+           "o": [
+            "of",
+            "from"
+           ]
+          },
+          {
+           "s": "Can I ___ you?",
+           "a": "help",
+           "o": [
+            "help",
+            "helps"
+           ]
+          },
+          {
+           "s": "Shoes are often made of ___ .",
+           "a": "leather",
+           "o": [
+            "leather",
+            "cotton"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "What does your father do? He's an engineer.",
+          "I wake up at half past five and pray.",
+          "Huda's family is big, but Sara's family is small.",
+          "The table is made of wood."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "What does your father do? He's an engineer.",
+           "o": [
+            "What does your father do? He's an engineer.",
+            "I wake up at half past five and pray.",
+            "Huda's family is big, but Sara's family is small."
+           ]
+          },
+          {
+           "a": "I wake up at half past five and pray.",
+           "o": [
+            "I wake up at half past five and pray.",
+            "What does your father do? He's an engineer.",
+            "Huda's family is big, but Sara's family is small."
+           ]
+          },
+          {
+           "a": "Huda's family is big, but Sara's family is small.",
+           "o": [
+            "Huda's family is big, but Sara's family is small.",
+            "What does your father do? He's an engineer.",
+            "I wake up at half past five and pray."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "doctor",
+       "ipa": "",
+       "meaning": "طبيب",
+       "ex": "doctor"
+      },
+      {
+       "must": 1,
+       "term": "engineer",
+       "ipa": "",
+       "meaning": "مهندس",
+       "ex": "What does your father do? He's an engineer."
+      },
+      {
+       "must": 1,
+       "term": "wake up",
+       "ipa": "",
+       "meaning": "يستيقظ",
+       "ex": "I wake up at half past five and pray."
+      },
+      {
+       "must": 0,
+       "term": "pray",
+       "ipa": "",
+       "meaning": "يصلي",
+       "ex": "I wake up at half past five and pray."
+      },
+      {
+       "must": 0,
+       "term": "big",
+       "ipa": "",
+       "meaning": "كبيرة",
+       "ex": "Huda's family is big, but Sara's family is small."
+      },
+      {
+       "must": 0,
+       "term": "small",
+       "ipa": "",
+       "meaning": "صغيرة",
+       "ex": "Huda's family is big, but Sara's family is small."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "He's ___ engineer.",
+       "a": "an",
+       "o": [
+        "an",
+        "a"
+       ],
+       "why": ""
+      },
+      {
+       "q": "He ___ the bus at seven.",
+       "a": "catches",
+       "o": [
+        "catches",
+        "catch"
+       ],
+       "why": ""
+      },
+      {
+       "q": "___ families live in Benghazi.",
+       "a": "Both",
+       "o": [
+        "Both",
+        "But"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى doctor؟",
+       "a": "طبيب",
+       "o": [
+        "طبيب",
+        "مهندس",
+        "يستيقظ"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى small؟",
+       "a": "صغيرة",
+       "o": [
+        "صغيرة",
+        "طبيب",
+        "مهندس"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "What does your father do? He's an engineer.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "What does your father do? He's an engineer.",
+       "o": [
+        "What does your father do? He's an engineer.",
+        "I wake up at half past five and pray.",
+        "Huda's family is big, but Sara's family is small."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

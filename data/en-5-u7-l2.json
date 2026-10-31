@@ -1,0 +1,287 @@
+{
+ "id": "en-5-u7-l2",
+ "grade": 5,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 7 · Lesson 2: Going on a Summer Holiday",
+ "titleAr": "سوف نزور تونس.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "سوف نزور تونس.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "suitcase",
+       "ar": "حقيبة سفر",
+       "em": "🧳"
+      },
+      {
+       "id": "v1",
+       "en": "pack",
+       "ar": "يحزم",
+       "em": "🎒"
+      },
+      {
+       "id": "v2",
+       "en": "going to",
+       "ar": "سوف",
+       "em": "➡️"
+      },
+      {
+       "id": "v3",
+       "en": "sun cream",
+       "ar": "واقي شمس",
+       "em": "🧴"
+      },
+      {
+       "id": "v4",
+       "en": "swimsuit",
+       "ar": "ملابس سباحة",
+       "em": "🩱"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 106⁠–⁠107 · كتاب النشاط ص 90⁠–⁠91"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "going to",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">We're <b>going</b> to visit Tunisia.</div><div class=\"ex\">I'm <b>going</b> to pack my suitcase.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "We're going to visit Tunisia. I'm going to pack my suitcase."
+      }
+     ]
+    }
+   ],
+   "lead": "am/is/are going to + فعل للخطط المستقبلية.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "We're ___ to visit Tunisia.",
+           "a": "going",
+           "o": [
+            "going",
+            "go"
+           ]
+          },
+          {
+           "s": "I'm going to ___ my suitcase.",
+           "a": "pack",
+           "o": [
+            "pack",
+            "packing"
+           ]
+          },
+          {
+           "s": "She ___ going to swim.",
+           "a": "is",
+           "o": [
+            "is",
+            "are"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "We're going to visit Tunisia.",
+          "I'm going to pack my suitcase."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "We're going to visit Tunisia.",
+           "o": [
+            "We're going to visit Tunisia.",
+            "I'm going to pack my suitcase."
+           ]
+          },
+          {
+           "a": "I'm going to pack my suitcase.",
+           "o": [
+            "I'm going to pack my suitcase.",
+            "We're going to visit Tunisia."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "suitcase",
+       "ipa": "",
+       "meaning": "حقيبة سفر",
+       "ex": "I'm going to pack my suitcase."
+      },
+      {
+       "must": 1,
+       "term": "pack",
+       "ipa": "",
+       "meaning": "يحزم",
+       "ex": "I'm going to pack my suitcase."
+      },
+      {
+       "must": 1,
+       "term": "going to",
+       "ipa": "",
+       "meaning": "سوف",
+       "ex": "We're going to visit Tunisia."
+      },
+      {
+       "must": 0,
+       "term": "sun cream",
+       "ipa": "",
+       "meaning": "واقي شمس",
+       "ex": "sun cream"
+      },
+      {
+       "must": 0,
+       "term": "swimsuit",
+       "ipa": "",
+       "meaning": "ملابس سباحة",
+       "ex": "swimsuit"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "We're ___ to visit Tunisia.",
+       "a": "going",
+       "o": [
+        "going",
+        "go"
+       ],
+       "why": ""
+      },
+      {
+       "q": "I'm going to ___ my suitcase.",
+       "a": "pack",
+       "o": [
+        "pack",
+        "packing"
+       ],
+       "why": ""
+      },
+      {
+       "q": "She ___ going to swim.",
+       "a": "is",
+       "o": [
+        "is",
+        "are"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى sun cream؟",
+       "a": "واقي شمس",
+       "o": [
+        "واقي شمس",
+        "حقيبة سفر",
+        "يحزم"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى going to؟",
+       "a": "سوف",
+       "o": [
+        "سوف",
+        "حقيبة سفر",
+        "يحزم"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "We're going to visit Tunisia.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "We're going to visit Tunisia.",
+       "o": [
+        "We're going to visit Tunisia.",
+        "I'm going to pack my suitcase."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

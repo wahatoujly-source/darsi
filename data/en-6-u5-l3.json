@@ -1,0 +1,287 @@
+{
+ "id": "en-6-u5-l3",
+ "grade": 6,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 5 · Lesson 3: Living Now",
+ "titleAr": "الآن لدينا كهرباء.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "الآن لدينا كهرباء.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "electricity",
+       "ar": "كهرباء",
+       "em": "⚡"
+      },
+      {
+       "id": "v1",
+       "en": "smartphone",
+       "ar": "هاتف ذكي",
+       "em": "📱"
+      },
+      {
+       "id": "v2",
+       "en": "tap",
+       "ar": "صنبور",
+       "em": "🚰"
+      },
+      {
+       "id": "v3",
+       "en": "modern",
+       "ar": "حديث",
+       "em": "🏙️"
+      },
+      {
+       "id": "v4",
+       "en": "message",
+       "ar": "رسالة",
+       "em": "💬"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 72⁠–⁠73 · كتاب النشاط ص 60⁠–⁠61"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Present simple vs past",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Now we <b>have</b> electricity.</div><div class=\"ex\">We send <b>messages</b> on smartphones.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Now we have electricity. We send messages on smartphones."
+      }
+     ]
+    }
+   ],
+   "lead": "Then they used candles; now we use electricity.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "Now we ___ electricity.",
+           "a": "have",
+           "o": [
+            "have",
+            "had"
+           ]
+          },
+          {
+           "s": "We send ___ on phones.",
+           "a": "messages",
+           "o": [
+            "messages",
+            "letter"
+           ]
+          },
+          {
+           "s": "Our houses are ___ .",
+           "a": "modern",
+           "o": [
+            "modern",
+            "old"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Now we have electricity.",
+          "We send messages on smartphones."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Now we have electricity.",
+           "o": [
+            "Now we have electricity.",
+            "We send messages on smartphones."
+           ]
+          },
+          {
+           "a": "We send messages on smartphones.",
+           "o": [
+            "We send messages on smartphones.",
+            "Now we have electricity."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "electricity",
+       "ipa": "",
+       "meaning": "كهرباء",
+       "ex": "Now we have electricity."
+      },
+      {
+       "must": 1,
+       "term": "smartphone",
+       "ipa": "",
+       "meaning": "هاتف ذكي",
+       "ex": "We send messages on smartphones."
+      },
+      {
+       "must": 1,
+       "term": "tap",
+       "ipa": "",
+       "meaning": "صنبور",
+       "ex": "tap"
+      },
+      {
+       "must": 0,
+       "term": "modern",
+       "ipa": "",
+       "meaning": "حديث",
+       "ex": "modern"
+      },
+      {
+       "must": 0,
+       "term": "message",
+       "ipa": "",
+       "meaning": "رسالة",
+       "ex": "We send messages on smartphones."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "Now we ___ electricity.",
+       "a": "have",
+       "o": [
+        "have",
+        "had"
+       ],
+       "why": ""
+      },
+      {
+       "q": "We send ___ on phones.",
+       "a": "messages",
+       "o": [
+        "messages",
+        "letter"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Our houses are ___ .",
+       "a": "modern",
+       "o": [
+        "modern",
+        "old"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى tap؟",
+       "a": "صنبور",
+       "o": [
+        "صنبور",
+        "كهرباء",
+        "هاتف ذكي"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى electricity؟",
+       "a": "كهرباء",
+       "o": [
+        "كهرباء",
+        "هاتف ذكي",
+        "صنبور"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Now we have electricity.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Now we have electricity.",
+       "o": [
+        "Now we have electricity.",
+        "We send messages on smartphones."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

@@ -1,0 +1,337 @@
+{
+ "id": "en-6-u1-l7",
+ "grade": 6,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 1 · Lesson 7: Check my Understanding",
+ "titleAr": "مراجعة الوحدة — Family and Work",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "مراجعة الوحدة — Family and Work",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "parents",
+       "ar": "والدان",
+       "em": "👨‍👩"
+      },
+      {
+       "id": "v1",
+       "en": "grandparents",
+       "ar": "أجداد",
+       "em": "👴👵"
+      },
+      {
+       "id": "v2",
+       "en": "doctor",
+       "ar": "طبيب",
+       "em": "🧑‍⚕️"
+      },
+      {
+       "id": "v3",
+       "en": "engineer",
+       "ar": "مهندس",
+       "em": "👷"
+      },
+      {
+       "id": "v4",
+       "en": "hospital",
+       "ar": "مستشفى",
+       "em": "🏥"
+      },
+      {
+       "id": "v5",
+       "en": "farm",
+       "ar": "مزرعة",
+       "em": "🚜"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 20⁠–⁠21 · كتاب النشاط ص 16⁠–⁠17"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Review",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">I live with my parents and my grandparents.</div><div class=\"ex\">What does your father do? He's <b>an</b> engineer.</div><div class=\"ex\">A doctor works in a hospital.</div><div class=\"ex\">I wake up at half past five and pray.</div><div class=\"ex\">My favourite job is a vet <b>because</b> I love animals.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "I live with my parents and my grandparents. What does your father do? He's an engineer. A doctor works in a hospital. I wake up at half past five and pray. My favourite job is a vet because I love animals."
+      }
+     ]
+    }
+   ],
+   "lead": "نراجع أهم قواعد الوحدة وكلماتها: اقرأ الأمثلة بصوت عالٍ ثم حلّ التمارين.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "My uncle's son is my ___ .",
+           "a": "cousin",
+           "o": [
+            "cousin",
+            "brother"
+           ]
+          },
+          {
+           "s": "He's ___ engineer.",
+           "a": "an",
+           "o": [
+            "an",
+            "a"
+           ]
+          },
+          {
+           "s": "A farmer works ___ a farm.",
+           "a": "on",
+           "o": [
+            "on",
+            "in"
+           ]
+          },
+          {
+           "s": "He ___ the bus at seven.",
+           "a": "catches",
+           "o": [
+            "catches",
+            "catch"
+           ]
+          },
+          {
+           "s": "I want to be a vet ___ I love animals.",
+           "a": "because",
+           "o": [
+            "because",
+            "but"
+           ]
+          },
+          {
+           "s": "___ families live in Benghazi.",
+           "a": "Both",
+           "o": [
+            "Both",
+            "But"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "I live with my parents and my grandparents.",
+          "What does your father do? He's an engineer.",
+          "A doctor works in a hospital.",
+          "I wake up at half past five and pray."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "I live with my parents and my grandparents.",
+           "o": [
+            "I live with my parents and my grandparents.",
+            "What does your father do? He's an engineer.",
+            "A doctor works in a hospital."
+           ]
+          },
+          {
+           "a": "What does your father do? He's an engineer.",
+           "o": [
+            "What does your father do? He's an engineer.",
+            "I live with my parents and my grandparents.",
+            "A doctor works in a hospital."
+           ]
+          },
+          {
+           "a": "A doctor works in a hospital.",
+           "o": [
+            "A doctor works in a hospital.",
+            "I live with my parents and my grandparents.",
+            "What does your father do? He's an engineer."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "parents",
+       "ipa": "",
+       "meaning": "والدان",
+       "ex": "I live with my parents and my grandparents."
+      },
+      {
+       "must": 1,
+       "term": "grandparents",
+       "ipa": "",
+       "meaning": "أجداد",
+       "ex": "I live with my parents and my grandparents."
+      },
+      {
+       "must": 1,
+       "term": "doctor",
+       "ipa": "",
+       "meaning": "طبيب",
+       "ex": "A doctor works in a hospital."
+      },
+      {
+       "must": 0,
+       "term": "engineer",
+       "ipa": "",
+       "meaning": "مهندس",
+       "ex": "What does your father do? He's an engineer."
+      },
+      {
+       "must": 0,
+       "term": "hospital",
+       "ipa": "",
+       "meaning": "مستشفى",
+       "ex": "A doctor works in a hospital."
+      },
+      {
+       "must": 0,
+       "term": "farm",
+       "ipa": "",
+       "meaning": "مزرعة",
+       "ex": "farm"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "My uncle's son is my ___ .",
+       "a": "cousin",
+       "o": [
+        "cousin",
+        "brother"
+       ],
+       "why": ""
+      },
+      {
+       "q": "He's ___ engineer.",
+       "a": "an",
+       "o": [
+        "an",
+        "a"
+       ],
+       "why": ""
+      },
+      {
+       "q": "A farmer works ___ a farm.",
+       "a": "on",
+       "o": [
+        "on",
+        "in"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى hospital؟",
+       "a": "مستشفى",
+       "o": [
+        "مستشفى",
+        "والدان",
+        "أجداد"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى grandparents؟",
+       "a": "أجداد",
+       "o": [
+        "أجداد",
+        "والدان",
+        "طبيب"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "I live with my parents and my grandparents.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "I live with my parents and my grandparents.",
+       "o": [
+        "I live with my parents and my grandparents.",
+        "What does your father do? He's an engineer.",
+        "A doctor works in a hospital."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

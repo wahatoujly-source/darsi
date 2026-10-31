@@ -1,0 +1,337 @@
+{
+ "id": "en-6-u5-l7",
+ "grade": 6,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 5 · Lesson 7: Check my Understanding",
+ "titleAr": "مراجعة الوحدة — Then and Now",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "مراجعة الوحدة — Then and Now",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "past",
+       "ar": "الماضي",
+       "em": "⏪"
+      },
+      {
+       "id": "v1",
+       "en": "present",
+       "ar": "الحاضر",
+       "em": "⏺️"
+      },
+      {
+       "id": "v2",
+       "en": "candle",
+       "ar": "شمعة",
+       "em": "🕯️"
+      },
+      {
+       "id": "v3",
+       "en": "well",
+       "ar": "بئر",
+       "em": "🪣"
+      },
+      {
+       "id": "v4",
+       "en": "electricity",
+       "ar": "كهرباء",
+       "em": "⚡"
+      },
+      {
+       "id": "v5",
+       "en": "smartphone",
+       "ar": "هاتف ذكي",
+       "em": "📱"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 80⁠–⁠81 · كتاب النشاط ص 68⁠–⁠69"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Review",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">In the past, people <b>travelled</b> by camel.</div><div class=\"ex\">Long ago, people <b>used</b> candles.</div><div class=\"ex\">Now we <b>have</b> electricity.</div><div class=\"ex\">We live in the 21st century.</div><div class=\"ex\">The Earth is a planet.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "In the past, people travelled by camel. Long ago, people used candles. Now we have electricity. We live in the 21st century. The Earth is a planet."
+      }
+     ]
+    }
+   ],
+   "lead": "نراجع أهم قواعد الوحدة وكلماتها: اقرأ الأمثلة بصوت عالٍ ثم حلّ التمارين.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "In the past, people ___ by camel.",
+           "a": "travelled",
+           "o": [
+            "travelled",
+            "travel"
+           ]
+          },
+          {
+           "s": "People ___ candles.",
+           "a": "used",
+           "o": [
+            "used",
+            "use"
+           ]
+          },
+          {
+           "s": "Now we ___ electricity.",
+           "a": "have",
+           "o": [
+            "have",
+            "had"
+           ]
+          },
+          {
+           "s": "We live in the 21___ century.",
+           "a": "st",
+           "o": [
+            "st",
+            "th"
+           ]
+          },
+          {
+           "s": "The Sun is a ___ .",
+           "a": "star",
+           "o": [
+            "star",
+            "planet"
+           ]
+          },
+          {
+           "s": "Astronauts ___ on the Moon in 1969.",
+           "a": "landed",
+           "o": [
+            "landed",
+            "land"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "In the past, people travelled by camel.",
+          "Long ago, people used candles.",
+          "Now we have electricity.",
+          "We live in the 21st century."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "In the past, people travelled by camel.",
+           "o": [
+            "In the past, people travelled by camel.",
+            "Long ago, people used candles.",
+            "Now we have electricity."
+           ]
+          },
+          {
+           "a": "Long ago, people used candles.",
+           "o": [
+            "Long ago, people used candles.",
+            "In the past, people travelled by camel.",
+            "Now we have electricity."
+           ]
+          },
+          {
+           "a": "Now we have electricity.",
+           "o": [
+            "Now we have electricity.",
+            "In the past, people travelled by camel.",
+            "Long ago, people used candles."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "past",
+       "ipa": "",
+       "meaning": "الماضي",
+       "ex": "In the past, people travelled by camel."
+      },
+      {
+       "must": 1,
+       "term": "present",
+       "ipa": "",
+       "meaning": "الحاضر",
+       "ex": "present"
+      },
+      {
+       "must": 1,
+       "term": "candle",
+       "ipa": "",
+       "meaning": "شمعة",
+       "ex": "Long ago, people used candles."
+      },
+      {
+       "must": 0,
+       "term": "well",
+       "ipa": "",
+       "meaning": "بئر",
+       "ex": "well"
+      },
+      {
+       "must": 0,
+       "term": "electricity",
+       "ipa": "",
+       "meaning": "كهرباء",
+       "ex": "Now we have electricity."
+      },
+      {
+       "must": 0,
+       "term": "smartphone",
+       "ipa": "",
+       "meaning": "هاتف ذكي",
+       "ex": "smartphone"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "In the past, people ___ by camel.",
+       "a": "travelled",
+       "o": [
+        "travelled",
+        "travel"
+       ],
+       "why": ""
+      },
+      {
+       "q": "People ___ candles.",
+       "a": "used",
+       "o": [
+        "used",
+        "use"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Now we ___ electricity.",
+       "a": "have",
+       "o": [
+        "have",
+        "had"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى candle؟",
+       "a": "شمعة",
+       "o": [
+        "شمعة",
+        "الماضي",
+        "الحاضر"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى past؟",
+       "a": "الماضي",
+       "o": [
+        "الماضي",
+        "الحاضر",
+        "شمعة"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "In the past, people travelled by camel.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "In the past, people travelled by camel.",
+       "o": [
+        "In the past, people travelled by camel.",
+        "Long ago, people used candles.",
+        "Now we have electricity."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

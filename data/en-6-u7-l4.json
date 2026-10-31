@@ -1,0 +1,287 @@
+{
+ "id": "en-6-u7-l4",
+ "grade": 6,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 7 · Lesson 4: Which job?",
+ "titleAr": "الطاهي شخص يطبخ الطعام.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "الطاهي شخص يطبخ الطعام.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "chef",
+       "ar": "طاهٍ",
+       "em": "🧑‍🍳"
+      },
+      {
+       "id": "v1",
+       "en": "mechanic",
+       "ar": "ميكانيكي",
+       "em": "🧑‍🔧"
+      },
+      {
+       "id": "v2",
+       "en": "firefighter",
+       "ar": "رجل إطفاء",
+       "em": "🧑‍🚒"
+      },
+      {
+       "id": "v3",
+       "en": "police officer",
+       "ar": "شرطي",
+       "em": "👮"
+      },
+      {
+       "id": "v4",
+       "en": "who",
+       "ar": "الذي",
+       "em": "🔗"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 110⁠–⁠111 · كتاب النشاط ص 94⁠–⁠95"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "who for people",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">A chef is a person <b>who</b> cooks food.</div><div class=\"ex\">A mechanic is a person <b>who</b> repairs cars.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "A chef is a person who cooks food. A mechanic is a person who repairs cars."
+      }
+     ]
+    }
+   ],
+   "lead": "a person who …",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "A chef is a person ___ cooks.",
+           "a": "who",
+           "o": [
+            "who",
+            "which"
+           ]
+          },
+          {
+           "s": "A ___ repairs cars.",
+           "a": "mechanic",
+           "o": [
+            "mechanic",
+            "chef"
+           ]
+          },
+          {
+           "s": "A ___ puts out fires.",
+           "a": "firefighter",
+           "o": [
+            "firefighter",
+            "police officer"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "A chef is a person who cooks food.",
+          "A mechanic is a person who repairs cars."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "A chef is a person who cooks food.",
+           "o": [
+            "A chef is a person who cooks food.",
+            "A mechanic is a person who repairs cars."
+           ]
+          },
+          {
+           "a": "A mechanic is a person who repairs cars.",
+           "o": [
+            "A mechanic is a person who repairs cars.",
+            "A chef is a person who cooks food."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "chef",
+       "ipa": "",
+       "meaning": "طاهٍ",
+       "ex": "A chef is a person who cooks food."
+      },
+      {
+       "must": 1,
+       "term": "mechanic",
+       "ipa": "",
+       "meaning": "ميكانيكي",
+       "ex": "A mechanic is a person who repairs cars."
+      },
+      {
+       "must": 1,
+       "term": "firefighter",
+       "ipa": "",
+       "meaning": "رجل إطفاء",
+       "ex": "firefighter"
+      },
+      {
+       "must": 0,
+       "term": "police officer",
+       "ipa": "",
+       "meaning": "شرطي",
+       "ex": "police officer"
+      },
+      {
+       "must": 0,
+       "term": "who",
+       "ipa": "",
+       "meaning": "الذي",
+       "ex": "A chef is a person who cooks food."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "A chef is a person ___ cooks.",
+       "a": "who",
+       "o": [
+        "who",
+        "which"
+       ],
+       "why": ""
+      },
+      {
+       "q": "A ___ repairs cars.",
+       "a": "mechanic",
+       "o": [
+        "mechanic",
+        "chef"
+       ],
+       "why": ""
+      },
+      {
+       "q": "A ___ puts out fires.",
+       "a": "firefighter",
+       "o": [
+        "firefighter",
+        "police officer"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى firefighter؟",
+       "a": "رجل إطفاء",
+       "o": [
+        "رجل إطفاء",
+        "طاهٍ",
+        "ميكانيكي"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى chef؟",
+       "a": "طاهٍ",
+       "o": [
+        "طاهٍ",
+        "ميكانيكي",
+        "رجل إطفاء"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "A chef is a person who cooks food.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "A chef is a person who cooks food.",
+       "o": [
+        "A chef is a person who cooks food.",
+        "A mechanic is a person who repairs cars."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

@@ -1,0 +1,319 @@
+{
+ "id": "en-5-u4-l2",
+ "grade": 5,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 4 · Lesson 2: All About Camels",
+ "titleAr": "تعيش الجمال في الصحراء.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "تعيش الجمال في الصحراء.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "camel",
+       "ar": "جمل",
+       "em": "🐫"
+      },
+      {
+       "id": "v1",
+       "en": "hump",
+       "ar": "سنام",
+       "em": "⛰️"
+      },
+      {
+       "id": "v2",
+       "en": "desert",
+       "ar": "صحراء",
+       "em": "🏜️"
+      },
+      {
+       "id": "v3",
+       "en": "without",
+       "ar": "بدون",
+       "em": "🚫"
+      },
+      {
+       "id": "v4",
+       "en": "sand",
+       "ar": "رمل",
+       "em": "🏖️"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 63 · كتاب النشاط ص 53"
+  },
+  {
+   "title": "اقرأ",
+   "eyebrow": "الخطوة ٢ — اقرأ",
+   "heading": "اقرأ واستمع",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "📖 All About Camels",
+     "html": "<div class=\"ex\">Camels live in the desert.</div><div class=\"ex\">A camel can live without water for many days.</div><div class=\"ex\">It stores fat in its hump.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Camels live in the desert. A camel can live without water for many days. It stores fat in its hump."
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط ▶ لتسمع النص."
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٣ — القاعدة",
+   "heading": "can + facts",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Camels live in the <b>desert</b>.</div><div class=\"ex\">A camel <b>can</b> live without water for many days.</div><div class=\"ex\">It stores fat in its <b>hump</b>.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Camels live in the desert. A camel can live without water for many days. It stores fat in its hump."
+      }
+     ]
+    }
+   ],
+   "lead": "A camel can …",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٤ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "Camels live in the ___ .",
+           "a": "desert",
+           "o": [
+            "desert",
+            "sea"
+           ]
+          },
+          {
+           "s": "A camel ___ live without water for days.",
+           "a": "can",
+           "o": [
+            "can",
+            "is"
+           ]
+          },
+          {
+           "s": "It stores fat in its ___ .",
+           "a": "hump",
+           "o": [
+            "hump",
+            "sand"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Camels live in the desert.",
+          "A camel can live without water for many days.",
+          "It stores fat in its hump."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Camels live in the desert.",
+           "o": [
+            "Camels live in the desert.",
+            "A camel can live without water for many days.",
+            "It stores fat in its hump."
+           ]
+          },
+          {
+           "a": "A camel can live without water for many days.",
+           "o": [
+            "A camel can live without water for many days.",
+            "Camels live in the desert.",
+            "It stores fat in its hump."
+           ]
+          },
+          {
+           "a": "It stores fat in its hump.",
+           "o": [
+            "It stores fat in its hump.",
+            "Camels live in the desert.",
+            "A camel can live without water for many days."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٥ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "camel",
+       "ipa": "",
+       "meaning": "جمل",
+       "ex": "Camels live in the desert."
+      },
+      {
+       "must": 1,
+       "term": "hump",
+       "ipa": "",
+       "meaning": "سنام",
+       "ex": "It stores fat in its hump."
+      },
+      {
+       "must": 1,
+       "term": "desert",
+       "ipa": "",
+       "meaning": "صحراء",
+       "ex": "Camels live in the desert."
+      },
+      {
+       "must": 0,
+       "term": "without",
+       "ipa": "",
+       "meaning": "بدون",
+       "ex": "A camel can live without water for many days."
+      },
+      {
+       "must": 0,
+       "term": "sand",
+       "ipa": "",
+       "meaning": "رمل",
+       "ex": "sand"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "Camels live in the ___ .",
+       "a": "desert",
+       "o": [
+        "desert",
+        "sea"
+       ],
+       "why": ""
+      },
+      {
+       "q": "A camel ___ live without water for days.",
+       "a": "can",
+       "o": [
+        "can",
+        "is"
+       ],
+       "why": ""
+      },
+      {
+       "q": "It stores fat in its ___ .",
+       "a": "hump",
+       "o": [
+        "hump",
+        "sand"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى desert؟",
+       "a": "صحراء",
+       "o": [
+        "صحراء",
+        "جمل",
+        "سنام"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى without؟",
+       "a": "بدون",
+       "o": [
+        "بدون",
+        "جمل",
+        "سنام"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Camels live in the desert.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Camels live in the desert.",
+       "o": [
+        "Camels live in the desert.",
+        "A camel can live without water for many days.",
+        "It stores fat in its hump."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

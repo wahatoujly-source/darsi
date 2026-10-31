@@ -1,0 +1,299 @@
+{
+ "id": "en-6-u6-l4",
+ "grade": 6,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 6 · Lesson 4: Road Safety",
+ "titleAr": "اعبر من ممر المشاة.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "اعبر من ممر المشاة.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "cross",
+       "ar": "يعبر",
+       "em": "🚸"
+      },
+      {
+       "id": "v1",
+       "en": "zebra crossing",
+       "ar": "ممر المشاة",
+       "em": "🦓"
+      },
+      {
+       "id": "v2",
+       "en": "look",
+       "ar": "ينظر",
+       "em": "👀"
+      },
+      {
+       "id": "v3",
+       "en": "seat belt",
+       "ar": "حزام الأمان",
+       "em": "🪢"
+      },
+      {
+       "id": "v4",
+       "en": "traffic",
+       "ar": "مرور",
+       "em": "🚗"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 92⁠–⁠93 · كتاب النشاط ص 78⁠–⁠79"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Safety instructions",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Cross at the zebra <b>crossing</b>.</div><div class=\"ex\">Look left and <b>right</b>.</div><div class=\"ex\">Wear your seat <b>belt</b>.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Cross at the zebra crossing. Look left and right. Wear your seat belt."
+      }
+     ]
+    }
+   ],
+   "lead": "Cross / Look / Wear",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "Cross at the zebra ___ .",
+           "a": "crossing",
+           "o": [
+            "crossing",
+            "cross"
+           ]
+          },
+          {
+           "s": "Look left and ___ .",
+           "a": "right",
+           "o": [
+            "right",
+            "write"
+           ]
+          },
+          {
+           "s": "Wear your seat ___ .",
+           "a": "belt",
+           "o": [
+            "belt",
+            "bell"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Cross at the zebra crossing.",
+          "Look left and right.",
+          "Wear your seat belt."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Cross at the zebra crossing.",
+           "o": [
+            "Cross at the zebra crossing.",
+            "Look left and right.",
+            "Wear your seat belt."
+           ]
+          },
+          {
+           "a": "Look left and right.",
+           "o": [
+            "Look left and right.",
+            "Cross at the zebra crossing.",
+            "Wear your seat belt."
+           ]
+          },
+          {
+           "a": "Wear your seat belt.",
+           "o": [
+            "Wear your seat belt.",
+            "Cross at the zebra crossing.",
+            "Look left and right."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "cross",
+       "ipa": "",
+       "meaning": "يعبر",
+       "ex": "Cross at the zebra crossing."
+      },
+      {
+       "must": 1,
+       "term": "zebra crossing",
+       "ipa": "",
+       "meaning": "ممر المشاة",
+       "ex": "Cross at the zebra crossing."
+      },
+      {
+       "must": 1,
+       "term": "look",
+       "ipa": "",
+       "meaning": "ينظر",
+       "ex": "Look left and right."
+      },
+      {
+       "must": 0,
+       "term": "seat belt",
+       "ipa": "",
+       "meaning": "حزام الأمان",
+       "ex": "Wear your seat belt."
+      },
+      {
+       "must": 0,
+       "term": "traffic",
+       "ipa": "",
+       "meaning": "مرور",
+       "ex": "traffic"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "Cross at the zebra ___ .",
+       "a": "crossing",
+       "o": [
+        "crossing",
+        "cross"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Look left and ___ .",
+       "a": "right",
+       "o": [
+        "right",
+        "write"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Wear your seat ___ .",
+       "a": "belt",
+       "o": [
+        "belt",
+        "bell"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى seat belt؟",
+       "a": "حزام الأمان",
+       "o": [
+        "حزام الأمان",
+        "يعبر",
+        "ممر المشاة"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى zebra crossing؟",
+       "a": "ممر المشاة",
+       "o": [
+        "ممر المشاة",
+        "يعبر",
+        "ينظر"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Cross at the zebra crossing.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Cross at the zebra crossing.",
+       "o": [
+        "Cross at the zebra crossing.",
+        "Look left and right.",
+        "Wear your seat belt."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

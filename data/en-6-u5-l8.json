@@ -1,0 +1,337 @@
+{
+ "id": "en-6-u5-l8",
+ "grade": 6,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 5 · Lesson 8: Let's sing!",
+ "titleAr": "نردّد بإيقاع — Then and Now",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "نردّد بإيقاع — Then and Now",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "rocket",
+       "ar": "صاروخ",
+       "em": "🚀"
+      },
+      {
+       "id": "v1",
+       "en": "land",
+       "ar": "يهبط",
+       "em": "🛬"
+      },
+      {
+       "id": "v2",
+       "en": "planet",
+       "ar": "كوكب",
+       "em": "🪐"
+      },
+      {
+       "id": "v3",
+       "en": "Earth",
+       "ar": "الأرض",
+       "em": "🌍"
+      },
+      {
+       "id": "v4",
+       "en": "century",
+       "ar": "قرن",
+       "em": "💯"
+      },
+      {
+       "id": "v5",
+       "en": "robot",
+       "ar": "روبوت",
+       "em": "🤖"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 82⁠–⁠83 · كتاب النشاط ص 70⁠–⁠71"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Chant",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">In 1969, astronauts <b>landed</b> on the Moon.</div><div class=\"ex\">The Earth is a planet.</div><div class=\"ex\">We live in the 21st century.</div><div class=\"ex\">Now we <b>have</b> electricity.</div><div class=\"ex\">Long ago, people <b>used</b> candles.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "In 1969, astronauts landed on the Moon. The Earth is a planet. We live in the 21st century. Now we have electricity. Long ago, people used candles."
+      }
+     ]
+    }
+   ],
+   "lead": "نردّد جمل الوحدة بإيقاع ونصفّق مع المقاطع المنبورة — يمكنك الاستماع إلى أغنية الكتاب مع معلمك.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "Astronauts ___ on the Moon in 1969.",
+           "a": "landed",
+           "o": [
+            "landed",
+            "land"
+           ]
+          },
+          {
+           "s": "The Sun is a ___ .",
+           "a": "star",
+           "o": [
+            "star",
+            "planet"
+           ]
+          },
+          {
+           "s": "We live in the 21___ century.",
+           "a": "st",
+           "o": [
+            "st",
+            "th"
+           ]
+          },
+          {
+           "s": "Now we ___ electricity.",
+           "a": "have",
+           "o": [
+            "have",
+            "had"
+           ]
+          },
+          {
+           "s": "People ___ candles.",
+           "a": "used",
+           "o": [
+            "used",
+            "use"
+           ]
+          },
+          {
+           "s": "In the past, people ___ by camel.",
+           "a": "travelled",
+           "o": [
+            "travelled",
+            "travel"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "In 1969, astronauts landed on the Moon.",
+          "The Earth is a planet.",
+          "We live in the 21st century.",
+          "Now we have electricity."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "In 1969, astronauts landed on the Moon.",
+           "o": [
+            "In 1969, astronauts landed on the Moon.",
+            "The Earth is a planet.",
+            "We live in the 21st century."
+           ]
+          },
+          {
+           "a": "The Earth is a planet.",
+           "o": [
+            "The Earth is a planet.",
+            "In 1969, astronauts landed on the Moon.",
+            "We live in the 21st century."
+           ]
+          },
+          {
+           "a": "We live in the 21st century.",
+           "o": [
+            "We live in the 21st century.",
+            "In 1969, astronauts landed on the Moon.",
+            "The Earth is a planet."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "rocket",
+       "ipa": "",
+       "meaning": "صاروخ",
+       "ex": "rocket"
+      },
+      {
+       "must": 1,
+       "term": "land",
+       "ipa": "",
+       "meaning": "يهبط",
+       "ex": "In 1969, astronauts landed on the Moon."
+      },
+      {
+       "must": 1,
+       "term": "planet",
+       "ipa": "",
+       "meaning": "كوكب",
+       "ex": "The Earth is a planet."
+      },
+      {
+       "must": 0,
+       "term": "Earth",
+       "ipa": "",
+       "meaning": "الأرض",
+       "ex": "The Earth is a planet."
+      },
+      {
+       "must": 0,
+       "term": "century",
+       "ipa": "",
+       "meaning": "قرن",
+       "ex": "We live in the 21st century."
+      },
+      {
+       "must": 0,
+       "term": "robot",
+       "ipa": "",
+       "meaning": "روبوت",
+       "ex": "robot"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "Astronauts ___ on the Moon in 1969.",
+       "a": "landed",
+       "o": [
+        "landed",
+        "land"
+       ],
+       "why": ""
+      },
+      {
+       "q": "The Sun is a ___ .",
+       "a": "star",
+       "o": [
+        "star",
+        "planet"
+       ],
+       "why": ""
+      },
+      {
+       "q": "We live in the 21___ century.",
+       "a": "st",
+       "o": [
+        "st",
+        "th"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى Earth؟",
+       "a": "الأرض",
+       "o": [
+        "الأرض",
+        "صاروخ",
+        "يهبط"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى land؟",
+       "a": "يهبط",
+       "o": [
+        "يهبط",
+        "صاروخ",
+        "كوكب"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "In 1969, astronauts landed on the Moon.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "In 1969, astronauts landed on the Moon.",
+       "o": [
+        "In 1969, astronauts landed on the Moon.",
+        "The Earth is a planet.",
+        "We live in the 21st century."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

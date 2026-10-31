@@ -1,0 +1,319 @@
+{
+ "id": "en-5-u5-l6",
+ "grade": 5,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 5 · Lesson 6: Picnic by the Lake",
+ "titleAr": "قمنا بنزهة بجانب البحيرة.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "قمنا بنزهة بجانب البحيرة.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "lake",
+       "ar": "بحيرة",
+       "em": "🏞️"
+      },
+      {
+       "id": "v1",
+       "en": "blanket",
+       "ar": "بطانية",
+       "em": "🧺"
+      },
+      {
+       "id": "v2",
+       "en": "ducks",
+       "ar": "بط",
+       "em": "🦆"
+      },
+      {
+       "id": "v3",
+       "en": "shade",
+       "ar": "ظل",
+       "em": "🌳"
+      },
+      {
+       "id": "v4",
+       "en": "enjoy",
+       "ar": "يستمتع",
+       "em": "😊"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 78⁠–⁠79 · كتاب النشاط ص 66⁠–⁠67"
+  },
+  {
+   "title": "اقرأ",
+   "eyebrow": "الخطوة ٢ — اقرأ",
+   "heading": "اقرأ واستمع",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "📖 Picnic by the Lake",
+     "html": "<div class=\"ex\">We had a picnic by the lake.</div><div class=\"ex\">We sat in the shade of a tree.</div><div class=\"ex\">We fed the ducks.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "We had a picnic by the lake. We sat in the shade of a tree. We fed the ducks."
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط ▶ لتسمع النص."
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٣ — القاعدة",
+   "heading": "Past simple",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">We <b>had</b> a picnic by the lake.</div><div class=\"ex\">We <b>sat</b> in the shade of a tree.</div><div class=\"ex\">We <b>fed</b> the ducks.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "We had a picnic by the lake. We sat in the shade of a tree. We fed the ducks."
+      }
+     ]
+    }
+   ],
+   "lead": "have → had, sit → sat, feed → fed.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٤ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "We ___ a picnic.",
+           "a": "had",
+           "o": [
+            "had",
+            "have"
+           ]
+          },
+          {
+           "s": "We ___ in the shade.",
+           "a": "sat",
+           "o": [
+            "sat",
+            "sit"
+           ]
+          },
+          {
+           "s": "We ___ the ducks.",
+           "a": "fed",
+           "o": [
+            "fed",
+            "feeded"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "We had a picnic by the lake.",
+          "We sat in the shade of a tree.",
+          "We fed the ducks."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "We had a picnic by the lake.",
+           "o": [
+            "We had a picnic by the lake.",
+            "We sat in the shade of a tree.",
+            "We fed the ducks."
+           ]
+          },
+          {
+           "a": "We sat in the shade of a tree.",
+           "o": [
+            "We sat in the shade of a tree.",
+            "We had a picnic by the lake.",
+            "We fed the ducks."
+           ]
+          },
+          {
+           "a": "We fed the ducks.",
+           "o": [
+            "We fed the ducks.",
+            "We had a picnic by the lake.",
+            "We sat in the shade of a tree."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٥ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "lake",
+       "ipa": "",
+       "meaning": "بحيرة",
+       "ex": "We had a picnic by the lake."
+      },
+      {
+       "must": 1,
+       "term": "blanket",
+       "ipa": "",
+       "meaning": "بطانية",
+       "ex": "blanket"
+      },
+      {
+       "must": 1,
+       "term": "ducks",
+       "ipa": "",
+       "meaning": "بط",
+       "ex": "We fed the ducks."
+      },
+      {
+       "must": 0,
+       "term": "shade",
+       "ipa": "",
+       "meaning": "ظل",
+       "ex": "We sat in the shade of a tree."
+      },
+      {
+       "must": 0,
+       "term": "enjoy",
+       "ipa": "",
+       "meaning": "يستمتع",
+       "ex": "enjoy"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "We ___ a picnic.",
+       "a": "had",
+       "o": [
+        "had",
+        "have"
+       ],
+       "why": ""
+      },
+      {
+       "q": "We ___ in the shade.",
+       "a": "sat",
+       "o": [
+        "sat",
+        "sit"
+       ],
+       "why": ""
+      },
+      {
+       "q": "We ___ the ducks.",
+       "a": "fed",
+       "o": [
+        "fed",
+        "feeded"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى ducks؟",
+       "a": "بط",
+       "o": [
+        "بط",
+        "بحيرة",
+        "بطانية"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى blanket؟",
+       "a": "بطانية",
+       "o": [
+        "بطانية",
+        "بحيرة",
+        "بط"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "We had a picnic by the lake.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "We had a picnic by the lake.",
+       "o": [
+        "We had a picnic by the lake.",
+        "We sat in the shade of a tree.",
+        "We fed the ducks."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

@@ -1,0 +1,337 @@
+{
+ "id": "en-5-u2-l7",
+ "grade": 5,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 2 · Lesson 7: Check my Understanding",
+ "titleAr": "مراجعة الوحدة — Different Lives",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "مراجعة الوحدة — Different Lives",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "o'clock",
+       "ar": "تماماً",
+       "em": "🕐"
+      },
+      {
+       "id": "v1",
+       "en": "half past",
+       "ar": "والنصف",
+       "em": "🕧"
+      },
+      {
+       "id": "v2",
+       "en": "gets up",
+       "ar": "يستيقظ",
+       "em": "⏰"
+      },
+      {
+       "id": "v3",
+       "en": "drives",
+       "ar": "يقود",
+       "em": "🚗"
+      },
+      {
+       "id": "v4",
+       "en": "always",
+       "ar": "دائماً",
+       "em": "💯"
+      },
+      {
+       "id": "v5",
+       "en": "usually",
+       "ar": "عادةً",
+       "em": "🔁"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 38⁠–⁠39 · كتاب النشاط ص 32⁠–⁠33"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Review",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">What's the time?</div><div class=\"ex\">Mr Dan gets up at six <b>o'clock</b>.</div><div class=\"ex\">I <b>always</b> brush my teeth.</div><div class=\"ex\">What's a cheetah <b>like</b>? It's very fast.</div><div class=\"ex\">Insects <b>have</b> six legs.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "What's the time? Mr Dan gets up at six o'clock. I always brush my teeth. What's a cheetah like? It's very fast. Insects have six legs."
+      }
+     ]
+    }
+   ],
+   "lead": "نراجع أهم قواعد الوحدة وكلماتها: اقرأ الأمثلة بصوت عالٍ ثم حلّ التمارين.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "It's seven ___ .",
+           "a": "o'clock",
+           "o": [
+            "o'clock",
+            "half"
+           ]
+          },
+          {
+           "s": "Mr Dan ___ up at six.",
+           "a": "gets",
+           "o": [
+            "gets",
+            "get"
+           ]
+          },
+          {
+           "s": "I ___ brush my teeth. (100%)",
+           "a": "always",
+           "o": [
+            "always",
+            "never"
+           ]
+          },
+          {
+           "s": "What's a tortoise ___ ?",
+           "a": "like",
+           "o": [
+            "like",
+            "likes"
+           ]
+          },
+          {
+           "s": "Insects ___ six legs.",
+           "a": "have",
+           "o": [
+            "have",
+            "has"
+           ]
+          },
+          {
+           "s": "Bees ___ honey.",
+           "a": "make",
+           "o": [
+            "make",
+            "makes"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "What's the time?",
+          "Mr Dan gets up at six o'clock.",
+          "I always brush my teeth.",
+          "What's a cheetah like? It's very fast."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "What's the time?",
+           "o": [
+            "What's the time?",
+            "Mr Dan gets up at six o'clock.",
+            "I always brush my teeth."
+           ]
+          },
+          {
+           "a": "Mr Dan gets up at six o'clock.",
+           "o": [
+            "Mr Dan gets up at six o'clock.",
+            "What's the time?",
+            "I always brush my teeth."
+           ]
+          },
+          {
+           "a": "I always brush my teeth.",
+           "o": [
+            "I always brush my teeth.",
+            "What's the time?",
+            "Mr Dan gets up at six o'clock."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "o'clock",
+       "ipa": "",
+       "meaning": "تماماً",
+       "ex": "Mr Dan gets up at six o'clock."
+      },
+      {
+       "must": 1,
+       "term": "half past",
+       "ipa": "",
+       "meaning": "والنصف",
+       "ex": "half past"
+      },
+      {
+       "must": 1,
+       "term": "gets up",
+       "ipa": "",
+       "meaning": "يستيقظ",
+       "ex": "Mr Dan gets up at six o'clock."
+      },
+      {
+       "must": 0,
+       "term": "drives",
+       "ipa": "",
+       "meaning": "يقود",
+       "ex": "drives"
+      },
+      {
+       "must": 0,
+       "term": "always",
+       "ipa": "",
+       "meaning": "دائماً",
+       "ex": "I always brush my teeth."
+      },
+      {
+       "must": 0,
+       "term": "usually",
+       "ipa": "",
+       "meaning": "عادةً",
+       "ex": "usually"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "It's seven ___ .",
+       "a": "o'clock",
+       "o": [
+        "o'clock",
+        "half"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Mr Dan ___ up at six.",
+       "a": "gets",
+       "o": [
+        "gets",
+        "get"
+       ],
+       "why": ""
+      },
+      {
+       "q": "I ___ brush my teeth. (100%)",
+       "a": "always",
+       "o": [
+        "always",
+        "never"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى always؟",
+       "a": "دائماً",
+       "o": [
+        "دائماً",
+        "تماماً",
+        "والنصف"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى gets up؟",
+       "a": "يستيقظ",
+       "o": [
+        "يستيقظ",
+        "تماماً",
+        "والنصف"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "What's the time?",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "What's the time?",
+       "o": [
+        "What's the time?",
+        "Mr Dan gets up at six o'clock.",
+        "I always brush my teeth."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

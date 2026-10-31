@@ -1,0 +1,287 @@
+{
+ "id": "en-5-u7-l4",
+ "grade": 5,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 7 · Lesson 4: Presents for Everyone",
+ "titleAr": "هذه المحفظة لأبي.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "هذه المحفظة لأبي.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "present",
+       "ar": "هدية",
+       "em": "🎁"
+      },
+      {
+       "id": "v1",
+       "en": "for",
+       "ar": "لـ",
+       "em": "➡️"
+      },
+      {
+       "id": "v2",
+       "en": "wallet",
+       "ar": "محفظة",
+       "em": "👛"
+      },
+      {
+       "id": "v3",
+       "en": "scarf",
+       "ar": "وشاح",
+       "em": "🧣"
+      },
+      {
+       "id": "v4",
+       "en": "perfume",
+       "ar": "عطر",
+       "em": "🌸"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 110⁠–⁠111 · كتاب النشاط ص 94⁠–⁠95"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "for + person",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">This wallet is <b>for</b> Dad.</div><div class=\"ex\">I'm going to buy a scarf <b>for</b> Grandma.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "This wallet is for Dad. I'm going to buy a scarf for Grandma."
+      }
+     ]
+    }
+   ],
+   "lead": "This is for Dad.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "This present is ___ Mum.",
+           "a": "for",
+           "o": [
+            "for",
+            "to"
+           ]
+          },
+          {
+           "s": "A ___ for Grandma.",
+           "a": "scarf",
+           "o": [
+            "scarf",
+            "wallet"
+           ]
+          },
+          {
+           "s": "Dad keeps money in his ___ .",
+           "a": "wallet",
+           "o": [
+            "wallet",
+            "perfume"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "This wallet is for Dad.",
+          "I'm going to buy a scarf for Grandma."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "This wallet is for Dad.",
+           "o": [
+            "This wallet is for Dad.",
+            "I'm going to buy a scarf for Grandma."
+           ]
+          },
+          {
+           "a": "I'm going to buy a scarf for Grandma.",
+           "o": [
+            "I'm going to buy a scarf for Grandma.",
+            "This wallet is for Dad."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "present",
+       "ipa": "",
+       "meaning": "هدية",
+       "ex": "present"
+      },
+      {
+       "must": 1,
+       "term": "for",
+       "ipa": "",
+       "meaning": "لـ",
+       "ex": "This wallet is for Dad."
+      },
+      {
+       "must": 1,
+       "term": "wallet",
+       "ipa": "",
+       "meaning": "محفظة",
+       "ex": "This wallet is for Dad."
+      },
+      {
+       "must": 0,
+       "term": "scarf",
+       "ipa": "",
+       "meaning": "وشاح",
+       "ex": "I'm going to buy a scarf for Grandma."
+      },
+      {
+       "must": 0,
+       "term": "perfume",
+       "ipa": "",
+       "meaning": "عطر",
+       "ex": "perfume"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "This present is ___ Mum.",
+       "a": "for",
+       "o": [
+        "for",
+        "to"
+       ],
+       "why": ""
+      },
+      {
+       "q": "A ___ for Grandma.",
+       "a": "scarf",
+       "o": [
+        "scarf",
+        "wallet"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Dad keeps money in his ___ .",
+       "a": "wallet",
+       "o": [
+        "wallet",
+        "perfume"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى scarf؟",
+       "a": "وشاح",
+       "o": [
+        "وشاح",
+        "هدية",
+        "لـ"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى for؟",
+       "a": "لـ",
+       "o": [
+        "لـ",
+        "هدية",
+        "محفظة"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "This wallet is for Dad.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "This wallet is for Dad.",
+       "o": [
+        "This wallet is for Dad.",
+        "I'm going to buy a scarf for Grandma."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

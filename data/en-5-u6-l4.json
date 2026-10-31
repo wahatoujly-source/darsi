@@ -1,0 +1,287 @@
+{
+ "id": "en-5-u6-l4",
+ "grade": 5,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 6 · Lesson 4: At Fun City",
+ "titleAr": "قطار الملاهي مخيف!",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "قطار الملاهي مخيف!",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "roller coaster",
+       "ar": "قطار الملاهي",
+       "em": "🎢"
+      },
+      {
+       "id": "v1",
+       "en": "big wheel",
+       "ar": "العجلة الدوارة",
+       "em": "🎡"
+      },
+      {
+       "id": "v2",
+       "en": "ticket",
+       "ar": "تذكرة",
+       "em": "🎟️"
+      },
+      {
+       "id": "v3",
+       "en": "scary",
+       "ar": "مخيف",
+       "em": "😱"
+      },
+      {
+       "id": "v4",
+       "en": "exciting",
+       "ar": "مثير",
+       "em": "🤩"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 92⁠–⁠93 · كتاب النشاط ص 78⁠–⁠79"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Adjectives -ing",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">The roller coaster is <b>scary</b>!</div><div class=\"ex\">Can I have two <b>tickets</b>, please?</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "The roller coaster is scary! Can I have two tickets, please?"
+      }
+     ]
+    }
+   ],
+   "lead": "exciting / amazing / boring",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "The roller coaster is ___ !",
+           "a": "scary",
+           "o": [
+            "scary",
+            "scared"
+           ]
+          },
+          {
+           "s": "Can I have two ___ ?",
+           "a": "tickets",
+           "o": [
+            "tickets",
+            "ticket"
+           ]
+          },
+          {
+           "s": "The big wheel is ___ !",
+           "a": "exciting",
+           "o": [
+            "exciting",
+            "excited"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "The roller coaster is scary!",
+          "Can I have two tickets, please?"
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "The roller coaster is scary!",
+           "o": [
+            "The roller coaster is scary!",
+            "Can I have two tickets, please?"
+           ]
+          },
+          {
+           "a": "Can I have two tickets, please?",
+           "o": [
+            "Can I have two tickets, please?",
+            "The roller coaster is scary!"
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "roller coaster",
+       "ipa": "",
+       "meaning": "قطار الملاهي",
+       "ex": "The roller coaster is scary!"
+      },
+      {
+       "must": 1,
+       "term": "big wheel",
+       "ipa": "",
+       "meaning": "العجلة الدوارة",
+       "ex": "big wheel"
+      },
+      {
+       "must": 1,
+       "term": "ticket",
+       "ipa": "",
+       "meaning": "تذكرة",
+       "ex": "Can I have two tickets, please?"
+      },
+      {
+       "must": 0,
+       "term": "scary",
+       "ipa": "",
+       "meaning": "مخيف",
+       "ex": "The roller coaster is scary!"
+      },
+      {
+       "must": 0,
+       "term": "exciting",
+       "ipa": "",
+       "meaning": "مثير",
+       "ex": "exciting"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "The roller coaster is ___ !",
+       "a": "scary",
+       "o": [
+        "scary",
+        "scared"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Can I have two ___ ?",
+       "a": "tickets",
+       "o": [
+        "tickets",
+        "ticket"
+       ],
+       "why": ""
+      },
+      {
+       "q": "The big wheel is ___ !",
+       "a": "exciting",
+       "o": [
+        "exciting",
+        "excited"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى big wheel؟",
+       "a": "العجلة الدوارة",
+       "o": [
+        "العجلة الدوارة",
+        "قطار الملاهي",
+        "تذكرة"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى scary؟",
+       "a": "مخيف",
+       "o": [
+        "مخيف",
+        "قطار الملاهي",
+        "العجلة الدوارة"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "The roller coaster is scary!",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "The roller coaster is scary!",
+       "o": [
+        "The roller coaster is scary!",
+        "Can I have two tickets, please?"
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

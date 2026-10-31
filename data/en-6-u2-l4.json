@@ -1,0 +1,287 @@
+{
+ "id": "en-6-u2-l4",
+ "grade": 6,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 2 · Lesson 4: Opposites",
+ "titleAr": "الحجر صلب لكن الوسادة ناعمة.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "الحجر صلب لكن الوسادة ناعمة.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "hard / soft",
+       "ar": "صلب / ناعم",
+       "em": "🪨"
+      },
+      {
+       "id": "v1",
+       "en": "heavy / light",
+       "ar": "ثقيل / خفيف",
+       "em": "🏋️"
+      },
+      {
+       "id": "v2",
+       "en": "rough / smooth",
+       "ar": "خشن / أملس",
+       "em": "🧱"
+      },
+      {
+       "id": "v3",
+       "en": "old / new",
+       "ar": "قديم / جديد",
+       "em": "🆕"
+      },
+      {
+       "id": "v4",
+       "en": "full / empty",
+       "ar": "ممتلئ / فارغ",
+       "em": "🥛"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 32⁠–⁠33 · كتاب النشاط ص 26⁠–⁠27"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Opposite adjectives",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">A stone is hard, but a pillow is <b>soft</b>.</div><div class=\"ex\">The box is heavy.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "A stone is hard, but a pillow is soft. The box is heavy."
+      }
+     ]
+    }
+   ],
+   "lead": "hard ↔ soft, heavy ↔ light, full ↔ empty.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "The opposite of heavy is ___ .",
+           "a": "light",
+           "o": [
+            "light",
+            "hard"
+           ]
+          },
+          {
+           "s": "The opposite of full is ___ .",
+           "a": "empty",
+           "o": [
+            "empty",
+            "soft"
+           ]
+          },
+          {
+           "s": "A pillow is ___ .",
+           "a": "soft",
+           "o": [
+            "soft",
+            "rough"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "A stone is hard, but a pillow is soft.",
+          "The box is heavy."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "A stone is hard, but a pillow is soft.",
+           "o": [
+            "A stone is hard, but a pillow is soft.",
+            "The box is heavy."
+           ]
+          },
+          {
+           "a": "The box is heavy.",
+           "o": [
+            "The box is heavy.",
+            "A stone is hard, but a pillow is soft."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "hard / soft",
+       "ipa": "",
+       "meaning": "صلب / ناعم",
+       "ex": "A stone is hard, but a pillow is soft."
+      },
+      {
+       "must": 1,
+       "term": "heavy / light",
+       "ipa": "",
+       "meaning": "ثقيل / خفيف",
+       "ex": "The box is heavy."
+      },
+      {
+       "must": 1,
+       "term": "rough / smooth",
+       "ipa": "",
+       "meaning": "خشن / أملس",
+       "ex": "rough / smooth"
+      },
+      {
+       "must": 0,
+       "term": "old / new",
+       "ipa": "",
+       "meaning": "قديم / جديد",
+       "ex": "old / new"
+      },
+      {
+       "must": 0,
+       "term": "full / empty",
+       "ipa": "",
+       "meaning": "ممتلئ / فارغ",
+       "ex": "full / empty"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "The opposite of heavy is ___ .",
+       "a": "light",
+       "o": [
+        "light",
+        "hard"
+       ],
+       "why": ""
+      },
+      {
+       "q": "The opposite of full is ___ .",
+       "a": "empty",
+       "o": [
+        "empty",
+        "soft"
+       ],
+       "why": ""
+      },
+      {
+       "q": "A pillow is ___ .",
+       "a": "soft",
+       "o": [
+        "soft",
+        "rough"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى hard / soft؟",
+       "a": "صلب / ناعم",
+       "o": [
+        "صلب / ناعم",
+        "ثقيل / خفيف",
+        "خشن / أملس"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى full / empty؟",
+       "a": "ممتلئ / فارغ",
+       "o": [
+        "ممتلئ / فارغ",
+        "صلب / ناعم",
+        "ثقيل / خفيف"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "A stone is hard, but a pillow is soft.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "A stone is hard, but a pillow is soft.",
+       "o": [
+        "A stone is hard, but a pillow is soft.",
+        "The box is heavy."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

@@ -1,0 +1,287 @@
+{
+ "id": "en-6-u3-l3",
+ "grade": 6,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 3 · Lesson 3: Helping Friends",
+ "titleAr": "صديقي قلق من الاختبار.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "صديقي قلق من الاختبار.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "worried",
+       "ar": "قلق",
+       "em": "😟"
+      },
+      {
+       "id": "v1",
+       "en": "upset",
+       "ar": "منزعج",
+       "em": "😢"
+      },
+      {
+       "id": "v2",
+       "en": "advice",
+       "ar": "نصيحة",
+       "em": "💡"
+      },
+      {
+       "id": "v3",
+       "en": "kind",
+       "ar": "لطيف",
+       "em": "🤗"
+      },
+      {
+       "id": "v4",
+       "en": "listen",
+       "ar": "يستمع",
+       "em": "👂"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 48⁠–⁠49 · كتاب النشاط ص 40⁠–⁠41"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Giving advice",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">My friend is <b>worried</b> about the test.</div><div class=\"ex\">I listen and give him <b>advice</b>.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "My friend is worried about the test. I listen and give him advice."
+      }
+     ]
+    }
+   ],
+   "lead": "Why don't you …? / You should …",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "My friend is ___ about the test.",
+           "a": "worried",
+           "o": [
+            "worried",
+            "worry"
+           ]
+          },
+          {
+           "s": "I give him ___ .",
+           "a": "advice",
+           "o": [
+            "advice",
+            "advise"
+           ]
+          },
+          {
+           "s": "Why ___ you study with me?",
+           "a": "don't",
+           "o": [
+            "don't",
+            "not"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "My friend is worried about the test.",
+          "I listen and give him advice."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "My friend is worried about the test.",
+           "o": [
+            "My friend is worried about the test.",
+            "I listen and give him advice."
+           ]
+          },
+          {
+           "a": "I listen and give him advice.",
+           "o": [
+            "I listen and give him advice.",
+            "My friend is worried about the test."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "worried",
+       "ipa": "",
+       "meaning": "قلق",
+       "ex": "My friend is worried about the test."
+      },
+      {
+       "must": 1,
+       "term": "upset",
+       "ipa": "",
+       "meaning": "منزعج",
+       "ex": "upset"
+      },
+      {
+       "must": 1,
+       "term": "advice",
+       "ipa": "",
+       "meaning": "نصيحة",
+       "ex": "I listen and give him advice."
+      },
+      {
+       "must": 0,
+       "term": "kind",
+       "ipa": "",
+       "meaning": "لطيف",
+       "ex": "kind"
+      },
+      {
+       "must": 0,
+       "term": "listen",
+       "ipa": "",
+       "meaning": "يستمع",
+       "ex": "I listen and give him advice."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "My friend is ___ about the test.",
+       "a": "worried",
+       "o": [
+        "worried",
+        "worry"
+       ],
+       "why": ""
+      },
+      {
+       "q": "I give him ___ .",
+       "a": "advice",
+       "o": [
+        "advice",
+        "advise"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Why ___ you study with me?",
+       "a": "don't",
+       "o": [
+        "don't",
+        "not"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى listen؟",
+       "a": "يستمع",
+       "o": [
+        "يستمع",
+        "قلق",
+        "منزعج"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى upset؟",
+       "a": "منزعج",
+       "o": [
+        "منزعج",
+        "قلق",
+        "نصيحة"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "My friend is worried about the test.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "My friend is worried about the test.",
+       "o": [
+        "My friend is worried about the test.",
+        "I listen and give him advice."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

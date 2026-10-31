@@ -1,0 +1,299 @@
+{
+ "id": "en-5-u1-l6",
+ "grade": 5,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 1 · Lesson 6: Country Information File",
+ "titleAr": "عاصمة ليبيا طرابلس.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "عاصمة ليبيا طرابلس.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "capital",
+       "ar": "عاصمة",
+       "em": "🏙️"
+      },
+      {
+       "id": "v1",
+       "en": "population",
+       "ar": "سكان",
+       "em": "👥"
+      },
+      {
+       "id": "v2",
+       "en": "currency",
+       "ar": "عملة",
+       "em": "💵"
+      },
+      {
+       "id": "v3",
+       "en": "language",
+       "ar": "لغة",
+       "em": "🗣️"
+      },
+      {
+       "id": "v4",
+       "en": "famous for",
+       "ar": "مشهور بـ",
+       "em": "⭐"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 18⁠–⁠19 · كتاب النشاط ص 14⁠–⁠15"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Facts with is",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">The <b>capital</b> of Libya is Tripoli.</div><div class=\"ex\">The <b>currency</b> is the Libyan dinar.</div><div class=\"ex\">Libya is famous <b>for</b> its desert and its old cities.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "The capital of Libya is Tripoli. The currency is the Libyan dinar. Libya is famous for its desert and its old cities."
+      }
+     ]
+    }
+   ],
+   "lead": "The capital is … / The currency is …",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "The ___ of Libya is Tripoli.",
+           "a": "capital",
+           "o": [
+            "capital",
+            "currency"
+           ]
+          },
+          {
+           "s": "The ___ is the dinar.",
+           "a": "currency",
+           "o": [
+            "currency",
+            "language"
+           ]
+          },
+          {
+           "s": "Libya is famous ___ its desert.",
+           "a": "for",
+           "o": [
+            "for",
+            "of"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "The capital of Libya is Tripoli.",
+          "The currency is the Libyan dinar.",
+          "Libya is famous for its desert and its old cities."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "The capital of Libya is Tripoli.",
+           "o": [
+            "The capital of Libya is Tripoli.",
+            "The currency is the Libyan dinar.",
+            "Libya is famous for its desert and its old cities."
+           ]
+          },
+          {
+           "a": "The currency is the Libyan dinar.",
+           "o": [
+            "The currency is the Libyan dinar.",
+            "The capital of Libya is Tripoli.",
+            "Libya is famous for its desert and its old cities."
+           ]
+          },
+          {
+           "a": "Libya is famous for its desert and its old cities.",
+           "o": [
+            "Libya is famous for its desert and its old cities.",
+            "The capital of Libya is Tripoli.",
+            "The currency is the Libyan dinar."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "capital",
+       "ipa": "",
+       "meaning": "عاصمة",
+       "ex": "The capital of Libya is Tripoli."
+      },
+      {
+       "must": 1,
+       "term": "population",
+       "ipa": "",
+       "meaning": "سكان",
+       "ex": "population"
+      },
+      {
+       "must": 1,
+       "term": "currency",
+       "ipa": "",
+       "meaning": "عملة",
+       "ex": "The currency is the Libyan dinar."
+      },
+      {
+       "must": 0,
+       "term": "language",
+       "ipa": "",
+       "meaning": "لغة",
+       "ex": "language"
+      },
+      {
+       "must": 0,
+       "term": "famous for",
+       "ipa": "",
+       "meaning": "مشهور بـ",
+       "ex": "Libya is famous for its desert and its old cities."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "The ___ of Libya is Tripoli.",
+       "a": "capital",
+       "o": [
+        "capital",
+        "currency"
+       ],
+       "why": ""
+      },
+      {
+       "q": "The ___ is the dinar.",
+       "a": "currency",
+       "o": [
+        "currency",
+        "language"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Libya is famous ___ its desert.",
+       "a": "for",
+       "o": [
+        "for",
+        "of"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى language؟",
+       "a": "لغة",
+       "o": [
+        "لغة",
+        "عاصمة",
+        "سكان"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى famous for؟",
+       "a": "مشهور بـ",
+       "o": [
+        "مشهور بـ",
+        "عاصمة",
+        "سكان"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "The capital of Libya is Tripoli.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "The capital of Libya is Tripoli.",
+       "o": [
+        "The capital of Libya is Tripoli.",
+        "The currency is the Libyan dinar.",
+        "Libya is famous for its desert and its old cities."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

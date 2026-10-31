@@ -1,0 +1,337 @@
+{
+ "id": "en-6-u2-l8",
+ "grade": 6,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 2 · Lesson 8: Let's sing!",
+ "titleAr": "نردّد بإيقاع — What is it?",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "نردّد بإيقاع — What is it?",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "blog",
+       "ar": "مدونة",
+       "em": "💻"
+      },
+      {
+       "id": "v1",
+       "en": "post",
+       "ar": "منشور",
+       "em": "📝"
+      },
+      {
+       "id": "v2",
+       "en": "cotton",
+       "ar": "قطن",
+       "em": "☁️"
+      },
+      {
+       "id": "v3",
+       "en": "leather",
+       "ar": "جلد",
+       "em": "👞"
+      },
+      {
+       "id": "v4",
+       "en": "hard / soft",
+       "ar": "صلب / ناعم",
+       "em": "🪨"
+      },
+      {
+       "id": "v5",
+       "en": "heavy / light",
+       "ar": "ثقيل / خفيف",
+       "em": "🏋️"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 40⁠–⁠41 · كتاب النشاط ص 34⁠–⁠35"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Chant",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">I write a <b>blog</b> about my school.</div><div class=\"ex\">My shirt is made <b>of</b> cotton.</div><div class=\"ex\">A stone is hard, but a pillow is soft.</div><div class=\"ex\">Can I <b>help</b> you?</div><div class=\"ex\">Let's go to the mall.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "I write a blog about my school. My shirt is made of cotton. A stone is hard, but a pillow is soft. Can I help you? Let's go to the mall."
+      }
+     ]
+    }
+   ],
+   "lead": "نردّد جمل الوحدة بإيقاع ونصفّق مع المقاطع المنبورة — يمكنك الاستماع إلى أغنية الكتاب مع معلمك.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "I write a ___ about my school.",
+           "a": "blog",
+           "o": [
+            "blog",
+            "comment"
+           ]
+          },
+          {
+           "s": "Shoes are often made of ___ .",
+           "a": "leather",
+           "o": [
+            "leather",
+            "cotton"
+           ]
+          },
+          {
+           "s": "The opposite of heavy is ___ .",
+           "a": "light",
+           "o": [
+            "light",
+            "hard"
+           ]
+          },
+          {
+           "s": "Can I ___ you?",
+           "a": "help",
+           "o": [
+            "help",
+            "helps"
+           ]
+          },
+          {
+           "s": "The bookshop is ___ the first floor.",
+           "a": "on",
+           "o": [
+            "on",
+            "in"
+           ]
+          },
+          {
+           "s": "The table is made ___ wood.",
+           "a": "of",
+           "o": [
+            "of",
+            "from"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "I write a blog about my school.",
+          "My shirt is made of cotton.",
+          "A stone is hard, but a pillow is soft.",
+          "Can I help you?"
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "I write a blog about my school.",
+           "o": [
+            "I write a blog about my school.",
+            "My shirt is made of cotton.",
+            "A stone is hard, but a pillow is soft."
+           ]
+          },
+          {
+           "a": "My shirt is made of cotton.",
+           "o": [
+            "My shirt is made of cotton.",
+            "I write a blog about my school.",
+            "A stone is hard, but a pillow is soft."
+           ]
+          },
+          {
+           "a": "A stone is hard, but a pillow is soft.",
+           "o": [
+            "A stone is hard, but a pillow is soft.",
+            "I write a blog about my school.",
+            "My shirt is made of cotton."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "blog",
+       "ipa": "",
+       "meaning": "مدونة",
+       "ex": "I write a blog about my school."
+      },
+      {
+       "must": 1,
+       "term": "post",
+       "ipa": "",
+       "meaning": "منشور",
+       "ex": "post"
+      },
+      {
+       "must": 1,
+       "term": "cotton",
+       "ipa": "",
+       "meaning": "قطن",
+       "ex": "My shirt is made of cotton."
+      },
+      {
+       "must": 0,
+       "term": "leather",
+       "ipa": "",
+       "meaning": "جلد",
+       "ex": "leather"
+      },
+      {
+       "must": 0,
+       "term": "hard / soft",
+       "ipa": "",
+       "meaning": "صلب / ناعم",
+       "ex": "A stone is hard, but a pillow is soft."
+      },
+      {
+       "must": 0,
+       "term": "heavy / light",
+       "ipa": "",
+       "meaning": "ثقيل / خفيف",
+       "ex": "heavy / light"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "I write a ___ about my school.",
+       "a": "blog",
+       "o": [
+        "blog",
+        "comment"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Shoes are often made of ___ .",
+       "a": "leather",
+       "o": [
+        "leather",
+        "cotton"
+       ],
+       "why": ""
+      },
+      {
+       "q": "The opposite of heavy is ___ .",
+       "a": "light",
+       "o": [
+        "light",
+        "hard"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى post؟",
+       "a": "منشور",
+       "o": [
+        "منشور",
+        "مدونة",
+        "قطن"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى cotton؟",
+       "a": "قطن",
+       "o": [
+        "قطن",
+        "مدونة",
+        "منشور"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "I write a blog about my school.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "I write a blog about my school.",
+       "o": [
+        "I write a blog about my school.",
+        "My shirt is made of cotton.",
+        "A stone is hard, but a pillow is soft."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

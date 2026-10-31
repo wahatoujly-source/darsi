@@ -1,0 +1,337 @@
+{
+ "id": "en-5-u3-l7",
+ "grade": 5,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 3 · Lesson 7: Check my Understanding",
+ "titleAr": "مراجعة الوحدة — My Free Time",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "مراجعة الوحدة — My Free Time",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "football",
+       "ar": "كرة القدم",
+       "em": "⚽"
+      },
+      {
+       "id": "v1",
+       "en": "swimming",
+       "ar": "السباحة",
+       "em": "🏊"
+      },
+      {
+       "id": "v2",
+       "en": "play football",
+       "ar": "يلعب الكرة",
+       "em": "⚽"
+      },
+      {
+       "id": "v3",
+       "en": "go swimming",
+       "ar": "يذهب للسباحة",
+       "em": "🏊"
+      },
+      {
+       "id": "v4",
+       "en": "once a week",
+       "ar": "مرة في الأسبوع",
+       "em": "1️⃣"
+      },
+      {
+       "id": "v5",
+       "en": "twice a week",
+       "ar": "مرتين في الأسبوع",
+       "em": "2️⃣"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 56⁠–⁠57 · كتاب النشاط ص 48⁠–⁠49"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Review",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">I like <b>swimming</b>.</div><div class=\"ex\">I <b>play</b> football on Saturdays.</div><div class=\"ex\">How often do you <b>play</b> football?</div><div class=\"ex\"><b>At</b> the weekend, I visit my relatives.</div><div class=\"ex\"><b>Ten</b> pupils like football.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "I like swimming. I play football on Saturdays. How often do you play football? At the weekend, I visit my relatives. Ten pupils like football."
+      }
+     ]
+    }
+   ],
+   "lead": "نراجع أهم قواعد الوحدة وكلماتها: اقرأ الأمثلة بصوت عالٍ ثم حلّ التمارين.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "I like ___ .",
+           "a": "swimming",
+           "o": [
+            "swimming",
+            "swim"
+           ]
+          },
+          {
+           "s": "I ___ football.",
+           "a": "play",
+           "o": [
+            "play",
+            "go"
+           ]
+          },
+          {
+           "s": "How ___ do you swim?",
+           "a": "often",
+           "o": [
+            "often",
+            "many"
+           ]
+          },
+          {
+           "s": "___ the weekend, I relax.",
+           "a": "At",
+           "o": [
+            "At",
+            "In"
+           ]
+          },
+          {
+           "s": "___ pupils like football.",
+           "a": "Ten",
+           "o": [
+            "Ten",
+            "Tenth"
+           ]
+          },
+          {
+           "s": "Sports keep us ___ .",
+           "a": "fit",
+           "o": [
+            "fit",
+            "fat"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "I like swimming.",
+          "I play football on Saturdays.",
+          "How often do you play football?",
+          "At the weekend, I visit my relatives."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "I like swimming.",
+           "o": [
+            "I like swimming.",
+            "I play football on Saturdays.",
+            "How often do you play football?"
+           ]
+          },
+          {
+           "a": "I play football on Saturdays.",
+           "o": [
+            "I play football on Saturdays.",
+            "I like swimming.",
+            "How often do you play football?"
+           ]
+          },
+          {
+           "a": "How often do you play football?",
+           "o": [
+            "How often do you play football?",
+            "I like swimming.",
+            "I play football on Saturdays."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "football",
+       "ipa": "",
+       "meaning": "كرة القدم",
+       "ex": "I play football on Saturdays."
+      },
+      {
+       "must": 1,
+       "term": "swimming",
+       "ipa": "",
+       "meaning": "السباحة",
+       "ex": "I like swimming."
+      },
+      {
+       "must": 1,
+       "term": "play football",
+       "ipa": "",
+       "meaning": "يلعب الكرة",
+       "ex": "I play football on Saturdays."
+      },
+      {
+       "must": 0,
+       "term": "go swimming",
+       "ipa": "",
+       "meaning": "يذهب للسباحة",
+       "ex": "go swimming"
+      },
+      {
+       "must": 0,
+       "term": "once a week",
+       "ipa": "",
+       "meaning": "مرة في الأسبوع",
+       "ex": "once a week"
+      },
+      {
+       "must": 0,
+       "term": "twice a week",
+       "ipa": "",
+       "meaning": "مرتين في الأسبوع",
+       "ex": "twice a week"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "I like ___ .",
+       "a": "swimming",
+       "o": [
+        "swimming",
+        "swim"
+       ],
+       "why": ""
+      },
+      {
+       "q": "I ___ football.",
+       "a": "play",
+       "o": [
+        "play",
+        "go"
+       ],
+       "why": ""
+      },
+      {
+       "q": "How ___ do you swim?",
+       "a": "often",
+       "o": [
+        "often",
+        "many"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى football؟",
+       "a": "كرة القدم",
+       "o": [
+        "كرة القدم",
+        "السباحة",
+        "يلعب الكرة"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى go swimming؟",
+       "a": "يذهب للسباحة",
+       "o": [
+        "يذهب للسباحة",
+        "كرة القدم",
+        "السباحة"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "I like swimming.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "I like swimming.",
+       "o": [
+        "I like swimming.",
+        "I play football on Saturdays.",
+        "How often do you play football?"
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

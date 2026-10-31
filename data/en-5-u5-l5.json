@@ -1,0 +1,287 @@
+{
+ "id": "en-5-u5-l5",
+ "grade": 5,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 5 · Lesson 5: My Lunchbox",
+ "titleAr": "في علبة غدائي شطيرة.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "في علبة غدائي شطيرة.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "lunchbox",
+       "ar": "علبة الغداء",
+       "em": "🍱"
+      },
+      {
+       "id": "v1",
+       "en": "sandwich",
+       "ar": "شطيرة",
+       "em": "🥪"
+      },
+      {
+       "id": "v2",
+       "en": "yoghurt",
+       "ar": "زبادي",
+       "em": "🥛"
+      },
+      {
+       "id": "v3",
+       "en": "apple",
+       "ar": "تفاحة",
+       "em": "🍎"
+      },
+      {
+       "id": "v4",
+       "en": "bottle",
+       "ar": "قارورة",
+       "em": "🧴"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 76⁠–⁠77 · كتاب النشاط ص 64⁠–⁠65"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "There is / There are",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">In my lunchbox there <b>is</b> a sandwich.</div><div class=\"ex\">There <b>are</b> some grapes too.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "In my lunchbox there is a sandwich. There are some grapes too."
+      }
+     ]
+    }
+   ],
+   "lead": "There is a sandwich. There are some grapes.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "There ___ a sandwich.",
+           "a": "is",
+           "o": [
+            "is",
+            "are"
+           ]
+          },
+          {
+           "s": "There ___ some grapes.",
+           "a": "are",
+           "o": [
+            "are",
+            "is"
+           ]
+          },
+          {
+           "s": "I drink water from a ___ .",
+           "a": "bottle",
+           "o": [
+            "bottle",
+            "lunchbox"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "In my lunchbox there is a sandwich.",
+          "There are some grapes too."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "In my lunchbox there is a sandwich.",
+           "o": [
+            "In my lunchbox there is a sandwich.",
+            "There are some grapes too."
+           ]
+          },
+          {
+           "a": "There are some grapes too.",
+           "o": [
+            "There are some grapes too.",
+            "In my lunchbox there is a sandwich."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "lunchbox",
+       "ipa": "",
+       "meaning": "علبة الغداء",
+       "ex": "In my lunchbox there is a sandwich."
+      },
+      {
+       "must": 1,
+       "term": "sandwich",
+       "ipa": "",
+       "meaning": "شطيرة",
+       "ex": "In my lunchbox there is a sandwich."
+      },
+      {
+       "must": 1,
+       "term": "yoghurt",
+       "ipa": "",
+       "meaning": "زبادي",
+       "ex": "yoghurt"
+      },
+      {
+       "must": 0,
+       "term": "apple",
+       "ipa": "",
+       "meaning": "تفاحة",
+       "ex": "apple"
+      },
+      {
+       "must": 0,
+       "term": "bottle",
+       "ipa": "",
+       "meaning": "قارورة",
+       "ex": "bottle"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "There ___ a sandwich.",
+       "a": "is",
+       "o": [
+        "is",
+        "are"
+       ],
+       "why": ""
+      },
+      {
+       "q": "There ___ some grapes.",
+       "a": "are",
+       "o": [
+        "are",
+        "is"
+       ],
+       "why": ""
+      },
+      {
+       "q": "I drink water from a ___ .",
+       "a": "bottle",
+       "o": [
+        "bottle",
+        "lunchbox"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى sandwich؟",
+       "a": "شطيرة",
+       "o": [
+        "شطيرة",
+        "علبة الغداء",
+        "زبادي"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى apple؟",
+       "a": "تفاحة",
+       "o": [
+        "تفاحة",
+        "علبة الغداء",
+        "شطيرة"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "In my lunchbox there is a sandwich.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "In my lunchbox there is a sandwich.",
+       "o": [
+        "In my lunchbox there is a sandwich.",
+        "There are some grapes too."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

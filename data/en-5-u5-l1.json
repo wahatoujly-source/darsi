@@ -1,0 +1,287 @@
+{
+ "id": "en-5-u5-l1",
+ "grade": 5,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 5 · Lesson 1: Let's eat!",
+ "titleAr": "هيا نتناول الغداء!",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "هيا نتناول الغداء!",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "lunch",
+       "ar": "غداء",
+       "em": "🍽️"
+      },
+      {
+       "id": "v1",
+       "en": "couscous",
+       "ar": "كسكسي",
+       "em": "🍲"
+      },
+      {
+       "id": "v2",
+       "en": "soup",
+       "ar": "شوربة",
+       "em": "🥣"
+      },
+      {
+       "id": "v3",
+       "en": "salad",
+       "ar": "سلطة",
+       "em": "🥗"
+      },
+      {
+       "id": "v4",
+       "en": "delicious",
+       "ar": "لذيذ",
+       "em": "😋"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 68⁠–⁠69 · كتاب النشاط ص 56⁠–⁠57"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Let's + verb",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\"><b>Let's</b> eat lunch!</div><div class=\"ex\">The couscous is <b>delicious</b>.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Let's eat lunch! The couscous is delicious."
+      }
+     ]
+    }
+   ],
+   "lead": "Let's eat / Let's cook.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "___ eat lunch!",
+           "a": "Let's",
+           "o": [
+            "Let's",
+            "Lets"
+           ]
+          },
+          {
+           "s": "The soup is ___ .",
+           "a": "delicious",
+           "o": [
+            "delicious",
+            "delicous"
+           ]
+          },
+          {
+           "s": "We eat ___ on Friday.",
+           "a": "couscous",
+           "o": [
+            "couscous",
+            "salad"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Let's eat lunch!",
+          "The couscous is delicious."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Let's eat lunch!",
+           "o": [
+            "Let's eat lunch!",
+            "The couscous is delicious."
+           ]
+          },
+          {
+           "a": "The couscous is delicious.",
+           "o": [
+            "The couscous is delicious.",
+            "Let's eat lunch!"
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "lunch",
+       "ipa": "",
+       "meaning": "غداء",
+       "ex": "Let's eat lunch!"
+      },
+      {
+       "must": 1,
+       "term": "couscous",
+       "ipa": "",
+       "meaning": "كسكسي",
+       "ex": "The couscous is delicious."
+      },
+      {
+       "must": 1,
+       "term": "soup",
+       "ipa": "",
+       "meaning": "شوربة",
+       "ex": "soup"
+      },
+      {
+       "must": 0,
+       "term": "salad",
+       "ipa": "",
+       "meaning": "سلطة",
+       "ex": "salad"
+      },
+      {
+       "must": 0,
+       "term": "delicious",
+       "ipa": "",
+       "meaning": "لذيذ",
+       "ex": "The couscous is delicious."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "___ eat lunch!",
+       "a": "Let's",
+       "o": [
+        "Let's",
+        "Lets"
+       ],
+       "why": ""
+      },
+      {
+       "q": "The soup is ___ .",
+       "a": "delicious",
+       "o": [
+        "delicious",
+        "delicous"
+       ],
+       "why": ""
+      },
+      {
+       "q": "We eat ___ on Friday.",
+       "a": "couscous",
+       "o": [
+        "couscous",
+        "salad"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى soup؟",
+       "a": "شوربة",
+       "o": [
+        "شوربة",
+        "غداء",
+        "كسكسي"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى salad؟",
+       "a": "سلطة",
+       "o": [
+        "سلطة",
+        "غداء",
+        "كسكسي"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Let's eat lunch!",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Let's eat lunch!",
+       "o": [
+        "Let's eat lunch!",
+        "The couscous is delicious."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

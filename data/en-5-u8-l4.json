@@ -1,0 +1,337 @@
+{
+ "id": "en-5-u8-l4",
+ "grade": 5,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 8 · Lesson 4: Let's sing!",
+ "titleAr": "نردّد بإيقاع — Revision (2)",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "نردّد بإيقاع — Revision (2)",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "dream",
+       "ar": "حلم",
+       "em": "💭"
+      },
+      {
+       "id": "v1",
+       "en": "pilot",
+       "ar": "طيار",
+       "em": "🧑‍✈️"
+      },
+      {
+       "id": "v2",
+       "en": "by car",
+       "ar": "بالسيارة",
+       "em": "🚗"
+      },
+      {
+       "id": "v3",
+       "en": "by plane",
+       "ar": "بالطائرة",
+       "em": "✈️"
+      },
+      {
+       "id": "v4",
+       "en": "sunny",
+       "ar": "مشمس",
+       "em": "☀️"
+      },
+      {
+       "id": "v5",
+       "en": "stormy",
+       "ar": "عاصف",
+       "em": "⛈️"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 125 · كتاب النشاط ص 107"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Chant",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Kareem has a dream.</div><div class=\"ex\">How do you travel <b>to</b> school? By bus.</div><div class=\"ex\">It <b>was</b> sunny every day.</div><div class=\"ex\">This wallet is <b>for</b> Dad.</div><div class=\"ex\">Can I see your <b>passport</b>, please?</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Kareem has a dream. How do you travel to school? By bus. It was sunny every day. This wallet is for Dad. Can I see your passport, please?"
+      }
+     ]
+    }
+   ],
+   "lead": "نردّد جمل الوحدة بإيقاع ونصفّق مع المقاطع المنبورة — يمكنك الاستماع إلى أغنية الكتاب مع معلمك.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "He wants ___ be a pilot.",
+           "a": "to",
+           "o": [
+            "to",
+            "be"
+           ]
+          },
+          {
+           "s": "We went ___ plane.",
+           "a": "by",
+           "o": [
+            "by",
+            "on"
+           ]
+          },
+          {
+           "s": "It ___ sunny yesterday.",
+           "a": "was",
+           "o": [
+            "was",
+            "is"
+           ]
+          },
+          {
+           "s": "This present is ___ Mum.",
+           "a": "for",
+           "o": [
+            "for",
+            "to"
+           ]
+          },
+          {
+           "s": "Can I see your ___ , please?",
+           "a": "passport",
+           "o": [
+            "passport",
+            "plane"
+           ]
+          },
+          {
+           "s": "We're ___ to visit Tunisia.",
+           "a": "going",
+           "o": [
+            "going",
+            "go"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Kareem has a dream.",
+          "How do you travel to school? By bus.",
+          "It was sunny every day.",
+          "This wallet is for Dad."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Kareem has a dream.",
+           "o": [
+            "Kareem has a dream.",
+            "How do you travel to school? By bus.",
+            "It was sunny every day."
+           ]
+          },
+          {
+           "a": "How do you travel to school? By bus.",
+           "o": [
+            "How do you travel to school? By bus.",
+            "Kareem has a dream.",
+            "It was sunny every day."
+           ]
+          },
+          {
+           "a": "It was sunny every day.",
+           "o": [
+            "It was sunny every day.",
+            "Kareem has a dream.",
+            "How do you travel to school? By bus."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "dream",
+       "ipa": "",
+       "meaning": "حلم",
+       "ex": "Kareem has a dream."
+      },
+      {
+       "must": 1,
+       "term": "pilot",
+       "ipa": "",
+       "meaning": "طيار",
+       "ex": "pilot"
+      },
+      {
+       "must": 1,
+       "term": "by car",
+       "ipa": "",
+       "meaning": "بالسيارة",
+       "ex": "How do you travel to school? By bus."
+      },
+      {
+       "must": 0,
+       "term": "by plane",
+       "ipa": "",
+       "meaning": "بالطائرة",
+       "ex": "How do you travel to school? By bus."
+      },
+      {
+       "must": 0,
+       "term": "sunny",
+       "ipa": "",
+       "meaning": "مشمس",
+       "ex": "It was sunny every day."
+      },
+      {
+       "must": 0,
+       "term": "stormy",
+       "ipa": "",
+       "meaning": "عاصف",
+       "ex": "stormy"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "He wants ___ be a pilot.",
+       "a": "to",
+       "o": [
+        "to",
+        "be"
+       ],
+       "why": ""
+      },
+      {
+       "q": "We went ___ plane.",
+       "a": "by",
+       "o": [
+        "by",
+        "on"
+       ],
+       "why": ""
+      },
+      {
+       "q": "It ___ sunny yesterday.",
+       "a": "was",
+       "o": [
+        "was",
+        "is"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى stormy؟",
+       "a": "عاصف",
+       "o": [
+        "عاصف",
+        "حلم",
+        "طيار"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى pilot؟",
+       "a": "طيار",
+       "o": [
+        "طيار",
+        "حلم",
+        "بالسيارة"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Kareem has a dream.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Kareem has a dream.",
+       "o": [
+        "Kareem has a dream.",
+        "How do you travel to school? By bus.",
+        "It was sunny every day."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

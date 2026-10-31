@@ -1,0 +1,319 @@
+{
+ "id": "en-5-u6-l6",
+ "grade": 5,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 6 · Lesson 6: A Fun Day Out",
+ "titleAr": "الجمعة الماضية قضينا يوماً ممتعاً.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "الجمعة الماضية قضينا يوماً ممتعاً.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "day out",
+       "ar": "نزهة يوم",
+       "em": "🚌"
+      },
+      {
+       "id": "v1",
+       "en": "zoo",
+       "ar": "حديقة حيوان",
+       "em": "🦁"
+      },
+      {
+       "id": "v2",
+       "en": "ate",
+       "ar": "أكل",
+       "em": "🍔"
+      },
+      {
+       "id": "v3",
+       "en": "saw",
+       "ar": "رأى",
+       "em": "👀"
+      },
+      {
+       "id": "v4",
+       "en": "tired",
+       "ar": "متعب",
+       "em": "😴"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 96⁠–⁠97 · كتاب النشاط ص 82⁠–⁠83"
+  },
+  {
+   "title": "اقرأ",
+   "eyebrow": "الخطوة ٢ — اقرأ",
+   "heading": "اقرأ واستمع",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "📖 A Fun Day Out",
+     "html": "<div class=\"ex\">Last Friday we had a fun day out.</div><div class=\"ex\">We saw lions at the zoo.</div><div class=\"ex\">We were tired but happy.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Last Friday we had a fun day out. We saw lions at the zoo. We were tired but happy."
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط ▶ لتسمع النص."
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٣ — القاعدة",
+   "heading": "Past simple",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Last Friday we had a fun day out.</div><div class=\"ex\">We <b>saw</b> lions at the zoo.</div><div class=\"ex\">We <b>were</b> tired but happy.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Last Friday we had a fun day out. We saw lions at the zoo. We were tired but happy."
+      }
+     ]
+    }
+   ],
+   "lead": "see → saw, eat → ate, be → were",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٤ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "We ___ lions.",
+           "a": "saw",
+           "o": [
+            "saw",
+            "seed"
+           ]
+          },
+          {
+           "s": "We ___ ice cream.",
+           "a": "ate",
+           "o": [
+            "ate",
+            "eated"
+           ]
+          },
+          {
+           "s": "We ___ tired but happy.",
+           "a": "were",
+           "o": [
+            "were",
+            "was"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Last Friday we had a fun day out.",
+          "We saw lions at the zoo.",
+          "We were tired but happy."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Last Friday we had a fun day out.",
+           "o": [
+            "Last Friday we had a fun day out.",
+            "We saw lions at the zoo.",
+            "We were tired but happy."
+           ]
+          },
+          {
+           "a": "We saw lions at the zoo.",
+           "o": [
+            "We saw lions at the zoo.",
+            "Last Friday we had a fun day out.",
+            "We were tired but happy."
+           ]
+          },
+          {
+           "a": "We were tired but happy.",
+           "o": [
+            "We were tired but happy.",
+            "Last Friday we had a fun day out.",
+            "We saw lions at the zoo."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٥ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "day out",
+       "ipa": "",
+       "meaning": "نزهة يوم",
+       "ex": "Last Friday we had a fun day out."
+      },
+      {
+       "must": 1,
+       "term": "zoo",
+       "ipa": "",
+       "meaning": "حديقة حيوان",
+       "ex": "We saw lions at the zoo."
+      },
+      {
+       "must": 1,
+       "term": "ate",
+       "ipa": "",
+       "meaning": "أكل",
+       "ex": "ate"
+      },
+      {
+       "must": 0,
+       "term": "saw",
+       "ipa": "",
+       "meaning": "رأى",
+       "ex": "We saw lions at the zoo."
+      },
+      {
+       "must": 0,
+       "term": "tired",
+       "ipa": "",
+       "meaning": "متعب",
+       "ex": "We were tired but happy."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "We ___ lions.",
+       "a": "saw",
+       "o": [
+        "saw",
+        "seed"
+       ],
+       "why": ""
+      },
+      {
+       "q": "We ___ ice cream.",
+       "a": "ate",
+       "o": [
+        "ate",
+        "eated"
+       ],
+       "why": ""
+      },
+      {
+       "q": "We ___ tired but happy.",
+       "a": "were",
+       "o": [
+        "were",
+        "was"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى saw؟",
+       "a": "رأى",
+       "o": [
+        "رأى",
+        "نزهة يوم",
+        "حديقة حيوان"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى zoo؟",
+       "a": "حديقة حيوان",
+       "o": [
+        "حديقة حيوان",
+        "نزهة يوم",
+        "أكل"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Last Friday we had a fun day out.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Last Friday we had a fun day out.",
+       "o": [
+        "Last Friday we had a fun day out.",
+        "We saw lions at the zoo.",
+        "We were tired but happy."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

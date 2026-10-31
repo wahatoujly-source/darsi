@@ -1,0 +1,287 @@
+{
+ "id": "en-6-u6-l8",
+ "grade": 6,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 6 · Lesson 8: Our Rules",
+ "titleAr": "يجب أن نرتدي الزي المدرسي.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "يجب أن نرتدي الزي المدرسي.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "rule",
+       "ar": "قاعدة",
+       "em": "📜"
+      },
+      {
+       "id": "v1",
+       "en": "have to",
+       "ar": "يجب",
+       "em": "❗"
+      },
+      {
+       "id": "v2",
+       "en": "don't have to",
+       "ar": "لا يلزم",
+       "em": "🙂"
+      },
+      {
+       "id": "v3",
+       "en": "uniform",
+       "ar": "زي مدرسي",
+       "em": "👔"
+      },
+      {
+       "id": "v4",
+       "en": "respect",
+       "ar": "يحترم",
+       "em": "🤝"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 100⁠–⁠101 · كتاب النشاط ص 86⁠–⁠87"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "have to / has to",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">We <b>have</b> to wear a uniform.</div><div class=\"ex\">We <b>have</b> to respect our teachers.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "We have to wear a uniform. We have to respect our teachers."
+      }
+     ]
+    }
+   ],
+   "lead": "للإلزام: We have to … / He has to …",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "We ___ to wear a uniform.",
+           "a": "have",
+           "o": [
+            "have",
+            "has"
+           ]
+          },
+          {
+           "s": "He ___ to come early.",
+           "a": "has",
+           "o": [
+            "has",
+            "have"
+           ]
+          },
+          {
+           "s": "We ___ our teachers.",
+           "a": "respect",
+           "o": [
+            "respect",
+            "respects"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "We have to wear a uniform.",
+          "We have to respect our teachers."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "We have to wear a uniform.",
+           "o": [
+            "We have to wear a uniform.",
+            "We have to respect our teachers."
+           ]
+          },
+          {
+           "a": "We have to respect our teachers.",
+           "o": [
+            "We have to respect our teachers.",
+            "We have to wear a uniform."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "rule",
+       "ipa": "",
+       "meaning": "قاعدة",
+       "ex": "rule"
+      },
+      {
+       "must": 1,
+       "term": "have to",
+       "ipa": "",
+       "meaning": "يجب",
+       "ex": "We have to wear a uniform."
+      },
+      {
+       "must": 1,
+       "term": "don't have to",
+       "ipa": "",
+       "meaning": "لا يلزم",
+       "ex": "don't have to"
+      },
+      {
+       "must": 0,
+       "term": "uniform",
+       "ipa": "",
+       "meaning": "زي مدرسي",
+       "ex": "We have to wear a uniform."
+      },
+      {
+       "must": 0,
+       "term": "respect",
+       "ipa": "",
+       "meaning": "يحترم",
+       "ex": "We have to respect our teachers."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "We ___ to wear a uniform.",
+       "a": "have",
+       "o": [
+        "have",
+        "has"
+       ],
+       "why": ""
+      },
+      {
+       "q": "He ___ to come early.",
+       "a": "has",
+       "o": [
+        "has",
+        "have"
+       ],
+       "why": ""
+      },
+      {
+       "q": "We ___ our teachers.",
+       "a": "respect",
+       "o": [
+        "respect",
+        "respects"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى don't have to؟",
+       "a": "لا يلزم",
+       "o": [
+        "لا يلزم",
+        "قاعدة",
+        "يجب"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى rule؟",
+       "a": "قاعدة",
+       "o": [
+        "قاعدة",
+        "يجب",
+        "لا يلزم"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "We have to wear a uniform.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "We have to wear a uniform.",
+       "o": [
+        "We have to wear a uniform.",
+        "We have to respect our teachers."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

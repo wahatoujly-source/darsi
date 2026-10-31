@@ -1,0 +1,319 @@
+{
+ "id": "en-5-u8-l2",
+ "grade": 5,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 8 · Lesson 2: An Email to a Friend",
+ "titleAr": "عزيزي سامي، كيف حالك؟",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "عزيزي سامي، كيف حالك؟",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "email",
+       "ar": "بريد إلكتروني",
+       "em": "📧"
+      },
+      {
+       "id": "v1",
+       "en": "Dear",
+       "ar": "عزيزي",
+       "em": "💌"
+      },
+      {
+       "id": "v2",
+       "en": "write",
+       "ar": "يكتب",
+       "em": "✍️"
+      },
+      {
+       "id": "v3",
+       "en": "soon",
+       "ar": "قريباً",
+       "em": "⏳"
+      },
+      {
+       "id": "v4",
+       "en": "Best wishes",
+       "ar": "أطيب التمنيات",
+       "em": "🙂"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 123 · كتاب النشاط ص 105"
+  },
+  {
+   "title": "اقرأ",
+   "eyebrow": "الخطوة ٢ — اقرأ",
+   "heading": "اقرأ واستمع",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "📖 An Email to a Friend",
+     "html": "<div class=\"ex\">Dear Sami, how are you?</div><div class=\"ex\">Write to me soon.</div><div class=\"ex\">Best wishes, Ali.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Dear Sami, how are you? Write to me soon. Best wishes, Ali."
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط ▶ لتسمع النص."
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٣ — القاعدة",
+   "heading": "Email format",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\"><b>Dear</b> Sami, how are you?</div><div class=\"ex\">Write to me <b>soon</b>.</div><div class=\"ex\">Best <b>wishes</b>, Ali.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Dear Sami, how are you? Write to me soon. Best wishes, Ali."
+      }
+     ]
+    }
+   ],
+   "lead": "نبدأ بـ Dear … وننهي بـ Best wishes.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٤ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "___ Sami,",
+           "a": "Dear",
+           "o": [
+            "Dear",
+            "Bye"
+           ]
+          },
+          {
+           "s": "Write to me ___ .",
+           "a": "soon",
+           "o": [
+            "soon",
+            "son"
+           ]
+          },
+          {
+           "s": "Best ___ , Ali.",
+           "a": "wishes",
+           "o": [
+            "wishes",
+            "wish"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Dear Sami, how are you?",
+          "Write to me soon.",
+          "Best wishes, Ali."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Dear Sami, how are you?",
+           "o": [
+            "Dear Sami, how are you?",
+            "Write to me soon.",
+            "Best wishes, Ali."
+           ]
+          },
+          {
+           "a": "Write to me soon.",
+           "o": [
+            "Write to me soon.",
+            "Dear Sami, how are you?",
+            "Best wishes, Ali."
+           ]
+          },
+          {
+           "a": "Best wishes, Ali.",
+           "o": [
+            "Best wishes, Ali.",
+            "Dear Sami, how are you?",
+            "Write to me soon."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٥ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "email",
+       "ipa": "",
+       "meaning": "بريد إلكتروني",
+       "ex": "email"
+      },
+      {
+       "must": 1,
+       "term": "Dear",
+       "ipa": "",
+       "meaning": "عزيزي",
+       "ex": "Dear Sami, how are you?"
+      },
+      {
+       "must": 1,
+       "term": "write",
+       "ipa": "",
+       "meaning": "يكتب",
+       "ex": "Write to me soon."
+      },
+      {
+       "must": 0,
+       "term": "soon",
+       "ipa": "",
+       "meaning": "قريباً",
+       "ex": "Write to me soon."
+      },
+      {
+       "must": 0,
+       "term": "Best wishes",
+       "ipa": "",
+       "meaning": "أطيب التمنيات",
+       "ex": "Best wishes, Ali."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٦ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "___ Sami,",
+       "a": "Dear",
+       "o": [
+        "Dear",
+        "Bye"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Write to me ___ .",
+       "a": "soon",
+       "o": [
+        "soon",
+        "son"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Best ___ , Ali.",
+       "a": "wishes",
+       "o": [
+        "wishes",
+        "wish"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى soon؟",
+       "a": "قريباً",
+       "o": [
+        "قريباً",
+        "بريد إلكتروني",
+        "عزيزي"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى Best wishes؟",
+       "a": "أطيب التمنيات",
+       "o": [
+        "أطيب التمنيات",
+        "بريد إلكتروني",
+        "عزيزي"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Dear Sami, how are you?",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Dear Sami, how are you?",
+       "o": [
+        "Dear Sami, how are you?",
+        "Write to me soon.",
+        "Best wishes, Ali."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

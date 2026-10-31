@@ -1,0 +1,337 @@
+{
+ "id": "en-5-u4-l4",
+ "grade": 5,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 4 · Lesson 4: Quiz Time",
+ "titleAr": "وقت المسابقة — Revision (1)",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "وقت المسابقة — Revision (1)",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "Libya",
+       "ar": "ليبيا",
+       "em": "🇱🇾"
+      },
+      {
+       "id": "v1",
+       "en": "Egypt",
+       "ar": "مصر",
+       "em": "🇪🇬"
+      },
+      {
+       "id": "v2",
+       "en": "Libyan",
+       "ar": "ليبي",
+       "em": "🇱🇾"
+      },
+      {
+       "id": "v3",
+       "en": "Egyptian",
+       "ar": "مصري",
+       "em": "🇪🇬"
+      },
+      {
+       "id": "v4",
+       "en": "language",
+       "ar": "لغة",
+       "em": "🗣️"
+      },
+      {
+       "id": "v5",
+       "en": "speak",
+       "ar": "يتحدث",
+       "em": "💬"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 65 · كتاب النشاط ص 55"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Quiz",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Where are you from? I'm from Algeria.</div><div class=\"ex\">I'm from Libya. I'm <b>Libyan</b>.</div><div class=\"ex\">I speak Arabic and English.</div><div class=\"ex\">What's the time?</div><div class=\"ex\">I <b>always</b> brush my teeth.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Where are you from? I'm from Algeria. I'm from Libya. I'm Libyan. I speak Arabic and English. What's the time? I always brush my teeth."
+      }
+     ]
+    }
+   ],
+   "lead": "مسابقة تراجع الوحدات السابقة.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "Where ___ he from?",
+           "a": "is",
+           "o": [
+            "is",
+            "are"
+           ]
+          },
+          {
+           "s": "I'm from Libya. I'm ___ .",
+           "a": "Libyan",
+           "o": [
+            "Libyan",
+            "Libya"
+           ]
+          },
+          {
+           "s": "She ___ English.",
+           "a": "speaks",
+           "o": [
+            "speaks",
+            "speak"
+           ]
+          },
+          {
+           "s": "It's seven ___ .",
+           "a": "o'clock",
+           "o": [
+            "o'clock",
+            "half"
+           ]
+          },
+          {
+           "s": "I ___ brush my teeth. (100%)",
+           "a": "always",
+           "o": [
+            "always",
+            "never"
+           ]
+          },
+          {
+           "s": "Insects ___ six legs.",
+           "a": "have",
+           "o": [
+            "have",
+            "has"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Where are you from? I'm from Algeria.",
+          "I'm from Libya. I'm Libyan.",
+          "I speak Arabic and English.",
+          "What's the time?"
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Where are you from? I'm from Algeria.",
+           "o": [
+            "Where are you from? I'm from Algeria.",
+            "I'm from Libya. I'm Libyan.",
+            "I speak Arabic and English."
+           ]
+          },
+          {
+           "a": "I'm from Libya. I'm Libyan.",
+           "o": [
+            "I'm from Libya. I'm Libyan.",
+            "Where are you from? I'm from Algeria.",
+            "I speak Arabic and English."
+           ]
+          },
+          {
+           "a": "I speak Arabic and English.",
+           "o": [
+            "I speak Arabic and English.",
+            "Where are you from? I'm from Algeria.",
+            "I'm from Libya. I'm Libyan."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "Libya",
+       "ipa": "",
+       "meaning": "ليبيا",
+       "ex": "I'm from Libya. I'm Libyan."
+      },
+      {
+       "must": 1,
+       "term": "Egypt",
+       "ipa": "",
+       "meaning": "مصر",
+       "ex": "Egypt"
+      },
+      {
+       "must": 1,
+       "term": "Libyan",
+       "ipa": "",
+       "meaning": "ليبي",
+       "ex": "I'm from Libya. I'm Libyan."
+      },
+      {
+       "must": 0,
+       "term": "Egyptian",
+       "ipa": "",
+       "meaning": "مصري",
+       "ex": "Egyptian"
+      },
+      {
+       "must": 0,
+       "term": "language",
+       "ipa": "",
+       "meaning": "لغة",
+       "ex": "language"
+      },
+      {
+       "must": 0,
+       "term": "speak",
+       "ipa": "",
+       "meaning": "يتحدث",
+       "ex": "I speak Arabic and English."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "Where ___ he from?",
+       "a": "is",
+       "o": [
+        "is",
+        "are"
+       ],
+       "why": ""
+      },
+      {
+       "q": "I'm from Libya. I'm ___ .",
+       "a": "Libyan",
+       "o": [
+        "Libyan",
+        "Libya"
+       ],
+       "why": ""
+      },
+      {
+       "q": "She ___ English.",
+       "a": "speaks",
+       "o": [
+        "speaks",
+        "speak"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى Egypt؟",
+       "a": "مصر",
+       "o": [
+        "مصر",
+        "ليبيا",
+        "ليبي"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى Egyptian؟",
+       "a": "مصري",
+       "o": [
+        "مصري",
+        "ليبيا",
+        "مصر"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Where are you from? I'm from Algeria.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Where are you from? I'm from Algeria.",
+       "o": [
+        "Where are you from? I'm from Algeria.",
+        "I'm from Libya. I'm Libyan.",
+        "I speak Arabic and English."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

@@ -1,0 +1,299 @@
+{
+ "id": "en-5-u5-l3",
+ "grade": 5,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 5 · Lesson 3: Would you like …?",
+ "titleAr": "هل تود بعض العصير؟",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "هل تود بعض العصير؟",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "would like",
+       "ar": "يود",
+       "em": "🙂"
+      },
+      {
+       "id": "v1",
+       "en": "please",
+       "ar": "من فضلك",
+       "em": "🙏"
+      },
+      {
+       "id": "v2",
+       "en": "no, thank you",
+       "ar": "لا، شكراً",
+       "em": "🙅"
+      },
+      {
+       "id": "v3",
+       "en": "glass",
+       "ar": "كأس",
+       "em": "🥛"
+      },
+      {
+       "id": "v4",
+       "en": "piece",
+       "ar": "قطعة",
+       "em": "🍰"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 72⁠–⁠73 · كتاب النشاط ص 60⁠–⁠61"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Would you like …? / I'd like …",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\"><b>Would</b> you like some juice?</div><div class=\"ex\">Yes, <b>please</b>.</div><div class=\"ex\">I'd like a <b>piece</b> of cake.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Would you like some juice? Yes, please. I'd like a piece of cake."
+      }
+     ]
+    }
+   ],
+   "lead": "طريقة مهذبة للعرض والطلب.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "___ you like some tea?",
+           "a": "Would",
+           "o": [
+            "Would",
+            "Do"
+           ]
+          },
+          {
+           "s": "Yes, ___ .",
+           "a": "please",
+           "o": [
+            "please",
+            "thanks you"
+           ]
+          },
+          {
+           "s": "I'd like a ___ of cake.",
+           "a": "piece",
+           "o": [
+            "piece",
+            "glass"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Would you like some juice?",
+          "Yes, please.",
+          "I'd like a piece of cake."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Would you like some juice?",
+           "o": [
+            "Would you like some juice?",
+            "Yes, please.",
+            "I'd like a piece of cake."
+           ]
+          },
+          {
+           "a": "Yes, please.",
+           "o": [
+            "Yes, please.",
+            "Would you like some juice?",
+            "I'd like a piece of cake."
+           ]
+          },
+          {
+           "a": "I'd like a piece of cake.",
+           "o": [
+            "I'd like a piece of cake.",
+            "Would you like some juice?",
+            "Yes, please."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "would like",
+       "ipa": "",
+       "meaning": "يود",
+       "ex": "Would you like some juice?"
+      },
+      {
+       "must": 1,
+       "term": "please",
+       "ipa": "",
+       "meaning": "من فضلك",
+       "ex": "Yes, please."
+      },
+      {
+       "must": 1,
+       "term": "no, thank you",
+       "ipa": "",
+       "meaning": "لا، شكراً",
+       "ex": "no, thank you"
+      },
+      {
+       "must": 0,
+       "term": "glass",
+       "ipa": "",
+       "meaning": "كأس",
+       "ex": "glass"
+      },
+      {
+       "must": 0,
+       "term": "piece",
+       "ipa": "",
+       "meaning": "قطعة",
+       "ex": "I'd like a piece of cake."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "___ you like some tea?",
+       "a": "Would",
+       "o": [
+        "Would",
+        "Do"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Yes, ___ .",
+       "a": "please",
+       "o": [
+        "please",
+        "thanks you"
+       ],
+       "why": ""
+      },
+      {
+       "q": "I'd like a ___ of cake.",
+       "a": "piece",
+       "o": [
+        "piece",
+        "glass"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى please؟",
+       "a": "من فضلك",
+       "o": [
+        "من فضلك",
+        "يود",
+        "لا، شكراً"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى would like؟",
+       "a": "يود",
+       "o": [
+        "يود",
+        "من فضلك",
+        "لا، شكراً"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Would you like some juice?",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Would you like some juice?",
+       "o": [
+        "Would you like some juice?",
+        "Yes, please.",
+        "I'd like a piece of cake."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

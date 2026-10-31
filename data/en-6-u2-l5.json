@@ -1,0 +1,287 @@
+{
+ "id": "en-6-u2-l5",
+ "grade": 6,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 2 · Lesson 5: Materials",
+ "titleAr": "قميصي من القطن.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "قميصي من القطن.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "cotton",
+       "ar": "قطن",
+       "em": "☁️"
+      },
+      {
+       "id": "v1",
+       "en": "leather",
+       "ar": "جلد",
+       "em": "👞"
+      },
+      {
+       "id": "v2",
+       "en": "rubber",
+       "ar": "مطاط",
+       "em": "🛞"
+      },
+      {
+       "id": "v3",
+       "en": "recycle",
+       "ar": "يعيد التدوير",
+       "em": "♻️"
+      },
+      {
+       "id": "v4",
+       "en": "natural",
+       "ar": "طبيعي",
+       "em": "🌿"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 34⁠–⁠35 · كتاب النشاط ص 28⁠–⁠29"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "can + passive idea",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">My shirt is made of cotton.</div><div class=\"ex\">We can <b>recycle</b> glass and paper.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "My shirt is made of cotton. We can recycle glass and paper."
+      }
+     ]
+    }
+   ],
+   "lead": "We can recycle … / Shoes are made of leather.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "Shoes are often made of ___ .",
+           "a": "leather",
+           "o": [
+            "leather",
+            "cotton"
+           ]
+          },
+          {
+           "s": "Tyres are made of ___ .",
+           "a": "rubber",
+           "o": [
+            "rubber",
+            "glass"
+           ]
+          },
+          {
+           "s": "We can ___ paper.",
+           "a": "recycle",
+           "o": [
+            "recycle",
+            "recycles"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "My shirt is made of cotton.",
+          "We can recycle glass and paper."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "My shirt is made of cotton.",
+           "o": [
+            "My shirt is made of cotton.",
+            "We can recycle glass and paper."
+           ]
+          },
+          {
+           "a": "We can recycle glass and paper.",
+           "o": [
+            "We can recycle glass and paper.",
+            "My shirt is made of cotton."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "cotton",
+       "ipa": "",
+       "meaning": "قطن",
+       "ex": "My shirt is made of cotton."
+      },
+      {
+       "must": 1,
+       "term": "leather",
+       "ipa": "",
+       "meaning": "جلد",
+       "ex": "leather"
+      },
+      {
+       "must": 1,
+       "term": "rubber",
+       "ipa": "",
+       "meaning": "مطاط",
+       "ex": "rubber"
+      },
+      {
+       "must": 0,
+       "term": "recycle",
+       "ipa": "",
+       "meaning": "يعيد التدوير",
+       "ex": "We can recycle glass and paper."
+      },
+      {
+       "must": 0,
+       "term": "natural",
+       "ipa": "",
+       "meaning": "طبيعي",
+       "ex": "natural"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "Shoes are often made of ___ .",
+       "a": "leather",
+       "o": [
+        "leather",
+        "cotton"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Tyres are made of ___ .",
+       "a": "rubber",
+       "o": [
+        "rubber",
+        "glass"
+       ],
+       "why": ""
+      },
+      {
+       "q": "We can ___ paper.",
+       "a": "recycle",
+       "o": [
+        "recycle",
+        "recycles"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى recycle؟",
+       "a": "يعيد التدوير",
+       "o": [
+        "يعيد التدوير",
+        "قطن",
+        "جلد"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى cotton؟",
+       "a": "قطن",
+       "o": [
+        "قطن",
+        "جلد",
+        "مطاط"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "My shirt is made of cotton.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "My shirt is made of cotton.",
+       "o": [
+        "My shirt is made of cotton.",
+        "We can recycle glass and paper."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

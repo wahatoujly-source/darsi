@@ -5,73 +5,42 @@
  "stage": "primary-4-6",
  "lang": "en",
  "title": "Unit 1 · Lesson 1: My Family",
- "titleAr": "الوحدة الأولى: العائلة والعمل — الدرس الأول: عائلتي",
- "characters": {},
+ "titleAr": "أعيش مع والدي وجديّ.",
  "steps": [
   {
    "title": "المفردات",
    "eyebrow": "الخطوة ١ — المفردات",
-   "heading": "أفراد العائلة",
+   "heading": "أعيش مع والدي وجديّ.",
    "blocks": [
     {
      "type": "vocab",
      "items": [
       {
        "id": "v0",
-       "en": "grandfather",
-       "ar": "جد",
-       "em": "👴"
+       "en": "parents",
+       "ar": "والدان",
+       "em": "👨‍👩"
       },
       {
        "id": "v1",
-       "en": "grandmother",
-       "ar": "جدة",
-       "em": "👵"
+       "en": "grandparents",
+       "ar": "أجداد",
+       "em": "👴👵"
       },
       {
        "id": "v2",
-       "en": "father",
-       "ar": "أب",
-       "em": "👨"
-      },
-      {
-       "id": "v3",
-       "en": "mother",
-       "ar": "أم",
-       "em": "👩"
-      },
-      {
-       "id": "v4",
-       "en": "uncle",
-       "ar": "عم / خال",
-       "em": "🧔"
-      },
-      {
-       "id": "v5",
-       "en": "aunt",
-       "ar": "عمة / خالة",
-       "em": "👩‍🦱"
-      },
-      {
-       "id": "v6",
-       "en": "brother",
-       "ar": "أخ",
-       "em": "👦"
-      },
-      {
-       "id": "v7",
-       "en": "sister",
-       "ar": "أخت",
-       "em": "👧"
-      },
-      {
-       "id": "v8",
        "en": "cousin",
-       "ar": "ابن العم / ابن الخال",
+       "ar": "ابن العم",
        "em": "🧒"
       },
       {
-       "id": "v9",
+       "id": "v3",
+       "en": "only child",
+       "ar": "طفل وحيد",
+       "em": "🧍"
+      },
+      {
+       "id": "v4",
        "en": "twins",
        "ar": "توأم",
        "em": "👯"
@@ -79,39 +48,27 @@
      ]
     }
    ],
-   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتابك ص 8–9."
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 8⁠–⁠9 · كتاب النشاط ص 4⁠–⁠5"
   },
   {
    "title": "القاعدة",
    "eyebrow": "الخطوة ٢ — القاعدة",
-   "heading": "How old …? / How many … ?",
+   "heading": "Possessive 's",
    "blocks": [
     {
      "type": "panel",
-     "title": "📖 Anwer's family",
-     "html": "<div class=\"ex\" dir=\"ltr\">My name's Anwer. I am 12. I have a sister and a brother. My sister's name is Dania. She is older than me – she's 13. My brother's name is Ali. He's younger than me – he's 6. He has just started school.<br>I have two cousins, Taher and Hiba. They are twins and they are the same age as I am. We live near them in Tripoli.</div>",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">I live with my <b>parents</b> and my grandparents.</div><div class=\"ex\">My cousins are twins.</div>",
      "blocks": [
       {
        "type": "say",
        "label": "▶ اسمع",
-       "text": "My name's Anwer. I am 12. I have a sister and a brother. My sister's name is Dania. She is older than me, she's 13. My brother's name is Ali. He's younger than me, he's 6. He has just started school. I have two cousins, Taher and Hiba. They are twins and they are the same age as I am. We live near them in Tripoli."
-      }
-     ]
-    },
-    {
-     "type": "panel",
-     "title": "السؤال",
-     "html": "<div class=\"ex\">How old <b>is</b> Anwer's sister? — She<b>'s</b> 13.</div><div class=\"ex\">How many cousins <b>does</b> Anwer <b>have</b>? — He <b>has</b> two.</div><div class=\"ex\">How many brothers <b>do</b> you <b>have</b>?</div>",
-     "blocks": [
-      {
-       "type": "say",
-       "label": "▶ اسمع",
-       "text": "How old is Anwer's sister? She's 13. How many cousins does Anwer have? He has two."
+       "text": "I live with my parents and my grandparents. My cousins are twins."
       }
      ]
     }
    ],
-   "lead": "How old للعمر، و How many + جمع + does/do … have? للعدد.",
+   "lead": "my uncle's son / my sister's book",
    "starOnVisit": true
   },
   {
@@ -124,77 +81,6 @@
      "star": true,
      "tabs": [
       {
-       "label": "افهم النص",
-       "blocks": [
-        {
-         "type": "choice",
-         "star": false,
-         "items": [
-          {
-           "q": "How old is Anwer?",
-           "a": "12",
-           "o": [
-            "12",
-            "13",
-            "6"
-           ],
-           "why": ""
-          },
-          {
-           "q": "How old is Dania?",
-           "a": "13",
-           "o": [
-            "13",
-            "12",
-            "6"
-           ],
-           "why": ""
-          },
-          {
-           "q": "Who is younger than Anwer?",
-           "a": "Ali",
-           "o": [
-            "Ali",
-            "Dania",
-            "Hiba"
-           ],
-           "why": ""
-          },
-          {
-           "q": "How many cousins does Anwer have?",
-           "a": "two",
-           "o": [
-            "two",
-            "three",
-            "one"
-           ],
-           "why": ""
-          },
-          {
-           "q": "Taher and Hiba are …",
-           "a": "twins",
-           "o": [
-            "twins",
-            "sisters",
-            "uncles"
-           ],
-           "why": ""
-          },
-          {
-           "q": "Where do they live?",
-           "a": "In Tripoli.",
-           "o": [
-            "In Tripoli.",
-            "In Benghazi.",
-            "In Sabha."
-           ],
-           "why": ""
-          }
-         ]
-        }
-       ]
-      },
-      {
        "label": "اختر الكلمة",
        "blocks": [
         {
@@ -202,46 +88,27 @@
          "mode": "gap",
          "items": [
           {
-           "s": "How ___ is your brother?",
-           "a": "old",
-           "o": [
-            "old",
-            "many"
-           ]
-          },
-          {
-           "s": "How many cousins ___ he have?",
-           "a": "does",
-           "o": [
-            "does",
-            "do",
-            "is"
-           ]
-          },
-          {
-           "s": "How many sisters ___ you have?",
-           "a": "do",
-           "o": [
-            "do",
-            "does"
-           ]
-          },
-          {
-           "s": "My father's brother is my ___ .",
-           "a": "uncle",
-           "o": [
-            "uncle",
-            "cousin",
-            "aunt"
-           ]
-          },
-          {
            "s": "My uncle's son is my ___ .",
            "a": "cousin",
            "o": [
             "cousin",
-            "brother",
-            "uncle"
+            "brother"
+           ]
+          },
+          {
+           "s": "My mother and father are my ___ .",
+           "a": "parents",
+           "o": [
+            "parents",
+            "twins"
+           ]
+          },
+          {
+           "s": "This is my ___ book. (أختي)",
+           "a": "sister's",
+           "o": [
+            "sister's",
+            "sisters"
            ]
           }
          ]
@@ -254,9 +121,33 @@
         {
          "type": "order",
          "sentences": [
-          "How old is Anwer's sister?",
-          "How many cousins does Anwer have?",
-          "They are twins."
+          "I live with my parents and my grandparents.",
+          "My cousins are twins."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "I live with my parents and my grandparents.",
+           "o": [
+            "I live with my parents and my grandparents.",
+            "My cousins are twins."
+           ]
+          },
+          {
+           "a": "My cousins are twins.",
+           "o": [
+            "My cousins are twins.",
+            "I live with my parents and my grandparents."
+           ]
+          }
          ]
         }
        ]
@@ -279,38 +170,38 @@
      "items": [
       {
        "must": 1,
+       "term": "parents",
+       "ipa": "",
+       "meaning": "والدان",
+       "ex": "I live with my parents and my grandparents."
+      },
+      {
+       "must": 1,
+       "term": "grandparents",
+       "ipa": "",
+       "meaning": "أجداد",
+       "ex": "I live with my parents and my grandparents."
+      },
+      {
+       "must": 1,
        "term": "cousin",
-       "ipa": "/ˈkʌzn/",
-       "meaning": "ابن/بنت العم أو الخال",
-       "ex": "I have two cousins."
-      },
-      {
-       "must": 1,
-       "term": "uncle",
-       "ipa": "/ˈʌŋkl/",
-       "meaning": "العم / الخال",
-       "ex": "My uncle lives in Tripoli."
-      },
-      {
-       "must": 1,
-       "term": "aunt",
-       "ipa": "/ɑːnt/",
-       "meaning": "العمة / الخالة",
-       "ex": "My aunt is a teacher."
-      },
-      {
-       "must": 1,
-       "term": "twins",
-       "ipa": "/twɪnz/",
-       "meaning": "توأم",
-       "ex": "Taher and Hiba are twins."
+       "ipa": "",
+       "meaning": "ابن العم",
+       "ex": "My cousins are twins."
       },
       {
        "must": 0,
-       "term": "the same age as",
-       "ipa": "/ðə seɪm eɪdʒ əz/",
-       "meaning": "في نفس عمر",
-       "ex": "They are the same age as I am."
+       "term": "only child",
+       "ipa": "",
+       "meaning": "طفل وحيد",
+       "ex": "only child"
+      },
+      {
+       "must": 0,
+       "term": "twins",
+       "ipa": "",
+       "meaning": "توأم",
+       "ex": "My cousins are twins."
       }
      ]
     }
@@ -327,62 +218,62 @@
      "pass": 5,
      "items": [
       {
-       "q": "How many cousins ___ Anwer have?",
-       "a": "does",
+       "q": "My uncle's son is my ___ .",
+       "a": "cousin",
        "o": [
-        "does",
-        "do"
+        "cousin",
+        "brother"
        ],
        "why": ""
       },
       {
-       "q": "ما معنى twins؟",
-       "a": "توأم",
+       "q": "My mother and father are my ___ .",
+       "a": "parents",
        "o": [
-        "توأم",
-        "أقارب",
-        "أصدقاء"
+        "parents",
+        "twins"
+       ],
+       "why": ""
+      },
+      {
+       "q": "This is my ___ book. (أختي)",
+       "a": "sister's",
+       "o": [
+        "sister's",
+        "sisters"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى parents؟",
+       "a": "والدان",
+       "o": [
+        "والدان",
+        "أجداد",
+        "ابن العم"
        ],
        "why": "",
        "ar": true
       },
       {
-       "q": "Dania is 13. Anwer is 12. Dania is …",
-       "a": "older",
+       "q": "ما معنى cousin؟",
+       "a": "ابن العم",
        "o": [
-        "older",
-        "younger"
+        "ابن العم",
+        "والدان",
+        "أجداد"
        ],
-       "why": ""
+       "why": "",
+       "ar": true
       },
       {
        "type": "listen",
-       "say": "How old is your brother?",
+       "say": "I live with my parents and my grandparents.",
        "q": "استمع: ماذا قال المتحدث؟",
-       "a": "How old is your brother?",
+       "a": "I live with my parents and my grandparents.",
        "o": [
-        "How old is your brother?",
-        "How many brothers do you have?",
-        "Where is your brother?"
-       ],
-       "why": ""
-      },
-      {
-       "q": "My mother's sister is my …",
-       "a": "aunt",
-       "o": [
-        "aunt",
-        "uncle",
-        "cousin"
-       ],
-       "why": ""
-      },
-      {
-       "q": "How many brothers ___ you have?",
-       "a": "do",
-       "o": [
-        "do",
-        "does"
+        "I live with my parents and my grandparents.",
+        "My cousins are twins."
        ],
        "why": ""
       }
@@ -391,5 +282,6 @@
    ],
    "lead": "6 أسئلة. تنجح بـ 5 من 6."
   }
- ]
+ ],
+ "characters": {}
 }

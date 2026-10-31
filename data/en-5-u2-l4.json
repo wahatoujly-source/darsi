@@ -1,0 +1,287 @@
+{
+ "id": "en-5-u2-l4",
+ "grade": 5,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 2 · Lesson 4: What's it like?",
+ "titleAr": "كيف هو الفهد؟ سريع جداً.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "كيف هو الفهد؟ سريع جداً.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "fast",
+       "ar": "سريع",
+       "em": "🐆"
+      },
+      {
+       "id": "v1",
+       "en": "slow",
+       "ar": "بطيء",
+       "em": "🐢"
+      },
+      {
+       "id": "v2",
+       "en": "dangerous",
+       "ar": "خطير",
+       "em": "⚠️"
+      },
+      {
+       "id": "v3",
+       "en": "beautiful",
+       "ar": "جميل",
+       "em": "🦋"
+      },
+      {
+       "id": "v4",
+       "en": "strong",
+       "ar": "قوي",
+       "em": "🦍"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 32⁠–⁠33 · كتاب النشاط ص 26⁠–⁠27"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "What's … like?",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">What's a cheetah <b>like</b>? It's very fast.</div><div class=\"ex\">What are snakes <b>like</b>? They're dangerous.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "What's a cheetah like? It's very fast. What are snakes like? They're dangerous."
+      }
+     ]
+    }
+   ],
+   "lead": "نسأل عن الصفة: What's it like?",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "What's a tortoise ___ ?",
+           "a": "like",
+           "o": [
+            "like",
+            "likes"
+           ]
+          },
+          {
+           "s": "It's very ___ . 🐢",
+           "a": "slow",
+           "o": [
+            "slow",
+            "fast"
+           ]
+          },
+          {
+           "s": "Some snakes are ___ .",
+           "a": "dangerous",
+           "o": [
+            "dangerous",
+            "beautiful"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "What's a cheetah like? It's very fast.",
+          "What are snakes like? They're dangerous."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "What's a cheetah like? It's very fast.",
+           "o": [
+            "What's a cheetah like? It's very fast.",
+            "What are snakes like? They're dangerous."
+           ]
+          },
+          {
+           "a": "What are snakes like? They're dangerous.",
+           "o": [
+            "What are snakes like? They're dangerous.",
+            "What's a cheetah like? It's very fast."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "fast",
+       "ipa": "",
+       "meaning": "سريع",
+       "ex": "What's a cheetah like? It's very fast."
+      },
+      {
+       "must": 1,
+       "term": "slow",
+       "ipa": "",
+       "meaning": "بطيء",
+       "ex": "slow"
+      },
+      {
+       "must": 1,
+       "term": "dangerous",
+       "ipa": "",
+       "meaning": "خطير",
+       "ex": "What are snakes like? They're dangerous."
+      },
+      {
+       "must": 0,
+       "term": "beautiful",
+       "ipa": "",
+       "meaning": "جميل",
+       "ex": "beautiful"
+      },
+      {
+       "must": 0,
+       "term": "strong",
+       "ipa": "",
+       "meaning": "قوي",
+       "ex": "strong"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "What's a tortoise ___ ?",
+       "a": "like",
+       "o": [
+        "like",
+        "likes"
+       ],
+       "why": ""
+      },
+      {
+       "q": "It's very ___ . 🐢",
+       "a": "slow",
+       "o": [
+        "slow",
+        "fast"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Some snakes are ___ .",
+       "a": "dangerous",
+       "o": [
+        "dangerous",
+        "beautiful"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى beautiful؟",
+       "a": "جميل",
+       "o": [
+        "جميل",
+        "سريع",
+        "بطيء"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى fast؟",
+       "a": "سريع",
+       "o": [
+        "سريع",
+        "بطيء",
+        "خطير"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "What's a cheetah like? It's very fast.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "What's a cheetah like? It's very fast.",
+       "o": [
+        "What's a cheetah like? It's very fast.",
+        "What are snakes like? They're dangerous."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

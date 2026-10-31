@@ -1,0 +1,287 @@
+{
+ "id": "en-6-u7-l3",
+ "grade": 6,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 7 · Lesson 3: Presents for Mother's Day",
+ "titleAr": "سأهدي أمي زهوراً.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "سأهدي أمي زهوراً.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "Mother's Day",
+       "ar": "عيد الأم",
+       "em": "💐"
+      },
+      {
+       "id": "v1",
+       "en": "flowers",
+       "ar": "زهور",
+       "em": "💐"
+      },
+      {
+       "id": "v2",
+       "en": "card",
+       "ar": "بطاقة",
+       "em": "💌"
+      },
+      {
+       "id": "v3",
+       "en": "make",
+       "ar": "يصنع",
+       "em": "✂️"
+      },
+      {
+       "id": "v4",
+       "en": "love",
+       "ar": "يحب",
+       "em": "❤️"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 108⁠–⁠109 · كتاب النشاط ص 92⁠–⁠93"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "give + person + thing",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">I'm going to <b>give</b> my mother flowers.</div><div class=\"ex\">I <b>made</b> a card for her.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "I'm going to give my mother flowers. I made a card for her."
+      }
+     ]
+    }
+   ],
+   "lead": "I give my mother flowers.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "I'm going to ___ my mother flowers.",
+           "a": "give",
+           "o": [
+            "give",
+            "gives"
+           ]
+          },
+          {
+           "s": "I ___ a card for her.",
+           "a": "made",
+           "o": [
+            "made",
+            "maked"
+           ]
+          },
+          {
+           "s": "Mother's ___",
+           "a": "Day",
+           "o": [
+            "Day",
+            "day's"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "I'm going to give my mother flowers.",
+          "I made a card for her."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "I'm going to give my mother flowers.",
+           "o": [
+            "I'm going to give my mother flowers.",
+            "I made a card for her."
+           ]
+          },
+          {
+           "a": "I made a card for her.",
+           "o": [
+            "I made a card for her.",
+            "I'm going to give my mother flowers."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "Mother's Day",
+       "ipa": "",
+       "meaning": "عيد الأم",
+       "ex": "Mother's Day"
+      },
+      {
+       "must": 1,
+       "term": "flowers",
+       "ipa": "",
+       "meaning": "زهور",
+       "ex": "I'm going to give my mother flowers."
+      },
+      {
+       "must": 1,
+       "term": "card",
+       "ipa": "",
+       "meaning": "بطاقة",
+       "ex": "I made a card for her."
+      },
+      {
+       "must": 0,
+       "term": "make",
+       "ipa": "",
+       "meaning": "يصنع",
+       "ex": "make"
+      },
+      {
+       "must": 0,
+       "term": "love",
+       "ipa": "",
+       "meaning": "يحب",
+       "ex": "love"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "I'm going to ___ my mother flowers.",
+       "a": "give",
+       "o": [
+        "give",
+        "gives"
+       ],
+       "why": ""
+      },
+      {
+       "q": "I ___ a card for her.",
+       "a": "made",
+       "o": [
+        "made",
+        "maked"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Mother's ___",
+       "a": "Day",
+       "o": [
+        "Day",
+        "day's"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى card؟",
+       "a": "بطاقة",
+       "o": [
+        "بطاقة",
+        "عيد الأم",
+        "زهور"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى love؟",
+       "a": "يحب",
+       "o": [
+        "يحب",
+        "عيد الأم",
+        "زهور"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "I'm going to give my mother flowers.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "I'm going to give my mother flowers.",
+       "o": [
+        "I'm going to give my mother flowers.",
+        "I made a card for her."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

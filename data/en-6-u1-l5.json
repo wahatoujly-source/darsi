@@ -5,83 +5,70 @@
  "stage": "primary-4-6",
  "lang": "en",
  "title": "Unit 1 · Lesson 5: My Favourite Job",
- "titleAr": "الوحدة الأولى: العائلة والعمل — الدرس الخامس: مهنتي المفضلة",
- "characters": {},
+ "titleAr": "وظيفتي المفضلة طبيب بيطري لأنني أحب الحيوانات.",
  "steps": [
   {
    "title": "المفردات",
    "eyebrow": "الخطوة ١ — المفردات",
-   "heading": "When I grow up …",
+   "heading": "وظيفتي المفضلة طبيب بيطري لأنني أحب الحيوانات.",
    "blocks": [
     {
      "type": "vocab",
      "items": [
       {
        "id": "v0",
-       "en": "use computers and make programs",
-       "ar": "أستخدم الحاسوب وأصنع البرامج",
-       "em": "💻"
+       "en": "help people",
+       "ar": "يساعد الناس",
+       "em": "🤝"
       },
       {
        "id": "v1",
-       "en": "help people when they are ill",
-       "ar": "أساعد الناس عندما يمرضون",
-       "em": "🩺"
+       "en": "interesting",
+       "ar": "ممتع",
+       "em": "🤔"
       },
       {
        "id": "v2",
-       "en": "work outside and grow things",
-       "ar": "أعمل في الخارج وأزرع",
-       "em": "🌱"
+       "en": "because",
+       "ar": "لأن",
+       "em": "➡️"
       },
       {
        "id": "v3",
-       "en": "travel a lot",
-       "ar": "أسافر كثيراً",
-       "em": "✈️"
+       "en": "vet",
+       "ar": "طبيب بيطري",
+       "em": "🐾"
       },
       {
        "id": "v4",
-       "en": "work with children",
-       "ar": "أعمل مع الأطفال",
-       "em": "🧑‍🏫"
-      },
-      {
-       "id": "v5",
-       "en": "drive cars, buses or trucks",
-       "ar": "أقود السيارات والحافلات",
-       "em": "🚚"
-      },
-      {
-       "id": "v6",
-       "en": "build things",
-       "ar": "أبني الأشياء",
-       "em": "🧱"
+       "en": "architect",
+       "ar": "معماري",
+       "em": "📐"
       }
      ]
     }
    ],
-   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتابك ص 16–17."
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 16⁠–⁠17 · كتاب النشاط ص 12⁠–⁠13"
   },
   {
    "title": "القاعدة",
    "eyebrow": "الخطوة ٢ — القاعدة",
-   "heading": "I want to be … because …",
+   "heading": "because",
    "blocks": [
     {
      "type": "panel",
-     "title": "الأمنية والسبب",
-     "html": "<div class=\"ex\">When I grow up, I <b>want to be</b> an IT programmer <b>because</b> I love using computers.</div><div class=\"ex\">I <b>want to be</b> an engineer <b>because</b> I want to build things.</div>",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">My favourite job is a vet <b>because</b> I love animals.</div><div class=\"ex\">It's interesting.</div>",
      "blocks": [
       {
        "type": "say",
        "label": "▶ اسمع",
-       "text": "When I grow up, I want to be an IT programmer because I love using computers. I want to be an engineer because I want to build things."
+       "text": "My favourite job is a vet because I love animals. It's interesting."
       }
      ]
     }
    ],
-   "lead": "نعبّر عن الأمنية بـ I want to be a/an …، ونذكر السبب بـ because.",
+   "lead": "نعطي السبب بـ because.",
    "starOnVisit": true
   },
   {
@@ -94,53 +81,6 @@
      "star": true,
      "tabs": [
       {
-       "label": "صِل المهنة بالسبب",
-       "blocks": [
-        {
-         "type": "choice",
-         "star": false,
-         "items": [
-          {
-           "q": "I want to be a doctor because …",
-           "a": "I want to help people when they are ill.",
-           "o": [
-            "I want to help people when they are ill.",
-            "I love driving."
-           ],
-           "why": ""
-          },
-          {
-           "q": "I want to be a pilot because …",
-           "a": "I like travelling a lot.",
-           "o": [
-            "I like travelling a lot.",
-            "I like growing vegetables."
-           ],
-           "why": ""
-          },
-          {
-           "q": "I want to be a farmer because …",
-           "a": "I like working outside and growing vegetables.",
-           "o": [
-            "I like working outside and growing vegetables.",
-            "I can make programs."
-           ],
-           "why": ""
-          },
-          {
-           "q": "I want to be a teacher because …",
-           "a": "I want to help young people learn.",
-           "o": [
-            "I want to help young people learn.",
-            "I want to build houses."
-           ],
-           "why": ""
-          }
-         ]
-        }
-       ]
-      },
-      {
        "label": "اختر الكلمة",
        "blocks": [
         {
@@ -148,30 +88,64 @@
          "mode": "gap",
          "items": [
           {
-           "s": "I want ___ be an engineer.",
-           "a": "to",
-           "o": [
-            "to",
-            "for",
-            "be"
-           ]
-          },
-          {
-           "s": "I want to be a doctor ___ I want to help people.",
+           "s": "I want to be a vet ___ I love animals.",
            "a": "because",
            "o": [
             "because",
-            "so",
             "but"
            ]
           },
           {
-           "s": "When I grow ___ , I want to be a pilot.",
-           "a": "up",
+           "s": "A ___ helps sick animals.",
+           "a": "vet",
            "o": [
-            "up",
-            "on",
-            "in"
+            "vet",
+            "architect"
+           ]
+          },
+          {
+           "s": "An ___ designs buildings.",
+           "a": "architect",
+           "o": [
+            "architect",
+            "vet"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "My favourite job is a vet because I love animals.",
+          "It's interesting."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "My favourite job is a vet because I love animals.",
+           "o": [
+            "My favourite job is a vet because I love animals.",
+            "It's interesting."
+           ]
+          },
+          {
+           "a": "It's interesting.",
+           "o": [
+            "It's interesting.",
+            "My favourite job is a vet because I love animals."
            ]
           }
          ]
@@ -196,38 +170,38 @@
      "items": [
       {
        "must": 1,
-       "term": "When I grow up",
-       "ipa": "/wen aɪ ɡrəʊ ʌp/",
-       "meaning": "عندما أكبر",
-       "ex": "When I grow up, I want to be a doctor."
+       "term": "help people",
+       "ipa": "",
+       "meaning": "يساعد الناس",
+       "ex": "help people"
       },
       {
        "must": 1,
-       "term": "I want to be …",
-       "ipa": "/aɪ wɒnt tə biː/",
-       "meaning": "أريد أن أكون …",
-       "ex": "I want to be an engineer."
+       "term": "interesting",
+       "ipa": "",
+       "meaning": "ممتع",
+       "ex": "It's interesting."
       },
       {
        "must": 1,
        "term": "because",
-       "ipa": "/bɪˈkɒz/",
+       "ipa": "",
        "meaning": "لأن",
-       "ex": "…because I love computers."
+       "ex": "My favourite job is a vet because I love animals."
       },
       {
        "must": 0,
-       "term": "travel",
-       "ipa": "/ˈtrævl/",
-       "meaning": "يسافر",
-       "ex": "I like travelling a lot."
+       "term": "vet",
+       "ipa": "",
+       "meaning": "طبيب بيطري",
+       "ex": "My favourite job is a vet because I love animals."
       },
       {
        "must": 0,
-       "term": "build",
-       "ipa": "/bɪld/",
-       "meaning": "يبني",
-       "ex": "I want to build houses."
+       "term": "architect",
+       "ipa": "",
+       "meaning": "معماري",
+       "ex": "architect"
       }
      ]
     }
@@ -241,10 +215,10 @@
     {
      "type": "quiz",
      "star": true,
-     "pass": 3,
+     "pass": 5,
      "items": [
       {
-       "q": "I want to be a doctor ___ I want to help people.",
+       "q": "I want to be a vet ___ I love animals.",
        "a": "because",
        "o": [
         "because",
@@ -253,41 +227,61 @@
        "why": ""
       },
       {
-       "q": "ما معنى When I grow up؟",
-       "a": "عندما أكبر",
+       "q": "A ___ helps sick animals.",
+       "a": "vet",
        "o": [
-        "عندما أكبر",
-        "عندما أسافر",
-        "عندما أعمل"
+        "vet",
+        "architect"
+       ],
+       "why": ""
+      },
+      {
+       "q": "An ___ designs buildings.",
+       "a": "architect",
+       "o": [
+        "architect",
+        "vet"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى help people؟",
+       "a": "يساعد الناس",
+       "o": [
+        "يساعد الناس",
+        "ممتع",
+        "لأن"
        ],
        "why": "",
        "ar": true
       },
       {
-       "q": "I want ___ be a pilot.",
-       "a": "to",
+       "q": "ما معنى vet؟",
+       "a": "طبيب بيطري",
        "o": [
-        "to",
-        "be"
+        "طبيب بيطري",
+        "يساعد الناس",
+        "ممتع"
        ],
-       "why": ""
+       "why": "",
+       "ar": true
       },
       {
        "type": "listen",
-       "say": "I want to be an engineer because I want to build things.",
+       "say": "My favourite job is a vet because I love animals.",
        "q": "استمع: ماذا قال المتحدث؟",
-       "a": "I want to be an engineer because I want to build things.",
+       "a": "My favourite job is a vet because I love animals.",
        "o": [
-        "I want to be an engineer because I want to build things.",
-        "I want to be a farmer.",
-        "I want to be a teacher."
+        "My favourite job is a vet because I love animals.",
+        "It's interesting."
        ],
        "why": ""
       }
      ]
     }
    ],
-   "lead": "4 أسئلة. تنجح بـ 3 من 4."
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
   }
- ]
+ ],
+ "characters": {}
 }

@@ -1,0 +1,299 @@
+{
+ "id": "en-6-u7-l8",
+ "grade": 6,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 7 · Lesson 8: A Card for Our Teacher",
+ "titleAr": "شكراً لتعليمنا.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "شكراً لتعليمنا.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "thank you",
+       "ar": "شكراً",
+       "em": "🙏"
+      },
+      {
+       "id": "v1",
+       "en": "teacher",
+       "ar": "معلم",
+       "em": "🧑‍🏫"
+      },
+      {
+       "id": "v2",
+       "en": "kind",
+       "ar": "لطيف",
+       "em": "🤗"
+      },
+      {
+       "id": "v3",
+       "en": "helpful",
+       "ar": "متعاون",
+       "em": "🤝"
+      },
+      {
+       "id": "v4",
+       "en": "best",
+       "ar": "الأفضل",
+       "em": "🏆"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 118⁠–⁠119 · كتاب النشاط ص 102⁠–⁠103"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Thank you for + -ing",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Thank you for <b>teaching</b> us.</div><div class=\"ex\">You are kind and <b>helpful</b>.</div><div class=\"ex\">You're the <b>best</b> teacher!</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Thank you for teaching us. You are kind and helpful. You're the best teacher!"
+      }
+     ]
+    }
+   ],
+   "lead": "Thank you for helping us.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "Thank you for ___ us.",
+           "a": "teaching",
+           "o": [
+            "teaching",
+            "teach"
+           ]
+          },
+          {
+           "s": "You are kind and ___ .",
+           "a": "helpful",
+           "o": [
+            "helpful",
+            "help"
+           ]
+          },
+          {
+           "s": "You're the ___ teacher!",
+           "a": "best",
+           "o": [
+            "best",
+            "good"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Thank you for teaching us.",
+          "You are kind and helpful.",
+          "You're the best teacher!"
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Thank you for teaching us.",
+           "o": [
+            "Thank you for teaching us.",
+            "You are kind and helpful.",
+            "You're the best teacher!"
+           ]
+          },
+          {
+           "a": "You are kind and helpful.",
+           "o": [
+            "You are kind and helpful.",
+            "Thank you for teaching us.",
+            "You're the best teacher!"
+           ]
+          },
+          {
+           "a": "You're the best teacher!",
+           "o": [
+            "You're the best teacher!",
+            "Thank you for teaching us.",
+            "You are kind and helpful."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "thank you",
+       "ipa": "",
+       "meaning": "شكراً",
+       "ex": "Thank you for teaching us."
+      },
+      {
+       "must": 1,
+       "term": "teacher",
+       "ipa": "",
+       "meaning": "معلم",
+       "ex": "You're the best teacher!"
+      },
+      {
+       "must": 1,
+       "term": "kind",
+       "ipa": "",
+       "meaning": "لطيف",
+       "ex": "You are kind and helpful."
+      },
+      {
+       "must": 0,
+       "term": "helpful",
+       "ipa": "",
+       "meaning": "متعاون",
+       "ex": "You are kind and helpful."
+      },
+      {
+       "must": 0,
+       "term": "best",
+       "ipa": "",
+       "meaning": "الأفضل",
+       "ex": "You're the best teacher!"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "Thank you for ___ us.",
+       "a": "teaching",
+       "o": [
+        "teaching",
+        "teach"
+       ],
+       "why": ""
+      },
+      {
+       "q": "You are kind and ___ .",
+       "a": "helpful",
+       "o": [
+        "helpful",
+        "help"
+       ],
+       "why": ""
+      },
+      {
+       "q": "You're the ___ teacher!",
+       "a": "best",
+       "o": [
+        "best",
+        "good"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى best؟",
+       "a": "الأفضل",
+       "o": [
+        "الأفضل",
+        "شكراً",
+        "معلم"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى helpful؟",
+       "a": "متعاون",
+       "o": [
+        "متعاون",
+        "شكراً",
+        "معلم"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Thank you for teaching us.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Thank you for teaching us.",
+       "o": [
+        "Thank you for teaching us.",
+        "You are kind and helpful.",
+        "You're the best teacher!"
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

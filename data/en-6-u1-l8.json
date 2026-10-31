@@ -1,0 +1,287 @@
+{
+ "id": "en-6-u1-l8",
+ "grade": 6,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 1 · Lesson 8: When I Grow Up",
+ "titleAr": "عندما أكبر سأصبح عالماً.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "عندما أكبر سأصبح عالماً.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "grow up",
+       "ar": "يكبر",
+       "em": "🌱"
+      },
+      {
+       "id": "v1",
+       "en": "will",
+       "ar": "سوف",
+       "em": "🔮"
+      },
+      {
+       "id": "v2",
+       "en": "scientist",
+       "ar": "عالم",
+       "em": "🔬"
+      },
+      {
+       "id": "v3",
+       "en": "travel",
+       "ar": "يسافر",
+       "em": "✈️"
+      },
+      {
+       "id": "v4",
+       "en": "future",
+       "ar": "مستقبل",
+       "em": "🚀"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 22⁠–⁠23 · كتاب النشاط ص 18⁠–⁠19"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "will + verb",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">When I grow up, I <b>will</b> be a scientist.</div><div class=\"ex\">I <b>will</b> travel around the world.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "When I grow up, I will be a scientist. I will travel around the world."
+      }
+     ]
+    }
+   ],
+   "lead": "will للتنبؤ والأحلام المستقبلية.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "I ___ be a scientist.",
+           "a": "will",
+           "o": [
+            "will",
+            "am"
+           ]
+          },
+          {
+           "s": "When I grow ___ ,",
+           "a": "up",
+           "o": [
+            "up",
+            "down"
+           ]
+          },
+          {
+           "s": "I will ___ to many countries.",
+           "a": "travel",
+           "o": [
+            "travel",
+            "travels"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "When I grow up, I will be a scientist.",
+          "I will travel around the world."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "When I grow up, I will be a scientist.",
+           "o": [
+            "When I grow up, I will be a scientist.",
+            "I will travel around the world."
+           ]
+          },
+          {
+           "a": "I will travel around the world.",
+           "o": [
+            "I will travel around the world.",
+            "When I grow up, I will be a scientist."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "grow up",
+       "ipa": "",
+       "meaning": "يكبر",
+       "ex": "When I grow up, I will be a scientist."
+      },
+      {
+       "must": 1,
+       "term": "will",
+       "ipa": "",
+       "meaning": "سوف",
+       "ex": "When I grow up, I will be a scientist."
+      },
+      {
+       "must": 1,
+       "term": "scientist",
+       "ipa": "",
+       "meaning": "عالم",
+       "ex": "When I grow up, I will be a scientist."
+      },
+      {
+       "must": 0,
+       "term": "travel",
+       "ipa": "",
+       "meaning": "يسافر",
+       "ex": "I will travel around the world."
+      },
+      {
+       "must": 0,
+       "term": "future",
+       "ipa": "",
+       "meaning": "مستقبل",
+       "ex": "future"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "I ___ be a scientist.",
+       "a": "will",
+       "o": [
+        "will",
+        "am"
+       ],
+       "why": ""
+      },
+      {
+       "q": "When I grow ___ ,",
+       "a": "up",
+       "o": [
+        "up",
+        "down"
+       ],
+       "why": ""
+      },
+      {
+       "q": "I will ___ to many countries.",
+       "a": "travel",
+       "o": [
+        "travel",
+        "travels"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى will؟",
+       "a": "سوف",
+       "o": [
+        "سوف",
+        "يكبر",
+        "عالم"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى scientist؟",
+       "a": "عالم",
+       "o": [
+        "عالم",
+        "يكبر",
+        "سوف"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "When I grow up, I will be a scientist.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "When I grow up, I will be a scientist.",
+       "o": [
+        "When I grow up, I will be a scientist.",
+        "I will travel around the world."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

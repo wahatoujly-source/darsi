@@ -1,0 +1,337 @@
+{
+ "id": "en-5-u4-l1",
+ "grade": 5,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 4 · Lesson 1: The Challenge",
+ "titleAr": "التحدي — Revision (1)",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "التحدي — Revision (1)",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "flag",
+       "ar": "علم",
+       "em": "🏳️"
+      },
+      {
+       "id": "v1",
+       "en": "star",
+       "ar": "نجمة",
+       "em": "⭐"
+      },
+      {
+       "id": "v2",
+       "en": "dates",
+       "ar": "تمر",
+       "em": "🌴"
+      },
+      {
+       "id": "v3",
+       "en": "tea",
+       "ar": "شاي",
+       "em": "🍵"
+      },
+      {
+       "id": "v4",
+       "en": "capital",
+       "ar": "عاصمة",
+       "em": "🏙️"
+      },
+      {
+       "id": "v5",
+       "en": "population",
+       "ar": "سكان",
+       "em": "👥"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 62 · كتاب النشاط ص 52"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Challenge",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">The Libyan flag is red, black and green.</div><div class=\"ex\">Where's this tea <b>from</b>? It's from China.</div><div class=\"ex\">The <b>capital</b> of Libya is Tripoli.</div><div class=\"ex\">Mr Dan <b>gets</b> up at six o'clock.</div><div class=\"ex\">What's a cheetah <b>like</b>? It's very fast.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "The Libyan flag is red, black and green. Where's this tea from? It's from China. The capital of Libya is Tripoli. Mr Dan gets up at six o'clock. What's a cheetah like? It's very fast."
+      }
+     ]
+    }
+   ],
+   "lead": "تحدٍّ يراجع الوحدات السابقة: كم نقطة تستطيع أن تجمع؟",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "The flag ___ a crescent and a star.",
+           "a": "has",
+           "o": [
+            "has",
+            "have"
+           ]
+          },
+          {
+           "s": "Where's this pizza ___ ?",
+           "a": "from",
+           "o": [
+            "from",
+            "in"
+           ]
+          },
+          {
+           "s": "The ___ of Libya is Tripoli.",
+           "a": "capital",
+           "o": [
+            "capital",
+            "currency"
+           ]
+          },
+          {
+           "s": "Mr Dan ___ up at six.",
+           "a": "gets",
+           "o": [
+            "gets",
+            "get"
+           ]
+          },
+          {
+           "s": "What's a tortoise ___ ?",
+           "a": "like",
+           "o": [
+            "like",
+            "likes"
+           ]
+          },
+          {
+           "s": "Bees ___ honey.",
+           "a": "make",
+           "o": [
+            "make",
+            "makes"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "The Libyan flag is red, black and green.",
+          "Where's this tea from? It's from China.",
+          "The capital of Libya is Tripoli.",
+          "Mr Dan gets up at six o'clock."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "The Libyan flag is red, black and green.",
+           "o": [
+            "The Libyan flag is red, black and green.",
+            "Where's this tea from? It's from China.",
+            "The capital of Libya is Tripoli."
+           ]
+          },
+          {
+           "a": "Where's this tea from? It's from China.",
+           "o": [
+            "Where's this tea from? It's from China.",
+            "The Libyan flag is red, black and green.",
+            "The capital of Libya is Tripoli."
+           ]
+          },
+          {
+           "a": "The capital of Libya is Tripoli.",
+           "o": [
+            "The capital of Libya is Tripoli.",
+            "The Libyan flag is red, black and green.",
+            "Where's this tea from? It's from China."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "flag",
+       "ipa": "",
+       "meaning": "علم",
+       "ex": "The Libyan flag is red, black and green."
+      },
+      {
+       "must": 1,
+       "term": "star",
+       "ipa": "",
+       "meaning": "نجمة",
+       "ex": "star"
+      },
+      {
+       "must": 1,
+       "term": "dates",
+       "ipa": "",
+       "meaning": "تمر",
+       "ex": "dates"
+      },
+      {
+       "must": 0,
+       "term": "tea",
+       "ipa": "",
+       "meaning": "شاي",
+       "ex": "Where's this tea from? It's from China."
+      },
+      {
+       "must": 0,
+       "term": "capital",
+       "ipa": "",
+       "meaning": "عاصمة",
+       "ex": "The capital of Libya is Tripoli."
+      },
+      {
+       "must": 0,
+       "term": "population",
+       "ipa": "",
+       "meaning": "سكان",
+       "ex": "population"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "The flag ___ a crescent and a star.",
+       "a": "has",
+       "o": [
+        "has",
+        "have"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Where's this pizza ___ ?",
+       "a": "from",
+       "o": [
+        "from",
+        "in"
+       ],
+       "why": ""
+      },
+      {
+       "q": "The ___ of Libya is Tripoli.",
+       "a": "capital",
+       "o": [
+        "capital",
+        "currency"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى population؟",
+       "a": "سكان",
+       "o": [
+        "سكان",
+        "علم",
+        "نجمة"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى dates؟",
+       "a": "تمر",
+       "o": [
+        "تمر",
+        "علم",
+        "نجمة"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "The Libyan flag is red, black and green.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "The Libyan flag is red, black and green.",
+       "o": [
+        "The Libyan flag is red, black and green.",
+        "Where's this tea from? It's from China.",
+        "The capital of Libya is Tripoli."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

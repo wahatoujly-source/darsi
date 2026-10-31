@@ -1,0 +1,287 @@
+{
+ "id": "en-6-u3-l1",
+ "grade": 6,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 3 · Lesson 1: How are you?",
+ "titleAr": "كيف حالك؟ لست بخير.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "كيف حالك؟ لست بخير.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "fine",
+       "ar": "بخير",
+       "em": "🙂"
+      },
+      {
+       "id": "v1",
+       "en": "ill",
+       "ar": "مريض",
+       "em": "🤒"
+      },
+      {
+       "id": "v2",
+       "en": "toothache",
+       "ar": "ألم أسنان",
+       "em": "🦷"
+      },
+      {
+       "id": "v3",
+       "en": "cough",
+       "ar": "سعال",
+       "em": "😷"
+      },
+      {
+       "id": "v4",
+       "en": "fever",
+       "ar": "حمى",
+       "em": "🌡️"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 44⁠–⁠45 · كتاب النشاط ص 36⁠–⁠37"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "What's the matter?",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">How are you? I'm not well.</div><div class=\"ex\">What's the <b>matter</b>? I have a cough.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "How are you? I'm not well. What's the matter? I have a cough."
+      }
+     ]
+    }
+   ],
+   "lead": "I have a … / I'm ill.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "What's the ___ ?",
+           "a": "matter",
+           "o": [
+            "matter",
+            "wrong"
+           ]
+          },
+          {
+           "s": "I ___ a toothache.",
+           "a": "have",
+           "o": [
+            "have",
+            "am"
+           ]
+          },
+          {
+           "s": "I'm ___ . I have a fever.",
+           "a": "ill",
+           "o": [
+            "ill",
+            "fine"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "How are you? I'm not well.",
+          "What's the matter? I have a cough."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "How are you? I'm not well.",
+           "o": [
+            "How are you? I'm not well.",
+            "What's the matter? I have a cough."
+           ]
+          },
+          {
+           "a": "What's the matter? I have a cough.",
+           "o": [
+            "What's the matter? I have a cough.",
+            "How are you? I'm not well."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "fine",
+       "ipa": "",
+       "meaning": "بخير",
+       "ex": "fine"
+      },
+      {
+       "must": 1,
+       "term": "ill",
+       "ipa": "",
+       "meaning": "مريض",
+       "ex": "ill"
+      },
+      {
+       "must": 1,
+       "term": "toothache",
+       "ipa": "",
+       "meaning": "ألم أسنان",
+       "ex": "toothache"
+      },
+      {
+       "must": 0,
+       "term": "cough",
+       "ipa": "",
+       "meaning": "سعال",
+       "ex": "What's the matter? I have a cough."
+      },
+      {
+       "must": 0,
+       "term": "fever",
+       "ipa": "",
+       "meaning": "حمى",
+       "ex": "fever"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "What's the ___ ?",
+       "a": "matter",
+       "o": [
+        "matter",
+        "wrong"
+       ],
+       "why": ""
+      },
+      {
+       "q": "I ___ a toothache.",
+       "a": "have",
+       "o": [
+        "have",
+        "am"
+       ],
+       "why": ""
+      },
+      {
+       "q": "I'm ___ . I have a fever.",
+       "a": "ill",
+       "o": [
+        "ill",
+        "fine"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى toothache؟",
+       "a": "ألم أسنان",
+       "o": [
+        "ألم أسنان",
+        "بخير",
+        "مريض"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى fine؟",
+       "a": "بخير",
+       "o": [
+        "بخير",
+        "مريض",
+        "ألم أسنان"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "How are you? I'm not well.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "How are you? I'm not well.",
+       "o": [
+        "How are you? I'm not well.",
+        "What's the matter? I have a cough."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

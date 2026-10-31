@@ -1,0 +1,287 @@
+{
+ "id": "en-6-u5-l2",
+ "grade": 6,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 5 · Lesson 2: The Past",
+ "titleAr": "منذ زمن بعيد استخدم الناس الشموع.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "منذ زمن بعيد استخدم الناس الشموع.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "candle",
+       "ar": "شمعة",
+       "em": "🕯️"
+      },
+      {
+       "id": "v1",
+       "en": "well",
+       "ar": "بئر",
+       "em": "🪣"
+      },
+      {
+       "id": "v2",
+       "en": "letter",
+       "ar": "رسالة",
+       "em": "✉️"
+      },
+      {
+       "id": "v3",
+       "en": "used to",
+       "ar": "اعتاد",
+       "em": "🔙"
+      },
+      {
+       "id": "v4",
+       "en": "long ago",
+       "ar": "منذ زمن بعيد",
+       "em": "📜"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 70⁠–⁠71 · كتاب النشاط ص 58⁠–⁠59"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Past simple regular",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Long ago, people <b>used</b> candles.</div><div class=\"ex\">They got water from a <b>well</b>.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Long ago, people used candles. They got water from a well."
+      }
+     ]
+    }
+   ],
+   "lead": "use → used, carry → carried",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "People ___ candles.",
+           "a": "used",
+           "o": [
+            "used",
+            "use"
+           ]
+          },
+          {
+           "s": "They got water from a ___ .",
+           "a": "well",
+           "o": [
+            "well",
+            "candle"
+           ]
+          },
+          {
+           "s": "They ___ letters.",
+           "a": "wrote",
+           "o": [
+            "wrote",
+            "writed"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Long ago, people used candles.",
+          "They got water from a well."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Long ago, people used candles.",
+           "o": [
+            "Long ago, people used candles.",
+            "They got water from a well."
+           ]
+          },
+          {
+           "a": "They got water from a well.",
+           "o": [
+            "They got water from a well.",
+            "Long ago, people used candles."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "candle",
+       "ipa": "",
+       "meaning": "شمعة",
+       "ex": "Long ago, people used candles."
+      },
+      {
+       "must": 1,
+       "term": "well",
+       "ipa": "",
+       "meaning": "بئر",
+       "ex": "They got water from a well."
+      },
+      {
+       "must": 1,
+       "term": "letter",
+       "ipa": "",
+       "meaning": "رسالة",
+       "ex": "letter"
+      },
+      {
+       "must": 0,
+       "term": "used to",
+       "ipa": "",
+       "meaning": "اعتاد",
+       "ex": "Long ago, people used candles."
+      },
+      {
+       "must": 0,
+       "term": "long ago",
+       "ipa": "",
+       "meaning": "منذ زمن بعيد",
+       "ex": "Long ago, people used candles."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "People ___ candles.",
+       "a": "used",
+       "o": [
+        "used",
+        "use"
+       ],
+       "why": ""
+      },
+      {
+       "q": "They got water from a ___ .",
+       "a": "well",
+       "o": [
+        "well",
+        "candle"
+       ],
+       "why": ""
+      },
+      {
+       "q": "They ___ letters.",
+       "a": "wrote",
+       "o": [
+        "wrote",
+        "writed"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى candle؟",
+       "a": "شمعة",
+       "o": [
+        "شمعة",
+        "بئر",
+        "رسالة"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى well؟",
+       "a": "بئر",
+       "o": [
+        "بئر",
+        "شمعة",
+        "رسالة"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Long ago, people used candles.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Long ago, people used candles.",
+       "o": [
+        "Long ago, people used candles.",
+        "They got water from a well."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

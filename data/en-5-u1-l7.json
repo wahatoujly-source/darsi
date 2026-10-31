@@ -1,0 +1,337 @@
+{
+ "id": "en-5-u1-l7",
+ "grade": 5,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 1 · Lesson 7: Check my Understanding",
+ "titleAr": "مراجعة الوحدة — Our World",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "مراجعة الوحدة — Our World",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "Libya",
+       "ar": "ليبيا",
+       "em": "🇱🇾"
+      },
+      {
+       "id": "v1",
+       "en": "Egypt",
+       "ar": "مصر",
+       "em": "🇪🇬"
+      },
+      {
+       "id": "v2",
+       "en": "flag",
+       "ar": "علم",
+       "em": "🏳️"
+      },
+      {
+       "id": "v3",
+       "en": "star",
+       "ar": "نجمة",
+       "em": "⭐"
+      },
+      {
+       "id": "v4",
+       "en": "Libyan",
+       "ar": "ليبي",
+       "em": "🇱🇾"
+      },
+      {
+       "id": "v5",
+       "en": "Egyptian",
+       "ar": "مصري",
+       "em": "🇪🇬"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 20⁠–⁠21 · كتاب النشاط ص 16⁠–⁠17"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Review",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Where are you <b>from</b>? I'm from Algeria.</div><div class=\"ex\">The Libyan flag <b>is</b> red, black and green.</div><div class=\"ex\">I'm from Libya. I'm <b>Libyan</b>.</div><div class=\"ex\">Where's this tea <b>from</b>? It's from China.</div><div class=\"ex\">I speak Arabic and English.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Where are you from? I'm from Algeria. The Libyan flag is red, black and green. I'm from Libya. I'm Libyan. Where's this tea from? It's from China. I speak Arabic and English."
+      }
+     ]
+    }
+   ],
+   "lead": "نراجع أهم قواعد الوحدة وكلماتها: اقرأ الأمثلة بصوت عالٍ ثم حلّ التمارين.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "Where ___ he from?",
+           "a": "is",
+           "o": [
+            "is",
+            "are"
+           ]
+          },
+          {
+           "s": "The flag ___ a crescent and a star.",
+           "a": "has",
+           "o": [
+            "has",
+            "have"
+           ]
+          },
+          {
+           "s": "I'm from Libya. I'm ___ .",
+           "a": "Libyan",
+           "o": [
+            "Libyan",
+            "Libya"
+           ]
+          },
+          {
+           "s": "Where's this pizza ___ ?",
+           "a": "from",
+           "o": [
+            "from",
+            "in"
+           ]
+          },
+          {
+           "s": "She ___ English.",
+           "a": "speaks",
+           "o": [
+            "speaks",
+            "speak"
+           ]
+          },
+          {
+           "s": "The ___ of Libya is Tripoli.",
+           "a": "capital",
+           "o": [
+            "capital",
+            "currency"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Where are you from? I'm from Algeria.",
+          "The Libyan flag is red, black and green.",
+          "I'm from Libya. I'm Libyan.",
+          "Where's this tea from? It's from China."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Where are you from? I'm from Algeria.",
+           "o": [
+            "Where are you from? I'm from Algeria.",
+            "The Libyan flag is red, black and green.",
+            "I'm from Libya. I'm Libyan."
+           ]
+          },
+          {
+           "a": "The Libyan flag is red, black and green.",
+           "o": [
+            "The Libyan flag is red, black and green.",
+            "Where are you from? I'm from Algeria.",
+            "I'm from Libya. I'm Libyan."
+           ]
+          },
+          {
+           "a": "I'm from Libya. I'm Libyan.",
+           "o": [
+            "I'm from Libya. I'm Libyan.",
+            "Where are you from? I'm from Algeria.",
+            "The Libyan flag is red, black and green."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "Libya",
+       "ipa": "",
+       "meaning": "ليبيا",
+       "ex": "The Libyan flag is red, black and green."
+      },
+      {
+       "must": 1,
+       "term": "Egypt",
+       "ipa": "",
+       "meaning": "مصر",
+       "ex": "Egypt"
+      },
+      {
+       "must": 1,
+       "term": "flag",
+       "ipa": "",
+       "meaning": "علم",
+       "ex": "The Libyan flag is red, black and green."
+      },
+      {
+       "must": 0,
+       "term": "star",
+       "ipa": "",
+       "meaning": "نجمة",
+       "ex": "star"
+      },
+      {
+       "must": 0,
+       "term": "Libyan",
+       "ipa": "",
+       "meaning": "ليبي",
+       "ex": "The Libyan flag is red, black and green."
+      },
+      {
+       "must": 0,
+       "term": "Egyptian",
+       "ipa": "",
+       "meaning": "مصري",
+       "ex": "Egyptian"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "Where ___ he from?",
+       "a": "is",
+       "o": [
+        "is",
+        "are"
+       ],
+       "why": ""
+      },
+      {
+       "q": "The flag ___ a crescent and a star.",
+       "a": "has",
+       "o": [
+        "has",
+        "have"
+       ],
+       "why": ""
+      },
+      {
+       "q": "I'm from Libya. I'm ___ .",
+       "a": "Libyan",
+       "o": [
+        "Libyan",
+        "Libya"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى star؟",
+       "a": "نجمة",
+       "o": [
+        "نجمة",
+        "ليبيا",
+        "مصر"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى Egyptian؟",
+       "a": "مصري",
+       "o": [
+        "مصري",
+        "ليبيا",
+        "مصر"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Where are you from? I'm from Algeria.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Where are you from? I'm from Algeria.",
+       "o": [
+        "Where are you from? I'm from Algeria.",
+        "The Libyan flag is red, black and green.",
+        "I'm from Libya. I'm Libyan."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

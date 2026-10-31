@@ -1,0 +1,299 @@
+{
+ "id": "en-5-u2-l3",
+ "grade": 5,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 2 · Lesson 3: Things We Do Every Day",
+ "titleAr": "أنظف أسناني دائماً.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "أنظف أسناني دائماً.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "always",
+       "ar": "دائماً",
+       "em": "💯"
+      },
+      {
+       "id": "v1",
+       "en": "usually",
+       "ar": "عادةً",
+       "em": "🔁"
+      },
+      {
+       "id": "v2",
+       "en": "sometimes",
+       "ar": "أحياناً",
+       "em": "🔀"
+      },
+      {
+       "id": "v3",
+       "en": "never",
+       "ar": "أبداً",
+       "em": "🚫"
+      },
+      {
+       "id": "v4",
+       "en": "every day",
+       "ar": "كل يوم",
+       "em": "📅"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 30⁠–⁠31 · كتاب النشاط ص 24⁠–⁠25"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Adverbs of frequency",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">I <b>always</b> brush my teeth.</div><div class=\"ex\">I <b>sometimes</b> play football.</div><div class=\"ex\">I <b>never</b> go to bed late.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "I always brush my teeth. I sometimes play football. I never go to bed late."
+      }
+     ]
+    }
+   ],
+   "lead": "always / usually / sometimes / never قبل الفعل.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "I ___ brush my teeth. (100%)",
+           "a": "always",
+           "o": [
+            "always",
+            "never"
+           ]
+          },
+          {
+           "s": "I ___ go to bed late. (0%)",
+           "a": "never",
+           "o": [
+            "never",
+            "always"
+           ]
+          },
+          {
+           "s": "I ___ play football. (50%)",
+           "a": "sometimes",
+           "o": [
+            "sometimes",
+            "always"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "I always brush my teeth.",
+          "I sometimes play football.",
+          "I never go to bed late."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "I always brush my teeth.",
+           "o": [
+            "I always brush my teeth.",
+            "I sometimes play football.",
+            "I never go to bed late."
+           ]
+          },
+          {
+           "a": "I sometimes play football.",
+           "o": [
+            "I sometimes play football.",
+            "I always brush my teeth.",
+            "I never go to bed late."
+           ]
+          },
+          {
+           "a": "I never go to bed late.",
+           "o": [
+            "I never go to bed late.",
+            "I always brush my teeth.",
+            "I sometimes play football."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "always",
+       "ipa": "",
+       "meaning": "دائماً",
+       "ex": "I always brush my teeth."
+      },
+      {
+       "must": 1,
+       "term": "usually",
+       "ipa": "",
+       "meaning": "عادةً",
+       "ex": "usually"
+      },
+      {
+       "must": 1,
+       "term": "sometimes",
+       "ipa": "",
+       "meaning": "أحياناً",
+       "ex": "I sometimes play football."
+      },
+      {
+       "must": 0,
+       "term": "never",
+       "ipa": "",
+       "meaning": "أبداً",
+       "ex": "I never go to bed late."
+      },
+      {
+       "must": 0,
+       "term": "every day",
+       "ipa": "",
+       "meaning": "كل يوم",
+       "ex": "every day"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "I ___ brush my teeth. (100%)",
+       "a": "always",
+       "o": [
+        "always",
+        "never"
+       ],
+       "why": ""
+      },
+      {
+       "q": "I ___ go to bed late. (0%)",
+       "a": "never",
+       "o": [
+        "never",
+        "always"
+       ],
+       "why": ""
+      },
+      {
+       "q": "I ___ play football. (50%)",
+       "a": "sometimes",
+       "o": [
+        "sometimes",
+        "always"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى always؟",
+       "a": "دائماً",
+       "o": [
+        "دائماً",
+        "عادةً",
+        "أحياناً"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى usually؟",
+       "a": "عادةً",
+       "o": [
+        "عادةً",
+        "دائماً",
+        "أحياناً"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "I always brush my teeth.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "I always brush my teeth.",
+       "o": [
+        "I always brush my teeth.",
+        "I sometimes play football.",
+        "I never go to bed late."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

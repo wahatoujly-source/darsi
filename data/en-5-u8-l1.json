@@ -1,0 +1,337 @@
+{
+ "id": "en-5-u8-l1",
+ "grade": 5,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 8 · Lesson 1: The Challenge",
+ "titleAr": "التحدي — Revision (2)",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "التحدي — Revision (2)",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "countable",
+       "ar": "معدود",
+       "em": "🔢"
+      },
+      {
+       "id": "v1",
+       "en": "uncountable",
+       "ar": "غير معدود",
+       "em": "💧"
+      },
+      {
+       "id": "v2",
+       "en": "healthy",
+       "ar": "صحي",
+       "em": "🥦"
+      },
+      {
+       "id": "v3",
+       "en": "unhealthy",
+       "ar": "غير صحي",
+       "em": "🍟"
+      },
+      {
+       "id": "v4",
+       "en": "lake",
+       "ar": "بحيرة",
+       "em": "🏞️"
+      },
+      {
+       "id": "v5",
+       "en": "blanket",
+       "ar": "بطانية",
+       "em": "🧺"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 122 · كتاب النشاط ص 104"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Challenge",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">I can count apples: one apple, two apples.</div><div class=\"ex\">Vegetables are healthy.</div><div class=\"ex\">We <b>had</b> a picnic by the lake.</div><div class=\"ex\">There's a bank in the city centre.</div><div class=\"ex\">I help Mum at home.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "I can count apples: one apple, two apples. Vegetables are healthy. We had a picnic by the lake. There's a bank in the city centre. I help Mum at home."
+      }
+     ]
+    }
+   ],
+   "lead": "تحدٍّ يراجع الوحدات السابقة: كم نقطة تستطيع أن تجمع؟",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "___ apple",
+           "a": "an",
+           "o": [
+            "an",
+            "some"
+           ]
+          },
+          {
+           "s": "Too ___ sugar is bad.",
+           "a": "much",
+           "o": [
+            "much",
+            "many"
+           ]
+          },
+          {
+           "s": "We ___ a picnic.",
+           "a": "had",
+           "o": [
+            "had",
+            "have"
+           ]
+          },
+          {
+           "s": "We buy medicine at the ___ .",
+           "a": "pharmacy",
+           "o": [
+            "pharmacy",
+            "bank"
+           ]
+          },
+          {
+           "s": "I'm ___ the dishes.",
+           "a": "washing",
+           "o": [
+            "washing",
+            "wash"
+           ]
+          },
+          {
+           "s": "It's only two dinars. It's ___ .",
+           "a": "cheap",
+           "o": [
+            "cheap",
+            "expensive"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "I can count apples: one apple, two apples.",
+          "Vegetables are healthy.",
+          "We had a picnic by the lake.",
+          "There's a bank in the city centre."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "I can count apples: one apple, two apples.",
+           "o": [
+            "I can count apples: one apple, two apples.",
+            "Vegetables are healthy.",
+            "We had a picnic by the lake."
+           ]
+          },
+          {
+           "a": "Vegetables are healthy.",
+           "o": [
+            "Vegetables are healthy.",
+            "I can count apples: one apple, two apples.",
+            "We had a picnic by the lake."
+           ]
+          },
+          {
+           "a": "We had a picnic by the lake.",
+           "o": [
+            "We had a picnic by the lake.",
+            "I can count apples: one apple, two apples.",
+            "Vegetables are healthy."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "countable",
+       "ipa": "",
+       "meaning": "معدود",
+       "ex": "countable"
+      },
+      {
+       "must": 1,
+       "term": "uncountable",
+       "ipa": "",
+       "meaning": "غير معدود",
+       "ex": "uncountable"
+      },
+      {
+       "must": 1,
+       "term": "healthy",
+       "ipa": "",
+       "meaning": "صحي",
+       "ex": "Vegetables are healthy."
+      },
+      {
+       "must": 0,
+       "term": "unhealthy",
+       "ipa": "",
+       "meaning": "غير صحي",
+       "ex": "unhealthy"
+      },
+      {
+       "must": 0,
+       "term": "lake",
+       "ipa": "",
+       "meaning": "بحيرة",
+       "ex": "We had a picnic by the lake."
+      },
+      {
+       "must": 0,
+       "term": "blanket",
+       "ipa": "",
+       "meaning": "بطانية",
+       "ex": "blanket"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "___ apple",
+       "a": "an",
+       "o": [
+        "an",
+        "some"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Too ___ sugar is bad.",
+       "a": "much",
+       "o": [
+        "much",
+        "many"
+       ],
+       "why": ""
+      },
+      {
+       "q": "We ___ a picnic.",
+       "a": "had",
+       "o": [
+        "had",
+        "have"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى unhealthy؟",
+       "a": "غير صحي",
+       "o": [
+        "غير صحي",
+        "معدود",
+        "غير معدود"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى healthy؟",
+       "a": "صحي",
+       "o": [
+        "صحي",
+        "معدود",
+        "غير معدود"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "I can count apples: one apple, two apples.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "I can count apples: one apple, two apples.",
+       "o": [
+        "I can count apples: one apple, two apples.",
+        "Vegetables are healthy.",
+        "We had a picnic by the lake."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

@@ -1,0 +1,287 @@
+{
+ "id": "en-6-u5-l4",
+ "grade": 6,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 5 · Lesson 4: Our 21st Century",
+ "titleAr": "نعيش في القرن الحادي والعشرين.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "نعيش في القرن الحادي والعشرين.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "century",
+       "ar": "قرن",
+       "em": "💯"
+      },
+      {
+       "id": "v1",
+       "en": "robot",
+       "ar": "روبوت",
+       "em": "🤖"
+      },
+      {
+       "id": "v2",
+       "en": "computer",
+       "ar": "حاسوب",
+       "em": "💻"
+      },
+      {
+       "id": "v3",
+       "en": "technology",
+       "ar": "تقنية",
+       "em": "🛰️"
+      },
+      {
+       "id": "v4",
+       "en": "invent",
+       "ar": "يخترع",
+       "em": "💡"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 74⁠–⁠75 · كتاب النشاط ص 62⁠–⁠63"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Ordinal numbers",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">We live in the 21st century.</div><div class=\"ex\"><b>Robots</b> help people in factories.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "We live in the 21st century. Robots help people in factories."
+      }
+     ]
+    }
+   ],
+   "lead": "21st, 22nd, 23rd, 24th",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "We live in the 21___ century.",
+           "a": "st",
+           "o": [
+            "st",
+            "th"
+           ]
+          },
+          {
+           "s": "___ help people in factories.",
+           "a": "Robots",
+           "o": [
+            "Robots",
+            "Robot"
+           ]
+          },
+          {
+           "s": "Scientists ___ new things.",
+           "a": "invent",
+           "o": [
+            "invent",
+            "invents"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "We live in the 21st century.",
+          "Robots help people in factories."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "We live in the 21st century.",
+           "o": [
+            "We live in the 21st century.",
+            "Robots help people in factories."
+           ]
+          },
+          {
+           "a": "Robots help people in factories.",
+           "o": [
+            "Robots help people in factories.",
+            "We live in the 21st century."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "century",
+       "ipa": "",
+       "meaning": "قرن",
+       "ex": "We live in the 21st century."
+      },
+      {
+       "must": 1,
+       "term": "robot",
+       "ipa": "",
+       "meaning": "روبوت",
+       "ex": "Robots help people in factories."
+      },
+      {
+       "must": 1,
+       "term": "computer",
+       "ipa": "",
+       "meaning": "حاسوب",
+       "ex": "computer"
+      },
+      {
+       "must": 0,
+       "term": "technology",
+       "ipa": "",
+       "meaning": "تقنية",
+       "ex": "technology"
+      },
+      {
+       "must": 0,
+       "term": "invent",
+       "ipa": "",
+       "meaning": "يخترع",
+       "ex": "invent"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "We live in the 21___ century.",
+       "a": "st",
+       "o": [
+        "st",
+        "th"
+       ],
+       "why": ""
+      },
+      {
+       "q": "___ help people in factories.",
+       "a": "Robots",
+       "o": [
+        "Robots",
+        "Robot"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Scientists ___ new things.",
+       "a": "invent",
+       "o": [
+        "invent",
+        "invents"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى robot؟",
+       "a": "روبوت",
+       "o": [
+        "روبوت",
+        "قرن",
+        "حاسوب"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى computer؟",
+       "a": "حاسوب",
+       "o": [
+        "حاسوب",
+        "قرن",
+        "روبوت"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "We live in the 21st century.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "We live in the 21st century.",
+       "o": [
+        "We live in the 21st century.",
+        "Robots help people in factories."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

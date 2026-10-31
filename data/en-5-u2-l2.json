@@ -1,0 +1,299 @@
+{
+ "id": "en-5-u2-l2",
+ "grade": 5,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 2 · Lesson 2: Mr Dan's Day",
+ "titleAr": "يستيقظ السيد دان في السادسة.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "يستيقظ السيد دان في السادسة.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "gets up",
+       "ar": "يستيقظ",
+       "em": "⏰"
+      },
+      {
+       "id": "v1",
+       "en": "drives",
+       "ar": "يقود",
+       "em": "🚗"
+      },
+      {
+       "id": "v2",
+       "en": "works",
+       "ar": "يعمل",
+       "em": "💼"
+      },
+      {
+       "id": "v3",
+       "en": "has lunch",
+       "ar": "يتغدى",
+       "em": "🍽️"
+      },
+      {
+       "id": "v4",
+       "en": "goes home",
+       "ar": "يعود للبيت",
+       "em": "🏠"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 28⁠–⁠29 · كتاب النشاط ص 22⁠–⁠23"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "he/she + -s",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">Mr Dan <b>gets</b> up at six o'clock.</div><div class=\"ex\">He <b>drives</b> to work.</div><div class=\"ex\">He <b>goes</b> home at five.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "Mr Dan gets up at six o'clock. He drives to work. He goes home at five."
+      }
+     ]
+    }
+   ],
+   "lead": "He gets, he drives, he goes.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "Mr Dan ___ up at six.",
+           "a": "gets",
+           "o": [
+            "gets",
+            "get"
+           ]
+          },
+          {
+           "s": "He ___ to work.",
+           "a": "drives",
+           "o": [
+            "drives",
+            "drive"
+           ]
+          },
+          {
+           "s": "He ___ home at five.",
+           "a": "goes",
+           "o": [
+            "goes",
+            "go"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "Mr Dan gets up at six o'clock.",
+          "He drives to work.",
+          "He goes home at five."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "Mr Dan gets up at six o'clock.",
+           "o": [
+            "Mr Dan gets up at six o'clock.",
+            "He drives to work.",
+            "He goes home at five."
+           ]
+          },
+          {
+           "a": "He drives to work.",
+           "o": [
+            "He drives to work.",
+            "Mr Dan gets up at six o'clock.",
+            "He goes home at five."
+           ]
+          },
+          {
+           "a": "He goes home at five.",
+           "o": [
+            "He goes home at five.",
+            "Mr Dan gets up at six o'clock.",
+            "He drives to work."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "gets up",
+       "ipa": "",
+       "meaning": "يستيقظ",
+       "ex": "Mr Dan gets up at six o'clock."
+      },
+      {
+       "must": 1,
+       "term": "drives",
+       "ipa": "",
+       "meaning": "يقود",
+       "ex": "He drives to work."
+      },
+      {
+       "must": 1,
+       "term": "works",
+       "ipa": "",
+       "meaning": "يعمل",
+       "ex": "works"
+      },
+      {
+       "must": 0,
+       "term": "has lunch",
+       "ipa": "",
+       "meaning": "يتغدى",
+       "ex": "has lunch"
+      },
+      {
+       "must": 0,
+       "term": "goes home",
+       "ipa": "",
+       "meaning": "يعود للبيت",
+       "ex": "He goes home at five."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "Mr Dan ___ up at six.",
+       "a": "gets",
+       "o": [
+        "gets",
+        "get"
+       ],
+       "why": ""
+      },
+      {
+       "q": "He ___ to work.",
+       "a": "drives",
+       "o": [
+        "drives",
+        "drive"
+       ],
+       "why": ""
+      },
+      {
+       "q": "He ___ home at five.",
+       "a": "goes",
+       "o": [
+        "goes",
+        "go"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى has lunch؟",
+       "a": "يتغدى",
+       "o": [
+        "يتغدى",
+        "يستيقظ",
+        "يقود"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى works؟",
+       "a": "يعمل",
+       "o": [
+        "يعمل",
+        "يستيقظ",
+        "يقود"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "Mr Dan gets up at six o'clock.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "Mr Dan gets up at six o'clock.",
+       "o": [
+        "Mr Dan gets up at six o'clock.",
+        "He drives to work.",
+        "He goes home at five."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

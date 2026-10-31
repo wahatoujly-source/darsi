@@ -1,0 +1,337 @@
+{
+ "id": "en-5-u1-l8",
+ "grade": 5,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 1 · Lesson 8: Let's sing!",
+ "titleAr": "نردّد بإيقاع — Our World",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "نردّد بإيقاع — Our World",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "capital",
+       "ar": "عاصمة",
+       "em": "🏙️"
+      },
+      {
+       "id": "v1",
+       "en": "population",
+       "ar": "سكان",
+       "em": "👥"
+      },
+      {
+       "id": "v2",
+       "en": "language",
+       "ar": "لغة",
+       "em": "🗣️"
+      },
+      {
+       "id": "v3",
+       "en": "speak",
+       "ar": "يتحدث",
+       "em": "💬"
+      },
+      {
+       "id": "v4",
+       "en": "dates",
+       "ar": "تمر",
+       "em": "🌴"
+      },
+      {
+       "id": "v5",
+       "en": "tea",
+       "ar": "شاي",
+       "em": "🍵"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 22⁠–⁠23 · كتاب النشاط ص 18⁠–⁠19"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Chant",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">The <b>capital</b> of Libya is Tripoli.</div><div class=\"ex\">I speak Arabic and English.</div><div class=\"ex\">Where's this tea <b>from</b>? It's from China.</div><div class=\"ex\">I'm <b>from</b> Libya. I'm Libyan.</div><div class=\"ex\">The <b>Libyan</b> flag is red, black and green.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "The capital of Libya is Tripoli. I speak Arabic and English. Where's this tea from? It's from China. I'm from Libya. I'm Libyan. The Libyan flag is red, black and green."
+      }
+     ]
+    }
+   ],
+   "lead": "نردّد جمل الوحدة بإيقاع ونصفّق مع المقاطع المنبورة — يمكنك الاستماع إلى أغنية الكتاب مع معلمك.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "The ___ of Libya is Tripoli.",
+           "a": "capital",
+           "o": [
+            "capital",
+            "currency"
+           ]
+          },
+          {
+           "s": "She ___ English.",
+           "a": "speaks",
+           "o": [
+            "speaks",
+            "speak"
+           ]
+          },
+          {
+           "s": "Where's this pizza ___ ?",
+           "a": "from",
+           "o": [
+            "from",
+            "in"
+           ]
+          },
+          {
+           "s": "I'm from Libya. I'm ___ .",
+           "a": "Libyan",
+           "o": [
+            "Libyan",
+            "Libya"
+           ]
+          },
+          {
+           "s": "The flag ___ a crescent and a star.",
+           "a": "has",
+           "o": [
+            "has",
+            "have"
+           ]
+          },
+          {
+           "s": "Where ___ he from?",
+           "a": "is",
+           "o": [
+            "is",
+            "are"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "The capital of Libya is Tripoli.",
+          "I speak Arabic and English.",
+          "Where's this tea from? It's from China.",
+          "I'm from Libya. I'm Libyan."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "The capital of Libya is Tripoli.",
+           "o": [
+            "The capital of Libya is Tripoli.",
+            "I speak Arabic and English.",
+            "Where's this tea from? It's from China."
+           ]
+          },
+          {
+           "a": "I speak Arabic and English.",
+           "o": [
+            "I speak Arabic and English.",
+            "The capital of Libya is Tripoli.",
+            "Where's this tea from? It's from China."
+           ]
+          },
+          {
+           "a": "Where's this tea from? It's from China.",
+           "o": [
+            "Where's this tea from? It's from China.",
+            "The capital of Libya is Tripoli.",
+            "I speak Arabic and English."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "capital",
+       "ipa": "",
+       "meaning": "عاصمة",
+       "ex": "The capital of Libya is Tripoli."
+      },
+      {
+       "must": 1,
+       "term": "population",
+       "ipa": "",
+       "meaning": "سكان",
+       "ex": "population"
+      },
+      {
+       "must": 1,
+       "term": "language",
+       "ipa": "",
+       "meaning": "لغة",
+       "ex": "language"
+      },
+      {
+       "must": 0,
+       "term": "speak",
+       "ipa": "",
+       "meaning": "يتحدث",
+       "ex": "I speak Arabic and English."
+      },
+      {
+       "must": 0,
+       "term": "dates",
+       "ipa": "",
+       "meaning": "تمر",
+       "ex": "dates"
+      },
+      {
+       "must": 0,
+       "term": "tea",
+       "ipa": "",
+       "meaning": "شاي",
+       "ex": "Where's this tea from? It's from China."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "The ___ of Libya is Tripoli.",
+       "a": "capital",
+       "o": [
+        "capital",
+        "currency"
+       ],
+       "why": ""
+      },
+      {
+       "q": "She ___ English.",
+       "a": "speaks",
+       "o": [
+        "speaks",
+        "speak"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Where's this pizza ___ ?",
+       "a": "from",
+       "o": [
+        "from",
+        "in"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى capital؟",
+       "a": "عاصمة",
+       "o": [
+        "عاصمة",
+        "سكان",
+        "لغة"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى language؟",
+       "a": "لغة",
+       "o": [
+        "لغة",
+        "عاصمة",
+        "سكان"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "The capital of Libya is Tripoli.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "The capital of Libya is Tripoli.",
+       "o": [
+        "The capital of Libya is Tripoli.",
+        "I speak Arabic and English.",
+        "Where's this tea from? It's from China."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

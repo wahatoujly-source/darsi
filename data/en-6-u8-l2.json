@@ -1,0 +1,337 @@
+{
+ "id": "en-6-u8-l2",
+ "grade": 6,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 8 · Lesson 2: My Progress",
+ "titleAr": "تقدّمي — Revision (2)",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "تقدّمي — Revision (2)",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "past",
+       "ar": "الماضي",
+       "em": "⏪"
+      },
+      {
+       "id": "v1",
+       "en": "present",
+       "ar": "الحاضر",
+       "em": "⏺️"
+      },
+      {
+       "id": "v2",
+       "en": "electricity",
+       "ar": "كهرباء",
+       "em": "⚡"
+      },
+      {
+       "id": "v3",
+       "en": "smartphone",
+       "ar": "هاتف ذكي",
+       "em": "📱"
+      },
+      {
+       "id": "v4",
+       "en": "planet",
+       "ar": "كوكب",
+       "em": "🪐"
+      },
+      {
+       "id": "v5",
+       "en": "Earth",
+       "ar": "الأرض",
+       "em": "🌍"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 123 · كتاب النشاط ص 105"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "My progress",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">In the past, people <b>travelled</b> by camel.</div><div class=\"ex\">Now we <b>have</b> electricity.</div><div class=\"ex\">The Earth <b>is</b> a planet.</div><div class=\"ex\"><b>First</b>, cut the tomatoes.</div><div class=\"ex\">My grandma <b>is</b> cooking bazeen.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "In the past, people travelled by camel. Now we have electricity. The Earth is a planet. First, cut the tomatoes. My grandma is cooking bazeen."
+      }
+     ]
+    }
+   ],
+   "lead": "قيّم نفسك: ماذا أستطيع أن أفعل الآن بالإنجليزية؟",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "In the past, people ___ by camel.",
+           "a": "travelled",
+           "o": [
+            "travelled",
+            "travel"
+           ]
+          },
+          {
+           "s": "Now we ___ electricity.",
+           "a": "have",
+           "o": [
+            "have",
+            "had"
+           ]
+          },
+          {
+           "s": "The Sun is a ___ .",
+           "a": "star",
+           "o": [
+            "star",
+            "planet"
+           ]
+          },
+          {
+           "s": "___ , cut the tomatoes.",
+           "a": "First",
+           "o": [
+            "First",
+            "Last"
+           ]
+          },
+          {
+           "s": "Grandma ___ cooking.",
+           "a": "is",
+           "o": [
+            "is",
+            "are"
+           ]
+          },
+          {
+           "s": "___ play with matches.",
+           "a": "Don't",
+           "o": [
+            "Don't",
+            "Do"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "In the past, people travelled by camel.",
+          "Now we have electricity.",
+          "The Earth is a planet.",
+          "First, cut the tomatoes."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "In the past, people travelled by camel.",
+           "o": [
+            "In the past, people travelled by camel.",
+            "Now we have electricity.",
+            "The Earth is a planet."
+           ]
+          },
+          {
+           "a": "Now we have electricity.",
+           "o": [
+            "Now we have electricity.",
+            "In the past, people travelled by camel.",
+            "The Earth is a planet."
+           ]
+          },
+          {
+           "a": "The Earth is a planet.",
+           "o": [
+            "The Earth is a planet.",
+            "In the past, people travelled by camel.",
+            "Now we have electricity."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "past",
+       "ipa": "",
+       "meaning": "الماضي",
+       "ex": "In the past, people travelled by camel."
+      },
+      {
+       "must": 1,
+       "term": "present",
+       "ipa": "",
+       "meaning": "الحاضر",
+       "ex": "present"
+      },
+      {
+       "must": 1,
+       "term": "electricity",
+       "ipa": "",
+       "meaning": "كهرباء",
+       "ex": "Now we have electricity."
+      },
+      {
+       "must": 0,
+       "term": "smartphone",
+       "ipa": "",
+       "meaning": "هاتف ذكي",
+       "ex": "smartphone"
+      },
+      {
+       "must": 0,
+       "term": "planet",
+       "ipa": "",
+       "meaning": "كوكب",
+       "ex": "The Earth is a planet."
+      },
+      {
+       "must": 0,
+       "term": "Earth",
+       "ipa": "",
+       "meaning": "الأرض",
+       "ex": "The Earth is a planet."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "In the past, people ___ by camel.",
+       "a": "travelled",
+       "o": [
+        "travelled",
+        "travel"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Now we ___ electricity.",
+       "a": "have",
+       "o": [
+        "have",
+        "had"
+       ],
+       "why": ""
+      },
+      {
+       "q": "The Sun is a ___ .",
+       "a": "star",
+       "o": [
+        "star",
+        "planet"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى planet؟",
+       "a": "كوكب",
+       "o": [
+        "كوكب",
+        "الماضي",
+        "الحاضر"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى present؟",
+       "a": "الحاضر",
+       "o": [
+        "الحاضر",
+        "الماضي",
+        "كهرباء"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "In the past, people travelled by camel.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "In the past, people travelled by camel.",
+       "o": [
+        "In the past, people travelled by camel.",
+        "Now we have electricity.",
+        "The Earth is a planet."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}

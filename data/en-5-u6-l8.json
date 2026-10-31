@@ -1,0 +1,287 @@
+{
+ "id": "en-5-u6-l8",
+ "grade": 5,
+ "subject": "en",
+ "stage": "primary-4-6",
+ "lang": "en",
+ "title": "Unit 6 · Lesson 8: The City Song",
+ "titleAr": "المدينة مزدحمة.",
+ "steps": [
+  {
+   "title": "المفردات",
+   "eyebrow": "الخطوة ١ — المفردات",
+   "heading": "المدينة مزدحمة.",
+   "blocks": [
+    {
+     "type": "vocab",
+     "items": [
+      {
+       "id": "v0",
+       "en": "city",
+       "ar": "مدينة",
+       "em": "🏙️"
+      },
+      {
+       "id": "v1",
+       "en": "busy",
+       "ar": "مزدحم",
+       "em": "🚗"
+      },
+      {
+       "id": "v2",
+       "en": "buildings",
+       "ar": "مبانٍ",
+       "em": "🏢"
+      },
+      {
+       "id": "v3",
+       "en": "streets",
+       "ar": "شوارع",
+       "em": "🛣️"
+      },
+      {
+       "id": "v4",
+       "en": "people",
+       "ar": "ناس",
+       "em": "👥"
+      }
+     ]
+    }
+   ],
+   "lead": "اضغط على كل بطاقة لتسمع الكلمة وردّدها بصوت عالٍ. كتاب التلميذ ص 100⁠–⁠101 · كتاب النشاط ص 86⁠–⁠87"
+  },
+  {
+   "title": "القاعدة",
+   "eyebrow": "الخطوة ٢ — القاعدة",
+   "heading": "Rhythm and stress",
+   "blocks": [
+    {
+     "type": "panel",
+     "title": "أمثلة",
+     "html": "<div class=\"ex\">The city is <b>busy</b>.</div><div class=\"ex\">There are tall <b>buildings</b> and long streets.</div>",
+     "blocks": [
+      {
+       "type": "say",
+       "label": "▶ اسمع",
+       "text": "The city is busy. There are tall buildings and long streets."
+      }
+     ]
+    }
+   ],
+   "lead": "نردد الجمل بإيقاع ونضغط على الكلمات المهمة: The CITY is BUSY.",
+   "starOnVisit": true
+  },
+  {
+   "title": "تدرّب",
+   "eyebrow": "الخطوة ٣ — تدرّب",
+   "heading": "تمارين تُصحَّح فوراً",
+   "blocks": [
+    {
+     "type": "tabs",
+     "star": true,
+     "tabs": [
+      {
+       "label": "اختر الكلمة",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "gap",
+         "items": [
+          {
+           "s": "The city is ___ .",
+           "a": "busy",
+           "o": [
+            "busy",
+            "quiet"
+           ]
+          },
+          {
+           "s": "There are tall ___ .",
+           "a": "buildings",
+           "o": [
+            "buildings",
+            "building"
+           ]
+          },
+          {
+           "s": "Many ___ live in the city.",
+           "a": "people",
+           "o": [
+            "people",
+            "peoples"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "رتّب الجملة",
+       "blocks": [
+        {
+         "type": "order",
+         "sentences": [
+          "The city is busy.",
+          "There are tall buildings and long streets."
+         ]
+        }
+       ]
+      },
+      {
+       "label": "استمع واختر",
+       "blocks": [
+        {
+         "type": "mcq",
+         "mode": "listen",
+         "items": [
+          {
+           "a": "The city is busy.",
+           "o": [
+            "The city is busy.",
+            "There are tall buildings and long streets."
+           ]
+          },
+          {
+           "a": "There are tall buildings and long streets.",
+           "o": [
+            "There are tall buildings and long streets.",
+            "The city is busy."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "lead": "أكمل التمارين لتأخذ النجمة."
+  },
+  {
+   "title": "احفظ",
+   "eyebrow": "الخطوة ٤ — احفظ",
+   "heading": "كلمات يجب أن تحفظها",
+   "blocks": [
+    {
+     "type": "keywords",
+     "star": true,
+     "lang": "en",
+     "intro": "<b>انتبه جيداً!</b> هذه أهم كلمات الدرس، وستتكرر معك في الدروس القادمة وفي الامتحان. <b>اسمعها، وردّدها بصوت عالٍ</b>. الكلمات ذات الإطار الأصفر <b>ضرورية جداً</b>.",
+     "items": [
+      {
+       "must": 1,
+       "term": "city",
+       "ipa": "",
+       "meaning": "مدينة",
+       "ex": "The city is busy."
+      },
+      {
+       "must": 1,
+       "term": "busy",
+       "ipa": "",
+       "meaning": "مزدحم",
+       "ex": "The city is busy."
+      },
+      {
+       "must": 1,
+       "term": "buildings",
+       "ipa": "",
+       "meaning": "مبانٍ",
+       "ex": "There are tall buildings and long streets."
+      },
+      {
+       "must": 0,
+       "term": "streets",
+       "ipa": "",
+       "meaning": "شوارع",
+       "ex": "There are tall buildings and long streets."
+      },
+      {
+       "must": 0,
+       "term": "people",
+       "ipa": "",
+       "meaning": "ناس",
+       "ex": "people"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "اختبار",
+   "eyebrow": "الخطوة ٥ — اختبار",
+   "heading": "اختبر نفسك",
+   "blocks": [
+    {
+     "type": "quiz",
+     "star": true,
+     "pass": 5,
+     "items": [
+      {
+       "q": "The city is ___ .",
+       "a": "busy",
+       "o": [
+        "busy",
+        "quiet"
+       ],
+       "why": ""
+      },
+      {
+       "q": "There are tall ___ .",
+       "a": "buildings",
+       "o": [
+        "buildings",
+        "building"
+       ],
+       "why": ""
+      },
+      {
+       "q": "Many ___ live in the city.",
+       "a": "people",
+       "o": [
+        "people",
+        "peoples"
+       ],
+       "why": ""
+      },
+      {
+       "q": "ما معنى city؟",
+       "a": "مدينة",
+       "o": [
+        "مدينة",
+        "مزدحم",
+        "مبانٍ"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "q": "ما معنى streets؟",
+       "a": "شوارع",
+       "o": [
+        "شوارع",
+        "مدينة",
+        "مزدحم"
+       ],
+       "why": "",
+       "ar": true
+      },
+      {
+       "type": "listen",
+       "say": "The city is busy.",
+       "q": "استمع: ماذا قال المتحدث؟",
+       "a": "The city is busy.",
+       "o": [
+        "The city is busy.",
+        "There are tall buildings and long streets."
+       ],
+       "why": ""
+      }
+     ]
+    }
+   ],
+   "lead": "6 أسئلة. تنجح بـ 5 من 6."
+  }
+ ],
+ "characters": {}
+}
