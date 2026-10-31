@@ -1,0 +1,415 @@
+// المجتهد — الحسابات: الدخول (هاتف، إيميل، Google)، الأدوار، ملفات الأبناء، حفظ التقدّم في السحابة.
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js';
+import { getAuth, onAuthStateChanged, signOut, GoogleAuthProvider, signInWithPopup, signInWithRedirect,
+  signInWithEmailAndPassword, createUserWithEmailAndPassword,
+  sendPasswordResetEmail, updateProfile } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js';
+import { getFunctions, httpsCallable } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-functions.js';
+import { getFirestore, doc, getDoc, setDoc, getDocs, collection, deleteDoc, serverTimestamp, query, where }
+  from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js';
+
+const firebaseConfig = {
+  apiKey: 'AIzaSyDiTpH5RF5c1Wd9M6RKy-j22mTeOBGKr9g',
+  authDomain: 'mujtahid-810d7.firebaseapp.com',
+  projectId: 'mujtahid-810d7',
+  storageBucket: 'mujtahid-810d7.firebasestorage.app',
+  messagingSenderId: '461631006811',
+  appId: '1:461631006811:web:fb082c0b138771f02cf77e',
+  measurementId: 'G-3JS9RCT2QM'
+};
+const fb = initializeApp(firebaseConfig);
+const auth = getAuth(fb); auth.languageCode = 'ar';
+const db = getFirestore(fb);
+const fns = getFunctions(fb, 'europe-west1');
+const call = (name, data) => httpsCallable(fns, name)(data).then(r => r.data);
+const fnErr = e => (e && e.message && !/^internal$|^INTERNAL$/.test(e.message)) ? e.message : 'تعذّر الاتصال بالخادم. حاول لاحقاً.';
+
+const D = window.DARSI; const { el, go, store } = D;
+const deviceId = (() => { let d = store.get('device_id', null); if (!d) { d = 'd' + crypto.getRandomValues(new Uint32Array(4)).join(''); store.set('device_id', d); } return d; })();
+const MAX_KIDS = 5;
+const isAdult = () => !!(ACC.profile && ['parent', 'teacher'].includes(ACC.profile.role));
+const kidsOf = () => ACC.profiles.filter(p => p.id !== 'me');
+const AVATARS = ['🦁','🐯','🐼','🐨','🦊','🐸','🐵','🦄','🐢','🐬','🦉','🐝'];
+const ROLES = { student: ['🧒', 'طالب', 'أدرس دروسي بنفسي'], parent: ['👨‍👩‍👧', 'ولي أمر', 'أتابع حتى 5 من أبنائي'], teacher: ['👩‍🏫', 'معلم', 'أستعمل الدروس مع طلابي، ويمكنني إضافة أبنائي'] };
+const GRADES = [['1','الأول'],['2','الثاني'],['3','الثالث'],['4','الرابع'],['5','الخامس'],['6','السادس'],['7','السابع'],['8','الثامن'],['9','التاسع']];
+const gradeName = g => (GRADES.find(x => x[0] === String(g)) || [, ''])[1];
+
+const ACC = window.ACC = { user: null, profile: null, profiles: [], pid: store.get('acc_pid', null), ready: false };
+
+/* ---------- Arabic error messages ---------- */
+const ERR = {
+  'auth/invalid-phone-number': 'رقم الهاتف غير صحيح.',
+  'auth/invalid-verification-code': 'الرمز غير صحيح. تأكد منه وحاول مرة أخرى.',
+  'auth/code-expired': 'انتهت صلاحية الرمز. اطلب رمزاً جديداً.',
+  'auth/too-many-requests': 'محاولات كثيرة. انتظر قليلاً ثم حاول مرة أخرى.',
+  'auth/invalid-email': 'البريد الإلكتروني غير صحيح.',
+  'auth/invalid-credential': 'البريد أو كلمة المرور غير صحيحة.',
+  'auth/wrong-password': 'كلمة المرور غير صحيحة.',
+  'auth/user-not-found': 'لا يوجد حساب بهذا البريد. أنشئ حساباً جديداً.',
+  'auth/email-already-in-use': 'هذا البريد مسجّل من قبل. ادخل بكلمة المرور.',
+  'auth/weak-password': 'كلمة المرور قصيرة. اكتب 6 أحرف أو أكثر.',
+  'auth/network-request-failed': 'لا يوجد اتصال بالإنترنت.',
+  'auth/popup-closed-by-user': 'أُغلقت نافذة جوجل قبل إتمام الدخول.',
+  'auth/unauthorized-domain': 'هذا الموقع غير مسموح له بالدخول بعد (Authorized domains).',
+  'auth/operation-not-allowed': 'طريقة الدخول هذه غير مفعّلة بعد.'
+};
+const errMsg = e => ERR[e && e.code] || 'حدث خطأ غير متوقع. حاول مرة أخرى.';
+const fbk = (box, cls, text) => { box.innerHTML = ''; box.append(el('div', { class: 'feedback ' + cls, text })); };
+
+/* ---------- Libyan phone numbers: 091/092/093/094/095 ---------- */
+const PHONE_DOMAIN = '@phone.mujtahid.ly';
+const phoneEmail = n => n.slice(1) + PHONE_DOMAIN;               // +218912345678 -> 218912345678@phone.mujtahid.ly
+const phoneOf = u => u && u.email && u.email.endsWith(PHONE_DOMAIN) ? '+' + u.email.slice(0, -PHONE_DOMAIN.length) : null;
+function libyanPhone(raw) {
+  const d = String(raw).replace(/[^\d٠-٩]/g, '').replace(/[٠-٩]/g, c => '٠١٢٣٤٥٦٧٨٩'.indexOf(c));
+  const m = /^(?:00218|218|0)?(9[1-5]\d{7})$/.exec(d);
+  return m ? '+218' + m[1] : null;
+}
+
+/* ---------- Firestore paths ---------- */
+const uref = () => doc(db, 'users', ACC.user.uid);
+const pcol = () => collection(db, 'users', ACC.user.uid, 'profiles');
+const pref = pid => doc(db, 'users', ACC.user.uid, 'profiles', pid);
+const prog = (pid, lid) => doc(db, 'users', ACC.user.uid, 'profiles', pid, 'progress', lid);
+
+async function loadProfiles() { const s = await getDocs(pcol()); ACC.profiles = s.docs.map(d => ({ id: d.id, ...d.data() })); }
+
+/* progress for the active child lives in localStorage under p_<pid>_done_<lesson> (see store in index.html) */
+async function pullProgress(pid) {
+  try { const s = await getDocs(collection(db, 'users', ACC.user.uid, 'profiles', pid, 'progress'));
+    s.forEach(d => { try { localStorage.setItem('darsi_p_' + pid + '_done_' + d.id, JSON.stringify(d.data().done || [])); } catch (e) {} });
+  } catch (e) { console.warn('progress', e); }
+}
+/* first profile inherits whatever the child did on this device before signing in */
+async function migrateLocal(pid) {
+  const keys = []; for (let i = 0; i < localStorage.length; i++) { const k = localStorage.key(i); if (/^darsi_done_/.test(k)) keys.push(k); }
+  for (const k of keys) { const lid = k.slice('darsi_done_'.length); let done = []; try { done = JSON.parse(localStorage.getItem(k)) || []; } catch (e) {}
+    if (done.length) { localStorage.setItem('darsi_p_' + pid + '_' + k.slice(6), JSON.stringify(done)); setDoc(prog(pid, lid), { done, at: serverTimestamp() }).catch(() => {}); } }
+}
+ACC.saveProgress = (lid, done) => { if (!ACC.user || !ACC.pid) return; setDoc(prog(ACC.pid, lid), { done, at: serverTimestamp() }).catch(e => console.warn('save', e)); };
+
+async function setActive(pid) {
+  ACC.pid = pid; store.set('acc_pid', pid);
+  if (pid && ACC.user) await pullProgress(pid);
+}
+const activeProfile = () => ACC.profiles.find(p => p.id === ACC.pid) || null;
+
+/* ---------- header pill ---------- */
+ACC.pill = () => {
+  if (!ACC.ready) return null;
+  if (!ACC.user) return el('button', { class: 'pill', onclick: () => go('login'), text: '👤 دخول' });
+  const p = activeProfile();
+  return el('button', { class: 'pill', onclick: () => go(isAdult() ? 'who' : 'account'), text: (p ? (p.avatar || '🙂') + ' ' + p.name : '👤 حسابي') });
+};
+
+/* ---------- pages ---------- */
+const page = (title, sub, back) => { D.root.innerHTML = ''; D.root.append(D.bar(title, sub, back)); const s = el('section', { class: 'stack acc' }); D.root.append(s); return s; };
+
+function renderLogin() {
+  if (ACC.user) { go(ACC.profile ? 'account' : 'onboard'); return; }
+  const s = page('الدخول', 'سجّل لتحفظ نجومك وتقدّمك على أي جهاز', 'home');
+  const msg = el('div');
+  // Google
+  const gBtn = el('button', { class: 'btn accbtn', onclick: async () => {
+    msg.innerHTML = ''; const pr = new GoogleAuthProvider(); pr.setCustomParameters({ prompt: 'select_account' });
+    try { await signInWithPopup(auth, pr); }
+    catch (e) { if (['auth/popup-blocked', 'auth/operation-not-supported-in-this-environment', 'auth/cancelled-popup-request'].includes(e.code)) await signInWithRedirect(auth, pr); else fbk(msg, 'bad', errMsg(e)); }
+  } }, el('b', { class: 'gl', text: 'G' }), 'الدخول بحساب Google');
+  // Phone + password (no SMS here: SMS is sent only when the person subscribes, see ACC.verifyPhone)
+  const ph = el('input', { type: 'tel', inputmode: 'numeric', placeholder: '09X XXX XXXX', 'aria-label': 'رقم الهاتف', autocomplete: 'tel' });
+  const ppw = el('input', { type: 'password', placeholder: 'كلمة المرور (6 أحرف أو أكثر)', 'aria-label': 'كلمة المرور', autocomplete: 'current-password' });
+  const phoneGo = async create => { msg.innerHTML = ''; const n = libyanPhone(ph.value);
+    if (!n) { fbk(msg, 'bad', 'اكتب رقماً ليبياً يبدأ بـ 091 أو 092 أو 093 أو 094 أو 095.'); return; }
+    try { create ? await createUserWithEmailAndPassword(auth, phoneEmail(n), ppw.value) : await signInWithEmailAndPassword(auth, phoneEmail(n), ppw.value); }
+    catch (e) { fbk(msg, 'bad', e.code === 'auth/email-already-in-use' ? 'هذا الرقم مسجّل من قبل. اضغط «دخول».' : e.code === 'auth/invalid-credential' ? 'الرقم أو كلمة المرور غير صحيحة.' : errMsg(e)); } };
+  const pforgot = el('button', { class: 'linkbtn', text: 'نسيت كلمة المرور؟', onclick: () => fbk(msg, 'info', 'تواصل معنا لإعادة تعيين كلمة المرور. وإذا كان رقمك مؤكداً (بعد الاشتراك) ستتمكن قريباً من إعادة تعيينها برسالة نصية.') });
+  // Email
+  const em = el('input', { type: 'email', placeholder: 'example@gmail.com', 'aria-label': 'البريد الإلكتروني', autocomplete: 'email' });
+  const pw = el('input', { type: 'password', placeholder: 'كلمة المرور (6 أحرف أو أكثر)', 'aria-label': 'كلمة المرور', autocomplete: 'current-password' });
+  const emailGo = async create => { msg.innerHTML = '';
+    try { create ? await createUserWithEmailAndPassword(auth, em.value.trim(), pw.value) : await signInWithEmailAndPassword(auth, em.value.trim(), pw.value); }
+    catch (e) { fbk(msg, 'bad', errMsg(e)); } };
+  const forgot = el('button', { class: 'linkbtn', text: 'نسيت كلمة المرور؟', onclick: async () => {
+    if (!em.value.trim()) { fbk(msg, 'info', 'اكتب بريدك أولاً ثم اضغط «نسيت كلمة المرور».'); return; }
+    try { await sendPasswordResetEmail(auth, em.value.trim()); fbk(msg, 'ok', 'أرسلنا رابط تغيير كلمة المرور إلى بريدك.'); } catch (e) { fbk(msg, 'bad', errMsg(e)); } } });
+  s.append(
+    el('div', { class: 'panel accbox' }, gBtn),
+    el('div', { class: 'panel accbox' }, el('b', { text: '📱 رقم الهاتف' }), ph, ppw,
+      el('div', { class: 'row', style: 'gap:8px;flex-wrap:wrap' }, el('button', { class: 'btn', text: 'دخول', onclick: () => phoneGo(false) }), el('button', { class: 'btn ghost', text: 'حساب جديد', onclick: () => phoneGo(true) }), pforgot)),
+    el('div', { class: 'panel accbox' }, el('b', { text: '✉️ البريد الإلكتروني' }), em, pw,
+      el('div', { class: 'row', style: 'gap:8px;flex-wrap:wrap' }, el('button', { class: 'btn', text: 'دخول', onclick: () => emailGo(false) }), el('button', { class: 'btn ghost', text: 'حساب جديد', onclick: () => emailGo(true) }), forgot)),
+    el('div', { class: 'panel accbox off' }, el('b', { text: ' الدخول بحساب Apple' }), el('span', { class: 'tag sun', text: 'قريباً' })),
+    msg,
+    el('p', { class: 'note', text: 'الدروس المجانية متاحة دون تسجيل. التسجيل يحفظ نجومك وتقدّمك، ويلزم للاشتراك.' }));
+}
+
+function renderOnboard() {
+  if (!ACC.user) { go('login'); return; }
+  if (ACC.profile) { go('account'); return; }
+  const s = page('مرحباً بك في المجتهد', 'خطوة واحدة ونبدأ', null);
+  const msg = el('div');
+  let role = null, grade = null, avatar = AVATARS[0];
+  const name = el('input', { class: 'tinput', placeholder: 'الاسم', 'aria-label': 'الاسم', value: ACC.user.displayName || '' });
+  const roles = el('div', { class: 'plans' }), kidBox = el('div', { class: 'stack', hidden: true });
+  const draw = () => { roles.innerHTML = ''; Object.entries(ROLES).forEach(([k, [ic, t, d]]) => roles.append(el('button', { class: 'plan', 'aria-pressed': String(role === k), onclick: () => { role = k; draw(); } }, el('b', { text: ic + ' ' + t }), el('span', { class: 'note', text: d }))));
+    kidBox.hidden = role !== 'student'; };
+  const gsel = el('div', { class: 'gpick' }); const drawG = () => { gsel.innerHTML = ''; GRADES.forEach(([g, n]) => gsel.append(el('button', { class: 'btn ghost sm' + (grade === g ? ' on' : ''), text: n, onclick: () => { grade = g; drawG(); } }))); }; drawG();
+  const av = el('div', { class: 'avpick' }); const drawA = () => { av.innerHTML = ''; AVATARS.forEach(a => av.append(el('button', { class: 'av' + (a === avatar ? ' on' : ''), text: a, onclick: () => { avatar = a; drawA(); } }))); }; drawA();
+  kidBox.append(el('b', { text: 'صفك الدراسي' }), gsel, el('b', { text: 'اختر صورتك' }), av);
+  draw();
+  const save = el('button', { class: 'btn sun paybig', text: 'ابدأ', onclick: async () => {
+    const nm = name.value.trim();
+    if (nm.length < 2) { fbk(msg, 'bad', 'اكتب الاسم.'); return; }
+    if (!role) { fbk(msg, 'bad', 'اختر: طالب أو ولي أمر أو معلم.'); return; }
+    if (role === 'student' && !grade) { fbk(msg, 'bad', 'اختر صفك الدراسي.'); return; }
+    save.disabled = true;
+    try {
+      const u = ACC.user;
+      const data = { name: nm, role, phone: phoneOf(u) || u.phoneNumber || null, email: phoneOf(u) ? null : (u.email || null), createdAt: serverTimestamp() };
+      await setDoc(uref(), data);
+      try { await updateProfile(u, { displayName: nm }); } catch (e) {}
+      ACC.profile = data;
+      if (role === 'parent') { ACC.profiles = []; go('kids'); return; }
+      await setDoc(pref('me'), { name: nm, grade: grade || null, avatar: role === 'teacher' ? '👩‍🏫' : avatar, createdAt: serverTimestamp() });
+      await loadProfiles(); await migrateLocal('me'); await setActive('me');
+      D.cheer && D.cheer('win'); go(grade ? 'g' + grade : 'home');
+    } catch (e) { save.disabled = false; fbk(msg, 'bad', errMsg(e)); console.error(e); }
+  } });
+  s.append(el('div', { class: 'panel accbox' }, el('b', { text: 'ما اسمك؟' }), name), el('b', { text: 'من أنت؟' }), roles, kidBox, msg, save);
+}
+
+/* ---------- parent: manage children ---------- */
+function renderKids() {
+  if (!ACC.user || !ACC.profile) { go('login'); return; }
+  const s = page('أبنائي', 'حتى ' + MAX_KIDS + ' أبناء في حساب واحد', 'who');
+  const list = el('div', { class: 'stack' }), msg = el('div');
+  const draw = () => { list.innerHTML = '';
+    if (!kidsOf().length) list.append(el('p', { class: 'note', text: 'لم تضف أحداً بعد. أضف ابنك الأول.' }));
+    kidsOf().forEach(p => list.append(el('div', { class: 'kidrow' }, el('span', { class: 'kav', text: p.avatar || '🙂' }), el('span', {}, el('b', { text: p.name }), el('span', { class: 'note', text: ' — الصف ' + gradeName(p.grade) })),
+      el('button', { class: 'btn ghost sm', text: 'حذف', onclick: async e => { const b = e.currentTarget; if (b.dataset.c !== '1') { b.dataset.c = '1'; b.textContent = 'تأكيد الحذف'; return; }
+        try { await deleteDoc(pref(p.id)); ACC.profiles = ACC.profiles.filter(x => x.id !== p.id); if (ACC.pid === p.id) await setActive(null); draw(); } catch (x) { fbk(msg, 'bad', errMsg(x)); } } })))); };
+  draw();
+  let grade = null, avatar = AVATARS[1];
+  const name = el('input', { class: 'tinput', placeholder: 'اسم الابن أو الابنة', 'aria-label': 'اسم الابن' });
+  const gsel = el('div', { class: 'gpick' }); const drawG = () => { gsel.innerHTML = ''; GRADES.forEach(([g, n]) => gsel.append(el('button', { class: 'btn ghost sm' + (grade === g ? ' on' : ''), text: n, onclick: () => { grade = g; drawG(); } }))); }; drawG();
+  const av = el('div', { class: 'avpick' }); const drawA = () => { av.innerHTML = ''; AVATARS.forEach(a => av.append(el('button', { class: 'av' + (a === avatar ? ' on' : ''), text: a, onclick: () => { avatar = a; drawA(); } }))); }; drawA();
+  const add = el('button', { class: 'btn', text: '＋ أضف', onclick: async () => {
+    if (kidsOf().length >= MAX_KIDS) { fbk(msg, 'bad', 'وصلت إلى الحد الأقصى: ' + MAX_KIDS + ' أبناء.'); return; }
+    const nm = name.value.trim(); if (nm.length < 2) { fbk(msg, 'bad', 'اكتب الاسم.'); return; } if (!grade) { fbk(msg, 'bad', 'اختر الصف.'); return; }
+    add.disabled = true;
+    try { const id = 'k' + Date.now().toString(36); const first = !kidsOf().length && ACC.profile.role === 'parent';
+      await setDoc(pref(id), { name: nm, grade, avatar, createdAt: serverTimestamp() });
+      ACC.profiles.push({ id, name: nm, grade, avatar }); if (first) { await migrateLocal(id); }
+      name.value = ''; grade = null; drawG(); draw(); fbk(msg, 'ok', 'تمت إضافة ' + nm + '.');
+    } catch (e) { fbk(msg, 'bad', errMsg(e)); }
+    add.disabled = false; } });
+  s.append(list, el('div', { class: 'panel accbox' }, el('b', { text: 'إضافة ابن' }), name, el('span', { class: 'note', text: 'الصف' }), gsel, el('span', { class: 'note', text: 'الصورة' }), av, add), msg,
+    el('button', { class: 'btn sun', text: 'تم ←', onclick: () => go('who') }));
+}
+
+/* ---------- parent: who is studying now? ---------- */
+function renderWho() {
+  if (!ACC.user || !ACC.profile) { go('login'); return; }
+  if (!isAdult()) { go('account'); return; }
+  const s = page('من يدرس الآن؟', ACC.profile.name, 'home');
+  const g = el('div', { class: 'whogrid' });
+  const me = ACC.profiles.find(p => p.id === 'me');
+  if (me) g.append(el('button', { class: 'who' + (ACC.pid === 'me' ? ' on' : ''), onclick: async () => { await setActive('me'); go('home'); } },
+    el('span', { class: 'kav big', text: me.avatar || '👩‍🏫' }), el('b', { text: 'أنا' }), el('span', { class: 'note', text: 'المعلم' })));
+  kidsOf().forEach(p => g.append(el('button', { class: 'who' + (p.id === ACC.pid ? ' on' : ''), onclick: async () => { await setActive(p.id); go('g' + p.grade); } },
+    el('span', { class: 'kav big', text: p.avatar || '🙂' }), el('b', { text: p.name }), el('span', { class: 'note', text: 'الصف ' + gradeName(p.grade) }))));
+  if (kidsOf().length < MAX_KIDS) g.append(el('button', { class: 'who add', onclick: () => go('kids') }, el('span', { class: 'kav big', text: '＋' }), el('b', { text: 'أضف ابناً' })));
+  s.append(g, el('div', { class: 'row', style: 'gap:8px;justify-content:center' }, el('button', { class: 'btn ghost', text: '✏️ إدارة الأبناء', onclick: () => go('kids') }), el('button', { class: 'btn ghost', text: '⚙️ حسابي', onclick: () => go('account') })));
+}
+
+function renderAccount() {
+  if (!ACC.user) { go('login'); return; }
+  if (!ACC.profile) { go('onboard'); return; }
+  const P = ACC.profile, u = ACC.user, [ic, rt] = ROLES[P.role] || ['👤', ''];
+  const s = page('حسابي', P.name, 'home');
+  s.append(el('div', { class: 'panel accbox' },
+    el('div', {}, el('b', { text: ic + ' ' + P.name }), el('span', { class: 'note', text: ' — ' + rt })),
+    (P.phone || phoneOf(u)) ? el('div', { class: 'note' }, el('span', { dir: 'ltr', text: '📱 ' + (P.phone || phoneOf(u)).replace('+218', '0') }), P.phoneVerified ? el('span', { class: 'tag', style: 'margin-inline-start:8px', text: '✓ مؤكد' }) : el('span', { class: 'tag sun', style: 'margin-inline-start:8px', text: 'يُؤكَّد برسالة عند الاشتراك' })) : null,
+    u.email && !phoneOf(u) ? el('div', { class: 'note', dir: 'ltr', style: 'text-align:right', text: '✉️ ' + u.email }) : null,
+    P.role === 'student' && activeProfile() && activeProfile().grade ? el('div', { class: 'note', text: '📚 الصف ' + gradeName(activeProfile().grade) }) : null));
+  if (isAdult()) s.append(el('button', { class: 'btn', text: '👨‍👩‍👧 أبنائي (' + kidsOf().length + ' من ' + MAX_KIDS + ')', onclick: () => go('kids') }));
+  if (P.role === 'parent') { const m = el('div');
+    s.append(el('div', { class: 'panel accbox' }, el('b', { text: '👩‍🏫 هل أنت معلم أيضاً؟' }), el('span', { class: 'note', text: 'حوّل حسابك إلى حساب معلم وتبقى إدارة أبنائك كما هي.' }),
+      el('button', { class: 'btn ghost', text: 'نعم، أنا معلم أيضاً', onclick: async () => {
+        try { await setDoc(uref(), { ...P, role: 'teacher' }); await setDoc(pref('me'), { name: P.name, grade: null, avatar: '👩‍🏫', createdAt: serverTimestamp() });
+          ACC.profile = { ...P, role: 'teacher' }; await loadProfiles(); D.cheer && D.cheer('win'); renderAccount(); } catch (e) { fbk(m, 'bad', errMsg(e)); } } }), m)); }
+  s.append(el('div', { class: 'panel accbox' }, el('b', { text: 'اشتراكاتي' }),
+    ...(ACC.subs.length ? ACC.subs.map(x => el('div', { class: 'kidrow' }, el('span', {}, el('b', { text: subName(x) }), el('span', { class: 'note', text: ' — حتى ' + fmtDate(x.end.toMillis()) })))) : [el('span', { class: 'note', text: 'لا يوجد اشتراك بعد. الدروس المجانية متاحة لك.' })]),
+    el('button', { class: 'btn sun', text: 'اشترك / أضف باقة', onclick: () => go('subscribe') })));
+  s.append(el('button', { class: 'btn ghost', text: 'تسجيل الخروج', onclick: async () => { await signOut(auth); go('home'); } }));
+}
+
+/* ---------- SMS verification: only before the first payment (resala, via our server) ---------- */
+ACC.phoneVerified = () => !!(ACC.profile && ACC.profile.phoneVerified);
+ACC.verifyPhone = box => new Promise(resolve => {
+  if (ACC.phoneVerified()) { resolve(true); return; }
+  box.innerHTML = ''; const msg = el('div');
+  const known = (ACC.profile && ACC.profile.phone) || phoneOf(ACC.user) || '';
+  const ph = el('input', { type: 'tel', inputmode: 'numeric', placeholder: '09X XXX XXXX', 'aria-label': 'رقم الهاتف', value: known.replace('+218', '0') });
+  const code = el('input', { inputmode: 'numeric', placeholder: 'الرمز (4 أرقام)', 'aria-label': 'رمز التحقق', autocomplete: 'one-time-code', maxlength: '4' });
+  const send = el('button', { class: 'btn', text: 'أرسل رمز التأكيد' });
+  const ok = el('button', { class: 'btn', text: 'تأكيد' });
+  const codeRow = el('div', { class: 'code', hidden: true }, code, ok);
+  send.onclick = async () => { msg.innerHTML = ''; const n = libyanPhone(ph.value);
+    if (!n) { fbk(msg, 'bad', 'اكتب رقماً ليبياً يبدأ بـ 091 أو 092 أو 093 أو 094 أو 095.'); return; }
+    send.disabled = true;
+    try { await call('sendOtp', { phone: n.replace('+218', '0'), deviceId }); codeRow.hidden = false; code.focus(); fbk(msg, 'ok', 'أرسلنا رمزاً من 4 أرقام إلى ' + n.replace('+218', '0') + '.'); }
+    catch (e) { fbk(msg, 'bad', fnErr(e)); }
+    send.disabled = false; };
+  ok.onclick = async () => { msg.innerHTML = ''; ok.disabled = true;
+    try { const r = await call('verifyOtp', { code: code.value.trim() });
+      if (r.ok) { ACC.profile = { ...ACC.profile, phone: r.phone, phoneVerified: true }; fbk(msg, 'ok', '✓ تم تأكيد رقمك.'); resolve(true); }
+      else fbk(msg, 'bad', 'الرمز غير صحيح. بقيت ' + r.left + ' محاولات.'); }
+    catch (e) { fbk(msg, 'bad', fnErr(e)); }
+    ok.disabled = false; };
+  box.append(el('div', { class: 'panel accbox' }, el('b', { text: '📱 أكّد رقم هاتفك قبل الدفع' }), el('span', { class: 'note', text: 'نرسل رسالة واحدة فقط لتأكيد أن الرقم لك. لا نرسلها مرة أخرى بعد التأكيد.' }), el('div', { class: 'code' }, ph, send), codeRow, msg));
+});
+
+/* ---------- paid lessons: fetched from the server for subscribers, then kept on this device ---------- */
+const PAID_CACHE = 'mj-paid-v1';
+async function cacheGet(id) { try { const c = await caches.open(PAID_CACHE); const r = await c.match('/paid/' + id); return r ? r.json() : null; } catch (e) { return null; } }
+async function cachePut(id, data) { try { const c = await caches.open(PAID_CACHE); await c.put('/paid/' + id, new Response(JSON.stringify(data), { headers: { 'Content-Type': 'application/json' } })); } catch (e) {} }
+ACC.loadPaid = async id => {
+  const cached = await cacheGet(id);
+  if (cached && (!navigator.onLine || !ACC.user)) return cached;           // offline: what was opened before keeps working
+  if (!ACC.user) { const e = new Error('login'); e.userMsg = 'سجّل الدخول لفتح هذا الدرس.'; throw e; }
+  try { const r = await call('getLesson', { id, pid: ACC.pid || null }); await cachePut(id, r.lesson); return r.lesson; }
+  catch (e) { if (cached && /unavailable|internal|deadline/i.test(e.code || '')) return cached;
+    const x = new Error('paid'); x.userMsg = fnErr(e); throw x; }
+};
+
+/* ---------- subscriptions ---------- */
+ACC.subs = [];
+async function loadSubs() {
+  ACC.subs = [];
+  try { const q = query(collection(db, 'subscriptions'), where('uid', '==', ACC.user.uid));
+    const sn = await getDocs(q); const now = Date.now();
+    ACC.subs = sn.docs.map(d => ({ id: d.id, ...d.data() })).filter(x => x.active !== false && x.end && x.end.toMillis() > now);
+  } catch (e) { console.warn('subs', e); }
+}
+const subApplies = sub => {
+  const sc = sub.scope || {}, role = ACC.profile && ACC.profile.role;
+  if (sc.teacherOnly) return role === 'teacher' && ACC.pid === 'me';
+  if (sc.kids) return !!ACC.pid && ACC.pid !== 'me';
+  return role === 'student';
+};
+ACC.hasAccess = (g, s) => ACC.subs.some(sub => { if (!subApplies(sub)) return false; const sc = sub.scope || {};
+  if (sc.pairs) return sc.pairs.includes(g + ':' + s);
+  return (sc.grades || []).some(x => x === '*' || x === g) && (sc.subjects || []).some(x => x === '*' || x === s); });
+ACC.hasAnySub = () => ACC.subs.some(subApplies);
+const fmtDate = ms => new Date(ms).toLocaleDateString('ar-LY', { year: 'numeric', month: 'long', day: 'numeric' });
+const KINDS = {
+  student_subject: ['📘', 'مادة واحدة', 'مادة واحدة في صف واحد', ['student']],
+  student_grade: ['📚', 'الصف كاملاً', 'كل مواد صف واحد', ['student']],
+  parent_grade: ['👨‍👩‍👧', 'العائلة — صف واحد', 'كل مواد صف واحد لأبنائك (حتى 5)', ['parent', 'teacher']],
+  parent_all: ['🏫', 'العائلة — كل الصفوف', 'كل الصفوف والمواد لأبنائك (حتى 5)', ['parent', 'teacher']],
+  teacher: ['👩‍🏫', 'المعلم', 'المواد والصفوف التي تدرّسها', ['teacher']],
+};
+const subName = sub => { const k = KINDS[sub.kind] || ['', sub.kind]; const sc = sub.scope || {};
+  let t = k[1]; if (sc.pairs) t += ' — ' + sc.pairs.length + ' مادة'; else if (sc.grades && sc.grades[0] !== '*') t += ' — الصف ' + gradeName(sc.grades[0]);
+  if (sc.subjects && sc.subjects[0] && sc.subjects[0] !== '*') t += ' — ' + subjName(sc.grades[0], sc.subjects[0]); return k[0] + ' ' + t; };
+const PAID_SUBJECTS = ['ar', 'en', 'math', 'comp', 'art', 'sci', 'soc', 'hist', 'geo'];
+function subjectsOf(g) { const c = D.App.catalog; return ((c && c.grades[g]) || []).filter(s => PAID_SUBJECTS.includes(s.id)); }
+function subjName(g, sid) { const s = subjectsOf(g).find(x => x.id === sid); return s ? s.name : sid; }
+
+function renderSubscribe() {
+  if (!ACC.user) { D.App.after = 'subscribe'; go('login'); return; }
+  if (!ACC.profile) { go('onboard'); return; }
+  const role = ACC.profile.role, s = page('الاشتراك', 'افتح الدروس حتى 31 أغسطس', D.App.after || 'home');
+  const mine = ACC.subs.filter(subApplies);
+  if (mine.length) s.append(el('div', { class: 'feedback ok', text: '✓ عندك اشتراك فعّال: ' + mine.map(subName).join('، ') }));
+  const box = el('div', { class: 'stack' }), msg = el('div'), phoneBox = el('div');
+  let prices = null, kind = null, grade = null, subject = null; const items = new Set();
+  const kinds = Object.entries(KINDS).filter(([, v]) => v[3].includes(role));
+  const kidsN = ACC.profiles.filter(p => p.id !== 'me').length;
+  const price = () => { if (!prices || !kind) return 0; const u = prices[kind] || 0; return kind === 'teacher' ? u * items.size : u; };
+  const draw = () => {
+    box.innerHTML = '';
+    const pg = el('div', { class: 'plans' });
+    kinds.forEach(([k, [ic, n, d]]) => { const pr = prices ? prices[k] : null;
+      pg.append(el('button', { class: 'plan', 'aria-pressed': String(kind === k), onclick: () => { kind = k; grade = null; subject = null; items.clear(); draw(); } },
+        el('b', { text: ic + ' ' + n }), el('span', { class: 'note', text: d }),
+        el('div', { class: 'tag sun', style: 'margin-top:6px', text: pr == null ? '…' : pr ? pr + ' د.ل' + (k === 'teacher' ? ' لكل مادة' : '') : 'قريباً' }))); });
+    box.append(el('b', { text: 'اختر الباقة' }), pg);
+    if (!kind) return;
+    if (['parent_grade', 'parent_all'].includes(kind) && !kidsN) { box.append(el('div', { class: 'feedback info' }, 'أضف أبناءك أولاً. ', el('button', { class: 'linkbtn', text: 'أبنائي', onclick: () => go('kids') }))); return; }
+    const gpick = () => { const w = el('div', { class: 'gpick' }); GRADES.forEach(([g, n]) => w.append(el('button', { class: 'btn ghost sm' + (grade === g ? ' on' : ''), text: n, onclick: () => { grade = g; subject = null; draw(); } }))); return w; };
+    if (['student_subject', 'student_grade', 'parent_grade'].includes(kind)) box.append(el('b', { text: 'الصف' }), gpick());
+    if (kind === 'student_subject' && grade) { const w = el('div', { class: 'gpick' }); subjectsOf(grade).forEach(x => w.append(el('button', { class: 'btn ghost sm' + (subject === x.id ? ' on' : ''), text: x.name, onclick: () => { subject = x.id; draw(); } }))); box.append(el('b', { text: 'المادة' }), w); }
+    if (kind === 'teacher') { box.append(el('b', { text: 'الصف' }), gpick());
+      if (grade) { const w = el('div', { class: 'gpick' }); subjectsOf(grade).forEach(x => { const key = grade + ':' + x.id; w.append(el('button', { class: 'btn ghost sm' + (items.has(key) ? ' on' : ''), text: (items.has(key) ? '✓ ' : '') + x.name, onclick: () => { items.has(key) ? items.delete(key) : items.add(key); draw(); } })); }); box.append(el('b', { text: 'المواد التي تدرّسها في هذا الصف' }), w); }
+      if (items.size) box.append(el('p', { class: 'note', text: 'اخترت ' + items.size + ': ' + [...items].map(k => { const [g, x] = k.split(':'); return subjName(g, x) + ' (' + gradeName(g) + ')'; }).join('، ') })); }
+    const ready = kind === 'parent_all' || (kind === 'student_subject' ? grade && subject : kind === 'teacher' ? items.size > 0 : !!grade);
+    if (!ready) return;
+    const total = price();
+    box.append(el('div', { class: 'paybox' }, el('b', { style: 'font-size:1.2rem', text: total ? 'المبلغ: ' + total + ' دينار' : 'هذه الباقة غير متاحة للشراء بعد' }),
+      el('span', { class: 'note', text: 'الاشتراك صالح حتى 31 أغسطس ' + (prices ? new Date(prices.end).getFullYear() : '') + '. الدفع عبر ماي باي: ادفع لي، سداد، موبي كاش وغيرها.' }),
+      total ? payBtn : null));
+  };
+  const payBtn = el('button', { class: 'btn sun paybig', text: 'ادفع الآن', onclick: async () => {
+    msg.innerHTML = '';
+    if (!ACC.phoneVerified()) { phoneBox.scrollIntoView({ behavior: 'smooth' }); await ACC.verifyPhone(phoneBox); phoneBox.innerHTML = ''; }
+    payBtn.disabled = true; fbk(msg, 'info', 'جارٍ تجهيز صفحة الدفع…');
+    try { const r = await call('createOrder', { kind, grade, subject, items: [...items].map(k => { const [g, x] = k.split(':'); return { grade: g, subject: x }; }) });
+      store.set('last_order', r.orderId); location.href = r.url; }
+    catch (e) { fbk(msg, 'bad', fnErr(e)); payBtn.disabled = false; } } });
+  s.append(box, phoneBox, msg);
+  draw();
+  call('getPlans', {}).then(r => { prices = { ...r.prices, end: r.end }; draw(); }).catch(e => fbk(msg, 'bad', fnErr(e)));
+}
+
+/* ---------- back from MyPay ---------- */
+function renderPaid(orderId) {
+  const s = page('نتيجة الدفع', '', 'home');
+  const st = el('div'); s.append(st); fbk(st, 'info', '⏳ جارٍ تأكيد الدفع… لا تغلق الصفحة.');
+  if (!ACC.user) { fbk(st, 'info', 'سجّل الدخول بنفس الحساب لنتأكد من الدفع.'); return; }
+  let n = 0;
+  const tick = async () => {
+    try { const d = await getDoc(doc(db, 'subscriptions', orderId));
+      if (d.exists()) { await loadSubs(); D.cheer && D.cheer('win'); fbk(st, 'ok', '🎉 تم الدفع وتفعيل اشتراكك حتى ' + fmtDate(d.data().end.toMillis()) + '.');
+        s.append(el('button', { class: 'btn sun', text: 'ابدأ التعلّم ←', onclick: () => go('home') })); return; }
+    } catch (e) {}
+    if (++n < 30) setTimeout(tick, 3000);
+    else { fbk(st, 'bad', 'لم يصلنا تأكيد الدفع بعد. إذا خُصم المبلغ فسيُفعَّل اشتراكك تلقائياً خلال دقائق؛ وإن لم يُفعَّل تواصل معنا وأرسل رقم الطلب.');
+      s.append(el('p', { class: 'note', dir: 'ltr', text: 'رقم الطلب: ' + orderId })); }
+  };
+  tick();
+}
+
+const ROUTES = { subscribe: renderSubscribe, login: renderLogin, onboard: renderOnboard, kids: renderKids, who: renderWho, account: renderAccount };
+ACC.route = h => { const pm = /^paid-([A-Za-z0-9]{10,40})$/.exec(h); const f = pm ? () => renderPaid(pm[1]) : ROUTES[h]; if (!f) return false; if (!ACC.ready) { page('…', 'جارٍ التحميل', 'home'); return true; } if (ACC.loadError && ACC.user) { showLoadError(); return true; } f(); return true; };
+
+/* ---------- auth state ---------- */
+const withTimeout = (pr, ms = 8000) => Promise.race([pr, new Promise((_, rej) => setTimeout(() => rej({ code: 'timeout' }), ms))]);
+onAuthStateChanged(auth, async user => {
+  ACC.user = user; ACC.profile = null; ACC.profiles = []; ACC.loadError = null;
+  try {
+    if (user) {
+      try { const snap = await withTimeout(getDoc(uref())); ACC.profile = snap.exists() ? snap.data() : null; if (ACC.profile) { await withTimeout(loadProfiles()); await withTimeout(loadSubs()); } }
+      catch (e) { console.error('profile', e); ACC.loadError = e; }
+      if (ACC.profiles.length && !ACC.profiles.some(p => p.id === ACC.pid)) await setActive(ACC.profiles.length === 1 ? ACC.profiles[0].id : null);
+      else if (ACC.pid && !ACC.loadError) withTimeout(pullProgress(ACC.pid)).catch(() => {});
+    } else { ACC.pid = null; store.set('acc_pid', null); }
+  } catch (e) { console.error('auth', e); ACC.loadError = e; }
+  ACC.ready = true;
+  const h = location.hash.replace(/^#/, '');
+  if (user && ACC.loadError) { if (ROUTES[h] || !h || h === 'home') { showLoadError(); return; } }
+  else if (user && !ACC.profile) { go('onboard'); return; }
+  else if (user && h === 'login') { go(isAdult() ? (ACC.profiles.length ? 'who' : 'kids') : 'home'); return; }
+  else if (user && isAdult() && !ACC.pid && (!h || h === 'home')) { go(ACC.profiles.length ? 'who' : 'kids'); return; }
+  if (D.App.catalog) D.route();
+});
+function showLoadError() {
+  const e = ACC.loadError || {};
+  const s = page('تعذّر تحميل حسابك', 'الدروس تعمل بشكل عادي', 'home');
+  s.append(el('div', { class: 'feedback bad', text: 'لم نتمكن من الاتصال بقاعدة البيانات. تحقق من الإنترنت ثم أعد المحاولة.' }),
+    el('p', { class: 'note', dir: 'ltr', style: 'text-align:right', text: 'code: ' + (e.code || e.message || e) }),
+    el('div', { class: 'row', style: 'gap:8px' }, el('button', { class: 'btn', text: '↺ أعد المحاولة', onclick: () => location.reload() }),
+      el('button', { class: 'btn ghost', text: 'الدروس', onclick: () => { ACC.loadError = null; location.hash = 'home'; D.route(); } }),
+      el('button', { class: 'btn ghost', text: 'تسجيل الخروج', onclick: async () => { await signOut(auth); } })));
+}
+
