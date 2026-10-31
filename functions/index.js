@@ -267,7 +267,7 @@ exports.createOrder = onCall({secrets: [MYPAY_ID, MYPAY_SECRET], memory: "256MiB
   const oRef = db.collection("orders").doc(); // رقم من 20 حرفاً ورقماً — يُرسل في custom
   await oRef.set({uid, kind, scope, qty, unit, amount, currency: "LYD", status: "pending",
     end: seasonEnd(), createdAt: FieldValue.serverTimestamp()});
-  const back = SITE_URL.value() + "#paid-" + oRef.id;
+  const back = "https://mujtahid.ly/#paid-" + oRef.id; // النطاق الرسمي
   try {
     const tr = await fetch(`${MYPAY_BASE}/authentication/token`, {
       method: "POST", headers: {"Content-Type": "application/json"},
