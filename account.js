@@ -473,7 +473,10 @@ function renderSubscribe() {
     box.append(el('b', { text: 'اختر الباقة' }), pg);
     if (!kind) return;
     if (['parent_grade', 'parent_all'].includes(kind) && !kidsN) { box.append(el('div', { class: 'feedback info' }, 'أضف أبناءك أولاً. ', el('button', { class: 'linkbtn', text: 'أبنائي', onclick: () => go('kids') }))); return; }
-    const gpick = () => { const w = el('div', { class: 'gpick' }); GRADES.forEach(([g, n]) => w.append(el('button', { class: 'btn ghost sm' + (grade === g ? ' on' : ''), text: n, onclick: () => { grade = g; subject = null; draw(); } }))); return w; };
+    const allowedG = () => { if (kind === 'parent_grade') return [...new Set(ACC.profiles.filter(p => p.id !== 'me' && p.grade).map(p => String(p.grade)))];
+      const me = ACC.profiles.find(p => p.id === 'me'); if (role === 'student' && me && me.grade && kind !== 'teacher') return [String(me.grade)]; return null; };
+    const AG = allowedG(); if (AG && AG.length === 1 && !grade && kind !== 'teacher') grade = AG[0];
+    const gpick = () => { const w = el('div', { class: 'gpick' }); GRADES.filter(([g]) => !AG || !AG.length || AG.includes(String(g))).forEach(([g, n]) => w.append(el('button', { class: 'btn ghost sm' + (grade === g ? ' on' : ''), text: n, onclick: () => { grade = g; subject = null; draw(); } }))); return w; };
     if (['student_subject', 'student_grade', 'parent_grade'].includes(kind)) box.append(el('b', { text: 'الصف' }), gpick());
     if (kind === 'student_subject' && grade) { const w = el('div', { class: 'gpick' }); subjectsOf(grade).forEach(x => w.append(el('button', { class: 'btn ghost sm' + (subject === x.id ? ' on' : ''), text: x.name, onclick: () => { subject = x.id; draw(); } }))); box.append(el('b', { text: 'المادة' }), w); }
     if (kind === 'teacher') { box.append(el('b', { text: 'الصف' }), gpick());
