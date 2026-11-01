@@ -234,7 +234,8 @@ function renderWho() {
     g.append(el('div', { class: 'whobox' }, el('button', { class: 'who' + (p.id === ACC.pid ? ' on' : ''), onclick: async () => { await setActive(p.id); go('g' + p.grade); } },
       el('span', { class: 'kav big', text: p.avatar || '🙂' }), el('b', { text: p.name }), el('span', { class: 'note', text: 'الصف ' + gradeName(p.grade) }),
       el('span', { class: 'wstats' }, el('span', { text: lv.icon + ' ' + lv.name }), el('span', { text: '⭐ ' + (st.stars || 0) }), el('span', { text: '🔥 ' + liveStreak(st) }))),
-      el('button', { class: 'btn ghost sm', text: '📊 التقرير', onclick: () => go('kid-' + p.id) }))); });
+      el('div', { class: 'row', style: 'gap:6px;justify-content:center' }, el('button', { class: 'btn ghost sm', text: '📊 التقرير', onclick: () => go('kid-' + p.id) }),
+        el('button', { class: 'btn sun sm', text: '📱 ربط موبايله', onclick: () => go('linkkid-' + p.id) })))); });
   if (kidsOf().length < MAX_KIDS) g.append(el('button', { class: 'who add', onclick: () => go('kids') }, el('span', { class: 'kav big', text: '＋' }), el('b', { text: 'أضف ابناً' })));
   s.append(g, el('div', { class: 'row', style: 'gap:8px;justify-content:center' }, el('button', { class: 'btn ghost', text: '✏️ إدارة الأبناء', onclick: () => go('kids') }), el('button', { class: 'btn ghost', text: '⚙️ حسابي', onclick: () => go('account') })));
 }
@@ -294,6 +295,17 @@ async function kidDevicesBox(p) {
 }
 let _qr = null;
 function loadQR() { return _qr || (_qr = new Promise((res, rej) => { const sc = document.createElement('script'); sc.src = 'https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js'; sc.onload = () => res(window.QRCode); sc.onerror = rej; document.head.append(sc); })); }
+
+async function renderLinkKid(pid) {
+  if (!ACC.user || !isAdult()) { go('login'); return; }
+  const p = ACC.profiles.find(x => x.id === pid); if (!p) { go('who'); return; }
+  const s = page('ربط موبايل ' + p.name, 'خطوة واحدة على موبايل الابن', 'who');
+  s.append(el('div', { class: 'panel accbox' }, el('b', { text: 'كيف؟' }),
+    el('span', { class: 'note', text: '1) اضغط الزر الأصفر بالأسفل: يظهر رمز من 6 أرقام ورمز QR.' }),
+    el('span', { class: 'note', text: '2) على موبايل ' + p.name + ': امسح رمز QR بالكاميرا، أو افتح المنصة (بدون تسجيل دخول) واضغط «دخول» ← «🧒 أنا طالب، عندي رمز من ولي أمري» واكتب الأرقام.' }),
+    el('span', { class: 'note', text: '3) انتهى! يبقى موبايله مفتوحاً على ملفه دائماً، ويظهر هنا في قائمة الأجهزة.' })),
+    await kidDevicesBox(p));
+}
 
 /* ---------- parent: one child's report ---------- */
 async function renderKid(pid) {
@@ -565,6 +577,7 @@ document.addEventListener('visibilitychange', async () => { if (document.visibil
 
 const ROUTES = { admin: renderAdmin, subscribe: renderSubscribe, login: renderLogin, onboard: renderOnboard, kids: renderKids, who: renderWho, account: renderAccount };
 ACC.route = h => { const pm = /^paid-([A-Za-z0-9]{10,40})$/.exec(h); const lm = /^link(?:-(\d{6}))?$/.exec(h); if (lm) { if (!ACC.ready) { page('…', 'جارٍ التحميل', 'home'); return true; } renderLink(lm[1]); return true; }
+  const lk = /^linkkid-([A-Za-z0-9]{1,30})$/.exec(h); if (lk) { if (!ACC.ready) { page('…', 'جارٍ التحميل', 'home'); return true; } renderLinkKid(lk[1]); return true; }
   const km = /^kid-([A-Za-z0-9]{1,30})$/.exec(h); const f = pm ? () => renderPaid(pm[1]) : km ? () => renderKid(km[1]) : ROUTES[h]; if (!f) return false; if (!ACC.ready) { page('…', 'جارٍ التحميل', 'home'); return true; } if (ACC.loadError && ACC.user) { showLoadError(); return true; } f(); return true; };
 
 /* ---------- auth state ---------- */
