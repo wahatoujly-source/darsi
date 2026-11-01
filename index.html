@@ -807,7 +807,7 @@ const VOX={on:store.get('vox',true),sets:null,
     a.onended=()=>done(true);a.onerror=()=>done(false);a.onpause=()=>done(true);a.play().catch(()=>done(false));setTimeout(()=>done(true),30000);});}};
 const sentSplit=s=>String(s).split(/(?<=[.!؟?…])\s+|\n+/).map(x=>x.trim()).filter(x=>/[ء-ي]/.test(x));
 /* the exact Arabic sentences the app will say for a text (same pipeline at runtime and when generating audio) */
-function arUnits(t){const out=[];t=String(t).replace(/[{}ـ]/g,'').replace(/[\p{Extended_Pictographic}\uFE0F\u200D]/gu,'');for(const p of qSplit(t)){if(p.q){out.push({q:p.q});continue;}const parts=String(p.t).split(EN_SEG);
+function arUnits(t){const out=[];t=String(t).replace(/(^|\s)[بلكف]ـ\s*(?=[:؟?.،]|$)/g,'$1').replace(/[{}ـ]/g,'').replace(/[\p{Extended_Pictographic}\uFE0F\u200D]/gu,'');for(const p of qSplit(t)){if(p.q){out.push({q:p.q});continue;}const parts=String(p.t).split(EN_SEG);
   parts.forEach((x,i)=>{if(!x)return;if(i%2===1){out.push({en:x});return;}if(!x.replace(/[\s.,،:؛()«»"'\-–]/g,''))return;sentSplit(mathSpeech(arLetters(x))).forEach(z=>out.push({ar:z}));});}return out;}
 async function sayAr(z){if(VOX.on){await VOX.load();const v=VOX.voice(),k=VOX.key(z);const w=VOX.sets[v]&&VOX.sets[v].has(k)?v:null;
   if(w){const tok=TTS.token;const ok=await VOX.play('aud/'+w+'/'+k+'.mp3');if(ok||tok!==TTS.token)return;}}
@@ -1087,7 +1087,7 @@ C.quiz=(b,ctx)=>{
    «ابدأ» tap so speech is allowed and steps don't talk while hidden.
    ========================================================= */
 const noEmo=t=>String(t).replace(/[\p{Extended_Pictographic}\uFE0F\u200D\u20E3]/gu,'').replace(/[—✓✗]/g,' ').trim();
-const spk=(t,lang)=>{const s=noEmo(t);if(!s)return Promise.resolve();return lang==='en'?speak(s):speakAr(s.replace(/ـ/g,''));};
+const spk=(t,lang)=>{const s=noEmo(t);if(!s)return Promise.resolve();return lang==='en'?speak(s):speakAr(s);};
 const plain=t=>String(t).replace(/[{}]/g,'');
 function hl(text){const f=document.createDocumentFragment();String(text).split(/(\{[^}]*\})/).forEach(p=>{if(!p)return;if(p[0]==='{')f.append(el('span',{class:'hl',text:p.slice(1,-1)}));else f.append(p);});return f;}
 const isEmo=s=>/\p{Extended_Pictographic}/u.test(s)&&!/[؀-ۿa-z0-9]/i.test(s);
