@@ -363,9 +363,16 @@ function lessonFrom(g, id) {
 const DAILY_LESSONS = 400;
 
 exports.getLesson = onCall({memory: "512MiB"}, async (req) => {
-  const uid = needUser(req);
+  let uid = needUser(req);
   const id = String((req.data && req.data.id) || "");
-  const pid = req.data && req.data.pid ? String(req.data.pid) : null;
+  let pid = req.data && req.data.pid ? String(req.data.pid) : null;
+  // جهاز ابن مربوط بولي أمره: يستعمل اشتراك ولي الأمر لملف هذا الابن فقط
+  const tk = req.auth.token || {};
+  if (tk.kidOf) {
+    const dev = await db.collection("users").doc(tk.kidOf).collection("kidDevices").doc(uid).get();
+    if (!dev.exists) throw new HttpsError("permission-denied", "أُلغي ربط هذا الجهاز. اطلب رمزاً جديداً من ولي أمرك.");
+    uid = tk.kidOf; pid = tk.kidPid;
+  }
   const meta = LESSON_INDEX[id];
   if (!meta) throw new HttpsError("not-found", "الدرس غير موجود");
   const [g, s] = meta;
@@ -404,6 +411,64 @@ exports.getLesson = onCall({memory: "512MiB"}, async (req) => {
   return {lesson};
 });
 
+
+// ===================== ربط جهاز الابن (رمز من 6 أرقام أو QR) =====================
+// ولي الأمر ينشئ رمزاً لملف ابن → الابن يفتح المنصة على جهازه (دخول مجهول) ويدخل الرمز
+// → يحصل الجهاز على صلاحية ملف هذا الابن فقط (kidOf/kidPid)، ويستطيع ولي الأمر إلغاءها متى شاء.
+const LINK_TTL = 15 * 60 * 1000;
+const MAX_KID_DEVICES = 3;
+exports.createLinkCode = onCall(async (req) => {
+  const uid = needUser(req);
+  if ((req.auth.token || {}).kidOf) throw new HttpsError("permission-denied", "غير مسموح");
+  const pid = String((req.data && req.data.pid) || "");
+  if (!pid || pid === "me") throw new HttpsError("invalid-argument", "اختر الابن");
+  const ps = await db.collection("users").doc(uid).collection("profiles").doc(pid).get();
+  if (!ps.exists) throw new HttpsError("not-found", "الابن غير موجود");
+  const devs = await db.collection("users").doc(uid).collection("kidDevices").where("pid", "==", pid).get();
+  if (devs.size >= MAX_KID_DEVICES) throw new HttpsError("resource-exhausted", "لهذا الابن " + MAX_KID_DEVICES + " أجهزة مربوطة. ألغِ ربط جهاز قديم أولاً.");
+  const hr = db.collection("linkRate").doc(uid + "_" + new Date().toISOString().slice(0, 13));
+  await db.runTransaction(async (tx) => { const d = await tx.get(hr); const n = (d.exists && d.data().n) || 0;
+    if (n >= 15) throw new HttpsError("resource-exhausted", "طلبت رموزاً كثيرة. حاول بعد ساعة."); tx.set(hr, {n: n + 1}); });
+  for (let i = 0; i < 6; i++) {
+    const code = String(crypto.randomInt(0, 1000000)).padStart(6, "0");
+    const ref = db.collection("linkCodes").doc(code);
+    const ok = await db.runTransaction(async (tx) => { const d = await tx.get(ref);
+      if (d.exists && !d.data().used && d.data().exp > Date.now()) return false;
+      tx.set(ref, {uid, pid, exp: Date.now() + LINK_TTL, used: false, at: FieldValue.serverTimestamp()}); return true; });
+    if (ok) return {code, exp: Date.now() + LINK_TTL, name: ps.data().name || ""};
+  }
+  throw new HttpsError("unavailable", "حاول مرة أخرى");
+});
+exports.redeemLinkCode = onCall(async (req) => {
+  const kid = needUser(req);
+  const tk = req.auth.token || {};
+  if ((tk.firebase || {}).sign_in_provider !== "anonymous") throw new HttpsError("failed-precondition", "سجّل الخروج من الحساب الحالي أولاً");
+  const code = String((req.data && req.data.code) || "").replace(/\D/g, "");
+  if (code.length !== 6) throw new HttpsError("invalid-argument", "الرمز 6 أرقام");
+  const tr = db.collection("linkRate").doc("k_" + kid);
+  await db.runTransaction(async (tx) => { const d = await tx.get(tr); const n = (d.exists && d.data().n) || 0;
+    if (n >= 8) throw new HttpsError("resource-exhausted", "محاولات كثيرة. اطلب رمزاً جديداً من ولي أمرك."); tx.set(tr, {n: n + 1}); });
+  const ref = db.collection("linkCodes").doc(code);
+  const info = await db.runTransaction(async (tx) => { const d = await tx.get(ref);
+    if (!d.exists || d.data().used || d.data().exp < Date.now()) throw new HttpsError("not-found", "الرمز غير صحيح أو انتهت صلاحيته");
+    tx.update(ref, {used: true, by: kid}); return d.data(); });
+  const ps = await db.collection("users").doc(info.uid).collection("profiles").doc(info.pid).get();
+  if (!ps.exists) throw new HttpsError("not-found", "الابن غير موجود");
+  await admin.auth().setCustomUserClaims(kid, {kidOf: info.uid, kidPid: info.pid});
+  const dev = String((req.data && req.data.device) || "").slice(0, 80);
+  await db.collection("users").doc(info.uid).collection("kidDevices").doc(kid).set({pid: info.pid, name: ps.data().name || "", device: dev, at: FieldValue.serverTimestamp()});
+  return {pid: info.pid, name: ps.data().name || ""};
+});
+exports.unlinkKidDevice = onCall(async (req) => {
+  const uid = needUser(req);
+  const kid = String((req.data && req.data.kid) || "");
+  const ref = db.collection("users").doc(uid).collection("kidDevices").doc(kid);
+  const d = await ref.get();
+  if (!d.exists) throw new HttpsError("not-found", "الجهاز غير موجود");
+  await ref.delete();
+  try { await admin.auth().deleteUser(kid); } catch (e) { logger.warn("unlink deleteUser", e.message); }
+  return {ok: true};
+});
 
 // ===================== لوحة الإدارة =====================
 // المدير: من يوجد معرّفه (uid) في المستند config/admins داخل الحقل uids (يُضاف من كونسول Firebase مرة واحدة).

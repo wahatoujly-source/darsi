@@ -1,6 +1,6 @@
 // المجتهد — الحسابات: الدخول (هاتف، إيميل، Google)، الأدوار، ملفات الأبناء، حفظ التقدّم في السحابة.
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js';
-import { getAuth, onAuthStateChanged, signOut, GoogleAuthProvider, signInWithPopup, signInWithRedirect,
+import { getAuth, onAuthStateChanged, signOut, GoogleAuthProvider, signInWithPopup, signInWithRedirect, signInAnonymously,
   signInWithEmailAndPassword, createUserWithEmailAndPassword,
   sendPasswordResetEmail, updateProfile } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js';
 import { getFunctions, httpsCallable } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-functions.js';
@@ -66,16 +66,18 @@ function libyanPhone(raw) {
 }
 
 /* ---------- Firestore paths ---------- */
+/* a linked child's device reads/writes the parent's data for that one child */
+const OW = () => ACC.kid ? ACC.kid.parent : ACC.user.uid;
 const uref = () => doc(db, 'users', ACC.user.uid);
-const pcol = () => collection(db, 'users', ACC.user.uid, 'profiles');
-const pref = pid => doc(db, 'users', ACC.user.uid, 'profiles', pid);
-const prog = (pid, lid) => doc(db, 'users', ACC.user.uid, 'profiles', pid, 'progress', lid);
+const pcol = () => collection(db, 'users', OW(), 'profiles');
+const pref = pid => doc(db, 'users', OW(), 'profiles', pid);
+const prog = (pid, lid) => doc(db, 'users', OW(), 'profiles', pid, 'progress', lid);
 
 async function loadProfiles() { const s = await getDocs(pcol()); ACC.profiles = s.docs.map(d => ({ id: d.id, ...d.data() })); }
 
 /* progress for the active child lives in localStorage under p_<pid>_done_<lesson> (see store in index.html) */
 async function pullProgress(pid) {
-  try { const s = await getDocs(collection(db, 'users', ACC.user.uid, 'profiles', pid, 'progress'));
+  try { const s = await getDocs(collection(db, 'users', OW(), 'profiles', pid, 'progress'));
     s.forEach(d => { try { localStorage.setItem('darsi_p_' + pid + '_done_' + d.id, JSON.stringify(d.data().done || [])); } catch (e) {} });
   } catch (e) { console.warn('progress', e); }
 }
@@ -89,7 +91,7 @@ ACC.saveProgress = (lid, done) => { if (!ACC.user || !ACC.pid) return; setDoc(pr
 
 ACC.saveStats = st => { if (!ACC.user || !ACC.pid) return; const p = ACC.profiles.find(x => x.id === ACC.pid); if (!p) return;
   p.stats = { ...st, at: Date.now() };
-  setDoc(pref(ACC.pid), { name: p.name, stats: { ...st, at: serverTimestamp() } }, { merge: true }).catch(e => console.warn('stats', e)); };
+  setDoc(pref(ACC.pid), ACC.kid ? { stats: { ...st, at: serverTimestamp() } } : { name: p.name, stats: { ...st, at: serverTimestamp() } }, { merge: true }).catch(e => console.warn('stats', e)); };
 /* bring the profile's goal + minutes/days from the cloud into this device (max per day wins) */
 function pullStats(pid) {
   const p = ACC.profiles.find(x => x.id === pid); if (!p) return; const k = n => 'darsi_p_' + pid + '_' + n;
@@ -110,7 +112,7 @@ ACC.pill = () => {
   if (!ACC.ready) return null;
   if (!ACC.user) return el('button', { class: 'pill', onclick: () => go('login'), text: '👤 دخول' });
   const p = activeProfile();
-  return el('button', { class: 'pill', onclick: () => go(isAdult() ? 'who' : 'account'), text: (p ? (p.avatar || '🙂') + ' ' + p.name : '👤 حسابي') });
+  return el('button', { class: 'pill', onclick: () => go(ACC.kid ? 'account' : isAdult() ? 'who' : 'account'), text: (p ? (p.avatar || '🙂') + ' ' + p.name : '👤 حسابي') });
 };
 
 /* ---------- pages ---------- */
@@ -120,6 +122,7 @@ function renderLogin() {
   if (ACC.user) { go(ACC.profile ? 'account' : 'onboard'); return; }
   const s = page('الدخول', 'سجّل لتحفظ نجومك وتقدّمك على أي جهاز', 'home');
   const msg = el('div');
+  s.append(el('button', { class: 'btn sun', style: 'width:100%', text: '🧒 أنا طالب، عندي رمز من ولي أمري', onclick: () => go('link') }));
   // Google
   const gBtn = el('button', { class: 'btn accbtn', onclick: async () => {
     msg.innerHTML = ''; const pr = new GoogleAuthProvider(); pr.setCustomParameters({ prompt: 'select_account' });
@@ -242,6 +245,56 @@ const daysAgo = n => { const d = new Date(); d.setDate(d.getDate() - n); return 
 const liveStreak = st => (st && st.streak && (st.lastDay === daysAgo(0) || st.lastDay === daysAgo(1))) ? st.streak : 0;
 const DAYN = ['الأحد', 'الاثنين', 'الثلاثاء', 'الأربعاء', 'الخميس', 'الجمعة', 'السبت'];
 
+/* ---------- child's device: enter the 6-digit code (or open the QR link) ---------- */
+function renderLink(pre) {
+  if (ACC.kid) { go('account'); return; }
+  const s = page('ربط جهاز الطالب', 'رمز من 6 أرقام من ولي أمرك', 'home');
+  if (ACC.user && !ACC.user.isAnonymous) { s.append(el('div', { class: 'feedback info', text: 'هذا الجهاز مسجّل بحساب آخر. اخرج منه أولاً ثم أدخل الرمز.' }),
+    el('button', { class: 'btn ghost', text: 'تسجيل الخروج', onclick: async () => { await signOut(auth); renderLink(pre); } })); return; }
+  const inp = el('input', { type: 'text', inputmode: 'numeric', maxlength: 6, placeholder: '000000', value: pre || '', dir: 'ltr', style: 'font-size:2rem;text-align:center;letter-spacing:.4em', 'aria-label': 'الرمز' });
+  const msg = el('div');
+  const btn = el('button', { class: 'btn sun', text: '🔗 اربط هذا الجهاز', onclick: async () => {
+    const code = inp.value.replace(/[^\d٠-٩]/g, '').replace(/[٠-٩]/g, c => '٠١٢٣٤٥٦٧٨٩'.indexOf(c));
+    if (code.length !== 6) { fbk(msg, 'bad', 'الرمز 6 أرقام.'); return; }
+    btn.disabled = true; fbk(msg, 'info', 'جارٍ الربط…');
+    try { ACC.linking = true;
+      if (!auth.currentUser) await signInAnonymously(auth);
+      const r = await call('redeemLinkCode', { code, device: (u => /iPhone/.test(u) ? 'iPhone' : /iPad/.test(u) ? 'iPad' : /Android/.test(u) ? 'Android' + ((/;\s*([^;)]+)\s+Build/.exec(u) || [])[1] ? ' — ' + /;\s*([^;)]+)\s+Build/.exec(u)[1] : '') : /Windows/.test(u) ? 'Windows' : /Mac/.test(u) ? 'Mac' : 'جهاز')(navigator.userAgent) });
+      await auth.currentUser.getIdToken(true);
+      fbk(msg, 'ok', '✓ تم! أهلاً ' + r.name); D.cheer && D.cheer('win');
+      setTimeout(() => { location.hash = 'home'; location.reload(); }, 900);
+    } catch (e) { ACC.linking = false; btn.disabled = false; fbk(msg, 'bad', e.code === 'auth/admin-restricted-operation' || e.code === 'auth/operation-not-allowed' ? 'خدمة الربط غير مفعّلة بعد.' : String(e.code || '').startsWith('auth/') ? errMsg(e) : fnErr(e));
+      if (auth.currentUser && auth.currentUser.isAnonymous) { const u = auth.currentUser; const t = await u.getIdTokenResult().catch(() => null); if (!(t && t.claims.kidOf)) await signOut(auth).catch(() => {}); } }
+  } });
+  s.append(el('div', { class: 'panel accbox' }, el('span', { class: 'note', text: 'اطلب من ولي أمرك أن يفتح: من يدرس الآن؟ ← التقرير ← «اربط جهاز ابني»، ثم اكتب الرمز هنا أو امسح رمز QR بكاميرا الهاتف.' }), inp, btn, msg));
+  if (pre && pre.length === 6) btn.click();
+}
+async function kidDevicesBox(p) {
+  const box = el('div', { class: 'panel accbox' }, el('b', { text: '📱 أجهزة ' + p.name }),
+    el('span', { class: 'note', text: 'اربط موبايل ابنك بملفه: يدخل مباشرة بدون رقم ولا كلمة سر، ولا يرى حسابك أو الدفع أو ملفات إخوته.' }));
+  const list = el('div'), out = el('div'), msg = el('div');
+  const load = async () => { list.innerHTML = '';
+    try { const q = await getDocs(query(collection(db, 'users', ACC.user.uid, 'kidDevices'), where('pid', '==', p.id)));
+      if (!q.size) list.append(el('span', { class: 'note', text: 'لا يوجد جهاز مربوط بعد.' }));
+      q.forEach(d => { const x = d.data(); list.append(el('div', { class: 'kidrow' }, el('span', { text: '📱' }), el('span', {}, el('b', { text: x.device || 'جهاز' }), el('span', { class: 'note', text: x.at && x.at.toMillis ? ' — رُبط في ' + fmtDate(x.at.toMillis()) : '' })),
+        el('button', { class: 'btn ghost sm', text: 'إلغاء الربط', onclick: async e => { e.target.disabled = true; try { await call('unlinkKidDevice', { kid: d.id }); load(); } catch (x) { fbk(msg, 'bad', fnErr(x)); e.target.disabled = false; } } }))); });
+    } catch (e) { list.append(el('span', { class: 'note', text: 'تعذّر تحميل الأجهزة.' })); } };
+  const gen = el('button', { class: 'btn sun', text: '🔗 اربط جهاز ' + p.name, onclick: async () => {
+    gen.disabled = true; out.innerHTML = ''; msg.innerHTML = '';
+    try { const r = await call('createLinkCode', { pid: p.id }); const url = location.origin + location.pathname + '#link-' + r.code;
+      const qr = el('div', { class: 'qrbox' });
+      const left = el('span', { class: 'note' });
+      out.append(el('div', { class: 'linkcode', dir: 'ltr', text: r.code.slice(0, 3) + ' ' + r.code.slice(3) }), qr, left,
+        el('span', { class: 'note', text: 'على موبايل ' + p.name + ': امسح الرمز بالكاميرا، أو افتح المنصة واضغط «دخول» ← «أنا طالب، عندي رمز» واكتب الأرقام.' }));
+      const t = setInterval(() => { const m = Math.max(0, r.exp - Date.now()); left.textContent = m ? 'صالح لمدة ' + Math.ceil(m / 60000) + ' دقيقة' : 'انتهت صلاحية الرمز'; if (!m || !out.isConnected) { clearInterval(t); if (!m) { out.innerHTML = ''; gen.disabled = false; } } }, 1000);
+      loadQR().then(Q => { new Q(qr, { text: url, width: 200, height: 200, correctLevel: Q.CorrectLevel.M }); }).catch(() => {});
+      setTimeout(() => { gen.disabled = false; }, 3000); const poll = setInterval(() => { if (!out.isConnected) { clearInterval(poll); return; } load(); }, 5000); setTimeout(() => clearInterval(poll), 15 * 60000);
+    } catch (e) { gen.disabled = false; fbk(msg, 'bad', fnErr(e)); } } });
+  box.append(list, gen, out, msg); load(); return box;
+}
+let _qr = null;
+function loadQR() { return _qr || (_qr = new Promise((res, rej) => { const sc = document.createElement('script'); sc.src = 'https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js'; sc.onload = () => res(window.QRCode); sc.onerror = rej; document.head.append(sc); })); }
+
 /* ---------- parent: one child's report ---------- */
 async function renderKid(pid) {
   if (!D.App.catalog) { setTimeout(() => renderKid(pid), 300); return; }
@@ -269,6 +322,7 @@ async function renderKid(pid) {
     try { await setDoc(pref(pid), { name: p.name, goal: v }, { merge: true }); p.goal = v; if (ACC.pid === pid) { try { localStorage.setItem('darsi_p_' + pid + '_g_goal', JSON.stringify(v)); } catch (e) {} } renderKid(pid); }
     catch (x) { fbk(msg, 'bad', errMsg(x)); } } })));
   s.append(el('div', { class: 'panel accbox' }, el('b', { text: '🎯 الهدف اليومي' }), el('span', { class: 'note', text: 'كم دقيقة تريد أن يتعلّم ' + p.name + ' كل يوم؟ سيظهر له عدّاد، ويحتفل التطبيق معه عند تحقيقه.' }), gsel, msg));
+  s.append(await kidDevicesBox(p));
   // full report (day / week / month) with weak skills, PDF and WhatsApp
   const rbox = el('div'); s.append(rbox);
   const drawRep = per => { rbox.innerHTML = ''; rbox.append(D.REPORT.view({ name: p.name, grade: p.grade, stats: st, goal }, per, drawRep)); };
@@ -276,8 +330,17 @@ async function renderKid(pid) {
   s.append(el('button', { class: 'btn sun', text: '▶ ابدأ الدراسة كـ ' + p.name, onclick: async () => { await setActive(pid); go('g' + p.grade); } }));
 }
 
+function renderKidAccount() {
+  const p = activeProfile() || {}; const s = page('حسابي', p.name || '', 'home');
+  s.append(el('div', { class: 'panel accbox' }, el('div', { style: 'font-size:3rem;text-align:center', text: p.avatar || '🙂' }),
+    el('b', { style: 'text-align:center;font-size:1.3rem', text: p.name || '' }), el('span', { class: 'note', style: 'text-align:center', text: 'الصف ' + gradeName(p.grade) }),
+    el('div', { class: 'feedback ok', text: '🔗 هذا الجهاز مربوط بحساب ولي أمرك. نجومك وتقدّمك تُحفظ تلقائياً ويراها ولي أمرك.' })),
+    el('button', { class: 'btn sun', text: '📚 دروسي', onclick: () => go('g' + p.grade) }),
+    el('button', { class: 'btn', text: '📊 تقريري', onclick: () => go('myreport') }));
+}
 function renderAccount() {
   if (!ACC.user) { go('login'); return; }
+  if (ACC.kid) { renderKidAccount(); return; }
   if (!ACC.profile) { go('onboard'); return; }
   const P = ACC.profile, u = ACC.user, [ic, rt] = ROLES[P.role] || ['👤', ''];
   const s = page('حسابي', P.name, 'home');
@@ -344,7 +407,7 @@ ACC.loadPaid = async id => {
 ACC.subs = [];
 async function loadSubs() {
   ACC.subs = [];
-  try { const q = query(collection(db, 'subscriptions'), where('uid', '==', ACC.user.uid));
+  try { const q = query(collection(db, 'subscriptions'), where('uid', '==', OW()));
     const sn = await getDocs(q); const now = Date.now();
     ACC.subs = sn.docs.map(d => ({ id: d.id, ...d.data() })).filter(x => x.active !== false && x.end && x.end.toMillis() > now);
   } catch (e) { console.warn('subs', e); }
@@ -354,6 +417,7 @@ const subApplies = sub => {
   if (sc.any) return true;                        // منحة الإدارة: لكل ملفات الحساب
   if (sc.teacherOnly) return role === 'teacher' && ACC.pid === 'me';
   if (sc.kids) return !!ACC.pid && ACC.pid !== 'me';
+  if (ACC.kid) return false;
   return role === 'student' || (!!sc.self && ACC.pid === 'me');
 };
 ACC.hasAccess = (g, s) => ACC.subs.some(sub => { if (!subApplies(sub)) return false; const sc = sub.scope || {};
@@ -376,6 +440,7 @@ function subjectsOf(g) { const c = D.App.catalog; return ((c && c.grades[g]) || 
 function subjName(g, sid) { const s = subjectsOf(g).find(x => x.id === sid); return s ? s.name : sid; }
 
 function renderSubscribe() {
+  if (ACC.kid) { const s = page('الاشتراك', '', 'home'); s.append(el('div', { class: 'feedback info', text: 'هذا الدرس يحتاج اشتراكاً. اطلب من ولي أمرك أن يشترك لك من حسابه، وسيفتح عندك مباشرة.' })); return; }
   if (!ACC.user) { D.App.after = 'subscribe'; go('login'); return; }
   if (!ACC.profile) { go('onboard'); return; }
   const role = ACC.profile.role, s = page('الاشتراك', 'افتح الدروس حتى 31 أغسطس', D.App.after || 'home');
@@ -499,14 +564,29 @@ function renderAdmin() {
 document.addEventListener('visibilitychange', async () => { if (document.visibilityState === 'visible' && ACC.user && ACC.profile) { const n = ACC.subs.length; await loadSubs(); if (ACC.subs.length !== n && D.App.catalog) D.route(); } });
 
 const ROUTES = { admin: renderAdmin, subscribe: renderSubscribe, login: renderLogin, onboard: renderOnboard, kids: renderKids, who: renderWho, account: renderAccount };
-ACC.route = h => { const pm = /^paid-([A-Za-z0-9]{10,40})$/.exec(h); const km = /^kid-([A-Za-z0-9]{1,30})$/.exec(h); const f = pm ? () => renderPaid(pm[1]) : km ? () => renderKid(km[1]) : ROUTES[h]; if (!f) return false; if (!ACC.ready) { page('…', 'جارٍ التحميل', 'home'); return true; } if (ACC.loadError && ACC.user) { showLoadError(); return true; } f(); return true; };
+ACC.route = h => { const pm = /^paid-([A-Za-z0-9]{10,40})$/.exec(h); const lm = /^link(?:-(\d{6}))?$/.exec(h); if (lm) { if (!ACC.ready) { page('…', 'جارٍ التحميل', 'home'); return true; } renderLink(lm[1]); return true; }
+  const km = /^kid-([A-Za-z0-9]{1,30})$/.exec(h); const f = pm ? () => renderPaid(pm[1]) : km ? () => renderKid(km[1]) : ROUTES[h]; if (!f) return false; if (!ACC.ready) { page('…', 'جارٍ التحميل', 'home'); return true; } if (ACC.loadError && ACC.user) { showLoadError(); return true; } f(); return true; };
 
 /* ---------- auth state ---------- */
 const withTimeout = (pr, ms = 8000) => Promise.race([pr, new Promise((_, rej) => setTimeout(() => rej({ code: 'timeout' }), ms))]);
 onAuthStateChanged(auth, async user => {
   ACC.user = user; ACC.profile = null; ACC.profiles = []; ACC.loadError = null;
   try {
-    if (user) {
+    ACC.kid = null;
+    if (user && user.isAnonymous) {
+      const tr = await withTimeout(user.getIdTokenResult()).catch(() => null);
+      const c = (tr && tr.claims) || {};
+      if (c.kidOf) {
+        ACC.kid = { parent: c.kidOf, pid: c.kidPid };
+        try { const d = await withTimeout(getDoc(pref(c.kidPid)));
+          if (!d.exists()) throw { code: 'unlinked' };
+          ACC.profiles = [{ id: d.id, ...d.data() }]; ACC.profile = { role: 'kid', name: d.data().name };
+          await withTimeout(loadSubs()); ACC.pid = c.kidPid; store.set('acc_pid', c.kidPid);
+          withTimeout(pullProgress(c.kidPid)).catch(() => {}); pullStats(c.kidPid);
+        } catch (e) { if (e.code === 'permission-denied' || e.code === 'unlinked') { ACC.kid = null; ACC.unlinked = true; await signOut(auth); return; } console.error('kid', e); ACC.loadError = e; }
+      } else if (!ACC.linking) { await signOut(auth); return; }
+    }
+    else if (user) {
       try { const snap = await withTimeout(getDoc(uref())); ACC.profile = snap.exists() ? snap.data() : null; if (ACC.profile) { await withTimeout(loadProfiles()); await withTimeout(loadSubs()); } }
       catch (e) { console.error('profile', e); ACC.loadError = e; }
       if (ACC.profiles.length && !ACC.profiles.some(p => p.id === ACC.pid)) await setActive(ACC.profiles.length === 1 ? ACC.profiles[0].id : null);
@@ -515,6 +595,9 @@ onAuthStateChanged(auth, async user => {
   } catch (e) { console.error('auth', e); ACC.loadError = e; }
   ACC.ready = true;
   const h = location.hash.replace(/^#/, '');
+  if (ACC.linking) return;
+  if (ACC.kid && (h === 'login' || h === 'who' || h === 'kids' || h === 'onboard')) { go('home'); return; }
+  if (!user && ACC.unlinked) { ACC.unlinked = false; go('link'); return; }
   if (user && ACC.loadError) { if (ROUTES[h] || !h || h === 'home') { showLoadError(); return; } }
   else if (user && !ACC.profile) { go('onboard'); return; }
   else if (user && h === 'login') { go(isAdult() ? (ACC.profiles.length ? 'who' : 'kids') : 'home'); return; }
