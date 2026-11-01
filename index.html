@@ -678,6 +678,9 @@ h2{font-weight:800}
 .panel.tip ul,.panel.life ul,.panel.think ul{padding-inline-start:20px;margin:6px 0}.panel.tip li,.panel.life li{margin:4px 0}
 @media (prefers-reduced-motion:no-preference){.lsec:not([hidden]){animation:lsecIn .35s ease-out}}@keyframes lsecIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
 .ctrl-list{display:grid;gap:4px;max-height:340px;overflow:auto;background:var(--paper);border-radius:12px;padding:8px}.ctrl-l{display:flex;gap:8px;align-items:flex-start;padding:4px 2px}.ctrl-l input{width:20px;height:20px;margin-top:3px;flex:none}
+.qplayer{display:grid;gap:8px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:12px;margin-top:10px}
+.qplayer .qsel,.qplayer .qrate{width:100%;padding:10px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:inherit;font:inherit}.qplayer .qrate{width:auto;padding:6px}
+.qplayer .qopts{gap:14px;flex-wrap:wrap;align-items:center}.qplayer .qmsg{margin:0}
 </style>
 
 </head><body>
@@ -772,7 +775,7 @@ async function qrInit(){if(QR.tried)return QR.read;QR.tried=true;
   try{const c=store.get('qr_timing_reads',null);let list=c&&Date.now()-c.t<7*864e5?c.list:null;
     if(!list){const j=await fetch('https://www.mp3quran.net/api/v3/ayat_timing/reads').then(r=>r.json());list=Array.isArray(j)?j:(j.reads||j.data||Object.values(j).find(Array.isArray)||[]);store.set('qr_timing_reads',{t:Date.now(),list});}
     const q=list.filter(x=>/قالون|qalon|qaloon|qalun/i.test(JSON.stringify(x)));
-    const pref=store.get('qr_timing_pref',null);QR.read=q.find(x=>x.id===pref)||q[0]||null;}catch(e){QR.read=null;}
+    QR.reads=q;const pref=store.get('qr_timing_pref',null);QR.read=q.find(x=>x.id===pref)||q[0]||null;}catch(e){QR.read=null;QR.reads=[];}
   return QR.read;}
 async function qrTiming(s){const r=QR.read;if(!r)return null;const k=r.id+':'+s;if(QR.timing[k])return QR.timing[k];
   try{const j=await fetch('https://www.mp3quran.net/api/v3/ayat_timing?surah='+s+'&read='+r.id).then(x=>x.json());const a=Array.isArray(j)?j:(j.data||[]);if(!a.length)return null;QR.timing[k]=a;return a;}catch(e){return null;}}
@@ -783,15 +786,14 @@ function playSrc(src,{from=0,to=null,onLabel}={}){return new Promise(res=>{qrSto
   const tok=TTS.token;const iv=setInterval(()=>{if(tok!==TTS.token||QR.audio!==a){clearInterval(iv);done();}},250);});}
 async function playQ(r,{mark}={}){const tok=TTS.token;
   await qrInit();
-  if(QR.read){const tm=await qrTiming(r.s);if(tok!==TTS.token)return;
-    if(tm){const f=x=>+(x.ayah??x.aya??x.verse);const st=tm.find(x=>f(x)===r.a1),en=tm.find(x=>f(x)===r.a2);
-      if(st&&en){const folder=String(QR.read.folder_url||QR.read.server||QR.read.url||'').replace(/\/?$/,'/');const div=(+en.end_time>10000||+st.start_time>10000)?1000:1;
-        if(folder.length>1){QR.label='بصوت '+(QR.read.name||'القارئ')+' — رواية قالون عن نافع';if(mark)mark(r.a1);
-          await playSrc(folder+String(r.s).padStart(3,'0')+'.mp3',{from:(+st.start_time)/div,to:(+en.end_time)/div});return;}}}}
-  // fallback: verse-by-verse files (Hafs numbering)
-  QR.label='تلاوة الحصري (رواية حفص) — لم تتوفر تلاوة الآية منفردة برواية قالون';
-  const [hs,h1,h2]=r.h||[r.s,r.a1,r.a2];
-  for(let a=h1;a<=h2;a++){if(tok!==TTS.token)return;if(mark)mark(r.a1+(a-h1));await playSrc('https://cdn.islamic.network/quran/audio/128/ar.husary/'+hafsGlobal(hs,a)+'.mp3');}
+  /* try the preferred Qalun reciter, then the other Qalun reciters that have verse timings; never switch to another riwaya */
+  const cands=[QR.read,...(QR.reads||[]).filter(x=>x!==QR.read)].filter(Boolean).slice(0,4);
+  for(const rd of cands){QR.read=rd;const tm=await qrTiming(r.s);if(tok!==TTS.token)return;if(!tm)continue;
+    const f=x=>+(x.ayah??x.aya??x.verse);const st=tm.find(x=>f(x)===r.a1),en=tm.find(x=>f(x)===r.a2);if(!st||!en)continue;
+    const folder=String(rd.folder_url||rd.server||rd.url||'').replace(/\/?$/,'/');if(folder.length<2)continue;const div=(+en.end_time>10000||+st.start_time>10000)?1000:1;
+    QR.label='بصوت '+(rd.name||'القارئ')+' — رواية قالون عن نافع';if(mark)mark(r.a1);
+    await playSrc(folder+String(r.s).padStart(3,'0')+'.mp3',{from:(+st.start_time)/div,to:(+en.end_time)/div});return;}
+  QR.label='تعذّر تحميل التلاوة الآن. تحقق من الاتصال بالإنترنت.';
 }
 function qFind(text){const t=String(text).trim();return QR.reg.find(r=>r.k!=='div'&&(r.k===t||r.k.indexOf(t)>=0&&t.length>8||t.indexOf(r.k)>=0&&r.k.length>8))||null;}
 /* split speech into TTS parts and verse parts; verses are never read by the synthetic voice */
@@ -799,6 +801,48 @@ function qSplit(text){const out=[];let last=0;const re=/﴿([^﴾]*)﴾/g;let m;
   while((m=re.exec(T))){if(m.index>last)out.push({t:T.slice(last,m.index)});if(/[ء-يࡰ-࢟]/.test(m[1])){const r=qFind(m[1]);if(r)out.push({q:r});}last=re.lastIndex;}
   if(last<T.length)out.push({t:T.slice(last)});return out;}
 
+/* ================= مشغّل القرآن الموحّد (رواية قالون عن نافع) =================
+   نفس المشغّل في صفحة السورة وداخل الدروس: اختيار القارئ، تشغيل/إيقاف/تقديم، السرعة، التكرار،
+   وتشغيل مقطع الآيات المطلوب فقط عندما يتوفر توقيت الآيات لهذا القارئ. لا نخلط برواية حفص أبداً. */
+const normU=u=>String(u||'').replace(/^https?:\/\//,'').replace(/\/+$/,'').toLowerCase();
+async function qrReads(){try{await qrInit();}catch(e){}const c=store.get('qr_timing_reads',null);return (c&&c.list)||[];}
+function quranPlayer(num,{a1=null,a2=null}={}){
+  const wrap=el('div',{class:'qplayer'});const msg=el('p',{class:'note qmsg',text:'جارٍ تحميل قائمة القرّاء…'});
+  const sel=el('select',{class:'qsel','aria-label':'اختر القارئ'});
+  const au=el('audio',{controls:true,preload:'none',style:'width:100%'});
+  const rep=el('input',{type:'checkbox'});rep.checked=!!store.get('qr_rep',false);
+  const rate=el('select',{'aria-label':'سرعة التلاوة',class:'qrate'});[['0.75','بطيئة'],['1','عادية'],['1.25','أسرع']].forEach(([v,t])=>rate.append(el('option',{value:v,text:t})));rate.value=String(store.get('qr_rate','1'));
+  let cur=null,tm=null,clip=a1!=null?{a1,a2:a2||a1}:null,stopAt=null,onAyah=null;
+  const ayahOf=t=>{if(!tm)return null;const d=tm.div;const x=tm.list.find(r=>t>=r.st/d&&t<r.en/d);return x?x.a:null;};
+  const rangeOf=(x,y)=>{if(!tm)return null;const f=a=>tm.list.find(r=>r.a===a);const s1=f(x),s2=f(y);return s1&&s2?[s1.st/tm.div,s2.en/tm.div]:null;};
+  async function loadTiming(it){tm=null;const reads=await qrReads();const r=reads.find(x=>normU(x.folder_url||x.server||x.url)===normU(it.server));if(!r)return;
+    try{const j=await fetch('https://www.mp3quran.net/api/v3/ayat_timing?surah='+num+'&read='+r.id).then(x=>x.json());const a=Array.isArray(j)?j:(j.data||[]);if(!a.length)return;
+      const list=a.map(x=>({a:+(x.ayah??x.aya??x.verse),st:+x.start_time,en:+x.end_time})).filter(x=>x.a>0);const div=list.some(x=>x.en>10000)?1000:1;tm={list,div};}catch(e){}}
+  function playRange(x,y){const r=rangeOf(x,y);stopAll();QR.audio=au;au.loop=false;
+    if(r){stopAt=r[1];const go_=()=>{try{au.currentTime=r[0];}catch(e){}au.play().catch(()=>{});};if(au.readyState>=1)go_();else au.addEventListener('loadedmetadata',go_,{once:true});au.load&&au.readyState<1&&au.load();}
+    else{stopAt=null;au.currentTime=0;au.play().catch(()=>{});msg.textContent='هذا القارئ لا يتوفر له توقيت الآيات، فتُتلى السورة من أولها. اختر قارئاً آخر لتسمع الآيات المحددة فقط.';}}
+  au.addEventListener('timeupdate',()=>{if(stopAt!=null&&au.currentTime>=stopAt){if(rep.checked&&clip){playRange(clip.a1,clip.a2);return;}au.pause();stopAt=null;}
+    const a=ayahOf(au.currentTime);if(onAyah)onAyah(au.paused?null:a);});
+  au.addEventListener('play',()=>{au.playbackRate=parseFloat(rate.value);if(QR.audio!==au){TTS.token++;if(TTS.synth)TTS.synth.cancel();QR.audio=au;}});
+  au.addEventListener('pause',()=>{onAyah&&onAyah(null);});au.addEventListener('ended',()=>{onAyah&&onAyah(null);});
+  au.addEventListener('error',()=>{if(au.getAttribute('src'))msg.textContent='تعذّر تشغيل التلاوة. تحقق من الاتصال أو جرّب قارئاً آخر.';});
+  rate.addEventListener('change',()=>{store.set('qr_rate',rate.value);au.playbackRate=parseFloat(rate.value);});
+  rep.addEventListener('change',()=>{store.set('qr_rep',rep.checked);au.loop=rep.checked&&!clip;});au.loop=rep.checked&&!clip;
+  const setSrc=async it=>{if(!it)return;cur=it;store.set('qr_reciter',it.id);const u=it.server.replace(/\/?$/,'/')+String(num).padStart(3,'0')+'.mp3';au.src=u;stopAt=null;
+    msg.textContent='القارئ: '+it.name+(it.moshaf?' — '+it.moshaf:'');await loadTiming(it);
+    if(clip&&!tm)msg.textContent='القارئ: '+it.name+' — تُتلى السورة كاملة (لا يتوفر توقيت الآيات لهذا القارئ).';};
+  const playBtn=clip?el('button',{class:'btn',text:'▶ استمع إلى الآيات '+(clip.a1===clip.a2?clip.a1:clip.a1+'–'+clip.a2),onclick:()=>playRange(clip.a1,clip.a2)}):null;
+  wrap.append(el('label',{class:'note',text:'القارئ (رواية قالون عن نافع):'}),sel,playBtn,au,
+    el('div',{class:'row qopts'},el('label',{class:'row',style:'gap:6px'},rep,el('span',{text:clip?'🔁 كرّر الآيات':'🔁 كرّر السورة'})),el('label',{class:'row',style:'gap:6px'},el('span',{text:'السرعة:'}),rate)),msg);
+  qalunReciters().then(list=>{list=list.filter(x=>x.suras.includes(num));if(!list.length){msg.textContent='لا تتوفر تلاوة لهذه السورة برواية قالون حالياً.';return;}
+    sel.innerHTML='';list.forEach(it=>sel.append(el('option',{value:it.id,text:it.name})));
+    const pref=store.get('qr_reciter',null);if(pref&&list.some(x=>x.id===pref))sel.value=pref;
+    setSrc(list.find(x=>x.id===sel.value));sel.addEventListener('change',async()=>{const was=!au.paused;await setSrc(list.find(x=>x.id===sel.value));if(was){clip?playRange(clip.a1,clip.a2):au.play().catch(()=>{});}});
+  }).catch(()=>{const fb={id:'fb-husr',name:'محمود خليل الحصري',moshaf:'رواية قالون عن نافع',server:'https://server13.mp3quran.net/husr/Rewayat-Qalon-A-n-Nafi/',suras:[]};
+    sel.innerHTML='';sel.append(el('option',{value:fb.id,text:fb.name}));setSrc(fb);msg.textContent='تعذّر تحميل قائمة القرّاء، فاخترنا لك قارئاً افتراضياً. تأكد من اتصالك بالإنترنت.';});
+  wrap.playAyah=a=>playRange(a,a);wrap.onAyah=f=>{onAyah=f;};wrap.audio=au;
+  return wrap;
+}
 /* ---------- Quran enhancer: Qalun text styling + tap-to-listen ---------- */
 function qPlayDiv(d,only){stopAll();const tok=TTS.token;const lab=d.nextElementSibling&&d.nextElementSibling.querySelector('.qsrc');const s=+d.dataset.q.split(':')[0];
   (async()=>{if(lab)lab.textContent='جارٍ تحميل التلاوة…';await qrInit();let lastH='';
@@ -809,8 +853,11 @@ function qPlayDiv(d,only){stopAll();const tok=TTS.token;const lab=d.nextElementS
     $$('.qa.now').forEach(y=>y.classList.remove('now'));})();}
 function qEnhance(base){if(!base)return;
   base.querySelectorAll('.quran.qx:not([data-e])').forEach(d=>{d.dataset.e='1';
-    const bar=el('div',{class:'qbar'},el('button',{class:'btn',text:'▶ استمع بصوت القارئ',onclick:()=>qPlayDiv(d)}),el('button',{class:'btn ghost',text:'■ إيقاف',onclick:stopAll}),el('span',{class:'qsrc',text:'رواية قالون عن نافع — اضغط على أي آية لتسمعها وحدها'}));
-    d.after(bar);d.querySelectorAll('.qa').forEach(x=>x.addEventListener('click',e=>{e.stopPropagation();qPlayDiv(d,+x.dataset.a);}));});
+    const [qs,qr]=String(d.dataset.q||'').split(':');const num=+qs;const [x1,x2]=(qr||'').split('-').map(Number);
+    if(!num){return;}
+    const pl=quranPlayer(num,x1?{a1:x1,a2:x2||x1}:{});d.after(pl);
+    pl.onAyah(a=>{d.querySelectorAll('.qa').forEach(y=>y.classList.toggle('now',a!=null&&+y.dataset.a===a));});
+    d.querySelectorAll('.qa').forEach(x=>x.addEventListener('click',e=>{e.stopPropagation();pl.playAyah(+x.dataset.a);}));});
   const tw=document.createTreeWalker(base,NodeFilter.SHOW_TEXT,{acceptNode:n=>/﴿[^﴾]*[ء-يࡰ-࢟]/.test(n.nodeValue)&&!n.parentElement.closest('.qx,.qv,.qsura,button,script,style,textarea,input')?NodeFilter.FILTER_ACCEPT:NodeFilter.FILTER_REJECT});
   const nodes=[];while(tw.nextNode())nodes.push(tw.currentNode);
   nodes.forEach(n=>{const frag=document.createDocumentFragment();let last=0;const T=n.nodeValue;const re=/﴿([^﴾]*)﴾/g;let m;
@@ -2084,31 +2131,15 @@ function renderQuran(g,sid,num){
   root.innerHTML='';root.append(bar('سورة '+name,'استمع برواية قالون عن نافع','g'+g+'-'+sid));
   const sec=el('section',{class:'stack'});
   sec.append(el('div',{class:'kw-intro',html:'<b>🎧 استمع وردّد.</b> اختر القارئ ثم اضغط تشغيل. فعّل «كرّر» لتسمع السورة مرة بعد مرة حتى تحفظها، وخفّف السرعة لتتابع مع المصحف. <br><span class="note">التلاوات تُبث مباشرة من موقع MP3Quran.net المتاح للاستماع المجاني، وحقوقها محفوظة لأصحابها، وتحتاج اتصالاً بالإنترنت.</span>'}));
-  const msg=el('p',{class:'note',text:'جارٍ تحميل قائمة القرّاء…'});
-  const sel=el('select',{class:'qsel','aria-label':'اختر القارئ',style:'width:100%;padding:10px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:inherit;font:inherit'});
-  const au=el('audio',{controls:true,preload:'none',style:'width:100%;margin-top:10px'});
-  const rep=el('input',{type:'checkbox',id:'qrep'});rep.checked=!!store.get('qr_rep',false);au.loop=rep.checked;
-  rep.addEventListener('change',()=>{au.loop=rep.checked;store.set('qr_rep',rep.checked);});
-  const rate=el('select',{'aria-label':'سرعة التلاوة',style:'padding:6px;border-radius:8px;border:1px solid var(--line);background:var(--card);color:inherit;font:inherit'});
-  [['0.75','بطيئة'],['1','عادية'],['1.25','أسرع']].forEach(([v,t])=>rate.append(el('option',{value:v,text:t})));rate.value=String(store.get('qr_rate','1'));
-  const applyRate=()=>{au.playbackRate=parseFloat(rate.value);};rate.addEventListener('change',()=>{store.set('qr_rate',rate.value);applyRate();});au.addEventListener('play',applyRate);
-  au.addEventListener('error',()=>{if(au.getAttribute('src'))msg.textContent='تعذّر تشغيل التلاوة. تحقق من الاتصال أو جرّب قارئاً آخر.';});
-  const panelBox=el('div',{class:'panel'},el('label',{for:'qsel',class:'note',text:'القارئ (رواية قالون عن نافع):'}),sel,au,
-    el('div',{class:'row',style:'margin-top:10px;gap:14px;flex-wrap:wrap;align-items:center'},el('label',{class:'row',style:'gap:6px'},rep,el('span',{text:'🔁 كرّر السورة'})),el('label',{class:'row',style:'gap:6px'},el('span',{text:'السرعة:'}),rate)),msg);
-  sel.id='qsel';sec.append(panelBox);root.append(sec);
+  const pl=quranPlayer(num);const panelBox=el('div',{class:'panel'},pl);
+  sec.append(panelBox);root.append(sec);
   const tbox=el('div',{class:'qsura',text:'جارٍ تحميل نص السورة…'});sec.append(el('h3',{class:'h3',text:'📖 نص السورة (رواية قالون عن نافع)'}),tbox,el('p',{class:'note',text:'اضغط على أي آية لتسمعها وحدها. خط مصحف المدينة لرواية قالون من مجمع الملك فهد لطباعة المصحف الشريف.'}));
   fetch('data/quran/'+String(num).padStart(3,'0')+'.json').then(r=>r.json()).then(Q=>{tbox.innerHTML='';const AD='٠١٢٣٤٥٦٧٨٩',ad=n=>String(n).replace(/\d/g,c=>AD[c]);
     if(Q.basmala)tbox.append(el('div',{class:'qbasm',text:Q.bas}));
     Q.ayahs.forEach((t,i)=>{const a=i+1,[h1,h2]=Q.h[i];const sp=el('span',{class:'qa'},t+' ',el('span',{class:'qn',text:'﴿'+ad(a)+'﴾'}),' ');
-      sp.onclick=()=>{try{au.pause()}catch(e){}stopAll();$$('.qa.now',tbox).forEach(x=>x.classList.remove('now'));sp.classList.add('now');playQ({s:num,a1:a,a2:a,h:[num,h1,h2]}).then(()=>{sp.classList.remove('now');msg.textContent=QR.label;});};tbox.append(sp);});
+      sp.onclick=()=>pl.playAyah(a);tbox.append(sp);});
+    pl.onAyah(a=>{$$('.qa',tbox).forEach((y,i)=>y.classList.toggle('now',a!=null&&i+1===a));});
   }).catch(()=>{tbox.textContent='تعذّر تحميل نص السورة.';});
-  const setSrc=(it)=>{if(!it)return;const u=it.server.replace(/\/?$/,'/')+String(num).padStart(3,'0')+'.mp3';au.src=u;msg.textContent='القارئ: '+it.name+(it.moshaf?' — '+it.moshaf:'');store.set('qr_reciter',it.id);};
-  qalunReciters().then(list=>{list=list.filter(x=>x.suras.includes(num));if(!list.length){msg.textContent='لا تتوفر تلاوة لهذه السورة برواية قالون حالياً.';return;}
-    sel.innerHTML='';list.forEach(it=>sel.append(el('option',{value:it.id,text:it.name})));
-    const pref=store.get('qr_reciter',null);if(pref&&list.some(x=>x.id===pref))sel.value=pref;
-    setSrc(list.find(x=>x.id===sel.value));sel.addEventListener('change',()=>{setSrc(list.find(x=>x.id===sel.value));au.play().catch(()=>{});});
-  }).catch(()=>{const fb={id:'fb-husr',name:'محمود خليل الحصري',moshaf:'رواية قالون عن نافع',server:'https://server13.mp3quran.net/husr/Rewayat-Qalon-A-n-Nafi/'};
-    sel.innerHTML='';sel.append(el('option',{value:fb.id,text:fb.name}));setSrc(fb);msg.textContent='تعذّر تحميل قائمة القرّاء، فاخترنا لك قارئاً افتراضياً. إن لم تعمل التلاوة فتأكد من اتصالك بالإنترنت.';});
 }
 function route(){
   stopAll();$$('audio').forEach(a=>{try{a.pause()}catch(e){}});document.body.classList.remove('kids');const h=location.hash.replace(/^#/,'');let m;
