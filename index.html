@@ -726,7 +726,12 @@ function assignVoices(chars){
   Object.entries(TTS.chars).forEach(([n,c])=>{const p=(TTS.pools&&TTS.pools[c.g])||[null];TTS.map[n]=p[used[c.g]++%p.length]||TTS.map.teacher;});
 }
 if(TTS.synth){loadVoices();TTS.synth.onvoiceschanged=()=>{loadVoices();assignVoices(TTS.chars);};}
-function speak(text,{who='teacher',lang='en',onWord,rate}={}){
+/* English letters are spoken by their NAMES (ess, bee, zed…), never as a bare sound the voice may mangle */
+const EN_LN={a:'ay',b:'bee',c:'see',d:'dee',e:'ee',f:'eff',g:'jee',h:'aitch',i:'eye',j:'jay',k:'kay',l:'ell',m:'em',n:'en',o:'oh',p:'pee',q:'cue',r:'ar',s:'ess',t:'tee',u:'you',v:'vee',w:'double you',x:'ex',y:'why',z:'zed'};
+function enLetters(t){const s=String(t).trim();const toks=s.match(/[A-Za-z]+/g);if(!toks)return t;
+  if(toks.every(x=>x.length===1||(x.length===2&&x[0]!==x[1]&&x[0].toLowerCase()===x[1].toLowerCase()))){const ls=[...new Set(toks.map(x=>x[0].toLowerCase()))];if(ls.length<=3)return ls.map(l=>EN_LN[l]).join('. ')+'.';}
+  return s.replace(/^([A-Za-z])\.\s+/,(m,l)=>EN_LN[l.toLowerCase()]+'. ');}
+function speak(text,{who='teacher',lang='en',onWord,rate}={}){if(lang!=='ar'&&!onWord)text=enLetters(text);
   return new Promise(res=>{
     if(!TTS.synth){res();return;}
     const u=new SpeechSynthesisUtterance(text);
