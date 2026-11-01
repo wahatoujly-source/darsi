@@ -634,6 +634,20 @@ h2{font-weight:800}
 .wkd{display:grid;grid-template-rows:auto 1fr auto;justify-items:center;height:100%;gap:3px;font-size:.72rem;color:var(--muted)}
 .wkb{width:70%;max-width:28px;height:100%;background:var(--paper);border-radius:8px;display:flex;align-items:flex-end;overflow:hidden}
 .wkb i{display:block;width:100%;background:var(--g5);border-radius:8px}.wkd.ok .wkb i{background:var(--g3)}
+.rep{padding-top:6px}.repsheet{font-family:inherit;border-radius:22px;border:0;padding:16px;font-size:15px;line-height:1.6}
+.rtabs{display:flex;gap:6px;margin-bottom:12px}.rtabs .btn{flex:1;padding:8px}.rtabs .btn.on{background:var(--night);color:#fff}
+.rhead{display:flex;gap:12px;align-items:center;margin-bottom:12px}.rhead .lvi{font-size:2rem;width:54px;height:54px;border-radius:16px;display:grid;place-items:center;background:#FFF4D6}
+.rhead b{display:block;font-family:var(--f-display);font-size:1.25rem}.rhead small{color:#555}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(92px,1fr));gap:8px}
+.kpi{background:#F4F6FB;border-radius:14px;padding:10px;text-align:center}.kpi b{display:block;font-family:var(--f-display);font-size:1.35rem}.kpi small{color:#555;font-size:.78rem}
+.kpi.ok b{color:#1F8A3B}.kpi.mid b{color:#B7791F}.kpi.bad b{color:#C53030}
+.rsec{margin-top:16px}.rsec h3{font-size:1.02rem;margin:0 0 8px;font-family:var(--f-display)}
+.ritem{border-inline-start:4px solid #C53030;background:#FFF5F5;border-radius:10px;padding:8px 10px;margin-bottom:6px}.ritem a{color:#2F6FED}
+.rtags{display:flex;flex-wrap:wrap;gap:6px}.rtags .chip{background:#EAF7EE;color:#1F6B33}
+.rrow{display:grid;grid-template-columns:auto 1fr auto;gap:8px;align-items:center;padding:6px 0;border-bottom:1px solid #eef}.rst{min-width:3.2em;font-size:.8rem}
+.onlyprint{display:none}.printcopy{display:none}
+@media print{body.prep .app>*:not(.printcopy){display:none!important}body.prep .printcopy{display:block!important}body.prep .rep .sheet{box-shadow:none}.noprint{display:none!important}.onlyprint{display:block}
+  body.prep .kpi,body.prep .ritem{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
 </style>
 
 </head><body>
@@ -800,6 +814,7 @@ function confetti(){if(reduceMotion)return;const box=el('div',{style:'position:f
     s.animate([{transform:'translate(0,0) rotate(0)'},{transform:`translate(${(Math.random()-.5)*160}px,${innerHeight+40}px) rotate(${Math.random()*720}deg)`}],{duration:1600+Math.random()*1400,easing:'cubic-bezier(.2,.6,.4,1)',fill:'forwards'});}
   document.body.append(box);setTimeout(()=>box.remove(),3200);}
 function cheer(kind,{say=true}={}){
+  if(kind==='right'||kind==='wrong')GAME.ans(kind==='right');
   if(!FX.on)return;
   if(kind==='right'){tones([660,880,1320]);if(say)setTimeout(()=>speak(pick(PRAISE[FX.lang]),{lang:FX.lang}),320);}
   else if(kind==='wrong'){tones([330,247],{type:'sine',vol:.1,gap:.13,dur:.2});}
@@ -1170,7 +1185,7 @@ C.pop=(b,ctx)=>{
   const upd=()=>{meter.textContent=score;};upd();
   const spawn=()=>{if(!live||!box.isConnected){clearInterval(timer);return;}const isT=Math.random()<0.45,t=isT?b.target:pick(b.pool.filter(x=>x!==b.target));
     const bl=el('button',{class:'balloon',lang:lang==='en'?'en':null,style:`left:${6+Math.random()*74}%;--bc:${pick(cols)};animation-duration:${(b.speed||6)+Math.random()*2}s`,text:t});
-    bl.onclick=()=>{if(bl.dataset.p)return;if(t===b.target){bl.dataset.p=1;bl.classList.add('popped');tones([880,1320],{dur:.09,gap:.04});score++;upd();if(score>=need)win();}else{bl.classList.add('shake');cheer('wrong');setTimeout(()=>bl.classList.remove('shake'),450);}};
+    bl.onclick=()=>{if(bl.dataset.p)return;if(t===b.target){bl.dataset.p=1;bl.classList.add('popped');tones([880,1320],{dur:.09,gap:.04});GAME.ans(true);score++;upd();if(score>=need)win();}else{bl.classList.add('shake');cheer('wrong');setTimeout(()=>bl.classList.remove('shake'),450);}};
     bl.addEventListener('animationend',e=>{if(e.animationName==='rise')bl.remove();});stage.append(bl);};
   const win=()=>{live=false;clearInterval(timer);$$('.balloon',stage).forEach(x=>x.remove());stage.append(el('div',{class:'kwin'},el('div',{class:'result-emo',text:'🎉'}),el('b',{text:'أحسنت! فرقعت '+score+' بالونات'}),el('button',{class:'btn',style:'margin-top:10px',text:'↺ العب مرة أخرى',onclick:go})));cheer('win');setTimeout(()=>speakAr('أحسنت! أنت بطل'),800);ctx.done();};
   const go=()=>{stage.innerHTML='';score=0;upd();live=true;stopAll();speakAr(b.q||'فرقع البالونات التي فيها').then(()=>spk(b.say||b.target,lang));
@@ -1507,24 +1522,102 @@ const GAME=(()=>{
   const minsToday=()=>Math.round((store.get('g_mins',{})[today()]||0));
   const goal=()=>store.get('g_goal',20);
   function week(){const m=store.get('g_mins',{});let t=0;for(let i=0;i<7;i++)t+=m[dayBefore(today(),i)]||0;return Math.round(t);}
+  const curLesson=()=>{const m=/^#l-([a-z0-9-]+)$/.exec(location.hash);return m?m[1]:null;};
+  /* per-lesson record: r right, w wrong, m minutes, st stars, t last activity (ms) */
+  function lrUp(f){const id=curLesson();if(!id)return;const L=store.get('g_lr',{});const x=L[id]||{r:0,w:0,m:0,st:0,t:0};f(x);x.t=Date.now();L[id]=x;store.set('g_lr',L);}
+  /* per-day record: r, w, st stars, l lessons touched */
+  function logUp(f){const id=curLesson();const G=store.get('g_log',{});const d=today();const x=G[d]||{r:0,w:0,st:0,l:[]};f(x);if(id&&!x.l.includes(id))x.l.push(id);G[d]=x;
+    const keep={};Object.keys(G).sort().slice(-95).forEach(k=>keep[k]=G[k]);store.set('g_log',keep);}
+  function ans(ok){lrUp(x=>ok?x.r++:x.w++);logUp(x=>ok?x.r++:x.w++);}
   function stats(){const st=countStars();return{stars:st,level:level(st),streak:streak(),today:minsToday(),goal:goal(),week:week()};}
   let lastSync=0;function sync(force){if(!window.ACC||!ACC.saveStats||!ACC.user||!ACC.pid)return;if(!force&&Date.now()-lastSync<60000)return;lastSync=Date.now();const x=stats();
-    ACC.saveStats({stars:x.stars,level:x.level.name,streak:x.streak,lastDay:today(),week:x.week,today:x.today,mins:store.get('g_mins',{})});}
+    ACC.saveStats({stars:x.stars,level:x.level.name,streak:x.streak,lastDay:today(),week:x.week,today:x.today,mins:store.get('g_mins',{}),lr:store.get('g_lr',{}),log:store.get('g_log',{}),goal:x.goal});}
   let tq=Promise.resolve();function toast(...a){tq=tq.then(()=>new Promise(r=>{toast1(...a);setTimeout(r,4100);}));}
   function toast1(icon,title,sub){const t=el('div',{class:'mj-toast',role:'status'},el('span',{class:'ti',text:icon}),el('span',{},el('b',{text:title}),sub?el('small',{text:sub}):null));document.body.append(t);requestAnimationFrame(()=>t.classList.add('on'));setTimeout(()=>{t.classList.remove('on');setTimeout(()=>t.remove(),400);},3600);}
-  function onStar(){const before=level(countStars()-1);const days=store.get('g_days',[]);const d=today();if(!days.includes(d)){days.push(d);store.set('g_days',days.slice(-120));const sk=streak();if(sk>1)setTimeout(()=>toast('🔥',sk+' أيام متتالية!','استمر، لا تقطع السلسلة'),900);}
+  function onStar(){lrUp(x=>x.st++);logUp(x=>x.st++);const before=level(countStars()-1);const days=store.get('g_days',[]);const d=today();if(!days.includes(d)){days.push(d);store.set('g_days',days.slice(-120));const sk=streak();if(sk>1)setTimeout(()=>toast('🔥',sk+' أيام متتالية!','استمر، لا تقطع السلسلة'),900);}
     const now=level(countStars());if(now.name!==before.name){setTimeout(()=>{cheer('perfect');toast(now.icon,'مستوى جديد: '+now.name,'أحسنت! رصيدك الآن '+countStars()+' ⭐');},600);sync(true);}else sync();}
   function tick(){if(document.visibilityState!=='visible'||!/^#l-/.test(location.hash))return;const m=store.get('g_mins',{}),d=today(),g=goal();const was=m[d]||0;m[d]=Math.round((was+0.5)*10)/10;
-    const keep={};Object.keys(m).sort().slice(-31).forEach(k=>keep[k]=m[k]);store.set('g_mins',keep);if(was<g&&m[d]>=g){cheer('win');toast('🎯','حققت هدفك اليوم!',g+' دقيقة من التعلّم. ممتاز');sync(true);}else sync();}
+    const keep={};Object.keys(m).sort().slice(-95).forEach(k=>keep[k]=m[k]);store.set('g_mins',keep);lrUp(x=>x.m=Math.round((x.m+0.5)*10)/10);logUp(()=>{});if(was<g&&m[d]>=g){cheer('win');toast('🎯','حققت هدفك اليوم!',g+' دقيقة من التعلّم. ممتاز');sync(true);}else sync();}
   setInterval(tick,30000);
   function card(){const x=stats();const pct=Math.min(1,x.today/Math.max(1,x.goal));const nx=x.level.next;
     const ring=el('span',{class:'ring',style:'--p:'+pct});ring.append(el('b',{text:String(x.today)}),el('small',{text:'من '+x.goal+' د'}));
     return el('div',{class:'mj-progress'},
       el('div',{class:'lv'},el('span',{class:'lvi',text:x.level.icon}),el('span',{},el('b',{text:x.level.name}),el('small',{text:nx?('باقي '+(nx[0]-x.stars)+' نجمة لمستوى '+nx[1]):'أعلى مستوى!'})),
         el('span',{class:'bar'},el('i',{style:'width:'+Math.round(100*(nx?(x.stars-x.level.min)/(nx[0]-x.level.min):1))+'%'}))),
-      el('div',{class:'chips'},el('span',{class:'chip'},'⭐ ',el('b',{text:String(x.stars)}),' نجمة'),el('span',{class:'chip'},'🔥 ',el('b',{text:String(x.streak)}),' يوم'),ring));}
-  return{onStar,card,stats,level,LEVELS,setGoal:g=>store.set('g_goal',g),sync,toast};
+      el('div',{class:'chips'},el('a',{class:'chip',href:'#myreport',text:'📊 تقريري'}),el('span',{class:'chip'},'⭐ ',el('b',{text:String(x.stars)}),' نجمة'),el('span',{class:'chip'},'🔥 ',el('b',{text:String(x.streak)}),' يوم'),ring));}
+  const local=()=>{const x=stats();return{stars:x.stars,streak:x.streak,lastDay:today(),mins:store.get('g_mins',{}),lr:store.get('g_lr',{}),log:store.get('g_log',{}),goal:x.goal};};
+  return{onStar,ans,card,stats,local,level,LEVELS,today,dayBefore,setGoal:g=>store.set('g_goal',g),sync,toast};
 })();
+/* ================= تقارير التقدّم (لولي الأمر وللطالب) ================= */
+const REPORT=(()=>{
+  const SK={math:[[/جدو?ل.{0,6}ضرب|جداول ضرب|الضرب في \d\b/,'جدول الضرب'],[/كسر|كسور/,'الكسور'],[/عشري/,'الأعداد العشرية'],[/نسب/,'النسبة والنسبة المئوية'],[/جبر|معادل|مقادير|مفكوك|تحليل/,'الجبر والمعادلات'],
+      [/مساح|محيط|حجم|حجوم/,'المساحة والمحيط والحجم'],[/زاوي|زوايا|مستقيم|مثلث|مضلع|هندس|تماثل|تطابق|تشابه|إحداث/,'الهندسة والزوايا'],[/قسم/,'القسمة'],[/ضرب/,'الضرب'],[/طرح|الفرق/,'الطرح'],[/جمع|المجموع/,'الجمع'],
+      [/طول|أطوال|كتل|زمن|الوقت|ساع|قياس|نقود|سرعة/,'القياس والوقت'],[/بيان|إحصا|متوسط|المعدل|تكرار/,'البيانات والإحصاء'],[/مسائل|لفظي/,'حلّ المسائل'],[/أعداد|العد|مكاني|تقريب|مقارنة/,'الأعداد والقيمة المكانية']],
+    ar:[[/حرف|الحروف|أصوات/,'الحروف وأصواتها'],[/إملاء|همز|التاء|الألف|اللام الشمسية|القمرية|التنوين|الشدة|المد/,'الإملاء'],[/نحو|فعل|اسم|جملة|مبتدأ|خبر|فاعل|مفعول|إعراب|حروف الجر|ضمير|نعت/,'النحو والقواعد'],[/تعبير|إنشاء|كتابة/,'التعبير والكتابة'],[/قراءة|نص|قصة|محفوظ|نشيد/,'القراءة والفهم']]};
+  function skillOf(f){const t=f.lesson.title+' '+(f.unit.title||'');for(const [re,n] of (SK[f.subject.id]||[]))if(re.test(f.lesson.title))return n;for(const [re,n] of (SK[f.subject.id]||[]))if(re.test(f.unit.title||''))return n;const ut=f.unit.title||'';if(!ut||/دروس الكتاب|^تدريب|^الوحدة\s*\S*$/.test(ut))return f.subject.name;return ut.replace(/^الوحدة\s*\S+\s*[:：-]?\s*/,'');}
+  const P=a=>'\u2066'+a+'%\u2069';
+  const acc=x=>{const n=(x.r||0)+(x.w||0);return n?Math.round(100*(x.r||0)/n):null;};
+  const grade=a=>a==null?'—':a>=90?'ممتاز':a>=75?'جيد جداً':a>=60?'جيد':'يحتاج متابعة';
+  const PER={day:['اليوم',1],week:['هذا الأسبوع',7],month:['هذا الشهر',30]};
+  function compute(st,period){
+    const days=PER[period][1],T=GAME.today(),keys=[];for(let i=0;i<days;i++)keys.push(GAME.dayBefore(T,i));
+    const mins=st.mins||{},log=st.log||{},lr=st.lr||{};
+    let m=0,r=0,w=0,stars=0,active=0;const ids=new Set();
+    keys.forEach(k=>{const mm=mins[k]||0,L=log[k];m+=mm;if(mm>=1||(L&&(L.r||L.w||L.st)))active++;if(L){r+=L.r||0;w+=L.w||0;stars+=L.st||0;(L.l||[]).forEach(i=>ids.add(i));}});
+    const lessons=[],skills={},subj={};
+    ids.forEach(id=>{const f=findLesson(id);if(!f)return;const x=lr[id]||{};const sk=skillOf(f);const key=f.subject.id+'|'+sk;
+      lessons.push({id,f,x,a:acc(x)});
+      const S=skills[key]||(skills[key]={name:sk,subj:f.subject,grade:f.grade,r:0,w:0,m:0,lessons:[]});S.r+=x.r||0;S.w+=x.w||0;S.m+=x.m||0;S.lessons.push({f,x,a:acc(x)});
+      const J=subj[f.subject.id]||(subj[f.subject.id]={s:f.subject,m:0,n:0,r:0,w:0});J.m+=x.m||0;J.n++;J.r+=x.r||0;J.w+=x.w||0;});
+    const SL=Object.values(skills).map(S=>({...S,a:acc(S),n:S.r+S.w}));
+    const weak=SL.filter(S=>S.n>=4&&(S.a<60||(S.w>=6&&S.a<70))).sort((a,b)=>a.a-b.a);
+    const strong=SL.filter(S=>S.r>=5&&S.a>=85).sort((a,b)=>b.a-a.a);
+    // earlier-grade lessons on the same skill, for review
+    weak.forEach(S=>{S.review=[];if(!App.catalog)return;const g0=+String(S.grade).replace(/\D/g,'');
+      const order=[];for(let g=g0-1;g>=1;g--)order.push(g);order.push(g0);let low=0;for(const g of order){if(S.review.length>=2)break;const subs=(App.catalog.grades[g]||[]).filter(x=>x.id===S.subj.id);for(const sb of subs)for(const u of unitsOf(sb))for(const l of u.lessons){if(S.review.length>=2)break;if(!l.ready)continue;
+        const f={lesson:l,unit:u,subject:sb,grade:g};if(skillOf(f)===S.name&&!S.lessons.some(z=>z.f.lesson.id===l.id)){if(g<g0){if(low>=1)continue;low++;}S.review.push({l,g});}}}});
+    let last=0;Object.values(lr).forEach(x=>{if(x.t>last)last=x.t;});
+    return{label:PER[period][0],days,m:Math.round(m),r,w,a:acc({r,w}),stars,active,lessons:lessons.sort((a,b)=>(b.x.t||0)-(a.x.t||0)),weak,strong,subj:Object.values(subj).sort((a,b)=>b.m-a.m),last};
+  }
+  const GN=['','الأول','الثاني','الثالث','الرابع','الخامس','السادس','السابع','الثامن','التاسع'];
+  function text(name,c,goal){const L=[];
+    L.push('📊 تقرير '+name+' — '+c.label+' (منصة المجتهد)');
+    if(!c.m&&!c.r&&!c.w&&!c.stars){L.push('لم يدرس '+name+' على المنصة في هذه الفترة.');return L.join('\n');}
+    L.push('⏱ وقت التعلّم: '+c.m+' دقيقة'+(c.days>1?' في '+c.active+' من '+c.days+' أيام':'')+' (الهدف '+goal+' دقيقة يومياً).');
+    L.push('📚 عدد الدروس: '+c.lessons.length+' — ⭐ النجوم الجديدة: '+c.stars);
+    if(c.r+c.w)L.push('✅ عدد المحاولات: '+(c.r+c.w)+' — الإجابات الصحيحة: '+P(c.a)+' — التقدير: '+grade(c.a));
+    if(c.strong.length)L.push('💪 يتقن: '+c.strong.slice(0,4).map(S=>S.name+' ('+P(S.a)+')').join('، ')+'.');
+    if(c.weak.length){L.push('⚠️ يحتاج عناية في:');c.weak.slice(0,4).forEach(S=>L.push('• '+S.name+' — '+S.subj.name+' (الدقة '+P(S.a)+'، الأخطاء: '+S.w+')'+(S.review.length?' — للتقوية: '+S.review.map(z=>'«'+z.l.title+'» الصف '+GN[z.g]).join(' و'):'')));}
+    else if(c.r+c.w>=10)L.push('👍 لا توجد نقاط ضعف واضحة في هذه الفترة.');
+    return L.join('\n');}
+  function view(o,period,onPeriod){
+    const st=o.stats||{},goal=o.goal||st.goal||20,c=compute(st,period),lv=GAME.level(st.stars||0);
+    const wrap=el('div',{class:'sheet-wrap rep'}),sh=el('div',{class:'sheet repsheet'});wrap.append(sh);
+    const tabs=el('div',{class:'rtabs noprint'});Object.entries(PER).forEach(([k,[t]])=>tabs.append(el('button',{class:'btn ghost'+(k===period?' on':''),text:t,onclick:()=>onPeriod(k)})));
+    sh.append(tabs,el('div',{class:'rhead'},el('span',{class:'lvi',text:lv.icon}),el('span',{},el('b',{text:'تقرير '+o.name}),el('small',{text:(o.grade?'الصف '+GN[o.grade]+' — ':'')+c.label+' — المستوى: '+lv.name+' — ⭐ '+(st.stars||0)}))));
+    const K=(v,t,cls)=>el('div',{class:'kpi '+(cls||'')},el('b',{text:v}),el('small',{text:t}));
+    sh.append(el('div',{class:'kpis'},K(c.m+' د','وقت التعلّم'),K(String(c.lessons.length),'عدد الدروس'),K(c.a==null?'—':P(c.a),'إجابات صحيحة',c.a==null?'':c.a>=75?'ok':c.a>=60?'mid':'bad'),K(String(c.stars),'نجوم جديدة'),
+      c.days>1?K(c.active+'/'+c.days,'أيام نشطة'):K(c.m>=goal?'✓':(goal-c.m)+' د',c.m>=goal?'حقّق الهدف':'باقي على الهدف')));
+    if(c.last)sh.append(el('p',{class:'note',text:'آخر نشاط: '+new Date(c.last).toLocaleString('ar-LY-u-nu-latn',{weekday:'long',hour:'numeric',minute:'2-digit'})}));
+    const sec=(t,...k)=>el('section',{class:'rsec'},el('h3',{text:t}),...k);
+    if(c.weak.length)sh.append(sec('⚠️ يحتاج عناية',...c.weak.map(S=>el('div',{class:'ritem bad'},el('b',{text:S.name}),el('span',{class:'note',text:' — '+S.subj.name+' · الدقة '+P(S.a)+' · الأخطاء '+S.w+' من '+S.n}),
+      S.review.length?el('div',{class:'note'},'للتقوية: ',...S.review.map((z,i)=>el('a',{href:'#l-'+z.l.id,text:(i?' و ':'')+'«'+z.l.title+'» (الصف '+GN[z.g]+')'}))):null))));
+    if(c.strong.length)sh.append(sec('💪 نقاط القوة',el('div',{class:'rtags'},...c.strong.slice(0,8).map(S=>el('span',{class:'chip',text:S.name+' '+P(S.a)})))));
+    if(c.subj.length)sh.append(sec('📘 المواد',...c.subj.map(J=>{const a=acc(J);return el('div',{class:'rrow'},el('span',{text:J.s.icon||'📘'}),el('b',{text:J.s.name}),el('span',{class:'note',text:'الدروس '+J.n+' · '+Math.round(J.m)+' د'+(a!=null?' · '+P(a):'')}));})));
+    if(c.lessons.length)sh.append(sec('📚 الدروس التي درسها',...c.lessons.slice(0,15).map(L=>el('div',{class:'rrow'},el('span',{class:'rst',text:'⭐'.repeat(Math.min(L.x.st||0,3))||'·'}),el('span',{},el('b',{text:L.f.lesson.title}),el('small',{class:'note',text:' — '+L.f.subject.name})),
+      el('span',{class:'note',text:Math.round(L.x.m||0)+' د'+(L.a!=null?' · '+P(L.a):'')})))));
+    if(!c.lessons.length&&!c.m)sh.append(el('p',{class:'note',text:'لا يوجد نشاط في هذه الفترة بعد.'}));
+    const txt=text(o.name,c,goal);
+    const act=el('div',{class:'row noprint',style:'gap:8px;flex-wrap:wrap;margin-top:12px'},
+      el('button',{class:'btn sun',text:'📄 حفظ PDF / طباعة',onclick:()=>{const cp=wrap.cloneNode(true);cp.classList.add('printcopy');root.append(cp);document.body.classList.add('prep');const done=()=>{cp.remove();document.body.classList.remove('prep');removeEventListener('afterprint',done);};addEventListener('afterprint',done);setTimeout(()=>window.print(),60);}}),
+      el('button',{class:'btn',text:'💬 إرسال واتساب',onclick:()=>window.open('https://wa.me/?text='+encodeURIComponent(txt),'_blank')}),
+      el('button',{class:'btn ghost',text:'📋 نسخ النص',onclick:e=>{navigator.clipboard&&navigator.clipboard.writeText(txt).then(()=>{e.target.textContent='✓ نُسخ';});}}));
+    sh.append(el('p',{class:'note onlyprint',text:'تاريخ التقرير: \u2066'+new Date().toLocaleDateString('en-GB')+'\u2069 — منصة المجتهد \u2066mujtahid.ly\u2069'}),act);
+    return wrap;}
+  return{compute,text,view,skillOf};
+})();
+function renderMyReport(period='week'){root.innerHTML='';const n=window.ACC&&ACC.user&&ACC.profiles?(ACC.profiles.find(p=>p.id===ACC.pid)||{}):{};
+  root.append(bar('تقريري','تقدّمك ونقاط قوتك وما يحتاج مراجعة','home'),REPORT.view({name:n.name||'الطالب',grade:n.grade,stats:GAME.local(),goal:GAME.stats().goal},period,k=>renderMyReport(k)));}
 const GRADE_NOTE={'1':'نتعلّم الحروف والأعداد','2':'نقرأ ونكتب ونحسب','3':'نكبر ونكتشف','4':'نبدأ رحلة العلوم','5':'نفكّر ونبحث','6':'نختم المرحلة الابتدائية','7':'أول الإعدادي','8':'نتعمّق أكثر','9':'شهادة التعليم الأساسي'};
 const AR_NUM=n=>String(n); // في ليبيا تُستعمل الأرقام 1 2 3
 function renderHome(){
@@ -1606,7 +1699,7 @@ async function renderLesson(id){
   const backTo='g'+info.grade+'-'+info.subject.id,N=L.steps.length,AR='123456789';
   const done=new Set(store.get('done_'+id,[]));
   const stars=el('span',{class:'pill'}),nav=el('nav',{class:'steps','aria-label':'خطوات الدرس'});
-  const snd=el('button',{class:'pill','aria-label':'أصوات التشجيع',onclick:()=>{FX.on=!FX.on;store.set('sound',FX.on);snd.textContent=FX.on?'🔊':'🔇';if(FX.on)cheer('right',{say:false});}},FX.on?'🔊':'🔇');
+  const snd=el('button',{class:'pill','aria-label':'أصوات التشجيع',onclick:()=>{FX.on=!FX.on;store.set('sound',FX.on);snd.textContent=FX.on?'🔊':'🔇';if(FX.on)tones([660,880,1320]);}},FX.on?'🔊':'🔇');
   root.innerHTML='';
   const head=bar(el('span',{lang:L.lang==='en'?'en':null,text:L.title}),L.titleAr,backTo,el('span',{class:'row',style:'flex-wrap:nowrap;gap:6px'},snd,stars));head.append(nav);root.append(head);
   if(info.lesson.ref)root.append(el('div',{class:'refchip'},el('span',{text:'📖'}),el('span',{},'في كتابك: ',el('b',{text:info.lesson.ref.replace(/–/g,'\u2060–\u2060')}))));
@@ -1876,6 +1969,7 @@ function route(){
    const tc=getComputedStyle(document.body).getPropertyValue('--sea').trim();const meta=document.querySelector('meta[name=theme-color]');if(meta&&tc)meta.content=tc;}
   if(!h||h==='home')renderHome();
   else if(window.ACC&&ACC.route(h)){}
+  else if(h==='myreport')renderMyReport();
   else if(h==='subscribe')renderSubscribe();
   else if(h==='teacher')renderTeacher();
   else if((m=/^teacher-([a-z0-9]+)$/.exec(h)))renderTeacher(m[1]);
@@ -1888,7 +1982,7 @@ function route(){
   else renderHome();
 }
 window.addEventListener('hashchange',()=>{if(document.startViewTransition&&!matchMedia('(prefers-reduced-motion: reduce)').matches){const t=document.startViewTransition(()=>route());[t.ready,t.finished,t.updateCallbackDone].forEach(x=>x&&x.catch(()=>{}));}else{route();root.classList.remove('enter');void root.offsetWidth;root.classList.add('enter');}});
-window.DARSI={el,go,store,App,route,cheer,bar,root,$,$$,GAME,findLesson:id=>App.catalog?findLesson(id):null};
+window.DARSI={el,go,store,App,route,cheer,bar,root,$,$$,GAME,REPORT,findLesson:id=>App.catalog?findLesson(id):null};
 const SPLASH_T0=performance.now();function hideSplash(){const sp=document.getElementById('splash');if(!sp)return;const wait=sessionStorage.getItem('mj_splash')?0:Math.max(0,1700-(performance.now()-SPLASH_T0));try{sessionStorage.setItem('mj_splash','1')}catch(e){}setTimeout(()=>{sp.classList.add('go');setTimeout(()=>sp.remove(),600);},wait);}
 // عند فتح التطبيق: نضع الرئيسية أولاً في السجل ثم نعود إلى آخر مكان توقف فيه الطالب
 (function bootNav(){let fresh=false;try{fresh=!sessionStorage.getItem('mj_open');sessionStorage.setItem('mj_open','1')}catch(e){}

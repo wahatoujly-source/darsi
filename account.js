@@ -244,6 +244,7 @@ const DAYN = ['الأحد', 'الاثنين', 'الثلاثاء', 'الأربع�
 
 /* ---------- parent: one child's report ---------- */
 async function renderKid(pid) {
+  if (!D.App.catalog) { setTimeout(() => renderKid(pid), 300); return; }
   if (!ACC.user || !isAdult()) { go('login'); return; }
   let p = ACC.profiles.find(x => x.id === pid); if (!p) { go('who'); return; }
   const s = page('تقرير ' + p.name, 'الصف ' + gradeName(p.grade), 'who');
@@ -268,15 +269,10 @@ async function renderKid(pid) {
     try { await setDoc(pref(pid), { name: p.name, goal: v }, { merge: true }); p.goal = v; if (ACC.pid === pid) { try { localStorage.setItem('darsi_p_' + pid + '_g_goal', JSON.stringify(v)); } catch (e) {} } renderKid(pid); }
     catch (x) { fbk(msg, 'bad', errMsg(x)); } } })));
   s.append(el('div', { class: 'panel accbox' }, el('b', { text: '🎯 الهدف اليومي' }), el('span', { class: 'note', text: 'كم دقيقة تريد أن يتعلّم ' + p.name + ' كل يوم؟ سيظهر له عدّاد، ويحتفل التطبيق معه عند تحقيقه.' }), gsel, msg));
-  // recent lessons
-  const box = el('div', { class: 'panel accbox' }, el('b', { text: '📚 آخر الدروس' }));
-  s.append(box);
-  try { const q = await withTimeout(getDocs(collection(db, 'users', ACC.user.uid, 'profiles', pid, 'progress')));
-    const rows = q.docs.map(d => ({ id: d.id, n: (d.data().done || []).length, at: d.data().at && d.data().at.toMillis ? d.data().at.toMillis() : 0 })).sort((a, b) => b.at - a.at).slice(0, 8);
-    if (!rows.length) box.append(el('span', { class: 'note', text: 'لم يبدأ أي درس بعد.' }));
-    rows.forEach(r => { const f = D.findLesson ? D.findLesson(r.id) : null; const t = f ? f.lesson.title : r.id;
-      box.append(el('div', { class: 'kidrow' }, el('span', { text: '⭐'.repeat(Math.min(r.n, 5)) || '—' }), el('span', {}, el('b', { text: t }), el('span', { class: 'note', text: r.at ? ' — ' + new Date(r.at).toLocaleDateString('ar-LY-u-nu-latn') : '' })))); });
-  } catch (e) { box.append(el('span', { class: 'note', text: 'تعذّر تحميل الدروس الآن.' })); }
+  // full report (day / week / month) with weak skills, PDF and WhatsApp
+  const rbox = el('div'); s.append(rbox);
+  const drawRep = per => { rbox.innerHTML = ''; rbox.append(D.REPORT.view({ name: p.name, grade: p.grade, stats: st, goal }, per, drawRep)); };
+  drawRep('week');
   s.append(el('button', { class: 'btn sun', text: '▶ ابدأ الدراسة كـ ' + p.name, onclick: async () => { await setActive(pid); go('g' + p.grade); } }));
 }
 

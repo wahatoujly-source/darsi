@@ -1,0 +1,48 @@
+<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>تجربة الأصوات — المجتهد</title><meta name="robots" content="noindex">
+<style>
+:root{--ink:#17203D;--paper:#F4F6FB;--sun:#FFB800;--night:#121A3A;--card:#fff;--muted:#5b6380}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Segoe UI",Tahoma,sans-serif;line-height:1.7}
+main{max-width:760px;margin:auto;padding:16px}
+h1{font-size:1.5rem;margin:.2em 0}.note{color:var(--muted);font-size:.92rem}
+.box{background:var(--card);border-radius:18px;padding:14px 16px;margin:12px 0;box-shadow:0 8px 24px -18px rgba(0,0,0,.4)}
+select,input[type=range]{width:100%;font:inherit;padding:8px;border-radius:12px;border:1px solid #d5d9e6;box-sizing:border-box}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+button{font:inherit;border:0;border-radius:12px;padding:8px 14px;background:var(--night);color:#fff;cursor:pointer}
+button.ghost{background:#e8ebf5;color:var(--ink)}
+.s b{display:block}.s p{margin:.3em 0 .5em;font-size:1.08rem}
+.warn{background:#FFF4D6;border-radius:12px;padding:10px 12px}
+.ok{color:#1F8A3B;font-weight:700}.bad{color:#C53030;font-weight:700}
+</style></head><body><main>
+<h1>🎧 تجربة أصوات الذكاء الاصطناعي</h1>
+<p class="note">هذه الصفحة تُسمعك أصوات Microsoft العصبية — نفس الأصوات التي سنشترك فيها (Azure) — قبل أن ندفع شيئاً.</p>
+<div class="warn" id="st">جارٍ البحث عن الأصوات…</div>
+<div class="box">
+  <b>الصوت</b><select id="v"></select>
+  <div class="row" style="margin-top:10px"><span style="min-width:5em">السرعة</span><input id="r" type="range" min="0.6" max="1.2" step="0.05" value="0.9"><span id="rv">0.9</span></div>
+</div>
+<div id="samples"></div>
+<div class="box"><b>جرّب نصاً من عندك</b><textarea id="own" rows="3" style="width:100%;font:inherit;border-radius:12px;border:1px solid #d5d9e6;padding:8px;box-sizing:border-box">مرحباً يا بطل! هيا نتعلّم معاً.</textarea>
+<div class="row" style="margin-top:8px"><button onclick="say(own.value)">▶ استمع</button><button class="ghost" onclick="speechSynthesis.cancel()">■ إيقاف</button></div></div>
+</main>
+<script>
+const S=[
+['الصف الأول — اللغة العربية','هذا حرفُ الباء. الباءُ تُشبهُ قارباً صغيراً، وتحتَها نقطةٌ واحدة. نقول: بابٌ، بطّةٌ، بيتٌ. هيّا نقرأْ معاً: بَ، بُ، بِ.'],
+['الصف الثاني — الرياضيات','عند أحمدَ ثلاثُ مجموعاتٍ من البرتقال، في كلِّ مجموعةٍ أربعُ برتقالات. كم برتقالةً عند أحمدَ؟ نضربُ ثلاثةً في أربعة، فيكونُ الناتجُ اثنتي عشرة.'],
+['الصف الخامس — العلوم','تحتاجُ النباتاتُ الخضراءُ إلى ضوءِ الشمس والماءِ وثاني أكسيد الكربون لتصنعَ غذاءَها. تُسمّى هذه العمليةُ البناءَ الضوئي، وتحدثُ في الأوراق.'],
+['الصف السادس — التربية الوطنية','ليبيا وطنُنا الحبيب، تقعُ في شمالِ قارةِ أفريقيا، ويطلُّ ساحلُها الطويلُ على البحر الأبيض المتوسط. عاصمتُها طرابلس، ومن مدنها بنغازي وسبها ومصراتة وجالو.'],
+['تشجيع','أحسنت! إجابةٌ صحيحة. أنت بطلٌ مجتهد! حاولْ مرةً أخرى، أنت قريبٌ جداً من الإجابة.'],
+];
+const sel=document.getElementById('v'),st=document.getElementById('st'),r=document.getElementById('r');
+r.oninput=()=>rv.textContent=r.value;
+S.forEach(([t,x])=>{const d=document.createElement('div');d.className='box s';d.innerHTML='<b></b><p></p>';d.querySelector('b').textContent=t;d.querySelector('p').textContent=x;
+  const row=document.createElement('div');row.className='row';const b=document.createElement('button');b.textContent='▶ استمع';b.onclick=()=>say(x);const c=document.createElement('button');c.className='ghost';c.textContent='■ إيقاف';c.onclick=()=>speechSynthesis.cancel();row.append(b,c);d.append(row);samples.append(d);});
+let V=[];
+function load(){V=speechSynthesis.getVoices().filter(v=>/^ar/i.test(v.lang));if(!V.length)return;
+  V.sort((a,b)=>score(b)-score(a));sel.innerHTML='';V.forEach((v,i)=>{const o=document.createElement('option');o.value=i;o.textContent=(/ar-LY/i.test(v.lang)?'🇱🇾 ':'')+v.name+' ('+v.lang+')';sel.append(o);});
+  const ly=V.filter(v=>/ar-LY/i.test(v.lang)).length,nat=V.filter(v=>/Natural|Online/i.test(v.name)).length;
+  st.className=ly?'box':'warn';st.innerHTML=ly?'<span class="ok">✓ وُجدت '+ly+' أصوات ليبية</span> — هي نفس أصوات Azure. اختر الصوت ثم اضغط «استمع».':'<span class="bad">لا توجد أصوات ليبية في هذا المتصفح.</span> افتح هذه الصفحة في متصفح <b>Microsoft Edge</b> على الكمبيوتر لتسمع الأصوات الليبية (عِمان وعمر).'+(nat?'':' الأصوات الظاهرة الآن أصوات الجهاز القديمة وليست المقصودة.');}
+const score=v=>(/ar-LY/i.test(v.lang)?100:0)+(/Natural|Online/i.test(v.name)?10:0);
+speechSynthesis.onvoiceschanged=load;load();setTimeout(()=>{if(!V.length)st.innerHTML='<span class="bad">لم يُعثر على أصوات عربية.</span> افتح الصفحة في <b>Microsoft Edge</b> على الكمبيوتر.';},2500);
+function say(t){speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);const v=V[sel.value];if(v){u.voice=v;u.lang=v.lang;}else u.lang='ar-LY';u.rate=+r.value;speechSynthesis.speak(u);}
+</script></body></html>
