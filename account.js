@@ -267,7 +267,10 @@ function renderLink(pre) {
     } catch (e) { ACC.linking = false; btn.disabled = false; fbk(msg, 'bad', e.code === 'auth/admin-restricted-operation' || e.code === 'auth/operation-not-allowed' ? 'خدمة الربط غير مفعّلة بعد.' : String(e.code || '').startsWith('auth/') ? errMsg(e) : fnErr(e));
       if (auth.currentUser && auth.currentUser.isAnonymous) { const u = auth.currentUser; const t = await u.getIdTokenResult().catch(() => null); if (!(t && t.claims.kidOf)) await signOut(auth).catch(() => {}); } }
   } });
-  s.append(el('div', { class: 'panel accbox' }, el('span', { class: 'note', text: 'اطلب من ولي أمرك أن يفتح: من يدرس الآن؟ ← التقرير ← «اربط جهاز ابني»، ثم اكتب الرمز هنا أو امسح رمز QR بكاميرا الهاتف.' }), inp, btn, msg));
+  const cam = el('div');
+  const scanB = el('button', { class: 'btn', text: '📷 امسح رمز QR من موبايل ولي أمرك', onclick: () => scanQR(cam, code => { inp.value = code; btn.click(); }, m => fbk(msg, 'bad', m)) });
+  s.append(el('div', { class: 'panel accbox' }, el('span', { class: 'note', text: 'اطلب من ولي أمرك أن يفتح: من يدرس الآن؟ ← «📱 ربط موبايله» ← «اربط جهاز»، ثم امسح رمز QR أو اكتب الأرقام.' }),
+    scanB, cam, el('span', { class: 'note', style: 'text-align:center', text: '— أو اكتب الأرقام —' }), inp, btn, msg));
   if (pre && pre.length === 6) btn.click();
 }
 async function kidDevicesBox(p) {
@@ -292,6 +295,33 @@ async function kidDevicesBox(p) {
       setTimeout(() => { gen.disabled = false; }, 3000); const poll = setInterval(() => { if (!out.isConnected) { clearInterval(poll); return; } load(); }, 5000); setTimeout(() => clearInterval(poll), 15 * 60000);
     } catch (e) { gen.disabled = false; fbk(msg, 'bad', fnErr(e)); } } });
   box.append(list, gen, out, msg); load(); return box;
+}
+/* in-app QR scanner: BarcodeDetector when available, otherwise jsQR */
+let _jsqr = null;
+const loadJsQR = () => _jsqr || (_jsqr = new Promise((res, rej) => { const sc = document.createElement('script'); sc.src = 'https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.js'; sc.onload = () => res(window.jsQR); sc.onerror = rej; document.head.append(sc); }));
+async function scanQR(box, onCode, onErr) {
+  box.innerHTML = '';
+  if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) { onErr('الكاميرا غير متاحة هنا. افتح كاميرا الهاتف ووجّهها إلى الرمز، أو اكتب الأرقام.'); return; }
+  let stream; try { stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: 'environment' }, audio: false }); }
+  catch (e) { onErr('لم نتمكن من فتح الكاميرا. اسمح للمتصفح باستعمال الكاميرا، أو اكتب الأرقام.'); return; }
+  const v = el('video', { playsinline: '', muted: '', style: 'width:100%;max-width:320px;border-radius:16px;display:block;margin:auto;background:#000' });
+  v.srcObject = stream; v.setAttribute('playsinline', ''); await v.play().catch(() => {});
+  let live = true; const stop = () => { live = false; stream.getTracks().forEach(t => t.stop()); box.innerHTML = ''; };
+  box.append(v, el('button', { class: 'btn ghost sm', style: 'margin:6px auto;display:block', text: '✕ إغلاق الكاميرا', onclick: stop }));
+  const pick = txt => { const m = /link-(\d{6})/.exec(txt || '') || /^\s*(\d{6})\s*$/.exec(txt || ''); return m ? m[1] : null; };
+  let det = null; try { if ('BarcodeDetector' in window) det = new window.BarcodeDetector({ formats: ['qr_code'] }); } catch (e) {}
+  const jsQR = det ? null : await loadJsQR().catch(() => null);
+  if (!det && !jsQR) { stop(); onErr('تعذّر تشغيل قارئ الرمز. اكتب الأرقام بدلاً منه.'); return; }
+  const cv = document.createElement('canvas'), cx = cv.getContext('2d', { willReadFrequently: true });
+  const tick = async () => { if (!live || !box.isConnected) { if (live) stop(); return; }
+    try { let txt = null;
+      if (v.readyState >= 2) {
+        if (det) { const r = await det.detect(v); txt = r[0] && r[0].rawValue; }
+        else { cv.width = v.videoWidth; cv.height = v.videoHeight; cx.drawImage(v, 0, 0); const im = cx.getImageData(0, 0, cv.width, cv.height); const r = jsQR(im.data, im.width, im.height); txt = r && r.data; } }
+      const code = pick(txt); if (code) { stop(); onCode(code); return; }
+    } catch (e) {}
+    setTimeout(tick, 250); };
+  tick();
 }
 let _qr = null;
 function loadQR() { return _qr || (_qr = new Promise((res, rej) => { const sc = document.createElement('script'); sc.src = 'https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js'; sc.onload = () => res(window.QRCode); sc.onerror = rej; document.head.append(sc); })); }
