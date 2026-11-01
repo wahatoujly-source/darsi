@@ -677,6 +677,7 @@ h2{font-weight:800}
 .panel.life{background:linear-gradient(160deg,#E6F6EA,#F6FCF7);border-color:#BFE6C8}.panel.life h3{color:#1F6B33}
 .panel.tip ul,.panel.life ul,.panel.think ul{padding-inline-start:20px;margin:6px 0}.panel.tip li,.panel.life li{margin:4px 0}
 @media (prefers-reduced-motion:no-preference){.lsec:not([hidden]){animation:lsecIn .35s ease-out}}@keyframes lsecIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.ctrl-list{display:grid;gap:4px;max-height:340px;overflow:auto;background:var(--paper);border-radius:12px;padding:8px}.ctrl-l{display:flex;gap:8px;align-items:flex-start;padding:4px 2px}.ctrl-l input{width:20px;height:20px;margin-top:3px;flex:none}
 </style>
 
 </head><body>
@@ -1759,6 +1760,11 @@ const AR_NUM=n=>String(n); // في ليبيا تُستعمل الأرقام 1 2 
 /* a learner (child profile, linked child phone, or student) sees only his own grade */
 function lockedGrade(){const A=window.ACC;if(!A||!A.user||!A.pid||!A.profiles)return null;const p=A.profiles.find(x=>x.id===A.pid);
   if(!p||!p.grade)return null;if(A.kid||p.id!=='me'||(A.profile&&A.profile.role==='student'))return String(p.grade);return null;}
+/* parent's controls for a child: which subjects, and optionally which lessons in each subject */
+function learnerCtrl(){const A=window.ACC;if(!lockedGrade()||!A||!A.pid||A.pid==='me')return null;const p=(A.profiles||[]).find(x=>x.id===A.pid);const c=p&&p.ctrl;
+  if(!c||(!(c.subjects&&c.subjects.length)&&!Object.keys(c.lessons||{}).some(k=>(c.lessons[k]||[]).length)))return null;return c;}
+const ctrlSubOk=(c,sid)=>!c||!c.subjects||!c.subjects.length||c.subjects.includes(sid);
+const ctrlLesOk=(c,sid,lid)=>!c||!(c.lessons&&c.lessons[sid]&&c.lessons[sid].length)||c.lessons[sid].includes(lid);
 function renderHome(){
   const c=App.catalog;root.innerHTML='';
   root.append(bar(null,null,null,subPill()));
@@ -1781,17 +1787,19 @@ function renderGrade(n){
   const c=App.catalog,subs=c.grades[n];if(!subs){go('home');return;}root.innerHTML='';
   root.append(bar(gradeLabel(gradeInfo(n)),'اختر المادة','home',subPill()));
   const g=el('div',{class:'subjects'});
-  subs.forEach(s=>{const us=unitsOf(s),total=us.reduce((a,u)=>a+u.lessons.length,0),ready=us.reduce((a,u)=>a+u.lessons.filter(l=>l.ready).length,0);
+  const CT=learnerCtrl();if(CT)root.append(el('div',{class:'feedback info',text:'📌 المواد التي اختارها لك ولي أمرك.'}));
+  subs.filter(s=>ctrlSubOk(CT,s.id)).forEach(s=>{const us=unitsOf(s),total=us.reduce((a,u)=>a+u.lessons.length,0),ready=us.reduce((a,u)=>a+u.lessons.filter(l=>l.ready).length,0);
     g.append(el('button',{class:'scard',onclick:()=>go('g'+n+'-'+s.id)},el('span',{class:'sicon',lang:s.lang==='en'?'en':null,text:s.icon}),el('span',{},el('b',{text:s.name}),el('span',{class:'note',text:(s.books&&s.books.length>1?s.books.length+' كتب · ':'')+us.length+' '+({'الباب ':'أبواب','القسم ':'أقسام','الوحدة ':'وحدات'}[s.unitWord||(s.id==='en'?'الوحدة ':'')]||'فصول')+' · '+ready+' من '+total+' دروس جاهزة'}))));});
-  c.plannedSubjects.forEach(s=>g.append(el('div',{class:'scard off'},el('span',{class:'sicon',text:s.icon}),el('span',{},el('b',{text:s.name}),el('span',{class:'tag sun',text:'قريباً'})))));
+  if(!lockedGrade())c.plannedSubjects.forEach(s=>g.append(el('div',{class:'scard off'},el('span',{class:'sicon',text:s.icon}),el('span',{},el('b',{text:s.name}),el('span',{class:'tag sun',text:'قريباً'})))));
   root.append(el('section',{},g,el('button',{class:'teach-card',style:'margin-top:14px',onclick:()=>go('teacher-'+n)},el('span',{class:'ti',text:'👩‍🏫'}),el('span',{},el('b',{text:'صانع الاختبارات للمعلم'}),el('span',{class:'note',text:'اختبارات جاهزة لهذا الصف قابلة للتعديل والطباعة'})),el('span',{class:'ls',text:'←'}))));
 }
 function renderSubject(n,sid){
   const c=App.catalog,s=(c.grades[n]||[]).find(x=>x.id===sid);if(!s){go('home');return;}root.innerHTML='';
   root.append(bar(s.name,gradeLabel(gradeInfo(n))+' · الوحدات والدروس','g'+n,subPill()));
-  const sec=el('section');
+  const sec=el('section');const CT=learnerCtrl();const only=CT&&CT.lessons&&CT.lessons[sid]&&CT.lessons[sid].length?CT.lessons[sid]:null;
+  if(only)sec.append(el('div',{class:'feedback info',text:'📌 الدروس التي اختارها لك ولي أمرك.'}));
   let lastBook=null;
-  unitsOf(s).forEach(u=>{if(s.books&&s.books.length>1&&u.book!==lastBook){lastBook=u.book;sec.append(el('div',{class:'bookh'},el('b',{text:'📚 '+u.book.name}),u.book.note?el('span',{class:'note',text:u.book.note}):null));}
+  unitsOf(s).map(u=>only?{...u,lessons:u.lessons.filter(l=>only.includes(l.id))}:u).filter(u=>!only||u.lessons.length).forEach(u=>{if(s.books&&s.books.length>1&&u.book!==lastBook){lastBook=u.book;sec.append(el('div',{class:'bookh'},el('b',{text:'📚 '+u.book.name}),u.book.note?el('span',{class:'note',text:u.book.note}):null));}
     const list=el('div',{class:'lessons'});
     if(!u.lessons.length)list.append(el('div',{class:'empty',text:'دروس هذه الوحدة قيد الإعداد.'}));
     u.lessons.forEach((l,k)=>{const free=isFree(l,k),locked=!free&&!App.sub&&!canOpen(n,sid);let status,cls='lcard';const qn=sid==='isl'?suraNum(l.title):0;
@@ -2108,8 +2116,10 @@ function route(){
    navTrack(h||'home');if(/^(l-|g\d|qr-)/.test(h))store.set('last_route',h);
    document.body.dataset.g=g;document.body.dataset.stage=g?(+g<=3?'k':+g<=6?'m':'s'):'';
    const tc=getComputedStyle(document.body).getPropertyValue('--sea').trim();const meta=document.querySelector('meta[name=theme-color]');if(meta&&tc)meta.content=tc;}
-  {const LG=lockedGrade();if(LG){let og=null,mm;if((mm=/^g(\d+)$/.exec(h)))og=mm[1];else if((mm=/^l-([a-z0-9-]+)$/.exec(h))&&App.catalog){const f=findLesson(mm[1]);if(f)og=String(f.grade);}
-    if((og&&og!==LG)||/^(teacher|tx-)/.test(h)){location.replace('#g'+LG);return;}}}
+  {const LG=lockedGrade();if(LG){let og=null,mm;if((mm=/^g(\d+)(?:-[a-z]+)?$/.exec(h)))og=mm[1];else if((mm=/^l-([a-z0-9-]+)$/.exec(h))&&App.catalog){const f=findLesson(mm[1]);if(f)og=String(f.grade);}
+    if((og&&og!==LG)||/^(teacher|tx-)/.test(h)){location.replace('#g'+LG);return;}
+    const CT=learnerCtrl();if(CT){let sm=/^g(\d+)-([a-z]+)$/.exec(h);if(sm&&!ctrlSubOk(CT,sm[2])){location.replace('#g'+LG);return;}
+      if((mm=/^l-([a-z0-9-]+)$/.exec(h))&&App.catalog){const f=findLesson(mm[1]);if(f&&(!ctrlSubOk(CT,f.subject.id)||!ctrlLesOk(CT,f.subject.id,mm[1]))){location.replace('#g'+LG+(ctrlSubOk(CT,f.subject.id)?'-'+f.subject.id:''));return;}}}}}
   if(!h||h==='home')renderHome();
   else if(window.ACC&&ACC.route(h)){}
   else if(h==='myreport')renderMyReport();

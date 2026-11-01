@@ -235,7 +235,8 @@ function renderWho() {
       el('span', { class: 'kav big', text: p.avatar || '🙂' }), el('b', { text: p.name }), el('span', { class: 'note', text: 'الصف ' + gradeName(p.grade) }),
       el('span', { class: 'wstats' }, el('span', { text: lv.icon + ' ' + lv.name }), el('span', { text: '⭐ ' + (st.stars || 0) }), el('span', { text: '🔥 ' + liveStreak(st) }))),
       el('div', { class: 'row', style: 'gap:6px;justify-content:center' }, el('button', { class: 'btn ghost sm', text: '📊 التقرير', onclick: () => go('kid-' + p.id) }),
-        el('button', { class: 'btn sun sm', text: '📱 ربط موبايله', onclick: () => go('linkkid-' + p.id) })))); });
+        el('button', { class: 'btn sun sm', text: '📱 ربط موبايله', onclick: () => go('linkkid-' + p.id) })),
+      el('button', { class: 'btn ghost sm', text: '🎛️ ماذا يدرس؟' + (p.ctrl && ((p.ctrl.subjects || []).length || Object.values(p.ctrl.lessons || {}).some(a => a.length)) ? ' ✓' : ''), onclick: () => go('ctrl-' + p.id) }))); });
   if (kidsOf().length < MAX_KIDS) g.append(el('button', { class: 'who add', onclick: () => go('kids') }, el('span', { class: 'kav big', text: '＋' }), el('b', { text: 'أضف ابناً' })));
   s.append(g, el('div', { class: 'row', style: 'gap:8px;justify-content:center' }, el('button', { class: 'btn ghost', text: '✏️ إدارة الأبناء', onclick: () => go('kids') }), el('button', { class: 'btn ghost', text: '⚙️ حسابي', onclick: () => go('account') })));
 }
@@ -326,6 +327,40 @@ async function scanQR(box, onCode, onErr) {
 let _qr = null;
 function loadQR() { return _qr || (_qr = new Promise((res, rej) => { const sc = document.createElement('script'); sc.src = 'https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js'; sc.onload = () => res(window.QRCode); sc.onerror = rej; document.head.append(sc); })); }
 
+/* ---------- parent: choose what the child studies (subjects, and lessons inside each subject) ---------- */
+function renderCtrl(pid) {
+  if (!ACC.user || !isAdult()) { go('login'); return; }
+  const p = ACC.profiles.find(x => x.id === pid); if (!p) { go('who'); return; }
+  if (!D.App.catalog) { setTimeout(() => renderCtrl(pid), 300); return; }
+  const g = String(p.grade || ''); const subs = (D.App.catalog.grades[g] || []);
+  const s = page('ماذا يدرس ' + p.name + '؟', 'الصف ' + gradeName(g), 'who');
+  const c0 = p.ctrl || {}; const selS = new Set(c0.subjects || []); const selL = {}; Object.entries(c0.lessons || {}).forEach(([k, v]) => selL[k] = new Set(v));
+  let all = !selS.size; const msg = el('div'); const box = el('div', { class: 'stack' });
+  const lessonsOf = sb => { const out = []; (sb.books || [{ units: sb.units }]).forEach(b => (b.units || []).forEach(u => u.lessons.forEach(l => { if (l.ready && !out.some(x => x.id === l.id)) out.push({ ...l, unit: u.title }); }))); return out; };
+  const draw = () => { box.innerHTML = '';
+    box.append(el('div', { class: 'panel accbox' }, el('b', { text: '1) المواد' }),
+      el('span', { class: 'note', text: 'اختر المواد التي تظهر لـ' + p.name + '. المواد غير المختارة تختفي من شاشته.' }),
+      el('div', { class: 'gpick' }, el('button', { class: 'btn ghost sm' + (all ? ' on' : ''), text: (all ? '✓ ' : '') + 'كل المواد', onclick: () => { all = true; selS.clear(); draw(); } }),
+        ...subs.map(sb => el('button', { class: 'btn ghost sm' + (!all && selS.has(sb.id) ? ' on' : ''), text: (!all && selS.has(sb.id) ? '✓ ' : '') + sb.name, onclick: () => { all = false; selS.has(sb.id) ? selS.delete(sb.id) : selS.add(sb.id); if (!selS.size) all = true; draw(); } })))));
+    const shown = all ? subs : subs.filter(sb => selS.has(sb.id));
+    const lp = el('div', { class: 'panel accbox' }, el('b', { text: '2) الدروس (اختياري)' }), el('span', { class: 'note', text: 'لكل مادة: اتركها «كل الدروس»، أو حدّد دروساً معيّنة فقط.' }));
+    shown.forEach(sb => { const L = lessonsOf(sb); const set = selL[sb.id] || (selL[sb.id] = new Set()); const open = set.size > 0;
+      const head = el('div', { class: 'row', style: 'justify-content:space-between;gap:8px;margin-top:8px' }, el('b', { text: sb.name }),
+        el('div', { class: 'row', style: 'gap:6px' }, el('button', { class: 'btn ghost sm' + (!open ? ' on' : ''), text: 'كل الدروس', onclick: () => { set.clear(); sb._open = false; draw(); } }),
+          el('button', { class: 'btn ghost sm' + (open || sb._open ? ' on' : ''), text: 'دروس محددة' + (set.size ? ' (' + set.size + ')' : ''), onclick: () => { sb._open = !sb._open; draw(); } })));
+      lp.append(head);
+      if (open || sb._open) { const list = el('div', { class: 'ctrl-list' });
+        L.forEach(l => list.append(el('label', { class: 'ctrl-l' }, el('input', { type: 'checkbox', checked: set.has(l.id) ? '' : null, onchange: e => { e.target.checked ? set.add(l.id) : set.delete(l.id); } }),
+          el('span', {}, el('b', { text: l.title }), el('small', { class: 'note', text: ' — ' + (l.unit || '') })))));
+        lp.append(list); } });
+    box.append(lp,
+      el('button', { class: 'btn sun', text: '💾 حفظ', onclick: async e => { e.target.disabled = true;
+        const ctrl = { subjects: all ? [] : [...selS], lessons: {} }; Object.entries(selL).forEach(([k, v]) => { if (v.size && (all || selS.has(k))) ctrl.lessons[k] = [...v]; });
+        try { await setDoc(pref(pid), { name: p.name, ctrl, ctrlAt: serverTimestamp() }, { mergeFields: ['name', 'ctrl', 'ctrlAt'] }); p.ctrl = ctrl; fbk(msg, 'ok', '✓ تم الحفظ. يظهر التغيير على جهاز ' + p.name + ' عند فتح المنصة.'); D.cheer && D.cheer('win'); }
+        catch (x) { fbk(msg, 'bad', errMsg(x)); } e.target.disabled = false; } }), msg);
+  };
+  draw(); s.append(box);
+}
 async function renderLinkKid(pid) {
   if (!ACC.user || !isAdult()) { go('login'); return; }
   const p = ACC.profiles.find(x => x.id === pid); if (!p) { go('who'); return; }
@@ -607,10 +642,12 @@ function renderAdmin() {
   }).catch(e => fbk(st, 'bad', fnErr(e)));
 }
 
-document.addEventListener('visibilitychange', async () => { if (document.visibilityState === 'visible' && ACC.user && ACC.profile) { const n = ACC.subs.length; await loadSubs(); if (ACC.subs.length !== n && D.App.catalog) D.route(); } });
+document.addEventListener('visibilitychange', async () => { if (document.visibilityState === 'visible' && ACC.kid) { try { const d = await getDoc(pref(ACC.kid.pid)); if (d.exists()) { const old = JSON.stringify(ACC.profiles[0] && ACC.profiles[0].ctrl || null); ACC.profiles = [{ id: d.id, ...d.data() }]; if (JSON.stringify(d.data().ctrl || null) !== old && D.App.catalog) D.route(); } } catch (e) {} }
+  if (document.visibilityState === 'visible' && ACC.user && ACC.profile) { const n = ACC.subs.length; await loadSubs(); if (ACC.subs.length !== n && D.App.catalog) D.route(); } });
 
 const ROUTES = { admin: renderAdmin, subscribe: renderSubscribe, login: renderLogin, onboard: renderOnboard, kids: renderKids, who: renderWho, account: renderAccount };
 ACC.route = h => { const pm = /^paid-([A-Za-z0-9]{10,40})$/.exec(h); const lm = /^link(?:-(\d{6}))?$/.exec(h); if (lm) { if (!ACC.ready) { page('…', 'جارٍ التحميل', 'home'); return true; } renderLink(lm[1]); return true; }
+  const ck = /^ctrl-([A-Za-z0-9]{1,30})$/.exec(h); if (ck) { if (!ACC.ready) { page('…', 'جارٍ التحميل', 'home'); return true; } renderCtrl(ck[1]); return true; }
   const lk = /^linkkid-([A-Za-z0-9]{1,30})$/.exec(h); if (lk) { if (!ACC.ready) { page('…', 'جارٍ التحميل', 'home'); return true; } renderLinkKid(lk[1]); return true; }
   const km = /^kid-([A-Za-z0-9]{1,30})$/.exec(h); const f = pm ? () => renderPaid(pm[1]) : km ? () => renderKid(km[1]) : ROUTES[h]; if (!f) return false; if (!ACC.ready) { page('…', 'جارٍ التحميل', 'home'); return true; } if (ACC.loadError && ACC.user) { showLoadError(); return true; } f(); return true; };
 
