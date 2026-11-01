@@ -517,6 +517,7 @@ function renderSubscribe() {
     const total = price();
     box.append(el('div', { class: 'paybox' }, el('b', { style: 'font-size:1.2rem', text: total ? 'المبلغ: ' + total + ' دينار' : 'هذه الباقة غير متاحة للشراء بعد' }),
       el('span', { class: 'note', text: 'الاشتراك صالح حتى 31 أغسطس ' + (prices ? new Date(prices.end).getFullYear() : '') + '. الدفع عبر ماي باي: ادفع لي، سداد، موبي كاش وغيرها.' }),
+      el('a', { class: 'note', href: '#privacy', text: 'بالدفع أنت توافق على شروط الاستخدام وسياسة الخصوصية.' }),
       total ? payBtn : null));
   };
   const payBtn = el('button', { class: 'btn sun paybig', text: 'ادفع الآن', onclick: async () => {
