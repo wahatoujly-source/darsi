@@ -796,12 +796,24 @@ function mathSpeech0(t){return String(t)
   .replace(/≠/g,' لا يساوي ').replace(/=/g,' يساوي ').replace(/>/g,' أكبر من ').replace(/</g,' أصغر من ')
   .replace(/[()\[\]]/g,' ').replace(/\s+/g,' ').trim();}
 const AR_LET={'ا':'ألف','أ':'ألف','ب':'باء','ت':'تاء','ث':'ثاء','ج':'جيم','ح':'حاء','خ':'خاء','د':'دال','ذ':'ذال','ر':'راء','ز':'زاي','س':'سين','ش':'شين','ص':'صاد','ض':'ضاد','ط':'طاء','ظ':'ظاء','ع':'عين','غ':'غين','ف':'فاء','ق':'قاف','ك':'كاف','ل':'لام','م':'ميم','ن':'نون','ه':'هاء','و':'واو','ي':'ياء','ء':'همزة','ة':'تاء مربوطة','ى':'ألف مقصورة'};
-const arLetters=t=>t.replace(/(^|\s)ص\s?(?=[0-9٠-٩])/g,'$1صفحة ').replace(/(?<![0-9٠-٩°]\s?)(^|[\s(«"'،,:؛\-–])([اأبتثجحخدذرزسشصضطظعغفقكلمنهويءةى])[ً-ْ]?(?=$|[\s)»"'،,.:؛\-–])/g,(m,a,l)=>a+AR_LET[l]);
+const arLetters=t=>t.replace(/(^|\s)و\s+(?=[0-9٠-٩])/g,'$1و').replace(/(^|\s)ص\s?(?=[0-9٠-٩])/g,'$1صفحة ').replace(/(?<![0-9٠-٩°]\s?)(^|[\s(«"'،,:؛\-–])([اأبتثجحخدذرزسشصضطظعغفقكلمنهويءةى])[ً-ْ]?(?=$|[\s)»"'،,.:؛\-–])/g,(m,a,l)=>a+AR_LET[l]);
 const EN_SEG=/([A-Za-z][A-Za-z0-9'’\- ]*[A-Za-z0-9]|[A-Za-z])/g;
-const speakAr=async(t)=>{const tok=TTS.token;for(const p of qSplit(t)){if(tok!==TTS.token)return;if(p.q){await playQ(p.q);continue;}
-  const parts=String(p.t).split(EN_SEG);for(let i=0;i<parts.length;i++){if(tok!==TTS.token)return;const x=parts[i];if(!x)continue;
-    if(i%2===1){if(TTS.en&&TTS.en.length)await speak(x,{lang:'en'});else await speak(x,{lang:'ar'});}
-    else if(x.replace(/[\s.,،:؛()«»"'\-–]/g,''))await speak(mathSpeech(arLetters(x)),{lang:'ar'});}}};
+/* ---------- recorded voices (ElevenLabs): sentence-level mp3s, browser TTS as fallback ---------- */
+const VOX={on:store.get('vox',true),sets:null,
+  key(t){t=String(t).replace(/\s+/g,' ').trim();let h1=0x811c9dc5,h2=5381;for(let i=0;i<t.length;i++){const c=t.charCodeAt(i);h1=Math.imul(h1^c,16777619);h2=(Math.imul(h2,33)^c)|0;}return (h1>>>0).toString(36)+(h2>>>0).toString(36);},
+  async load(){if(VOX.sets)return;VOX.sets={};try{const j=await (await fetch('aud/index.json',{cache:'no-cache'})).json();for(const v in j)VOX.sets[v]=new Set(j[v]);}catch(e){}},
+  voice(){const g=+(document.body.dataset.g||0);return g>=7?'m':'f';},
+  play(src){return new Promise(res=>{qrStop();const a=new Audio(src);QR.audio=a;let fin=false;const done=ok=>{if(fin)return;fin=true;res(ok);};
+    a.onended=()=>done(true);a.onerror=()=>done(false);a.onpause=()=>done(true);a.play().catch(()=>done(false));setTimeout(()=>done(true),30000);});}};
+const sentSplit=s=>String(s).split(/(?<=[.!؟?…])\s+|\n+/).map(x=>x.trim()).filter(x=>/[ء-ي]/.test(x));
+/* the exact Arabic sentences the app will say for a text (same pipeline at runtime and when generating audio) */
+function arUnits(t){const out=[];t=String(t).replace(/[{}ـ]/g,'').replace(/[\p{Extended_Pictographic}\uFE0F\u200D]/gu,'');for(const p of qSplit(t)){if(p.q){out.push({q:p.q});continue;}const parts=String(p.t).split(EN_SEG);
+  parts.forEach((x,i)=>{if(!x)return;if(i%2===1){out.push({en:x});return;}if(!x.replace(/[\s.,،:؛()«»"'\-–]/g,''))return;sentSplit(mathSpeech(arLetters(x))).forEach(z=>out.push({ar:z}));});}return out;}
+async function sayAr(z){if(VOX.on){await VOX.load();const v=VOX.voice(),k=VOX.key(z);const w=VOX.sets[v]&&VOX.sets[v].has(k)?v:null;
+  if(w){const tok=TTS.token;const ok=await VOX.play('aud/'+w+'/'+k+'.mp3');if(ok||tok!==TTS.token)return;}}
+  return speak(z,{lang:'ar'});}
+const speakAr=async(t)=>{const tok=TTS.token;for(const u of arUnits(t)){if(tok!==TTS.token)return;
+  if(u.q)await playQ(u.q);else if(u.en){if(TTS.en&&TTS.en.length)await speak(u.en,{lang:'en'});else await speak(u.en,{lang:'ar'});}else await sayAr(u.ar);}};
 
 /* ---------- encouragement sounds (Web Audio chimes + spoken praise + confetti) ---------- */
 const FX={ctx:null,on:store.get('sound',true),lang:'ar',lastWin:0};
@@ -816,7 +828,7 @@ function confetti(){if(reduceMotion)return;const box=el('div',{style:'position:f
 function cheer(kind,{say=true}={}){
   if(kind==='right'||kind==='wrong')GAME.ans(kind==='right');
   if(!FX.on)return;
-  if(kind==='right'){tones([660,880,1320]);if(say)setTimeout(()=>speak(pick(PRAISE[FX.lang]),{lang:FX.lang}),320);}
+  if(kind==='right'){tones([660,880,1320]);if(say)setTimeout(()=>FX.lang==='ar'?speakAr(pick(PRAISE.ar)):speak(pick(PRAISE.en),{lang:'en'}),320);}
   else if(kind==='wrong'){tones([330,247],{type:'sine',vol:.1,gap:.13,dur:.2});}
   else if(kind==='star'){if(Date.now()-FX.lastWin>2500)tones([1047,1319,1568,2093],{dur:.14,gap:.06,vol:.1});}
   else if(kind==='win'||kind==='perfect'){FX.lastWin=Date.now();tones(kind==='perfect'?[523,659,784,1047,784,1047,1319]:[523,659,784,1047],{dur:.24,gap:.13,vol:.18});confetti();}
@@ -1982,7 +1994,7 @@ function route(){
   else renderHome();
 }
 window.addEventListener('hashchange',()=>{if(document.startViewTransition&&!matchMedia('(prefers-reduced-motion: reduce)').matches){const t=document.startViewTransition(()=>route());[t.ready,t.finished,t.updateCallbackDone].forEach(x=>x&&x.catch(()=>{}));}else{route();root.classList.remove('enter');void root.offsetWidth;root.classList.add('enter');}});
-window.DARSI={el,go,store,App,route,cheer,bar,root,$,$$,GAME,REPORT,findLesson:id=>App.catalog?findLesson(id):null};
+window.DARSI={VOX,arUnits,PRAISE,el,go,store,App,route,cheer,bar,root,$,$$,GAME,REPORT,findLesson:id=>App.catalog?findLesson(id):null};
 const SPLASH_T0=performance.now();function hideSplash(){const sp=document.getElementById('splash');if(!sp)return;const wait=sessionStorage.getItem('mj_splash')?0:Math.max(0,1700-(performance.now()-SPLASH_T0));try{sessionStorage.setItem('mj_splash','1')}catch(e){}setTimeout(()=>{sp.classList.add('go');setTimeout(()=>sp.remove(),600);},wait);}
 // عند فتح التطبيق: نضع الرئيسية أولاً في السجل ثم نعود إلى آخر مكان توقف فيه الطالب
 (function bootNav(){let fresh=false;try{fresh=!sessionStorage.getItem('mj_open');sessionStorage.setItem('mj_open','1')}catch(e){}
