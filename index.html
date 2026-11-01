@@ -814,7 +814,7 @@ function arUnits(t){const out=[];t=String(t).replace(/(^|\s)[بلكف]ـ\s*(?=[:
 async function sayAr(z){if(VOX.on){await VOX.load();const v=VOX.voice(),k=VOX.key(z);const w=VOX.sets[v]&&VOX.sets[v].has(k)?v:null;
   if(w){const tok=TTS.token;const ok=await VOX.play('aud/'+w+'/'+k+'.mp3');if(ok||tok!==TTS.token)return;}}
   return speak(z,{lang:'ar'});}
-const speakAr=async(t)=>{const tok=TTS.token;for(const u of arUnits(t)){if(tok!==TTS.token)return;
+const speakAr=async(t,o={})=>{if(TTS.quiet&&!o.force)return;const tok=TTS.token;for(const u of arUnits(t)){if(tok!==TTS.token)return;
   if(u.q)await playQ(u.q);else if(u.en){if(TTS.en&&TTS.en.length)await speak(u.en,{lang:'en'});else await speak(u.en,{lang:'ar'});}else await sayAr(u.ar);}};
 
 /* ---------- encouragement sounds (Web Audio chimes + spoken praise + confetti) ---------- */
@@ -917,11 +917,11 @@ C.html=b=>el('div',{html:b.html});
 C.say=b=>el('div',{class:'row',style:'margin-top:8px'},el('button',{class:'btn ghost',text:b.label,onclick:()=>{stopAll();speak(b.text);}}));
 C.nasheed=b=>{const box=el('div',{class:'panel gbox'},el('h3',{text:'🎵 '+(b.title||'النشيد')}));const txt=el('div');box.append(txt);
   getJSON('data/nasheeds.json').then(m=>{const n=m&&m[b.key];if(n&&n.lines&&n.lines.length){txt.append(el('div',{class:'hadith',style:'line-height:2.3'},...n.lines.flatMap((l,i)=>i?[el('br'),l]:[l])));if(n.by)txt.append(el('p',{class:'note',text:n.by}));
-    txt.append(el('div',{class:'row',style:'margin-top:8px'},el('button',{class:'btn ghost',text:'▶ اسمع النص',onclick:()=>{stopAll();speakAr(n.lines.join('. '));}})));}
+    if(!TTS.quiet)txt.append(el('div',{class:'row',style:'margin-top:8px'},el('button',{class:'btn ghost',text:'▶ اسمع النص',onclick:()=>{stopAll();speakAr(n.lines.join('. '));}})));}
    else txt.append(el('p',{class:'note',text:'اقرأ النشيد من كتابك المدرسي، واستمع إلى أدائه من الرابط.'}));}).catch(()=>{});
   const url=b.url||('https://www.youtube.com/results?search_query='+encodeURIComponent(b.q||('نشيد '+b.title)));
   box.append(el('div',{class:'row',style:'margin-top:10px'},el('a',{class:'btn',href:url,target:'_blank',rel:'noopener',text:b.url?'▶ شاهد النشيد على يوتيوب':'▶ ابحث عن النشيد على يوتيوب'})));return box;};
-C.sayAr=b=>el('div',{class:'row',style:'margin-top:10px'},el('button',{class:'btn ghost',text:b.label,onclick:()=>{stopAll();speakAr(b.text);}}));
+C.sayAr=b=>TTS.quiet?el('span'):el('div',{class:'row',style:'margin-top:10px'},el('button',{class:'btn ghost',text:b.label,onclick:()=>{stopAll();speakAr(b.text);}}));
 C.panel=(b,ctx)=>{const p=el('div',{class:'panel gbox'});if(b.title)p.append(el('h3',{html:b.title}));if(b.html)p.append(el('div',{html:b.html}));(b.blocks||[]).forEach(x=>p.append(render(x,ctx)));return p;};
 
 C.vocab=(b,ctx)=>{
@@ -1040,7 +1040,7 @@ C.keywords=(b,ctx)=>{
   const en=b.lang==='en';
   const sayK=k=>{stopAll();if(en)speak((k.alt&&k.alt!==k.term?k.term+'. '+k.alt+'.':k.term)+' ... '+k.ex);else speakAr(k.term+'. '+k.meaning);};
   const card=k=>{const c=el('div',{class:'kw'+(k.must?' must':'')},
-      el('div',{class:'kw-head'+(en?' ltr':'')},el('div',{class:'kw-term',lang:en?'en':null},k.term,k.alt?el('small',{lang:'en',text:en?'  →  '+k.alt:'  '+k.alt}):null),el('button',{class:'play','aria-label':'استمع',text:'▶',onclick:()=>sayK(k)})),
+      el('div',{class:'kw-head'+(en?' ltr':'')},el('div',{class:'kw-term',lang:en?'en':null},k.term,k.alt?el('small',{lang:'en',text:en?'  →  '+k.alt:'  '+k.alt}):null),(TTS.quiet&&!en)?null:el('button',{class:'play','aria-label':'استمع',text:'▶',onclick:()=>sayK(k)})),
       k.ipa?el('div',{class:'kw-ipa',text:k.ipa}):null,el('div',{class:'kw-mean'},mt(k.meaning)),el('div',{class:'kw-ex'+(en?' ltr':'')},en?k.ex:mt(k.ex)),k.tip?el('div',{class:'kw-tip',text:k.tip}):null);return c;};
   const must=el('div',{class:'kwlist'}),use=el('div',{class:'kwlist'});b.items.forEach(k=>(k.must?must:use).append(card(k)));
   const meter=el('i'),fcBox=el('div');let queue=[],known=0;const total=b.items.filter(k=>k.must).length;
@@ -1300,7 +1300,7 @@ C.worked=(b,ctx)=>{
     const list=el('ol',{class:'wsteps'});const lis=ex.steps.map((s,k)=>{const li=el('li',{},el('b',{text:String(k+1)}),el('span',{},mt(s.t)));list.append(li);return li;});
     let k=0,running=false;
     const doStep=async(token)=>{const s=ex.steps[k];lis.forEach((li,j)=>{li.classList.toggle('on',j===k);if(j<k)li.classList.add('done');});
-      const talk=speakAr(s.t);
+      const talk=speakAr(s.t,{force:1});
       if(s.act==='start'){nl.place(ex.start);nl.mark(ex.start);}
       if(s.act==='jump'){await sleep(400);await nl.jump(ex.move,{token});}
       if(s.act==='result'){ansEl.textContent=fmt(ex.start+ex.move);nl.mark(ex.start+ex.move,'pick');}
@@ -1386,7 +1386,7 @@ C.steps=(b,ctx)=>{
     if(ex.html)stage.append(el('div',{html:ex.html}));
     const list=el('ol',{class:'wsteps'});const lis=ex.steps.map((t,k)=>{const li=el('li',{hidden:true},el('b',{text:String(k+1)}),el('span',{},mt(t)));list.append(li);return li;});
     let k=0,running=false;
-    const reveal=async()=>{const li=lis[k];li.hidden=false;lis.forEach((x,j)=>{x.classList.toggle('on',j===k);if(j<k)x.classList.add('done');});await speakAr((ex.say&&ex.say[k])||ex.steps[k]);k++;
+    const reveal=async()=>{const li=lis[k];li.hidden=false;lis.forEach((x,j)=>{x.classList.toggle('on',j===k);if(j<k)x.classList.add('done');});await speakAr((ex.say&&ex.say[k])||ex.steps[k],{force:1});k++;
       if(k>=lis.length){lis.forEach(x=>{x.classList.remove('on');x.classList.add('done');});seen.add(cur);if(btns[cur])btns[cur].textContent='مثال '+(cur+1)+' ✓';if(seen.size===b.examples.length)ctx.done();}upd();};
     const playB=el('button',{class:'btn',text:'▶ شغّل الشرح'}),stepB=el('button',{class:'btn ghost',text:'الخطوة التالية'}),again=el('button',{class:'btn ghost',text:'↺ من البداية',onclick:()=>{stopAll();draw();}});
     const upd=()=>{const end=k>=lis.length;playB.disabled=end||running;stepB.disabled=end||running;};
@@ -1427,11 +1427,12 @@ C.sequence=(b,ctx)=>{
 C.reading=(b,ctx)=>{
   const ar=b.lang==='ar'||ctx.L.lang==='ar';const wrap=el('div'),body=el('div',{class:'read'+(ar?' ar':'')}),sents=[];
   if(b.title)body.append(el('h4',{text:b.title}));
-  b.paragraphs.forEach(par=>{const p=el('p');if(typeof par==='object'&&par.h){body.append(el('h5',{class:'rh',text:par.h}));return;}(par.match(/[^.!?؟]+[.!?؟]+["'»)]?\s*|[^.!?؟]+$/g)||[par]).forEach(t=>{const sp=el('span',{class:'sn',text:t});sp.onclick=()=>{stopAll();playOne(sents.indexOf(sp));};p.append(sp);sents.push(sp);});body.append(p);});
+  b.paragraphs.forEach(par=>{const p=el('p');if(typeof par==='object'&&par.h){body.append(el('h5',{class:'rh',text:par.h}));return;}(par.match(/[^.!?؟]+[.!?؟]+["'»)]?\s*|[^.!?؟]+$/g)||[par]).forEach(t=>{const sp=el('span',{class:'sn',text:t});if(!(TTS.quiet&&ar))sp.onclick=()=>{stopAll();playOne(sents.indexOf(sp));};p.append(sp);sents.push(sp);});body.append(p);});
   async function playOne(k){sents.forEach(x=>x.classList.remove('now'));const sp=sents[k];sp.classList.add('now');sp.scrollIntoView({block:'center',behavior:'smooth'});await (ar?speakAr(sp.textContent.trim()):speak(sp.textContent.trim(),{who:b.voice||'teacher'}));sp.classList.remove('now');}
   let holder=body;if(b.mail){holder=el('div',{class:'mail'},el('div',{class:'mail-h',html:b.mail}),body);}
   const speedB=el('button',{class:'btn ghost',text:'السرعة: عادية',onclick:()=>{TTS.rate=TTS.rate===TTS.age.rate?TTS.age.slow:TTS.age.rate;speedB.textContent='السرعة: '+(TTS.rate===TTS.age.slow?'بطيئة':'عادية');}});
   const hideB=el('button',{class:'btn ghost',text:'إخفاء النص',onclick:()=>{const h=body.classList.toggle('hide');hideB.textContent=h?'إظهار النص':'إخفاء النص';}});
+  if(TTS.quiet&&ar){const rd=el('button',{class:'btn',text:'✓ قرأت النص',onclick:()=>{rd.disabled=true;rd.textContent='✓ أحسنت';ctx.done();}});wrap.append(el('div',{class:'panel'},holder),el('div',{class:'ctrls'},rd,hideB));return wrap;}
   wrap.append(el('div',{class:'panel'},holder),el('div',{class:'ctrls'},el('button',{class:'btn',text:'▶ اقرأ لي النص',onclick:async()=>{stopAll();const t=TTS.token;for(let k=0;k<sents.length;k++){if(t!==TTS.token)return;await playOne(k);}if(t===TTS.token)ctx.done();}}),el('button',{class:'btn ghost',text:'■ إيقاف',onclick:stopAll}),speedB,hideB));
   return wrap;
 };
@@ -1709,7 +1710,7 @@ async function renderLesson(id){
   if(!info.free&&!App.sub){App.after='l-'+id;go('subscribe');return;}
   root.innerHTML='';root.append(el('p',{class:'note',style:'padding:30px 0',text:'جارٍ تحميل الدرس…'}));
   let L;try{L=await getJSON('data/'+id+'.json');}catch(e){root.innerHTML='';root.append(el('div',{class:'err'},el('p',{text:e&&e.userMsg?e.userMsg:'تعذّر تحميل الدرس. تحقق من الاتصال وحاول مرة أخرى.'}),el('button',{class:'btn',text:'أعد المحاولة',onclick:route})));return;}
-  QR.reg=L.quran||[];const kids=L.stage==='primary-1-3';document.body.classList.toggle('kids',kids);TTS.age=AGE_PROFILES[L.stage]||AGE_PROFILES['prep-7-9'];TTS.rate=TTS.age.rate;assignVoices(L.characters||{});FX.lang=L.lang==='en'?'en':'ar';
+  QR.reg=L.quran||[];const kids=L.stage==='primary-1-3';document.body.classList.toggle('kids',kids);TTS.age=AGE_PROFILES[L.stage]||AGE_PROFILES['prep-7-9'];TTS.quiet=L.lang!=='en'&&L.subject!=='en'&&(+String(L.grade).replace(/\D/g,''))>=7;TTS.rate=TTS.age.rate;assignVoices(L.characters||{});FX.lang=L.lang==='en'?'en':'ar';
   const backTo='g'+info.grade+'-'+info.subject.id,N=L.steps.length,AR='123456789';
   const done=new Set(store.get('done_'+id,[]));
   const stars=el('span',{class:'pill'}),nav=el('nav',{class:'steps','aria-label':'خطوات الدرس'});
