@@ -87,9 +87,21 @@ async function migrateLocal(pid) {
 }
 ACC.saveProgress = (lid, done) => { if (!ACC.user || !ACC.pid) return; setDoc(prog(ACC.pid, lid), { done, at: serverTimestamp() }).catch(e => console.warn('save', e)); };
 
+ACC.saveStats = st => { if (!ACC.user || !ACC.pid) return; const p = ACC.profiles.find(x => x.id === ACC.pid); if (!p) return;
+  p.stats = { ...st, at: Date.now() };
+  setDoc(pref(ACC.pid), { name: p.name, stats: { ...st, at: serverTimestamp() } }, { merge: true }).catch(e => console.warn('stats', e)); };
+/* bring the profile's goal + minutes/days from the cloud into this device (max per day wins) */
+function pullStats(pid) {
+  const p = ACC.profiles.find(x => x.id === pid); if (!p) return; const k = n => 'darsi_p_' + pid + '_' + n;
+  const rd = (n, d) => { try { return JSON.parse(localStorage.getItem(k(n))) ?? d; } catch (e) { return d; } };
+  const wr = (n, v) => { try { localStorage.setItem(k(n), JSON.stringify(v)); } catch (e) {} };
+  if (p.goal) wr('g_goal', p.goal);
+  const m = rd('g_mins', {}), cm = (p.stats && p.stats.mins) || {}; Object.keys(cm).forEach(d => { if ((cm[d] || 0) > (m[d] || 0)) m[d] = cm[d]; }); wr('g_mins', m);
+  const days = new Set(rd('g_days', [])); Object.keys(cm).forEach(d => { if (cm[d] >= 1) days.add(d); }); wr('g_days', [...days].sort().slice(-120));
+}
 async function setActive(pid) {
   ACC.pid = pid; store.set('acc_pid', pid);
-  if (pid && ACC.user) await pullProgress(pid);
+  if (pid && ACC.user) { pullStats(pid); await pullProgress(pid); }
 }
 const activeProfile = () => ACC.profiles.find(p => p.id === ACC.pid) || null;
 
@@ -215,10 +227,57 @@ function renderWho() {
   const me = ACC.profiles.find(p => p.id === 'me');
   if (me) g.append(el('button', { class: 'who' + (ACC.pid === 'me' ? ' on' : ''), onclick: async () => { await setActive('me'); go('home'); } },
     el('span', { class: 'kav big', text: me.avatar || '👩‍🏫' }), el('b', { text: 'أنا' }), el('span', { class: 'note', text: 'المعلم' })));
-  kidsOf().forEach(p => g.append(el('button', { class: 'who' + (p.id === ACC.pid ? ' on' : ''), onclick: async () => { await setActive(p.id); go('g' + p.grade); } },
-    el('span', { class: 'kav big', text: p.avatar || '🙂' }), el('b', { text: p.name }), el('span', { class: 'note', text: 'الصف ' + gradeName(p.grade) }))));
+  kidsOf().forEach(p => { const st = p.stats || {}; const lv = D.GAME.level(st.stars || 0);
+    g.append(el('div', { class: 'whobox' }, el('button', { class: 'who' + (p.id === ACC.pid ? ' on' : ''), onclick: async () => { await setActive(p.id); go('g' + p.grade); } },
+      el('span', { class: 'kav big', text: p.avatar || '🙂' }), el('b', { text: p.name }), el('span', { class: 'note', text: 'الصف ' + gradeName(p.grade) }),
+      el('span', { class: 'wstats' }, el('span', { text: lv.icon + ' ' + lv.name }), el('span', { text: '⭐ ' + (st.stars || 0) }), el('span', { text: '🔥 ' + liveStreak(st) }))),
+      el('button', { class: 'btn ghost sm', text: '📊 التقرير', onclick: () => go('kid-' + p.id) }))); });
   if (kidsOf().length < MAX_KIDS) g.append(el('button', { class: 'who add', onclick: () => go('kids') }, el('span', { class: 'kav big', text: '＋' }), el('b', { text: 'أضف ابناً' })));
   s.append(g, el('div', { class: 'row', style: 'gap:8px;justify-content:center' }, el('button', { class: 'btn ghost', text: '✏️ إدارة الأبناء', onclick: () => go('kids') }), el('button', { class: 'btn ghost', text: '⚙️ حسابي', onclick: () => go('account') })));
+}
+
+const ymd = d => d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+const daysAgo = n => { const d = new Date(); d.setDate(d.getDate() - n); return ymd(d); };
+/* a streak only counts if the child studied today or yesterday */
+const liveStreak = st => (st && st.streak && (st.lastDay === daysAgo(0) || st.lastDay === daysAgo(1))) ? st.streak : 0;
+const DAYN = ['الأحد', 'الاثنين', 'الثلاثاء', 'الأربعاء', 'الخميس', 'الجمعة', 'السبت'];
+
+/* ---------- parent: one child's report ---------- */
+async function renderKid(pid) {
+  if (!ACC.user || !isAdult()) { go('login'); return; }
+  let p = ACC.profiles.find(x => x.id === pid); if (!p) { go('who'); return; }
+  const s = page('تقرير ' + p.name, 'الصف ' + gradeName(p.grade), 'who');
+  s.append(el('p', { class: 'note', text: 'جارٍ التحديث…' }));
+  try { const d = await withTimeout(getDoc(pref(pid))); if (d.exists()) { Object.assign(p, d.data()); } } catch (e) {}
+  s.innerHTML = '';
+  const st = p.stats || {}, lv = D.GAME.level(st.stars || 0), mins = st.mins || {}, goal = p.goal || 20;
+  const nx = lv.next;
+  s.append(el('div', { class: 'mj-progress' },
+    el('div', { class: 'lv' }, el('span', { class: 'lvi', text: lv.icon }), el('span', {}, el('b', { text: lv.name }), el('small', { text: nx ? ('باقي ' + (nx[0] - (st.stars || 0)) + ' نجمة لمستوى ' + nx[1]) : 'أعلى مستوى!' }))),
+    el('div', { class: 'chips' }, el('span', { class: 'chip' }, '⭐ ', el('b', { text: String(st.stars || 0) }), ' نجمة'), el('span', { class: 'chip' }, '🔥 ', el('b', { text: String(liveStreak(st)) }), ' يوم متتالٍ'),
+      el('span', { class: 'chip' }, '⏱ ', el('b', { text: String(Math.round(Object.keys(mins).filter(k => k >= daysAgo(6)).reduce((a, k) => a + mins[k], 0))) }), ' دقيقة هذا الأسبوع'))));
+  // 7-day bars
+  const ch = el('div', { class: 'wk' }); const mx = Math.max(goal, ...Array.from({ length: 7 }, (_, i) => mins[daysAgo(i)] || 0));
+  for (let i = 6; i >= 0; i--) { const k = daysAgo(i), v = Math.round(mins[k] || 0), d = new Date(); d.setDate(d.getDate() - i);
+    ch.append(el('div', { class: 'wkd' + (v >= goal ? ' ok' : '') }, el('small', { text: String(v) }), el('span', { class: 'wkb' }, el('i', { style: 'height:' + Math.round(100 * v / mx) + '%' })), el('small', { text: i === 0 ? 'اليوم' : DAYN[d.getDay()] }))); }
+  ch.style.setProperty('--goal', (100 * goal / mx) + '%');
+  s.append(el('div', { class: 'panel accbox' }, el('b', { text: 'دقائق التعلّم في آخر 7 أيام' }), el('span', { class: 'note', text: 'الهدف اليومي ' + goal + ' دقيقة. العمود الأخضر = يوم حقّق فيه الهدف.' }), ch));
+  // goal setting
+  const gsel = el('div', { class: 'gpick' }); const msg = el('div');
+  [10, 15, 20, 30, 45, 60].forEach(v => gsel.append(el('button', { class: 'btn' + (v === goal ? ' on' : ''), text: v + ' د', onclick: async () => {
+    try { await setDoc(pref(pid), { name: p.name, goal: v }, { merge: true }); p.goal = v; if (ACC.pid === pid) { try { localStorage.setItem('darsi_p_' + pid + '_g_goal', JSON.stringify(v)); } catch (e) {} } renderKid(pid); }
+    catch (x) { fbk(msg, 'bad', errMsg(x)); } } })));
+  s.append(el('div', { class: 'panel accbox' }, el('b', { text: '🎯 الهدف اليومي' }), el('span', { class: 'note', text: 'كم دقيقة تريد أن يتعلّم ' + p.name + ' كل يوم؟ سيظهر له عدّاد، ويحتفل التطبيق معه عند تحقيقه.' }), gsel, msg));
+  // recent lessons
+  const box = el('div', { class: 'panel accbox' }, el('b', { text: '📚 آخر الدروس' }));
+  s.append(box);
+  try { const q = await withTimeout(getDocs(collection(db, 'users', ACC.user.uid, 'profiles', pid, 'progress')));
+    const rows = q.docs.map(d => ({ id: d.id, n: (d.data().done || []).length, at: d.data().at && d.data().at.toMillis ? d.data().at.toMillis() : 0 })).sort((a, b) => b.at - a.at).slice(0, 8);
+    if (!rows.length) box.append(el('span', { class: 'note', text: 'لم يبدأ أي درس بعد.' }));
+    rows.forEach(r => { const f = D.findLesson ? D.findLesson(r.id) : null; const t = f ? f.lesson.title : r.id;
+      box.append(el('div', { class: 'kidrow' }, el('span', { text: '⭐'.repeat(Math.min(r.n, 5)) || '—' }), el('span', {}, el('b', { text: t }), el('span', { class: 'note', text: r.at ? ' — ' + new Date(r.at).toLocaleDateString('ar-LY-u-nu-latn') : '' })))); });
+  } catch (e) { box.append(el('span', { class: 'note', text: 'تعذّر تحميل الدروس الآن.' })); }
+  s.append(el('button', { class: 'btn sun', text: '▶ ابدأ الدراسة كـ ' + p.name, onclick: async () => { await setActive(pid); go('g' + p.grade); } }));
 }
 
 function renderAccount() {
@@ -444,7 +503,7 @@ function renderAdmin() {
 document.addEventListener('visibilitychange', async () => { if (document.visibilityState === 'visible' && ACC.user && ACC.profile) { const n = ACC.subs.length; await loadSubs(); if (ACC.subs.length !== n && D.App.catalog) D.route(); } });
 
 const ROUTES = { admin: renderAdmin, subscribe: renderSubscribe, login: renderLogin, onboard: renderOnboard, kids: renderKids, who: renderWho, account: renderAccount };
-ACC.route = h => { const pm = /^paid-([A-Za-z0-9]{10,40})$/.exec(h); const f = pm ? () => renderPaid(pm[1]) : ROUTES[h]; if (!f) return false; if (!ACC.ready) { page('…', 'جارٍ التحميل', 'home'); return true; } if (ACC.loadError && ACC.user) { showLoadError(); return true; } f(); return true; };
+ACC.route = h => { const pm = /^paid-([A-Za-z0-9]{10,40})$/.exec(h); const km = /^kid-([A-Za-z0-9]{1,30})$/.exec(h); const f = pm ? () => renderPaid(pm[1]) : km ? () => renderKid(km[1]) : ROUTES[h]; if (!f) return false; if (!ACC.ready) { page('…', 'جارٍ التحميل', 'home'); return true; } if (ACC.loadError && ACC.user) { showLoadError(); return true; } f(); return true; };
 
 /* ---------- auth state ---------- */
 const withTimeout = (pr, ms = 8000) => Promise.race([pr, new Promise((_, rej) => setTimeout(() => rej({ code: 'timeout' }), ms))]);
