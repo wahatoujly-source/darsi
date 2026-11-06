@@ -150,7 +150,7 @@ const page = (title, sub, back) => { D.root.innerHTML = ''; D.root.append(D.bar(
 /* ---------- sign-in / sign-up: one elegant page with three ways (Google, phone, email) ---------- */
 const ROLE_HERO = { parent: ['👨‍👩‍👧', 'أنشئ حساب ولي الأمر', 'تابع أبناءك وتقاريرهم وجدولهم الدراسي من مكان واحد.'], student: ['🎒', 'أنشئ حسابك يا بطل', 'احفظ نجومك وتقدّمك وتنافس زملاءك في لوحة الأبطال.'], teacher: ['👩‍🏫', 'أنشئ حساب المعلم', 'راجع الدروس واصنع الاختبارات لطلابك.'] };
 function authHero(sub) { const r = ROLE_HERO[store.get('pref_role', '')] || ['✨', 'مرحباً بك في المجتهد', 'سجّل لتحفظ النجوم والتقدّم على أي جهاز.'];
-  return el('div', { class: 'au-hero' }, el('div', { class: 'au-logo', html: D.LOGO || '' }), el('h1', { text: sub || r[1] }), el('p', { text: r[2] })); }
+  return el('div', { class: 'au-hero' }, el('div', { class: 'au-logo' }, el('img', { src: 'icons/icon-512.png', alt: 'المجتهد' })), el('h1', { text: sub || r[1] }), el('p', { text: r[2] })); }
 function renderLogin() {
   if (ACC.user) { go(ACC.profile ? 'account' : 'onboard'); return; }
   const root = D.root; root.innerHTML = ''; const msg = el('div', { class: 'au-msg' });
