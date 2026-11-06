@@ -714,6 +714,7 @@ h2{font-weight:800}
 :root[data-theme="dark"] .eyebrow,:root[data-theme="dark"] .read .rh,:root[data-theme="dark"] .unit-h b{color:color-mix(in srgb,var(--sea) 45%,#fff)}
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .kw-term small,:root:not([data-theme="light"]) .kw small{color:color-mix(in srgb,var(--sea) 45%,#fff)}}
 :root[data-theme="dark"] .kw-term small{color:color-mix(in srgb,var(--sea) 45%,#fff)}
+#admbar{position:fixed;z-index:70;inset-inline:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));max-width:460px;margin:auto;display:flex;justify-content:space-between;align-items:center;gap:8px;background:#7A1F1F;color:#fff;border-radius:14px;padding:8px 12px;font-weight:700;font-size:.9rem;box-shadow:0 10px 30px -12px rgba(0,0,0,.6)}#admbar button{border:0;border-radius:10px;background:#fff;color:#7A1F1F;font:inherit;padding:4px 12px}
 </style>
 
 </head><body>
@@ -1638,8 +1639,9 @@ const FREE_SUBJECTS=['isl','civ']; // التربية الإسلامية والو
 /* admin switches (config/access): maintenance, open everything, closed / subscribers-only / extra-free grades, subjects, lessons */
 const ACCX=()=>(window.ACC&&ACC.access)||{};
 const accIn=(list,g,sid,lid)=>{const ks=['g'+g,'g'+g+'-'+sid,'l-'+lid];return (list||[]).some(k=>ks.includes(k));};
-const isClosed=(g,sid,lid)=>accIn(ACCX().closed,g,sid,lid);
-const isFree=(l,k,g,sid)=>OPEN_ACCESS||!!ACCX().openAll||accIn(ACCX().extraFree,g,sid,l.id)||(!!l.free&&!accIn(ACCX().subsOnly,g,sid,l.id));
+const adminBrowse=()=>!!(window.ACC&&ACC.adminBrowse);
+const isClosed=(g,sid,lid)=>!adminBrowse()&&accIn(ACCX().closed,g,sid,lid);
+const isFree=(l,k,g,sid)=>OPEN_ACCESS||adminBrowse()||!!ACCX().openAll||accIn(ACCX().extraFree,g,sid,l.id)||(!!l.free&&!accIn(ACCX().subsOnly,g,sid,l.id));
 const canOpen=(g,sid)=>!!(window.ACC&&ACC.hasAccess&&ACC.hasAccess(String(g),sid));
 function markFree(c){for(const g in c.grades)for(const s of c.grades[g]){const all=FREE_SUBJECTS.includes(s.id);
   const books=s.books||[{units:s.units}];books.forEach(b=>{let first=true;(b.units||[]).forEach(u=>u.lessons.forEach(l=>{if(all||(first&&l.ready)){l.free=true;if(l.ready)first=false;}}));});}}
@@ -1898,7 +1900,7 @@ function renderPrivacy(){root.innerHTML='';root.append(bar('الخصوصية و�
 const GRADE_NOTE={'1':'نتعلّم الحروف والأعداد','2':'نقرأ ونكتب ونحسب','3':'نكبر ونكتشف','4':'نبدأ رحلة العلوم','5':'نفكّر ونبحث','6':'نختم المرحلة الابتدائية','7':'أول الإعدادي','8':'نتعمّق أكثر','9':'شهادة التعليم الأساسي'};
 const AR_NUM=n=>String(n); // في ليبيا تُستعمل الأرقام 1 2 3
 /* a learner (child profile, linked child phone, or student) sees only his own grade */
-function lockedGrade(){const A=window.ACC;if(!A||!A.user||!A.pid||!A.profiles)return null;const p=A.profiles.find(x=>x.id===A.pid);
+function lockedGrade(){const A=window.ACC;if(!A||!A.user||!A.pid||!A.profiles||A.adminBrowse)return null;const p=A.profiles.find(x=>x.id===A.pid);
   if(!p||!p.grade)return null;if(A.kid||p.id!=='me'||(A.profile&&A.profile.role==='student'))return String(p.grade);return null;}
 /* parent's controls for a child: which subjects, and optionally which lessons in each subject */
 function learnerCtrl(){const A=window.ACC;if(!lockedGrade()||!A||!A.pid||A.pid==='me')return null;
@@ -1954,7 +1956,7 @@ async function renderBoard(){root.innerHTML='';const g=boardGrade();root.append(
   const list=el('div',{class:'brd-list'});L.slice(0,30).forEach((x,i)=>list.append(el('div',{class:'brd-row'+(x.me?' me':'')},el('span',{class:'brd-r',text:i<3?['🥇','🥈','🥉'][i]:String(i+1)}),el('span',{class:'brd-av',text:x.av||'🙂'}),el('b',{text:x.n+(x.me?' (أنت)':'')}),el('span',{class:'brd-p',text:x.pts+' نقطة'}))));
   if(myI>=30){const x=L[myI];list.append(el('div',{class:'brd-row me'},el('span',{class:'brd-r',text:String(myI+1)}),el('span',{class:'brd-av',text:x.av}),el('b',{text:x.n+' (أنت)'}),el('span',{class:'brd-p',text:x.pts+' نقطة'})));}
   box.append(list,el('p',{class:'note',text:'تظهر الأسماء الأولى فقط. يتجدد الترتيب كل يوم. يستطيع ولي الأمر إخفاء ابنه من اللوحة.'}));}
-function kidTT(){const A=window.ACC;if(!A||!A.pid||A.pid==='me'||!A.profiles)return null;const p=A.profiles.find(x=>x.id===A.pid);return p&&p.tt&&p.tt.on?p.tt:null;}
+function kidTT(){const A=window.ACC;if(!A||A.adminBrowse||!A.pid||A.pid==='me'||!A.profiles)return null;const p=A.profiles.find(x=>x.id===A.pid);return p&&p.tt&&p.tt.on?p.tt:null;}
 /* the next lesson to study in a subject: the first ready lesson after the last one studied */
 function nextLessonOf(g,sid){const sb=(App.catalog.grades[g]||[]).find(x=>x.id===sid);if(!sb)return null;const ls=unitsOf(sb).flatMap(u=>u.lessons).filter(l=>l.ready);
   let last=-1;ls.forEach((l,i)=>{if(lessonStudy(l.id)||store.get('done_'+l.id,[]).length)last=i;});return {next:ls[last+1]||ls[ls.length-1]||null,prev:last>=0?ls[last]:null};}
@@ -2300,7 +2302,9 @@ function renderQuran(g,sid,num){
     pl.onAyah(a=>{$$('.qa',tbox).forEach((y,i)=>y.classList.toggle('now',a!=null&&i+1===a));});
   }).catch(()=>{tbox.textContent='تعذّر تحميل نص السورة.';});
 }
-function route(){
+function adminBanner(){let b=document.getElementById('admbar');if(!adminBrowse()){if(b)b.remove();return;}if(b)return;
+  b=el('div',{id:'admbar'},el('span',{text:'👁️ وضع المدير — كل الدروس مفتوحة'}),el('button',{text:'إنهاء',onclick:()=>{ACC.adminBrowse=false;store.set('admin_browse',false);adminBanner();route();}}));document.body.append(b);}
+function route(){setTimeout(adminBanner,0);
   stopAll();$$('audio').forEach(a=>{try{a.pause()}catch(e){}});document.body.classList.remove('kids');const h=location.hash.replace(/^#/,'');let m;
   {let g='';const gm=/^(?:g|teacher-|tx-)(\d)/.exec(h)||/^qr-(\d)/.exec(h);if(gm)g=gm[1];else if((m=/^l-([a-z0-9-]+)$/.exec(h))&&App.catalog){const f=findLesson(m[1]);if(f)g=String(f.grade).replace(/\D/g,'');}
    navTrack(h||'home');if(/^(l-|g\d|qr-)/.test(h))store.set('last_route',h);

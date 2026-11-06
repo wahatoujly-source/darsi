@@ -402,6 +402,13 @@ exports.getLesson = onCall({memory: "512MiB"}, async (req) => {
   const meta = LESSON_INDEX[id];
   if (!meta) throw new HttpsError("not-found", "الدرس غير موجود");
   const [g, s] = meta;
+  // المدير يتصفح كل الدروس للمراجعة (بدون اشتراك وبدون حدّ يومي، حتى المغلقة)
+  if (req.data && req.data.admin) {
+    await needAdmin(req);
+    const lesson = lessonFrom(g, id);
+    if (!lesson) throw new HttpsError("not-found", "الدرس غير موجود");
+    return {lesson};
+  }
   const acc = await getAccessCfg();
   if (acc.maint && acc.maint.on) throw new HttpsError("unavailable", acc.maint.msg || "المنصة في صيانة قصيرة. عُد بعد قليل.");
   if (accHas(acc.closed, g, s, id)) throw new HttpsError("unavailable", "هذا الدرس مغلق مؤقتاً للمراجعة. عُد إليه لاحقاً.");

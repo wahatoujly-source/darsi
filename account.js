@@ -571,7 +571,7 @@ ACC.loadPaid = async id => {
   const cached = await cacheGet(id);
   if (cached && (!navigator.onLine || !ACC.user)) return cached;           // offline: what was opened before keeps working
   if (!ACC.user) { const e = new Error('login'); e.userMsg = 'سجّل الدخول لفتح هذا الدرس.'; throw e; }
-  try { const r = await call('getLesson', { id, pid: ACC.pid || null }); await cachePut(id, r.lesson); return r.lesson; }
+  try { const r = await call('getLesson', ACC.adminBrowse ? { id, admin: true } : { id, pid: ACC.pid || null }); await cachePut(id, r.lesson); return r.lesson; }
   catch (e) { if (cached && /unavailable|internal|deadline/i.test(e.code || '')) return cached;
     const x = new Error('paid'); x.userMsg = fnErr(e); throw x; }
 };
@@ -758,6 +758,10 @@ function renderAdmin() {
                 catch (e) { fbk(gm, 'bad', fnErr(e)); } b.disabled = false; } }))); });
         } catch (e) { fbk(gm, 'bad', fnErr(e)); } } })), gres, gm);
     s.append(gbox);
+    s.append(el('div', { class: 'panel accbox' }, el('b', { text: '👁️ تصفّح المنصة كمدير' }),
+      el('span', { class: 'note', text: 'تُفتح لك كل الصفوف والمواد والدروس مجاناً (حتى المغلقة) لتراجعها وتجربها، دون أن تتغير المنصة لأي مستخدم آخر.' }),
+      el('button', { class: 'btn sun', text: ACC.adminBrowse ? '✓ وضع المدير مفعّل — افتح الصفحة الرئيسية' : '👁️ ابدأ التصفح كمدير', onclick: () => { ACC.adminBrowse = true; store.set('admin_browse', true); setActive(null).then(() => go('home')); } }),
+      ACC.adminBrowse ? el('button', { class: 'btn ghost', text: 'إنهاء وضع المدير', onclick: () => { ACC.adminBrowse = false; store.set('admin_browse', false); renderAdmin(); } }) : null));
     s.append(accessBox());
     // list
     const tb = el('div', { class: 'stack' });
@@ -804,6 +808,7 @@ onAuthStateChanged(auth, async user => {
       try { const tr = await withTimeout(user.getIdTokenResult()).catch(() => null); if (tr && tr.claims && tr.claims.coOf) ACC.co = { owner: tr.claims.coOf };
         const snap = await withTimeout(getDoc(uref())); ACC.profile = snap.exists() ? snap.data() : null; if (ACC.profile) { await withTimeout(loadProfiles()); await withTimeout(loadSubs()); } }
       catch (e) { console.error('profile', e); ACC.loadError = e; }
+      if (store.get('admin_browse', false)) { try { await call('adminCheck', {}); ACC.isAdmin = true; ACC.adminBrowse = true; } catch (e) { store.set('admin_browse', false); } }
       if (ACC.profiles.length && !ACC.profiles.some(p => p.id === ACC.pid)) await setActive(ACC.profiles.length === 1 ? ACC.profiles[0].id : null);
       else if (ACC.pid && !ACC.loadError) withTimeout(pullProgress(ACC.pid)).catch(() => {});
     } else { ACC.pid = null; store.set('acc_pid', null); }
