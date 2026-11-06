@@ -48,6 +48,8 @@ service cloud.firestore {
     match /plans/{id} { allow read: if true; allow write: if false; }
 
     // money: written only by Cloud Functions; the owner can read their own.
+    // public switches set from the admin panel (open/close grades, subjects, lessons)
+    match /config/access { allow read: if true; allow write: if false; }
     match /subscriptions/{id} { allow read: if signedIn() && (resource.data.uid == request.auth.uid || resource.data.uid == request.auth.token.get('kidOf', '-')); allow write: if false; }
     match /orders/{id}        { allow read: if signedIn() && resource.data.uid == request.auth.uid; allow write: if false; }
 

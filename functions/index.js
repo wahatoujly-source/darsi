@@ -362,6 +362,32 @@ function lessonFrom(g, id) {
 }
 const DAILY_LESSONS = 400;
 
+// ===================== فتح وإغلاق المحتوى من لوحة الإدارة =====================
+// config/access: {maint:{on,msg}, openAll:bool, closed:[keys], subsOnly:[keys], extraFree:[keys]}
+// key = "g7" (صف) أو "g7-math" (مادة في صف) أو "l-<lessonId>" (درس)
+let ACCESS = null, ACCESS_AT = 0;
+async function getAccessCfg() {
+  if (ACCESS && Date.now() - ACCESS_AT < 60000) return ACCESS;
+  const d = await db.collection("config").doc("access").get();
+  ACCESS = d.exists ? d.data() : {}; ACCESS_AT = Date.now(); return ACCESS;
+}
+const accKeys = (g, s, id) => ["g" + g, "g" + g + "-" + s, "l-" + id];
+const accHas = (list, g, s, id) => (list || []).some((k) => accKeys(g, s, id).includes(k));
+const ACCESS_KEY = /^(g\d{1,2}|g\d{1,2}-[a-z]{2,8}|l-[a-z0-9-]{3,60})$/;
+exports.adminSetAccess = onCall(async (req) => {
+  await needAdmin(req);
+  const d = req.data || {};
+  const list = (x) => [...new Set((Array.isArray(x) ? x : []).map(String).filter((k) => ACCESS_KEY.test(k)))].slice(0, 500);
+  const out = {
+    maint: {on: !!(d.maint && d.maint.on), msg: String((d.maint && d.maint.msg) || "").slice(0, 200)},
+    openAll: !!d.openAll, closed: list(d.closed), subsOnly: list(d.subsOnly), extraFree: list(d.extraFree),
+    updatedAt: FieldValue.serverTimestamp(),
+  };
+  await db.collection("config").doc("access").set(out);
+  ACCESS = null;
+  return {ok: true};
+});
+
 exports.getLesson = onCall({memory: "512MiB"}, async (req) => {
   let uid = needUser(req);
   const id = String((req.data && req.data.id) || "");
@@ -376,13 +402,17 @@ exports.getLesson = onCall({memory: "512MiB"}, async (req) => {
   const meta = LESSON_INDEX[id];
   if (!meta) throw new HttpsError("not-found", "الدرس غير موجود");
   const [g, s] = meta;
+  const acc = await getAccessCfg();
+  if (acc.maint && acc.maint.on) throw new HttpsError("unavailable", acc.maint.msg || "المنصة في صيانة قصيرة. عُد بعد قليل.");
+  if (accHas(acc.closed, g, s, id)) throw new HttpsError("unavailable", "هذا الدرس مغلق مؤقتاً للمراجعة. عُد إليه لاحقاً.");
+  const openFree = acc.openAll || accHas(acc.extraFree, g, s, id);
 
   const [us, subsSnap] = await Promise.all([
     db.collection("users").doc(uid).get(),
     db.collection("subscriptions").where("uid", "==", uid).get(),
   ]);
-  if (!us.exists) throw new HttpsError("failed-precondition", "أكمل بيانات حسابك أولاً");
-  const role = us.data().role;
+  if (!us.exists && !openFree) throw new HttpsError("failed-precondition", "أكمل بيانات حسابك أولاً");
+  const role = us.exists ? us.data().role : null;
   if (pid) {
     const ps = await db.collection("users").doc(uid).collection("profiles").doc(pid).get();
     if (!ps.exists) throw new HttpsError("permission-denied", "اختر الطالب من «من يدرس الآن؟»");
@@ -396,7 +426,7 @@ exports.getLesson = onCall({memory: "512MiB"}, async (req) => {
     if (sc.kids) { if (!pid || pid === "me") return false; } else if (!(role === "student" || (sc.self && pid === "me"))) return false;
     return (sc.grades || []).some((x) => x === "*" || x === g) && (sc.subjects || []).some((x) => x === "*" || x === s);
   });
-  if (!ok) throw new HttpsError("permission-denied", "هذا الدرس للمشتركين. اشترك لتفتحه.");
+  if (!ok && !openFree) throw new HttpsError("permission-denied", "هذا الدرس للمشتركين. اشترك لتفتحه.");
 
   // حدّ يومي يمنع سحب المنهج كاملاً
   const qRef = db.collection("lessonQuota").doc(uid + "_" + new Date().toISOString().slice(0, 10));

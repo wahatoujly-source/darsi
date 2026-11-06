@@ -236,7 +236,7 @@ function renderWho() {
       el('span', { class: 'wstats' }, el('span', { text: lv.icon + ' ' + lv.name }), el('span', { text: '⭐ ' + (st.stars || 0) }), el('span', { text: '🔥 ' + liveStreak(st) }))),
       el('div', { class: 'row', style: 'gap:6px;justify-content:center' }, el('button', { class: 'btn ghost sm', text: '📊 التقرير', onclick: () => go('kid-' + p.id) }),
         el('button', { class: 'btn sun sm', text: '📱 ربط موبايله', onclick: () => go('linkkid-' + p.id) })),
-      el('button', { class: 'btn ghost sm', text: '🎛️ ماذا يدرس؟' + (p.ctrl && ((p.ctrl.subjects || []).length || Object.values(p.ctrl.lessons || {}).some(a => a.length)) ? ' ✓' : ''), onclick: () => go('ctrl-' + p.id) }))); });
+      el('button', { class: 'btn ghost sm', text: '🎛️ ماذا يدرس؟ والأصوات' + (p.ctrl && ((p.ctrl.subjects || []).length || Object.values(p.ctrl.lessons || {}).some(a => a.length)) ? ' ✓' : ''), onclick: () => go('ctrl-' + p.id) }))); });
   if (kidsOf().length < MAX_KIDS) g.append(el('button', { class: 'who add', onclick: () => go('kids') }, el('span', { class: 'kav big', text: '＋' }), el('b', { text: 'أضف ابناً' })));
   s.append(g, el('div', { class: 'row', style: 'gap:8px;justify-content:center' }, el('button', { class: 'btn ghost', text: '✏️ إدارة الأبناء', onclick: () => go('kids') }), el('button', { class: 'btn ghost', text: '⚙️ حسابي', onclick: () => go('account') })));
 }
@@ -335,7 +335,7 @@ function renderCtrl(pid) {
   const g = String(p.grade || ''); const subs = (D.App.catalog.grades[g] || []);
   const s = page('ماذا يدرس ' + p.name + '؟', 'الصف ' + gradeName(g), 'who');
   const c0 = p.ctrl || {}; const selS = new Set(c0.subjects || []); const selL = {}; Object.entries(c0.lessons || {}).forEach(([k, v]) => selL[k] = new Set(v));
-  let all = !selS.size; const msg = el('div'); const box = el('div', { class: 'stack' });
+  let all = !selS.size; const msg = el('div'); const box = el('div', { class: 'stack' }); const snd = { voice: true, praise: true, fx: true, ...(p.snd || {}) };
   const lessonsOf = sb => { const out = []; (sb.books || [{ units: sb.units }]).forEach(b => (b.units || []).forEach(u => u.lessons.forEach(l => { if (l.ready && !out.some(x => x.id === l.id)) out.push({ ...l, unit: u.title }); }))); return out; };
   const draw = () => { box.innerHTML = '';
     box.append(el('div', { class: 'panel accbox' }, el('b', { text: '1) المواد' }),
@@ -349,14 +349,26 @@ function renderCtrl(pid) {
         el('div', { class: 'row', style: 'gap:6px' }, el('button', { class: 'btn ghost sm' + (!open ? ' on' : ''), text: 'كل الدروس', onclick: () => { set.clear(); sb._open = false; draw(); } }),
           el('button', { class: 'btn ghost sm' + (open || sb._open ? ' on' : ''), text: 'دروس محددة' + (set.size ? ' (' + set.size + ')' : ''), onclick: () => { sb._open = !sb._open; draw(); } })));
       lp.append(head);
+      // where the child is in this subject: last studied lesson and the next one
+      const SS = L.map(l => ({ l, S: D.lessonStudy(l.id, p.stats || {}) }));
+      let lastI = -1; SS.forEach((x, i) => { if (x.S) lastI = i; });
+      const nxt = SS.slice(lastI + 1).find(x => !x.S);
+      lp.append(el('div', { class: 'note', style: 'margin-top:2px' }, lastI >= 0 ? '✓ درس ' + SS.filter(x => x.S).length + ' من ' + L.length + ' — آخرها: «' + SS[lastI].l.title + '»' : 'لم يبدأ هذه المادة بعد.',
+        nxt ? el('span', { style: 'display:block;font-weight:700', text: '▶ التالي: «' + nxt.l.title + '»' }) : null));
       if (open || sb._open) { const list = el('div', { class: 'ctrl-list' });
-        L.forEach(l => list.append(el('label', { class: 'ctrl-l' }, el('input', { type: 'checkbox', checked: set.has(l.id) ? '' : null, onchange: e => { e.target.checked ? set.add(l.id) : set.delete(l.id); } }),
-          el('span', {}, el('b', { text: l.title }), el('small', { class: 'note', text: ' — ' + (l.unit || '') })))));
+        SS.forEach(({ l, S }) => list.append(el('label', { class: 'ctrl-l' + (S ? ' studied' : '') + (nxt && nxt.l.id === l.id ? ' next' : '') }, el('input', { type: 'checkbox', checked: set.has(l.id) ? '' : null, onchange: e => { e.target.checked ? set.add(l.id) : set.delete(l.id); } }),
+          el('span', {}, el('b', { text: l.title }), el('small', { class: 'note', text: ' — ' + (l.unit || '') }), S ? el('small', { class: 'lstudy', text: D.studyLine(S) }) : (nxt && nxt.l.id === l.id ? el('small', { class: 'lnext', text: '▶ الدرس التالي' }) : null)))));
         lp.append(list); } });
-    box.append(lp,
+    const tg = (k, t, d) => el('label', { class: 'sndrow' }, el('input', { type: 'checkbox', checked: snd[k] ? '' : null, onchange: e => { snd[k] = e.target.checked; } }), el('span', {}, el('b', { text: t }), el('small', { class: 'note', text: d })));
+    const sp = el('div', { class: 'panel accbox' }, el('b', { text: '3) الأصوات' }),
+      tg('voice', '🗣️ الشرح الصوتي', 'قراءة الشرح والنصوص بالصوت. إذا أوقفته يقرأ ' + p.name + ' بنفسه.'),
+      tg('praise', '👏 كلمات التشجيع', '«أحسنت! ممتاز!» بعد الإجابة الصحيحة.'),
+      tg('fx', '🔔 المؤثرات الصوتية', 'نغمات الصح والخطأ والفوز.'),
+      el('span', { class: 'note', text: 'ملاحظة: دروس الإنجليزي، وحروف اللغة العربية للصفوف 1–3، وأسئلة «اسمع واختر»، وتلاوة القرآن يبقى صوتها دائماً لأنها تعتمد عليه.' }));
+    box.append(lp, sp,
       el('button', { class: 'btn sun', text: '💾 حفظ', onclick: async e => { e.target.disabled = true;
         const ctrl = { subjects: all ? [] : [...selS], lessons: {} }; Object.entries(selL).forEach(([k, v]) => { if (v.size && (all || selS.has(k))) ctrl.lessons[k] = [...v]; });
-        try { await setDoc(pref(pid), { name: p.name, ctrl, ctrlAt: serverTimestamp() }, { mergeFields: ['name', 'ctrl', 'ctrlAt'] }); p.ctrl = ctrl; fbk(msg, 'ok', '✓ تم الحفظ. يظهر التغيير على جهاز ' + p.name + ' عند فتح المنصة.'); D.cheer && D.cheer('win'); }
+        try { await setDoc(pref(pid), { name: p.name, ctrl, snd: { ...snd }, ctrlAt: serverTimestamp() }, { mergeFields: ['name', 'ctrl', 'snd', 'ctrlAt'] }); p.ctrl = ctrl; p.snd = { ...snd }; fbk(msg, 'ok', '✓ تم الحفظ. يظهر التغيير على جهاز ' + p.name + ' عند فتح المنصة.'); D.cheer && D.cheer('win'); }
         catch (x) { fbk(msg, 'bad', errMsg(x)); } e.target.disabled = false; } }), msg);
   };
   draw(); s.append(box);
@@ -587,6 +599,36 @@ function renderPaid(orderId) {
 
 /* ---------- admin dashboard ---------- */
 const ROLE_AR = { student: 'طالب', parent: 'ولي أمر', teacher: 'معلم' };
+/* ---------- admin: open / close grades, subjects, lessons; maintenance; open-for-all day ---------- */
+async function loadAccess() { try { const d = await getDoc(doc(db, 'config', 'access')); ACC.access = d.exists() ? d.data() : {}; } catch (e) { ACC.access = ACC.access || {}; } }
+function accessBox() {
+  const A = JSON.parse(JSON.stringify(ACC.access || {})); ['closed', 'subsOnly', 'extraFree'].forEach(k => A[k] = new Set(A[k] || [])); A.maint = A.maint || { on: false, msg: '' };
+  const box = el('div', { class: 'panel accbox' }, el('b', { text: '🔐 فتح وإغلاق المحتوى' }),
+    el('span', { class: 'note', text: 'لكل صف أو مادة أو درس: مفتوح (حسب الاشتراك العادي)، أو مجاني للجميع، أو للمشتركين فقط (حتى الدروس المجانية)، أو مغلق (للمراجعة).' }));
+  const msg = el('div'); const body = el('div', { class: 'stack' });
+  const mOn = el('input', { type: 'checkbox', checked: A.maint.on ? '' : null }), mMsg = el('input', { value: A.maint.msg || '', placeholder: 'رسالة الصيانة (اختياري)' });
+  const oAll = el('input', { type: 'checkbox', checked: A.openAll ? '' : null });
+  box.append(el('label', { class: 'sndrow' }, oAll, el('span', {}, el('b', { text: '🎉 افتح المنصة كاملة مجاناً للجميع' }), el('small', { class: 'note', text: 'مثلاً يوم الجمعة أو أيام العروض. (يحتاج الزائر تسجيل الدخول لفتح الدروس المدفوعة)' }))),
+    el('label', { class: 'sndrow' }, mOn, el('span', {}, el('b', { text: '🛠️ إغلاق كامل للصيانة' }), el('small', { class: 'note', text: 'يرى الجميع صفحة صيانة، ما عدا المدير.' }))), mMsg);
+  const state = k => A.closed.has(k) ? 'closed' : A.subsOnly.has(k) ? 'subs' : A.extraFree.has(k) ? 'free' : 'open';
+  const setState = (k, v) => { ['closed', 'subsOnly', 'extraFree'].forEach(x => A[x].delete(k)); if (v === 'closed') A.closed.add(k); if (v === 'subs') A.subsOnly.add(k); if (v === 'free') A.extraFree.add(k); };
+  const OPTS = [['open', 'عادي'], ['free', 'مجاني'], ['subs', 'للمشتركين'], ['closed', 'مغلق']];
+  const picker = (k, redraw) => { const w = el('div', { class: 'accpick' }); OPTS.forEach(([v, t]) => w.append(el('button', { class: 'btn ghost sm acc-' + v + (state(k) === v ? ' on' : ''), text: t, onclick: () => { setState(k, v); redraw(); } }))); return w; };
+  const gsel = el('select', { class: 'qsel' }, ...GRADES.map(([g, n]) => el('option', { value: g, text: 'الصف ' + n })));
+  const draw = () => { body.innerHTML = ''; const g = gsel.value; const subs = (D.App.catalog && D.App.catalog.grades[g]) || [];
+    body.append(el('div', { class: 'accrow head' }, el('b', { text: 'الصف ' + gradeName(g) + ' كاملاً' }), picker('g' + g, draw)));
+    subs.forEach(sb => { const k = 'g' + g + '-' + sb.id; const row = el('div', { class: 'accrow' }, el('span', {}, el('b', { text: sb.name }), el('button', { class: 'linkbtn', text: sb._accOpen ? '▲ إخفاء الدروس' : '▼ الدروس', onclick: () => { sb._accOpen = !sb._accOpen; draw(); } })), picker(k, draw));
+      body.append(row);
+      if (sb._accOpen) { const ls = []; (sb.books || [{ units: sb.units }]).forEach(b => (b.units || []).forEach(u => u.lessons.forEach(l => { if (l.ready && !ls.some(x => x.id === l.id)) ls.push(l); })));
+        const lw = el('div', { class: 'ctrl-list' }); ls.forEach(l => lw.append(el('div', { class: 'accrow sm' }, el('span', { text: l.title }), picker('l-' + l.id, draw)))); body.append(lw); } });
+    const cnt = A.closed.size + A.subsOnly.size + A.extraFree.size; body.append(el('span', { class: 'note', text: 'إعدادات خاصة مفعّلة: ' + cnt }));
+  };
+  gsel.addEventListener('change', draw);
+  box.append(el('b', { text: 'اختر الصف:' }), gsel, body, el('button', { class: 'btn sun', text: '💾 حفظ الإعدادات', onclick: async e => { e.target.disabled = true;
+    try { await call('adminSetAccess', { maint: { on: mOn.checked, msg: mMsg.value }, openAll: oAll.checked, closed: [...A.closed], subsOnly: [...A.subsOnly], extraFree: [...A.extraFree] });
+      await loadAccess(); fbk(msg, 'ok', '✓ حُفظت. تظهر للمستخدمين عند فتح المنصة أو تحديثها.'); } catch (x) { fbk(msg, 'bad', fnErr(x)); } e.target.disabled = false; } }), msg);
+  setTimeout(draw, 0); return box;
+}
 function renderAdmin() {
   if (!ACC.user) { go('login'); return; }
   const s = page('لوحة الإدارة', 'المجتهد', 'account');
@@ -631,6 +673,7 @@ function renderAdmin() {
                 catch (e) { fbk(gm, 'bad', fnErr(e)); } b.disabled = false; } }))); });
         } catch (e) { fbk(gm, 'bad', fnErr(e)); } } })), gres, gm);
     s.append(gbox);
+    s.append(accessBox());
     // list
     const tb = el('div', { class: 'stack' });
     d.list.forEach(x => { const sc = x.scope || {}; const what = (KINDS[x.kind] || ['', x.kind])[1] + (sc.grades && sc.grades[0] !== '*' ? ' — الصف ' + gradeName(sc.grades[0]) : sc.grades ? ' — كل الصفوف' : '') + (sc.subjects && sc.subjects[0] && sc.subjects[0] !== '*' ? ' — ' + sc.subjects[0] : '');
@@ -642,7 +685,8 @@ function renderAdmin() {
   }).catch(e => fbk(st, 'bad', fnErr(e)));
 }
 
-document.addEventListener('visibilitychange', async () => { if (document.visibilityState === 'visible' && ACC.kid) { try { const d = await getDoc(pref(ACC.kid.pid)); if (d.exists()) { const old = JSON.stringify(ACC.profiles[0] && ACC.profiles[0].ctrl || null); ACC.profiles = [{ id: d.id, ...d.data() }]; if (JSON.stringify(d.data().ctrl || null) !== old && D.App.catalog) D.route(); } } catch (e) {} }
+loadAccess().then(() => { if (D.App.catalog) D.route(); });
+document.addEventListener('visibilitychange', async () => { if (document.visibilityState === 'visible') { const o = JSON.stringify(ACC.access || {}); await loadAccess(); if (JSON.stringify(ACC.access) !== o && D.App.catalog) D.route(); } if (document.visibilityState === 'visible' && ACC.kid) { try { const d = await getDoc(pref(ACC.kid.pid)); if (d.exists()) { const old = JSON.stringify(ACC.profiles[0] && ACC.profiles[0].ctrl || null); ACC.profiles = [{ id: d.id, ...d.data() }]; if (JSON.stringify(d.data().ctrl || null) !== old && D.App.catalog) D.route(); } } catch (e) {} }
   if (document.visibilityState === 'visible' && ACC.user && ACC.profile) { const n = ACC.subs.length; await loadSubs(); if (ACC.subs.length !== n && D.App.catalog) D.route(); } });
 
 const ROUTES = { admin: renderAdmin, subscribe: renderSubscribe, login: renderLogin, onboard: renderOnboard, kids: renderKids, who: renderWho, account: renderAccount };
