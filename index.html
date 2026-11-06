@@ -777,8 +777,8 @@ function voiceHelp(lang){
   const box=el('div',{class:'voicehelp'},el('b',{text:'🔇 لا يوجد صوت '+(lang==='en'?'إنجليزي':'عربي')+' على هذا الجهاز'}),el('span',{class:'note',text:'لذلك لن تسمع الشرح. الحل سهل ومجاني (دقيقة واحدة):'}),el('ol',{},...steps.map(t=>el('li',{text:t}))),
     el('div',{class:'row',style:'gap:8px'},el('button',{class:'btn sun sm',text:'🔊 جرّب الصوت',onclick:()=>{loadVoices();speak(lang==='en'?'Hello! Welcome to Mujtahid.':'مرحباً بك في منصة المجتهد',{lang});}}),el('button',{class:'btn ghost sm',text:'إخفاء',onclick:()=>{box.remove();store.set('vh_hide_'+lang,Date.now());}})));
   return box;}
-function voiceCheck(host,lang){if(TTS.quiet&&lang!=='en')return;const h=store.get('vh_hide_'+lang,0);if(h&&Date.now()-h<3*864e5)return;
-  setTimeout(()=>{loadVoices();const ok=lang==='en'?(TTS.en&&TTS.en.length):(TTS.ar&&TTS.ar.length);if(!ok&&host.isConnected)host.prepend(voiceHelp(lang));},1800);}
+function voiceCheck(host,lang){if(TTS.quiet&&lang!=='en')return;if(store.get('vh_seen_'+lang,false))return;
+  setTimeout(()=>{loadVoices();const ok=lang==='en'?(TTS.en&&TTS.en.length):(TTS.ar&&TTS.ar.length);if(!ok&&host.isConnected){store.set('vh_seen_'+lang,true);host.prepend(voiceHelp(lang));}},1800);}
 /* English letters are spoken by their NAMES (ess, bee, zed…), never as a bare sound the voice may mangle */
 const EN_LN={a:'ay',b:'bee',c:'see',d:'dee',e:'ee',f:'eff',g:'jee',h:'aitch',i:'eye',j:'jay',k:'kay',l:'ell',m:'em',n:'en',o:'oh',p:'pee',q:'cue',r:'ar',s:'ess',t:'tee',u:'you',v:'vee',w:'double you',x:'ex',y:'why',z:'zed'};
 function enLetters(t){const s=String(t).trim();const toks=s.match(/[A-Za-z]+/g);if(!toks)return t;
@@ -930,7 +930,9 @@ function mathSpeech0(t){return String(t)
   .replace(/≠/g,' لا يساوي ').replace(/=/g,' يساوي ').replace(/>/g,' أكبر من ').replace(/</g,' أصغر من ')
   .replace(/[()\[\]]/g,' ').replace(/\s+/g,' ').trim();}
 const AR_LET={'ا':'ألف','أ':'ألف','ب':'باء','ت':'تاء','ث':'ثاء','ج':'جيم','ح':'حاء','خ':'خاء','د':'دال','ذ':'ذال','ر':'راء','ز':'زاي','س':'سين','ش':'شين','ص':'صاد','ض':'ضاد','ط':'طاء','ظ':'ظاء','ع':'عين','غ':'غين','ف':'فاء','ق':'قاف','ك':'كاف','ل':'لام','م':'ميم','ن':'نون','ه':'هاء','و':'واو','ي':'ياء','ء':'همزة','ة':'تاء مربوطة','ى':'ألف مقصورة'};
-const arLetters=t=>t.replace(/(^|\s)و\s+(?=[0-9٠-٩])/g,'$1و').replace(/(^|\s)ص\s?(?=[0-9٠-٩])/g,'$1صفحة ').replace(/(?<![0-9٠-٩°]\s?)(^|[\s(«"'،,:؛\-–])([اأبتثجحخدذرزسشصضطظعغفقكلمنهويءةى])[ً-ْ]?(?=$|[\s)»"'،,.:؛\-–])/g,(m,a,l)=>a+AR_LET[l]);
+const arLetters=t=>t.replace(/(^|\s)و\s+(?=[0-9٠-٩])/g,'$1و').replace(/(^|\s)ص\s?(?=[0-9٠-٩])/g,'$1صفحة ')/* a lone letter WITH a vowel mark is a sound (بَ، أُ، سْ): keep it so the voice says the sound; tanween is read as the sound + n (بً → بَنْ) */
+  .replace(/(^|[\s(«"'،,:؛\-–])([اأإآبتثجحخدذرزسشصضطظعغفقكلمنهويءة])([ًٌٍ])(?=$|[\s)»"'،,.:؛\-–])/g,(m,a,l,t)=>a+(l==='ا'?'أ':l)+({'ً':'َ','ٌ':'ُ','ٍ':'ِ'})[t]+'نْ')
+  .replace(/(?<![0-9٠-٩°]\s?)(^|[\s(«"'،,:؛\-–])([اأبتثجحخدذرزسشصضطظعغفقكلمنهويءةى])(?=$|[\s)»"'،,.:؛\-–])/g,(m,a,l)=>a+AR_LET[l]);
 const EN_SEG=/([A-Za-z][A-Za-z0-9'’\- ]*[A-Za-z0-9]|[A-Za-z])/g;
 /* ---------- recorded voices (ElevenLabs): sentence-level mp3s, browser TTS as fallback ---------- */
 const VOX={on:store.get('vox',true),sets:null,
