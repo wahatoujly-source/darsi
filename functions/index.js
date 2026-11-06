@@ -398,7 +398,7 @@ exports.getLesson = onCall({memory: "512MiB"}, async (req) => {
     const dev = await db.collection("users").doc(tk.kidOf).collection("kidDevices").doc(uid).get();
     if (!dev.exists) throw new HttpsError("permission-denied", "أُلغي ربط هذا الجهاز. اطلب رمزاً جديداً من ولي أمرك.");
     uid = tk.kidOf; pid = tk.kidPid;
-  }
+  } else if (tk.coOf) { uid = await ownerOf(req); }
   const meta = LESSON_INDEX[id];
   if (!meta) throw new HttpsError("not-found", "الدرس غير موجود");
   const [g, s] = meta;
@@ -446,9 +446,15 @@ exports.getLesson = onCall({memory: "512MiB"}, async (req) => {
 // ولي الأمر ينشئ رمزاً لملف ابن → الابن يفتح المنصة على جهازه (دخول مجهول) ويدخل الرمز
 // → يحصل الجهاز على صلاحية ملف هذا الابن فقط (kidOf/kidPid)، ويستطيع ولي الأمر إلغاءها متى شاء.
 const LINK_TTL = 15 * 60 * 1000;
+// a co-parent acts on the main parent's account (after checking the link still exists)
+async function ownerOf(req) {
+  const uid = needUser(req); const tk = req.auth.token || {};
+  if (tk.coOf) { const d = await db.collection("users").doc(tk.coOf).collection("coParents").doc(uid).get(); if (d.exists) return tk.coOf; }
+  return uid;
+}
 const MAX_KID_DEVICES = 3;
 exports.createLinkCode = onCall(async (req) => {
-  const uid = needUser(req);
+  needUser(req); const uid = await ownerOf(req);
   if ((req.auth.token || {}).kidOf) throw new HttpsError("permission-denied", "غير مسموح");
   const pid = String((req.data && req.data.pid) || "");
   if (!pid || pid === "me") throw new HttpsError("invalid-argument", "اختر الابن");
@@ -490,13 +496,63 @@ exports.redeemLinkCode = onCall(async (req) => {
   return {pid: info.pid, name: ps.data().name || ""};
 });
 exports.unlinkKidDevice = onCall(async (req) => {
-  const uid = needUser(req);
+  needUser(req); const uid = await ownerOf(req);
   const kid = String((req.data && req.data.kid) || "");
   const ref = db.collection("users").doc(uid).collection("kidDevices").doc(kid);
   const d = await ref.get();
   if (!d.exists) throw new HttpsError("not-found", "الجهاز غير موجود");
   await ref.delete();
   try { await admin.auth().deleteUser(kid); } catch (e) { logger.warn("unlink deleteUser", e.message); }
+  return {ok: true};
+});
+
+// ===================== ولي أمر ثانٍ (مثلاً الأم) =====================
+// ولي الأمر الأساسي ينشئ رمزاً → الطرف الثاني يسجّل الدخول بحسابه ويدخل الرمز → يرى الأبناء ويتابعهم بنفس الصلاحيات ما عدا إضافة أو حذف ابن.
+exports.createCoCode = onCall(async (req) => {
+  const uid = needUser(req); const tk = req.auth.token || {};
+  if (tk.kidOf || tk.coOf || (tk.firebase || {}).sign_in_provider === "anonymous") throw new HttpsError("permission-denied", "هذه الخاصية لولي الأمر الأساسي فقط");
+  const us = await db.collection("users").doc(uid).get();
+  if (!us.exists || !["parent", "teacher"].includes(us.data().role)) throw new HttpsError("permission-denied", "هذه الخاصية لحساب ولي الأمر");
+  const cos = await db.collection("users").doc(uid).collection("coParents").get();
+  if (cos.size >= 3) throw new HttpsError("resource-exhausted", "يمكن ربط 3 أولياء أمور كحد أقصى.");
+  for (let i = 0; i < 6; i++) {
+    const code = String(crypto.randomInt(0, 1000000)).padStart(6, "0");
+    const ref = db.collection("coCodes").doc(code);
+    const ok = await db.runTransaction(async (tx) => { const d = await tx.get(ref);
+      if (d.exists && !d.data().used && d.data().exp > Date.now()) return false;
+      tx.set(ref, {uid, exp: Date.now() + LINK_TTL, used: false, name: us.data().name || ""}); return true; });
+    if (ok) return {code, exp: Date.now() + LINK_TTL};
+  }
+  throw new HttpsError("unavailable", "حاول مرة أخرى");
+});
+exports.redeemCoCode = onCall(async (req) => {
+  const me = needUser(req); const tk = req.auth.token || {};
+  if ((tk.firebase || {}).sign_in_provider === "anonymous" || tk.kidOf) throw new HttpsError("failed-precondition", "سجّل الدخول بحسابك (رقم الهاتف أو البريد) أولاً");
+  const code = String((req.data && req.data.code) || "").replace(/\D/g, "");
+  if (code.length !== 6) throw new HttpsError("invalid-argument", "الرمز 6 أرقام");
+  const tr = db.collection("linkRate").doc("c_" + me);
+  await db.runTransaction(async (tx) => { const d = await tx.get(tr); const n = (d.exists && d.data().n) || 0;
+    if (n >= 8) throw new HttpsError("resource-exhausted", "محاولات كثيرة. اطلب رمزاً جديداً."); tx.set(tr, {n: n + 1}); });
+  const ref = db.collection("coCodes").doc(code);
+  const info = await db.runTransaction(async (tx) => { const d = await tx.get(ref);
+    if (!d.exists || d.data().used || d.data().exp < Date.now()) throw new HttpsError("not-found", "الرمز غير صحيح أو انتهت صلاحيته");
+    if (d.data().uid === me) throw new HttpsError("failed-precondition", "هذا رمز حسابك نفسه. افتحه من حساب ولي الأمر الآخر.");
+    tx.update(ref, {used: true, by: me}); return d.data(); });
+  const mine = await db.collection("users").doc(me).get();
+  const nm = (mine.exists && mine.data().name) || String((req.data && req.data.name) || "").slice(0, 60) || "ولي أمر";
+  if (!mine.exists) await db.collection("users").doc(me).set({role: "parent", name: nm, phoneVerified: false, createdAt: FieldValue.serverTimestamp()});
+  await admin.auth().setCustomUserClaims(me, {coOf: info.uid});
+  await db.collection("users").doc(info.uid).collection("coParents").doc(me).set({name: nm, at: FieldValue.serverTimestamp()});
+  return {owner: info.name || ""};
+});
+exports.removeCoParent = onCall(async (req) => {
+  const me = needUser(req); const tk = req.auth.token || {};
+  const co = String((req.data && req.data.co) || (tk.coOf ? me : ""));
+  const owner = tk.coOf && co === me ? tk.coOf : me;
+  const ref = db.collection("users").doc(owner).collection("coParents").doc(co);
+  const d = await ref.get(); if (!d.exists) throw new HttpsError("not-found", "غير موجود");
+  await ref.delete();
+  try { await admin.auth().setCustomUserClaims(co, {}); await admin.auth().revokeRefreshTokens(co); } catch (e) { logger.warn("removeCo", e.message); }
   return {ok: true};
 });
 

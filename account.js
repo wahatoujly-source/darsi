@@ -67,7 +67,32 @@ function libyanPhone(raw) {
 
 /* ---------- Firestore paths ---------- */
 /* a linked child's device reads/writes the parent's data for that one child */
-const OW = () => ACC.kid ? ACC.kid.parent : ACC.user.uid;
+/* ---------- second parent (e.g. the mother) ---------- */
+function coParentBox() {
+  const box = el('div', { class: 'panel accbox' }); const msg = el('div');
+  if (ACC.co) { box.append(el('b', { text: '👨‍👩‍👧 حساب مرتبط' }), el('span', { class: 'note', text: 'أنت مرتبط بحساب ولي الأمر الأساسي: ترى الأبناء وتقاريرهم وجداولهم وتتحكم فيها، ما عدا إضافة أو حذف ابن.' }),
+      el('button', { class: 'btn ghost sm', text: 'إلغاء الارتباط', onclick: async e => { const b = e.currentTarget; if (b.dataset.c !== '1') { b.dataset.c = '1'; b.textContent = 'تأكيد إلغاء الارتباط'; return; }
+        try { await call('removeCoParent', {}); await auth.currentUser.getIdToken(true); location.reload(); } catch (x) { fbk(msg, 'bad', fnErr(x)); } } }), msg); return box; }
+  box.append(el('b', { text: '👨‍👩‍👧 أضف ولي أمر آخر (الأم أو الأب)' }), el('span', { class: 'note', text: 'يرى الأبناء وتقاريرهم ويتحكم في جداولهم بنفس صلاحياتك، ما عدا إضافة أو حذف ابن. يمكنك إزالته في أي وقت.' }));
+  const list = el('div'), out = el('div');
+  const load = async () => { list.innerHTML = ''; try { const q = await getDocs(collection(db, 'users', ACC.user.uid, 'coParents'));
+    q.forEach(d => list.append(el('div', { class: 'kidrow' }, el('span', { text: '👤' }), el('b', { text: d.data().name || 'ولي أمر' }),
+      el('button', { class: 'btn ghost sm', text: 'إزالة', onclick: async e => { e.target.disabled = true; try { await call('removeCoParent', { co: d.id }); load(); } catch (x) { fbk(msg, 'bad', fnErr(x)); e.target.disabled = false; } } })))); } catch (e) {} };
+  const gen = el('button', { class: 'btn sun', text: '🔗 أنشئ رمز ربط', onclick: async () => { gen.disabled = true; out.innerHTML = '';
+    try { const r = await call('createCoCode', {}); out.append(el('div', { class: 'linkcode', dir: 'ltr', text: r.code.slice(0, 3) + ' ' + r.code.slice(3) }),
+      el('span', { class: 'note', text: 'على هاتف ولي الأمر الآخر: يسجّل الدخول بحسابه (رقمه أو بريده)، ثم «حسابي» ← «عندي رمز من ولي الأمر» ويكتب الرقم. صالح 15 دقيقة.' }));
+      setTimeout(load, 20000); } catch (x) { fbk(msg, 'bad', fnErr(x)); } gen.disabled = false; } });
+  box.append(list, gen, out, msg); load(); return box;
+}
+function coRedeemBox() {
+  const inp = el('input', { type: 'text', inputmode: 'numeric', maxlength: 6, placeholder: '000000', dir: 'ltr', style: 'font-size:1.6rem;text-align:center;letter-spacing:.3em' }); const msg = el('div');
+  const btn = el('button', { class: 'btn', text: '🔗 اربط حسابي', onclick: async () => { const code = inp.value.replace(/[٠-٩]/g, c => '٠١٢٣٤٥٦٧٨٩'.indexOf(c)).replace(/\D/g, '');
+    if (code.length !== 6) { fbk(msg, 'bad', 'الرمز 6 أرقام.'); return; } btn.disabled = true;
+    try { const r = await call('redeemCoCode', { code, name: (ACC.profile && ACC.profile.name) || '' }); await auth.currentUser.getIdToken(true); fbk(msg, 'ok', '✓ تم الربط بحساب ' + (r.owner || 'ولي الأمر'));
+      setTimeout(() => { location.hash = 'who'; location.reload(); }, 900); } catch (x) { fbk(msg, 'bad', fnErr(x)); btn.disabled = false; } } });
+  return el('div', { class: 'panel accbox' }, el('b', { text: '🔑 عندي رمز من ولي الأمر' }), el('span', { class: 'note', text: 'إذا أرسل لك ولي الأمر الآخر رمز ربط، اكتبه هنا لترى الأبناء وتتابعهم.' }), inp, btn, msg);
+}
+const OW = () => ACC.kid ? ACC.kid.parent : ACC.co ? ACC.co.owner : ACC.user.uid;
 const uref = () => doc(db, 'users', ACC.user.uid);
 const pcol = () => collection(db, 'users', OW(), 'profiles');
 const pref = pid => doc(db, 'users', OW(), 'profiles', pid);
@@ -89,6 +114,10 @@ async function migrateLocal(pid) {
 }
 ACC.saveProgress = (lid, done) => { if (!ACC.user || !ACC.pid) return; setDoc(prog(ACC.pid, lid), { done, at: serverTimestamp() }).catch(e => console.warn('save', e)); };
 
+ACC.saveBoard = (day, grade, e) => { if (!ACC.user || !ACC.pid || !grade) return; const p = ACC.profiles.find(x => x.id === ACC.pid); if (!p || p.board === false) return;
+  const id = OW() + '_' + ACC.pid; const n = String(p.name || (ACC.profile && ACC.profile.name) || 'طالب').trim().split(/\s+/)[0].slice(0, 20);
+  setDoc(doc(db, 'boards', day + '_g' + grade, 'e', id), { n, av: p.avatar || '🙂', pts: Math.min(3000, Math.max(0, Math.round(e.pts))), st: e.st | 0, r: e.r | 0, m: Math.round(e.m || 0), g: String(grade), at: serverTimestamp() }).catch(e2 => console.warn('board', e2)); };
+ACC.loadBoard = async (day, grade) => { const q = await getDocs(collection(db, 'boards', day + '_g' + grade, 'e')); return q.docs.map(d => ({ id: d.id, me: d.id === OW() + '_' + ACC.pid, ...d.data() })).sort((a, b) => b.pts - a.pts); };
 ACC.saveStats = st => { if (!ACC.user || !ACC.pid) return; const p = ACC.profiles.find(x => x.id === ACC.pid); if (!p) return;
   p.stats = { ...st, at: Date.now() };
   setDoc(pref(ACC.pid), ACC.kid ? { stats: { ...st, at: serverTimestamp() } } : { name: p.name, stats: { ...st, at: serverTimestamp() } }, { merge: true }).catch(e => console.warn('stats', e)); };
@@ -196,6 +225,7 @@ function renderOnboard() {
 function renderKids() {
   if (!ACC.user || !ACC.profile) { go('login'); return; }
   const s = page('أبنائي', 'حتى ' + MAX_KIDS + ' أبناء في حساب واحد', 'who');
+  if (ACC.co) { s.append(el('div', { class: 'feedback info', text: 'أنت مرتبط بحساب ولي الأمر الأساسي. إضافة الأبناء أو حذفهم تتم من حسابه.' }), el('div', { class: 'stack' }, ...kidsOf().map(p => el('div', { class: 'kidrow' }, el('span', { class: 'kav', text: p.avatar || '🙂' }), el('b', { text: p.name + ' — الصف ' + gradeName(p.grade) })))), el('button', { class: 'btn sun', text: 'تم ←', onclick: () => go('who') })); return; }
   const list = el('div', { class: 'stack' }), msg = el('div');
   const draw = () => { list.innerHTML = '';
     if (!kidsOf().length) list.append(el('p', { class: 'note', text: 'لم تضف أحداً بعد. أضف ابنك الأول.' }));
@@ -238,7 +268,7 @@ function renderWho() {
         el('button', { class: 'btn sun sm', text: '📱 ربط موبايله', onclick: () => go('linkkid-' + p.id) })),
       el('button', { class: 'btn ghost sm', text: '📅 الجدول الدراسي' + (p.tt && p.tt.on ? ' ✓' : ''), onclick: () => go('tt-' + p.id) }),
       el('button', { class: 'btn ghost sm', text: '🎛️ ماذا يدرس؟ والأصوات' + (p.ctrl && ((p.ctrl.subjects || []).length || Object.values(p.ctrl.lessons || {}).some(a => a.length)) ? ' ✓' : ''), onclick: () => go('ctrl-' + p.id) }))); });
-  if (kidsOf().length < MAX_KIDS) g.append(el('button', { class: 'who add', onclick: () => go('kids') }, el('span', { class: 'kav big', text: '＋' }), el('b', { text: 'أضف ابناً' })));
+  if (!ACC.co && kidsOf().length < MAX_KIDS) g.append(el('button', { class: 'who add', onclick: () => go('kids') }, el('span', { class: 'kav big', text: '＋' }), el('b', { text: 'أضف ابناً' })));
   s.append(g, el('div', { class: 'row', style: 'gap:8px;justify-content:center' }, el('button', { class: 'btn ghost', text: '✏️ إدارة الأبناء', onclick: () => go('kids') }), el('button', { class: 'btn ghost', text: '⚙️ حسابي', onclick: () => go('account') })));
 }
 
@@ -280,7 +310,7 @@ async function kidDevicesBox(p) {
     el('span', { class: 'note', text: 'اربط موبايل ابنك بملفه: يدخل مباشرة بدون رقم ولا كلمة سر، ولا يرى حسابك أو الدفع أو ملفات إخوته.' }));
   const list = el('div'), out = el('div'), msg = el('div');
   const load = async () => { list.innerHTML = '';
-    try { const q = await getDocs(query(collection(db, 'users', ACC.user.uid, 'kidDevices'), where('pid', '==', p.id)));
+    try { const q = await getDocs(query(collection(db, 'users', OW(), 'kidDevices'), where('pid', '==', p.id)));
       if (!q.size) list.append(el('span', { class: 'note', text: 'لا يوجد جهاز مربوط بعد.' }));
       q.forEach(d => { const x = d.data(); list.append(el('div', { class: 'kidrow' }, el('span', { text: '📱' }), el('span', {}, el('b', { text: x.device || 'جهاز' }), el('span', { class: 'note', text: x.at && x.at.toMillis ? ' — رُبط في ' + fmtDate(x.at.toMillis()) : '' })),
         el('button', { class: 'btn ghost sm', text: 'إلغاء الربط', onclick: async e => { e.target.disabled = true; try { await call('unlinkKidDevice', { kid: d.id }); load(); } catch (x) { fbk(msg, 'bad', fnErr(x)); e.target.disabled = false; } } }))); });
@@ -336,7 +366,7 @@ function renderCtrl(pid) {
   const g = String(p.grade || ''); const subs = (D.App.catalog.grades[g] || []);
   const s = page('ماذا يدرس ' + p.name + '؟', 'الصف ' + gradeName(g), 'who');
   const c0 = p.ctrl || {}; const selS = new Set(c0.subjects || []); const selL = {}; Object.entries(c0.lessons || {}).forEach(([k, v]) => selL[k] = new Set(v));
-  let all = !selS.size; const msg = el('div'); const box = el('div', { class: 'stack' }); const snd = { voice: true, praise: true, fx: true, ...(p.snd || {}) };
+  let all = !selS.size; const msg = el('div'); const box = el('div', { class: 'stack' }); const snd = { voice: true, praise: true, fx: true, ...(p.snd || {}) }; let boardOn = p.board !== false;
   const lessonsOf = sb => { const out = []; (sb.books || [{ units: sb.units }]).forEach(b => (b.units || []).forEach(u => u.lessons.forEach(l => { if (l.ready && !out.some(x => x.id === l.id)) out.push({ ...l, unit: u.title }); }))); return out; };
   const draw = () => { box.innerHTML = '';
     box.append(el('div', { class: 'panel accbox' }, el('b', { text: '1) المواد' }),
@@ -365,11 +395,12 @@ function renderCtrl(pid) {
       tg('voice', '🗣️ الشرح الصوتي', 'قراءة الشرح والنصوص بالصوت. إذا أوقفته يقرأ ' + p.name + ' بنفسه.'),
       tg('praise', '👏 كلمات التشجيع', '«أحسنت! ممتاز!» بعد الإجابة الصحيحة.'),
       tg('fx', '🔔 المؤثرات الصوتية', 'نغمات الصح والخطأ والفوز.'),
-      el('span', { class: 'note', text: 'ملاحظة: دروس الإنجليزي، وحروف اللغة العربية للصفوف 1–3، وأسئلة «اسمع واختر»، وتلاوة القرآن يبقى صوتها دائماً لأنها تعتمد عليه.' }));
+      el('span', { class: 'note', text: 'ملاحظة: دروس الإنجليزي، وحروف اللغة العربية للصفوف 1–3، وأسئلة «اسمع واختر»، وتلاوة القرآن يبقى صوتها دائماً لأنها تعتمد عليه.' }),
+      el('b', { text: '4) لوحة الأبطال' }), el('label', { class: 'sndrow' }, el('input', { type: 'checkbox', checked: p.board !== false ? '' : null, onchange: e => { boardOn = e.target.checked; } }), el('span', {}, el('b', { text: '🏆 إظهار ' + p.name + ' في لوحة الترتيب' }), el('small', { class: 'note', text: 'يظهر الاسم الأول والصورة الرمزية والنقاط فقط، لطلاب الصف نفسه.' }))));
     box.append(lp, sp,
       el('button', { class: 'btn sun', text: '💾 حفظ', onclick: async e => { e.target.disabled = true;
         const ctrl = { subjects: all ? [] : [...selS], lessons: {} }; Object.entries(selL).forEach(([k, v]) => { if (v.size && (all || selS.has(k))) ctrl.lessons[k] = [...v]; });
-        try { await setDoc(pref(pid), { name: p.name, ctrl, snd: { ...snd }, ctrlAt: serverTimestamp() }, { mergeFields: ['name', 'ctrl', 'snd', 'ctrlAt'] }); p.ctrl = ctrl; p.snd = { ...snd }; fbk(msg, 'ok', '✓ تم الحفظ. يظهر التغيير على جهاز ' + p.name + ' عند فتح المنصة.'); D.cheer && D.cheer('win'); }
+        try { await setDoc(pref(pid), { name: p.name, ctrl, snd: { ...snd }, board: boardOn, ctrlAt: serverTimestamp() }, { mergeFields: ['name', 'ctrl', 'snd', 'board', 'ctrlAt'] }); p.ctrl = ctrl; p.snd = { ...snd }; p.board = boardOn; fbk(msg, 'ok', '✓ تم الحفظ. يظهر التغيير على جهاز ' + p.name + ' عند فتح المنصة.'); D.cheer && D.cheer('win'); }
         catch (x) { fbk(msg, 'bad', errMsg(x)); } e.target.disabled = false; } }), msg);
   };
   draw(); s.append(box);
@@ -490,6 +521,8 @@ function renderAccount() {
     u.email && !phoneOf(u) ? el('div', { class: 'note', dir: 'ltr', style: 'text-align:right', text: '✉️ ' + u.email }) : null,
     P.role === 'student' && activeProfile() && activeProfile().grade ? el('div', { class: 'note', text: '📚 الصف ' + gradeName(activeProfile().grade) }) : null));
   if (isAdult()) s.append(el('button', { class: 'btn', text: '👨‍👩‍👧 أبنائي (' + kidsOf().length + ' من ' + MAX_KIDS + ')', onclick: () => go('kids') }));
+  if (isAdult()) s.append(coParentBox());
+  if (isAdult() && !ACC.co && !kidsOf().length) s.append(coRedeemBox());
   if (P.role === 'parent') { const m = el('div');
     s.append(el('div', { class: 'panel accbox' }, el('b', { text: '👩‍🏫 هل أنت معلم أيضاً؟' }), el('span', { class: 'note', text: 'حوّل حسابك إلى حساب معلم وتبقى إدارة أبنائك كما هي.' }),
       el('button', { class: 'btn ghost', text: 'نعم، أنا معلم أيضاً', onclick: async () => {
@@ -580,6 +613,7 @@ function subjectsOf(g) { const c = D.App.catalog; return ((c && c.grades[g]) || 
 function subjName(g, sid) { const s = subjectsOf(g).find(x => x.id === sid); return s ? s.name : sid; }
 
 function renderSubscribe() {
+  if (ACC.co) { const s = page('الاشتراك', '', 'who'); s.append(el('div', { class: 'feedback info', text: 'الاشتراك يتم من حساب ولي الأمر الأساسي، ويشمل الأبناء عندك تلقائياً.' })); return; }
   if (ACC.kid) { const s = page('الاشتراك', '', 'home'); s.append(el('div', { class: 'feedback info', text: 'هذا الدرس يحتاج اشتراكاً. اطلب من ولي أمرك أن يشترك لك من حسابه، وسيفتح عندك مباشرة.' })); return; }
   if (!ACC.user) { D.App.after = 'subscribe'; go('login'); return; }
   if (!ACC.profile) { go('onboard'); return; }
@@ -752,7 +786,7 @@ const withTimeout = (pr, ms = 8000) => Promise.race([pr, new Promise((_, rej) =>
 onAuthStateChanged(auth, async user => {
   ACC.user = user; ACC.profile = null; ACC.profiles = []; ACC.loadError = null;
   try {
-    ACC.kid = null;
+    ACC.kid = null; ACC.co = null;
     if (user && user.isAnonymous) {
       const tr = await withTimeout(user.getIdTokenResult()).catch(() => null);
       const c = (tr && tr.claims) || {};
@@ -767,7 +801,8 @@ onAuthStateChanged(auth, async user => {
       } else if (!ACC.linking) { await signOut(auth); return; }
     }
     else if (user) {
-      try { const snap = await withTimeout(getDoc(uref())); ACC.profile = snap.exists() ? snap.data() : null; if (ACC.profile) { await withTimeout(loadProfiles()); await withTimeout(loadSubs()); } }
+      try { const tr = await withTimeout(user.getIdTokenResult()).catch(() => null); if (tr && tr.claims && tr.claims.coOf) ACC.co = { owner: tr.claims.coOf };
+        const snap = await withTimeout(getDoc(uref())); ACC.profile = snap.exists() ? snap.data() : null; if (ACC.profile) { await withTimeout(loadProfiles()); await withTimeout(loadSubs()); } }
       catch (e) { console.error('profile', e); ACC.loadError = e; }
       if (ACC.profiles.length && !ACC.profiles.some(p => p.id === ACC.pid)) await setActive(ACC.profiles.length === 1 ? ACC.profiles[0].id : null);
       else if (ACC.pid && !ACC.loadError) withTimeout(pullProgress(ACC.pid)).catch(() => {});

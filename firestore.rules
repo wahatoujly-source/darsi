@@ -4,6 +4,9 @@ service cloud.firestore {
     function signedIn() { return request.auth != null; }
     function isOwner(uid) { return signedIn() && request.auth.uid == uid; }
     // a child's device linked by the parent (claims set only by the server; revoked by deleting kidDevices/{device})
+    // a second parent (e.g. the mother) linked by the main parent: same rights on the children, but cannot add or delete them
+    function isCo(uid) { return signedIn() && request.auth.token.get('coOf', '') == uid
+      && exists(/databases/$(database)/documents/users/$(uid)/coParents/$(request.auth.uid)); }
     function isKid(uid, pid) { return signedIn() && request.auth.token.get('kidOf', '') == uid && request.auth.token.get('kidPid', '') == pid
       && exists(/databases/$(database)/documents/users/$(uid)/kidDevices/$(request.auth.uid)); }
 
@@ -25,23 +28,26 @@ service cloud.firestore {
 
       // children / own profile
       match /profiles/{pid} {
-        allow read: if isOwner(uid) || isKid(uid, pid);
+        allow read: if isOwner(uid) || isKid(uid, pid) || isCo(uid);
         allow delete: if isOwner(uid);
-        allow create, update: if isOwner(uid)
+        allow create: if isOwner(uid)
+          && request.resource.data.name is string && request.resource.data.name.size() <= 40;
+        allow update: if (isOwner(uid) || isCo(uid))
           && request.resource.data.name is string && request.resource.data.name.size() <= 40;
         // the child may update only his own stats
         allow update: if isKid(uid, pid) && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['stats']);
 
         // stars per lesson
         match /progress/{lessonId} {
-          allow read: if isOwner(uid) || isKid(uid, pid);
+          allow read: if isOwner(uid) || isKid(uid, pid) || isCo(uid);
           allow delete: if isOwner(uid);
-          allow create, update: if (isOwner(uid) || isKid(uid, pid)) && request.resource.data.done is list && request.resource.data.done.size() <= 20;
+          allow create, update: if (isOwner(uid) || isKid(uid, pid) || isCo(uid)) && request.resource.data.done is list && request.resource.data.done.size() <= 20;
         }
       }
 
       // children's linked devices: written only by the server
-      match /kidDevices/{d} { allow read: if isOwner(uid); allow write: if false; }
+      match /kidDevices/{d} { allow read: if isOwner(uid) || isCo(uid); allow write: if false; }
+      match /coParents/{d} { allow read: if isOwner(uid) || (signedIn() && request.auth.uid == d); allow write: if false; }
     }
 
     // plans: everyone can read prices; only the server (Admin SDK) writes.
@@ -50,7 +56,16 @@ service cloud.firestore {
     // money: written only by Cloud Functions; the owner can read their own.
     // public switches set from the admin panel (open/close grades, subjects, lessons)
     match /config/access { allow read: if true; allow write: if false; }
-    match /subscriptions/{id} { allow read: if signedIn() && (resource.data.uid == request.auth.uid || resource.data.uid == request.auth.token.get('kidOf', '-')); allow write: if false; }
+    // daily leaderboard per grade: first name, avatar and points only; each family writes only its own entries
+    match /boards/{bid}/e/{eid} {
+      allow read: if signedIn();
+      allow create, update: if signedIn()
+        && (eid.matches(request.auth.uid + '_.*') || eid.matches(request.auth.token.get('kidOf', '~') + '_.*') || eid.matches(request.auth.token.get('coOf', '~') + '_.*'))
+        && request.resource.data.keys().hasOnly(['n', 'av', 'pts', 'st', 'r', 'm', 'at', 'g'])
+        && request.resource.data.pts is int && request.resource.data.pts >= 0 && request.resource.data.pts <= 3000
+        && request.resource.data.n is string && request.resource.data.n.size() <= 20;
+    }
+    match /subscriptions/{id} { allow read: if signedIn() && (resource.data.uid == request.auth.uid || resource.data.uid == request.auth.token.get('kidOf', '-') || resource.data.uid == request.auth.token.get('coOf', '-')); allow write: if false; }
     match /orders/{id}        { allow read: if signedIn() && resource.data.uid == request.auth.uid; allow write: if false; }
 
     // everything else is closed

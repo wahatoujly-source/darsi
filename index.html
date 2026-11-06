@@ -705,6 +705,10 @@ h2{font-weight:800}
 .ttrow{display:grid;grid-template-columns:auto 1fr 1.4fr auto auto;gap:6px;align-items:center;padding:4px 0}.ttrow select{min-width:0;width:100%}.tttime{font-size:.8rem;color:var(--muted);min-width:4.5em}
 .ttbrk{text-align:center;font-size:.85rem;background:rgba(255,184,0,.15);border-radius:10px;padding:4px}
 @media (max-width:480px){.ttrow{grid-template-columns:auto 1fr auto auto}.ttrow select:nth-of-type(2){grid-column:1/-1;grid-row:2}}
+.brd-me{text-align:center;background:linear-gradient(135deg,rgba(255,184,0,.25),rgba(255,138,0,.12));border-radius:22px;padding:18px;display:grid;gap:4px;justify-items:center}.brd-me b{font-family:var(--f-display);font-size:1.25rem}
+.brd-list{background:var(--card);border-radius:20px;padding:8px}.brd-row{display:grid;grid-template-columns:2.2em 2em 1fr auto;gap:8px;align-items:center;padding:8px;border-bottom:1px solid var(--line)}.brd-row:last-child{border:0}
+.brd-row.me{background:rgba(42,157,70,.13);border-radius:12px}.brd-r{text-align:center;font-family:var(--f-display);font-size:1.1rem}.brd-av{font-size:1.4rem}.brd-p{font-family:var(--f-display);color:var(--sea)}
+.mj-acts{grid-template-columns:repeat(3,minmax(0,1fr))!important}@media (max-width:400px){.mj-acts{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
 </style>
 
 </head><body>
@@ -1688,7 +1692,9 @@ const GAME=(()=>{
   function opened(id){const A=store.get('g_act',[]);const last=A[A.length-1];if(last&&last.l===id&&Date.now()-last.t<30*60000)return;A.push({l:id,t:Date.now()});store.set('g_act',A.slice(-250));}
   function ans(ok){lrUp(x=>ok?x.r++:x.w++);logUp(x=>ok?x.r++:x.w++);if(!ok)misAdd();}
   function stats(){const st=countStars();return{stars:st,level:level(st),streak:streak(),today:minsToday(),goal:goal(),week:week()};}
+  function todayPts(){const L=(store.get('g_log',{})[today()])||{};const m=store.get('g_mins',{})[today()]||0;const D=store.get('g_daily',{});return{pts:(L.st||0)*10+(L.r||0)*2+Math.round(m)+(D.date===today()?(D.score||0)*5:0),st:L.st||0,r:L.r||0,m};}
   let lastSync=0;function sync(force){if(!window.ACC||!ACC.saveStats||!ACC.user||!ACC.pid)return;if(!force&&Date.now()-lastSync<60000)return;lastSync=Date.now();const x=stats();
+    try{const g=boardGrade();if(g&&ACC.saveBoard)ACC.saveBoard(today(),g,todayPts());}catch(e){}
     ACC.saveStats({stars:x.stars,level:x.level.name,streak:x.streak,lastDay:today(),week:x.week,today:x.today,mins:store.get('g_mins',{}),lr:store.get('g_lr',{}),log:store.get('g_log',{}),goal:x.goal,qz:store.get('g_qz',[]),act:store.get('g_act',[])});}
   let tq=Promise.resolve();function toast(...a){tq=tq.then(()=>new Promise(r=>{toast1(...a);setTimeout(r,4100);}));}
   function toast1(icon,title,sub){const t=el('div',{class:'mj-toast',role:'status'},el('span',{class:'ti',text:icon}),el('span',{},el('b',{text:title}),sub?el('small',{text:sub}):null));document.body.append(t);requestAnimationFrame(()=>t.classList.add('on'));setTimeout(()=>{t.classList.remove('on');setTimeout(()=>t.remove(),400);},3600);}
@@ -1704,10 +1710,11 @@ const GAME=(()=>{
         el('span',{class:'bar'},el('i',{style:'width:'+Math.round(100*(nx?(x.stars-x.level.min)/(nx[0]-x.level.min):1))+'%'}))),
       (()=>{const D=store.get('g_daily',{}),nm=Object.keys(store.get('g_mis',{})).length,done=D.date===today();return el('div',{class:'mj-acts'},
         el('button',{class:'mj-act'+(done?'':' hot'),onclick:()=>go('daily')},el('span',{class:'ai',text:done?'✅':'⚡'}),el('span',{},el('b',{text:'تحدي اليوم'}),el('small',{text:done?'أنجزته: '+D.score+'/5':weekend(today())?'عطلة 🌴 اختياري':'5 أسئلة سريعة'}))),
+        el('button',{class:'mj-act',onclick:()=>go('board')},el('span',{class:'ai',text:'🏆'}),el('span',{},el('b',{text:'لوحة الأبطال'}),el('small',{text:'ترتيبك في صفّك اليوم'}))),
         el('button',{class:'mj-act',onclick:()=>go('mistakes')},el('span',{class:'ai',text:'🔁'}),el('span',{},el('b',{text:'مراجعة أخطائي'}),el('small',{text:nm?nm+' تمرين للمراجعة':'لا توجد أخطاء'}))));})(),
       el('div',{class:'chips'},el('a',{class:'chip',href:'#myreport',text:'📊 تقريري'}),el('span',{class:'chip'},'⭐ ',el('b',{text:String(x.stars)}),' نجمة'),el('span',{class:'chip'},'🔥 ',el('b',{text:String(x.streak)}),' يوم'),ring));}
   const local=()=>{const x=stats();return{stars:x.stars,streak:x.streak,lastDay:today(),mins:store.get('g_mins',{}),lr:store.get('g_lr',{}),log:store.get('g_log',{}),goal:x.goal,qz:store.get('g_qz',[]),act:store.get('g_act',[])};};
-  return{quiz,opened,setCur:c=>{cur=c;},sessWrong:()=>sess,resetSess:()=>{sess=0;},markDay,weekend,onStar,ans,card,stats,local,level,LEVELS,today,dayBefore,setGoal:g=>store.set('g_goal',g),sync,toast};
+  return{todayPts,quiz,opened,setCur:c=>{cur=c;},sessWrong:()=>sess,resetSess:()=>{sess=0;},markDay,weekend,onStar,ans,card,stats,local,level,LEVELS,today,dayBefore,setGoal:g=>store.set('g_goal',g),sync,toast};
 })();
 /* ================= تقارير التقدّم (لولي الأمر وللطالب) ================= */
 const REPORT=(()=>{
@@ -1929,6 +1936,19 @@ const TT=(()=>{
     const i=T.findIndex(x=>x[0]>m);return{state:'break',until:T[i][0],next:day[i],day,T};}
   return{PLAN,DAYS,build,deflt,times,now,hm};
 })();
+function boardGrade(){const A=window.ACC;if(!A||!A.pid||!A.profiles)return null;const p=A.profiles.find(x=>x.id===A.pid);return p&&p.grade?String(p.grade):null;}
+/* ================= لوحة الترتيب اليومية في الصف ================= */
+async function renderBoard(){root.innerHTML='';const g=boardGrade();root.append(bar('🏆 لوحة الأبطال','ترتيب طلاب '+(g?(gradeInfo(g)||{}).name:'صفّك')+' اليوم','home'));
+  const box=el('div',{class:'stack'});root.append(box);
+  if(!window.ACC||!ACC.user||!g){box.append(el('div',{class:'feedback info',text:'سجّل الدخول واختر الطالب لتظهر في لوحة الأبطال وتنافس زملاءك.'}));return;}
+  GAME.sync(true);box.append(el('p',{class:'note',text:'جارٍ التحميل…'}));
+  let L=[];try{await new Promise(r=>setTimeout(r,700));L=await ACC.loadBoard(GAME.today(),g);}catch(e){box.innerHTML='';box.append(el('div',{class:'feedback bad',text:'تعذّر تحميل اللوحة الآن.'}));return;}
+  box.innerHTML='';const myI=L.findIndex(x=>x.me);
+  box.append(el('div',{class:'brd-me'},el('div',{style:'font-size:2.6rem',text:myI===0?'🥇':myI===1?'🥈':myI===2?'🥉':'🏅'}),
+    el('b',{text:myI>=0?'ترتيبك اليوم: '+(myI+1)+' من '+L.length:'ابدأ درساً لتظهر في اللوحة!'}),el('small',{class:'note',text:'النقاط: كل نجمة 10، كل إجابة صحيحة 2، كل دقيقة تعلّم 1، وتحدي اليوم حتى 25.'})));
+  const list=el('div',{class:'brd-list'});L.slice(0,30).forEach((x,i)=>list.append(el('div',{class:'brd-row'+(x.me?' me':'')},el('span',{class:'brd-r',text:i<3?['🥇','🥈','🥉'][i]:String(i+1)}),el('span',{class:'brd-av',text:x.av||'🙂'}),el('b',{text:x.n+(x.me?' (أنت)':'')}),el('span',{class:'brd-p',text:x.pts+' نقطة'}))));
+  if(myI>=30){const x=L[myI];list.append(el('div',{class:'brd-row me'},el('span',{class:'brd-r',text:String(myI+1)}),el('span',{class:'brd-av',text:x.av}),el('b',{text:x.n+' (أنت)'}),el('span',{class:'brd-p',text:x.pts+' نقطة'})));}
+  box.append(list,el('p',{class:'note',text:'تظهر الأسماء الأولى فقط. يتجدد الترتيب كل يوم. يستطيع ولي الأمر إخفاء ابنه من اللوحة.'}));}
 function kidTT(){const A=window.ACC;if(!A||!A.pid||A.pid==='me'||!A.profiles)return null;const p=A.profiles.find(x=>x.id===A.pid);return p&&p.tt&&p.tt.on?p.tt:null;}
 /* the next lesson to study in a subject: the first ready lesson after the last one studied */
 function nextLessonOf(g,sid){const sb=(App.catalog.grades[g]||[]).find(x=>x.id===sid);if(!sb)return null;const ls=unitsOf(sb).flatMap(u=>u.lessons).filter(l=>l.ready);
@@ -2296,6 +2316,7 @@ function route(){
   else if(window.ACC&&ACC.route(h)){}
   else if(h==='myreport')renderMyReport();
   else if(h==='mistakes')renderMistakes();
+  else if(h==='board')renderBoard();
   else if(h==='privacy')renderPrivacy();
   else if(h==='daily')renderDaily();
   else if((m=/^mis-([a-z0-9-]+)~(\d+)~(\d+)$/.exec(h)))renderMistake(m[1],m[2],m[3]);
