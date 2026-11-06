@@ -153,18 +153,20 @@ function authHero(sub) { const r = ROLE_HERO[store.get('pref_role', '')] || ['�
   return el('div', { class: 'au-hero' }, el('div', { class: 'au-logo', html: D.LOGO || '' }), el('h1', { text: sub || r[1] }), el('p', { text: r[2] })); }
 function renderLogin() {
   if (ACC.user) { go(ACC.profile ? 'account' : 'onboard'); return; }
-  const root = D.root; root.innerHTML = ''; const msg = el('div');
-  const gBtn = el('button', { class: 'au-btn g', onclick: async () => {
+  const root = D.root; root.innerHTML = ''; const msg = el('div', { class: 'au-msg' });
+  const gBtn = el('button', { class: 'au-row g', onclick: async () => {
     msg.innerHTML = ''; const pr = new GoogleAuthProvider(); pr.setCustomParameters({ prompt: 'select_account' });
     try { await signInWithPopup(auth, pr); }
     catch (e) { if (['auth/popup-blocked', 'auth/operation-not-supported-in-this-environment', 'auth/cancelled-popup-request'].includes(e.code)) await signInWithRedirect(auth, pr); else fbk(msg, 'bad', errMsg(e)); }
-  } }, el('span', { class: 'au-ic', html: '<svg viewBox="0 0 48 48" width="26" height="26"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3 0 5.8 1.1 7.9 3l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3 0 5.8 1.1 7.9 3l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/></svg>' }), el('span', { class: 'au-t' }, el('b', { text: 'المتابعة بحساب Google' }), el('small', { text: 'أسرع طريقة — بضغطة واحدة' })));
-  const opt = (ic, t, d, to) => el('button', { class: 'au-btn', onclick: () => go(to) }, el('span', { class: 'au-ic', text: ic }), el('span', { class: 'au-t' }, el('b', { text: t }), el('small', { text: d })), el('span', { class: 'au-go', text: '←' }));
+  } }, el('span', { class: 'ri', html: '<svg viewBox="0 0 48 48" width="22" height="22"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3 0 5.8 1.1 7.9 3l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3 0 5.8 1.1 7.9 3l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/></svg>' }), el('span', {}, el('b', { text: 'المتابعة بحساب Google' }), el('small', { text: 'بضغطة واحدة' })), el('span', { class: 'tag', text: 'الأسرع' }));
+  const opt = (cls, ic, t, d, to) => el('button', { class: 'au-row ' + cls, onclick: () => go(to) }, el('span', { class: 'ri', text: ic }), el('span', {}, el('b', { text: t }), el('small', { text: d })), el('span', { class: 'rg', text: '←' }));
   root.append(el('section', { class: 'au' }, el('button', { class: 'au-back', text: '→', 'aria-label': 'رجوع', onclick: () => go(store.get('welcomed', false) ? 'start' : 'home') }),
-    authHero(), el('div', { class: 'au-list' }, gBtn, opt('📱', 'رقم الهاتف', 'برقمك الليبي وكلمة مرور', 'login-phone'), opt('✉️', 'البريد الإلكتروني', 'ببريدك وكلمة مرور', 'login-email')), msg,
-    el('button', { class: 'st-link', text: '🧒 أنا طالب، عندي رمز من ولي أمري', onclick: () => go('link') }),
-    el('button', { class: 'st-link', style: 'color:var(--muted)', text: 'تصفّح الدروس المجانية دون تسجيل', onclick: () => go('home') }),
-    el('p', { class: 'note au-legal' }, 'بالمتابعة أنت توافق على ', el('a', { href: '#privacy', text: 'الشروط وسياسة الخصوصية' }), '.')));
+    authHero(),
+    el('div', { class: 'au-group' }, gBtn, opt('e', '✉️', 'البريد الإلكتروني', 'ببريدك وكلمة مرور', 'login-email'), opt('p', '📱', 'رقم الهاتف', 'برقمك الليبي وكلمة مرور', 'login-phone')), msg,
+    el('button', { class: 'st-link', style: 'color:var(--muted);font-weight:600', text: 'تصفّح الدروس المجانية دون تسجيل', onclick: () => go('home') }),
+    el('p', { class: 'note au-legal', style: 'margin:0' }, 'بالمتابعة أنت توافق على ', el('a', { href: '#privacy', text: 'الشروط وسياسة الخصوصية' }), '.'),
+    el('div', { class: 'au-or', text: 'للطلاب' }),
+    el('button', { class: 'au-kid', onclick: () => go('link') }, el('span', { class: 'ri', text: '🧒' }), el('span', {}, el('b', { text: 'أنا طالب، عندي رمز من ولي أمري' }), el('small', { text: 'أدخل الرمز أو امسح QR' })), el('span', { class: 'rg', style: 'color:var(--muted)', text: '←' }))));
 }
 function authForm(kind) {
   if (ACC.user) { go(ACC.profile ? 'account' : 'onboard'); return; }
