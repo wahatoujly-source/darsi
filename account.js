@@ -236,6 +236,7 @@ function renderWho() {
       el('span', { class: 'wstats' }, el('span', { text: lv.icon + ' ' + lv.name }), el('span', { text: '⭐ ' + (st.stars || 0) }), el('span', { text: '🔥 ' + liveStreak(st) }))),
       el('div', { class: 'row', style: 'gap:6px;justify-content:center' }, el('button', { class: 'btn ghost sm', text: '📊 التقرير', onclick: () => go('kid-' + p.id) }),
         el('button', { class: 'btn sun sm', text: '📱 ربط موبايله', onclick: () => go('linkkid-' + p.id) })),
+      el('button', { class: 'btn ghost sm', text: '📅 الجدول الدراسي' + (p.tt && p.tt.on ? ' ✓' : ''), onclick: () => go('tt-' + p.id) }),
       el('button', { class: 'btn ghost sm', text: '🎛️ ماذا يدرس؟ والأصوات' + (p.ctrl && ((p.ctrl.subjects || []).length || Object.values(p.ctrl.lessons || {}).some(a => a.length)) ? ' ✓' : ''), onclick: () => go('ctrl-' + p.id) }))); });
   if (kidsOf().length < MAX_KIDS) g.append(el('button', { class: 'who add', onclick: () => go('kids') }, el('span', { class: 'kav big', text: '＋' }), el('b', { text: 'أضف ابناً' })));
   s.append(g, el('div', { class: 'row', style: 'gap:8px;justify-content:center' }, el('button', { class: 'btn ghost', text: '✏️ إدارة الأبناء', onclick: () => go('kids') }), el('button', { class: 'btn ghost', text: '⚙️ حسابي', onclick: () => go('account') })));
@@ -372,6 +373,56 @@ function renderCtrl(pid) {
         catch (x) { fbk(msg, 'bad', errMsg(x)); } e.target.disabled = false; } }), msg);
   };
   draw(); s.append(box);
+}
+/* ---------- parent: weekly timetable for a child ---------- */
+function renderTT(pid) {
+  if (!ACC.user || !isAdult()) { go('login'); return; }
+  const p = ACC.profiles.find(x => x.id === pid); if (!p) { go('who'); return; }
+  if (!D.App.catalog) { setTimeout(() => renderTT(pid), 300); return; }
+  const g = String(p.grade || ''); const subs = D.App.catalog.grades[g] || []; const TT = D.TT;
+  const s = page('📅 جدول ' + p.name, 'الصف ' + gradeName(g) + ' — من الأحد إلى الخميس', 'who');
+  const clone = o => JSON.parse(JSON.stringify(o));
+  let tt = p.tt ? clone(p.tt) : TT.deflt(g); tt.days = [0, 1, 2, 3, 4].map(i => (tt.days && tt.days[i]) || []);
+  const msg = el('div'); const box = el('div', { class: 'stack' }); s.append(box, msg);
+  const subName = sid => (subs.find(x => x.id === sid) || {}).name || sid;
+  const lessonsOf = sid => { const sb = subs.find(x => x.id === sid); if (!sb) return []; const out = []; (sb.books || [{ units: sb.units }]).forEach(b => (b.units || []).forEach(u => u.lessons.forEach(l => { if (l.ready && !out.some(x => x.id === l.id)) out.push(l); }))); return out; };
+  const inp = (attrs, on) => { const e = el('input', attrs); e.addEventListener('change', () => { on(e); draw(); }); return e; };
+  function draw() {
+    box.innerHTML = '';
+    const cnt = {}; tt.days.flat().forEach(x => cnt[x.s] = (cnt[x.s] || 0) + 1);
+    box.append(el('div', { class: 'panel accbox' }, el('b', { text: '⚙️ الإعدادات' }),
+      el('label', { class: 'sndrow' }, inp({ type: 'checkbox', checked: tt.on ? '' : null }, e => tt.on = e.checked), el('span', {}, el('b', { text: 'تفعيل الجدول' }), el('small', { class: 'note', text: 'يظهر لـ' + p.name + ' جدول اليوم والحصة الحالية في الصفحة الرئيسية.' }))),
+      el('label', { class: 'sndrow' }, inp({ type: 'checkbox', checked: tt.mandatory ? '' : null }, e => tt.mandatory = e.checked), el('span', {}, el('b', { text: '🔒 الجدول إلزامي' }), el('small', { class: 'note', text: 'وقت الحصة لا يظهر إلا مادتها (ودرسها إن حدّدته). وقت الاستراحة تظهر شاشة استراحة.' }))),
+      tt.mandatory ? el('label', { class: 'sndrow' }, inp({ type: 'checkbox', checked: tt.outside === 'closed' ? '' : null }, e => tt.outside = e.checked ? 'closed' : 'open'), el('span', {}, el('b', { text: 'إغلاق المنصة خارج أوقات الجدول' }), el('small', { class: 'note', text: 'قبل الحصة الأولى وبعد الأخيرة ويومي الجمعة والسبت.' }))) : null,
+      el('div', { class: 'ttset' },
+        el('label', {}, el('span', { text: 'بداية الحصة الأولى' }), inp({ type: 'time', value: tt.start }, e => tt.start = e.value || '08:00')),
+        el('label', {}, el('span', { text: 'مدة الحصة (دقيقة)' }), inp({ type: 'number', min: 10, max: 90, value: tt.len }, e => tt.len = Math.max(10, Math.min(90, +e.value || 45)))),
+        el('label', {}, el('span', { text: 'مراجعة الدرس السابق أول الحصة' }), (() => { const sel = el('select', {}, ...[[0, 'بدون'], [5, '5 دقائق'], [10, '10 دقائق']].map(([v, t]) => el('option', { value: v, text: t }))); sel.value = String(tt.review || 0); sel.onchange = () => { tt.review = +sel.value; draw(); }; return sel; })())),
+      el('div', { class: 'ttset' },
+        el('label', { class: 'row', style: 'gap:6px' }, inp({ type: 'checkbox', checked: tt.brk.on ? '' : null }, e => tt.brk.on = e.checked), el('span', { text: '☕ استراحة' })),
+        el('label', {}, el('span', { text: 'بعد الحصة رقم' }), inp({ type: 'number', min: 1, max: 8, value: tt.brk.after }, e => tt.brk.after = +e.value || 3)),
+        el('label', {}, el('span', { text: 'مدتها (دقيقة)' }), inp({ type: 'number', min: 5, max: 60, value: tt.brk.len }, e => tt.brk.len = +e.value || 30))),
+      el('button', { class: 'btn ghost sm', text: '↺ جدول افتراضي حسب الخطة الدراسية للوزارة', onclick: () => { const d = TT.deflt(g); tt.days = d.days; draw(); } }),
+      el('span', { class: 'note', text: 'الحصص في الأسبوع: ' + Object.entries(cnt).map(([k, v]) => subName(k) + ' ' + v).join('، ') })));
+    tt.days.forEach((day, di) => { const T = TT.times(tt, day.length);
+      const dbox = el('div', { class: 'panel accbox ttday' }, el('b', { text: TT.DAYS[di] + ' — ' + day.length + ' حصص' + (day.length ? ' (' + TT.hm(T[0][0]) + ' – ' + TT.hm(T[T.length - 1][1]) + ')' : '') }));
+      day.forEach((x, i) => {
+        const ss = el('select', {}, ...subs.map(sb => el('option', { value: sb.id, text: sb.name }))); ss.value = x.s; ss.onchange = () => { x.s = ss.value; x.l = null; draw(); };
+        const ls = el('select', {}, el('option', { value: '', text: '▶ الدرس التالي تلقائياً' }), ...lessonsOf(x.s).map(l => { const S = D.lessonStudy(l.id, p.stats || {}); return el('option', { value: l.id, text: (S ? '✓ ' : '') + l.title }); }));
+        ls.value = x.l || ''; ls.onchange = () => { x.l = ls.value || null; };
+        dbox.append(el('div', { class: 'ttrow' }, el('span', { class: 'tttime', text: (i + 1) + ') ' + TT.hm(T[i][0]) }), ss, ls,
+          el('button', { class: 'btn ghost sm', title: 'لأعلى', text: '↑', onclick: () => { if (i) { [day[i - 1], day[i]] = [day[i], day[i - 1]]; draw(); } } }),
+          el('button', { class: 'btn ghost sm', title: 'حذف', text: '✕', onclick: () => { day.splice(i, 1); draw(); } })));
+        if (tt.brk.on && i + 1 === +tt.brk.after && i + 1 < day.length) dbox.append(el('div', { class: 'ttbrk', text: '☕ استراحة ' + tt.brk.len + ' دقيقة' }));
+      });
+      dbox.append(el('button', { class: 'btn ghost sm', text: '+ إضافة حصة', onclick: () => { day.push({ s: (subs[0] || {}).id, l: null }); draw(); } }));
+      box.append(dbox); });
+    box.append(el('button', { class: 'btn sun', text: '💾 حفظ الجدول', onclick: async e => { e.target.disabled = true;
+      const save = { ...clone(tt), days: Object.fromEntries(tt.days.map((d, i) => [String(i), d])) };
+      try { await setDoc(pref(pid), { name: p.name, tt: save }, { mergeFields: ['name', 'tt'] }); p.tt = save; fbk(msg, 'ok', '✓ حُفظ الجدول. يظهر على جهاز ' + p.name + ' عند فتح المنصة.'); D.cheer && D.cheer('win'); }
+      catch (x) { fbk(msg, 'bad', errMsg(x)); } e.target.disabled = false; } }));
+  }
+  draw();
 }
 async function renderLinkKid(pid) {
   if (!ACC.user || !isAdult()) { go('login'); return; }
@@ -691,6 +742,7 @@ document.addEventListener('visibilitychange', async () => { if (document.visibil
 
 const ROUTES = { admin: renderAdmin, subscribe: renderSubscribe, login: renderLogin, onboard: renderOnboard, kids: renderKids, who: renderWho, account: renderAccount };
 ACC.route = h => { const pm = /^paid-([A-Za-z0-9]{10,40})$/.exec(h); const lm = /^link(?:-(\d{6}))?$/.exec(h); if (lm) { if (!ACC.ready) { page('…', 'جارٍ التحميل', 'home'); return true; } renderLink(lm[1]); return true; }
+  const tk = /^tt-([A-Za-z0-9]{1,30})$/.exec(h); if (tk) { if (!ACC.ready) { page('…', 'جارٍ التحميل', 'home'); return true; } renderTT(tk[1]); return true; }
   const ck = /^ctrl-([A-Za-z0-9]{1,30})$/.exec(h); if (ck) { if (!ACC.ready) { page('…', 'جارٍ التحميل', 'home'); return true; } renderCtrl(ck[1]); return true; }
   const lk = /^linkkid-([A-Za-z0-9]{1,30})$/.exec(h); if (lk) { if (!ACC.ready) { page('…', 'جارٍ التحميل', 'home'); return true; } renderLinkKid(lk[1]); return true; }
   const km = /^kid-([A-Za-z0-9]{1,30})$/.exec(h); const f = pm ? () => renderPaid(pm[1]) : km ? () => renderKid(km[1]) : ROUTES[h]; if (!f) return false; if (!ACC.ready) { page('…', 'جارٍ التحميل', 'home'); return true; } if (ACC.loadError && ACC.user) { showLoadError(); return true; } f(); return true; };
