@@ -1,4 +1,5 @@
 // المجتهد — الحسابات: الدخول (هاتف، إيميل، Google)، الأدوار، ملفات الأبناء، حفظ التقدّم في السحابة.
+import initTeach from './teach.js';
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js';
 import { getAuth, onAuthStateChanged, signOut, GoogleAuthProvider, signInWithPopup, signInWithRedirect, signInAnonymously,
   signInWithEmailAndPassword, createUserWithEmailAndPassword,
@@ -546,6 +547,9 @@ function renderAccount() {
   s.append(el('div', { class: 'panel accbox' }, el('b', { text: 'اشتراكاتي' }),
     ...(ACC.subs.length ? ACC.subs.map(x => el('div', { class: 'kidrow' }, el('span', {}, el('b', { text: subName(x) }), el('span', { class: 'note', text: ' — حتى ' + fmtDate(x.end.toMillis()) })))) : [el('span', { class: 'note', text: 'لا يوجد اشتراك بعد. الدروس المجانية متاحة لك.' })]),
     ACC.hasAnySub() ? null : el('button', { class: 'btn sun', text: '⭐ ترقية', onclick: () => go('subscribe') })));
+  { const tc = (ACC.access || {}).teach || {}; if (tc.on || ACC.isAdmin) s.append(el('div', { class: 'panel accbox' }, el('b', { text: '🎥 دورات المعلمين' }),
+    el('div', { class: 'row', style: 'gap:8px;flex-wrap:wrap' }, tc.show || ACC.isAdmin ? el('button', { class: 'btn ghost', text: '🎒 دوراتي المشتراة', onclick: () => go('courses-mine') }) : null,
+      el('button', { class: 'btn ghost', text: '🎓 منصة المعلم — انشر دوراتك', onclick: () => go('studio') })))); }
   const adm = el('div'); s.append(adm);
   call('adminCheck', {}).then(() => { ACC.isAdmin = true; adm.append(el('button', { class: 'btn sun', text: '🛠️ لوحة الإدارة', onclick: () => go('admin') })); }).catch(() => {});
   s.append(el('button', { class: 'btn ghost', text: 'تسجيل الخروج', onclick: async () => { await signOut(auth); go('home'); } }));
@@ -801,7 +805,7 @@ function renderAdmin() {
       el('span', { class: 'note', text: 'تُفتح لك كل الصفوف والمواد والدروس مجاناً (حتى المغلقة) لتراجعها وتجربها، دون أن تتغير المنصة لأي مستخدم آخر.' }),
       el('button', { class: 'btn sun', text: ACC.adminBrowse ? '✓ وضع المدير مفعّل — افتح الصفحة الرئيسية' : '👁️ ابدأ التصفح كمدير', onclick: () => { ACC.adminBrowse = true; store.set('admin_browse', true); setActive(null).then(() => go('home')); } }),
       ACC.adminBrowse ? el('button', { class: 'btn ghost', text: 'إنهاء وضع المدير', onclick: () => { ACC.adminBrowse = false; store.set('admin_browse', false); renderAdmin(); } }) : null));
-    s.append(accessBox(), booksBox());
+    s.append(accessBox(), booksBox(), ACC.teachAdminBox());
     // list
     const tb = el('div', { class: 'stack' });
     d.list.forEach(x => { const sc = x.scope || {}; const what = (KINDS[x.kind] || ['', x.kind])[1] + (sc.grades && sc.grades[0] !== '*' ? ' — الصف ' + gradeName(sc.grades[0]) : sc.grades ? ' — كل الصفوف' : '') + (sc.subjects && sc.subjects[0] && sc.subjects[0] !== '*' ? ' — ' + sc.subjects[0] : '');
@@ -818,7 +822,8 @@ document.addEventListener('visibilitychange', async () => { if (document.visibil
   if (document.visibilityState === 'visible' && ACC.user && ACC.profile) { const n = ACC.subs.length; await loadSubs(); if (ACC.subs.length !== n && D.App.catalog) D.route(); } });
 
 const ROUTES = { admin: renderAdmin, subscribe: renderSubscribe, login: renderLogin, 'login-phone': () => authForm('phone'), 'login-email': () => authForm('email'), onboard: renderOnboard, kids: renderKids, who: renderWho, account: renderAccount };
-ACC.route = h => { const pm = /^paid-([A-Za-z0-9]{10,40})$/.exec(h); const lm = /^link(?:-(\d{6}))?$/.exec(h); if (lm) { if (!ACC.ready) { page('…', 'جارٍ التحميل', 'home'); return true; } renderLink(lm[1]); return true; }
+initTeach({ call, fnErr, ACC, page, fbk, D, el, go, store });
+ACC.route = h => { if (ACC.teachRoute && ACC.teachRoute(h)) return true; const pm = /^paid-([A-Za-z0-9]{10,40})$/.exec(h); const lm = /^link(?:-(\d{6}))?$/.exec(h); if (lm) { if (!ACC.ready) { page('…', 'جارٍ التحميل', 'home'); return true; } renderLink(lm[1]); return true; }
   const tk = /^tt-([A-Za-z0-9]{1,30})$/.exec(h); if (tk) { if (!ACC.ready) { page('…', 'جارٍ التحميل', 'home'); return true; } renderTT(tk[1]); return true; }
   const ck = /^ctrl-([A-Za-z0-9]{1,30})$/.exec(h); if (ck) { if (!ACC.ready) { page('…', 'جارٍ التحميل', 'home'); return true; } renderCtrl(ck[1]); return true; }
   const lk = /^linkkid-([A-Za-z0-9]{1,30})$/.exec(h); if (lk) { if (!ACC.ready) { page('…', 'جارٍ التحميل', 'home'); return true; } renderLinkKid(lk[1]); return true; }

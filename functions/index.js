@@ -268,6 +268,12 @@ exports.createOrder = onCall({secrets: [MYPAY_ID, MYPAY_SECRET], memory: "256MiB
   await oRef.set({uid, kind, scope, qty, unit, amount, currency: "LYD", status: "pending",
     end: seasonEnd(), createdAt: FieldValue.serverTimestamp()});
   const back = "https://mujtahid.ly/#paid-" + oRef.id; // النطاق الرسمي
+  const url = await mypayCreate(oRef, amount, back);
+  return {ok: true, url, orderId: oRef.id, amount};
+});
+
+// إنشاء رابط دفع في ماي باي لطلب محفوظ (يُستعمل للاشتراكات ودورات المعلمين)
+async function mypayCreate(oRef, amount, back) {
   try {
     const tr = await fetch(`${MYPAY_BASE}/authentication/token`, {
       method: "POST", headers: {"Content-Type": "application/json"},
@@ -288,12 +294,12 @@ exports.createOrder = onCall({secrets: [MYPAY_ID, MYPAY_SECRET], memory: "256MiB
       logger.error("mypay create error", cr.status, JSON.stringify(cj)); throw new Error("create");
     }
     await oRef.update({mypayToken: (cj.data && cj.data.token) || null, paymentUrl: url});
-    return {ok: true, url, orderId: oRef.id, amount};
+    return url;
   } catch (e) {
     await oRef.update({status: "failed"});
     throw new HttpsError("internal", "تعذّر إنشاء طلب الدفع، حاول لاحقاً");
   }
-});
+}
 
 // ===================== إشعار ماي باي بعد الدفع =====================
 function sigOk(raw, header, secret) {
@@ -332,6 +338,7 @@ exports.mypayWebhook = onRequest({secrets: [MYPAY_WEBHOOK], memory: "256MiB", co
       if (!isFinite(paid) || Math.abs(paid - Number(o.amount)) > 0.001) return "amount-mismatch";
       tx.update(oRef, {status: "paid", paidAt: FieldValue.serverTimestamp(),
         mypayTransactionId: b.transaction_id || null, gateway: b.gateway || null});
+      if (o.kind === "course") { courseSaleTx(tx, o, orderId); return "ok"; }
       tx.set(db.collection("subscriptions").doc(orderId), {
         uid: o.uid, kind: o.kind, scope: o.scope, amount: o.amount, orderId,
         start: FieldValue.serverTimestamp(), end: o.end, active: true,
@@ -683,4 +690,352 @@ exports.adminRevoke = onCall(async (req) => {
   if (!/^[A-Za-z0-9_*-]{5,120}$/.test(id)) throw new HttpsError("invalid-argument", "معرّف غير صحيح");
   await db.collection("subscriptions").doc(id).update({active: false, revokedAt: FieldValue.serverTimestamp()});
   return {ok: true};
+});
+
+// ===================== منصة المعلمين: دورات فيديو مدفوعة =====================
+// الإعداد في config/access.teach = {on, show, apply} يُضبط من لوحة الإدارة.
+// المعلم يقدّم طلباً ← توافق الإدارة ← ينشئ دورات (دروس فيديو) ويرسلها للمراجعة ←
+// الإدارة ترفع الفيديو على يوتيوب (غير مدرج) وتضع الرابط ← تُنشر الدورة.
+// الدرس الأول مجاني. عند الشراء: 70% لمحفظة المعلم و30% للمنصة (رسوم البوابة من نصيب المنصة).
+// السحب: رصيد 200 د.ل فأكثر، ومرة واحدة كل 30 يوماً.
+const T = {MIN: 30, MAX: 500, SHARE: 0.7, MIN_WD: 200, GAP: 30 * DAY, MAX_LESSONS: 60, TERMS_V: 1};
+const T_KINDS = ["course", "boost", "exam", "skill"];
+const T_SUBJ = ["ar", "en", "math", "sci", "isl", "soc", "hist", "geo", "civ", "comp", "art", "phy", "chem", "bio", "other"];
+const str = (x, n) => String(x == null ? "" : x).trim().slice(0, n);
+const tcfg = async () => ((await getAccessCfg()).teach || {});
+async function tOwner(req) { // صاحب الحساب: ولي الأمر لجهاز الابن المربوط أو للوالد الثاني
+  const uid = needUser(req); const tk = req.auth.token || {};
+  if (tk.kidOf) { const dev = await db.collection("users").doc(tk.kidOf).collection("kidDevices").doc(uid).get(); if (dev.exists) return tk.kidOf;
+    throw new HttpsError("permission-denied", "أُلغي ربط هذا الجهاز"); }
+  return ownerOf(req);
+}
+const ytId = (u) => { const s = String(u || "").trim();
+  const m = /(?:youtu\.be\/|v=|\/embed\/|\/shorts\/|\/live\/)([A-Za-z0-9_-]{11})/.exec(s) || /^([A-Za-z0-9_-]{11})$/.exec(s);
+  return m ? m[1] : null; };
+const ms = (t) => (t && t.toMillis ? t.toMillis() : null);
+const pubCourse = (id, c) => ({id, tid: c.tid, tname: c.tname, title: c.title, desc: c.desc || "", cat: c.cat, grade: c.grade || "",
+  subject: c.subject || "", skill: c.skill || "", kind: c.kind, price: c.price, status: c.status, students: c.students || 0,
+  lessons: (c.lessons || []).map((l, i) => ({id: l.id, title: l.title, min: l.min || 0, free: i === 0, ready: !!l.ready})),
+  at: ms(c.publishedAt) || ms(c.createdAt)});
+const pubTeacher = (id, t) => ({id, name: t.name, bio: t.bio || "", spec: t.spec || "", courses: t.courses || 0});
+
+// تُستدعى داخل معاملة إشعار الدفع
+function courseSaleTx(tx, o, orderId) {
+  const tShare = r2(o.amount * T.SHARE);
+  tx.set(db.collection("enroll").doc(o.uid + "_" + o.cid), {uid: o.uid, cid: o.cid, tid: o.tid, price: o.amount, orderId,
+    at: FieldValue.serverTimestamp()});
+  tx.set(db.collection("wallets").doc(o.tid), {bal: FieldValue.increment(tShare), earned: FieldValue.increment(tShare),
+    sales: FieldValue.increment(1)}, {merge: true});
+  tx.set(db.collection("wallets").doc(o.tid).collection("tx").doc(orderId), {t: "sale", amt: tShare, price: o.amount,
+    cid: o.cid, title: o.title || "", at: FieldValue.serverTimestamp()});
+  tx.set(db.collection("courses").doc(o.cid), {students: FieldValue.increment(1)}, {merge: true});
+  tx.set(db.collection("config").doc("teachStats"), {sales: FieldValue.increment(1), gross: FieldValue.increment(o.amount),
+    teachers: FieldValue.increment(tShare), platform: FieldValue.increment(r2(o.amount - tShare))}, {merge: true});
+}
+
+let TLIST = null, TLIST_AT = 0;
+async function liveList() {
+  if (TLIST && Date.now() - TLIST_AT < 60000) return TLIST;
+  const [cs, ts] = await Promise.all([db.collection("courses").where("status", "==", "live").get(),
+    db.collection("teachers").where("status", "==", "approved").get()]);
+  const teachers = {};
+  ts.docs.forEach((d) => { if (!d.data().hidden) teachers[d.id] = pubTeacher(d.id, d.data()); });
+  const courses = cs.docs.map((d) => pubCourse(d.id, d.data())).filter((c) => teachers[c.tid]);
+  TLIST = {courses, teachers}; TLIST_AT = Date.now(); return TLIST;
+}
+function cleanLessons(arr, old) {
+  const prev = {}; (old || []).forEach((l) => { prev[l.id] = l; });
+  const out = [], seen = new Set();
+  for (const l of (Array.isArray(arr) ? arr : []).slice(0, T.MAX_LESSONS)) {
+    const title = str(l && l.title, 90); if (!title) continue;
+    let id = str(l.id, 12); if (!/^[a-z0-9]{4,12}$/.test(id) || seen.has(id)) id = crypto.randomBytes(4).toString("hex");
+    seen.add(id);
+    const src = str(l.src, 400); const p = prev[id];
+    out.push({id, title, src, min: Math.max(0, Math.min(600, Math.round(Number(l.min) || 0))),
+      ready: !!(p && p.ready && p.src === src)});
+  }
+  return out;
+}
+
+exports.teach = onCall({secrets: [MYPAY_ID, MYPAY_SECRET], memory: "256MiB"}, async (req) => {
+  const d = req.data || {}; const op = String(d.op || "");
+  const cfg = await tcfg();
+  let isAdm = false;
+  if (req.auth) { try { await needAdmin(req); isAdm = true; } catch (e) { isAdm = false; } }
+  const uid = req.auth && req.auth.uid;
+  if (!cfg.on && !isAdm && op !== "me") throw new HttpsError("failed-precondition", "منصة المعلمين غير مفعّلة حالياً");
+
+  // ---------- للعامة ----------
+  if (op === "list") {
+    if (!cfg.show && !isAdm) return {courses: [], teachers: {}, off: true};
+    return await liveList();
+  }
+  if (op === "course") {
+    const cid = str(d.cid, 40); const cs = await db.collection("courses").doc(cid).get();
+    if (!cs.exists) throw new HttpsError("not-found", "الدورة غير موجودة");
+    const c = cs.data(); const mine = uid && c.tid === uid;
+    const ts = await db.collection("teachers").doc(c.tid).get(); const t = ts.exists ? ts.data() : {};
+    const visible = c.status === "live" && t.status === "approved" && !t.hidden && cfg.show;
+    if (!visible && !mine && !isAdm) throw new HttpsError("not-found", "الدورة غير متاحة حالياً");
+    let owned = false, phone = "";
+    if (uid) {
+      const own = await tOwner(req);
+      owned = (await db.collection("enroll").doc(own + "_" + cid).get()).exists;
+      const us = await db.collection("users").doc(own).get(); phone = us.exists ? String(us.data().phone || "").replace("+218", "0") : "";
+    }
+    const pv = await db.collection("courses").doc(cid).collection("priv").doc("v").get(); const map = (pv.exists && pv.data().map) || {};
+    const full = owned || mine || isAdm;
+    const vids = {};
+    (c.lessons || []).forEach((l, i) => { if (l.ready && map[l.id] && (full || i === 0)) vids[l.id] = map[l.id]; });
+    return {course: pubCourse(cid, c), teacher: pubTeacher(c.tid, t), owned, mine: !!mine, admin: isAdm, vids, wm: phone || (uid ? uid.slice(0, 8) : "")};
+  }
+  if (op === "teacher") {
+    const tid = str(d.tid, 40); const ts = await db.collection("teachers").doc(tid).get();
+    if (!ts.exists || ts.data().status !== "approved" || (ts.data().hidden && !isAdm)) throw new HttpsError("not-found", "المعلم غير موجود");
+    const L = await liveList();
+    return {teacher: pubTeacher(tid, ts.data()), courses: L.courses.filter((c) => c.tid === tid)};
+  }
+  if (op === "buy") {
+    needUser(req);
+    const t = req.auth.token || {};
+    if (t.kidOf) throw new HttpsError("permission-denied", "اطلب من ولي أمرك شراء الدورة من حسابه");
+    const own = await tOwner(req);
+    const cid = str(d.cid, 40); const cs = await db.collection("courses").doc(cid).get();
+    if (!cs.exists || cs.data().status !== "live" || !cfg.show) throw new HttpsError("not-found", "الدورة غير متاحة للشراء");
+    const c = cs.data();
+    if (c.tid === own) throw new HttpsError("failed-precondition", "هذه دورتك");
+    if ((await db.collection("enroll").doc(own + "_" + cid).get()).exists) return {owned: true};
+    const us = await db.collection("users").doc(own).get();
+    if (!us.exists) throw new HttpsError("failed-precondition", "أكمل بيانات حسابك أولاً");
+    if (!us.data().phoneVerified) throw new HttpsError("failed-precondition", "أكّد رقم هاتفك أولاً");
+    const recent = await db.collection("orders").where("uid", "==", own).where("status", "==", "pending").get();
+    if (recent.docs.filter((x) => ms(x.data().createdAt) > Date.now() - HOUR).length >= 5) throw new HttpsError("resource-exhausted", "طلبات كثيرة، حاول بعد قليل");
+    const amount = r2(Number(c.price));
+    const oRef = db.collection("orders").doc();
+    await oRef.set({uid: own, kind: "course", cid, tid: c.tid, title: c.title, amount, currency: "LYD", status: "pending",
+      createdAt: FieldValue.serverTimestamp()});
+    const url = await mypayCreate(oRef, amount, "https://mujtahid.ly/#cpaid-" + oRef.id);
+    return {url, orderId: oRef.id, amount};
+  }
+  if (op === "paid") {
+    const own = await tOwner(req); const oid = str(d.orderId, 40);
+    const os = await db.collection("orders").doc(oid).get();
+    if (!os.exists || os.data().uid !== own) throw new HttpsError("not-found", "الطلب غير موجود");
+    return {status: os.data().status, cid: os.data().cid || null, title: os.data().title || ""};
+  }
+  if (op === "mine") { // الدورات التي اشتراها الحساب
+    const own = await tOwner(req);
+    const es = await db.collection("enroll").where("uid", "==", own).get();
+    const out = [];
+    for (const e of es.docs.slice(0, 50)) { const c = await db.collection("courses").doc(e.data().cid).get(); if (c.exists) out.push(pubCourse(c.id, c.data())); }
+    return {courses: out};
+  }
+
+  // ---------- للمعلم ----------
+  const me = needUser(req);
+  if ((req.auth.token || {}).kidOf || req.auth.token.firebase.sign_in_provider === "anonymous") throw new HttpsError("permission-denied", "سجّل الدخول بحسابك");
+  const tRef = db.collection("teachers").doc(me);
+  if (op === "me") {
+    const ts = await tRef.get();
+    if (!ts.exists) return {teacher: null, cfg: {on: !!cfg.on, apply: cfg.apply !== false}, terms: T, admin: isAdm};
+    const [cs, ws, txs, wds] = await Promise.all([db.collection("courses").where("tid", "==", me).get(), db.collection("wallets").doc(me).get(),
+      db.collection("wallets").doc(me).collection("tx").orderBy("at", "desc").limit(50).get(),
+      db.collection("withdrawals").where("tid", "==", me).get()]);
+    const t = ts.data(); const w = ws.exists ? ws.data() : {};
+    return {teacher: {...pubTeacher(me, t), status: t.status, hidden: !!t.hidden, note: t.note || "", banks: t.banks || [], phone: t.phone || ""},
+      courses: cs.docs.map((x) => ({...pubCourse(x.id, x.data()), note: x.data().note || "", lessons: (x.data().lessons || []).map((l, i) => ({...l, free: i === 0}))}))
+          .sort((a, b) => (b.at || 0) - (a.at || 0)),
+      wallet: {bal: r2(w.bal || 0), earned: r2(w.earned || 0), paid: r2(w.paid || 0), sales: w.sales || 0, lastWd: ms(w.lastWd)},
+      tx: txs.docs.map((x) => ({...x.data(), at: ms(x.data().at)})),
+      wds: wds.docs.map((x) => ({id: x.id, amount: x.data().amount, status: x.data().status, at: ms(x.data().at), bank: (x.data().bank || {}).bank || "", note: x.data().note || ""}))
+          .sort((a, b) => (b.at || 0) - (a.at || 0)),
+      cfg: {on: !!cfg.on}, terms: T, admin: isAdm};
+  }
+  if (op === "apply") {
+    if (cfg.apply === false) throw new HttpsError("failed-precondition", "استقبال طلبات المعلمين متوقف حالياً");
+    const us = await db.collection("users").doc(me).get();
+    if (!us.exists || !us.data().phoneVerified) throw new HttpsError("failed-precondition", "أكّد رقم هاتفك أولاً");
+    if (d.agree !== true) throw new HttpsError("invalid-argument", "يجب الموافقة على شروط المنصة");
+    const name = str(d.name, 50), spec = str(d.spec, 80), bio = str(d.bio, 500);
+    if (name.length < 3 || spec.length < 2) throw new HttpsError("invalid-argument", "اكتب اسمك وتخصصك");
+    const ts = await tRef.get();
+    if (ts.exists && ts.data().status === "approved") throw new HttpsError("already-exists", "أنت معلم معتمد");
+    if (ts.exists && ts.data().status === "blocked") throw new HttpsError("permission-denied", "الحساب موقوف، تواصل مع الإدارة");
+    await tRef.set({name, spec, bio, phone: us.data().phone || "", status: "pending", hidden: false, banks: (ts.exists && ts.data().banks) || [],
+      agreed: {v: T.TERMS_V, at: FieldValue.serverTimestamp()}, createdAt: (ts.exists && ts.data().createdAt) || FieldValue.serverTimestamp()}, {merge: true});
+    return {ok: true};
+  }
+  const ts = await tRef.get();
+  if (!ts.exists || ts.data().status !== "approved") throw new HttpsError("permission-denied", "حساب المعلم غير معتمد بعد");
+  const t = ts.data();
+  if (op === "profile") {
+    const name = str(d.name, 50), spec = str(d.spec, 80), bio = str(d.bio, 500);
+    if (name.length < 3) throw new HttpsError("invalid-argument", "الاسم قصير");
+    await tRef.update({name, spec, bio}); TLIST = null;
+    const cs = await db.collection("courses").where("tid", "==", me).get();
+    await Promise.all(cs.docs.map((x) => x.ref.update({tname: name})));
+    return {ok: true};
+  }
+  if (op === "save") {
+    const cid = str(d.cid, 40);
+    const ref = cid ? db.collection("courses").doc(cid) : db.collection("courses").doc();
+    const old = cid ? await ref.get() : null;
+    if (cid && (!old.exists || old.data().tid !== me)) throw new HttpsError("not-found", "الدورة غير موجودة");
+    const o = old && old.exists ? old.data() : null;
+    const title = str(d.title, 90); if (title.length < 4) throw new HttpsError("invalid-argument", "اكتب عنواناً واضحاً للدورة");
+    const price = Math.round(Number(d.price));
+    if (!(price >= T.MIN && price <= T.MAX)) throw new HttpsError("invalid-argument", `السعر بين ${T.MIN} و${T.MAX} دينار`);
+    const cat = d.cat === "skill" ? "skill" : "cur";
+    const grade = cat === "cur" ? str(d.grade, 2) : ""; if (cat === "cur" && !GRADES.includes(grade)) throw new HttpsError("invalid-argument", "اختر الصف");
+    const subject = cat === "cur" ? str(d.subject, 8) : ""; if (cat === "cur" && !T_SUBJ.includes(subject)) throw new HttpsError("invalid-argument", "اختر المادة");
+    const skill = cat === "skill" ? str(d.skill, 60) : ""; if (cat === "skill" && skill.length < 2) throw new HttpsError("invalid-argument", "اكتب اسم المهارة");
+    const kind = T_KINDS.includes(d.kind) ? d.kind : (cat === "skill" ? "skill" : "course");
+    const lessons = cleanLessons(d.lessons, o && o.lessons);
+    if (!lessons.length) throw new HttpsError("invalid-argument", "أضف درساً واحداً على الأقل");
+    const live = o && o.status === "live";
+    const data = {tid: me, tname: t.name, title, desc: str(d.desc, 1500), cat, grade, subject, skill, kind, price, lessons,
+      updatedAt: FieldValue.serverTimestamp()};
+    if (!o) Object.assign(data, {status: "draft", students: 0, createdAt: FieldValue.serverTimestamp()});
+    else if (!live && o.status !== "pending") data.status = "draft";
+    await ref.set(data, {merge: true});
+    if (o) { // احذف روابط الدروس التي تغيّر مصدرها أو حُذفت
+      const pv = ref.collection("priv").doc("v"); const ps = await pv.get();
+      if (ps.exists) { const map = ps.data().map || {}; const keep = {}; lessons.forEach((l) => { if (l.ready && map[l.id]) keep[l.id] = map[l.id]; }); await pv.set({map: keep}); }
+    }
+    if (!o) await tRef.update({courses: FieldValue.increment(1)});
+    TLIST = null;
+    return {cid: ref.id, live, waiting: lessons.filter((l) => !l.ready).length};
+  }
+  if (op === "submit" || op === "unpublish" || op === "delete") {
+    const ref = db.collection("courses").doc(str(d.cid, 40)); const cs = await ref.get();
+    if (!cs.exists || cs.data().tid !== me) throw new HttpsError("not-found", "الدورة غير موجودة");
+    const c = cs.data();
+    if (op === "submit") { if (c.status === "live") return {ok: true}; await ref.update({status: "pending", note: "", submittedAt: FieldValue.serverTimestamp()}); }
+    if (op === "unpublish") await ref.update({status: "draft"});
+    if (op === "delete") { if (c.students) throw new HttpsError("failed-precondition", "لا يمكن حذف دورة اشترك فيها طلاب؛ يمكنك إيقافها"); await ref.delete(); await tRef.update({courses: FieldValue.increment(-1)}); }
+    TLIST = null; return {ok: true};
+  }
+  if (op === "banks") {
+    const banks = [];
+    for (const b of (Array.isArray(d.banks) ? d.banks : []).slice(0, 5)) {
+      const bank = str(b.bank, 60), branch = str(b.branch, 60), holder = str(b.holder, 60);
+      const iban = str(b.iban, 40).replace(/\s+/g, "").toUpperCase(), acct = str(b.acct, 30).replace(/\s+/g, ""), phone = str(b.phone, 10);
+      if (!bank || !branch || holder.length < 3) throw new HttpsError("invalid-argument", "أكمل اسم المصرف والفرع واسم صاحب الحساب");
+      if (!/^LY\d{23}$/.test(iban)) throw new HttpsError("invalid-argument", "رقم IBAN يبدأ بـ LY ثم 23 رقماً");
+      if (!/^\d{5,20}$/.test(acct)) throw new HttpsError("invalid-argument", "رقم الحساب أرقام فقط");
+      if (!PHONE_RE.test(phone)) throw new HttpsError("invalid-argument", "رقم الهاتف 09xxxxxxxx");
+      banks.push({id: /^[a-z0-9]{4,12}$/.test(b.id) ? b.id : crypto.randomBytes(4).toString("hex"), bank, branch, holder, iban, acct, phone});
+    }
+    await tRef.update({banks}); return {banks};
+  }
+  if (op === "withdraw") {
+    const bank = (t.banks || []).find((b) => b.id === d.bankId);
+    if (!bank) throw new HttpsError("invalid-argument", "اختر الحساب المصرفي");
+    const amount = r2(Number(d.amount));
+    const wRef = db.collection("wallets").doc(me); const out = db.collection("withdrawals").doc();
+    await db.runTransaction(async (tx) => {
+      const ws = await tx.get(wRef); const w = ws.exists ? ws.data() : {}; const bal = r2(w.bal || 0);
+      if (bal < T.MIN_WD) throw new HttpsError("failed-precondition", `أقل رصيد للسحب ${T.MIN_WD} دينار`);
+      if (!(amount >= T.MIN_WD && amount <= bal)) throw new HttpsError("invalid-argument", `المبلغ بين ${T.MIN_WD} و${bal} دينار`);
+      const last = ms(w.lastWd);
+      if (last && Date.now() - last < T.GAP) {
+        const days = Math.ceil((T.GAP - (Date.now() - last)) / DAY);
+        throw new HttpsError("failed-precondition", `يمكنك طلب سحب جديد بعد ${days} يوماً`);
+      }
+      tx.set(wRef, {bal: r2(bal - amount), lastWd: FieldValue.serverTimestamp(), prevWd: w.lastWd || null}, {merge: true});
+      tx.set(out, {tid: me, tname: t.name, phone: t.phone || "", amount, bank, status: "pending", at: FieldValue.serverTimestamp()});
+      tx.set(wRef.collection("tx").doc("wd_" + out.id), {t: "wd", amt: -amount, at: FieldValue.serverTimestamp(), bank: bank.bank});
+    });
+    return {ok: true, id: out.id};
+  }
+  throw new HttpsError("invalid-argument", "عملية غير معروفة");
+});
+
+// ---------- لوحة الإدارة: المعلمون والدورات والسحوبات ----------
+exports.adminTeach = onCall({memory: "256MiB"}, async (req) => {
+  const adm = await needAdmin(req);
+  const d = req.data || {}; const op = String(d.op || "");
+  if (op === "cfg") {
+    const teach = {on: !!d.on, show: !!d.show, apply: !!d.apply};
+    await db.collection("config").doc("access").set({teach}, {merge: true}); ACCESS = null; return {teach};
+  }
+  if (op === "load") {
+    const [ts, cs, wd, st] = await Promise.all([db.collection("teachers").get(), db.collection("courses").get(),
+      db.collection("withdrawals").where("status", "==", "pending").get(), db.collection("config").doc("teachStats").get()]);
+    const wal = await db.collection("wallets").get(); const bal = {}; wal.docs.forEach((x) => { bal[x.id] = x.data(); });
+    return {
+      teachers: ts.docs.map((x) => { const t = x.data(); return {id: x.id, name: t.name, spec: t.spec, bio: t.bio || "", phone: (t.phone || "").replace("+218", "0"),
+        status: t.status, hidden: !!t.hidden, note: t.note || "", courses: t.courses || 0, at: ms(t.createdAt),
+        bal: r2((bal[x.id] || {}).bal || 0), earned: r2((bal[x.id] || {}).earned || 0)}; }),
+      courses: cs.docs.map((x) => ({...pubCourse(x.id, x.data()), note: x.data().note || "", lessons: (x.data().lessons || []).map((l, i) => ({...l, free: i === 0}))})),
+      withdrawals: wd.docs.map((x) => ({id: x.id, ...x.data(), at: ms(x.data().at)})),
+      stats: st.exists ? st.data() : {},
+    };
+  }
+  if (op === "teacher") {
+    const ref = db.collection("teachers").doc(str(d.tid, 40)); if (!(await ref.get()).exists) throw new HttpsError("not-found", "غير موجود");
+    const up = {};
+    if (["approved", "rejected", "blocked", "pending"].includes(d.status)) up.status = d.status;
+    if (typeof d.hidden === "boolean") up.hidden = d.hidden;
+    if (d.note != null) up.note = str(d.note, 200);
+    up.reviewedBy = adm; up.reviewedAt = FieldValue.serverTimestamp();
+    await ref.update(up); TLIST = null; return {ok: true};
+  }
+  if (op === "videos") { // روابط يوتيوب للدروس: {cid, vids:{lessonId: url}}
+    const ref = db.collection("courses").doc(str(d.cid, 40)); const cs = await ref.get();
+    if (!cs.exists) throw new HttpsError("not-found", "الدورة غير موجودة");
+    const pv = ref.collection("priv").doc("v"); const ps = await pv.get(); const map = (ps.exists && ps.data().map) || {};
+    const lessons = (cs.data().lessons || []).map((l) => {
+      if (d.vids && Object.prototype.hasOwnProperty.call(d.vids, l.id)) {
+        const raw = String(d.vids[l.id] || "").trim();
+        if (!raw) { delete map[l.id]; return {...l, ready: false}; }
+        const id = ytId(raw); if (!id) throw new HttpsError("invalid-argument", "رابط يوتيوب غير صحيح: " + l.title);
+        map[l.id] = id; return {...l, ready: true};
+      }
+      return l;
+    });
+    await pv.set({map}); await ref.update({lessons}); TLIST = null;
+    return {ok: true, map};
+  }
+  if (op === "vmap") {
+    const ps = await db.collection("courses").doc(str(d.cid, 40)).collection("priv").doc("v").get();
+    return {map: (ps.exists && ps.data().map) || {}};
+  }
+  if (op === "course") {
+    const ref = db.collection("courses").doc(str(d.cid, 40)); const cs = await ref.get();
+    if (!cs.exists) throw new HttpsError("not-found", "الدورة غير موجودة");
+    const st = d.status;
+    if (!["live", "rejected", "off", "draft", "pending"].includes(st)) throw new HttpsError("invalid-argument", "حالة غير صحيحة");
+    if (st === "live") {
+      const ls = cs.data().lessons || [];
+      if (!ls.length || !ls[0].ready) throw new HttpsError("failed-precondition", "ضع رابط يوتيوب للدرس الأول على الأقل قبل النشر");
+    }
+    const up = {status: st, note: str(d.note, 300), reviewedBy: adm};
+    if (st === "live" && !cs.data().publishedAt) up.publishedAt = FieldValue.serverTimestamp();
+    await ref.update(up); TLIST = null; return {ok: true};
+  }
+  if (op === "withdrawal") {
+    const ref = db.collection("withdrawals").doc(str(d.id, 40));
+    await db.runTransaction(async (tx) => {
+      const ws = await tx.get(ref); if (!ws.exists) throw new HttpsError("not-found", "غير موجود");
+      const w = ws.data(); if (w.status !== "pending") throw new HttpsError("failed-precondition", "تمت معالجته");
+      const wal = db.collection("wallets").doc(w.tid); const wv = await tx.get(wal);
+      if (d.status === "paid") {
+        tx.update(ref, {status: "paid", doneAt: FieldValue.serverTimestamp(), note: str(d.note, 200), by: adm});
+        tx.set(wal, {paid: FieldValue.increment(w.amount)}, {merge: true});
+      } else if (d.status === "rejected") {
+        tx.update(ref, {status: "rejected", doneAt: FieldValue.serverTimestamp(), note: str(d.note, 200), by: adm});
+        tx.set(wal, {bal: FieldValue.increment(w.amount), lastWd: (wv.exists && wv.data().prevWd) || null}, {merge: true});
+        tx.set(wal.collection("tx").doc("wdback_" + ref.id), {t: "wd-back", amt: w.amount, at: FieldValue.serverTimestamp()});
+      } else throw new HttpsError("invalid-argument", "حالة غير صحيحة");
+    });
+    return {ok: true};
+  }
+  if (op === "grant") { // منح دورة مجاناً لحساب
+    const uid = str(d.uid, 60), cid = str(d.cid, 40);
+    const cs = await db.collection("courses").doc(cid).get(); if (!cs.exists) throw new HttpsError("not-found", "الدورة غير موجودة");
+    await db.collection("enroll").doc(uid + "_" + cid).set({uid, cid, tid: cs.data().tid, price: 0, orderId: null, gift: adm, at: FieldValue.serverTimestamp()});
+    return {ok: true};
+  }
+  throw new HttpsError("invalid-argument", "عملية غير معروفة");
 });
