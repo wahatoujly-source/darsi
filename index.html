@@ -718,10 +718,44 @@ h2{font-weight:800}
 .pill.up{background:linear-gradient(135deg,#FFB800,#FF8A00);color:#2B1E00;font-weight:800}
 .vframe{position:relative;width:100%;aspect-ratio:16/9;border-radius:16px;overflow:hidden;background:#000}.vframe iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 .vposter{position:absolute;inset:0;border:0;background:#000 center/cover no-repeat;cursor:pointer;display:grid;place-items:center}.vplay{width:72px;height:72px;border-radius:50%;background:rgba(229,72,77,.92);color:#fff;font-size:2rem;display:grid;place-items:center;box-shadow:0 10px 30px -8px rgba(0,0,0,.6)}
+/* welcome & start */
+body.wl-on .app>header,body.wl-on #admbar{display:none}
+.wl{min-height:calc(100dvh - 20px);margin:-8px -16px 0;padding:18px 22px 28px;color:#fff;display:flex;flex-direction:column;align-items:center;text-align:center;gap:10px;position:relative;border-radius:0 0 28px 28px;animation:wlIn .45s ease-out}
+@keyframes wlIn{from{opacity:.3;transform:translateX(-14px)}to{opacity:1;transform:none}}
+.wl-skip{align-self:flex-start;background:rgba(255,255,255,.18);color:#fff;border:0;border-radius:99px;padding:6px 14px;font:inherit;font-size:.9rem}
+.wl-ill{width:min(78vw,320px);margin-top:4vh}.wl-ill svg{width:100%;height:auto;filter:drop-shadow(0 18px 30px rgba(0,0,0,.25))}
+.wl-t{font-family:var(--f-display);font-size:clamp(1.6rem,6.5vw,2.2rem);line-height:1.35;margin:14px 0 4px}
+.wl-p{font-size:1.08rem;line-height:1.8;margin:0;max-width:30em;opacity:.95}
+.wl-dots{display:flex;gap:8px;margin-top:auto;padding-top:22px}.wl-dots span{width:9px;height:9px;border-radius:9px;background:rgba(255,255,255,.4);transition:width .3s}.wl-dots span.on{width:28px;background:#FFC21A}
+.wl-nav{display:flex;justify-content:space-between;align-items:center;width:100%;max-width:420px;margin-top:14px}
+.wl-next{background:#FFC21A;color:#2B1E00;border:0;border-radius:16px;padding:14px 26px;font-family:var(--f-display);font-weight:800;font-size:1.1rem;box-shadow:0 12px 24px -12px rgba(0,0,0,.5)}
+.wl-back{background:rgba(255,255,255,.18);color:#fff;border:0;border-radius:14px;width:48px;height:48px;font-size:1.3rem}
+.st{display:grid;gap:12px;padding:18px 0 28px;text-align:center;justify-items:center}.st h1{font-family:var(--f-display);margin:4px 0 0}.st-logo svg{width:86px;height:86px;background:linear-gradient(135deg,#14935A,#075232);border-radius:24px;padding:10px;box-shadow:0 16px 30px -16px rgba(7,82,50,.8)}
+.st-card{width:100%;max-width:460px;display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center;text-align:start;border:2px solid var(--line);background:var(--card);color:var(--ink);border-radius:20px;padding:14px 16px;font:inherit;transition:transform .15s,border-color .15s}
+.st-card:active{transform:scale(.98)}.st-card:hover{border-color:var(--sea)}.st-ic{font-size:2rem;width:56px;height:56px;border-radius:16px;display:grid;place-items:center}
+.st-card.p .st-ic{background:rgba(14,143,90,.14)}.st-card.s .st-ic{background:rgba(47,111,237,.14)}.st-card.t .st-ic{background:rgba(122,76,244,.14)}.st-card.v .st-ic{background:rgba(255,184,0,.18)}
+.st-card b{display:block;font-family:var(--f-display);font-size:1.15rem}.st-card small{color:var(--muted)}.st-go{color:var(--muted);font-size:1.2rem}
+.st-link{background:none;border:0;color:var(--sea);font:inherit;font-weight:700;padding:6px}
+#splash .sp-fact{max-width:300px;text-align:center;font-size:.9rem;line-height:1.7;color:#C9D3FF;opacity:0;animation:spUp .5s 1.2s ease-out forwards;margin-top:14px}
+/* auth pages */
+.au{display:grid;gap:14px;padding:6px 0 28px;justify-items:center;position:relative}
+.au-back{justify-self:start;border:0;background:var(--card);color:var(--ink);width:44px;height:44px;border-radius:14px;font-size:1.2rem;box-shadow:0 1px 0 var(--line)}
+.au-hero{text-align:center;display:grid;gap:6px;justify-items:center}.au-hero h1{font-family:var(--f-display);font-size:1.6rem;margin:6px 0 0}.au-hero p{margin:0;color:var(--muted);max-width:26em;line-height:1.7}
+.au-logo svg{width:78px;height:78px;background:linear-gradient(135deg,#14935A,#075232);border-radius:22px;padding:9px;box-shadow:0 16px 30px -16px rgba(7,82,50,.8)}
+.au-list{display:grid;gap:10px;width:100%;max-width:440px}
+.au-btn{display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center;text-align:start;width:100%;border:2px solid var(--line);background:var(--card);color:var(--ink);border-radius:18px;padding:14px 16px;font:inherit}
+.au-btn.g{border-color:transparent;background:linear-gradient(var(--card),var(--card)) padding-box,linear-gradient(90deg,#4285F4,#34A853,#FBBC05,#EA4335) border-box}
+.au-btn:active{transform:scale(.98)}.au-ic{width:46px;height:46px;border-radius:14px;background:var(--paper);display:grid;place-items:center;font-size:1.5rem}.au-t b{display:block;font-family:var(--f-display);font-size:1.08rem}.au-t small{color:var(--muted)}.au-go{color:var(--muted)}
+.au-card{width:100%;max-width:440px;background:var(--card);border-radius:22px;padding:16px;display:grid;gap:8px;box-shadow:0 1px 0 var(--line),0 18px 40px -28px rgba(23,32,61,.5)}
+.au-tabs{display:grid;grid-template-columns:1fr 1fr;background:var(--paper);border-radius:14px;padding:4px;margin-bottom:6px}.au-tabs button{border:0;background:transparent;border-radius:11px;padding:10px;font:inherit;font-weight:700;color:var(--muted)}.au-tabs button.on{background:var(--card);color:var(--ink);box-shadow:0 2px 8px -4px rgba(0,0,0,.3)}
+.au-lab{font-size:.85rem;color:var(--muted);margin-top:4px}.au-in{width:100%;box-sizing:border-box;padding:14px;border-radius:14px;border:2px solid var(--line);background:var(--paper);color:var(--ink);font:inherit;font-size:1.1rem}.au-in:focus{outline:0;border-color:var(--sea)}
+.au-pw{position:relative}.au-eye{position:absolute;inset-inline-end:8px;top:50%;transform:translateY(-50%);border:0;background:none;font-size:1.1rem}
+.au-main{margin-top:8px;border:0;border-radius:16px;padding:15px;background:linear-gradient(135deg,#14935A,#0B6B3A);color:#fff;font-family:var(--f-display);font-weight:800;font-size:1.12rem;box-shadow:0 14px 26px -14px rgba(7,82,50,.9)}.au-main.busy{opacity:.6}
+.au-legal{text-align:center;font-size:.8rem}
 </style>
 
 </head><body>
-<div id="splash" aria-hidden="true"><svg class="sp-mark" viewBox="0 0 120 120" aria-hidden="true"><rect class="s1" x="10" y="74" width="28" height="36" rx="8" fill="#FF5D73"/><rect class="s2" x="46" y="52" width="28" height="58" rx="8" fill="#4CC9F0"/><rect class="s3" x="82" y="30" width="28" height="80" rx="8" fill="#7BE07B"/><circle class="glow" cx="96" cy="14" r="16" fill="#FFB800" opacity=".3"/><path class="star" d="M96 2l3.9 8 8.8 1.3-6.4 6.2 1.5 8.8L96 22.1l-7.8 4.2 1.5-8.8-6.4-6.2 8.8-1.3z" fill="#FFB800"/></svg><div class="sp-word">المجتهد</div><div class="sp-tag">تعلّم خطوة بخطوة</div><div class="sp-bar"><i></i></div></div>
+<div id="splash" aria-hidden="true"><svg class="sp-mark" viewBox="0 0 120 120" aria-hidden="true"> <path d="M60 58 C48 50 30 48 14 52 L14 98 C30 94 48 96 60 104 Z" fill="#FFFFFF"/> <path d="M60 58 C72 50 90 48 106 52 L106 98 C90 94 72 96 60 104 Z" fill="#EAF6EF"/> <path d="M60 58 L60 104" stroke="#0B6B3A" stroke-width="2.4" stroke-linecap="round"/> <path d="M22 64 C33 62 45 64 53 68 M22 74 C33 72 45 74 53 78 M22 84 C33 82 45 84 53 88" stroke="#0B6B3A" stroke-opacity=".35" stroke-width="2.6" stroke-linecap="round" fill="none"/> <path d="M67 68 C75 64 87 62 98 64 M67 78 C75 74 87 72 98 74 M67 88 C75 84 87 82 98 84" stroke="#0B6B3A" stroke-opacity=".35" stroke-width="2.6" stroke-linecap="round" fill="none"/> <path d="M14 101 C30 97 48 99 60 107 C72 99 90 97 106 101" stroke="#E4002B" stroke-width="3.2" fill="none" stroke-linecap="round"/> <path d="M14 106 C30 102 48 104 60 112 C72 104 90 102 106 106" stroke="#111" stroke-width="3.2" fill="none" stroke-linecap="round"/> <path d="M62 14 A22 22 0 1 0 62 50 A17.5 17.5 0 1 1 62 14 Z" fill="#FFFFFF"/> <path d="M74 20 l3.6 7.4 8.2 1.2-5.9 5.8 1.4 8.1-7.3-3.9-7.3 3.9 1.4-8.1-5.9-5.8 8.2-1.2z" fill="#FFC21A"/></svg><div class="sp-word">المجتهد</div><div class="sp-tag">المنهج الليبي من الصف الأول إلى التاسع</div><div class="sp-fact" id="spFact">💡 هل تعلم؟ التعلّم 20 دقيقة كل يوم أفضل من ساعتين مرة في الأسبوع.</div><div class="sp-bar"><i></i></div></div>
 <script>try{if(sessionStorage.getItem("mj_splash"))document.getElementById("splash").remove()}catch(e){}</script>
 <div class="app" dir="rtl" id="app"><p class="note" style="padding:30px 0">جارٍ التحميل…</p></div>
 
@@ -733,6 +767,7 @@ h2{font-weight:800}
    Content lives in data/*.json; this file only knows how to show it.
    ========================================================= */
 const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
+{const f=document.getElementById('spFact');if(f){const F=['التعلّم 20 دقيقة كل يوم أفضل من ساعتين مرة في الأسبوع.','الدماغ يتذكّر أكثر عندما تشرح ما تعلّمته لغيرك.','ليبيا من أكبر دول أفريقيا مساحة، ويطلّ ساحلها على البحر المتوسط.','النوم الجيد ليلة الامتحان يساعد على التذكّر أكثر من السهر.','الخطأ خطوة في طريق التعلّم: من يخطئ ثم يصحّح يتعلّم أسرع.','قراءة 10 صفحات يومياً تعني أكثر من 3000 صفحة في السنة!'];f.textContent='💡 هل تعلم؟ '+F[Math.random()*F.length|0];}}
 /* never print 'null' when an optional child is missing */
 ['append','prepend','after','before'].forEach(m=>[Element.prototype,DocumentFragment.prototype].forEach(P=>{const o=P[m];if(o)P[m]=function(...x){return o.apply(this,x.filter(v=>v!=null&&v!==false));};}));
 function el(t,a={},...kids){const e=document.createElement(t);for(const k in a){const v=a[k];if(v==null||v===false)continue;if(k==='class')e.className=v;else if(k==='text')e.textContent=v;else if(k==='html')e.innerHTML=v;else if(k.startsWith('on'))e.addEventListener(k.slice(2),v);else e.setAttribute(k,v===true?'':v);}kids.flat().forEach(c=>{if(c!=null&&c!==false)e.append(c)});return e;}
@@ -1648,7 +1683,7 @@ async function getJSON(p){if(App.cache[p])return App.cache[p];let r=null;try{r=a
   if(!r||!r.ok){const m=/^data\/([a-z0-9-]+)\.json$/.exec(p);if(m&&window.ACC&&ACC.loadPaid&&!(r&&r.ok)){const j=await ACC.loadPaid(m[1]);App.cache[p]=j;return j;}throw new Error(p);}
   const j=await r.json();App.cache[p]=j;return j;}
 const go=h=>{if(location.hash==='#'+h)route();else location.hash=h;};
-const LOGO='<svg viewBox="0 0 120 120" aria-hidden="true"><rect class="s1" x="10" y="74" width="28" height="36" rx="8" fill="#FF5D73"/><rect class="s2" x="46" y="52" width="28" height="58" rx="8" fill="#4CC9F0"/><rect class="s3" x="82" y="30" width="28" height="80" rx="8" fill="#7BE07B"/><circle class="glow" cx="96" cy="14" r="16" fill="#FFB800" opacity=".3"/><path class="star" d="M96 2l3.9 8 8.8 1.3-6.4 6.2 1.5 8.8L96 22.1l-7.8 4.2 1.5-8.8-6.4-6.2 8.8-1.3z" fill="#FFB800"/></svg>';
+const LOGO='<svg viewBox="0 0 120 120" aria-hidden="true"> <path d="M60 58 C48 50 30 48 14 52 L14 98 C30 94 48 96 60 104 Z" fill="#FFFFFF"/> <path d="M60 58 C72 50 90 48 106 52 L106 98 C90 94 72 96 60 104 Z" fill="#EAF6EF"/> <path d="M60 58 L60 104" stroke="#0B6B3A" stroke-width="2.4" stroke-linecap="round"/> <path d="M22 64 C33 62 45 64 53 68 M22 74 C33 72 45 74 53 78 M22 84 C33 82 45 84 53 88" stroke="#0B6B3A" stroke-opacity=".35" stroke-width="2.6" stroke-linecap="round" fill="none"/> <path d="M67 68 C75 64 87 62 98 64 M67 78 C75 74 87 72 98 74 M67 88 C75 84 87 82 98 84" stroke="#0B6B3A" stroke-opacity=".35" stroke-width="2.6" stroke-linecap="round" fill="none"/> <path d="M14 101 C30 97 48 99 60 107 C72 99 90 97 106 101" stroke="#E4002B" stroke-width="3.2" fill="none" stroke-linecap="round"/> <path d="M14 106 C30 102 48 104 60 112 C72 104 90 102 106 106" stroke="#111" stroke-width="3.2" fill="none" stroke-linecap="round"/> <path d="M62 14 A22 22 0 1 0 62 50 A17.5 17.5 0 1 1 62 14 Z" fill="#FFFFFF"/> <path d="M74 20 l3.6 7.4 8.2 1.2-5.9 5.8 1.4 8.1-7.3-3.9-7.3 3.9 1.4-8.1-5.9-5.8 8.2-1.2z" fill="#FFC21A"/></svg>';
 const logoEl=()=>{const t=document.createElement('span');t.innerHTML=LOGO;return t.firstChild;};
 
 const HOME_ICON='<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5.5v-6h-5v6H4a1 1 0 0 1-1-1z" fill="currentColor"/></svg>';
@@ -1926,6 +1961,37 @@ function renderPrivacy(){root.innerHTML='';root.append(bar('الخصوصية و�
     S('حذف الحساب','يمكنك طلب حذف حسابك وكل بياناته بمراسلتنا، ويتم الحذف خلال 30 يوماً.'),
     S('شروط الاستخدام',['الاشتراك صالح حتى 31 أغسطس من العام الدراسي الذي اشتركت فيه، أياً كان تاريخ الاشتراك.','الاشتراك شخصي للحساب وأبنائه، ولا يجوز بيعه أو مشاركته مع غيرهم. عدد الأجهزة محدود حسب الباقة.','لا يُسترد المبلغ بعد تفعيل الاشتراك، إلا إذا تعذّر علينا تقديم الخدمة.','الدروس الأولى من كل كتاب، والتربية الإسلامية، والتربية الوطنية مجانية.','محتوى المنصة التفاعلي (الشرح، والأنشطة، والأسئلة، والتصميم) ملك لمنصة المجتهد، ويُمنع نسخه أو إعادة نشره. المنهج الدراسي نفسه ملك لوزارة التربية والتعليم.','نعمل على دقة المحتوى ومراجعته باستمرار، وإن وجدت خطأ فأخبرنا لنصلحه.','قد نحدّث هذه الشروط، ونعلن عن أي تغيير مهم داخل المنصة.']),
     S('تواصل معنا',CONTACT?'للاستفسار أو طلب حذف البيانات: '+CONTACT:'للاستفسار أو طلب حذف البيانات تواصل معنا عبر صفحة المنصة الرسمية.')));}
+
+/* ================= أول زيارة: 3 لوحات تعريفية ← من أنت؟ ← التسجيل ================= */
+const ILL={
+ book:'<svg viewBox="0 0 200 160"><circle cx="100" cy="82" r="70" fill="rgba(255,255,255,.12)"/><path d="M100 60C84 50 58 47 34 52v62c24-5 50-2 66 8z" fill="#fff"/><path d="M100 60c16-10 42-13 66-8v62c-24-5-50-2-66 8z" fill="#E7F6EC"/><path d="M100 60v62" stroke="#0B6B3A" stroke-width="3"/><g stroke="#0B6B3A" stroke-opacity=".35" stroke-width="3.5" stroke-linecap="round"><path d="M46 70c14-2 30 0 42 5M46 84c14-2 30 0 42 5M46 98c14-2 30 0 42 5M112 75c12-5 28-7 42-5M112 89c12-5 28-7 42-5M112 103c12-5 28-7 42-5"/></g><path d="M34 118c24-5 50-2 66 8 16-10 42-13 66-8" stroke="#E4002B" stroke-width="4" fill="none" stroke-linecap="round"/><path d="M34 125c24-5 50-2 66 8 16-10 42-13 66-8" stroke="#111" stroke-width="4" fill="none" stroke-linecap="round"/><path d="M104 14a20 20 0 1 0 0 32 16 16 0 1 1 0-32z" fill="#fff"/><path d="M118 20l3.3 6.8 7.5 1.1-5.4 5.3 1.3 7.4-6.7-3.5-6.7 3.5 1.3-7.4-5.4-5.3 7.5-1.1z" fill="#FFC21A"/></svg>',
+ play:'<svg viewBox="0 0 200 160"><circle cx="100" cy="82" r="70" fill="rgba(255,255,255,.12)"/><rect x="48" y="40" width="104" height="84" rx="16" fill="#fff"/><circle cx="76" cy="70" r="12" fill="#FF5D73"/><rect x="96" y="62" width="40" height="16" rx="8" fill="#4CC9F0"/><rect x="62" y="92" width="76" height="16" rx="8" fill="#7BE07B"/><path d="M150 30l5 10 11 1.6-8 7.8 1.9 11L150 55l-9.9 5.2 1.9-11-8-7.8 11-1.6z" fill="#FFC21A"/><path d="M40 112l3.5 7 7.7 1.1-5.6 5.4 1.3 7.7-6.9-3.6-6.9 3.6 1.3-7.7-5.6-5.4 7.7-1.1z" fill="#FFC21A"/><circle cx="168" cy="110" r="10" fill="#FFB800"/><text x="168" y="114.5" font-size="12" text-anchor="middle" fill="#2B1E00" font-weight="700">1</text></svg>',
+ parent:'<svg viewBox="0 0 200 160"><circle cx="100" cy="82" r="70" fill="rgba(255,255,255,.12)"/><rect x="40" y="36" width="120" height="96" rx="16" fill="#fff"/><rect x="56" y="96" width="14" height="22" rx="4" fill="#4CC9F0"/><rect x="78" y="80" width="14" height="38" rx="4" fill="#7BE07B"/><rect x="100" y="66" width="14" height="52" rx="4" fill="#FFB800"/><rect x="122" y="52" width="14" height="66" rx="4" fill="#FF5D73"/><rect x="56" y="48" width="56" height="8" rx="4" fill="#17203D" opacity=".25"/><circle cx="160" cy="44" r="18" fill="#0E8F5A"/><path d="M151 44l6 6 12-12" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>'};
+const SLIDES=[
+ {ill:'book',bg:'linear-gradient(160deg,#0E8F5A,#075232)',t:'المنهج الليبي كاملاً في جيبك',p:['دروس الصفوف من الأول إلى التاسع، مطابقة لكتب وزارة التعليم.','شرح بالصوت والصورة، خطوة بخطوة، بلغة يفهمها طفلك.']},
+ {ill:'play',bg:'linear-gradient(160deg,#2F6FED,#1B3E9E)',t:'يتعلّم وهو يلعب',p:['تمارين وألعاب تفاعلية، ونجوم ومستويات من «مبتدئ» إلى «عبقري».','تحدٍّ يومي ولوحة أبطال تجعل الدراسة متعة كل يوم.']},
+ {ill:'parent',bg:'linear-gradient(160deg,#7A4CF4,#45208F)',t:'ولي الأمر يتابع لحظة بلحظة',p:['تقارير بالدرجات ونقاط القوة والضعف، ومحاولات كل اختبار.','جدول دراسي، وتحكم كامل في المواد والدروس والأصوات.']}];
+function renderWelcome(i=0){root.innerHTML='';document.body.classList.add('wl-on');const S=SLIDES[i];
+  const dots=el('div',{class:'wl-dots'},...SLIDES.map((_,k)=>el('span',{class:k===i?'on':''})));
+  const card=el('section',{class:'wl',style:'background:'+S.bg},
+    el('button',{class:'wl-skip',text:'تخطَّ',onclick:()=>go('start')}),
+    el('div',{class:'wl-ill',html:ILL[S.ill]}),
+    el('h1',{class:'wl-t',text:S.t}),...S.p.map(x=>el('p',{class:'wl-p',text:x})),dots,
+    el('div',{class:'wl-nav'},i>0?el('button',{class:'wl-back',text:'→',onclick:()=>renderWelcome(i-1)}):el('span'),
+      el('button',{class:'wl-next',text:i<SLIDES.length-1?'التالي ←':'ابدأ الآن ←',onclick:()=>i<SLIDES.length-1?renderWelcome(i+1):go('start')})));
+  let x0=null;card.addEventListener('touchstart',e=>{x0=e.touches[0].clientX;},{passive:true});
+  card.addEventListener('touchend',e=>{if(x0==null)return;const dx=e.changedTouches[0].clientX-x0;x0=null;if(Math.abs(dx)<50)return;if(dx<0&&i>0)renderWelcome(i-1);else if(dx>0)i<SLIDES.length-1?renderWelcome(i+1):go('start');});
+  root.append(card);}
+function renderStart(){root.innerHTML='';document.body.classList.add('wl-on');
+  const pick=(ic,t,d,fn,cls='')=>el('button',{class:'st-card '+cls,onclick:fn},el('span',{class:'st-ic',text:ic}),el('span',{},el('b',{text:t}),el('small',{text:d})),el('span',{class:'st-go',text:'←'}));
+  const role=r=>()=>{store.set('welcomed',true);store.set('pref_role',r);document.body.classList.remove('wl-on');go('login');};
+  root.append(el('section',{class:'st'},el('div',{class:'st-logo',html:LOGO}),el('h1',{text:'أهلاً بك في المجتهد'}),el('p',{class:'note',text:'من أنت؟ لنجهّز لك المنصة المناسبة.'}),
+    pick('👨‍👩‍👧','ولي أمر','أتابع أبنائي ودروسهم وتقاريرهم',role('parent'),'p'),
+    pick('🎒','طالب','أدرس دروسي وأجمع النجوم',role('student'),'s'),
+    pick('👩‍🏫','معلم','أراجع الدروس وأصنع الاختبارات',role('teacher'),'t'),
+    pick('👀','زائر','أتصفح الدروس المجانية أولاً',()=>{store.set('welcomed',true);document.body.classList.remove('wl-on');go('home');},'v'),
+    el('button',{class:'st-link',text:'🧒 عندي رمز من ولي أمري',onclick:()=>{store.set('welcomed',true);document.body.classList.remove('wl-on');go('link');}}),
+    el('button',{class:'st-link',text:'لدي حساب — تسجيل الدخول',onclick:()=>{store.set('welcomed',true);document.body.classList.remove('wl-on');go('login');}})));}
 const GRADE_NOTE={'1':'نتعلّم الحروف والأعداد','2':'نقرأ ونكتب ونحسب','3':'نكبر ونكتشف','4':'نبدأ رحلة العلوم','5':'نفكّر ونبحث','6':'نختم المرحلة الابتدائية','7':'أول الإعدادي','8':'نتعمّق أكثر','9':'شهادة التعليم الأساسي'};
 const AR_NUM=n=>String(n); // في ليبيا تُستعمل الأرقام 1 2 3
 /* a learner (child profile, linked child phone, or student) sees only his own grade */
@@ -2350,6 +2416,10 @@ function route(){setTimeout(adminBanner,0);TTS.phonics=false;TTS.phx=null;
     if((og&&og!==LG)||/^(teacher|tx-)/.test(h)){location.replace('#g'+LG);return;}
     const CT=learnerCtrl();if(CT){let sm=/^g(\d+)-([a-z]+)$/.exec(h);if(sm&&!ctrlSubOk(CT,sm[2])){location.replace('#g'+LG);return;}
       if((mm=/^l-([a-z0-9-]+)$/.exec(h))&&App.catalog){const f=findLesson(mm[1]);if(f&&(!ctrlSubOk(CT,f.subject.id)||!ctrlLesOk(CT,f.subject.id,mm[1]))){location.replace('#g'+LG+(ctrlSubOk(CT,f.subject.id)?'-'+f.subject.id:''));return;}}}}}
+  if(h!=='welcome'&&h!=='start')document.body.classList.remove('wl-on');
+  if((!h||h==='home')&&!store.get('welcomed',false)&&!(window.ACC&&ACC.user)){renderWelcome(0);return;}
+  if(h==='welcome'){renderWelcome(0);return;}if(h==='start'){renderStart();return;}
+  if(h==='home'||!h){if(window.ACC&&ACC.user)store.set('welcomed',true);}
   if(!h||h==='home')renderHome();
   else if(window.ACC&&ACC.route(h)){}
   else if(h==='myreport')renderMyReport();
@@ -2370,7 +2440,7 @@ function route(){setTimeout(adminBanner,0);TTS.phonics=false;TTS.phx=null;
   else renderHome();
 }
 window.addEventListener('hashchange',()=>{if(document.startViewTransition&&!matchMedia('(prefers-reduced-motion: reduce)').matches){const t=document.startViewTransition(()=>route());[t.ready,t.finished,t.updateCallbackDone].forEach(x=>x&&x.catch(()=>{}));}else{route();root.classList.remove('enter');void root.offsetWidth;root.classList.add('enter');}});
-window.DARSI={TT,lessonStudy,studyLine,VOX,arUnits,PRAISE,el,go,store,App,route,cheer,bar,root,$,$$,GAME,REPORT,findLesson:id=>App.catalog?findLesson(id):null};
+window.DARSI={LOGO,TT,lessonStudy,studyLine,VOX,arUnits,PRAISE,el,go,store,App,route,cheer,bar,root,$,$$,GAME,REPORT,findLesson:id=>App.catalog?findLesson(id):null};
 const SPLASH_T0=performance.now();function hideSplash(){const sp=document.getElementById('splash');if(!sp)return;const wait=sessionStorage.getItem('mj_splash')?0:Math.max(0,1700-(performance.now()-SPLASH_T0));try{sessionStorage.setItem('mj_splash','1')}catch(e){}setTimeout(()=>{sp.classList.add('go');setTimeout(()=>sp.remove(),600);},wait);}
 // عند فتح التطبيق: نضع الرئيسية أولاً في السجل ثم نعود إلى آخر مكان توقف فيه الطالب
 (function bootNav(){let fresh=false;try{fresh=!sessionStorage.getItem('mj_open');sessionStorage.setItem('mj_open','1')}catch(e){}

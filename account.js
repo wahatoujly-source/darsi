@@ -147,43 +147,55 @@ ACC.pill = () => {
 /* ---------- pages ---------- */
 const page = (title, sub, back) => { D.root.innerHTML = ''; D.root.append(D.bar(title, sub, back)); const s = el('section', { class: 'stack acc' }); D.root.append(s); return s; };
 
+/* ---------- sign-in / sign-up: one elegant page with three ways (Google, phone, email) ---------- */
+const ROLE_HERO = { parent: ['👨‍👩‍👧', 'أنشئ حساب ولي الأمر', 'تابع أبناءك وتقاريرهم وجدولهم الدراسي من مكان واحد.'], student: ['🎒', 'أنشئ حسابك يا بطل', 'احفظ نجومك وتقدّمك وتنافس زملاءك في لوحة الأبطال.'], teacher: ['👩‍🏫', 'أنشئ حساب المعلم', 'راجع الدروس واصنع الاختبارات لطلابك.'] };
+function authHero(sub) { const r = ROLE_HERO[store.get('pref_role', '')] || ['✨', 'مرحباً بك في المجتهد', 'سجّل لتحفظ النجوم والتقدّم على أي جهاز.'];
+  return el('div', { class: 'au-hero' }, el('div', { class: 'au-logo', html: D.LOGO || '' }), el('h1', { text: sub || r[1] }), el('p', { text: r[2] })); }
 function renderLogin() {
   if (ACC.user) { go(ACC.profile ? 'account' : 'onboard'); return; }
-  const s = page('الدخول', 'سجّل لتحفظ نجومك وتقدّمك على أي جهاز', 'home');
-  const msg = el('div');
-  s.append(el('button', { class: 'btn sun', style: 'width:100%', text: '🧒 أنا طالب، عندي رمز من ولي أمري', onclick: () => go('link') }));
-  // Google
-  const gBtn = el('button', { class: 'btn accbtn', onclick: async () => {
+  const root = D.root; root.innerHTML = ''; const msg = el('div');
+  const gBtn = el('button', { class: 'au-btn g', onclick: async () => {
     msg.innerHTML = ''; const pr = new GoogleAuthProvider(); pr.setCustomParameters({ prompt: 'select_account' });
     try { await signInWithPopup(auth, pr); }
     catch (e) { if (['auth/popup-blocked', 'auth/operation-not-supported-in-this-environment', 'auth/cancelled-popup-request'].includes(e.code)) await signInWithRedirect(auth, pr); else fbk(msg, 'bad', errMsg(e)); }
-  } }, el('b', { class: 'gl', text: 'G' }), 'الدخول بحساب Google');
-  // Phone + password (no SMS here: SMS is sent only when the person subscribes, see ACC.verifyPhone)
-  const ph = el('input', { type: 'tel', inputmode: 'numeric', placeholder: '09X XXX XXXX', 'aria-label': 'رقم الهاتف', autocomplete: 'tel' });
-  const ppw = el('input', { type: 'password', placeholder: 'كلمة المرور (6 أحرف أو أكثر)', 'aria-label': 'كلمة المرور', autocomplete: 'current-password' });
-  const phoneGo = async create => { msg.innerHTML = ''; const n = libyanPhone(ph.value);
-    if (!n) { fbk(msg, 'bad', 'اكتب رقماً ليبياً يبدأ بـ 091 أو 092 أو 093 أو 094 أو 095.'); return; }
-    try { create ? await createUserWithEmailAndPassword(auth, phoneEmail(n), ppw.value) : await signInWithEmailAndPassword(auth, phoneEmail(n), ppw.value); }
-    catch (e) { fbk(msg, 'bad', e.code === 'auth/email-already-in-use' ? 'هذا الرقم مسجّل من قبل. اضغط «دخول».' : e.code === 'auth/invalid-credential' ? 'الرقم أو كلمة المرور غير صحيحة.' : errMsg(e)); } };
-  const pforgot = el('button', { class: 'linkbtn', text: 'نسيت كلمة المرور؟', onclick: () => fbk(msg, 'info', 'تواصل معنا لإعادة تعيين كلمة المرور. وإذا كان رقمك مؤكداً (بعد الاشتراك) ستتمكن قريباً من إعادة تعيينها برسالة نصية.') });
-  // Email
-  const em = el('input', { type: 'email', placeholder: 'example@gmail.com', 'aria-label': 'البريد الإلكتروني', autocomplete: 'email' });
-  const pw = el('input', { type: 'password', placeholder: 'كلمة المرور (6 أحرف أو أكثر)', 'aria-label': 'كلمة المرور', autocomplete: 'current-password' });
-  const emailGo = async create => { msg.innerHTML = '';
-    try { create ? await createUserWithEmailAndPassword(auth, em.value.trim(), pw.value) : await signInWithEmailAndPassword(auth, em.value.trim(), pw.value); }
-    catch (e) { fbk(msg, 'bad', errMsg(e)); } };
-  const forgot = el('button', { class: 'linkbtn', text: 'نسيت كلمة المرور؟', onclick: async () => {
-    if (!em.value.trim()) { fbk(msg, 'info', 'اكتب بريدك أولاً ثم اضغط «نسيت كلمة المرور».'); return; }
-    try { await sendPasswordResetEmail(auth, em.value.trim()); fbk(msg, 'ok', 'أرسلنا رابط تغيير كلمة المرور إلى بريدك.'); } catch (e) { fbk(msg, 'bad', errMsg(e)); } } });
-  s.append(
-    el('div', { class: 'panel accbox' }, gBtn),
-    el('div', { class: 'panel accbox' }, el('b', { text: '📱 رقم الهاتف' }), ph, ppw,
-      el('div', { class: 'row', style: 'gap:8px;flex-wrap:wrap' }, el('button', { class: 'btn', text: 'دخول', onclick: () => phoneGo(false) }), el('button', { class: 'btn ghost', text: 'حساب جديد', onclick: () => phoneGo(true) }), pforgot)),
-    el('div', { class: 'panel accbox' }, el('b', { text: '✉️ البريد الإلكتروني' }), em, pw,
-      el('div', { class: 'row', style: 'gap:8px;flex-wrap:wrap' }, el('button', { class: 'btn', text: 'دخول', onclick: () => emailGo(false) }), el('button', { class: 'btn ghost', text: 'حساب جديد', onclick: () => emailGo(true) }), forgot)),
-    el('div', { class: 'panel accbox off' }, el('b', { text: ' الدخول بحساب Apple' }), el('span', { class: 'tag sun', text: 'قريباً' })),
-    msg,
-    el('p', { class: 'note', text: 'الدروس المجانية متاحة دون تسجيل. التسجيل يحفظ نجومك وتقدّمك، ويلزم للاشتراك.' }));
+  } }, el('span', { class: 'au-ic', html: '<svg viewBox="0 0 48 48" width="26" height="26"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3 0 5.8 1.1 7.9 3l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3 0 5.8 1.1 7.9 3l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/></svg>' }), el('span', { class: 'au-t' }, el('b', { text: 'المتابعة بحساب Google' }), el('small', { text: 'أسرع طريقة — بضغطة واحدة' })));
+  const opt = (ic, t, d, to) => el('button', { class: 'au-btn', onclick: () => go(to) }, el('span', { class: 'au-ic', text: ic }), el('span', { class: 'au-t' }, el('b', { text: t }), el('small', { text: d })), el('span', { class: 'au-go', text: '←' }));
+  root.append(el('section', { class: 'au' }, el('button', { class: 'au-back', text: '→', 'aria-label': 'رجوع', onclick: () => go(store.get('welcomed', false) ? 'start' : 'home') }),
+    authHero(), el('div', { class: 'au-list' }, gBtn, opt('📱', 'رقم الهاتف', 'برقمك الليبي وكلمة مرور', 'login-phone'), opt('✉️', 'البريد الإلكتروني', 'ببريدك وكلمة مرور', 'login-email')), msg,
+    el('button', { class: 'st-link', text: '🧒 أنا طالب، عندي رمز من ولي أمري', onclick: () => go('link') }),
+    el('button', { class: 'st-link', style: 'color:var(--muted)', text: 'تصفّح الدروس المجانية دون تسجيل', onclick: () => go('home') }),
+    el('p', { class: 'note au-legal' }, 'بالمتابعة أنت توافق على ', el('a', { href: '#privacy', text: 'الشروط وسياسة الخصوصية' }), '.')));
+}
+function authForm(kind) {
+  if (ACC.user) { go(ACC.profile ? 'account' : 'onboard'); return; }
+  const root = D.root; root.innerHTML = ''; const msg = el('div'); let mode = 'new';
+  const isPhone = kind === 'phone';
+  const id = isPhone ? el('input', { class: 'au-in', type: 'tel', inputmode: 'numeric', placeholder: '09X XXX XXXX', 'aria-label': 'رقم الهاتف', autocomplete: 'tel', dir: 'ltr' })
+    : el('input', { class: 'au-in', type: 'email', placeholder: 'example@gmail.com', 'aria-label': 'البريد الإلكتروني', autocomplete: 'email', dir: 'ltr' });
+  const pw = el('input', { class: 'au-in', type: 'password', placeholder: 'كلمة المرور (6 أحرف أو أكثر)', 'aria-label': 'كلمة المرور', autocomplete: 'new-password' });
+  const eye = el('button', { class: 'au-eye', type: 'button', text: '👁️', onclick: () => { pw.type = pw.type === 'password' ? 'text' : 'password'; } });
+  const tabs = el('div', { class: 'au-tabs' }); const go_ = el('button', { class: 'au-main' }); const extra = el('div');
+  const draw = () => { tabs.innerHTML = ''; [['new', 'حساب جديد'], ['in', 'لدي حساب']].forEach(([k, t]) => tabs.append(el('button', { class: k === mode ? 'on' : '', text: t, onclick: () => { mode = k; msg.innerHTML = ''; draw(); } })));
+    go_.textContent = mode === 'new' ? 'إنشاء الحساب ←' : 'دخول ←'; pw.autocomplete = mode === 'new' ? 'new-password' : 'current-password';
+    extra.innerHTML = ''; if (mode === 'in') extra.append(el('button', { class: 'linkbtn', text: 'نسيت كلمة المرور؟', onclick: async () => {
+      if (isPhone) { fbk(msg, 'info', 'تواصل معنا لإعادة تعيين كلمة المرور، أو سجّل الدخول ببريدك أو بحساب Google.'); return; }
+      if (!id.value.trim()) { fbk(msg, 'info', 'اكتب بريدك أولاً ثم اضغط «نسيت كلمة المرور».'); return; }
+      try { await sendPasswordResetEmail(auth, id.value.trim()); fbk(msg, 'ok', 'أرسلنا رابط تغيير كلمة المرور إلى بريدك.'); } catch (e) { fbk(msg, 'bad', errMsg(e)); } } })); };
+  go_.onclick = async () => { msg.innerHTML = ''; const create = mode === 'new';
+    if ((pw.value || '').length < 6) { fbk(msg, 'bad', 'كلمة المرور 6 أحرف أو أكثر.'); return; }
+    let login = id.value.trim();
+    if (isPhone) { const n = libyanPhone(login); if (!n) { fbk(msg, 'bad', 'اكتب رقماً ليبياً يبدأ بـ 091 أو 092 أو 093 أو 094 أو 095.'); return; } login = phoneEmail(n); }
+    go_.disabled = true; go_.classList.add('busy');
+    try { create ? await createUserWithEmailAndPassword(auth, login, pw.value) : await signInWithEmailAndPassword(auth, login, pw.value); }
+    catch (e) { fbk(msg, 'bad', e.code === 'auth/email-already-in-use' ? (isPhone ? 'هذا الرقم مسجّل من قبل. اختر «لدي حساب».' : 'هذا البريد مسجّل من قبل. اختر «لدي حساب».') : e.code === 'auth/invalid-credential' ? (isPhone ? 'الرقم أو كلمة المرور غير صحيحة.' : 'البريد أو كلمة المرور غير صحيحة.') : errMsg(e)); }
+    go_.disabled = false; go_.classList.remove('busy'); };
+  draw();
+  root.append(el('section', { class: 'au' }, el('button', { class: 'au-back', text: '→', 'aria-label': 'رجوع', onclick: () => go('login') }),
+    authHero(isPhone ? 'التسجيل برقم الهاتف' : 'التسجيل بالبريد الإلكتروني'),
+    el('div', { class: 'au-card' }, tabs, el('label', { class: 'au-lab', text: isPhone ? 'رقم الهاتف' : 'البريد الإلكتروني' }), id,
+      el('label', { class: 'au-lab', text: 'كلمة المرور' }), el('div', { class: 'au-pw' }, pw, eye), go_, extra, msg,
+      isPhone ? el('p', { class: 'note', text: 'لن نرسل لك رسالة الآن. نؤكد رقمك برسالة قصيرة واحدة فقط عند الاشتراك.' }) : null)));
+  setTimeout(() => id.focus(), 50);
 }
 
 function renderOnboard() {
@@ -191,7 +203,7 @@ function renderOnboard() {
   if (ACC.profile) { go('account'); return; }
   const s = page('مرحباً بك في المجتهد', 'خطوة واحدة ونبدأ', null);
   const msg = el('div');
-  let role = null, grade = null, avatar = AVATARS[0];
+  let role = ['parent', 'student', 'teacher'].includes(store.get('pref_role', '')) ? store.get('pref_role', '') : null, grade = null, avatar = AVATARS[0];
   const name = el('input', { class: 'tinput', placeholder: 'الاسم', 'aria-label': 'الاسم', value: ACC.user.displayName || '' });
   const roles = el('div', { class: 'plans' }), kidBox = el('div', { class: 'stack', hidden: true });
   const draw = () => { roles.innerHTML = ''; Object.entries(ROLES).forEach(([k, [ic, t, d]]) => roles.append(el('button', { class: 'plan', 'aria-pressed': String(role === k), onclick: () => { role = k; draw(); } }, el('b', { text: ic + ' ' + t }), el('span', { class: 'note', text: d }))));
@@ -779,7 +791,7 @@ loadAccess().then(() => { if (D.App.catalog) D.route(); });
 document.addEventListener('visibilitychange', async () => { if (document.visibilityState === 'visible') { const o = JSON.stringify(ACC.access || {}); await loadAccess(); if (JSON.stringify(ACC.access) !== o && D.App.catalog) D.route(); } if (document.visibilityState === 'visible' && ACC.kid) { try { const d = await getDoc(pref(ACC.kid.pid)); if (d.exists()) { const old = JSON.stringify(ACC.profiles[0] && ACC.profiles[0].ctrl || null); ACC.profiles = [{ id: d.id, ...d.data() }]; if (JSON.stringify(d.data().ctrl || null) !== old && D.App.catalog) D.route(); } } catch (e) {} }
   if (document.visibilityState === 'visible' && ACC.user && ACC.profile) { const n = ACC.subs.length; await loadSubs(); if (ACC.subs.length !== n && D.App.catalog) D.route(); } });
 
-const ROUTES = { admin: renderAdmin, subscribe: renderSubscribe, login: renderLogin, onboard: renderOnboard, kids: renderKids, who: renderWho, account: renderAccount };
+const ROUTES = { admin: renderAdmin, subscribe: renderSubscribe, login: renderLogin, 'login-phone': () => authForm('phone'), 'login-email': () => authForm('email'), onboard: renderOnboard, kids: renderKids, who: renderWho, account: renderAccount };
 ACC.route = h => { const pm = /^paid-([A-Za-z0-9]{10,40})$/.exec(h); const lm = /^link(?:-(\d{6}))?$/.exec(h); if (lm) { if (!ACC.ready) { page('…', 'جارٍ التحميل', 'home'); return true; } renderLink(lm[1]); return true; }
   const tk = /^tt-([A-Za-z0-9]{1,30})$/.exec(h); if (tk) { if (!ACC.ready) { page('…', 'جارٍ التحميل', 'home'); return true; } renderTT(tk[1]); return true; }
   const ck = /^ctrl-([A-Za-z0-9]{1,30})$/.exec(h); if (ck) { if (!ACC.ready) { page('…', 'جارٍ التحميل', 'home'); return true; } renderCtrl(ck[1]); return true; }
