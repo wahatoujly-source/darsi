@@ -125,7 +125,7 @@ export default function initTeach(X) {
           playerVars: { autoplay: 1, controls: 0, disablekb: 1, fs: 0, rel: 0, iv_load_policy: 3, modestbranding: 1, playsinline: 1, cc_load_policy: 0, origin: location.origin, hl: 'ar' },
           events: { onReady: () => { ready = true; P.playVideo(); clearInterval(timer); timer = setInterval(tick, 500);
               setTimeout(() => { if (!started && P.getPlayerState && [-1, 5].includes(P.getPlayerState())) { hideCover(); shield.style.pointerEvents = 'none'; } }, 1800); },
-            onStateChange: onState, onError: () => { cover.style.display = 'grid'; cover.className = 'tv-cover dim'; cover.innerHTML = ''; cover.append(el('p', { text: 'تعذّر تشغيل هذا الفيديو الآن. حاول لاحقاً.' })); } } });
+            onStateChange: onState, onError: () => { cover.style.display = 'grid'; cover.className = 'tv-cover dim'; cover.innerHTML = ''; cover.append(el('p', { text: 'تعذّر تشغيل الفيديو الآن. إذا رُفع حديثاً فقد يكون قيد المعالجة؛ حاول بعد دقائق.' })); } } });
       } catch (e) { cover.innerHTML = ''; cover.append(el('p', { text: 'تعذّر تحميل المشغّل. تحقق من الاتصال.' })); }
     };
     const toggle = () => { if (!P || !ready) { play(); return; } const s = P.getPlayerState(); if (s === 1 || s === 3) P.pauseVideo(); else P.playVideo(); };
@@ -273,8 +273,8 @@ export default function initTeach(X) {
       if (ME.cfg.apply === false) { s.append(el('div', { class: 'empty' }, el('span', { class: 'big', text: '⏸️' }), el('p', { text: 'استقبال طلبات المعلمين متوقف مؤقتاً.' }))); return; }
       if (T && T.status === 'rejected') { const x = el('div'); s.append(x); fbk(x, 'bad', 'لم يُقبل طلبك السابق' + (T.note ? ': ' + T.note : '.') + ' يمكنك تعديل بياناتك وإعادة التقديم.'); }
       s.append(el('div', { class: 'panel accbox' }, el('b', { text: 'كيف تعمل منصة المعلم؟' }), el('ol', { class: 'tc-terms' },
-        el('li', { text: 'قدّم طلبك، وتراجعه الإدارة.' }), el('li', { text: 'أنشئ دورة: عنوان، صف ومادة أو مهارة، سعر، وروابط فيديوهات الدروس.' }),
-        el('li', { text: 'نراجع الدورة ونرفع الفيديوهات على مشغّل المنصة المحمي، ثم تُنشر.' }), el('li', { text: 'كل اشتراك يضيف 70% من السعر إلى محفظتك، وتسحب رصيدك إلى حسابك المصرفي.' }))));
+        el('li', { text: 'قدّم طلبك، وتراجعه الإدارة.' }), el('li', { text: 'أنشئ دورة: عنوان، صف ومادة أو مهارة، سعر، وارفع فيديوهات الدروس من جهازك مباشرة.' }),
+        el('li', { text: 'تراجع الإدارة الدورة ثم تُنشر للطلاب.' }), el('li', { text: 'كل اشتراك يضيف 70% من السعر إلى محفظتك، وتسحب رصيدك إلى حسابك المصرفي.' }))));
       const name = el('input', { value: (T && T.name) || (ACC.profile && ACC.profile.name) || '', placeholder: 'الاسم كما يظهر للطلاب (مثلاً: أ. محمد علي)' });
       const spec = el('input', { value: (T && T.spec) || '', placeholder: 'التخصص (مثلاً: معلم رياضيات للمرحلة الإعدادية)' });
       const bio = el('textarea', { rows: '4', placeholder: 'نبذة عنك وخبرتك (اختياري)', text: (T && T.bio) || '' });
@@ -376,34 +376,91 @@ export default function initTeach(X) {
     const curBox = el('div', { class: 'stack' }, gSel, sSel), skBox = el('div', { class: 'stack' }, skill);
     const upCat = () => { curBox.style.display = catSel.value === 'cur' ? '' : 'none'; skBox.style.display = catSel.value === 'skill' ? '' : 'none'; if (catSel.value === 'skill') kSel.value = 'skill'; }; catSel.onchange = upCat; upCat();
     const lw = el('div', { class: 'stack' });
-    const drawL = () => { lw.innerHTML = ''; C.lessons.forEach((l, i) => {
+    const rid = () => crypto.getRandomValues(new Uint32Array(1))[0].toString(16).padStart(8, '0');
+    let curCid = o ? o.id : '', curStatus = o ? o.status : 'draft';
+    const UP = {}; // lessonId -> {pct, msg, busy, done}
+    const queue = []; let running = false;
+    const upEls = {};
+    const showUp = id => { const u = UP[id], e = upEls[id]; if (!e || !u) return; e.bar.style.width = (u.pct || 0) + '%'; e.txt.textContent = u.msg || ''; e.wrap.style.display = u.busy || u.msg ? '' : 'none'; };
+    const durOf = f => new Promise(res => { try { const v = document.createElement('video'); v.preload = 'metadata'; v.onloadedmetadata = () => { res(Math.max(1, Math.round(v.duration / 60))); URL.revokeObjectURL(v.src); }; v.onerror = () => res(0); v.src = URL.createObjectURL(f); setTimeout(() => res(0), 8000); } catch (e) { res(0); } });
+    const xput = (url, file, start, prog) => new Promise((res, rej) => { const x = new XMLHttpRequest(); x.open('PUT', url);
+      if (start > 0) x.setRequestHeader('Content-Range', 'bytes ' + start + '-' + (file.size - 1) + '/' + file.size);
+      x.upload.onprogress = e => prog(start + e.loaded);
+      x.onload = () => { if (x.status === 200 || x.status === 201) { let id = null; try { id = JSON.parse(x.responseText).id; } catch (e) {} res({ done: true, id }); }
+        else if (x.status === 308) { const r = x.getResponseHeader('Range'); res({ next: r ? Number(r.split('-')[1]) + 1 : start }); } else rej(new Error('http ' + x.status)); };
+      x.onerror = () => rej(new Error('net')); x.send(start > 0 ? file.slice(start) : file); });
+    const xstat = (url, size) => new Promise((res, rej) => { const x = new XMLHttpRequest(); x.open('PUT', url); x.setRequestHeader('Content-Range', 'bytes */' + size);
+      x.onload = () => { if (x.status === 200 || x.status === 201) { let id = null; try { id = JSON.parse(x.responseText).id; } catch (e) {} res({ done: true, id }); }
+        else if (x.status === 308) { const r = x.getResponseHeader('Range'); res({ next: r ? Number(r.split('-')[1]) + 1 : 0 }); } else rej(new Error('http ' + x.status)); };
+      x.onerror = () => rej(new Error('net')); x.send(); });
+    const fmtMB = b => (b / 1048576).toFixed(b > 1e9 ? 0 : 1) + ' م.ب';
+    const finish = async (l, vid, min) => { for (let i = 0; i < 6; i++) { try { return await call('teach', { op: 'upDone', cid: curCid, lid: l.id, vid, min }); } catch (e) { if (i === 5) throw e; await new Promise(r => setTimeout(r, 5000)); } } };
+    const doUpload = async (l, file) => { const u = UP[l.id] = { busy: true, pct: 0, msg: 'جارٍ التحضير…' }; showUp(l.id);
+      try {
+        if (!l.title.trim()) l.title = file.name.replace(/\.[a-z0-9]{2,5}$/i, '').slice(0, 80);
+        const min = await durOf(file); if (min && !l.min) { l.min = min; drawL(); }
+        await doSave(false, true);
+        const { url } = await call('teach', { op: 'upInit', cid: curCid, lid: l.id, size: file.size, type: file.type || 'video/mp4', origin: location.origin });
+        let start = 0, res = null, t0 = Date.now();
+        const prog = n => { u.pct = Math.round(n / file.size * 100); const sp = n / Math.max(1, (Date.now() - t0) / 1000); const left = sp > 0 ? Math.round((file.size - n) / sp / 60) : 0;
+          u.msg = '📤 ' + u.pct + '% · ' + fmtMB(n) + ' من ' + fmtMB(file.size) + (left > 0 ? ' · باقي ~' + left + ' د' : ''); showUp(l.id); };
+        for (let att = 0; att < 8 && !(res && res.done); att++) {
+          try { res = await xput(url, file, start, prog); if (!res.done) start = res.next; }
+          catch (e) { u.msg = '⚠️ انقطع الاتصال، إعادة المحاولة…'; showUp(l.id); await new Promise(r => setTimeout(r, 3000 * (att + 1)));
+            try { const st = await xstat(url, file.size); if (st.done) res = st; else start = st.next; } catch (e2) {} }
+        }
+        if (!res || !res.done) throw new Error('تعذّر إكمال الرفع. تحقق من الإنترنت وأعد المحاولة.');
+        u.pct = 100; u.msg = '⏳ اكتمل الرفع، جارٍ التأكيد…'; showUp(l.id);
+        await finish(l, res.id, min);
+        l.ready = true; u.busy = false; u.msg = ''; u.done = true; D.cheer && D.cheer('win'); drawL();
+      } catch (e) { u.busy = false; u.msg = '❌ ' + (e.message && !/^http|^net/.test(e.message) ? fnErr(e) : 'فشل الرفع. أعد المحاولة.'); showUp(l.id); }
+    };
+    const enqueue = (l, file) => { UP[l.id] = { busy: true, pct: 0, msg: '⏳ في الانتظار…' }; showUp(l.id); queue.push([l, file]); run(); };
+    const run = async () => { if (running) return; running = true; while (queue.length) { const [l, f] = queue.shift(); await doUpload(l, f); } running = false; };
+    window.addEventListener('beforeunload', e => { if (running) { e.preventDefault(); e.returnValue = ''; } });
+    const picker = (multi, onFiles) => { const i = el('input', { type: 'file', accept: 'video/*', multiple: multi ? '' : null, style: 'display:none', onchange: () => { const fs = [...i.files]; i.value = ''; if (fs.length) onFiles(fs); } }); return i; };
+    const drawL = () => { lw.innerHTML = ''; C.lessons.forEach((l, i) => { if (!l.id) l.id = rid();
       const t = el('input', { value: l.title || '', placeholder: 'عنوان الدرس ' + (i + 1), oninput: e => { l.title = e.target.value; } });
-      const src = el('input', { value: l.src || '', dir: 'ltr', placeholder: 'رابط الفيديو (Google Drive أو غيره)', oninput: e => { l.src = e.target.value; } });
       const mn = el('input', { class: 'min', type: 'number', min: '0', value: l.min ? String(l.min) : '', placeholder: 'دقائق', oninput: e => { l.min = Number(e.target.value) || 0; } });
       const mv = (d) => { const j = i + d; if (j < 0 || j >= C.lessons.length) return; [C.lessons[i], C.lessons[j]] = [C.lessons[j], C.lessons[i]]; drawL(); };
-      lw.append(el('div', { class: 'tc-ed' }, el('span', { class: 'n', text: String(i + 1) }), el('div', { class: 'f' }, t, src,
-        el('div', { class: 'r' }, mn, i === 0 ? tag('مجاني — دعاية لدورتك', 'ok') : null, l.ready ? tag('✓ جاهز', 'ok') : (l.id ? tag('⏳ بانتظار الرفع', 'sun') : null),
-          el('span', { style: 'flex:1' }), el('button', { class: 'linkbtn', text: '⬆', onclick: () => mv(-1) }), el('button', { class: 'linkbtn', text: '⬇', onclick: () => mv(1) }),
-          el('button', { class: 'linkbtn', text: '🗑️', onclick: () => { C.lessons.splice(i, 1); drawL(); } }))))); });
-      lw.append(el('div', { class: 'row', style: 'gap:6px;flex-wrap:wrap' }, el('button', { class: 'btn ghost sm', text: '➕ درس', onclick: () => { C.lessons.push({ title: '', src: '', min: 0 }); drawL(); } }),
-        el('button', { class: 'btn ghost sm', text: '📋 لصق عدة روابط دفعة واحدة', onclick: () => bulk.style.display = '' }))); };
-    const bulkTa = el('textarea', { rows: '5', dir: 'ltr', placeholder: 'رابط في كل سطر\nhttps://drive.google.com/...\nhttps://drive.google.com/...' });
-    const bulk = el('div', { class: 'stack', style: 'display:none' }, bulkTa, el('button', { class: 'btn sm', text: 'إضافة الدروس', onclick: () => {
-      bulkTa.value.split(/\n+/).map(x => x.trim()).filter(Boolean).forEach(u => C.lessons.push({ title: 'الدرس ' + (C.lessons.length + 1), src: u, min: 0 })); bulkTa.value = ''; bulk.style.display = 'none'; drawL(); } }));
-    if (!C.lessons.length) C.lessons.push({ title: '', src: '', min: 0 });
+      const busy = UP[l.id] && UP[l.id].busy;
+      const fi = picker(false, fs => enqueue(l, fs[0]));
+      const upBtn = el('button', { class: 'btn sm ' + (l.ready ? 'ghost' : ''), text: busy ? '⏳ جارٍ الرفع' : l.ready ? '🔁 استبدال الفيديو' : '📤 رفع فيديو الدرس', disabled: busy ? '' : null, onclick: () => fi.click() });
+      const bar = el('i', { style: 'display:block;height:100%;width:0;background:var(--sea);border-radius:6px;transition:width .3s' });
+      const txt = el('small', { class: 'note' }); const wrap = el('div', { style: 'display:none' }, el('div', { style: 'height:8px;background:var(--line);border-radius:6px;overflow:hidden;margin:2px 0' }, bar), txt);
+      upEls[l.id] = { bar, txt, wrap };
+      lw.append(el('div', { class: 'tc-ed' }, el('span', { class: 'n', text: String(i + 1) }), el('div', { class: 'f' }, t,
+        el('div', { class: 'r' }, upBtn, fi, l.ready ? tag('✓ الفيديو مرفوع', 'ok') : null, i === 0 ? tag('مجاني — دعاية لدورتك', 'ok') : null),
+        wrap,
+        el('div', { class: 'r' }, mn, el('span', { class: 'note', text: 'دقيقة' }), el('span', { style: 'flex:1' }),
+          el('button', { class: 'linkbtn', text: '⬆', onclick: () => mv(-1) }), el('button', { class: 'linkbtn', text: '⬇', onclick: () => mv(1) }),
+          busy ? null : el('button', { class: 'linkbtn', text: '🗑️', onclick: () => { C.lessons.splice(i, 1); drawL(); } }))))); showUp(l.id); });
+      const multi = picker(true, fs => { fs.forEach(f => { const l = { id: rid(), title: f.name.replace(/\.[a-z0-9]{2,5}$/i, '').slice(0, 80), min: 0 }; C.lessons.push(l); }); drawL();
+        fs.forEach((f, k) => enqueue(C.lessons[C.lessons.length - fs.length + k], f)); });
+      lw.append(el('div', { class: 'row', style: 'gap:6px;flex-wrap:wrap' }, el('button', { class: 'btn ghost sm', text: '➕ درس', onclick: () => { C.lessons.push({ id: rid(), title: '', min: 0 }); drawL(); } }),
+        el('button', { class: 'btn ghost sm', text: '📤 رفع عدة فيديوهات دفعة واحدة', onclick: () => multi.click() }), multi)); };
+    const bulk = el('div');
+    if (!C.lessons.length) C.lessons.push({ id: rid(), title: '', min: 0 });
     drawL();
+    const doSave = async (submit, quiet) => {
+      C.lessons.forEach((l, i) => { if (!String(l.title || '').trim()) l.title = 'الدرس ' + (i + 1); });
+      const r = await call('teach', { op: 'save', cid: curCid, cat: catSel.value, grade: gSel.value, subject: sSel.value, skill: skill.value, kind: kSel.value, title: title.value, desc: desc.value, price: Number(price.value), lessons: C.lessons.map(l => ({ id: l.id, title: l.title, min: l.min || 0, src: '' })) });
+      if (!curCid) { curCid = r.cid; history.replaceState(null, '', '#studio-' + r.cid); }
+      if (submit && !r.live) { await call('teach', { op: 'submit', cid: r.cid }); curStatus = 'pending'; }
+      if (!quiet) drawL();
+      return r; };
     const save = async (submit, btn) => { btn.disabled = true; fbk(msg, 'info', 'جارٍ الحفظ…');
-      try { const r = await call('teach', { op: 'save', cid: o ? o.id : '', cat: catSel.value, grade: gSel.value, subject: sSel.value, skill: skill.value, kind: kSel.value, title: title.value, desc: desc.value, price: Number(price.value), lessons: C.lessons });
-        if (submit && !r.live) await call('teach', { op: 'submit', cid: r.cid });
-        await loadMe(); fbk(msg, 'ok', r.live ? '✓ حُفظت. ' + (r.waiting ? r.waiting + ' درس جديد بانتظار رفعه من الإدارة.' : '') : submit ? '✓ أُرسلت الدورة للمراجعة. سنبلغك عند نشرها.' : '✓ حُفظت كمسودة.');
-        if (!o) setTimeout(() => go('studio'), 1200);
-      } catch (er) { fbk(msg, 'bad', fnErr(er)); } btn.disabled = false; };
+      try { if (submit && running) throw new Error('انتظر حتى يكتمل رفع الفيديوهات ثم أرسل الدورة للمراجعة.');
+        if (submit && C.lessons.some(l => !l.ready)) throw new Error('ارفع فيديو كل الدروس قبل الإرسال للمراجعة.');
+        const r = await doSave(submit); loadMe().catch(() => {});
+        fbk(msg, 'ok', r.live ? '✓ حُفظت التعديلات.' : submit ? '✓ أُرسلت الدورة للمراجعة. سنبلغك عند نشرها.' : '✓ حُفظت كمسودة.');
+      } catch (er) { fbk(msg, 'bad', er.code ? fnErr(er) : er.message); } btn.disabled = false; };
     s.append(o ? el('div', {}, tag((STAT[o.status] || [''])[0], (STAT[o.status] || ['', ''])[1]), o.note ? el('span', { class: 'note', text: '  ملاحظة الإدارة: ' + o.note }) : null) : null,
       el('div', { class: 'panel accbox' }, el('b', { text: '1. نوع الدورة' }), catSel, curBox, skBox, kSel),
       el('div', { class: 'panel accbox' }, el('b', { text: '2. العنوان والوصف' }), title, desc),
       el('div', { class: 'panel accbox' }, el('b', { text: '3. السعر' }), el('label', { class: 'prow' }, el('span', { text: 'سعر الدورة كاملة (دينار)' }), price), share),
       el('div', { class: 'panel accbox' }, el('b', { text: '4. الدروس بالترتيب' }),
-        el('span', { class: 'note', text: 'ارفع كل فيديو على Google Drive (المشاركة: «أي شخص لديه الرابط») أو أي خدمة، والصق رابطه. فريق المنصة ينقله إلى مشغّل المنصة المحمي. الدرس الأول يُعرض مجاناً للجميع.' }), lw, bulk),
+        el('span', { class: 'note', text: 'ارفع فيديو كل درس من جهازك مباشرة؛ يُحفظ في مشغّل المنصة المحمي ولا يظهر لأحد إلا لمشتركي دورتك. أبقِ الصفحة مفتوحة حتى يكتمل الرفع. الدرس الأول يُعرض مجاناً للجميع.' }), lw),
       el('div', { class: 'row', style: 'gap:8px;flex-wrap:wrap' }, el('button', { class: 'btn ghost', text: '💾 حفظ', onclick: e => save(false, e.target) }),
         !o || o.status !== 'live' ? el('button', { class: 'btn sun', text: '📤 حفظ وإرسال للمراجعة', onclick: e => save(true, e.target) }) : null), msg,
       o && !o.students ? el('button', { class: 'linkbtn', style: 'color:#b91c1c;align-self:flex-start', text: '🗑️ حذف الدورة', onclick: async e => { if (e.target.dataset.c !== '1') { e.target.dataset.c = '1'; e.target.textContent = 'اضغط مرة أخرى لتأكيد الحذف'; return; }
@@ -420,6 +477,14 @@ export default function initTeach(X) {
       ck('show', '👁️ إظهار الدورات للجميع', 'بطاقة «دورات المعلمين» في الرئيسية وصفحات الدورات. عند الإخفاء يراها المدير فقط.'),
       ck('apply', '📝 استقبال طلبات معلمين جدد', ''),
       el('button', { class: 'btn', text: 'حفظ', onclick: async () => { try { await call('adminTeach', { op: 'cfg', ...C }); fbk(cm, 'ok', '✓ حُفظت.'); } catch (e) { fbk(cm, 'bad', fnErr(e)); } } }), cm);
+    const yb = el('div', { class: 'tc-adm-row' }, el('b', { text: '▶️ قناة يوتيوب للرفع' }), el('span', { class: 'note', text: 'جارٍ الفحص…' }));
+    box.append(yb);
+    call('adminTeach', { op: 'ytStatus' }).then(r => { yb.lastChild.remove();
+      yb.append(r.ok ? el('span', { class: 'note', html: '' }, '✅ مربوطة: ', el('b', { text: r.name }), ' · ' + r.videos + ' فيديو ', r.url ? el('a', { href: r.url, target: '_blank', rel: 'noopener', text: 'فتح القناة' }) : null)
+        : el('span', { class: 'note', text: '⚠️ غير مربوطة بعد — المعلمون لا يستطيعون رفع الفيديوهات حتى تربطها.' }));
+      const lm = el('div'); yb.append(el('button', { class: 'btn sm ' + (r.ok ? 'ghost' : 'sun'), text: r.ok ? 'إعادة ربط القناة' : '🔗 ربط قناة يوتيوب', onclick: async e => { e.target.disabled = true;
+        try { const x = await call('adminTeach', { op: 'ytLink' }); location.href = x.url; } catch (er) { fbk(lm, 'bad', fnErr(er)); e.target.disabled = false; } } }), lm); })
+      .catch(e => { yb.lastChild.textContent = fnErr(e); });
     const tabs = el('div', { class: 'tc-tabs' }), body = el('div', { class: 'stack' }), stats = el('div'); box.append(stats, tabs, body);
     let A = null, tab = 'req';
     const TABS = [['req', 'طلبات المعلمين'], ['teachers', 'المعلمون'], ['review', 'دورات للمراجعة'], ['all', 'كل الدورات'], ['wd', 'طلبات السحب']];
@@ -445,10 +510,10 @@ export default function initTeach(X) {
       const B = (txt, status, cls) => el('button', { class: 'btn sm ' + (cls || 'ghost'), text: txt, onclick: e => act(() => call('adminTeach', { op: 'course', cid: c.id, status, note: note.value }), e.target, m) });
       const openV = async () => { open = !open; vw.innerHTML = ''; if (!open) return; const mm = loading(vw);
         try { const { map } = await call('adminTeach', { op: 'vmap', cid: c.id }); mm.remove(); const inp = {};
-          vw.append(el('span', { class: 'note', text: 'نزّل الفيديو من رابط المعلم، ارفعه على قناتك في يوتيوب «غير مدرج» (مع السماح بالتضمين)، ثم الصق رابط يوتيوب هنا.' }));
+          vw.append(el('span', { class: 'note', text: 'المعلم يرفع الفيديوهات بنفسه إلى قناتك. الروابط هنا للمعاينة، ويمكنك استبدال أي درس برابط يوتيوب آخر عند الحاجة.' }));
           c.lessons.forEach((l, i) => { inp[l.id] = el('input', { dir: 'ltr', value: map[l.id] ? 'https://youtu.be/' + map[l.id] : '', placeholder: 'رابط يوتيوب للدرس ' + (i + 1) });
             vw.append(el('div', { class: 'tc-ed' }, el('span', { class: 'n', text: String(i + 1) }), el('div', { class: 'f' }, el('b', { text: l.title + (l.min ? ' (' + l.min + ' د)' : '') }),
-              l.src ? el('a', { href: l.src, target: '_blank', rel: 'noopener', dir: 'ltr', style: 'font-size:.8rem;word-break:break-all', text: '⬇ ' + l.src }) : el('span', { class: 'note', text: 'لا يوجد رابط من المعلم' }), inp[l.id]))); });
+              map[l.id] ? el('a', { href: 'https://youtu.be/' + map[l.id], target: '_blank', rel: 'noopener', style: 'font-size:.8rem', text: '▶ مشاهدة على يوتيوب' }) : el('span', { class: 'note', text: '⏳ لم يُرفع بعد' }), inp[l.id]))); });
           vw.append(el('button', { class: 'btn sun sm', text: '💾 حفظ روابط يوتيوب', onclick: e => act(() => call('adminTeach', { op: 'videos', cid: c.id, vids: Object.fromEntries(Object.entries(inp).map(([k, v]) => [k, v.value])) }), e.target, m) }));
         } catch (e) { fbk(mm, 'bad', fnErr(e)); } };
       const ready = c.lessons.filter(l => l.ready).length;

@@ -31,6 +31,11 @@ const MYPAY_ID = defineSecret("MYPAY_CLIENT_ID");
 const MYPAY_SECRET = defineSecret("MYPAY_CLIENT_SECRET");
 const MYPAY_WEBHOOK = defineSecret("MYPAY_WEBHOOK_SECRET");
 const MYPAY_BASE = "https://mypay.ly/pay/api/v1";
+// يوتيوب: المعلم يرفع الفيديو من داخل المنصة مباشرة إلى قناة المنصة (غير مدرج)
+const YT_ID = defineSecret("YT_CLIENT_ID");
+const YT_SECRET = defineSecret("YT_CLIENT_SECRET");
+const YT_REFRESH = defineSecret("YT_REFRESH_TOKEN");
+const YT_REDIRECT = "https://europe-west1-mujtahid-810d7.cloudfunctions.net/ytAuth";
 
 const SERVICE_NAME = "المجتهد";
 const DAY = 24 * 60 * 60 * 1000;
@@ -757,7 +762,59 @@ function cleanLessons(arr, old) {
   return out;
 }
 
-exports.teach = onCall({secrets: [MYPAY_ID, MYPAY_SECRET], memory: "256MiB"}, async (req) => {
+// ---------- يوتيوب ----------
+let YT_TOK = null, YT_TOK_AT = 0, YT_UPL = null;
+async function ytToken() {
+  if (YT_TOK && Date.now() - YT_TOK_AT < 45 * 60000) return YT_TOK;
+  const rt = String(YT_REFRESH.value() || "").trim();
+  if (rt.length < 20) throw new HttpsError("failed-precondition", "قناة يوتيوب غير مربوطة بعد. اربطها من لوحة الإدارة.");
+  const r = await fetch("https://oauth2.googleapis.com/token", {method: "POST", headers: {"Content-Type": "application/x-www-form-urlencoded"},
+    body: new URLSearchParams({client_id: YT_ID.value(), client_secret: YT_SECRET.value(), refresh_token: rt, grant_type: "refresh_token"})});
+  const j = await r.json().catch(() => ({}));
+  if (!r.ok || !j.access_token) { logger.error("yt token", r.status, j.error); throw new HttpsError("unavailable", "تعذّر الاتصال بقناة يوتيوب. أعد ربط القناة من لوحة الإدارة."); }
+  YT_TOK = j.access_token; YT_TOK_AT = Date.now(); return YT_TOK;
+}
+async function yt(pathQ, opt = {}) {
+  const r = await fetch((pathQ.startsWith("https://") ? "" : "https://www.googleapis.com/youtube/v3/") + pathQ, {...opt, headers: {"Authorization": "Bearer " + await ytToken(), ...(opt.headers || {})}});
+  if (opt.raw) return r;
+  const j = await r.json().catch(() => ({}));
+  if (!r.ok) { logger.error("yt api", pathQ.split("?")[0], r.status, JSON.stringify(j.error || {}).slice(0, 300)); throw new HttpsError("unavailable", "خطأ من يوتيوب، حاول لاحقاً"); }
+  return j;
+}
+const ytSafe = (x, n) => String(x || "").replace(/[<>]/g, "").slice(0, n);
+const ORIGINS = ["https://mujtahid.ly", "https://www.mujtahid.ly", "https://wahatoujly-source.github.io", "http://localhost:8771"];
+async function findUpload(ref) { // يبحث في آخر الفيديوهات المرفوعة عن الوسم ref
+  if (!YT_UPL) { const c = await yt("channels?part=contentDetails&mine=true"); YT_UPL = c.items && c.items[0] && c.items[0].contentDetails.relatedPlaylists.uploads; }
+  if (!YT_UPL) return null;
+  const p = await yt("playlistItems?part=snippet&maxResults=50&playlistId=" + YT_UPL);
+  const it = (p.items || []).find((x) => String(x.snippet.description || "").includes(ref));
+  return it ? it.snippet.resourceId.videoId : null;
+}
+
+// ربط القناة: المدير يفتح رابط الموافقة من Google، وهذه الصفحة تعرض رمز التحديث ليضعه في Secret Manager
+exports.ytAuth = onRequest({secrets: [YT_ID, YT_SECRET], memory: "256MiB"}, async (req, res) => {
+  const page = (body) => res.status(200).set("Content-Type", "text/html; charset=utf-8").send(`<!doctype html><html dir="rtl" lang="ar"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ربط قناة يوتيوب</title>
+<style>body{font-family:system-ui,Tahoma;max-width:640px;margin:30px auto;padding:0 16px;line-height:1.8;background:#f4f6fb;color:#111}.b{background:#fff;border-radius:16px;padding:18px;box-shadow:0 2px 12px #0001}textarea{width:100%;direction:ltr;font-family:monospace;font-size:13px;padding:8px;box-sizing:border-box}code{background:#eef;padding:2px 6px;border-radius:6px;direction:ltr;display:inline-block}button{background:#1d4ed8;color:#fff;border:0;border-radius:10px;padding:10px 16px;font:inherit;cursor:pointer}</style></head><body><div class="b">${body}</div></body></html>`);
+  const state = String(req.query.state || ""), code = String(req.query.code || "");
+  if (req.query.error) return page("<h2>❌ لم تتم الموافقة</h2><p>" + ytSafe(req.query.error, 80) + "</p>");
+  const nRef = db.collection("config").doc("ytNonce"); const ns = await nRef.get();
+  if (!ns.exists || ns.data().n !== state || !/^[a-f0-9]{32}$/.test(state) || Date.now() - ns.data().at > 20 * 60000) return page("<h2>⛔ الرابط منتهي أو غير صالح</h2><p>ابدأ الربط من جديد من لوحة الإدارة.</p>");
+  await nRef.delete();
+  const r = await fetch("https://oauth2.googleapis.com/token", {method: "POST", headers: {"Content-Type": "application/x-www-form-urlencoded"},
+    body: new URLSearchParams({code, client_id: YT_ID.value(), client_secret: YT_SECRET.value(), redirect_uri: YT_REDIRECT, grant_type: "authorization_code"})});
+  const j = await r.json().catch(() => ({}));
+  if (!r.ok || !j.refresh_token) return page("<h2>❌ تعذّر الحصول على الصلاحية</h2><p>" + ytSafe(j.error_description || j.error || "لم يُرجع Google رمز التحديث", 200) + "</p>");
+  const ch = await fetch("https://www.googleapis.com/youtube/v3/channels?part=snippet&mine=true", {headers: {"Authorization": "Bearer " + j.access_token}}).then((x) => x.json()).catch(() => ({}));
+  const c = ch.items && ch.items[0];
+  const name = c ? ytSafe(c.snippet.title, 80) + (c.snippet.customUrl ? " (" + ytSafe(c.snippet.customUrl, 40) + ")" : "") : "؟";
+  const tok = ytSafe(j.refresh_token, 300).replace(/[^A-Za-z0-9/_.\-]/g, "");
+  return page(`<h2>✅ تمت الموافقة</h2><p>القناة: <b>${name}</b></p><p>إذا كانت هذه قناتك الصحيحة، انسخ الرمز التالي:</p>
+<textarea id="t" rows="4" readonly>${tok}</textarea><p><button onclick="navigator.clipboard.writeText(document.getElementById('t').value);this.textContent='✓ نُسخ'">نسخ الرمز</button></p>
+<p>ثم في الطرفية (Terminal) داخل مجلد المشروع شغّل:</p><p><code>firebase functions:secrets:set YT_REFRESH_TOKEN</code></p><p>والصق الرمز عندما يُطلب، ثم:</p><p><code>firebase deploy --only functions:teach,functions:adminTeach</code></p>
+<p>⚠️ لا ترسل هذا الرمز لأحد، ولا تضعه في الكود. أغلق هذه الصفحة بعد النسخ.</p>`);
+});
+
+exports.teach = onCall({secrets: [MYPAY_ID, MYPAY_SECRET, YT_ID, YT_SECRET, YT_REFRESH], memory: "256MiB", timeoutSec: 120}, async (req) => {
   const d = req.data || {}; const op = String(d.op || "");
   const cfg = await tcfg();
   let isAdm = false;
@@ -915,6 +972,44 @@ exports.teach = onCall({secrets: [MYPAY_ID, MYPAY_SECRET], memory: "256MiB"}, as
     if (op === "delete") { if (c.students) throw new HttpsError("failed-precondition", "لا يمكن حذف دورة اشترك فيها طلاب؛ يمكنك إيقافها"); await ref.delete(); await tRef.update({courses: FieldValue.increment(-1)}); }
     TLIST = null; return {ok: true};
   }
+  if (op === "upInit" || op === "upDone") {
+    const cid = str(d.cid, 40), lid = str(d.lid, 12);
+    const cRef = db.collection("courses").doc(cid); const cs = await cRef.get();
+    if (!cs.exists || cs.data().tid !== me) throw new HttpsError("not-found", "الدورة غير موجودة");
+    const c = cs.data(); const li = (c.lessons || []).findIndex((l) => l.id === lid);
+    if (li < 0) throw new HttpsError("not-found", "احفظ الدرس أولاً");
+    const L = c.lessons[li]; const ref = "ref:" + cid + "/" + lid;
+    if (op === "upInit") {
+      const size = Math.floor(Number(d.size)); const type = /^video\/[a-z0-9.+-]{1,30}$/.test(d.type) ? d.type : "video/*";
+      if (!(size > 10000 && size < 8 * 1024 * 1024 * 1024)) throw new HttpsError("invalid-argument", "حجم الفيديو غير مقبول (حتى 8 جيجا)");
+      const origin = ORIGINS.includes(d.origin) ? d.origin : ORIGINS[0];
+      const dayRef = db.collection("config").doc("ytDay_" + new Date().toISOString().slice(0, 10));
+      await takeSlot(dayRef, 90, "تم الوصول للحد اليومي لرفع الفيديوهات، حاول غداً", DAY);
+      const kids = c.cat === "cur" && Number(c.grade) <= 6;
+      const body = {snippet: {title: ytSafe(c.title + " — " + (li + 1) + ". " + L.title, 100), categoryId: "27",
+        description: ytSafe(c.title + "\n" + L.title + "\n" + t.name + "\nمنصة المجتهد — https://mujtahid.ly\n" + ref, 4900)},
+      status: {privacyStatus: "unlisted", embeddable: true, selfDeclaredMadeForKids: kids}};
+      const r = await yt("https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status", {method: "POST", raw: true,
+        headers: {"Content-Type": "application/json; charset=UTF-8", "X-Upload-Content-Length": String(size), "X-Upload-Content-Type": type, "Origin": origin},
+        body: JSON.stringify(body)});
+      const url = r.headers.get("location");
+      if (!r.ok || !url) { logger.error("yt upInit", r.status, (await r.text()).slice(0, 300)); throw new HttpsError("unavailable", "تعذّر بدء الرفع، حاول لاحقاً"); }
+      await db.collection("uploads").doc(cid + "_" + lid).set({tid: me, cid, lid, size, at: FieldValue.serverTimestamp()});
+      return {url};
+    }
+    let vid = /^[A-Za-z0-9_-]{11}$/.test(d.vid || "") ? d.vid : null;
+    if (vid) { const v = await yt("videos?part=snippet&id=" + vid); const it = v.items && v.items[0];
+      if (!it || !String(it.snippet.description || "").includes(ref)) vid = null; }
+    if (!vid) vid = await findUpload(ref);
+    if (!vid) throw new HttpsError("not-found", "لم نجد الفيديو بعد. انتظر دقيقة ثم اضغط «تحقق».");
+    const pv = cRef.collection("priv").doc("v"); const ps = await pv.get(); const map = (ps.exists && ps.data().map) || {};
+    const old = map[lid]; map[lid] = vid; await pv.set({map});
+    const lessons = c.lessons.map((l) => l.id === lid ? {...l, ready: true, src: ""} : l);
+    const min = Math.round(Number(d.min)); if (min > 0 && !L.min) lessons[li].min = Math.min(600, min);
+    await cRef.update({lessons}); TLIST = null;
+    if (old && old !== vid) yt("videos?id=" + old, {method: "DELETE", raw: true}).catch(() => {});
+    return {ok: true, vid};
+  }
   if (op === "banks") {
     const banks = [];
     for (const b of (Array.isArray(d.banks) ? d.banks : []).slice(0, 5)) {
@@ -952,12 +1047,23 @@ exports.teach = onCall({secrets: [MYPAY_ID, MYPAY_SECRET], memory: "256MiB"}, as
 });
 
 // ---------- لوحة الإدارة: المعلمون والدورات والسحوبات ----------
-exports.adminTeach = onCall({memory: "256MiB"}, async (req) => {
+exports.adminTeach = onCall({secrets: [YT_ID, YT_SECRET, YT_REFRESH], memory: "256MiB"}, async (req) => {
   const adm = await needAdmin(req);
   const d = req.data || {}; const op = String(d.op || "");
   if (op === "cfg") {
     const teach = {on: !!d.on, show: !!d.show, apply: !!d.apply};
     await db.collection("config").doc("access").set({teach}, {merge: true}); ACCESS = null; return {teach};
+  }
+  if (op === "ytLink") {
+    const n = crypto.randomBytes(16).toString("hex");
+    await db.collection("config").doc("ytNonce").set({n, at: Date.now(), by: adm});
+    return {url: "https://accounts.google.com/o/oauth2/v2/auth?" + new URLSearchParams({client_id: YT_ID.value(), redirect_uri: YT_REDIRECT,
+      response_type: "code", scope: "https://www.googleapis.com/auth/youtube", access_type: "offline", prompt: "consent", state: n})};
+  }
+  if (op === "ytStatus") {
+    try { const c = await yt("channels?part=snippet,statistics&mine=true"); const it = c.items && c.items[0];
+      return {ok: !!it, name: it ? it.snippet.title : "", url: it && it.snippet.customUrl ? "https://www.youtube.com/" + it.snippet.customUrl : "", videos: it ? Number(it.statistics.videoCount) : 0};
+    } catch (e) { return {ok: false, err: e.message}; }
   }
   if (op === "load") {
     const [ts, cs, wd, st] = await Promise.all([db.collection("teachers").get(), db.collection("courses").get(),
