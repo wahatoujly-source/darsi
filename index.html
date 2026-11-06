@@ -715,6 +715,7 @@ h2{font-weight:800}
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .kw-term small,:root:not([data-theme="light"]) .kw small{color:color-mix(in srgb,var(--sea) 45%,#fff)}}
 :root[data-theme="dark"] .kw-term small{color:color-mix(in srgb,var(--sea) 45%,#fff)}
 #admbar{position:fixed;z-index:70;inset-inline:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));max-width:460px;margin:auto;display:flex;justify-content:space-between;align-items:center;gap:8px;background:#7A1F1F;color:#fff;border-radius:14px;padding:8px 12px;font-weight:700;font-size:.9rem;box-shadow:0 10px 30px -12px rgba(0,0,0,.6)}#admbar button{border:0;border-radius:10px;background:#fff;color:#7A1F1F;font:inherit;padding:4px 12px}
+.pill.up{background:linear-gradient(135deg,#FFB800,#FF8A00);color:#2B1E00;font-weight:800}
 </style>
 
 </head><body>
@@ -1631,7 +1632,7 @@ function bar(title,sub,backTo,right){const homeBtn=backTo&&backTo!=='home'?(()=>
   const b=el('header',{class:'bar'},el('div',{class:'bar-top'},
   backTo?el('span',{class:'row',style:'gap:6px;flex-wrap:nowrap'},el('button',{class:'back',text:'→',title:'رجوع','aria-label':'رجوع',onclick:()=>goBack(backTo)}),homeBtn):el('span',{class:'brand'},logoEl(),'المجتهد'),
   el('h1',{},title,sub?el('small',{text:sub}):null),right||el('span')));return b;}
-const subPill=()=>el('span',{class:'row',style:'gap:6px;flex-wrap:nowrap'},window.ACC&&ACC.pill?ACC.pill():null,OPEN_ACCESS?null:el('button',{class:'pill',onclick:()=>go('subscribe'),text:window.ACC&&ACC.hasAnySub&&ACC.hasAnySub()?'✓ مشترك':'اشترك'}));
+const subPill=()=>el('span',{class:'row',style:'gap:6px;flex-wrap:nowrap'},window.ACC&&ACC.pill?ACC.pill():null,(OPEN_ACCESS||(window.ACC&&ACC.hasAnySub&&ACC.hasAnySub())||(window.ACC&&(ACC.kid||ACC.co)))?null:el('button',{class:'pill up',onclick:()=>go('subscribe'),text:'⭐ ترقية'}));
 
 // OPEN_ACCESS: كل الدروس مفتوحة دون اشتراك. غيّرها إلى false لتفعيل الاشتراك.
 const OPEN_ACCESS=false; // الدروس المدفوعة تأتي من الخادم لمن عنده اشتراك
@@ -2012,7 +2013,7 @@ function renderSubject(n,sid){
       if(!l.ready&&qn){list.append(el('button',{class:cls+' qrow',onclick:()=>go('qr-'+n+'-'+sid+'-'+qn)},el('span',{class:'ln',text:String(l.n)}),el('span',{class:'lt'},el('b',{text:l.title}),el('span',{text:'استمع برواية قالون عن نافع'}),l.ref?el('span',{class:'lref',text:'📖 '+l.ref.replace(/–/g,'\u2060–\u2060')}):null),el('span',{class:'ls'},'🎧 استمع')));return;}
       if(l.ready&&isClosed(n,sid,l.id)){list.append(el('button',{class:cls+' soon',disabled:true},el('span',{class:'ln',text:String(l.n)}),el('span',{class:'lt'},el('b',{text:l.title}),el('span',{text:'🔧 مغلق مؤقتاً للمراجعة'})),el('span',{class:'ls'},'🔧')));return;}
       if(!l.ready){status='قريباً';cls+=' soon';}
-      else if(locked){status='🔒 للمشتركين';cls+=' locked';}
+      else if(locked){status='⭐ ترقية';cls+=' locked';}
       else{const d=store.get('done_'+l.id,[]).length;const S=lessonStudy(l.id);if(S||d){cls+=' studied';l._study=S;}status=d?el('span',{class:'prog',text:'★ '+d}):S?'راجِع':'ابدأ';}
       list.append(el('button',{class:cls,disabled:!l.ready,onclick:()=>{if(locked){App.after='l-'+l.id;go('subscribe');}else go('l-'+l.id);}},
         el('span',{class:'ln',text:String(l.n)}),el('span',{class:'lt'},el('b',{lang:sid==='en'?'en':null,text:l.title}),l.titleAr?el('span',{text:l.titleAr}):null,l._study?el('span',{class:'lstudy',text:studyLine(l._study)}):null,l.ref?el('span',{class:'lref',text:'📖 '+l.ref.replace(/–/g,'\u2060–\u2060')}):null),

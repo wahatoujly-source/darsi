@@ -256,6 +256,7 @@ function renderWho() {
   if (!ACC.user || !ACC.profile) { go('login'); return; }
   if (!isAdult()) { go('account'); return; }
   const s = page('من يدرس الآن؟', ACC.profile.name, 'home');
+  if (ACC.isAdmin) s.append(el('div', { class: 'row', style: 'gap:8px;flex-wrap:wrap;margin-bottom:8px' }, el('button', { class: 'btn sun', text: ACC.adminBrowse ? '👁️ وضع المدير مفعّل ← الرئيسية' : '👁️ تصفّح المنصة كمدير (كل الدروس)', onclick: async () => { ACC.adminBrowse = true; store.set('admin_browse', true); await setActive(null); go('home'); } }), el('button', { class: 'btn ghost', text: '🛠️ لوحة الإدارة', onclick: () => go('admin') })));
   const g = el('div', { class: 'whogrid' });
   const me = ACC.profiles.find(p => p.id === 'me');
   if (me) g.append(el('button', { class: 'who' + (ACC.pid === 'me' ? ' on' : ''), onclick: async () => { await setActive('me'); go('home'); } },
@@ -530,7 +531,7 @@ function renderAccount() {
           ACC.profile = { ...P, role: 'teacher' }; await loadProfiles(); D.cheer && D.cheer('win'); renderAccount(); } catch (e) { fbk(m, 'bad', errMsg(e)); } } }), m)); }
   s.append(el('div', { class: 'panel accbox' }, el('b', { text: 'اشتراكاتي' }),
     ...(ACC.subs.length ? ACC.subs.map(x => el('div', { class: 'kidrow' }, el('span', {}, el('b', { text: subName(x) }), el('span', { class: 'note', text: ' — حتى ' + fmtDate(x.end.toMillis()) })))) : [el('span', { class: 'note', text: 'لا يوجد اشتراك بعد. الدروس المجانية متاحة لك.' })]),
-    el('button', { class: 'btn sun', text: 'اشترك / أضف باقة', onclick: () => go('subscribe') })));
+    ACC.hasAnySub() ? null : el('button', { class: 'btn sun', text: '⭐ ترقية', onclick: () => go('subscribe') })));
   const adm = el('div'); s.append(adm);
   call('adminCheck', {}).then(() => { ACC.isAdmin = true; adm.append(el('button', { class: 'btn sun', text: '🛠️ لوحة الإدارة', onclick: () => go('admin') })); }).catch(() => {});
   s.append(el('button', { class: 'btn ghost', text: 'تسجيل الخروج', onclick: async () => { await signOut(auth); go('home'); } }));
@@ -808,7 +809,8 @@ onAuthStateChanged(auth, async user => {
       try { const tr = await withTimeout(user.getIdTokenResult()).catch(() => null); if (tr && tr.claims && tr.claims.coOf) ACC.co = { owner: tr.claims.coOf };
         const snap = await withTimeout(getDoc(uref())); ACC.profile = snap.exists() ? snap.data() : null; if (ACC.profile) { await withTimeout(loadProfiles()); await withTimeout(loadSubs()); } }
       catch (e) { console.error('profile', e); ACC.loadError = e; }
-      if (store.get('admin_browse', false)) { try { await call('adminCheck', {}); ACC.isAdmin = true; ACC.adminBrowse = true; } catch (e) { store.set('admin_browse', false); } }
+      { const ak = 'adm_' + user.uid; let isA = store.get(ak, null); if (isA === null || store.get('admin_browse', false)) { try { await call('adminCheck', {}); isA = true; } catch (e) { isA = /permission|unauthenticated/.test(e.code || '') ? false : null; } if (isA !== null) store.set(ak, isA); }
+        ACC.isAdmin = !!isA; ACC.adminBrowse = ACC.isAdmin && !!store.get('admin_browse', false); if (!ACC.isAdmin) store.set('admin_browse', false); }
       if (ACC.profiles.length && !ACC.profiles.some(p => p.id === ACC.pid)) await setActive(ACC.profiles.length === 1 ? ACC.profiles[0].id : null);
       else if (ACC.pid && !ACC.loadError) withTimeout(pullProgress(ACC.pid)).catch(() => {});
     } else { ACC.pid = null; store.set('acc_pid', null); }
