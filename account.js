@@ -612,6 +612,8 @@ ACC.hasAccess = (g, s) => ACC.subs.some(sub => { if (!subApplies(sub)) return fa
   if (sc.pairs) return sc.pairs.includes(g + ':' + s);
   return (sc.grades || []).some(x => x === '*' || x === g) && (sc.subjects || []).some(x => x === '*' || x === s); });
 ACC.hasAnySub = () => ACC.subs.some(subApplies);
+ACC.hasGrade = g => ACC.subs.some(sub => { if (!subApplies(sub)) return false; const sc = sub.scope || {}; if (sc.any) return true;
+  if (sc.pairs) return sc.pairs.some(x => x.startsWith(g + ':')); return (sc.grades || []).some(x => x === '*' || x === g); });
 const fmtDate = ms => new Date(ms).toLocaleDateString('ar-LY', { year: 'numeric', month: 'long', day: 'numeric' });
 const KINDS = {
   gift: ['🎁', 'اشتراك مجاني', 'منحة من الإدارة', []],
@@ -729,6 +731,28 @@ function accessBox() {
       await loadAccess(); fbk(msg, 'ok', '✓ حُفظت. تظهر للمستخدمين عند فتح المنصة أو تحديثها.'); } catch (x) { fbk(msg, 'bad', fnErr(x)); } e.target.disabled = false; } }), msg);
   setTimeout(draw, 0); return box;
 }
+/* ---------- admin: textbooks (PDF) — per grade / subject: for everyone, subscribers only, or hidden ---------- */
+function booksBox() {
+  const M = Object.assign({}, (ACC.access || {}).books || {});
+  const box = el('div', { class: 'panel accbox' }, el('b', { text: '📚 الكتب المدرسية PDF' }),
+    el('span', { class: 'note', text: 'لكل صف أو مادة: تظهر للجميع، أو للمشتركين في ذلك الصف فقط، أو مخفية. إعداد المادة يتقدّم على إعداد الصف، وإعداد الصف على الإعداد العام.' }));
+  const OPTS = [['all', 'للجميع'], ['subs', 'للمشتركين'], ['off', 'مخفية']], CLS = { all: 'free', subs: 'subs', off: 'closed' };
+  const cur = k => M[k] || (k === 'all' ? 'all' : '');
+  const pick = (k, redraw, inherit) => { const w = el('div', { class: 'accpick' });
+    if (inherit) w.append(el('button', { class: 'btn ghost sm acc-open' + (!M[k] ? ' on' : ''), text: 'كالصف', onclick: () => { delete M[k]; redraw(); } }));
+    OPTS.forEach(([v, t]) => w.append(el('button', { class: 'btn ghost sm acc-' + CLS[v] + (cur(k) === v ? ' on' : ''), text: t, onclick: () => { if (v === 'all' && k !== 'all' && !inherit) delete M[k]; else M[k] = v; if (k === 'all' && v === 'all') delete M.all; redraw(); } }))); return w; };
+  const body = el('div', { class: 'stack' }), msg = el('div'); let B = null, open = {};
+  const draw = () => { body.innerHTML = ''; if (!B) { body.append(el('span', { class: 'note', text: 'جارٍ التحميل…' })); return; }
+    body.append(el('div', { class: 'accrow head' }, el('b', { text: 'كل الكتب (الإعداد العام)' }), pick('all', draw)));
+    Object.keys(B.grades).forEach(g => { const subs = [...new Set(B.grades[g].map(b => b.s))]; const gk = 'g' + g;
+      body.append(el('div', { class: 'accrow' }, el('span', {}, el('b', { text: 'الصف ' + gradeName(g) + ' (' + B.grades[g].length + ' كتاب)' }), el('button', { class: 'linkbtn', text: open[g] ? '▲ إخفاء المواد' : '▼ المواد', onclick: () => { open[g] = !open[g]; draw(); } })), pick(gk, draw, true)));
+      if (open[g]) { const lw = el('div', { class: 'ctrl-list' }); subs.forEach(sb => lw.append(el('div', { class: 'accrow sm' }, el('span', { text: (B.subjects[sb] || {}).name || sb }), pick(gk + '-' + sb, draw, true)))); body.append(lw); } });
+    body.append(el('span', { class: 'note', text: 'إعدادات خاصة: ' + Object.keys(M).length + ' — "كالصف" يعني يأخذ إعداد الصف أو الإعداد العام.' })); };
+  fetch('data/books.json').then(r => r.json()).then(j => { B = j; draw(); }).catch(() => fbk(msg, 'bad', 'تعذّر تحميل قائمة الكتب.'));
+  box.append(body, el('button', { class: 'btn sun', text: '💾 حفظ إعدادات الكتب', onclick: async e => { e.target.disabled = true;
+    try { await call('adminSetBooks', { books: M }); await loadAccess(); fbk(msg, 'ok', '✓ حُفظت. تظهر للمستخدمين عند فتح المنصة أو تحديثها.'); } catch (x) { fbk(msg, 'bad', fnErr(x)); } e.target.disabled = false; } }), msg);
+  draw(); return box;
+}
 function renderAdmin() {
   if (!ACC.user) { go('login'); return; }
   const s = page('لوحة الإدارة', 'المجتهد', 'account');
@@ -777,7 +801,7 @@ function renderAdmin() {
       el('span', { class: 'note', text: 'تُفتح لك كل الصفوف والمواد والدروس مجاناً (حتى المغلقة) لتراجعها وتجربها، دون أن تتغير المنصة لأي مستخدم آخر.' }),
       el('button', { class: 'btn sun', text: ACC.adminBrowse ? '✓ وضع المدير مفعّل — افتح الصفحة الرئيسية' : '👁️ ابدأ التصفح كمدير', onclick: () => { ACC.adminBrowse = true; store.set('admin_browse', true); setActive(null).then(() => go('home')); } }),
       ACC.adminBrowse ? el('button', { class: 'btn ghost', text: 'إنهاء وضع المدير', onclick: () => { ACC.adminBrowse = false; store.set('admin_browse', false); renderAdmin(); } }) : null));
-    s.append(accessBox());
+    s.append(accessBox(), booksBox());
     // list
     const tb = el('div', { class: 'stack' });
     d.list.forEach(x => { const sc = x.scope || {}; const what = (KINDS[x.kind] || ['', x.kind])[1] + (sc.grades && sc.grades[0] !== '*' ? ' — الصف ' + gradeName(sc.grades[0]) : sc.grades ? ' — كل الصفوف' : '') + (sc.subjects && sc.subjects[0] && sc.subjects[0] !== '*' ? ' — ' + sc.subjects[0] : '');

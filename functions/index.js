@@ -383,7 +383,20 @@ exports.adminSetAccess = onCall(async (req) => {
     openAll: !!d.openAll, closed: list(d.closed), subsOnly: list(d.subsOnly), extraFree: list(d.extraFree),
     updatedAt: FieldValue.serverTimestamp(),
   };
-  await db.collection("config").doc("access").set(out);
+  await db.collection("config").doc("access").set(out, {merge: true});
+  ACCESS = null;
+  return {ok: true};
+});
+
+// textbooks visibility: {all|gN|gN-subj: "all"|"subs"|"off"}
+const BOOK_KEY = /^(all|g\d{1,2}|g\d{1,2}-[a-z]{2,8})$/;
+exports.adminSetBooks = onCall(async (req) => {
+  await needAdmin(req);
+  const src = (req.data && req.data.books) || {};
+  const books = {};
+  for (const [k, v] of Object.entries(src).slice(0, 300)) if (BOOK_KEY.test(k) && ["all", "subs", "off"].includes(v)) books[k] = v;
+  await db.collection("config").doc("access").update({books, updatedAt: FieldValue.serverTimestamp()}).catch(() =>
+    db.collection("config").doc("access").set({books, updatedAt: FieldValue.serverTimestamp()}, {merge: true}));
   ACCESS = null;
   return {ok: true};
 });

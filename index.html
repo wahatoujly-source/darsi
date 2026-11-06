@@ -832,6 +832,7 @@ header.bar .btxt b,header.bar .btxt small{white-space:nowrap}
 .bk-card{width:100%;display:grid;grid-template-columns:52px 1fr auto;gap:12px;align-items:center;text-align:start;padding:12px 14px;border-radius:18px;border:1px solid color-mix(in srgb,var(--sea) 25%,var(--line));background:linear-gradient(120deg,color-mix(in srgb,var(--sea) 12%,var(--card)),var(--card));box-shadow:0 6px 18px -12px var(--sea)}
 .bk-card .bi{font-size:1.7rem;width:52px;height:52px;display:grid;place-items:center;border-radius:15px;background:color-mix(in srgb,var(--sea) 16%,var(--card))}
 .bk-card b{display:block;font-family:var(--f-display);font-size:1.05rem}.bk-card small{color:var(--muted);font-size:.8rem}
+.bk-row.lk{opacity:.72}.bk-row.lk .bk-dl{background:var(--line)!important;color:var(--ink)!important}.bk-lock{margin-inline-start:auto;font-size:.72rem;font-weight:800;color:var(--muted);background:var(--line);padding:3px 9px;border-radius:999px}
 .bk-card .bk-go{background:var(--sea);color:#fff;font-weight:800;font-size:.8rem;padding:7px 12px;border-radius:999px}
 .bk-wrap{display:grid;gap:14px;margin-top:18px}
 .bk-intro{display:flex;gap:10px;align-items:center;padding:12px 14px;border-radius:16px;background:color-mix(in srgb,var(--sea) 9%,var(--card));border:1px solid var(--line)}
@@ -1807,6 +1808,11 @@ const adminBrowse=()=>!!(window.ACC&&ACC.adminBrowse);
 const isClosed=(g,sid,lid)=>!adminBrowse()&&accIn(ACCX().closed,g,sid,lid);
 const isFree=(l,k,g,sid)=>OPEN_ACCESS||adminBrowse()||!!ACCX().openAll||accIn(ACCX().extraFree,g,sid,l.id)||(!!l.free&&!accIn(ACCX().subsOnly,g,sid,l.id));
 const canOpen=(g,sid)=>!!(window.ACC&&ACC.hasAccess&&ACC.hasAccess(String(g),sid));
+/* books visibility from the admin panel: config/access.books {all|gN|gN-subj: 'subs'|'off'}; most specific wins */
+const bkMode=(g,sb)=>{const M=ACCX().books||{};return M['g'+g+'-'+sb]||M['g'+g]||M.all||'all';};
+const bkLocked=(g,sb)=>bkMode(g,sb)==='subs'&&!adminBrowse()&&!ACCX().openAll&&!(window.ACC&&ACC.hasGrade&&ACC.hasGrade(String(g)));
+const bkShown=(g,sb)=>adminBrowse()||bkMode(g,sb)!=='off';
+let BKS=null;const bkAnyOn=()=>{if(adminBrowse())return true;if(BKS)return Object.keys(BKS).some(bkGradeOn);const M=ACCX().books||{};return M.all!=='off'||Object.entries(M).some(([k,v])=>k!=='all'&&v!=='off');};const bkGradeOn=g=>{if(!BKS)return bkMode(g,'')!=='off'||adminBrowse();return (BKS[g]||[]).some(s=>bkShown(g,s));};
 function markFree(c){for(const g in c.grades)for(const s of c.grades[g]){const all=FREE_SUBJECTS.includes(s.id);
   const books=s.books||[{units:s.units}];books.forEach(b=>{let first=true;(b.units||[]).forEach(u=>u.lessons.forEach(l=>{if(all||(first&&l.ready)){l.free=true;if(l.ready)first=false;}}));});}}
 function gradeInfo(id){for(const st of App.catalog.stages){const g=st.grades.find(x=>x.id===String(id));if(g)return{...g,stage:st};}return null;}
@@ -2052,16 +2058,16 @@ function renderBooks(sel){root.innerHTML='';const LG=lockedGrade();
   root.append(bar('الكتب المدرسية','المنهج الليبي · تحميل مجاني PDF','home'));
   const wrap=el('div',{class:'bk-wrap'},el('p',{class:'note',text:'جارٍ تحميل القائمة…'}));root.append(wrap);
   getJSON('data/books.json').then(B=>{wrap.innerHTML='';
-    const gs=Object.keys(B.grades).filter(g=>!LG||g===LG);let cur=String(sel||LG||store.get('bk_g',null)||gs[0]);if(!gs.includes(cur))cur=gs[0];
+    BKS={};for(const g in B.grades)BKS[g]=[...new Set(B.grades[g].map(b=>b.s))];const gs=Object.keys(B.grades).filter(g=>(!LG||g===LG)&&bkGradeOn(g));if(!gs.length){wrap.append(el('div',{class:'empty'},el('span',{class:'big',text:'📚'}),el('p',{text:'الكتب غير متاحة حالياً.'})));return;}let cur=String(sel||LG||store.get('bk_g',null)||gs[0]);if(!gs.includes(cur))cur=gs[0];
     const chips=el('div',{class:'bk-chips'});const list=el('div',{class:'bk-list'});
     const KIND={s:'كتاب الطالب',w:'كراسة / نشاط',t:'دليل المعلم'};
     const show=g=>{cur=g;store.set('bk_g',g);[...chips.children].forEach(b=>b.classList.toggle('on',b.dataset.g===g));list.innerHTML='';
       const by={};B.grades[g].forEach(b=>{(by[b.s]=by[b.s]||[]).push(b);});
-      B.order.filter(s=>by[s]).forEach(s=>{const S=B.subjects[s];
-        list.append(el('div',{class:'bk-sub'},el('div',{class:'bk-sh'},el('span',{class:'bk-si',text:S.icon}),el('b',{text:S.name}),el('small',{text:by[s].length+(by[s].length>2?' كتب':by[s].length===2?' كتابان':' كتاب')})),
-          ...by[s].map(b=>el('a',{class:'bk-row k-'+b.k,href:B.base+'g'+g+'/'+encodeURIComponent(b.f),download:b.f,target:'_blank',rel:'noopener'},
+      B.order.filter(s=>by[s]&&bkShown(g,s)).forEach(s=>{const S=B.subjects[s];const lk=bkLocked(g,s);
+        list.append(el('div',{class:'bk-sub'},el('div',{class:'bk-sh'},el('span',{class:'bk-si',text:S.icon}),el('b',{text:S.name}),el('small',{text:by[s].length+(by[s].length>2?' كتب':by[s].length===2?' كتابان':' كتاب')}),lk?el('span',{class:'bk-lock',text:'🔒 للمشتركين'}):null),
+          ...by[s].map(b=>el('a',lk?{class:'bk-row lk k-'+b.k,href:'#'+(window.ACC&&ACC.user?'subscribe':'login'),title:'للمشتركين فقط'}:{class:'bk-row k-'+b.k,href:B.base+'g'+g+'/'+encodeURIComponent(b.f),download:b.f,target:'_blank',rel:'noopener'},
             el('span',{class:'bk-t'},el('b',{lang:/^[A-Za-z]/.test(b.t)?'en':null,text:b.t}),el('small',{text:KIND[b.k]+' · '+b.pg+' صفحة · '+b.mb+' م.ب'})),
-            el('span',{class:'bk-dl','aria-label':'تحميل',text:'⬇'})))));});};
+            el('span',{class:'bk-dl','aria-label':lk?'للمشتركين':'تحميل',text:lk?'🔒':'⬇'})))));});};
     gs.forEach(g=>chips.append(el('button',{class:'bk-chip','data-g':g,onclick:()=>show(g)},el('small',{text:'الصف'}),el('b',{text:g}))));
     wrap.append(el('div',{class:'bk-intro'},el('span',{text:'📚'}),el('p',{text:'كتب المنهج الليبي المعتمدة للعام 2025–2026، مجاناً ودون تسجيل. اختر الصف ثم اضغط على الكتاب لتحميله.'})),chips,list,
       el('p',{class:'note bk-src',text:'المصدر: وزارة التربية والتعليم – مركز المناهج التعليمية والبحوث التربوية، ليبيا. حقوق الكتب محفوظة لأصحابها.'}));
@@ -2213,7 +2219,7 @@ function renderHome(){
   const ic=installCard();if(ic)below.append(ic);
   {const tc=ttCard();if(tc)below.append(tc);}
   if(GAME.stats().stars>0||(window.ACC&&ACC.user))below.append(el('div',{class:'gsec-h'},el('span',{text:'نشاطي اليوم'}),el('i')),GAME.card());
-  below.append(el('button',{class:'bk-card',onclick:()=>go('books')},el('span',{class:'bi',text:'📚'}),el('span',{},el('b',{text:'الكتب المدرسية PDF'}),el('small',{text:'حمّل كتب المنهج الليبي لكل الصفوف مجاناً'})),el('span',{class:'bk-go',text:'تحميل'})));
+  if(bkAnyOn())below.append(el('button',{class:'bk-card',onclick:()=>go('books')},el('span',{class:'bi',text:'📚'}),el('span',{},el('b',{text:'الكتب المدرسية PDF'}),el('small',{text:'حمّل كتب المنهج الليبي لكل الصفوف مجاناً'})),el('span',{class:'bk-go',text:'تحميل'})));
   if(!LG)below.append(el('button',{class:'teach-card',onclick:()=>go('teacher')},el('span',{class:'ti',text:'👩‍🏫'}),el('span',{},el('b',{text:'للمعلم: صانع الاختبارات'}),el('span',{class:'note',text:'اختبارات شهرية جاهزة لكل مادة، تعدّلها وتطبعها PDF باسم مدرستك'})),el('span',{class:'ls',text:'←'})));
   if(below.childNodes.length)root.append(below);
   root.append(el('a',{class:'legal-link',href:'#privacy',text:'الخصوصية وشروط الاستخدام'}));
@@ -2226,7 +2232,7 @@ function renderGrade(n){
   subs.filter(s=>ctrlSubOk(CT,s.id)&&!isClosed(n,s.id,'-')).forEach(s=>{const us=unitsOf(s),total=us.reduce((a,u)=>a+u.lessons.length,0),ready=us.reduce((a,u)=>a+u.lessons.filter(l=>l.ready).length,0);
     g.append(el('button',{class:'scard',onclick:()=>go('g'+n+'-'+s.id)},el('span',{class:'sicon',lang:s.lang==='en'?'en':null,text:s.icon}),el('span',{},el('b',{text:s.name}),el('span',{class:'note',text:(s.books&&s.books.length>1?s.books.length+' كتب · ':'')+us.length+' '+({'الباب ':'أبواب','القسم ':'أقسام','الوحدة ':'وحدات'}[s.unitWord||(s.id==='en'?'الوحدة ':'')]||'فصول')+' · '+ready+' من '+total+' دروس جاهزة'}))));});
   if(!lockedGrade())c.plannedSubjects.forEach(s=>g.append(el('div',{class:'scard off'},el('span',{class:'sicon',text:s.icon}),el('span',{},el('b',{text:s.name}),el('span',{class:'tag sun',text:'قريباً'})))));
-  root.append(el('section',{},g,el('button',{class:'bk-card',style:'margin-top:14px',onclick:()=>go('books-'+n)},el('span',{class:'bi',text:'📚'}),el('span',{},el('b',{text:'كتب هذا الصف PDF'}),el('small',{text:'حمّل كتب المنهج مجاناً'})),el('span',{class:'bk-go',text:'تحميل'})),el('button',{class:'teach-card',style:'margin-top:14px',onclick:()=>go('teacher-'+n)},el('span',{class:'ti',text:'👩‍🏫'}),el('span',{},el('b',{text:'صانع الاختبارات للمعلم'}),el('span',{class:'note',text:'اختبارات جاهزة لهذا الصف قابلة للتعديل والطباعة'})),el('span',{class:'ls',text:'←'}))));
+  root.append(el('section',{},g,!bkGradeOn(String(n))?null:el('button',{class:'bk-card',style:'margin-top:14px',onclick:()=>go('books-'+n)},el('span',{class:'bi',text:'📚'}),el('span',{},el('b',{text:'كتب هذا الصف PDF'}),el('small',{text:'حمّل كتب المنهج مجاناً'})),el('span',{class:'bk-go',text:'تحميل'})),el('button',{class:'teach-card',style:'margin-top:14px',onclick:()=>go('teacher-'+n)},el('span',{class:'ti',text:'👩‍🏫'}),el('span',{},el('b',{text:'صانع الاختبارات للمعلم'}),el('span',{class:'note',text:'اختبارات جاهزة لهذا الصف قابلة للتعديل والطباعة'})),el('span',{class:'ls',text:'←'}))));
 }
 function renderSubject(n,sid){
   const c=App.catalog,s=(c.grades[n]||[]).find(x=>x.id===sid);if(!s){go('home');return;}root.innerHTML='';
