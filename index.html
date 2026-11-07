@@ -1824,7 +1824,7 @@ const ACCX=()=>(window.ACC&&ACC.access)||{};
 const accIn=(list,g,sid,lid)=>{const ks=['g'+g,'g'+g+'-'+sid,'l-'+lid];return (list||[]).some(k=>ks.includes(k));};
 const adminBrowse=()=>!!(window.ACC&&ACC.adminBrowse);
 const isClosed=(g,sid,lid)=>!adminBrowse()&&accIn(ACCX().closed,g,sid,lid);
-const isFree=(l,k,g,sid)=>OPEN_ACCESS||adminBrowse()||!!ACCX().openAll||accIn(ACCX().extraFree,g,sid,l.id)||(!!l.free&&!accIn(ACCX().subsOnly,g,sid,l.id));
+const isFree=(l,k,g,sid)=>(window.ACC&&ACC.trialN&&l.tr!=null&&l.tr<ACC.trialN())||OPEN_ACCESS||adminBrowse()||!!ACCX().openAll||accIn(ACCX().extraFree,g,sid,l.id)||(!!l.free&&!accIn(ACCX().subsOnly,g,sid,l.id));
 const canOpen=(g,sid)=>!!(window.ACC&&ACC.hasAccess&&ACC.hasAccess(String(g),sid));
 /* books visibility from the admin panel: config/access.books {all|gN|gN-subj: 'subs'|'off'}; most specific wins */
 const bkMode=(g,sb)=>{const M=ACCX().books||{};return M['g'+g+'-'+sb]||M['g'+g]||M.all||'all';};
@@ -1832,7 +1832,7 @@ const bkLocked=(g,sb)=>bkMode(g,sb)==='subs'&&!adminBrowse()&&!ACCX().openAll&&!
 const bkShown=(g,sb)=>adminBrowse()||bkMode(g,sb)!=='off';
 let BKS=null;const bkAnyOn=()=>{if(adminBrowse())return true;if(BKS)return Object.keys(BKS).some(bkGradeOn);const M=ACCX().books||{};return M.all!=='off'||Object.entries(M).some(([k,v])=>k!=='all'&&v!=='off');};const bkGradeOn=g=>{if(!BKS)return bkMode(g,'')!=='off'||adminBrowse();return (BKS[g]||[]).some(s=>bkShown(g,s));};
 function markFree(c){for(const g in c.grades)for(const s of c.grades[g]){const all=FREE_SUBJECTS.includes(s.id);
-  const books=s.books||[{units:s.units}];books.forEach(b=>{let first=true;(b.units||[]).forEach(u=>u.lessons.forEach(l=>{if(all||(first&&l.ready)){l.free=true;if(l.ready)first=false;}}));});}}
+  const books=s.books||[{units:s.units}];books.forEach(b=>{let first=true,rank=0;(b.units||[]).forEach(u=>u.lessons.forEach(l=>{l.tr=rank;if(l.ready)rank++;if(all||(first&&l.ready)){l.free=true;if(l.ready)first=false;}}));});}}
 function gradeInfo(id){for(const st of App.catalog.stages){const g=st.grades.find(x=>x.id===String(id));if(g)return{...g,stage:st};}return null;}
 const gradeLabel=g=>g?(g.name+(g.track?' — '+g.track:'')):'';
 const unitsOf=s=>s.books?s.books.flatMap(b=>b.units.map(u=>({...u,book:b}))):s.units;
@@ -2209,6 +2209,16 @@ function ttCard(){const tt=kidTT();if(!tt)return null;const g=lockedGrade();if(!
   else if(N.state==='break')box.append(el('div',{class:'tt-now brk'},el('b',{text:'☕ استراحة'}),el('small',{text:'الحصة التالية '+subName(N.next.s)+' الساعة '+TT.hm(N.until)})));
   if(day.length){const ul=el('div',{class:'tt-list'});day.forEach((x,i)=>ul.append(el('div',{class:'tt-it'+(N.state==='class'&&N.i===i?' cur':'')+(T[i][1]<=new Date().getHours()*60+new Date().getMinutes()?' past':'')},el('small',{text:TT.hm(T[i][0])}),el('span',{text:subName(x.s)}))));box.append(ul);}
   return box;}
+/* invite landing: a friend's link (#i-CODE) */
+function renderInvite(code){root.innerHTML='';const R=ACCX().ref||{};const inv=R.invitee!=null?R.invitee:3,N=R.trialN||5;
+  root.append(bar('دعوة من صديق 🎁','منصة المجتهد','home'));
+  const sec=el('section',{class:'stack',style:'text-align:center;gap:14px'});
+  sec.append(el('div',{style:'font-size:4rem',text:'🎁'}),el('h2',{style:'margin:0;font-family:var(--f-display)',text:'صديقك يدعوك لتجربة المجتهد'}),
+    el('p',{style:'margin:0;line-height:1.9',text:'دروس المنهج الليبي للصفوف 1–9 بالصوت والصورة والألعاب. سجّل الآن واحصل على '+inv+' أيام مجانية تفتح أول '+N+' دروس في كل مادة.'}),
+    window.ACC&&ACC.user?el('div',{class:'feedback info',text:'أنت مسجّل بالفعل. الدعوة للحسابات الجديدة فقط.'}):el('button',{class:'btn sun paybig',text:'🎁 سجّل واحصل على '+inv+' أيام مجانية',onclick:()=>go('login')}),
+    el('button',{class:'btn ghost',text:'🧮 أو اختبر مستوى ابنك في الرياضيات مجاناً',onclick:()=>go('test')}),
+    el('button',{class:'linkbtn',text:'تصفّح الدروس المجانية أولاً',onclick:()=>{store.set('welcomed',true);go('home');}}));
+  root.append(sec);}
 function renderHome(){
   const c=App.catalog;root.innerHTML='';
   root.append(bar(null,null,null,subPill()));
@@ -2239,6 +2249,7 @@ function renderHome(){
   {const tc=ttCard();if(tc)below.append(tc);}
   if(GAME.stats().stars>0||(window.ACC&&ACC.user))below.append(el('div',{class:'gsec-h'},el('span',{text:'نشاطي اليوم'}),el('i')),GAME.card());
   {const tc=ACCX().teach||{};if((tc.on&&tc.show)||(window.ACC&&ACC.isAdmin&&tc.on))below.append(el('button',{class:'bk-card tc-card-home',onclick:()=>go('courses')},el('span',{class:'bi',text:'🎥'}),el('span',{},el('b',{text:'دورات المعلمين'}),el('small',{text:'دروس فيديو ومهارات من معلمين معتمدين'})),el('span',{class:'bk-go',text:'شاهد'})));}
+  below.append(el('button',{class:'bk-card',style:'border-color:#f59e0b',onclick:()=>go('test')},el('span',{class:'bi',text:'🧮'}),el('span',{},el('b',{text:'اختبر مستوى ابنك مجاناً'}),el('small',{text:'الجمع، الطرح، جدول الضرب والقسمة — دقيقتان فقط'})),el('span',{class:'bk-go',style:'background:#f59e0b',text:'ابدأ'})));
   if(bkAnyOn())below.append(el('button',{class:'bk-card',onclick:()=>go('books')},el('span',{class:'bi',text:'📚'}),el('span',{},el('b',{text:'الكتب المدرسية PDF'}),el('small',{text:'حمّل كتب المنهج الليبي لكل الصفوف مجاناً'})),el('span',{class:'bk-go',text:'تحميل'})));
   if(!LG)below.append(el('button',{class:'teach-card',onclick:()=>go('teacher')},el('span',{class:'ti',text:'👩‍🏫'}),el('span',{},el('b',{text:'للمعلم: صانع الاختبارات'}),el('span',{class:'note',text:'اختبارات شهرية جاهزة لكل مادة، تعدّلها وتطبعها PDF باسم مدرستك'})),el('span',{class:'ls',text:'←'})));
   if(below.childNodes.length)root.append(below);
@@ -2578,6 +2589,8 @@ function route(){setTimeout(adminBanner,0);TTS.phonics=false;TTS.phx=null;
       if((mm=/^l-([a-z0-9-]+)$/.exec(h))&&App.catalog){const f=findLesson(mm[1]);if(f&&(!ctrlSubOk(CT,f.subject.id)||!ctrlLesOk(CT,f.subject.id,mm[1]))){location.replace('#g'+LG+(ctrlSubOk(CT,f.subject.id)?'-'+f.subject.id:''));return;}}}}}
   if(h!=='welcome'&&h!=='start')document.body.classList.remove('wl-on');
   if((!h||h==='home')&&!store.get('welcomed',false)&&!(window.ACC&&ACC.user)){renderWelcome(0);return;}
+  if(h==='test'||/^test-/.test(h)){import('./test.js').then(m=>m.default(window.DARSI,h)).catch(()=>{root.innerHTML='';root.append(el('p',{class:'note',style:'padding:30px',text:'تعذّر التحميل. تحقق من الاتصال.'}));});return;}
+  {const im=/^i-([2-9A-HJ-NP-Z]{6})$/.exec(h);if(im){store.set('ref_in',{c:im[1],at:Date.now()});renderInvite(im[1]);return;}}
   if(h==='welcome'){renderWelcome(0);return;}if(h==='start'){renderStart();return;}
   if(h==='home'||!h){if(window.ACC&&ACC.user)store.set('welcomed',true);}
   if(!h||h==='home')renderHome();
@@ -2602,7 +2615,7 @@ function route(){setTimeout(adminBanner,0);TTS.phonics=false;TTS.phx=null;
   else renderHome();
 }
 window.addEventListener('hashchange',()=>{if(document.startViewTransition&&!matchMedia('(prefers-reduced-motion: reduce)').matches){const t=document.startViewTransition(()=>route());[t.ready,t.finished,t.updateCallbackDone].forEach(x=>x&&x.catch(()=>{}));}else{route();root.classList.remove('enter');void root.offsetWidth;root.classList.add('enter');}});
-window.DARSI={ttsOn,ttsGet,sayAr,LOGO,TT,lessonStudy,studyLine,VOX,arUnits,PRAISE,el,go,store,App,route,cheer,bar,root,$,$$,GAME,REPORT,findLesson:id=>App.catalog?findLesson(id):null};
+window.DARSI={ttsOn,ttsGet,sayAr,speakAr,FX,gradeName:id=>(gradeInfo(id)||{}).name||'',LOGO,TT,lessonStudy,studyLine,VOX,arUnits,PRAISE,el,go,store,App,route,cheer,bar,root,$,$$,GAME,REPORT,findLesson:id=>App.catalog?findLesson(id):null};
 const SPLASH_T0=performance.now();function hideSplash(){const sp=document.getElementById('splash');if(!sp)return;const wait=sessionStorage.getItem('mj_splash')?0:Math.max(0,1700-(performance.now()-SPLASH_T0));try{sessionStorage.setItem('mj_splash','1')}catch(e){}setTimeout(()=>{sp.classList.add('go');setTimeout(()=>sp.remove(),600);},wait);}
 // عند فتح التطبيق: نضع الرئيسية أولاً في السجل ثم نعود إلى آخر مكان توقف فيه الطالب
 (function bootNav(){let fresh=false;try{fresh=!sessionStorage.getItem('mj_open');sessionStorage.setItem('mj_open','1')}catch(e){}

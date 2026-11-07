@@ -23,6 +23,7 @@ const auth = getAuth(fb); auth.languageCode = 'ar';
 const db = getFirestore(fb);
 const fns = getFunctions(fb, 'europe-west1');
 const call = (name, data) => httpsCallable(fns, name)(data).then(r => r.data);
+window.ACC_CALL = call;
 
 const fnErr = e => (e && e.message && !/^internal$|^INTERNAL$/.test(e.message)) ? e.message : 'تعذّر الاتصال بالخادم. حاول لاحقاً.';
 
@@ -36,7 +37,7 @@ const ROLES = { student: ['🧒', 'طالب', 'أدرس دروسي بنفسي'],
 const GRADES = [['1','الأول'],['2','الثاني'],['3','الثالث'],['4','الرابع'],['5','الخامس'],['6','السادس'],['7','السابع'],['8','الثامن'],['9','التاسع']];
 const gradeName = g => (GRADES.find(x => x[0] === String(g)) || [, ''])[1];
 
-const ACC = window.ACC = { user: null, profile: null, profiles: [], pid: store.get('acc_pid', null), ready: false };
+const ACC = window.ACC = { user: null, profile: null, profiles: [], pid: store.get('acc_pid', null), ready: false, call };
 
 /* ---------- push notifications (FCM web push) ---------- */
 const IOS = /iPhone|iPad|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
@@ -280,6 +281,7 @@ function renderOnboard() {
       await setDoc(uref(), data);
       try { await updateProfile(u, { displayName: nm }); } catch (e) {}
       ACC.profile = data;
+      await claimRef();
       if (role === 'parent') { ACC.profiles = []; go('kids'); return; }
       await setDoc(pref('me'), { name: nm, grade: grade || null, avatar: role === 'teacher' ? '👩‍🏫' : avatar, createdAt: serverTimestamp() });
       await loadProfiles(); await migrateLocal('me'); await setActive('me');
@@ -325,6 +327,8 @@ function renderWho() {
   if (!isAdult()) { go('account'); return; }
   const s = page('من يدرس الآن؟', ACC.profile.name, 'home');
   { const pc = ACC.pushCard(); if (pc) s.append(pc); }
+  s.append(el('div', { class: 'row', style: 'gap:8px;flex-wrap:wrap;margin-bottom:6px' }, el('button', { class: 'btn ghost sm', text: '🧮 اختبر مستوى أبنائك في الرياضيات', onclick: () => go('test') }),
+    (ACC.access && ACC.access.ref && ACC.access.ref.on === false) ? null : el('button', { class: 'btn ghost sm', text: '🎁 ادعُ عائلة واحصل على أيام مجانية', onclick: () => go('account') })));
   if (ACC.isAdmin) s.append(el('div', { class: 'row', style: 'gap:8px;flex-wrap:wrap;margin-bottom:8px' }, !ACC.can('browse') ? null : el('button', { class: 'btn sun', text: ACC.adminBrowse ? '👁️ وضع المدير مفعّل ← الرئيسية' : '👁️ تصفّح المنصة كمدير (كل الدروس)', onclick: async () => { ACC.adminBrowse = true; store.set('admin_browse', true); await setActive(null); go('home'); } }), el('button', { class: 'btn ghost', text: '🛠️ لوحة الإدارة', onclick: () => go('admin') })));
   const g = el('div', { class: 'whogrid' });
   const me = ACC.profiles.find(p => p.id === 'me');
@@ -601,6 +605,7 @@ function renderAccount() {
   s.append(el('div', { class: 'panel accbox' }, el('b', { text: 'اشتراكاتي' }),
     ...(ACC.subs.length ? ACC.subs.map(x => el('div', { class: 'kidrow' }, el('span', {}, el('b', { text: subName(x) }), el('span', { class: 'note', text: ' — حتى ' + fmtDate(x.end.toMillis()) })))) : [el('span', { class: 'note', text: 'لا يوجد اشتراك بعد. الدروس المجانية متاحة لك.' })]),
     ACC.hasAnySub() ? null : el('button', { class: 'btn sun', text: '⭐ ترقية', onclick: () => go('subscribe') })));
+  if (!ACC.kid && !ACC.co) s.append(refBox());
   s.append(pushRow());
   { const tc = (ACC.access || {}).teach || {}; if (tc.on || ACC.isAdmin) s.append(el('div', { class: 'panel accbox' }, el('b', { text: '🎥 دورات المعلمين' }),
     el('div', { class: 'row', style: 'gap:8px;flex-wrap:wrap' }, tc.show || ACC.isAdmin ? el('button', { class: 'btn ghost', text: '🎒 دوراتي المشتراة', onclick: () => go('courses-mine') }) : null,
@@ -668,11 +673,12 @@ const subApplies = sub => {
   if (ACC.kid) return false;
   return role === 'student' || (!!sc.self && ACC.pid === 'me');
 };
-ACC.hasAccess = (g, s) => ACC.subs.some(sub => { if (!subApplies(sub)) return false; const sc = sub.scope || {};
+ACC.trialN = () => { const t = ACC.subs.find(x => x.kind === 'trial'); return t ? ((t.scope || {}).trialN || 5) : 0; };
+ACC.hasAccess = (g, s) => ACC.subs.some(sub => { if (sub.kind === 'trial' || !subApplies(sub)) return false; const sc = sub.scope || {};
   if (sc.pairs) return sc.pairs.includes(g + ':' + s);
   return (sc.grades || []).some(x => x === '*' || x === g) && (sc.subjects || []).some(x => x === '*' || x === s); });
-ACC.hasAnySub = () => ACC.subs.some(subApplies);
-ACC.hasGrade = g => ACC.subs.some(sub => { if (!subApplies(sub)) return false; const sc = sub.scope || {}; if (sc.any) return true;
+ACC.hasAnySub = () => ACC.subs.some(x => x.kind !== 'trial' && subApplies(x));
+ACC.hasGrade = g => ACC.subs.some(sub => { if (sub.kind === 'trial' || !subApplies(sub)) return false; const sc = sub.scope || {}; if (sc.any) return true;
   if (sc.pairs) return sc.pairs.some(x => x.startsWith(g + ':')); return (sc.grades || []).some(x => x === '*' || x === g); });
 const fmtDate = ms => new Date(ms).toLocaleDateString('ar-LY', { year: 'numeric', month: 'long', day: 'numeric' });
 const KINDS = {
@@ -730,7 +736,7 @@ function renderSubscribe() {
       const isDays = (pl.dur || {}).t === 'days', want = pl.base === 'student_subject' ? { g: [grade], s: [subject] } : pl.base === 'parent_all' ? { g: ['*'], s: ['*'] } : { g: [grade], s: ['*'] };
       const kidIds = ACC.profiles.filter(p => p.id !== 'me').map(p => p.id), forKids = isParent;
       const inc = (have, w) => (have || []).includes('*') || w.every(v => (have || []).includes(v));
-      const cov = ACC.subs.find(x => { if (isDays && x.plan === pl.id) return false; const sc = x.scope || {}; if (sc.teacherOnly) return false;
+      const cov = ACC.subs.find(x => { if (x.kind === 'trial') return false; if (isDays && x.plan === pl.id) return false; const sc = x.scope || {}; if (sc.teacherOnly) return false;
         const who = sc.any || (forKids ? (sc.kids && (!sc.kidIds || kidIds.every(k => sc.kidIds.includes(k)))) : (sc.self || (!sc.kids && role === 'student')));
         return who && inc(sc.grades, want.g) && (sc.any || inc(sc.subjects, want.s)) && x.end.toMillis() >= pl.end - 864e5; });
       if (cov) { box.append(el('div', { class: 'feedback ok', text: '✓ أنت مشترك بالفعل في «' + subName(cov).replace(/^\S+\s/, '') + '» حتى ' + fmtDate(cov.end.toMillis()) + '، وهو يشمل ما اخترته. لا حاجة لاشتراك جديد.' })); return; }
@@ -1088,6 +1094,52 @@ function adminSafety(s) {
     b._st = setTimeout(() => { if (b.isConnected && b.dataset.sure === '1') { b.dataset.sure = ''; b.textContent = b._orig; b._orig = null; b.classList.remove('adm-sure'); } }, 5000);
   }, true);
 }
+/* ---------- invites: claim on sign-up, share card in «حسابي», admin box ---------- */
+async function claimRef() {
+  const r = store.get('ref_in', null); if (!r || !r.c || Date.now() - r.at > 14 * 864e5) return;
+  try { const x = await call('refClaim', { code: r.c }); store.set('ref_in', null);
+    if (x.ok) { await loadSubs(); D.cheer && D.cheer('win'); store.set('ref_gift', x.days || 3); } } catch (e) { store.set('ref_in', null); }
+}
+function refBox() {
+  const box = el('div', { class: 'panel accbox', style: 'border:2px solid #f59e0b' }, el('b', { text: '🎁 ادعُ عائلة واحصل على أيام مجانية' })); const m = el('div');
+  const gift = store.get('ref_gift', 0); if (gift) { box.append(el('div', { class: 'feedback ok', text: '🎉 حصلت على ' + gift + ' أيام مجانية لأنك سجّلت من رابط صديق.' })); store.set('ref_gift', 0); }
+  const body = el('div', { class: 'stack' }); box.append(body, m); body.append(el('span', { class: 'note', text: 'جارٍ التحميل…' }));
+  call('refMine', {}).then(r => { body.innerHTML = ''; const C = r.cfg, S = r.stats; store.set('my_ref', r.code); if (!C.on) { box.remove(); return; }
+    const link = 'https://mujtahid.ly/#i-' + r.code;
+    const msgTxt = 'أبنائي يتعلمون المنهج الليبي بالصوت والصورة على منصة المجتهد 📚✨ سجّلوا من هذا الرابط واحصلوا على ' + C.invitee + ' أيام مجانية 🎁\n' + link;
+    body.append(el('span', { class: 'note', text: 'شارك رابطك مع الأقارب والأصدقاء ومجموعات أولياء الأمور. كل عائلة تسجّل من رابطك ويبدأ أبناؤها الدراسة: ' + C.reg + ' يوم مجاني لك، وإذا اشتركت: ' + C.pay + ' أيام أخرى. وهم يحصلون على ' + C.invitee + ' أيام مجانية.' }),
+      el('div', { class: 'code', dir: 'ltr', style: 'font-weight:800;word-break:break-all', text: link }),
+      el('div', { class: 'row', style: 'gap:8px;flex-wrap:wrap' },
+        el('a', { class: 'btn sun', href: 'https://wa.me/?text=' + encodeURIComponent(msgTxt), target: '_blank', rel: 'noopener', text: '💬 شارك على واتساب' }),
+        el('button', { class: 'btn ghost', text: '📋 نسخ الرابط', onclick: async () => { try { await navigator.clipboard.writeText(msgTxt); fbk(m, 'ok', '✓ نُسخ.'); } catch (e) { fbk(m, 'info', link); } } }),
+        navigator.share ? el('button', { class: 'btn ghost', text: '📤 مشاركة', onclick: () => navigator.share({ text: msgTxt }).catch(() => {}) }) : null),
+      el('div', { class: 'stats' }, ...[[S.invited, 'عائلة سجّلت'], [S.active, 'بدأت الدراسة'], [S.paid, 'اشتركت'], [S.days, 'يوم مجاني حصلت عليه']].map(([n, t]) => el('div', { class: 'stat' }, el('b', { text: String(n) }), el('span', { text: t })))));
+    const tr = ACC.subs.find(x => x.kind === 'trial'); if (tr) body.append(el('div', { class: 'feedback info', text: '🎁 أيامك المجانية سارية حتى ' + fmtDate(tr.end.toMillis()) + ': أول ' + ((tr.scope || {}).trialN || 5) + ' دروس مفتوحة في كل مادة.' }));
+  }).catch(e => { body.innerHTML = ''; fbk(m, 'bad', fnErr(e)); });
+  return box;
+}
+function refAdminBox() {
+  const box = el('div', { class: 'panel accbox' }, el('b', { text: '🎁 الدعوات واختبار المستوى' }));
+  const body = el('div', { class: 'stack' }), m = el('div'); box.append(body, m);
+  box._lazy = () => { body.append(el('span', { class: 'note', text: 'جارٍ التحميل…' }));
+    call('adminRefs', { op: 'list' }).then(r => { body.innerHTML = ''; const C = r.cfg;
+      const num = (k, t) => { const i = el('input', { type: 'number', min: '0', value: String(C[k]), style: 'width:90px', oninput: e => { C[k] = Number(e.target.value); } }); return el('label', { class: 'prow' }, el('span', { text: t }), i); };
+      const on = el('input', { type: 'checkbox', checked: C.on ? '' : null, onchange: e => { C.on = e.target.checked; } });
+      const tb = r.tests || {}; const days = Object.keys(tb.byDay || {}).sort().reverse().slice(0, 7);
+      body.append(el('div', { class: 'stats' }, ...[[r.total.invited, 'سجّلوا من دعوة'], [r.total.active, 'بدأوا الدراسة'], [r.total.paid, 'اشتركوا من دعوة'], [tb.n || 0, 'اختبار مستوى (30 يوماً)'], [tb.reg || 0, 'اختبار من مسجّلين']].map(([n, t]) => el('div', { class: 'stat' }, el('b', { text: String(n) }), el('span', { text: t })))),
+        days.length ? el('span', { class: 'note', text: 'اختبارات المستوى: ' + days.map(d => d.slice(5) + ': ' + tb.byDay[d]).join(' · ') }) : null,
+        el('span', { class: 'note', text: 'رابط اختبار المستوى للإعلانات: https://mujtahid.ly/#test' }),
+        el('b', { text: '⚙️ الإعدادات' }), el('label', { class: 'sndrow' }, on, el('b', { text: 'تفعيل الدعوات' })),
+        num('invitee', 'أيام مجانية للمدعو عند التسجيل'), num('reg', 'أيام للداعي عندما يبدأ صديقه الدراسة'), num('pay', 'أيام إضافية للداعي عندما يشترك صديقه'), num('cap', 'حد أيام التسجيلات للداعي'), num('trialN', 'عدد الدروس المفتوحة من كل كتاب في الأيام المجانية'),
+        el('button', { class: 'btn', text: '💾 حفظ إعدادات الدعوات', onclick: async () => { try { await call('adminRefs', { op: 'cfg', ...C }); await loadAccess(); fbk(m, 'ok', '✓ حُفظت.'); } catch (e) { fbk(m, 'bad', fnErr(e)); } } }),
+        el('b', { text: '🏅 أكثر الداعين' }));
+      if (!r.top.length) body.append(el('span', { class: 'note', text: 'لا توجد دعوات بعد.' }));
+      r.top.forEach(t => body.append(el('div', { class: 'kidrow', style: 'display:flex;justify-content:space-between;gap:6px' }, el('span', {}, el('b', { text: t.name || '—' }), el('span', { class: 'note', dir: 'ltr', text: ' ' + t.phone })),
+        el('span', { class: 'note', text: t.invited + ' سجّل · ' + t.active + ' نشِط · ' + t.paid + ' اشترك · ' + t.days + ' يوم' }))));
+    }).catch(e => { body.innerHTML = ''; fbk(m, 'bad', fnErr(e)); }); };
+  return box;
+}
+
 function renderAdmin() {
   if (!ACC.user) { go('login'); return; }
   const s = page('لوحة الإدارة', ACC.owner ? 'المجتهد' : 'مشرف — حسب صلاحياتك', 'account');
@@ -1101,6 +1153,7 @@ function renderAdmin() {
   if (can('browse')) s.append(browseBox());
   if (ACC.owner) s.append(staffBox());
   if (can('plans')) s.append(plansBox());
+  if (can('plans') || can('stats')) s.append(refAdminBox());
   if (can('push')) s.append(pushBox());
   if (can('tts')) s.append(ttsBox());
   if (can('access')) s.append(accessBox(), booksBox());

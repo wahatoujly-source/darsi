@@ -340,6 +340,7 @@ exports.createOrder = onCall({secrets: [MYPAY_ID, MYPAY_SECRET], memory: "256MiB
   const newEnd = planEnd(plan, from).toMillis();
   const covering = active.find((x) => {
     if (isDays && x.plan === plan.id) return false; // تجديد نفس الباقة الشهرية مسموح (تُضاف المدة)
+    if (x.kind === "trial") return false;
     const sc = x.scope || {};
     if (sc.teacherOnly) return false;
     const who = sc.any || (scope.kids ? (sc.kids && (!sc.kidIds || kidIds.every((k) => sc.kidIds.includes(k)))) : (sc.self || (!sc.kids && u.role === "student")));
@@ -440,7 +441,8 @@ exports.mypayWebhook = onRequest({secrets: [MYPAY_WEBHOOK], memory: "256MiB", co
     if (result === "ok") { const o = (await oRef.get()).data() || {};
       if (o.kind === "course") { await pushUser(o.uid, {title: "✅ تم الاشتراك في الدورة", body: o.title || "", link: "#crs-" + o.cid}, {rule: "events"});
         await pushUser(o.tid, {title: "🎉 مشترك جديد في دورتك", body: (o.title || "") + " — أُضيف نصيبك إلى محفظتك.", link: "#studio"}, {rule: "events"}); }
-      else await pushUser(o.uid, {title: "✅ تم تفعيل اشتراكك", body: (o.planName || "اشتراك المجتهد") + " — كل الدروس المشمولة مفتوحة الآن.", link: "#home"}, {rule: "events"}); }
+      else { await refPaid(o.uid).catch((e) => logger.warn("refPaid", e.message));
+        await pushUser(o.uid, {title: "✅ تم تفعيل اشتراكك", body: (o.planName || "اشتراك المجتهد") + " — كل الدروس المشمولة مفتوحة الآن.", link: "#home"}, {rule: "events"}); } }
     return res.status(200).send(result);
   } catch (e) {
     logger.error("mypayWebhook error", e);
@@ -516,7 +518,7 @@ exports.getLesson = onCall({memory: "512MiB"}, async (req) => {
   } else if (tk.coOf) { uid = await ownerOf(req); }
   const meta = LESSON_INDEX[id];
   if (!meta) throw new HttpsError("not-found", "الدرس غير موجود");
-  const [g, s] = meta;
+  const [g, s, rank] = meta;
   // المدير يتصفح كل الدروس للمراجعة (بدون اشتراك وبدون حدّ يومي، حتى المغلقة)
   if (req.data && req.data.admin) {
     await needAdmin(req, "browse");
@@ -543,6 +545,7 @@ exports.getLesson = onCall({memory: "512MiB"}, async (req) => {
   const ok = subsSnap.docs.map((d) => d.data()).some((sub) => {
     if (sub.active === false || !sub.end || sub.end.toMillis() <= now) return false;
     const sc = sub.scope || {};
+    if (sub.kind === "trial") return rank != null && rank < (sc.trialN || 5); // أيام مجانية: أول N دروس من كل كتاب فقط
     if (sc.teacherOnly) return role === "teacher" && pid === "me" && (sc.pairs || []).includes(g + ":" + s);
     if (sc.any) return (sc.grades || []).some((x) => x === "*" || x === g);
     if (sc.kids) { if (!pid || pid === "me" || (sc.kidIds && !sc.kidIds.includes(pid))) return false; } else if (!(role === "student" || (sc.self && pid === "me"))) return false;
@@ -749,7 +752,7 @@ exports.adminStats = onCall({memory: "512MiB"}, async (req) => {
   active.forEach((x) => {
     byKind[x.kind] = (byKind[x.kind] || 0) + 1;
     const r = (uinfo[x.uid] || {}).role;
-    if (x.kind !== "gift" && payers[r]) payers[r].add(x.uid);
+    if (x.kind !== "gift" && x.kind !== "trial" && payers[r]) payers[r].add(x.uid);
   });
   let kidsCovered = 0;
   const kidSubUsers = new Set(active.filter((x) => (x.scope || {}).kids).map((x) => x.uid));
@@ -1443,7 +1446,7 @@ async function audience(a) {
   const [toks, users, subs, profs] = await Promise.all([db.collection("pushTokens").get(),
     db.collection("users").select("role", "phone", "lastSeen", "createdAt").get(), db.collection("subscriptions").get(), db.collectionGroup("profiles").select("grade", "stats.lastDay").get()]);
   const now = Date.now(); const U = {}; users.docs.forEach((d) => { U[d.id] = d.data(); });
-  const subbed = new Set(); subs.docs.forEach((d) => { const x = d.data(); if (x.active !== false && x.end && x.end.toMillis() > now) subbed.add(x.uid); });
+  const subbed = new Set(); subs.docs.forEach((d) => { const x = d.data(); if (x.kind !== "trial" && x.active !== false && x.end && x.end.toMillis() > now) subbed.add(x.uid); });
   const grades = {}, last = {};
   profs.docs.forEach((d) => { const uid = d.ref.parent.parent.id; const x = d.data(); (grades[uid] = grades[uid] || new Set()).add(String(x.grade || ""));
     (grades[uid + "/" + d.id] = new Set([String(x.grade || "")]));
@@ -1500,7 +1503,8 @@ exports.pushAuto = onSchedule({schedule: "30 18 * * *", timeZone: "Africa/Tripol
     db.collectionGroup("profiles").get(), db.collection("pushState").get()]);
   const T = {}; toks.docs.forEach((d) => { const x = d.data(); (T[x.uid] = T[x.uid] || []).push(d); });
   const S = {}; states.docs.forEach((d) => { S[d.id] = d.data(); });
-  const active = {}; subs.docs.forEach((d) => { const x = d.data(); if (x.active !== false && x.end && x.end.toMillis() > now) (active[x.uid] = active[x.uid] || []).push(x); });
+  const active = {}; subs.docs.forEach((d) => { const x = d.data(); if (x.kind !== "trial" && x.active !== false && x.end && x.end.toMillis() > now) (active[x.uid] = active[x.uid] || []).push(x); });
+  await refActivate().catch((e) => logger.warn("refActivate", e.message));
   const P = {}; profs.docs.forEach((d) => { const uid = d.ref.parent.parent.id; (P[uid] = P[uid] || []).push({id: d.id, ...d.data()}); });
   const fill = (t, v) => String(t || "").replace(/\{(\w+)\}/g, (m, k) => v[k] != null ? v[k] : m);
   const sent = {}; const mark = async (uid, k, extra = {}) => { await db.collection("pushState").doc(uid).set({[k]: now, ...extra}, {merge: true}); };
@@ -1603,4 +1607,112 @@ exports.adminActivity = onCall({memory: "1GiB", timeoutSec: 120}, async (req) =>
   }
   rows.sort((a, b) => b.pts - a.pts);
   return {days, dau, byGrade, total, everActive, rows: rows.slice(0, 300), count: rows.length};
+});
+
+
+// ===================== الدعوات والأيام المجانية =====================
+// config/access.ref = {on, reg: أيام للداعي عند تسجيل صديق نشِط, pay: أيام إضافية عند دفع الصديق, invitee: أيام للمدعو, cap: حد أيام التسجيلات, trialN: عدد الدروس المفتوحة من كل كتاب}
+const REF_DEF = {on: true, reg: 2, pay: 5, invitee: 3, cap: 30, trialN: 5};
+const refCfg = async () => ({...REF_DEF, ...((await getAccessCfg()).ref || {})});
+// يضيف أياماً: المشترك تُمدَّد نهاية اشتراكه، وغير المشترك يحصل على «أيام مجانية» تفتح أول N دروس من كل كتاب
+async function grantDays(uid, days, why) {
+  if (!(days > 0)) return null;
+  const now = Date.now(); const subs = (await db.collection("subscriptions").where("uid", "==", uid).get()).docs;
+  const paid = subs.filter((d) => { const x = d.data(); return x.kind !== "trial" && x.active !== false && x.end && x.end.toMillis() > now; })
+      .sort((a, b) => b.data().end.toMillis() - a.data().end.toMillis());
+  if (paid.length) { await paid[0].ref.update({end: Timestamp.fromMillis(paid[0].data().end.toMillis() + days * DAY), bonusDays: FieldValue.increment(days)}); return "extended"; }
+  const cfg = await refCfg(); const ref = db.collection("subscriptions").doc("trial_" + uid); const cur = await ref.get();
+  const base = cur.exists && cur.data().end && cur.data().end.toMillis() > now ? cur.data().end.toMillis() : now;
+  await ref.set({uid, kind: "trial", plan: "trial", planName: "أيام مجانية — أول " + cfg.trialN + " دروس من كل كتاب", scope: {grades: ["*"], subjects: ["*"], any: true, trialN: cfg.trialN},
+    amount: 0, orderId: null, start: FieldValue.serverTimestamp(), end: Timestamp.fromMillis(base + days * DAY), active: true, why: String(why || "").slice(0, 40), days: FieldValue.increment(days)}, {merge: true});
+  return "trial";
+}
+const REF_ABC = "23456789ABCDEFGHJKLMNPQRSTUVWXYZ";
+exports.refMine = onCall(async (req) => {
+  const uid = needUser(req); const tk = req.auth.token || {};
+  if (tk.kidOf || (tk.firebase && tk.firebase.sign_in_provider === "anonymous")) throw new HttpsError("permission-denied", "سجّل الدخول بحسابك");
+  const owner = tk.coOf ? await ownerOf(req) : uid;
+  const uRef = db.collection("users").doc(owner); const us = await uRef.get(); if (!us.exists) throw new HttpsError("failed-precondition", "أكمل بيانات حسابك أولاً");
+  let code = us.data().refCode;
+  if (!code) {
+    for (let i = 0; i < 6 && !code; i++) { const c = Array.from(crypto.randomBytes(6)).map((b) => REF_ABC[b % REF_ABC.length]).join("");
+      const cr = db.collection("refCodes").doc(c); const ok = await db.runTransaction(async (tx) => { if ((await tx.get(cr)).exists) return false; tx.set(cr, {uid: owner, at: FieldValue.serverTimestamp()}); return true; });
+      if (ok) code = c; }
+    await uRef.set({refCode: code}, {merge: true});
+  }
+  const refs = (await db.collection("refs").where("by", "==", owner).get()).docs.map((x) => x.data());
+  return {code, cfg: await refCfg(), stats: {invited: refs.length, active: refs.filter((x) => x.active).length, paid: refs.filter((x) => x.paid).length,
+    days: refs.reduce((a, x) => a + (x.regDays || 0) + (x.payDays || 0), 0)}};
+});
+exports.refClaim = onCall(async (req) => {
+  const uid = needUser(req); const tk = req.auth.token || {};
+  if (tk.kidOf || tk.coOf || (tk.firebase && tk.firebase.sign_in_provider === "anonymous")) return {ok: false};
+  const cfg = await refCfg(); if (!cfg.on) return {ok: false, off: true};
+  const code = String((req.data && req.data.code) || "").toUpperCase(); if (!/^[2-9A-HJ-NP-Z]{6}$/.test(code)) throw new HttpsError("invalid-argument", "رمز الدعوة غير صحيح");
+  const cs = await db.collection("refCodes").doc(code).get(); if (!cs.exists) throw new HttpsError("not-found", "رمز الدعوة غير موجود");
+  const by = cs.data().uid; if (by === uid) throw new HttpsError("failed-precondition", "لا يمكنك استعمال رابطك أنت");
+  const uRef = db.collection("users").doc(uid);
+  const done = await db.runTransaction(async (tx) => {
+    const us = await tx.get(uRef); if (!us.exists) throw new HttpsError("failed-precondition", "أكمل بيانات حسابك أولاً");
+    const u = us.data(); if (u.refBy) return false;
+    const created = u.createdAt && u.createdAt.toMillis ? u.createdAt.toMillis() : 0;
+    if (!created || Date.now() - created > 3 * DAY) throw new HttpsError("failed-precondition", "رابط الدعوة للحسابات الجديدة فقط");
+    tx.set(uRef, {refBy: by}, {merge: true});
+    tx.set(db.collection("refs").doc(uid), {by, uid, name: u.name || "", at: FieldValue.serverTimestamp(), active: false, paid: false, regDays: 0, payDays: 0});
+    return true;
+  });
+  if (!done) return {ok: false, already: true};
+  const r = await grantDays(uid, cfg.invitee, "invitee");
+  pushUser(by, {title: "🎁 عائلة جديدة سجّلت من رابطك", body: "ستحصل على " + cfg.reg + " يوم مجاني عندما يبدأ أبناؤهم الدراسة، و" + cfg.pay + " أيام أخرى إذا اشتركوا.", link: "#account"}, {rule: "events"});
+  return {ok: true, days: cfg.invitee, kind: r};
+});
+// الصديق صار نشِطاً (درس فعلاً) → أيام التسجيل للداعي (حتى الحد الأقصى)
+async function refActivate() {
+  const cfg = await refCfg(); if (!cfg.on) return;
+  const pend = await db.collection("refs").where("active", "==", false).get();
+  for (const d of pend.docs) {
+    const x = d.data(); const ps = await db.collection("users").doc(x.uid).collection("profiles").get();
+    if (!ps.docs.some((p) => p.data().stats && p.data().stats.lastDay)) continue;
+    const mine = (await db.collection("refs").where("by", "==", x.by).get()).docs.reduce((a, r) => a + (r.data().regDays || 0), 0);
+    const give = Math.max(0, Math.min(cfg.reg, cfg.cap - mine));
+    await d.ref.update({active: true, regDays: give, activeAt: FieldValue.serverTimestamp()});
+    if (give) { await grantDays(x.by, give, "ref-reg"); await pushUser(x.by, {title: "🎉 حصلت على " + give + " يوم مجاني", body: "عائلة دعوتها بدأت الدراسة في المجتهد. شكراً لك!", link: "#account"}, {rule: "events"}); }
+  }
+}
+// الصديق دفع → أيام إضافية للداعي (بلا حد)
+async function refPaid(uid) {
+  const cfg = await refCfg(); if (!cfg.on) return;
+  const r = db.collection("refs").doc(uid); const rs = await r.get(); if (!rs.exists || rs.data().paid) return;
+  await r.update({paid: true, payDays: cfg.pay, paidAt: FieldValue.serverTimestamp()});
+  await grantDays(rs.data().by, cfg.pay, "ref-pay");
+  await pushUser(rs.data().by, {title: "🎉 حصلت على " + cfg.pay + " أيام مجانية", body: "عائلة دعوتها اشتركت في المجتهد. شكراً لأنك تنشر الخير!", link: "#account"}, {rule: "events"});
+}
+exports.adminRefs = onCall(async (req) => {
+  const d = req.data || {};
+  if (d.op === "cfg") {
+    await needAdmin(req, "plans");
+    const n = (v, lo, hi, def) => { const x = Math.round(Number(v)); return x >= lo && x <= hi ? x : def; };
+    const ref = {on: !!d.on, reg: n(d.reg, 0, 30, 2), pay: n(d.pay, 0, 60, 5), invitee: n(d.invitee, 0, 30, 3), cap: n(d.cap, 0, 365, 30), trialN: n(d.trialN, 1, 20, 5)};
+    await db.collection("config").doc("access").set({ref}, {merge: true}); ACCESS = null; return {cfg: ref};
+  }
+  await needAdmin(req, ["plans", "stats"]);
+  const refs = (await db.collection("refs").get()).docs.map((x) => x.data()); const by = {};
+  refs.forEach((x) => { const b = by[x.by] = by[x.by] || {uid: x.by, invited: 0, active: 0, paid: 0, days: 0}; b.invited++; if (x.active) b.active++; if (x.paid) b.paid++; b.days += (x.regDays || 0) + (x.payDays || 0); });
+  const top = Object.values(by).sort((a, b) => b.paid - a.paid || b.active - a.active || b.invited - a.invited).slice(0, 30);
+  for (const t of top) { const u = await db.collection("users").doc(t.uid).get(); t.name = u.exists ? u.data().name || "" : ""; t.phone = u.exists ? String(u.data().phone || "").replace("+218", "0") : ""; }
+  const since = Date.now() - 30 * DAY;
+  const tests = await db.collection("testLogs").where("at", ">", Timestamp.fromMillis(since)).get();
+  const tByDay = {}; tests.docs.forEach((x) => { const k = tripDay(x.data().at.toMillis()); tByDay[k] = (tByDay[k] || 0) + 1; });
+  return {cfg: await refCfg(), total: {invited: refs.length, active: refs.filter((x) => x.active).length, paid: refs.filter((x) => x.paid).length}, top,
+    tests: {n: tests.size, byDay: tByDay, reg: tests.docs.filter((x) => x.data().uid).length}};
+});
+
+// ===================== اختبار المستوى المجاني (بدون تسجيل) =====================
+exports.testLog = onCall(async (req) => {
+  const d = req.data || {}; const g = String(d.g || "");
+  if (!GRADES.includes(g) || !["add", "sub", "mul", "div", "mix"].includes(d.skill)) return {ok: false};
+  const n = Math.min(40, Math.max(1, Math.round(Number(d.n) || 0))), sc = Math.min(n, Math.max(0, Math.round(Number(d.sc) || 0)));
+  await db.collection("testLogs").add({g, skill: d.skill, n, sc, secs: Math.min(3600, Math.max(0, Math.round(Number(d.secs) || 0))), lvl: str(d.lvl, 20),
+    uid: req.auth ? req.auth.uid : null, at: FieldValue.serverTimestamp()});
+  return {ok: true};
 });
