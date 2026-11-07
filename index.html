@@ -933,7 +933,7 @@ function phToken(t){const x=String(t).trim().replace(/[.,!]/g,' ').trim().split(
   return u.length===1&&PH_TOK.test(u[0])?u[0]:null;}
 async function phSay(tok){let k=(TTS.phx&&TTS.phx[tok])||tok;if(k==='k')k='c';await VOX.load();
   if(VOX.sets.ph&&VOX.sets.ph.has(k)){const ok=await VOX.play('aud/ph/'+k+'.mp3');if(ok)return;}
-  if(PH_EN[k])return speak(PH_EN[k],{lang:'en',raw:true});return speak(PH_AR[k]||k,{lang:'ar'});}
+  if(PH_EN[k])return speak(PH_EN[k],{lang:'en',raw:true});return sayAr(PH_AR[k]||k);}
 function speak(text,{who='teacher',lang='en',onWord,rate,raw}={}){
   /* any Arabic sentence sent here (games, hints, 'اضغط على حرف…') goes through the Arabic pipeline: recorded → cloud voice → device */
   if(lang!=='ar'&&!onWord&&!raw&&/[\u0621-\u064A]/.test(String(text)))return speakAr(String(text),{force:true});
