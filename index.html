@@ -2212,6 +2212,7 @@ function renderHome(){
   root.append(el('div',{class:'hm-hero'},
     el('h2',{text:who&&who.id!=='me'?'أهلاً '+who.name+' 👋':'اختر صفّك وابدأ التعلّم'}),
     el('p',{text:'دروس المنهج الليبي بالصوت والصورة.'})));
+  {const pc=window.ACC&&ACC.pushCard&&ACC.pushCard();if(pc)root.append(pc);}
   const card=gr=>{const on=!!c.grades[gr.id];const n=parseInt(gr.id,10);
     return el('button',{class:'gcard'+(on?'':' off')+(mineG===gr.id||LG===gr.id?' mine':''),style:on&&n?'--c:var(--g'+n+')':null,disabled:!on,onclick:()=>go('g'+gr.id)},
       el('span',{class:'gn',text:n?AR_NUM(n):'★'}),

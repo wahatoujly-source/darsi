@@ -5,6 +5,7 @@ import { getAuth, onAuthStateChanged, signOut, GoogleAuthProvider, signInWithPop
   signInWithEmailAndPassword, createUserWithEmailAndPassword,
   sendPasswordResetEmail, updateProfile } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js';
 import { getFunctions, httpsCallable } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-functions.js';
+import { getMessaging, getToken, deleteToken, isSupported } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-messaging.js';
 import { getFirestore, doc, getDoc, setDoc, getDocs, collection, deleteDoc, serverTimestamp, query, where }
   from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js';
 
@@ -22,6 +23,7 @@ const auth = getAuth(fb); auth.languageCode = 'ar';
 const db = getFirestore(fb);
 const fns = getFunctions(fb, 'europe-west1');
 const call = (name, data) => httpsCallable(fns, name)(data).then(r => r.data);
+
 const fnErr = e => (e && e.message && !/^internal$|^INTERNAL$/.test(e.message)) ? e.message : 'تعذّر الاتصال بالخادم. حاول لاحقاً.';
 
 const D = window.DARSI; const { el, go, store } = D;
@@ -35,6 +37,57 @@ const GRADES = [['1','الأول'],['2','الثاني'],['3','الثالث'],['4
 const gradeName = g => (GRADES.find(x => x[0] === String(g)) || [, ''])[1];
 
 const ACC = window.ACC = { user: null, profile: null, profiles: [], pid: store.get('acc_pid', null), ready: false };
+
+/* ---------- push notifications (FCM web push) ---------- */
+const IOS = /iPhone|iPad|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+const standalone = () => (window.matchMedia && matchMedia('(display-mode: standalone)').matches) || navigator.standalone === true;
+const osName = () => IOS ? 'ios' : /Android/.test(navigator.userAgent) ? 'android' : 'desktop';
+ACC.pushState = async () => {
+  if (IOS && !standalone()) return 'ios-install';
+  if (!('Notification' in window) || !('serviceWorker' in navigator)) return 'unsupported';
+  try { if (!(await isSupported())) return 'unsupported'; } catch (e) { return 'unsupported'; }
+  return Notification.permission; };
+let MSG = null;
+const pushToken = async () => { MSG = MSG || getMessaging(fb); const reg = await navigator.serviceWorker.ready; return getToken(MSG, { serviceWorkerRegistration: reg }); };
+ACC.enablePush = async () => {
+  const p = await Notification.requestPermission(); if (p !== 'granted') return p;
+  const t = await pushToken(); await call('pushReg', { token: t, pid: ACC.kid ? ACC.kid.pid : 'me', os: osName() });
+  store.set('push_t', t); store.set('push_at', Date.now()); return 'granted'; };
+ACC.disablePush = async () => { const t = store.get('push_t', ''); try { if (t) await call('pushReg', { token: t, off: true }); } catch (e) {} try { MSG = MSG || getMessaging(fb); await deleteToken(MSG); } catch (e) {} store.set('push_t', ''); };
+async function pushRefresh() { // مرة يومياً: تحديث رمز الجهاز + آخر ظهور
+  try { if (!ACC.user || (ACC.user.isAnonymous && !ACC.kid)) return; if (store.get('push_at', 0) > Date.now() - 20 * 3600e3) return;
+    let t = ''; if ((await ACC.pushState()) === 'granted') { try { t = await pushToken(); store.set('push_t', t); } catch (e) {} }
+    await call('pushReg', t ? { token: t, pid: ACC.kid ? ACC.kid.pid : 'me', os: osName() } : {}); store.set('push_at', Date.now()); } catch (e) {} }
+/* soft prompt on the home page (never the browser prompt on first sight) */
+ACC.pushCard = () => {
+  if (!ACC.user || (ACC.user.isAnonymous && !ACC.kid)) return null;
+  if (store.get('push_later', 0) > Date.now() - 4 * 864e5) return null;
+  const w = el('div');
+  ACC.pushState().then(st => {
+    if (!['default', 'ios-install'].includes(st)) return;
+    if (st === 'ios-install' && store.get('push_ios_seen', 0) > Date.now() - 14 * 864e5) return;
+    const kidsN = (ACC.profiles || []).filter(p => p.id !== 'me').length;
+    const txt = ACC.kid ? 'فعّل الإشعارات ليصلك تذكير بدروسك وتحدياتك اليومية.' : kidsN ? 'فعّل الإشعارات ليصلك تقرير أسبوعي عن ' + (kidsN > 1 ? 'أبنائك' : 'ابنك') + '، وتذكير بالدروس، وكل جديد في المنصة.' : 'فعّل الإشعارات ليصلك كل جديد: دروس جديدة، تذكير يومي، وعروض الاشتراك.';
+    const m = el('div');
+    const later = el('button', { class: 'btn ghost sm', text: 'لاحقاً', onclick: () => { store.set('push_later', Date.now()); if (st === 'ios-install') store.set('push_ios_seen', Date.now()); w.remove(); } });
+    w.append(el('div', { class: 'panel', style: 'display:flex;flex-direction:column;gap:8px;border:2px solid #f59e0b;margin:10px 0' },
+      el('b', { text: '🔔 لا تفوّت شيئاً' }), el('span', { class: 'note', text: st === 'ios-install' ? 'على آيفون تصل الإشعارات فقط بعد تثبيت المنصة: اضغط زر المشاركة ⬆️ في Safari، ثم «إضافة إلى الشاشة الرئيسية»، وافتح المنصة من أيقونتها.' : txt }),
+      el('div', { class: 'row', style: 'gap:8px' }, st === 'default' ? el('button', { class: 'btn sun sm', text: '🔔 تفعيل الإشعارات', onclick: async e => { e.target.disabled = true;
+        try { const r = await ACC.enablePush(); if (r === 'granted') { w.innerHTML = ''; w.append(el('div', { class: 'feedback ok', text: '✓ تم تفعيل الإشعارات.' })); setTimeout(() => w.remove(), 3000); }
+          else { fbk(m, 'info', 'لم تُفعَّل. يمكنك تفعيلها لاحقاً من «حسابي».'); store.set('push_later', Date.now()); } } catch (er) { fbk(m, 'bad', 'تعذّر التفعيل على هذا الجهاز.'); } e.target.disabled = false; } }) : null, later), m)); });
+  return w; };
+/* row in «حسابي» */
+function pushRow() {
+  const box = el('div', { class: 'panel accbox' }, el('b', { text: '🔔 الإشعارات على هذا الجهاز' })); const m = el('div');
+  const draw = st => { [...box.children].slice(1).forEach(x => x.remove());
+    const T = { granted: '✅ مفعّلة', denied: '⛔ مرفوضة من إعدادات المتصفح. لتفعيلها: افتح إعدادات الموقع في المتصفح (رمز القفل بجانب العنوان) واسمح بالإشعارات.', default: 'غير مفعّلة', unsupported: 'هذا المتصفح لا يدعم الإشعارات. جرّب Chrome.', 'ios-install': 'على آيفون: أضف المنصة إلى الشاشة الرئيسية (زر المشاركة ⬆️ ← «إضافة إلى الشاشة الرئيسية») ثم افتحها من الأيقونة وفعّل الإشعارات من هنا.' };
+    box.append(el('span', { class: 'note', text: T[st] || st }));
+    if (st === 'default') box.append(el('button', { class: 'btn sun', text: '🔔 تفعيل الإشعارات', onclick: async () => { try { draw(await ACC.enablePush()); } catch (e) { fbk(m, 'bad', 'تعذّر التفعيل.'); } } }));
+    if (st === 'granted') box.append(el('button', { class: 'btn ghost sm', text: 'إيقاف الإشعارات على هذا الجهاز', onclick: async () => { await ACC.disablePush(); fbk(m, 'ok', '✓ أُوقفت.'); } }));
+    box.append(m); };
+  ACC.pushState().then(draw); return box;
+}
+
 
 /* ---------- Arabic error messages ---------- */
 const ERR = {
@@ -271,6 +324,7 @@ function renderWho() {
   if (!ACC.user || !ACC.profile) { go('login'); return; }
   if (!isAdult()) { go('account'); return; }
   const s = page('من يدرس الآن؟', ACC.profile.name, 'home');
+  { const pc = ACC.pushCard(); if (pc) s.append(pc); }
   if (ACC.isAdmin) s.append(el('div', { class: 'row', style: 'gap:8px;flex-wrap:wrap;margin-bottom:8px' }, !ACC.can('browse') ? null : el('button', { class: 'btn sun', text: ACC.adminBrowse ? '👁️ وضع المدير مفعّل ← الرئيسية' : '👁️ تصفّح المنصة كمدير (كل الدروس)', onclick: async () => { ACC.adminBrowse = true; store.set('admin_browse', true); await setActive(null); go('home'); } }), el('button', { class: 'btn ghost', text: '🛠️ لوحة الإدارة', onclick: () => go('admin') })));
   const g = el('div', { class: 'whogrid' });
   const me = ACC.profiles.find(p => p.id === 'me');
@@ -547,6 +601,7 @@ function renderAccount() {
   s.append(el('div', { class: 'panel accbox' }, el('b', { text: 'اشتراكاتي' }),
     ...(ACC.subs.length ? ACC.subs.map(x => el('div', { class: 'kidrow' }, el('span', {}, el('b', { text: subName(x) }), el('span', { class: 'note', text: ' — حتى ' + fmtDate(x.end.toMillis()) })))) : [el('span', { class: 'note', text: 'لا يوجد اشتراك بعد. الدروس المجانية متاحة لك.' })]),
     ACC.hasAnySub() ? null : el('button', { class: 'btn sun', text: '⭐ ترقية', onclick: () => go('subscribe') })));
+  s.append(pushRow());
   { const tc = (ACC.access || {}).teach || {}; if (tc.on || ACC.isAdmin) s.append(el('div', { class: 'panel accbox' }, el('b', { text: '🎥 دورات المعلمين' }),
     el('div', { class: 'row', style: 'gap:8px;flex-wrap:wrap' }, tc.show || ACC.isAdmin ? el('button', { class: 'btn ghost', text: '🎒 دوراتي المشتراة', onclick: () => go('courses-mine') }) : null,
       el('button', { class: 'btn ghost', text: '🎓 منصة المعلم — انشر دوراتك', onclick: () => go('studio') })))); }
@@ -843,7 +898,7 @@ function plansBox() {
 
 /* ---------- admin: supervisors with specific permissions (owner only) ---------- */
 const PERM_AR = { stats: '📊 الإحصائيات والمشتركون', grant: '🎁 منح وإلغاء الاشتراكات المجانية', plans: '💰 الباقات والأسعار', access: '🔐 فتح وإغلاق الدروس والكتب', tts: '🔊 الأصوات',
-  teach_req: '👩‍🏫 قبول طلبات المعلمين', teach_courses: '🎬 مراجعة ونشر دورات الفيديو', teach_wd: '💸 طلبات سحب أرصدة المعلمين', browse: '👁️ تصفّح كل الدروس للمراجعة' };
+  teach_req: '👩‍🏫 قبول طلبات المعلمين', teach_courses: '🎬 مراجعة ونشر دورات الفيديو', teach_wd: '💸 طلبات سحب أرصدة المعلمين', browse: '👁️ تصفّح كل الدروس للمراجعة', push: '🔔 إرسال الإشعارات' };
 function staffBox() {
   const box = el('div', { class: 'panel accbox' }, el('b', { text: '🧑‍💼 المشرفون' }),
     el('span', { class: 'note', text: 'أضف مشرفاً من الأشخاص المسجّلين في المنصة، واختر صلاحياته بالضبط. يرى المشرف في لوحة الإدارة الأقسام المسموحة له فقط، ولا يستطيع إضافة مشرفين أو تغيير إعدادات المنصة الأساسية.' }));
@@ -865,6 +920,67 @@ function staffBox() {
           el('button', { class: 'btn sun', text: 'اجعله مشرفاً', onclick: async () => { try { const x = await call('adminStaff', { op: 'set', uid: u.uid, perms: [...sel] }); drawList(x.staff); res.innerHTML = ''; fbk(msg, 'ok', '✓ أُضيف المشرف. يسجّل دخوله ثم يفتح «حسابي ← لوحة الإدارة».'); } catch (e) { fbk(msg, 'bad', fnErr(e)); } } }))); });
     } catch (e) { fbk(msg, 'bad', fnErr(e)); } } })), res, msg);
   call('adminStaff', { op: 'list' }).then(r => drawList(r.staff)).catch(e => fbk(msg, 'bad', fnErr(e)));
+  return box;
+}
+
+/* ---------- admin: notifications (manual campaigns + automatic rules) ---------- */
+function pushBox() {
+  const box = el('div', { class: 'panel accbox' }, el('b', { text: '🔔 الإشعارات' }),
+    el('span', { class: 'note', text: 'تصل لمن وافق على الإشعارات في جهازه، حتى والمنصة مغلقة. اختر الفئة واكتب الرسالة، أو استخدم قالباً جاهزاً.' }));
+  const info = el('div'), msg = el('div'); box.append(info);
+  const sel = (opts, v) => { const x = el('select', { class: 'qsel' }, ...opts.map(([k, t]) => el('option', { value: k, text: t }))); x.value = v; return x; };
+  const role = sel([['all', 'كل البالغين (أولياء أمور وطلاب ومعلمون)'], ['parent', 'أولياء الأمور'], ['student', 'الطلاب'], ['teacher', 'المعلمون'], ['kids', 'الطلاب وأجهزة الأبناء']], 'all');
+  const sub = sel([['', 'المشتركون وغير المشتركين'], ['no', 'غير المشتركين فقط'], ['yes', 'المشتركون فقط']], '');
+  const grade = sel([['', 'كل الصفوف'], ...GRADES.map(([g, n]) => [g, 'الصف ' + n])], '');
+  const inact = sel([['0', 'بغض النظر عن آخر نشاط'], ['7', 'لم يفتحوا المنصة منذ 7 أيام'], ['14', 'منذ 14 يوماً'], ['30', 'منذ 30 يوماً'], ['60', 'منذ 60 يوماً']], '0');
+  const phone = el('input', { placeholder: 'أو شخص واحد برقم هاتفه 09xxxxxxxx (اختياري)', dir: 'ltr', inputmode: 'numeric' });
+  const title = el('input', { placeholder: 'العنوان (قصير وواضح)' }), body = el('textarea', { rows: '3', placeholder: 'نص الإشعار' });
+  const link = sel([['#home', 'يفتح: الرئيسية'], ['#subscribe', 'يفتح: صفحة الاشتراك'], ['#books', 'يفتح: الكتب المدرسية'], ['#courses', 'يفتح: دورات المعلمين'], ['#who', 'يفتح: تقارير الأبناء'], ['#studio', 'يفتح: منصة المعلم'], ['#account', 'يفتح: حسابي']], '#home');
+  const aud = () => ({ role: role.value, sub: sub.value, grade: grade.value, inactive: Number(inact.value), phone: phone.value.trim() });
+  const TPL = [['📚 الكتب المدرسية', '📚 كتب المنهج الليبي PDF مجاناً', 'حمّل كتب صف ابنك مجاناً وبدون تسجيل من منصة المجتهد.', '#books', ''],
+    ['🆕 دروس جديدة', '🆕 دروس جديدة في المجتهد', 'أضفنا دروساً جديدة. افتح المنصة وجرّبها مع ابنك الآن.', '#home', ''],
+    ['📝 الامتحانات', '📝 استعدّوا للامتحانات', 'مراجعات وتمارين جاهزة لكل المواد. ابدأوا اليوم ولو بدرس واحد.', '#home', ''],
+    ['🎁 عرض للاشتراك', '🎁 عرض خاص لفترة محدودة', 'اشترك الآن بسعر رمزي وافتح كل الدروس لأبنائك.', '#subscribe', 'no'],
+    ['🎥 دورات المعلمين', '🎥 دورات فيديو من معلمين معتمدين', 'شروحات وحصص تقوية لكل المواد. الدرس الأول مجاني.', '#courses', ''],
+    ['💙 للغائبين', '💙 اشتقنا لكم في المجتهد', 'خمس دقائق اليوم تصنع فرقاً. هيا نكمل من حيث توقفنا!', '#home', '']];
+  const cnt = el('span', { class: 'note' });
+  const sendB = el('button', { class: 'btn sun', text: '📤 إرسال' });
+  sendB.onclick = async () => { msg.innerHTML = '';
+    if (sendB.dataset.c !== '1') { try { const r = await call('adminPush', { op: 'count', aud: aud() }); if (!r.n) { fbk(msg, 'info', 'لا يوجد أحد في هذه الفئة فعّل الإشعارات بعد.'); return; }
+      sendB.dataset.c = '1'; sendB.textContent = '✓ تأكيد الإرسال إلى ' + r.n + ' جهاز'; } catch (e) { fbk(msg, 'bad', fnErr(e)); } return; }
+    sendB.disabled = true; fbk(msg, 'info', 'جارٍ الإرسال…');
+    try { const r = await call('adminPush', { op: 'send', aud: aud(), title: title.value, body: body.value, link: link.value }); fbk(msg, 'ok', '✓ أُرسل إلى ' + r.ok + ' جهاز' + (r.fail ? ' (تعذّر ' + r.fail + ')' : '') + '.'); loadInfo(); }
+    catch (e) { fbk(msg, 'bad', fnErr(e)); } sendB.disabled = false; sendB.dataset.c = ''; sendB.textContent = '📤 إرسال'; };
+  [role, sub, grade, inact, phone].forEach(x => x.addEventListener('change', () => { sendB.dataset.c = ''; sendB.textContent = '📤 إرسال'; cnt.textContent = ''; }));
+  box.append(el('b', { text: '✉️ إشعار جديد' }), el('div', { class: 'row', style: 'gap:6px;flex-wrap:wrap' }, ...TPL.map(([n, t, b, l, sb]) => el('button', { class: 'btn ghost sm', text: n, onclick: () => { title.value = t; body.value = b; link.value = l; if (sb) sub.value = sb; } }))),
+    el('span', { class: 'note', text: 'إلى من؟' }), role, sub, grade, inact, phone,
+    el('div', { class: 'row', style: 'gap:6px;align-items:center' }, el('button', { class: 'btn ghost sm', text: '👥 كم شخصاً؟', onclick: async () => { cnt.textContent = '…'; try { const r = await call('adminPush', { op: 'count', aud: aud() }); cnt.textContent = r.n + ' جهاز'; } catch (e) { cnt.textContent = fnErr(e); } } }), cnt),
+    title, body, link,
+    el('div', { class: 'row', style: 'gap:6px;flex-wrap:wrap' }, el('button', { class: 'btn ghost', text: '📲 جرّب على جهازي', onclick: async () => { try { await call('adminPush', { op: 'test', title: title.value, body: body.value, link: link.value }); fbk(msg, 'ok', '✓ أُرسل إلى أجهزتك.'); } catch (e) { fbk(msg, 'bad', fnErr(e)); } } }), sendB), msg);
+  const autoBox = el('div', { class: 'stack' }), logBox = el('div', { class: 'stack' });
+  box.append(el('b', { text: '⚙️ الإشعارات الآلية' }), el('span', { class: 'note', text: 'تُرسل تلقائياً كل يوم الساعة 6:30 مساءً (إشعار واحد كحد أقصى لكل شخص في اليوم)، والأحداث تُرسل فوراً.' }), autoBox,
+    el('b', { text: '🗂️ آخر الإرسالات' }), logBox);
+  const AUTO_AR = { nosub: ['👋 سجّل ولم يشترك', 'بعد 2 و7 و14 و30 يوماً من التسجيل (أولياء الأمور والطلاب).', true],
+    inactive: ['💙 الغائبون', 'من لم يفتح المنصة 14 يوماً، ومرة كل 14 يوماً.', true],
+    expiry: ['⏳ قرب انتهاء الاشتراك', 'قبل 3 أيام من انتهاء الاشتراك. {days} = عدد الأيام.', true],
+    streak: ['🔥 سلسلة الطالب', 'للطالب أو جهاز الابن إذا لم يدرس اليوم وسلسلته يومان فأكثر. {n} = عدد الأيام.', true],
+    lowday: ['📚 ابنك درس أقل من هدفه', 'لولي الأمر إذا درس ابنه اليوم أقل من نصف هدفه (مرتين أسبوعياً على الأكثر). النص يُكتب تلقائياً باسم الابن.', false],
+    weekly: ['📊 تقرير أسبوعي', 'كل خميس لولي الأمر: دقائق دراسة كل ابن هذا الأسبوع.', false],
+    events: ['⚡ أحداث فورية', 'تأكيد الدفع، قبول المعلم أو دورته، مشترك جديد في دورة، تحويل رصيد.', false],
+    staff: ['🛠️ تنبيه الإدارة', 'لك وللمشرفين: طلب معلم جديد، دورة للمراجعة، طلب سحب.', false] };
+  let CFG = null;
+  const drawAuto = () => { autoBox.innerHTML = ''; Object.entries(AUTO_AR).forEach(([k, [n, d, ed]]) => { const c = CFG[k];
+    const row = el('div', { style: 'border:1px solid var(--line);border-radius:12px;padding:8px;display:flex;flex-direction:column;gap:4px' },
+      el('label', { class: 'sndrow', style: 'margin:0' }, el('input', { type: 'checkbox', checked: c.on ? '' : null, disabled: ACC.owner ? null : '', onchange: e => { c.on = e.target.checked; } }), el('span', {}, el('b', { text: n }), el('small', { class: 'note', text: ' — ' + d }))));
+    if (ed) row.append(el('input', { value: c.title, disabled: ACC.owner ? null : '', oninput: e => { c.title = e.target.value; } }), el('textarea', { rows: '2', text: c.body, disabled: ACC.owner ? null : '', oninput: e => { c.body = e.target.value; } }));
+    autoBox.append(row); });
+    if (ACC.owner) autoBox.append(el('button', { class: 'btn', text: '💾 حفظ الإشعارات الآلية', onclick: async () => { try { const r = await call('adminPush', { op: 'cfg', auto: CFG }); CFG = r.cfg; fbk(msg, 'ok', '✓ حُفظت.'); } catch (e) { fbk(msg, 'bad', fnErr(e)); } } })); };
+  const loadInfo = () => call('adminPush', { op: 'info' }).then(r => { CFG = r.cfg; drawAuto();
+    const b = r.byRole || {}; info.innerHTML = ''; info.append(el('div', { class: 'stats' }, ...[[r.devices, 'جهاز فعّل الإشعارات'], [b.parent || 0, 'أولياء أمور'], [b.student || 0, 'طلاب'], [b.kid || 0, 'أجهزة أبناء'], [b.teacher || 0, 'معلمون']].map(([n, t]) => el('div', { class: 'stat' }, el('b', { text: String(n) }), el('span', { text: t })))));
+    logBox.innerHTML = ''; if (!r.log.length) logBox.append(el('span', { class: 'note', text: 'لا توجد إرسالات بعد.' }));
+    r.log.forEach(x => logBox.append(el('div', { class: 'kidrow' }, el('span', {}, el('b', { text: x.auto ? '⚙️ ' + x.title : x.title }), el('span', { class: 'note', text: ' · ' + (x.at ? new Date(x.at).toLocaleString('ar-LY-u-nu-latn', { dateStyle: 'medium', timeStyle: 'short' }) : '') + (x.auto ? ' · ' + x.body : '') })), el('b', { text: (x.ok != null ? x.ok : x.n) + ' ✓' })))); })
+    .catch(e => fbk(info, 'bad', fnErr(e)));
+  loadInfo();
   return box;
 }
 
@@ -909,6 +1025,7 @@ function renderAdmin() {
   if (can('browse')) s.append(browseBox());
   if (ACC.owner) s.append(staffBox());
   if (can('plans')) s.append(plansBox());
+  if (can('push')) s.append(pushBox());
   if (can('tts')) s.append(ttsBox());
   if (can('access')) s.append(accessBox(), booksBox());
   if (teachAny) s.append(ACC.teachAdminBox());
@@ -984,7 +1101,7 @@ onAuthStateChanged(auth, async user => {
       else if (ACC.pid && !ACC.loadError) withTimeout(pullProgress(ACC.pid)).catch(() => {});
     } else { ACC.pid = null; store.set('acc_pid', null); }
   } catch (e) { console.error('auth', e); ACC.loadError = e; }
-  ACC.ready = true;
+  ACC.ready = true; pushRefresh();
   const h = location.hash.replace(/^#/, '');
   if (ACC.linking) return;
   if (ACC.kid && (h === 'login' || h === 'who' || h === 'kids' || h === 'onboard')) { go('home'); return; }

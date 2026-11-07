@@ -2,6 +2,7 @@
 // الاشتراكات: تأكيد الهاتف برسالة (resala) قبل الدفع، إنشاء الطلب، الدفع عبر ماي باي، تفعيل الاشتراك.
 const {setGlobalOptions} = require("firebase-functions");
 const {onCall, onRequest, HttpsError} = require("firebase-functions/https");
+const {onSchedule} = require("firebase-functions/scheduler");
 const {defineString, defineSecret} = require("firebase-functions/params");
 const logger = require("firebase-functions/logger");
 const admin = require("firebase-admin");
@@ -436,6 +437,10 @@ exports.mypayWebhook = onRequest({secrets: [MYPAY_WEBHOOK], memory: "256MiB", co
       return "ok";
     });
     logger.info(`mypayWebhook: ${orderId} -> ${result}`);
+    if (result === "ok") { const o = (await oRef.get()).data() || {};
+      if (o.kind === "course") { await pushUser(o.uid, {title: "✅ تم الاشتراك في الدورة", body: o.title || "", link: "#crs-" + o.cid}, {rule: "events"});
+        await pushUser(o.tid, {title: "🎉 مشترك جديد في دورتك", body: (o.title || "") + " — أُضيف نصيبك إلى محفظتك.", link: "#studio"}, {rule: "events"}); }
+      else await pushUser(o.uid, {title: "✅ تم تفعيل اشتراكك", body: (o.planName || "اشتراك المجتهد") + " — كل الدروس المشمولة مفتوحة الآن.", link: "#home"}, {rule: "events"}); }
     return res.status(200).send(result);
   } catch (e) {
     logger.error("mypayWebhook error", e);
@@ -678,7 +683,7 @@ exports.removeCoParent = onCall(async (req) => {
 // حسابات Google الخاصة بالمالك: من يدخل بها (بحساب Google) يصبح مديراً تلقائياً
 const OWNER_EMAILS = ["wahatoujly@gmail.com", "laffatkly@gmail.com"];
 // المشرفون: config/admins.staff = {uid: {name, phone, perms: [...]}} — يضيفهم المالك من لوحة الإدارة بصلاحيات محددة
-const PERMS = ["stats", "grant", "plans", "access", "tts", "teach_req", "teach_courses", "teach_wd", "browse"];
+const PERMS = ["stats", "grant", "plans", "access", "tts", "push", "teach_req", "teach_courses", "teach_wd", "browse"];
 async function staffOf(req) {
   if (!req.auth) return null;
   const uid = req.auth.uid; const tok = req.auth.token || {};
@@ -1038,6 +1043,7 @@ exports.teach = onCall({secrets: [MYPAY_ID, MYPAY_SECRET, YT_ID, YT_SECRET, YT_R
     const ts = await tRef.get();
     if (ts.exists && ts.data().status === "approved") throw new HttpsError("already-exists", "أنت معلم معتمد");
     if (ts.exists && ts.data().status === "blocked") throw new HttpsError("permission-denied", "الحساب موقوف، تواصل مع الإدارة");
+    pushStaff("teach_req", {title: "👩‍🏫 طلب انضمام معلم جديد", body: name + " — " + spec});
     await tRef.set({name, spec, bio, phone: us.data().phone || "", status: "pending", hidden: false, banks: (ts.exists && ts.data().banks) || [],
       agreed: {v: T.TERMS_V, at: FieldValue.serverTimestamp()}, createdAt: (ts.exists && ts.data().createdAt) || FieldValue.serverTimestamp()}, {merge: true});
     return {ok: true};
@@ -1087,7 +1093,8 @@ exports.teach = onCall({secrets: [MYPAY_ID, MYPAY_SECRET, YT_ID, YT_SECRET, YT_R
     const ref = db.collection("courses").doc(str(d.cid, 40)); const cs = await ref.get();
     if (!cs.exists || cs.data().tid !== me) throw new HttpsError("not-found", "الدورة غير موجودة");
     const c = cs.data();
-    if (op === "submit") { if (c.status === "live") return {ok: true}; await ref.update({status: "pending", note: "", submittedAt: FieldValue.serverTimestamp()}); }
+    if (op === "submit") { if (c.status === "live") return {ok: true}; await ref.update({status: "pending", note: "", submittedAt: FieldValue.serverTimestamp()});
+      pushStaff("teach_courses", {title: "🎬 دورة جديدة تنتظر المراجعة", body: c.title + " — " + t.name}); }
     if (op === "unpublish") await ref.update({status: "draft"});
     if (op === "delete") { if (c.students) throw new HttpsError("failed-precondition", "لا يمكن حذف دورة اشترك فيها طلاب؛ يمكنك إيقافها"); await ref.delete(); await tRef.update({courses: FieldValue.increment(-1)}); }
     TLIST = null; return {ok: true};
@@ -1161,6 +1168,7 @@ exports.teach = onCall({secrets: [MYPAY_ID, MYPAY_SECRET, YT_ID, YT_SECRET, YT_R
       tx.set(out, {tid: me, tname: t.name, phone: t.phone || "", amount, bank, status: "pending", at: FieldValue.serverTimestamp()});
       tx.set(wRef.collection("tx").doc("wd_" + out.id), {t: "wd", amt: -amount, at: FieldValue.serverTimestamp(), bank: bank.bank});
     });
+    pushStaff("teach_wd", {title: "💸 طلب سحب رصيد", body: t.name + " — " + amount + " د.ل"});
     return {ok: true, id: out.id};
   }
   throw new HttpsError("invalid-argument", "عملية غير معروفة");
@@ -1208,7 +1216,10 @@ exports.adminTeach = onCall({secrets: [YT_ID, YT_SECRET, YT_REFRESH], memory: "2
     if (typeof d.hidden === "boolean") up.hidden = d.hidden;
     if (d.note != null) up.note = str(d.note, 200);
     up.reviewedBy = adm; up.reviewedAt = FieldValue.serverTimestamp();
-    await ref.update(up); TLIST = null; return {ok: true};
+    await ref.update(up); TLIST = null;
+    if (up.status === "approved") pushUser(ref.id, {title: "🎉 تم قبولك معلماً في المجتهد", body: "ابدأ الآن بإنشاء دورتك الأولى ورفع فيديوهاتها.", link: "#studio"}, {rule: "events"});
+    if (up.status === "rejected") pushUser(ref.id, {title: "طلبك كمعلم يحتاج تعديلاً", body: up.note || "افتح منصة المعلم لمعرفة التفاصيل.", link: "#studio"}, {rule: "events"});
+    return {ok: true};
   }
   if (op === "videos") { // روابط يوتيوب للدروس: {cid, vids:{lessonId: url}}
     const ref = db.collection("courses").doc(str(d.cid, 40)); const cs = await ref.get();
@@ -1241,7 +1252,11 @@ exports.adminTeach = onCall({secrets: [YT_ID, YT_SECRET, YT_REFRESH], memory: "2
     }
     const up = {status: st, note: str(d.note, 300), reviewedBy: adm};
     if (st === "live" && !cs.data().publishedAt) up.publishedAt = FieldValue.serverTimestamp();
-    await ref.update(up); TLIST = null; return {ok: true};
+    await ref.update(up); TLIST = null;
+    const c0 = cs.data();
+    if (st === "live" && c0.status !== "live") pushUser(c0.tid, {title: "🎉 نُشرت دورتك", body: c0.title + " — أصبحت متاحة للطلاب الآن.", link: "#crs-" + cs.id}, {rule: "events"});
+    if (st === "rejected") pushUser(c0.tid, {title: "دورتك تحتاج تعديلاً", body: c0.title + (up.note ? " — " + up.note : ""), link: "#studio-" + cs.id}, {rule: "events"});
+    return {ok: true};
   }
   if (op === "withdrawal") {
     const ref = db.collection("withdrawals").doc(str(d.id, 40));
@@ -1252,6 +1267,7 @@ exports.adminTeach = onCall({secrets: [YT_ID, YT_SECRET, YT_REFRESH], memory: "2
       if (d.status === "paid") {
         tx.update(ref, {status: "paid", doneAt: FieldValue.serverTimestamp(), note: str(d.note, 200), by: adm});
         tx.set(wal, {paid: FieldValue.increment(w.amount)}, {merge: true});
+        pushUser(w.tid, {title: "💸 تم تحويل " + w.amount + " د.ل إلى حسابك", body: (w.bank && w.bank.bank) || "", link: "#studio"}, {rule: "events"});
       } else if (d.status === "rejected") {
         tx.update(ref, {status: "rejected", doneAt: FieldValue.serverTimestamp(), note: str(d.note, 200), by: adm});
         tx.set(wal, {bal: FieldValue.increment(w.amount), lastWd: (wv.exists && wv.data().prevWd) || null}, {merge: true});
@@ -1353,4 +1369,189 @@ exports.adminTts = onCall({memory: "256MiB"}, async (req) => {
     await db.collection("config").doc("access").set({tts}, {merge: true}); ACCESS = null; return {tts};
   }
   throw new HttpsError("invalid-argument", "عملية غير معروفة");
+});
+
+
+// ===================== الإشعارات (Firebase Cloud Messaging — Web Push) =====================
+// pushTokens/{sha1}: {t, uid (صاحب الحساب), pid, kid, role, os, at, seen}
+// config/push: {auto: {اسم القاعدة: {on, title, body}}} — قواعد آلية تُشغَّل يومياً 18:30 بتوقيت ليبيا + أحداث فورية
+// pushState/{uid}: آخر وقت أُرسل فيه كل نوع (منع التكرار)
+const PUSH_AUTO = {
+  nosub: {on: true, title: "منصة المجتهد ما زالت مفتوحة لكم 🎒", body: "جرّبوا الدروس المجانية مع أبنائكم، والاشتراك بسعر رمزي يفتح كل الدروس."},
+  inactive: {on: true, title: "اشتقنا لكم في المجتهد 💙", body: "مرّ وقت على آخر درس. خمس دقائق اليوم تصنع فرقاً كبيراً — هيا نكمل!"},
+  expiry: {on: true, title: "اشتراكك ينتهي بعد {days} أيام ⏳", body: "جدّد اشتراكك الآن حتى لا تتوقف الدروس."},
+  lowday: {on: true, title: "", body: ""},
+  weekly: {on: true, title: "", body: ""},
+  streak: {on: true, title: "لا تكسر سلسلتك! 🔥", body: "سلسلتك {n} أيام. درس قصير اليوم يحافظ عليها."},
+  events: {on: true, title: "", body: ""},
+  staff: {on: true, title: "", body: ""},
+};
+async function pushCfg() { const d = await db.collection("config").doc("push").get(); const a = (d.exists && d.data().auto) || {};
+  const out = {}; for (const k in PUSH_AUTO) out[k] = {...PUSH_AUTO[k], ...(a[k] || {})}; return out; }
+const tokId = (t) => crypto.createHash("sha1").update(t).digest("hex");
+const firstName = (n) => String(n || "").trim().split(/\s+/)[0] || "ابنك";
+const tripDay = (ms = Date.now()) => new Date(ms + 2 * HOUR).toISOString().slice(0, 10);
+
+async function sendDocs(docs, msg, log) {
+  const seen = new Set(); const list = docs.filter((d) => { const t = d.data().t; if (!t || seen.has(t)) return false; seen.add(t); return true; });
+  let ok = 0, fail = 0;
+  for (let i = 0; i < list.length; i += 500) {
+    const part = list.slice(i, i + 500);
+    const r = await admin.messaging().sendEachForMulticast({tokens: part.map((d) => d.data().t),
+      data: {title: String(msg.title || "المجتهد").slice(0, 120), body: String(msg.body || "").slice(0, 400), link: String(msg.link || "#home").slice(0, 200), tag: String(msg.tag || "")},
+      webpush: {headers: {Urgency: "high", TTL: "172800"}}});
+    r.responses.forEach((x, j) => { if (x.success) ok++; else { fail++; const c = (x.error && x.error.code) || "";
+      if (/registration-token-not-registered|invalid-registration-token|invalid-argument/.test(c)) part[j].ref.delete().catch(() => {}); } });
+  }
+  if (log) await db.collection("pushLog").add({...log, title: msg.title, body: msg.body, link: msg.link || "", n: list.length, ok, fail, at: FieldValue.serverTimestamp()}).catch(() => {});
+  return {n: list.length, ok, fail};
+}
+const tokensOf = async (uid, onlyAdult = true) => (await db.collection("pushTokens").where("uid", "==", uid).get()).docs.filter((d) => !onlyAdult || !d.data().kid);
+async function pushUser(uid, msg, opt = {}) {
+  try { const cfg = await pushCfg(); if (opt.rule && cfg[opt.rule] && !cfg[opt.rule].on) return;
+    const docs = await tokensOf(uid, opt.adultsOnly !== false); if (docs.length) await sendDocs(docs, msg); } catch (e) { logger.warn("pushUser", e.message); }
+}
+// تنبيه فريق الإدارة (المالك + المشرفون أصحاب الصلاحية)
+async function pushStaff(perm, msg) {
+  try { const cfg = await pushCfg(); if (!cfg.staff.on) return;
+    const a = await db.collection("config").doc("admins").get(); const A = a.exists ? a.data() : {};
+    const uids = new Set(A.uids || []);
+    Object.entries(A.staff || {}).forEach(([u, x]) => { if (!x.off && (x.perms || []).includes(perm)) uids.add(u); });
+    const owners = await db.collection("users").where("email", "in", OWNER_EMAILS).get().catch(() => ({docs: []}));
+    owners.docs.forEach((d) => uids.add(d.id));
+    for (const u of uids) { const docs = await tokensOf(u); if (docs.length) await sendDocs(docs, {...msg, link: msg.link || "#admin"}); }
+  } catch (e) { logger.warn("pushStaff", e.message); }
+}
+
+exports.pushReg = onCall(async (req) => {
+  const uid = needUser(req); const tk = req.auth.token || {}; const d = req.data || {};
+  const t = String(d.token || "");
+  if (t && !/^[A-Za-z0-9:_\-.]{100,400}$/.test(t)) throw new HttpsError("invalid-argument", "رمز غير صحيح");
+  let owner = uid, pid = String(d.pid || "me").slice(0, 30), kid = false;
+  if (tk.kidOf) { owner = tk.kidOf; pid = tk.kidPid; kid = true; } else if (tk.coOf) owner = await ownerOf(req);
+  else if (tk.firebase && tk.firebase.sign_in_provider === "anonymous") throw new HttpsError("permission-denied", "سجّل الدخول أولاً");
+  const us = await db.collection("users").doc(owner).get(); const role = kid ? "kid" : (us.exists ? us.data().role : "");
+  if (t) await db.collection("pushTokens").doc(tokId(t)).set({t, uid: owner, by: uid, pid, kid, role, os: String(d.os || "").slice(0, 12),
+    at: FieldValue.serverTimestamp(), seen: Date.now()}, {merge: true});
+  if (d.off && t) await db.collection("pushTokens").doc(tokId(t)).delete();
+  await db.collection("users").doc(owner).set({lastSeen: Date.now()}, {merge: true}).catch(() => {});
+  return {ok: true};
+});
+
+// ---------- الجمهور: من يستلم؟ ----------
+async function audience(a) {
+  const [toks, users, subs, profs] = await Promise.all([db.collection("pushTokens").get(),
+    db.collection("users").select("role", "phone", "lastSeen", "createdAt").get(), db.collection("subscriptions").get(), db.collectionGroup("profiles").select("grade", "stats.lastDay").get()]);
+  const now = Date.now(); const U = {}; users.docs.forEach((d) => { U[d.id] = d.data(); });
+  const subbed = new Set(); subs.docs.forEach((d) => { const x = d.data(); if (x.active !== false && x.end && x.end.toMillis() > now) subbed.add(x.uid); });
+  const grades = {}, last = {};
+  profs.docs.forEach((d) => { const uid = d.ref.parent.parent.id; const x = d.data(); (grades[uid] = grades[uid] || new Set()).add(String(x.grade || ""));
+    (grades[uid + "/" + d.id] = new Set([String(x.grade || "")]));
+    const ld = x.stats && x.stats.lastDay; if (ld) { const t = Date.parse(ld); if (t && t > (last[uid] || 0)) last[uid] = t; } });
+  const phone = a.phone ? toE164(String(a.phone)) : null;
+  return toks.docs.filter((d) => {
+    const x = d.data(); const u = U[x.uid] || {};
+    if (phone) return u.phone === phone && !x.kid;
+    if (a.role === "kids") { if (!x.kid && !(u.role === "student")) return false; }
+    else if (a.role && a.role !== "all") { if (x.kid || u.role !== a.role) return false; }
+    else if (x.kid && !a.kids) return false;
+    if (a.sub === "yes" && !subbed.has(x.uid)) return false;
+    if (a.sub === "no" && subbed.has(x.uid)) return false;
+    if (a.grade) { const g = x.kid ? grades[x.uid + "/" + x.pid] : grades[x.uid]; if (!g || !g.has(String(a.grade))) return false; }
+    if (a.inactive) { const l = Math.max(u.lastSeen || 0, last[x.uid] || 0); if (now - l < a.inactive * DAY) return false; }
+    return true;
+  });
+}
+const cleanAud = (a = {}) => ({role: ["all", "parent", "student", "teacher", "kids"].includes(a.role) ? a.role : "all", sub: ["yes", "no"].includes(a.sub) ? a.sub : "",
+  grade: GRADES.includes(String(a.grade || "")) ? String(a.grade) : "", inactive: [7, 14, 30, 60].includes(Number(a.inactive)) ? Number(a.inactive) : 0,
+  phone: /^09[1-5]\d{7}$/.test(String(a.phone || "")) ? String(a.phone) : "", kids: !!a.kids});
+
+exports.adminPush = onCall({memory: "512MiB", timeoutSec: 300}, async (req) => {
+  const by = await needAdmin(req, "push");
+  const d = req.data || {}; const op = String(d.op || "");
+  if (op === "info") {
+    const [toks, log, cfg] = await Promise.all([db.collection("pushTokens").get(), db.collection("pushLog").orderBy("at", "desc").limit(20).get(), pushCfg()]);
+    const by = {parent: 0, student: 0, teacher: 0, kid: 0}; toks.docs.forEach((x) => { const r = x.data().role || "?"; by[r] = (by[r] || 0) + 1; });
+    return {devices: toks.size, byRole: by, cfg, log: log.docs.map((x) => ({...x.data(), at: ms(x.data().at)}))};
+  }
+  if (op === "count") return {n: (await audience(cleanAud(d.aud))).length};
+  if (op === "send") {
+    const title = str(d.title, 120), body = str(d.body, 400), link = /^#[a-z0-9-]{1,60}$/.test(d.link || "") ? d.link : "#home";
+    if (title.length < 3 || body.length < 3) throw new HttpsError("invalid-argument", "اكتب العنوان والنص");
+    const aud = cleanAud(d.aud);
+    const docs = await audience(aud);
+    if (!docs.length) throw new HttpsError("failed-precondition", "لا يوجد أحد في هذه الفئة فعّل الإشعارات بعد");
+    return await sendDocs(docs, {title, body, link}, {by, aud, manual: true});
+  }
+  if (op === "test") { const docs = await tokensOf(req.auth.uid, false); if (!docs.length) throw new HttpsError("failed-precondition", "فعّل الإشعارات على جهازك أولاً من «حسابي»");
+    return await sendDocs(docs, {title: str(d.title, 120) || "تجربة إشعار ✅", body: str(d.body, 400) || "الإشعارات تعمل على جهازك.", link: d.link || "#home"}); }
+  if (op === "cfg") {
+    await needAdmin(req, "owner");
+    const auto = {}; for (const k in PUSH_AUTO) { const x = (d.auto || {})[k] || {}; auto[k] = {on: !!x.on, title: str(x.title, 120), body: str(x.body, 400)}; }
+    await db.collection("config").doc("push").set({auto}, {merge: true}); return {cfg: await pushCfg()};
+  }
+  throw new HttpsError("invalid-argument", "عملية غير معروفة");
+});
+
+// ---------- القواعد الآلية: كل يوم 18:30 بتوقيت ليبيا ----------
+exports.pushAuto = onSchedule({schedule: "30 18 * * *", timeZone: "Africa/Tripoli", memory: "512MiB", timeoutSeconds: 540}, async () => {
+  const cfg = await pushCfg(); const now = Date.now(); const today = tripDay(now); const dow = new Date(now + 2 * HOUR).getUTCDay(); // 4 = الخميس
+  const [toks, users, subs, profs, states] = await Promise.all([db.collection("pushTokens").get(), db.collection("users").get(), db.collection("subscriptions").get(),
+    db.collectionGroup("profiles").get(), db.collection("pushState").get()]);
+  const T = {}; toks.docs.forEach((d) => { const x = d.data(); (T[x.uid] = T[x.uid] || []).push(d); });
+  const S = {}; states.docs.forEach((d) => { S[d.id] = d.data(); });
+  const active = {}; subs.docs.forEach((d) => { const x = d.data(); if (x.active !== false && x.end && x.end.toMillis() > now) (active[x.uid] = active[x.uid] || []).push(x); });
+  const P = {}; profs.docs.forEach((d) => { const uid = d.ref.parent.parent.id; (P[uid] = P[uid] || []).push({id: d.id, ...d.data()}); });
+  const fill = (t, v) => String(t || "").replace(/\{(\w+)\}/g, (m, k) => v[k] != null ? v[k] : m);
+  const sent = {}; const mark = async (uid, k, extra = {}) => { await db.collection("pushState").doc(uid).set({[k]: now, ...extra}, {merge: true}); };
+  const adultDocs = (uid) => (T[uid] || []).filter((d) => !d.data().kid);
+  const kidDocs = (uid, pid) => (T[uid] || []).filter((d) => d.data().kid && d.data().pid === pid);
+  const cnt = (k) => { sent[k] = (sent[k] || 0) + 1; };
+  for (const u of users.docs) {
+    const uid = u.id, x = u.data(), st = S[uid] || {}, subsU = active[uid] || [], profsU = (P[uid] || []);
+    const kids = profsU.filter((p) => p.id !== "me");
+    const lastAct = Math.max(x.lastSeen || 0, ...profsU.map((p) => (p.stats && Date.parse(p.stats.lastDay)) || 0));
+    const created = (x.createdAt && x.createdAt.toMillis) ? x.createdAt.toMillis() : 0;
+    const adults = adultDocs(uid);
+    try {
+      // 1) سجّل ولم يشترك: بعد 2 و7 و14 و30 يوماً
+      if (cfg.nosub.on && adults.length && !subsU.length && created && ["parent", "student"].includes(x.role)) {
+        const age = Math.floor((now - created) / DAY); const step = [2, 7, 14, 30].filter((n) => age >= n).pop();
+        if (step && (st.nosubStep || 0) < step) { await sendDocs(adults, {title: cfg.nosub.title, body: cfg.nosub.body, link: x.role === "parent" ? "#subscribe" : "#home", tag: "nosub"}); await mark(uid, "nosub", {nosubStep: step}); cnt("nosub"); continue; }
+      }
+      // 2) انتهاء الاشتراك بعد 3 أيام
+      if (cfg.expiry.on && adults.length && subsU.length) {
+        const maxEnd = Math.max(...subsU.map((s) => s.end.toMillis())); const left = Math.ceil((maxEnd - now) / DAY);
+        if (left <= 3 && left >= 1 && (!st.expiry || now - st.expiry > 5 * DAY)) { await sendDocs(adults, {title: fill(cfg.expiry.title, {days: left}), body: cfg.expiry.body, link: "#subscribe", tag: "expiry"}); await mark(uid, "expiry"); cnt("expiry"); continue; }
+      }
+      // 3) غياب طويل: 14 يوماً بلا نشاط، ومرة كل 14 يوماً
+      if (cfg.inactive.on && adults.length && lastAct && now - lastAct > 14 * DAY && (!st.inactive || now - st.inactive > 14 * DAY)) {
+        await sendDocs(adults, {title: cfg.inactive.title, body: cfg.inactive.body, link: "#home", tag: "inactive"}); await mark(uid, "inactive"); cnt("inactive"); continue;
+      }
+      // 4) تقرير أسبوعي لولي الأمر (الخميس)
+      if (cfg.weekly.on && dow === 4 && adults.length && kids.length && st.weekly !== today) {
+        const lines = kids.map((k) => { const m = (k.stats && k.stats.mins) || {}; let w = 0; for (let i = 0; i < 7; i++) w += m[tripDay(now - i * DAY)] || 0;
+          return firstName(k.name) + ": " + Math.round(w) + " دقيقة"; });
+        await sendDocs(adults, {title: "📊 تقرير الأسبوع", body: "وقت الدراسة هذا الأسبوع — " + lines.join("، ") + ". اضغط لرؤية التفاصيل.", link: "#who", tag: "weekly"});
+        await mark(uid, "weeklyAt", {weekly: today}); cnt("weekly"); continue;
+      }
+      // 5) ابنك درس اليوم أقل من هدفه (مرتان أسبوعياً على الأكثر لكل ابن)
+      if (cfg.lowday.on && adults.length && kids.length && dow !== 5 && dow !== 6) {
+        const low = kids.find((k) => { const g = Number(k.goal || (k.stats && k.stats.goal) || 0); const m = Number(((k.stats && k.stats.mins) || {})[today] || 0);
+          const recent = k.stats && k.stats.lastDay && now - Date.parse(k.stats.lastDay) < 7 * DAY; const lk = "low_" + k.id;
+          return g > 0 && recent && m < g * 0.5 && (!st[lk] || now - st[lk] > 3.5 * DAY); });
+        if (low) { const m = Math.round(((low.stats && low.stats.mins) || {})[today] || 0); const g = Number(low.goal || low.stats.goal);
+          await sendDocs(adults, {title: "📚 " + firstName(low.name) + " درس اليوم " + m + " دقيقة", body: "هدفه اليومي " + g + " دقيقة. شجّعه على درس قصير قبل النوم 💪", link: "#kid-" + low.id, tag: "lowday"});
+          await mark(uid, "low_" + low.id); cnt("lowday"); continue; }
+      }
+      // 6) سلسلة الطالب (على جهاز الطالب أو جهاز الابن)
+      if (cfg.streak.on) for (const p of profsU) {
+        const s2 = p.stats || {}; const devs = p.id === "me" ? (x.role === "student" ? adults : []) : kidDocs(uid, p.id);
+        if (devs.length && (s2.streak || 0) >= 2 && s2.lastDay && s2.lastDay !== today && dow !== 5 && dow !== 6 && st["streak_" + p.id] !== today) {
+          await sendDocs(devs, {title: cfg.streak.title, body: fill(cfg.streak.body, {n: s2.streak}), link: "#home", tag: "streak"}); await mark(uid, "s", {["streak_" + p.id]: today}); cnt("streak"); }
+      }
+    } catch (e) { logger.warn("pushAuto user", uid, e.message); }
+  }
+  await db.collection("pushLog").add({auto: true, title: "الإشعارات الآلية اليومية", body: JSON.stringify(sent), n: Object.values(sent).reduce((a, b) => a + b, 0), at: FieldValue.serverTimestamp()});
+  logger.info("pushAuto", sent);
 });
