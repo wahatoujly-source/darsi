@@ -761,6 +761,7 @@ function renderAdmin() {
   if (!ACC.user) { go('login'); return; }
   const s = page('لوحة الإدارة', 'المجتهد', 'account');
   const st = el('div'); s.append(st); fbk(st, 'info', 'جارٍ التحميل…');
+  if (ACC.teachAdminAlert) s.append(ACC.teachAdminAlert());
   call('adminStats', {}).then(d => {
     st.innerHTML = '';
     const card = (n, t) => el('div', { class: 'stat' }, el('b', { text: String(n) }), el('span', { text: t }));
