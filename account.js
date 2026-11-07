@@ -735,6 +735,39 @@ function accessBox() {
       await loadAccess(); fbk(msg, 'ok', '✓ حُفظت. تظهر للمستخدمين عند فتح المنصة أو تحديثها.'); } catch (x) { fbk(msg, 'bad', fnErr(x)); } e.target.disabled = false; } }), msg);
   setTimeout(draw, 0); return box;
 }
+/* ---------- admin: cloud voice (Google Chirp HD) — on/off, voice per stage, speed, audition ---------- */
+function ttsBox() {
+  const C = Object.assign({ on: false, f: 'ar-XA-Chirp3-HD-Aoede', m: 'ar-XA-Chirp3-HD-Charon', rate: 0.9 }, (ACC.access || {}).tts || {});
+  const box = el('div', { class: 'panel accbox' }, el('b', { text: '🔊 القراءة الصوتية التلقائية' }),
+    el('span', { class: 'note', text: 'تقرأ المنصة أي جملة عربية بصوت طبيعي من Google، حتى لو لم يكن في جهاز الطالب صوت عربي. يُنشأ صوت كل جملة مرة واحدة ويُحفظ للجميع. التسجيلات التي سجّلتموها بأنفسكم تبقى لها الأولوية.' }));
+  const msg = el('div'), body = el('div', { class: 'stack' }); box.append(body, msg);
+  const on = el('input', { type: 'checkbox', checked: C.on ? '' : null });
+  const vf = el('select', { class: 'qsel' }), vm = el('select', { class: 'qsel' });
+  const rate = el('input', { type: 'range', min: '0.7', max: '1.2', step: '0.05', value: String(C.rate) }); const rl = el('span', { class: 'note', text: 'السرعة: ' + C.rate });
+  rate.oninput = () => { rl.textContent = 'السرعة: ' + rate.value; };
+  const sample = el('textarea', { rows: '2', text: 'أحسنت يا بطل! اسمع جيداً، ثم اضغط على حرف الباء.' });
+  let audio = null;
+  const tryV = async (sel, btn) => { btn.disabled = true; fbk(msg, 'info', '⏳ جارٍ التوليد…');
+    try { const r = await call('adminTts', { op: 'try', text: sample.value, voice: sel.value, rate: Number(rate.value) }); msg.innerHTML = '';
+      if (audio) audio.pause(); audio = new Audio('data:audio/mpeg;base64,' + r.audio); audio.play(); } catch (e) { fbk(msg, 'bad', fnErr(e)); } btn.disabled = false; };
+  const vlabel = n => n.replace('ar-XA-', '').replace('Chirp3-HD-', 'HD · ');
+  body.append(el('span', { class: 'note', text: 'جارٍ جلب الأصوات…' }));
+  call('adminTts', { op: 'voices' }).then(r => { body.innerHTML = '';
+    const list = r.voices.filter(v => /Chirp3-HD|Chirp-HD|Neural2|Wavenet/.test(v.name)).sort((a, b) => (/Chirp3/.test(b.name) - /Chirp3/.test(a.name)) || a.name.localeCompare(b.name));
+    [vf, vm].forEach((sel, i) => { list.forEach(v => sel.append(el('option', { value: v.name, text: vlabel(v.name) + (v.g === 'FEMALE' ? ' — أنثى' : v.g === 'MALE' ? ' — ذكر' : '') }))); sel.value = i ? C.m : C.f; });
+    const st = r.stats || {};
+    body.append(el('label', { class: 'sndrow' }, on, el('span', {}, el('b', { text: '⚙️ تفعيل القراءة الصوتية التلقائية' }), el('small', { class: 'note', text: ' عند الإيقاف يعود الاعتماد على صوت الجهاز فقط' }))),
+      el('b', { text: 'صوت الصفوف 1–6' }), el('div', { class: 'row', style: 'gap:6px' }, vf, el('button', { class: 'btn ghost sm', text: '▶ اسمع', onclick: e => tryV(vf, e.target) })),
+      el('b', { text: 'صوت الصفوف 7–9' }), el('div', { class: 'row', style: 'gap:6px' }, vm, el('button', { class: 'btn ghost sm', text: '▶ اسمع', onclick: e => tryV(vm, e.target) })),
+      rl, rate, el('span', { class: 'note', text: 'نص التجربة (غيّره كما تريد):' }), sample,
+      el('span', { class: 'note', text: 'المحفوظ: ' + (st.items || 0) + ' جملة (' + (st.chars || 0) + ' حرف) · اليوم: ' + (r.today || 0) + ' حرف. مجاني حتى نحو مليون حرف شهرياً، وكل المنهج أقل من نصف مليون.' }),
+      el('button', { class: 'btn sun', text: '💾 حفظ', onclick: async e => { e.target.disabled = true;
+        try { await call('adminTts', { op: 'cfg', on: on.checked, f: vf.value, m: vm.value, rate: Number(rate.value) }); await loadAccess(); fbk(msg, 'ok', '✓ حُفظت. تغيير الصوت أو السرعة يعيد توليد الجمل تلقائياً عند الحاجة.'); }
+        catch (x) { fbk(msg, 'bad', fnErr(x)); } e.target.disabled = false; } }));
+  }).catch(e => { body.innerHTML = ''; body.append(el('span', { class: 'note', text: '⚠️ ' + fnErr(e) }),
+    el('a', { href: 'https://console.cloud.google.com/apis/library/texttospeech.googleapis.com?project=mujtahid-810d7', target: '_blank', rel: 'noopener', class: 'btn sun', text: 'تفعيل Cloud Text-to-Speech API' })); });
+  return box;
+}
 /* ---------- admin: textbooks (PDF) — per grade / subject: for everyone, subscribers only, or hidden ---------- */
 function booksBox() {
   const M = Object.assign({}, (ACC.access || {}).books || {});
@@ -806,7 +839,7 @@ function renderAdmin() {
       el('span', { class: 'note', text: 'تُفتح لك كل الصفوف والمواد والدروس مجاناً (حتى المغلقة) لتراجعها وتجربها، دون أن تتغير المنصة لأي مستخدم آخر.' }),
       el('button', { class: 'btn sun', text: ACC.adminBrowse ? '✓ وضع المدير مفعّل — افتح الصفحة الرئيسية' : '👁️ ابدأ التصفح كمدير', onclick: () => { ACC.adminBrowse = true; store.set('admin_browse', true); setActive(null).then(() => go('home')); } }),
       ACC.adminBrowse ? el('button', { class: 'btn ghost', text: 'إنهاء وضع المدير', onclick: () => { ACC.adminBrowse = false; store.set('admin_browse', false); renderAdmin(); } }) : null));
-    s.append(accessBox(), booksBox(), ACC.teachAdminBox());
+    s.append(ttsBox(), accessBox(), booksBox(), ACC.teachAdminBox());
     // list
     const tb = el('div', { class: 'stack' });
     d.list.forEach(x => { const sc = x.scope || {}; const what = (KINDS[x.kind] || ['', x.kind])[1] + (sc.grades && sc.grades[0] !== '*' ? ' — الصف ' + gradeName(sc.grades[0]) : sc.grades ? ' — كل الصفوف' : '') + (sc.subjects && sc.subjects[0] && sc.subjects[0] !== '*' ? ' — ' + sc.subjects[0] : '');

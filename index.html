@@ -916,7 +916,7 @@ function voiceHelp(lang){
     el('div',{class:'row',style:'gap:8px'},el('button',{class:'btn sun sm',text:'🔊 جرّب الصوت',onclick:()=>{loadVoices();speak(lang==='en'?'Hello! Welcome to Mujtahid.':'مرحباً بك في منصة المجتهد',{lang});}}),el('button',{class:'btn ghost sm',text:'إخفاء',onclick:()=>{box.remove();store.set('vh_hide_'+lang,Date.now());}})));
   return box;}
 function voiceCheck(host,lang){if(TTS.quiet&&lang!=='en')return;if(store.get('vh_seen_'+lang,false))return;
-  setTimeout(()=>{loadVoices();const ok=lang==='en'?(TTS.en&&TTS.en.length):(TTS.ar&&TTS.ar.length);if(!ok&&host.isConnected){store.set('vh_seen_'+lang,true);host.prepend(voiceHelp(lang));}},1800);}
+  setTimeout(()=>{loadVoices();const ok=lang==='en'?(TTS.en&&TTS.en.length):(TTS.ar&&TTS.ar.length)||ttsOn();if(!ok&&host.isConnected){store.set('vh_seen_'+lang,true);host.prepend(voiceHelp(lang));}},1800);}
 /* English letters are spoken by their NAMES (ess, bee, zed…), never as a bare sound the voice may mangle */
 const EN_LN={a:'ay',b:'bee',c:'see',d:'dee',e:'ee',f:'eff',g:'jee',h:'aitch',i:'eye',j:'jay',k:'kay',l:'ell',m:'em',n:'en',o:'oh',p:'pee',q:'cue',r:'ar',s:'ess',t:'tee',u:'you',v:'vee',w:'double you',x:'ex',y:'why',z:'zed'};
 function enLetters(t){const s=String(t).trim();const toks=s.match(/[A-Za-z]+/g);if(!toks)return t;
@@ -935,6 +935,8 @@ async function phSay(tok){let k=(TTS.phx&&TTS.phx[tok])||tok;if(k==='k')k='c';aw
   if(VOX.sets.ph&&VOX.sets.ph.has(k)){const ok=await VOX.play('aud/ph/'+k+'.mp3');if(ok)return;}
   if(PH_EN[k])return speak(PH_EN[k],{lang:'en',raw:true});return speak(PH_AR[k]||k,{lang:'ar'});}
 function speak(text,{who='teacher',lang='en',onWord,rate,raw}={}){
+  /* any Arabic sentence sent here (games, hints, 'اضغط على حرف…') goes through the Arabic pipeline: recorded → cloud voice → device */
+  if(lang!=='ar'&&!onWord&&!raw&&/[\u0621-\u064A]/.test(String(text)))return speakAr(String(text),{force:true});
   if(lang!=='ar'&&!raw&&TTS.phonics&&!onWord){const s0=String(text).trim();const m=/^([A-Za-z]{1,2})\.\s+(.+)$/.exec(s0);
     if(m&&PH_TOK.test(m[1].toLowerCase()))return phSay(m[1].toLowerCase()).then(()=>speak(m[2],{who,lang,rate,raw:true}));
     const tk=phToken(s0);if(tk)return phSay(tk);}
@@ -1099,10 +1101,19 @@ const sentSplit=s=>String(s).split(/(?<=[.!؟?…])\s+|\n+/).map(x=>x.trim()).fi
 /* the exact Arabic sentences the app will say for a text (same pipeline at runtime and when generating audio) */
 function arUnits(t){const out=[];t=String(t).replace(/(^|\s)[بلكف]ـ\s*(?=[:؟?.،]|$)/g,'$1').replace(/[{}ـ]/g,'').replace(/[\p{Extended_Pictographic}\uFE0F\u200D]/gu,'');for(const p of qSplit(t)){if(p.q){out.push({q:p.q});continue;}const parts=String(p.t).split(EN_SEG);
   parts.forEach((x,i)=>{if(!x)return;if(i%2===1){out.push({en:x});return;}if(!x.replace(/[\s.,،:؛()«»"'\-–]/g,''))return;sentSplit(mathSpeech(arLetters(x))).forEach(z=>out.push({ar:z}));});}return out;}
-async function sayAr(z){if(VOX.on){await VOX.load();const v=VOX.voice(),k=VOX.key(z);const w=VOX.sets[v]&&VOX.sets[v].has(k)?v:null;
-  if(w){const tok=TTS.token;const ok=await VOX.play('aud/'+w+'/'+k+'.mp3');if(ok||tok!==TTS.token)return;}}
+/* cloud voice: the server reads any Arabic sentence with a natural voice and caches it (admin switch: config/access.tts.on) */
+const TTSC={url:'https://europe-west1-mujtahid-810d7.cloudfunctions.net/tts',m:new Map(),bad:0};
+const ttsOn=()=>{const t=ACCX().tts;return !!(t&&t.on)&&TTSC.bad<4;};
+const ttsGet=z=>{const u=TTSC.url+'?v='+VOX.voice()+'&t='+encodeURIComponent(String(z).replace(/\s+/g,' ').trim());
+  if(!TTSC.m.has(u)){const p=fetch(u).then(r=>{if(!r.ok)throw new Error(r.status);return r.blob();}).then(b=>{TTSC.bad=0;return URL.createObjectURL(b);}).catch(()=>{TTSC.m.delete(u);TTSC.bad++;return null;});TTSC.m.set(u,p);}
+  return TTSC.m.get(u);};
+const vxRec=async z=>{if(!VOX.on)return null;await VOX.load();const v=VOX.voice(),k=VOX.key(z);return VOX.sets[v]&&VOX.sets[v].has(k)?'aud/'+v+'/'+k+'.mp3':null;};
+async function sayAr(z){const tok=TTS.token;
+  const rec=await vxRec(z);if(rec){const ok=await VOX.play(rec);if(ok||tok!==TTS.token)return;}
+  if(ttsOn()){const src=await ttsGet(z);if(tok!==TTS.token)return;if(src){const ok=await VOX.play(src);if(ok||tok!==TTS.token)return;}}
   return speak(z,{lang:'ar'});}
-const speakAr=async(t,o={})=>{if(TTS.quiet&&!o.force)return;const tok=TTS.token;for(const u of arUnits(t)){if(tok!==TTS.token)return;
+const speakAr=async(t,o={})=>{if(TTS.quiet&&!o.force)return;const tok=TTS.token;const us=arUnits(t);for(let i=0;i<us.length;i++){const u=us[i];if(tok!==TTS.token)return;
+  const nx=us[i+1];if(nx&&nx.ar&&ttsOn())vxRec(nx.ar).then(r=>{if(!r)ttsGet(nx.ar);});
   if(u.q)await playQ(u.q);else if(u.en){if(TTS.en&&TTS.en.length)await speak(u.en,{lang:'en'});else await speak(u.en,{lang:'ar'});}else await sayAr(u.ar);}};
 
 /* ---------- encouragement sounds (Web Audio chimes + spoken praise + confetti) ---------- */
@@ -2583,7 +2594,7 @@ function route(){setTimeout(adminBanner,0);TTS.phonics=false;TTS.phx=null;
   else renderHome();
 }
 window.addEventListener('hashchange',()=>{if(document.startViewTransition&&!matchMedia('(prefers-reduced-motion: reduce)').matches){const t=document.startViewTransition(()=>route());[t.ready,t.finished,t.updateCallbackDone].forEach(x=>x&&x.catch(()=>{}));}else{route();root.classList.remove('enter');void root.offsetWidth;root.classList.add('enter');}});
-window.DARSI={LOGO,TT,lessonStudy,studyLine,VOX,arUnits,PRAISE,el,go,store,App,route,cheer,bar,root,$,$$,GAME,REPORT,findLesson:id=>App.catalog?findLesson(id):null};
+window.DARSI={ttsOn,ttsGet,sayAr,LOGO,TT,lessonStudy,studyLine,VOX,arUnits,PRAISE,el,go,store,App,route,cheer,bar,root,$,$$,GAME,REPORT,findLesson:id=>App.catalog?findLesson(id):null};
 const SPLASH_T0=performance.now();function hideSplash(){const sp=document.getElementById('splash');if(!sp)return;const wait=sessionStorage.getItem('mj_splash')?0:Math.max(0,1700-(performance.now()-SPLASH_T0));try{sessionStorage.setItem('mj_splash','1')}catch(e){}setTimeout(()=>{sp.classList.add('go');setTimeout(()=>sp.remove(),600);},wait);}
 // عند فتح التطبيق: نضع الرئيسية أولاً في السجل ثم نعود إلى آخر مكان توقف فيه الطالب
 (function bootNav(){let fresh=false;try{fresh=!sessionStorage.getItem('mj_open');sessionStorage.setItem('mj_open','1')}catch(e){}

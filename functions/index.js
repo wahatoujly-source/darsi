@@ -1145,3 +1145,89 @@ exports.adminTeach = onCall({secrets: [YT_ID, YT_SECRET, YT_REFRESH], memory: "2
   }
   throw new HttpsError("invalid-argument", "عملية غير معروفة");
 });
+
+// ===================== الأصوات: قراءة النص العربي بصوت Google (Chirp 3 HD) مع حفظ دائم =====================
+// يُنشأ ملف الصوت لأول من يحتاج الجملة، ويُحفظ في Firestore (ttsCache) ثم يخدم الجميع من الحفظ.
+// الإعداد في config/access.tts = {on, f: اسم صوت الصفوف 1–6, m: اسم صوت الصفوف 7–9, rate}
+const TTS_DEF = {f: "ar-XA-Chirp3-HD-Aoede", m: "ar-XA-Chirp3-HD-Charon", rate: 0.9};
+const TTS_DAY_CAP = 300000; // أقصى عدد أحرف جديدة يومياً (حماية من الإساءة)
+async function gcpToken() {
+  const r = await fetch("http://metadata.google.internal/computeMetadata/v1/instance/service-account/default/token", {headers: {"Metadata-Flavor": "Google"}});
+  return (await r.json()).access_token;
+}
+async function synth(text, voice, rate) {
+  const lang = voice.slice(0, 5);
+  const body = {input: {text}, voice: {languageCode: lang, name: voice}, audioConfig: {audioEncoding: "MP3", sampleRateHertz: 24000}};
+  if (rate && Math.abs(rate - 1) > 0.01) body.audioConfig.speakingRate = rate;
+  const r = await fetch("https://texttospeech.googleapis.com/v1/text:synthesize", {method: "POST",
+    headers: {"Authorization": "Bearer " + await gcpToken(), "Content-Type": "application/json"}, body: JSON.stringify(body)});
+  const j = await r.json().catch(() => ({}));
+  if (!r.ok || !j.audioContent) {
+    logger.error("tts", r.status, JSON.stringify(j.error || {}).slice(0, 300));
+    const e = new Error((j.error && j.error.message) || "tts failed"); e.status = r.status; throw e;
+  }
+  return Buffer.from(j.audioContent, "base64");
+}
+const ttsKey = (voice, rate, text) => crypto.createHash("sha1").update(voice + "|" + rate + "|" + text).digest("hex");
+const TTS_MEM = new Map();
+
+exports.tts = onRequest({memory: "256MiB", concurrency: 40, maxInstances: 5}, async (req, res) => {
+  res.set("Access-Control-Allow-Origin", "*");
+  if (req.method === "OPTIONS") return res.status(204).send("");
+  try {
+    const cfg = (await getAccessCfg()).tts || {};
+    if (!cfg.on) return res.status(404).send("off");
+    const which = req.query.v === "m" ? "m" : "f";
+    const voice = /^[a-z]{2}-[A-Z]{2}-[A-Za-z0-9-]{3,40}$/.test(cfg[which] || "") ? cfg[which] : TTS_DEF[which];
+    const rate = Math.min(1.3, Math.max(0.6, Number(cfg.rate) || TTS_DEF.rate));
+    const text = String(req.query.t || "").replace(/\s+/g, " ").trim();
+    if (!text || text.length > 400 || !/[ء-ي]/.test(text) || /[<>{}]/.test(text)) return res.status(400).send("bad");
+    const k = ttsKey(voice, rate, text);
+    let buf = TTS_MEM.get(k);
+    if (!buf) {
+      const ref = db.collection("ttsCache").doc(k); const ds = await ref.get();
+      if (ds.exists) buf = Buffer.from(ds.data().b, "base64");
+      else {
+        const day = db.collection("config").doc("ttsDay_" + new Date().toISOString().slice(0, 10));
+        const used = await db.runTransaction(async (tx) => { const s = await tx.get(day); const n = (s.exists ? s.data().chars : 0) + text.length;
+          if (n > TTS_DAY_CAP) return -1; tx.set(day, {chars: n, items: FieldValue.increment(1)}, {merge: true}); return n; });
+        if (used < 0) return res.status(429).send("cap");
+        buf = await synth(text, voice, rate);
+        await ref.set({b: buf.toString("base64"), t: text.slice(0, 400), v: voice, r: rate, n: text.length, at: FieldValue.serverTimestamp()});
+        db.collection("config").doc("ttsStats").set({items: FieldValue.increment(1), chars: FieldValue.increment(text.length)}, {merge: true}).catch(() => {});
+      }
+      if (TTS_MEM.size > 3000) TTS_MEM.clear();
+      TTS_MEM.set(k, buf);
+    }
+    res.set("Content-Type", "audio/mpeg").set("Cache-Control", "public, max-age=31536000, immutable").send(buf);
+  } catch (e) {
+    logger.error("tts endpoint", e.message);
+    res.status(e.status === 403 ? 503 : 500).send("error");
+  }
+});
+
+exports.adminTts = onCall({memory: "256MiB"}, async (req) => {
+  await needAdmin(req);
+  const d = req.data || {}; const op = String(d.op || "");
+  if (op === "voices") {
+    const r = await fetch("https://texttospeech.googleapis.com/v1/voices?languageCode=ar-XA", {headers: {"Authorization": "Bearer " + await gcpToken()}});
+    const j = await r.json().catch(() => ({}));
+    if (!r.ok) throw new HttpsError("failed-precondition", r.status === 403 ? "خدمة Text-to-Speech غير مفعّلة في مشروع Google Cloud بعد" : "تعذّر جلب الأصوات");
+    const st = await db.collection("config").doc("ttsStats").get();
+    const today = await db.collection("config").doc("ttsDay_" + new Date().toISOString().slice(0, 10)).get();
+    return {voices: (j.voices || []).map((v) => ({name: v.name, g: v.ssmlGender})).sort((a, b) => a.name.localeCompare(b.name)),
+      stats: st.exists ? st.data() : {}, today: today.exists ? today.data().chars : 0, def: TTS_DEF};
+  }
+  if (op === "try") {
+    const text = str(d.text, 400); const voice = str(d.voice, 60);
+    if (!text || !/^[a-z]{2}-[A-Z]{2}-/.test(voice)) throw new HttpsError("invalid-argument", "النص أو الصوت غير صحيح");
+    try { const b = await synth(text, voice, Math.min(1.3, Math.max(0.6, Number(d.rate) || 1))); return {audio: b.toString("base64")}; }
+    catch (e) { throw new HttpsError("failed-precondition", e.status === 403 ? "خدمة Text-to-Speech غير مفعّلة في مشروع Google Cloud بعد" : "تعذّر توليد الصوت: " + str(e.message, 150)); }
+  }
+  if (op === "cfg") {
+    const ok = (v) => /^[a-z]{2}-[A-Z]{2}-[A-Za-z0-9-]{3,40}$/.test(v || "");
+    const tts = {on: !!d.on, f: ok(d.f) ? d.f : TTS_DEF.f, m: ok(d.m) ? d.m : TTS_DEF.m, rate: Math.min(1.3, Math.max(0.6, Number(d.rate) || TTS_DEF.rate))};
+    await db.collection("config").doc("access").set({tts}, {merge: true}); ACCESS = null; return {tts};
+  }
+  throw new HttpsError("invalid-argument", "عملية غير معروفة");
+});
