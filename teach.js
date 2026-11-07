@@ -473,13 +473,13 @@ export default function initTeach(X) {
     const box = el('div', { class: 'panel accbox' }, el('b', { text: '🎥 منصة المعلمين (دورات الفيديو)' }));
     const ck = (k, t, n) => { const i = el('input', { type: 'checkbox', checked: C[k] ? '' : null, onchange: e => { C[k] = e.target.checked; } }); return el('label', { class: 'sndrow' }, i, el('span', {}, el('b', { text: t }), el('small', { class: 'note', text: n }))); };
     const cm = el('div');
-    box.append(ck('on', '⚙️ تفعيل الخدمة', 'المعلمون يقدّمون وينشئون الدورات، والطلاب يشترون. عند التعطيل يتوقف كل شيء.'),
+    if (ACC.owner) box.append(ck('on', '⚙️ تفعيل الخدمة', 'المعلمون يقدّمون وينشئون الدورات، والطلاب يشترون. عند التعطيل يتوقف كل شيء.'),
       ck('show', '👁️ إظهار الدورات للجميع', 'بطاقة «دورات المعلمين» في الرئيسية وصفحات الدورات. عند الإخفاء يراها المدير فقط.'),
       ck('apply', '📝 استقبال طلبات معلمين جدد', ''),
       el('button', { class: 'btn', text: 'حفظ', onclick: async () => { try { await call('adminTeach', { op: 'cfg', ...C }); fbk(cm, 'ok', '✓ حُفظت.'); } catch (e) { fbk(cm, 'bad', fnErr(e)); } } }), cm);
     const yb = el('div', { class: 'tc-adm-row' }, el('b', { text: '▶️ قناة يوتيوب للرفع' }), el('span', { class: 'note', text: 'جارٍ الفحص…' }));
-    box.append(yb);
-    call('adminTeach', { op: 'ytStatus' }).then(r => { yb.lastChild.remove();
+    if (ACC.owner) box.append(yb);
+    if (ACC.owner) call('adminTeach', { op: 'ytStatus' }).then(r => { yb.lastChild.remove();
       yb.append(r.ok ? el('span', { class: 'note', html: '' }, '✅ مربوطة: ', el('b', { text: r.name }), ' · ' + r.videos + ' فيديو ', r.url ? el('a', { href: r.url, target: '_blank', rel: 'noopener', text: 'فتح القناة' }) : null)
         : el('span', { class: 'note', text: '⚠️ غير مربوطة بعد — المعلمون لا يستطيعون رفع الفيديوهات حتى تربطها.' }));
       const lm = el('div'); yb.append(el('button', { class: 'btn sm ' + (r.ok ? 'ghost' : 'sun'), text: r.ok ? 'إعادة ربط القناة' : '🔗 ربط قناة يوتيوب', onclick: async e => { e.target.disabled = true;
@@ -487,12 +487,13 @@ export default function initTeach(X) {
       .catch(e => { yb.lastChild.textContent = fnErr(e); });
     const tabs = el('div', { class: 'tc-tabs' }), body = el('div', { class: 'stack' }), stats = el('div'); box.append(stats, tabs, body);
     let A = null, tab = 'req';
-    const TABS = [['req', 'طلبات المعلمين'], ['teachers', 'المعلمون'], ['review', 'دورات للمراجعة'], ['all', 'كل الدورات'], ['wd', 'طلبات السحب']];
+    const TABS = [['req', 'طلبات المعلمين', 'teach_req'], ['teachers', 'المعلمون', 'teach_req'], ['review', 'دورات للمراجعة', 'teach_courses'], ['all', 'كل الدورات', 'teach_courses'], ['wd', 'طلبات السحب', 'teach_wd']].filter(x => ACC.can(x[2]));
+    tab = (TABS[0] || [])[0] || 'req';
     const drawTabs = () => { tabs.innerHTML = ''; TABS.forEach(([k, t]) => { const n = !A ? '' : k === 'req' ? A.teachers.filter(x => x.status === 'pending').length : k === 'review' ? A.courses.filter(x => x.status === 'pending' || x.lessons.some(l => !l.ready && x.status === 'live')).length : k === 'wd' ? A.withdrawals.length : '';
       tabs.append(el('button', { class: 'btn sm ' + (k === tab ? '' : 'ghost'), text: t + (n ? ' (' + n + ')' : ''), onclick: () => { tab = k; drawTabs(); draw(); } })); }); };
     const load = async () => { body.innerHTML = ''; const m = loading(body);
       try { A = await call('adminTeach', { op: 'load' }); const S = A.stats || {};
-        stats.innerHTML = ''; stats.append(el('div', { class: 'tc-wal' }, el('div', {}, el('b', { text: String(S.sales || 0) }), el('span', { text: 'اشتراك مدفوع' })), el('div', {}, el('b', { text: money(S.gross) }), el('span', { text: 'إجمالي المبيعات' })),
+        stats.innerHTML = ''; if (ACC.can('stats')) stats.append(el('div', { class: 'tc-wal' }, el('div', {}, el('b', { text: String(S.sales || 0) }), el('span', { text: 'اشتراك مدفوع' })), el('div', {}, el('b', { text: money(S.gross) }), el('span', { text: 'إجمالي المبيعات' })),
           el('div', {}, el('b', { text: money(S.platform) }), el('span', { text: 'نصيب المنصة 30%' })), el('div', {}, el('b', { text: money(S.teachers) }), el('span', { text: 'نصيب المعلمين 70%' }))));
         drawTabs(); draw(); } catch (e) { fbk(m, 'bad', fnErr(e)); } };
     const act = async (fn, btn, m) => { btn.disabled = true; try { await fn(); await load(); } catch (e) { fbk(m, 'bad', fnErr(e)); btn.disabled = false; } };
@@ -547,11 +548,12 @@ export default function initTeach(X) {
       const nT = A.teachers.filter(x => x.status === 'pending').length;
       const nC = A.courses.filter(x => x.status === 'pending').length;
       const nW = A.withdrawals.length;
+      const tot = items.reduce((a, x) => a + x[0], 0);
       const go2 = k => { const b = document.getElementById('tc-admin'); if (b && b.openTab) b.openTab(k); };
-      const items = [[nT, '👩‍🏫 طلبات انضمام معلمين', 'req'], [nC, '🎬 دورات تنتظر المراجعة', 'review'], [nW, '💸 طلبات سحب أرصدة', 'wd']];
-      w.append(el('div', { class: 'panel accbox', style: 'border:2px solid ' + (nT + nC + nW ? '#f59e0b' : 'var(--line)') },
-        el('b', { text: nT + nC + nW ? '🔔 بانتظار موافقتك' : '✅ منصة المعلمين: لا توجد طلبات تنتظرك' }),
-        ...(nT + nC + nW ? items.filter(x => x[0]).map(([n, t, k]) => el('button', { class: 'btn ghost', style: 'justify-content:space-between;display:flex', onclick: () => go2(k) }, el('span', { text: t }), el('b', { text: String(n) }))) : []),
+      const items = [[nT, '👩‍🏫 طلبات انضمام معلمين', 'req', 'teach_req'], [nC, '🎬 دورات تنتظر المراجعة', 'review', 'teach_courses'], [nW, '💸 طلبات سحب أرصدة', 'wd', 'teach_wd']].filter(x => ACC.can(x[3]));
+      w.append(el('div', { class: 'panel accbox', style: 'border:2px solid ' + (tot ? '#f59e0b' : 'var(--line)') },
+        el('b', { text: tot ? '🔔 بانتظار موافقتك' : '✅ منصة المعلمين: لا توجد طلبات تنتظرك' }),
+        ...(tot ? items.filter(x => x[0]).map(([n, t, k]) => el('button', { class: 'btn ghost', style: 'justify-content:space-between;display:flex', onclick: () => go2(k) }, el('span', { text: t }), el('b', { text: String(n) }))) : []),
         el('span', { class: 'note', text: 'المعلمون المعتمدون: ' + A.teachers.filter(x => x.status === 'approved').length + ' · الدورات المنشورة: ' + A.courses.filter(x => x.status === 'live').length + ' · كل الطلبات: ' + A.teachers.length })));
     }).catch(e => { w.append(el('div', { class: 'panel accbox' }, el('b', { text: '🎥 منصة المعلمين' }), el('span', { class: 'note', text: fnErr(e) }))); });
     return w;

@@ -208,7 +208,65 @@ async function getPrices() {
   }
   return out;
 }
-exports.getPlans = onCall(async () => ({prices: await getPrices(), end: seasonEnd().toMillis()}));
+// ===================== الباقات المرنة (config/plans) =====================
+// كل باقة: نوع أساسي (مادة/صف للطالب، صف/كل الصفوف لولي الأمر) + سعر + مدة (حتى 31 أغسطس، أو عدد أيام من الاشتراك، أو حتى تاريخ محدد)
+// + حد للأبناء (مثلاً باقة «ابنان فقط»). تُدار بالكامل من لوحة الإدارة.
+const BASES = ["student_subject", "student_grade", "parent_grade", "parent_all"];
+const PARENT_BASES = ["parent_grade", "parent_all"];
+function defaultPlans(pr) {
+  const P0 = (id, base, name, desc, extra = {}) => ({id, on: true, base, name, desc, price: pr[base] || 0, dur: {t: "season"}, kids: PARENT_BASES.includes(base) ? 5 : 0, ...extra});
+  return [
+    P0("student_subject", "student_subject", "مادة واحدة", "مادة واحدة في صف واحد"),
+    P0("student_grade", "student_grade", "الصف كاملاً", "كل مواد صف واحد"),
+    P0("parent_grade", "parent_grade", "العائلة — صف واحد", "كل مواد صف واحد لأبنائك (حتى 5)"),
+    P0("parent_all", "parent_all", "العائلة — كل الصفوف", "كل الصفوف والمواد لأبنائك (حتى 5)"),
+    P0("parent2_grade", "parent_grade", "ابنان — صف واحد", "كل مواد صف واحد لابنين فقط", {on: false, price: 0, kids: 2}),
+    P0("parent2_all", "parent_all", "ابنان — كل الصفوف", "كل الصفوف والمواد لابنين فقط", {on: false, price: 0, kids: 2}),
+    P0("student_grade_m1", "student_grade", "الصف كاملاً — شهر", "كل مواد صف واحد لمدة شهر", {on: false, price: 0, dur: {t: "days", days: 30}}),
+    P0("parent_all_m1", "parent_all", "العائلة — شهر", "كل الصفوف لأبنائك لمدة شهر", {on: false, price: 0, dur: {t: "days", days: 30}}),
+  ];
+}
+async function getPlansCfg() {
+  const snap = await db.collection("config").doc("plans").get();
+  if (snap.exists && Array.isArray(snap.data().list) && snap.data().list.length) return snap.data().list;
+  return defaultPlans(await getPrices());
+}
+const tripEnd = (y, m, d) => Timestamp.fromDate(new Date(Date.UTC(y, m, d, 21, 59, 59))); // 23:59 بتوقيت طرابلس
+function planEnd(p, from = Date.now()) {
+  const dur = p.dur || {t: "season"};
+  if (dur.t === "days") { const x = new Date(from + Number(dur.days) * DAY + 2 * HOUR); return tripEnd(x.getUTCFullYear(), x.getUTCMonth(), x.getUTCDate()); }
+  if (dur.t === "until") { const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(dur.until || ""); if (m) return tripEnd(+m[1], +m[2] - 1, +m[3]); }
+  return seasonEnd();
+}
+const planLive = (p) => p.on && p.price > 0 && planEnd(p).toMillis() > Date.now();
+exports.getPlans = onCall(async () => {
+  const list = await getPlansCfg();
+  const plans = list.filter(planLive).map((p) => ({id: p.id, base: p.base, name: p.name, desc: p.desc || "", price: p.price,
+    dur: p.dur || {t: "season"}, kids: p.kids || 0, end: planEnd(p).toMillis()}));
+  const prices = {}; plans.forEach((p) => { if (prices[p.base] == null && (p.dur || {}).t === "season") prices[p.base] = p.price; });
+  return {plans, prices, end: seasonEnd().toMillis()};
+});
+exports.adminSetPlans = onCall(async (req) => {
+  await needAdmin(req, "plans");
+  const src = Array.isArray(req.data && req.data.list) ? req.data.list.slice(0, 24) : [];
+  const list = [], ids = new Set();
+  for (const x of src) {
+    const id = String(x.id || "").trim();
+    if (!/^[a-z0-9_]{3,24}$/.test(id) || ids.has(id)) throw new HttpsError("invalid-argument", "معرّف الباقة غير صحيح أو مكرر: " + id);
+    ids.add(id);
+    if (!BASES.includes(x.base)) throw new HttpsError("invalid-argument", "نوع الباقة غير صحيح");
+    const name = String(x.name || "").trim().slice(0, 40); if (name.length < 2) throw new HttpsError("invalid-argument", "اكتب اسم الباقة");
+    const price = Number(x.price); if (!isFinite(price) || price < 0 || price > 5000) throw new HttpsError("invalid-argument", "سعر غير صحيح: " + name);
+    const d = x.dur || {}; let dur = {t: "season"};
+    if (d.t === "days") { const n = Math.round(Number(d.days)); if (!(n >= 1 && n <= 400)) throw new HttpsError("invalid-argument", "عدد الأيام غير صحيح: " + name); dur = {t: "days", days: n}; }
+    if (d.t === "until") { if (!/^\d{4}-\d{2}-\d{2}$/.test(d.until || "")) throw new HttpsError("invalid-argument", "تاريخ النهاية غير صحيح: " + name); dur = {t: "until", until: d.until}; }
+    const kids = PARENT_BASES.includes(x.base) ? Math.min(5, Math.max(1, Math.round(Number(x.kids) || 5))) : 0;
+    list.push({id, on: !!x.on, base: x.base, name, desc: String(x.desc || "").trim().slice(0, 120), price: r2(price), dur, kids});
+  }
+  await db.collection("config").doc("plans").set({list, updatedAt: FieldValue.serverTimestamp()});
+  return {list};
+});
+exports.adminGetPlans = onCall(async (req) => { await needAdmin(req, "plans"); return {list: await getPlansCfg()}; });
 
 // يحدّد نطاق الاشتراك ويحسب سعره في الخادم فقط
 function buildScope(kind, role, d, kidsCount) {
@@ -258,20 +316,31 @@ exports.createOrder = onCall({secrets: [MYPAY_ID, MYPAY_SECRET], memory: "256MiB
   if (!us.exists) throw new HttpsError("failed-precondition", "أكمل بيانات حسابك أولاً");
   const u = us.data();
   if (!u.phoneVerified) throw new HttpsError("failed-precondition", "أكّد رقم هاتفك أولاً");
-  const kids = (await db.collection("users").doc(uid).collection("profiles").get()).docs.filter((x) => x.id !== "me").length;
-  const {scope, qty} = buildScope(kind, u.role, d, kids);
-  if (!KINDS_ON_SALE.includes(kind)) throw new HttpsError("failed-precondition", "هذه الباقة غير متاحة حالياً");
-  const unit = (await getPrices())[kind] || 0;
-  if (!unit) throw new HttpsError("failed-precondition", "هذه الباقة غير متاحة للشراء بعد");
+  const kidIds = (await db.collection("users").doc(uid).collection("profiles").get()).docs.filter((x) => x.id !== "me").map((x) => x.id);
+  const plan = (await getPlansCfg()).find((p) => p.id === String(d.plan || kind));
+  if (!plan || !planLive(plan)) throw new HttpsError("failed-precondition", "هذه الباقة غير متاحة حالياً");
+  const {scope, qty} = buildScope(plan.base, u.role, d, kidIds.length);
+  if (PARENT_BASES.includes(plan.base) && plan.kids && plan.kids < 5) {
+    if (kidIds.length > plan.kids) throw new HttpsError("failed-precondition", `هذه الباقة ${plan.kids === 2 ? "لابنين" : "لـ" + plan.kids + " أبناء"} فقط، وعندك ${kidIds.length}. اختر باقة العائلة.`);
+    scope.kidIds = kidIds;
+  }
+  const unit = plan.price;
   const amount = r2(unit * qty);
+  // الباقات بالأيام: إذا كان عنده اشتراك فعّال من نفس الباقة ونفس الصف/المادة تُضاف المدة بعد نهايته
+  let from = Date.now();
+  if ((plan.dur || {}).t === "days") {
+    const same = (await db.collection("subscriptions").where("uid", "==", uid).get()).docs.map((x) => x.data())
+        .filter((x) => x.plan === plan.id && x.active !== false && x.end && x.end.toMillis() > from && JSON.stringify((x.scope || {}).grades) === JSON.stringify(scope.grades) && JSON.stringify((x.scope || {}).subjects) === JSON.stringify(scope.subjects));
+    same.forEach((x) => { from = Math.max(from, x.end.toMillis()); });
+  }
 
   const recent = await db.collection("orders").where("uid", "==", uid).where("status", "==", "pending").get();
   const fresh = recent.docs.filter((x) => (x.data().createdAt && x.data().createdAt.toMillis() > Date.now() - HOUR));
   if (fresh.length >= 5) throw new HttpsError("resource-exhausted", "طلبات كثيرة، حاول بعد قليل");
 
   const oRef = db.collection("orders").doc(); // رقم من 20 حرفاً ورقماً — يُرسل في custom
-  await oRef.set({uid, kind, scope, qty, unit, amount, currency: "LYD", status: "pending",
-    end: seasonEnd(), createdAt: FieldValue.serverTimestamp()});
+  await oRef.set({uid, kind: plan.base, plan: plan.id, planName: plan.name, scope, qty, unit, amount, currency: "LYD", status: "pending",
+    end: planEnd(plan, from), createdAt: FieldValue.serverTimestamp()});
   const back = "https://mujtahid.ly/#paid-" + oRef.id; // النطاق الرسمي
   const url = await mypayCreate(oRef, amount, back);
   return {ok: true, url, orderId: oRef.id, amount};
@@ -345,7 +414,7 @@ exports.mypayWebhook = onRequest({secrets: [MYPAY_WEBHOOK], memory: "256MiB", co
         mypayTransactionId: b.transaction_id || null, gateway: b.gateway || null});
       if (o.kind === "course") { courseSaleTx(tx, o, orderId); return "ok"; }
       tx.set(db.collection("subscriptions").doc(orderId), {
-        uid: o.uid, kind: o.kind, scope: o.scope, amount: o.amount, orderId,
+        uid: o.uid, kind: o.kind, plan: o.plan || o.kind, planName: o.planName || null, scope: o.scope, amount: o.amount, orderId,
         start: FieldValue.serverTimestamp(), end: o.end, active: true,
       });
       return "ok";
@@ -387,7 +456,7 @@ const accKeys = (g, s, id) => ["g" + g, "g" + g + "-" + s, "l-" + id];
 const accHas = (list, g, s, id) => (list || []).some((k) => accKeys(g, s, id).includes(k));
 const ACCESS_KEY = /^(g\d{1,2}|g\d{1,2}-[a-z]{2,8}|l-[a-z0-9-]{3,60})$/;
 exports.adminSetAccess = onCall(async (req) => {
-  await needAdmin(req);
+  await needAdmin(req, "access");
   const d = req.data || {};
   const list = (x) => [...new Set((Array.isArray(x) ? x : []).map(String).filter((k) => ACCESS_KEY.test(k)))].slice(0, 500);
   const out = {
@@ -403,7 +472,7 @@ exports.adminSetAccess = onCall(async (req) => {
 // textbooks visibility: {all|gN|gN-subj: "all"|"subs"|"off"}
 const BOOK_KEY = /^(all|g\d{1,2}|g\d{1,2}-[a-z]{2,8})$/;
 exports.adminSetBooks = onCall(async (req) => {
-  await needAdmin(req);
+  await needAdmin(req, "access");
   const src = (req.data && req.data.books) || {};
   const books = {};
   for (const [k, v] of Object.entries(src).slice(0, 300)) if (BOOK_KEY.test(k) && ["all", "subs", "off"].includes(v)) books[k] = v;
@@ -429,7 +498,7 @@ exports.getLesson = onCall({memory: "512MiB"}, async (req) => {
   const [g, s] = meta;
   // المدير يتصفح كل الدروس للمراجعة (بدون اشتراك وبدون حدّ يومي، حتى المغلقة)
   if (req.data && req.data.admin) {
-    await needAdmin(req);
+    await needAdmin(req, "browse");
     const lesson = lessonFrom(g, id);
     if (!lesson) throw new HttpsError("not-found", "الدرس غير موجود");
     return {lesson};
@@ -455,7 +524,7 @@ exports.getLesson = onCall({memory: "512MiB"}, async (req) => {
     const sc = sub.scope || {};
     if (sc.teacherOnly) return role === "teacher" && pid === "me" && (sc.pairs || []).includes(g + ":" + s);
     if (sc.any) return (sc.grades || []).some((x) => x === "*" || x === g);
-    if (sc.kids) { if (!pid || pid === "me") return false; } else if (!(role === "student" || (sc.self && pid === "me"))) return false;
+    if (sc.kids) { if (!pid || pid === "me" || (sc.kidIds && !sc.kidIds.includes(pid))) return false; } else if (!(role === "student" || (sc.self && pid === "me"))) return false;
     return (sc.grades || []).some((x) => x === "*" || x === g) && (sc.subjects || []).some((x) => x === "*" || x === s);
   });
   if (!ok && !openFree) throw new HttpsError("permission-denied", "هذا الدرس للمشتركين. اشترك لتفتحه.");
@@ -592,19 +661,54 @@ exports.removeCoParent = onCall(async (req) => {
 // المدير: من يوجد معرّفه (uid) في المستند config/admins داخل الحقل uids (يُضاف من كونسول Firebase مرة واحدة).
 // حسابات Google الخاصة بالمالك: من يدخل بها (بحساب Google) يصبح مديراً تلقائياً
 const OWNER_EMAILS = ["wahatoujly@gmail.com", "laffatkly@gmail.com"];
-async function needAdmin(req) {
-  const uid = needUser(req);
-  const tok = req.auth.token || {};
-  if (tok.email && tok.email_verified === true && OWNER_EMAILS.includes(String(tok.email).toLowerCase())) return uid;
-  const a = await db.collection("config").doc("admins").get();
-  const list = (a.exists && Array.isArray(a.data().uids)) ? a.data().uids : [];
-  if (!list.includes(uid)) throw new HttpsError("permission-denied", "هذه الصفحة للإدارة فقط");
-  return uid;
+// المشرفون: config/admins.staff = {uid: {name, phone, perms: [...]}} — يضيفهم المالك من لوحة الإدارة بصلاحيات محددة
+const PERMS = ["stats", "grant", "plans", "access", "tts", "teach_req", "teach_courses", "teach_wd", "browse"];
+async function staffOf(req) {
+  if (!req.auth) return null;
+  const uid = req.auth.uid; const tok = req.auth.token || {};
+  if (tok.email && tok.email_verified === true && OWNER_EMAILS.includes(String(tok.email).toLowerCase())) return {uid, owner: true, perms: PERMS};
+  const a = await db.collection("config").doc("admins").get(); const A = a.exists ? a.data() : {};
+  if (Array.isArray(A.uids) && A.uids.includes(uid)) return {uid, owner: true, perms: PERMS};
+  const st = (A.staff || {})[uid];
+  if (st && !st.off) return {uid, owner: false, perms: (st.perms || []).filter((x) => PERMS.includes(x)), name: st.name || ""};
+  return null;
 }
-exports.adminCheck = onCall(async (req) => { await needAdmin(req); return {admin: true}; });
+// perm: بدون = أي مشرف · "owner" = المالك فقط · غير ذلك = صلاحية محددة
+async function needAdmin(req, perm) {
+  needUser(req);
+  const s = await staffOf(req);
+  if (!s) throw new HttpsError("permission-denied", "هذه الصفحة للإدارة فقط");
+  if (perm === "owner" && !s.owner) throw new HttpsError("permission-denied", "هذه العملية لمالك المنصة فقط");
+  if (perm && perm !== "owner" && !s.owner) {
+    const any = Array.isArray(perm) ? perm : [perm];
+    if (!any.some((x) => s.perms.includes(x))) throw new HttpsError("permission-denied", "ليست لديك صلاحية لهذه العملية");
+  }
+  return s.uid;
+}
+exports.adminCheck = onCall(async (req) => { needUser(req); const s = await staffOf(req);
+  if (!s) throw new HttpsError("permission-denied", "هذه الصفحة للإدارة فقط");
+  return {admin: true, owner: s.owner, perms: s.perms}; });
+exports.adminStaff = onCall(async (req) => {
+  await needAdmin(req, "owner");
+  const d = req.data || {}; const ref = db.collection("config").doc("admins");
+  const snap = await ref.get(); const staff = (snap.exists && snap.data().staff) || {};
+  if (d.op === "set") {
+    const uid = String(d.uid || "");
+    const us = await db.collection("users").doc(uid).get(); if (!us.exists) throw new HttpsError("not-found", "المستخدم غير موجود");
+    const perms = (Array.isArray(d.perms) ? d.perms : []).filter((x) => PERMS.includes(x));
+    if (!perms.length) throw new HttpsError("invalid-argument", "اختر صلاحية واحدة على الأقل");
+    staff[uid] = {name: us.data().name || "", phone: String(us.data().phone || "").replace("+218", "0"), email: us.data().email || "", perms, off: false,
+      at: (staff[uid] && staff[uid].at) || Date.now()};
+    await ref.set({staff}, {merge: true});
+  } else if (d.op === "remove") {
+    delete staff[String(d.uid || "")];
+    await ref.set({staff: FieldValue.delete()}, {merge: true}); await ref.set({staff}, {merge: true});
+  }
+  return {staff: Object.entries(staff).map(([uid, x]) => ({uid, ...x})), perms: PERMS};
+});
 
 exports.adminStats = onCall({memory: "512MiB"}, async (req) => {
-  await needAdmin(req);
+  await needAdmin(req, "stats");
   const now = Date.now();
   const [users, profiles, subs, orders] = await Promise.all([
     db.collection("users").select("role", "name", "phone", "email", "phoneVerified").get(),
@@ -631,7 +735,7 @@ exports.adminStats = onCall({memory: "512MiB"}, async (req) => {
   profiles.docs.forEach((d) => { if (d.id !== "me" && kidSubUsers.has(d.ref.parent.parent.id)) kidsCovered++; });
   let revenue = 0; orders.docs.forEach((d) => { revenue += Number(d.data().amount) || 0; });
   const list = active.sort((a, b) => (b.start && b.start.toMillis ? b.start.toMillis() : 0) - (a.start && a.start.toMillis ? a.start.toMillis() : 0))
-      .slice(0, 200).map((x) => ({id: x.id, uid: x.uid, kind: x.kind, scope: x.scope, amount: x.amount || 0,
+      .slice(0, 200).map((x) => ({id: x.id, uid: x.uid, kind: x.kind, planName: x.planName || "", scope: x.scope, amount: x.amount || 0,
         end: x.end.toMillis(), name: (uinfo[x.uid] || {}).name || "", phone: (uinfo[x.uid] || {}).phone || "", role: (uinfo[x.uid] || {}).role || "", note: x.note || ""}));
   return {
     users: users.size, roles, kids, kidsByGrade, kidsCovered,
@@ -642,7 +746,7 @@ exports.adminStats = onCall({memory: "512MiB"}, async (req) => {
 });
 
 exports.adminSetPrices = onCall(async (req) => {
-  await needAdmin(req);
+  await needAdmin(req, "plans");
   const d = req.data || {};
   const out = {};
   for (const k of KINDS_ON_SALE) {
@@ -656,7 +760,7 @@ exports.adminSetPrices = onCall(async (req) => {
 
 // البحث عن مستخدم برقم الهاتف أو البريد
 exports.adminFindUser = onCall(async (req) => {
-  await needAdmin(req);
+  await needAdmin(req, "grant");
   const q = String((req.data && req.data.q) || "").trim();
   let snap;
   if (/^09[1-5]\d{7}$/.test(q)) snap = await db.collection("users").where("phone", "==", toE164(q)).limit(5).get();
@@ -674,7 +778,7 @@ exports.adminFindUser = onCall(async (req) => {
 
 // منح اشتراك مجاني (أقارب، أبناء…) لصف معيّن أو لكل الصفوف
 exports.adminGrant = onCall(async (req) => {
-  const admin = await needAdmin(req);
+  const admin = await needAdmin(req, "grant");
   const d = req.data || {};
   const uid = String(d.uid || "");
   const grade = String(d.grade || "*");
@@ -690,7 +794,7 @@ exports.adminGrant = onCall(async (req) => {
 });
 
 exports.adminRevoke = onCall(async (req) => {
-  await needAdmin(req);
+  await needAdmin(req, "grant");
   const id = String((req.data && req.data.id) || "");
   if (!/^[A-Za-z0-9_*-]{5,120}$/.test(id)) throw new HttpsError("invalid-argument", "معرّف غير صحيح");
   await db.collection("subscriptions").doc(id).update({active: false, revokedAt: FieldValue.serverTimestamp()});
@@ -1048,8 +1152,10 @@ exports.teach = onCall({secrets: [MYPAY_ID, MYPAY_SECRET, YT_ID, YT_SECRET, YT_R
 
 // ---------- لوحة الإدارة: المعلمون والدورات والسحوبات ----------
 exports.adminTeach = onCall({secrets: [YT_ID, YT_SECRET, YT_REFRESH], memory: "256MiB"}, async (req) => {
-  const adm = await needAdmin(req);
   const d = req.data || {}; const op = String(d.op || "");
+  const OP_PERM = {cfg: "owner", ytLink: "owner", ytStatus: ["teach_courses", "teach_req"], load: ["teach_req", "teach_courses", "teach_wd"],
+    teacher: "teach_req", videos: "teach_courses", vmap: "teach_courses", course: "teach_courses", withdrawal: "teach_wd", grant: "grant"};
+  const adm = await needAdmin(req, OP_PERM[op] || "owner");
   if (op === "cfg") {
     const teach = {on: !!d.on, show: !!d.show, apply: !!d.apply};
     await db.collection("config").doc("access").set({teach}, {merge: true}); ACCESS = null; return {teach};
@@ -1066,6 +1172,7 @@ exports.adminTeach = onCall({secrets: [YT_ID, YT_SECRET, YT_REFRESH], memory: "2
     } catch (e) { return {ok: false, err: e.message}; }
   }
   if (op === "load") {
+    const me = await staffOf(req); const canWd = me.owner || me.perms.includes("teach_wd");
     const [ts, cs, wd, st] = await Promise.all([db.collection("teachers").get(), db.collection("courses").get(),
       db.collection("withdrawals").where("status", "==", "pending").get(), db.collection("config").doc("teachStats").get()]);
     const wal = await db.collection("wallets").get(); const bal = {}; wal.docs.forEach((x) => { bal[x.id] = x.data(); });
@@ -1074,7 +1181,7 @@ exports.adminTeach = onCall({secrets: [YT_ID, YT_SECRET, YT_REFRESH], memory: "2
         status: t.status, hidden: !!t.hidden, note: t.note || "", courses: t.courses || 0, at: ms(t.createdAt),
         bal: r2((bal[x.id] || {}).bal || 0), earned: r2((bal[x.id] || {}).earned || 0)}; }),
       courses: cs.docs.map((x) => ({...pubCourse(x.id, x.data()), note: x.data().note || "", lessons: (x.data().lessons || []).map((l, i) => ({...l, free: i === 0}))})),
-      withdrawals: wd.docs.map((x) => ({id: x.id, ...x.data(), at: ms(x.data().at)})),
+      withdrawals: canWd ? wd.docs.map((x) => ({id: x.id, ...x.data(), at: ms(x.data().at)})) : [],
       stats: st.exists ? st.data() : {},
     };
   }
@@ -1207,7 +1314,7 @@ exports.tts = onRequest({memory: "256MiB", concurrency: 40, maxInstances: 5}, as
 });
 
 exports.adminTts = onCall({memory: "256MiB"}, async (req) => {
-  await needAdmin(req);
+  await needAdmin(req, "tts");
   const d = req.data || {}; const op = String(d.op || "");
   if (op === "voices") {
     const r = await fetch("https://texttospeech.googleapis.com/v1/voices?languageCode=ar-XA", {headers: {"Authorization": "Bearer " + await gcpToken()}});
