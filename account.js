@@ -671,12 +671,24 @@ function renderSubscribe() {
     if (pl.base === 'student_subject' && grade) { const w = el('div', { class: 'gpick' }); subjectsOf(grade).forEach(x => w.append(el('button', { class: 'btn ghost sm' + (subject === x.id ? ' on' : ''), text: x.name, onclick: () => { subject = x.id; draw(); } }))); box.append(el('b', { text: 'المادة' }), w); }
     const ready = pl.base === 'parent_all' || (pl.base === 'student_subject' ? grade && subject : !!grade);
     if (!ready) return;
+    { // اشتراك فعّال يشمل نفس الاختيار؟ لا داعي للدفع مرة أخرى
+      const isDays = (pl.dur || {}).t === 'days', want = pl.base === 'student_subject' ? { g: [grade], s: [subject] } : pl.base === 'parent_all' ? { g: ['*'], s: ['*'] } : { g: [grade], s: ['*'] };
+      const kidIds = ACC.profiles.filter(p => p.id !== 'me').map(p => p.id), forKids = isParent;
+      const inc = (have, w) => (have || []).includes('*') || w.every(v => (have || []).includes(v));
+      const cov = ACC.subs.find(x => { if (isDays && x.plan === pl.id) return false; const sc = x.scope || {}; if (sc.teacherOnly) return false;
+        const who = sc.any || (forKids ? (sc.kids && (!sc.kidIds || kidIds.every(k => sc.kidIds.includes(k)))) : (sc.self || (!sc.kids && role === 'student')));
+        return who && inc(sc.grades, want.g) && (sc.any || inc(sc.subjects, want.s)) && x.end.toMillis() >= pl.end - 864e5; });
+      if (cov) { box.append(el('div', { class: 'feedback ok', text: '✓ أنت مشترك بالفعل في «' + subName(cov).replace(/^\S+\s/, '') + '» حتى ' + fmtDate(cov.end.toMillis()) + '، وهو يشمل ما اخترته. لا حاجة لاشتراك جديد.' })); return; }
+    }
     const d = pl.dur || {}, endTxt = d.t === 'days' ? 'الاشتراك لمدة ' + durLabel(pl) + '. إذا كان عندك اشتراك فعّال من نفس الباقة تُضاف المدة بعد نهايته.' : 'الاشتراك صالح ' + durLabel(pl) + '.';
     box.append(el('div', { class: 'paybox' }, el('b', { style: 'font-size:1.2rem', text: 'المبلغ: ' + pl.price + ' دينار' }),
       el('span', { class: 'note', text: endTxt + ' الدفع عبر ماي باي: ادفع لي، سداد، موبي كاش وغيرها.' }),
-      el('a', { class: 'note', href: '#privacy', text: 'بالدفع أنت توافق على شروط الاستخدام وسياسة الخصوصية.' }), payBtn));
+      el('label', { class: 'sndrow', style: 'margin:4px 0' }, agree, el('span', {}, 'أوافق على ', el('a', { href: '#privacy', text: 'شروط الاستخدام وسياسة الخصوصية' }))), payBtn));
+    payBtn.disabled = !agree.checked;
   };
+  const agree = el('input', { type: 'checkbox', onchange: () => { payBtn.disabled = !agree.checked; } });
   const payBtn = el('button', { class: 'btn sun paybig', text: 'ادفع الآن', onclick: async () => {
+    if (!agree.checked) { fbk(msg, 'bad', 'وافق على الشروط أولاً.'); return; }
     msg.innerHTML = '';
     if (!ACC.phoneVerified()) { phoneBox.scrollIntoView({ behavior: 'smooth' }); await ACC.verifyPhone(phoneBox); phoneBox.innerHTML = ''; }
     payBtn.disabled = true; fbk(msg, 'info', 'جارٍ تجهيز صفحة الدفع…');

@@ -328,10 +328,26 @@ exports.createOrder = onCall({secrets: [MYPAY_ID, MYPAY_SECRET], memory: "256MiB
   const amount = r2(unit * qty);
   // الباقات بالأيام: إذا كان عنده اشتراك فعّال من نفس الباقة ونفس الصف/المادة تُضاف المدة بعد نهايته
   let from = Date.now();
-  if ((plan.dur || {}).t === "days") {
-    const same = (await db.collection("subscriptions").where("uid", "==", uid).get()).docs.map((x) => x.data())
-        .filter((x) => x.plan === plan.id && x.active !== false && x.end && x.end.toMillis() > from && JSON.stringify((x.scope || {}).grades) === JSON.stringify(scope.grades) && JSON.stringify((x.scope || {}).subjects) === JSON.stringify(scope.subjects));
-    same.forEach((x) => { from = Math.max(from, x.end.toMillis()); });
+  const active = (await db.collection("subscriptions").where("uid", "==", uid).get()).docs.map((x) => x.data())
+      .filter((x) => x.active !== false && x.end && x.end.toMillis() > from);
+  const isDays = (plan.dur || {}).t === "days";
+  if (isDays) {
+    active.filter((x) => x.plan === plan.id && JSON.stringify((x.scope || {}).grades) === JSON.stringify(scope.grades) && JSON.stringify((x.scope || {}).subjects) === JSON.stringify(scope.subjects))
+        .forEach((x) => { from = Math.max(from, x.end.toMillis()); });
+  }
+  // منع الشراء المكرر: اشتراك فعّال يشمل نفس الصفوف والمواد ونفس المستفيدين، ويستمر حتى نهاية الباقة الجديدة أو بعدها
+  const newEnd = planEnd(plan, from).toMillis();
+  const covering = active.find((x) => {
+    if (isDays && x.plan === plan.id) return false; // تجديد نفس الباقة الشهرية مسموح (تُضاف المدة)
+    const sc = x.scope || {};
+    if (sc.teacherOnly) return false;
+    const who = sc.any || (scope.kids ? (sc.kids && (!sc.kidIds || kidIds.every((k) => sc.kidIds.includes(k)))) : (sc.self || (!sc.kids && u.role === "student")));
+    const inc = (have, want) => (have || []).includes("*") || (want || []).every((v) => (have || []).includes(v));
+    return who && inc(sc.grades, scope.grades) && (sc.any || inc(sc.subjects, scope.subjects)) && x.end.toMillis() >= newEnd - DAY;
+  });
+  if (covering) {
+    const dt = new Date(covering.end.toMillis()).toLocaleDateString("ar-LY-u-nu-latn", {timeZone: "Africa/Tripoli", day: "numeric", month: "long", year: "numeric"});
+    throw new HttpsError("already-exists", `أنت مشترك بالفعل${covering.planName ? " في «" + covering.planName + "»" : ""} حتى ${dt}، وهو يشمل ما اخترته. لا حاجة لاشتراك جديد.`);
   }
 
   const recent = await db.collection("orders").where("uid", "==", uid).where("status", "==", "pending").get();
