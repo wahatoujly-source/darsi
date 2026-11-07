@@ -537,7 +537,7 @@ export default function initTeach(X) {
       if (tab === 'all') items = A.courses.sort((a, b) => (b.at || 0) - (a.at || 0)).map(cRow);
       if (tab === 'wd') items = A.withdrawals.map(wRow);
       if (!items.length) body.append(el('span', { class: 'note', text: 'لا يوجد شيء هنا.' })); else body.append(...items); };
-    box.id = 'tc-admin'; box.openTab = k => { tab = k; drawTabs(); draw(); box.scrollIntoView({ behavior: 'smooth', block: 'start' }); };
+    box.id = 'tc-admin'; box.openTab = k => { const fd = box.closest('details'); if (fd) fd.open = true; tab = k; drawTabs(); draw(); box.scrollIntoView({ behavior: 'smooth', block: 'start' }); };
     drawTabs(); load();
     return box;
   };
@@ -548,9 +548,9 @@ export default function initTeach(X) {
       const nT = A.teachers.filter(x => x.status === 'pending').length;
       const nC = A.courses.filter(x => x.status === 'pending').length;
       const nW = A.withdrawals.length;
-      const tot = items.reduce((a, x) => a + x[0], 0);
       const go2 = k => { const b = document.getElementById('tc-admin'); if (b && b.openTab) b.openTab(k); };
       const items = [[nT, '👩‍🏫 طلبات انضمام معلمين', 'req', 'teach_req'], [nC, '🎬 دورات تنتظر المراجعة', 'review', 'teach_courses'], [nW, '💸 طلبات سحب أرصدة', 'wd', 'teach_wd']].filter(x => ACC.can(x[3]));
+      const tot = items.reduce((a, x) => a + x[0], 0);
       w.append(el('div', { class: 'panel accbox', style: 'border:2px solid ' + (tot ? '#f59e0b' : 'var(--line)') },
         el('b', { text: tot ? '🔔 بانتظار موافقتك' : '✅ منصة المعلمين: لا توجد طلبات تنتظرك' }),
         ...(tot ? items.filter(x => x[0]).map(([n, t, k]) => el('button', { class: 'btn ghost', style: 'justify-content:space-between;display:flex', onclick: () => go2(k) }, el('span', { text: t }), el('b', { text: String(n) }))) : []),

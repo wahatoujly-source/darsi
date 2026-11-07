@@ -1013,6 +1013,26 @@ function browseBox() {
       el('button', { class: 'btn sun', text: ACC.adminBrowse ? '✓ وضع المدير مفعّل — افتح الصفحة الرئيسية' : '👁️ ابدأ التصفح كمدير', onclick: () => { ACC.adminBrowse = true; store.set('admin_browse', true); setActive(null).then(() => go('home')); } }),
       ACC.adminBrowse ? el('button', { class: 'btn ghost', text: 'إنهاء وضع المدير', onclick: () => { ACC.adminBrowse = false; store.set('admin_browse', false); renderAdmin(); } }) : null);
 }
+/* ---------- admin safety: every section folded, sensitive buttons need a second press ---------- */
+function fold(box, title) {
+  const h = box.querySelector(':scope > b'); const t = title || (h ? h.textContent : 'قسم');
+  if (h && !title) h.style.display = 'none';
+  const d = el('details', { class: 'adm-fold' }, el('summary', {}, el('span', { text: t }), el('i', { text: '▾' })), box);
+  d.addEventListener('toggle', () => { if (d.open && d.parentElement) d.parentElement.querySelectorAll(':scope > details.adm-fold[open]').forEach(x => { if (x !== d) x.open = false; }); });
+  return d;
+}
+const RISKY = /حفظ|امنح|موافقة|رفض|إيقاف|نشر|تم التحويل|اجعله مشرفاً|إظهار|إخفاء|ربط قناة|إعادة ربط|تحويل/;
+function adminSafety(s) {
+  [...s.children].forEach(c => { if (c.classList && c.classList.contains('panel') && c.classList.contains('accbox')) { const ph = el('span'); s.replaceChild(ph, c); s.replaceChild(fold(c), ph); } });
+  s.addEventListener('click', e => {
+    const b = e.target.closest && e.target.closest('button'); if (!b || !s.contains(b) || b.closest('summary')) return;
+    const txt = b.textContent || ''; if (!RISKY.test(txt) || /تأكيد|اضغط مرة أخرى/.test(txt)) return;
+    if (b.dataset.sure === '1') { b.dataset.sure = ''; clearTimeout(b._st); if (b._orig != null) { b.textContent = b._orig; b._orig = null; } b.classList.remove('adm-sure'); return; }
+    e.preventDefault(); e.stopImmediatePropagation();
+    b.dataset.sure = '1'; b._orig = txt; b.textContent = '⚠️ اضغط مرة أخرى للتأكيد: ' + txt.replace(/^[^\p{L}]+/u, '').slice(0, 30); b.classList.add('adm-sure');
+    b._st = setTimeout(() => { if (b.isConnected && b.dataset.sure === '1') { b.dataset.sure = ''; b.textContent = b._orig; b._orig = null; b.classList.remove('adm-sure'); } }, 5000);
+  }, true);
+}
 function renderAdmin() {
   if (!ACC.user) { go('login'); return; }
   const s = page('لوحة الإدارة', ACC.owner ? 'المجتهد' : 'مشرف — حسب صلاحياتك', 'account');
@@ -1029,8 +1049,9 @@ function renderAdmin() {
   if (can('tts')) s.append(ttsBox());
   if (can('access')) s.append(accessBox(), booksBox());
   if (teachAny) s.append(ACC.teachAdminBox());
+  adminSafety(s);
   if (!can('stats')) return;
-  s.append(listHost);
+  s.append(fold(listHost, '📋 آخر الاشتراكات الفعّالة (مع زر الإلغاء)'));
   call('adminStats', {}).then(d => {
     statsHost.innerHTML = ''; const st = statsHost; const s0 = s;
     { const s = st;

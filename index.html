@@ -854,6 +854,12 @@ header.bar .btxt b,header.bar .btxt small{white-space:nowrap}
 .bk-src{text-align:center;font-size:.75rem}
 .bk-t b[lang=en]{text-align:right}
 .plan[aria-pressed="true"] .note{color:rgba(255,255,255,.9)!important}
+.adm-fold{border:1px solid var(--line);border-radius:16px;background:var(--card);margin:8px 0;overflow:hidden}
+.adm-fold>summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:8px;padding:14px 16px;font-weight:800;font-family:var(--f-display)}
+.adm-fold>summary::-webkit-details-marker{display:none}.adm-fold>summary i{font-style:normal;transition:transform .2s;color:var(--muted)}
+.adm-fold[open]>summary{border-bottom:1px solid var(--line);background:color-mix(in srgb,var(--sea) 8%,var(--card))}.adm-fold[open]>summary i{transform:rotate(180deg)}
+.adm-fold>.panel{border:0!important;margin:0!important;border-radius:0!important;box-shadow:none!important}
+.adm-sure{background:#dc2626!important;color:#fff!important;border-color:#dc2626!important}
 </style>
 
 </head><body>
