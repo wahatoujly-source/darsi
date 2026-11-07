@@ -1824,7 +1824,7 @@ const ACCX=()=>(window.ACC&&ACC.access)||{};
 const accIn=(list,g,sid,lid)=>{const ks=['g'+g,'g'+g+'-'+sid,'l-'+lid];return (list||[]).some(k=>ks.includes(k));};
 const adminBrowse=()=>!!(window.ACC&&ACC.adminBrowse);
 const isClosed=(g,sid,lid)=>!adminBrowse()&&accIn(ACCX().closed,g,sid,lid);
-const isFree=(l,k,g,sid)=>(window.ACC&&ACC.trialN&&l.tr!=null&&l.tr<ACC.trialN())||OPEN_ACCESS||adminBrowse()||!!ACCX().openAll||accIn(ACCX().extraFree,g,sid,l.id)||(!!l.free&&!accIn(ACCX().subsOnly,g,sid,l.id));
+const isFree=(l,k,g,sid)=>(window.ACC&&ACC.trialN&&l.tr!=null&&l.tr<ACC.trialN(g))||OPEN_ACCESS||adminBrowse()||!!ACCX().openAll||accIn(ACCX().extraFree,g,sid,l.id)||(!!l.free&&!accIn(ACCX().subsOnly,g,sid,l.id));
 const canOpen=(g,sid)=>!!(window.ACC&&ACC.hasAccess&&ACC.hasAccess(String(g),sid));
 /* books visibility from the admin panel: config/access.books {all|gN|gN-subj: 'subs'|'off'}; most specific wins */
 const bkMode=(g,sb)=>{const M=ACCX().books||{};return M['g'+g+'-'+sb]||M['g'+g]||M.all||'all';};

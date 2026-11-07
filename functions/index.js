@@ -545,7 +545,7 @@ exports.getLesson = onCall({memory: "512MiB"}, async (req) => {
   const ok = subsSnap.docs.map((d) => d.data()).some((sub) => {
     if (sub.active === false || !sub.end || sub.end.toMillis() <= now) return false;
     const sc = sub.scope || {};
-    if (sub.kind === "trial") return rank != null && rank < (sc.trialN || 5); // أيام مجانية: أول N دروس من كل كتاب فقط
+    if (sub.kind === "trial") return rank != null && rank < (sc.trialN || 5) && (sc.grades || []).includes(g); // أيام مجانية: صف واحد يختاره، أول N دروس من كل كتاب
     if (sc.teacherOnly) return role === "teacher" && pid === "me" && (sc.pairs || []).includes(g + ":" + s);
     if (sc.any) return (sc.grades || []).some((x) => x === "*" || x === g);
     if (sc.kids) { if (!pid || pid === "me" || (sc.kidIds && !sc.kidIds.includes(pid))) return false; } else if (!(role === "student" || (sc.self && pid === "me"))) return false;
@@ -1623,7 +1623,11 @@ async function grantDays(uid, days, why) {
   if (paid.length) { await paid[0].ref.update({end: Timestamp.fromMillis(paid[0].data().end.toMillis() + days * DAY), bonusDays: FieldValue.increment(days)}); return "extended"; }
   const cfg = await refCfg(); const ref = db.collection("subscriptions").doc("trial_" + uid); const cur = await ref.get();
   const base = cur.exists && cur.data().end && cur.data().end.toMillis() > now ? cur.data().end.toMillis() : now;
-  await ref.set({uid, kind: "trial", plan: "trial", planName: "أيام مجانية — أول " + cfg.trialN + " دروس من كل كتاب", scope: {grades: ["*"], subjects: ["*"], any: true, trialN: cfg.trialN},
+  // صف واحد فقط: يبقى كما اختاره سابقاً، والطالب يُضبط على صفه تلقائياً
+  let grades = (cur.exists && cur.data().scope && cur.data().scope.grades) || [];
+  if (!grades.length) { const [us, me] = await Promise.all([db.collection("users").doc(uid).get(), db.collection("users").doc(uid).collection("profiles").doc("me").get()]);
+    if (us.exists && us.data().role === "student" && me.exists && GRADES.includes(String(me.data().grade || ""))) grades = [String(me.data().grade)]; }
+  await ref.set({uid, kind: "trial", plan: "trial", planName: "أيام مجانية — صف واحد، أول " + cfg.trialN + " دروس من كل كتاب", scope: {grades, subjects: ["*"], any: true, trialN: cfg.trialN},
     amount: 0, orderId: null, start: FieldValue.serverTimestamp(), end: Timestamp.fromMillis(base + days * DAY), active: true, why: String(why || "").slice(0, 40), days: FieldValue.increment(days)}, {merge: true});
   return "trial";
 }
@@ -1687,6 +1691,18 @@ async function refPaid(uid) {
   await grantDays(rs.data().by, cfg.pay, "ref-pay");
   await pushUser(rs.data().by, {title: "🎉 حصلت على " + cfg.pay + " أيام مجانية", body: "عائلة دعوتها اشتركت في المجتهد. شكراً لأنك تنشر الخير!", link: "#account"}, {rule: "events"});
 }
+// اختيار صف الأيام المجانية — مرة واحدة ولا يتغير
+exports.trialGrade = onCall(async (req) => {
+  const uid = needUser(req); const tk = req.auth.token || {}; const owner = tk.coOf ? await ownerOf(req) : uid;
+  if (tk.kidOf) throw new HttpsError("permission-denied", "يختار ولي الأمر الصف من حسابه");
+  const g = String((req.data && req.data.grade) || ""); if (!GRADES.includes(g)) throw new HttpsError("invalid-argument", "اختر الصف");
+  const ref = db.collection("subscriptions").doc("trial_" + owner);
+  return await db.runTransaction(async (tx) => {
+    const s = await tx.get(ref); if (!s.exists || !s.data().end || s.data().end.toMillis() < Date.now()) throw new HttpsError("failed-precondition", "لا توجد أيام مجانية فعّالة");
+    const sc = s.data().scope || {}; if ((sc.grades || []).length) throw new HttpsError("failed-precondition", "الصف مختار مسبقاً ولا يمكن تغييره");
+    tx.update(ref, {"scope.grades": [g]}); return {ok: true, grade: g};
+  });
+});
 exports.adminRefs = onCall(async (req) => {
   const d = req.data || {};
   if (d.op === "cfg") {

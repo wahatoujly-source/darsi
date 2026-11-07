@@ -326,6 +326,7 @@ function renderWho() {
   if (!ACC.user || !ACC.profile) { go('login'); return; }
   if (!isAdult()) { go('account'); return; }
   const s = page('من يدرس الآن؟', ACC.profile.name, 'home');
+  { const tp = trialPick(); if (tp && tp.tagName !== 'DIV' || (tp && !tp.classList.contains('feedback'))) s.append(tp); }
   { const pc = ACC.pushCard(); if (pc) s.append(pc); }
   s.append(el('div', { class: 'row', style: 'gap:8px;flex-wrap:wrap;margin-bottom:6px' }, el('button', { class: 'btn ghost sm', text: '🧮 اختبر مستوى أبنائك في الرياضيات', onclick: () => go('test') }),
     (ACC.access && ACC.access.ref && ACC.access.ref.on === false) ? null : el('button', { class: 'btn ghost sm', text: '🎁 ادعُ عائلة واحصل على أيام مجانية', onclick: () => go('account') })));
@@ -673,7 +674,24 @@ const subApplies = sub => {
   if (ACC.kid) return false;
   return role === 'student' || (!!sc.self && ACC.pid === 'me');
 };
-ACC.trialN = () => { const t = ACC.subs.find(x => x.kind === 'trial'); return t ? ((t.scope || {}).trialN || 5) : 0; };
+ACC.trialN = g => { const t = ACC.subs.find(x => x.kind === 'trial'); if (!t) return 0; const gs = (t.scope || {}).grades || []; if (g != null && !gs.includes(String(g))) return 0; return (t.scope || {}).trialN || 5; };
+/* free days: one grade, chosen once by the account owner and locked */
+function trialPick() {
+  const t = ACC.subs.find(x => x.kind === 'trial'); if (!t || ACC.kid) return null; const sc = t.scope || {}, N = sc.trialN || 5;
+  if ((sc.grades || []).length) return el('div', { class: 'feedback info', text: '🎁 أيامك المجانية سارية حتى ' + fmtDate(t.end.toMillis()) + ': أول ' + N + ' دروس في كل مادة للصف ' + gradeName(sc.grades[0]) + '.' });
+  if (ACC.co) return el('div', { class: 'feedback info', text: '🎁 عندكم أيام مجانية. يختار ولي الأمر الأساسي الصف من حسابه.' });
+  const kids = ACC.profiles.filter(p => p.id !== 'me' && p.grade); const me = ACC.profiles.find(p => p.id === 'me');
+  const opts = kids.length ? [...new Map(kids.map(k => [String(k.grade), k.name])).entries()].map(([g]) => [g, 'الصف ' + gradeName(g) + ' (' + kids.filter(k => String(k.grade) === g).map(k => k.name).join('، ') + ')'])
+    : (me && me.grade) ? [[String(me.grade), 'الصف ' + gradeName(me.grade)]] : GRADES.map(([g, n]) => [g, 'الصف ' + n]);
+  let sel = opts.length === 1 ? opts[0][0] : null; const m = el('div');
+  const box = el('div', { class: 'panel', style: 'border:2px solid #16a34a;display:flex;flex-direction:column;gap:8px;margin:8px 0' },
+    el('b', { text: '🎁 عندك أيام مجانية حتى ' + fmtDate(t.end.toMillis()) }), el('span', { class: 'note', text: 'اختر صفاً واحداً تُفتح فيه أول ' + N + ' دروس من كل مادة. لا يمكن تغيير الصف بعد الاختيار.' }));
+  const gp = el('div', { class: 'gpick' }); const drawG = () => { gp.innerHTML = ''; opts.forEach(([g, t2]) => gp.append(el('button', { class: 'btn ghost sm' + (sel === g ? ' on' : ''), text: t2, onclick: () => { sel = g; drawG(); conf.dataset.c = ''; conf.textContent = '✓ اعتمد هذا الصف'; } }))); };
+  const conf = el('button', { class: 'btn sun', text: '✓ اعتمد هذا الصف', onclick: async () => { if (!sel) { fbk(m, 'bad', 'اختر الصف.'); return; }
+    if (conf.dataset.c !== '1') { conf.dataset.c = '1'; conf.textContent = '⚠️ تأكيد: الصف ' + gradeName(sel) + ' (لا يمكن تغييره)'; return; }
+    conf.disabled = true; try { await call('trialGrade', { grade: sel }); await loadSubs(); D.cheer && D.cheer('win'); D.route(); } catch (e) { fbk(m, 'bad', fnErr(e)); conf.disabled = false; } } });
+  drawG(); box.append(gp, conf, m); return box;
+}
 ACC.hasAccess = (g, s) => ACC.subs.some(sub => { if (sub.kind === 'trial' || !subApplies(sub)) return false; const sc = sub.scope || {};
   if (sc.pairs) return sc.pairs.includes(g + ':' + s);
   return (sc.grades || []).some(x => x === '*' || x === g) && (sc.subjects || []).some(x => x === '*' || x === s); });
@@ -1114,7 +1132,7 @@ function refBox() {
         el('button', { class: 'btn ghost', text: '📋 نسخ الرابط', onclick: async () => { try { await navigator.clipboard.writeText(msgTxt); fbk(m, 'ok', '✓ نُسخ.'); } catch (e) { fbk(m, 'info', link); } } }),
         navigator.share ? el('button', { class: 'btn ghost', text: '📤 مشاركة', onclick: () => navigator.share({ text: msgTxt }).catch(() => {}) }) : null),
       el('div', { class: 'stats' }, ...[[S.invited, 'عائلة سجّلت'], [S.active, 'بدأت الدراسة'], [S.paid, 'اشتركت'], [S.days, 'يوم مجاني حصلت عليه']].map(([n, t]) => el('div', { class: 'stat' }, el('b', { text: String(n) }), el('span', { text: t })))));
-    const tr = ACC.subs.find(x => x.kind === 'trial'); if (tr) body.append(el('div', { class: 'feedback info', text: '🎁 أيامك المجانية سارية حتى ' + fmtDate(tr.end.toMillis()) + ': أول ' + ((tr.scope || {}).trialN || 5) + ' دروس مفتوحة في كل مادة.' }));
+    { const tp = trialPick(); if (tp) body.append(tp); }
   }).catch(e => { body.innerHTML = ''; fbk(m, 'bad', fnErr(e)); });
   return box;
 }

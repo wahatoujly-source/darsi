@@ -64,9 +64,9 @@ export default function runTest(D, h) {
     if (skill === 'add') { const m = addMax(g, lv); a = R(1, Math.max(2, Math.floor(m * .6))); b = R(1, Math.max(1, m - a)); c = a + b; op = '+'; tag = ((a % 10) + (b % 10) >= 10) ? 'مع حمل (نقل)' : 'بدون حمل'; }
     else if (skill === 'sub') { const m = addMax(g, lv); a = R(2, m); b = R(1, a - 1); c = a - b; op = '−'; tag = (a % 10) < (b % 10) ? 'مع استلاف' : 'بدون استلاف'; }
     else {
-      const tabs = st.table ? [st.table] : lv === 1 ? [2, 5, 10] : lv === 2 ? [2, 3, 4, 5, 6] : [6, 7, 8, 9];
-      const t = pick(tabs); const n = lv === 1 ? R(1, 5) : lv === 2 ? R(1, 10) : R(4, 10);
-      if (skill === 'mul') { [a, b] = Math.random() < .5 || st.table ? [t, n] : [n, t]; c = a * b; op = '×'; } else { a = t * n; b = t; c = n; op = '÷'; }
+      const tabs = st.table ? [st.table] : lv === 1 ? [2, 3, 4, 5, 10] : lv === 2 ? [2, 3, 4, 5, 6, 7] : [6, 7, 8, 9];
+      const t = pick(tabs); const n = st.table ? R(1, 10) : lv === 1 ? R(1, 10) : lv === 2 ? R(1, 10) : R(3, 10);
+      if (skill === 'mul') { [a, b] = Math.random() < .5 ? [t, n] : [n, t]; c = a * b; op = '×'; } else { a = t * n; b = t; c = n; op = '÷'; }
       tag = 'جدول ' + t;
     }
     const opts = new Set([c]); const near = [c + 1, c - 1, c + 2, c - 2, c + 10, c - 10, skill === 'mul' ? c + b : c + 3, skill === 'mul' ? c - a : c - 3, Number(String(c).split('').reverse().join(''))];
@@ -83,14 +83,17 @@ export default function runTest(D, h) {
   /* ---------- run the test ---------- */
   function run() {
     const N = st.g <= 2 ? 15 : 20; let i = 0, lv = st.g <= 2 ? 1 : 2, streak = 0; const log = []; const t0 = Date.now();
+    // أسئلة عشوائية في كل مرة: لا يتكرر سؤال داخل الاختبار، ونتجنب أسئلة المحاولات السابقة قدر الإمكان
+    const qk = q => q.a + q.op + q.b; const seen = new Set(); const old = new Set(store.get('tst_seen', []));
+    const fresh = () => { let q = null; for (let k = 0; k < 40; k++) { q = gen(st.skill, lv); if (!seen.has(qk(q)) && (k > 25 || !old.has(qk(q)))) break; } seen.add(qk(q)); return q; };
     const w = page(SK[st.skill][0] + ' ' + SK[st.skill][1] + (st.table ? ' — جدول ' + st.table : ''), (st.name ? st.name + ' · ' : '') + 'الصف ' + GN[st.g]);
     const prog = el('i', { style: 'width:0' }), meta = el('div', { class: 'meta' }), qEl = el('div', { class: 'q' }), ans = el('div', { class: 'ans' }), clock = el('span');
     w.append(el('div', { class: 'prog' }, prog), meta, qEl, ans, el('button', { class: 'btn ghost sm', style: 'align-self:center', text: '🔊 اسمع السؤال', onclick: () => say(cur) }));
     let cur = null, qT = 0, locked = false;
     const tick = setInterval(() => { if (!document.body.contains(w)) { clearInterval(tick); return; } const s = Math.round((Date.now() - t0) / 1000); clock.textContent = '⏱️ ' + Math.floor(s / 60) + ':' + String(s % 60).padStart(2, '0'); }, 500);
     const next = () => {
-      if (i >= N) { clearInterval(tick); return result(log, (Date.now() - t0) / 1000); }
-      cur = gen(st.skill, lv); qT = Date.now(); locked = false;
+      if (i >= N) { clearInterval(tick); store.set('tst_seen', [...old, ...seen].slice(-150)); return result(log, (Date.now() - t0) / 1000); }
+      cur = fresh(); qT = Date.now(); locked = false;
       prog.style.width = (i / N * 100) + '%'; meta.innerHTML = ''; meta.append(el('span', { text: 'سؤال ' + (i + 1) + ' من ' + N }), clock);
       qEl.textContent = cur.a + ' ' + cur.op + ' ' + cur.b + ' = ?';
       ans.innerHTML = ''; cur.opts.forEach(v => ans.append(el('button', { text: String(v), onclick: e => choose(v, e.currentTarget) })));
