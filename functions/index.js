@@ -1555,3 +1555,52 @@ exports.pushAuto = onSchedule({schedule: "30 18 * * *", timeZone: "Africa/Tripol
   await db.collection("pushLog").add({auto: true, title: "الإشعارات الآلية اليومية", body: JSON.stringify(sent), n: Object.values(sent).reduce((a, b) => a + b, 0), at: FieldValue.serverTimestamp()});
   logger.info("pushAuto", sent);
 });
+
+// ===================== لوحة الأبطال والنشاط للإدارة =====================
+// تُحسب من إحصاءات كل ملف طالب المتزامنة (stats.log / stats.mins) — تشمل المشتركين والتجريبيين المسجّلين
+const ptsOf = (L, m) => (L.st || 0) * 10 + (L.r || 0) * 2 + Math.round(m || 0);
+exports.adminActivity = onCall({memory: "1GiB", timeoutSec: 120}, async (req) => {
+  await needAdmin(req, "stats");
+  const d = req.data || {}; const op = String(d.op || "overview");
+  if (op === "student") {
+    const uid = str(d.uid, 60), pid = str(d.pid, 40);
+    const [ps, us, subs] = await Promise.all([db.collection("users").doc(uid).collection("profiles").doc(pid).get(), db.collection("users").doc(uid).get(),
+      db.collection("subscriptions").where("uid", "==", uid).get()]);
+    if (!ps.exists) throw new HttpsError("not-found", "الطالب غير موجود");
+    const p = ps.data(), u = us.exists ? us.data() : {}, st = p.stats || {};
+    const now = Date.now();
+    const act = subs.docs.map((x) => x.data()).filter((x) => x.active !== false && x.end && x.end.toMillis() > now)
+        .map((x) => ({name: x.planName || x.kind, end: x.end.toMillis(), gift: x.kind === "gift"}));
+    return {name: p.name || "", grade: p.grade || "", av: p.avatar || "🙂", goal: p.goal || st.goal || 0,
+      owner: {name: u.name || "", role: u.role || "", phone: String(u.phone || "").replace("+218", "0"), email: u.email || "", lastSeen: u.lastSeen || 0, created: ms(u.createdAt)},
+      stats: {stars: st.stars || 0, level: st.level || "", streak: st.streak || 0, lastDay: st.lastDay || "", mins: st.mins || {}, log: st.log || {}, lr: st.lr || {}, qz: (st.qz || []).slice(-60), act: (st.act || []).slice(-60)},
+      subs: act};
+  }
+  // overview: النشاط اليومي + الترتيب لفترة وصف
+  const [profs, users, subs] = await Promise.all([db.collectionGroup("profiles").get(), db.collection("users").select("name", "role", "phone").get(), db.collection("subscriptions").get()]);
+  const now = Date.now(); const U = {}; users.docs.forEach((x) => { U[x.id] = x.data(); });
+  const subbed = new Set(); subs.docs.forEach((x) => { const s = x.data(); if (s.active !== false && s.end && s.end.toMillis() > now) subbed.add(s.uid); });
+  const days = []; for (let i = 0; i < 30; i++) days.push(tripDay(now - i * DAY));
+  const period = {today: days.slice(0, 1), yesterday: days.slice(1, 2), week: days.slice(0, 7), month: days.slice(0, 30)}[d.period] || days.slice(0, 1);
+  const grade = GRADES.includes(String(d.grade || "")) ? String(d.grade) : "";
+  const dau = Object.fromEntries(days.map((x) => [x, 0])); const byGrade = {}; const rows = [];
+  let total = 0, everActive = 0;
+  for (const doc of profs.docs) {
+    const p = doc.data(); const st = p.stats; if (!st) continue;
+    const uid = doc.ref.parent.parent.id; total++;
+    const log = st.log || {}, mins = st.mins || {};
+    let any = false;
+    for (const day of days) { const L = log[day] || {}; if ((mins[day] || 0) > 0 || L.r || L.w || L.st) { dau[day]++; any = true; if (day === days[0]) byGrade[p.grade || "?"] = (byGrade[p.grade || "?"] || 0) + 1; } }
+    if (any) everActive++;
+    if (grade && String(p.grade || "") !== grade) continue;
+    let pts = 0, r = 0, w = 0, s2 = 0, m = 0, lessons = new Set();
+    for (const day of period) { const L = log[day] || {}; pts += ptsOf(L, mins[day]); r += L.r || 0; w += L.w || 0; s2 += L.st || 0; m += mins[day] || 0; (L.l || []).forEach((x) => lessons.add(x)); }
+    if (!pts && !m) continue;
+    const u = U[uid] || {};
+    rows.push({uid, pid: doc.id, name: p.name || u.name || "", av: p.avatar || "🙂", grade: String(p.grade || ""), pts, r, w, st: s2, m: Math.round(m), lessons: lessons.size,
+      acc: r + w ? Math.round(r * 100 / (r + w)) : null, stars: st.stars || 0, level: st.level || "", streak: st.streak || 0, sub: subbed.has(uid), role: u.role || "",
+      owner: doc.id === "me" ? "" : (u.name || "")});
+  }
+  rows.sort((a, b) => b.pts - a.pts);
+  return {days, dau, byGrade, total, everActive, rows: rows.slice(0, 300), count: rows.length};
+});

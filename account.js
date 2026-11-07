@@ -1013,12 +1013,67 @@ function browseBox() {
       el('button', { class: 'btn sun', text: ACC.adminBrowse ? '✓ وضع المدير مفعّل — افتح الصفحة الرئيسية' : '👁️ ابدأ التصفح كمدير', onclick: () => { ACC.adminBrowse = true; store.set('admin_browse', true); setActive(null).then(() => go('home')); } }),
       ACC.adminBrowse ? el('button', { class: 'btn ghost', text: 'إنهاء وضع المدير', onclick: () => { ACC.adminBrowse = false; store.set('admin_browse', false); renderAdmin(); } }) : null);
 }
+/* ---------- admin: heroes board + activity (all grades, every day / week / month, click a student for his full card) ---------- */
+function heroesBox() {
+  const box = el('div', { class: 'panel accbox' }, el('b', { text: '🏆 لوحة الأبطال ونشاط الطلاب' }),
+    el('span', { class: 'note', text: 'كل الطلاب المسجّلين (مشتركين وتجريبيين) في كل الصفوف. الزائر الذي لم يسجّل الدخول لا يُحسب. اضغط على أي طالب لترى ملفه ونشاطه.' }));
+  const top = el('div', { class: 'stack' }), ctrl = el('div', { class: 'stack' }), list = el('div', { class: 'stack' }), msg = el('div'); box.append(top, ctrl, list, msg);
+  let period = 'today', grade = '';
+  const P = [['today', 'اليوم'], ['yesterday', 'أمس'], ['week', 'آخر 7 أيام'], ['month', 'آخر 30 يوماً']];
+  const dname = d => new Date(d + 'T12:00:00').toLocaleDateString('ar-LY-u-nu-latn', { weekday: 'short', day: 'numeric' });
+  const bars = (pairs, unit) => { const mx = Math.max(1, ...pairs.map(x => x[1]));
+    return el('div', { style: 'display:flex;align-items:flex-end;gap:3px;height:110px;padding:6px 0;direction:ltr' }, ...pairs.slice().reverse().map(([lab, v]) => el('div', { style: 'flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:2px;min-width:0' },
+      el('small', { style: 'font-size:.62rem;color:var(--muted)', text: v ? String(v) : '' }), el('div', { style: 'width:100%;border-radius:4px 4px 0 0;background:var(--sea);height:' + Math.max(2, Math.round(v / mx * 70)) + 'px', title: lab + ': ' + v + (unit || '') }),
+      el('small', { style: 'font-size:.55rem;color:var(--muted);white-space:nowrap;overflow:hidden;max-width:100%', text: lab })))); };
+  const stat = (n, t) => el('div', { class: 'stat' }, el('b', { text: String(n) }), el('span', { text: t }));
+  const load = async () => { list.innerHTML = ''; fbk(msg, 'info', 'جارٍ التحميل…');
+    try { const r = await call('adminActivity', { op: 'overview', period, grade }); msg.innerHTML = '';
+      top.innerHTML = ''; const dd = r.days;
+      top.append(el('div', { class: 'stats' }, stat(r.dau[dd[0]], 'نشِط اليوم'), stat(r.dau[dd[1]], 'نشِط أمس'), stat(r.everActive, 'نشِط خلال 30 يوماً'), stat(r.total, 'ملف طالب له نشاط مسجّل')),
+        el('span', { class: 'note', text: 'عدد الطلاب النشِطين يومياً (آخر 14 يوماً):' }), bars(dd.slice(0, 14).map(x => [dname(x), r.dau[x]])),
+        Object.keys(r.byGrade).length ? el('span', { class: 'note', text: 'اليوم حسب الصف: ' + Object.entries(r.byGrade).sort().map(([g, n]) => (g === '?' ? 'بدون صف' : 'الصف ' + g) + ': ' + n).join(' · ') }) : null);
+      list.append(el('b', { text: (P.find(x => x[0] === period) || [])[1] + (grade ? ' — الصف ' + gradeName(grade) : ' — كل الصفوف') + ' (' + r.count + ' طالب)' }));
+      if (!r.rows.length) list.append(el('span', { class: 'note', text: 'لا يوجد نشاط في هذه الفترة.' }));
+      r.rows.forEach((x, i) => list.append(el('button', { class: 'kidrow', style: 'width:100%;text-align:start;cursor:pointer;font:inherit;color:inherit;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:8px 10px;display:flex;gap:8px;align-items:center', onclick: () => student(x) },
+        el('b', { style: 'min-width:28px;text-align:center', text: i < 3 ? ['🥇', '🥈', '🥉'][i] : String(i + 1) }), el('span', { style: 'font-size:1.4rem', text: x.av }),
+        el('span', { style: 'flex:1;min-width:0' }, el('b', { text: x.name + (x.grade ? ' — الصف ' + gradeName(x.grade) : '') }), ' ', el('span', { class: 'tag ' + (x.sub ? 'sun' : ''), style: 'font-size:.68rem;padding:1px 7px', text: x.sub ? 'مشترك' : 'تجريبي' }),
+          el('div', { class: 'note', style: 'font-size:.75rem', text: '⭐ ' + x.st + ' · ✔️ ' + x.r + (x.acc != null ? ' (' + x.acc + '%)' : '') + ' · ⏱️ ' + x.m + ' د · 📘 ' + x.lessons + ' درس · ' + x.level + (x.owner ? ' · وليّه: ' + x.owner : '') })),
+        el('b', { style: 'color:var(--sea)', text: x.pts + ' ن' })))); }
+    catch (e) { fbk(msg, 'bad', fnErr(e)); } };
+  const drawCtrl = () => { ctrl.innerHTML = '';
+    ctrl.append(el('div', { class: 'row', style: 'gap:6px;flex-wrap:wrap' }, ...P.map(([k, t]) => el('button', { class: 'btn sm ' + (k === period ? '' : 'ghost'), text: t, onclick: () => { period = k; drawCtrl(); load(); } }))),
+      el('div', { class: 'gpick' }, ...[['', 'كل الصفوف'], ...GRADES].map(([g, n]) => el('button', { class: 'btn ghost sm' + (grade === g ? ' on' : ''), text: n, onclick: () => { grade = g; drawCtrl(); load(); } })))); };
+  const student = async x => { const w = el('div', { class: 'stack' }); list.innerHTML = ''; list.append(el('button', { class: 'btn ghost sm', style: 'align-self:flex-start', text: '→ رجوع للقائمة', onclick: load }), w); fbk(w, 'info', 'جارٍ التحميل…');
+    try { const r = await call('adminActivity', { op: 'student', uid: x.uid, pid: x.pid }); w.innerHTML = ''; const st = r.stats; const now = Date.now();
+      const dd = []; for (let i = 0; i < 14; i++) { const t = new Date(now - i * 864e5 + 2 * 3600e3).toISOString().slice(0, 10); dd.push(t); }
+      const m14 = dd.reduce((a, d) => a + (st.mins[d] || 0), 0); let R = 0, W = 0; Object.values(st.log).forEach(L => { R += L.r || 0; W += L.w || 0; });
+      const qz = st.qz || []; const qAvg = qz.length ? Math.round(qz.reduce((a, q) => a + (q.n ? q.sc / q.n : 0), 0) / qz.length * 100) : null;
+      w.append(el('div', { style: 'display:flex;gap:10px;align-items:center' }, el('span', { style: 'font-size:2.6rem', text: r.av }),
+          el('div', {}, el('b', { style: 'font-size:1.15rem', text: r.name }), el('div', { class: 'note', text: (r.grade ? 'الصف ' + gradeName(r.grade) + ' · ' : '') + (st.level || '') + ' · 🔥 ' + st.streak + ' أيام' }))),
+        el('div', { class: 'note', text: (x.pid === 'me' ? 'الحساب: ' : 'ولي الأمر: ') + (r.owner.name || '—') + (r.owner.phone ? ' · ' + r.owner.phone : r.owner.email ? ' · ' + r.owner.email : '') + (r.owner.created ? ' · سجّل ' + fmtDate(r.owner.created) : '') }),
+        el('div', { class: 'note', text: r.subs.length ? '✅ مشترك: ' + r.subs.map(s => s.name + ' حتى ' + fmtDate(s.end)).join('، ') : '🆓 غير مشترك (يستخدم الدروس المجانية)' }),
+        el('div', { class: 'stats' }, stat(st.stars, 'نجمة'), stat(R + W ? Math.round(R * 100 / (R + W)) + '%' : '—', 'دقة الإجابات'), stat(Math.round(m14), 'دقيقة في 14 يوماً'), stat(qAvg != null ? qAvg + '%' : '—', 'متوسط الاختبارات')),
+        el('span', { class: 'note', text: 'دقائق الدراسة يومياً (آخر 14 يوماً)' + (r.goal ? ' — الهدف ' + r.goal + ' د' : '') + ' · آخر نشاط: ' + (st.lastDay || '—') }), bars(dd.map(d => [dname(d), Math.round(st.mins[d] || 0)]), ' د'));
+      const lr = Object.entries(st.lr || {}).sort((a, b) => (b[1].t || 0) - (a[1].t || 0));
+      w.append(el('b', { text: '📘 الدروس (' + lr.length + ')' }));
+      if (!lr.length) w.append(el('span', { class: 'note', text: 'لا توجد دروس مسجّلة.' }));
+      lr.slice(0, 60).forEach(([id, L]) => { const f = D.findLesson && D.findLesson(id); const acc = L.r + L.w ? Math.round(L.r * 100 / (L.r + L.w)) : null;
+        w.append(el('div', { class: 'kidrow', style: 'display:flex;justify-content:space-between;gap:8px' }, el('span', { style: 'min-width:0' }, el('b', { style: 'font-size:.88rem', text: f ? f.lesson.title : id }),
+          el('div', { class: 'note', style: 'font-size:.72rem', text: (f ? f.subject.name + ' · ' : '') + (L.t ? fmtDate(L.t) : '') })),
+          el('span', { class: 'note', style: 'white-space:nowrap;font-size:.75rem;color:' + (acc == null ? 'var(--muted)' : acc >= 80 ? '#15803d' : acc >= 50 ? '#b45309' : '#b91c1c'), text: '⭐' + (L.st || 0) + ' · ' + (acc != null ? acc + '%' : '—') + ' · ' + Math.round(L.m || 0) + 'د' }))); });
+      if (qz.length) { w.append(el('b', { text: '📝 آخر الاختبارات' })); qz.slice(-10).reverse().forEach(q => { const f = D.findLesson && D.findLesson(q.l);
+        w.append(el('div', { class: 'kidrow', style: 'display:flex;justify-content:space-between' }, el('span', { class: 'note', text: (f ? f.lesson.title : q.l) + ' · ' + fmtDate(q.t) }), el('b', { text: q.sc + '/' + q.n }))); }); }
+    } catch (e) { fbk(w, 'bad', fnErr(e)); } };
+  drawCtrl(); box._lazy = load;
+  return box;
+}
+
 /* ---------- admin safety: every section folded, sensitive buttons need a second press ---------- */
 function fold(box, title) {
   const h = box.querySelector(':scope > b'); const t = title || (h ? h.textContent : 'قسم');
   if (h && !title) h.style.display = 'none';
   const d = el('details', { class: 'adm-fold' }, el('summary', {}, el('span', { text: t }), el('i', { text: '▾' })), box);
-  d.addEventListener('toggle', () => { if (d.open && d.parentElement) d.parentElement.querySelectorAll(':scope > details.adm-fold[open]').forEach(x => { if (x !== d) x.open = false; }); });
+  d.addEventListener('toggle', () => { if (d.open && box._lazy) { const f = box._lazy; box._lazy = null; f(); } if (d.open && d.parentElement) d.parentElement.querySelectorAll(':scope > details.adm-fold[open]').forEach(x => { if (x !== d) x.open = false; }); });
   return d;
 }
 const RISKY = /حفظ|امنح|موافقة|رفض|إيقاف|نشر|تم التحويل|اجعله مشرفاً|إظهار|إخفاء|ربط قناة|إعادة ربط|تحويل/;
@@ -1041,6 +1096,7 @@ function renderAdmin() {
   if (teachAny && ACC.teachAdminAlert) s.append(ACC.teachAdminAlert());
   const statsHost = el('div'), listHost = el('div');
   if (can('stats')) { s.append(statsHost); fbk(statsHost, 'info', 'جارٍ تحميل الإحصائيات…'); }
+  if (can('stats')) s.append(heroesBox());
   if (can('grant')) s.append(grantBox());
   if (can('browse')) s.append(browseBox());
   if (ACC.owner) s.append(staffBox());
