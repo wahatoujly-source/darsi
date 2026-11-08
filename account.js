@@ -832,10 +832,11 @@ function accessBox() {
 /* ---------- admin: cloud voice (Google Chirp HD) — on/off, voice per stage, speed, audition ---------- */
 function ttsBox() {
   const C = Object.assign({ on: false, f: 'ar-XA-Chirp3-HD-Aoede', m: 'ar-XA-Chirp3-HD-Charon', rate: 0.9 }, (ACC.access || {}).tts || {});
+  const stBox = el('div', { class: 'feedback ' + (C.on ? 'ok' : 'info'), text: C.on ? '✅ الصوت الجديد مفعّل الآن في كل الدروس' : '⏸️ الصوت الجديد غير مفعّل بعد — اضغط «تفعيل الصوت الجديد الآن»' });
   const box = el('div', { class: 'panel accbox' }, el('b', { text: '🔊 القراءة الصوتية التلقائية' }),
-    el('span', { class: 'note', text: 'عند التفعيل يصبح صوت Google المختار هو الصوت الرسمي لكل الدروس، حتى لو لم يكن في جهاز الطالب صوت عربي. يُنشأ صوت كل جملة مرة واحدة ويُحفظ للجميع. إذا تعذّر لأي سبب تُستعمل التسجيلات ثم صوت الجهاز احتياطاً.' }), el('div', { class: 'feedback ' + (C.on ? 'ok' : 'info'), text: C.on ? '✅ الصوت الجديد مفعّل الآن' : '⏸️ الصوت الجديد غير مفعّل — علّم «تفعيل» ثم اضغط حفظ مرتين (التأكيد)' }));
+    el('span', { class: 'note', text: 'عند التفعيل يصبح صوت Google المختار هو الصوت الرسمي لكل الدروس، حتى لو لم يكن في جهاز الطالب صوت عربي. يُنشأ صوت كل جملة مرة واحدة ويُحفظ للجميع. إذا تعذّر لأي سبب تُستعمل التسجيلات ثم صوت الجهاز احتياطاً.' }), stBox);
   const msg = el('div'), body = el('div', { class: 'stack' }); box.append(body, msg);
-  const on = el('input', { type: 'checkbox', checked: C.on ? '' : null });
+  const on = { checked: !!C.on };
   const vf = el('select', { class: 'qsel' }), vm = el('select', { class: 'qsel' });
   const rate = el('input', { type: 'range', min: '0.7', max: '1.2', step: '0.05', value: String(C.rate) }); const rl = el('span', { class: 'note', text: 'السرعة: ' + C.rate });
   rate.oninput = () => { rl.textContent = 'السرعة: ' + rate.value; };
@@ -850,13 +851,19 @@ function ttsBox() {
     const list = r.voices.filter(v => /Chirp3-HD|Chirp-HD|Neural2|Wavenet/.test(v.name)).sort((a, b) => (/Chirp3/.test(b.name) - /Chirp3/.test(a.name)) || a.name.localeCompare(b.name));
     [vf, vm].forEach((sel, i) => { list.forEach(v => sel.append(el('option', { value: v.name, text: vlabel(v.name) + (v.g === 'FEMALE' ? ' — أنثى' : v.g === 'MALE' ? ' — ذكر' : '') }))); sel.value = i ? C.m : C.f; });
     const st = r.stats || {};
-    body.append(el('label', { class: 'sndrow' }, on, el('span', {}, el('b', { text: '⚙️ تفعيل القراءة الصوتية التلقائية' }), el('small', { class: 'note', text: ' عند الإيقاف يعود الاعتماد على صوت الجهاز فقط' }))),
+    const setOn = async (v, btn) => { btn.disabled = true;
+      try { await call('adminTts', { op: 'cfg', on: v, f: vf.value, m: vm.value, rate: Number(rate.value) }); await loadAccess(); C.on = v; on.checked = v;
+        stBox.className = 'feedback ' + (v ? 'ok' : 'info'); stBox.textContent = v ? '✅ الصوت الجديد مفعّل الآن في كل الدروس' : '⏸️ الصوت الجديد موقوف'; fbk(msg, 'ok', v ? '✓ تم التفعيل. افتح أي درس وجرّب.' : '✓ تم الإيقاف.'); drawOnBtn(); }
+      catch (x) { fbk(msg, 'bad', fnErr(x)); } btn.disabled = false; };
+    const onWrap = el('div'); const drawOnBtn = () => { onWrap.innerHTML = ''; onWrap.append(C.on ? el('button', { class: 'btn ghost', text: '⏸️ إيقاف الصوت الجديد', onclick: e => setOn(false, e.target) }) : el('button', { class: 'btn sun paybig', text: '✅ تفعيل الصوت الجديد الآن', onclick: e => setOn(true, e.target) })); };
+    drawOnBtn();
+    body.append(onWrap,
       el('b', { text: 'صوت الصفوف 1–6' }), el('div', { class: 'row', style: 'gap:6px' }, vf, el('button', { class: 'btn ghost sm', text: '▶ اسمع', onclick: e => tryV(vf, e.target) })),
       el('b', { text: 'صوت الصفوف 7–9' }), el('div', { class: 'row', style: 'gap:6px' }, vm, el('button', { class: 'btn ghost sm', text: '▶ اسمع', onclick: e => tryV(vm, e.target) })),
       rl, rate, el('span', { class: 'note', text: 'نص التجربة (غيّره كما تريد):' }), sample,
       el('span', { class: 'note', text: 'المحفوظ: ' + (st.items || 0) + ' جملة (' + (st.chars || 0) + ' حرف) · اليوم: ' + (r.today || 0) + ' حرف. مجاني حتى نحو مليون حرف شهرياً، وكل المنهج أقل من نصف مليون.' }),
-      el('button', { class: 'btn sun', text: '💾 حفظ', onclick: async e => { e.target.disabled = true;
-        try { await call('adminTts', { op: 'cfg', on: on.checked, f: vf.value, m: vm.value, rate: Number(rate.value) }); await loadAccess(); fbk(msg, 'ok', '✓ حُفظت. تغيير الصوت أو السرعة يعيد توليد الجمل تلقائياً عند الحاجة.'); }
+      el('button', { class: 'btn', text: '💾 حفظ الصوت والسرعة', onclick: async e => { e.target.disabled = true;
+        try { await call('adminTts', { op: 'cfg', on: C.on, f: vf.value, m: vm.value, rate: Number(rate.value) }); await loadAccess(); fbk(msg, 'ok', '✓ حُفظت. تغيير الصوت أو السرعة يعيد توليد الجمل تلقائياً عند الحاجة.'); }
         catch (x) { fbk(msg, 'bad', fnErr(x)); } e.target.disabled = false; } }));
   }).catch(e => { body.innerHTML = ''; body.append(el('span', { class: 'note', text: '⚠️ ' + fnErr(e) }),
     el('a', { href: 'https://console.cloud.google.com/apis/library/texttospeech.googleapis.com?project=mujtahid-810d7', target: '_blank', rel: 'noopener', class: 'btn sun', text: 'تفعيل Cloud Text-to-Speech API' })); });
