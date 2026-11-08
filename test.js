@@ -151,6 +151,7 @@ export default function runTest(D, h) {
       el('span', { text: logged ? 'دروس الرياضيات للصف ' + GN[st.g] + ' بالصوت والصورة والألعاب.' : 'سجّل مجاناً في 20 ثانية: دروس المنهج الليبي بالصوت والصورة، وتقارير أسبوعية عن ابنك.' }),
       el('button', { class: 'btn paybig', text: logged ? 'ابدأ التدريب ←' : 'سجّل مجاناً ←', onclick: () => logged ? go('g' + st.g + '-math') : go('login') })));
     w.append(el('div', { class: 'row', style: 'gap:8px;justify-content:center;flex-wrap:wrap' },
+      st.skill === 'mul' || st.skill === 'div' ? el('button', { class: 'btn', text: '✖️ احفظ جدول الضرب', onclick: () => go(st.table ? 'times-' + st.table : 'times') }) : null,
       el('button', { class: 'btn ghost', text: '🔁 أعد نفس الاختبار', onclick: () => run() }), el('button', { class: 'btn ghost', text: '🧮 اختبار آخر', onclick: chooseSkill })));
   }
 

@@ -2249,7 +2249,10 @@ function renderHome(){
   {const tc=ttCard();if(tc)below.append(tc);}
   if(GAME.stats().stars>0||(window.ACC&&ACC.user))below.append(el('div',{class:'gsec-h'},el('span',{text:'نشاطي اليوم'}),el('i')),GAME.card());
   {const tc=ACCX().teach||{};if((tc.on&&tc.show)||(window.ACC&&ACC.isAdmin&&tc.on))below.append(el('button',{class:'bk-card tc-card-home',onclick:()=>go('courses')},el('span',{class:'bi',text:'🎥'}),el('span',{},el('b',{text:'دورات المعلمين'}),el('small',{text:'دروس فيديو ومهارات من معلمين معتمدين'})),el('span',{class:'bk-go',text:'شاهد'})));}
+  below.append(el('button',{class:'bk-card',style:'border-color:#16a34a',onclick:()=>go('times')},el('span',{class:'bi',text:'✖️'}),el('span',{},el('b',{text:'احفظ جدول الضرب'}),el('small',{text:'من 1 إلى 12 — تعلّم، مستويات، نجوم وتحديات'})),el('span',{class:'bk-go',style:'background:#16a34a',text:'ابدأ'})));
   below.append(el('button',{class:'bk-card',style:'border-color:#f59e0b',onclick:()=>go('test')},el('span',{class:'bi',text:'🧮'}),el('span',{},el('b',{text:'اختبر مستوى ابنك مجاناً'}),el('small',{text:'الجمع، الطرح، جدول الضرب والقسمة — دقيقتان فقط'})),el('span',{class:'bk-go',style:'background:#f59e0b',text:'ابدأ'})));
+  {const rc=store.get('my_ref','');const lk='https://mujtahid.ly/'+(rc?'#i-'+rc:'');const tx='منصة المجتهد: دروس المنهج الليبي للصفوف 1–9 بالصوت والصورة والألعاب 📚✨ جرّبوها مع أبنائكم 👇\n'+lk;
+   below.append(el('a',{class:'btn ghost',style:'width:100%;justify-content:center;margin-top:6px',href:'https://wa.me/?text='+encodeURIComponent(tx),target:'_blank',rel:'noopener',text:'💬 شارك المنصة مع الأهل والأصدقاء على واتساب'}));}
   if(bkAnyOn())below.append(el('button',{class:'bk-card',onclick:()=>go('books')},el('span',{class:'bi',text:'📚'}),el('span',{},el('b',{text:'الكتب المدرسية PDF'}),el('small',{text:'حمّل كتب المنهج الليبي لكل الصفوف مجاناً'})),el('span',{class:'bk-go',text:'تحميل'})));
   if(!LG)below.append(el('button',{class:'teach-card',onclick:()=>go('teacher')},el('span',{class:'ti',text:'👩‍🏫'}),el('span',{},el('b',{text:'للمعلم: صانع الاختبارات'}),el('span',{class:'note',text:'اختبارات شهرية جاهزة لكل مادة، تعدّلها وتطبعها PDF باسم مدرستك'})),el('span',{class:'ls',text:'←'})));
   if(below.childNodes.length)root.append(below);
@@ -2589,6 +2592,7 @@ function route(){setTimeout(adminBanner,0);TTS.phonics=false;TTS.phx=null;
       if((mm=/^l-([a-z0-9-]+)$/.exec(h))&&App.catalog){const f=findLesson(mm[1]);if(f&&(!ctrlSubOk(CT,f.subject.id)||!ctrlLesOk(CT,f.subject.id,mm[1]))){location.replace('#g'+LG+(ctrlSubOk(CT,f.subject.id)?'-'+f.subject.id:''));return;}}}}}
   if(h!=='welcome'&&h!=='start')document.body.classList.remove('wl-on');
   if((!h||h==='home')&&!store.get('welcomed',false)&&!(window.ACC&&ACC.user)){renderWelcome(0);return;}
+  if(h==='times'||/^times-\d{1,2}$/.test(h)){import('./times.js').then(m=>m.default(window.DARSI,h)).catch(()=>{root.innerHTML='';root.append(el('p',{class:'note',style:'padding:30px',text:'تعذّر التحميل. تحقق من الاتصال.'}));});return;}
   if(h==='test'||/^test-/.test(h)){import('./test.js').then(m=>m.default(window.DARSI,h)).catch(()=>{root.innerHTML='';root.append(el('p',{class:'note',style:'padding:30px',text:'تعذّر التحميل. تحقق من الاتصال.'}));});return;}
   {const im=/^i-([2-9A-HJ-NP-Z]{6})$/.exec(h);if(im){store.set('ref_in',{c:im[1],at:Date.now()});renderInvite(im[1]);return;}}
   if(h==='welcome'){renderWelcome(0);return;}if(h==='start'){renderStart();return;}
