@@ -1312,6 +1312,18 @@ async function synth(text, voice, rate) {
   }
   return Buffer.from(j.audioContent, "base64");
 }
+// توحيد الإعداد: {on, p: {rate, a, b, mode: single|alt|subject, subj: {مادة: صوت}}, s: {...}} (مع دعم الشكل القديم {f, m, rate})
+const VOICE_RE = /^[a-z]{2}-[A-Z]{2}-[A-Za-z0-9-]{3,40}$/;
+const clampRate = (r, d) => Math.min(1.3, Math.max(0.6, Number(r) || d));
+function ttsNorm(t) {
+  const st = (x, oldVoice, oldRate) => { x = x || {}; const subj = {};
+    Object.entries(x.subj || {}).forEach(([k, v]) => { if (/^[a-z]{2,8}$/.test(k) && VOICE_RE.test(v || "")) subj[k] = v; });
+    return {rate: clampRate(x.rate != null ? x.rate : oldRate, TTS_DEF.rate), a: VOICE_RE.test(x.a || "") ? x.a : (VOICE_RE.test(oldVoice || "") ? oldVoice : null),
+      b: VOICE_RE.test(x.b || "") ? x.b : null, mode: ["single", "alt", "subject"].includes(x.mode) ? x.mode : "single", subj}; };
+  const p = st(t.p, t.f, t.rate), s2 = st(t.s, t.m, t.rate);
+  if (!p.a) p.a = TTS_DEF.f; if (!s2.a) s2.a = TTS_DEF.m;
+  return {on: !!t.on, p, s: s2};
+}
 const ttsKey = (voice, rate, text) => crypto.createHash("sha1").update(voice + "|" + rate + "|" + text).digest("hex");
 const TTS_MEM = new Map();
 
@@ -1319,11 +1331,13 @@ exports.tts = onRequest({memory: "256MiB", concurrency: 40, maxInstances: 5}, as
   res.set("Access-Control-Allow-Origin", "*");
   if (req.method === "OPTIONS") return res.status(204).send("");
   try {
-    const cfg = (await getAccessCfg()).tts || {};
+    const cfg = ttsNorm((await getAccessCfg()).tts || {});
     if (!cfg.on) return res.status(404).send("off");
-    const which = req.query.v === "m" ? "m" : "f";
-    const voice = /^[a-z]{2}-[A-Z]{2}-[A-Za-z0-9-]{3,40}$/.test(cfg[which] || "") ? cfg[which] : TTS_DEF[which];
-    const rate = Math.min(1.3, Math.max(0.6, Number(cfg.rate) || TTS_DEF.rate));
+    // st: p = الصفوف 1–6، s = 7–9 · v: اسم الصوت (يجب أن يكون من الأصوات المختارة في الإعداد) · v=f/m للنسخ القديمة
+    const st = req.query.st === "s" || req.query.v === "m" ? "s" : "p"; const S = cfg[st];
+    const allowed = new Set([S.a, S.b, ...Object.values(S.subj || {})].filter(Boolean));
+    const voice = allowed.has(String(req.query.v || "")) ? String(req.query.v) : S.a;
+    const rate = S.rate;
     const text = String(req.query.t || "").replace(/\s+/g, " ").trim();
     if (!text || text.length > 400 || !/[ء-ي]/.test(text) || /[<>{}]/.test(text)) return res.status(400).send("bad");
     const k = ttsKey(voice, rate, text);
@@ -1368,18 +1382,17 @@ async function adminTtsOp(req) {
     const st = await db.collection("config").doc("ttsStats").get();
     const today = await db.collection("config").doc("ttsDay_" + new Date().toISOString().slice(0, 10)).get();
     return {voices: (j.voices || []).map((v) => ({name: v.name, g: v.ssmlGender})).sort((a, b) => a.name.localeCompare(b.name)),
-      stats: st.exists ? st.data() : {}, today: today.exists ? today.data().chars : 0, def: TTS_DEF};
+      stats: st.exists ? st.data() : {}, today: today.exists ? today.data().chars : 0, def: TTS_DEF, cfg: ttsNorm((await getAccessCfg()).tts || {})};
   }
   if (op === "try") {
     const text = str(d.text, 400); const voice = str(d.voice, 60);
-    if (!text || !/^[a-z]{2}-[A-Z]{2}-/.test(voice)) throw new HttpsError("invalid-argument", "النص أو الصوت غير صحيح");
+    if (!text || !VOICE_RE.test(voice)) throw new HttpsError("invalid-argument", "النص أو الصوت غير صحيح");
     try { const b = await synth(text, voice, Math.min(1.3, Math.max(0.6, Number(d.rate) || 1))); return {audio: b.toString("base64")}; }
     catch (e) { throw new HttpsError("failed-precondition", e.status === 403 ? "خدمة Text-to-Speech غير مفعّلة في مشروع Google Cloud بعد" : "تعذّر توليد الصوت: " + str(e.message, 150)); }
   }
   if (op === "cfg") {
-    const ok = (v) => /^[a-z]{2}-[A-Z]{2}-[A-Za-z0-9-]{3,40}$/.test(v || "");
-    const tts = {on: !!d.on, f: ok(d.f) ? d.f : TTS_DEF.f, m: ok(d.m) ? d.m : TTS_DEF.m, rate: Math.min(1.3, Math.max(0.6, Number(d.rate) || TTS_DEF.rate))};
-    await db.collection("config").doc("access").set({tts}, {merge: true}); ACCESS = null; return {tts};
+    const tts = ttsNorm({on: !!d.on, p: d.p, s: d.s, f: d.f, m: d.m, rate: d.rate});
+    await db.collection("config").doc("access").update({tts}).catch(() => db.collection("config").doc("access").set({tts}, {merge: true})); ACCESS = null; return {tts};
   }
   throw new HttpsError("invalid-argument", "عملية غير معروفة");
 }

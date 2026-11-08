@@ -1111,7 +1111,13 @@ function arUnits(t){const out=[];t=String(t).replace(/(^|\s)[بلكف]ـ\s*(?=[:
 /* cloud voice: the server reads any Arabic sentence with a natural voice and caches it (admin switch: config/access.tts.on) */
 const TTSC={url:'https://europe-west1-mujtahid-810d7.cloudfunctions.net/tts',m:new Map(),bad:0};
 const ttsOn=()=>{const t=ACCX().tts;return !!(t&&t.on)&&TTSC.bad<4;};
-const ttsGet=z=>{const u=TTSC.url+'?v='+VOX.voice()+'&t='+encodeURIComponent(String(z).replace(/\s+/g,' ').trim());
+/* which voice: stage (1–6 / 7–9) → one voice, alternate per lesson, or per subject — chosen in the admin panel */
+const ttsVoice=()=>{const t=ACCX().tts||{};const st=VOX.voice()==='m'?'s':'p';const S=t[st]||{};const a=S.a||(st==='s'?t.m:t.f)||'';
+  const lid=(/^#l-([a-z0-9-]+)$/.exec(location.hash)||[])[1]||'';const subj=lid.split('-')[0];
+  if(S.mode==='subject'&&S.subj&&S.subj[subj])return[st,S.subj[subj]];
+  if(S.mode==='alt'&&S.b&&lid){let h=0;for(const c of lid)h=(h*31+c.charCodeAt(0))|0;return[st,(h&1)?S.b:a];}
+  return[st,a];};
+const ttsGet=z=>{const[st,v]=ttsVoice();const u=TTSC.url+'?st='+st+'&v='+encodeURIComponent(v)+'&t='+encodeURIComponent(String(z).replace(/\s+/g,' ').trim());
   if(!TTSC.m.has(u)){const p=fetch(u).then(r=>{if(!r.ok)throw new Error(r.status);return r.blob();}).then(b=>{TTSC.bad=0;return URL.createObjectURL(b);}).catch(()=>{TTSC.m.delete(u);TTSC.bad++;return null;});TTSC.m.set(u,p);}
   return TTSC.m.get(u);};
 const vxRec=async z=>{if(!VOX.on)return null;await VOX.load();const v=VOX.voice(),k=VOX.key(z);return VOX.sets[v]&&VOX.sets[v].has(k)?'aud/'+v+'/'+k+'.mp3':null;};
