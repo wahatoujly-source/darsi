@@ -1115,12 +1115,13 @@ const ttsGet=z=>{const u=TTSC.url+'?v='+VOX.voice()+'&t='+encodeURIComponent(Str
   if(!TTSC.m.has(u)){const p=fetch(u).then(r=>{if(!r.ok)throw new Error(r.status);return r.blob();}).then(b=>{TTSC.bad=0;return URL.createObjectURL(b);}).catch(()=>{TTSC.m.delete(u);TTSC.bad++;return null;});TTSC.m.set(u,p);}
   return TTSC.m.get(u);};
 const vxRec=async z=>{if(!VOX.on)return null;await VOX.load();const v=VOX.voice(),k=VOX.key(z);return VOX.sets[v]&&VOX.sets[v].has(k)?'aud/'+v+'/'+k+'.mp3':null;};
+// الصوت الرسمي: صوت Google المعتمد من لوحة الإدارة أولاً، ثم التسجيلات، ثم صوت الجهاز احتياطاً
 async function sayAr(z){const tok=TTS.token;
-  const rec=await vxRec(z);if(rec){const ok=await VOX.play(rec);if(ok||tok!==TTS.token)return;}
   if(ttsOn()){const src=await ttsGet(z);if(tok!==TTS.token)return;if(src){const ok=await VOX.play(src);if(ok||tok!==TTS.token)return;}}
+  const rec=await vxRec(z);if(rec){const ok=await VOX.play(rec);if(ok||tok!==TTS.token)return;}
   return speak(z,{lang:'ar'});}
 const speakAr=async(t,o={})=>{if(TTS.quiet&&!o.force)return;const tok=TTS.token;const us=arUnits(t);for(let i=0;i<us.length;i++){const u=us[i];if(tok!==TTS.token)return;
-  const nx=us[i+1];if(nx&&nx.ar&&ttsOn())vxRec(nx.ar).then(r=>{if(!r)ttsGet(nx.ar);});
+  const nx=us[i+1];if(nx&&nx.ar&&ttsOn())ttsGet(nx.ar);
   if(u.q)await playQ(u.q);else if(u.en){if(TTS.en&&TTS.en.length)await speak(u.en,{lang:'en'});else await speak(u.en,{lang:'ar'});}else await sayAr(u.ar);}};
 
 /* ---------- encouragement sounds (Web Audio chimes + spoken praise + confetti) ---------- */

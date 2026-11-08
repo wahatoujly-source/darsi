@@ -833,7 +833,7 @@ function accessBox() {
 function ttsBox() {
   const C = Object.assign({ on: false, f: 'ar-XA-Chirp3-HD-Aoede', m: 'ar-XA-Chirp3-HD-Charon', rate: 0.9 }, (ACC.access || {}).tts || {});
   const box = el('div', { class: 'panel accbox' }, el('b', { text: '🔊 القراءة الصوتية التلقائية' }),
-    el('span', { class: 'note', text: 'تقرأ المنصة أي جملة عربية بصوت طبيعي من Google، حتى لو لم يكن في جهاز الطالب صوت عربي. يُنشأ صوت كل جملة مرة واحدة ويُحفظ للجميع. التسجيلات التي سجّلتموها بأنفسكم تبقى لها الأولوية.' }));
+    el('span', { class: 'note', text: 'عند التفعيل يصبح صوت Google المختار هو الصوت الرسمي لكل الدروس، حتى لو لم يكن في جهاز الطالب صوت عربي. يُنشأ صوت كل جملة مرة واحدة ويُحفظ للجميع. إذا تعذّر لأي سبب تُستعمل التسجيلات ثم صوت الجهاز احتياطاً.' }), el('div', { class: 'feedback ' + (C.on ? 'ok' : 'info'), text: C.on ? '✅ الصوت الجديد مفعّل الآن' : '⏸️ الصوت الجديد غير مفعّل — علّم «تفعيل» ثم اضغط حفظ مرتين (التأكيد)' }));
   const msg = el('div'), body = el('div', { class: 'stack' }); box.append(body, msg);
   const on = el('input', { type: 'checkbox', checked: C.on ? '' : null });
   const vf = el('select', { class: 'qsel' }), vm = el('select', { class: 'qsel' });
