@@ -1117,12 +1117,20 @@ const ttsVoice=()=>{const t=ACCX().tts||{};const st=VOX.voice()==='m'?'s':'p';co
   if(S.mode==='subject'&&S.subj&&S.subj[subj])return[st,S.subj[subj]];
   if(S.mode==='alt'&&S.b&&lid){let h=0;for(const c of lid)h=(h*31+c.charCodeAt(0))|0;return[st,(h&1)?S.b:a];}
   return[st,a];};
-const ttsGet=z=>{const[st,v]=ttsVoice();const u=TTSC.url+'?st='+st+'&v='+encodeURIComponent(v)+'&t='+encodeURIComponent(String(z).replace(/\s+/g,' ').trim());
+const ttsGet=z=>{const[st,v]=ttsVoice();
+  if(!TTSC.pre)TTSC.pre={};if(!TTSC.pre[v]){TTSC.pre[v]=1;setTimeout(()=>PRAISE.ar.forEach(p=>ttsGet(p)),50);} // عبارات التشجيع جاهزة مسبقاً لكل صوت
+  const u=TTSC.url+'?st='+st+'&v='+encodeURIComponent(v)+'&t='+encodeURIComponent(String(z).replace(/\s+/g,' ').trim());
   if(!TTSC.m.has(u)){const p=fetch(u).then(r=>{if(!r.ok)throw new Error(r.status);return r.blob();}).then(b=>{TTSC.bad=0;return URL.createObjectURL(b);}).catch(()=>{TTSC.m.delete(u);TTSC.bad++;return null;});TTSC.m.set(u,p);}
   return TTSC.m.get(u);};
 const vxRec=async z=>{if(!VOX.on)return null;await VOX.load();const v=VOX.voice(),k=VOX.key(z);return VOX.sets[v]&&VOX.sets[v].has(k)?'aud/'+v+'/'+k+'.mp3':null;};
 // الصوت الرسمي: صوت Google المعتمد من لوحة الإدارة أولاً، ثم التسجيلات، ثم صوت الجهاز احتياطاً
-async function sayAr(z){const tok=TTS.token;
+/* praise plays on its own audio channel and is never cut; the next sentence waits for it to finish (max 3 s) */
+const PR={p:null};
+function praiseSay(t){if(!ttsOn())return speakAr(t);
+  PR.p=(async()=>{const src=await ttsGet(t);if(!src)return;await new Promise(res=>{const a=new Audio(src);let d=false;const fin=()=>{if(!d){d=true;res();}};a.onended=fin;a.onerror=fin;a.play().catch(fin);setTimeout(fin,3500);});})();
+  return PR.p;}
+async function sayAr(z){if(PR.p){const w=PR.p;await Promise.race([w,new Promise(r=>setTimeout(r,3000))]);if(PR.p===w)PR.p=null;}
+  const tok=TTS.token;
   if(ttsOn()){const src=await ttsGet(z);if(tok!==TTS.token)return;if(src){const ok=await VOX.play(src);if(ok||tok!==TTS.token)return;}}
   const rec=await vxRec(z);if(rec){const ok=await VOX.play(rec);if(ok||tok!==TTS.token)return;}
   return speak(z,{lang:'ar'});}
@@ -1145,7 +1153,7 @@ function confetti(){if(reduceMotion)return;const box=el('div',{style:'position:f
 function cheer(kind,{say=true}={}){
   if(kind==='right'||kind==='wrong')GAME.ans(kind==='right');
   if(!FX.on)return;
-  if(kind==='right'){tones([660,880,1320]);if(say&&kidSound().praise!==false)setTimeout(()=>FX.lang==='ar'?speakAr(pick(PRAISE.ar)):speak(pick(PRAISE.en),{lang:'en'}),320);}
+  if(kind==='right'){tones([660,880,1320]);if(say&&kidSound().praise!==false)setTimeout(()=>FX.lang==='ar'?praiseSay(pick(PRAISE.ar)):speak(pick(PRAISE.en),{lang:'en'}),320);}
   else if(kind==='wrong'){tones([330,247],{type:'sine',vol:.1,gap:.13,dur:.2});}
   else if(kind==='star'){if(Date.now()-FX.lastWin>2500)tones([1047,1319,1568,2093],{dur:.14,gap:.06,vol:.1});}
   else if(kind==='win'||kind==='perfect'){FX.lastWin=Date.now();tones(kind==='perfect'?[523,659,784,1047,784,1047,1319]:[523,659,784,1047],{dur:.24,gap:.13,vol:.18});confetti();}
