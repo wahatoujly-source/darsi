@@ -61,10 +61,11 @@ export default function runTimes(D, h) {
         el('button', { class: 'btn ghost sm', text: '🔊 اسمع الجدول كله', onclick: async () => { for (let b = 1; b <= 12; b++) { await D.speakAr(W[N] + ' في ' + W[b] + ' يساوي ' + (N * b), { force: true }); } } }),
         el('button', { class: 'btn ghost sm', text: '🙈 غطِّ النواتج واختبر نفسك', onclick: () => { hide = !hide; draw(); } })),
       el('b', { text: '🎯 المستويات' }));
-    LV.forEach(([e, t, d], i) => { const open = i === 0 || (p.lv || 0) >= i; const ok = (p.lv || 0) > i;
+    const admin = !!(window.ACC && ACC.isAdmin);
+    LV.forEach(([e, t, d], i) => { const open = admin || i === 0 || (p.lv || 0) >= i; const ok = (p.lv || 0) > i;
       w.append(el('button', { class: 'lv', disabled: open ? null : '', onclick: () => quiz({ mode: 'lv', N, lv: i + 1 }) }, el('span', { class: 'e', text: open ? e : '🔒' }),
         el('span', { style: 'flex:1' }, el('b', { text: 'المستوى ' + (i + 1) + ': ' + t + (ok ? ' ✅' : '') }), el('small', { text: i === 4 && p.best ? d + ' — أفضل نتيجة: ' + p.best : d })))); });
-    w.append(el('p', { class: 'sub', text: 'تنجح في المستوى بـ 11 من 12 على الأقل، فيُفتح الذي بعده. سباق الدقيقة: 20 إجابة صحيحة = النجمة الثالثة ⭐' }));
+    w.append(el('p', { class: 'sub', text: 'تنجح في المستوى بـ 11 من 12 على الأقل، فيُفتح الذي بعده. سباق الدقيقة: 20 إجابة صحيحة = النجمة الثالثة ⭐' + (admin ? ' — (كل المستويات مفتوحة لك كمدير)' : '') }));
   }
   /* ---------- quiz engine ---------- */
   function quiz(o) {
