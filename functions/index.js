@@ -1755,3 +1755,191 @@ exports.testLog = onCall(async (req) => {
     uid: req.auth ? req.auth.uid : null, at: FieldValue.serverTimestamp()});
   return {ok: true};
 });
+
+// ===================== ساحة المسابقات المباشرة (رياضيات) =====================
+// config/access.arena = {on, who: all|sub, every: كل كم ساعة, start: أول ساعة, seats, minP, n: عدد الأسئلة, secs: ثواني السؤال, open: دقائق فتح الحجز قبل البداية, levels:[1..6]}
+// arena/{cid}: مسابقة واحدة (موعد + مستوى) · arena/{cid}/p/{uid}: لاعب · arena/{cid}/priv/q: الأسئلة والإجابات (لا تُرسل إلا وقت السؤال)
+const ARENA_DEF = {on: false, who: "all", every: 3, start: 0, seats: 20, minP: 2, n: 15, secs: 12, open: 60, levels: [1, 2, 3, 4, 5, 6]};
+const ARENA_GAP = 4; // ثوانٍ لعرض الإجابة والترتيب بين الأسئلة
+const arenaCfg = async () => ({...ARENA_DEF, ...((await getAccessCfg()).arena || {})});
+const LV_AR = ["", "المستوى 1 — بداية", "المستوى 2 — سهل", "المستوى 3 — متوسط", "المستوى 4 — جيد", "المستوى 5 — متقدم", "المستوى 6 — أبطال"];
+const gradeLevel = (g) => Math.min(6, Math.max(1, Number(g) - 1)); // الصف 2 → 1 ... الصف 7 فما فوق → 6
+// المواعيد بتوقيت ليبيا (UTC+2): كل every ساعات بدءاً من start
+function arenaSlots(cfg, from, k) {
+  const out = []; const H = 3600000; let t = Math.ceil((from + 2 * H) / H) * H - 2 * H; // بداية الساعة القادمة (UTC ms)
+  for (let i = 0; i < 24 * 8 && out.length < k; i++, t += H) { const h = new Date(t + 2 * H).getUTCHours(); if (((h - cfg.start) % cfg.every + cfg.every) % cfg.every === 0) out.push(t); }
+  return out;
+}
+const slotId = (t) => new Date(t + 2 * HOUR).toISOString().slice(0, 13).replace(/[-T]/g, "");
+const arenaTimes = (c) => ({openAt: (i) => c.at + i * (c.secs + ARENA_GAP) * 1000, closeAt: (i) => c.at + i * (c.secs + ARENA_GAP) * 1000 + c.secs * 1000, end: c.at + c.n * (c.secs + ARENA_GAP) * 1000});
+const RI = (a, b) => a + Math.floor(Math.random() * (b - a + 1));
+function arenaQ(lv) {
+  const ops = lv <= 1 ? ["+", "−", "×"] : ["+", "−", "×", "÷"]; const op = ops[RI(0, ops.length - 1)]; let a, b, c;
+  const AS = [0, 20, 100, 1000, 10000, 100000, 100000][lv];
+  if (op === "+") { a = RI(1, Math.floor(AS * .6)); b = RI(1, AS - a); c = a + b; }
+  else if (op === "−") { a = RI(Math.ceil(AS / 4), AS); b = RI(1, a - 1); c = a - b; }
+  else if (op === "×") {
+    if (lv <= 1) { a = [2, 5, 10][RI(0, 2)]; b = RI(1, 10); } else if (lv === 2) { a = RI(2, 6); b = RI(1, 10); } else if (lv === 3) { a = RI(2, 10); b = RI(2, 10); }
+    else if (lv === 4) { a = RI(2, 12); b = RI(2, 12); } else if (lv === 5) { a = RI(11, 99); b = RI(2, 9); } else { a = RI(11, 49); b = RI(11, 25); }
+    if (Math.random() < .5) [a, b] = [b, a]; c = a * b;
+  } else {
+    let d, q; if (lv === 2) { d = RI(2, 5); q = RI(1, 10); } else if (lv === 3) { d = RI(2, 10); q = RI(1, 10); } else if (lv === 4) { d = RI(2, 12); q = RI(2, 12); }
+    else if (lv === 5) { d = RI(2, 9); q = RI(11, 99); } else { d = RI(11, 25); q = RI(6, 40); }
+    a = d * q; b = d; c = q;
+  }
+  const near = new Set([c]); const cand = [c + 1, c - 1, c + 2, c - 2, c + 10, c - 10, c + (op === "×" ? b : 3), c - (op === "×" ? a : 3), Number(String(c).split("").reverse().join(""))].sort(() => Math.random() - .5);
+  for (const x of cand) { if (near.size >= 4) break; if (x >= 0 && x !== c) near.add(x); }
+  while (near.size < 4) near.add(c + RI(3, 20));
+  return {a, op, b, c, opts: [...near].sort(() => Math.random() - .5)};
+}
+function arenaQs(lv, n) { const seen = new Set(), qs = []; for (let k = 0; qs.length < n && k < n * 50; k++) { const q = arenaQ(lv); const key = q.a + q.op + q.b; if (!seen.has(key)) { seen.add(key); qs.push(q); } } return qs; }
+
+async function arenaComp(cfg, at, lv, create) {
+  const cid = slotId(at) + "_L" + lv; const ref = db.collection("arena").doc(cid); let s = await ref.get();
+  if (!s.exists && create) {
+    await db.runTransaction(async (tx) => { const s2 = await tx.get(ref); if (s2.exists) return;
+      tx.set(ref, {at, lv, n: cfg.n, secs: cfg.secs, seats: cfg.seats, minP: cfg.minP, count: 0, status: "open", createdAt: FieldValue.serverTimestamp()});
+      tx.set(ref.collection("priv").doc("q"), {qs: arenaQs(lv, cfg.n)}); });
+    s = await ref.get();
+  }
+  return s.exists ? {cid, ref, ...s.data()} : null;
+}
+async function arenaFinalize(c) {
+  if (c.status === "done" || c.status === "cancelled") return c.status;
+  const ps = await c.ref.collection("p").orderBy("score", "desc").limit(3).get();
+  const now = Date.now(); const batch = db.batch(); const medals = ["gold", "silver", "bronze"];
+  ps.docs.forEach((d, i) => { const p = d.data(); if (!(p.score > 0)) return;
+    batch.set(db.collection("arenaWins").doc(c.cid + "_" + d.id), {cid: c.cid, uid: d.id, at: c.at, lv: c.lv, rank: i + 1, medal: medals[i], score: p.score, right: p.right || 0,
+      name: p.name, city: p.city || "", school: p.school || "", show: p.show !== false, reg: !!p.reg, createdAt: FieldValue.serverTimestamp()}); });
+  batch.update(c.ref, {status: "done", doneAt: now}); await batch.commit();
+  ps.docs.slice(0, 3).forEach((d, i) => { if (d.data().reg && d.data().score > 0) pushUser(d.id, {title: ["🥇", "🥈", "🥉"][i] + " مبروك! المركز " + (i + 1) + " في مسابقة " + LV_AR[c.lv], body: "حصلت على وسام جديد في خزانة أوسمتك.", link: "#arena"}, {rule: "events"}); });
+  return "done";
+}
+
+exports.arena = onCall({memory: "256MiB"}, async (req) => {
+  const d = req.data || {}; const op = String(d.op || ""); const cfg = await arenaCfg(); const now = Date.now();
+  let isAdm = false; if (req.auth) { try { await needAdmin(req); isAdm = true; } catch (e) { isAdm = false; } }
+  if (!cfg.on && !isAdm) return {off: true, now};
+  const uid = req.auth && req.auth.uid; const tk = (req.auth && req.auth.token) || {};
+  const anon = !!(tk.firebase && tk.firebase.sign_in_provider === "anonymous") && !tk.kidOf;
+  if (op === "hub") {
+    const slots = arenaSlots(cfg, now - 1000 * (cfg.n * (cfg.secs + ARENA_GAP)), 3);
+    const out = [];
+    for (const at of slots) {
+      const levels = [];
+      for (const lv of cfg.levels) { const s = await db.collection("arena").doc(slotId(at) + "_L" + lv).get(); const x = s.exists ? s.data() : {};
+        let mine = false; if (uid && s.exists) mine = (await s.ref.collection("p").doc(uid).get()).exists;
+        levels.push({lv, cid: slotId(at) + "_L" + lv, count: x.count || 0, status: x.status || "open", mine}); }
+      out.push({at, end: at + cfg.n * (cfg.secs + ARENA_GAP) * 1000, openAt: at - cfg.open * 60000, levels});
+    }
+    const dayStart = Date.parse(tripDay(now) + "T00:00:00Z") - 2 * HOUR;
+    const wins = await db.collection("arenaWins").where("at", ">=", dayStart - 6 * DAY).get();
+    const heroes = wins.docs.map((x) => x.data()).filter((x) => x.show).sort((a, b) => b.at - a.at || a.rank - b.rank).slice(0, 60)
+        .map((x) => ({name: x.name, city: x.city, school: x.school, rank: x.rank, lv: x.lv, at: x.at, score: x.score}));
+    let mine = []; if (uid) mine = (await db.collection("arenaWins").where("uid", "==", uid).get()).docs.map((x) => x.data()).sort((a, b) => b.at - a.at).slice(0, 50)
+        .map((x) => ({rank: x.rank, lv: x.lv, at: x.at, score: x.score}));
+    let grade = null; if (uid && !anon) { const owner = tk.kidOf || uid; const pid = tk.kidPid || (/^[\w-]{1,40}$/.test(String(d.pid || "")) ? String(d.pid) : "me"); const pp = await db.collection("users").doc(owner).collection("profiles").doc(pid).get(); if (pp.exists && pp.data().grade) grade = String(pp.data().grade); }
+    return {now, cfg: {who: cfg.who, seats: cfg.seats, minP: cfg.minP, n: cfg.n, secs: cfg.secs, gap: ARENA_GAP, open: cfg.open, levels: cfg.levels, every: cfg.every}, slots: out, heroes, mine,
+      minLv: grade ? gradeLevel(grade) : 1, grade, LV: LV_AR};
+  }
+  needUser(req);
+  if (op === "book") {
+    if (anon) throw new HttpsError("permission-denied", "سجّل الدخول (مجاناً) أولاً لتدخل المسابقة.");
+    if (cfg.who === "sub" && !isAdm) { const owner = tk.kidOf || uid;
+      const ok = (await db.collection("subscriptions").where("uid", "==", owner).get()).docs.map((x) => x.data()).some((x) => x.active !== false && x.kind !== "trial" && x.end && x.end.toMillis() > now);
+      if (!ok) throw new HttpsError("permission-denied", "المسابقات الآن للمشتركين فقط. اشترك لتشارك 🏆"); }
+    const at = Number(d.at), lv = Number(d.lv);
+    if (!arenaSlots(cfg, now - 1000, 3).includes(at)) throw new HttpsError("invalid-argument", "موعد غير صحيح");
+    if (!cfg.levels.includes(lv)) throw new HttpsError("invalid-argument", "المستوى غير متاح");
+    if (now < at - cfg.open * 60000) throw new HttpsError("failed-precondition", "الحجز يُفتح قبل البداية بـ" + cfg.open + " دقيقة");
+    if (now >= at) throw new HttpsError("failed-precondition", "بدأت المسابقة");
+    const name = str(d.name, 30), city = str(d.city, 30), school = str(d.school, 50);
+    if (name.length < 2 || city.length < 2) throw new HttpsError("invalid-argument", "اكتب الاسم والمدينة");
+    if (!anon) { const owner = tk.kidOf || uid; const pid = tk.kidPid || (/^[\w-]{1,40}$/.test(String(d.pid || "")) ? String(d.pid) : "me"); const pp = await db.collection("users").doc(owner).collection("profiles").doc(pid).get();
+      if (pp.exists && pp.data().grade && lv < gradeLevel(pp.data().grade) && !isAdm) throw new HttpsError("failed-precondition", "مستواك يبدأ من " + LV_AR[gradeLevel(pp.data().grade)]); }
+    // حجز واحد في كل موعد
+    for (const l of cfg.levels) { if (l === lv) continue; const o = await db.collection("arena").doc(slotId(at) + "_L" + l).collection("p").doc(uid).get(); if (o.exists) throw new HttpsError("already-exists", "حجزت مسابقة أخرى في نفس الموعد"); }
+    const c = await arenaComp(cfg, at, lv, true);
+    await db.runTransaction(async (tx) => { const cs = await tx.get(c.ref); const pRef = c.ref.collection("p").doc(uid); const ps = await tx.get(pRef);
+      if (ps.exists) { tx.update(pRef, {name, city, school, show: d.show !== false}); return; }
+      if ((cs.data().count || 0) >= cs.data().seats) throw new HttpsError("resource-exhausted", "اكتملت المقاعد — اختر مستوى آخر أو الموعد القادم");
+      tx.set(pRef, {name, city, school, show: d.show !== false, reg: !anon, score: 0, right: 0, ans: {}, at: FieldValue.serverTimestamp()});
+      tx.update(c.ref, {count: FieldValue.increment(1)}); });
+    return {ok: true, cid: c.cid, at};
+  }
+  const cid = str(d.cid, 40); const ref = db.collection("arena").doc(cid); const cs = await ref.get();
+  if (!cs.exists) throw new HttpsError("not-found", "المسابقة غير موجودة");
+  const c = {cid, ref, ...cs.data()}; const T = arenaTimes(c);
+  if (c.status === "open" && now >= c.at && (c.count || 0) < c.minP) { await ref.update({status: "cancelled"}); c.status = "cancelled"; }
+  const pRef = ref.collection("p").doc(uid);
+  if (op === "cancel") { if (now >= c.at) throw new HttpsError("failed-precondition", "بدأت المسابقة");
+    await db.runTransaction(async (tx) => { const ps = await tx.get(pRef); if (!ps.exists) return; tx.delete(pRef); tx.update(ref, {count: FieldValue.increment(-1)}); }); return {ok: true}; }
+  if (op === "room") {
+    const ps = await ref.collection("p").orderBy("at").limit(60).get(); const me = ps.docs.find((x) => x.id === uid);
+    return {now, cid, at: c.at, lv: c.lv, lvName: LV_AR[c.lv], n: c.n, secs: c.secs, gap: ARENA_GAP, seats: c.seats, minP: c.minP, count: c.count || 0, status: c.status,
+      players: ps.docs.map((x) => ({name: x.data().name, city: x.data().city})), joined: !!me};
+  }
+  const ps = await pRef.get(); if (!ps.exists) throw new HttpsError("permission-denied", "أنت غير مسجّل في هذه المسابقة");
+  if (c.status === "cancelled") return {cancelled: true, now};
+  if (op === "q") {
+    const i = Math.floor(Number(d.i)); if (!(i >= 0 && i < c.n)) throw new HttpsError("invalid-argument", "سؤال غير صحيح");
+    if (now < T.openAt(i) - 800) return {wait: T.openAt(i) - now, now};
+    const qd = await ref.collection("priv").doc("q").get(); const q = qd.data().qs[i];
+    if (c.status === "open") ref.update({status: "live"}).catch(() => {});
+    return {now, i, a: q.a, op: q.op, b: q.b, opts: q.opts, openAt: T.openAt(i), closeAt: T.closeAt(i)};
+  }
+  if (op === "a") {
+    const i = Math.floor(Number(d.i)); if (!(i >= 0 && i < c.n)) throw new HttpsError("invalid-argument", "سؤال غير صحيح");
+    if (now < T.openAt(i) - 500 || now > T.closeAt(i) + 1500) return {late: true, now};
+    const qd = await ref.collection("priv").doc("q").get(); const q = qd.data().qs[i];
+    const ok = Number(d.v) === q.c; const el = Math.max(0, Math.min(c.secs * 1000, now - T.openAt(i)));
+    const pts = ok ? 500 + Math.round(500 * (1 - el / (c.secs * 1000))) : 0;
+    const res = await db.runTransaction(async (tx) => { const p = (await tx.get(pRef)).data(); if (p.ans && p.ans[i] != null) return {dup: true};
+      tx.update(pRef, {["ans." + i]: pts, score: FieldValue.increment(pts), right: FieldValue.increment(ok ? 1 : 0), ms: FieldValue.increment(el)}); return {}; });
+    if (res.dup) return {dup: true, now};
+    return {now, ok, pts, right: q.c};
+  }
+  if (op === "board") {
+    const i = Math.floor(Number(d.i));
+    if (now > T.end && c.status !== "done") { await arenaFinalize(c); c.status = "done"; }
+    const top = await ref.collection("p").orderBy("score", "desc").limit(10).get();
+    const myScore = ps.data().score || 0;
+    const higher = (await ref.collection("p").where("score", ">", myScore).count().get()).data().count;
+    return {now, i, top: top.docs.map((x) => ({name: x.data().name, city: x.data().city, score: x.data().score, me: x.id === uid})), rank: higher + 1, score: myScore, right: ps.data().right || 0,
+      count: c.count || 0, done: c.status === "done"};
+  }
+  throw new HttpsError("invalid-argument", "عملية غير معروفة");
+});
+
+// تذكير قبل البداية + إنهاء المسابقات المنتهية (كل 15 دقيقة)
+exports.arenaTick = onSchedule({schedule: "*/15 * * * *", timeZone: "Africa/Tripoli", memory: "256MiB"}, async () => {
+  const cfg = await arenaCfg(); if (!cfg.on) return; const now = Date.now();
+  const soon = await db.collection("arena").where("at", ">", now).where("at", "<=", now + 20 * 60000).get();
+  for (const s of soon.docs) { if (s.data().reminded) continue; await s.ref.update({reminded: true});
+    const ps = await s.ref.collection("p").get(); const mins = Math.round((s.data().at - now) / 60000);
+    for (const p of ps.docs) if (p.data().reg) await pushUser(p.id, {title: "🏟️ مسابقتك تبدأ بعد " + mins + " دقيقة!", body: LV_AR[s.data().lv] + " — كن جاهزاً، الأسرع والأدق يفوز 🏆", link: "#arena-" + s.id}, {rule: "events", adultsOnly: false}); }
+  const ended = await db.collection("arena").where("at", "<", now - 5 * 60000).where("at", ">", now - 2 * DAY).get();
+  for (const s of ended.docs) { const c = {cid: s.id, ref: s.ref, ...s.data()}; if (["done", "cancelled"].includes(c.status)) continue;
+    if (now > arenaTimes(c).end) { if ((c.count || 0) < c.minP) await s.ref.update({status: "cancelled"}); else await arenaFinalize(c); } }
+});
+
+exports.adminArena = onCall({memory: "256MiB"}, async (req) => {
+  const d = req.data || {};
+  if (d.op === "cfg") {
+    await needAdmin(req, "owner");
+    const n = (v, lo, hi, def) => { const x = Math.round(Number(v)); return x >= lo && x <= hi ? x : def; };
+    const arena = {on: !!d.on, who: d.who === "sub" ? "sub" : "all", every: [1, 2, 3, 4, 6, 8, 12, 24].includes(Number(d.every)) ? Number(d.every) : 3, start: n(d.start, 0, 23, 0),
+      seats: n(d.seats, 2, 100, 20), minP: n(d.minP, 2, 20, 2), n: n(d.n, 5, 30, 15), secs: n(d.secs, 5, 30, 12), open: n(d.open, 10, 720, 60),
+      levels: (Array.isArray(d.levels) ? d.levels : []).map(Number).filter((x) => x >= 1 && x <= 6).sort()};
+    if (!arena.levels.length) arena.levels = [1, 2, 3, 4, 5, 6];
+    await db.collection("config").doc("access").update({arena}).catch(() => db.collection("config").doc("access").set({arena}, {merge: true})); ACCESS = null; return {cfg: arena};
+  }
+  await needAdmin(req, ["stats", "push"]);
+  const since = Date.now() - 14 * DAY;
+  const [comps, wins] = await Promise.all([db.collection("arena").where("at", ">", since).get(), db.collection("arenaWins").where("at", ">", since).get()]);
+  const W = {}; wins.docs.forEach((x) => { const w = x.data(); (W[w.cid] = W[w.cid] || []).push(w); });
+  const list = comps.docs.map((x) => ({cid: x.id, ...x.data(), winners: (W[x.id] || []).sort((a, b) => a.rank - b.rank)})).sort((a, b) => b.at - a.at).slice(0, 60);
+  for (const c of list) for (const w of c.winners) { if (w.reg) { const u = await db.collection("users").doc(w.uid).get(); w.phone = u.exists ? String(u.data().phone || "").replace("+218", "0") : ""; } }
+  return {cfg: await arenaCfg(), list: list.map((c) => ({cid: c.cid, at: c.at, lv: c.lv, count: c.count || 0, status: c.status, winners: c.winners.map((w) => ({rank: w.rank, name: w.name, city: w.city, school: w.school, score: w.score, phone: w.phone || ""}))})),
+    totals: {comps: list.length, players: list.reduce((a, c) => a + (c.count || 0), 0)}};
+});

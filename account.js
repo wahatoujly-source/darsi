@@ -1110,6 +1110,43 @@ function heroesBox() {
   return box;
 }
 
+function arenaAdminBox() {
+  const box = el('div', { class: 'panel accbox' }, el('b', { text: '🏟️ ساحة المسابقات' }),
+    el('span', { class: 'note', text: 'مسابقات رياضيات مباشرة مبرمجة تلقائياً (6 مستويات: المستوى 1 للصف الثاني … المستوى 6 للصف السابع فما فوق). الأسئلة تُولَّد عشوائياً لكل مسابقة ولا تتكرر داخلها، والترتيب بالدقة ثم السرعة.' }));
+  const cfgW = el('div', { class: 'stack' }), listW = el('div', { class: 'stack' }), msg = el('div'); box.append(cfgW, msg, listW);
+  const LVN = ['', 'م1·ص2', 'م2·ص3', 'م3·ص4', 'م4·ص5', 'م5·ص6', 'م6·ص7+'];
+  const num = (v, lo, hi) => el('input', { type: 'number', min: lo, max: hi, value: v, style: 'width:90px' });
+  const lab = (t, inp, hint) => el('label', { style: 'display:flex;gap:8px;align-items:center;flex-wrap:wrap' }, el('span', { style: 'min-width:150px', text: t }), inp, hint ? el('small', { class: 'note', text: hint }) : null);
+  const tm = t => new Date(t).toLocaleString('ar-LY-u-nu-latn', { weekday: 'short', day: 'numeric', month: 'numeric', hour: 'numeric', minute: '2-digit', timeZone: 'Africa/Tripoli' });
+  const ST = { open: 'الحجز مفتوح', live: 'جارية', done: 'انتهت', cancelled: 'أُلغيت (عدد قليل)' };
+  const load = async () => { fbk(msg, 'info', 'جارٍ التحميل…');
+    try { const r = await call('adminArena', { op: 'list' }); msg.innerHTML = ''; const c = r.cfg; cfgW.innerHTML = '';
+      if (ACC.owner) {
+        const on = el('input', { type: 'checkbox' }); on.checked = !!c.on;
+        const who = el('select', {}, el('option', { value: 'all', text: 'كل المسجّلين (مجاني ومشترك)' }), el('option', { value: 'sub', text: 'المشتركين فقط' })); who.value = c.who === 'sub' ? 'sub' : 'all';
+        const every = el('select', {}, ...[1, 2, 3, 4, 6, 8, 12, 24].map(h => el('option', { value: h, text: h === 1 ? 'كل ساعة' : h === 2 ? 'كل ساعتين' : h === 24 ? 'مرة واحدة يومياً' : 'كل ' + h + (h <= 10 ? ' ساعات' : ' ساعة') }))); every.value = c.every;
+        const start = el('select', {}, ...Array.from({ length: 24 }, (_, h) => el('option', { value: h, text: (h % 12 || 12) + (h < 12 ? ' صباحاً' : ' مساءً') }))); start.value = c.start;
+        const seats = num(c.seats, 2, 100), minP = num(c.minP, 2, 20), n = num(c.n, 5, 30), secs = num(c.secs, 5, 30), open = num(c.open, 10, 720);
+        const lvs = [1, 2, 3, 4, 5, 6].map(v => { const x = el('input', { type: 'checkbox', value: v }); x.checked = (c.levels || []).includes(v); return x; });
+        const slots = () => { const e = +every.value, st = +start.value; const H = []; for (let h = 0; h < 24; h++) if (((h - st) % e + e) % e === 0) H.push((h % 12 || 12) + (h < 12 ? 'ص' : 'م')); return H.join(' · '); };
+        const sl = el('small', { class: 'note' }); const upd = () => sl.textContent = 'المواعيد اليومية (بتوقيت ليبيا): ' + slots(); every.onchange = upd; start.onchange = upd; upd();
+        cfgW.append(el('label', { style: 'display:flex;gap:8px;align-items:center;font-weight:700;justify-content:flex-start' }, on, el('span', { style: 'flex:1', text: 'تفعيل الساحة (تظهر للمستخدمين)' })),
+          lab('من يشارك', who), lab('تكرار المسابقة', every), lab('أول موعد في اليوم', start), sl,
+          lab('أقصى عدد مقاعد', seats, 'لكل مستوى'), lab('أقل عدد للبدء', minP, 'وإلا تُلغى'), lab('عدد الأسئلة', n), lab('ثواني كل سؤال', secs), lab('فتح الحجز قبل البداية (دقيقة)', open),
+          el('span', { text: 'المستويات المتاحة:' }), el('div', { class: 'row', style: 'gap:10px;flex-wrap:wrap' }, ...lvs.map((x, i) => el('label', { style: 'display:flex;gap:4px;align-items:center' }, x, el('span', { text: LVN[i + 1] })))),
+          el('button', { class: 'btn sun', text: '💾 حفظ إعدادات المسابقات', onclick: async e => { const b = e.currentTarget; b.disabled = true;
+            try { await call('adminArena', { op: 'cfg', on: on.checked, who: who.value, every: +every.value, start: +start.value, seats: +seats.value, minP: +minP.value, n: +n.value, secs: +secs.value, open: +open.value, levels: lvs.filter(x => x.checked).map(x => +x.value) });
+              fbk(msg, 'ok', '✓ تم الحفظ. يظهر للمستخدمين خلال دقيقة.'); } catch (x) { fbk(msg, 'bad', fnErr(x)); } b.disabled = false; } }));
+      } else cfgW.append(el('span', { class: 'note', text: 'الحالة: ' + (c.on ? '✅ مفعّلة' : '⛔ متوقفة') + ' · كل ' + c.every + ' ساعة · ' + c.seats + ' مقعد · ' + c.n + ' سؤال × ' + c.secs + ' ث' }));
+      listW.innerHTML = ''; listW.append(el('b', { text: 'آخر 14 يوماً: ' + r.totals.comps + ' مسابقة · ' + r.totals.players + ' مشاركة' }));
+      if (!r.list.length) listW.append(el('span', { class: 'note', text: 'لا توجد مسابقات بعد.' }));
+      r.list.forEach(x => listW.append(el('div', { class: 'kidrow', style: 'display:flex;flex-direction:column;gap:4px' },
+        el('div', { style: 'display:flex;justify-content:space-between;gap:8px' }, el('b', { text: tm(x.at) + ' — ' + LVN[x.lv] }), el('span', { class: 'note', text: '👥 ' + x.count + ' · ' + (ST[x.status] || x.status) })),
+        ...x.winners.map(w => el('div', { class: 'note', style: 'font-size:.8rem', text: ['', '🥇', '🥈', '🥉'][w.rank] + ' ' + w.name + ' · ' + w.city + (w.school ? ' · ' + w.school : '') + ' · ' + w.score + ' ن' + (w.phone ? ' · ' + w.phone : '') })))));
+    } catch (e) { fbk(msg, 'bad', fnErr(e)); } };
+  box._lazy = load; return box;
+}
+
 /* ---------- admin safety: every section folded, sensitive buttons need a second press ---------- */
 function fold(box, title) {
   const h = box.querySelector(':scope > b'); const t = title || (h ? h.textContent : 'قسم');
@@ -1190,6 +1227,7 @@ function renderAdmin() {
   if (ACC.owner) s.append(staffBox());
   if (can('plans')) s.append(plansBox());
   if (can('plans') || can('stats')) s.append(refAdminBox());
+  if (can('stats') || can('push')) s.append(arenaAdminBox());
   if (can('push')) s.append(pushBox());
   if (can('tts')) s.append(ttsBox());
   if (can('access')) s.append(accessBox(), booksBox());
