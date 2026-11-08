@@ -1295,7 +1295,9 @@ const TTS_DEF = {f: "ar-XA-Chirp3-HD-Aoede", m: "ar-XA-Chirp3-HD-Charon", rate: 
 const TTS_DAY_CAP = 300000; // أقصى عدد أحرف جديدة يومياً (حماية من الإساءة)
 async function gcpToken() {
   const r = await fetch("http://metadata.google.internal/computeMetadata/v1/instance/service-account/default/token", {headers: {"Metadata-Flavor": "Google"}});
-  return (await r.json()).access_token;
+  const j = await r.json().catch(() => ({}));
+  if (!r.ok || !j.access_token) throw new Error("metadata token " + r.status);
+  return j.access_token;
 }
 async function synth(text, voice, rate) {
   const lang = voice.slice(0, 5);
@@ -1350,11 +1352,19 @@ exports.tts = onRequest({memory: "256MiB", concurrency: 40, maxInstances: 5}, as
 
 exports.adminTts = onCall({memory: "256MiB"}, async (req) => {
   await needAdmin(req, "tts");
+  try { return await adminTtsOp(req); } catch (e) {
+    if (e instanceof HttpsError) throw e;
+    logger.error("adminTts", e && e.stack);
+    throw new HttpsError("failed-precondition", "خطأ في خدمة الأصوات: " + String((e && e.message) || e).slice(0, 200));
+  }
+});
+async function adminTtsOp(req) {
   const d = req.data || {}; const op = String(d.op || "");
   if (op === "voices") {
     const r = await fetch("https://texttospeech.googleapis.com/v1/voices?languageCode=ar-XA", {headers: {"Authorization": "Bearer " + await gcpToken()}});
     const j = await r.json().catch(() => ({}));
-    if (!r.ok) throw new HttpsError("failed-precondition", r.status === 403 ? "خدمة Text-to-Speech غير مفعّلة في مشروع Google Cloud بعد" : "تعذّر جلب الأصوات");
+    if (!r.ok) { logger.error("tts voices", r.status, JSON.stringify(j.error || {}).slice(0, 400));
+      throw new HttpsError("failed-precondition", r.status === 403 ? "خدمة Text-to-Speech غير مفعّلة في مشروع Google Cloud بعد (أو لا صلاحية): " + String((j.error && j.error.message) || "").slice(0, 160) : "تعذّر جلب الأصوات (" + r.status + ")"); }
     const st = await db.collection("config").doc("ttsStats").get();
     const today = await db.collection("config").doc("ttsDay_" + new Date().toISOString().slice(0, 10)).get();
     return {voices: (j.voices || []).map((v) => ({name: v.name, g: v.ssmlGender})).sort((a, b) => a.name.localeCompare(b.name)),
@@ -1372,7 +1382,7 @@ exports.adminTts = onCall({memory: "256MiB"}, async (req) => {
     await db.collection("config").doc("access").set({tts}, {merge: true}); ACCESS = null; return {tts};
   }
   throw new HttpsError("invalid-argument", "عملية غير معروفة");
-});
+}
 
 
 // ===================== الإشعارات (Firebase Cloud Messaging — Web Push) =====================
