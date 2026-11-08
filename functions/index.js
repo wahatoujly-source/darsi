@@ -1294,7 +1294,7 @@ exports.adminTeach = onCall({secrets: [YT_ID, YT_SECRET, YT_REFRESH], memory: "2
 const TTS_DEF = {f: "ar-XA-Chirp3-HD-Aoede", m: "ar-XA-Chirp3-HD-Charon", rate: 0.9};
 const TTS_DAY_CAP = 300000; // أقصى عدد أحرف جديدة يومياً (حماية من الإساءة)
 async function gcpToken() {
-  const r = await fetch("http://metadata.google.internal/computeMetadata/v1/instance/service-account/default/token", {headers: {"Metadata-Flavor": "Google"}});
+  const r = await fetch("http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/default/token", {headers: {"Metadata-Flavor": "Google"}});
   const j = await r.json().catch(() => ({}));
   if (!r.ok || !j.access_token) throw new Error("metadata token " + r.status);
   return j.access_token;
