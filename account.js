@@ -757,6 +757,12 @@ function renderSubscribe() {
   const role = ACC.profile.role, s = page('الاشتراك', 'اختر الباقة والمدة المناسبة لك', D.App.after || 'home');
   const mine = ACC.subs.filter(subApplies);
   if (mine.length) s.append(el('div', { class: 'feedback ok', text: '✓ عندك اشتراك فعّال: ' + mine.map(x => subName(x) + ' (حتى ' + fmtDate(x.end.toMillis()) + ')').join('، ') }));
+  { const U = n => 'img/ui/' + n + '.webp';
+    s.append(el('div', { class: 'kx-subhero' }, el('div', { class: 'bgx' }), el('img', { class: 'k1', src: U('k2'), alt: '' }), el('img', { class: 'k2', src: U('k3'), alt: '' }),
+      el('div', { class: 'tx' }, el('span', { class: 'cap', text: '⭐ اشتراك المجتهد' }), el('h2', { text: 'افتح المنصة كاملة لأبنائك' }),
+        el('p', { text: 'كل دروس المنهج الليبي بالصوت والصورة، من الصف الأول للتاسع' }))));
+    s.append(el('div', { class: 'kx-ben' }, ...[['q_learn', 'كل الدروس', 'بالصوت والصورة'], ['q_review', 'تمارين واختبارات', 'تصحيح فوري'], ['n_ach', 'تقارير لولي الأمر', 'بالدقيقة والنسبة'], ['q_comp', 'مسابقات وأوسمة', 'تحفيز يومي']]
+      .map(([im, t, sm]) => el('div', {}, el('img', { src: U(im), alt: '', loading: 'lazy' }), el('b', { text: t }), el('small', { text: sm }))))); }
   const box = el('div', { class: 'stack' }), msg = el('div'), phoneBox = el('div');
   let plans = null, pl = null, grade = null, subject = null;
   const kidsN = ACC.profiles.filter(p => p.id !== 'me').length;
@@ -765,12 +771,14 @@ function renderSubscribe() {
     if (!plans) { box.append(el('span', { class: 'note', text: 'جارٍ تحميل الباقات…' })); return; }
     const mineP = plans.filter(p => (BASE_ROLES[p.base] || []).includes(role));
     if (!mineP.length) { box.append(el('div', { class: 'feedback info', text: 'لا توجد باقات متاحة حالياً. عُد قريباً.' })); return; }
-    const pg = el('div', { class: 'plans' });
-    mineP.forEach(p => pg.append(el('button', { class: 'plan', 'aria-pressed': String(pl === p), onclick: () => { pl = p; grade = null; subject = null; draw(); } },
-      el('b', { text: (BASE_ICON[p.base] || '⭐') + ' ' + p.name }), p.desc ? el('span', { class: 'note', style: 'display:block', text: p.desc }) : null,
-      el('span', { class: 'note', style: 'display:block;font-weight:700', text: '⏳ ' + durLabel(p) }),
-      el('div', { class: 'tag sun', style: 'margin-top:6px', text: p.price + ' د.ل' }))));
-    box.append(el('b', { text: 'اختر الباقة' }), pg);
+    const pg = el('div', { class: 'kx-plans' });
+    const best = mineP.find(p => p.base === 'parent_all' && (p.dur || {}).t !== 'days') || mineP.find(p => (p.dur || {}).t !== 'days');
+    mineP.forEach(p => pg.append(el('button', { class: 'kx-plan' + (pl === p ? ' on' : '') + (p === best ? ' best' : ''), 'aria-pressed': String(pl === p), onclick: () => { pl = p; grade = null; subject = null; draw(); setTimeout(() => { const t = box.querySelector('.kx-step,.paybox'); t && t.scrollIntoView({ behavior: 'smooth', block: 'center' }); }, 50); } },
+      p === best ? el('span', { class: 'rib', text: '🔥 الأكثر طلباً' }) : null,
+      el('span', { class: 'rd' }),
+      el('span', { class: 'tx' }, el('b', { text: (BASE_ICON[p.base] || '⭐') + ' ' + p.name }), p.desc ? el('small', { text: p.desc }) : null, el('span', { class: 'du', text: '⏳ ' + durLabel(p) })),
+      el('span', { class: 'pr' }, el('b', { text: String(p.price) }), el('small', { text: 'دينار' })))));
+    box.append(el('div', { class: 'kx-h', text: '1️⃣ اختر الباقة' }), pg);
     if (!pl) return;
     const isParent = ['parent_grade', 'parent_all'].includes(pl.base);
     if (isParent && !kidsN) { box.append(el('div', { class: 'feedback info' }, 'أضف أبناءك أولاً. ', el('button', { class: 'linkbtn', text: 'أبنائي', onclick: () => go('kids') }))); return; }
@@ -779,8 +787,8 @@ function renderSubscribe() {
       const me = ACC.profiles.find(p => p.id === 'me'); if (role === 'student' && me && me.grade) return [String(me.grade)]; return null; };
     const AG = allowedG(); if (AG && AG.length === 1 && !grade) grade = AG[0];
     const gpick = () => { const w = el('div', { class: 'gpick' }); GRADES.filter(([g]) => !AG || !AG.length || AG.includes(String(g))).forEach(([g, n]) => w.append(el('button', { class: 'btn ghost sm' + (grade === g ? ' on' : ''), text: n, onclick: () => { grade = g; subject = null; draw(); } }))); return w; };
-    if (['student_subject', 'student_grade', 'parent_grade'].includes(pl.base)) box.append(el('b', { text: 'الصف' }), gpick());
-    if (pl.base === 'student_subject' && grade) { const w = el('div', { class: 'gpick' }); subjectsOf(grade).forEach(x => w.append(el('button', { class: 'btn ghost sm' + (subject === x.id ? ' on' : ''), text: x.name, onclick: () => { subject = x.id; draw(); } }))); box.append(el('b', { text: 'المادة' }), w); }
+    if (['student_subject', 'student_grade', 'parent_grade'].includes(pl.base)) box.append(el('div', { class: 'kx-h kx-step', text: '2️⃣ اختر الصف' }), gpick());
+    if (pl.base === 'student_subject' && grade) { const w = el('div', { class: 'gpick' }); subjectsOf(grade).forEach(x => w.append(el('button', { class: 'btn ghost sm' + (subject === x.id ? ' on' : ''), text: x.name, onclick: () => { subject = x.id; draw(); } }))); box.append(el('div', { class: 'kx-h', text: '3️⃣ اختر المادة' }), w); }
     const ready = pl.base === 'parent_all' || (pl.base === 'student_subject' ? grade && subject : !!grade);
     if (!ready) return;
     { // اشتراك فعّال يشمل نفس الاختيار؟ لا داعي للدفع مرة أخرى
@@ -793,13 +801,14 @@ function renderSubscribe() {
       if (cov) { box.append(el('div', { class: 'feedback ok', text: '✓ أنت مشترك بالفعل في «' + subName(cov).replace(/^\S+\s/, '') + '» حتى ' + fmtDate(cov.end.toMillis()) + '، وهو يشمل ما اخترته. لا حاجة لاشتراك جديد.' })); return; }
     }
     const d = pl.dur || {}, endTxt = d.t === 'days' ? 'الاشتراك لمدة ' + durLabel(pl) + '. إذا كان عندك اشتراك فعّال من نفس الباقة تُضاف المدة بعد نهايته.' : 'الاشتراك صالح ' + durLabel(pl) + '.';
-    box.append(el('div', { class: 'paybox' }, el('b', { style: 'font-size:1.2rem', text: 'المبلغ: ' + pl.price + ' دينار' }),
-      el('span', { class: 'note', text: endTxt + ' الدفع عبر ماي باي: ادفع لي، سداد، موبي كاش وغيرها.' }),
+    box.append(el('div', { class: 'paybox kx-pay' }, el('div', { class: 'sum' }, el('span', {}, el('small', { text: 'الباقة' }), el('b', { text: pl.name })), el('span', { class: 'tot' }, el('small', { text: 'المجموع' }), el('b', { text: pl.price + ' د.ل' }))),
+      el('span', { class: 'note', text: endTxt }),
+      el('div', { class: 'ways' }, ...['سداد', 'ادفع لي', 'موبي كاش', 'معاملات', 'يسر باي'].map(t => el('span', { text: t }))),
       el('label', { class: 'sndrow', style: 'margin:4px 0' }, agree, el('span', {}, 'أوافق على ', el('a', { href: '#privacy', text: 'شروط الاستخدام وسياسة الخصوصية' }))), payBtn));
     payBtn.disabled = !agree.checked;
   };
   const agree = el('input', { type: 'checkbox', onchange: () => { payBtn.disabled = !agree.checked; } });
-  const payBtn = el('button', { class: 'btn sun paybig', text: 'ادفع الآن', onclick: async () => {
+  const payBtn = el('button', { class: 'btn sun paybig', text: '🔒 ادفع الآن واشترك', onclick: async () => {
     if (!agree.checked) { fbk(msg, 'bad', 'وافق على الشروط أولاً.'); return; }
     msg.innerHTML = '';
     if (!ACC.phoneVerified()) { phoneBox.scrollIntoView({ behavior: 'smooth' }); await ACC.verifyPhone(phoneBox); phoneBox.innerHTML = ''; }
