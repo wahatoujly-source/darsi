@@ -194,9 +194,10 @@ const activeProfile = () => ACC.profiles.find(p => p.id === ACC.pid) || null;
 /* ---------- header pill ---------- */
 ACC.pill = () => {
   if (!ACC.ready) return null;
-  if (!ACC.user) return el('button', { class: 'pill', onclick: () => go('login'), text: '👤 دخول' });
+  if (!ACC.user) return el('button', { class: 'pill dup', onclick: () => go('login'), text: '👤 دخول' });
   const p = activeProfile();
-  return el('button', { class: 'pill', onclick: () => go(ACC.kid ? 'account' : isAdult() ? 'who' : 'account'), text: (p ? (p.avatar || '🙂') + ' ' + p.name : '👤 حسابي') });
+  if (!p || ACC.kid) return el('button', { class: 'pill dup', onclick: () => go('account'), text: '👤 حسابي' });
+  return el('button', { class: 'pill', title: 'تبديل الطالب', onclick: () => go(isAdult() ? 'who' : 'account'), text: (p.avatar || '🙂') + ' ' + p.name + (isAdult() ? ' 🔄' : '') });
 };
 
 /* ---------- pages ---------- */
