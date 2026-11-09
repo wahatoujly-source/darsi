@@ -590,42 +590,64 @@ function renderAccount() {
   if (ACC.kid) { renderKidAccount(); return; }
   if (!ACC.profile) { go('onboard'); return; }
   const P = ACC.profile, u = ACC.user, [ic, rt] = ROLES[P.role] || ['👤', ''];
-  const s = page('حسابي', P.name, 'home');
-  { const U = n => 'img/ui/' + n + '.webp'; const ph = P.phone || phoneOf(u); const sub = ACC.subs && ACC.subs[0];
-    s.append(el('div', { class: 'kx-acch' },
-      el('div', { class: 'av' }, el('img', { src: U(P.role === 'teacher' ? 'k6' : P.role === 'student' ? 'k3' : 'n_acc'), alt: '' })),
-      el('div', { class: 'tx' }, el('span', { class: 'role', text: ic + ' ' + rt }), el('h2', { text: P.name }),
-        ph ? el('div', { class: 'ln' }, el('span', { dir: 'ltr', text: '📱 ' + ph.replace('+218', '0') }), P.phoneVerified ? el('span', { class: 'ok', text: '✓ مؤكد' }) : null) : null,
-        u.email && !ph ? el('div', { class: 'ln', dir: 'ltr', style: 'text-align:right', text: '✉️ ' + u.email }) : null,
-        P.role === 'student' && activeProfile() && activeProfile().grade ? el('div', { class: 'ln', text: '📚 الصف ' + gradeName(activeProfile().grade) }) : null,
-        el('span', { class: 'st' + (ACC.hasAnySub() ? ' on' : ''), text: ACC.hasAnySub() ? '⭐ مشترك' + (sub && sub.end ? ' حتى ' + fmtDate(sub.end.toMillis()) : '') : 'حساب مجاني' }))));
-    const T = [];
-    if (isAdult()) T.push(['k2', 'أبنائي', kidsOf().length + ' من ' + MAX_KIDS, () => go('kids')]);
-    T.push(['n_ach', 'التقارير', 'التقدّم والإنجازات', () => go(isAdult() && kidsOf().length ? 'who' : 'myreport')]);
-    T.push(['q_comp', ACC.hasAnySub() ? 'اشتراكي' : 'ترقية', ACC.hasAnySub() ? 'الباقات والتجديد' : 'افتح كل الدروس', () => go('subscribe')]);
-    { const tc = (ACC.access || {}).teach || {}; if (tc.on || ACC.isAdmin) T.push(['n_lessons', 'دوراتي', 'دورات الفيديو', () => go('courses-mine')]); }
-    if (P.role === 'teacher' || ACC.isAdmin) T.push(['k5', 'منصة المعلم', 'انشر دوراتك', () => go('studio')]);
-    T.push(['x_all', 'كتب PDF', 'المنهج مجاناً', () => go('books')]);
-    s.append(el('div', { class: 'kx-tiles' }, ...T.map(([im, t, sm, fn]) => el('button', { class: 'kx-m', onclick: fn }, el('img', { src: U(im), alt: '', loading: 'lazy' }), t, el('small', { text: sm }))))); }
-  if (isAdult()) s.append(coParentBox());
-  if (isAdult() && !ACC.co && !kidsOf().length) s.append(coRedeemBox());
-  if (P.role === 'parent') { const m = el('div');
-    s.append(el('div', { class: 'panel accbox' }, el('b', { text: '👩‍🏫 هل أنت معلم أيضاً؟' }), el('span', { class: 'note', text: 'حوّل حسابك إلى حساب معلم وتبقى إدارة أبنائك كما هي.' }),
+  const U = n => 'img/ui/' + n + '.webp'; const ph = P.phone || phoneOf(u); const subOn = ACC.hasAnySub();
+  const s = page('حسابي', '', 'home'); s.classList.add('kx-acc');
+  const kids = isAdult() ? kidsOf() : [];
+  const tot = kids.reduce((a, k) => a + ((k.stats || {}).stars || 0), 0);
+  /* ---- hero ---- */
+  s.append(el('div', { class: 'kx-ph' },
+    el('div', { class: 'bgx' }), el('span', { class: 'sp1', text: '✨' }), el('span', { class: 'sp2', text: '⭐' }),
+    el('div', { class: 'avw' }, el('img', { src: U(P.role === 'teacher' ? 'k6' : P.role === 'student' ? 'k3' : 'k5'), alt: '' })),
+    el('h2', { text: P.name }),
+    el('div', { class: 'chips' }, el('span', { class: 'c', text: ic + ' ' + rt }),
+      ph ? el('span', { class: 'c', dir: 'ltr', text: ph.replace('+218', '0') + (P.phoneVerified ? ' ✓' : '') }) : u.email ? el('span', { class: 'c', dir: 'ltr', text: u.email }) : null),
+    isAdult() ? el('div', { class: 'stats' },
+      el('div', {}, el('b', { text: String(kids.length) }), el('small', { text: 'أبناء' })),
+      el('div', {}, el('b', { text: String(tot) }), el('small', { text: 'نجمة جمعوها' })),
+      el('div', {}, el('b', { text: subOn ? '⭐' : '—' }), el('small', { text: subOn ? 'مشترك' : 'مجاني' }))) : null));
+  /* ---- kids strip ---- */
+  if (isAdult()) s.append(el('div', { class: 'kx-card' }, el('div', { class: 'hd' }, el('b', { text: '👨‍👩‍👧 أبنائي' }), el('button', { class: 'lnk', text: 'إدارة ←', onclick: () => go('kids') })),
+    el('div', { class: 'kx-kids' }, ...kids.map(k => { const st = k.stats || {}; return el('button', { class: 'kx-kid1', onclick: () => go('kid-' + k.id) },
+      el('span', { class: 'kav', text: k.avatar || '🙂' }), el('b', { text: k.name }), el('small', { text: k.grade ? 'الصف ' + gradeName(k.grade) : '' }), el('span', { class: 'kst', text: '⭐ ' + (st.stars || 0) })); }),
+      kids.length < MAX_KIDS && !ACC.co ? el('button', { class: 'kx-kid1 add', onclick: () => go('kids') }, el('span', { class: 'kav', text: '+' }), el('b', { text: 'أضف ابناً' }), el('small', { text: 'حتى ' + MAX_KIDS })) : null)));
+  /* ---- subscription card ---- */
+  { const sub = ACC.subs && ACC.subs.find(x => x.kind !== 'trial') ; const subs = (ACC.subs || []).filter(x => x.kind !== 'trial');
+    s.append(subOn && sub ? el('button', { class: 'kx-sub on', onclick: () => go('subscribe') }, el('img', { src: U('q_comp'), alt: '' }),
+        el('span', { class: 'tx' }, el('small', { text: 'اشتراكك فعّال ⭐' }), el('b', { text: subName(sub) }), el('small', { text: subs.length > 1 ? subs.length + ' اشتراكات · ' + 'أقربها ينتهي ' + fmtDate(Math.min(...subs.map(x => x.end.toMillis()))) : 'حتى ' + fmtDate(sub.end.toMillis()) })), el('span', { class: 'go', text: 'التفاصيل' }))
+      : el('button', { class: 'kx-sub', onclick: () => go('subscribe') }, el('img', { src: U('q_learn'), alt: '' }),
+        el('span', { class: 'tx' }, el('small', { text: 'حسابك مجاني الآن' }), el('b', { text: 'افتح كل الدروس والمواد' }), el('small', { text: 'باقات للطالب والعائلة — شهري أو حتى نهاية العام' })), el('span', { class: 'go', text: '⭐ ترقية' }))); }
+  /* ---- quick tiles ---- */
+  { const T = [];
+    T.push(['n_ach', 'التقارير', () => go(isAdult() && kids.length ? 'who' : 'myreport')]);
+    { const tc = (ACC.access || {}).teach || {}; if (tc.on || ACC.isAdmin) T.push(['n_lessons', 'دوراتي', () => go('courses-mine')]); }
+    if (P.role === 'teacher' || ACC.isAdmin) T.push(['k6', 'منصة المعلم', () => go('studio')]);
+    T.push(['x_all', 'كتب PDF', () => go('books')], ['q_test', 'اختبر مستوى', () => go('test')], ['q_times', 'جدول الضرب', () => go('times')]);
+    s.append(el('div', { class: 'kx-qk' }, ...T.slice(0, 6).map(([im, t, fn]) => el('button', { onclick: fn }, el('span', { class: 'ib' }, el('img', { src: U(im), alt: '', loading: 'lazy' })), el('b', { text: t }))))); }
+  /* ---- settings list (each row opens its panel) ---- */
+  const list = el('div', { class: 'kx-set' });
+  const row = (icon, bg, title, sub, mk, danger) => { const box = el('div', { class: 'body', hidden: true }); let made = false;
+    const b = el('button', { class: 'r' + (danger ? ' danger' : ''), onclick: () => {
+      if (!made) { made = true; const c = mk(); if (c) box.append(c); } box.hidden = !box.hidden; b.classList.toggle('open', !box.hidden); } },
+      el('span', { class: 'ic', style: 'background:' + bg, text: icon }), el('span', { class: 'tt' }, el('b', { text: title }), sub ? el('small', { text: sub }) : null), el('span', { class: 'ch', text: '‹' }));
+    list.append(el('div', { class: 'it' }, b, box)); };
+  const link = (icon, bg, title, sub, fn, danger) => list.append(el('div', { class: 'it' }, el('button', { class: 'r' + (danger ? ' danger' : ''), onclick: fn },
+    el('span', { class: 'ic', style: 'background:' + bg, text: icon }), el('span', { class: 'tt' }, el('b', { text: title }), sub ? el('small', { text: sub }) : null), el('span', { class: 'ch', text: '‹' }))));
+  row('🔔', '#fff1c2', 'الإشعارات', 'تذكير بالدروس وتقارير الأبناء', () => pushRow());
+  if (!ACC.kid && !ACC.co) row('🎁', '#ffe1ec', 'ادعُ عائلة واكسب أياماً مجانية', 'رابطك الخاص للمشاركة', () => refBox());
+  if (isAdult()) row('👫', '#e2f0ff', 'ولي أمر آخر', 'الأم أو الأب يتابع معك نفس الأبناء', () => { const w = el('div', { class: 'stack' }); w.append(coParentBox()); if (!ACC.co && !kids.length) w.append(coRedeemBox()); return w; });
+  if ((ACC.subs || []).length) row('🧾', '#e3f7ea', 'اشتراكاتي', (ACC.subs || []).length + ' اشتراك', () => el('div', { class: 'stack' }, ...ACC.subs.map(x => el('div', { class: 'kidrow' }, el('span', {}, el('b', { text: subName(x) }), el('span', { class: 'note', text: ' — حتى ' + fmtDate(x.end.toMillis()) }))))));
+  if (P.role === 'parent') row('👩‍🏫', '#efe6ff', 'هل أنت معلم أيضاً؟', 'حوّل حسابك لحساب معلم', () => { const m = el('div');
+    return el('div', { class: 'stack' }, el('span', { class: 'note', text: 'حوّل حسابك إلى حساب معلم وتبقى إدارة أبنائك كما هي.' }),
       el('button', { class: 'btn ghost', text: 'نعم، أنا معلم أيضاً', onclick: async () => {
         try { await setDoc(uref(), { ...P, role: 'teacher' }); await setDoc(pref('me'), { name: P.name, grade: null, avatar: '👩‍🏫', createdAt: serverTimestamp() });
-          ACC.profile = { ...P, role: 'teacher' }; await loadProfiles(); D.cheer && D.cheer('win'); renderAccount(); } catch (e) { fbk(m, 'bad', errMsg(e)); } } }), m)); }
-  s.append(el('div', { class: 'panel accbox' }, el('b', { text: 'اشتراكاتي' }),
-    ...(ACC.subs.length ? ACC.subs.map(x => el('div', { class: 'kidrow' }, el('span', {}, el('b', { text: subName(x) }), el('span', { class: 'note', text: ' — حتى ' + fmtDate(x.end.toMillis()) })))) : [el('span', { class: 'note', text: 'لا يوجد اشتراك بعد. الدروس المجانية متاحة لك.' })]),
-    ACC.hasAnySub() ? null : el('button', { class: 'btn sun', text: '⭐ ترقية', onclick: () => go('subscribe') })));
-  if (!ACC.kid && !ACC.co) s.append(refBox());
-  s.append(pushRow());
-  { const tc = (ACC.access || {}).teach || {}; if (tc.on || ACC.isAdmin) s.append(el('div', { class: 'panel accbox' }, el('b', { text: '🎥 دورات المعلمين' }),
-    el('div', { class: 'row', style: 'gap:8px;flex-wrap:wrap' }, tc.show || ACC.isAdmin ? el('button', { class: 'btn ghost', text: '🎒 دوراتي المشتراة', onclick: () => go('courses-mine') }) : null,
-      el('button', { class: 'btn ghost', text: '🎓 منصة المعلم — انشر دوراتك', onclick: () => go('studio') })))); }
-  const adm = el('div'); s.append(adm);
-  call('adminCheck', {}).then(() => { ACC.isAdmin = true; adm.append(el('button', { class: 'btn sun', text: '🛠️ لوحة الإدارة', onclick: () => go('admin') })); }).catch(() => {});
-  s.append(el('button', { class: 'btn ghost', text: 'تسجيل الخروج', onclick: async () => { await signOut(auth); go('home'); } }));
-  s.append(el('p', { class: 'note', dir: 'ltr', style: 'text-align:center;font-size:.75rem;opacity:.6', text: 'ID: ' + u.uid }));
+          ACC.profile = { ...P, role: 'teacher' }; await loadProfiles(); D.cheer && D.cheer('win'); renderAccount(); } catch (e) { fbk(m, 'bad', errMsg(e)); } } }), m); });
+  const admSlot = el('div'); list.append(admSlot);
+  link('🔒', '#eef0f6', 'الخصوصية وشروط الاستخدام', '', () => go('privacy'));
+  link('🚪', '#ffe4e4', 'تسجيل الخروج', '', async () => { await signOut(auth); go('home'); }, true);
+  s.append(el('div', { class: 'kx-card pad0' }, el('div', { class: 'hd', style: 'padding:12px 14px 4px' }, el('b', { text: '⚙️ الإعدادات' })), list));
+  call('adminCheck', {}).then(() => { ACC.isAdmin = true; admSlot.append(el('div', { class: 'it' }, el('button', { class: 'r', onclick: () => go('admin') },
+    el('span', { class: 'ic', style: 'background:#fff1c2', text: '🛠️' }), el('span', { class: 'tt' }, el('b', { text: 'لوحة الإدارة' }), el('small', { text: 'للمدير والمشرفين' })), el('span', { class: 'ch', text: '‹' })))); }).catch(() => {});
+  s.append(el('p', { class: 'note', dir: 'ltr', style: 'text-align:center;font-size:.7rem;opacity:.5;margin:0', text: 'ID: ' + u.uid }));
 }
 
 /* ---------- SMS verification: only before the first payment (resala, via our server) ---------- */
