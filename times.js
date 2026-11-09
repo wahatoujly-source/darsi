@@ -80,7 +80,7 @@ export default function runTimes(D, h) {
     w.append(el('div', { class: 'prog' }, prog), meta, qEl, area);
     let i = 0, sc = 0, cur = null, locked = false, val = ''; const t0 = Date.now(); let tmr = null;
     const end = () => { clearInterval(tmr); result({ o, sc, n: race ? sc : qs.length, secs: (Date.now() - t0) / 1000 }); };
-    if (race) { tmr = setInterval(() => { if (!document.body.contains(w)) { clearInterval(tmr); return; } const left = 60 - Math.floor((Date.now() - t0) / 1000); meta.lastChild && (meta.lastChild.textContent = '⏱️ ' + Math.max(0, left)); prog.style.width = ((60 - left) / 60 * 100) + '%'; if (left <= 0) end(); }, 250); }
+    if (race) { let lastL = 61; tmr = setInterval(() => { if (!document.body.contains(w)) { clearInterval(tmr); return; } const left = 60 - Math.floor((Date.now() - t0) / 1000); if (left !== lastL && left >= 0) { lastL = left; D.tick && D.tick(left); } meta.lastChild && (meta.lastChild.textContent = '⏱️ ' + Math.max(0, left)); prog.style.width = ((60 - left) / 60 * 100) + '%'; if (left <= 0) end(); }, 250); }
     const disp = el('div', { class: 'disp' });
     const next = () => {
       if (!race && i >= qs.length) return end();

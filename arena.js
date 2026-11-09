@@ -141,7 +141,7 @@ export default function runArena(D, h) {
         try { await call('arena', { op: 'cancel', cid }); go('arena'); } catch (x) { b.textContent = err(x); } } }));
     const drawP = X => { list.innerHTML = ''; X.players.forEach(p => list.append(el('span', { class: 'chip', text: p.name + ' · ' + p.city }))); cnt.textContent = X.count + ' / ' + X.seats + ' متسابق' + (X.count < X.minP ? ' — نحتاج ' + X.minP + ' على الأقل' : ''); };
     drawP(R);
-    const tick = () => { if (!alive()) return; const left = R.at - now(); cdEl.textContent = cd(left); if (left <= 0) { play(cid, R); return; } later(tick, 250); };
+    let lastT = -1; const tick = () => { if (!alive()) return; const left = R.at - now(); cdEl.textContent = cd(left); { const sc = Math.ceil(left / 1000); if (sc <= 10 && sc !== lastT && sc >= 0) { lastT = sc; D.tick && D.tick(sc); } } if (left <= 0) { play(cid, R); return; } later(tick, 250); };
     const poll = async () => { if (!alive() || now() >= R.at - 3000) return; try { const X = await call('arena', { op: 'room', cid }); sync(X); if (X.status === 'cancelled') return room(cid); drawP(X); } catch (e) {} later(poll, 8000); };
     tick(); later(poll, 8000);
   }
@@ -166,7 +166,7 @@ export default function runArena(D, h) {
       if (Q.cancelled) return room(cid);
       if (Q.wait) return later(() => ask(i), Q.wait);
       q.textContent = eq(Q.a, Q.op, Q.b); let done = false;
-      let ended = false; const bars = () => { if (ended || !alive()) return; const left = Q.closeAt - now(); tm.firstChild.style.width = Math.min(100, Math.max(0, left / (R.secs * 10))) + '%'; if (left > 0) later(bars, 100); else { ended = true; if (!done) { done = true; [...opts.children].forEach(b => b.disabled = true); fb.textContent = '⏰ انتهى الوقت'; } } };
+      let ended = false, lastS = -1; const bars = () => { if (ended || !alive()) return; const left = Q.closeAt - now(); { const sc = Math.ceil(left / 1000); if (sc !== lastS && sc >= 0) { lastS = sc; if (!done) D.tick && D.tick(sc); } } tm.firstChild.style.width = Math.min(100, Math.max(0, left / (R.secs * 10))) + '%'; if (left > 0) later(bars, 100); else { ended = true; if (!done) { done = true; [...opts.children].forEach(b => b.disabled = true); fb.textContent = '⏰ انتهى الوقت'; } } };
       bars();
       Q.opts.forEach(v => opts.append(el('button', { text: String(v), onclick: async e => { if (done) return; done = true; const b = e.currentTarget; [...opts.children].forEach(x => x.disabled = true); b.style.outline = '3px solid var(--sea)';
         try { const A = await call('arena', { op: 'a', cid, i, v }); sync(A);
