@@ -332,19 +332,27 @@ function renderWho() {
   s.append(el('div', { class: 'row', style: 'gap:8px;flex-wrap:wrap;margin-bottom:6px' }, el('button', { class: 'btn ghost sm', text: '🧮 اختبر مستوى أبنائك في الرياضيات', onclick: () => go('test') }),
     (ACC.access && ACC.access.ref && ACC.access.ref.on === false) ? null : el('button', { class: 'btn ghost sm', text: '🎁 ادعُ عائلة واحصل على أيام مجانية', onclick: () => go('account') })));
   if (ACC.isAdmin) s.append(el('div', { class: 'row', style: 'gap:8px;flex-wrap:wrap;margin-bottom:8px' }, !ACC.can('browse') ? null : el('button', { class: 'btn sun', text: ACC.adminBrowse ? '👁️ وضع المدير مفعّل ← الرئيسية' : '👁️ تصفّح المنصة كمدير (كل الدروس)', onclick: async () => { ACC.adminBrowse = true; store.set('admin_browse', true); await setActive(null); go('home'); } }), el('button', { class: 'btn ghost', text: '🛠️ لوحة الإدارة', onclick: () => go('admin') })));
-  const g = el('div', { class: 'whogrid' });
+  const g = el('div', { class: 'kx-who' });
+  const U = n => 'img/ui/' + n + '.webp'; const PAIRK = gr => (+gr <= 3 ? ['k1', 'k2'] : +gr <= 6 ? ['k3', 'k4'] : ['k5', 'k6']);
+  const GC = { 1: ['#ff7a7a', '#e8384f'], 2: ['#ffb44d', '#f47a12'], 3: ['#5fd47a', '#24a148'], 4: ['#32cbd9', '#0e9fb3'], 5: ['#5ab0ff', '#1f72e0'], 6: ['#a07bff', '#6c43ea'], 7: ['#6a86ff', '#3a56dd'], 8: ['#e07af5', '#ad3fcb'], 9: ['#ff6f9e', '#d92f6b'] };
   const me = ACC.profiles.find(p => p.id === 'me');
-  if (me) g.append(el('button', { class: 'who' + (ACC.pid === 'me' ? ' on' : ''), onclick: async () => { await setActive('me'); go('home'); } },
-    el('span', { class: 'kav big', text: me.avatar || '👩‍🏫' }), el('b', { text: 'أنا' }), el('span', { class: 'note', text: 'المعلم' })));
-  kidsOf().forEach(p => { const st = p.stats || {}; const lv = D.GAME.level(st.stars || 0);
-    g.append(el('div', { class: 'whobox' }, el('button', { class: 'who' + (p.id === ACC.pid ? ' on' : ''), onclick: async () => { await setActive(p.id); go('g' + p.grade); } },
-      el('span', { class: 'kav big', text: p.avatar || '🙂' }), el('b', { text: p.name }), el('span', { class: 'note', text: 'الصف ' + gradeName(p.grade) }),
-      el('span', { class: 'wstats' }, el('span', { text: lv.icon + ' ' + lv.name }), el('span', { text: '⭐ ' + (st.stars || 0) }), el('span', { text: '🔥 ' + liveStreak(st) }))),
-      el('div', { class: 'row', style: 'gap:6px;justify-content:center' }, el('button', { class: 'btn ghost sm', text: '📊 التقرير', onclick: () => go('kid-' + p.id) }),
-        el('button', { class: 'btn sun sm', text: '📱 ربط موبايله', onclick: () => go('linkkid-' + p.id) })),
-      el('button', { class: 'btn ghost sm', text: '📅 الجدول الدراسي' + (p.tt && p.tt.on ? ' ✓' : ''), onclick: () => go('tt-' + p.id) }),
-      el('button', { class: 'btn ghost sm', text: '🎛️ ماذا يدرس؟ والأصوات' + (p.ctrl && ((p.ctrl.subjects || []).length || Object.values(p.ctrl.lessons || {}).some(a => a.length)) ? ' ✓' : ''), onclick: () => go('ctrl-' + p.id) }))); });
-  if (!ACC.co && kidsOf().length < MAX_KIDS) g.append(el('button', { class: 'who add', onclick: () => go('kids') }, el('span', { class: 'kav big', text: '＋' }), el('b', { text: 'أضف ابناً' })));
+  if (me) g.append(el('div', { class: 'kx-wc' + (ACC.pid === 'me' ? ' on' : ''), style: '--a:#94a3b8;--b:#475569' },
+    el('button', { class: 'top', onclick: async () => { await setActive('me'); go('home'); } }, el('span', { class: 'kav', text: me.avatar || '👩‍🏫' }), el('span', { class: 'nm' }, el('b', { text: 'أنا' }), el('small', { text: 'المعلم' })), el('span', { class: 'go', text: 'ادخل ←' }))));
+  kidsOf().forEach((p, idx) => { const st = p.stats || {}; const lv = D.GAME.level(st.stars || 0); const c = GC[+p.grade] || ['#8aa0ff', '#5b6cf0'];
+    const ctrlOn = p.ctrl && ((p.ctrl.subjects || []).length || Object.values(p.ctrl.lessons || {}).some(a => a.length));
+    g.append(el('div', { class: 'kx-wc' + (p.id === ACC.pid ? ' on' : ''), style: '--a:' + c[0] + ';--b:' + c[1] },
+      el('button', { class: 'top', onclick: async () => { await setActive(p.id); go('g' + p.grade); } },
+        el('img', { class: 'ch', src: U(PAIRK(p.grade)[idx % 2]), alt: '' }),
+        el('span', { class: 'kav', text: p.avatar || '🙂' }),
+        el('span', { class: 'nm' }, el('b', { text: p.name }), el('small', { text: 'الصف ' + gradeName(p.grade) }),
+          el('span', { class: 'st' }, el('i', { text: lv.icon + ' ' + lv.name }), el('i', { text: '⭐ ' + (st.stars || 0) }), el('i', { text: '🔥 ' + liveStreak(st) }))),
+        el('span', { class: 'go', text: 'ابدأ الدراسة ←' })),
+      el('div', { class: 'acts' },
+        el('button', { onclick: () => go('kid-' + p.id) }, el('span', { text: '📊' }), 'التقرير'),
+        el('button', { onclick: () => go('linkkid-' + p.id) }, el('span', { text: '📱' }), 'ربط موبايله'),
+        el('button', { onclick: () => go('tt-' + p.id) }, el('span', { text: '📅' }), 'الجدول' + (p.tt && p.tt.on ? ' ✓' : '')),
+        el('button', { onclick: () => go('ctrl-' + p.id) }, el('span', { text: '🎛️' }), 'التحكم' + (ctrlOn ? ' ✓' : ''))))); });
+  if (!ACC.co && kidsOf().length < MAX_KIDS) g.append(el('button', { class: 'kx-wadd', onclick: () => go('kids') }, el('span', { text: '＋' }), el('b', { text: 'أضف ابناً' }), el('small', { text: 'حتى ' + MAX_KIDS + ' أبناء في حساب واحد' })));
   s.append(g, el('div', { class: 'row', style: 'gap:8px;justify-content:center' }, el('button', { class: 'btn ghost', text: '✏️ إدارة الأبناء', onclick: () => go('kids') }), el('button', { class: 'btn ghost', text: '⚙️ حسابي', onclick: () => go('account') })));
 }
 
