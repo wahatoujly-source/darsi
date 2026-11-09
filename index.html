@@ -1407,11 +1407,15 @@ const speakAr=async(t,o={})=>{if(TTS.quiet&&!o.force)return;const tok=TTS.token;
 const FX={ctx:null,on:store.get('sound',true),lang:'ar',lastWin:0};
 function ac(){try{if(!FX.ctx){const A=window.AudioContext||window.webkitAudioContext;if(!A)return null;FX.ctx=new A();}if(FX.ctx.state==='suspended')FX.ctx.resume();return FX.ctx;}catch(e){return null;}}
 /* countdown clock: tick-tock each second, faster/louder in the last seconds (like a real quiz show) */
-let TK_n=0;function tick(left){if(!FX.on||kidSound().fx===false)return;const c=ac();if(!c)return;const t=c.currentTime+.005;const urgent=left!=null&&left<=5;
-  const one=(at,f,v)=>{const o=c.createOscillator(),g=c.createGain(),hp=c.createBiquadFilter();o.type='square';o.frequency.value=f;hp.type='highpass';hp.frequency.value=700;
-    g.gain.setValueAtTime(.0001,at);g.gain.exponentialRampToValueAtTime(v,at+.002);g.gain.exponentialRampToValueAtTime(.0001,at+.045);o.connect(hp);hp.connect(g);g.connect(c.destination);o.start(at);o.stop(at+.06);};
-  TK_n++;if(left===0){[0,.12,.24].forEach((d,i)=>one(t+d,i===2?660:880,.3));return;}
-  if(urgent){one(t,1900,.32);one(t+.5,1900,.26);}else one(t,TK_n%2?1500:1050,.2);}
+let TK_n=0;function tick(left){if(!FX.on||kidSound().fx===false)return;const c=ac();if(!c)return;const t=c.currentTime+.01;const urgent=left!=null&&left<=5;
+  const one=(at,f,v)=>{/* wood-block click: a short sine body + a bright square transient, loud enough for phone speakers */
+    const o=c.createOscillator(),g=c.createGain();o.type='sine';o.frequency.setValueAtTime(f,at);o.frequency.exponentialRampToValueAtTime(f*.6,at+.08);
+    g.gain.setValueAtTime(.0001,at);g.gain.exponentialRampToValueAtTime(v,at+.004);g.gain.exponentialRampToValueAtTime(.0001,at+.09);o.connect(g);g.connect(c.destination);o.start(at);o.stop(at+.1);
+    const o2=c.createOscillator(),g2=c.createGain();o2.type='square';o2.frequency.value=f*2.5;g2.gain.setValueAtTime(.0001,at);g2.gain.exponentialRampToValueAtTime(v*.35,at+.002);g2.gain.exponentialRampToValueAtTime(.0001,at+.025);o2.connect(g2);g2.connect(c.destination);o2.start(at);o2.stop(at+.03);};
+  TK_n++;if(left===0){[0,.14,.28].forEach((d,i)=>one(t+d,i===2?660:990,.7));return;}
+  if(urgent){one(t,1500,.75);one(t+.5,1500,.6);}else one(t,TK_n%2?1250:900,.6);}
+/* phones only allow sound after a touch: unlock the audio context on the first tap anywhere */
+['pointerdown','touchstart','keydown'].forEach(ev=>window.addEventListener(ev,()=>{const c=ac();if(c&&c.state!=='running')c.resume();try{const b=c.createBuffer(1,1,22050),s=c.createBufferSource();s.buffer=b;s.connect(c.destination);s.start(0);}catch(e){}},{passive:true}));
 /* parent's sound settings for the active child: {voice,praise,fx} (false = off) */
 function kidSound(){const A=window.ACC;if(!A||!A.pid||A.pid==='me'||!A.profiles)return {};const p=A.profiles.find(x=>x.id===A.pid);return (p&&p.snd)||{};}
 function tones(freqs,{dur=.16,gap=.08,type='triangle',vol=.16}={}){if(kidSound().fx===false)return;const c=ac();if(!c)return;let t=c.currentTime+.02;freqs.forEach(f=>{const o=c.createOscillator(),g=c.createGain();o.type=type;o.frequency.value=f;g.gain.setValueAtTime(0.0001,t);g.gain.exponentialRampToValueAtTime(vol,t+.015);g.gain.exponentialRampToValueAtTime(.0001,t+dur);o.connect(g);g.connect(c.destination);o.start(t);o.stop(t+dur+.03);t+=gap;});}
