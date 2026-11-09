@@ -590,12 +590,22 @@ function renderAccount() {
   if (!ACC.profile) { go('onboard'); return; }
   const P = ACC.profile, u = ACC.user, [ic, rt] = ROLES[P.role] || ['👤', ''];
   const s = page('حسابي', P.name, 'home');
-  s.append(el('div', { class: 'panel accbox' },
-    el('div', {}, el('b', { text: ic + ' ' + P.name }), el('span', { class: 'note', text: ' — ' + rt })),
-    (P.phone || phoneOf(u)) ? el('div', { class: 'note' }, el('span', { dir: 'ltr', text: '📱 ' + (P.phone || phoneOf(u)).replace('+218', '0') }), P.phoneVerified ? el('span', { class: 'tag', style: 'margin-inline-start:8px', text: '✓ مؤكد' }) : el('span', { class: 'tag sun', style: 'margin-inline-start:8px', text: 'يُؤكَّد برسالة عند الاشتراك' })) : null,
-    u.email && !phoneOf(u) ? el('div', { class: 'note', dir: 'ltr', style: 'text-align:right', text: '✉️ ' + u.email }) : null,
-    P.role === 'student' && activeProfile() && activeProfile().grade ? el('div', { class: 'note', text: '📚 الصف ' + gradeName(activeProfile().grade) }) : null));
-  if (isAdult()) s.append(el('button', { class: 'btn', text: '👨‍👩‍👧 أبنائي (' + kidsOf().length + ' من ' + MAX_KIDS + ')', onclick: () => go('kids') }));
+  { const U = n => 'img/ui/' + n + '.webp'; const ph = P.phone || phoneOf(u); const sub = ACC.subs && ACC.subs[0];
+    s.append(el('div', { class: 'kx-acch' },
+      el('div', { class: 'av' }, el('img', { src: U(P.role === 'teacher' ? 'k6' : P.role === 'student' ? 'k3' : 'n_acc'), alt: '' })),
+      el('div', { class: 'tx' }, el('span', { class: 'role', text: ic + ' ' + rt }), el('h2', { text: P.name }),
+        ph ? el('div', { class: 'ln' }, el('span', { dir: 'ltr', text: '📱 ' + ph.replace('+218', '0') }), P.phoneVerified ? el('span', { class: 'ok', text: '✓ مؤكد' }) : null) : null,
+        u.email && !ph ? el('div', { class: 'ln', dir: 'ltr', style: 'text-align:right', text: '✉️ ' + u.email }) : null,
+        P.role === 'student' && activeProfile() && activeProfile().grade ? el('div', { class: 'ln', text: '📚 الصف ' + gradeName(activeProfile().grade) }) : null,
+        el('span', { class: 'st' + (ACC.hasAnySub() ? ' on' : ''), text: ACC.hasAnySub() ? '⭐ مشترك' + (sub && sub.end ? ' حتى ' + fmtDate(sub.end.toMillis()) : '') : 'حساب مجاني' }))));
+    const T = [];
+    if (isAdult()) T.push(['k2', 'أبنائي', kidsOf().length + ' من ' + MAX_KIDS, () => go('kids')]);
+    T.push(['n_ach', 'التقارير', 'التقدّم والإنجازات', () => go(isAdult() && kidsOf().length ? 'who' : 'myreport')]);
+    T.push(['q_comp', ACC.hasAnySub() ? 'اشتراكي' : 'ترقية', ACC.hasAnySub() ? 'الباقات والتجديد' : 'افتح كل الدروس', () => go('subscribe')]);
+    { const tc = (ACC.access || {}).teach || {}; if (tc.on || ACC.isAdmin) T.push(['n_lessons', 'دوراتي', 'دورات الفيديو', () => go('courses-mine')]); }
+    if (P.role === 'teacher' || ACC.isAdmin) T.push(['k5', 'منصة المعلم', 'انشر دوراتك', () => go('studio')]);
+    T.push(['x_all', 'كتب PDF', 'المنهج مجاناً', () => go('books')]);
+    s.append(el('div', { class: 'kx-tiles' }, ...T.map(([im, t, sm, fn]) => el('button', { class: 'kx-m', onclick: fn }, el('img', { src: U(im), alt: '', loading: 'lazy' }), t, el('small', { text: sm }))))); }
   if (isAdult()) s.append(coParentBox());
   if (isAdult() && !ACC.co && !kidsOf().length) s.append(coRedeemBox());
   if (P.role === 'parent') { const m = el('div');
