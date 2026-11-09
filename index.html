@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#121A3A"><meta name="description" content="دروس تفاعلية بالصوت والصورة مطابقة للمنهج الليبي"><link rel="manifest" href="manifest.json"><link rel="icon" href="icons/icon-192.png"><link rel="apple-touch-icon" href="icons/apple-180.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="المجتهد">
+<html lang="ar" dir="rtl" data-theme="light"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#c4e7ff"><meta name="description" content="دروس تفاعلية بالصوت والصورة مطابقة للمنهج الليبي"><link rel="manifest" href="manifest.json"><link rel="icon" href="icons/icon-192.png"><link rel="apple-touch-icon" href="icons/apple-180.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="المجتهد">
 <style>:root{color-scheme:light;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
 <title>المجتهد</title>
 <meta name="claude:viewport-fit-sides" content="cover">
@@ -860,6 +860,97 @@ header.bar .btxt b,header.bar .btxt small{white-space:nowrap}
 .adm-fold[open]>summary{border-bottom:1px solid var(--line);background:color-mix(in srgb,var(--sea) 8%,var(--card))}.adm-fold[open]>summary i{transform:rotate(180deg)}
 .adm-fold>.panel{border:0!important;margin:0!important;border-radius:0!important;box-shadow:none!important}
 .adm-sure{background:#dc2626!important;color:#fff!important;border-color:#dc2626!important}
+
+/* ===================== v4 — واجهة الأطفال (رسومات المجتهد) ===================== */
+:root{--kx-ink:#1f2150;--kx-mut:#6b6e98;--kx-d:"Baloo Bhaijaan 2",var(--f-display)}
+html{overflow-x:hidden}html,body{background:linear-gradient(180deg,#c4e7ff 0,#e1f1ff 260px,#f3ecff 900px,#fff5e8 100%) #f6f3ff;min-height:100%}
+body::before{background:#c4e7ff!important}
+.app{position:relative}
+.app::before{content:"";position:absolute;inset:0 0 auto;height:340px;pointer-events:none;z-index:0;opacity:.95;background:
+ radial-gradient(56px 24px at 10% 70px,#fff 98%,#fff0),radial-gradient(40px 20px at 18% 60px,#fff 98%,#fff0),
+ radial-gradient(64px 26px at 88% 250px,#ffffffd0 98%,#fff0),radial-gradient(42px 20px at 80% 241px,#ffffffd0 98%,#fff0)}
+.app>*{position:relative;z-index:1}
+header.bar{-webkit-mask:none!important;mask:none!important;background:#ffffffe0!important;color:var(--kx-ink)!important;--on-color:var(--kx-ink);
+ margin:8px 0 10px!important;border-radius:24px!important;padding:8px 10px!important;border:1.5px solid #fff;box-shadow:0 8px 24px rgba(59,75,211,.13)!important;
+ backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);top:calc(env(safe-area-inset-top,0px) + 6px)}
+header.bar::after{display:none!important}
+header.bar h1{color:var(--kx-ink);font-family:var(--kx-d);font-weight:800;font-size:1.2rem}header.bar h1 small{color:var(--kx-mut);opacity:1;font-family:var(--f-body)}
+header.bar .btxt b{background:linear-gradient(90deg,#2b49e0,#7b3fe4);-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:none;font-family:var(--kx-d)}
+header.bar .btxt small{color:var(--kx-mut);opacity:1}
+header.bar .bmark{box-shadow:0 4px 10px rgba(0,0,0,.15)!important;width:44px;height:44px;border-radius:14px}
+header.bar .pill{background:#f2f1ff;border:1px solid #e4e1fb;color:var(--kx-ink);backdrop-filter:none}
+header.bar .pill.up{background:linear-gradient(180deg,#ffe07a,#ffb21e)!important;color:#5a3300!important;box-shadow:0 4px 0 #d98b00,inset 0 2px 0 rgba(255,255,255,.55)!important;font-family:var(--kx-d);font-weight:800}
+header.bar .back{background:linear-gradient(180deg,#fff,#eef0ff)!important;border:0!important;color:var(--kx-ink)!important;box-shadow:0 3px 0 #dcdcf3;border-radius:14px;height:40px;min-width:40px}
+header.bar .back svg{color:var(--kx-ink)!important}
+/* hero (grade) */
+.kx-hero{position:relative;height:250px;margin-top:4px}
+.kx-hero .bg{position:absolute;inset:34px 0 0;border-radius:32px;background:linear-gradient(160deg,var(--a),var(--b));box-shadow:0 18px 34px -16px var(--b),inset 0 3px 0 rgba(255,255,255,.45);overflow:hidden}
+.kx-hero .bg::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 125%,rgba(255,255,255,.32) 0 38%,#fff0 39%),radial-gradient(circle at 50% 125%,rgba(255,255,255,.16) 0 54%,#fff0 55%),radial-gradient(circle at 50% 125%,rgba(255,255,255,.09) 0 70%,#fff0 71%)}
+.kx-kid{position:absolute;bottom:-4px;height:236px;max-width:42%;object-fit:contain;filter:drop-shadow(0 10px 10px rgba(0,0,0,.2));z-index:3;animation:kxb 4s ease-in-out infinite}
+.kx-kid.r{right:-4px}.kx-kid.l{left:-4px;animation-delay:-2s}
+@keyframes kxb{50%{transform:translateY(-5px)}}
+.kx-plq{position:absolute;left:50%;top:60px;transform:translateX(-50%);z-index:4;text-align:center;width:46%}
+.kx-plq .cap{display:inline-block;font-family:var(--kx-d);font-weight:800;font-size:15px;color:var(--b);background:#fff;border-radius:999px;padding:0 14px;box-shadow:0 3px 0 rgba(0,0,0,.08)}
+.kx-plq h1{font-family:var(--kx-d);font-weight:800;font-size:48px;line-height:1.05;margin:4px 0 2px;color:#fff;-webkit-text-stroke:7px var(--d);paint-order:stroke fill;text-shadow:0 6px 0 rgba(0,0,0,.15);white-space:nowrap}
+.kx-plq .lvl{display:inline-block;font-family:var(--kx-d);font-weight:800;font-size:16px;color:#4a2b00;background:linear-gradient(180deg,#ffe58a,#ffbf2f);border-radius:999px;padding:0 16px;box-shadow:0 3px 0 #c98800}
+.kx-plq p{margin:8px 0 0;color:#fff;font-weight:700;font-size:13px;line-height:1.4;text-shadow:0 1px 2px rgba(0,0,0,.25)}
+.kx-spk{position:absolute;z-index:2;font-size:22px;animation:kxs 2.6s ease-in-out infinite}@keyframes kxs{50%{transform:scale(1.25) rotate(12deg)}}
+/* quick tabs */
+.kx-qt{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:14px}
+.kx-q{position:relative;border:0;border-radius:24px;padding:8px 6px 10px;text-align:center;background:linear-gradient(180deg,var(--a),var(--b));box-shadow:0 6px 0 var(--d),0 14px 20px -10px var(--d),inset 0 2px 0 rgba(255,255,255,.5);color:#fff;font-family:var(--kx-d);font-weight:800;font-size:18px;overflow:hidden;cursor:pointer;transition:transform .12s}
+.kx-q img{width:84px;height:84px;object-fit:contain;display:block;margin:-2px auto -2px;filter:drop-shadow(0 6px 6px rgba(0,0,0,.2))}
+.kx-q::after{content:"";position:absolute;inset:6px 10px auto;height:30%;border-radius:18px;background:linear-gradient(rgba(255,255,255,.33),#fff0);pointer-events:none}
+.kx-q:active,.kx-s2:active,.kx-g:active,.kx-m:active,.kx-cta:active{transform:translateY(4px) scale(.98)}
+/* stats */
+.kx-st{display:grid;grid-template-columns:1fr 1.4fr 1fr;gap:8px;margin-top:14px}
+.kx-s{background:rgba(255,255,255,.92);border-radius:20px;padding:8px;box-shadow:0 6px 16px rgba(59,75,211,.08);border:1.5px solid #fff;font-size:11.5px;color:var(--kx-mut);display:flex;flex-direction:column;gap:3px;align-items:center;text-align:center;min-width:0}
+.kx-s b{font-family:var(--kx-d);font-weight:800;font-size:17px;color:var(--kx-ink);line-height:1.1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
+.kx-bar{width:100%;height:12px;border-radius:8px;background:#ecebf8;overflow:hidden;box-shadow:inset 0 2px 3px rgba(0,0,0,.06)}.kx-bar i{display:block;height:100%;border-radius:8px;background:linear-gradient(90deg,#16c172,#9be15d);box-shadow:inset 0 3px 0 rgba(255,255,255,.4)}
+.kx-lab{display:table;margin:18px auto 12px;font-family:var(--kx-d);font-weight:800;font-size:18px;color:#fff;background:linear-gradient(90deg,#6a3df0,#b14ef0);padding:2px 22px;border-radius:999px;box-shadow:0 5px 0 #4b25b8,0 10px 18px -8px #6a3df0}
+/* subjects */
+.kx-sg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px}
+.kx-s2{position:relative;background:linear-gradient(180deg,#fff 30%,var(--t));border-radius:24px;padding:6px 4px 9px;text-align:center;border:2px solid #fff;box-shadow:0 6px 0 var(--k),0 14px 20px -12px var(--k);cursor:pointer;font:inherit;color:var(--kx-ink);min-width:0;transition:transform .12s}
+.kx-s2 img{width:100%;height:86px;object-fit:contain;display:block;margin-bottom:3px;filter:drop-shadow(0 6px 6px rgba(0,0,0,.12))}
+.kx-s2 .ei{display:grid;place-items:center;height:86px;font-size:46px}
+.kx-s2 b{display:block;font-family:var(--kx-d);font-weight:800;font-size:15px;line-height:1.15}
+.kx-s2 small{display:block;font-size:10.5px;color:var(--kx-mut);margin-top:2px}
+.kx-s2.off{opacity:.7;cursor:default}.kx-s2 .soon{position:absolute;top:8px;left:8px;font-size:10px;font-weight:800;background:#ffd33d;color:#5a3a00;border-radius:999px;padding:0 8px}
+/* cta + minis */
+.kx-cta{width:100%;display:flex;align-items:center;justify-content:center;gap:8px;font-family:var(--kx-d);font-weight:800;font-size:23px;color:#fff;border:0;border-radius:999px;padding:4px 10px;margin-top:18px;background:linear-gradient(180deg,#b35cff,#6a1fd6);box-shadow:0 7px 0 #45108f,0 16px 26px -10px #6a1fd6,inset 0 2px 0 rgba(255,255,255,.45);cursor:pointer;transition:transform .12s}
+.kx-cta img{width:62px;height:62px;object-fit:contain;margin:-10px 0}
+.kx-mini{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin-top:16px}
+.kx-m{background:rgba(255,255,255,.92);border-radius:20px;padding:6px 6px 8px;text-align:center;font-family:var(--kx-d);font-weight:800;font-size:14px;line-height:1.2;color:var(--kx-ink);border:1.5px solid #fff;box-shadow:0 6px 16px rgba(59,75,211,.08);cursor:pointer;min-width:0;transition:transform .12s}
+.kx-m img{width:64px;height:64px;object-fit:contain;display:block;margin:0 auto 2px}
+.kx-m small{display:block;font-family:var(--f-body);font-weight:600;font-size:10px;color:var(--kx-mut);line-height:1.3}
+/* home hero */
+.kx-hb{position:relative;height:262px;margin-top:2px}
+.kx-hb .bg{position:absolute;inset:40px 0 0;border-radius:32px;background:linear-gradient(150deg,#4b6bff,#8a4dff 60%,#ff5fa2);box-shadow:0 18px 34px -16px #6d3cf0,inset 0 3px 0 rgba(255,255,255,.4);overflow:hidden}
+.kx-hb .bg::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 18% 125%,rgba(255,255,255,.25) 0 40%,#fff0 41%),radial-gradient(circle at 18% 125%,rgba(255,255,255,.12) 0 58%,#fff0 59%)}
+.kx-hb .tx{position:absolute;right:14px;top:62px;width:calc(100% - 190px);max-width:260px;color:#fff;z-index:4}
+.kx-hb h2{font-family:var(--kx-d);font-weight:800;font-size:25px;line-height:1.12;margin:0;color:#fff;text-shadow:0 3px 0 rgba(0,0,0,.12)}
+.kx-hb p{font-size:12.5px;margin:6px 0 10px;font-weight:700;line-height:1.5;color:#fff;opacity:.96}
+.kx-go{display:inline-block;border:0;font-family:var(--kx-d);font-weight:800;font-size:16px;background:#fff;color:#5b21b6;border-radius:999px;padding:4px 16px;box-shadow:0 4px 0 #d8ccff;cursor:pointer}
+.kx-grp{position:absolute;left:0;bottom:-4px;width:175px;height:250px;z-index:3}
+.kx-grp img{position:absolute;bottom:0;filter:drop-shadow(0 8px 10px rgba(0,0,0,.2))}.kx-grp img:nth-child(1){left:-8px;height:196px}.kx-grp img:nth-child(2){left:40px;height:238px;z-index:2}.kx-grp img:nth-child(3){left:98px;height:204px}
+.kx-sec{display:flex;align-items:center;gap:8px;font-family:var(--kx-d);font-weight:800;font-size:19px;color:var(--kx-ink);margin:20px 0 10px}.kx-sec::after{content:"";flex:1;height:4px;border-radius:3px;background:linear-gradient(90deg,#fff0,#a48bff)}
+.kx-gg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px}
+.kx-g{min-width:0;position:relative;height:150px;border:0;border-radius:26px;background:linear-gradient(170deg,var(--a),var(--b));box-shadow:0 6px 0 var(--d),0 14px 22px -12px var(--d),inset 0 2px 0 rgba(255,255,255,.5);overflow:hidden;color:#fff;cursor:pointer;padding:0;font:inherit;transition:transform .12s}
+.kx-g::before{content:"";position:absolute;inset:auto -20% -40%;height:70%;border-radius:50%;background:rgba(255,255,255,.15)}
+.kx-g img{position:absolute;left:-10px;bottom:-26px;height:128px}
+.kx-g .n{position:absolute;top:8px;right:8px;width:42px;height:42px;border-radius:50%;background:#fff;color:var(--b);font-family:var(--kx-d);font-weight:800;font-size:27px;display:grid;place-items:center;box-shadow:0 3px 0 rgba(0,0,0,.12)}
+.kx-g b{position:absolute;right:8px;top:54px;font-family:var(--kx-d);font-weight:800;font-size:20px;line-height:1;text-shadow:0 2px 0 rgba(0,0,0,.12)}
+.kx-g small{position:absolute;right:8px;top:80px;font-size:10px;font-weight:700;width:60px;line-height:1.25;text-align:right;text-shadow:0 1px 2px rgba(0,0,0,.2)}
+.kx-g.mine{outline:4px solid #ffd33d;outline-offset:2px}.kx-g .me{position:absolute;bottom:6px;right:6px;font-family:var(--kx-d);font-weight:800;font-size:11px;background:#ffd33d;color:#5a3a00;border-radius:999px;padding:0 8px}
+.kx-g.off{filter:grayscale(.8);opacity:.6;cursor:default}
+.kx-gg.one{grid-template-columns:1fr}.kx-gg.one .kx-g{height:170px}.kx-gg.one .kx-g img{height:190px;left:16px;bottom:-40px}.kx-gg.one .kx-g b{font-size:30px;top:60px}.kx-gg.one .kx-g small{top:100px;width:auto;font-size:13px}
+/* bottom nav */
+.kx-nav{position:fixed;bottom:0;left:0;right:0;z-index:40;display:none;justify-content:center;pointer-events:none}
+.kx-nav>div{pointer-events:auto;width:100%;max-width:560px;height:calc(76px + env(safe-area-inset-bottom,0px));padding-bottom:env(safe-area-inset-bottom,0px);background:rgba(255,255,255,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-radius:28px 28px 0 0;box-shadow:0 -8px 26px rgba(59,75,211,.14);display:grid;grid-template-columns:repeat(5,1fr);align-items:end}
+.kx-nv{border:0;background:none;font:inherit;text-align:center;font-size:11px;color:var(--kx-mut);font-weight:700;padding:0 0 9px;cursor:pointer}.kx-nv img{width:38px;height:38px;object-fit:contain;display:block;margin:0 auto 1px;transition:transform .15s}
+.kx-nv.on{color:#2b5ce6}.kx-nv.on img{transform:translateY(-3px) scale(1.08)}
+.kx-nv.home span{width:62px;height:62px;border-radius:50%;margin:-30px auto 2px;display:grid;place-items:center;background:linear-gradient(180deg,#7fb2ff,#2b5ce6);border:5px solid #fff;box-shadow:0 8px 18px rgba(43,92,230,.35)}.kx-nv.home span img{width:42px;height:42px;margin:0}
+body.has-nav .kx-nav{display:flex}body.has-nav .app{padding-bottom:calc(96px + env(safe-area-inset-bottom,0px))}
+@media (min-width:600px){.kx-hero,.kx-hb{height:290px}.kx-kid{height:276px}}
 </style>
 
 </head><body>
@@ -2151,7 +2242,7 @@ function renderStart(){root.innerHTML='';document.body.classList.add('wl-on');
     pick('👀','زائر','أتصفح الدروس المجانية أولاً',()=>{store.set('welcomed',true);document.body.classList.remove('wl-on');go('home');},'v'),
     el('button',{class:'st-link',text:'🧒 عندي رمز من ولي أمري',onclick:()=>{store.set('welcomed',true);document.body.classList.remove('wl-on');go('link');}}),
     el('button',{class:'st-link',text:'لدي حساب — تسجيل الدخول',onclick:()=>{store.set('welcomed',true);document.body.classList.remove('wl-on');go('login');}})));}
-const GRADE_NOTE={'1':'نتعلّم الحروف والأعداد','2':'نقرأ ونكتب ونحسب','3':'نكبر ونكتشف','4':'نبدأ رحلة العلوم','5':'نفكّر ونبحث','6':'نختم المرحلة الابتدائية','7':'أول الإعدادي','8':'نتعمّق أكثر','9':'شهادة التعليم الأساسي'};
+const GRADE_NOTE={'1':'نتعلّم الحروف والأعداد','2':'نقرأ ونكتب ونحسب','3':'نكبر ونكتشف','4':'نبدأ رحلة العلوم','5':'نفكّر ونبحث','6':'نتقدّم بثقة','7':'نتعمّق في المعرفة','8':'نبحث ونبدع','9':'شهادة التعليم الأساسي'};
 const AR_NUM=n=>String(n); // في ليبيا تُستعمل الأرقام 1 2 3
 /* a learner (child profile, linked child phone, or student) sees only his own grade */
 function lockedGrade(){const A=window.ACC;if(!A||!A.user||!A.pid||!A.profiles||A.adminBrowse)return null;const p=A.profiles.find(x=>x.id===A.pid);
@@ -2234,57 +2325,103 @@ function renderInvite(code){root.innerHTML='';const R=ACCX().ref||{};const inv=R
     el('button',{class:'btn ghost',text:'🧮 أو اختبر مستوى ابنك في الرياضيات مجاناً',onclick:()=>go('test')}),
     el('button',{class:'linkbtn',text:'تصفّح الدروس المجانية أولاً',onclick:()=>{store.set('welcomed',true);go('home');}}));
   root.append(sec);}
+/* ===== v4 design helpers ===== */
+const UIMG=n=>'img/ui/'+n+'.webp';
+const KX_GR={1:['#ff7a7a','#e8384f','#b51f35'],2:['#ffb44d','#f47a12','#c25500'],3:['#5fd47a','#24a148','#17782f'],4:['#32cbd9','#0e9fb3','#08768a'],5:['#5ab0ff','#1f72e0','#1453ad'],6:['#a07bff','#6c43ea','#4b2bb8'],7:['#6a86ff','#3a56dd','#2a3fae'],8:['#e07af5','#ad3fcb','#82269c'],9:['#ff6f9e','#d92f6b','#a61a4e']};
+const KX_SUB={ar:['#ffe3e3','#ffadad'],en:['#e2f0ff','#9dc8ff'],math:['#fff1d6','#ffcf70'],isl:['#dff7ea','#86d9ac'],sci:['#ece5ff','#bea6ff'],civ:['#ffe9e0','#ffb59a'],soc:['#dff4ff','#8fd3f5'],hist:['#fff0dc','#f4c487'],geo:['#e3f6e6','#97d6a2'],comp:['#dffaf7','#7fdccf'],art:['#ffe6f2','#ffa6cf']};
+const kxPair=n=>(+n<=3?['k1','k2']:+n<=6?['k3','k4']:['k5','k6']);
+const kxVars=n=>{const c=KX_GR[n]||['#8aa0ff','#5b6cf0','#3e4bc0'];return '--a:'+c[0]+';--b:'+c[1]+';--d:'+c[2];};
+const kxMini=(img,t,sub,fn)=>el('button',{class:'kx-m',onclick:fn},el('img',{src:UIMG(img),alt:'',loading:'lazy'}),t,sub?el('small',{text:sub}):null);
+const kxArenaOn=()=>!!(ACCX().arena&&ACCX().arena.on);
+const kxTeachOn=()=>{const tc=ACCX().teach||{};return !!((tc.on&&tc.show)||(window.ACC&&ACC.isAdmin&&tc.on));};
+function kxMyGrade(){const LG=lockedGrade();if(LG)return LG;const who=window.ACC&&ACC.user&&ACC.profiles&&ACC.profiles.find(p=>p.id===ACC.pid);if(who&&who.grade)return String(who.grade);const lr=store.get('last_route','');const m=/^g(\d)/.exec(lr);return m?m[1]:null;}
+let KXNAV=null;
+function kxNav(h){
+  const show=/^(home|g\d+|g\d+-[a-z]+|books(-\d+)?|myreport|account|board|courses(-[a-z0-9]+)?|kids|who|mistakes)?$/.test(h);
+  document.body.classList.toggle('has-nav',show);if(!show)return;
+  if(!KXNAV){KXNAV=el('nav',{class:'kx-nav','aria-label':'التنقل'},el('div'));document.body.append(KXNAV);}
+  const g=kxMyGrade();const acc=window.ACC&&ACC.user&&!(ACC.user.isAnonymous&&!ACC.kid);
+  const items=[['n_acc','حسابي',acc?'account':'login',/^(account|kids|who)$/],['n_ach','إنجازاتي','myreport',/^(myreport|board|mistakes)$/],['n_home','الرئيسية','home',/^(home)?$/],
+    ['n_lib','المكتبة',bkAnyOn()?'books':'courses',/^(books|courses)/],['n_lessons','الدروس',g?'g'+g:'home',/^g\d/]];
+  const box=KXNAV.firstChild;box.innerHTML='';
+  items.slice().reverse().forEach(([ic,t,to,re])=>{const on=re.test(h);const home=ic==='n_home';
+    box.append(el('button',{class:'kx-nv'+(home?' home':'')+(on?' on':''),onclick:()=>go(to)},home?el('span',{},el('img',{src:UIMG(ic),alt:''})):el('img',{src:UIMG(ic),alt:''}),t));});
+}
 function renderHome(){
   const c=App.catalog;root.innerHTML='';
   root.append(bar(null,null,null,subPill()));
   const who=window.ACC&&ACC.user&&ACC.profiles&&ACC.profiles.find(p=>p.id===ACC.pid);
   const mineG=who&&who.grade?String(who.grade):null;
   const LG=lockedGrade();
-  root.append(el('div',{class:'hm-hero'},
-    el('h2',{text:who&&who.id!=='me'?'أهلاً '+who.name+' 👋':'اختر صفّك وابدأ التعلّم'}),
-    el('p',{text:'دروس المنهج الليبي بالصوت والصورة.'})));
+  {const nm=who&&who.id!=='me'&&who.name?who.name:'';
+   root.append(el('div',{class:'kx-hb'},el('div',{class:'bg'}),el('span',{class:'kx-spk',style:'top:58px;left:168px',text:'✨'}),
+    el('div',{class:'kx-grp'},el('img',{src:UIMG('k2'),alt:''}),el('img',{src:UIMG('k3'),alt:''}),el('img',{src:UIMG('k4'),alt:''})),
+    el('div',{class:'tx'},el('h2',{text:nm?('أهلاً يا '+nm+'! 👋'):'أهلاً يا بطل! 👋'}),el('h2',{style:'font-size:21px;margin-top:2px',text:'جاهز تتعلّم اليوم؟'}),
+      el('p',{text:'المنهج الليبي كامل بالصوت والصورة… تعلّم والعب واجمع النجوم ⭐'}),
+      el('button',{class:'kx-go',onclick:()=>{const g=mineG||LG;if(g)go('g'+g);else{const t=document.querySelector('.kx-gg');t&&t.scrollIntoView({behavior:'smooth',block:'start'});}},text:(mineG||LG)?'ادخل صفّك ←':'اختر صفّك ←'}))));}
   {const pc=window.ACC&&ACC.pushCard&&ACC.pushCard();if(pc)root.append(pc);}
-  const card=gr=>{const on=!!c.grades[gr.id];const n=parseInt(gr.id,10);
-    return el('button',{class:'gcard'+(on?'':' off')+(mineG===gr.id||LG===gr.id?' mine':''),style:on&&n?'--c:var(--g'+n+')':null,disabled:!on,onclick:()=>go('g'+gr.id)},
-      el('span',{class:'gn',text:n?AR_NUM(n):'★'}),
-      el('span',{class:'gl',text:/^الصف /.test(gr.name)?'الصف':''}),el('b',{text:gr.name.replace(/^الصف /,'')+(gr.track?' — '+gr.track:'')}),
-      el('small',{text:on?(GRADE_NOTE[gr.id]||''):'قريباً'}));};
-  const groups=[['المرحلة الابتدائية',['1','2','3','4','5','6']],['المرحلة الإعدادية',['7','8','9']]];
+  const card=gr=>{const on=!!c.grades[gr.id];const n=parseInt(gr.id,10);const mine=mineG===gr.id||LG===gr.id;const pr=kxPair(n||9);
+    return el('button',{class:'kx-g'+(on?'':' off')+(mine?' mine':''),style:kxVars(n),disabled:!on,onclick:()=>go('g'+gr.id)},
+      el('img',{src:UIMG(pr[(n||1)%2]),alt:'',loading:'lazy'}),el('span',{class:'n',text:n?String(n):'★'}),el('b',{text:gr.name.replace(/^الصف /,'')}),
+      el('small',{text:on?(GRADE_NOTE[gr.id]||''):'قريباً'}),mine?el('span',{class:'me',text:'صفّك'}):null);};
   const all=[].concat(...c.stages.map(st=>st.grades));
   const sec=el('section',{class:'gsec'});
-  groups.forEach(([name,ids])=>{const gs=all.filter(g=>ids.includes(g.id)&&(!LG||g.id===LG));if(!gs.length)return;
-    sec.append(el('div',{class:'gsec-h'},el('span',{text:name}),el('i')),el('div',{class:'ggrid'+(gs.length===1?' one':'')},...gs.map(card)));});
-  const rest=all.filter(g=>!groups.some(x=>x[1].includes(g.id)));
+  {const gs=all.filter(g=>/^\d$/.test(g.id)&&(!LG||g.id===LG));
+   if(gs.length)sec.append(el('div',{class:'kx-sec'},el('span',{text:'🎒 صفوف التعليم الأساسي'})),el('div',{class:'kx-gg'+(gs.length===1?' one':'')},...gs.map(card)));}
+  const rest=all.filter(g=>!/^\d$/.test(g.id));
   if(!LG&&rest.length){const on=rest.filter(g=>c.grades[g.id]);
-    if(on.length)sec.append(el('div',{class:'gsec-h'},el('span',{text:'المرحلة الثانوية'}),el('i')),el('div',{class:'ggrid'},...rest.map(card)));
+    if(on.length)sec.append(el('div',{class:'kx-sec'},el('span',{text:'🎓 المرحلة الثانوية'})),el('div',{class:'kx-gg'},...rest.map(card)));
     else sec.append(el('div',{class:'gsoon'},'🎓 المرحلة الثانوية — قريباً'));}
   root.append(sec);
+  {const mm=[];if(kxArenaOn())mm.push(kxMini('q_comp','المسابقات','مباشرة مع طلاب ليبيا',()=>go('arena')));
+   mm.push(kxMini('q_times','جدول الضرب','من 1 إلى 12',()=>go('times')),kxMini('q_test','اختبر مستواك','مجاناً — دقيقتان',()=>go('test')));
+   if(bkAnyOn())mm.push(kxMini('x_all','كتب PDF','كتب المنهج مجاناً',()=>go('books')));
+   if(kxTeachOn())mm.push(kxMini('n_lessons','دورات المعلمين','فيديو من معلمين معتمدين',()=>go('courses')));
+   root.append(el('div',{class:'kx-mini'},...mm));}
   const below=el('section',{class:'hm-below'});
   const ic=installCard();if(ic)below.append(ic);
   {const tc=ttCard();if(tc)below.append(tc);}
   if(GAME.stats().stars>0||(window.ACC&&ACC.user))below.append(el('div',{class:'gsec-h'},el('span',{text:'نشاطي اليوم'}),el('i')),GAME.card());
-  {const tc=ACCX().teach||{};if((tc.on&&tc.show)||(window.ACC&&ACC.isAdmin&&tc.on))below.append(el('button',{class:'bk-card tc-card-home',onclick:()=>go('courses')},el('span',{class:'bi',text:'🎥'}),el('span',{},el('b',{text:'دورات المعلمين'}),el('small',{text:'دروس فيديو ومهارات من معلمين معتمدين'})),el('span',{class:'bk-go',text:'شاهد'})));}
-  if(ACCX().arena&&ACCX().arena.on)below.append(el('button',{class:'bk-card',style:'border-color:#7c3aed',onclick:()=>go('arena')},el('span',{class:'bi',text:'🏟️'}),el('span',{},el('b',{text:'ساحة المسابقات المباشرة'}),el('small',{text:'نافس طلاب ليبيا في الرياضيات — الأسرع والأدق يفوز بالأوسمة'})),el('span',{class:'bk-go',style:'background:#7c3aed',text:'ادخل'})));
-  below.append(el('button',{class:'bk-card',style:'border-color:#16a34a',onclick:()=>go('times')},el('span',{class:'bi',text:'✖️'}),el('span',{},el('b',{text:'احفظ جدول الضرب'}),el('small',{text:'من 1 إلى 12 — تعلّم، مستويات، نجوم وتحديات'})),el('span',{class:'bk-go',style:'background:#16a34a',text:'ابدأ'})));
-  below.append(el('button',{class:'bk-card',style:'border-color:#f59e0b',onclick:()=>go('test')},el('span',{class:'bi',text:'🧮'}),el('span',{},el('b',{text:'اختبر مستوى ابنك مجاناً'}),el('small',{text:'الجمع، الطرح، جدول الضرب والقسمة — دقيقتان فقط'})),el('span',{class:'bk-go',style:'background:#f59e0b',text:'ابدأ'})));
   {const rc=store.get('my_ref','');const lk='https://mujtahid.ly/'+(rc?'#i-'+rc:'');const tx='منصة المجتهد: دروس المنهج الليبي للصفوف 1–9 بالصوت والصورة والألعاب 📚✨ جرّبوها مع أبنائكم 👇\n'+lk;
    below.append(el('a',{class:'btn ghost',style:'width:100%;justify-content:center;margin-top:6px',href:'https://wa.me/?text='+encodeURIComponent(tx),target:'_blank',rel:'noopener',text:'💬 شارك المنصة مع الأهل والأصدقاء على واتساب'}));}
-  if(bkAnyOn())below.append(el('button',{class:'bk-card',onclick:()=>go('books')},el('span',{class:'bi',text:'📚'}),el('span',{},el('b',{text:'الكتب المدرسية PDF'}),el('small',{text:'حمّل كتب المنهج الليبي لكل الصفوف مجاناً'})),el('span',{class:'bk-go',text:'تحميل'})));
   if(!LG)below.append(el('button',{class:'teach-card',onclick:()=>go('teacher')},el('span',{class:'ti',text:'👩‍🏫'}),el('span',{},el('b',{text:'للمعلم: صانع الاختبارات'}),el('span',{class:'note',text:'اختبارات شهرية جاهزة لكل مادة، تعدّلها وتطبعها PDF باسم مدرستك'})),el('span',{class:'ls',text:'←'})));
   if(below.childNodes.length)root.append(below);
   root.append(el('a',{class:'legal-link',href:'#privacy',text:'الخصوصية وشروط الاستخدام'}));
 }
 function renderGrade(n){
   const c=App.catalog,subs=c.grades[n];if(!subs){go('home');return;}root.innerHTML='';
-  root.append(bar(gradeLabel(gradeInfo(n)),'اختر المادة','home',subPill()));
-  const g=el('div',{class:'subjects'});
-  const CT=learnerCtrl();if(CT)root.append(el('div',{class:'feedback info',text:'📌 المواد التي اختارها لك ولي أمرك.'}));
-  subs.filter(s=>ctrlSubOk(CT,s.id)&&!isClosed(n,s.id,'-')).forEach(s=>{const us=unitsOf(s),total=us.reduce((a,u)=>a+u.lessons.length,0),ready=us.reduce((a,u)=>a+u.lessons.filter(l=>l.ready).length,0);
-    g.append(el('button',{class:'scard',onclick:()=>go('g'+n+'-'+s.id)},el('span',{class:'sicon',lang:s.lang==='en'?'en':null,text:s.icon}),el('span',{},el('b',{text:s.name}),el('span',{class:'note',text:(s.books&&s.books.length>1?s.books.length+' كتب · ':'')+us.length+' '+({'الباب ':'أبواب','القسم ':'أقسام','الوحدة ':'وحدات'}[s.unitWord||(s.id==='en'?'الوحدة ':'')]||'فصول')+' · '+ready+' من '+total+' دروس جاهزة'}))));});
-  if(!lockedGrade())c.plannedSubjects.forEach(s=>g.append(el('div',{class:'scard off'},el('span',{class:'sicon',text:s.icon}),el('span',{},el('b',{text:s.name}),el('span',{class:'tag sun',text:'قريباً'})))));
-  root.append(el('section',{},g,+n>=2&&ACCX().arena&&ACCX().arena.on?el('button',{class:'bk-card',style:'margin-top:14px;border-color:#7c3aed',onclick:()=>go('arena')},el('span',{class:'bi',text:'🏟️'}),el('span',{},el('b',{text:'ساحة المسابقات المباشرة'}),el('small',{text:'نافس طلاب ليبيا في الرياضيات — الأسرع والأدق يفوز بالأوسمة'})),el('span',{class:'bk-go',style:'background:#7c3aed',text:'ادخل'})):null,+n>=2?el('button',{class:'bk-card',style:'margin-top:14px;border-color:#16a34a',onclick:()=>go('times')},el('span',{class:'bi',text:'✖️'}),el('span',{},el('b',{text:'احفظ جدول الضرب'}),el('small',{text:'من 1 إلى 12 — تعلّم، مستويات، نجوم وتحديات'})),el('span',{class:'bk-go',style:'background:#16a34a',text:'ابدأ'})):null,
-    el('button',{class:'bk-card',style:'margin-top:10px;border-color:#f59e0b',onclick:()=>go('test')},el('span',{class:'bi',text:'🧮'}),el('span',{},el('b',{text:'اختبر مستواك في الرياضيات'}),el('small',{text:'الجمع، الطرح، الضرب والقسمة — دقيقتان'})),el('span',{class:'bk-go',style:'background:#f59e0b',text:'ابدأ'})),
-    (ACCX().teach||{}).on&&(ACCX().teach||{}).show?el('button',{class:'bk-card tc-card-home',style:'margin-top:14px',onclick:()=>go('courses-g'+n)},el('span',{class:'bi',text:'🎥'}),el('span',{},el('b',{text:'دورات فيديو لهذا الصف'}),el('small',{text:'شروحات وحصص تقوية من معلمين معتمدين'})),el('span',{class:'bk-go',text:'شاهد'})):null,!bkGradeOn(String(n))?null:el('button',{class:'bk-card',style:'margin-top:14px',onclick:()=>go('books-'+n)},el('span',{class:'bi',text:'📚'}),el('span',{},el('b',{text:'كتب هذا الصف PDF'}),el('small',{text:'حمّل كتب المنهج مجاناً'})),el('span',{class:'bk-go',text:'تحميل'})),el('button',{class:'teach-card',style:'margin-top:14px',onclick:()=>go('teacher-'+n)},el('span',{class:'ti',text:'👩‍🏫'}),el('span',{},el('b',{text:'صانع الاختبارات للمعلم'}),el('span',{class:'note',text:'اختبارات جاهزة لهذا الصف قابلة للتعديل والطباعة'})),el('span',{class:'ls',text:'←'}))));
+  const gi=gradeInfo(n);root.append(bar(gradeLabel(gi),'اختر المادة','home',subPill()));
+  const ng=parseInt(n,10)||0;const pr=kxPair(ng||7);
+  const title=String(gi&&gi.name||gradeLabel(gi)).replace(/^الصف /,'');
+  root.append(el('div',{class:'kx-hero',style:kxVars(ng)},el('div',{class:'bg'}),el('span',{class:'kx-spk',style:'top:54px;right:44%',text:'✨'}),
+    el('img',{class:'kx-kid r',src:UIMG(pr[0]),alt:''}),el('img',{class:'kx-kid l',src:UIMG(pr[1]),alt:''}),
+    el('div',{class:'kx-plq'},el('span',{class:'cap',text:'الصف'}),el('h1',{text:title,style:title.length>6?'font-size:38px':null}),el('span',{class:'lvl',text:ng?'أساسي':'ثانوي'}),el('p',{text:GRADE_NOTE[n]||''}))));
+  const CT=learnerCtrl();
+  const toSubs=()=>{const t=document.querySelector('.kx-sg');t&&t.scrollIntoView({behavior:'smooth',block:'start'});};
+  root.append(el('div',{class:'kx-qt'},
+    el('button',{class:'kx-q',style:'--a:#ffb347;--b:#f57c00;--d:#c05a00',onclick:toSubs},el('img',{src:UIMG('q_learn'),alt:''}),'التعلّم'),
+    el('button',{class:'kx-q',style:'--a:#36d1dc;--b:#0f9bb0;--d:#08778a',onclick:()=>go('mistakes')},el('img',{src:UIMG('q_review'),alt:''}),'المراجعة'),
+    el('button',{class:'kx-q',style:'--a:#b48cff;--b:#7044ec;--d:#4f2bbd',onclick:()=>go(kxArenaOn()&&ng>=2?'arena':'board')},el('img',{src:UIMG('q_comp'),alt:''}),'المنافسة')));
+  {const x=GAME.stats();const nx=x.level.next;const pct=Math.round(100*(nx?(x.stars-x.level.min)/Math.max(1,nx[0]-x.level.min):1));
+   root.append(el('div',{class:'kx-st'},el('div',{class:'kx-s'},'نجومي',el('b',{text:'⭐ '+x.stars})),
+     el('div',{class:'kx-s'},nx?'باقي '+(nx[0]-x.stars)+' نجمة للمستوى التالي':'أعلى مستوى!',el('div',{class:'kx-bar'},el('i',{style:'width:'+Math.max(4,Math.min(100,pct))+'%'})),el('b',{style:'font-size:14px',text:pct+'%'})),
+     el('div',{class:'kx-s'},'مستواي',el('b',{text:x.level.icon+' '+x.level.name}))));}
+  if(CT)root.append(el('div',{class:'feedback info',style:'margin-top:12px',text:'📌 المواد التي اختارها لك ولي أمرك.'}));
+  root.append(el('div',{class:'kx-lab',text:'📖 المواد والدروس'}));
+  const g=el('div',{class:'kx-sg'});
+  const pic=s=>KX_SUB[s.id]?el('img',{src:UIMG('s_'+s.id),alt:'',loading:'lazy'}):el('span',{class:'ei',lang:s.lang==='en'?'en':null,text:s.icon});
+  subs.filter(s=>ctrlSubOk(CT,s.id)&&!isClosed(n,s.id,'-')).forEach(s=>{const us=unitsOf(s),ready=us.reduce((a,u)=>a+u.lessons.filter(l=>l.ready).length,0);const k=KX_SUB[s.id]||['#eef0ff','#c3c8f5'];
+    g.append(el('button',{class:'kx-s2',style:'--t:'+k[0]+';--k:'+k[1],onclick:()=>go('g'+n+'-'+s.id)},pic(s),el('b',{text:s.name}),el('small',{text:ready+' '+(ready>=3&&ready<=10?'دروس':'درساً')})));});
+  if(!lockedGrade())c.plannedSubjects.forEach(s=>{const k=KX_SUB[s.id]||['#f1f1f6','#d4d4e2'];g.append(el('div',{class:'kx-s2 off',style:'--t:'+k[0]+';--k:'+k[1]},el('span',{class:'soon',text:'قريباً'}),pic(s),el('b',{text:s.name})));});
+  root.append(g);
+  if(kxArenaOn()&&ng>=2)root.append(el('button',{class:'kx-cta',onclick:()=>go('arena')},el('img',{src:UIMG('q_comp'),alt:''}),'تحدّي المنافسة'));
+  const mm=[];if(ng>=2)mm.push(kxMini('q_times','جدول الضرب','',()=>go('times')));
+  mm.push(kxMini('q_test','اختبر مستواك','',()=>go('test')));
+  if(bkGradeOn(String(n)))mm.push(kxMini('x_all','كتب PDF','',()=>go('books-'+n)));
+  {const tc=ACCX().teach||{};if(tc.on&&tc.show)mm.push(kxMini('n_lessons','دورات فيديو','',()=>go('courses-g'+n)));}
+  if(ng<2)mm.unshift(kxMini('n_ach','إنجازاتي','',()=>go('myreport')));
+  root.append(el('div',{class:'kx-mini'},...mm.slice(0,6)));
+  if(!lockedGrade())root.append(el('button',{class:'teach-card',style:'margin-top:16px',onclick:()=>go('teacher-'+n)},el('span',{class:'ti',text:'👩‍🏫'}),el('span',{},el('b',{text:'صانع الاختبارات للمعلم'}),el('span',{class:'note',text:'اختبارات جاهزة لهذا الصف قابلة للتعديل والطباعة'})),el('span',{class:'ls',text:'←'})));
 }
 function renderSubject(n,sid){
   const c=App.catalog,s=(c.grades[n]||[]).find(x=>x.id===sid);if(!s){go('home');return;}root.innerHTML='';
@@ -2594,9 +2731,9 @@ function adminBanner(){let b=document.getElementById('admbar');if(!adminBrowse()
 function route(){setTimeout(adminBanner,0);TTS.phonics=false;TTS.phx=null;
   stopAll();$$('audio').forEach(a=>{try{a.pause()}catch(e){}});document.body.classList.remove('kids');const h=location.hash.replace(/^#/,'');let m;
   {let g='';const gm=/^(?:g|teacher-|tx-)(\d)/.exec(h)||/^qr-(\d)/.exec(h);if(gm)g=gm[1];else if((m=/^l-([a-z0-9-]+)$/.exec(h))&&App.catalog){const f=findLesson(m[1]);if(f)g=String(f.grade).replace(/\D/g,'');}
-   navTrack(h||'home');if(/^(l-|g\d|qr-)/.test(h))store.set('last_route',h);
+   navTrack(h||'home');try{kxNav(h)}catch(e){}if(/^(l-|g\d|qr-)/.test(h))store.set('last_route',h);
    document.body.dataset.g=g;document.body.dataset.stage=g?(+g<=3?'k':+g<=6?'m':'s'):'';
-   const tc=getComputedStyle(document.body).getPropertyValue('--sea').trim();const meta=document.querySelector('meta[name=theme-color]');if(meta&&tc)meta.content=tc;}
+   const meta=document.querySelector('meta[name=theme-color]');if(meta)meta.content='#c4e7ff';}
   {const AX=ACCX();const admin=window.ACC&&ACC.isAdmin;
     if(AX.maint&&AX.maint.on&&!admin&&!/^(login|account|admin|privacy)/.test(h)){root.innerHTML='';root.append(el('div',{class:'maint'},el('div',{style:'font-size:3.5rem',text:'🛠️'}),el('h2',{text:'المنصة في صيانة قصيرة'}),el('p',{text:AX.maint.msg||'نحسّن الدروس من أجلك. عُد بعد قليل.'})));return;}
     let cm;if((cm=/^l-([a-z0-9-]+)$/.exec(h))&&App.catalog){const f=findLesson(cm[1]);if(f&&isClosed(String(f.grade),f.subject.id,cm[1])&&!admin){root.innerHTML='';root.append(bar('درس مغلق','','g'+f.grade+'-'+f.subject.id),el('div',{class:'maint'},el('div',{style:'font-size:3rem',text:'🔧'}),el('p',{text:'هذا الدرس مغلق مؤقتاً للمراجعة. عُد إليه لاحقاً.'})));return;}}}
