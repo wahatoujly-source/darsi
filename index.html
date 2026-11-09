@@ -1036,6 +1036,51 @@ body.has-nav .kx-nav{display:flex}body.has-nav header.bar .pill.dup,body.has-nav
 .kx-set .r.danger .tt b{color:#dc2626}
 .kx-set .body{padding:0 12px 12px}.kx-set .body>.panel,.kx-set .body .panel{box-shadow:none!important;border:1.5px solid #efecfb!important;background:#fbfaff!important}
 .kx-set .body .panel>b:first-child{display:none}
+/* report v5 */
+.rep .repsheet{background:transparent!important;border:0!important;box-shadow:none!important;padding:0!important;display:flex;flex-direction:column;gap:12px}
+.rp-hero{position:relative;display:flex;align-items:flex-end;gap:6px;min-height:150px;margin-top:18px;padding:14px 14px 14px 0;border-radius:28px;color:#fff;background:linear-gradient(150deg,#4b6bff,#8a4dff 55%,#ff5fa2);box-shadow:0 16px 30px -16px #6d3cf0,inset 0 3px 0 rgba(255,255,255,.35)}
+.rp-hero .kid{width:118px;height:178px;object-fit:contain;object-position:bottom;margin:-34px 0 -14px -4px;flex:0 0 auto;order:2;filter:drop-shadow(0 8px 10px rgba(0,0,0,.2))}
+.rp-hero .tx{flex:1;min-width:0;display:flex;flex-direction:column;gap:4px;align-items:flex-start}
+.rp-hero small{font-size:11.5px;font-weight:700;opacity:.92}.rp-hero h2{margin:0;font-family:var(--kx-d);font-weight:800;font-size:27px;line-height:1.1;color:#fff}
+.rp-hero .gr{font-size:11.5px;font-weight:800;background:rgba(255,255,255,.22);border-radius:999px;padding:0 10px}
+.rp-hero .lv{display:flex;gap:8px;align-items:center;margin-top:4px}.rp-hero .li{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;font-size:22px;background:rgba(255,255,255,.95)}
+.rp-hero .lv b{display:block;font-family:var(--kx-d);font-weight:800;font-size:16px;line-height:1.1}.rp-hero .kx-bar{height:10px;background:rgba(255,255,255,.3)}.rp-hero .kx-bar i{background:linear-gradient(90deg,#ffe07a,#ffb21e)}
+.rp-seg{display:flex;gap:4px;background:rgba(255,255,255,.85);border:1.5px solid #fff;border-radius:999px;padding:4px;box-shadow:0 6px 16px rgba(59,75,211,.08)}
+.rp-seg button{flex:1;border:0;background:none;border-radius:999px;padding:7px 4px;font-family:var(--kx-d);font-weight:800;font-size:14.5px;color:var(--kx-mut);cursor:pointer}
+.rp-seg button.on{background:linear-gradient(180deg,#8d6bff,#5b3df0);color:#fff;box-shadow:0 3px 0 #3e25b8}
+.rp-kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.rp-acc{grid-column:1/-1;display:flex;align-items:center;gap:12px;background:rgba(255,255,255,.94);border:1.5px solid #fff;border-radius:22px;padding:10px 12px;box-shadow:0 6px 16px rgba(59,75,211,.08)}
+.rp-acc b{display:block;font-family:var(--kx-d);font-weight:800;font-size:17px;color:var(--kx-ink)}.rp-acc small{display:block;font-size:12px;color:var(--kx-mut);font-weight:600}
+.rp-acc .tag{display:inline-block;margin-top:4px;font-size:11.5px;font-weight:800;border-radius:999px;padding:0 10px;background:#eef0fb;color:var(--kx-mut)}.rp-acc .tag.ok{background:#dcfce7;color:#15803d}.rp-acc .tag.mid{background:#fef3c7;color:#a16207}.rp-acc .tag.bad{background:#fee2e2;color:#b91c1c}
+.rp-ring{width:78px;height:78px;flex:0 0 auto;border-radius:50%;display:grid;place-items:center;background:conic-gradient(var(--c) calc(var(--p)*1%),#ecebf8 0);position:relative}
+.rp-ring::before{content:"";position:absolute;inset:9px;border-radius:50%;background:#fff}.rp-ring b{position:relative;font-family:var(--kx-d);font-weight:800;font-size:18px!important}
+.rp-k{background:var(--bg);border-radius:20px;padding:8px 4px;text-align:center;border:1.5px solid #fff;box-shadow:0 4px 12px rgba(59,75,211,.06);min-width:0}
+.rp-k .ic{display:block;font-size:22px;line-height:1.2}.rp-k b{display:block;font-family:var(--kx-d);font-weight:800;font-size:18px;color:var(--kx-ink);line-height:1.15;white-space:nowrap}.rp-k small{font-size:10.5px;color:var(--kx-mut);font-weight:700}
+.rp-chart{background:rgba(255,255,255,.94);border:1.5px solid #fff;border-radius:22px;padding:10px 12px 8px;box-shadow:0 6px 16px rgba(59,75,211,.08)}
+.rp-chart .hd{display:flex;justify-content:space-between;align-items:baseline}.rp-chart .hd b{font-family:var(--kx-d);font-weight:800;font-size:16px}.rp-chart .hd small{font-size:11px;color:var(--kx-mut);font-weight:700}
+.rp-chart .bars{position:relative;display:flex;align-items:flex-end;gap:6px;height:130px;margin-top:6px;padding-bottom:18px}
+.rp-chart .bars::before{content:"";position:absolute;left:0;right:0;bottom:calc(18px + var(--g) * (130px - 18px - 16px) / 100% * 1);border-top:2px dashed #c4b5fd;display:none}
+.rp-chart .bc{flex:1;height:100%;position:relative;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;min-width:0}
+.rp-chart .bc i{display:block;width:100%;max-width:28px;border-radius:8px 8px 4px 4px;background:linear-gradient(180deg,#a78bfa,#6d28d9);min-height:2px}
+.rp-chart .bc.hit i{background:linear-gradient(180deg,#4ade80,#16a34a)}.rp-chart .bc.today i{box-shadow:0 0 0 2px #fff,0 0 0 4px #fbbf24}
+.rp-chart .bc .v{font-size:10px;font-weight:800;color:var(--kx-mut);margin-bottom:2px}.rp-chart .bc small{position:absolute;bottom:-18px;font-size:10.5px;font-weight:800;color:var(--kx-mut)}
+.rp-chart .bars.many{gap:2px}.rp-chart .bars.many .v{display:none}
+.rep .rverdict{border-radius:22px!important;border:1.5px solid #fff!important;box-shadow:0 6px 16px rgba(59,75,211,.08);padding:12px!important}
+.rep .rverdict .rv-ic{font-size:30px}
+.rep .rsec{background:rgba(255,255,255,.94);border:1.5px solid #fff;border-radius:22px;padding:10px 12px;box-shadow:0 6px 16px rgba(59,75,211,.08);margin:0!important}
+.rep .rsec h3{margin:0 0 8px;font-family:var(--kx-d);font-weight:800;font-size:16px;color:var(--kx-ink)}
+.rep .rrow{border-radius:14px;background:#faf9ff;border:1px solid #f0eef8;padding:7px 10px;margin-bottom:6px}
+.rp-sub{display:flex;align-items:center;gap:10px;padding:6px 0;border-top:1px solid #f0eef8}.rp-sub:first-of-type{border-top:0}
+.rp-sub img{width:48px;height:48px;object-fit:contain;flex:0 0 auto}.rp-sub .ei{width:48px;text-align:center;font-size:26px}
+.rp-sub .tx{flex:1;min-width:0}.rp-sub .t1{display:flex;justify-content:space-between;gap:6px;align-items:baseline}.rp-sub .t1 b{font-family:var(--kx-d);font-weight:800;font-size:15px}.rp-sub .kx-bar{height:8px;margin-top:4px}
+.rp-sub .pc{font-family:var(--kx-d);font-weight:800;font-size:14px;border-radius:999px;padding:1px 10px;background:#eef0fb}.rp-sub .pc.ok{background:#dcfce7;color:#15803d}.rp-sub .pc.mid{background:#fef3c7;color:#a16207}.rp-sub .pc.bad{background:#fee2e2;color:#b91c1c}
+.rep .rquiz{grid-template-columns:1fr auto;gap:2px 8px;padding:7px 10px;border-radius:16px;background:#faf9ff;border:1px solid #f0eef8;margin-bottom:6px;align-items:center}
+.rep .rq-h{grid-column:1;line-height:1.3}.rep .rq-h b{font-family:var(--kx-d);font-weight:800;font-size:14.5px}
+.rep .rq-att{grid-column:2;grid-row:1/3;gap:4px;flex-wrap:nowrap}.rep .rq-a{min-width:0;padding:3px 7px;border-radius:10px}.rep .rq-a small{display:none}.rep .rq-a b{font-size:13px}
+.rep .rq-tag{grid-column:1;font-size:11.5px}
+.rep .rhide{display:none}@media print{.rep .rhide{display:grid}}
+.rep .rmore{width:100%;border:0;background:#f0eeff;color:#5b3df0;font-weight:800;border-radius:12px;padding:6px;cursor:pointer;font-family:var(--kx-d)}
+@media print{.rp-hero{background:#5b4cf0!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}.rp-hero .kid{display:none}}
 /* buttons + panels everywhere */
 .btn{border-radius:16px;box-shadow:0 4px 0 rgba(20,20,80,.18);transition:transform .1s,box-shadow .1s}.btn:active:not(:disabled){transform:translateY(3px);box-shadow:0 1px 0 rgba(20,20,80,.18)}
 .btn.ghost{background:#f0eeff;color:var(--kx-ink);box-shadow:0 3px 0 #dcd8f6}
@@ -2177,14 +2222,27 @@ const REPORT=(()=>{
   function view(o,period,onPeriod){
     const st=o.stats||{},goal=o.goal||st.goal||20,c=compute(st,period),lv=GAME.level(st.stars||0);
     const wrap=el('div',{class:'sheet-wrap rep'}),sh=el('div',{class:'sheet repsheet'});wrap.append(sh);
-    const tabs=el('div',{class:'rtabs noprint'});Object.entries(PER).forEach(([k,[t]])=>tabs.append(el('button',{class:'btn ghost'+(k===period?' on':''),text:t,onclick:()=>onPeriod(k)})));
-    sh.append(tabs,el('div',{class:'rhead'},el('span',{class:'lvi',text:lv.icon}),el('span',{},el('b',{text:'تقرير '+o.name}),el('small',{text:(o.grade?'الصف '+GN[o.grade]+' — ':'')+c.label+' — المستوى: '+lv.name+' — ⭐ '+(st.stars||0)}))));
-    const K=(v,t,cls)=>el('div',{class:'kpi '+(cls||'')},el('b',{text:v}),el('small',{text:t}));
-    sh.append(el('div',{class:'kpis'},K(c.m+' د','وقت التعلّم'),K(String(c.lessons.length),'عدد الدروس'),K(c.a==null?'—':P(c.a),'إجابات صحيحة',c.a==null?'':c.a>=75?'ok':c.a>=60?'mid':'bad'),K(String(c.stars),'نجوم جديدة'),
-      c.days>1?K(c.active+'/'+c.days,'أيام نشطة'):K(c.m>=goal?'✓':(goal-c.m)+' د',c.m>=goal?'حقّق الهدف':'باقي على الهدف')));
+    const gnum=+String(o.grade||'').replace(/\D/g,'')||0;const pr=kxPair(gnum||4);
+    const tabs=el('div',{class:'rp-seg noprint'});Object.entries(PER).forEach(([k,[t]])=>tabs.append(el('button',{class:k===period?'on':'',text:t,onclick:()=>onPeriod(k)})));
+    const nx=lv.next;const lp=Math.round(100*(nx?((st.stars||0)-lv.min)/Math.max(1,nx[0]-lv.min):1));
+    sh.append(el('div',{class:'rp-hero'},el('img',{class:'kid',src:UIMG(pr[gnum%2]),alt:''}),
+      el('div',{class:'tx'},el('small',{text:'📊 تقرير '+c.label}),el('h2',{text:o.name}),el('span',{class:'gr',text:(o.grade?'الصف '+GN[o.grade]:'')}),
+        el('div',{class:'lv'},el('span',{class:'li',text:lv.icon}),el('span',{},el('b',{text:lv.name}),el('small',{text:'⭐ '+(st.stars||0)+(nx?' · باقي '+(nx[0]-(st.stars||0))+' للمستوى التالي':'')})),),
+        el('div',{class:'kx-bar'},el('i',{style:'width:'+Math.max(4,Math.min(100,lp))+'%'})))),tabs);
+    const ring=a=>{const v=a==null?0:a;const col=a==null?'#c9c6e0':a>=75?'#16a34a':a>=60?'#f59e0b':'#ef4444';return el('div',{class:'rp-ring',style:'--p:'+v+';--c:'+col},el('b',{text:a==null?'—':P(a)}));};
+    const K=(ic,v,t,bg)=>el('div',{class:'rp-k',style:'--bg:'+bg},el('span',{class:'ic',text:ic}),el('b',{text:v}),el('small',{text:t}));
+    sh.append(el('div',{class:'rp-kpis'},
+      el('div',{class:'rp-acc'},ring(c.a),el('div',{},el('b',{text:'الإجابات الصحيحة'}),el('small',{text:(c.r+c.w)?c.r+' صحيحة من '+(c.r+c.w):'لا توجد إجابات بعد'}),el('span',{class:'tag '+(c.a==null?'':c.a>=75?'ok':c.a>=60?'mid':'bad'),text:grade(c.a)}))),
+      K('⏱️',c.m+' د','وقت التعلّم','#e0f2fe'),K('📚',String(c.lessons.length),'دروس','#ede9fe'),K('⭐',String(c.stars),'نجوم جديدة','#fef3c7'),
+      c.days>1?K('🔥',c.active+'/'+c.days,'أيام نشطة','#ffe4e6'):K('🎯',c.m>=goal?'✓':(goal-c.m)+' د',c.m>=goal?'حقّق الهدف':'باقي للهدف','#dcfce7')));
+    {const N=period==='month'?30:7,T=GAME.today(),mins=st.mins||{},ds=[];for(let i=N-1;i>=0;i--)ds.push(GAME.dayBefore(T,i));const mx=Math.max(goal,...ds.map(d=>mins[d]||0));
+     const DS=['ح','ن','ث','ر','خ','ج','س'];
+     sh.append(el('section',{class:'rp-chart'},el('div',{class:'hd'},el('b',{text:'📈 دقائق التعلّم يومياً'}),el('small',{text:'الهدف '+goal+' د'})),
+       el('div',{class:'bars'+(N>7?' many':''),style:'--g:'+Math.round(100*goal/mx)+'%'},...ds.map(d=>{const v=Math.round(mins[d]||0);const dt=new Date(d+'T12:00:00');
+         return el('div',{class:'bc'+(v>=goal?' hit':'')+(d===T?' today':'')},el('span',{class:'v',text:v?String(v):''}),el('i',{style:'height:'+Math.max(v?6:2,Math.round(100*v/mx))+'%'}),el('small',{text:N>7?(dt.getDate()%5===0||d===T?String(dt.getDate()):''):DS[dt.getDay()]}));}))));}
     const vd=verdict(c.qAvg,c.a);if(vd)sh.append(el('div',{class:'rverdict '+vd[2]},el('span',{class:'rv-ic',text:vd[0]}),el('span',{},el('b',{text:'الخلاصة'}),el('span',{text:' '+vd[1]+(c.qAvg!=null?' (متوسط المحاولة الأولى في الاختبارات '+P(c.qAvg)+')':'')}))));
     if(c.last)sh.append(el('p',{class:'note',text:'آخر نشاط: '+new Date(c.last).toLocaleString('ar-LY-u-nu-latn',{weekday:'long',hour:'numeric',minute:'2-digit'})}));
-    const sec=(t,...k)=>el('section',{class:'rsec'},el('h3',{text:t}),...k);
+    const sec=(t,...k)=>{const S=el('section',{class:'rsec'},el('h3',{text:t}));const items=k.flat();if(items.length>6){items.slice(5).forEach(x=>x&&x.classList&&x.classList.add('rhide'));const b=el('button',{class:'rmore noprint',text:'عرض الكل ('+items.length+')',onclick:()=>{S.querySelectorAll('.rhide').forEach(x=>x.classList.remove('rhide'));b.remove();}});S.append(...items,b);}else S.append(...items);return S;};
     if(c.weak.length)sh.append(sec('⚠️ يحتاج عناية',...c.weak.map(S=>el('div',{class:'ritem bad'},el('b',{text:S.name}),el('span',{class:'note',text:' — '+S.subj.name+(S.fromQuiz?' · المحاولة الأولى في الاختبار '+P(S.a):' · الدقة '+P(S.a)+' · الأخطاء '+S.w+' من '+S.n)}),
       S.review.length?el('div',{class:'note'},'للتقوية: ',...S.review.map((z,i)=>el('a',{href:'#l-'+z.l.id,text:(i?' و ':'')+'«'+z.l.title+'» (الصف '+GN[z.g]+')'}))):null))));
     if(c.quizzes.length)sh.append(sec('📝 نتائج الاختبارات ومحاولاته',...c.quizzes.slice(0,12).map(q=>{const tag=q.fullAt===0?['🌟 علامة كاملة من أول محاولة','ok']:q.fullAt>0?['✓ أتقنه بعد '+(q.fullAt+1)+' محاولات','mid']:q.best>=70?['✓ نجح، ولم يصل للعلامة الكاملة','mid']:['⚠️ لم يتقنه بعد','bad'];
@@ -2192,7 +2250,9 @@ const REPORT=(()=>{
         el('div',{class:'rq-att'},...q.att.slice(-6).map((a,i)=>el('span',{class:'rq-a '+(a.sc===a.n?'ok':a.sc/a.n>=.6?'mid':'bad')},el('small',{text:'المحاولة '+(q.att.length>6?q.att.length-6+i+1:i+1)}),el('b',{dir:'ltr',text:a.sc+'/'+a.n})))),
         el('span',{class:'rq-tag '+tag[1],text:tag[0]}));})));
     if(c.strong.length)sh.append(sec('💪 نقاط القوة',el('div',{class:'rtags'},...c.strong.slice(0,8).map(S=>el('span',{class:'chip',text:S.name+' '+P(S.a)})))));
-    if(c.subj.length)sh.append(sec('📘 المواد',...c.subj.map(J=>{const a=acc(J);return el('div',{class:'rrow'},el('span',{text:J.s.icon||'📘'}),el('b',{text:J.s.name}),el('span',{class:'note',text:'الدروس '+J.n+' · '+Math.round(J.m)+' د'+(a!=null?' · '+P(a):'')}));})));
+    if(c.subj.length){const mm=Math.max(...c.subj.map(J=>J.m),1);sh.append(sec('📘 المواد',...c.subj.map(J=>{const a=acc(J);return el('div',{class:'rp-sub'},KX_SUB[J.s.id]?el('img',{src:UIMG('s_'+J.s.id),alt:''}):el('span',{class:'ei',text:J.s.icon||'📘'}),
+      el('div',{class:'tx'},el('div',{class:'t1'},el('b',{text:J.s.name}),el('span',{class:'note',text:J.n+' دروس · '+Math.round(J.m)+' د'})),el('div',{class:'kx-bar'},el('i',{style:'width:'+Math.max(4,Math.round(100*J.m/mm))+'%'}))),
+      a!=null?el('span',{class:'pc '+(a>=75?'ok':a>=60?'mid':'bad'),text:P(a)}):null);})));}
     if(c.lessons.length)sh.append(sec('📚 الدروس التي درسها',...c.lessons.slice(0,15).map(L=>el('div',{class:'rrow'},el('span',{class:'rst',text:'⭐'.repeat(Math.min(L.x.st||0,3))||'·'}),el('span',{},el('b',{text:L.f.lesson.title}),el('small',{class:'note',text:' — '+L.f.subject.name})),
       el('span',{class:'note',text:Math.round(L.x.m||0)+' د'+(L.a!=null?' · '+P(L.a):'')})))));
     if(c.act.length)sh.append(sec('🕒 سجل النشاط: متى فتح الدروس',...c.act.slice(0,20).map(a=>el('div',{class:'rrow'},el('span',{class:'note',style:'min-width:8.5em',text:tfmt(a.t)}),el('span',{},el('b',{text:a.f.lesson.title}),el('small',{class:'note',text:' — '+a.f.subject.name})),
