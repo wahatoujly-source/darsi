@@ -285,7 +285,6 @@ function buildScope(kind, role, d, kidsCount) {
   }
   if (kind === "parent_grade" || kind === "parent_all") {
     if (!["parent", "teacher"].includes(role)) throw new HttpsError("permission-denied", "هذه الباقة لولي الأمر");
-    if (kidsCount < 1) throw new HttpsError("failed-precondition", "أضف أبناءك أولاً من صفحة «أبنائي»");
     if (kind === "parent_grade") {
       if (!GRADES.includes(grade)) throw new HttpsError("invalid-argument", "اختر الصف");
       return {scope: {grades: [grade], subjects: ["*"], kids: true}, qty: 1};
@@ -316,14 +315,14 @@ exports.createOrder = onCall({secrets: [MYPAY_ID, MYPAY_SECRET], memory: "256MiB
   const us = await db.collection("users").doc(uid).get();
   if (!us.exists) throw new HttpsError("failed-precondition", "أكمل بيانات حسابك أولاً");
   const u = us.data();
-  if (!u.phoneVerified) throw new HttpsError("failed-precondition", "أكّد رقم هاتفك أولاً");
+  // الدفع مباشرة بدون رسالة تأكيد الهاتف وبدون إضافة الأبناء مسبقاً (تبسيط للمبتدئين)
   const kidIds = (await db.collection("users").doc(uid).collection("profiles").get()).docs.filter((x) => x.id !== "me").map((x) => x.id);
   const plan = (await getPlansCfg()).find((p) => p.id === String(d.plan || kind));
   if (!plan || !planLive(plan)) throw new HttpsError("failed-precondition", "هذه الباقة غير متاحة حالياً");
   const {scope, qty} = buildScope(plan.base, u.role, d, kidIds.length);
   if (PARENT_BASES.includes(plan.base) && plan.kids && plan.kids < 5) {
     if (kidIds.length > plan.kids) throw new HttpsError("failed-precondition", `هذه الباقة ${plan.kids === 2 ? "لابنين" : "لـ" + plan.kids + " أبناء"} فقط، وعندك ${kidIds.length}. اختر باقة العائلة.`);
-    scope.kidIds = kidIds;
+    if (kidIds.length) scope.kidIds = kidIds; else scope.maxKids = plan.kids; // بدون أبناء بعد: أول N أبناء يضيفهم
   }
   const unit = plan.price;
   const amount = r2(unit * qty);
@@ -542,13 +541,16 @@ exports.getLesson = onCall({memory: "512MiB"}, async (req) => {
     if (!ps.exists) throw new HttpsError("permission-denied", "اختر الطالب من «من يدرس الآن؟»");
   }
   const now = Date.now();
+  let firstKids = [];
+  if (subsSnap.docs.some((d) => ((d.data().scope || {}).maxKids))) firstKids = (await db.collection("users").doc(uid).collection("profiles").get()).docs.filter((x) => x.id !== "me")
+      .sort((a, b) => ((a.data().createdAt && a.data().createdAt.toMillis()) || 0) - ((b.data().createdAt && b.data().createdAt.toMillis()) || 0)).map((x) => x.id);
   const ok = subsSnap.docs.map((d) => d.data()).some((sub) => {
     if (sub.active === false || !sub.end || sub.end.toMillis() <= now) return false;
     const sc = sub.scope || {};
     if (sub.kind === "trial") return rank != null && rank < (sc.trialN || 5) && (sc.grades || []).includes(g); // أيام مجانية: صف واحد يختاره، أول N دروس من كل كتاب
     if (sc.teacherOnly) return role === "teacher" && pid === "me" && (sc.pairs || []).includes(g + ":" + s);
     if (sc.any) return (sc.grades || []).some((x) => x === "*" || x === g);
-    if (sc.kids) { if (!pid || pid === "me" || (sc.kidIds && !sc.kidIds.includes(pid))) return false; } else if (!(role === "student" || (sc.self && pid === "me"))) return false;
+    if (sc.kids) { if (!pid || pid === "me" || (sc.kidIds && !sc.kidIds.includes(pid)) || (!sc.kidIds && sc.maxKids && !firstKids.slice(0, sc.maxKids).includes(pid))) return false; } else if (!(role === "student" || (sc.self && pid === "me"))) return false;
     return (sc.grades || []).some((x) => x === "*" || x === g) && (sc.subjects || []).some((x) => x === "*" || x === s);
   });
   if (!ok && !openFree) throw new HttpsError("permission-denied", "هذا الدرس للمشتركين. اشترك لتفتحه.");

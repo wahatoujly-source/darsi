@@ -259,6 +259,7 @@ function authForm(kind) {
 function renderOnboard() {
   if (!ACC.user) { go('login'); return; }
   if (ACC.profile) { go('account'); return; }
+  if (store.get('pend_pay', null)) { go('subscribe'); return; }
   const s = page('مرحباً بك في المجتهد', 'خطوة واحدة ونبدأ', null);
   const msg = el('div');
   let role = ['parent', 'student', 'teacher'].includes(store.get('pref_role', '')) ? store.get('pref_role', '') : null, grade = null, avatar = AVATARS[0];
@@ -711,7 +712,9 @@ const subApplies = sub => {
   const sc = sub.scope || {}, role = ACC.profile && ACC.profile.role;
   if (sc.any) return true;                        // منحة الإدارة: لكل ملفات الحساب
   if (sc.teacherOnly) return role === 'teacher' && ACC.pid === 'me';
-  if (sc.kids) return !!ACC.pid && ACC.pid !== 'me' && (!sc.kidIds || sc.kidIds.includes(ACC.pid));
+  if (sc.kids) { if (!ACC.pid || ACC.pid === 'me') return false; if (sc.kidIds) return sc.kidIds.includes(ACC.pid);
+    if (sc.maxKids) { const ks = (ACC.profiles || []).filter(p => p.id !== 'me').sort((x, y) => ((x.createdAt && x.createdAt.toMillis && x.createdAt.toMillis()) || 0) - ((y.createdAt && y.createdAt.toMillis && y.createdAt.toMillis()) || 0)).map(p => p.id);
+      return ks.slice(0, sc.maxKids).includes(ACC.pid); } return true; }
   if (ACC.kid) return false;
   return role === 'student' || (!!sc.self && ACC.pid === 'me');
 };
@@ -760,73 +763,85 @@ const durLabel = p => { const d = p.dur || {}; return d.t === 'days' ? (d.days %
 function renderSubscribe() {
   if (ACC.co) { const s = page('الاشتراك', '', 'who'); s.append(el('div', { class: 'feedback info', text: 'الاشتراك يتم من حساب ولي الأمر الأساسي، ويشمل الأبناء عندك تلقائياً.' })); return; }
   if (ACC.kid) { const s = page('الاشتراك', '', 'home'); s.append(el('div', { class: 'feedback info', text: 'هذا الدرس يحتاج اشتراكاً. اطلب من ولي أمرك أن يشترك لك من حسابه، وسيفتح عندك مباشرة.' })); return; }
-  if (!ACC.user) { D.App.after = 'subscribe'; go('login'); return; }
-  if (!ACC.profile) { go('onboard'); return; }
-  const role = ACC.profile.role, s = page('الاشتراك', 'اختر الباقة والمدة المناسبة لك', D.App.after || 'home');
-  const mine = ACC.subs.filter(subApplies);
-  if (mine.length) s.append(el('div', { class: 'feedback ok', text: '✓ عندك اشتراك فعّال: ' + mine.map(x => subName(x) + ' (حتى ' + fmtDate(x.end.toMillis()) + ')').join('، ') }));
-  { const U = n => 'img/ui/' + n + '.webp';
-    s.append(el('div', { class: 'kx-subhero' }, el('div', { class: 'bgx' }), el('img', { class: 'k1', src: U('k2'), alt: '' }), el('img', { class: 'k2', src: U('k3'), alt: '' }),
-      el('div', { class: 'tx' }, el('span', { class: 'cap', text: '⭐ اشتراك المجتهد' }), el('h2', { text: 'افتح المنصة كاملة لأبنائك' }),
-        el('p', { text: 'كل دروس المنهج الليبي بالصوت والصورة، من الصف الأول للتاسع' }))));
-    s.append(el('div', { class: 'kx-ben' }, ...[['q_learn', 'كل الدروس', 'بالصوت والصورة'], ['q_review', 'تمارين واختبارات', 'تصحيح فوري'], ['n_ach', 'تقارير لولي الأمر', 'بالدقيقة والنسبة'], ['q_comp', 'مسابقات وأوسمة', 'تحفيز يومي']]
-      .map(([im, t, sm]) => el('div', {}, el('img', { src: U(im), alt: '', loading: 'lazy' }), el('b', { text: t }), el('small', { text: sm }))))); }
-  const box = el('div', { class: 'stack' }), msg = el('div'), phoneBox = el('div');
-  let plans = null, pl = null, grade = null, subject = null;
-  const kidsN = ACC.profiles.filter(p => p.id !== 'me').length;
+  const logged = !!ACC.user && !(ACC.user.isAnonymous && !ACC.kid);
+  const s = page('الاشتراك', 'اختر الباقة وادفع — دقيقة واحدة', D.App.after && D.App.after !== 'subscribe' ? D.App.after : 'home');
+  const U = n => 'img/ui/' + n + '.webp';
+  s.append(el('div', { class: 'kx-subhero' }, el('div', { class: 'bgx' }), el('img', { class: 'k1', src: U('k2'), alt: '' }), el('img', { class: 'k2', src: U('k3'), alt: '' }),
+    el('div', { class: 'tx' }, el('span', { class: 'cap', text: '⭐ اشتراك المجتهد' }), el('h2', { text: 'افتح المنصة كاملة لأبنائك' }),
+      el('p', { text: 'كل دروس المنهج الليبي بالصوت والصورة، من الصف الأول للتاسع' }))));
+  s.append(el('div', { class: 'kx-ben' }, ...[['q_learn', 'كل الدروس', 'بالصوت والصورة'], ['q_review', 'تمارين واختبارات', 'تصحيح فوري'], ['n_ach', 'تقارير لولي الأمر', 'بالدقيقة والنسبة'], ['q_comp', 'مسابقات وأوسمة', 'تحفيز يومي']]
+    .map(([im, t, sm]) => el('div', {}, el('img', { src: U(im), alt: '', loading: 'lazy' }), el('b', { text: t }), el('small', { text: sm })))));
+  if (logged && ACC.profile) { const mine = ACC.subs.filter(subApplies); if (mine.length) s.append(el('div', { class: 'feedback ok', text: '✓ عندك اشتراك فعّال: ' + mine.map(x => subName(x) + ' (حتى ' + fmtDate(x.end.toMillis()) + ')').join('، ') })); }
+  const pend = store.get('pend_pay', null);
+  let who = ACC.profile ? ACC.profile.role : (pend && pend.who) || store.get('sub_who', 'parent');
+  const box = el('div', { class: 'stack' }), msg = el('div');
+  let plans = null, pl = null, grade = (pend && pend.grade) || null, subject = (pend && pend.subject) || null;
+  const kidsN = (ACC.profiles || []).filter(p => p.id !== 'me').length;
+  const nameIn = el('input', { class: 'tinput', placeholder: 'اسمك (ولي الأمر أو الطالب)', 'aria-label': 'الاسم', value: (ACC.user && ACC.user.displayName) || '' });
   const draw = () => {
     box.innerHTML = '';
     if (!plans) { box.append(el('span', { class: 'note', text: 'جارٍ تحميل الباقات…' })); return; }
-    const mineP = plans.filter(p => (BASE_ROLES[p.base] || []).includes(role));
+    if (!ACC.profile) box.append(el('div', { class: 'rp-seg kx-who2' }, ...[['parent', '👨‍👩‍👧 لأبنائي'], ['student', '🎒 لنفسي (طالب)']].map(([k, t]) =>
+      el('button', { class: who === k ? 'on' : '', text: t, onclick: () => { who = k; store.set('sub_who', k); pl = null; grade = null; subject = null; draw(); } }))));
+    const mineP = plans.filter(p => (BASE_ROLES[p.base] || []).includes(who));
     if (!mineP.length) { box.append(el('div', { class: 'feedback info', text: 'لا توجد باقات متاحة حالياً. عُد قريباً.' })); return; }
+    if (!pl && pend) { pl = mineP.find(p => p.id === pend.plan) || null; }
     const pg = el('div', { class: 'kx-plans' });
     const best = mineP.find(p => p.base === 'parent_all' && (p.dur || {}).t !== 'days') || mineP.find(p => (p.dur || {}).t !== 'days');
-    mineP.forEach(p => pg.append(el('button', { class: 'kx-plan' + (pl === p ? ' on' : '') + (p === best ? ' best' : ''), 'aria-pressed': String(pl === p), onclick: () => { pl = p; grade = null; subject = null; draw(); setTimeout(() => { const t = box.querySelector('.kx-step,.paybox'); t && t.scrollIntoView({ behavior: 'smooth', block: 'center' }); }, 50); } },
-      p === best ? el('span', { class: 'rib', text: '🔥 الأكثر طلباً' }) : null,
-      el('span', { class: 'rd' }),
+    mineP.forEach(p => pg.append(el('button', { class: 'kx-plan' + (pl === p ? ' on' : '') + (p === best ? ' best' : ''), 'aria-pressed': String(pl === p), onclick: () => { pl = p; grade = null; subject = null; store.set('pend_pay', null); draw(); setTimeout(() => { const t = box.querySelector('.kx-step,.kx-pay'); t && t.scrollIntoView({ behavior: 'smooth', block: 'center' }); }, 60); } },
+      p === best ? el('span', { class: 'rib', text: '🔥 الأكثر طلباً' }) : null, el('span', { class: 'rd' }),
       el('span', { class: 'tx' }, el('b', { text: (BASE_ICON[p.base] || '⭐') + ' ' + p.name }), p.desc ? el('small', { text: p.desc }) : null, el('span', { class: 'du', text: '⏳ ' + durLabel(p) })),
       el('span', { class: 'pr' }, el('b', { text: String(p.price) }), el('small', { text: 'دينار' })))));
-    box.append(el('div', { class: 'kx-h', text: '1️⃣ اختر الباقة' }), pg);
+    box.append(el('div', { class: 'kx-h', text: 'اختر الباقة 👇' }), pg);
     if (!pl) return;
     const isParent = ['parent_grade', 'parent_all'].includes(pl.base);
-    if (isParent && !kidsN) { box.append(el('div', { class: 'feedback info' }, 'أضف أبناءك أولاً. ', el('button', { class: 'linkbtn', text: 'أبنائي', onclick: () => go('kids') }))); return; }
     if (isParent && pl.kids && pl.kids < 5 && kidsN > pl.kids) { box.append(el('div', { class: 'feedback info', text: 'هذه الباقة ' + (pl.kids === 2 ? 'لابنين' : 'لـ' + pl.kids + ' أبناء') + ' فقط، وعندك ' + kidsN + '. اختر باقة العائلة.' })); return; }
-    const allowedG = () => { if (pl.base === 'parent_grade') return [...new Set(ACC.profiles.filter(p => p.id !== 'me' && p.grade).map(p => String(p.grade)))];
-      const me = ACC.profiles.find(p => p.id === 'me'); if (role === 'student' && me && me.grade) return [String(me.grade)]; return null; };
-    const AG = allowedG(); if (AG && AG.length === 1 && !grade) grade = AG[0];
-    const gpick = () => { const w = el('div', { class: 'gpick' }); GRADES.filter(([g]) => !AG || !AG.length || AG.includes(String(g))).forEach(([g, n]) => w.append(el('button', { class: 'btn ghost sm' + (grade === g ? ' on' : ''), text: n, onclick: () => { grade = g; subject = null; draw(); } }))); return w; };
-    if (['student_subject', 'student_grade', 'parent_grade'].includes(pl.base)) box.append(el('div', { class: 'kx-h kx-step', text: '2️⃣ اختر الصف' }), gpick());
-    if (pl.base === 'student_subject' && grade) { const w = el('div', { class: 'gpick' }); subjectsOf(grade).forEach(x => w.append(el('button', { class: 'btn ghost sm' + (subject === x.id ? ' on' : ''), text: x.name, onclick: () => { subject = x.id; draw(); } }))); box.append(el('div', { class: 'kx-h', text: '3️⃣ اختر المادة' }), w); }
+    const AG = (() => { if (pl.base === 'parent_grade') { const k = [...new Set((ACC.profiles || []).filter(p => p.id !== 'me' && p.grade).map(p => String(p.grade)))]; return k.length ? k : null; }
+      const me = (ACC.profiles || []).find(p => p.id === 'me'); if (who === 'student' && me && me.grade) return [String(me.grade)]; return null; })();
+    if (AG && AG.length === 1 && !grade) grade = AG[0];
+    const needG = ['student_subject', 'student_grade', 'parent_grade'].includes(pl.base);
+    if (needG) { const w = el('div', { class: 'gpick' }); GRADES.filter(([g]) => !AG || AG.includes(String(g))).forEach(([g, n]) => w.append(el('button', { class: 'btn ghost sm' + (String(grade) === String(g) ? ' on' : ''), text: n, onclick: () => { grade = g; subject = null; draw(); setTimeout(() => { const t = box.querySelector('.kx-pay,.kx-sbj'); t && t.scrollIntoView({ behavior: 'smooth', block: 'center' }); }, 60); } })));
+      box.append(el('div', { class: 'kx-h kx-step', text: isParent ? 'في أي صف ابنك؟' : 'في أي صف أنت؟' }), w); }
+    if (pl.base === 'student_subject' && grade) { const w = el('div', { class: 'gpick kx-sbj' }); subjectsOf(grade).forEach(x => w.append(el('button', { class: 'btn ghost sm' + (subject === x.id ? ' on' : ''), text: x.name, onclick: () => { subject = x.id; draw(); } }))); box.append(el('div', { class: 'kx-h', text: 'أي مادة؟' }), w); }
     const ready = pl.base === 'parent_all' || (pl.base === 'student_subject' ? grade && subject : !!grade);
     if (!ready) return;
-    { // اشتراك فعّال يشمل نفس الاختيار؟ لا داعي للدفع مرة أخرى
+    if (logged && ACC.profile) {
       const isDays = (pl.dur || {}).t === 'days', want = pl.base === 'student_subject' ? { g: [grade], s: [subject] } : pl.base === 'parent_all' ? { g: ['*'], s: ['*'] } : { g: [grade], s: ['*'] };
       const kidIds = ACC.profiles.filter(p => p.id !== 'me').map(p => p.id), forKids = isParent;
       const inc = (have, w) => (have || []).includes('*') || w.every(v => (have || []).includes(v));
       const cov = ACC.subs.find(x => { if (x.kind === 'trial') return false; if (isDays && x.plan === pl.id) return false; const sc = x.scope || {}; if (sc.teacherOnly) return false;
-        const who = sc.any || (forKids ? (sc.kids && (!sc.kidIds || kidIds.every(k => sc.kidIds.includes(k)))) : (sc.self || (!sc.kids && role === 'student')));
-        return who && inc(sc.grades, want.g) && (sc.any || inc(sc.subjects, want.s)) && x.end.toMillis() >= pl.end - 864e5; });
+        const whoOk = sc.any || (forKids ? (sc.kids && (!sc.kidIds || kidIds.every(k => sc.kidIds.includes(k)))) : (sc.self || (!sc.kids && ACC.profile.role === 'student')));
+        return whoOk && inc(sc.grades, want.g) && (sc.any || inc(sc.subjects, want.s)) && x.end.toMillis() >= pl.end - 864e5; });
       if (cov) { box.append(el('div', { class: 'feedback ok', text: '✓ أنت مشترك بالفعل في «' + subName(cov).replace(/^\S+\s/, '') + '» حتى ' + fmtDate(cov.end.toMillis()) + '، وهو يشمل ما اخترته. لا حاجة لاشتراك جديد.' })); return; }
     }
-    const d = pl.dur || {}, endTxt = d.t === 'days' ? 'الاشتراك لمدة ' + durLabel(pl) + '. إذا كان عندك اشتراك فعّال من نفس الباقة تُضاف المدة بعد نهايته.' : 'الاشتراك صالح ' + durLabel(pl) + '.';
-    box.append(el('div', { class: 'paybox kx-pay' }, el('div', { class: 'sum' }, el('span', {}, el('small', { text: 'الباقة' }), el('b', { text: pl.name })), el('span', { class: 'tot' }, el('small', { text: 'المجموع' }), el('b', { text: pl.price + ' د.ل' }))),
+    const d = pl.dur || {}, endTxt = d.t === 'days' ? 'المدة ' + durLabel(pl) + ' من يوم الدفع.' : 'صالح ' + durLabel(pl) + '.';
+    const gname = grade ? (GRADES.find(([g]) => String(g) === String(grade)) || [, ''])[1] : '';
+    box.append(el('div', { class: 'paybox kx-pay' },
+      el('div', { class: 'sum' }, el('span', {}, el('small', { text: 'الباقة' }), el('b', { text: pl.name + (gname ? ' · ' + gname : '') })), el('span', { class: 'tot' }, el('small', { text: 'المبلغ' }), el('b', { text: pl.price + ' د.ل' }))),
       el('span', { class: 'note', text: endTxt }),
-      el('div', { class: 'ways' }, ...['سداد', 'ادفع لي', 'موبي كاش', 'معاملات', 'يسر باي'].map(t => el('span', { text: t }))),
-      el('label', { class: 'sndrow', style: 'margin:4px 0' }, agree, el('span', {}, 'أوافق على ', el('a', { href: '#privacy', text: 'شروط الاستخدام وسياسة الخصوصية' }))), payBtn));
-    payBtn.disabled = !agree.checked;
+      logged && !ACC.profile ? el('div', { class: 'stack', style: 'gap:4px' }, el('b', { text: 'ما اسمك؟' }), nameIn) : null,
+      el('div', { class: 'ways' }, ...['سداد', 'ادفع لي', 'موبي كاش', 'معاملات', 'يسر باي', 'صحارى باي'].map(t => el('span', { text: t }))),
+      payBtn, msg,
+      el('p', { class: 'note', style: 'margin:0;font-size:11.5px;text-align:center' }, 'بالضغط على «ادفع» أنت توافق على ', el('a', { href: '#privacy', text: 'الشروط' }), '. يتفعّل الاشتراك تلقائياً بعد الدفع.')));
+    payBtn.textContent = logged ? '🔒 ادفع ' + pl.price + ' د.ل الآن' : '🔒 سجّل وادفع ' + pl.price + ' د.ل';
   };
-  const agree = el('input', { type: 'checkbox', onchange: () => { payBtn.disabled = !agree.checked; } });
-  const payBtn = el('button', { class: 'btn sun paybig', text: '🔒 ادفع الآن واشترك', onclick: async () => {
-    if (!agree.checked) { fbk(msg, 'bad', 'وافق على الشروط أولاً.'); return; }
+  const payBtn = el('button', { class: 'btn sun paybig', onclick: async () => {
     msg.innerHTML = '';
-    if (!ACC.phoneVerified()) { phoneBox.scrollIntoView({ behavior: 'smooth' }); await ACC.verifyPhone(phoneBox); phoneBox.innerHTML = ''; }
-    payBtn.disabled = true; fbk(msg, 'info', 'جارٍ تجهيز صفحة الدفع…');
-    try { const r = await call('createOrder', { plan: pl.id, kind: pl.base, grade, subject });
-      store.set('last_order', r.orderId); location.href = r.url; }
-    catch (e) { fbk(msg, 'bad', fnErr(e)); payBtn.disabled = false; } } });
-  s.append(box, phoneBox, msg);
+    if (!logged) { store.set('pend_pay', { plan: pl.id, grade, subject, who }); D.App.after = 'subscribe'; go('login'); return; }
+    payBtn.disabled = true;
+    try {
+      if (!ACC.profile) { const nm = nameIn.value.trim(); if (nm.length < 2) { payBtn.disabled = false; fbk(msg, 'bad', 'اكتب اسمك.'); nameIn.focus(); return; }
+        const u = ACC.user; const data = { name: nm, role: who, phone: phoneOf(u) || u.phoneNumber || null, email: phoneOf(u) ? null : (u.email || null), createdAt: serverTimestamp() };
+        await setDoc(uref(), data); try { await updateProfile(u, { displayName: nm }); } catch (e) {}
+        ACC.profile = data; await claimRef();
+        if (who === 'student') { await setDoc(pref('me'), { name: nm, grade: grade || null, avatar: AVATARS[0], createdAt: serverTimestamp() }); await loadProfiles(); await setActive('me'); } else ACC.profiles = []; }
+      fbk(msg, 'info', 'جارٍ فتح صفحة الدفع…');
+      const r = await call('createOrder', { plan: pl.id, kind: pl.base, grade, subject });
+      store.set('pend_pay', null); store.set('last_order', r.orderId); location.href = r.url;
+    } catch (e) { fbk(msg, 'bad', fnErr(e)); payBtn.disabled = false; } } });
+  s.append(box);
   draw();
-  call('getPlans', {}).then(r => { plans = r.plans || []; draw(); }).catch(e => fbk(msg, 'bad', fnErr(e)));
+  call('getPlans', {}).then(r => { plans = r.plans || []; draw(); if (pend && pl) setTimeout(() => { const t = box.querySelector('.kx-pay'); t && t.scrollIntoView({ behavior: 'smooth', block: 'center' }); }, 100); }).catch(e => fbk(msg, 'bad', fnErr(e)));
 }
 
 /* ---------- back from MyPay ---------- */
@@ -838,7 +853,8 @@ function renderPaid(orderId) {
   const tick = async () => {
     try { const d = await getDoc(doc(db, 'subscriptions', orderId));
       if (d.exists()) { await loadSubs(); D.cheer && D.cheer('win'); fbk(st, 'ok', '🎉 تم الدفع وتفعيل اشتراكك حتى ' + fmtDate(d.data().end.toMillis()) + '.');
-        s.append(el('button', { class: 'btn sun', text: 'ابدأ التعلّم ←', onclick: () => go('home') })); return; }
+        if (isAdult() && !kidsOf().length) s.append(el('div', { class: 'feedback info', text: 'خطوة أخيرة: أضف أسماء أبنائك وصفوفهم ليبدؤوا الدراسة.' }), el('button', { class: 'btn sun', text: '👨‍👩‍👧 أضف أبنائي ←', onclick: () => go('kids') }));
+        else s.append(el('button', { class: 'btn sun', text: 'ابدأ التعلّم ←', onclick: () => go('home') })); return; }
     } catch (e) {}
     if (++n < 30) setTimeout(tick, 3000);
     else { fbk(st, 'bad', 'لم يصلنا تأكيد الدفع بعد. إذا خُصم المبلغ فسيُفعَّل اشتراكك تلقائياً خلال دقائق؛ وإن لم يُفعَّل تواصل معنا وأرسل رقم الطلب.');
@@ -1361,6 +1377,7 @@ onAuthStateChanged(auth, async user => {
   if (ACC.kid && (h === 'login' || h === 'who' || h === 'kids' || h === 'onboard')) { go('home'); return; }
   if (!user && ACC.unlinked) { ACC.unlinked = false; go('link'); return; }
   if (user && ACC.loadError) { if (ROUTES[h] || !h || h === 'home') { showLoadError(); return; } }
+  else if (user && store.get('pend_pay', null) && /^(login|onboard)/.test(h)) { go('subscribe'); return; }
   else if (user && !ACC.profile) { go('onboard'); return; }
   else if (user && h === 'login') { go(isAdult() ? (ACC.profiles.length ? 'who' : 'kids') : 'home'); return; }
   else if (user && isAdult() && !ACC.pid && (!h || h === 'home')) { go(ACC.profiles.length ? 'who' : 'kids'); return; }
