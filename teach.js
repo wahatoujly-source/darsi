@@ -13,6 +13,7 @@ export default function initTeach(X) {
   const mins = ls => { const m = ls.reduce((a, l) => a + (l.min || 0), 0); return m ? (m >= 60 ? Math.floor(m / 60) + ' س ' + (m % 60 ? m % 60 + ' د' : '') : m + ' دقيقة') : ''; };
   const where = c => c.cat === 'skill' ? (c.skill || 'مهارة') : (SUBJ[c.subject] || '') + ' · الصف ' + gName(c.grade);
   const fdate = ms => ms ? new Date(ms).toLocaleDateString('ar-LY-u-nu-latn', { year: 'numeric', month: 'short', day: 'numeric' }) : '';
+  const ini = n => (String(n || '؟').replace(/^\s*(أ|د|م|ا)\.\s*/, '').trim() || '؟')[0];
   const tag = (t, c) => el('span', { class: 'tc-tag ' + (c || ''), text: t });
   const loading = s => { const m = el('div'); s.append(m); fbk(m, 'info', 'جارٍ التحميل…'); return m; };
   const TERMS = ['الفيديوهات التي تنشرها في المنصة حصرية لها: تُعرض لمشتركي دورتك فقط داخل المنصة، ولا تنشرها في مكان آخر بمقابل أو مجاناً.',
@@ -76,6 +77,26 @@ export default function initTeach(X) {
 .tc-bank code{direction:ltr;unicode-bidi:embed;font-weight:700}
 .tc-card-home{border-color:color-mix(in srgb,#7c3aed 30%,var(--line))!important;background:linear-gradient(120deg,color-mix(in srgb,#7c3aed 12%,var(--card)),var(--card))!important}
 .tc-card-home .bk-go{background:#7c3aed!important}
+
+/* v6 */
+.tc-chips{padding-top:10px}.tc-chip{border:0;background:#fff;box-shadow:0 3px 0 #dde2f0;font-family:var(--kx-d)}.tc-chip.on{background:linear-gradient(180deg,#8a6bff,#5b3ee8);box-shadow:0 3px 0 #3d26b0}
+.tc-teach{display:flex;align-items:center;gap:10px;width:100%;border:2px dashed #c9b8ff;background:#f7f3ff;border-radius:18px;padding:10px 12px;font:inherit;color:inherit;cursor:pointer;text-align:start;margin-bottom:6px}
+.tc-teach>span:first-child{font-size:1.6rem}.tc-teach b{display:block;color:#5b3ee8}.tc-teach small{color:var(--kx-mut);font-weight:600}.tc-teach .go{margin-inline-start:auto;font-weight:800;color:#5b3ee8}
+.tc-t{background:#fff;border-radius:18px;padding:8px 10px;box-shadow:0 8px 20px -18px rgba(23,32,61,.6)}
+.tc-card2{display:flex;gap:12px;align-items:stretch;border:0;border-radius:20px;padding:10px;box-shadow:0 10px 24px -18px rgba(23,32,61,.6)}
+.tc-th{position:relative;flex:none;width:92px;border-radius:16px;background:linear-gradient(160deg,#eef0ff,#dfe3ff);display:grid;place-items:center}
+.tc-th img{width:76px;height:76px;object-fit:contain}.tc-th i{position:absolute;bottom:6px;inset-inline-end:6px;width:26px;height:26px;border-radius:50%;background:#fff;color:#5b3ee8;display:grid;place-items:center;font-style:normal;font-size:.75rem;box-shadow:0 2px 6px rgba(0,0,0,.2)}
+.tc-bd{flex:1;min-width:0;display:flex;flex-direction:column;gap:3px}.tc-card2 b{font-family:var(--kx-d);font-size:1.05rem;margin:0;color:var(--kx-ink)}
+.tc-price{background:linear-gradient(180deg,#ffd451,#f5a400);color:#3a2300;box-shadow:0 2px 0 #b97800}.tc-free{color:#15803d;font-weight:800;font-size:.75rem}
+.tc-tph{display:flex;gap:12px;align-items:center;padding:14px;border-radius:24px;background:linear-gradient(160deg,#a066ff,#5b3ee8);color:#fff;box-shadow:0 12px 26px -16px #5b3ee8}
+.tc-tph .tc-av{background:#fff;color:#5b3ee8}.tc-tph b{display:block;font-family:var(--kx-d);font-size:1.3rem}.tc-tph small{display:block;opacity:.9;font-weight:600}.tc-tph .c{display:inline-block;margin-top:4px;background:rgba(255,255,255,.2);border-radius:99px;padding:2px 10px;font-size:.8rem;font-weight:700}
+.tv{border-radius:22px;box-shadow:0 16px 30px -18px rgba(0,0,0,.6)}
+.tc-buy{border:0;background:linear-gradient(160deg,#fff8e1,#fff);box-shadow:0 0 0 2px #ffd451 inset,0 12px 26px -20px rgba(0,0,0,.5);border-radius:22px}
+.tc-l{border:0;background:#fff;border-radius:16px;box-shadow:0 6px 16px -14px rgba(23,32,61,.6)}.tc-l .n{background:#eef0ff;color:#5b3ee8}.tc-l.on{box-shadow:0 0 0 2px #8a6bff}.tc-l.on .n{background:#5b3ee8}
+.tc-wal div{border:0;border-radius:18px;background:#fff;box-shadow:0 8px 20px -16px rgba(23,32,61,.6)}.tc-wal div:first-child{background:linear-gradient(160deg,#ffd451,#f5a400);color:#3a2300}.tc-wal div:first-child span{color:#5a3a00}
+.tc-wal b{font-family:var(--kx-d)}
+.tc-tabs{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;padding:4px 2px 8px}.tc-tabs .tc-chip{flex:0 0 auto}
+.tc-ed{border:0;background:#fff;border-radius:18px;box-shadow:0 8px 20px -16px rgba(23,32,61,.6)}
 `;
   document.head.append(el('style', { text: css }));
 
@@ -150,11 +171,16 @@ export default function initTeach(X) {
   }
 
   /* ---------------- public: course list ---------------- */
-  const courseCard = c => el('button', { class: 'tc-card', onclick: () => go('crs-' + c.id) },
-    el('div', { class: 'tc-m' }, tag(KIND[c.kind] || 'دورة'), el('span', { text: where(c) }), el('span', { class: 'tc-price', text: money(c.price) })),
-    el('b', { text: c.title }),
-    el('div', { class: 'tc-m' }, el('span', { text: '🎬 ' + c.lessons.length + ' درس' }), mins(c.lessons) ? el('span', { text: '⏱️ ' + mins(c.lessons) }) : null, c.lessons[0] && c.lessons[0].ready ? el('span', { text: '▶ الدرس الأول مجاني' }) : null));
-  const tHead = (t, n) => el('button', { class: 'tc-t', onclick: () => go('tch-' + t.id) }, el('span', { class: 'tc-av', text: (t.name || '؟').trim()[0] }),
+  const SIMG = ['ar', 'en', 'math', 'isl', 'sci', 'civ', 'soc', 'hist', 'geo', 'comp', 'art'];
+  const cImg = c => 'img/ui/' + (c.cat === 'skill' ? 'q_learn' : SIMG.includes(c.subject) ? 's_' + c.subject : 'x_all') + '.webp';
+  const courseCard = c => el('button', { class: 'tc-card tc-card2', onclick: () => go('crs-' + c.id) },
+    el('span', { class: 'tc-th' }, el('img', { src: cImg(c), alt: '', loading: 'lazy' }), el('i', { text: '▶' })),
+    el('span', { class: 'tc-bd' },
+      el('div', { class: 'tc-m' }, tag(KIND[c.kind] || 'دورة'), el('span', { text: where(c) })),
+      el('b', { text: c.title }),
+      el('div', { class: 'tc-m' }, el('span', { text: '🎬 ' + c.lessons.length + ' درس' }), mins(c.lessons) ? el('span', { text: '⏱️ ' + mins(c.lessons) }) : null, el('span', { class: 'tc-price', text: money(c.price) })),
+      c.lessons[0] && c.lessons[0].ready ? el('small', { class: 'tc-free', text: '▶ الدرس الأول مجاني' }) : null));
+  const tHead = (t, n) => el('button', { class: 'tc-t', onclick: () => go('tch-' + t.id) }, el('span', { class: 'tc-av', text: ini(t.name) }),
     el('span', {}, el('b', { text: t.name }), el('small', { text: (t.spec || '') + (n ? ' · ' + n + (n > 2 ? ' دورات' : n === 2 ? ' دورتان' : ' دورة') : '') })));
 
   async function renderCourses(f) {
@@ -164,8 +190,8 @@ export default function initTeach(X) {
     const chips = el('div', { class: 'tc-chips' });
     [['all', 'الكل'], ['skill', '✨ مهارات'], ...GR.map(([g]) => ['g' + g, 'الصف ' + g]), ...(ACC.user ? [['mine', '🎒 دوراتي']] : [])].forEach(([k, t]) =>
       chips.append(el('button', { class: 'tc-chip' + (k === f ? ' on' : ''), text: t, onclick: () => go(k === 'all' ? 'courses' : 'courses-' + k) })));
-    s.append(chips);
-    if (ACC.user && !ACC.kid) s.append(el('button', { class: 'btn ghost sm', style: 'align-self:flex-start', text: '🎓 أنت معلم؟ انشر دوراتك واربح', onclick: () => go('studio') }));
+    s.append(el('div', { class: 'gx-hero', style: '--h1:#a066ff;--h2:#5b3ee8' }, el('img', { src: 'img/ui/n_lessons.webp', alt: '' }), el('div', {}, el('b', { text: 'دورات فيديو من معلمين ليبيين' }), el('span', { text: 'شرح المنهج والتقوية والمراجعة قبل الامتحانات — الدرس الأول مجاني دائماً' }))), chips);
+    if (ACC.user && !ACC.kid) s.append(el('button', { class: 'tc-teach', onclick: () => go('studio') }, el('span', { text: '🎓' }), el('span', {}, el('b', { text: 'أنت معلم؟' }), el('small', { text: 'انشر دوراتك واربح 70% من كل اشتراك' })), el('span', { class: 'go', text: '←' })));
     const box = el('div'); s.append(box); const m = loading(box);
     try {
       if (f === 'mine') { const r = await call('teach', { op: 'mine' }); box.innerHTML = '';
@@ -183,8 +209,8 @@ export default function initTeach(X) {
   async function renderTeacherPage(tid) {
     const s = page('صفحة المعلم', '', 'courses'); const m = loading(s);
     try { const r = await call('teach', { op: 'teacher', tid }); m.remove(); const t = r.teacher;
-      s.append(el('div', { class: 'panel', style: 'display:flex;gap:12px;align-items:center' }, el('span', { class: 'tc-av big', text: (t.name || '؟')[0] }),
-        el('div', {}, el('b', { style: 'font-size:1.2rem;font-family:var(--f-display)', text: t.name }), el('div', { class: 'note', text: t.spec || '' }))));
+      s.append(el('div', { class: 'tc-tph' }, el('span', { class: 'tc-av big', text: ini(t.name) }),
+        el('div', {}, el('b', { text: t.name }), el('small', { text: t.spec || '' }), el('span', { class: 'c', text: '🎬 ' + r.courses.length + (r.courses.length > 2 ? ' دورات' : r.courses.length === 2 ? ' دورتان' : ' دورة') }))));
       if (t.bio) s.append(el('p', { style: 'line-height:1.8;margin:0', text: t.bio }));
       s.append(el('h3', { text: 'دورات ' + t.name + ' (' + r.courses.length + ')' }));
       r.courses.forEach(c => s.append(courseCard(c)));
@@ -276,7 +302,7 @@ export default function initTeach(X) {
         el('li', { text: 'قدّم طلبك، وتراجعه الإدارة.' }), el('li', { text: 'أنشئ دورة: عنوان، صف ومادة أو مهارة، سعر، وارفع فيديوهات الدروس من جهازك مباشرة.' }),
         el('li', { text: 'تراجع الإدارة الدورة ثم تُنشر للطلاب.' }), el('li', { text: 'كل اشتراك يضيف 70% من السعر إلى محفظتك، وتسحب رصيدك إلى حسابك المصرفي.' }))));
       const name = el('input', { value: (T && T.name) || (ACC.profile && ACC.profile.name) || '', placeholder: 'الاسم كما يظهر للطلاب (مثلاً: أ. محمد علي)' });
-      const spec = el('input', { value: (T && T.spec) || '', placeholder: 'التخصص (مثلاً: معلم رياضيات للمرحلة الإعدادية)' });
+      const spec = el('input', { value: (T && T.spec) || '', placeholder: 'التخصص (مثلاً: معلم رياضيات للتعليم الأساسي)' });
       const bio = el('textarea', { rows: '4', placeholder: 'نبذة عنك وخبرتك (اختياري)', text: (T && T.bio) || '' });
       const agree = el('input', { type: 'checkbox' }); const msg = el('div'); const pbox = el('div');
       s.append(el('div', { class: 'panel accbox' }, el('b', { text: 'طلب الانضمام كمعلم' }), name, spec, bio), termsBox(),
@@ -294,11 +320,12 @@ export default function initTeach(X) {
     // approved
     tab = tab || store.get('st_tab', 'courses'); store.set('st_tab', tab);
     const W = ME.wallet;
+    s.append(el('div', { class: 'gx-hero', style: '--h1:#34c46a;--h2:#0e9f6e' }, el('img', { src: 'img/ui/k6.webp', alt: '', style: 'height:100px;margin:-10px 0 -12px' }), el('div', {}, el('b', { text: 'أهلاً ' + (T.name || '') + ' 👋' }), el('span', { text: T.spec || 'منصة المعلم' }))));
     s.append(el('div', { class: 'tc-wal' }, el('div', {}, el('b', { text: money(W.bal) }), el('span', { text: 'رصيدك الحالي' })),
       el('div', {}, el('b', { text: String(W.sales) }), el('span', { text: 'اشتراك في دوراتك' })), el('div', {}, el('b', { text: money(W.earned) }), el('span', { text: 'إجمالي أرباحك' }))));
     const tabs = el('div', { class: 'tc-tabs' }); const body = el('div', { class: 'stack' });
-    [['courses', '🎬 دوراتي'], ['wallet', '💰 المحفظة والسحب'], ['banks', '🏦 حساباتي المصرفية'], ['profile', '👤 ملفي']].forEach(([k, t]) =>
-      tabs.append(el('button', { class: 'btn sm ' + (k === tab ? '' : 'ghost'), text: t, onclick: () => renderStudio(k) })));
+    [['courses', '🎬 دوراتي'], ['wallet', '💰 المحفظة'], ['banks', '🏦 حساباتي'], ['profile', '👤 ملفي']].forEach(([k, t]) =>
+      tabs.append(el('button', { class: 'tc-chip' + (k === tab ? ' on' : ''), text: t, onclick: () => renderStudio(k) })));
     s.append(tabs, body);
     if (tab === 'courses') studioCourses(body); else if (tab === 'wallet') studioWallet(body); else if (tab === 'banks') studioBanks(body); else studioProfile(body);
   }

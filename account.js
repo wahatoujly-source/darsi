@@ -1295,6 +1295,7 @@ function renderAdmin() {
   if (!ACC.user) { go('login'); return; }
   const s = page('لوحة الإدارة', ACC.owner ? 'المجتهد' : 'مشرف — حسب صلاحياتك', 'account');
   if (!ACC.isAdmin) { const m = el('div'); s.append(m); fbk(m, 'bad', 'هذه الصفحة للإدارة فقط.'); return; }
+  s.classList.add('kx-adm'); s.append(el('div', { class: 'gx-hero', style: '--h1:#334a9e;--h2:#1b2660' }, el('img', { src: 'img/ui/n_acc.webp', alt: '' }), el('div', {}, el('b', { text: '🛠 لوحة الإدارة' }), el('span', { text: ACC.owner ? 'كل الأدوات بين يديك — افتح القسم الذي تحتاجه' : 'مشرف — الأقسام حسب صلاحياتك' }))));
   const can = ACC.can, teachAny = can('teach_req') || can('teach_courses') || can('teach_wd');
   if (teachAny && ACC.teachAdminAlert) s.append(ACC.teachAdminAlert());
   const statsHost = el('div'), listHost = el('div');

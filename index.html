@@ -1285,6 +1285,15 @@ html body .ar .hero{background:url(img/ui/q_comp.webp) no-repeat left 6px bottom
 html body .ar .hero .cd{font-family:var(--kx-d);text-align:start}
 html body .ar .lvc{background:#f8f9fe;border-radius:16px}html body .ar .lvc button{border-radius:12px;box-shadow:0 3px 0 rgba(0,0,0,.18)}
 html body .ar .row{border:0;background:#f6f7fc;border-radius:14px}
+/* v6 — لوحة الإدارة */
+.kx-adm h3{font-family:var(--kx-d);margin:14px 4px 6px;font-size:1.05rem}
+.kx-adm .stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.kx-adm .stat{border:0;border-radius:18px;padding:10px 8px;text-align:center;background:#fff;box-shadow:0 8px 18px -14px rgba(23,32,61,.6);border-top:4px solid var(--sc,#5b6cf0)}
+.kx-adm .stat b{font-family:var(--kx-d);font-size:1.35rem;color:var(--sc,#5b6cf0);display:block}.kx-adm .stat span{font-size:.72rem;color:var(--kx-mut);font-weight:700;line-height:1.4;display:block}
+.kx-adm .stat:nth-child(6n+2){--sc:#16a34a}.kx-adm .stat:nth-child(6n+3){--sc:#f59e0b}.kx-adm .stat:nth-child(6n+4){--sc:#8b5cf6}.kx-adm .stat:nth-child(6n+5){--sc:#0ea5e9}.kx-adm .stat:nth-child(6n){--sc:#ef4444}
+.kx-adm .adm-fold{border:0;border-radius:18px;box-shadow:0 8px 18px -15px rgba(23,32,61,.6);margin:7px 0}
+.kx-adm .adm-fold>summary{padding:13px 14px;font-family:var(--kx-d)}
+.kx-adm .adm-fold[open]>summary{background:linear-gradient(90deg,#eef1ff,#fff)}
 /* buttons + panels everywhere */
 .btn{border-radius:16px;box-shadow:0 4px 0 rgba(20,20,80,.18);transition:transform .1s,box-shadow .1s}.btn:active:not(:disabled){transform:translateY(3px);box-shadow:0 1px 0 rgba(20,20,80,.18)}
 .btn.ghost{background:#f0eeff;color:var(--kx-ink);box-shadow:0 3px 0 #dcd8f6}
