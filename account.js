@@ -294,6 +294,14 @@ function renderOnboard() {
 }
 
 /* ---------- parent: manage children ---------- */
+const GC = { 1: ['#ff7a7a', '#e8384f'], 2: ['#ffb44d', '#f47a12'], 3: ['#5fd47a', '#24a148'], 4: ['#32cbd9', '#0e9fb3'], 5: ['#5ab0ff', '#1f72e0'], 6: ['#a07bff', '#6c43ea'], 7: ['#6a86ff', '#3a56dd'], 8: ['#e07af5', '#ad3fcb'], 9: ['#ff6f9e', '#d92f6b'] };
+const gcVars = n => { const c = GC[+n] || ['#8aa0ff', '#5b6cf0']; return '--a:' + c[0] + ';--b:' + c[1] + ';--d:' + c[1]; };
+/* coloured kid strip at the top of parent sub-pages */
+function kidStrip(p, title, sub) {
+  const gn = +p.grade || 3, im = 'img/ui/' + (gn <= 3 ? 'k2' : gn <= 6 ? 'k4' : 'k6') + '.webp';
+  return el('div', { class: 'kx-ks', style: gcVars(gn) }, el('span', { class: 'av', text: p.avatar || '🙂' }),
+    el('span', { class: 'tx' }, el('b', { text: title }), el('small', { text: sub })), el('img', { src: im, alt: '' }));
+}
 function renderKids() {
   if (!ACC.user || !ACC.profile) { go('login'); return; }
   const s = page('أبنائي', 'حتى ' + MAX_KIDS + ' أبناء في حساب واحد', 'who');
@@ -301,8 +309,8 @@ function renderKids() {
   const list = el('div', { class: 'stack' }), msg = el('div');
   const draw = () => { list.innerHTML = '';
     if (!kidsOf().length) list.append(el('p', { class: 'note', text: 'لم تضف أحداً بعد. أضف ابنك الأول.' }));
-    kidsOf().forEach(p => list.append(el('div', { class: 'kidrow' }, el('span', { class: 'kav', text: p.avatar || '🙂' }), el('span', {}, el('b', { text: p.name }), el('span', { class: 'note', text: ' — الصف ' + gradeName(p.grade) })),
-      el('button', { class: 'btn ghost sm', text: 'حذف', onclick: async e => { const b = e.currentTarget; if (b.dataset.c !== '1') { b.dataset.c = '1'; b.textContent = 'تأكيد الحذف'; return; }
+    kidsOf().forEach(p => list.append(el('div', { class: 'kx-krow', style: gcVars(p.grade) }, el('span', { class: 'kav', text: p.avatar || '🙂' }), el('span', { class: 'tx' }, el('b', { text: p.name }), el('small', { text: 'الصف ' + gradeName(p.grade) + ' أساسي' })),
+      el('button', { class: 'del', text: '🗑', 'aria-label': 'حذف ' + p.name, onclick: async e => { const b = e.currentTarget; if (b.dataset.c !== '1') { b.dataset.c = '1'; b.textContent = 'تأكيد الحذف؟'; b.classList.add('sure'); return; }
         try { await deleteDoc(pref(p.id)); ACC.profiles = ACC.profiles.filter(x => x.id !== p.id); if (ACC.pid === p.id) await setActive(null); draw(); } catch (x) { fbk(msg, 'bad', errMsg(x)); } } })))); };
   draw();
   let grade = null, avatar = AVATARS[1];
@@ -319,8 +327,8 @@ function renderKids() {
       name.value = ''; grade = null; drawG(); draw(); fbk(msg, 'ok', 'تمت إضافة ' + nm + '.');
     } catch (e) { fbk(msg, 'bad', errMsg(e)); }
     add.disabled = false; } });
-  s.append(list, el('div', { class: 'panel accbox' }, el('b', { text: 'إضافة ابن' }), name, el('span', { class: 'note', text: 'الصف' }), gsel, el('span', { class: 'note', text: 'الصورة' }), av, add), msg,
-    el('button', { class: 'btn sun', text: 'تم ←', onclick: () => go('who') }));
+  s.append(list, el('div', { class: 'panel accbox kx-addk' }, el('b', { text: '➕ أضف ابناً أو ابنة' }), name, el('span', { class: 'note', text: 'الصف' }), gsel, el('span', { class: 'note', text: 'الصورة' }), av, add), msg,
+    el('button', { class: 'btn sun', style: 'width:100%;margin-top:12px', text: 'تم، ابدأ الدراسة ←', onclick: () => go('who') }));
 }
 
 /* ---------- parent: who is studying now? ---------- */
@@ -335,7 +343,7 @@ function renderWho() {
   if (ACC.isAdmin) s.append(el('div', { class: 'row', style: 'gap:8px;flex-wrap:wrap;margin-bottom:8px' }, !ACC.can('browse') ? null : el('button', { class: 'btn sun', text: ACC.adminBrowse ? '👁️ وضع المدير مفعّل ← الرئيسية' : '👁️ تصفّح المنصة كمدير (كل الدروس)', onclick: async () => { ACC.adminBrowse = true; store.set('admin_browse', true); await setActive(null); go('home'); } }), el('button', { class: 'btn ghost', text: '🛠️ لوحة الإدارة', onclick: () => go('admin') })));
   const g = el('div', { class: 'kx-who' });
   const U = n => 'img/ui/' + n + '.webp'; const PAIRK = gr => (+gr <= 3 ? ['k1', 'k2'] : +gr <= 6 ? ['k3', 'k4'] : ['k5', 'k6']);
-  const GC = { 1: ['#ff7a7a', '#e8384f'], 2: ['#ffb44d', '#f47a12'], 3: ['#5fd47a', '#24a148'], 4: ['#32cbd9', '#0e9fb3'], 5: ['#5ab0ff', '#1f72e0'], 6: ['#a07bff', '#6c43ea'], 7: ['#6a86ff', '#3a56dd'], 8: ['#e07af5', '#ad3fcb'], 9: ['#ff6f9e', '#d92f6b'] };
+
   const me = ACC.profiles.find(p => p.id === 'me');
   if (me) g.append(el('div', { class: 'kx-wc' + (ACC.pid === 'me' ? ' on' : ''), style: '--a:#94a3b8;--b:#475569' },
     el('button', { class: 'top', onclick: async () => { await setActive('me'); go('home'); } }, el('span', { class: 'kav', text: me.avatar || '👩‍🏫' }), el('span', { class: 'nm' }, el('b', { text: 'أنا' }), el('small', { text: 'المعلم' })), el('span', { class: 'go', text: 'ادخل ←' }))));
@@ -449,7 +457,7 @@ function renderCtrl(pid) {
   const p = ACC.profiles.find(x => x.id === pid); if (!p) { go('who'); return; }
   if (!D.App.catalog) { setTimeout(() => renderCtrl(pid), 300); return; }
   const g = String(p.grade || ''); const subs = (D.App.catalog.grades[g] || []);
-  const s = page('ماذا يدرس ' + p.name + '؟', 'الصف ' + gradeName(g), 'who');
+  const s = page('ماذا يدرس ' + p.name + '؟', 'الصف ' + gradeName(g), 'who'); s.append(kidStrip(p, '🎛 تحكّم في دروس ' + p.name, 'اختر المواد والدروس التي تظهر له، والأصوات'));
   const c0 = p.ctrl || {}; const selS = new Set(c0.subjects || []); const selL = {}; Object.entries(c0.lessons || {}).forEach(([k, v]) => selL[k] = new Set(v));
   let all = !selS.size; const msg = el('div'); const box = el('div', { class: 'stack' }); const snd = { voice: true, praise: true, fx: true, ...(p.snd || {}) }; let boardOn = p.board !== false;
   const lessonsOf = sb => { const out = []; (sb.books || [{ units: sb.units }]).forEach(b => (b.units || []).forEach(u => u.lessons.forEach(l => { if (l.ready && !out.some(x => x.id === l.id)) out.push({ ...l, unit: u.title }); }))); return out; };
@@ -496,7 +504,7 @@ function renderTT(pid) {
   const p = ACC.profiles.find(x => x.id === pid); if (!p) { go('who'); return; }
   if (!D.App.catalog) { setTimeout(() => renderTT(pid), 300); return; }
   const g = String(p.grade || ''); const subs = D.App.catalog.grades[g] || []; const TT = D.TT;
-  const s = page('📅 جدول ' + p.name, 'الصف ' + gradeName(g) + ' — من الأحد إلى الخميس', 'who');
+  const s = page('📅 جدول ' + p.name, 'الصف ' + gradeName(g) + ' — من الأحد إلى الخميس', 'who'); s.append(kidStrip(p, '📅 الجدول الدراسي', 'حصص ' + p.name + ' من الأحد إلى الخميس، مثل المدرسة'));
   const clone = o => JSON.parse(JSON.stringify(o));
   let tt = p.tt ? clone(p.tt) : TT.deflt(g); tt.days = [0, 1, 2, 3, 4].map(i => (tt.days && tt.days[i]) || []);
   const msg = el('div'); const box = el('div', { class: 'stack' }); s.append(box, msg);
@@ -543,11 +551,14 @@ function renderTT(pid) {
 async function renderLinkKid(pid) {
   if (!ACC.user || !isAdult()) { go('login'); return; }
   const p = ACC.profiles.find(x => x.id === pid); if (!p) { go('who'); return; }
-  const s = page('ربط موبايل ' + p.name, 'خطوة واحدة على موبايل الابن', 'who');
-  s.append(el('div', { class: 'panel accbox' }, el('b', { text: 'كيف؟' }),
-    el('span', { class: 'note', text: '1) اضغط الزر الأصفر بالأسفل: يظهر رمز من 6 أرقام ورمز QR.' }),
-    el('span', { class: 'note', text: '2) على موبايل ' + p.name + ': امسح رمز QR بالكاميرا، أو افتح المنصة (بدون تسجيل دخول) واضغط «دخول» ← «🧒 أنا طالب، عندي رمز من ولي أمري» واكتب الأرقام.' }),
-    el('span', { class: 'note', text: '3) انتهى! يبقى موبايله مفتوحاً على ملفه دائماً، ويظهر هنا في قائمة الأجهزة.' })),
+  const s = page('ربط موبايل ' + p.name, 'خطوة واحدة على موبايل الابن', 'who'); s.classList.add('kx-lk');
+  const gn = +p.grade || 3, im = 'img/ui/' + (gn <= 3 ? 'k2' : gn <= 6 ? 'k4' : 'k6') + '.webp';
+  const stp = (n, t, d) => el('div', { class: 'st' }, el('span', { class: 'n', text: n }), el('span', {}, el('b', { text: t }), el('small', { text: d })));
+  s.append(el('div', { class: 'lk-hero' }, el('img', { src: im, alt: '' }), el('div', {}, el('b', { text: 'موبايل ' + p.name + ' يدخل مباشرة' }), el('span', { text: 'بدون رقم ولا كلمة سر، ولا يرى حسابك أو الدفع أو ملفات إخوته.' }))),
+    el('div', { class: 'lk-steps' },
+      stp('1', 'اضغط الزر الأصفر', 'يظهر رمز من 6 أرقام ورمز QR'),
+      stp('2', 'على موبايل ' + p.name, 'امسح رمز QR بالكاميرا، أو افتح المنصة ← «دخول» ← «🧒 أنا طالب، عندي رمز» واكتب الأرقام'),
+      stp('3', 'انتهى! ✓', 'يبقى موبايله مفتوحاً على ملفه دائماً ويظهر في الأجهزة بالأسفل')),
     await kidDevicesBox(p));
 }
 
@@ -561,17 +572,10 @@ async function renderKid(pid) {
   try { const d = await withTimeout(getDoc(pref(pid))); if (d.exists()) { Object.assign(p, d.data()); } } catch (e) {}
   s.innerHTML = '';
   const st = p.stats || {}, lv = D.GAME.level(st.stars || 0), mins = st.mins || {}, goal = p.goal || 20;
-  const nx = lv.next;
-  s.append(el('div', { class: 'mj-progress' },
-    el('div', { class: 'lv' }, el('span', { class: 'lvi', text: lv.icon }), el('span', {}, el('b', { text: lv.name }), el('small', { text: nx ? ('باقي ' + (nx[0] - (st.stars || 0)) + ' نجمة لمستوى ' + nx[1]) : 'أعلى مستوى!' }))),
-    el('div', { class: 'chips' }, el('span', { class: 'chip' }, '⭐ ', el('b', { text: String(st.stars || 0) }), ' نجمة'), el('span', { class: 'chip' }, '🔥 ', el('b', { text: String(liveStreak(st)) }), ' يوم متتالٍ'),
-      el('span', { class: 'chip' }, '⏱ ', el('b', { text: String(Math.round(Object.keys(mins).filter(k => k >= daysAgo(6)).reduce((a, k) => a + mins[k], 0))) }), ' دقيقة هذا الأسبوع'))));
-  // 7-day bars
-  const ch = el('div', { class: 'wk' }); const mx = Math.max(goal, ...Array.from({ length: 7 }, (_, i) => mins[daysAgo(i)] || 0));
-  for (let i = 6; i >= 0; i--) { const k = daysAgo(i), v = Math.round(mins[k] || 0), d = new Date(); d.setDate(d.getDate() - i);
-    ch.append(el('div', { class: 'wkd' + (v >= goal ? ' ok' : '') }, el('small', { text: String(v) }), el('span', { class: 'wkb' }, el('i', { style: 'height:' + Math.round(100 * v / mx) + '%' })), el('small', { text: i === 0 ? 'اليوم' : DAYN[d.getDay()] }))); }
-  ch.style.setProperty('--goal', (100 * goal / mx) + '%');
-  s.append(el('div', { class: 'panel accbox' }, el('b', { text: 'دقائق التعلّم في آخر 7 أيام' }), el('span', { class: 'note', text: 'الهدف اليومي ' + goal + ' دقيقة. العمود الأخضر = يوم حقّق فيه الهدف.' }), ch));
+  const rbox = el('div'); s.append(rbox);
+  const drawRep = per => { rbox.innerHTML = ''; rbox.append(D.REPORT.view({ name: p.name, grade: p.grade, stats: st, goal }, per, drawRep)); };
+  drawRep('week');
+  s.append(el('button', { class: 'btn sun', style: 'width:100%;margin-top:12px', text: '▶ ابدأ الدراسة كـ ' + p.name, onclick: async () => { await setActive(pid); go('g' + p.grade); } }));
   // goal setting
   const gsel = el('div', { class: 'gpick' }); const msg = el('div');
   [10, 15, 20, 30, 45, 60].forEach(v => gsel.append(el('button', { class: 'btn' + (v === goal ? ' on' : ''), text: v + ' د', onclick: async () => {
@@ -579,20 +583,28 @@ async function renderKid(pid) {
     catch (x) { fbk(msg, 'bad', errMsg(x)); } } })));
   s.append(el('div', { class: 'panel accbox' }, el('b', { text: '🎯 الهدف اليومي' }), el('span', { class: 'note', text: 'كم دقيقة تريد أن يتعلّم ' + p.name + ' كل يوم؟ سيظهر له عدّاد، ويحتفل التطبيق معه عند تحقيقه.' }), gsel, msg));
   s.append(await kidDevicesBox(p));
-  // full report (day / week / month) with weak skills, PDF and WhatsApp
-  const rbox = el('div'); s.append(rbox);
-  const drawRep = per => { rbox.innerHTML = ''; rbox.append(D.REPORT.view({ name: p.name, grade: p.grade, stats: st, goal }, per, drawRep)); };
-  drawRep('week');
-  s.append(el('button', { class: 'btn sun', text: '▶ ابدأ الدراسة كـ ' + p.name, onclick: async () => { await setActive(pid); go('g' + p.grade); } }));
 }
 
 function renderKidAccount() {
-  const p = activeProfile() || {}; const s = page('حسابي', p.name || '', 'home');
-  s.append(el('div', { class: 'panel accbox' }, el('div', { style: 'font-size:3rem;text-align:center', text: p.avatar || '🙂' }),
-    el('b', { style: 'text-align:center;font-size:1.3rem', text: p.name || '' }), el('span', { class: 'note', style: 'text-align:center', text: 'الصف ' + gradeName(p.grade) }),
-    el('div', { class: 'feedback ok', text: '🔗 هذا الجهاز مربوط بحساب ولي أمرك. نجومك وتقدّمك تُحفظ تلقائياً ويراها ولي أمرك.' })),
-    el('button', { class: 'btn sun', text: '📚 دروسي', onclick: () => go('g' + p.grade) }),
-    el('button', { class: 'btn', text: '📊 تقريري', onclick: () => go('myreport') }));
+  const p = activeProfile() || {}; const U = n => 'img/ui/' + n + '.webp';
+  const s = page('حسابي', '', 'home'); s.classList.add('kx-acc');
+  const gn = +p.grade || 3, pair = gn <= 3 ? ['k1', 'k2'] : gn <= 6 ? ['k3', 'k4'] : ['k5', 'k6'];
+  const st = p.stats || {}, G = D.GAME, ls = (G.stats && G.stats()) || {}, stars = Math.max(st.stars || 0, ls.stars || 0), lv = G.level(stars), nx = lv.next, stk = Math.max(liveStreak(st), ls.streak || 0);
+  s.append(el('div', { class: 'kx-ph' },
+    el('div', { class: 'bgx' }), el('span', { class: 'sp1', text: '✨' }), el('span', { class: 'sp2', text: '⭐' }),
+    el('div', { class: 'avw' + (p.avatar ? ' emo' : '') }, p.avatar ? el('span', { text: p.avatar }) : el('img', { src: U(pair[0]), alt: '' })),
+    el('h2', { text: p.name || '' }),
+    el('div', { class: 'chips' }, el('span', { class: 'c', text: '🎒 الصف ' + gradeName(p.grade) + ' أساسي' }), el('span', { class: 'c', text: lv.icon + ' ' + lv.name })),
+    el('div', { class: 'stats' },
+      el('div', {}, el('b', { text: String(stars) }), el('small', { text: 'نجمة' })),
+      el('div', {}, el('b', { text: String(stk) }), el('small', { text: 'يوم متتالٍ 🔥' })),
+      el('div', {}, el('b', { text: nx ? String(Math.max(0, nx[0] - stars)) : '👑' }), el('small', { text: nx ? 'نجمة للمستوى التالي' : 'أعلى مستوى' })))));
+  s.append(el('button', { class: 'kx-sub on', onclick: () => go('g' + p.grade) }, el('img', { src: U(pair[1]), alt: '' }),
+    el('span', { class: 'tx' }, el('small', { text: 'جاهز للتعلّم؟' }), el('b', { text: '📚 دروسي' }), el('small', { text: 'كل مواد الصف ' + gradeName(p.grade) })), el('span', { class: 'go', text: 'ادخل ←' })));
+  const T = [['n_ach', 'تقريري', () => go('myreport')], ['q_review', 'أخطائي', () => go('mistakes')], ['q_comp', 'لوحة الأبطال', () => go('board')],
+    ['q_times', 'جدول الضرب', () => go('times')], ['q_test', 'اختبر مستواك', () => go('test')], ['x_all', 'كتبي PDF', () => go('books')]];
+  s.append(el('div', { class: 'kx-qk' }, ...T.map(([im, t, fn]) => el('button', { onclick: fn }, el('span', { class: 'ib' }, el('img', { src: U(im), alt: '', loading: 'lazy' })), el('b', { text: t })))));
+  s.append(el('div', { class: 'kx-linked' }, el('span', { class: 'i', text: '🔗' }), el('span', {}, el('b', { text: 'هذا الجهاز مربوط بحساب ولي أمرك' }), el('small', { text: 'نجومك وتقدّمك تُحفظ تلقائياً ويراها ولي أمرك.' }))));
 }
 function renderAccount() {
   if (!ACC.user) { go('login'); return; }
