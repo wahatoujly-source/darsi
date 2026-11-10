@@ -1164,6 +1164,67 @@ body.has-nav .kx-nav{display:flex}body.has-nav header.bar .pill.dup,body.has-nav
 .au-card{border-radius:26px!important;border:2px solid #fff!important;background:rgba(255,255,255,.95)!important;box-shadow:0 10px 26px rgba(59,75,211,.12)!important}
 .au-in{border-radius:16px!important;border:2px solid #e6e4f6!important;background:#faf9ff!important}.au-in:focus{border-color:#8b6cff!important;background:#fff!important;box-shadow:0 0 0 4px rgba(139,108,255,.15)!important;outline:0}
 .au-tabs{background:#f0eeff!important;border-radius:999px!important;padding:4px!important}.au-tabs button.on{background:linear-gradient(180deg,#8d6bff,#5b3df0)!important;color:#fff!important;border-radius:999px!important;box-shadow:0 3px 0 #3e25b8}
+/* v6 — صفحة الدرس */
+header.bar.lx-head{position:sticky;top:6px;z-index:30}
+header.bar.lx-head h1{white-space:normal;font-size:1.05rem;line-height:1.25;overflow:visible;text-overflow:clip}header.bar.lx-head h1 small{display:block}
+.lx-prog{height:6px;border-radius:9px;background:rgba(23,32,61,.08);margin:8px 4px 2px;overflow:hidden}
+.lx-prog i{display:block;height:100%;width:0;border-radius:9px;background:linear-gradient(270deg,#34d27a,#16a34a);transition:width .45s cubic-bezier(.3,.8,.3,1)}
+nav.steps button.done .n{background:#22c55e;color:#fff}
+.lsec{border:1.5px solid rgba(255,255,255,.75);box-shadow:0 14px 30px -24px rgba(23,32,61,.55),inset 0 0 0 1px rgba(23,32,61,.04)}
+.lsec .eyebrow{font-family:var(--kx-d),inherit;font-weight:800;font-size:.8rem}
+.lsec h2{font-family:var(--kx-d),inherit;font-size:1.35rem;color:var(--kx-ink,#17203d)}
+.nav.lx-nav{position:sticky;bottom:calc(env(safe-area-inset-bottom,0px) + 10px);z-index:25;margin-top:14px;padding:8px;border-radius:22px;background:rgba(255,255,255,.88);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);box-shadow:0 12px 30px -14px rgba(23,32,61,.4);display:flex;gap:8px}
+.nav.lx-nav .btn{flex:1;justify-content:center;min-height:50px;font-size:1.02rem}
+.nav.lx-nav .btn:not(.ghost){flex:1.6;background:linear-gradient(180deg,#34c46a,#1f9d4f);box-shadow:0 5px 0 #157a3b}
+.nav.lx-nav .btn.ghost:disabled{opacity:.4}
+.lx-vn{margin:12px 4px 0;font-size:.82rem;text-align:center}
+.lx-end{margin-top:14px;padding:18px 16px 18px;border-radius:30px;text-align:center;background:linear-gradient(170deg,var(--a),var(--b));color:#fff;box-shadow:0 18px 40px -22px var(--d);overflow:hidden;position:relative;animation:lxPop .5s cubic-bezier(.2,1.4,.4,1)}
+.lx-end::before{content:"";position:absolute;inset:-40% -20% auto;height:70%;background:radial-gradient(closest-side,rgba(255,255,255,.35),transparent);pointer-events:none}
+.lx-ech{display:flex;justify-content:center;align-items:flex-end;gap:0;height:150px;position:relative}
+.lx-ech img{height:150px;filter:drop-shadow(0 10px 14px rgba(0,0,0,.25))}.lx-ech img+img{height:135px;margin-inline-start:-26px}
+.lx-end h2{margin:6px 0 2px;font-family:var(--kx-d),inherit;font-size:1.7rem;color:#fff;text-shadow:0 2px 0 rgba(0,0,0,.12)}
+.lx-em{margin:0 0 6px;font-weight:700;opacity:.95}
+.lx-stars{display:flex;justify-content:center;gap:6px;margin:6px 0 4px}
+.lx-stars span{font-size:2.6rem;line-height:1;color:rgba(255,255,255,.3);text-shadow:0 3px 0 rgba(0,0,0,.12)}
+.lx-stars span.on{color:#ffd23f;animation:lxStar .5s calc(var(--i)*.18s) both cubic-bezier(.2,1.6,.4,1)}.lx-stars span:nth-child(2){font-size:3.2rem;transform:translateY(-6px)}
+.lx-sc{display:inline-block;background:rgba(255,255,255,.2);border-radius:99px;padding:3px 14px;font-weight:700;font-size:.9rem;margin-bottom:12px}
+.lx-nx{display:flex;flex-direction:column;align-items:center;width:100%;min-height:58px;background:linear-gradient(180deg,#ffd451,#f5a400)!important;color:#3a2300!important;box-shadow:0 5px 0 #b97800!important;font-size:1.05rem}
+.lx-nx small{font-size:.75rem;opacity:.8;font-weight:700}
+.lx-done{background:rgba(255,255,255,.2);border-radius:16px;padding:10px;font-weight:800}
+.lx-ac{display:flex;gap:8px;margin-top:10px}.lx-ac .btn{flex:1;justify-content:center;background:rgba(255,255,255,.92)!important;color:var(--d)!important;box-shadow:0 4px 0 rgba(0,0,0,.15)!important}
+@keyframes lxPop{from{transform:scale(.85);opacity:0}to{transform:none;opacity:1}}
+@keyframes lxStar{from{transform:scale(0) rotate(-40deg)}to{transform:scale(1)}}
+/* v6 — التحدي واللوحة والأخطاء */
+.dx-hero{display:flex;align-items:center;gap:10px;margin-top:4px;padding:10px 14px 10px 10px;border-radius:24px;background:linear-gradient(160deg,var(--a),var(--b));color:#fff;box-shadow:0 12px 26px -18px var(--d);min-height:96px;overflow:hidden}
+.dx-hero img{height:92px;margin:-6px 0 -12px;filter:drop-shadow(0 6px 10px rgba(0,0,0,.2));flex:none}
+.dx-hero.mx img,.dx-hero.bd img{height:78px;margin:0}
+.dx-hero b{display:block;font-family:var(--kx-d);font-size:1.25rem;line-height:1.3}.dx-hero span{display:block;font-size:.85rem;opacity:.92;font-weight:600}
+.dx-top{display:flex;align-items:center;gap:8px;margin:12px 0 8px}.dx-top .ddots{flex:1;margin:0}.dx-top .ddots span{flex:1;height:9px}
+.dx-qn{font-weight:800;font-size:.85rem;color:var(--kx-ink)}.dx-sc{background:#e6f6ea;color:#1f6b33;border-radius:99px;padding:2px 10px;font-weight:800;font-size:.85rem}
+.ddots span.on{background:#22c55e}.ddots span.cur{background:#ffb800}
+.dq{border:1.5px solid rgba(23,32,61,.06);box-shadow:0 12px 26px -20px rgba(23,32,61,.5);padding:18px;font-size:1.3rem;text-align:center}
+.dq small{justify-self:center;background:rgba(91,108,240,.1);color:#4a57d8!important;border-radius:99px;padding:2px 12px;font-weight:700}
+.dopts .btn{position:relative;min-height:56px;font-size:1.1rem;border-radius:18px;background:#fff;border:2px solid #e4e8f5;box-shadow:0 4px 0 #dde2f0;color:var(--kx-ink)}
+.dopts .btn[data-k]::before{content:attr(data-k);position:absolute;inset-inline-start:12px;top:50%;transform:translateY(-50%);width:30px;height:30px;border-radius:10px;background:#eef1fb;display:grid;place-items:center;font-size:.9rem;color:#5b6cf0}
+.dopts .btn.right{box-shadow:0 4px 0 #2A9D46}.dopts .btn.right::before{background:#2A9D46;color:#fff;content:"✓"}.dopts .btn.wrong{box-shadow:0 4px 0 #E5484D}.dopts .btn.wrong::before{background:#E5484D;color:#fff;content:"✗"}
+.dx-done{margin-top:12px;text-align:center;border-radius:28px;padding:16px;background:#fff;box-shadow:0 14px 30px -22px rgba(23,32,61,.6);position:relative;display:grid;justify-items:center;gap:4px;animation:lxPop .45s cubic-bezier(.2,1.4,.4,1)}
+.dx-done>img{height:140px;margin-top:-6px}
+.dx-ring{width:96px;height:96px;border-radius:50%;margin-top:-20px;background:conic-gradient(var(--b) calc(var(--p)*1%),#eef1fb 0);display:grid;place-items:center;box-shadow:0 6px 16px -8px var(--d)}
+.dx-ring b{width:76px;height:76px;border-radius:50%;background:#fff;display:grid;place-items:center;font-family:var(--kx-d);font-size:1.5rem;color:var(--d)}
+.dx-done h2{margin:4px 0 0;font-family:var(--kx-d);color:var(--kx-ink)}.dx-done p{margin:0;color:var(--kx-mut);font-weight:600}
+.dx-ac{display:flex;gap:8px;width:100%;margin-top:10px}.dx-ac .btn{flex:1;justify-content:center}
+.mis-empty img{filter:drop-shadow(0 8px 12px rgba(0,0,0,.15))}
+.mis-card{border:1.5px solid rgba(23,32,61,.06);box-shadow:0 10px 22px -18px rgba(23,32,61,.5);padding:12px}
+.mis-go{background:linear-gradient(180deg,#ff7a7e,#e5484d);color:#fff;border-radius:12px;padding:7px 12px;font-weight:800;font-size:.85rem;box-shadow:0 3px 0 #b3262b}
+.bd-pod{display:grid;grid-template-columns:1fr 1.1fr 1fr;align-items:end;gap:8px;margin-top:6px}
+.bd-p{display:grid;justify-items:center;gap:2px;text-align:center;min-width:0}
+.bd-av{font-size:2rem;width:58px;height:58px;border-radius:50%;background:#fff;display:grid;place-items:center;box-shadow:0 0 0 4px var(--rc),0 8px 14px -8px rgba(0,0,0,.4)}
+.bd-p.p1 .bd-av{width:70px;height:70px;font-size:2.4rem}
+.bd-p b{font-size:.9rem;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--kx-ink)}.bd-p small{font-size:.75rem;color:var(--kx-mut);font-weight:700}
+.bd-st{width:100%;border-radius:16px 16px 6px 6px;background:linear-gradient(180deg,var(--rc),var(--rd));display:grid;place-items:center;font-size:1.6rem;margin-top:4px;box-shadow:inset 0 -4px 0 rgba(0,0,0,.12)}
+.bd-p.p1{--rc:#ffd23f;--rd:#f5a400}.bd-p.p1 .bd-st{height:96px}.bd-p.p2{--rc:#cfd8e6;--rd:#9aa7bd}.bd-p.p2 .bd-st{height:72px}.bd-p.p3{--rc:#f0b48a;--rd:#c9774a}.bd-p.p3 .bd-st{height:56px}
+.bd-p.me b{color:#1f9d4f}
+.brd-list{box-shadow:0 10px 22px -18px rgba(23,32,61,.5)}.brd-row{padding:8px 6px}.brd-row+.brd-row{border-top:1px solid #f0f2f8}
 /* buttons + panels everywhere */
 .btn{border-radius:16px;box-shadow:0 4px 0 rgba(20,20,80,.18);transition:transform .1s,box-shadow .1s}.btn:active:not(:disabled){transform:translateY(3px);box-shadow:0 1px 0 rgba(20,20,80,.18)}
 .btn.ghost{background:#f0eeff;color:var(--kx-ink);box-shadow:0 3px 0 #dcd8f6}
@@ -1237,7 +1298,7 @@ function voiceHelp(lang){
     el('div',{class:'row',style:'gap:8px'},el('button',{class:'btn sun sm',text:'🔊 جرّب الصوت',onclick:()=>{loadVoices();speak(lang==='en'?'Hello! Welcome to Mujtahid.':'مرحباً بك في منصة المجتهد',{lang});}}),el('button',{class:'btn ghost sm',text:'إخفاء',onclick:()=>{box.remove();store.set('vh_hide_'+lang,Date.now());}})));
   return box;}
 function voiceCheck(host,lang){if(TTS.quiet&&lang!=='en')return;if(store.get('vh_seen_'+lang,false))return;
-  setTimeout(()=>{loadVoices();const ok=lang==='en'?(TTS.en&&TTS.en.length):(TTS.ar&&TTS.ar.length)||ttsOn();if(!ok&&host.isConnected){store.set('vh_seen_'+lang,true);host.prepend(voiceHelp(lang));}},1800);}
+  setTimeout(()=>{loadVoices();const ok=lang==='en'?(TTS.en&&TTS.en.length):(TTS.ar&&TTS.ar.length)||ttsOn();if(!ok&&host.isConnected&&!document.querySelector('.voicehelp')){store.set('vh_seen_'+lang,true);host.prepend(voiceHelp(lang));}},1800);}
 /* English letters are spoken by their NAMES (ess, bee, zed…), never as a bare sound the voice may mangle */
 const EN_LN={a:'ay',b:'bee',c:'see',d:'dee',e:'ee',f:'eff',g:'jee',h:'aitch',i:'eye',j:'jay',k:'kay',l:'ell',m:'em',n:'en',o:'oh',p:'pee',q:'cue',r:'ar',s:'ess',t:'tee',u:'you',v:'vee',w:'double you',x:'ex',y:'why',z:'zed'};
 function enLetters(t){const s=String(t).trim();const toks=s.match(/[A-Za-z]+/g);if(!toks)return t;
@@ -2374,10 +2435,11 @@ function renderMyReport(period='week'){root.innerHTML='';const n=window.ACC&&ACC
 
 /* ================= مراجعة أخطائي ================= */
 async function renderMistakes(){
-  root.innerHTML='';root.append(bar('مراجعة أخطائي','التمارين التي أخطأت فيها: أعدها حتى تتقنها','home'));
-  const M=store.get('g_mis',{}),keys=Object.keys(M).sort((a,b)=>M[b].t-M[a].t);const box=el('div',{class:'stack'});root.append(box);
-  if(!keys.length){box.append(el('div',{class:'mis-empty'},el('div',{style:'font-size:3rem',text:'🏆'}),el('b',{text:'لا توجد أخطاء للمراجعة!'}),el('p',{class:'note',text:'كل تمرين تخطئ فيه يظهر هنا لتعيده لاحقاً حتى تتقنه.'})));return;}
-  box.append(el('p',{class:'note',text:'عندك '+keys.length+' تمرين للمراجعة. حلّه بدون أخطاء ليختفي من القائمة.'}));
+  root.innerHTML='';root.append(bar('مراجعة أخطائي','أعد التمارين حتى تتقنها','home'));
+  const M=store.get('g_mis',{}),keys=Object.keys(M).sort((a,b)=>M[b].t-M[a].t);const KG=kxMyGrade()||'3';
+  root.append(el('div',{class:'dx-hero mx',style:kxVars(KG)},el('img',{src:UIMG('q_review'),alt:''}),el('div',{},el('b',{text:keys.length?'عندك '+keys.length+' '+(keys.length===1?'تمرين':keys.length<=10?'تمارين':'تمريناً')+' للمراجعة':'لا توجد أخطاء! 🏆'}),el('span',{text:keys.length?'حلّ التمرين بدون أخطاء ليختفي من القائمة':'كل تمرين تخطئ فيه يظهر هنا لتعيده حتى تتقنه'}))));
+  const box=el('div',{class:'stack'});root.append(box);
+  if(!keys.length){box.append(el('div',{class:'mis-empty'},el('img',{src:UIMG(kxPair(KG)[0]),alt:'',style:'height:150px'}),el('b',{text:'ممتاز! لا شيء للمراجعة'}),el('button',{class:'btn',text:'⚡ تحدي اليوم',onclick:()=>go('daily')})));return;}
   keys.forEach(k=>{const [lid,si,bi]=k.split('|');const f=findLesson(lid);if(!f)return;const x=M[k];
     box.append(el('button',{class:'mis-card',onclick:()=>go('mis-'+lid+'~'+si+'~'+bi)},el('span',{class:'mis-ic',text:f.subject.icon||'📘'}),
       el('span',{},el('b',{text:f.lesson.title}),el('small',{class:'note',text:f.subject.name+' — الخطوة '+(+si+1)+' — أخطاء: '+x.w})),el('span',{class:'mis-go',text:'تدرّب ←'})));});
@@ -2400,9 +2462,15 @@ async function renderMistake(lid,si,bi){
 
 /* ================= التحدي اليومي: 5 أسئلة من دروسك (الجمعة والسبت عطلة) ================= */
 async function renderDaily(){
-  root.innerHTML='';root.append(bar('⚡ تحدي اليوم','5 أسئلة سريعة من دروسك','home'));const box=el('div',{class:'stack'});root.append(box);
+  root.innerHTML='';root.append(bar('⚡ تحدي اليوم','5 أسئلة سريعة من دروسك','home'));
+  const KG=kxMyGrade()||'3',KP=kxPair(KG);
+  const dDone=(sc,extra)=>el('div',{class:'dx-done',style:kxVars(KG)},el('img',{src:UIMG(sc>=3?KP[0]:KP[1]),alt:''}),
+    el('div',{class:'dx-ring',style:'--p:'+(sc/5*100)},el('b',{text:sc+'/5'})),el('h2',{text:sc===5?'علامة كاملة! 🏆':sc>=3?'أحسنت! ⭐':'محاولة جيدة 💪'}),
+    el('p',{text:sc===5?'أنت بطل اليوم. عُد غداً لتحدٍّ جديد':sc>=3?'عُد غداً لتحدٍّ جديد وحافظ على سلسلتك 🔥':'راجع دروسك وعُد غداً، ستكون أفضل'}),extra||null);
+  root.append(el('div',{class:'dx-hero',style:kxVars(KG)},el('img',{src:UIMG(KP[1]),alt:''}),el('div',{},el('b',{text:'تحدّى نفسك اليوم!'}),el('span',{text:'5 أسئلة من دروسك · حتى 25 نقطة في لوحة الأبطال'}))));
+  const box=el('div',{class:'stack'});root.append(box);
   const T=GAME.today(),D=store.get('g_daily',{});
-  if(D.date===T){box.append(el('div',{class:'daily-done'},el('div',{style:'font-size:3rem',text:D.score===5?'🏆':'⭐'}),el('b',{text:'أنهيت تحدي اليوم: '+D.score+' من 5'}),el('p',{class:'note',text:'عُد غداً لتحدٍّ جديد وحافظ على سلسلتك 🔥'})));return;}
+  if(D.date===T){box.append(dDone(D.score,el('div',{class:'dx-ac'},el('button',{class:'btn',text:'🏆 لوحة الأبطال',onclick:()=>go('board')}),el('button',{class:'btn ghost',text:'📝 أخطائي',onclick:()=>go('mistakes')}))));return;}
   if(GAME.weekend(T))box.append(el('div',{class:'feedback info',text:'🌴 اليوم عطلة! سلسلتك محفوظة ولن تنقطع. إن أردت، يمكنك أن تلعب التحدي.'}));
   box.append(el('p',{class:'note',text:'جارٍ تجهيز الأسئلة…'}));
   const LG=lockedGrade();const lr=store.get('g_lr',{});
@@ -2417,11 +2485,10 @@ async function renderDaily(){
   const Q=shuffle(pool).slice(0,5);let i=0,score=0;const area=el('div');box.append(area);
   const draw=()=>{area.innerHTML='';
     if(i>=5){store.set('g_daily',{date:T,score});GAME.markDay();cheer(score===5?'perfect':score>=3?'win':'tryagain');
-      area.append(el('div',{class:'daily-done'},el('div',{style:'font-size:3rem',text:score===5?'🏆':score>=3?'⭐':'💪'}),el('b',{text:'نتيجتك: '+score+' من 5'}),el('p',{class:'note',text:score===5?'رائع! علامة كاملة.':score>=3?'أحسنت! عُد غداً لتحدٍّ جديد.':'لا بأس، راجع دروسك وعُد غداً.'}),
-        el('button',{class:'btn',text:'🏠 الرئيسية',onclick:()=>go('home')})));return;}
+      area.append(dDone(score,el('div',{class:'dx-ac'},el('button',{class:'btn',text:'🏆 لوحة الأبطال',onclick:()=>go('board')}),el('button',{class:'btn ghost',text:'🏠 الرئيسية',onclick:()=>go('home')}))));return;}
     const it=Q[i];let locked=false;const fb=el('div');
-    const dots=el('div',{class:'ddots'});for(let k=0;k<5;k++)dots.append(el('span',{class:k<i?'on':k===i?'cur':''}));
-    const opts=el('div',{class:'dopts'});shuffle(it.o).forEach(o=>{const bt=el('button',{class:'btn ghost',lang:it.en?'en':null,text:o,onclick:()=>{if(locked)return;locked=true;
+    const dots=el('div',{class:'dx-top'},el('span',{class:'dx-qn',text:'السؤال '+(i+1)+' من 5'}),el('div',{class:'ddots'},...[0,1,2,3,4].map(k=>el('span',{class:k<i?'on':k===i?'cur':''}))),el('span',{class:'dx-sc',text:'✓ '+score}));
+    const opts=el('div',{class:'dopts'});shuffle(it.o).forEach((o,oi)=>{const bt=el('button',{class:'btn ghost','data-k':'أبجدهو'[oi]||'',lang:it.en?'en':null,text:o,onclick:()=>{if(locked)return;locked=true;
       if(o===it.a){bt.classList.add('right');score++;cheer('right');}else{bt.classList.add('wrong');cheer('wrong');$$('button',opts).forEach(x=>{if(x.textContent===it.a)x.classList.add('right');});}
       if(it.why)fb.append(el('div',{class:'feedback '+(o===it.a?'ok':'info'),text:it.why}));
       fb.append(el('button',{class:'btn',style:'margin-top:8px',text:i<4?'التالي ←':'النتيجة',onclick:()=>{i++;draw();}}));}});opts.append(bt);});
@@ -2554,11 +2621,12 @@ async function renderBoard(){root.innerHTML='';const g=boardGrade();root.append(
   GAME.sync(true);box.append(el('p',{class:'note',text:'جارٍ التحميل…'}));
   let L=[];try{await new Promise(r=>setTimeout(r,700));L=await ACC.loadBoard(GAME.today(),g);}catch(e){box.innerHTML='';box.append(el('div',{class:'feedback bad',text:'تعذّر تحميل اللوحة الآن.'}));return;}
   box.innerHTML='';const myI=L.findIndex(x=>x.me);
-  box.append(el('div',{class:'brd-me'},el('div',{style:'font-size:2.6rem',text:myI===0?'🥇':myI===1?'🥈':myI===2?'🥉':'🏅'}),
-    el('b',{text:myI>=0?'ترتيبك اليوم: '+(myI+1)+' من '+L.length:'ابدأ درساً لتظهر في اللوحة!'}),el('small',{class:'note',text:'النقاط: كل نجمة 10، كل إجابة صحيحة 2، كل دقيقة تعلّم 1، وتحدي اليوم حتى 25.'})));
-  const list=el('div',{class:'brd-list'});L.slice(0,30).forEach((x,i)=>list.append(el('div',{class:'brd-row'+(x.me?' me':'')},el('span',{class:'brd-r',text:i<3?['🥇','🥈','🥉'][i]:String(i+1)}),el('span',{class:'brd-av',text:x.av||'🙂'}),el('b',{text:x.n+(x.me?' (أنت)':'')}),el('span',{class:'brd-p',text:x.pts+' نقطة'}))));
+  box.append(el('div',{class:'dx-hero bd',style:kxVars(g)},el('img',{src:UIMG('q_comp'),alt:''}),el('div',{},
+    el('b',{text:myI>=0?'ترتيبك اليوم: '+(myI+1)+' من '+L.length:'ابدأ درساً لتظهر في اللوحة!'}),el('span',{text:myI>=0?(L[myI].pts+' نقطة'+(myI>0?' · ينقصك '+(L[myI-1].pts-L[myI].pts+1)+' للتقدّم':' · أنت في الصدارة 👑')):'كل نجمة 10 · كل إجابة صحيحة 2 · كل دقيقة 1 · تحدي اليوم حتى 25'}))));
+  if(L.length>=3){const pod=el('div',{class:'bd-pod'});[1,0,2].forEach(i=>{const x=L[i];pod.append(el('div',{class:'bd-p p'+(i+1)+(x.me?' me':'')},el('span',{class:'bd-av',text:x.av||'🙂'}),el('b',{text:x.n}),el('small',{text:x.pts+' نقطة'}),el('div',{class:'bd-st',text:['🥇','🥈','🥉'][i]})));});box.append(pod);}
+  const list=el('div',{class:'brd-list'});L.slice(L.length>=3?3:0,30).forEach((x,j)=>{const i=j+(L.length>=3?3:0);list.append(el('div',{class:'brd-row'+(x.me?' me':'')},el('span',{class:'brd-r',text:i<3?['🥇','🥈','🥉'][i]:String(i+1)}),el('span',{class:'brd-av',text:x.av||'🙂'}),el('b',{text:x.n+(x.me?' (أنت)':'')}),el('span',{class:'brd-p',text:x.pts+' نقطة'})));});
   if(myI>=30){const x=L[myI];list.append(el('div',{class:'brd-row me'},el('span',{class:'brd-r',text:String(myI+1)}),el('span',{class:'brd-av',text:x.av}),el('b',{text:x.n+' (أنت)'}),el('span',{class:'brd-p',text:x.pts+' نقطة'})));}
-  box.append(list,el('p',{class:'note',text:'تظهر الأسماء الأولى فقط. يتجدد الترتيب كل يوم. يستطيع ولي الأمر إخفاء ابنه من اللوحة.'}));}
+  box.append(list.childElementCount?list:'',el('p',{class:'note',style:'text-align:center;font-size:.82rem',text:'تظهر الأسماء الأولى فقط · يتجدد الترتيب كل يوم · يستطيع ولي الأمر إخفاء ابنه'}));}
 function kidTT(){const A=window.ACC;if(!A||A.adminBrowse||!A.pid||A.pid==='me'||!A.profiles)return null;const p=A.profiles.find(x=>x.id===A.pid);return p&&p.tt&&p.tt.on?p.tt:null;}
 /* the next lesson to study in a subject: the first ready lesson after the last one studied */
 function nextLessonOf(g,sid){const sb=(App.catalog.grades[g]||[]).find(x=>x.id===sid);if(!sb)return null;const ls=unitsOf(sb).flatMap(u=>u.lessons).filter(l=>l.ready);
@@ -2753,18 +2821,32 @@ async function renderLesson(id){
   const stars=el('span',{class:'pill'}),nav=el('nav',{class:'steps','aria-label':'خطوات الدرس'});
   const snd=el('button',{class:'pill','aria-label':'أصوات التشجيع',onclick:()=>{FX.on=!FX.on;store.set('sound',FX.on);snd.textContent=FX.on?'🔊':'🔇';if(FX.on)tones([660,880,1320]);}},FX.on?'🔊':'🔇');
   root.innerHTML='';
-  const head=bar(el('span',{lang:L.lang==='en'?'en':null,text:L.title}),L.titleAr,backTo,el('span',{class:'row',style:'flex-wrap:nowrap;gap:6px'},snd,stars));head.append(nav);root.append(head);
+  const head=bar(el('span',{lang:L.lang==='en'?'en':null,text:L.title}),L.titleAr,backTo,el('span',{class:'row',style:'flex-wrap:nowrap;gap:6px'},snd,stars));head.classList.add('lx-head');const prog=el('div',{class:'lx-prog'},el('i'));head.append(nav,prog);root.append(head);
   if(info.lesson.ref)root.append(el('div',{class:'refchip'},el('span',{text:'📖'}),el('span',{},'في كتابك: ',el('b',{text:info.lesson.ref.replace(/–/g,'\u2060–\u2060')}))));
   let cur=1;const sections=[];const stepKey='step_'+id;GAME.opened(id);voiceCheck(root,L.lang==='en'?'en':'ar');
   const award=n=>{if(done.has(n))return;done.add(n);store.set('done_'+id,[...done]);window.ACC&&ACC.saveProgress&&ACC.saveProgress(id,[...done]);cheer('star');drawNav();GAME.onStar();};
-  function drawNav(){nav.innerHTML='';L.steps.forEach((s,i)=>{const n=i+1;const b=el('button',{class:done.has(n)?'done':'',onclick:()=>show(n)},el('span',{class:'n',text:AR[i]}),s.title);if(n===cur)b.setAttribute('aria-current','step');nav.append(b);});stars.textContent='★ '+done.size+'/'+N;}
+  function drawNav(){nav.innerHTML='';L.steps.forEach((s,i)=>{const n=i+1;const b=el('button',{class:done.has(n)?'done':'',onclick:()=>show(n)},el('span',{class:'n',text:AR[i]}),s.title);if(n===cur)b.setAttribute('aria-current','step');nav.append(b);});stars.textContent='★ '+done.size+'/'+N;prog.firstChild.style.width=Math.round(cur/N*100)+'%';}
   L.steps.forEach((s,i)=>{const n=i+1;const ctx={L,stepIndex:n,done:()=>award(n)};
     const sec=el('section',{class:'lsec t'+(i%6),hidden:n!==1},el('div',{class:'eyebrow',text:s.eyebrow}),el('h2',{text:s.heading,style:/^[A-Za-z]/.test(s.heading||'')?'unicode-bidi:plaintext;text-align:right':null}),s.lead?el('p',{class:'lead'},kids?el('button',{class:'lead-say','aria-label':'اسمع التعليمات',text:'🔊',onclick:()=>{stopAll();speakAr(s.say||s.lead);}}):null,s.lead):null);
     const body=el('div',{class:'stack'});s.blocks.forEach((b,j)=>{const nd=render(b,ctx);const mark=()=>GAME.setCur({lid:id,si:i,bi:j});nd.addEventListener('pointerdown',mark,true);nd.addEventListener('focusin',mark,true);body.append(nd);});sec.append(body);sections.push(sec);root.append(sec);});
-  const prev=el('button',{class:'btn ghost',text:'→ السابق',onclick:()=>show(cur-1)}),next=el('button',{class:'btn',onclick:()=>cur===N?go(backTo):show(cur+1)});
-  root.append(el('div',{class:'nav'},prev,next));
-  const vnote=el('p',{class:'note',style:'margin-top:18px'});root.append(vnote);
-  const voiceNote=()=>{const need=L.lang==='en'?TTS.en:TTS.ar;vnote.textContent=!TTS.synth?'المتصفح لا يدعم النطق الآلي.':!need.length?('لم يُعثر على صوت '+(L.lang==='en'?'إنجليزي':'عربي')+' في هذا الجهاز. ثبّت اللغة من إعدادات تحويل النص إلى كلام في جهازك. في النسخة النهائية ستكون الأصوات تسجيلات ثابتة.'):'الأصوات حالياً من جهازك. في النسخة النهائية ستُستبدل بتسجيلات ثابتة بنفس الجودة على كل الأجهزة.';};
+  const prev=el('button',{class:'btn ghost',text:'→ السابق',onclick:()=>show(cur-1)}),next=el('button',{class:'btn',onclick:()=>cur===N?finish():show(cur+1)});
+  const navBox=el('div',{class:'nav lx-nav'},prev,next);root.append(navBox);
+  const vnote=el('p',{class:'note lx-vn'});root.append(vnote);
+  const voiceNote=()=>{const need=L.lang==='en'?TTS.en:TTS.ar;vnote.textContent=!TTS.synth?'🔇 المتصفح لا يدعم النطق الآلي.':(!need.length&&!(L.lang!=='en'&&ttsOn()))?('🔇 لا يوجد صوت '+(L.lang==='en'?'إنجليزي':'عربي')+' في هذا الجهاز — ثبّته من إعدادات «تحويل النص إلى كلام».'):'';vnote.hidden=!vnote.textContent;};
+  function finish(){stopAll();store.set(stepKey,1);
+    const flat=unitsOf(info.subject).flatMap(u=>u.lessons),k=flat.findIndex(l=>l.id===id),nxt=flat.slice(k+1).find(l=>l.ready);
+    const who=window.ACC&&ACC.user&&ACC.profiles&&ACC.profiles.find(p=>p.id===ACC.pid),nm=who&&who.id!=='me'&&who.name?who.name:'';
+    const st=done.size,lvl=st>=N?3:st/N>=.5?2:1,pr=kxPair(info.grade);
+    const msg=lvl===3?'ممتاز! أنهيت الدرس وجمعت كل النجوم 🎉':lvl===2?'رائع! أنهيت الدرس — بقيت نجوم قليلة':'أنهيت الدرس! أعده لتجمع النجوم الباقية ⭐';
+    sections.forEach(x=>x.hidden=true);navBox.hidden=true;vnote.hidden=true;prog.firstChild.style.width='100%';
+    const end=el('div',{class:'lx-end',style:kxVars(info.grade)},
+      el('div',{class:'lx-ech'},el('img',{src:UIMG(pr[0]),alt:''}),el('img',{src:UIMG(pr[1]),alt:''})),
+      el('h2',{text:nm?'أحسنت يا '+nm+'!':'أحسنت!'}),el('p',{class:'lx-em',text:msg}),
+      el('div',{class:'lx-stars'},...[1,2,3].map(i=>el('span',{class:i<=lvl?'on':'',style:'--i:'+i,text:'★'}))),
+      el('div',{class:'lx-sc'},el('b',{text:st+'/'+N}),' خطوات أنجزتها'),
+      nxt?el('button',{class:'btn lx-nx',onclick:()=>go('l-'+nxt.id)},el('small',{text:'الدرس التالي'}),el('span',{text:nxt.title+' ←'})):el('div',{class:'lx-done',text:'🏁 هذا آخر درس في المادة!'}),
+      el('div',{class:'lx-ac'},el('button',{class:'btn ghost',text:'↺ أعد الدرس',onclick:()=>{end.remove();navBox.hidden=false;voiceNote();show(1);}}),el('button',{class:'btn ghost',text:'📚 دروس المادة',onclick:()=>go(backTo)})));
+    root.append(end);cheer(lvl===3?'perfect':'win');window.scrollTo({top:0,behavior:'smooth'});}
   voiceNote();setTimeout(voiceNote,1200);
   function show(n){stopAll();cur=Math.max(1,Math.min(N,n));store.set(stepKey,cur);sections.forEach((s,i)=>s.hidden=i+1!==cur);prev.disabled=cur===1;next.textContent=cur===N?'إنهاء الدرس ✓':'التالي ←';
     if(L.steps[cur-1].starOnVisit)award(cur);drawNav();const cb=$('[aria-current]',nav);cb&&cb.scrollIntoView({block:'nearest',inline:'center'});window.scrollTo({top:0,behavior:'smooth'});}
