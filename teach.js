@@ -171,7 +171,7 @@ export default function initTeach(X) {
   }
 
   /* ---------------- public: course list ---------------- */
-  const SIMG = ['ar', 'en', 'math', 'isl', 'sci', 'civ', 'soc', 'hist', 'geo', 'comp', 'art'];
+  const SIMG = ['ar', 'en', 'math', 'isl', 'sci', 'civ', 'soc', 'hist', 'geo', 'comp', 'art', 'phy', 'chem', 'bio', 'it', 'socio'];
   const cImg = c => 'img/ui/' + (c.cat === 'skill' ? 'q_learn' : SIMG.includes(c.subject) ? 's_' + c.subject : 'x_all') + '.webp';
   const courseCard = c => el('button', { class: 'tc-card tc-card2', onclick: () => go('crs-' + c.id) },
     el('span', { class: 'tc-th' }, el('img', { src: cImg(c), alt: '', loading: 'lazy' }), el('i', { text: '▶' })),
