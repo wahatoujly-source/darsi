@@ -44,8 +44,8 @@ const HOUR = 60 * 60 * 1000;
 const PHONE_RE = /^09[1-5]\d{7}$/;
 const GLOBAL_DAILY_CAP = 100;
 const TEST_CODE = "0000";
-const GRADES = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
-const SUBJECTS = ["ar", "en", "math", "comp", "art", "sci", "soc", "hist", "geo"]; // التربية الإسلامية والوطنية مجانيتان
+const GRADES = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "s1"];
+const SUBJECTS = ["ar", "en", "math", "comp", "art", "sci", "soc", "hist", "geo", "phy", "chem", "bio", "it", "socio"]; // التربية الإسلامية والوطنية مجانيتان
 const r2 = (x) => Math.round(x * 100) / 100;
 const sha = (s) => crypto.createHash("sha256").update(s).digest("hex");
 const toE164 = (local) => "+218" + local.slice(1);
@@ -476,7 +476,7 @@ async function getAccessCfg() {
 }
 const accKeys = (g, s, id) => ["g" + g, "g" + g + "-" + s, "l-" + id];
 const accHas = (list, g, s, id) => (list || []).some((k) => accKeys(g, s, id).includes(k));
-const ACCESS_KEY = /^(g\d{1,2}|g\d{1,2}-[a-z]{2,8}|l-[a-z0-9-]{3,60})$/;
+const ACCESS_KEY = /^(g(?:\d{1,2}|s\d)|g(?:\d{1,2}|s\d)-[a-z]{2,8}|l-[a-z0-9-]{3,60})$/;
 exports.adminSetAccess = onCall(async (req) => {
   await needAdmin(req, "access");
   const d = req.data || {};
@@ -492,7 +492,7 @@ exports.adminSetAccess = onCall(async (req) => {
 });
 
 // textbooks visibility: {all|gN|gN-subj: "all"|"subs"|"off"}
-const BOOK_KEY = /^(all|g\d{1,2}|g\d{1,2}-[a-z]{2,8})$/;
+const BOOK_KEY = /^(all|g(?:\d{1,2}|s\d)|g(?:\d{1,2}|s\d)-[a-z]{2,8})$/;
 exports.adminSetBooks = onCall(async (req) => {
   await needAdmin(req, "access");
   const src = (req.data && req.data.books) || {};
@@ -835,7 +835,7 @@ exports.adminRevoke = onCall(async (req) => {
 // السحب: رصيد 200 د.ل فأكثر، ومرة واحدة كل 30 يوماً.
 const T = {MIN: 30, MAX: 500, SHARE: 0.7, MIN_WD: 200, GAP: 30 * DAY, MAX_LESSONS: 60, TERMS_V: 1};
 const T_KINDS = ["course", "boost", "exam", "skill"];
-const T_SUBJ = ["ar", "en", "math", "sci", "isl", "soc", "hist", "geo", "civ", "comp", "art", "phy", "chem", "bio", "other"];
+const T_SUBJ = ["ar", "en", "math", "sci", "isl", "soc", "hist", "geo", "civ", "comp", "art", "phy", "chem", "bio", "it", "socio", "other"];
 const str = (x, n) => String(x == null ? "" : x).trim().slice(0, n);
 const tcfg = async () => ((await getAccessCfg()).teach || {});
 async function tOwner(req) { // صاحب الحساب: ولي الأمر لجهاز الابن المربوط أو للوالد الثاني
@@ -1765,7 +1765,7 @@ const ARENA_DEF = {on: false, who: "all", every: 3, start: 0, seats: 20, minP: 2
 const ARENA_GAP = 4; // ثوانٍ لعرض الإجابة والترتيب بين الأسئلة
 const arenaCfg = async () => ({...ARENA_DEF, ...((await getAccessCfg()).arena || {})});
 const LV_AR = ["", "المستوى 1 — بداية", "المستوى 2 — سهل", "المستوى 3 — متوسط", "المستوى 4 — جيد", "المستوى 5 — متقدم", "المستوى 6 — أبطال"];
-const gradeLevel = (g) => Math.min(6, Math.max(1, Number(g) - 1)); // الصف 2 → 1 ... الصف 7 فما فوق → 6
+const gradeLevel = (g) => /^s/.test(String(g)) ? 6 : Math.min(6, Math.max(1, Number(g) - 1)); // الصف 2 → 1 ... الصف 7 فما فوق → 6
 // المواعيد بتوقيت ليبيا (UTC+2): كل every ساعات بدءاً من start
 function arenaSlots(cfg, from, k) {
   const out = []; const H = 3600000; let t = Math.ceil((from + 2 * H) / H) * H - 2 * H; // بداية الساعة القادمة (UTC ms)

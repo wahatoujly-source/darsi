@@ -34,7 +34,8 @@ const isAdult = () => !!(ACC.profile && ['parent', 'teacher'].includes(ACC.profi
 const kidsOf = () => ACC.profiles.filter(p => p.id !== 'me');
 const AVATARS = ['🦁','🐯','🐼','🐨','🦊','🐸','🐵','🦄','🐢','🐬','🦉','🐝'];
 const ROLES = { student: ['🧒', 'طالب', 'أدرس دروسي بنفسي'], parent: ['👨‍👩‍👧', 'ولي أمر', 'أتابع حتى 5 من أبنائي'], teacher: ['👩‍🏫', 'معلم', 'أستعمل الدروس مع طلابي، ويمكنني إضافة أبنائي'] };
-const GRADES = [['1','الأول'],['2','الثاني'],['3','الثالث'],['4','الرابع'],['5','الخامس'],['6','السادس'],['7','السابع'],['8','الثامن'],['9','التاسع']];
+const GRADES = [['1','الأول'],['2','الثاني'],['3','الثالث'],['4','الرابع'],['5','الخامس'],['6','السادس'],['7','السابع'],['8','الثامن'],['9','التاسع'],['s1','الأول الثانوي']];
+const gNum = g => /^s/.test(String(g)) ? 10 : (+g || 3);
 const gradeName = g => (GRADES.find(x => x[0] === String(g)) || [, ''])[1];
 
 const ACC = window.ACC = { user: null, profile: null, profiles: [], pid: store.get('acc_pid', null), ready: false, call };
@@ -298,7 +299,7 @@ const GC = { 1: ['#ff7a7a', '#e8384f'], 2: ['#ffb44d', '#f47a12'], 3: ['#5fd47a'
 const gcVars = n => { const c = GC[+n] || ['#8aa0ff', '#5b6cf0']; return '--a:' + c[0] + ';--b:' + c[1] + ';--d:' + c[1]; };
 /* coloured kid strip at the top of parent sub-pages */
 function kidStrip(p, title, sub) {
-  const gn = +p.grade || 3, im = 'img/ui/' + (gn <= 3 ? 'k2' : gn <= 6 ? 'k4' : 'k6') + '.webp';
+  const gn = gNum(p.grade), im = 'img/ui/' + (gn <= 3 ? 'k2' : gn <= 6 ? 'k4' : 'k6') + '.webp';
   return el('div', { class: 'kx-ks', style: gcVars(gn) }, el('span', { class: 'av', text: p.avatar || '🙂' }),
     el('span', { class: 'tx' }, el('b', { text: title }), el('small', { text: sub })), el('img', { src: im, alt: '' }));
 }
@@ -552,7 +553,7 @@ async function renderLinkKid(pid) {
   if (!ACC.user || !isAdult()) { go('login'); return; }
   const p = ACC.profiles.find(x => x.id === pid); if (!p) { go('who'); return; }
   const s = page('ربط موبايل ' + p.name, 'خطوة واحدة على موبايل الابن', 'who'); s.classList.add('kx-lk');
-  const gn = +p.grade || 3, im = 'img/ui/' + (gn <= 3 ? 'k2' : gn <= 6 ? 'k4' : 'k6') + '.webp';
+  const gn = gNum(p.grade), im = 'img/ui/' + (gn <= 3 ? 'k2' : gn <= 6 ? 'k4' : 'k6') + '.webp';
   const stp = (n, t, d) => el('div', { class: 'st' }, el('span', { class: 'n', text: n }), el('span', {}, el('b', { text: t }), el('small', { text: d })));
   s.append(el('div', { class: 'lk-hero' }, el('img', { src: im, alt: '' }), el('div', {}, el('b', { text: 'موبايل ' + p.name + ' يدخل مباشرة' }), el('span', { text: 'بدون رقم ولا كلمة سر، ولا يرى حسابك أو الدفع أو ملفات إخوته.' }))),
     el('div', { class: 'lk-steps' },
@@ -588,7 +589,7 @@ async function renderKid(pid) {
 function renderKidAccount() {
   const p = activeProfile() || {}; const U = n => 'img/ui/' + n + '.webp';
   const s = page('حسابي', '', 'home'); s.classList.add('kx-acc');
-  const gn = +p.grade || 3, pair = gn <= 3 ? ['k1', 'k2'] : gn <= 6 ? ['k3', 'k4'] : ['k5', 'k6'];
+  const gn = gNum(p.grade), pair = gn <= 3 ? ['k1', 'k2'] : gn <= 6 ? ['k3', 'k4'] : ['k5', 'k6'];
   const st = p.stats || {}, G = D.GAME, ls = (G.stats && G.stats()) || {}, stars = Math.max(st.stars || 0, ls.stars || 0), lv = G.level(stars), nx = lv.next, stk = Math.max(liveStreak(st), ls.streak || 0);
   s.append(el('div', { class: 'kx-ph' },
     el('div', { class: 'bgx' }), el('span', { class: 'sp1', text: '✨' }), el('span', { class: 'sp2', text: '⭐' }),

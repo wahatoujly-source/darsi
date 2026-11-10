@@ -2519,7 +2519,7 @@ async function renderMistake(lid,si,bi){
   let L;try{L=await getJSON('data/'+lid+'.json');}catch(e){root.append(el('p',{class:'feedback bad',text:'تعذّر تحميل التمرين.'}));return;}
   const st=L.steps[+si],b=st&&st.blocks[+bi];const k=lid+'|'+si+'|'+bi;
   if(!b){const M=store.get('g_mis',{});delete M[k];store.set('g_mis',M);go('mistakes');return;}
-  QR.reg=L.quran||[];document.body.classList.toggle('kids',L.stage==='primary-1-3');TTS.age=AGE_PROFILES[L.stage]||AGE_PROFILES['prep-7-9'];TTS.rate=TTS.age.rate;TTS.quiet=L.lang!=='en'&&L.subject!=='en'&&(+String(L.grade).replace(/\D/g,''))>=7;FX.lang=L.lang==='en'?'en':'ar';
+  QR.reg=L.quran||[];document.body.classList.toggle('kids',L.stage==='primary-1-3');TTS.age=AGE_PROFILES[L.stage]||AGE_PROFILES['prep-7-9'];TTS.rate=TTS.age.rate;TTS.quiet=L.lang!=='en'&&L.subject!=='en'&&(/^s/.test(L.grade)||(+String(L.grade).replace(/\D/g,''))>=7);FX.lang=L.lang==='en'?'en':'ar';
   const f=findLesson(lid);root.append(el('div',{class:'eyebrow',text:(f?f.lesson.title+' — ':'')+(st.heading||'')}));
   GAME.resetSess();const fb=el('div');let ended=false;
   const ctx={L,stepIndex:+si+1,done:()=>{if(ended)return;ended=true;const M=store.get('g_mis',{});
@@ -2637,7 +2637,7 @@ function renderStart(){root.innerHTML='';document.body.classList.add('wl-on');
     pick('q_learn','زائر','أتصفح الدروس المجانية أولاً',()=>{store.set('welcomed',true);document.body.classList.remove('wl-on');go('home');},'v'),
     el('button',{class:'st-link',text:'🧒 عندي رمز من ولي أمري',onclick:()=>{store.set('welcomed',true);document.body.classList.remove('wl-on');go('link');}}),
     el('button',{class:'st-link',text:'لدي حساب — تسجيل الدخول',onclick:()=>{store.set('welcomed',true);document.body.classList.remove('wl-on');go('login');}})));}
-const GRADE_NOTE={'1':'نتعلّم الحروف والأعداد','2':'نقرأ ونكتب ونحسب','3':'نكبر ونكتشف','4':'نبدأ رحلة العلوم','5':'نفكّر ونبحث','6':'نتقدّم بثقة','7':'نتعمّق في المعرفة','8':'نبحث ونبدع','9':'شهادة التعليم الأساسي'};
+const GRADE_NOTE={'s1':'بداية المرحلة الثانوية','1':'نتعلّم الحروف والأعداد','2':'نقرأ ونكتب ونحسب','3':'نكبر ونكتشف','4':'نبدأ رحلة العلوم','5':'نفكّر ونبحث','6':'نتقدّم بثقة','7':'نتعمّق في المعرفة','8':'نبحث ونبدع','9':'شهادة التعليم الأساسي'};
 const AR_NUM=n=>String(n); // في ليبيا تُستعمل الأرقام 1 2 3
 /* a learner (child profile, linked child phone, or student) sees only his own grade */
 function lockedGrade(){const A=window.ACC;if(!A||!A.user||!A.pid||!A.profiles||A.adminBrowse)return null;const p=A.profiles.find(x=>x.id===A.pid);
@@ -2724,22 +2724,22 @@ function renderInvite(code){root.innerHTML='';const R=ACCX().ref||{};const inv=R
 /* ===== v4 design helpers ===== */
 const UIMG=n=>'img/ui/'+n+'.webp';
 const GRADE_AR=['','الأول','الثاني','الثالث','الرابع','الخامس','السادس','السابع','الثامن','التاسع'];
-const KX_GR={1:['#ff7a7a','#e8384f','#b51f35'],2:['#ffb44d','#f47a12','#c25500'],3:['#5fd47a','#24a148','#17782f'],4:['#32cbd9','#0e9fb3','#08768a'],5:['#5ab0ff','#1f72e0','#1453ad'],6:['#a07bff','#6c43ea','#4b2bb8'],7:['#6a86ff','#3a56dd','#2a3fae'],8:['#e07af5','#ad3fcb','#82269c'],9:['#ff6f9e','#d92f6b','#a61a4e']};
+const KX_GR={s1:['#4fb3a9','#1f7f86','#14595e'],s2:['#5c7cfa','#3b5bdb','#2b44a8'],s3:['#c56cf0','#8e44ad','#6c3483'],1:['#ff7a7a','#e8384f','#b51f35'],2:['#ffb44d','#f47a12','#c25500'],3:['#5fd47a','#24a148','#17782f'],4:['#32cbd9','#0e9fb3','#08768a'],5:['#5ab0ff','#1f72e0','#1453ad'],6:['#a07bff','#6c43ea','#4b2bb8'],7:['#6a86ff','#3a56dd','#2a3fae'],8:['#e07af5','#ad3fcb','#82269c'],9:['#ff6f9e','#d92f6b','#a61a4e']};
 const KX_SUB={ar:['#ffe3e3','#ffadad'],en:['#e2f0ff','#9dc8ff'],math:['#fff1d6','#ffcf70'],isl:['#dff7ea','#86d9ac'],sci:['#ece5ff','#bea6ff'],civ:['#ffe9e0','#ffb59a'],soc:['#dff4ff','#8fd3f5'],hist:['#fff0dc','#f4c487'],geo:['#e3f6e6','#97d6a2'],comp:['#dffaf7','#7fdccf'],art:['#ffe6f2','#ffa6cf']};
 const kxPair=n=>(+n<=3?['k1','k2']:+n<=6?['k3','k4']:['k5','k6']);
 const kxVars=n=>{const c=KX_GR[n]||['#8aa0ff','#5b6cf0','#3e4bc0'];return '--a:'+c[0]+';--b:'+c[1]+';--d:'+c[2];};
 const kxMini=(img,t,sub,fn)=>el('button',{class:'kx-m',onclick:fn},el('img',{src:UIMG(img),alt:'',loading:'lazy'}),t,sub?el('small',{text:sub}):null);
 const kxArenaOn=()=>!!(ACCX().arena&&ACCX().arena.on);
 const kxTeachOn=()=>{const tc=ACCX().teach||{};return !!((tc.on&&tc.show)||(window.ACC&&ACC.isAdmin&&tc.on));};
-function kxMyGrade(){const LG=lockedGrade();if(LG)return LG;const who=window.ACC&&ACC.user&&ACC.profiles&&ACC.profiles.find(p=>p.id===ACC.pid);if(who&&who.grade)return String(who.grade);const lr=store.get('last_route','');const m=/^g(\d)/.exec(lr);return m?m[1]:null;}
+function kxMyGrade(){const LG=lockedGrade();if(LG)return LG;const who=window.ACC&&ACC.user&&ACC.profiles&&ACC.profiles.find(p=>p.id===ACC.pid);if(who&&who.grade)return String(who.grade);const lr=store.get('last_route','');const m=/^g(\d|s\d)/.exec(lr);return m?m[1]:null;}
 let KXNAV=null;
 function kxNav(h){
-  const show=/^(home|g\d+|g\d+-[a-z]+|books(-\d+|-s\d)?|myreport|account|board|courses(-[a-z0-9]+)?|kids|who|mistakes)?$/.test(h);
+  const show=/^(home|g(?:\d+|s\d)|g(?:\d+|s\d)-[a-z]+|books(-\d+|-s\d)?|myreport|account|board|courses(-[a-z0-9]+)?|kids|who|mistakes)?$/.test(h);
   document.body.classList.toggle('has-nav',show);if(!show)return;
   if(!KXNAV){KXNAV=el('nav',{class:'kx-nav','aria-label':'التنقل'},el('div'));document.body.append(KXNAV);}
   const g=kxMyGrade();const acc=window.ACC&&ACC.user&&!(ACC.user.isAnonymous&&!ACC.kid);
   const items=[['n_acc','حسابي',acc?'account':'login',/^(account|kids|who)$/],['n_ach','إنجازاتي','myreport',/^(myreport|board|mistakes)$/],['n_home','الرئيسية','home',/^(home)?$/],
-    ['n_lib','المكتبة',bkAnyOn()?'books':'courses',/^(books|courses)/],['n_lessons','الدروس',g?'g'+g:'home',/^g\d/]];
+    ['n_lib','المكتبة',bkAnyOn()?'books':'courses',/^(books|courses)/],['n_lessons','الدروس',g?'g'+g:'home',/^g(\d|s\d)/]];
   const box=KXNAV.firstChild;box.innerHTML='';
   items.slice().reverse().forEach(([ic,t,to,re])=>{const on=re.test(h);const home=ic==='n_home';
     box.append(el('button',{class:'kx-nv'+(home?' home':'')+(on?' on':''),onclick:()=>go(to)},home?el('span',{},el('img',{src:UIMG(ic),alt:''})):el('img',{src:UIMG(ic),alt:''}),t));});
@@ -2757,15 +2757,15 @@ function renderHome(){
       el('p',{text:'المنهج الليبي كامل بالصوت والصورة… تعلّم والعب واجمع النجوم ⭐'}),
       el('button',{class:'kx-go',onclick:()=>{const g=mineG||LG;if(g)go('g'+g);else{const t=document.querySelector('.kx-gg');t&&t.scrollIntoView({behavior:'smooth',block:'start'});}},text:(mineG||LG)?'ادخل صفّك ←':'اختر صفّك ←'}))));}
   const card=gr=>{const on=!!c.grades[gr.id];const n=parseInt(gr.id,10);const mine=mineG===gr.id||LG===gr.id;const pr=kxPair(n||9);
-    return el('button',{class:'kx-g'+(on?'':' off')+(mine?' mine':''),style:kxVars(n),disabled:!on,onclick:()=>go('g'+gr.id)},
-      el('img',{src:UIMG(pr[(n||1)%2]),alt:'',loading:'lazy'}),el('span',{class:'n',text:n?String(n):'★'}),el('b',{text:gr.name.replace(/^الصف /,'')}),
-      el('small',{text:on?(GRADE_NOTE[gr.id]||''):'قريباً'}),mine?el('span',{class:'me',text:'صفّك'}):null);};
+    return el('button',{class:'kx-g'+(on?'':' off')+(mine?' mine':''),style:kxVars(n||gr.id),disabled:!on,onclick:()=>go('g'+gr.id)},
+      el('img',{src:UIMG(pr[(n||1)%2]),alt:'',loading:'lazy'}),el('span',{class:'n',text:n?String(n):(/^s(\d)/.exec(gr.id)||[,'★'])[1]}),el('b',{text:gr.name.replace(/^الصف /,'').replace(/ الثانوي$/,'')}),
+      el('small',{text:(!n&&gr.track?gr.track+(on?'':' · '):'')+(on?(GRADE_NOTE[gr.id]||''):'قريباً')}),mine?el('span',{class:'me',text:'صفّك'}):null);};
   const all=[].concat(...c.stages.map(st=>st.grades));
   const sec=el('section',{class:'gsec'});
   {const gs=all.filter(g=>/^\d$/.test(g.id)&&(!LG||g.id===LG));
    if(gs.length)sec.append(el('div',{class:'kx-sec'},el('span',{text:'🎒 صفوف التعليم الأساسي'})),el('div',{class:'kx-gg'+(gs.length===1?' one':'')},...gs.map(card)));}
-  const rest=all.filter(g=>!/^\d$/.test(g.id));
-  if(!LG&&rest.length){const on=rest.filter(g=>c.grades[g.id]);
+  const rest=all.filter(g=>!/^\d$/.test(g.id)&&(!LG||g.id===LG));
+  if(rest.length&&(!LG||c.grades[LG])){const on=rest.filter(g=>c.grades[g.id]);
     if(on.length)sec.append(el('div',{class:'kx-sec'},el('span',{text:'🎓 المرحلة الثانوية'})),el('div',{class:'kx-gg'},...rest.map(card)));
     else sec.append(el('div',{class:'gsoon'},'🎓 المرحلة الثانوية — قريباً'));}
   root.append(sec);
@@ -2790,7 +2790,7 @@ function renderGrade(n){
   const gi=gradeInfo(n);root.append(bar(gradeLabel(gi),'اختر المادة','home',subPill()));
   const ng=parseInt(n,10)||0;const pr=kxPair(ng||7);
   const title=String(gi&&gi.name||gradeLabel(gi)).replace(/^الصف /,'');
-  root.append(el('div',{class:'kx-hero',style:kxVars(ng)},el('div',{class:'bg'}),el('span',{class:'kx-spk',style:'top:54px;right:44%',text:'✨'}),
+  root.append(el('div',{class:'kx-hero',style:kxVars(ng||n)},el('div',{class:'bg'}),el('span',{class:'kx-spk',style:'top:54px;right:44%',text:'✨'}),
     el('img',{class:'kx-kid r',src:UIMG(pr[0]),alt:''}),el('img',{class:'kx-kid l',src:UIMG(pr[1]),alt:''}),
     el('div',{class:'kx-plq'},el('span',{class:'cap',text:'الصف'}),el('h1',{text:title,style:title.length>6?'font-size:38px':null}),el('span',{class:'lvl',text:ng?'أساسي':'ثانوي'}),el('p',{text:GRADE_NOTE[n]||''}))));
   const CT=learnerCtrl();
@@ -2806,12 +2806,12 @@ function renderGrade(n){
   root.append(el('div',{class:'kx-qt'},
     el('button',{class:'kx-q',style:'--a:#ffb347;--b:#f57c00;--d:#c05a00',onclick:toSubs},el('img',{src:UIMG('q_learn'),alt:''}),'التعلّم'),
     el('button',{class:'kx-q',style:'--a:#36d1dc;--b:#0f9bb0;--d:#08778a',onclick:()=>go('mistakes')},el('img',{src:UIMG('q_review'),alt:''}),'المراجعة'),
-    el('button',{class:'kx-q',style:'--a:#b48cff;--b:#7044ec;--d:#4f2bbd',onclick:()=>go(kxArenaOn()&&ng>=2?'arena':'board')},el('img',{src:UIMG('q_comp'),alt:''}),'المنافسة')));
+    el('button',{class:'kx-q',style:'--a:#b48cff;--b:#7044ec;--d:#4f2bbd',onclick:()=>go(kxArenaOn()&&(ng>=2||!ng)?'arena':'board')},el('img',{src:UIMG('q_comp'),alt:''}),'المنافسة')));
   {const x=GAME.stats();const nx=x.level.next;const pct=Math.round(100*(nx?(x.stars-x.level.min)/Math.max(1,nx[0]-x.level.min):1));
    root.append(el('div',{class:'kx-st'},el('div',{class:'kx-s'},'نجومي',el('b',{text:'⭐ '+x.stars})),
      el('div',{class:'kx-s'},nx?'باقي '+(nx[0]-x.stars)+' نجمة للمستوى التالي':'أعلى مستوى!',el('div',{class:'kx-bar'},el('i',{style:'width:'+Math.max(4,Math.min(100,pct))+'%'})),el('b',{style:'font-size:14px',text:pct+'%'})),
      el('div',{class:'kx-s'},'مستواي',el('b',{text:x.level.icon+' '+x.level.name}))));}
-  if(kxArenaOn()&&ng>=2)root.append(el('button',{class:'kx-cta',onclick:()=>go('arena')},el('img',{src:UIMG('q_comp'),alt:''}),'تحدّي المنافسة'));
+  if(kxArenaOn()&&(ng>=2||!ng))root.append(el('button',{class:'kx-cta',onclick:()=>go('arena')},el('img',{src:UIMG('q_comp'),alt:''}),'تحدّي المنافسة'));
   const mm=[];if(ng>=2)mm.push(kxMini('q_times','جدول الضرب','',()=>go('times')));
   mm.push(kxMini('q_test','اختبر مستواك','',()=>go('test')));
   if(bkGradeOn(String(n)))mm.push(kxMini('x_all','كتب PDF','',()=>go('books-'+n)));
@@ -2884,8 +2884,8 @@ async function renderLesson(id){
   if(!info.free&&!App.sub){App.after='l-'+id;go('subscribe');return;}
   root.innerHTML='';root.append(el('p',{class:'note',style:'padding:30px 0',text:'جارٍ تحميل الدرس…'}));
   let L;try{L=await getJSON('data/'+id+'.json');}catch(e){root.innerHTML='';root.append(el('div',{class:'err'},el('p',{text:e&&e.userMsg?e.userMsg:'تعذّر تحميل الدرس. تحقق من الاتصال وحاول مرة أخرى.'}),el('button',{class:'btn',text:'أعد المحاولة',onclick:route})));return;}
-  QR.reg=L.quran||[];const kids=L.stage==='primary-1-3';document.body.classList.toggle('kids',kids);TTS.phonics=!!L.phonics;TTS.phx=L.phx||null;TTS.age=AGE_PROFILES[L.stage]||AGE_PROFILES['prep-7-9'];TTS.quiet=L.lang!=='en'&&L.subject!=='en'&&(+String(L.grade).replace(/\D/g,''))>=7;
-  {const gN=+String(L.grade).replace(/\D/g,'');const essential=L.lang==='en'||L.subject==='en'||(L.subject==='ar'&&gN<=3);if(kidSound().voice===false&&!essential)TTS.quiet=true;}TTS.rate=TTS.age.rate;assignVoices(L.characters||{});FX.lang=L.lang==='en'?'en':'ar';
+  QR.reg=L.quran||[];const kids=L.stage==='primary-1-3';document.body.classList.toggle('kids',kids);TTS.phonics=!!L.phonics;TTS.phx=L.phx||null;TTS.age=AGE_PROFILES[L.stage]||AGE_PROFILES['prep-7-9'];TTS.quiet=L.lang!=='en'&&L.subject!=='en'&&(/^s/.test(L.grade)||(+String(L.grade).replace(/\D/g,''))>=7);
+  {const gN=/^s/.test(L.grade)?10:+String(L.grade).replace(/\D/g,'');const essential=L.lang==='en'||L.subject==='en'||(L.subject==='ar'&&gN<=3);if(kidSound().voice===false&&!essential)TTS.quiet=true;}TTS.rate=TTS.age.rate;assignVoices(L.characters||{});FX.lang=L.lang==='en'?'en':'ar';
   const backTo='g'+info.grade+'-'+info.subject.id,N=L.steps.length,AR='123456789';
   const done=new Set(store.get('done_'+id,[]));
   const stars=el('span',{class:'pill'}),nav=el('nav',{class:'steps','aria-label':'خطوات الدرس'});
@@ -3154,7 +3154,7 @@ function adminBanner(){let b=document.getElementById('admbar');if(!adminBrowse()
 function route(){setTimeout(adminBanner,0);TTS.phonics=false;TTS.phx=null;
   stopAll();$$('audio').forEach(a=>{try{a.pause()}catch(e){}});document.body.classList.remove('kids');const h=location.hash.replace(/^#/,'');let m;
   {let g='';const gm=/^(?:g|teacher-|tx-)(\d)/.exec(h)||/^qr-(\d)/.exec(h);if(gm)g=gm[1];else if((m=/^l-([a-z0-9-]+)$/.exec(h))&&App.catalog){const f=findLesson(m[1]);if(f)g=String(f.grade).replace(/\D/g,'');}
-   navTrack(h||'home');try{kxNav(h)}catch(e){}if(/^(l-|g\d|qr-)/.test(h))store.set('last_route',h);
+   navTrack(h||'home');try{kxNav(h)}catch(e){}if(/^(l-|g\d|gs\d|qr-)/.test(h))store.set('last_route',h);
    document.body.dataset.g=g;document.body.dataset.stage=g?(+g<=3?'k':+g<=6?'m':'s'):'';
    const meta=document.querySelector('meta[name=theme-color]');if(meta)meta.content='#c4e7ff';}
   {const AX=ACCX();const admin=window.ACC&&ACC.isAdmin;
@@ -3164,9 +3164,9 @@ function route(){setTimeout(adminBanner,0);TTS.phonics=false;TTS.phx=null;
     const blk=(ic,t,sub)=>{root.innerHTML='';root.append(el('div',{class:'maint'},el('div',{style:'font-size:3.5rem',text:ic}),el('h2',{text:t}),el('p',{text:sub})),el('div',{class:'stack'},ttCard()||''));};
     if(N.state==='break'){blk('☕','وقت الاستراحة','الحصة التالية الساعة '+TT.hm(N.until)+'. اشرب ماءً وتحرّك قليلاً!');return;}
     if(N.state==='off'&&tt.outside==='closed'){blk(N.why==='weekend'?'🌴':'🌙',N.why==='weekend'?'اليوم عطلة':'خارج وقت الدراسة',N.why==='before'?'تبدأ الحصة الأولى الساعة '+TT.hm(N.next)+'.':'نراك في اليوم الدراسي القادم. أحسنت!');return;}}}
-  {const LG=lockedGrade();if(LG){let og=null,mm;if((mm=/^g(\d+)(?:-[a-z]+)?$/.exec(h)))og=mm[1];else if((mm=/^l-([a-z0-9-]+)$/.exec(h))&&App.catalog){const f=findLesson(mm[1]);if(f)og=String(f.grade);}
+  {const LG=lockedGrade();if(LG){let og=null,mm;if((mm=/^g(\d+|s\d)(?:-[a-z]+)?$/.exec(h)))og=mm[1];else if((mm=/^l-([a-z0-9-]+)$/.exec(h))&&App.catalog){const f=findLesson(mm[1]);if(f)og=String(f.grade);}
     if((og&&og!==LG)||/^(teacher|tx-)/.test(h)){location.replace('#g'+LG);return;}
-    const CT=learnerCtrl();if(CT){let sm=/^g(\d+)-([a-z]+)$/.exec(h);if(sm&&!ctrlSubOk(CT,sm[2])){location.replace('#g'+LG);return;}
+    const CT=learnerCtrl();if(CT){let sm=/^g(\d+|s\d)-([a-z]+)$/.exec(h);if(sm&&!ctrlSubOk(CT,sm[2])){location.replace('#g'+LG);return;}
       if((mm=/^l-([a-z0-9-]+)$/.exec(h))&&App.catalog){const f=findLesson(mm[1]);if(f&&(!ctrlSubOk(CT,f.subject.id)||!ctrlLesOk(CT,f.subject.id,mm[1]))){location.replace('#g'+LG+(ctrlSubOk(CT,f.subject.id)?'-'+f.subject.id:''));return;}}}}}
   if(h!=='welcome'&&h!=='start')document.body.classList.remove('wl-on');
   if((!h||h==='home')&&!store.get('welcomed',false)&&!(window.ACC&&ACC.user)){renderWelcome(0);return;}
