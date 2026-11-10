@@ -2637,7 +2637,7 @@ function renderStart(){root.innerHTML='';document.body.classList.add('wl-on');
     pick('q_learn','زائر','أتصفح الدروس المجانية أولاً',()=>{store.set('welcomed',true);document.body.classList.remove('wl-on');go('home');},'v'),
     el('button',{class:'st-link',text:'🧒 عندي رمز من ولي أمري',onclick:()=>{store.set('welcomed',true);document.body.classList.remove('wl-on');go('link');}}),
     el('button',{class:'st-link',text:'لدي حساب — تسجيل الدخول',onclick:()=>{store.set('welcomed',true);document.body.classList.remove('wl-on');go('login');}})));}
-const GRADE_NOTE={'s1':'بداية المرحلة الثانوية','1':'نتعلّم الحروف والأعداد','2':'نقرأ ونكتب ونحسب','3':'نكبر ونكتشف','4':'نبدأ رحلة العلوم','5':'نفكّر ونبحث','6':'نتقدّم بثقة','7':'نتعمّق في المعرفة','8':'نبحث ونبدع','9':'شهادة التعليم الأساسي'};
+const GRADE_NOTE={'s1':'بداية المرحلة الثانوية','s2sci':'القسم العلمي','1':'نتعلّم الحروف والأعداد','2':'نقرأ ونكتب ونحسب','3':'نكبر ونكتشف','4':'نبدأ رحلة العلوم','5':'نفكّر ونبحث','6':'نتقدّم بثقة','7':'نتعمّق في المعرفة','8':'نبحث ونبدع','9':'شهادة التعليم الأساسي'};
 const AR_NUM=n=>String(n); // في ليبيا تُستعمل الأرقام 1 2 3
 /* a learner (child profile, linked child phone, or student) sees only his own grade */
 function lockedGrade(){const A=window.ACC;if(!A||!A.user||!A.pid||!A.profiles||A.adminBrowse)return null;const p=A.profiles.find(x=>x.id===A.pid);
@@ -2725,21 +2725,21 @@ function renderInvite(code){root.innerHTML='';const R=ACCX().ref||{};const inv=R
 const UIMG=n=>'img/ui/'+n+'.webp';
 const GRADE_AR=['','الأول','الثاني','الثالث','الرابع','الخامس','السادس','السابع','الثامن','التاسع'];
 const KX_GR={s1:['#4fb3a9','#1f7f86','#14595e'],s2:['#5c7cfa','#3b5bdb','#2b44a8'],s3:['#c56cf0','#8e44ad','#6c3483'],1:['#ff7a7a','#e8384f','#b51f35'],2:['#ffb44d','#f47a12','#c25500'],3:['#5fd47a','#24a148','#17782f'],4:['#32cbd9','#0e9fb3','#08768a'],5:['#5ab0ff','#1f72e0','#1453ad'],6:['#a07bff','#6c43ea','#4b2bb8'],7:['#6a86ff','#3a56dd','#2a3fae'],8:['#e07af5','#ad3fcb','#82269c'],9:['#ff6f9e','#d92f6b','#a61a4e']};
-const KX_SUB={ar:['#ffe3e3','#ffadad'],en:['#e2f0ff','#9dc8ff'],math:['#fff1d6','#ffcf70'],isl:['#dff7ea','#86d9ac'],sci:['#ece5ff','#bea6ff'],civ:['#ffe9e0','#ffb59a'],soc:['#dff4ff','#8fd3f5'],hist:['#fff0dc','#f4c487'],geo:['#e3f6e6','#97d6a2'],comp:['#dffaf7','#7fdccf'],art:['#ffe6f2','#ffa6cf'],phy:['#efe6ff','#c4a8ff'],chem:['#e0f8f3','#86dccb'],bio:['#fde7f6','#f2a6dc'],it:['#e6eefc','#a8c0ec'],socio:['#e3f0ff','#9cc7f7']};
+const KX_SUB={ar:['#ffe3e3','#ffadad'],en:['#e2f0ff','#9dc8ff'],math:['#fff1d6','#ffcf70'],isl:['#dff7ea','#86d9ac'],sci:['#ece5ff','#bea6ff'],civ:['#ffe9e0','#ffb59a'],soc:['#dff4ff','#8fd3f5'],hist:['#fff0dc','#f4c487'],geo:['#e3f6e6','#97d6a2'],comp:['#dffaf7','#7fdccf'],art:['#ffe6f2','#ffa6cf'],phy:['#efe6ff','#c4a8ff'],chem:['#e0f8f3','#86dccb'],bio:['#fde7f6','#f2a6dc'],it:['#e6eefc','#a8c0ec'],socio:['#e3f0ff','#9cc7f7'],stat:['#fff4e0','#ffc98a']};
 const kxPair=n=>(+n<=3?['k1','k2']:+n<=6?['k3','k4']:['k5','k6']);
 const kxVars=n=>{const c=KX_GR[n]||['#8aa0ff','#5b6cf0','#3e4bc0'];return '--a:'+c[0]+';--b:'+c[1]+';--d:'+c[2];};
 const kxMini=(img,t,sub,fn)=>el('button',{class:'kx-m',onclick:fn},el('img',{src:UIMG(img),alt:'',loading:'lazy'}),t,sub?el('small',{text:sub}):null);
 const kxArenaOn=()=>!!(ACCX().arena&&ACCX().arena.on);
 const kxTeachOn=()=>{const tc=ACCX().teach||{};return !!((tc.on&&tc.show)||(window.ACC&&ACC.isAdmin&&tc.on));};
-function kxMyGrade(){const LG=lockedGrade();if(LG)return LG;const who=window.ACC&&ACC.user&&ACC.profiles&&ACC.profiles.find(p=>p.id===ACC.pid);if(who&&who.grade)return String(who.grade);const lr=store.get('last_route','');const m=/^g(\d|s\d)/.exec(lr);return m?m[1]:null;}
+function kxMyGrade(){const LG=lockedGrade();if(LG)return LG;const who=window.ACC&&ACC.user&&ACC.profiles&&ACC.profiles.find(p=>p.id===ACC.pid);if(who&&who.grade)return String(who.grade);const lr=store.get('last_route','');const m=/^g(\d|s\d(?:sci|lit)?)/.exec(lr);return m?m[1]:null;}
 let KXNAV=null;
 function kxNav(h){
-  const show=/^(home|g(?:\d+|s\d)|g(?:\d+|s\d)-[a-z]+|books(-\d+|-s\d)?|myreport|account|board|courses(-[a-z0-9]+)?|kids|who|mistakes)?$/.test(h);
+  const show=/^(home|g(?:\d+|s\d(?:sci|lit)?)|g(?:\d+|s\d(?:sci|lit)?)-[a-z]+|books(-\d+|-s\d(?:sci|lit)?)?|myreport|account|board|courses(-[a-z0-9]+)?|kids|who|mistakes)?$/.test(h);
   document.body.classList.toggle('has-nav',show);if(!show)return;
   if(!KXNAV){KXNAV=el('nav',{class:'kx-nav','aria-label':'التنقل'},el('div'));document.body.append(KXNAV);}
   const g=kxMyGrade();const acc=window.ACC&&ACC.user&&!(ACC.user.isAnonymous&&!ACC.kid);
   const items=[['n_acc','حسابي',acc?'account':'login',/^(account|kids|who)$/],['n_ach','إنجازاتي','myreport',/^(myreport|board|mistakes)$/],['n_home','الرئيسية','home',/^(home)?$/],
-    ['n_lib','المكتبة',bkAnyOn()?'books':'courses',/^(books|courses)/],['n_lessons','الدروس',g?'g'+g:'home',/^g(\d|s\d)/]];
+    ['n_lib','المكتبة',bkAnyOn()?'books':'courses',/^(books|courses)/],['n_lessons','الدروس',g?'g'+g:'home',/^g(\d|s\d(?:sci|lit)?)/]];
   const box=KXNAV.firstChild;box.innerHTML='';
   items.slice().reverse().forEach(([ic,t,to,re])=>{const on=re.test(h);const home=ic==='n_home';
     box.append(el('button',{class:'kx-nv'+(home?' home':'')+(on?' on':''),onclick:()=>go(to)},home?el('span',{},el('img',{src:UIMG(ic),alt:''})):el('img',{src:UIMG(ic),alt:''}),t));});
@@ -3164,9 +3164,9 @@ function route(){setTimeout(adminBanner,0);TTS.phonics=false;TTS.phx=null;
     const blk=(ic,t,sub)=>{root.innerHTML='';root.append(el('div',{class:'maint'},el('div',{style:'font-size:3.5rem',text:ic}),el('h2',{text:t}),el('p',{text:sub})),el('div',{class:'stack'},ttCard()||''));};
     if(N.state==='break'){blk('☕','وقت الاستراحة','الحصة التالية الساعة '+TT.hm(N.until)+'. اشرب ماءً وتحرّك قليلاً!');return;}
     if(N.state==='off'&&tt.outside==='closed'){blk(N.why==='weekend'?'🌴':'🌙',N.why==='weekend'?'اليوم عطلة':'خارج وقت الدراسة',N.why==='before'?'تبدأ الحصة الأولى الساعة '+TT.hm(N.next)+'.':'نراك في اليوم الدراسي القادم. أحسنت!');return;}}}
-  {const LG=lockedGrade();if(LG){let og=null,mm;if((mm=/^g(\d+|s\d)(?:-[a-z]+)?$/.exec(h)))og=mm[1];else if((mm=/^l-([a-z0-9-]+)$/.exec(h))&&App.catalog){const f=findLesson(mm[1]);if(f)og=String(f.grade);}
+  {const LG=lockedGrade();if(LG){let og=null,mm;if((mm=/^g(\d+|s\d(?:sci|lit)?)(?:-[a-z]+)?$/.exec(h)))og=mm[1];else if((mm=/^l-([a-z0-9-]+)$/.exec(h))&&App.catalog){const f=findLesson(mm[1]);if(f)og=String(f.grade);}
     if((og&&og!==LG)||/^(teacher|tx-)/.test(h)){location.replace('#g'+LG);return;}
-    const CT=learnerCtrl();if(CT){let sm=/^g(\d+|s\d)-([a-z]+)$/.exec(h);if(sm&&!ctrlSubOk(CT,sm[2])){location.replace('#g'+LG);return;}
+    const CT=learnerCtrl();if(CT){let sm=/^g(\d+|s\d(?:sci|lit)?)-([a-z]+)$/.exec(h);if(sm&&!ctrlSubOk(CT,sm[2])){location.replace('#g'+LG);return;}
       if((mm=/^l-([a-z0-9-]+)$/.exec(h))&&App.catalog){const f=findLesson(mm[1]);if(f&&(!ctrlSubOk(CT,f.subject.id)||!ctrlLesOk(CT,f.subject.id,mm[1]))){location.replace('#g'+LG+(ctrlSubOk(CT,f.subject.id)?'-'+f.subject.id:''));return;}}}}}
   if(h!=='welcome'&&h!=='start')document.body.classList.remove('wl-on');
   if((!h||h==='home')&&!store.get('welcomed',false)&&!(window.ACC&&ACC.user)){renderWelcome(0);return;}
@@ -3183,7 +3183,7 @@ function route(){setTimeout(adminBanner,0);TTS.phonics=false;TTS.phx=null;
   else if(h==='board')renderBoard();
   else if(h==='privacy')renderPrivacy();
   else if(h==='books')renderBooks();
-  else if((m=/^books-(\d|s\d)$/.exec(h)))renderBooks(m[1]);
+  else if((m=/^books-(\d|s\d(?:sci|lit)?)$/.exec(h)))renderBooks(m[1]);
   else if(h==='daily')renderDaily();
   else if((m=/^mis-([a-z0-9-]+)~(\d+)~(\d+)$/.exec(h)))renderMistake(m[1],m[2],m[3]);
   else if(h==='subscribe')renderSubscribe();
@@ -3204,7 +3204,7 @@ const SPLASH_T0=performance.now();function hideSplash(){const sp=document.getEle
 (function bootNav(){let fresh=false;try{fresh=!sessionStorage.getItem('mj_open');sessionStorage.setItem('mj_open','1')}catch(e){}
   const h=location.hash.replace(/^#/,'');
   if(fresh&&(!h||h==='home')){history.replaceState(null,'','#home');const last=store.get('last_route',null);if(last&&last!=='home')App.resume=last;}})();
-getJSON('data/catalog.json').then(c=>{markFree(c);{const O=['isl','ar','math','phy','chem','bio','en','sci','soc','hist','geo','socio','civ','comp','it','art'],k=x=>{const i=O.indexOf(x.id);return i<0?99:i;};Object.values(c.grades||{}).forEach(L=>Array.isArray(L)&&L.sort((a,b)=>k(a)-k(b)));}App.catalog=c;route();hideSplash();if(App.resume){const r=App.resume;App.resume=null;setTimeout(()=>go(r),60);}}).catch(()=>{hideSplash();root.innerHTML='';root.append(el('div',{class:'err'},el('p',{text:'تعذّر تحميل قائمة الدروس. تحقق من الاتصال وحاول مرة أخرى.'}),el('button',{class:'btn',text:'أعد المحاولة',onclick:()=>location.reload()})));});
+getJSON('data/catalog.json').then(c=>{markFree(c);{const O=['isl','ar','math','stat','phy','chem','bio','en','sci','soc','hist','geo','socio','civ','comp','it','art'],k=x=>{const i=O.indexOf(x.id);return i<0?99:i;};Object.values(c.grades||{}).forEach(L=>Array.isArray(L)&&L.sort((a,b)=>k(a)-k(b)));}App.catalog=c;route();hideSplash();if(App.resume){const r=App.resume;App.resume=null;setTimeout(()=>go(r),60);}}).catch(()=>{hideSplash();root.innerHTML='';root.append(el('div',{class:'err'},el('p',{text:'تعذّر تحميل قائمة الدروس. تحقق من الاتصال وحاول مرة أخرى.'}),el('button',{class:'btn',text:'أعد المحاولة',onclick:()=>location.reload()})));});
 })();
 </script>
 <script type="module" src="account.js"></script>
