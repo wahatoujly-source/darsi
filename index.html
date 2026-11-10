@@ -2301,6 +2301,7 @@ const isClosed=(g,sid,lid)=>!adminBrowse()&&accIn(ACCX().closed,g,sid,lid);
 const isFree=(l,k,g,sid)=>(window.ACC&&ACC.trialN&&l.tr!=null&&l.tr<ACC.trialN(g))||OPEN_ACCESS||adminBrowse()||!!ACCX().openAll||accIn(ACCX().extraFree,g,sid,l.id)||(!!l.free&&!accIn(ACCX().subsOnly,g,sid,l.id));
 const canOpen=(g,sid)=>!!(window.ACC&&ACC.hasAccess&&ACC.hasAccess(String(g),sid));
 /* books visibility from the admin panel: config/access.books {all|gN|gN-subj: 'subs'|'off'}; most specific wins */
+const bkGN=g=>{const m=/^s(\d)/.exec(g);return m?['','الأول','الثاني','الثالث'][+m[1]]+' الثانوي':'الصف '+(GRADE_AR[+g]||g);};
 const bkMode=(g,sb)=>{const M=ACCX().books||{};return M['g'+g+'-'+sb]||M['g'+g]||M.all||'all';};
 const bkLocked=(g,sb)=>bkMode(g,sb)==='subs'&&!adminBrowse()&&!ACCX().openAll&&!(window.ACC&&ACC.hasGrade&&ACC.hasGrade(String(g)));
 const bkShown=(g,sb)=>adminBrowse()||bkMode(g,sb)!=='off';
@@ -2577,15 +2578,15 @@ function renderBooks(sel){root.innerHTML='';const LG=lockedGrade();
     const KIND={s:['كتاب الطالب','📘'],w:['كراسة / نشاط','📝'],t:['دليل المعلم','👩‍🏫']};
     const show=g=>{cur=g;store.set('bk_g',g);[...chips.children].forEach(b=>b.classList.toggle('on',b.dataset.g===g));list.innerHTML='';
       const by={};B.grades[g].forEach(b=>{(by[b.s]=by[b.s]||[]).push(b);});const ng=+g||0;
-      head.innerHTML='';head.setAttribute('style',kxVars(ng));head.append(el('b',{text:'الصف '+(GRADE_AR[ng]||g)}),el('small',{text:B.grades[g].length+' كتاباً · '+Object.keys(by).length+' مواد'}));
+      head.innerHTML='';head.setAttribute('style',kxVars(ng));head.append(el('b',{text:bkGN(g)}),el('small',{text:B.grades[g].length+' كتاباً · '+Object.keys(by).length+' مواد'}));
       B.order.filter(s=>by[s]&&bkShown(g,s)).forEach(s=>{const S=B.subjects[s];const lk=bkLocked(g,s);const K=KX_SUB[s]||['#eef0ff','#b9c0f5'];
         list.append(el('div',{class:'bk-sub2',style:'--t:'+K[0]+';--k:'+K[1]},
           el('div',{class:'hd'},KX_SUB[s]?el('img',{src:UIMG('s_'+s),alt:'',loading:'lazy'}):el('span',{class:'ei',text:S.icon}),
             el('span',{class:'tt'},el('b',{text:S.name}),el('small',{text:by[s].length+(by[s].length>2?' كتب':by[s].length===2?' كتابان':' كتاب')})),lk?el('span',{class:'lk',text:'🔒 للمشتركين'}):el('span',{class:'fr',text:'مجاني'})),
           el('div',{class:'bk-grid'},...by[s].map(b=>el('a',lk?{class:'bk-c lk k-'+b.k,href:'#'+(window.ACC&&ACC.user?'subscribe':'login'),title:'للمشتركين فقط'}:{class:'bk-c k-'+b.k,href:B.base+'g'+g+'/'+encodeURIComponent(b.f),download:b.f,target:'_blank',rel:'noopener'},
-            el('span',{class:'cv'},el('span',{class:'sp'}),el('span',{class:'ki',text:KIND[b.k][1]}),el('b',{lang:/^[A-Za-z]/.test(b.t)?'en':null,text:b.t}),el('small',{text:'الصف '+g})),
+            el('span',{class:'cv'},el('span',{class:'sp'}),el('span',{class:'ki',text:KIND[b.k][1]}),el('b',{lang:/^[A-Za-z]/.test(b.t)?'en':null,text:b.t}),el('small',{text:/^s/.test(g)?bkGN(g):'الصف '+g})),
             el('span',{class:'in'},el('small',{text:KIND[b.k][0]}),el('span',{class:'mt',text:b.pg+' صفحة · '+b.mb+' م.ب'}),el('span',{class:'dl',text:lk?'🔒 للمشتركين':'⬇ تحميل'})))))));});};
-    gs.forEach(g=>{const n=+g||0;chips.append(el('button',{class:'bk-g','data-g':g,style:kxVars(n),onclick:()=>show(g)},el('b',{text:g}),el('small',{text:GRADE_AR[n]||''})));});
+    gs.forEach(g=>{const n=+g||0,sc=/^s(\d)/.exec(g);chips.append(el('button',{class:'bk-g'+(sc?' sec':''),'data-g':g,style:sc?'--a:#5a6b8c;--b:#2c3a5a;--d:#1b2438':kxVars(n),onclick:()=>show(g)},el('b',{text:sc?sc[1]:g}),el('small',{text:sc?'ثانوي':GRADE_AR[n]||''})));});
     wrap.append(el('div',{class:'bk-hero'},el('img',{src:UIMG('n_lib'),alt:''}),el('div',{class:'tx'},el('h2',{text:'مكتبة المجتهد'}),el('p',{text:'كتب المنهج الليبي المعتمدة 2025–2026 — مجاناً وبدون تسجيل'}),
       el('div',{class:'st'},el('span',{text:'📚 '+total+' كتاب'}),el('span',{text:'🎒 '+gs.length+' صفوف'}),el('span',{text:'📄 PDF'})))),
       gs.length>1?chips:null,head,list,el('p',{class:'note bk-src',text:'المصدر: وزارة التربية والتعليم – مركز المناهج التعليمية والبحوث التربوية، ليبيا. حقوق الكتب محفوظة لأصحابها.'}));
@@ -2733,7 +2734,7 @@ const kxTeachOn=()=>{const tc=ACCX().teach||{};return !!((tc.on&&tc.show)||(wind
 function kxMyGrade(){const LG=lockedGrade();if(LG)return LG;const who=window.ACC&&ACC.user&&ACC.profiles&&ACC.profiles.find(p=>p.id===ACC.pid);if(who&&who.grade)return String(who.grade);const lr=store.get('last_route','');const m=/^g(\d)/.exec(lr);return m?m[1]:null;}
 let KXNAV=null;
 function kxNav(h){
-  const show=/^(home|g\d+|g\d+-[a-z]+|books(-\d+)?|myreport|account|board|courses(-[a-z0-9]+)?|kids|who|mistakes)?$/.test(h);
+  const show=/^(home|g\d+|g\d+-[a-z]+|books(-\d+|-s\d)?|myreport|account|board|courses(-[a-z0-9]+)?|kids|who|mistakes)?$/.test(h);
   document.body.classList.toggle('has-nav',show);if(!show)return;
   if(!KXNAV){KXNAV=el('nav',{class:'kx-nav','aria-label':'التنقل'},el('div'));document.body.append(KXNAV);}
   const g=kxMyGrade();const acc=window.ACC&&ACC.user&&!(ACC.user.isAnonymous&&!ACC.kid);
@@ -3182,7 +3183,7 @@ function route(){setTimeout(adminBanner,0);TTS.phonics=false;TTS.phx=null;
   else if(h==='board')renderBoard();
   else if(h==='privacy')renderPrivacy();
   else if(h==='books')renderBooks();
-  else if((m=/^books-(\d)$/.exec(h)))renderBooks(m[1]);
+  else if((m=/^books-(\d|s\d)$/.exec(h)))renderBooks(m[1]);
   else if(h==='daily')renderDaily();
   else if((m=/^mis-([a-z0-9-]+)~(\d+)~(\d+)$/.exec(h)))renderMistake(m[1],m[2],m[3]);
   else if(h==='subscribe')renderSubscribe();
