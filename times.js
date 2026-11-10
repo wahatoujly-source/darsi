@@ -42,9 +42,10 @@ export default function runTimes(D, h) {
   function home() {
     const w = page('✖️ جدول الضرب', 'احفظه خطوة بخطوة — مجاناً');
     const done = Object.keys(P).filter(n => starsOf(n) === 3).length;
-    w.append(el('h2', { text: 'اختر الجدول' }), el('p', { class: 'sub', text: 'لكل جدول: تعلّم واسمع، ثم 5 مستويات. اجمع 3 نجوم في كل جدول لتصبح بطل جدول الضرب! 🏆 (' + done + ' من 12)' }));
+    w.append(el('div', { class: 'gx-hero', style: '--h1:#ff9a3c;--h2:#f0562e' }, el('img', { src: 'img/ui/q_times.webp', alt: '' }), el('div', {}, el('b', { text: 'كن بطل جدول الضرب! 🏆' }), el('span', { text: 'لكل جدول: تعلّم واسمع ثم 5 مستويات. اجمع 3 نجوم في كل جدول.' }),
+      el('div', { class: 'gx-pr' }, el('i', { style: 'width:' + Math.round(done / 12 * 100) + '%' })), el('small', { text: done + ' من 12 جدولاً مكتملاً' }))));
     const g = el('div', { class: 'tabs' });
-    for (let n = 1; n <= 12; n++) { const s = starsOf(n); g.append(el('button', { class: 'tb' + (s === 3 ? ' done' : ''), onclick: () => go('times-' + n) }, el('small', { text: 'جدول' }), el('b', { text: String(n) }), el('span', { class: 'st', text: stars(s) }))); }
+    for (let n = 1; n <= 12; n++) { const s = starsOf(n); g.append(el('button', { class: 'tb' + (s === 3 ? ' done' : ''), style: '--hu:' + (n * 30 % 360), onclick: () => go('times-' + n) }, el('small', { text: 'جدول' }), el('b', { text: String(n) }), el('span', { class: 'st', text: stars(s) }))); }
     const m = store.get(MISS, []);
     w.append(g, el('button', { class: 'lv', onclick: () => quiz({ mode: 'all' }) }, el('span', { class: 'e', text: '🌟' }), el('span', {}, el('b', { text: 'تحدّي كل الجداول' }), el('small', { text: '20 سؤالاً من كل الجداول، تكتب الجواب بنفسك' }))),
       el('button', { class: 'lv', disabled: m.length ? null : '', onclick: () => quiz({ mode: 'miss' }) }, el('span', { class: 'e', text: '🔁' }), el('span', {}, el('b', { text: 'راجع أخطائي (' + m.length + ')' }), el('small', { text: m.length ? 'الأسئلة التي أخطأت فيها مؤخراً' : 'لا توجد أخطاء محفوظة — ممتاز!' }))),

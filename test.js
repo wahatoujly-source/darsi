@@ -30,11 +30,10 @@ export default function runTest(D, h) {
   /* ---------- step 1: grade + name ---------- */
   function start() {
     const w = page('🧮 اختبر مستوى ابنك');
-    w.append(el('div', { style: 'font-size:3.4rem;text-align:center', text: '🧮⏱️' }), el('h2', { text: 'كم يعرف ابنك في الرياضيات؟' }),
-      el('p', { class: 'sub', text: 'اختبار سريع من 2 إلى 4 دقائق، تتغير صعوبته حسب إجابات ابنك. في النهاية تعرف مستواه الحقيقي ونقاط ضعفه بالضبط.' }));
+    w.append(el('div', { class: 'gx-hero', style: '--h1:#5b8cff;--h2:#7a4cf4' }, el('img', { src: 'img/ui/q_test.webp', alt: '' }), el('div', {}, el('b', { text: 'كم يعرف ابنك في الرياضيات؟' }), el('span', { text: 'اختبار من 2 إلى 4 دقائق، يتغيّر حسب إجاباته. في النهاية تعرف مستواه ونقاط ضعفه بالضبط.' }))));
     const nm = el('input', { value: st.name, placeholder: 'اسم ابنك (اختياري)', style: 'text-align:center' });
     const grid = el('div', { class: 'grid' });
-    const draw = () => { grid.innerHTML = ''; for (let g = 1; g <= 9; g++) grid.append(el('button', { class: 'opt' + (st.g === g ? ' on' : ''), text: 'الصف ' + GN[g], onclick: () => { st.g = g; store.set('tst_g', g); st.name = nm.value.trim(); store.set('tst_name', st.name); chooseSkill(); } })); };
+    const draw = () => { grid.innerHTML = ''; for (let g = 1; g <= 9; g++) grid.append(el('button', { class: 'opt' + (st.g === g ? ' on' : ''), style: '--hu:' + (g * 40 % 360), text: 'الصف ' + GN[g], onclick: () => { st.g = g; store.set('tst_g', g); st.name = nm.value.trim(); store.set('tst_name', st.name); chooseSkill(); } })); };
     draw();
     w.append(nm, el('b', { style: 'text-align:center', text: 'في أي صف؟' }), grid);
   }

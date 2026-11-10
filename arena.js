@@ -56,7 +56,8 @@ export default function runArena(D, h) {
     msg.remove();
     if (r.off) { w.append(el('div', { class: 'hero' }, el('b', { style: 'font-size:1.3rem', text: '🏟️ ساحة المسابقات قريباً!' }), el('span', { text: 'مسابقات رياضيات مباشرة بين الطلاب من كل ليبيا — الأسرع والأدق يفوز بالأوسمة.' }))); return; }
     const C = r.cfg, LV = r.LV || [];
-    const first = r.slots.find(s => s.end > now()) || r.slots[0];
+    r.slots = r.slots || []; const first = r.slots.find(s => s.end > now()) || r.slots[0];
+    if (!first) { w.append(el('div', { class: 'hero' }, el('b', { style: 'font-size:1.2rem', text: '🏟️ لا توجد مسابقات مجدولة الآن' }), el('span', { text: 'تابعنا، المسابقة القادمة تُعلن قريباً.' }))); return; }
     const cdEl = el('div', { class: 'cd' }); const live = first && now() >= first.at;
     w.append(el('div', { class: 'hero' }, el('b', { text: live ? '🔴 مسابقة جارية الآن' : '⏳ المسابقة القادمة ' + dayLbl(first.at) + ' الساعة ' + hm(first.at) }), cdEl,
       el('small', { text: C.n + ' سؤالاً · ' + C.secs + ' ثانية لكل سؤال · من ' + C.minP + ' إلى ' + C.seats + ' متسابقاً' })));
