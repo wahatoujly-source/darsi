@@ -3203,7 +3203,7 @@ const SPLASH_T0=performance.now();function hideSplash(){const sp=document.getEle
 (function bootNav(){let fresh=false;try{fresh=!sessionStorage.getItem('mj_open');sessionStorage.setItem('mj_open','1')}catch(e){}
   const h=location.hash.replace(/^#/,'');
   if(fresh&&(!h||h==='home')){history.replaceState(null,'','#home');const last=store.get('last_route',null);if(last&&last!=='home')App.resume=last;}})();
-getJSON('data/catalog.json').then(c=>{markFree(c);App.catalog=c;route();hideSplash();if(App.resume){const r=App.resume;App.resume=null;setTimeout(()=>go(r),60);}}).catch(()=>{hideSplash();root.innerHTML='';root.append(el('div',{class:'err'},el('p',{text:'تعذّر تحميل قائمة الدروس. تحقق من الاتصال وحاول مرة أخرى.'}),el('button',{class:'btn',text:'أعد المحاولة',onclick:()=>location.reload()})));});
+getJSON('data/catalog.json').then(c=>{markFree(c);{const O=['isl','ar','math','en','sci','soc','hist','geo','civ','comp','art'],k=x=>{const i=O.indexOf(x.id);return i<0?99:i;};Object.values(c.grades||{}).forEach(L=>Array.isArray(L)&&L.sort((a,b)=>k(a)-k(b)));}App.catalog=c;route();hideSplash();if(App.resume){const r=App.resume;App.resume=null;setTimeout(()=>go(r),60);}}).catch(()=>{hideSplash();root.innerHTML='';root.append(el('div',{class:'err'},el('p',{text:'تعذّر تحميل قائمة الدروس. تحقق من الاتصال وحاول مرة أخرى.'}),el('button',{class:'btn',text:'أعد المحاولة',onclick:()=>location.reload()})));});
 })();
 </script>
 <script type="module" src="account.js"></script>

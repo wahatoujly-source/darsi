@@ -765,7 +765,7 @@ const KINDS = {
 const subName = sub => { const k = KINDS[sub.kind] || ['', sub.kind]; const sc = sub.scope || {};
   let t = sub.planName || k[1]; if (sc.pairs) t += ' — ' + sc.pairs.length + ' مادة'; else if (sc.grades && sc.grades[0] !== '*') t += ' — الصف ' + gradeName(sc.grades[0]);
   if (sc.subjects && sc.subjects[0] && sc.subjects[0] !== '*') t += ' — ' + subjName(sc.grades[0], sc.subjects[0]); return k[0] + ' ' + t; };
-const PAID_SUBJECTS = ['ar', 'en', 'math', 'comp', 'art', 'sci', 'soc', 'hist', 'geo'];
+const PAID_SUBJECTS = ['ar', 'math', 'en', 'sci', 'soc', 'hist', 'geo', 'comp', 'art'];
 function subjectsOf(g) { const c = D.App.catalog; return ((c && c.grades[g]) || []).filter(s => PAID_SUBJECTS.includes(s.id)); }
 function subjName(g, sid) { const s = subjectsOf(g).find(x => x.id === sid); return s ? s.name : sid; }
 
