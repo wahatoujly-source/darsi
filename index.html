@@ -2371,6 +2371,12 @@ const adminBrowse=()=>!!(window.ACC&&ACC.adminBrowse);
 const isClosed=(g,sid,lid)=>!adminBrowse()&&accIn(ACCX().closed,g,sid,lid);
 const isFree=(l,k,g,sid)=>(window.ACC&&ACC.trialN&&l.tr!=null&&l.tr<ACC.trialN(g))||OPEN_ACCESS||adminBrowse()||!!ACCX().openAll||accIn(ACCX().extraFree,g,sid,l.id)||(!!l.free&&!accIn(ACCX().subsOnly,g,sid,l.id));
 const canOpen=(g,sid)=>!!(window.ACC&&ACC.hasAccess&&ACC.hasAccess(String(g),sid));
+/* قفل الدرس بعد الإتقان (النسخة المجانية): من يحصل على النسبة المحددة (افتراضياً 80%) في اختبار الدرس يُغلق عليه الدرس،
+   ما لم يكن عنده اشتراك مدفوع رسمي (الأيام المجانية والمنح لا تكفي). الاشتراك المدفوع يعيد فتح كل الدروس تلقائياً. */
+const MASTER=()=>{const m=ACCX().master||{};return{on:m.on!==false,pct:Math.max(50,Math.min(100,+m.pct||80))};};
+const paidUser=()=>OPEN_ACCESS||adminBrowse()||!!(window.ACC&&ACC.paidSub&&ACC.paidSub());
+const lessonBest=lid=>{let b=store.get('g_lock',{})[lid]||0;(GAME.local().qz||[]).forEach(q=>{if(q.l===lid&&q.n)b=Math.max(b,Math.round(q.sc*100/q.n));});return b;};
+const mastered=lid=>{const M=MASTER();return M.on&&!paidUser()&&lessonBest(lid)>=M.pct;};
 /* books visibility from the admin panel: config/access.books {all|gN|gN-subj: 'subs'|'off'}; most specific wins */
 const bkGN=g=>{const m=/^s(\d)/.exec(g);return m?['','الأول','الثاني','الثالث'][+m[1]]+' الثانوي':'الصف '+(GRADE_AR[+g]||g);};
 const bkMode=(g,sb)=>{const M=ACCX().books||{};return M['g'+g+'-'+sb]||M['g'+g]||M.all||'all';};
@@ -2429,7 +2435,9 @@ const GAME=(()=>{
   function logUp(f){const id=curLesson();const G=store.get('g_log',{});const d=today();const x=G[d]||{r:0,w:0,st:0,l:[]};f(x);if(id&&!x.l.includes(id))x.l.push(id);G[d]=x;
     const keep={};Object.keys(G).sort().slice(-95).forEach(k=>keep[k]=G[k]);store.set('g_log',keep);}
   /* every finished test is kept (score per attempt), and every lesson opening, for the parent's report */
-  function quiz(ctx,score,total){try{const id=ctx&&ctx.L&&ctx.L.id;if(!id||!total)return;const Q=store.get('g_qz',[]);Q.push({l:id,s:ctx.stepIndex||0,sc:score,n:total,t:Date.now()});store.set('g_qz',Q.slice(-250));sync(true);}catch(e){}}
+  function quiz(ctx,score,total){try{const id=ctx&&ctx.L&&ctx.L.id;if(!id||!total)return;const Q=store.get('g_qz',[]);Q.push({l:id,s:ctx.stepIndex||0,sc:score,n:total,t:Date.now()});store.set('g_qz',Q.slice(-250));sync(true);
+    const pc=Math.round(score*100/total),M=MASTER(),lk=pc>=M.pct;if(lk){const G=store.get('g_lock',{});G[id]=Math.max(G[id]||0,pc);store.set('g_lock',G);}
+    window.AX&&AX.ev('lesson_score',{l:id,g:String(ctx.L.grade||''),s:String(ctx.L.subject||''),sc:pc,n:total,lock:lk&&M.on&&!paidUser()?1:0,paid:paidUser()?1:0});}catch(e){}}
   function opened(id){const A=store.get('g_act',[]);const last=A[A.length-1];if(last&&last.l===id&&Date.now()-last.t<30*60000)return;A.push({l:id,t:Date.now()});store.set('g_act',A.slice(-250));}
   function ans(ok){lrUp(x=>ok?x.r++:x.w++);logUp(x=>ok?x.r++:x.w++);if(!ok)misAdd();}
   function stats(){const st=countStars();return{stars:st,level:level(st),streak:streak(),today:minsToday(),goal:goal(),week:week()};}
@@ -2896,7 +2904,7 @@ function renderSubject(n,sid){
   root.append(bar(s.name,gradeLabel(gradeInfo(n)),'g'+n,subPill()));
   const KS=KX_SUB[sid]||['#eef0ff','#b9c0f5'];
   {let tot=0,st=0,stars=0,next=null;unitsOf(s).forEach(u=>u.lessons.forEach((l,k)=>{if(!l.ready)return;tot++;const d=store.get('done_'+l.id,[]).length;const S=lessonStudy(l.id);if(d||S)st++;stars+=d;
-     const free=isFree(l,k,n,sid),locked=!free&&!App.sub&&!canOpen(n,sid);if(!next&&!d&&!S&&!locked&&!isClosed(n,sid,l.id))next=l;}));
+     const free=isFree(l,k,n,sid),locked=!free&&!App.sub&&!canOpen(n,sid);if(!next&&!d&&!S&&!locked&&!isClosed(n,sid,l.id)&&!mastered(l.id))next=l;}));
    const pct=tot?Math.round(100*st/tot):0;
    root.append(el('div',{class:'kx-subh',style:'--t:'+KS[0]+';--k:'+KS[1]},
      KX_SUB[sid]?el('img',{src:UIMG('s_'+sid),alt:''}):el('span',{class:'ei',text:s.icon}),
@@ -2916,6 +2924,7 @@ function renderSubject(n,sid){
       if(l.ready&&isClosed(n,sid,l.id)){list.append(el('button',{class:cls+' soon',disabled:true},el('span',{class:'ln',text:String(l.n)}),el('span',{class:'lt'},el('b',{text:l.title}),el('span',{text:'🔧 مغلق مؤقتاً للمراجعة'})),el('span',{class:'ls'},'🔧')));return;}
       if(!l.ready){status='قريباً';cls+=' soon';}
       else if(locked){status='⭐ ترقية';cls+=' locked';}
+      else if(mastered(l.id)){status='🏆 '+lessonBest(l.id)+'%';cls+=' studied';}
       else{const d=store.get('done_'+l.id,[]).length;const S=lessonStudy(l.id);if(S||d){cls+=' studied';l._study=S;}status=d?el('span',{class:'prog',text:'★ '+d}):S?'راجِع':'ابدأ';}
       list.append(el('button',{class:cls,disabled:!l.ready,onclick:()=>{if(locked){App.after='l-'+l.id;go('subscribe');}else go('l-'+l.id);}},
         el('span',{class:'ln',text:String(l.n)}),el('span',{class:'lt'},el('b',{lang:sid==='en'?'en':null,text:l.title}),l.titleAr?el('span',{text:l.titleAr}):null,l._study?el('span',{class:'lstudy',text:studyLine(l._study)}):null,l.ref?el('span',{class:'lref',text:'📖 '+l.ref.replace(/–/g,'\u2060–\u2060')}):null),
@@ -2953,10 +2962,22 @@ function renderSubscribe(){
   root.append(sec);
 }
 
+function renderMastered(info,id){const A=window.ACC,kid=A&&(A.kid||(A.pid&&A.pid!=='me'&&A.profile&&A.profile.role!=='student')),pc=lessonBest(id);
+  const flat=unitsOf(info.subject).flatMap(u=>u.lessons),k=flat.findIndex(l=>l.id===id),nxt=flat.slice(k+1).find(l=>l.ready&&!mastered(l.id));
+  const all=flat.filter(l=>l.ready).every(l=>mastered(l.id));window.AX&&AX.ev('mastered_view',{l:id,s:info.subject.id,all:all?1:0},id);
+  root.innerHTML='';root.append(bar(info.lesson.title,info.subject.name,'g'+info.grade+'-'+info.subject.id),
+   el('div',{class:'lx-end',style:kxVars(info.grade)},el('div',{style:'font-size:3.6rem',text:'🏆'}),el('h2',{text:'أتقنت هذا الدرس!'}),
+    el('p',{class:'lx-em',text:'حصلت على '+pc+'% في اختبار الدرس، لذلك أُغلق هذا الدرس'+(all?' — وأتقنت كل دروس '+info.subject.name+' 🎉':'.')}),
+    el('div',{class:'cta-soft'},el('span',{style:'font-size:1.6rem',text:'🔓'}),el('span',{class:'tx'},el('b',{text:'إعادة الدروس والمراجعة للمشتركين'}),
+      el('small',{text:kid?'في النسخة المجانية يُغلق الدرس بعد إتقانه. اطلب من ولي أمرك الاشتراك لتعيد أي درس متى شئت.':'في النسخة المجانية يُغلق الدرس بعد إتقانه. اشترك لتعيد أي درس وتراجع متى شئت، وتُفتح لك كل المواد.'})),
+      kid&&A.kid?null:el('button',{class:'btn sun sm',text:'الاشتراك',onclick:()=>{window.AX&&AX.ev('cta_click',{from:'mastered',s:info.subject.id});App.after='l-'+id;go('subscribe');}})),
+    nxt?el('button',{class:'btn lx-nx',onclick:()=>go('l-'+nxt.id)},el('small',{text:'الدرس التالي'}),el('span',{text:nxt.title+' ←'})):null,
+    el('div',{class:'lx-ac'},el('button',{class:'btn ghost',text:'📚 دروس المادة',onclick:()=>go('g'+info.grade+'-'+info.subject.id)}))));}
 async function renderLesson(id){
   const info=findLesson(id);if(!info||!info.lesson.ready){go('home');return;}
   if(!info.free&&!App.sub&&(!window.ACC||!ACC.ready)){root.innerHTML='';root.append(el('p',{class:'note',style:'padding:30px 0',text:'جارٍ التحقق من اشتراكك…'}));return;} // the account module re-routes when ready
   if(!info.free&&!App.sub){App.after='l-'+id;go('subscribe');return;}
+  if(mastered(id)){if((!window.ACC||!ACC.ready)&&!App._mwait){App._mwait=1;root.innerHTML='';root.append(el('p',{class:'note',style:'padding:30px 0',text:'جارٍ التحقق…'}));setTimeout(()=>{if(location.hash==='#l-'+id)route();},4000);return;}renderMastered(info,id);return;}
   root.innerHTML='';root.append(el('p',{class:'note',style:'padding:30px 0',text:'جارٍ تحميل الدرس…'}));
   let L;try{L=await getJSON('data/'+id+'.json');}catch(e){root.innerHTML='';root.append(el('div',{class:'err'},el('p',{text:e&&e.userMsg?e.userMsg:'تعذّر تحميل الدرس. تحقق من الاتصال وحاول مرة أخرى.'}),el('button',{class:'btn',text:'أعد المحاولة',onclick:route})));return;}
   QR.reg=L.quran||[];const kids=L.stage==='primary-1-3';document.body.classList.toggle('kids',kids);TTS.phonics=!!L.phonics;TTS.phx=L.phx||null;TTS.age=AGE_PROFILES[L.stage]||AGE_PROFILES['prep-7-9'];TTS.quiet=L.lang!=='en'&&L.subject!=='en'&&(/^s/.test(L.grade)||(+String(L.grade).replace(/\D/g,''))>=7);
@@ -2993,6 +3014,7 @@ async function renderLesson(id){
       el('div',{class:'lx-sc'},el('b',{text:st+'/'+N}),' خطوات أنجزتها'),
       nxt?el('button',{class:'btn lx-nx',onclick:()=>go('l-'+nxt.id)},el('small',{text:'الدرس التالي'}),el('span',{text:nxt.title+' ←'})):el('div',{class:'lx-done',text:'🏁 هذا آخر درس في المادة!'}),
       el('div',{class:'lx-ac'},el('button',{class:'btn ghost',text:'↺ أعد الدرس',onclick:()=>{end.remove();navBox.hidden=false;voiceNote();show(1);}}),el('button',{class:'btn ghost',text:'📚 دروس المادة',onclick:()=>go(backTo)})));
+    if(mastered(id))end.append(el('div',{class:'cta-soft'},el('span',{style:'font-size:1.6rem',text:'🏆'}),el('span',{class:'tx'},el('b',{text:'أتقنت الدرس بنسبة '+lessonBest(id)+'%'}),el('small',{text:'في النسخة المجانية يُغلق الدرس بعد إتقانه، ويمكنك الانتقال للدرس التالي. المشتركون يعيدون الدروس متى شاؤوا.'}))));
     {const A=window.ACC,subbed=App.sub||(A&&A.hasAnySub&&A.hasAnySub())||(A&&(A.kid||A.co))||OPEN_ACCESS,day=new Date().toISOString().slice(0,10);
      if(!subbed&&store.get('cta_end_day','')!==day){store.set('cta_end_day',day);
        end.append(el('div',{class:'cta-soft'},el('span',{style:'font-size:1.8rem',text:'🔓'}),el('span',{class:'tx'},el('b',{text:'أعجبك الدرس؟ باقي المواد بنفس الطريقة'}),el('small',{text:'الرياضيات والعلوم والعربي والإنجليزي وغيرها — شرح بالصوت وتمارين وتقارير لولي الأمر.'})),

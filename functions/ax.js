@@ -9,7 +9,7 @@
 
 const EVENTS = new Set(["session_start", "page_view", "ping", "upgrade_click", "plans_view", "plan_select", "plan_info", "pay_click", "pay_redirect",
   "pay_return", "pay_cancel", "pay_confirmed", "pay_unconfirmed", "pay_error", "reg_open", "reg_method", "reg_input", "reg_submit", "reg_error", "reg_auth",
-  "onboard_open", "signup_done", "login_done", "kid_add", "tour_step", "tour_done", "tour_skip", "tip_click", "lesson_open", "lesson_done", "lesson_leave", "cta_click"]);
+  "onboard_open", "signup_done", "login_done", "kid_add", "tour_step", "tour_done", "tour_skip", "tip_click", "lesson_open", "lesson_done", "lesson_leave", "cta_click", "lesson_score", "mastered_view"]);
 // الخطوات التي نحفظ آخر وقت لها في ملف الزائر (لقوائم «توقف عند…»)
 const MILESTONES = ["reg_open", "reg_method", "reg_input", "reg_submit", "reg_error", "reg_auth", "onboard_open", "signup_done", "login_done", "upgrade_click",
   "plans_view", "plan_select", "pay_click", "pay_redirect", "pay_return", "pay_cancel", "pay_confirmed", "pay_error", "lesson_open", "lesson_done", "kid_add", "tour_done", "tour_skip"];
@@ -26,7 +26,7 @@ const clean = (v, d = 0) => {
 };
 // قائمة بيضاء لأسماء الخصائص: أي شيء آخر (مثل نص أدخله المستخدم) يُرمى ولا يُحفظ
 const PROPS = new Set(["r", "x", "l", "g", "s", "f", "n", "at", "st", "plans", "plan", "price", "who", "logged", "m", "mode", "code", "role", "via", "oid", "amt", "msg",
-  "from", "src", "med", "cmp", "cnt", "trm", "ref", "land", "paid", "pwa", "dev", "ret", "i", "k", "t"]);
+  "from", "src", "med", "cmp", "cnt", "trm", "ref", "land", "paid", "pwa", "dev", "ret", "i", "k", "t", "sc", "lock", "all"]);
 const cleanProps = (p) => { const o = {}; if (!p || typeof p !== "object") return o; let n = 0;
   for (const k of Object.keys(p)) { if (n++ > 24 || !PROPS.has(k)) continue; const v = clean(p[k]); if (v != null) o[k] = v; } return o; };
 const okId = (x, re) => typeof x === "string" && re.test(x);
@@ -385,7 +385,19 @@ function computeReport(data, from, to, opt = {}) {
       .sort((a, b) => b.days.size - a.days.size).slice(0, 400).map(rowOf);
   const retention = {all: cohort(inCo), reg: cohort(inCo.filter((x) => x.reg)), visitorsOnly: cohort(inCo.filter((x) => !x.reg)), weeks, visitsDist, regNoReturn, usedNoSub};
 
-  return {from, to, gen: Date.now(), firstTrack: firstTrack === Infinity ? 0 : firstTrack, overview, daily: dailyRows, funnel, pages: top(pages, 20), pagesX: top(pagesX, 40),
+  // نتائج اختبارات الدروس والإقفال بعد الإتقان
+  const scAgg = {}; const scRows = [];
+  evs.filter((e) => e.n === "lesson_score" && e.p && e.p.l).forEach((e) => { const k = pkey(e.vid, e.uid);
+    const a = scAgg[e.p.l] = scAgg[e.p.l] || {l: e.p.l, g: e.p.g || "", s: e.p.s || "", attempts: 0, persons: new Set(), sum: 0, best: {}, locked: new Set(), paid: new Set()};
+    a.attempts++; a.persons.add(k); a.sum += Number(e.p.sc) || 0; a.best[k] = Math.max(a.best[k] || 0, Number(e.p.sc) || 0); if (e.p.lock) a.locked.add(k); if (e.p.paid) a.paid.add(k);
+    const p = pinfo[k]; const r = p ? rowOf(p) : {id: k.slice(2, 12), reg: k.startsWith("u:")};
+    scRows.push({t: e.t, id: r.id, reg: r.reg, name: r.name || "", role: r.role || "", l: e.p.l, g: e.p.g || "", s: e.p.s || "", sc: Number(e.p.sc) || 0, lock: !!e.p.lock, paid: !!e.p.paid}); });
+  const scores = {lessons: Object.values(scAgg).map((a) => { const b = Object.values(a.best); return {l: a.l, g: a.g, s: a.s, attempts: a.attempts, persons: a.persons.size,
+    avg: a.attempts ? Math.round(a.sum / a.attempts) : 0, avgBest: b.length ? Math.round(b.reduce((x, y) => x + y, 0) / b.length) : 0, over80: b.filter((x) => x >= 80).length, locked: a.locked.size, paid: a.paid.size}; })
+      .sort((a, b) => b.persons - a.persons), rows: scRows.sort((a, b) => b.t - a.t).slice(0, 600),
+    lockedPersons: new Set(evs.filter((e) => e.n === "lesson_score" && e.p && e.p.lock).map((e) => pkey(e.vid, e.uid))).size,
+    lockViews: S("mastered_view"), lockCta: evs.filter((e) => e.n === "cta_click" && e.p && e.p.from === "mastered").length};
+  return {scores, from, to, gen: Date.now(), firstTrack: firstTrack === Infinity ? 0 : firstTrack, overview, daily: dailyRows, funnel, pages: top(pages, 20), pagesX: top(pagesX, 40),
     sources, campaigns, regSteps, regMethods: Object.fromEntries(Object.entries(methods).map(([k, s]) => [k, s.size])), regErrors: top(regErrors, 30),
     people: peopleRows, peopleTotal: people.length, stalledReg, stalledSub, histPending, plans, entry: top(entry, 20), free: freeRep, retention, events: cnt};
 }

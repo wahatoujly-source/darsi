@@ -758,6 +758,7 @@ function trialPick() {
 ACC.hasAccess = (g, s) => ACC.subs.some(sub => { if (sub.kind === 'trial' || !subApplies(sub)) return false; const sc = sub.scope || {};
   if (sc.pairs) return sc.pairs.includes(g + ':' + s);
   return (sc.grades || []).some(x => x === '*' || x === g) && (sc.subjects || []).some(x => x === '*' || x === s); });
+ACC.paidSub = () => ACC.subs.some(x => !['trial', 'gift'].includes(x.kind) && subApplies(x));
 ACC.hasAnySub = () => ACC.subs.some(x => x.kind !== 'trial' && subApplies(x));
 ACC.hasGrade = g => ACC.subs.some(sub => { if (sub.kind === 'trial' || !subApplies(sub)) return false; const sc = sub.scope || {}; if (sc.any) return true;
   if (sc.pairs) return sc.pairs.some(x => x.startsWith(g + ':')); return (sc.grades || []).some(x => x === '*' || x === g); });

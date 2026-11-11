@@ -81,7 +81,7 @@ export default function axAdmin({ call, fnErr, ACC, page, fbk, D, el, go, store 
   // ---------- الهيكل ----------
   const per = el('div', { class: 'ax-per' }), tabs = el('div', { class: 'ax-tabs' }), body = el('div', { class: 'stack' }), msg = el('div');
   const TABS = [['ov', '📊 نظرة عامة'], ['fun', '🔻 مسار التحويل'], ['ppl', '👥 الزوار والمستخدمون'], ['reg', '📝 التسجيلات المتوقفة'], ['sub', '💳 الاشتراكات المتوقفة'],
-    ['free', '📖 المواد المجانية'], ['ret', '🔁 العودة'], ['src', '📣 المصادر والحملات'], ['al', '🔔 التنبيهات']];
+    ['free', '📖 المواد المجانية'], ['sc', '🏆 نتائج الدروس والإتقان'], ['ret', '🔁 العودة'], ['src', '📣 المصادر والحملات'], ['al', '🔔 التنبيهات']];
   let unread = 0;
   const drawTabs = () => { tabs.innerHTML = ''; TABS.forEach(([k, t]) => tabs.append(el('button', { class: tab === k ? 'on' : '', onclick: () => { tab = k; store.set('ax_tab', k); drawTabs(); render(); } }, t, k === 'al' && unread ? el('span', { class: 'bd', text: String(unread) }) : null))); };
   const drawPer = () => { per.innerHTML = '';
@@ -108,7 +108,7 @@ export default function axAdmin({ call, fnErr, ACC, page, fbk, D, el, go, store 
     const notice = el('div', { class: 'ax-note' }, R.firstTrack ? 'بدأ تسجيل سلوك الزوار في ' + fmtDT(R.firstTrack) + '. ما قبل ذلك غير متاح، باستثناء الحسابات والطلبات والمدفوعات (من قاعدة البيانات مباشرة). حسابات الإدارة وأجهزة الأبناء المربوطة مستبعدة من الأرقام.'
       : 'لم يصل أي حدث تتبع بعد. بعد نشر التحديث ستبدأ الأرقام بالظهور تلقائياً. الحسابات والطلبات والمدفوعات أدناه من قاعدة البيانات مباشرة.');
     body.append(notice);
-    ({ ov: renderOv, fun: renderFun, ppl: renderPpl, reg: renderReg, sub: renderSub, free: renderFree, ret: renderRet, src: renderSrc })[tab]();
+    ({ sc: renderSc, ov: renderOv, fun: renderFun, ppl: renderPpl, reg: renderReg, sub: renderSub, free: renderFree, ret: renderRet, src: renderSrc })[tab]();
   }
 
   // ---------- 1) نظرة عامة ----------
@@ -190,6 +190,22 @@ export default function axAdmin({ call, fnErr, ACC, page, fbk, D, el, go, store 
       table('مجانية-' + f.s, [['id', 'المعرّف'], ['reg', 'الحالة', (r) => r.sub ? 'مشترك' : r.reg ? 'مسجّل' : 'زائر', (r) => r.sub ? tag('s', 'مشترك') : r.reg ? tag('r', 'مسجّل') : tag('v', 'زائر')], ['name', 'الاسم'], ['g', 'الصف', (r) => D.gradeName(r.g) || r.g],
         ['opened', 'فتح'], ['done', 'أكمل'], ['total', 'دروس المادة'], ['full', 'أكمل المادة؟', (r) => r.full ? 'نعم' : 'لا'], ['last', 'أين توقف', (r) => lname(r.last) + (r.n ? ' (الخطوة ' + r.lastAt + ' من ' + r.n + ')' : '')],
         ['sess', 'مرات العودة'], ['toPlans', 'ذهب للباقات؟', (r) => r.toPlans ? 'نعم' : 'لا'], ['lastT', 'آخر نشاط', (r) => fmtDT(r.lastT)]], f.rows)); });
+  }
+  // ---------- نتائج الدروس والقفل بعد الإتقان ----------
+  const SUBJ = (g, sid) => { const c = D.App.catalog; const sj = c && (c.grades[g] || []).find((x) => x.id === sid); return sj ? sj.name : sid; };
+  function renderSc() { const M0 = (ACC.access || {}).master || {}; const M = { on: M0.on !== false, pct: +M0.pct || 80 }; const S = R.scores || { lessons: [], rows: [] };
+    const on = el('input', { type: 'checkbox', checked: M.on ? '' : null }), pc = el('input', { type: 'number', min: '50', max: '100', value: String(M.pct), style: 'width:80px' }), m = el('div');
+    body.append(el('div', { class: 'panel', style: 'display:flex;flex-direction:column;gap:8px;border:2px solid #ffc98a' }, el('b', { text: '⚙️ قفل الدرس بعد الإتقان (النسخة المجانية)' }),
+      help('من يحصل على هذه النسبة أو أكثر في اختبار الدرس يُغلق عليه الدرس ولا يستطيع إعادته، ما لم يكن عنده اشتراك مدفوع رسمي. يشمل الزوار والمسجلين بدون دفع وأصحاب الأيام المجانية والمنح. عند الاشتراك المدفوع تُفتح كل الدروس تلقائياً. الدروس التي ليس فيها اختبار لا تُغلق.'),
+      el('label', { class: 'sndrow', style: 'margin:0' }, on, el('b', { text: 'تفعيل القفل بعد الإتقان' })),
+      el('label', { class: 'prow' }, el('span', { text: 'نسبة الإتقان المطلوبة %' }), pc),
+      ACC.can('access') ? el('button', { class: 'btn sun', text: '💾 حفظ', onclick: async (e) => { e.target.disabled = true; try { const r = await call('adminSetAccess', { op: 'master', on: on.checked, pct: +pc.value }); ACC.access = { ...(ACC.access || {}), master: { on: on.checked, pct: r.pct } }; fbk(m, 'ok', '✓ حُفظ: ' + (on.checked ? 'القفل مفعّل عند ' + r.pct + '%' : 'القفل متوقف')); } catch (x) { fbk(m, 'bad', fnErr(x)); } e.target.disabled = false; } })
+        : el('span', { class: 'note', text: 'التعديل يحتاج صلاحية «فتح وإغلاق الدروس».' }), m),
+      el('div', { class: 'ax-kpis' }, kpi(S.rows.length, 'محاولة اختبار في الفترة'), kpi(S.lockedPersons, 'شخص أُغلق عليه درس', null, true), kpi(S.lockViews, 'شخص رأى رسالة «أتقنت الدرس»'), kpi(S.lockCta, 'ضغط «الاشتراك» من رسالة الإتقان', null, true)),
+      el('h3', { text: 'نتائج كل درس' }), help('«متوسط أفضل نتيجة» = متوسط أعلى درجة حصل عليها كل شخص. «أُغلق» = عدد من أُغلق عليهم الدرس (غير مشتركين).'),
+      table('نتائج-الدروس', [['l', 'الدرس', (r) => lname(r.l)], ['s', 'المادة', (r) => SUBJ(r.g, r.s)], ['g', 'الصف', (r) => D.gradeName(r.g) || r.g], ['persons', 'أشخاص'], ['attempts', 'محاولات'], ['avg', 'متوسط الدرجة %'], ['avgBest', 'متوسط أفضل نتيجة %'], ['over80', 'حصلوا 80% فأكثر'], ['locked', 'أُغلق'], ['paid', 'مشتركون']], S.lessons),
+      el('h3', { text: 'آخر المحاولات' }), table('محاولات-الاختبارات', [['t', 'الوقت', (r) => fmtDT(r.t)], ['id', 'المعرّف'], ['name', 'الشخص', (r) => r.reg ? (r.name || 'حساب') + (r.role ? ' (' + (ROLE[r.role] || r.role) + ')' : '') : 'زائر'],
+        ['l', 'الدرس', (r) => lname(r.l)], ['s', 'المادة', (r) => SUBJ(r.g, r.s)], ['sc', 'الدرجة %'], ['lock', 'أُغلق؟', (r) => r.paid ? 'مشترك' : r.lock ? 'نعم 🔒' : 'لا']], S.rows));
   }
   // ---------- 7) العودة ----------
   function renderRet() { const T = R.retention;
