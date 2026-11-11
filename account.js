@@ -38,6 +38,8 @@ const GRADES = [['1','الأول'],['2','الثاني'],['3','الثالث'],['4
 const gNum = g => /^s/.test(String(g)) ? 10 : (+g || 3);
 const gradeName = g => (GRADES.find(x => x[0] === String(g)) || [, ''])[1];
 
+const AXe = (n, p, once) => { try { window.AX && AX.ev(n, p, once); } catch (e) {} };
+if (window.AX) AX.tokFn = async () => (auth.currentUser ? auth.currentUser.getIdToken() : null);
 const ACC = window.ACC = { user: null, profile: null, profiles: [], pid: store.get('acc_pid', null), ready: false, call };
 
 /* ---------- push notifications (FCM web push) ---------- */
@@ -211,12 +213,13 @@ function authHero(sub) { const r = ROLE_HERO[store.get('pref_role', '')] || ['�
 function renderLogin() {
   if (ACC.user) { go(ACC.profile ? 'account' : 'onboard'); return; }
   const root = D.root; root.innerHTML = ''; const msg = el('div', { class: 'au-msg' });
+  AXe('reg_open', { from: D.App.after === 'subscribe' || store.get('pend_pay', null) ? 'pay' : String(store.get('pref_role', '') || '') });
   const gBtn = el('button', { class: 'au-row g', onclick: async () => {
-    msg.innerHTML = ''; const pr = new GoogleAuthProvider(); pr.setCustomParameters({ prompt: 'select_account' });
+    msg.innerHTML = ''; const pr = new GoogleAuthProvider(); pr.setCustomParameters({ prompt: 'select_account' }); AXe('reg_method', { m: 'google' }); AXe('reg_submit', { m: 'google', mode: 'any' });
     try { await signInWithPopup(auth, pr); }
-    catch (e) { if (['auth/popup-blocked', 'auth/operation-not-supported-in-this-environment', 'auth/cancelled-popup-request'].includes(e.code)) await signInWithRedirect(auth, pr); else fbk(msg, 'bad', errMsg(e)); }
+    catch (e) { AXe('reg_error', { m: 'google', code: String(e.code || 'x').slice(0, 60) }); if (['auth/popup-blocked', 'auth/operation-not-supported-in-this-environment', 'auth/cancelled-popup-request'].includes(e.code)) await signInWithRedirect(auth, pr); else fbk(msg, 'bad', errMsg(e)); }
   } }, el('span', { class: 'ri', html: '<svg viewBox="0 0 48 48" width="22" height="22"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3 0 5.8 1.1 7.9 3l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3 0 5.8 1.1 7.9 3l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/></svg>' }), el('span', {}, el('b', { text: 'المتابعة بحساب Google' }), el('small', { text: 'بضغطة واحدة' })), el('span', { class: 'tag', text: 'الأسرع' }));
-  const opt = (cls, ic, t, d, to) => el('button', { class: 'au-row ' + cls, onclick: () => go(to) }, el('span', { class: 'ri', text: ic }), el('span', {}, el('b', { text: t }), el('small', { text: d })), el('span', { class: 'rg', text: '←' }));
+  const opt = (cls, ic, t, d, to) => el('button', { class: 'au-row ' + cls, onclick: () => { AXe('reg_method', { m: to === 'login-phone' ? 'phone' : 'email' }); go(to); } }, el('span', { class: 'ri', text: ic }), el('span', {}, el('b', { text: t }), el('small', { text: d })), el('span', { class: 'rg', text: '←' }));
   root.append(el('section', { class: 'au' }, el('button', { class: 'au-back', text: '→', 'aria-label': 'رجوع', onclick: () => go(store.get('welcomed', false) ? 'start' : 'home') }),
     authHero(),
     el('div', { class: 'au-group' }, gBtn, opt('e', '✉️', 'البريد الإلكتروني', 'ببريدك وكلمة مرور', 'login-email'), opt('p', '📱', 'رقم الهاتف', 'برقمك الليبي وكلمة مرور', 'login-phone')), msg,
@@ -228,10 +231,11 @@ function renderLogin() {
 function authForm(kind) {
   if (ACC.user) { go(ACC.profile ? 'account' : 'onboard'); return; }
   const root = D.root; root.innerHTML = ''; const msg = el('div'); let mode = 'new';
-  const isPhone = kind === 'phone';
+  const isPhone = kind === 'phone'; const M = isPhone ? 'phone' : 'email';
   const id = isPhone ? el('input', { class: 'au-in', type: 'tel', inputmode: 'numeric', placeholder: '09X XXX XXXX', 'aria-label': 'رقم الهاتف', autocomplete: 'tel', dir: 'ltr' })
     : el('input', { class: 'au-in', type: 'email', placeholder: 'example@gmail.com', 'aria-label': 'البريد الإلكتروني', autocomplete: 'email', dir: 'ltr' });
   const pw = el('input', { class: 'au-in', type: 'password', placeholder: 'كلمة المرور (6 أحرف أو أكثر)', 'aria-label': 'كلمة المرور', autocomplete: 'new-password' });
+  [id, pw].forEach(x => x.addEventListener('input', () => AXe('reg_input', { m: M, mode }, M + mode), { once: false }));
   const eye = el('button', { class: 'au-eye', type: 'button', text: '👁️', onclick: () => { pw.type = pw.type === 'password' ? 'text' : 'password'; } });
   const tabs = el('div', { class: 'au-tabs' }); const go_ = el('button', { class: 'au-main' }); const extra = el('div');
   const draw = () => { tabs.innerHTML = ''; [['new', 'حساب جديد'], ['in', 'لدي حساب']].forEach(([k, t]) => tabs.append(el('button', { class: k === mode ? 'on' : '', text: t, onclick: () => { mode = k; msg.innerHTML = ''; draw(); } })));
@@ -240,13 +244,14 @@ function authForm(kind) {
       if (isPhone) { fbk(msg, 'info', 'تواصل معنا لإعادة تعيين كلمة المرور، أو سجّل الدخول ببريدك أو بحساب Google.'); return; }
       if (!id.value.trim()) { fbk(msg, 'info', 'اكتب بريدك أولاً ثم اضغط «نسيت كلمة المرور».'); return; }
       try { await sendPasswordResetEmail(auth, id.value.trim()); fbk(msg, 'ok', 'أرسلنا رابط تغيير كلمة المرور إلى بريدك.'); } catch (e) { fbk(msg, 'bad', errMsg(e)); } } })); };
-  go_.onclick = async () => { msg.innerHTML = ''; const create = mode === 'new';
-    if ((pw.value || '').length < 6) { fbk(msg, 'bad', 'كلمة المرور 6 أحرف أو أكثر.'); return; }
+  go_.onclick = async () => { msg.innerHTML = ''; const create = mode === 'new'; AXe('reg_submit', { m: M, mode });
+    if (!isPhone && !/^\S+@\S+\.\S+$/.test(id.value.trim())) AXe('reg_error', { m: M, mode, code: 'bad_email' });
+    if ((pw.value || '').length < 6) { AXe('reg_error', { m: M, mode, code: 'short_password' }); fbk(msg, 'bad', 'كلمة المرور 6 أحرف أو أكثر.'); return; }
     let login = id.value.trim();
-    if (isPhone) { const n = libyanPhone(login); if (!n) { fbk(msg, 'bad', 'اكتب رقماً ليبياً يبدأ بـ 091 أو 092 أو 093 أو 094 أو 095.'); return; } login = phoneEmail(n); }
+    if (isPhone) { const n = libyanPhone(login); if (!n) { AXe('reg_error', { m: M, mode, code: 'bad_phone' }); fbk(msg, 'bad', 'اكتب رقماً ليبياً يبدأ بـ 091 أو 092 أو 093 أو 094 أو 095.'); return; } login = phoneEmail(n); }
     go_.disabled = true; go_.classList.add('busy');
     try { create ? await createUserWithEmailAndPassword(auth, login, pw.value) : await signInWithEmailAndPassword(auth, login, pw.value); }
-    catch (e) { fbk(msg, 'bad', e.code === 'auth/email-already-in-use' ? (isPhone ? 'هذا الرقم مسجّل من قبل. اختر «لدي حساب».' : 'هذا البريد مسجّل من قبل. اختر «لدي حساب».') : e.code === 'auth/invalid-credential' ? (isPhone ? 'الرقم أو كلمة المرور غير صحيحة.' : 'البريد أو كلمة المرور غير صحيحة.') : errMsg(e)); }
+    catch (e) { AXe('reg_error', { m: M, mode, code: String(e.code || 'x').slice(0, 60) }); fbk(msg, 'bad', e.code === 'auth/email-already-in-use' ? (isPhone ? 'هذا الرقم مسجّل من قبل. اختر «لدي حساب».' : 'هذا البريد مسجّل من قبل. اختر «لدي حساب».') : e.code === 'auth/invalid-credential' ? (isPhone ? 'الرقم أو كلمة المرور غير صحيحة.' : 'البريد أو كلمة المرور غير صحيحة.') : errMsg(e)); }
     go_.disabled = false; go_.classList.remove('busy'); };
   draw();
   root.append(el('section', { class: 'au' }, el('button', { class: 'au-back', text: '→', 'aria-label': 'رجوع', onclick: () => go('login') }),
@@ -262,7 +267,7 @@ function renderOnboard() {
   if (ACC.profile) { go('account'); return; }
   if (store.get('pend_pay', null)) { go('subscribe'); return; }
   const s = page('مرحباً بك في المجتهد', 'خطوة واحدة ونبدأ', null);
-  const msg = el('div');
+  const msg = el('div'); AXe('onboard_open', {}, true);
   let role = ['parent', 'student', 'teacher'].includes(store.get('pref_role', '')) ? store.get('pref_role', '') : null, grade = null, avatar = AVATARS[0];
   const name = el('input', { class: 'tinput', placeholder: 'الاسم', 'aria-label': 'الاسم', value: ACC.user.displayName || '' });
   const roles = el('div', { class: 'plans' }), kidBox = el('div', { class: 'stack', hidden: true });
@@ -274,22 +279,22 @@ function renderOnboard() {
   draw();
   const save = el('button', { class: 'btn sun paybig', text: 'ابدأ', onclick: async () => {
     const nm = name.value.trim();
-    if (nm.length < 2) { fbk(msg, 'bad', 'اكتب الاسم.'); return; }
-    if (!role) { fbk(msg, 'bad', 'اختر: طالب أو ولي أمر أو معلم.'); return; }
-    if (role === 'student' && !grade) { fbk(msg, 'bad', 'اختر صفك الدراسي.'); return; }
+    if (nm.length < 2) { AXe('reg_error', { m: 'onboard', code: 'no_name' }); fbk(msg, 'bad', 'اكتب الاسم.'); return; }
+    if (!role) { AXe('reg_error', { m: 'onboard', code: 'no_role' }); fbk(msg, 'bad', 'اختر: طالب أو ولي أمر أو معلم.'); return; }
+    if (role === 'student' && !grade) { AXe('reg_error', { m: 'onboard', code: 'no_grade' }); fbk(msg, 'bad', 'اختر صفك الدراسي.'); return; }
     save.disabled = true;
     try {
       const u = ACC.user;
       const data = { name: nm, role, phone: phoneOf(u) || u.phoneNumber || null, email: phoneOf(u) ? null : (u.email || null), createdAt: serverTimestamp() };
       await setDoc(uref(), data);
       try { await updateProfile(u, { displayName: nm }); } catch (e) {}
-      ACC.profile = data;
+      ACC.profile = data; AXe('signup_done', { role, g: grade || '' }); window.AX && AX.flush();
       await claimRef();
-      if (role === 'parent') { ACC.profiles = []; go('kids'); return; }
+      if (role === 'parent') { ACC.profiles = []; go('guide'); return; }
       await setDoc(pref('me'), { name: nm, grade: grade || null, avatar: role === 'teacher' ? '👩‍🏫' : avatar, createdAt: serverTimestamp() });
       await loadProfiles(); await migrateLocal('me'); await setActive('me');
       D.cheer && D.cheer('win'); go(grade ? 'g' + grade : 'home');
-    } catch (e) { save.disabled = false; fbk(msg, 'bad', errMsg(e)); console.error(e); }
+    } catch (e) { save.disabled = false; AXe('reg_error', { m: 'onboard', code: String(e.code || 'save').slice(0, 60) }); fbk(msg, 'bad', errMsg(e)); console.error(e); }
   } });
   s.append(el('div', { class: 'panel accbox' }, el('b', { text: 'ما اسمك؟' }), name), el('b', { text: 'من أنت؟' }), roles, kidBox, msg, save);
 }
@@ -310,7 +315,7 @@ function renderKids() {
   const list = el('div', { class: 'stack' }), msg = el('div');
   const draw = () => { list.innerHTML = '';
     if (!kidsOf().length) list.append(el('p', { class: 'note', text: 'لم تضف أحداً بعد. أضف ابنك الأول.' }));
-    kidsOf().forEach(p => list.append(el('div', { class: 'kx-krow', style: gcVars(p.grade) }, el('span', { class: 'kav', text: p.avatar || '🙂' }), el('span', { class: 'tx' }, el('b', { text: p.name }), el('small', { text: 'الصف ' + gradeName(p.grade) + ' أساسي' })),
+    kidsOf().forEach(p => list.append(el('div', { class: 'kx-krow', style: gcVars(p.grade) }, el('span', { class: 'kav', text: p.avatar || '🙂' }), el('span', { class: 'tx' }, el('b', { text: p.name }), el('small', { text: 'الصف ' + gradeName(p.grade) + (/^s/.test(String(p.grade)) ? '' : ' أساسي') })),
       el('button', { class: 'del', text: '🗑', 'aria-label': 'حذف ' + p.name, onclick: async e => { const b = e.currentTarget; if (b.dataset.c !== '1') { b.dataset.c = '1'; b.textContent = 'تأكيد الحذف؟'; b.classList.add('sure'); return; }
         try { await deleteDoc(pref(p.id)); ACC.profiles = ACC.profiles.filter(x => x.id !== p.id); if (ACC.pid === p.id) await setActive(null); draw(); } catch (x) { fbk(msg, 'bad', errMsg(x)); } } })))); };
   draw();
@@ -324,11 +329,12 @@ function renderKids() {
     add.disabled = true;
     try { const id = 'k' + Date.now().toString(36); const first = !kidsOf().length && ACC.profile.role === 'parent';
       await setDoc(pref(id), { name: nm, grade, avatar, createdAt: serverTimestamp() });
-      ACC.profiles.push({ id, name: nm, grade, avatar }); if (first) { await migrateLocal(id); }
+      ACC.profiles.push({ id, name: nm, grade, avatar }); AXe('kid_add', { g: grade, n: kidsOf().length }); if (first) { await migrateLocal(id); }
       name.value = ''; grade = null; drawG(); draw(); fbk(msg, 'ok', 'تمت إضافة ' + nm + '.');
     } catch (e) { fbk(msg, 'bad', errMsg(e)); }
     add.disabled = false; } });
-  s.append(list, el('div', { class: 'panel accbox kx-addk' }, el('b', { text: '➕ أضف ابناً أو ابنة' }), name, el('span', { class: 'note', text: 'الصف' }), gsel, el('span', { class: 'note', text: 'الصورة' }), av, add), msg,
+  const addBox = el('div', { class: 'panel accbox kx-addk' }, el('b', { text: '➕ أضف ابناً أو ابنة' }), name, el('span', { class: 'note', text: 'الصف' }), gsel, el('span', { class: 'note', text: 'الصورة' }), av, add);
+  s.append(list, kidsOf().length ? null : D.tip && D.tip('addkid', '👇 اكتب اسم ابنك واختر صفه ثم اضغط «أضف»', add), addBox, msg,
     el('button', { class: 'btn sun', style: 'width:100%;margin-top:12px', text: 'تم، ابدأ الدراسة ←', onclick: () => go('who') }));
 }
 
@@ -363,7 +369,7 @@ function renderWho() {
         el('button', { onclick: () => go('tt-' + p.id) }, el('span', { text: '📅' }), 'الجدول' + (p.tt && p.tt.on ? ' ✓' : '')),
         el('button', { onclick: () => go('ctrl-' + p.id) }, el('span', { text: '🎛️' }), 'التحكم' + (ctrlOn ? ' ✓' : ''))))); });
   if (!ACC.co && kidsOf().length < MAX_KIDS) g.append(el('button', { class: 'kx-wadd', onclick: () => go('kids') }, el('span', { text: '＋' }), el('b', { text: 'أضف ابناً' }), el('small', { text: 'حتى ' + MAX_KIDS + ' أبناء في حساب واحد' })));
-  s.append(g, el('div', { class: 'row', style: 'gap:8px;justify-content:center' }, el('button', { class: 'btn ghost', text: '✏️ إدارة الأبناء', onclick: () => go('kids') }), el('button', { class: 'btn ghost', text: '⚙️ حسابي', onclick: () => go('account') })));
+  s.append(g, el('div', { class: 'row', style: 'gap:8px;justify-content:center' }, el('button', { class: 'btn ghost', text: '✏️ إدارة الأبناء', onclick: () => go('kids') }), el('button', { class: 'btn ghost', text: '🧭 الدليل', onclick: () => go('guide') }), el('button', { class: 'btn ghost', text: '⚙️ حسابي', onclick: () => go('account') })));
 }
 
 const ymd = d => d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
@@ -772,6 +778,24 @@ function subjName(g, sid) { const s = subjectsOf(g).find(x => x.id === sid); ret
 
 const BASE_ROLES = { student_subject: ['student', 'teacher'], student_grade: ['student', 'teacher'], parent_grade: ['parent', 'teacher'], parent_all: ['parent', 'teacher'] };
 const BASE_ICON = { student_subject: '📘', student_grade: '📚', parent_grade: '👨‍👩‍👧', parent_all: '🏫' };
+// ما الذي تشمله كل باقة — يُبنى من بيانات الباقة نفسها (لا تغيير في الأسعار)
+const kidsOfPlan = p => ['parent_grade', 'parent_all'].includes(p.base) ? (p.kids || 5) : 1;
+const scopeLabel = p => ({ student_subject: 'مادة واحدة تختارها في صف واحد', student_grade: 'كل مواد صف واحد', parent_grade: 'كل مواد صف واحد', parent_all: 'كل الصفوف والمواد المتاحة' })[p.base] || '';
+const perKid = p => { const k = kidsOfPlan(p); if (k < 2 || !(p.price > 0)) return null; const v = Math.round(p.price * 10 / k) / 10; const d = p.dur || {};
+  const per = d.t === 'days' ? (d.days === 30 ? 'في الشهر' : 'للمدة كاملة') : 'للعام الدراسي'; return { v, k, per }; };
+function planDetails(p) {
+  const isP = kidsOfPlan(p) > 1, pk = perKid(p), c = D.App.catalog; const gN = c ? Object.keys(c.grades).length : 0;
+  const li = (ic, t) => el('li', { style: 'display:flex;gap:8px;align-items:flex-start;line-height:1.7' }, el('span', { text: ic }), el('span', { text: t }));
+  return el('div', { class: 'panel', style: 'border:2px solid #ffc98a;display:flex;flex-direction:column;gap:6px' },
+    el('b', { text: '✨ ماذا تشمل «' + p.name + '»؟' }),
+    el('ul', { style: 'list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:4px' },
+      li('👥', isP ? 'حتى ' + kidsOfPlan(p) + ' ' + (kidsOfPlan(p) === 2 ? 'ابنين' : 'أبناء') + ' في حساب واحد، ولكل ابن صفه وتقريره' : 'طالب واحد (حسابك أنت)'),
+      li('⏳', 'المدة: ' + durLabel(p)),
+      li('📚', scopeLabel(p) + (p.base === 'parent_all' && gN ? ' (' + gN + ' صفوف حالياً، وكل ما يُضاف خلال المدة)' : '') + ' — كل الدروس بالصوت والصورة والتمارين والاختبارات'),
+      isP ? li('👨‍👩‍👧', 'لولي الأمر: تقرير لكل ابن (الدقائق والنجوم ونقاط القوة والضعف)، واختيار المواد والدروس التي يراها، وجدول دراسي، وربط هاتف الابن برمز') : null,
+      li('✅', 'بعد الدفع: تُفتح الدروس فوراً وتلقائياً، دون انتظار أو تفعيل يدوي'),
+      pk ? li('💡', 'عند استخدامها لـ ' + pk.k + ' أبناء تصبح تكلفة الطالب الواحد نحو ' + pk.v + ' د.ل ' + pk.per + ' — والسعر الإجمالي للباقة ' + p.price + ' د.ل') : null));
+}
 const durLabel = p => { const d = p.dur || {}; return d.t === 'days' ? (d.days % 30 === 0 ? (d.days === 30 ? 'شهر واحد' : d.days === 60 ? 'شهران' : (d.days / 30) + ' أشهر') : d.days + ' يوماً') + ' من يوم الاشتراك' : 'حتى ' + fmtDate(p.end); };
 function renderSubscribe() {
   if (ACC.co) { const s = page('الاشتراك', '', 'who'); s.append(el('div', { class: 'feedback info', text: 'الاشتراك يتم من حساب ولي الأمر الأساسي، ويشمل الأبناء عندك تلقائياً.' })); return; }
@@ -781,7 +805,7 @@ function renderSubscribe() {
   const U = n => 'img/ui/' + n + '.webp';
   s.append(el('div', { class: 'kx-subhero' }, el('div', { class: 'bgx' }), el('img', { class: 'k1', src: U('k2'), alt: '' }), el('img', { class: 'k2', src: U('k3'), alt: '' }),
     el('div', { class: 'tx' }, el('span', { class: 'cap', text: '⭐ اشتراك المجتهد' }), el('h2', { text: 'افتح المنصة كاملة لأبنائك' }),
-      el('p', { text: 'كل دروس المنهج الليبي بالصوت والصورة، من الصف الأول للتاسع' }))));
+      el('p', { text: 'كل دروس المنهج الليبي بالصوت والصورة، من الصف الأول الأساسي حتى الأول الثانوي' }))));
   s.append(el('div', { class: 'kx-ben' }, ...[['q_learn', 'كل الدروس', 'بالصوت والصورة'], ['q_review', 'تمارين واختبارات', 'تصحيح فوري'], ['n_ach', 'تقارير لولي الأمر', 'بالدقيقة والنسبة'], ['q_comp', 'مسابقات وأوسمة', 'تحفيز يومي']]
     .map(([im, t, sm]) => el('div', {}, el('img', { src: U(im), alt: '', loading: 'lazy' }), el('b', { text: t }), el('small', { text: sm })))));
   if (logged && ACC.profile) { const mine = ACC.subs.filter(subApplies); if (mine.length) s.append(el('div', { class: 'feedback ok', text: '✓ عندك اشتراك فعّال: ' + mine.map(x => subName(x) + ' (حتى ' + fmtDate(x.end.toMillis()) + ')').join('، ') })); }
@@ -801,12 +825,15 @@ function renderSubscribe() {
     if (!pl && pend) { pl = mineP.find(p => p.id === pend.plan) || null; }
     const pg = el('div', { class: 'kx-plans' });
     const best = mineP.find(p => p.base === 'parent_all' && (p.dur || {}).t !== 'days') || mineP.find(p => (p.dur || {}).t !== 'days');
-    mineP.forEach(p => pg.append(el('button', { class: 'kx-plan' + (pl === p ? ' on' : '') + (p === best ? ' best' : ''), 'aria-pressed': String(pl === p), onclick: () => { pl = p; grade = null; subject = null; store.set('pend_pay', null); draw(); setTimeout(() => { const t = box.querySelector('.kx-step,.kx-pay'); t && t.scrollIntoView({ behavior: 'smooth', block: 'center' }); }, 60); } },
+    if (!draw._seen || draw._seen !== who) { draw._seen = who; AXe('plans_view', { plans: mineP.map(p => p.id), who, logged: logged ? 1 : 0 }); }
+    mineP.forEach(p => pg.append(el('button', { class: 'kx-plan' + (pl === p ? ' on' : '') + (p === best ? ' best' : ''), 'aria-pressed': String(pl === p), onclick: () => { if (pl !== p) AXe('plan_select', { plan: p.id, price: p.price, who }); pl = p; grade = null; subject = null; store.set('pend_pay', null); draw(); setTimeout(() => { const t = box.querySelector('.kx-step,.kx-pay'); t && t.scrollIntoView({ behavior: 'smooth', block: 'center' }); }, 60); } },
       p === best ? el('span', { class: 'rib', text: '🔥 الأكثر طلباً' }) : null, el('span', { class: 'rd' }),
-      el('span', { class: 'tx' }, el('b', { text: (BASE_ICON[p.base] || '⭐') + ' ' + p.name }), p.desc ? el('small', { text: p.desc }) : null, el('span', { class: 'du', text: '⏳ ' + durLabel(p) })),
+      el('span', { class: 'tx' }, el('b', { text: (BASE_ICON[p.base] || '⭐') + ' ' + p.name }), p.desc ? el('small', { text: p.desc }) : null, el('span', { class: 'du', text: '⏳ ' + durLabel(p) }),
+        perKid(p) ? el('span', { class: 'du', style: 'color:#1b7f3a;font-weight:800', text: '💡 ≈ ' + perKid(p).v + ' د.ل للطالب ' + perKid(p).per + ' عند ' + perKid(p).k + ' أبناء' }) : null),
       el('span', { class: 'pr' }, el('b', { text: String(p.price) }), el('small', { text: 'دينار' })))));
     box.append(el('div', { class: 'kx-h', text: 'اختر الباقة 👇' }), pg);
-    if (!pl) return;
+    if (!pl) { box.append(el('p', { class: 'note', style: 'text-align:center', text: 'اضغط على أي باقة لترى ما تشمله بالتفصيل. السعر المكتوب هو السعر الكامل للباقة.' })); return; }
+    box.append(planDetails(pl));
     const isParent = ['parent_grade', 'parent_all'].includes(pl.base);
     if (isParent && pl.kids && pl.kids < 5 && kidsN > pl.kids) { box.append(el('div', { class: 'feedback info', text: 'هذه الباقة ' + (pl.kids === 2 ? 'لابنين' : 'لـ' + pl.kids + ' أبناء') + ' فقط، وعندك ' + kidsN + '. اختر باقة العائلة.' })); return; }
     const AG = (() => { if (pl.base === 'parent_grade') { const k = [...new Set((ACC.profiles || []).filter(p => p.id !== 'me' && p.grade).map(p => String(p.grade)))]; return k.length ? k : null; }
@@ -839,38 +866,42 @@ function renderSubscribe() {
     payBtn.textContent = logged ? '🔒 ادفع ' + pl.price + ' د.ل الآن' : '🔒 سجّل وادفع ' + pl.price + ' د.ل';
   };
   const payBtn = el('button', { class: 'btn sun paybig', onclick: async () => {
-    msg.innerHTML = '';
+    msg.innerHTML = ''; AXe('pay_click', { plan: pl.id, price: pl.price, logged: logged ? 1 : 0, g: grade || '' });
     if (!logged) { store.set('pend_pay', { plan: pl.id, grade, subject, who }); D.App.after = 'subscribe'; go('login'); return; }
     payBtn.disabled = true;
     try {
       if (!ACC.profile) { const nm = nameIn.value.trim(); if (nm.length < 2) { payBtn.disabled = false; fbk(msg, 'bad', 'اكتب اسمك.'); nameIn.focus(); return; }
         const u = ACC.user; const data = { name: nm, role: who, phone: phoneOf(u) || u.phoneNumber || null, email: phoneOf(u) ? null : (u.email || null), createdAt: serverTimestamp() };
         await setDoc(uref(), data); try { await updateProfile(u, { displayName: nm }); } catch (e) {}
-        ACC.profile = data; await claimRef();
+        ACC.profile = data; AXe('signup_done', { role: who, g: grade || '', via: 'pay' }); await claimRef();
         if (who === 'student') { await setDoc(pref('me'), { name: nm, grade: grade || null, avatar: AVATARS[0], createdAt: serverTimestamp() }); await loadProfiles(); await setActive('me'); } else ACC.profiles = []; }
       fbk(msg, 'info', 'جارٍ فتح صفحة الدفع…');
       const r = await call('createOrder', { plan: pl.id, kind: pl.base, grade, subject });
-      store.set('pend_pay', null); store.set('last_order', r.orderId); location.href = r.url;
-    } catch (e) { fbk(msg, 'bad', fnErr(e)); payBtn.disabled = false; } } });
+      store.set('pend_pay', null); store.set('last_order', r.orderId); AXe('pay_redirect', { plan: pl.id, oid: r.orderId, amt: r.amount }); if (window.AX) await AX.flush(); location.href = r.url;
+    } catch (e) { AXe('pay_error', { plan: pl.id, code: String(e.code || 'x').slice(0, 40), msg: String(fnErr(e)).slice(0, 80) }); fbk(msg, 'bad', fnErr(e)); payBtn.disabled = false; } } });
   s.append(box);
   draw();
   call('getPlans', {}).then(r => { plans = r.plans || []; draw(); if (pend && pl) setTimeout(() => { const t = box.querySelector('.kx-pay'); t && t.scrollIntoView({ behavior: 'smooth', block: 'center' }); }, 100); }).catch(e => fbk(msg, 'bad', fnErr(e)));
 }
 
 /* ---------- back from MyPay ---------- */
-function renderPaid(orderId) {
+function renderPaid(orderId, cancelled) {
   const s = page('نتيجة الدفع', '', 'home');
-  const st = el('div'); s.append(st); fbk(st, 'info', '⏳ جارٍ تأكيد الدفع… لا تغلق الصفحة.');
+  const st = el('div'); s.append(st); AXe(cancelled ? 'pay_cancel' : 'pay_return', { oid: orderId }, orderId);
+  if (cancelled) { fbk(st, 'info', 'لم تكتمل عملية الدفع. يمكنك المحاولة مرة أخرى متى شئت، وإذا خُصم منك مبلغ فسيتفعّل اشتراكك تلقائياً خلال دقائق.');
+    s.append(el('button', { class: 'btn sun', text: 'العودة إلى الباقات ←', onclick: () => go('subscribe') }), el('p', { class: 'note', text: 'إذا واجهتك مشكلة في الدفع تواصل معنا وسنساعدك.' }));
+    if (ACC.user) getDoc(doc(db, 'subscriptions', orderId)).then(d => { if (d.exists()) renderPaid(orderId, false); }).catch(() => {}); return; }
+  fbk(st, 'info', '⏳ جارٍ تأكيد الدفع… لا تغلق الصفحة.');
   if (!ACC.user) { fbk(st, 'info', 'سجّل الدخول بنفس الحساب لنتأكد من الدفع.'); return; }
   let n = 0;
   const tick = async () => {
     try { const d = await getDoc(doc(db, 'subscriptions', orderId));
-      if (d.exists()) { await loadSubs(); D.cheer && D.cheer('win'); fbk(st, 'ok', '🎉 تم الدفع وتفعيل اشتراكك حتى ' + fmtDate(d.data().end.toMillis()) + '.');
+      if (d.exists()) { await loadSubs(); D.cheer && D.cheer('win'); AXe('pay_confirmed', { oid: orderId }, orderId); fbk(st, 'ok', '🎉 تم الدفع وتفعيل اشتراكك حتى ' + fmtDate(d.data().end.toMillis()) + '.');
         if (isAdult() && !kidsOf().length) s.append(el('div', { class: 'feedback info', text: 'خطوة أخيرة: أضف أسماء أبنائك وصفوفهم ليبدؤوا الدراسة.' }), el('button', { class: 'btn sun', text: '👨‍👩‍👧 أضف أبنائي ←', onclick: () => go('kids') }));
         else s.append(el('button', { class: 'btn sun', text: 'ابدأ التعلّم ←', onclick: () => go('home') })); return; }
     } catch (e) {}
     if (++n < 30) setTimeout(tick, 3000);
-    else { fbk(st, 'bad', 'لم يصلنا تأكيد الدفع بعد. إذا خُصم المبلغ فسيُفعَّل اشتراكك تلقائياً خلال دقائق؛ وإن لم يُفعَّل تواصل معنا وأرسل رقم الطلب.');
+    else { AXe('pay_unconfirmed', { oid: orderId }, orderId); fbk(st, 'bad', 'لم يصلنا تأكيد الدفع بعد. إذا خُصم المبلغ فسيُفعَّل اشتراكك تلقائياً خلال دقائق؛ وإن لم يُفعَّل تواصل معنا وأرسل رقم الطلب.');
       s.append(el('p', { class: 'note', dir: 'ltr', text: 'رقم الطلب: ' + orderId })); }
   };
   tick();
@@ -1018,7 +1049,7 @@ function plansBox() {
 }
 
 /* ---------- admin: supervisors with specific permissions (owner only) ---------- */
-const PERM_AR = { stats: '📊 الإحصائيات والمشتركون', grant: '🎁 منح وإلغاء الاشتراكات المجانية', plans: '💰 الباقات والأسعار', access: '🔐 فتح وإغلاق الدروس والكتب', tts: '🔊 الأصوات',
+const PERM_AR = { ax: '📈 تحليلات المنصة والتحويلات (بيانات حساسة)', stats: '📊 الإحصائيات والمشتركون', grant: '🎁 منح وإلغاء الاشتراكات المجانية', plans: '💰 الباقات والأسعار', access: '🔐 فتح وإغلاق الدروس والكتب', tts: '🔊 الأصوات',
   teach_req: '👩‍🏫 قبول طلبات المعلمين', teach_courses: '🎬 مراجعة ونشر دورات الفيديو', teach_wd: '💸 طلبات سحب أرصدة المعلمين', browse: '👁️ تصفّح كل الدروس للمراجعة', push: '🔔 إرسال الإشعارات' };
 function staffBox() {
   const box = el('div', { class: 'panel accbox' }, el('b', { text: '🧑‍💼 المشرفون' }),
@@ -1299,6 +1330,9 @@ function renderAdmin() {
   s.classList.add('kx-adm'); s.append(el('div', { class: 'gx-hero', style: '--h1:#334a9e;--h2:#1b2660' }, el('img', { src: 'img/ui/n_acc.webp', alt: '' }), el('div', {}, el('b', { text: '🛠 لوحة الإدارة' }), el('span', { text: ACC.owner ? 'كل الأدوات بين يديك — افتح القسم الذي تحتاجه' : 'مشرف — الأقسام حسب صلاحياتك' }))));
   const can = ACC.can, teachAny = can('teach_req') || can('teach_courses') || can('teach_wd');
   if (teachAny && ACC.teachAdminAlert) s.append(ACC.teachAdminAlert());
+  if (can('ax')) { const bd = el('span', { class: 'ax-bd', style: 'background:#e8384f;color:#fff;border-radius:99px;padding:0 8px;font-size:.8rem;margin-inline-start:6px', hidden: true });
+    s.append(el('button', { class: 'btn sun', style: 'width:100%;font-size:1.05rem;padding:14px', onclick: () => go('admin-ax') }, '📈 تحليلات المنصة والتحويلات', bd));
+    call('adminAx', { op: 'alerts' }).then(r => { const n = (r.list || []).filter(x => !x.read).length; if (n) { bd.hidden = false; bd.textContent = n + ' تنبيه جديد'; } }).catch(() => {}); }
   const statsHost = el('div'), listHost = el('div');
   if (can('stats')) { s.append(statsHost); fbk(statsHost, 'info', 'جارٍ تحميل الإحصائيات…'); }
   if (can('stats')) s.append(heroesBox());
@@ -1344,13 +1378,39 @@ loadAccess().then(() => { if (D.App.catalog) D.route(); });
 document.addEventListener('visibilitychange', async () => { if (document.visibilityState === 'visible') { const o = JSON.stringify(ACC.access || {}); await loadAccess(); if (JSON.stringify(ACC.access) !== o && D.App.catalog) D.route(); } if (document.visibilityState === 'visible' && ACC.kid) { try { const d = await getDoc(pref(ACC.kid.pid)); if (d.exists()) { const old = JSON.stringify(ACC.profiles[0] && ACC.profiles[0].ctrl || null); ACC.profiles = [{ id: d.id, ...d.data() }]; if (JSON.stringify(d.data().ctrl || null) !== old && D.App.catalog) D.route(); } } catch (e) {} }
   if (document.visibilityState === 'visible' && ACC.user && ACC.profile) { const n = ACC.subs.length; await loadSubs(); if (ACC.subs.length !== n && D.App.catalog) D.route(); } });
 
-const ROUTES = { admin: renderAdmin, subscribe: renderSubscribe, login: renderLogin, 'login-phone': () => authForm('phone'), 'login-email': () => authForm('email'), onboard: renderOnboard, kids: renderKids, who: renderWho, account: renderAccount };
+/* ---------- دليل ولي الأمر: خطوات قصيرة قابلة للتخطي، ويمكن فتحه لاحقاً من «حسابي» ---------- */
+const GUIDE = [
+  ['📚', 'ما هي منصة المجتهد؟', 'دروس المنهج الليبي بالصوت والصورة، من الصف الأول حتى الأول الثانوي، مطابقة لكتب الوزارة، مع تمارين وتصحيح فوري.'],
+  ['🌟', 'كيف يستفيد أبناؤك؟', 'يدرس الابن الدرس خطوة بخطوة، ويحل التمارين ويجمع النجوم، ويراجع أخطاءه، ويتنافس مع زملائه في لوحة الأبطال.'],
+  ['➕', 'أضف أبناءك', 'من صفحة «أبنائي» اكتب اسم ابنك أو ابنتك واضغط «أضف». يمكنك إضافة حتى 5 أبناء في حساب واحد.'],
+  ['🎒', 'حدّد صف كل ابن', 'عند الإضافة اختر صفه الدراسي. يرى كل ابن مواد صفه فقط تلقائياً، فلا يتشتت.'],
+  ['📖', 'اختيار المواد والدروس', 'اضغط «ابدأ الدراسة» تحت اسم الابن لتظهر مواد صفه، ثم يختار المادة ويبدأ من «ابدأ أول درس». المواد المجانية: التربية الإسلامية والتربية الوطنية.'],
+  ['📊', 'تابع مستوى أبنائك', 'زر 📊 تحت اسم الابن يعرض تقريره: دقائق الدراسة، والنجوم، والإجابات الصحيحة والخاطئة، ونقاط القوة والضعف.'],
+  ['🎛️', 'التحكم الأبوي', 'زر 🎛️ لاختيار المواد والدروس التي تظهر له والأصوات، وزر 📅 لجدول الدراسة والاستراحة، وزر 📱 لربط هاتف ابنك برمز أو QR دون كلمة مرور.'],
+];
+function renderGuide(i = 0) {
+  if (!ACC.user || !isAdult()) { go('home'); return; }
+  i = Math.max(0, Math.min(GUIDE.length - 1, +i || 0)); AXe('tour_step', { i: i + 1 });
+  const [ic, t, d] = GUIDE[i]; const last = i === GUIDE.length - 1;
+  const finish = (skip) => { store.set('guide_done', 1); AXe(skip ? 'tour_skip' : 'tour_done', { i: i + 1 }); go(kidsOf().length ? 'who' : 'kids'); };
+  const s = page('دليل ولي الأمر', 'خطوة ' + (i + 1) + ' من ' + GUIDE.length, null);
+  s.append(el('div', { class: 'panel', style: 'text-align:center;padding:26px 18px;display:flex;flex-direction:column;gap:12px;align-items:center' },
+    el('div', { style: 'font-size:3.4rem;line-height:1', text: ic }), el('h2', { style: 'margin:0', text: t }), el('p', { style: 'margin:0;font-size:1.05rem;line-height:1.9', text: d }),
+    el('div', { style: 'display:flex;gap:6px;justify-content:center' }, ...GUIDE.map((_, k) => el('span', { style: 'width:' + (k === i ? 22 : 8) + 'px;height:8px;border-radius:9px;background:' + (k <= i ? '#1f72e0' : 'var(--line)') })))),
+    el('div', { class: 'row', style: 'gap:8px;margin-top:12px' },
+      i ? el('button', { class: 'btn ghost', text: '→ السابق', onclick: () => renderGuide(i - 1) }) : null,
+      el('button', { class: 'btn sun', style: 'flex:1', text: last ? (kidsOf().length ? 'تم، لنبدأ ←' : '➕ أضف ابنك الأول ←') : 'التالي ←', onclick: () => last ? finish(false) : renderGuide(i + 1) })),
+    last ? null : el('button', { class: 'st-link', style: 'margin-top:8px;color:var(--muted)', text: 'تخطَّ الدليل (يمكنك فتحه لاحقاً من «حسابي»)', onclick: () => finish(true) }));
+}
+function renderAxAdmin() { if (!ACC.user) { go('login'); return; } const s = page('تحليلات المنصة', 'جارٍ التحميل…', 'admin');
+  import('./axadmin.js').then(m => m.default({ call, fnErr, ACC, page, fbk, D, el, go, store })).catch(() => fbk(s, 'bad', 'تعذّر التحميل. تحقق من الاتصال.')); }
+const ROUTES = { guide: () => renderGuide(0), 'admin-ax': renderAxAdmin, admin: renderAdmin, subscribe: renderSubscribe, login: renderLogin, 'login-phone': () => authForm('phone'), 'login-email': () => authForm('email'), onboard: renderOnboard, kids: renderKids, who: renderWho, account: renderAccount };
 initTeach({ call, fnErr, ACC, page, fbk, D, el, go, store });
-ACC.route = h => { if (ACC.teachRoute && ACC.teachRoute(h)) return true; const pm = /^paid-([A-Za-z0-9]{10,40})$/.exec(h); const lm = /^link(?:-(\d{6}))?$/.exec(h); if (lm) { if (!ACC.ready) { page('…', 'جارٍ التحميل', 'home'); return true; } renderLink(lm[1]); return true; }
+ACC.route = h => { if (ACC.teachRoute && ACC.teachRoute(h)) return true; const pm = /^paid-([A-Za-z0-9]{10,40})(-x)?$/.exec(h); const lm = /^link(?:-(\d{6}))?$/.exec(h); if (lm) { if (!ACC.ready) { page('…', 'جارٍ التحميل', 'home'); return true; } renderLink(lm[1]); return true; }
   const tk = /^tt-([A-Za-z0-9]{1,30})$/.exec(h); if (tk) { if (!ACC.ready) { page('…', 'جارٍ التحميل', 'home'); return true; } renderTT(tk[1]); return true; }
   const ck = /^ctrl-([A-Za-z0-9]{1,30})$/.exec(h); if (ck) { if (!ACC.ready) { page('…', 'جارٍ التحميل', 'home'); return true; } renderCtrl(ck[1]); return true; }
   const lk = /^linkkid-([A-Za-z0-9]{1,30})$/.exec(h); if (lk) { if (!ACC.ready) { page('…', 'جارٍ التحميل', 'home'); return true; } renderLinkKid(lk[1]); return true; }
-  const km = /^kid-([A-Za-z0-9]{1,30})$/.exec(h); const f = pm ? () => renderPaid(pm[1]) : km ? () => renderKid(km[1]) : ROUTES[h]; if (!f) return false; if (!ACC.ready) { page('…', 'جارٍ التحميل', 'home'); return true; } if (ACC.loadError && ACC.user) { showLoadError(); return true; } f(); return true; };
+  const km = /^kid-([A-Za-z0-9]{1,30})$/.exec(h); const f = pm ? () => renderPaid(pm[1], !!pm[2]) : km ? () => renderKid(km[1]) : ROUTES[h]; if (!f) return false; if (!ACC.ready) { page('…', 'جارٍ التحميل', 'home'); return true; } if (ACC.loadError && ACC.user) { showLoadError(); return true; } f(); return true; };
 
 /* ---------- auth state ---------- */
 const withTimeout = (pr, ms = 8000) => Promise.race([pr, new Promise((_, rej) => setTimeout(() => rej({ code: 'timeout' }), ms))]);
@@ -1387,6 +1447,7 @@ onAuthStateChanged(auth, async user => {
   } catch (e) { console.error('auth', e); ACC.loadError = e; }
   ACC.ready = true; pushRefresh();
   const h = location.hash.replace(/^#/, '');
+  if (window.AX) { AX.uid = user ? user.uid : null; if (user && !user.isAnonymous) { if (!ACC.profile && !ACC.loadError) AXe('reg_auth', { m: (user.providerData[0] || {}).providerId === 'google.com' ? 'google' : phoneOf(user) ? 'phone' : 'email' }, user.uid); else if (ACC.profile && /^login/.test(h)) AXe('login_done', { role: ACC.profile.role }, user.uid); } if (user) AX.flush(); }
   if (ACC.linking) return;
   if (ACC.kid && (h === 'login' || h === 'who' || h === 'kids' || h === 'onboard')) { go('home'); return; }
   if (!user && ACC.unlinked) { ACC.unlinked = false; go('link'); return; }

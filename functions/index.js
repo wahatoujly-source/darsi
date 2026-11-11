@@ -44,8 +44,8 @@ const HOUR = 60 * 60 * 1000;
 const PHONE_RE = /^09[1-5]\d{7}$/;
 const GLOBAL_DAILY_CAP = 100;
 const TEST_CODE = "0000";
-const GRADES = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "s1"];
-const SUBJECTS = ["ar", "en", "math", "comp", "art", "sci", "soc", "hist", "geo", "phy", "chem", "bio", "it", "socio"]; // التربية الإسلامية والوطنية مجانيتان
+const GRADES = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "s1", "s2sci"];
+const SUBJECTS = ["ar", "en", "math", "comp", "art", "sci", "soc", "hist", "geo", "phy", "chem", "bio", "it", "socio", "stat"]; // التربية الإسلامية والوطنية مجانيتان
 const r2 = (x) => Math.round(x * 100) / 100;
 const sha = (s) => crypto.createHash("sha256").update(s).digest("hex");
 const toE164 = (local) => "+218" + local.slice(1);
@@ -377,7 +377,7 @@ async function mypayCreate(oRef, amount, back) {
     }
     const cr = await fetch(`${MYPAY_BASE}/payment/create`, {
       method: "POST", headers: {"Content-Type": "application/json", "Authorization": `Bearer ${access}`},
-      body: JSON.stringify({amount: amount.toFixed(2), currency: "LYD", return_url: back, cancel_url: back, custom: oRef.id}),
+      body: JSON.stringify({amount: amount.toFixed(2), currency: "LYD", return_url: back, cancel_url: /#paid-[A-Za-z0-9]+$/.test(back) ? back + "-x" : back, custom: oRef.id}),
     });
     const cj = await cr.json();
     const url = cj && cj.data && cj.data.payment_url;
@@ -387,7 +387,8 @@ async function mypayCreate(oRef, amount, back) {
     await oRef.update({mypayToken: (cj.data && cj.data.token) || null, paymentUrl: url});
     return url;
   } catch (e) {
-    await oRef.update({status: "failed"});
+    await oRef.update({status: "failed", gwEvent: "create_error"});
+    AXM.addAlert({id: "payerr_" + oRef.id, type: "payfail", lvl: "warn", title: "تعذّر إنشاء طلب دفع", body: `خطأ من بوابة الدفع عند إنشاء طلب بقيمة ${amount} د.ل. راجع سجلات الدالة createOrder.`}, true).catch(() => {});
     throw new HttpsError("internal", "تعذّر إنشاء طلب الدفع، حاول لاحقاً");
   }
 }
@@ -413,8 +414,18 @@ exports.mypayWebhook = onRequest({secrets: [MYPAY_WEBHOOK], memory: "256MiB", co
   }
   let b;
   try { b = JSON.parse(raw.toString("utf8")); } catch (e) { return res.status(400).send("bad json"); }
-  if (b.event !== "payment.success" || b.status !== "success") return res.status(200).send("ignored");
   const orderId = String(b.custom || "");
+  if (b.event !== "payment.success" || b.status !== "success") {
+    // فشل أو إلغاء من بوابة الدفع: نسجّله فقط (للتحليلات والتنبيهات) دون أي تغيير على اشتراك قائم
+    if (/^[A-Za-z0-9]{10,40}$/.test(orderId)) {
+      try { const oRef = db.collection("orders").doc(orderId); let o = null;
+        await db.runTransaction(async (tx) => { const os = await tx.get(oRef); if (!os.exists || os.data().status !== "pending") return; o = os.data();
+          tx.update(oRef, {status: "failed", failedAt: FieldValue.serverTimestamp(), gwEvent: String(b.event || "").slice(0, 40), gwStatus: String(b.status || "").slice(0, 40)}); });
+        if (o && o.kind !== "course") await AXM.addAlert({id: "payfail_" + orderId, type: "payfail", lvl: "warn", title: "فشل عملية دفع", body: `${o.planName || o.plan || "باقة"} — ${o.amount} د.ل (${String(b.event || b.status || "").slice(0, 40)})`, uid: o.uid}, true);
+      } catch (e) { logger.warn("mypayWebhook fail-record", e.message); }
+    }
+    return res.status(200).send("ignored");
+  }
   if (!/^[A-Za-z0-9]{10,40}$/.test(orderId)) return res.status(200).send("ignored");
 
   const oRef = db.collection("orders").doc(orderId);
@@ -441,6 +452,7 @@ exports.mypayWebhook = onRequest({secrets: [MYPAY_WEBHOOK], memory: "256MiB", co
       if (o.kind === "course") { await pushUser(o.uid, {title: "✅ تم الاشتراك في الدورة", body: o.title || "", link: "#crs-" + o.cid}, {rule: "events"});
         await pushUser(o.tid, {title: "🎉 مشترك جديد في دورتك", body: (o.title || "") + " — أُضيف نصيبك إلى محفظتك.", link: "#studio"}, {rule: "events"}); }
       else { await refPaid(o.uid).catch((e) => logger.warn("refPaid", e.message));
+        await AXM.addAlert({id: "sub_" + orderId, type: "sub", lvl: "good", title: "🎉 اشتراك جديد", body: `${o.planName || o.plan || "باقة"} — ${o.amount} د.ل`, uid: o.uid}, true).catch(() => {});
         await pushUser(o.uid, {title: "✅ تم تفعيل اشتراكك", body: (o.planName || "اشتراك المجتهد") + " — كل الدروس المشمولة مفتوحة الآن.", link: "#home"}, {rule: "events"}); } }
     return res.status(200).send(result);
   } catch (e) {
@@ -476,7 +488,7 @@ async function getAccessCfg() {
 }
 const accKeys = (g, s, id) => ["g" + g, "g" + g + "-" + s, "l-" + id];
 const accHas = (list, g, s, id) => (list || []).some((k) => accKeys(g, s, id).includes(k));
-const ACCESS_KEY = /^(g(?:\d{1,2}|s\d)|g(?:\d{1,2}|s\d)-[a-z]{2,8}|l-[a-z0-9-]{3,60})$/;
+const ACCESS_KEY = /^(g(?:\d{1,2}|s\d(?:sci|lit)?)|g(?:\d{1,2}|s\d(?:sci|lit)?)-[a-z]{2,8}|l-[a-z0-9-]{3,60})$/;
 exports.adminSetAccess = onCall(async (req) => {
   await needAdmin(req, "access");
   const d = req.data || {};
@@ -492,7 +504,7 @@ exports.adminSetAccess = onCall(async (req) => {
 });
 
 // textbooks visibility: {all|gN|gN-subj: "all"|"subs"|"off"}
-const BOOK_KEY = /^(all|g(?:\d{1,2}|s\d)|g(?:\d{1,2}|s\d)-[a-z]{2,8})$/;
+const BOOK_KEY = /^(all|g(?:\d{1,2}|s\d(?:sci|lit)?)|g(?:\d{1,2}|s\d(?:sci|lit)?)-[a-z]{2,8})$/;
 exports.adminSetBooks = onCall(async (req) => {
   await needAdmin(req, "access");
   const src = (req.data && req.data.books) || {};
@@ -688,7 +700,7 @@ exports.removeCoParent = onCall(async (req) => {
 // حسابات Google الخاصة بالمالك: من يدخل بها (بحساب Google) يصبح مديراً تلقائياً
 const OWNER_EMAILS = ["wahatoujly@gmail.com", "laffatkly@gmail.com"];
 // المشرفون: config/admins.staff = {uid: {name, phone, perms: [...]}} — يضيفهم المالك من لوحة الإدارة بصلاحيات محددة
-const PERMS = ["stats", "grant", "plans", "access", "tts", "push", "teach_req", "teach_courses", "teach_wd", "browse"];
+const PERMS = ["ax", "stats", "grant", "plans", "access", "tts", "push", "teach_req", "teach_courses", "teach_wd", "browse"];
 async function staffOf(req) {
   if (!req.auth) return null;
   const uid = req.auth.uid; const tok = req.auth.token || {};
@@ -1945,3 +1957,17 @@ exports.adminArena = onCall({memory: "256MiB"}, async (req) => {
   return {cfg: await arenaCfg(), list: list.map((c) => ({cid: c.cid, at: c.at, lv: c.lv, count: c.count || 0, status: c.status, winners: c.winners.map((w) => ({rank: w.rank, name: w.name, city: w.city, school: w.school, score: w.score, phone: w.phone || ""}))})),
     totals: {comps: list.length, players: list.reduce((a, c) => a + (c.count || 0), 0)}};
 });
+
+
+// ===================== التحليلات والتحويلات (ax.js) =====================
+async function staffUids() {
+  const a = await db.collection("config").doc("admins").get(); const A = a.exists ? a.data() : {};
+  const out = new Set([...(A.uids || []), ...Object.keys(A.staff || {})]);
+  const owners = await db.collection("users").where("email", "in", OWNER_EMAILS).get().catch(() => ({docs: []}));
+  owners.docs.forEach((d) => out.add(d.id));
+  return [...out];
+}
+const AXM = require("./ax.js")({db, FieldValue, onRequest, onCall, onSchedule, HttpsError, logger, admin, needAdmin, pushStaff, staffUids});
+exports.ax = AXM.ax;
+exports.adminAx = AXM.adminAx;
+exports.axWatch = AXM.axWatch;
