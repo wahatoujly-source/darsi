@@ -9,7 +9,7 @@
 
 const EVENTS = new Set(["session_start", "page_view", "ping", "upgrade_click", "plans_view", "plan_select", "plan_info", "pay_click", "pay_redirect",
   "pay_return", "pay_cancel", "pay_confirmed", "pay_unconfirmed", "pay_error", "reg_open", "reg_method", "reg_input", "reg_submit", "reg_error", "reg_auth",
-  "onboard_open", "signup_done", "login_done", "kid_add", "tour_step", "tour_done", "tour_skip", "tip_click", "lesson_open", "lesson_done", "lesson_leave", "cta_click", "lesson_score", "mastered_view"]);
+  "onboard_open", "signup_done", "login_done", "kid_add", "tour_step", "tour_done", "tour_skip", "tip_click", "lesson_open", "lesson_done", "lesson_leave", "cta_click", "lesson_score", "mastered_view", "order_skip"]);
 // الخطوات التي نحفظ آخر وقت لها في ملف الزائر (لقوائم «توقف عند…»)
 const MILESTONES = ["reg_open", "reg_method", "reg_input", "reg_submit", "reg_error", "reg_auth", "onboard_open", "signup_done", "login_done", "upgrade_click",
   "plans_view", "plan_select", "pay_click", "pay_redirect", "pay_return", "pay_cancel", "pay_confirmed", "pay_error", "lesson_open", "lesson_done", "kid_add", "tour_done", "tour_skip"];

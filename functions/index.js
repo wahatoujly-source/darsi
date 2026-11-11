@@ -494,7 +494,7 @@ exports.adminSetAccess = onCall(async (req) => {
   const d = req.data || {};
   if (d.op === "master") { // قفل الدرس بعد الإتقان: تشغيل/إيقاف + النسبة (افتراضياً 80%)
     const pct = Math.max(50, Math.min(100, Math.round(Number(d.pct) || 80)));
-    await db.collection("config").doc("access").set({master: {on: !!d.on, pct}}, {merge: true}); ACCESS = null; return {ok: true, pct};
+    await db.collection("config").doc("access").set({master: {on: !!d.on, pct, order: d.order !== false}}, {merge: true}); ACCESS = null; return {ok: true, pct};
   }
   const list = (x) => [...new Set((Array.isArray(x) ? x : []).map(String).filter((k) => ACCESS_KEY.test(k)))].slice(0, 500);
   const out = {
