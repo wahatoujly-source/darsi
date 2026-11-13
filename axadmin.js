@@ -52,11 +52,13 @@ export default function axAdmin({ call, fnErr, ACC, page, fbk, D, el, go, store 
   const fmtDT = (t) => t ? new Date(t).toLocaleString('ar-LY-u-nu-latn', { timeZone: 'Africa/Tripoli', day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' }) : '—';
   const pct = (a, b) => b ? (Math.round(a * 1000 / b) / 10) + '%' : '—';
   const dur = (sec) => sec < 60 ? sec + ' ث' : Math.floor(sec / 60) + ' د ' + (sec % 60 ? (sec % 60) + ' ث' : '');
-  let P = store.get('ax_per', { k: '7' }); let R = null, planNames = {}, tab = store.get('ax_tab', 'ov');
-  const range = () => { const now = Date.now(), t0 = dayStart(now);
-    if (P.k === 'today') return [t0, now]; if (P.k === 'yday') return [t0 - DAY, t0];
+  let P = { k: 'today' }; // اليوم افتراضياً عند كل فتح
+  let R = null, planNames = {}, tab = store.get('ax_tab', 'ov');
+  // الفترة الحالية، أو سابقة لها بنفس الطول (P.off = عدد الفترات للخلف)
+  const range = () => { const now = Date.now(), t0 = dayStart(now), off = P.off || 0;
     if (P.k === 'custom' && P.from && P.to) return [Date.parse(P.from + 'T00:00:00Z') - tz, Date.parse(P.to + 'T00:00:00Z') - tz + DAY];
-    return [t0 - (+P.k - 1) * DAY, now]; };
+    const n = P.k === 'today' ? 1 : P.k === 'yday' ? 1 : +P.k, end = (P.k === 'yday' ? t0 : t0 + DAY) - off * n * DAY;
+    return [end - n * DAY, Math.min(end, now)]; };
 
   // ---------- أدوات العرض ----------
   const kpi = (n, t, prev, hi) => { let i = null; if (prev != null && typeof n === 'number') { const d = n - prev; if (d) i = el('i', { class: d > 0 ? 'up' : 'dn', text: (d > 0 ? '▲ ' : '▼ ') + Math.abs(Math.round(d * 100) / 100) + ' عن الفترة السابقة' }); }
@@ -80,23 +82,27 @@ export default function axAdmin({ call, fnErr, ACC, page, fbk, D, el, go, store 
 
   // ---------- الهيكل ----------
   const per = el('div', { class: 'ax-per' }), tabs = el('div', { class: 'ax-tabs' }), body = el('div', { class: 'stack' }), msg = el('div');
-  const TABS = [['ov', '📊 نظرة عامة'], ['fun', '🔻 مسار التحويل'], ['ppl', '👥 الزوار والمستخدمون'], ['reg', '📝 التسجيلات المتوقفة'], ['sub', '💳 الاشتراكات المتوقفة'],
+  const TABS = [['full', '📑 التقرير الشامل للمنصة'], ['ov', '📊 نظرة عامة'], ['fun', '🔻 مسار التحويل'], ['ppl', '👥 الزوار والمستخدمون'], ['reg', '📝 التسجيلات المتوقفة'], ['sub', '💳 الاشتراكات المتوقفة'],
     ['free', '📖 المواد المجانية'], ['sc', '🏆 نتائج الدروس والإتقان'], ['ret', '🔁 العودة'], ['src', '📣 المصادر والحملات'], ['al', '🔔 التنبيهات']];
   let unread = 0;
   const drawTabs = () => { tabs.innerHTML = ''; TABS.forEach(([k, t]) => tabs.append(el('button', { class: tab === k ? 'on' : '', onclick: () => { tab = k; store.set('ax_tab', k); drawTabs(); render(); } }, t, k === 'al' && unread ? el('span', { class: 'bd', text: String(unread) }) : null))); };
   const drawPer = () => { per.innerHTML = '';
-    [['today', 'اليوم'], ['yday', 'أمس'], ['7', '7 أيام'], ['30', '30 يوماً'], ['90', '90 يوماً'], ['custom', 'فترة مخصصة']].forEach(([k, t]) => per.append(el('button', { class: P.k === k ? 'on' : '', text: t, onclick: () => { P = { ...P, k }; store.set('ax_per', P); drawPer(); if (k !== 'custom' || (P.from && P.to)) load(); } })));
+    [['today', 'اليوم'], ['yday', 'أمس'], ['7', '7 أيام'], ['30', '30 يوماً'], ['90', '3 أشهر'], ['365', 'سنة'], ['custom', 'فترة مخصصة']].forEach(([k, t]) => per.append(el('button', { class: P.k === k ? 'on' : '', text: t, onclick: () => { P = { ...P, k, off: 0 }; drawPer(); if (k !== 'custom' || (P.from && P.to)) load(); } })));
     if (P.k === 'custom') { const today = new Date(Date.now() + tz).toISOString().slice(0, 10);
       const a = el('input', { type: 'date', value: P.from || today, max: today }), b = el('input', { type: 'date', value: P.to || today, max: today });
       per.append(a, el('span', { text: 'إلى' }), b, el('button', { class: 'on', text: 'عرض', onclick: () => { if (a.value > b.value) return; P = { k: 'custom', from: a.value, to: b.value }; store.set('ax_per', P); load(); } })); }
-    per.append(el('button', { text: '↻ تحديث', onclick: () => load() })); };
+    per.append(el('button', { text: '↻ تحديث', onclick: () => load() }));
+    if (P.k !== 'custom') { const [a, b] = range(); per.append(el('div', { class: 'ax-row', style: 'width:100%' },
+      el('button', { text: '→ الفترة السابقة', onclick: () => { P = { ...P, off: (P.off || 0) + 1 }; drawPer(); load(); } }),
+      el('b', { style: 'font-size:.85rem', text: fmtD(a) + (b - a > DAY + 1000 ? ' — ' + fmtD(b - 1) : '') }),
+      el('button', { text: 'الفترة التالية ←', disabled: P.off ? null : '', onclick: () => { P = { ...P, off: Math.max(0, (P.off || 0) - 1) }; drawPer(); load(); } }))); } };
   s.append(el('div', { class: 'gx-hero', style: '--h1:#1f72e0;--h2:#123f86' }, el('img', { src: 'img/ui/n_ach.webp', alt: '' }), el('div', {}, el('b', { text: '📈 تحليلات المنصة والتحويلات' }), el('span', { text: 'من أين يأتي الزوار، وأين نخسرهم، وما الذي يجعلهم يشتركون' }))),
     per, tabs, msg, body);
   drawTabs(); drawPer();
 
   async function load() {
     const [from, to] = range(); body.innerHTML = ''; fbk(msg, 'info', '⏳ جارٍ حساب التقرير…');
-    try { R = await call('adminAx', { op: 'report', from, to }); msg.innerHTML = ''; render(); }
+    try { R = await call('adminAx', { op: 'report', from, to, full: true }); msg.innerHTML = ''; render(); }
     catch (e) { fbk(msg, 'bad', fnErr(e)); }
   }
   async function loadAlerts() { try { const a = await call('adminAx', { op: 'alerts' }); ACC._axAlerts = a.list || []; unread = ACC._axAlerts.filter((x) => !x.read).length; drawTabs(); if (tab === 'al') render(); } catch (e) {} }
@@ -108,7 +114,7 @@ export default function axAdmin({ call, fnErr, ACC, page, fbk, D, el, go, store 
     const notice = el('div', { class: 'ax-note' }, R.firstTrack ? 'بدأ تسجيل سلوك الزوار في ' + fmtDT(R.firstTrack) + '. ما قبل ذلك غير متاح، باستثناء الحسابات والطلبات والمدفوعات (من قاعدة البيانات مباشرة). حسابات الإدارة وأجهزة الأبناء المربوطة مستبعدة من الأرقام.'
       : 'لم يصل أي حدث تتبع بعد. بعد نشر التحديث ستبدأ الأرقام بالظهور تلقائياً. الحسابات والطلبات والمدفوعات أدناه من قاعدة البيانات مباشرة.');
     body.append(notice);
-    ({ sc: renderSc, ov: renderOv, fun: renderFun, ppl: renderPpl, reg: renderReg, sub: renderSub, free: renderFree, ret: renderRet, src: renderSrc })[tab]();
+    ({ full: renderFull, sc: renderSc, ov: renderOv, fun: renderFun, ppl: renderPpl, reg: renderReg, sub: renderSub, free: renderFree, ret: renderRet, src: renderSrc })[tab]();
   }
 
   // ---------- 1) نظرة عامة ----------
@@ -151,7 +157,7 @@ export default function axAdmin({ call, fnErr, ACC, page, fbk, D, el, go, store 
   }
   const ERR = { bad_phone: 'رقم هاتف غير صحيح', short_password: 'كلمة مرور قصيرة', bad_email: 'بريد غير صحيح', 'auth/email-already-in-use': 'الحساب موجود مسبقاً', 'auth/invalid-credential': 'بيانات دخول خاطئة', 'auth/popup-closed-by-user': 'أغلق نافذة Google',
     'auth/network-request-failed': 'مشكلة اتصال', 'auth/too-many-requests': 'محاولات كثيرة', no_name: 'لم يكتب الاسم', no_role: 'لم يختر الدور', no_grade: 'لم يختر الصف', 'auth/invalid-email': 'بريد غير صحيح', 'auth/weak-password': 'كلمة مرور ضعيفة' };
-  const errAr = (k) => { const [m, c] = String(k).split(' · '); return ({ google: 'Google', email: 'البريد', phone: 'الهاتف', onboard: 'إكمال البيانات' })[m] || m + ' · ' + (ERR[c] || c); };
+  const errAr = (k) => { const [m, c] = String(k).split(' · '); return (({ google: 'Google', email: 'البريد', phone: 'الهاتف', onboard: 'إكمال البيانات' })[m] || m) + ' · ' + (ERR[c] || c); };
 
   // ---------- 3) الزوار والمستخدمون ----------
   function renderPpl() {
@@ -190,6 +196,19 @@ export default function axAdmin({ call, fnErr, ACC, page, fbk, D, el, go, store 
       table('مجانية-' + f.s, [['id', 'المعرّف'], ['reg', 'الحالة', (r) => r.sub ? 'مشترك' : r.reg ? 'مسجّل' : 'زائر', (r) => r.sub ? tag('s', 'مشترك') : r.reg ? tag('r', 'مسجّل') : tag('v', 'زائر')], ['name', 'الاسم'], ['g', 'الصف', (r) => D.gradeName(r.g) || r.g],
         ['opened', 'فتح'], ['done', 'أكمل'], ['total', 'دروس المادة'], ['full', 'أكمل المادة؟', (r) => r.full ? 'نعم' : 'لا'], ['last', 'أين توقف', (r) => lname(r.last) + (r.n ? ' (الخطوة ' + r.lastAt + ' من ' + r.n + ')' : '')],
         ['sess', 'مرات العودة'], ['toPlans', 'ذهب للباقات؟', (r) => r.toPlans ? 'نعم' : 'لا'], ['lastT', 'آخر نشاط', (r) => fmtDT(r.lastT)]], f.rows)); });
+  }
+  // ---------- التقرير الشامل: ملف Excel واحد ----------
+  const NAMES = { lesson: lname, grade: (g) => D.gradeName(g) || g, plan: planN,
+    subj: (g, sid) => { const c = D.App.catalog; if (c && g && c.grades[g]) { const x = c.grades[g].find((y) => y.id === sid); if (x) return x.name; } if (c) for (const k in c.grades) { const x = c.grades[k].find((y) => y.id === sid); if (x) return x.name; } return sid; },
+    page: (k) => PAGE[k] || ENTRY[k] || k, err: (k) => errAr(k) };
+  function renderFull() { const m = el('div');
+    body.append(el('div', { class: 'panel', style: 'display:flex;flex-direction:column;gap:8px;border:2px solid #1f72e0' }, el('b', { text: '📑 التقرير الشامل للمنصة' }),
+      help('ملف Excel واحد للفترة المختارة أعلاه (اليوم افتراضياً)، فيه: الملخص التنفيذي مع نقاط القوة والضعف والتوصيات، والزوار ورحلة المستخدم، والتسجيل والحسابات، والنشاط التعليمي، والاشتراكات والباقات، والمشكلات والتوقفات. التقارير الفردية وتصديرها في التبويبات الأخرى تبقى كما هي.'),
+      el('button', { class: 'btn sun', text: '⬇️ تصدير التقرير الشامل (Excel)', onclick: async (e) => { e.target.disabled = true; fbk(m, 'info', '⏳ جارٍ إعداد الملف…');
+        try { const al = ACC._axAlerts || (await call('adminAx', { op: 'alerts' })).list || []; const mod = await import('./fullreport.js'); const r = await mod.exportFull(R, NAMES, al); fbk(m, 'ok', '✓ تم تنزيل ' + r.fn); }
+        catch (x) { fbk(m, 'bad', 'تعذّر إنشاء الملف: ' + (x && x.message || x)); } e.target.disabled = false; } }), m));
+    import('./fullreport.js').then((mod) => { const A = mod.analyze(R, NAMES); const sec = (t, L) => [el('h3', { text: t }), ...(L.length ? L.map(([a, b, c]) => el('div', { class: 'ax-al' + (c === 'مؤكد' ? '' : ' un') }, el('div', { class: 'tx' }, el('b', { text: a }), el('div', { text: b }), el('small', { text: c })))) : [el('p', { class: 'note', text: '—' })])];
+      body.append(...sec('✅ نقاط القوة', A.S), ...sec('⚠️ نقاط الضعف والمشكلات', A.W), ...sec('💡 توصيات التحسين', A.REC), ...(A.NOTE.length ? sec('ℹ️ ملاحظات', A.NOTE) : [])); }).catch(() => {});
   }
   // ---------- نتائج الدروس والقفل بعد الإتقان ----------
   const SUBJ = (g, sid) => { const c = D.App.catalog; const sj = c && (c.grades[g] || []).find((x) => x.id === sid); return sj ? sj.name : sid; };

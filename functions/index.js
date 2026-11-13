@@ -486,9 +486,17 @@ async function getAccessCfg() {
   const d = await db.collection("config").doc("access").get();
   ACCESS = d.exists ? d.data() : {}; ACCESS_AT = Date.now(); return ACCESS;
 }
-const accKeys = (g, s, id) => ["g" + g, "g" + g + "-" + s, "l-" + id];
+const accKeys = (g, s, id) => ["g" + g, "g" + g + "-" + s, "l-" + id, ...((LESSON_INDEX[id] || [])[3] ? [LESSON_INDEX[id][3]] : [])];
 const accHas = (list, g, s, id) => (list || []).some((k) => accKeys(g, s, id).includes(k));
-const ACCESS_KEY = /^(g(?:\d{1,2}|s\d(?:sci|lit)?)|g(?:\d{1,2}|s\d(?:sci|lit)?)-[a-z]{2,8}|l-[a-z0-9-]{3,60})$/;
+// الإعداد الأدق يغلب: درس ← وحدة ← مادة ← صف (والمغلق يُفحص قبله ويغلب الجميع)
+function accState(acc, g, s, id) {
+  if ((acc.intro || []).includes(id)) return "free";
+  for (const k of ["l-" + id, (LESSON_INDEX[id] || [])[3], "g" + g + "-" + s, "g" + g]) { if (!k) continue;
+    if ((acc.extraFree || []).includes(k)) return "free"; if ((acc.regFree || []).includes(k)) return "reg"; if ((acc.subsOnly || []).includes(k)) return "subs";
+  }
+  return null;
+}
+const ACCESS_KEY = /^(g(?:\d{1,2}|s\d(?:sci|lit)?)|g(?:\d{1,2}|s\d(?:sci|lit)?)-[a-z]{2,8}|l-[a-z0-9-]{3,60}|u-(?:\d{1,2}|s\d(?:sci|lit)?)-[a-z]{2,8}-\d{1,2}-\d{1,3})$/;
 exports.adminSetAccess = onCall(async (req) => {
   await needAdmin(req, "access");
   const d = req.data || {};
@@ -499,7 +507,8 @@ exports.adminSetAccess = onCall(async (req) => {
   const list = (x) => [...new Set((Array.isArray(x) ? x : []).map(String).filter((k) => ACCESS_KEY.test(k)))].slice(0, 500);
   const out = {
     maint: {on: !!(d.maint && d.maint.on), msg: String((d.maint && d.maint.msg) || "").slice(0, 200)},
-    openAll: !!d.openAll, closed: list(d.closed), subsOnly: list(d.subsOnly), extraFree: list(d.extraFree),
+    openAll: !!d.openAll, closed: list(d.closed), subsOnly: list(d.subsOnly), extraFree: list(d.extraFree), regFree: list(d.regFree),
+    intro: [...new Set((Array.isArray(d.intro) ? d.intro : []).map(String).filter((x) => /^[a-z0-9-]{3,60}$/.test(x)))].slice(0, 200), // دروس تعريفية مجانية يختارها المدير
     updatedAt: FieldValue.serverTimestamp(),
   };
   await db.collection("config").doc("access").set(out, {merge: true});
@@ -544,13 +553,15 @@ exports.getLesson = onCall({memory: "512MiB"}, async (req) => {
   const acc = await getAccessCfg();
   if (acc.maint && acc.maint.on) throw new HttpsError("unavailable", acc.maint.msg || "المنصة في صيانة قصيرة. عُد بعد قليل.");
   if (accHas(acc.closed, g, s, id)) throw new HttpsError("unavailable", "هذا الدرس مغلق مؤقتاً للمراجعة. عُد إليه لاحقاً.");
-  const openFree = acc.openAll || accHas(acc.extraFree, g, s, id);
+  const ast = accState(acc, g, s, id);
+  const openFree = acc.openAll || ast === "free";
+  const regOpen = ast === "reg" && (!!tk.kidOf || (tk.firebase || {}).sign_in_provider !== "anonymous"); // مجاني للمسجلين فقط
 
   const [us, subsSnap] = await Promise.all([
     db.collection("users").doc(uid).get(),
     db.collection("subscriptions").where("uid", "==", uid).get(),
   ]);
-  if (!us.exists && !openFree) throw new HttpsError("failed-precondition", "أكمل بيانات حسابك أولاً");
+  if (!us.exists && !openFree && !regOpen) throw new HttpsError("failed-precondition", "أكمل بيانات حسابك أولاً");
   const role = us.exists ? us.data().role : null;
   if (pid) {
     const ps = await db.collection("users").doc(uid).collection("profiles").doc(pid).get();
@@ -569,7 +580,7 @@ exports.getLesson = onCall({memory: "512MiB"}, async (req) => {
     if (sc.kids) { if (!pid || pid === "me" || (sc.kidIds && !sc.kidIds.includes(pid)) || (!sc.kidIds && sc.maxKids && !firstKids.slice(0, sc.maxKids).includes(pid))) return false; } else if (!(role === "student" || (sc.self && pid === "me"))) return false;
     return (sc.grades || []).some((x) => x === "*" || x === g) && (sc.subjects || []).some((x) => x === "*" || x === s);
   });
-  if (!ok && !openFree) throw new HttpsError("permission-denied", "هذا الدرس للمشتركين. اشترك لتفتحه.");
+  if (!ok && !openFree && !regOpen) throw new HttpsError("permission-denied", ast === "reg" ? "سجّل حساباً مجانياً لتفتح هذا الدرس." : "هذا الدرس للمشتركين. اشترك لتفتحه.");
 
   // حدّ يومي يمنع سحب المنهج كاملاً
   const qRef = db.collection("lessonQuota").doc(uid + "_" + new Date().toISOString().slice(0, 10));
@@ -584,6 +595,24 @@ exports.getLesson = onCall({memory: "512MiB"}, async (req) => {
   return {lesson};
 });
 
+
+// درس جعله المدير «مجانياً للجميع» (أو درساً تعريفياً) يفتحه الزائر بدون تسجيل
+exports.freeLesson = onRequest({memory: "512MiB", maxInstances: 10}, async (req, res) => {
+  res.set("Access-Control-Allow-Origin", "*"); res.set("Cache-Control", "no-store");
+  if (req.method === "OPTIONS") return res.status(204).send("");
+  const id = String(req.query.id || "");
+  const meta = LESSON_INDEX[id]; if (!meta) return res.status(404).json({error: "not-found"});
+  const [g, s] = meta; const acc = await getAccessCfg();
+  if (acc.maint && acc.maint.on) return res.status(503).json({error: acc.maint.msg || "صيانة"});
+  if (accHas(acc.closed, g, s, id)) return res.status(403).json({error: "هذا الدرس مغلق مؤقتاً للمراجعة."});
+  if (!(acc.openAll || accState(acc, g, s, id) === "free")) return res.status(403).json({error: "هذا الدرس ليس مجانياً."});
+  const ip = String(req.headers["x-forwarded-for"] || req.ip || "x").split(",")[0].trim().replace(/[^0-9a-f.:]/gi, "").slice(0, 45) || "x";
+  const qRef = db.collection("lessonQuota").doc("ip_" + ip.replace(/[.:]/g, "_") + "_" + new Date().toISOString().slice(0, 10));
+  const n = await db.runTransaction(async (tx) => { const q = await tx.get(qRef); const n = ((q.exists && q.data().n) || 0) + 1; if (n <= 120) tx.set(qRef, {n}); return n; });
+  if (n > 120) return res.status(429).json({error: "فتحت دروساً كثيرة اليوم. سجّل حساباً مجانياً لتكمل."});
+  const lesson = lessonFrom(g, id); if (!lesson) return res.status(404).json({error: "not-found"});
+  return res.json({lesson});
+});
 
 // ===================== ربط جهاز الابن (رمز من 6 أرقام أو QR) =====================
 // ولي الأمر ينشئ رمزاً لملف ابن → الابن يفتح المنصة على جهازه (دخول مجهول) ويدخل الرمز
@@ -603,7 +632,7 @@ exports.createLinkCode = onCall(async (req) => {
   if (!pid || pid === "me") throw new HttpsError("invalid-argument", "اختر الابن");
   const ps = await db.collection("users").doc(uid).collection("profiles").doc(pid).get();
   if (!ps.exists) throw new HttpsError("not-found", "الابن غير موجود");
-  const devs = await db.collection("users").doc(uid).collection("kidDevices").where("pid", "==", pid).get();
+  const devs = await db.collection("users").doc(uid).collection("kidDevices").where("pids", "array-contains", pid).get();
   if (devs.size >= MAX_KID_DEVICES) throw new HttpsError("resource-exhausted", "لهذا الابن " + MAX_KID_DEVICES + " أجهزة مربوطة. ألغِ ربط جهاز قديم أولاً.");
   const hr = db.collection("linkRate").doc(uid + "_" + new Date().toISOString().slice(0, 13));
   await db.runTransaction(async (tx) => { const d = await tx.get(hr); const n = (d.exists && d.data().n) || 0;
@@ -633,9 +662,17 @@ exports.redeemLinkCode = onCall(async (req) => {
     tx.update(ref, {used: true, by: kid}); return d.data(); });
   const ps = await db.collection("users").doc(info.uid).collection("profiles").doc(info.pid).get();
   if (!ps.exists) throw new HttpsError("not-found", "الابن غير موجود");
+  const dRef = db.collection("users").doc(info.uid).collection("kidDevices").doc(kid);
+  const old = (tk.kidOf === info.uid) ? await dRef.get() : null;
+  if (old && old.exists) { // جهاز مرتبط بابن من نفس الأسرة: يصبح جهازاً مشتركاً (لا نستبدل الابن الأول)
+    const pids = [...new Set([...(old.data().pids || [old.data().pid]), info.pid])].slice(0, 6);
+    await dRef.update({pids, type: pids.length > 1 ? "shared" : (old.data().type || "own"), at: FieldValue.serverTimestamp()});
+    await admin.auth().setCustomUserClaims(kid, {kidOf: info.uid, kidPid: info.pid});
+    return {pid: info.pid, name: ps.data().name || "", shared: pids.length};
+  }
   await admin.auth().setCustomUserClaims(kid, {kidOf: info.uid, kidPid: info.pid});
   const dev = String((req.data && req.data.device) || "").slice(0, 80);
-  await db.collection("users").doc(info.uid).collection("kidDevices").doc(kid).set({pid: info.pid, name: ps.data().name || "", device: dev, at: FieldValue.serverTimestamp()});
+  await dRef.set({pid: info.pid, pids: [info.pid], type: "own", name: ps.data().name || "", device: dev, at: FieldValue.serverTimestamp()});
   return {pid: info.pid, name: ps.data().name || ""};
 });
 exports.unlinkKidDevice = onCall(async (req) => {
@@ -647,6 +684,119 @@ exports.unlinkKidDevice = onCall(async (req) => {
   await ref.delete();
   try { await admin.auth().deleteUser(kid); } catch (e) { logger.warn("unlink deleteUser", e.message); }
   return {ok: true};
+});
+
+// ===================== أجهزتي المرتبطة: أجهزة خاصة ومشتركة وجهاز الأسرة الوحيد =====================
+// kidDevices/{kidUid}: جهاز ابن (خاص أو مشترك بين أكثر من ابن) — {pid (الحالي), pids[], type, dname, sched, schedOn, paused, ext, last}
+// famDevices/{id}: هاتف ولي الأمر نفسه يستخدمه الأبناء (جهاز الأسرة الوحيد) — نفس الحقول + pinH (اختياري)
+// الجدول بتوقيت ليبيا (الخادم هو المرجع للوقت): sched = {pid: [{d:[0..6], s:"16:00", e:"17:30"}]}
+const TZ_MS = 2 * 3600e3;
+const hm = (t) => { const [h, m] = String(t).split(":").map(Number); return h * 60 + m; };
+const isHM = (t) => /^([01]\d|2[0-3]):[0-5]\d$/.test(String(t)) || t === "24:00";
+function devNow(dev, now) { // من صاحب الوقت الآن؟ + الموعد القادم
+  const L = new Date(now + TZ_MS), day = L.getUTCDay(), mins = L.getUTCHours() * 60 + L.getUTCMinutes();
+  const pids = dev.pids || (dev.pid ? [dev.pid] : []);
+  if (dev.ext && dev.ext.until > now && pids.includes(dev.ext.pid)) return {pid: dev.ext.pid, until: dev.ext.until, ext: true};
+  const S = dev.sched || {};
+  for (const pid of pids) for (const sl of (S[pid] || [])) if ((sl.d || []).includes(day) && mins >= hm(sl.s) && mins < hm(sl.e)) {
+    return {pid, until: now + (hm(sl.e) - mins) * 60e3 - L.getUTCSeconds() * 1000};
+  }
+  let next = null;
+  for (let k = 0; k < 8 && !next; k++) { const dd = (day + k) % 7; let best = null;
+    for (const pid of pids) for (const sl of (S[pid] || [])) if ((sl.d || []).includes(dd) && (k > 0 || hm(sl.s) > mins) && (!best || hm(sl.s) < hm(best.s))) best = {pid, s: sl.s};
+    if (best) next = {pid: best.pid, at: now + ((k * 1440 + hm(best.s) - mins) * 60e3) - L.getUTCSeconds() * 1000}; }
+  return {pid: null, next};
+}
+function checkSched(sched, pids) { // ينظّف الجدول ويمنع تعارض المواعيد بين الأبناء على نفس الجهاز
+  const out = {}; const slots = [];
+  for (const pid of pids) { const L = Array.isArray((sched || {})[pid]) ? sched[pid].slice(0, 8) : [];
+    out[pid] = L.map((x) => ({d: [...new Set((x.d || []).map(Number).filter((n) => n >= 0 && n <= 6))].sort(), s: String(x.s), e: String(x.e)}))
+      .filter((x) => x.d.length && isHM(x.s) && isHM(x.e));
+    for (const x of out[pid]) { if (hm(x.e) <= hm(x.s)) throw new HttpsError("invalid-argument", "وقت النهاية يجب أن يكون بعد وقت البداية (" + x.s + " – " + x.e + ")."); slots.push({pid, ...x}); } }
+  for (let i = 0; i < slots.length; i++) for (let j = i + 1; j < slots.length; j++) { const a = slots[i], b = slots[j];
+    if (a.d.some((d) => b.d.includes(d)) && hm(a.s) < hm(b.e) && hm(b.s) < hm(a.e)) throw new HttpsError("invalid-argument", "conflict:" + a.pid + ":" + b.pid + ":" + a.s + "-" + a.e + ":" + b.s + "-" + b.e); }
+  return out;
+}
+const DAYMS = 864e5;
+async function profilesBrief(uid, pids) {
+  const out = []; for (const pid of pids) { const d = await db.collection("users").doc(uid).collection("profiles").doc(pid).get(); if (d.exists) out.push({id: pid, name: d.data().name || "", grade: d.data().grade || "", avatar: d.data().avatar || ""}); }
+  return out;
+}
+const devPublic = (id, d, kind) => ({id, kind, type: d.type || (kind === "fam" ? "family" : ((d.pids || []).length > 1 ? "shared" : "own")), name: d.dname || (kind === "fam" ? "هاتف ولي الأمر" : (d.device ? d.device.slice(0, 40) : "جهاز " + (d.name || ""))),
+  pids: d.pids || (d.pid ? [d.pid] : []), pid: d.pid || null, sched: d.sched || {}, schedOn: !!d.schedOn, paused: !!d.paused, ext: d.ext || null, last: d.last || 0, hasPin: !!d.pinH, at: d.at && d.at.toMillis ? d.at.toMillis() : 0});
+// جهاز الابن يسأل: من أنا الآن؟ (ويحدّث آخر نشاط)
+exports.kidDeviceState = onCall(async (req) => {
+  const kid = needUser(req); const tk = req.auth.token || {};
+  if (!tk.kidOf) throw new HttpsError("permission-denied", "هذا الجهاز غير مرتبط");
+  const ref = db.collection("users").doc(tk.kidOf).collection("kidDevices").doc(kid); const d = await ref.get();
+  if (!d.exists) throw new HttpsError("not-found", "unlinked");
+  const now = Date.now(); ref.update({last: now}).catch(() => {});
+  const D = devPublic(kid, d.data(), "kid");
+  return {...D, now, cur: tk.kidPid, kids: await profilesBrief(tk.kidOf, D.pids), state: devNow(D, now)};
+});
+// جهاز الابن ينتقل إلى ملف ابن آخر (يتحقق الخادم من الجدول بوقته هو، لا بساعة الهاتف)
+exports.kidSwitch = onCall(async (req) => {
+  const kid = needUser(req); const tk = req.auth.token || {}; const pid = String((req.data || {}).pid || "");
+  if (!tk.kidOf) throw new HttpsError("permission-denied", "هذا الجهاز غير مرتبط");
+  const ref = db.collection("users").doc(tk.kidOf).collection("kidDevices").doc(kid); const d = await ref.get();
+  if (!d.exists) throw new HttpsError("not-found", "unlinked");
+  const D = devPublic(kid, d.data(), "kid"); const now = Date.now();
+  if (!D.pids.includes(pid)) throw new HttpsError("permission-denied", "هذا الابن غير مرتبط بهذا الجهاز");
+  if (D.paused) throw new HttpsError("failed-precondition", "أوقف ولي الأمر هذا الجهاز مؤقتاً");
+  if (D.schedOn) { const st = devNow(D, now); if (st.pid !== pid) throw new HttpsError("failed-precondition", "ليس موعد هذا الابن الآن"); }
+  await admin.auth().setCustomUserClaims(kid, {kidOf: tk.kidOf, kidPid: pid});
+  await ref.update({pid, last: now});
+  return {ok: true, pid};
+});
+// إدارة الأجهزة من حساب ولي الأمر
+exports.devAdmin = onCall(async (req) => {
+  needUser(req); const tk = req.auth.token || {};
+  if (tk.kidOf || (tk.firebase || {}).sign_in_provider === "anonymous") throw new HttpsError("permission-denied", "لولي الأمر فقط");
+  const uid = await ownerOf(req); const d = req.data || {}; const op = String(d.op || ""); const now = Date.now();
+  const U = db.collection("users").doc(uid);
+  if (op === "list") {
+    const [kd, fd, ps] = await Promise.all([U.collection("kidDevices").get(), U.collection("famDevices").get(), U.collection("profiles").get()]);
+    return {now, kids: ps.docs.map((x) => ({id: x.id, name: x.data().name || "", grade: x.data().grade || "", avatar: x.data().avatar || ""})),
+      devices: [...kd.docs.map((x) => devPublic(x.id, x.data(), "kid")), ...fd.docs.map((x) => devPublic(x.id, x.data(), "fam"))].map((D) => ({...D, state: devNow(D, now)}))};
+  }
+  if (op === "famCreate") { // هاتف ولي الأمر يصبح «جهاز الأسرة»
+    const fd = await U.collection("famDevices").get(); if (fd.size >= 3) throw new HttpsError("resource-exhausted", "يمكن تسجيل 3 أجهزة أسرة كحد أقصى.");
+    const ps = await U.collection("profiles").get(); const pids = ps.docs.map((x) => x.id).filter((x) => x !== "me").slice(0, 6);
+    const ref = U.collection("famDevices").doc();
+    await ref.set({type: "family", dname: String(d.name || "هاتف ولي الأمر").slice(0, 40), pids, sched: {}, schedOn: false, paused: false, at: FieldValue.serverTimestamp(), last: now});
+    return {id: ref.id};
+  }
+  const kind = d.kind === "fam" ? "fam" : "kid"; const id = String(d.dev || "");
+  if (!/^[A-Za-z0-9_-]{6,40}$/.test(id)) throw new HttpsError("invalid-argument", "الجهاز غير صحيح");
+  const ref = U.collection(kind === "fam" ? "famDevices" : "kidDevices").doc(id); const snap = await ref.get();
+  if (!snap.exists) throw new HttpsError("not-found", "الجهاز غير موجود");
+  const cur = snap.data();
+  if (op === "state") { ref.update({last: now}).catch(() => {}); const D = devPublic(id, cur, kind); return {...D, now, pinH: kind === "fam" ? (cur.pinH || null) : null, kids: await profilesBrief(uid, D.pids), state: devNow(D, now)}; }
+  if (op === "unlink") { await ref.delete(); if (kind === "kid") { try { await admin.auth().deleteUser(id); } catch (e) { logger.warn("devAdmin unlink", e.message); } } return {ok: true}; }
+  if (op !== "update") throw new HttpsError("invalid-argument", "عملية غير معروفة");
+  const P = d.patch || {}; const up = {};
+  let pids = cur.pids || (cur.pid ? [cur.pid] : []);
+  if (Array.isArray(P.pids)) {
+    const ok = new Set((await U.collection("profiles").get()).docs.map((x) => x.id));
+    pids = [...new Set(P.pids.map(String).filter((x) => ok.has(x) && x !== "me"))].slice(0, 6);
+    if (!pids.length) throw new HttpsError("invalid-argument", kind === "kid" ? "يجب أن يبقى ابن واحد على الأقل. لإزالة الجهاز استخدم «إلغاء الربط»." : "اختر ابناً واحداً على الأقل.");
+    up.pids = pids;
+    if (kind === "kid") { up.type = pids.length > 1 ? "shared" : "own"; if (!pids.includes(cur.pid)) { up.pid = pids[0]; await admin.auth().setCustomUserClaims(id, {kidOf: uid, kidPid: pids[0]}); } }
+  }
+  if (P.sched !== undefined) up.sched = checkSched(P.sched, pids);
+  else if (up.pids) { const S = {}; pids.forEach((p) => { if ((cur.sched || {})[p]) S[p] = cur.sched[p]; }); up.sched = S; }
+  if (P.schedOn !== undefined) up.schedOn = !!P.schedOn;
+  if (P.paused !== undefined) up.paused = !!P.paused;
+  if (P.name !== undefined) up.dname = String(P.name).slice(0, 40);
+  if (P.ext !== undefined) { // تمديد استثنائي لابن: حتى 120 دقيقة
+    if (P.ext === null) up.ext = FieldValue.delete();
+    else { const pid = String(P.ext.pid || ""), m = Math.max(5, Math.min(120, Number(P.ext.mins) || 15)); if (!pids.includes(pid)) throw new HttpsError("invalid-argument", "الابن غير مرتبط بالجهاز");
+      const base = devNow({...cur, ...up, pids}, now); const from = base.pid === pid && base.until ? base.until : now; up.ext = {pid, until: from + m * 60e3, by: now}; }
+  }
+  if (kind === "fam" && P.pinH !== undefined) up.pinH = P.pinH ? String(P.pinH).slice(0, 80) : FieldValue.delete();
+  await ref.update(up);
+  const D = devPublic(id, {...cur, ...up, ext: up.ext && up.ext.until ? up.ext : (P.ext === null ? null : cur.ext)}, kind);
+  return {ok: true, device: {...D, state: devNow(D, now)}};
 });
 
 // ===================== ولي أمر ثانٍ (مثلاً الأم) =====================

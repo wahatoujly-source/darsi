@@ -9,7 +9,14 @@ export default function runTimes(D, h) {
   const P = store.get(PK, {}); // {N: {lv: أعلى مستوى ناجح, best: أفضل سباق, stars}}
   const save = () => store.set(PK, P);
   const MISS = 'ttm_' + ((window.ACC && ACC.pid) || 'g');
-  const LV = [['🟢', 'بالترتيب', 'الأسئلة بالترتيب من 1 إلى 12'], ['🟡', 'عشوائي', 'نفس الجدول بترتيب عشوائي'], ['🟠', 'الرقم الناقص', 'مثل: 6 × ؟ = 18'], ['🔴', 'اكتب الجواب', 'بدون اختيارات — تكتب الناتج بنفسك'], ['⚡', 'سباق الدقيقة', 'أكبر عدد من الإجابات الصحيحة في 60 ثانية']];
+  const LV = [['🟢', 'بالترتيب', 'الأسئلة بالترتيب من 1 إلى 12'], ['🟡', 'عشوائي', '20 سؤالاً من الجدول بترتيب عشوائي'], ['🟠', 'الرقم الناقص', '20 سؤالاً مثل: 6 × ؟ = 18'], ['🔴', 'اكتب الجواب', '20 سؤالاً بدون اختيارات — تكتب الناتج بنفسك'], ['⚡', 'سباق الدقيقة', 'أكبر عدد من الإجابات الصحيحة في 60 ثانية']];
+  const PASS = 0.8; // النجاح في المستوى: 80% على الأقل
+  // إعداد ولي الأمر لهذا الابن: prog (بالتدريج — الافتراضي) | all (كل المستويات مفتوحة) | manual (جداول يحددها ولي الأمر)
+  const prof = (window.ACC && ACC.user && ACC.profiles && ACC.profiles.find(x => x.id === ACC.pid)) || null;
+  const CFG = (prof && prof.tmc) || { mode: 'prog' };
+  const allowed = N => CFG.mode !== 'manual' || (CFG.tables || []).includes(N);
+  // سجل التدريب: يُحفظ في ملف الطالب ويظهر في تقرير ولي الأمر (الزائر يبقى سجله على جهازه فقط)
+  const rec = r => { try { const A = store.get('g_tm', []); A.push(r); store.set('g_tm', A.slice(-300)); D.GAME && D.GAME.sync && D.GAME.sync(true); } catch (e) {} };
   const css = `.tt{display:flex;flex-direction:column;gap:12px;padding-bottom:30px}.tt h2{margin:0;font-family:var(--f-display);text-align:center}.tt .sub{color:var(--muted);text-align:center;margin:0;line-height:1.8}
 .tt .tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
 .tt .tb{border:2px solid var(--line);background:var(--card);border-radius:20px;padding:12px 6px;font:inherit;color:inherit;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:4px}
@@ -45,7 +52,8 @@ export default function runTimes(D, h) {
     w.append(el('div', { class: 'gx-hero', style: '--h1:#ff9a3c;--h2:#f0562e' }, el('img', { src: 'img/ui/q_times.webp', alt: '' }), el('div', {}, el('b', { text: 'كن بطل جدول الضرب! 🏆' }), el('span', { text: 'لكل جدول: تعلّم واسمع ثم 5 مستويات. اجمع 3 نجوم في كل جدول.' }),
       el('div', { class: 'gx-pr' }, el('i', { style: 'width:' + Math.round(done / 12 * 100) + '%' })), el('small', { text: done + ' من 12 جدولاً مكتملاً' }))));
     const g = el('div', { class: 'tabs' });
-    for (let n = 1; n <= 12; n++) { const s = starsOf(n); g.append(el('button', { class: 'tb' + (s === 3 ? ' done' : ''), style: '--hu:' + (n * 30 % 360), onclick: () => go('times-' + n) }, el('small', { text: 'جدول' }), el('b', { text: String(n) }), el('span', { class: 'st', text: stars(s) }))); }
+    for (let n = 1; n <= 12; n++) { const s = starsOf(n), ok = allowed(n); g.append(el('button', { class: 'tb' + (s === 3 ? ' done' : ''), disabled: ok ? null : '', style: '--hu:' + (n * 30 % 360) + (ok ? '' : ';opacity:.4'), onclick: () => go('times-' + n) }, el('small', { text: 'جدول' }), el('b', { text: String(n) }), el('span', { class: 'st', text: ok ? stars(s) : '🔒' }))); }
+    if (CFG.mode === 'manual') w.append(el('p', { class: 'sub', text: '🔒 حدّد ولي أمرك الجداول المسموح لك بالتدرّب عليها.' }));
     const m = store.get(MISS, []);
     w.append(g, el('button', { class: 'lv', onclick: () => quiz({ mode: 'all' }) }, el('span', { class: 'e', text: '🌟' }), el('span', {}, el('b', { text: 'تحدّي كل الجداول' }), el('small', { text: '20 سؤالاً من كل الجداول، تكتب الجواب بنفسك' }))),
       el('button', { class: 'lv', disabled: m.length ? null : '', onclick: () => quiz({ mode: 'miss' }) }, el('span', { class: 'e', text: '🔁' }), el('span', {}, el('b', { text: 'راجع أخطائي (' + m.length + ')' }), el('small', { text: m.length ? 'الأسئلة التي أخطأت فيها مؤخراً' : 'لا توجد أخطاء محفوظة — ممتاز!' }))),
@@ -53,6 +61,7 @@ export default function runTimes(D, h) {
   }
   /* ---------- one table: learn + levels ---------- */
   function table(N) {
+    if (!allowed(N)) { const w = page('✖️ جدول ' + N, '', 'times'); w.append(el('h2', { text: '🔒 هذا الجدول لم يفتحه ولي أمرك بعد' })); return; }
     const w = page('✖️ جدول ' + N, stars(starsOf(N)), 'times'); const p = P[N] || {};
     let hide = false; const facts = el('div', { class: 'row12' });
     const draw = () => { facts.innerHTML = ''; for (let b = 1; b <= 12; b++) facts.append(el('button', { class: 'fact' + (hide ? ' hid' : ''), onclick: e => { if (hide) e.currentTarget.classList.toggle('hid'); sayFact(N, b); } }, N + ' × ' + b + ' = ', el('i', { text: String(N * b) }))); };
@@ -62,17 +71,17 @@ export default function runTimes(D, h) {
         el('button', { class: 'btn ghost sm', text: '🔊 اسمع الجدول كله', onclick: async () => { for (let b = 1; b <= 12; b++) { await D.speakAr(W[N] + ' في ' + W[b] + ' يساوي ' + (N * b), { force: true }); } } }),
         el('button', { class: 'btn ghost sm', text: '🙈 غطِّ النواتج واختبر نفسك', onclick: () => { hide = !hide; draw(); } })),
       el('b', { text: '🎯 المستويات' }));
-    const admin = !!(window.ACC && ACC.isAdmin);
+    const admin = !!(window.ACC && ACC.isAdmin) || CFG.mode === 'all';
     LV.forEach(([e, t, d], i) => { const open = admin || i === 0 || (p.lv || 0) >= i; const ok = (p.lv || 0) > i;
       w.append(el('button', { class: 'lv', disabled: open ? null : '', onclick: () => quiz({ mode: 'lv', N, lv: i + 1 }) }, el('span', { class: 'e', text: open ? e : '🔒' }),
         el('span', { style: 'flex:1' }, el('b', { text: 'المستوى ' + (i + 1) + ': ' + t + (ok ? ' ✅' : '') }), el('small', { text: i === 4 && p.best ? d + ' — أفضل نتيجة: ' + p.best : d })))); });
-    w.append(el('p', { class: 'sub', text: 'تنجح في المستوى بـ 11 من 12 على الأقل، فيُفتح الذي بعده. سباق الدقيقة: 20 إجابة صحيحة = النجمة الثالثة ⭐' + (admin ? ' — (كل المستويات مفتوحة لك كمدير)' : '') }));
+    w.append(el('p', { class: 'sub', text: 'تنجح في المستوى إذا حصلت على 80% على الأقل، فيُفتح الذي بعده. إذا لم تصل إليها أعد المحاولة. سباق الدقيقة: 20 إجابة صحيحة = النجمة الثالثة ⭐' + (admin ? ' — (كل المستويات مفتوحة' + (CFG.mode === 'all' ? ' بإذن ولي أمرك)' : ' لك كمدير)') : '') }));
   }
   /* ---------- quiz engine ---------- */
   function quiz(o) {
     const N = o.N, lv = o.lv || 4; const typed = o.mode !== 'lv' || lv >= 4, race = o.mode === 'lv' && lv === 5, missing = o.mode === 'lv' && lv === 3;
     let qs = [];
-    if (o.mode === 'lv') { const bs = Array.from({ length: 12 }, (_, i) => i + 1); qs = (lv === 1 ? bs : shuf(bs)).map(b => [N, b]); if (lv >= 2 && lv !== 3) qs = qs.map(([a, b]) => Math.random() < .3 ? [b, a] : [a, b]); }
+    if (o.mode === 'lv') { const bs = Array.from({ length: 12 }, (_, i) => i + 1); qs = (lv === 1 ? bs : shuf(bs).concat(shuf(bs).slice(0, 8))).map(b => [N, b]); if (lv >= 2 && lv !== 3) qs = qs.map(([a, b]) => Math.random() < .3 ? [b, a] : [a, b]); }
     if (o.mode === 'all') { const seen = new Set(); while (qs.length < 20) { const a = R(2, 12), b = R(2, 12), k = Math.min(a, b) + 'x' + Math.max(a, b); if (!seen.has(k)) { seen.add(k); qs.push([a, b]); } } }
     if (o.mode === 'miss') qs = shuf(store.get(MISS, []).map(k => k.split('x').map(Number))).slice(0, 20);
     const title = o.mode === 'lv' ? 'جدول ' + N + ' — ' + LV[lv - 1][1] : o.mode === 'all' ? 'تحدّي كل الجداول' : 'مراجعة أخطائي';
@@ -80,7 +89,8 @@ export default function runTimes(D, h) {
     const prog = el('i', { style: 'width:0' }), meta = el('div', { class: 'meta' }), qEl = el('div', { class: 'q' }), area = el('div');
     w.append(el('div', { class: 'prog' }, prog), meta, qEl, area);
     let i = 0, sc = 0, cur = null, locked = false, val = ''; const t0 = Date.now(); let tmr = null;
-    const end = () => { clearInterval(tmr); result({ o, sc, n: race ? sc : qs.length, secs: (Date.now() - t0) / 1000 }); };
+    let answered = 0;
+    const end = () => { clearInterval(tmr); result({ o, sc, n: race ? sc : qs.length, asked: race ? answered : qs.length, secs: (Date.now() - t0) / 1000, t0 }); };
     if (race) { let lastL = 61; tmr = setInterval(() => { if (!document.body.contains(w)) { clearInterval(tmr); return; } const left = 60 - Math.floor((Date.now() - t0) / 1000); if (left !== lastL && left >= 0) { lastL = left; D.tick && D.tick(left); } meta.lastChild && (meta.lastChild.textContent = '⏱️ ' + Math.max(0, left)); prog.style.width = ((60 - left) / 60 * 100) + '%'; if (left <= 0) end(); }, 250); }
     const disp = el('div', { class: 'disp' });
     const next = () => {
@@ -102,7 +112,7 @@ export default function runTimes(D, h) {
     };
     const key = k => { if (locked) return; if (k === 'del') val = val.slice(0, -1); else if (k === 'ok') { if (val) answer(Number(val), disp); return; } else if (val.length < 3) val += k; disp.textContent = val; };
     const answer = (v, btn, g) => { if (locked) return; locked = true; const ok = v === cur.want; const [a, b] = cur;
-      btn.classList.add(ok ? 'ok' : 'no'); beep(ok); if (ok) sc++;
+      btn.classList.add(ok ? 'ok' : 'no'); beep(ok); if (ok) sc++; answered++;
       if (!ok) { if (g) [...g.children].forEach(x => { if (Number(x.textContent) === cur.want) x.classList.add('ok'); }); else disp.textContent = v + ' ✗ ' + cur.want; }
       miss(a, b, !ok); i++;
       setTimeout(() => { btn.classList.remove('ok', 'no'); next(); }, ok ? (race ? 150 : 450) : 1300); };
@@ -114,9 +124,10 @@ export default function runTimes(D, h) {
     let passed = false, msg = '';
     if (o.mode === 'lv') { const p = P[N] = P[N] || {};
       if (lv === 5) { if (r.sc > (p.best || 0)) p.best = r.sc; passed = r.sc >= 20; msg = r.sc + ' إجابة صحيحة في دقيقة' + (r.sc >= 20 ? ' — النجمة الثالثة ⭐' : ' — حاول الوصول إلى 20 لتنال النجمة الثالثة'); if (passed) p.lv = Math.max(p.lv || 0, 5); }
-      else { passed = r.sc >= 11; if (passed) p.lv = Math.max(p.lv || 0, lv); msg = r.sc + ' من ' + r.n + (passed ? (lv < 5 ? ' — فُتح المستوى ' + (lv + 1) + ' 🔓' : '') : ' — تحتاج 11 لتنجح. حاول مرة أخرى!'); }
+      else { const need = Math.ceil(r.n * PASS); passed = r.sc >= need; if (passed) p.lv = Math.max(p.lv || 0, lv); msg = r.sc + ' من ' + r.n + ' (' + Math.round(r.sc * 100 / r.n) + '%)' + (passed ? (lv < 5 ? ' — فُتح المستوى ' + (lv + 1) + ' 🔓' : '') : ' — تحتاج ' + need + ' (80%) لتنجح. حاول مرة أخرى!'); }
       save(); }
     else { passed = r.sc >= r.n * .8; msg = r.sc + ' من ' + r.n + ' في ' + Math.round(r.secs) + ' ثانية'; }
+    rec({ t: r.t0, e: Date.now(), s: Math.round(r.secs), N: o.mode === 'lv' ? N : 0, m: o.mode, lv: o.mode === 'lv' ? lv : 0, n: r.asked || r.n, ok: r.sc, p: passed ? 1 : 0, top: o.mode === 'lv' ? ((P[N] || {}).lv || 0) : 0 });
     try { if (passed) D.cheer && D.cheer('win', { say: false }); } catch (e) {}
     const w = page(passed ? '🎉 أحسنت!' : '💪 تقدّم جيد', o.mode === 'lv' ? 'جدول ' + N : '', o.mode === 'lv' ? 'times-' + N : 'times');
     w.append(el('div', { style: 'font-size:4.5rem;text-align:center', text: passed ? '🏆' : '💪' }), el('h2', { text: msg }));

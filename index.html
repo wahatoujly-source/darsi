@@ -1054,9 +1054,12 @@ body.has-nav .kx-nav{display:flex}body.has-nav header.bar .pill.dup,body.has-nav
 .rp-hero .gr{font-size:11.5px;font-weight:800;background:rgba(255,255,255,.22);border-radius:999px;padding:0 10px}
 .rp-hero .lv{display:flex;gap:8px;align-items:center;margin-top:4px}.rp-hero .li{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;font-size:22px;background:rgba(255,255,255,.95)}
 .rp-hero .lv b{display:block;font-family:var(--kx-d);font-weight:800;font-size:16px;line-height:1.1}.rp-hero .kx-bar{height:10px;background:rgba(255,255,255,.3)}.rp-hero .kx-bar i{background:linear-gradient(90deg,#ffe07a,#ffb21e)}
+.rp-cust{display:flex;gap:6px;align-items:center;flex-wrap:wrap;justify-content:center;margin:8px 0}.rp-cust input{border:1.5px solid var(--line);border-radius:10px;padding:5px 8px;font:inherit;background:var(--card);color:var(--ink)}
+.rp-nav{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:8px 0}.rp-nav b{font-size:.95rem;text-align:center}
 .rp-seg{display:flex;gap:4px;background:rgba(255,255,255,.85);border:1.5px solid #fff;border-radius:999px;padding:4px;box-shadow:0 6px 16px rgba(59,75,211,.08)}
 .rp-seg button{flex:1;border:0;background:none;border-radius:999px;padding:7px 4px;font-family:var(--kx-d);font-weight:800;font-size:14.5px;color:var(--kx-mut);cursor:pointer}
 .rp-seg button.on{background:linear-gradient(180deg,#8d6bff,#5b3df0);color:#fff;box-shadow:0 3px 0 #3e25b8}
+.rp-seg{display:grid;grid-template-columns:repeat(3,1fr);border-radius:18px}.rp-seg button{white-space:nowrap;font-size:13.5px;padding:7px 2px}
 .rp-kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
 .rp-acc{grid-column:1/-1;display:flex;align-items:center;gap:12px;background:rgba(255,255,255,.94);border:1.5px solid #fff;border-radius:22px;padding:10px 12px;box-shadow:0 6px 16px rgba(59,75,211,.08)}
 .rp-acc b{display:block;font-family:var(--kx-d);font-weight:800;font-size:17px;color:var(--kx-ink)}.rp-acc small{display:block;font-size:12px;color:var(--kx-mut);font-weight:600}
@@ -1389,7 +1392,7 @@ const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelect
 ['append','prepend','after','before'].forEach(m=>[Element.prototype,DocumentFragment.prototype].forEach(P=>{const o=P[m];if(o)P[m]=function(...x){return o.apply(this,x.filter(v=>v!=null&&v!==false));};}));
 function el(t,a={},...kids){const e=document.createElement(t);for(const k in a){const v=a[k];if(v==null||v===false)continue;if(k==='class')e.className=v;else if(k==='text')e.textContent=v;else if(k==='html')e.innerHTML=v;else if(k.startsWith('on'))e.addEventListener(k.slice(2),v);else e.setAttribute(k,v===true?'':v);}kids.flat().forEach(c=>{if(c!=null&&c!==false)e.append(c)});return e;}
 const shuffle=a=>{const b=[...a];for(let i=b.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[b[i],b[j]]=[b[j],b[i]]}return b;};
-const pk=k=>(/^(done_|g_)/.test(k)&&window.ACC&&ACC.user&&ACC.pid?'p_'+ACC.pid+'_':'')+k;
+const pk=k=>(/^(done_|g_|step_)/.test(k)&&window.ACC&&ACC.user&&ACC.pid?'p_'+ACC.pid+'_':'')+k;
 const store={get(k,d){try{const v=localStorage.getItem('darsi_'+pk(k));return v?JSON.parse(v):d}catch(e){return d}},set(k,v){try{localStorage.setItem('darsi_'+pk(k),JSON.stringify(v))}catch(e){}}};
 const reduceMotion=matchMedia('(prefers-reduced-motion: reduce)').matches;
 /* إرشاد قصير يظهر فوق العنصر حتى يتعلّم المستخدم الخطوة: يختفي بعد أن ينفّذها أو بعد 4 مرات عرض أو إذا ضغط «فهمت» */
@@ -2373,10 +2376,18 @@ if(window.AX)AX.onLeave=()=>{const x=AX.lesson;if(x&&!x.fin)AX.ev('lesson_leave'
 const FREE_SUBJECTS=['isl','civ']; // التربية الإسلامية والوطنية مجانيتان دائماً
 /* admin switches (config/access): maintenance, open everything, closed / subscribers-only / extra-free grades, subjects, lessons */
 const ACCX=()=>(window.ACC&&ACC.access)||{};
-const accIn=(list,g,sid,lid)=>{const ks=['g'+g,'g'+g+'-'+sid,'l-'+lid];return (list||[]).some(k=>ks.includes(k));};
+/* مفتاح الوحدة لإعدادات الإتاحة: u-<الصف>-<المادة>-<رقم الكتاب>-<رقم الوحدة> (نفس ما يبنيه الخادم) */
+let _UK=null;const ukeyOf=lid=>{if(!App.catalog)return null;if(!_UK){_UK={};for(const g in App.catalog.grades)for(const sj of App.catalog.grades[g])(sj.books||[{units:sj.units}]).forEach((b,bi)=>(b.units||[]).forEach((u,ui)=>u.lessons.forEach(l=>{if(l.id)_UK[l.id]='u-'+g+'-'+sj.id+'-'+bi+'-'+ui;})));}return _UK[lid]||null;};
+const accIn=(list,g,sid,lid)=>{const ks=['g'+g,'g'+g+'-'+sid,'l-'+lid,ukeyOf(lid)];return (list||[]).some(k=>ks.includes(k));};
+const registered=()=>{const A=window.ACC;return !!(A&&A.user&&(!A.user.isAnonymous||A.kid));};
+/* حالة الإتاحة من الإدارة: المغلق يغلب الجميع، ثم الإعداد الأدق (درس ← وحدة ← مادة ← صف) */
+const accState=(g,sid,lid)=>{const A=ACCX();if(accIn(A.closed,g,sid,lid))return'closed';if((A.intro||[]).includes(lid))return'free';
+  for(const k of ['l-'+lid,ukeyOf(lid),'g'+g+'-'+sid,'g'+g]){if(!k)continue;if((A.extraFree||[]).includes(k))return'free';if((A.regFree||[]).includes(k))return'reg';if((A.subsOnly||[]).includes(k))return'subs';}return null;};
+const regOnly=(g,sid,lid)=>accState(g,sid,lid)==='reg';
+const adminFree=(g,sid,lid)=>!!ACCX().openAll||accState(g,sid,lid)==='free';
 const adminBrowse=()=>!!(window.ACC&&ACC.adminBrowse);
 const isClosed=(g,sid,lid)=>!adminBrowse()&&accIn(ACCX().closed,g,sid,lid);
-const isFree=(l,k,g,sid)=>(window.ACC&&ACC.trialN&&l.tr!=null&&l.tr<ACC.trialN(g))||OPEN_ACCESS||adminBrowse()||!!ACCX().openAll||accIn(ACCX().extraFree,g,sid,l.id)||(!!l.free&&!accIn(ACCX().subsOnly,g,sid,l.id));
+const isFree=(l,k,g,sid)=>{if((window.ACC&&ACC.trialN&&l.tr!=null&&l.tr<ACC.trialN(g))||OPEN_ACCESS||adminBrowse()||ACCX().openAll)return true;const st=accState(g,sid,l.id);return st==='free'||(st==='reg'?registered():st==='subs'?false:!!l.free);};
 const canOpen=(g,sid)=>!!(window.ACC&&ACC.hasAccess&&ACC.hasAccess(String(g),sid));
 /* قفل الدرس بعد الإتقان (النسخة المجانية): من يحصل على النسبة المحددة (افتراضياً 80%) في اختبار الدرس يُغلق عليه الدرس،
    ما لم يكن عنده اشتراك مدفوع رسمي (الأيام المجانية والمنح لا تكفي). الاشتراك المدفوع يعيد فتح كل الدروس تلقائياً. */
@@ -2447,7 +2458,7 @@ const GAME=(()=>{
   function lrUp(f){const id=curLesson();if(!id)return;const L=store.get('g_lr',{});const x=L[id]||{r:0,w:0,m:0,st:0,t:0};f(x);x.t=Date.now();L[id]=x;store.set('g_lr',L);}
   /* per-day record: r, w, st stars, l lessons touched */
   function logUp(f){const id=curLesson();const G=store.get('g_log',{});const d=today();const x=G[d]||{r:0,w:0,st:0,l:[]};f(x);if(id&&!x.l.includes(id))x.l.push(id);G[d]=x;
-    const keep={};Object.keys(G).sort().slice(-95).forEach(k=>keep[k]=G[k]);store.set('g_log',keep);}
+    const keep={};Object.keys(G).sort().slice(-400).forEach(k=>keep[k]=G[k]);store.set('g_log',keep);}
   /* every finished test is kept (score per attempt), and every lesson opening, for the parent's report */
   function quiz(ctx,score,total){try{const id=ctx&&ctx.L&&ctx.L.id;if(!id||!total)return;const Q=store.get('g_qz',[]);Q.push({l:id,s:ctx.stepIndex||0,sc:score,n:total,t:Date.now()});store.set('g_qz',Q.slice(-250));sync(true);
     const pc=Math.round(score*100/total),M=MASTER(),lk=pc>=M.pct;if(lk){const G=store.get('g_lock',{});G[id]=Math.max(G[id]||0,pc);store.set('g_lock',G);}
@@ -2458,13 +2469,13 @@ const GAME=(()=>{
   function todayPts(){const L=(store.get('g_log',{})[today()])||{};const m=store.get('g_mins',{})[today()]||0;const D=store.get('g_daily',{});return{pts:(L.st||0)*10+(L.r||0)*2+Math.round(m)+(D.date===today()?(D.score||0)*5:0),st:L.st||0,r:L.r||0,m};}
   let lastSync=0;function sync(force){if(!window.ACC||!ACC.saveStats||!ACC.user||!ACC.pid)return;if(!force&&Date.now()-lastSync<60000)return;lastSync=Date.now();const x=stats();
     try{const g=boardGrade();if(g&&ACC.saveBoard)ACC.saveBoard(today(),g,todayPts());}catch(e){}
-    ACC.saveStats({stars:x.stars,level:x.level.name,streak:x.streak,lastDay:today(),week:x.week,today:x.today,mins:store.get('g_mins',{}),lr:store.get('g_lr',{}),log:store.get('g_log',{}),goal:x.goal,qz:store.get('g_qz',[]),act:store.get('g_act',[])});}
+    ACC.saveStats({stars:x.stars,level:x.level.name,streak:x.streak,lastDay:today(),week:x.week,today:x.today,mins:store.get('g_mins',{}),lr:store.get('g_lr',{}),log:store.get('g_log',{}),goal:x.goal,qz:store.get('g_qz',[]),act:store.get('g_act',[]),tm:store.get('g_tm',[])});}
   let tq=Promise.resolve();function toast(...a){tq=tq.then(()=>new Promise(r=>{toast1(...a);setTimeout(r,4100);}));}
   function toast1(icon,title,sub){const t=el('div',{class:'mj-toast',role:'status'},el('span',{class:'ti',text:icon}),el('span',{},el('b',{text:title}),sub?el('small',{text:sub}):null));document.body.append(t);requestAnimationFrame(()=>t.classList.add('on'));setTimeout(()=>{t.classList.remove('on');setTimeout(()=>t.remove(),400);},3600);}
   function onStar(){lrUp(x=>x.st++);logUp(x=>x.st++);const before=level(countStars()-1);markDay();
     const now=level(countStars());if(now.name!==before.name){setTimeout(()=>{cheer('perfect');toast(now.icon,'مستوى جديد: '+now.name,'أحسنت! رصيدك الآن '+countStars()+' ⭐');},600);sync(true);}else sync();}
   function tick(){if(document.visibilityState!=='visible'||!/^#l-/.test(location.hash))return;const m=store.get('g_mins',{}),d=today(),g=goal();const was=m[d]||0;m[d]=Math.round((was+0.5)*10)/10;
-    const keep={};Object.keys(m).sort().slice(-95).forEach(k=>keep[k]=m[k]);store.set('g_mins',keep);lrUp(x=>x.m=Math.round((x.m+0.5)*10)/10);logUp(()=>{});if(was<g&&m[d]>=g){cheer('win');toast('🎯','حققت هدفك اليوم!',g+' دقيقة من التعلّم. ممتاز');sync(true);}else sync();}
+    const keep={};Object.keys(m).sort().slice(-400).forEach(k=>keep[k]=m[k]);store.set('g_mins',keep);lrUp(x=>x.m=Math.round((x.m+0.5)*10)/10);logUp(()=>{});if(was<g&&m[d]>=g){cheer('win');toast('🎯','حققت هدفك اليوم!',g+' دقيقة من التعلّم. ممتاز');sync(true);}else sync();}
   setInterval(tick,30000);
   function card(){const x=stats();const pct=Math.min(1,x.today/Math.max(1,x.goal));const nx=x.level.next;
     const ring=el('span',{class:'ring',style:'--p:'+pct});ring.append(el('b',{text:String(x.today)}),el('small',{text:'من '+x.goal+' د'}));
@@ -2476,7 +2487,7 @@ const GAME=(()=>{
         el('button',{class:'mj-act',onclick:()=>go('board')},el('span',{class:'ai',text:'🏆'}),el('span',{},el('b',{text:'لوحة الأبطال'}),el('small',{text:'ترتيبك في صفّك اليوم'}))),
         el('button',{class:'mj-act',onclick:()=>go('mistakes')},el('span',{class:'ai',text:'🔁'}),el('span',{},el('b',{text:'مراجعة أخطائي'}),el('small',{text:nm?nm+' تمرين للمراجعة':'لا توجد أخطاء'}))));})(),
       el('div',{class:'chips'},el('a',{class:'chip',href:'#myreport',text:'📊 تقريري'}),el('span',{class:'chip'},'⭐ ',el('b',{text:String(x.stars)}),' نجمة'),el('span',{class:'chip'},'🔥 ',el('b',{text:String(x.streak)}),' يوم'),ring));}
-  const local=()=>{const x=stats();return{stars:x.stars,streak:x.streak,lastDay:today(),mins:store.get('g_mins',{}),lr:store.get('g_lr',{}),log:store.get('g_log',{}),goal:x.goal,qz:store.get('g_qz',[]),act:store.get('g_act',[])};};
+  const local=()=>{const x=stats();return{stars:x.stars,streak:x.streak,lastDay:today(),mins:store.get('g_mins',{}),lr:store.get('g_lr',{}),log:store.get('g_log',{}),goal:x.goal,qz:store.get('g_qz',[]),act:store.get('g_act',[]),tm:store.get('g_tm',[])};};
   return{todayPts,quiz,opened,setCur:c=>{cur=c;},sessWrong:()=>sess,resetSess:()=>{sess=0;},markDay,weekend,onStar,ans,card,stats,local,level,LEVELS,today,dayBefore,setGoal:g=>store.set('g_goal',g),sync,toast};
 })();
 /* ================= تقارير التقدّم (لولي الأمر وللطالب) ================= */
@@ -2489,9 +2500,17 @@ const REPORT=(()=>{
   const P=a=>'\u2066'+a+'%\u2069';
   const acc=x=>{const n=(x.r||0)+(x.w||0);return n?Math.round(100*(x.r||0)/n):null;};
   const grade=a=>a==null?'—':a>=90?'ممتاز':a>=75?'جيد جداً':a>=60?'جيد':'يحتاج متابعة';
-  const PER={day:['اليوم',1],week:['هذا الأسبوع',7],month:['هذا الشهر',30]};
+  /* الفترات: اليوم افتراضياً، مع أسبوع وشهر و3 أشهر وسنة، والانتقال إلى الفترات السابقة (period@n)، أو فترة مخصصة c:من:إلى */
+  const PER={day:['اليوم',1,'يوم'],week:['آخر 7 أيام',7,'أسبوع'],month:['آخر 30 يوماً',30,'شهر'],q3:['آخر 3 أشهر',91,'3 أشهر'],year:['آخر سنة',365,'سنة']};
+  const dnum=d=>Math.round(new Date(d+'T12:00:00').getTime()/864e5);
+  const fmtD=d=>{const x=new Date(d+'T12:00:00');return x.getDate()+'/'+(x.getMonth()+1);};
+  function span(period){period=period||'day';const T=GAME.today();let m;
+    if((m=/^c:(\d{4}-\d\d-\d\d):(\d{4}-\d\d-\d\d)$/.exec(period))){let a=m[1],b=m[2];if(a>b)[a,b]=[b,a];if(b>T)b=T;const n=Math.min(400,dnum(b)-dnum(a)+1),keys=[];for(let i=0;i<n;i++)keys.push(GAME.dayBefore(b,i));return{kind:'c',off:0,keys,label:'من '+fmtD(a)+' إلى '+fmtD(b)};}
+    const [k0,o0]=period.split('@');const k=PER[k0]?k0:'day',off=Math.max(0,+o0||0),n=PER[k][1],end=GAME.dayBefore(T,off*n),keys=[];for(let i=0;i<n;i++)keys.push(GAME.dayBefore(end,i));
+    const label=!off?PER[k][0]:k==='day'?(off===1?'أمس':new Date(end+'T12:00:00').toLocaleDateString('ar-LY-u-nu-latn',{weekday:'long',day:'numeric',month:'numeric'})):'من '+fmtD(keys[keys.length-1])+' إلى '+fmtD(end);
+    return{kind:k,off,keys,label};}
   function compute(st,period){
-    const days=PER[period][1],T=GAME.today(),keys=[];for(let i=0;i<days;i++)keys.push(GAME.dayBefore(T,i));
+    const SP=span(period),keys=SP.keys,days=keys.length;
     const mins=st.mins||{},log=st.log||{},lr=st.lr||{};
     let m=0,r=0,w=0,stars=0,active=0;const ids=new Set();
     keys.forEach(k=>{const mm=mins[k]||0,L=log[k];m+=mm;if(mm>=1||(L&&(L.r||L.w||L.st)))active++;if(L){r+=L.r||0;w+=L.w||0;stars+=L.st||0;(L.l||[]).forEach(i=>ids.add(i));}});
@@ -2508,16 +2527,20 @@ const REPORT=(()=>{
       const order=[];for(let g=g0-1;g>=1;g--)order.push(g);order.push(g0);let low=0;for(const g of order){if(S.review.length>=2)break;const subs=(App.catalog.grades[g]||[]).filter(x=>x.id===S.subj.id);for(const sb of subs)for(const u of unitsOf(sb))for(const l of u.lessons){if(S.review.length>=2)break;if(!l.ready)continue;
         const f={lesson:l,unit:u,subject:sb,grade:g};if(skillOf(f)===S.name&&!S.lessons.some(z=>z.f.lesson.id===l.id)){if(g<g0){if(low>=1)continue;low++;}S.review.push({l,g});}}}});
     let last=0;Object.values(lr).forEach(x=>{if(x.t>last)last=x.t;});
-    const from=new Date(keys[keys.length-1]+'T00:00:00').getTime();
-    const QG={};(st.qz||[]).filter(q=>q.t>=from).forEach(q=>{const k=q.l+'|'+q.s;(QG[k]||(QG[k]={l:q.l,s:q.s,att:[]})).att.push(q);});
+    const from=new Date(keys[keys.length-1]+'T00:00:00').getTime(),to=new Date(keys[0]+'T00:00:00').getTime()+864e5;
+    const QG={};(st.qz||[]).filter(q=>q.t>=from&&q.t<to).forEach(q=>{const k=q.l+'|'+q.s;(QG[k]||(QG[k]={l:q.l,s:q.s,att:[]})).att.push(q);});
     const quizzes=Object.values(QG).map(g=>{g.att.sort((a,b)=>a.t-b.t);const f=findLesson(g.l);const first=g.att[0],best=g.att.reduce((m,a)=>Math.max(m,a.sc/a.n),0);
       const firstP=Math.round(100*first.sc/first.n);const fullAt=g.att.findIndex(a=>a.sc===a.n);
       return{...g,f,firstP,best:Math.round(100*best),fullAt,last:g.att[g.att.length-1].t};}).filter(g=>g.f).sort((a,b)=>b.last-a.last);
     const qAvg=quizzes.length?Math.round(quizzes.reduce((a,q)=>a+q.firstP,0)/quizzes.length):null;
-    const act=(st.act||[]).filter(a=>a.t>=from).sort((a,b)=>b.t-a.t).map(a=>({...a,f:findLesson(a.l),x:lr[a.l]||{}})).filter(a=>a.f);
+    const act=(st.act||[]).filter(a=>a.t>=from&&a.t<to).sort((a,b)=>b.t-a.t).map(a=>({...a,f:findLesson(a.l),x:lr[a.l]||{}})).filter(a=>a.f);
     // a quiz failed at first try also flags its skill
     quizzes.forEach(q=>{if(q.firstP<60){const sk=skillOf(q.f);const key=q.f.subject.id+'|'+sk;if(!weak.some(S=>S.subj.id+'|'+S.name===key))weak.push({name:sk,subj:q.f.subject,grade:q.f.grade,a:q.firstP,w:q.f?0:0,n:0,r:0,lessons:[],review:[],fromQuiz:true});}});
-    return{quizzes,qAvg,act,label:PER[period][0],days,m:Math.round(m),r,w,a:acc({r,w}),stars,active,lessons:lessons.sort((a,b)=>(b.x.t||0)-(a.x.t||0)),weak,strong,subj:Object.values(subj).sort((a,b)=>b.m-a.m),last};
+    // جدول الضرب: جلسات التدريب في الفترة
+    const TM=(st.tm||[]).filter(x=>x.t>=from&&x.t<to).sort((a,b)=>b.t-a.t);
+    const tmTop={};(st.tm||[]).filter(x=>x.t<to).forEach(x=>{if(x.N&&x.p)tmTop[x.N]=Math.max(tmTop[x.N]||0,x.lv);});
+    const tm={list:TM,n:TM.length,secs:TM.reduce((a,x)=>a+(x.s||0),0),q:TM.reduce((a,x)=>a+(x.n||0),0),ok:TM.reduce((a,x)=>a+(x.ok||0),0),tables:[...new Set(TM.filter(x=>x.N).map(x=>x.N))].sort((a,b)=>a-b),top:tmTop,ever:(st.tm||[]).length};
+    return{tm,quizzes,qAvg,act,label:SP.label,SP,keys,days,m:Math.round(m),r,w,a:acc({r,w}),stars,active,lessons:lessons.sort((a,b)=>(b.x.t||0)-(a.x.t||0)),weak,strong,subj:Object.values(subj).sort((a,b)=>b.m-a.m),last};
   }
   const verdict=(qa,a)=>{const v=qa!=null?qa:a;if(v==null)return null;
     return v>=90?['🌟','مستواه ممتاز ما شاء الله: ينجح في أغلب الاختبارات من المحاولة الأولى.','ok']:v>=75?['👍','مستواه جيد جداً، ويحتاج مراجعة خفيفة في بعض النقاط.','ok']:v>=60?['🙂','مستواه جيد، ويستفيد من إعادة الدروس التي أخطأ فيها.','mid']:['⚠️','يحتاج متابعة ومساعدة أكثر: يخطئ كثيراً في المحاولة الأولى.','bad'];};
@@ -2531,6 +2554,7 @@ const REPORT=(()=>{
     L.push('📚 عدد الدروس: '+c.lessons.length+' — ⭐ النجوم الجديدة: '+c.stars);
     if(c.r+c.w)L.push('✅ عدد المحاولات: '+(c.r+c.w)+' — الإجابات الصحيحة: '+P(c.a)+' — التقدير: '+grade(c.a));
     const vd=verdict(c.qAvg,c.a);if(vd)L.push(vd[0]+' '+vd[1]);
+    if(c.tm&&c.tm.n)L.push('✖️ جدول الضرب: '+c.tm.n+' جلسة، '+c.tm.ok+' صحيحة من '+c.tm.q+(c.tm.tables.length?' — الجداول: '+c.tm.tables.join('، '):''));
     if(c.quizzes.length){L.push('📝 الاختبارات:');c.quizzes.slice(0,6).forEach(q=>L.push('• '+q.f.lesson.title+': '+q.att.map((a,i)=>'م'+(i+1)+' '+a.sc+'/'+a.n).join(' ← ')));}
     if(c.strong.length)L.push('💪 يتقن: '+c.strong.slice(0,4).map(S=>S.name+' ('+P(S.a)+')').join('، ')+'.');
     if(c.weak.length){L.push('⚠️ يحتاج عناية في:');c.weak.slice(0,4).forEach(S=>L.push('• '+S.name+' — '+S.subj.name+' (الدقة '+P(S.a)+'، الأخطاء: '+S.w+')'+(S.review.length?' — للتقوية: '+S.review.map(z=>'«'+z.l.title+'» الصف '+GN[z.g]).join(' و'):'')));}
@@ -2540,19 +2564,25 @@ const REPORT=(()=>{
     const st=o.stats||{},goal=o.goal||st.goal||20,c=compute(st,period),lv=GAME.level(st.stars||0);
     const wrap=el('div',{class:'sheet-wrap rep'}),sh=el('div',{class:'sheet repsheet'});wrap.append(sh);
     const gnum=+String(o.grade||'').replace(/\D/g,'')||0;const pr=kxPair(gnum||4);
-    const tabs=el('div',{class:'rp-seg noprint'});Object.entries(PER).forEach(([k,[t]])=>tabs.append(el('button',{class:k===period?'on':'',text:t,onclick:()=>onPeriod(k)})));
+    const SP=c.SP;const tabs=el('div',{class:'rp-seg noprint'});Object.entries(PER).forEach(([k,[,,t]])=>tabs.append(el('button',{class:k===SP.kind?'on':'',text:k==='day'?'يومي':k==='week'?'أسبوعي':k==='month'?'شهري':t,onclick:()=>onPeriod(k)})));
+    tabs.append(el('button',{class:SP.kind==='c'?'on':'',text:'📅 مخصصة',onclick:()=>{cust.hidden=!cust.hidden;}}));
+    const T0=GAME.today(),da=el('input',{type:'date',max:T0,value:SP.kind==='c'?keys0(SP):GAME.dayBefore(T0,6)}),db=el('input',{type:'date',max:T0,value:SP.kind==='c'?SP.keys[0]:T0});
+    function keys0(S){return S.keys[S.keys.length-1];}
+    const cust=el('div',{class:'rp-cust noprint',hidden:SP.kind!=='c'},el('span',{text:'من'}),da,el('span',{text:'إلى'}),db,el('button',{class:'btn sm',text:'عرض',onclick:()=>{if(da.value&&db.value)onPeriod('c:'+da.value+':'+db.value);}}));
+    const nav=SP.kind==='c'?null:el('div',{class:'rp-nav noprint'},el('button',{class:'btn ghost sm',text:'→ السابق',onclick:()=>onPeriod(SP.kind+'@'+(SP.off+1))}),el('b',{text:SP.label}),
+      el('button',{class:'btn ghost sm',text:'التالي ←',disabled:SP.off?null:'',onclick:()=>onPeriod(SP.off>1?SP.kind+'@'+(SP.off-1):SP.kind)}));
     const nx=lv.next;const lp=Math.round(100*(nx?((st.stars||0)-lv.min)/Math.max(1,nx[0]-lv.min):1));
     sh.append(el('div',{class:'rp-hero'},el('img',{class:'kid',src:UIMG(pr[gnum%2]),alt:''}),
       el('div',{class:'tx'},el('small',{text:'📊 تقرير '+c.label}),el('h2',{text:o.name}),el('span',{class:'gr',text:(o.grade?'الصف '+GN[o.grade]:'')}),
         el('div',{class:'lv'},el('span',{class:'li',text:lv.icon}),el('span',{},el('b',{text:lv.name}),el('small',{text:'⭐ '+(st.stars||0)+(nx?' · باقي '+(nx[0]-(st.stars||0))+' للمستوى التالي':'')})),),
-        el('div',{class:'kx-bar'},el('i',{style:'width:'+Math.max(4,Math.min(100,lp))+'%'})))),tabs);
+        el('div',{class:'kx-bar'},el('i',{style:'width:'+Math.max(4,Math.min(100,lp))+'%'})))),tabs,cust,nav);
     const ring=a=>{const v=a==null?0:a;const col=a==null?'#c9c6e0':a>=75?'#16a34a':a>=60?'#f59e0b':'#ef4444';return el('div',{class:'rp-ring',style:'--p:'+v+';--c:'+col},el('b',{text:a==null?'—':P(a)}));};
     const K=(ic,v,t,bg)=>el('div',{class:'rp-k',style:'--bg:'+bg},el('span',{class:'ic',text:ic}),el('b',{text:v}),el('small',{text:t}));
     sh.append(el('div',{class:'rp-kpis'},
       el('div',{class:'rp-acc'},ring(c.a),el('div',{},el('b',{text:'الإجابات الصحيحة'}),el('small',{text:(c.r+c.w)?c.r+' صحيحة من '+(c.r+c.w):'لا توجد إجابات بعد'}),el('span',{class:'tag '+(c.a==null?'':c.a>=75?'ok':c.a>=60?'mid':'bad'),text:grade(c.a)}))),
       K('⏱️',c.m+' د','وقت التعلّم','#e0f2fe'),K('📚',String(c.lessons.length),'دروس','#ede9fe'),K('⭐',String(c.stars),'نجوم جديدة','#fef3c7'),
       c.days>1?K('🔥',c.active+'/'+c.days,'أيام نشطة','#ffe4e6'):K('🎯',c.m>=goal?'✓':(goal-c.m)+' د',c.m>=goal?'حقّق الهدف':'باقي للهدف','#dcfce7')));
-    {const N=period==='month'?30:7,T=GAME.today(),mins=st.mins||{},ds=[];for(let i=N-1;i>=0;i--)ds.push(GAME.dayBefore(T,i));const mx=Math.max(goal,...ds.map(d=>mins[d]||0));
+    if(c.days>1&&c.days<=31){const N=c.days,T=c.keys[0],mins=st.mins||{},ds=[...c.keys].reverse();const mx=Math.max(goal,...ds.map(d=>mins[d]||0));
      const DS=['ح','ن','ث','ر','خ','ج','س'];
      sh.append(el('section',{class:'rp-chart'},el('div',{class:'hd'},el('b',{text:'📈 دقائق التعلّم يومياً'}),el('small',{text:'الهدف '+goal+' د'})),
        el('div',{class:'bars'+(N>7?' many':''),style:'--g:'+Math.round(100*goal/mx)+'%'},...ds.map(d=>{const v=Math.round(mins[d]||0);const dt=new Date(d+'T12:00:00');
@@ -2560,6 +2590,14 @@ const REPORT=(()=>{
     const vd=verdict(c.qAvg,c.a);if(vd)sh.append(el('div',{class:'rverdict '+vd[2]},el('span',{class:'rv-ic',text:vd[0]}),el('span',{},el('b',{text:'الخلاصة'}),el('span',{text:' '+vd[1]+(c.qAvg!=null?' (متوسط المحاولة الأولى في الاختبارات '+P(c.qAvg)+')':'')}))));
     if(c.last)sh.append(el('p',{class:'note',text:'آخر نشاط: '+new Date(c.last).toLocaleString('ar-LY-u-nu-latn',{weekday:'long',hour:'numeric',minute:'2-digit'})}));
     const sec=(t,...k)=>{const S=el('section',{class:'rsec'},el('h3',{text:t}));const items=k.flat();if(items.length>6){items.slice(5).forEach(x=>x&&x.classList&&x.classList.add('rhide'));const b=el('button',{class:'rmore noprint',text:'عرض الكل ('+items.length+')',onclick:()=>{S.querySelectorAll('.rhide').forEach(x=>x.classList.remove('rhide'));b.remove();}});S.append(...items,b);}else S.append(...items);return S;};
+    if(c.tm.n){const T=c.tm,ta=T.q?Math.round(100*T.ok/T.q):null,LVN=['','بالترتيب','عشوائي','الرقم الناقص','اكتب الجواب','سباق الدقيقة'];
+      sh.append(el('section',{class:'rsec'},el('h3',{text:'✖️ جدول الضرب'}),
+        el('div',{class:'ritem'},el('b',{text:T.n+' جلسة تدريب · '+Math.max(1,Math.round(T.secs/60))+' دقيقة · '+T.q+' سؤالاً'}),el('span',{class:'note',text:' — الإجابات الصحيحة '+T.ok+' ('+(ta==null?'—':P(ta))+')'})),
+        el('div',{class:'ritem'},el('b',{text:'الجداول التي تدرّب عليها: '}),el('span',{text:T.tables.length?T.tables.join('، '):'تحدّي كل الجداول / مراجعة الأخطاء'})),
+        Object.keys(T.top).length?el('div',{class:'ritem ok'},el('b',{text:'المستوى الذي وصل إليه: '}),el('span',{text:Object.entries(T.top).sort((a,b)=>a[0]-b[0]).map(([n,l])=>'جدول '+n+': '+l+'/5').join(' · ')})):null,
+        ...T.list.slice(0,8).map(x=>el('div',{class:'ritem '+(x.p?'ok':'bad')},el('b',{text:(x.N?'جدول '+x.N+' — المستوى '+x.lv+' ('+LVN[x.lv]+')':x.m==='all'?'تحدّي كل الجداول':'مراجعة الأخطاء')}),
+          el('span',{class:'note',text:' — '+x.ok+' من '+x.n+(x.n?' ('+P(Math.round(100*x.ok/x.n))+')':'')+' · '+(x.p?'نجح ✅':'لم ينجح بعد')+' · '+tfmt(x.t)+' · '+Math.max(1,Math.round((x.s||0)/60))+' د'})))));}
+    else if(c.tm.ever===0&&c.days>=7)sh.append(el('p',{class:'note',text:'✖️ لم يستخدم جدول الضرب بعد.'}));
     if(c.weak.length)sh.append(sec('⚠️ يحتاج عناية',...c.weak.map(S=>el('div',{class:'ritem bad'},el('b',{text:S.name}),el('span',{class:'note',text:' — '+S.subj.name+(S.fromQuiz?' · المحاولة الأولى في الاختبار '+P(S.a):' · الدقة '+P(S.a)+' · الأخطاء '+S.w+' من '+S.n)}),
       S.review.length?el('div',{class:'note'},'للتقوية: ',...S.review.map((z,i)=>el('a',{href:'#l-'+z.l.id,text:(i?' و ':'')+'«'+z.l.title+'» (الصف '+GN[z.g]+')'}))):null))));
     if(c.quizzes.length)sh.append(sec('📝 نتائج الاختبارات ومحاولاته',...c.quizzes.slice(0,12).map(q=>{const tag=q.fullAt===0?['🌟 علامة كاملة من أول محاولة','ok']:q.fullAt>0?['✓ أتقنه بعد '+(q.fullAt+1)+' محاولات','mid']:q.best>=70?['✓ نجح، ولم يصل للعلامة الكاملة','mid']:['⚠️ لم يتقنه بعد','bad'];
@@ -2593,7 +2631,7 @@ function lessonStudy(lid,st){st=st||GAME.local();const x=(st.lr||{})[lid];const 
 function studyLine(S){if(!S)return null;const d=new Date(S.t);const dn=['الأحد','الاثنين','الثلاثاء','الأربعاء','الخميس','الجمعة','السبت'][d.getDay()]+' '+d.getDate()+'/'+(d.getMonth()+1);
   const parts=['✓ درسه '+dn];if(S.st)parts.push('⭐'+S.st);if(S.acc!=null)parts.push('صحيح \u2066'+S.acc+'%\u2069');
   if(S.last)parts.push('الاختبار '+'\u2066'+S.last.sc+'/'+S.last.n+'\u2069'+(S.q.length>1?' ('+S.q.length+' محاولات)':''));return parts.join(' · ');}
-function renderMyReport(period='week'){root.innerHTML='';const n=window.ACC&&ACC.user&&ACC.profiles?(ACC.profiles.find(p=>p.id===ACC.pid)||{}):{};
+function renderMyReport(period='day'){root.innerHTML='';const n=window.ACC&&ACC.user&&ACC.profiles?(ACC.profiles.find(p=>p.id===ACC.pid)||{}):{};
   root.append(bar('تقريري','تقدّمك ونقاط قوتك وما يحتاج مراجعة','home'),REPORT.view({name:n.name||'الطالب',grade:n.grade,stats:GAME.local(),goal:GAME.stats().goal},period,k=>renderMyReport(k)));}
 
 /* ================= مراجعة أخطائي ================= */
@@ -2933,15 +2971,16 @@ function renderSubject(n,sid){
   unitsOf(s).map(u=>only?{...u,lessons:u.lessons.filter(l=>only.includes(l.id))}:u).filter(u=>!only||u.lessons.length).forEach(u=>{if(s.books&&s.books.length>1&&u.book!==lastBook){lastBook=u.book;sec.append(el('div',{class:'bookh'},el('b',{text:'📚 '+u.book.name}),u.book.note?el('span',{class:'note',text:u.book.note}):null));}
     const list=el('div',{class:'lessons'});
     if(!u.lessons.length)list.append(el('div',{class:'empty',text:'دروس هذه الوحدة قيد الإعداد.'}));
-    u.lessons.forEach((l,k)=>{l._study=null;const free=isFree(l,k,n,sid),locked=!free&&!App.sub&&!canOpen(n,sid);let status,cls='lcard';const qn=sid==='isl'?suraNum(l.title):0;
+    u.lessons.forEach((l,k)=>{l._study=null;const free=isFree(l,k,n,sid),regLock=!free&&regOnly(n,sid,l.id)&&!registered(),locked=!free&&!regLock&&!App.sub&&!canOpen(n,sid);let status,cls='lcard';const qn=sid==='isl'?suraNum(l.title):0;
       if(!l.ready&&qn){list.append(el('button',{class:cls+' qrow',onclick:()=>go('qr-'+n+'-'+sid+'-'+qn)},el('span',{class:'ln',text:String(l.n)}),el('span',{class:'lt'},el('b',{text:l.title}),el('span',{text:'استمع برواية قالون عن نافع'}),l.ref?el('span',{class:'lref',text:'📖 '+l.ref.replace(/–/g,'\u2060–\u2060')}):null),el('span',{class:'ls'},'🎧 استمع')));return;}
       if(l.ready&&isClosed(n,sid,l.id)){list.append(el('button',{class:cls+' soon',disabled:true},el('span',{class:'ln',text:String(l.n)}),el('span',{class:'lt'},el('b',{text:l.title}),el('span',{text:'🔧 مغلق مؤقتاً للمراجعة'})),el('span',{class:'ls'},'🔧')));return;}
       if(!l.ready){status='قريباً';cls+=' soon';}
+      else if(regLock){status='🔑 سجّل مجاناً';cls+=' locked';}
       else if(locked){status='⭐ ترقية';cls+=' locked';}
       else if(mastered(l.id)){status='🏆 '+lessonBest(l.id)+'%';cls+=' studied';}
       else if(aheadOf(l.id)&&!store.get('done_'+l.id,[]).length){status='🔒 بالترتيب';cls+=' ahead';}
       else{const d=store.get('done_'+l.id,[]).length;const S=lessonStudy(l.id);if(S||d){cls+=' studied';l._study=S;}status=d?el('span',{class:'prog',text:'★ '+d}):S?'راجِع':'ابدأ';}
-      list.append(el('button',{class:cls,disabled:!l.ready,onclick:()=>{if(locked){App.after='l-'+l.id;go('subscribe');}else go('l-'+l.id);}},
+      list.append(el('button',{class:cls,disabled:!l.ready,onclick:()=>{if(regLock){App.after='l-'+l.id;go('login');}else if(locked){App.after='l-'+l.id;go('subscribe');}else go('l-'+l.id);}},
         el('span',{class:'ln',text:String(l.n)}),el('span',{class:'lt'},el('b',{lang:sid==='en'?'en':null,text:l.title}),l.titleAr?el('span',{text:l.titleAr}):null,l._study?el('span',{class:'lstudy',text:studyLine(l._study)}):null,l.ref?el('span',{class:'lref',text:'📖 '+l.ref.replace(/–/g,'\u2060–\u2060')}):null),
         el('span',{class:'ls'},free&&l.ready&&!OPEN_ACCESS?el('span',{class:'tag',text:'مجاني',style:'margin-inline-end:6px'}):null,status)));
       if(l.ready&&qn)list.append(el('button',{class:'lcard qrow',style:'padding:6px 14px',onclick:()=>go('qr-'+n+'-'+sid+'-'+qn)},el('span',{class:'ln',text:'🎧'}),el('span',{class:'lt'},el('b',{text:'استمع إلى '+l.title.split(/[(—]/)[0].trim()+' برواية قالون'})),el('span',{class:'ls'},'استمع')));});
@@ -2991,6 +3030,7 @@ function renderMastered(info,id){const A=window.ACC,kid=A&&(A.kid||(A.pid&&A.pid
 async function renderLesson(id){
   const info=findLesson(id);if(!info||!info.lesson.ready){go('home');return;}
   if(!info.free&&!App.sub&&(!window.ACC||!ACC.ready)){root.innerHTML='';root.append(el('p',{class:'note',style:'padding:30px 0',text:'جارٍ التحقق من اشتراكك…'}));return;} // the account module re-routes when ready
+  if(!info.free&&regOnly(info.grade,info.subject.id,id)&&!registered()){App.after='l-'+id;go('login');return;}
   if(!info.free&&!App.sub){App.after='l-'+id;go('subscribe');return;}
   {const pv=aheadOf(id);if(pv){root.innerHTML='';root.append(bar(info.lesson.title,info.subject.name,'g'+info.grade+'-'+info.subject.id),
     el('div',{class:'lx-end',style:kxVars(info.grade)},el('div',{style:'font-size:3.2rem',text:'🔒'}),el('h2',{text:'هذا درس متقدم'}),
@@ -3324,7 +3364,7 @@ function route(){setTimeout(adminBanner,0);TTS.phonics=false;TTS.phx=null;
   else renderHome();
 }
 window.addEventListener('hashchange',()=>{if(document.startViewTransition&&!matchMedia('(prefers-reduced-motion: reduce)').matches){const t=document.startViewTransition(()=>route());[t.ready,t.finished,t.updateCallbackDone].forEach(x=>x&&x.catch(()=>{}));}else{route();root.classList.remove('enter');void root.offsetWidth;root.classList.add('enter');}});
-window.DARSI={tip,tipDone,ttsOn,ttsGet,sayAr,speakAr,FX,tick,gradeName:id=>(gradeInfo(id)||{}).name||'',LOGO,TT,lessonStudy,studyLine,VOX,arUnits,PRAISE,el,go,store,App,route,cheer,bar,root,$,$$,GAME,REPORT,findLesson:id=>App.catalog?findLesson(id):null};
+window.DARSI={adminFree,regOnly,tip,tipDone,ttsOn,ttsGet,sayAr,speakAr,FX,tick,gradeName:id=>(gradeInfo(id)||{}).name||'',LOGO,TT,lessonStudy,studyLine,VOX,arUnits,PRAISE,el,go,store,App,route,cheer,bar,root,$,$$,GAME,REPORT,findLesson:id=>App.catalog?findLesson(id):null};
 const SPLASH_T0=performance.now();function hideSplash(){const sp=document.getElementById('splash');if(!sp)return;const wait=sessionStorage.getItem('mj_splash')?0:Math.max(0,1700-(performance.now()-SPLASH_T0));try{sessionStorage.setItem('mj_splash','1')}catch(e){}setTimeout(()=>{sp.classList.add('go');setTimeout(()=>sp.remove(),600);},wait);}
 // عند فتح التطبيق: نضع الرئيسية أولاً في السجل ثم نعود إلى آخر مكان توقف فيه الطالب
 (function bootNav(){let fresh=false;try{fresh=!sessionStorage.getItem('mj_open');sessionStorage.setItem('mj_open','1')}catch(e){}

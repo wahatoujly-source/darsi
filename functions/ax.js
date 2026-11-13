@@ -149,6 +149,8 @@ module.exports = function makeAx(ctx) {
       prev = computeReport({...data, events: pe.docs.map((x) => x.data())}, pf, from, {light: true});
     }
     const r = computeReport(data, from, to, {});
+    if (d.full) { try { const [k, f] = await Promise.all([db.collectionGroup("kidDevices").count().get(), db.collectionGroup("famDevices").count().get()]);
+      r.extra.devices = {kid: k.data().count, fam: f.data().count}; } catch (e) { r.extra.devices = null; } }
     r.prev = prev && r.firstTrack && r.firstTrack <= from - (to - from) ? prev.overview : null; // لا مقارنة بفترة لم يكن التتبع يعمل فيها
     return r;
   });
@@ -397,7 +399,28 @@ function computeReport(data, from, to, opt = {}) {
       .sort((a, b) => b.persons - a.persons), rows: scRows.sort((a, b) => b.t - a.t).slice(0, 600),
     lockedPersons: new Set(evs.filter((e) => e.n === "lesson_score" && e.p && e.p.lock).map((e) => pkey(e.vid, e.uid))).size,
     lockViews: S("mastered_view"), lockCta: evs.filter((e) => e.n === "cta_click" && e.p && e.p.from === "mastered").length};
-  return {scores, from, to, gen: Date.now(), firstTrack: firstTrack === Infinity ? 0 : firstTrack, overview, daily: dailyRows, funnel, pages: top(pages, 20), pagesX: top(pagesX, 40),
+  // ---- إضافات التقرير الشامل ----
+  const roles = {}, rolesNew = {}; users.filter((u) => !isStaff(u.id)).forEach((u) => { const r = u.role || "—"; roles[r] = (roles[r] || 0) + 1; if (inR(u.created)) rolesNew[r] = (rolesNew[r] || 0) + 1; });
+  const authNoProfile = [...union("reg_auth")].filter((k) => !regDoneSet.has(k) && !(k.startsWith("u:") && U[k.slice(2)])).length;
+  const nowMs = Date.now(); const pSubs = subs.filter((x) => !isStaff(x.uid));
+  const subsInfo = {active: pSubs.filter((x) => x.active && x.end > nowMs && x.kind !== "trial").length, activeTrial: pSubs.filter((x) => x.active && x.end > nowMs && x.kind === "trial").length,
+    newPaid: paidR.length, started: pSubs.filter((x) => inR(x.start)).length, expired: pSubs.filter((x) => x.end >= from && x.end < Math.min(to, nowMs) && !pSubs.some((y) => y.uid === x.uid && y.end > x.end)).length};
+  const LU = {};
+  const LZ = (l, e) => (LU[l] = LU[l] || {l, g: (e.p && e.p.g) || "", s: (e.p && e.p.s) || "", opens: 0, dones: 0, persons: new Set(), leaves: 0, scN: 0, scSum: 0, low: 0});
+  evs.forEach((e) => { if (!e.p || !e.p.l || !/^lesson_/.test(e.n)) return; const a = LZ(e.p.l, e); const k = pkey(e.vid, e.uid);
+    if (e.n === "lesson_open") { a.opens++; a.persons.add(k); } else if (e.n === "lesson_done") a.dones++; else if (e.n === "lesson_leave") a.leaves++;
+    else if (e.n === "lesson_score") { a.scN++; a.scSum += Number(e.p.sc) || 0; if ((Number(e.p.sc) || 0) < 60) a.low++; } });
+  const lessonsUse = Object.values(LU).map((a) => ({l: a.l, g: a.g, s: a.s, opens: a.opens, persons: a.persons.size, dones: a.dones, leaves: a.leaves, done: a.opens ? Math.round(a.dones * 100 / a.opens) : 0, quiz: a.scN, avg: a.scN ? Math.round(a.scSum / a.scN) : null, low: a.low})).sort((a, b) => b.persons - a.persons || b.opens - a.opens);
+  const subjUse = {}; lessonsUse.forEach((x) => { const k = x.g + "|" + x.s; const a = subjUse[k] = subjUse[k] || {g: x.g, s: x.s, opens: 0, dones: 0, persons: 0, quiz: 0}; a.opens += x.opens; a.dones += x.dones; a.persons += x.persons; a.quiz += x.quiz; });
+  const learnSessions = new Set(evs.filter((e) => e.n === "lesson_open").map((e) => e.sid)).size;
+  const leaveAt = {}; evs.filter((e) => e.n === "lesson_leave" && e.p).forEach((e) => { const k = e.p.n ? Math.min(100, Math.round(((Number(e.p.at) || 1) / e.p.n) * 4) * 25) + "%" : "?"; leaveAt[k] = (leaveAt[k] || 0) + 1; });
+  const payErrors = {}; evs.filter((e) => e.n === "pay_error").forEach((e) => { const k = String((e.p && (e.p.msg || e.p.code)) || "?"); payErrors[k] = (payErrors[k] || 0) + 1; });
+  const stallRegSteps = {}; stalledReg.forEach((x) => { stallRegSteps[x.stepT] = (stallRegSteps[x.stepT] || 0) + 1; });
+  const stallSubSteps = {}; stalledSub.forEach((x) => { stallSubSteps[x.stepT] = (stallSubSteps[x.stepT] || 0) + 1; });
+  const extra = {roles, rolesNew, authNoProfile, subsInfo, lessonsUse: lessonsUse.slice(0, 400), subjUse: Object.values(subjUse).sort((a, b) => b.persons - a.persons), learnSessions,
+    lessonsDone: cnt.lesson_done || 0, quizzes: cnt.lesson_score || 0, quizAvg: (() => { const a = evs.filter((e) => e.n === "lesson_score"); return a.length ? Math.round(a.reduce((x, e) => x + (Number(e.p.sc) || 0), 0) / a.length) : null; })(),
+    tmUse: cnt.page_view ? evs.filter((e) => e.n === "page_view" && e.p && /^times/.test(e.p.r)).length : 0, leaveAt, payErrors, stallRegSteps, stallSubSteps, ctaClicks: cnt.cta_click || 0, orderSkips: cnt.order_skip || 0};
+  return {extra, scores, from, to, gen: Date.now(), firstTrack: firstTrack === Infinity ? 0 : firstTrack, overview, daily: dailyRows, funnel, pages: top(pages, 20), pagesX: top(pagesX, 40),
     sources, campaigns, regSteps, regMethods: Object.fromEntries(Object.entries(methods).map(([k, s]) => [k, s.size])), regErrors: top(regErrors, 30),
     people: peopleRows, peopleTotal: people.length, stalledReg, stalledSub, histPending, plans, entry: top(entry, 20), free: freeRep, retention, events: cnt};
 }
