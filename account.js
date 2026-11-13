@@ -100,17 +100,25 @@ const ERR = {
   'auth/code-expired': 'انتهت صلاحية الرمز. اطلب رمزاً جديداً.',
   'auth/too-many-requests': 'محاولات كثيرة. انتظر قليلاً ثم حاول مرة أخرى.',
   'auth/invalid-email': 'البريد الإلكتروني غير صحيح.',
-  'auth/invalid-credential': 'البريد أو كلمة المرور غير صحيحة.',
+  'auth/invalid-credential': 'الرقم أو البريد أو كلمة المرور غير صحيحة.',
   'auth/wrong-password': 'كلمة المرور غير صحيحة.',
-  'auth/user-not-found': 'لا يوجد حساب بهذا البريد. أنشئ حساباً جديداً.',
+  'auth/user-not-found': 'لا يوجد حساب بهذه البيانات. أنشئ حساباً جديداً.',
   'auth/email-already-in-use': 'هذا البريد مسجّل من قبل. ادخل بكلمة المرور.',
   'auth/weak-password': 'كلمة المرور قصيرة. اكتب 6 أحرف أو أكثر.',
   'auth/network-request-failed': 'لا يوجد اتصال بالإنترنت.',
   'auth/popup-closed-by-user': 'أُغلقت نافذة جوجل قبل إتمام الدخول.',
   'auth/unauthorized-domain': 'هذا الموقع غير مسموح له بالدخول بعد (Authorized domains).',
-  'auth/operation-not-allowed': 'طريقة الدخول هذه غير مفعّلة بعد.'
+  'auth/operation-not-allowed': 'طريقة الدخول هذه غير مفعّلة بعد.',
+  'auth/internal-error': 'تعذّر الاتصال بالخادم لحظياً. حاول مرة أخرى.',
+  'auth/web-storage-unsupported': 'هذا المتصفح يمنع حفظ الدخول. افتح الموقع في Chrome أو Safari.',
+  'auth/user-disabled': 'هذا الحساب موقوف. تواصل معنا.',
+  'auth/password-does-not-meet-requirements': 'كلمة المرور لا تستوفي الشروط. اكتب 6 أحرف أو أكثر.',
+  'auth/missing-password': 'اكتب كلمة المرور.',
+  'auth/admin-restricted-operation': 'طريقة الدخول هذه غير مفعّلة بعد.',
+  'auth/quota-exceeded': 'ضغط كبير على الخدمة الآن. حاول بعد دقائق.',
+  'auth/timeout': 'انتهت مهلة الاتصال. حاول مرة أخرى.'
 };
-const errMsg = e => ERR[e && e.code] || 'حدث خطأ غير متوقع. حاول مرة أخرى.';
+const errMsg = e => ERR[e && e.code] || ('تعذّر إكمال العملية. حاول مرة أخرى' + (e && e.code ? ' (رمز: ' + String(e.code).replace('auth/', '') + ')' : '') + '.');
 const fbk = (box, cls, text) => { box.innerHTML = ''; box.append(el('div', { class: 'feedback ' + cls, text })); };
 
 /* ---------- Libyan phone numbers: 091/092/093/094/095 ---------- */
@@ -281,7 +289,13 @@ function authForm(kind) {
     if (isPhone) { const n = libyanPhone(login); if (!n) { AXe('reg_error', { m: M, mode, code: 'bad_phone' }); fbk(msg, 'bad', 'اكتب رقماً ليبياً يبدأ بـ 091 أو 092 أو 093 أو 094 أو 095.'); return; } login = phoneEmail(n); }
     go_.disabled = true; go_.classList.add('busy');
     try { create ? await createUserWithEmailAndPassword(auth, login, pw.value) : await signInWithEmailAndPassword(auth, login, pw.value); }
-    catch (e) { AXe('reg_error', { m: M, mode, code: String(e.code || 'x').slice(0, 60) }); fbk(msg, 'bad', e.code === 'auth/email-already-in-use' ? (isPhone ? 'هذا الرقم مسجّل من قبل. اختر «لدي حساب».' : 'هذا البريد مسجّل من قبل. اختر «لدي حساب».') : e.code === 'auth/invalid-credential' ? (isPhone ? 'الرقم أو كلمة المرور غير صحيحة.' : 'البريد أو كلمة المرور غير صحيحة.') : errMsg(e)); }
+    catch (e0) { let e = e0;
+      // الحساب أُنشئ رغم الخطأ (انقطاع لحظة الرد): نكمل مباشرة
+      if (auth.currentUser && !auth.currentUser.isAnonymous) { AXe('reg_error', { m: M, mode, code: 'recovered:' + String(e0.code || 'x').slice(0, 40) }); go_.disabled = false; go_.classList.remove('busy'); return; }
+      // «مسجّل من قبل» عند إنشاء حساب: نجرّب الدخول بنفس كلمة المرور تلقائياً
+      if (create && e0.code === 'auth/email-already-in-use') { try { await signInWithEmailAndPassword(auth, login, pw.value); AXe('reg_auth', { m: M, via: 'existing' }); go_.disabled = false; go_.classList.remove('busy'); return; } catch (e1) { e = e0; } }
+      // خطأ شبكة لحظي: محاولة ثانية واحدة
+      if (['auth/network-request-failed', 'auth/internal-error'].includes(e0.code)) { try { await new Promise(r => setTimeout(r, 1200)); create ? await createUserWithEmailAndPassword(auth, login, pw.value) : await signInWithEmailAndPassword(auth, login, pw.value); go_.disabled = false; go_.classList.remove('busy'); return; } catch (e2) { e = e2; if (auth.currentUser && !auth.currentUser.isAnonymous) { go_.disabled = false; go_.classList.remove('busy'); return; } } } AXe('reg_error', { m: M, mode, code: String(e.code || 'x').slice(0, 60) }); fbk(msg, 'bad', e.code === 'auth/email-already-in-use' ? (isPhone ? 'هذا الرقم مسجّل من قبل. اختر «لدي حساب».' : 'هذا البريد مسجّل من قبل. اختر «لدي حساب».') : e.code === 'auth/invalid-credential' ? (isPhone ? 'الرقم أو كلمة المرور غير صحيحة.' : 'البريد أو كلمة المرور غير صحيحة.') : errMsg(e)); }
     go_.disabled = false; go_.classList.remove('busy'); };
   draw();
   root.append(el('section', { class: 'au' }, el('button', { class: 'au-back', text: '→', 'aria-label': 'رجوع', onclick: () => go('login') }),
@@ -688,6 +702,19 @@ function renderAccount() {
       el('div', {}, el('b', { text: String(kids.length) }), el('small', { text: 'أبناء' })),
       el('div', {}, el('b', { text: String(tot) }), el('small', { text: 'نجمة جمعوها' })),
       el('div', {}, el('b', { text: subOn ? '⭐' : '—' }), el('small', { text: subOn ? 'مشترك' : 'مجاني' }))) : null));
+  /* ---- نوع الحساب: يمكن تصحيحه ---- */
+  if (!ACC.co) { const box = el('div', { class: 'kx-card' }); const m = el('div');
+    const drawR = () => { box.innerHTML = ''; box.append(el('div', { class: 'hd' }, el('b', { text: '👤 نوع الحساب: ' + rt }), el('button', { class: 'lnk', text: 'تغيير', onclick: () => {
+      box.innerHTML = ''; let g = null; const gs = el('div', { class: 'gpick', hidden: true });
+      GRADES.forEach(([k, n]) => gs.append(el('button', { class: 'btn ghost sm', text: n, onclick: e => { g = k; [...gs.children].forEach(b => b.classList.remove('on')); e.currentTarget.classList.add('on'); } })));
+      const opts = el('div', { class: 'plans' }); let pick = null;
+      Object.entries(ROLES).filter(([k]) => k !== P.role).forEach(([k, [ic2, t2, d2]]) => opts.append(el('button', { class: 'plan', onclick: e => { pick = k; [...opts.children].forEach(b => b.setAttribute('aria-pressed', 'false')); e.currentTarget.setAttribute('aria-pressed', 'true'); gs.hidden = k !== 'student'; } }, el('b', { text: ic2 + ' ' + t2 }), el('span', { class: 'note', text: d2 }))));
+      box.append(el('b', { text: 'غيّر نوع حسابك إلى:' }), opts, gs, el('div', { class: 'row', style: 'gap:8px' },
+        el('button', { class: 'btn sun', text: 'حفظ', onclick: async ev2 => { if (!pick) { fbk(m, 'bad', 'اختر النوع.'); return; } if (pick === 'student' && !g) { fbk(m, 'bad', 'اختر صفك.'); return; } ev2.currentTarget.disabled = true;
+          try { await call('setMyRole', { role: pick, grade: g }); P.role = pick; AXe('role_change', { role: pick }); fbk(m, 'ok', '✓ تم التغيير.'); setTimeout(() => location.reload(), 700); } catch (x) { fbk(m, 'bad', fnErr(x)); ev2.currentTarget.disabled = false; } } }),
+        el('button', { class: 'btn ghost', text: 'إلغاء', onclick: drawR })), m); } })),
+      el('small', { class: 'note', text: P.role === 'student' ? 'إذا كنت ولي أمر وتريد متابعة أبنائك والاشتراك لهم، غيّر النوع إلى «ولي أمر».' : P.role === 'parent' ? 'إذا كنت طالباً تدرس لنفسك، غيّر النوع إلى «طالب».' : '' })); };
+    drawR(); s.append(box); }
   /* ---- kids strip ---- */
   if (isAdult()) s.append(el('div', { class: 'kx-card' }, el('div', { class: 'hd' }, el('b', { text: '👨‍👩‍👧 أبنائي' }), el('button', { class: 'lnk', text: 'إدارة ←', onclick: () => go('kids') })),
     el('div', { class: 'kx-kids' }, ...kids.map(k => { const st = k.stats || {}; return el('button', { class: 'kx-kid1', onclick: () => go('kid-' + k.id) },
@@ -902,7 +929,8 @@ function renderSubscribe() {
     .map(([im, t, sm]) => el('div', {}, el('img', { src: U(im), alt: '', loading: 'lazy' }), el('b', { text: t }), el('small', { text: sm })))));
   if (logged && ACC.profile) { const mine = ACC.subs.filter(subApplies); if (mine.length) s.append(el('div', { class: 'feedback ok', text: '✓ عندك اشتراك فعّال: ' + mine.map(x => subName(x) + ' (حتى ' + fmtDate(x.end.toMillis()) + ')').join('، ') })); }
   const pend = store.get('pend_pay', null);
-  let who = ACC.profile ? ACC.profile.role : (pend && pend.who) || store.get('sub_who', 'parent');
+  const obR = (store.get('ob', null) || {}).role;
+  let who = ACC.profile ? ACC.profile.role : (pend && pend.who) || (obR === 'student' ? 'student' : obR === 'parent' || obR === 'teacher' ? 'parent' : store.get('sub_who', 'parent'));
   const box = el('div', { class: 'stack' }), msg = el('div');
   let plans = null, pl = null, grade = (pend && pend.grade) || null, subject = (pend && pend.subject) || null;
   const kidsN = (ACC.profiles || []).filter(p => p.id !== 'me').length;
@@ -911,6 +939,7 @@ function renderSubscribe() {
   const drawMx = () => {
     if (!mst.n) { const pm = pend && /^mx(\d+)_(\w+)$/.exec(pend.plan || ''); if (pm) { mst.n = +pm[1]; mst.col = pm[2]; } else mst.n = who === 'student' ? 1 : Math.max(1, kidsN || ((store.get('ob', null) || {}).n | 0) || 1); }
     if (who === 'student') mst.n = 1;
+    if (ACC.profile && ACC.profile.role === 'student') box.append(el('div', { class: 'feedback info' }, 'حسابك مسجّل كـ«طالب»، فالاشتراك لك وحدك. أنت ولي أمر وتريد الاشتراك لأبنائك؟ ', el('a', { href: '#account', text: 'غيّر نوع الحساب ←' })));
     if (!drawMx._seen || drawMx._seen !== who) { drawMx._seen = who; AXe('plans_view', { plans: ['matrix'], who, logged: logged ? 1 : 0 }); }
     box.append(matrixView(M, mst, (x, picked) => { if (picked) { const p = mxPick(M, mst); p && AXe('plan_select', { plan: p.id, price: p.price, who }); } store.set('pend_pay', null); draw(); }, { fixedN: who === 'student', kidsTitle: kidsN ? 'عدد الطلاب (عندك ' + kidsN + ' في الحساب)' : 'كم طالباً تريد أن تشترك له؟' }));
     pl = mxPick(M, mst); if (!pl) return;
