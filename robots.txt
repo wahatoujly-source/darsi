@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /voices.html
+
+Sitemap: https://mujtahid.ly/sitemap.xml

@@ -83,7 +83,7 @@ export default function axAdmin({ call, fnErr, ACC, page, fbk, D, el, go, store 
   // ---------- الهيكل ----------
   const per = el('div', { class: 'ax-per' }), tabs = el('div', { class: 'ax-tabs' }), body = el('div', { class: 'stack' }), msg = el('div');
   const TABS = [['full', '📑 التقرير الشامل للمنصة'], ['ov', '📊 نظرة عامة'], ['fun', '🔻 مسار التحويل'], ['ppl', '👥 الزوار والمستخدمون'], ['reg', '📝 التسجيلات المتوقفة'], ['sub', '💳 الاشتراكات المتوقفة'],
-    ['free', '📖 المواد المجانية'], ['sc', '🏆 نتائج الدروس والإتقان'], ['ret', '🔁 العودة'], ['src', '📣 المصادر والحملات'], ['al', '🔔 التنبيهات']];
+    ['free', '📖 المواد المجانية'], ['sc', '🏆 نتائج الدروس والإتقان'], ['ret', '🔁 العودة'], ['src', '📣 المصادر والحملات'], ['br', '📱 المتصفحات وفيسبوك'], ['ob', '🧭 رحلة البداية'], ['lq', '🎓 جودة الدروس'], ['al', '🔔 التنبيهات']];
   let unread = 0;
   const drawTabs = () => { tabs.innerHTML = ''; TABS.forEach(([k, t]) => tabs.append(el('button', { class: tab === k ? 'on' : '', onclick: () => { tab = k; store.set('ax_tab', k); drawTabs(); render(); } }, t, k === 'al' && unread ? el('span', { class: 'bd', text: String(unread) }) : null))); };
   const drawPer = () => { per.innerHTML = '';
@@ -114,9 +114,51 @@ export default function axAdmin({ call, fnErr, ACC, page, fbk, D, el, go, store 
     const notice = el('div', { class: 'ax-note' }, R.firstTrack ? 'بدأ تسجيل سلوك الزوار في ' + fmtDT(R.firstTrack) + '. ما قبل ذلك غير متاح، باستثناء الحسابات والطلبات والمدفوعات (من قاعدة البيانات مباشرة). حسابات الإدارة وأجهزة الأبناء المربوطة مستبعدة من الأرقام.'
       : 'لم يصل أي حدث تتبع بعد. بعد نشر التحديث ستبدأ الأرقام بالظهور تلقائياً. الحسابات والطلبات والمدفوعات أدناه من قاعدة البيانات مباشرة.');
     body.append(notice);
-    ({ full: renderFull, sc: renderSc, ov: renderOv, fun: renderFun, ppl: renderPpl, reg: renderReg, sub: renderSub, free: renderFree, ret: renderRet, src: renderSrc })[tab]();
+    ({ full: renderFull, sc: renderSc, ov: renderOv, fun: renderFun, ppl: renderPpl, reg: renderReg, sub: renderSub, free: renderFree, ret: renderRet, src: renderSrc, br: renderBr, ob: renderOb, lq: renderLq })[tab]();
   }
 
+
+  // ---------- المتصفحات (ومنها متصفح فيسبوك الداخلي) ----------
+  const BRN = { fb: 'فيسبوك (المتصفح الداخلي)', ig: 'إنستغرام (داخلي)', msg: 'ماسنجر (داخلي)', tt: 'تيك توك (داخلي)', snap: 'سناب شات (داخلي)', wv: 'تطبيق آخر (داخلي)', chrome: 'Chrome', safari: 'Safari', samsung: 'Samsung Internet', edge: 'Edge', firefox: 'Firefox', opera: 'Opera', other: 'أخرى', '?': 'غير معروف (قبل التحديث)' };
+  const pc = (a, b) => (b ? Math.round(a * 1000 / b) / 10 + '%' : '—');
+  function renderBr() { const X = R.extra || {}, L = X.browsers || [];
+    if (!L.length) { body.append(help('لا توجد بيانات متصفحات بعد. تبدأ بالظهور بعد نشر التحديث.')); return; }
+    const iab = L.filter((x) => x.iab), web = L.filter((x) => !x.iab && x.br !== '?'); const sum = (A, k) => A.reduce((a, x) => a + (x[k] || 0), 0);
+    body.append(el('h3', { text: 'داخل التطبيقات (فيسبوك وغيره) مقابل المتصفحات العادية' }), el('div', { class: 'ax-kpis' },
+      kpi(sum(iab, 'persons'), 'زائر من داخل التطبيقات', null, true), kpi(pc(sum(iab, 'regs'), sum(iab, 'persons')), 'نسبة التسجيل داخل التطبيقات'), kpi(pc(sum(iab, 'plans'), sum(iab, 'persons')), 'شاهدوا الباقات (داخل التطبيقات)'),
+      kpi(sum(web, 'persons'), 'زائر من متصفح عادي'), kpi(pc(sum(web, 'regs'), sum(web, 'persons')), 'نسبة التسجيل (متصفح عادي)'), kpi(pc(sum(web, 'plans'), sum(web, 'persons')), 'شاهدوا الباقات (متصفح عادي)')),
+      help('«الأشخاص» = زوار مختلفون، و«الجلسات» = عدد الزيارات. التسجيل والباقات والدفع تُحسب مرة واحدة لكل شخص. داخل فيسبوك لا يعمل الدخول بحساب Google (تمنعه Google)، لذلك يظهر للزائر هناك التسجيل بالهاتف أو البريد.'),
+      table('المتصفحات', [['br', 'المتصفح', (r) => BRN[r.br] || r.br], ['persons', 'أشخاص'], ['sessions', 'جلسات'], ['regStart', 'بدأ التسجيل'], ['regs', 'أكمل التسجيل'], ['rr', 'نسبة التسجيل', (r) => pc(r.regs, r.persons)], ['plans', 'شاهد الباقات'], ['paid', 'اشترك']], L));
+    const E = Object.entries(X.iabErr || {}).sort((a, b) => b[1] - a[1]);
+    body.append(el('h3', { text: 'أخطاء التسجيل داخل فيسبوك وإنستغرام' }), E.length ? table('أخطاء-فيسبوك', [['k', 'الطريقة · الخطأ'], ['v', 'مرات']], E.map(([k, v]) => ({ k, v }))) : help('لا أخطاء مسجّلة في هذه الفترة.'));
+  }
+  // ---------- رحلة البداية ----------
+  const ROLEB = { parent: 'ولي أمر', student: 'طالب', teacher: 'معلم', visitor: 'زائر' };
+  function renderOb() { const O = (R.extra || {}).onboarding; if (!O) { body.append(help('تظهر بعد نشر التحديث.')); return; }
+    body.append(el('h3', { text: 'ماذا اختار الزوار في شاشة «كيف ترغب في استخدام المنصة؟»' }),
+      table('رحلة-البداية-الأدوار', [['role', 'الاختيار', (r) => ROLEB[r.role] || r.role], ['persons', 'أشخاص'], ['regStart', 'بدأ التسجيل'], ['regs', 'أكمل التسجيل'], ['plans', 'شاهد الباقات'], ['paid', 'اشترك']], O.roles || []),
+      el('h3', { text: 'عدد الأبناء الذي اختاره أولياء الأمور' }), table('عدد-الأبناء', [['k', 'عدد الأبناء'], ['v', 'أولياء أمور']], Object.entries(O.kids || {}).map(([k, v]) => ({ k, v }))),
+      el('h3', { text: 'الصفوف المختارة' }), table('الصفوف-المختارة', [['g', 'الصف', (r) => D.gradeName(r.g) || r.g], ['v', 'أشخاص']], Object.entries(O.grades || {}).map(([g, v]) => ({ g, v })).sort((a, b) => b.v - a.v)),
+      el('h3', { text: 'الخطوة التالية بعد الرحلة' }), el('div', { class: 'ax-kpis' }, kpi(O.obPlans, 'عرض الباقات داخل الرحلة'), kpi(O.obSelect, 'اختيار باقة من الرحلة'),
+        kpi((O.ctas || {}).register || 0, 'ضغط «أنشئ حساباً»'), kpi((O.ctas || {}).explore || 0, 'ضغط «استكشف المجاني»'), kpi((O.ctas || {}).lesson || 0, 'ضغط «جرّب» على درس'), kpi(O.handoff || 0, 'انتقل من فيسبوك إلى المتصفح')),
+      el('h3', { text: 'مشاركة الدروس' }), el('div', { class: 'ax-kpis' }, ...['whatsapp', 'facebook', 'copy', 'native'].map((k) => kpi((O.shares || {})[k] || 0, { whatsapp: 'واتساب', facebook: 'فيسبوك', copy: 'نسخ الرابط', native: 'مشاركة الهاتف' }[k]))));
+  }
+  // ---------- جودة الدروس ----------
+  const CLS = { excellent: ['ممتاز', 's'], good: ['جيد', 'r'], average: ['متوسط', 'v'], weak: ['ضعيف', 'w'], insufficient: ['بيانات غير كافية', 'v'] };
+  function lqRows() { const L = (R.extra || {}).lessonQ || []; const seen = new Set(L.map((x) => x.l)); const rows = L.slice();
+    // الدروس الجاهزة التي لم يفتحها أحد في الفترة تظهر أيضاً (بيانات غير كافية)
+    const c = D.App.catalog; if (c) Object.entries(c.grades).forEach(([g, ss]) => ss.forEach((sj) => (sj.books || [{ units: sj.units }]).forEach((b) => (b.units || []).forEach((u) => u.lessons.forEach((l) => { if (l.ready && l.id && !seen.has(l.id)) rows.push({ l: l.id, g, s: sj.id, opens: 0, persons: 0, done: 0, doneRate: 0, cls: 'insufficient', rec: 'بيانات غير كافية', flags: ['لم يفتحه أحد في هذه الفترة'] }); })))));
+    return rows; }
+  let lqAll = false;
+  function renderLq() { const rows = lqRows(); const cnt = {}; rows.forEach((x) => { cnt[x.cls] = (cnt[x.cls] || 0) + 1; }); const shown = lqAll ? rows : rows.filter((x) => x.persons > 0);
+    body.append(el('h3', { text: 'تصنيف الدروس حسب بيانات الطلاب الفعلية' }), el('div', { class: 'ax-kpis' }, ...Object.keys(CLS).map((k) => kpi(cnt[k] || 0, CLS[k][0], null, k === 'weak'))),
+      help('التصنيف يجمع: نسبة إكمال الدرس (40%)، ومدى التقدّم في خطواته (20%)، ونتيجة المحاولة الأولى في الاختبار (25%)، والانتقال إلى الدرس التالي (15%). لا يُصنَّف درس فتحه أقل من 8 أشخاص. الوقت النشط يُحسب من تفاعل الطالب الفعلي (لمس وكتابة وتمرير)، لا من بقاء الصفحة مفتوحة. التوصية للمراجعة فقط، ولا يُحذف أي درس تلقائياً.'),
+      el('button', { class: 'btn sm', text: '⬇️ تنزيل تقرير جودة الدروس (Excel)', onclick: async (e) => { const b = e.currentTarget; b.disabled = true; try { const mod = await import('./fullreport.js'); await mod.exportLessons(rows, NAMES); } catch (x) { fbk(msg, 'bad', 'تعذّر التصدير: ' + (x.message || x)); } b.disabled = false; } }),
+      table('جودة-الدروس', [['l', 'الدرس', (r) => lname(r.l)], ['s', 'المادة', (r) => SUBJ(r.g, r.s)], ['g', 'الصف', (r) => D.gradeName(r.g) || r.g], ['cls', 'التصنيف', (r) => (CLS[r.cls] || [r.cls])[0], (r) => tag((CLS[r.cls] || ['', ''])[1], (CLS[r.cls] || [r.cls])[0])],
+        ['q', 'الدرجة /100'], ['persons', 'أشخاص'], ['opens', 'مرات الفتح'], ['doneRate', 'أكمل %'], ['prog', 'متوسط التقدّم %'], ['act', 'الوقت النشط (ث)'], ['first', 'المحاولة الأولى %'], ['retake', 'أعادوا الاختبار'], ['nextRate', 'انتقلوا للتالي %'], ['toPlans', 'شاهدوا الباقات بعده'], ['toReg', 'سجّلوا بعده'],
+        ['rec', 'التوصية'], ['flags', 'ملاحظات', (r) => (r.flags || []).join(' · ')]], shown, { limit: 400, empty: 'لم يُفتح أي درس في هذه الفترة.' }),
+      el('button', { class: 'btn ghost sm', text: lqAll ? 'اعرض الدروس التي فُتحت فقط' : 'اعرض كل الدروس الجاهزة (بما فيها التي لم يفتحها أحد)', onclick: () => { lqAll = !lqAll; render(); } }));
+  }
   // ---------- 1) نظرة عامة ----------
   function renderOv() { const o = R.overview, p = R.prev || {};
     body.append(el('h3', { text: 'الزوار والنشاط' }), el('div', { class: 'ax-kpis' },

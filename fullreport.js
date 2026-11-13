@@ -4,6 +4,7 @@ const XLSX_URL = 'https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.m
 let _x = null; const loadX = () => _x || (_x = new Promise((res, rej) => { if (window.XLSX) return res(window.XLSX); const s = document.createElement('script'); s.src = XLSX_URL; s.onload = () => res(window.XLSX); s.onerror = rej; document.head.append(s); }));
 const SRC = { facebook: 'فيسبوك', instagram: 'إنستغرام', google: 'جوجل', whatsapp: 'واتساب', youtube: 'يوتيوب', direct: 'مباشر', ref: 'موقع آخر', invite: 'رابط دعوة' };
 const ROLE = { student: 'طالب', parent: 'ولي أمر', teacher: 'معلم', '—': 'غير محدد' };
+const BRN = { fb: 'فيسبوك (داخلي)', ig: 'إنستغرام (داخلي)', msg: 'ماسنجر (داخلي)', tt: 'تيك توك (داخلي)', snap: 'سناب شات (داخلي)', wv: 'تطبيق آخر (داخلي)', chrome: 'Chrome', safari: 'Safari', samsung: 'Samsung Internet', edge: 'Edge', firefox: 'Firefox', opera: 'Opera', other: 'أخرى', '?': 'غير معروف' };
 const pc = (a, b) => b ? Math.round(a * 1000 / b) / 10 : null;
 const dt = t => t ? new Date(t).toLocaleString('ar-LY-u-nu-latn', { timeZone: 'Africa/Tripoli', day: 'numeric', month: 'numeric', year: 'numeric', hour: '2-digit', minute: '2-digit' }) : '';
 
@@ -120,6 +121,32 @@ export async function exportFull(R, names, alerts) {
     ...T('أين يتوقف الاشتراك', ['الخطوة', 'أشخاص'], Object.entries(X.stallSubSteps || {}).sort((a, b) => b[1] - a[1])),
     ...T('طلبات دفع لم تكتمل (تشمل ما قبل التتبع)', ['الاسم', 'الهاتف', 'الباقة', 'المبلغ', 'الحالة', 'التاريخ'], (R.histPending || []).map(x => [x.name, x.phone, x.plan, x.amount, x.status === 'failed' ? 'فشل' : x.cancelled ? 'ألغاه' : 'لم يكمل', dt(x.at)])),
     ...T('تنبيهات النظام في الفترة', ['الوقت', 'التنبيه', 'التفاصيل'], (alerts || []).filter(a => a.at >= R.from && a.at < R.to).map(a => [dt(a.at), a.title, a.body || '']))]);
+  // 7) المتصفحات (فيسبوك الداخلي) ورحلة البداية والمنح
+  { const B = X.browsers || [], O = X.onboarding || {}, G = (X.subsInfo || {}).gifts || {};
+    add('المتصفحات ورحلة البداية', [['المتصفحات ورحلة البداية', per],
+      ...T('المتصفحات', ['المتصفح', 'داخل تطبيق؟', 'أشخاص', 'جلسات', 'بدأ التسجيل', 'أكمل التسجيل', 'نسبة التسجيل %', 'شاهد الباقات', 'اشترك'], B.map(x => [BRN[x.br] || x.br, x.iab ? 'نعم' : 'لا', x.persons, x.sessions, x.regStart, x.regs, v(pc(x.regs, x.persons)), x.plans, x.paid])),
+      ...T('أخطاء التسجيل داخل فيسبوك وإنستغرام', ['الطريقة · الخطأ', 'مرات'], Object.entries(X.iabErr || {}).sort((a, b) => b[1] - a[1])),
+      ...T('اختيار نوع الاستخدام', ['الاختيار', 'أشخاص', 'بدأ التسجيل', 'أكمل التسجيل', 'شاهد الباقات', 'اشترك'], (O.roles || []).map(x => [ROLE[x.role] || (x.role === 'visitor' ? 'زائر' : x.role), x.persons, x.regStart, x.regs, x.plans, x.paid])),
+      ...T('عدد الأبناء (أولياء الأمور)', ['عدد الأبناء', 'أولياء أمور'], Object.entries(O.kids || {})),
+      ...T('الصفوف المختارة', ['الصف', 'أشخاص'], Object.entries(O.grades || {}).map(([g, n]) => [names.grade(g), n])),
+      ...T('الاشتراكات المجانية والترويجية (فعالة الآن)', ['السبب', 'العدد'], Object.entries(G.byWhy || {}).map(([k, n]) => [({ promo: 'ترويج ونشر', family: 'أقارب وأصدقاء', staff: 'فريق العمل', other: 'أخرى' })[k] || k, n]).concat([['المجموع', G.active || 0], ['المدفوعة الفعالة (للمقارنة)', (X.subsInfo || {}).paidActive || 0]]))]); }
+  // 8) جودة الدروس
+  if ((X.lessonQ || []).length) add('جودة الدروس', lessonSheet(X.lessonQ, names));
   const fn = 'mujtahid-full-report-' + new Date(R.to - 1 + 2 * 3600e3).toISOString().slice(0, 10) + '.xlsx';
   XL.writeFile(wb, fn); return { fn, A };
+}
+
+/* ---------- تقرير جودة الدروس (ملف مستقل) ---------- */
+const CLS_AR = { excellent: 'ممتاز', good: 'جيد', average: 'متوسط', weak: 'ضعيف', insufficient: 'بيانات غير كافية' };
+function lessonSheet(rows, names) {
+  const nn = x => (x == null ? '' : x);
+  return [['تقرير جودة الدروس — للمراجعة فقط، ولا يُحذف أي درس تلقائياً'], ['طريقة التصنيف: إكمال الدرس 40% + التقدّم في خطواته 20% + نتيجة المحاولة الأولى 25% + الانتقال للدرس التالي 15%. يحتاج الدرس 8 أشخاص على الأقل ليُصنَّف. الوقت النشط من تفاعل الطالب الفعلي.'], [],
+    ['الصف', 'المادة', 'الدرس', 'التصنيف', 'الدرجة /100', 'أشخاص', 'مرات الفتح', 'أكملوا', 'نسبة الإكمال %', 'متوسط إكمال المادة %', 'متوسط التقدّم %', 'الوقت النشط (ثانية، الوسيط)', 'خاضوا الاختبار', 'المحاولة الأولى %', 'أعادوا الاختبار', 'انتقلوا للتالي %', 'شاهدوا الباقات بعده', 'سجّلوا بعده', 'التوصية الإدارية', 'ملاحظات'],
+    ...rows.map(x => [names.grade(x.g), names.subj ? names.subj(x.g, x.s) : x.s, names.lesson(x.l), CLS_AR[x.cls] || x.cls, nn(x.q), x.persons, x.opens, nn(x.done), x.persons ? x.doneRate : '', nn(x.subDone), nn(x.prog), nn(x.act), nn(x.quizP), nn(x.first), nn(x.retake), nn(x.nextRate), nn(x.toPlans), nn(x.toReg), x.rec, (x.flags || []).join(' · ')])];
+}
+export async function exportLessons(rows, names) {
+  const XL = await loadX(); const wb = XL.utils.book_new(); wb.Workbook = { Views: [{ RTL: true }] };
+  const ws = XL.utils.aoa_to_sheet(lessonSheet(rows, names)); ws['!cols'] = [14, 16, 34, 14, 10, 8, 10, 8, 10, 12, 10, 12, 10, 10, 10, 10, 10, 10, 30, 50].map(w => ({ wch: w })); ws['!rightToLeft'] = true;
+  XL.utils.book_append_sheet(wb, ws, 'جودة الدروس');
+  const fn = 'mujtahid-lessons-quality-' + new Date(Date.now() + 2 * 3600e3).toISOString().slice(0, 10) + '.xlsx'; XL.writeFile(wb, fn); return { fn };
 }
