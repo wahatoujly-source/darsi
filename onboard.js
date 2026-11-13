@@ -112,6 +112,15 @@ function plansBlock(who, n, grades, src) {
   return box;
 }
 
+/* الأسعار لا تُعرض مباشرة: الزائر يجرّب أولاً، ومن يريد يضغط «كم سعر الاشتراك؟» فتظهر الباقات */
+let PRICE_OPEN = false;
+function priceAsk(title, mk) {
+  const box = el('div', { class: 'ob-price' });
+  const open = () => { PRICE_OPEN = true; box.innerHTML = ''; box.append(el('section', { class: 'ob-step' }, el('div', { class: 'ob-sn' }, el('span', { text: '💳' }), el('b', { text: title })),
+    el('p', { class: 'note', style: 'margin:0', text: 'الدروس المجانية متاحة دائماً دون اشتراك. الاشتراك يفتح بقية الدروس والتقارير الكاملة.' }), ...[].concat(mk()))); };
+  if (PRICE_OPEN) open(); else box.append(el('button', { class: 'ob-link', text: '💬 كم سعر الاشتراك؟', onclick: () => { ev('ob_cta', { to: 'prices', role: OB().role || '' }); open(); } }));
+  return box;
+}
 const benefits = who => el('div', { class: 'ob-ben' }, ...(who === 'parent' ? [
   ['📊', 'تقرير لكل ابن', 'الدقائق والدرجات ونقاط القوة والضعف'], ['📱', 'ربط هاتف الابن', 'برمز أو QR دون بريد أو كلمة مرور'],
   ['🗓️', 'جدول وتحكم', 'تختار المواد والدروس وأوقات الدراسة'], ['🎯', 'محاولات الاختبارات', 'الأولى والمكررة لكل درس']]
@@ -146,8 +155,7 @@ function renderParent(o, alsoTeacher) {
   if (done) { const uniq = [...new Set(G)];
     const s3 = stepBox(3, 'هذا ما ينتظر أبناءك', ...uniq.map(g => contentCard(g, { who: o.kids.map((x, i) => x === g ? (n === 1 ? 'ابنك' : 'الابن ' + (i + 1)) : null).filter(Boolean).join('، ') })));
     s3.classList.add('ob-s3'); wrap.append(s3, benefits('parent'),
-      stepBox(4, 'الباقات المناسبة لـ ' + (n === 1 ? 'ابن واحد' : n + ' أبناء') + (uniq.length > 1 ? ' في ' + uniq.length + ' صفوف' : ' في ' + gName(uniq[0])), plansBlock('parent', n, G, 'parent')),
-      ctas('parent', uniq[0])); }
+      ctas('parent', uniq[0]), priceAsk('الباقات المناسبة لـ ' + (n === 1 ? 'ابن واحد' : n + ' أبناء') + (uniq.length > 1 ? ' في ' + uniq.length + ' صفوف' : ' في ' + gName(uniq[0])), () => plansBlock('parent', n, G, 'parent'))); }
   return wrap;
 }
 
@@ -156,7 +164,7 @@ function renderStudent(o) { const wrap = el('div', { class: 'ob-wrap' }, head('�
   const g = o.grade || null;
   wrap.append(stepBox(1, 'في أي صف أنت؟', gradePicker(g, v => { o.grade = v; saveOB(o); ev('grade_selected', { g: v, role: 'student' }); draw(); setTimeout(() => { const t = document.querySelector('.ob-s2'); t && t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 60); })));
   if (g) { const s2 = stepBox(2, 'دروسك في ' + gName(g), contentCard(g)); s2.classList.add('ob-s2');
-    wrap.append(s2, benefits('student'), stepBox(3, 'باقات الطالب', plansBlock('student', 1, [g], 'student')), ctas('student', g),
+    wrap.append(s2, benefits('student'), ctas('student', g), priceAsk('باقات الطالب', () => plansBlock('student', 1, [g], 'student')),
       el('button', { class: 'ob-link', text: '🧒 عندي رمز من ولي أمري', onclick: () => go('link') })); }
   return wrap; }
 
@@ -172,7 +180,7 @@ function renderTeacher(o) { const wrap = el('div', { class: 'ob-wrap' }, head('�
       el('span', {}, el('b', { text: 'وأنا أيضاً ولي أمر وأريد متابعة أبنائي' }), el('small', { text: 'حساب واحد للدورين — دون حساب ثانٍ.' })));
     wrap.append(ap);
     if (o.alsoParent) wrap.append(renderParent(o, true));
-    else wrap.append(stepBox(3, 'الباقات', plansBlock('student', 1, o.tg.length === 1 ? o.tg : o.tg, 'teacher')), ctas('teacher', o.tg[0]));
+    else wrap.append(ctas('teacher', o.tg[0]), priceAsk('الباقات', () => plansBlock('student', 1, o.tg, 'teacher')));
   }
   return wrap; }
 
@@ -183,7 +191,7 @@ function renderVisitor(o) { const wrap = el('div', { class: 'ob-wrap' }, head('�
   if (g) { const s2 = stepBox(2, 'جرّب الآن مجاناً', contentCard(g)); s2.classList.add('ob-s2'); wrap.append(s2);
     const who = o.pw || 'parent';
     const seg = el('div', { class: 'ob-seg' }, chip('👨‍👩‍👧 لأبنائي', who === 'parent', () => { o.pw = 'parent'; saveOB(o); draw(); }), chip('🎒 لنفسي (طالب)', who === 'student', () => { o.pw = 'student'; saveOB(o); draw(); }));
-    wrap.append(benefits(who), stepBox(3, 'الباقات المتاحة لـ' + gName(g), seg, plansBlock(who, 1, [g], 'visitor')), ctas(who, g)); }
+    wrap.append(benefits(who), ctas(who, g), priceAsk('الباقات المتاحة لـ' + gName(g), () => [seg, plansBlock(who, 1, [g], 'visitor')])); }
   return wrap; }
 
 /* ---------- الصفحة ---------- */
@@ -205,5 +213,5 @@ export default function (DARSI, h) {
   // الزائر تُحفظ رغبته كدور مفضل فقط عند اختيار ولي الأمر/الطالب/المعلم
   if (r !== 'visitor') store.set('pref_role', r);
   store.set('welcomed', true); document.body.classList.remove('wl-on');
-  CUR = r; draw();
+  if (CUR !== r) PRICE_OPEN = false; CUR = r; draw();
 }
