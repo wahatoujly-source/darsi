@@ -682,6 +682,27 @@ function renderKidAccount() {
   s.append(el('div', { class: 'kx-qk' }, ...T.map(([im, t, fn]) => el('button', { onclick: fn }, el('span', { class: 'ib' }, el('img', { src: U(im), alt: '', loading: 'lazy' })), el('b', { text: t })))));
   s.append(el('div', { class: 'kx-linked' }, el('span', { class: 'i', text: '🔗' }), el('span', {}, el('b', { text: 'هذا الجهاز مربوط بحساب ولي أمرك' }), el('small', { text: 'نجومك وتقدّمك تُحفظ تلقائياً ويراها ولي أمرك.' }))));
 }
+
+/* ---------- إدارة الحساب: تعديل الاسم، حذف الحساب ---------- */
+function manageRows(P, redraw, m) {
+  const w = el('div', { class: 'stack', style: 'gap:6px' });
+  const nm = el('input', { class: 'tinput', value: P.name || '', 'aria-label': 'الاسم', maxlength: '60' });
+  w.append(el('div', { class: 'row', style: 'gap:6px;flex-wrap:nowrap' }, nm, el('button', { class: 'btn ghost sm', text: '💾 حفظ الاسم', onclick: async () => { const v = nm.value.trim(); if (v.length < 2) { fbk(m, 'bad', 'اكتب الاسم.'); return; }
+    try { await setDoc(uref(), { name: v }, { merge: true }); P.name = v; try { await updateProfile(ACC.user, { displayName: v }); } catch (e) {} fbk(m, 'ok', '✓ حُفظ الاسم.'); } catch (e) { fbk(m, 'bad', errMsg(e)); } } })));
+  const del = el('button', { class: 'linkbtn', style: 'color:#c22a43;align-self:flex-start', text: '🗑️ حذف حسابي نهائياً', onclick: () => {
+    const conf = el('input', { class: 'tinput', placeholder: 'اكتب: حذف', 'aria-label': 'تأكيد الحذف' });
+    const go2 = el('button', { class: 'btn', style: 'background:#c22a43;color:#fff', text: 'احذف الحساب', onclick: async () => {
+      if (conf.value.trim() !== 'حذف') { fbk(m, 'bad', 'اكتب كلمة «حذف» للتأكيد.'); return; } go2.disabled = true; fbk(m, 'info', 'جارٍ حذف الحساب…');
+      try { await call('deleteMyAccount', { confirm: 'حذف' }); AXe('account_deleted', {});
+        ['ob', 'pref_role', 'pend_pay', 'sub_who', 'welcomed', 'last_order'].forEach(k => { try { localStorage.removeItem('darsi_' + k); } catch (e) {} });
+        try { await signOut(auth); } catch (e) {} location.hash = 'start'; location.reload(); }
+      catch (e) { go2.disabled = false; fbk(m, 'bad', fnErr(e)); } } });
+    w.replaceChild(el('div', { class: 'stack', style: 'gap:6px;border:1.5px solid #f3c2c9;background:#fff5f6;border-radius:14px;padding:10px' },
+      el('b', { text: '⚠️ حذف الحساب نهائياً' }),
+      el('span', { class: 'note', text: 'يُحذف حسابك وملفات أبنائك وتقدّمهم وأجهزتهم المرتبطة، ولا يمكن استرجاعها. بعدها يمكنك التسجيل من جديد بنفس الرقم أو البريد واختيار النوع الصحيح. (إذا كان عندك اشتراك مدفوع فعّال لا يمكن الحذف.)' }),
+      conf, el('div', { class: 'row', style: 'gap:6px' }, go2, el('button', { class: 'btn ghost', text: 'إلغاء', onclick: redraw }))), del); } });
+  w.append(del); return w;
+}
 function renderAccount() {
   if (!ACC.user) { go('login'); return; }
   if (ACC.kid) { renderKidAccount(); return; }
@@ -704,7 +725,7 @@ function renderAccount() {
       el('div', {}, el('b', { text: subOn ? '⭐' : '—' }), el('small', { text: subOn ? 'مشترك' : 'مجاني' }))) : null));
   /* ---- نوع الحساب: يمكن تصحيحه ---- */
   if (!ACC.co) { const box = el('div', { class: 'kx-card' }); const m = el('div');
-    const drawR = () => { box.innerHTML = ''; box.append(el('div', { class: 'hd' }, el('b', { text: '👤 نوع الحساب: ' + rt }), el('button', { class: 'lnk', text: 'تغيير', onclick: () => {
+    const drawR = () => { box.innerHTML = ''; box.append(el('div', { class: 'hd' }, el('b', { text: '⚙️ إدارة الحساب' })), manageRows(P, drawR, m), el('div', { class: 'hd' }, el('b', { text: '👤 نوع الحساب: ' + rt }), el('button', { class: 'lnk', text: 'تغيير', onclick: () => {
       box.innerHTML = ''; let g = null; const gs = el('div', { class: 'gpick', hidden: true });
       GRADES.forEach(([k, n]) => gs.append(el('button', { class: 'btn ghost sm', text: n, onclick: e => { g = k; [...gs.children].forEach(b => b.classList.remove('on')); e.currentTarget.classList.add('on'); } })));
       const opts = el('div', { class: 'plans' }); let pick = null;
@@ -713,7 +734,7 @@ function renderAccount() {
         el('button', { class: 'btn sun', text: 'حفظ', onclick: async ev2 => { if (!pick) { fbk(m, 'bad', 'اختر النوع.'); return; } if (pick === 'student' && !g) { fbk(m, 'bad', 'اختر صفك.'); return; } ev2.currentTarget.disabled = true;
           try { await call('setMyRole', { role: pick, grade: g }); P.role = pick; AXe('role_change', { role: pick }); fbk(m, 'ok', '✓ تم التغيير.'); setTimeout(() => location.reload(), 700); } catch (x) { fbk(m, 'bad', fnErr(x)); ev2.currentTarget.disabled = false; } } }),
         el('button', { class: 'btn ghost', text: 'إلغاء', onclick: drawR })), m); } })),
-      el('small', { class: 'note', text: P.role === 'student' ? 'إذا كنت ولي أمر وتريد متابعة أبنائك والاشتراك لهم، غيّر النوع إلى «ولي أمر».' : P.role === 'parent' ? 'إذا كنت طالباً تدرس لنفسك، غيّر النوع إلى «طالب».' : '' })); };
+      el('small', { class: 'note', text: P.role === 'student' ? 'إذا كنت ولي أمر وتريد متابعة أبنائك والاشتراك لهم، غيّر النوع إلى «ولي أمر».' : P.role === 'parent' ? 'إذا كنت طالباً تدرس لنفسك، غيّر النوع إلى «طالب».' : '' }), m); };
     drawR(); s.append(box); }
   /* ---- kids strip ---- */
   if (isAdult()) s.append(el('div', { class: 'kx-card' }, el('div', { class: 'hd' }, el('b', { text: '👨‍👩‍👧 أبنائي' }), el('button', { class: 'lnk', text: 'إدارة ←', onclick: () => go('kids') })),
