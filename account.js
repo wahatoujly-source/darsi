@@ -386,7 +386,7 @@ function renderWho() {
   const s = page('من يدرس الآن؟', ACC.profile.name, 'home');
   { const tp = trialPick(); if (tp && tp.tagName !== 'DIV' || (tp && !tp.classList.contains('feedback'))) s.append(tp); }
   { const pc = ACC.pushCard(); if (pc) s.append(pc); }
-  s.append(el('div', { class: 'row', style: 'gap:8px;flex-wrap:wrap;margin-bottom:6px' }, el('button', { class: 'btn ghost sm', text: '🧮 اختبر مستوى أبنائك في الرياضيات', onclick: () => go('test') }),
+  s.append(el('div', { class: 'row', style: 'gap:8px;flex-wrap:wrap;margin-bottom:6px' }, el('button', { class: 'btn ghost sm', text: '🧮 اختبر مستواهم في الرياضيات', onclick: () => go('test-math') }), el('button', { class: 'btn ghost sm', text: '🔤 اختبر مستواهم في الإنجليزي', onclick: () => go('test-en') }),
     (ACC.access && ACC.access.ref && ACC.access.ref.on === false) ? null : el('button', { class: 'btn ghost sm', text: '🎁 ادعُ عائلة واحصل على أيام مجانية', onclick: () => go('account') })));
   if (ACC.isAdmin) s.append(el('div', { class: 'row', style: 'gap:8px;flex-wrap:wrap;margin-bottom:8px' }, !ACC.can('browse') ? null : el('button', { class: 'btn sun', text: ACC.adminBrowse ? '👁️ وضع المدير مفعّل ← الرئيسية' : '👁️ تصفّح المنصة كمدير (كل الدروس)', onclick: async () => { ACC.adminBrowse = true; store.set('admin_browse', true); await setActive(null); go('home'); } }), el('button', { class: 'btn ghost', text: '🛠️ لوحة الإدارة', onclick: () => go('admin') })));
   const g = el('div', { class: 'kx-who' });
