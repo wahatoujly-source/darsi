@@ -84,6 +84,17 @@ function fitPlans(list, who, n, grades) {
 function plansBlock(who, n, grades, src) {
   const box = el('div', { class: 'ob-plans' }, el('p', { class: 'note', text: 'جارٍ تحميل الباقات…' }));
   loadPlans().then(R => { box.innerHTML = '';
+    if (R.matrix && R.matrix.on && window.ACC && ACC.matrixView) { // جدول الأسعار: عدد الطلاب × المدة
+      const st = { n: who === 'student' ? 1 : Math.max(1, Math.min(n || 1, R.matrix.rows.length)), col: null };
+      ev('plans_view', { plans: ['matrix'], who, src: 'ob', kids: n || 0, gs: grades.join(',') });
+      if (who === 'parent' && n > R.matrix.rows.length) box.append(el('div', { class: 'ob-note warn', text: 'الأسعار المعروضة حتى ' + R.matrix.rows.length + ' طلاب. لعائلة من ' + n + ' أبناء تواصل معنا لنرتّب لك الأنسب.' }));
+      const go2 = el('button', { class: 'btn sun ob-pick' });
+      const upd = () => { const p = ACC.mxPick(R.matrix, st); go2.textContent = p ? 'اشترك: ' + p.name + ' — ' + p.price + ' د.ل ←' : 'اختر'; go2.disabled = !p; };
+      go2.onclick = () => { const p = ACC.mxPick(R.matrix, st); if (!p) return; ev('plan_select', { plan: p.id, price: p.price, who, src: 'ob' });
+        const G = [...new Set(grades.filter(Boolean))]; store.set('pend_pay', { plan: p.id, grade: who === 'student' && G.length === 1 ? G[0] : null, subject: null, who }); store.set('sub_who', who); go('subscribe'); };
+      box.append(ACC.matrixView(R.matrix, st, upd, { fixedN: who === 'student', kidsTitle: 'عدد الطلاب' }), go2,
+        el('p', { class: 'note ob-fine', text: 'يشمل كل الصفوف والمواد للعدد المختار. المبلغ النهائي يظهر قبل الدفع، ويتفعّل الاشتراك تلقائياً بعد تأكيد الدفع.' }));
+      upd(); return; }
     const L = fitPlans(R.plans || [], who, n, grades);
     if (!L.length) { box.append(el('p', { class: 'note', text: 'لا توجد باقات متاحة حالياً.' })); return; }
     ev('plans_view', { plans: L.map(x => x.p.id), who, src: 'ob', kids: n || 0, gs: grades.join(',') });

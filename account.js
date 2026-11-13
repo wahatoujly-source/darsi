@@ -29,11 +29,11 @@ const fnErr = e => (e && e.message && !/^internal$|^INTERNAL$/.test(e.message)) 
 
 const D = window.DARSI; const { el, go, store } = D;
 const deviceId = (() => { let d = store.get('device_id', null); if (!d) { d = 'd' + crypto.getRandomValues(new Uint32Array(4)).join(''); store.set('device_id', d); } return d; })();
-const MAX_KIDS = 5;
+const MAX_KIDS = 6;
 const isAdult = () => !!(ACC.profile && ['parent', 'teacher'].includes(ACC.profile.role));
 const kidsOf = () => ACC.profiles.filter(p => p.id !== 'me');
 const AVATARS = ['🦁','🐯','🐼','🐨','🦊','🐸','🐵','🦄','🐢','🐬','🦉','🐝'];
-const ROLES = { student: ['🧒', 'طالب', 'أدرس دروسي بنفسي'], parent: ['👨‍👩‍👧', 'ولي أمر', 'أتابع حتى 5 من أبنائي'], teacher: ['👩‍🏫', 'معلم', 'أستعمل الدروس مع طلابي، ويمكنني إضافة أبنائي'] };
+const ROLES = { student: ['🧒', 'طالب', 'أدرس دروسي بنفسي'], parent: ['👨‍👩‍👧', 'ولي أمر', 'أتابع حتى 6 من أبنائي'], teacher: ['👩‍🏫', 'معلم', 'أستعمل الدروس مع طلابي، ويمكنني إضافة أبنائي'] };
 const GRADES = [['1','الأول'],['2','الثاني'],['3','الثالث'],['4','الرابع'],['5','الخامس'],['6','السادس'],['7','السابع'],['8','الثامن'],['9','التاسع'],['s1','الأول الثانوي']];
 const gNum = g => /^s/.test(String(g)) ? 10 : (+g || 3);
 const gradeName = g => (GRADES.find(x => x[0] === String(g)) || [, ''])[1];
@@ -859,6 +859,36 @@ function planDetails(p) {
       pk ? li('💡', 'عند استخدامها لـ ' + pk.k + ' أبناء تصبح تكلفة الطالب الواحد نحو ' + pk.v + ' د.ل ' + pk.per + ' — والسعر الإجمالي للباقة ' + p.price + ' د.ل') : null));
 }
 const durLabel = p => { const d = p.dur || {}; return d.t === 'days' ? (d.days % 30 === 0 ? (d.days === 30 ? 'شهر واحد' : d.days === 60 ? 'شهران' : (d.days / 30) + ' أشهر') : d.days + ' يوماً') + ' من يوم الاشتراك' : 'حتى ' + fmtDate(p.end); };
+
+/* ---------- جدول الأسعار: عدد الطلاب × المدة (من لوحة الإدارة) ---------- */
+const kidsLbl = n => n === 1 ? 'طالب واحد' : n === 2 ? 'طالبان' : n + ' طلاب';
+function mxDays(c) { return c.dur && c.dur.t === 'days' ? c.dur.days : Math.max(1, Math.ceil((c.end - Date.now()) / 864e5)); }
+function matrixView(M, st, onChange, opts = {}) {
+  const w = el('div', { class: 'mx' });
+  const draw = () => { w.innerHTML = ''; const max = M.rows.length; st.n = Math.min(Math.max(1, st.n || 1), max);
+    if (!opts.fixedN) { const ch = el('div', { class: 'mx-n' }); for (let i = 1; i <= max; i++) ch.append(el('button', { class: st.n === i ? 'on' : '', 'aria-pressed': String(st.n === i), onclick: () => { st.n = i; draw(); onChange(st); } }, el('b', { text: String(i) }), el('small', { text: i === 1 ? 'طالب' : i === 2 ? 'طالبان' : 'طلاب' })));
+      w.append(el('div', { class: 'mx-h', text: opts.kidsTitle || 'كم طالباً تريد أن تشترك له؟' }), ch); }
+    const row = M.rows[st.n - 1] || [];
+    const cells = M.cols.map((c, j) => ({ c, j, price: Number(row[j]) || 0, days: mxDays(c) })).filter(x => x.price > 0);
+    const ref = cells.find(x => x.days <= 7) || cells[0]; const refDay = ref ? ref.price / ref.days : 0;
+    cells.forEach(x => { x.perDay = x.price / x.days; x.save = refDay ? Math.round((1 - x.perDay / refDay) * 100) : 0; });
+    const best = cells.reduce((a, x) => (!a || x.perDay < a.perDay ? x : a), null), pop = cells.find(x => x.c.id === 'm1') || cells[1];
+    if (!st.col || !cells.some(x => x.c.id === st.col)) st.col = (pop || cells[0] || {}).c && (pop || cells[0]).c.id;
+    w.append(el('div', { class: 'mx-h', text: opts.durTitle || 'اختر المدة' }));
+    const list = el('div', { class: 'mx-d' });
+    cells.forEach(x => { const on = st.col === x.c.id;
+      list.append(el('button', { class: 'mx-c' + (on ? ' on' : '') + (x === best ? ' best' : ''), 'aria-pressed': String(on), onclick: () => { st.col = x.c.id; draw(); onChange(st, true); } },
+        x === best && cells.length > 1 ? el('span', { class: 'rib g', text: '💎 الأوفر' }) : x === pop ? el('span', { class: 'rib', text: '⭐ مقترح' }) : null,
+        el('span', { class: 'rd' }),
+        el('span', { class: 'tx' }, el('b', { text: x.c.name }), el('small', { text: x.c.dur.t === 'days' ? (x.days + ' يوماً من يوم الدفع') : ('حتى ' + fmtDate(x.c.end)) }),
+          el('small', { class: 'pd', text: '≈ ' + (Math.round(x.perDay * 100) / 100) + ' د.ل في اليوم' + (st.n > 1 ? ' · ' + (Math.round(x.price / st.n * 10) / 10) + ' د.ل للطالب' : '') })),
+        el('span', { class: 'pr' }, el('b', { text: String(x.price) }), el('small', { text: 'د.ل' }), x.save >= 5 ? el('em', { text: 'وفّر ' + x.save + '%' }) : null))); });
+    w.append(list); };
+  draw(); return w;
+}
+const mxPick = (M, st) => { const j = M.cols.findIndex(c => c.id === st.col); const price = j >= 0 ? Number((M.rows[st.n - 1] || [])[j]) || 0 : 0; const c = M.cols[j];
+  return price > 0 ? { id: 'mx' + st.n + '_' + c.id, price, name: kidsLbl(st.n) + ' — ' + c.name, col: c, n: st.n, dur: c.dur, end: c.end, base: 'parent_all', mx: true } : null; };
+ACC.matrixView = matrixView; ACC.mxPick = mxPick;
 function renderSubscribe() {
   if (ACC.co) { const s = page('الاشتراك', '', 'who'); s.append(el('div', { class: 'feedback info', text: 'الاشتراك يتم من حساب ولي الأمر الأساسي، ويشمل الأبناء عندك تلقائياً.' })); return; }
   if (ACC.kid) { const s = page('الاشتراك', '', 'home'); s.append(el('div', { class: 'feedback info', text: 'هذا الدرس يحتاج اشتراكاً. اطلب من ولي أمرك أن يشترك لك من حسابه، وسيفتح عندك مباشرة.' })); return; }
@@ -877,9 +907,24 @@ function renderSubscribe() {
   let plans = null, pl = null, grade = (pend && pend.grade) || null, subject = (pend && pend.subject) || null;
   const kidsN = (ACC.profiles || []).filter(p => p.id !== 'me').length;
   const nameIn = el('input', { class: 'tinput', placeholder: 'اسمك (ولي الأمر أو الطالب)', 'aria-label': 'الاسم', value: (ACC.user && ACC.user.displayName) || '' });
+  let M = null; const mst = { n: 0, col: null };
+  const drawMx = () => {
+    if (!mst.n) { const pm = pend && /^mx(\d+)_(\w+)$/.exec(pend.plan || ''); if (pm) { mst.n = +pm[1]; mst.col = pm[2]; } else mst.n = who === 'student' ? 1 : Math.max(1, kidsN || ((store.get('ob', null) || {}).n | 0) || 1); }
+    if (who === 'student') mst.n = 1;
+    if (!drawMx._seen || drawMx._seen !== who) { drawMx._seen = who; AXe('plans_view', { plans: ['matrix'], who, logged: logged ? 1 : 0 }); }
+    box.append(matrixView(M, mst, (x, picked) => { if (picked) { const p = mxPick(M, mst); p && AXe('plan_select', { plan: p.id, price: p.price, who }); } store.set('pend_pay', null); draw(); }, { fixedN: who === 'student', kidsTitle: kidsN ? 'عدد الطلاب (عندك ' + kidsN + ' في الحساب)' : 'كم طالباً تريد أن تشترك له؟' }));
+    pl = mxPick(M, mst); if (!pl) return;
+    if (who !== 'student' && kidsN > mst.n) { box.append(el('div', { class: 'feedback info', text: 'عندك ' + kidsN + ' أبناء في الحساب. اختر ' + kidsLbl(kidsN) + ' أو أكثر ليشملهم الاشتراك.' })); return; }
+    box.append(el('div', { class: 'mx-inc' }, el('b', { text: '✅ يشمل:' }), el('span', { text: who === 'student' ? 'كل مواد صفّك ودروسه بالصوت والصورة، والتمارين والاختبارات، والمسابقات.' : 'كل الصفوف والمواد لـ' + kidsLbl(mst.n) + '، لكل طالب ملفه وتقريره، وربط هاتفه، والجدول والتحكم.' })));
+    if (who === 'student') { const me = (ACC.profiles || []).find(p => p.id === 'me'); if (me && me.grade && !grade) grade = String(me.grade);
+      if (!me || !me.grade) { const w = el('div', { class: 'gpick' }); GRADES.forEach(([g, n]) => w.append(el('button', { class: 'btn ghost sm' + (String(grade) === String(g) ? ' on' : ''), text: n, onclick: () => { grade = g; draw(); } }))); box.append(el('div', { class: 'kx-h kx-step', text: 'في أي صف أنت؟' }), w); if (!grade) return; } }
+    payArea();
+  };
   const draw = () => {
     box.innerHTML = '';
-    if (!plans) { box.append(el('span', { class: 'note', text: 'جارٍ تحميل الباقات…' })); return; }
+    if (!plans && !M) { box.append(el('span', { class: 'note', text: 'جارٍ تحميل الباقات…' })); return; }
+    if (M) { if (!ACC.profile) box.append(el('div', { class: 'rp-seg kx-who2' }, ...[['parent', '👨‍👩‍👧 لأبنائي'], ['student', '🎒 لنفسي (طالب)']].map(([k, t]) =>
+      el('button', { class: who === k ? 'on' : '', text: t, onclick: () => { who = k; store.set('sub_who', k); grade = null; mst.n = 0; draw(); } })))); drawMx(); return; }
     if (!ACC.profile) box.append(el('div', { class: 'rp-seg kx-who2' }, ...[['parent', '👨‍👩‍👧 لأبنائي'], ['student', '🎒 لنفسي (طالب)']].map(([k, t]) =>
       el('button', { class: who === k ? 'on' : '', text: t, onclick: () => { who = k; store.set('sub_who', k); pl = null; grade = null; subject = null; draw(); } }))));
     const mineP = plans.filter(p => (BASE_ROLES[p.base] || []).includes(who));
@@ -916,7 +961,10 @@ function renderSubscribe() {
         return whoOk && inc(sc.grades, want.g) && (sc.any || inc(sc.subjects, want.s)) && x.end.toMillis() >= pl.end - 864e5; });
       if (cov) { box.append(el('div', { class: 'feedback ok', text: '✓ أنت مشترك بالفعل في «' + subName(cov).replace(/^\S+\s/, '') + '» حتى ' + fmtDate(cov.end.toMillis()) + '، وهو يشمل ما اخترته. لا حاجة لاشتراك جديد.' })); return; }
     }
-    const d = pl.dur || {}, endTxt = d.t === 'days' ? 'المدة ' + durLabel(pl) + ' من يوم الدفع.' : 'صالح ' + durLabel(pl) + '.';
+    payArea();
+  };
+  const payArea = () => {
+    const d = pl.dur || {}, endTxt = pl.mx ? (d.t === 'days' ? 'المدة ' + d.days + ' يوماً من يوم الدفع.' : 'صالح حتى ' + fmtDate(pl.end) + '.') : d.t === 'days' ? 'المدة ' + durLabel(pl) + ' من يوم الدفع.' : 'صالح ' + durLabel(pl) + '.';
     const gname = grade ? (GRADES.find(([g]) => String(g) === String(grade)) || [, ''])[1] : '';
     box.append(el('div', { class: 'paybox kx-pay' },
       el('div', { class: 'sum' }, el('span', {}, el('small', { text: 'الباقة' }), el('b', { text: pl.name + (gname ? ' · ' + gname : '') })), el('span', { class: 'tot' }, el('small', { text: 'المبلغ' }), el('b', { text: pl.price + ' د.ل' }))),
@@ -944,7 +992,7 @@ function renderSubscribe() {
     } catch (e) { AXe('pay_error', { plan: pl.id, code: String(e.code || 'x').slice(0, 40), msg: String(fnErr(e)).slice(0, 80) }); fbk(msg, 'bad', fnErr(e)); payBtn.disabled = false; } } });
   s.append(box);
   draw();
-  call('getPlans', {}).then(r => { plans = r.plans || []; draw(); if (pend && pl) setTimeout(() => { const t = box.querySelector('.kx-pay'); t && t.scrollIntoView({ behavior: 'smooth', block: 'center' }); }, 100); }).catch(e => fbk(msg, 'bad', fnErr(e)));
+  call('getPlans', {}).then(r => { plans = r.plans || []; M = r.matrix && r.matrix.on && r.matrix.cols.length ? r.matrix : null; draw(); if (pend && pl) setTimeout(() => { const t = box.querySelector('.kx-pay'); t && t.scrollIntoView({ behavior: 'smooth', block: 'center' }); }, 100); }).catch(e => fbk(msg, 'bad', fnErr(e)));
 }
 
 /* ---------- back from MyPay ---------- */
@@ -1096,9 +1144,31 @@ function plansBox() {
     el('span', { class: 'note', text: 'أضف أي باقة: النوع، السعر، المدة (حتى 31 أغسطس، أو عدد أيام من يوم الاشتراك، أو حتى تاريخ محدد مثل نهاية الامتحانات)، وعدد الأبناء لباقات ولي الأمر. الباقة غير المفعّلة أو بسعر 0 لا تظهر للمشتركين.' }));
   const body = el('div', { class: 'stack' }), msg = el('div'); box.append(body, msg);
   const BASES = [['student_subject', 'طالب — مادة واحدة'], ['student_grade', 'طالب — الصف كاملاً'], ['parent_grade', 'ولي أمر — صف واحد'], ['parent_all', 'ولي أمر — كل الصفوف']];
-  let L = null;
+  let L = null, Mx = null;
   const slug = () => 'p' + Date.now().toString(36).slice(-6);
-  const draw = () => { body.innerHTML = '';
+  const drawMx = () => { if (!Mx) return;
+    const mw = el('div', { class: 'stack', style: 'border:2px solid #2563eb;border-radius:16px;padding:12px;gap:8px' });
+    mw.append(el('b', { text: '📊 جدول الأسعار: عدد الطلاب × المدة' }), el('span', { class: 'note', text: 'هذا ما يراه الزوار في صفحة الاشتراك عندما يكون مفعّلاً (وتُخفى الباقات القديمة). كل خانة تشمل كل الصفوف والمواد لعدد الطلاب. اترك الخانة 0 لإخفائها.' }),
+      el('label', { class: 'sndrow' }, el('input', { type: 'checkbox', checked: Mx.on ? '' : null, onchange: e => { Mx.on = e.target.checked; } }), el('b', { text: 'تفعيل جدول الأسعار' })));
+    const tb = el('div', { style: 'overflow-x:auto' }); const t = el('table', { class: 'mx-adm', style: 'border-collapse:collapse;min-width:520px;font-size:.85rem' });
+    const th = el('tr', {}, el('th', { text: 'عدد الطلاب' }));
+    Mx.cols.forEach((c, j) => { const nm = el('input', { value: c.name, style: 'width:80px', oninput: e => { c.name = e.target.value; } });
+      const dt = el('select', { class: 'qsel', onchange: e => { c.dur = e.target.value === 'until' ? { t: 'until', until: c.dur.until || '2027-08-31' } : { t: 'days', days: c.dur.days || 30 }; drawAll(); } }, el('option', { value: 'days', text: 'أيام' }), el('option', { value: 'until', text: 'حتى تاريخ' })); dt.value = c.dur.t;
+      const dv = c.dur.t === 'days' ? el('input', { type: 'number', min: '1', max: '400', value: String(c.dur.days), style: 'width:60px', oninput: e => { c.dur.days = Number(e.target.value); } }) : el('input', { type: 'date', value: c.dur.until, oninput: e => { c.dur.until = e.target.value; } });
+      th.append(el('th', {}, el('div', { class: 'stack', style: 'gap:3px' }, nm, dt, dv, el('button', { class: 'linkbtn', text: '✕ حذف العمود', onclick: () => { Mx.cols.splice(j, 1); Mx.rows.forEach(r => r.splice(j, 1)); drawAll(); } })))); });
+    t.append(th);
+    Mx.rows.forEach((r, i) => { const tr = el('tr', {}, el('td', {}, el('b', { text: kidsLbl(i + 1) })));
+      Mx.cols.forEach((c, j) => tr.append(el('td', {}, el('input', { type: 'number', min: '0', step: '0.5', value: String(r[j] == null ? 0 : r[j]), style: 'width:70px', oninput: e => { r[j] = Number(e.target.value); } }))));
+      t.append(tr); });
+    tb.append(t); mw.append(tb, el('div', { class: 'row', style: 'gap:6px;flex-wrap:wrap' },
+      el('button', { class: 'btn ghost sm', text: '➕ صف (طالب إضافي)', onclick: () => { Mx.rows.push(Mx.cols.map(() => 0)); drawAll(); } }),
+      Mx.rows.length > 1 ? el('button', { class: 'btn ghost sm', text: '➖ حذف آخر صف', onclick: () => { Mx.rows.pop(); drawAll(); } }) : null,
+      el('button', { class: 'btn ghost sm', text: '➕ عمود (مدة)', onclick: () => { Mx.cols.push({ id: 'c' + Date.now().toString(36).slice(-4), name: 'مدة جديدة', dur: { t: 'days', days: 14 } }); Mx.rows.forEach(r => r.push(0)); drawAll(); } })),
+      el('button', { class: 'btn sun', text: '💾 حفظ جدول الأسعار', onclick: async e => { e.target.disabled = true;
+        try { const r = await call('adminSetPlans', { list: L, matrix: Mx }); L = r.list; Mx = r.matrix; drawAll(); fbk(msg, 'ok', '✓ حُفظ جدول الأسعار. يظهر للزوار فوراً.'); } catch (x) { fbk(msg, 'bad', fnErr(x)); } e.target.disabled = false; } }));
+    body.append(mw, el('b', { style: 'margin-top:8px', text: '🗂️ الباقات الأخرى' + (Mx.on ? ' (مخفية ما دام جدول الأسعار مفعّلاً)' : '') })); };
+  const drawAll = () => draw();
+  const draw = () => { body.innerHTML = ''; drawMx();
     L.forEach((p, i) => { p.dur = p.dur || { t: 'season' };
       const inp = (k, attrs) => el('input', { ...attrs, value: p[k] == null ? '' : String(p[k]), oninput: e => { p[k] = attrs.type === 'number' ? Number(e.target.value) : e.target.value; } });
       const base = el('select', { class: 'qsel', onchange: e => { p.base = e.target.value; if (p.base.startsWith('parent') && !p.kids) p.kids = 5; draw(); } }, ...BASES.map(([v, t]) => el('option', { value: v, text: t }))); base.value = p.base;
@@ -1120,9 +1190,9 @@ function plansBox() {
         isP ? el('label', { class: 'prow' }, el('span', { text: 'أقصى عدد للأبناء' }), inp('kids', { type: 'number', min: '1', max: '5' })) : null)); });
     body.append(el('button', { class: 'btn ghost', text: '➕ إضافة باقة', onclick: () => { L.push({ id: slug(), on: false, base: 'student_grade', name: '', desc: '', price: 0, dur: { t: 'days', days: 30 }, kids: 0 }); draw(); } }),
       el('button', { class: 'btn sun', text: '💾 حفظ الباقات', onclick: async e => { e.target.disabled = true;
-        try { const r = await call('adminSetPlans', { list: L }); L = r.list; draw(); fbk(msg, 'ok', '✓ حُفظت الباقات. تظهر للمشتركين فوراً.'); } catch (x) { fbk(msg, 'bad', fnErr(x)); } e.target.disabled = false; } })); };
+        try { const r = await call('adminSetPlans', { list: L, matrix: Mx }); L = r.list; Mx = r.matrix; draw(); fbk(msg, 'ok', '✓ حُفظت الباقات. تظهر للمشتركين فوراً.'); } catch (x) { fbk(msg, 'bad', fnErr(x)); } e.target.disabled = false; } })); };
   body.append(el('span', { class: 'note', text: 'جارٍ التحميل…' }));
-  call('adminGetPlans', {}).then(r => { L = r.list; draw(); }).catch(e => { body.innerHTML = ''; fbk(msg, 'bad', fnErr(e)); });
+  call('adminGetPlans', {}).then(r => { L = r.list; Mx = r.matrix ? JSON.parse(JSON.stringify(r.matrix)) : null; draw(); }).catch(e => { body.innerHTML = ''; fbk(msg, 'bad', fnErr(e)); });
   return box;
 }
 
@@ -1463,7 +1533,7 @@ document.addEventListener('visibilitychange', async () => { if (document.visibil
 const GUIDE = [
   ['📚', 'ما هي منصة المجتهد؟', 'دروس المنهج الليبي بالصوت والصورة، من الصف الأول حتى الأول الثانوي، مطابقة لكتب الوزارة، مع تمارين وتصحيح فوري.'],
   ['🌟', 'كيف يستفيد أبناؤك؟', 'يدرس الابن الدرس خطوة بخطوة، ويحل التمارين ويجمع النجوم، ويراجع أخطاءه، ويتنافس مع زملائه في لوحة الأبطال.'],
-  ['➕', 'أضف أبناءك', 'من صفحة «أبنائي» اكتب اسم ابنك أو ابنتك واضغط «أضف». يمكنك إضافة حتى 5 أبناء في حساب واحد.'],
+  ['➕', 'أضف أبناءك', 'من صفحة «أبنائي» اكتب اسم ابنك أو ابنتك واضغط «أضف». يمكنك إضافة حتى 6 أبناء في حساب واحد.'],
   ['🎒', 'حدّد صف كل ابن', 'عند الإضافة اختر صفه الدراسي. يرى كل ابن مواد صفه فقط تلقائياً، فلا يتشتت.'],
   ['📖', 'اختيار المواد والدروس', 'اضغط «ابدأ الدراسة» تحت اسم الابن لتظهر مواد صفه، ثم يختار المادة ويبدأ من «ابدأ أول درس». المواد المجانية: التربية الإسلامية والتربية الوطنية.'],
   ['📊', 'تابع مستوى أبنائك', 'زر 📊 تحت اسم الابن يعرض تقريره: دقائق الدراسة، والنجوم، والإجابات الصحيحة والخاطئة، ونقاط القوة والضعف.'],
