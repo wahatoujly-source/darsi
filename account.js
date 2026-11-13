@@ -270,8 +270,15 @@ function authForm(kind) {
   if (ACC.user) { go(ACC.profile ? 'account' : 'onboard'); return; }
   const root = D.root; root.innerHTML = ''; const msg = el('div'); let mode = 'new';
   const isPhone = kind === 'phone'; const M = isPhone ? 'phone' : 'email';
-  const id = isPhone ? el('input', { class: 'au-in', type: 'tel', inputmode: 'numeric', placeholder: '09X XXX XXXX', 'aria-label': 'رقم الهاتف', autocomplete: 'tel', dir: 'ltr' })
+  const id = isPhone ? el('input', { class: 'au-in', type: 'tel', inputmode: 'numeric', placeholder: '091 234 5678', 'aria-label': 'رقم الهاتف', autocomplete: 'tel', dir: 'ltr' })
     : el('input', { class: 'au-in', type: 'email', placeholder: 'example@gmail.com', 'aria-label': 'البريد الإلكتروني', autocomplete: 'email', dir: 'ltr' });
+  const phHint = isPhone ? el('small', { class: 'note', style: 'margin:-4px 2px 4px', text: 'الرقم الليبي 10 أرقام: 091 أو 092 أو 093 أو 094 أو 095 ثم 7 أرقام.' }) : null;
+  if (isPhone) { id.maxLength = 14; id.addEventListener('input', () => { // أرقام فقط (تُقبل الأرقام العربية)، ونعرض كم بقي
+    const d = id.value.replace(/[٠-٩]/g, c => '٠١٢٣٤٥٦٧٨٩'.indexOf(c)).replace(/[^\d]/g, '').replace(/^00218|^218/, '0'); const t = d.slice(0, 10);
+    id.value = t.replace(/^(\d{3})(\d{0,3})(\d{0,4}).*$/, (m, a, b, c) => [a, b, c].filter(Boolean).join(' '));
+    const ok = /^09[1-5]\d{7}$/.test(t);
+    phHint.style.color = ok ? '#1b7f3a' : t.length >= 3 && !/^09[1-5]/.test(t) ? '#c22a43' : '';
+    phHint.textContent = ok ? '✓ رقم صحيح' : t.length >= 3 && !/^09[1-5]/.test(t) ? 'يبدأ الرقم بـ 091 أو 092 أو 093 أو 094 أو 095' : t.length ? 'باقي ' + (10 - t.length) + ' أرقام' : 'الرقم الليبي 10 أرقام: 091 أو 092 أو 093 أو 094 أو 095 ثم 7 أرقام.'; }); }
   const pw = el('input', { class: 'au-in', type: 'password', placeholder: 'كلمة المرور (6 أحرف أو أكثر)', 'aria-label': 'كلمة المرور', autocomplete: 'new-password' });
   [id, pw].forEach(x => x.addEventListener('input', () => AXe('reg_input', { m: M, mode }, M + mode), { once: false }));
   const eye = el('button', { class: 'au-eye', type: 'button', text: '👁️', onclick: () => { pw.type = pw.type === 'password' ? 'text' : 'password'; } });
@@ -286,7 +293,7 @@ function authForm(kind) {
     if (!isPhone && !/^\S+@\S+\.\S+$/.test(id.value.trim())) AXe('reg_error', { m: M, mode, code: 'bad_email' });
     if ((pw.value || '').length < 6) { AXe('reg_error', { m: M, mode, code: 'short_password' }); fbk(msg, 'bad', 'كلمة المرور 6 أحرف أو أكثر.'); return; }
     let login = id.value.trim();
-    if (isPhone) { const n = libyanPhone(login); if (!n) { AXe('reg_error', { m: M, mode, code: 'bad_phone' }); fbk(msg, 'bad', 'اكتب رقماً ليبياً يبدأ بـ 091 أو 092 أو 093 أو 094 أو 095.'); return; } login = phoneEmail(n); }
+    if (isPhone) { const n = libyanPhone(login); if (!n) { AXe('reg_error', { m: M, mode, code: 'bad_phone' }); fbk(msg, 'bad', 'اكتب رقماً ليبياً من 10 أرقام يبدأ بـ 091 أو 092 أو 093 أو 094 أو 095، مثل 0912345678.'); return; } login = phoneEmail(n); }
     go_.disabled = true; go_.classList.add('busy');
     try { create ? await createUserWithEmailAndPassword(auth, login, pw.value) : await signInWithEmailAndPassword(auth, login, pw.value); }
     catch (e0) { let e = e0;
@@ -300,7 +307,7 @@ function authForm(kind) {
   draw();
   root.append(el('section', { class: 'au' }, el('button', { class: 'au-back', text: '→', 'aria-label': 'رجوع', onclick: () => go('login') }),
     authHero(isPhone ? 'التسجيل برقم الهاتف' : 'التسجيل بالبريد الإلكتروني'),
-    el('div', { class: 'au-card' }, tabs, el('label', { class: 'au-lab', text: isPhone ? 'رقم الهاتف' : 'البريد الإلكتروني' }), id,
+    el('div', { class: 'au-card' }, tabs, el('label', { class: 'au-lab', text: isPhone ? 'رقم الهاتف' : 'البريد الإلكتروني' }), id, phHint,
       el('label', { class: 'au-lab', text: 'كلمة المرور' }), el('div', { class: 'au-pw' }, pw, eye), go_, extra, msg,
       isPhone ? el('p', { class: 'note', text: 'لن نرسل لك رسالة الآن. نؤكد رقمك برسالة قصيرة واحدة فقط عند الاشتراك.' }) : null)));
   setTimeout(() => id.focus(), 50);
@@ -787,13 +794,13 @@ ACC.verifyPhone = box => new Promise(resolve => {
   if (ACC.phoneVerified()) { resolve(true); return; }
   box.innerHTML = ''; const msg = el('div');
   const known = (ACC.profile && ACC.profile.phone) || phoneOf(ACC.user) || '';
-  const ph = el('input', { type: 'tel', inputmode: 'numeric', placeholder: '09X XXX XXXX', 'aria-label': 'رقم الهاتف', value: known.replace('+218', '0') });
+  const ph = el('input', { type: 'tel', inputmode: 'numeric', placeholder: '091 234 5678', 'aria-label': 'رقم الهاتف', value: known.replace('+218', '0') });
   const code = el('input', { inputmode: 'numeric', placeholder: 'الرمز (4 أرقام)', 'aria-label': 'رمز التحقق', autocomplete: 'one-time-code', maxlength: '4' });
   const send = el('button', { class: 'btn', text: 'أرسل رمز التأكيد' });
   const ok = el('button', { class: 'btn', text: 'تأكيد' });
   const codeRow = el('div', { class: 'code', hidden: true }, code, ok);
   send.onclick = async () => { msg.innerHTML = ''; const n = libyanPhone(ph.value);
-    if (!n) { fbk(msg, 'bad', 'اكتب رقماً ليبياً يبدأ بـ 091 أو 092 أو 093 أو 094 أو 095.'); return; }
+    if (!n) { fbk(msg, 'bad', 'اكتب رقماً ليبياً من 10 أرقام يبدأ بـ 091 أو 092 أو 093 أو 094 أو 095، مثل 0912345678.'); return; }
     send.disabled = true;
     try { await call('sendOtp', { phone: n.replace('+218', '0'), deviceId }); codeRow.hidden = false; code.focus(); fbk(msg, 'ok', 'أرسلنا رمزاً من 4 أرقام إلى ' + n.replace('+218', '0') + '.'); }
     catch (e) { fbk(msg, 'bad', fnErr(e)); }
