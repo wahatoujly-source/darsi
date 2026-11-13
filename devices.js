@@ -65,11 +65,11 @@ export async function renderDevices(ctx) {
   const myFam = LS.get('fam_dev');
   const draw = () => { box.innerHTML = '';
     box.append(el('p', { class: 'note', text: 'نظّم استخدام المجتهد في أسرتك: هاتف خاص لكل ابن، أو هاتف يشترك فيه أكثر من ابن، أو هاتفك أنت يستخدمه الأبناء. هذا ينظّم استخدام المجتهد فقط، ولا يقفل الهاتف ولا التطبيقات الأخرى.' }));
-    // الحالات الثلاث
+    // الحالات الثلاث: كلها عبر معالج إعداد خطوة بخطوة
     box.append(el('b', { text: '➕ أضف جهازاً' }),
-      el('button', { class: 'dv-case', onclick: () => pickKid('لمن هذا الهاتف؟', k => go('linkkid-' + k)) }, el('span', { class: 'e', text: '📱' }), el('span', {}, el('b', { text: 'هاتف خاص لابن' }), el('small', { text: 'يُربط بملف الابن عن طريق رمز QR (كما هو الآن). كل هاتف لابن واحد.' }))),
-      el('button', { class: 'dv-case', onclick: () => pickKid('اربط أولاً أحد الأبناء بالهاتف المشترك، ثم أضف إخوته من بطاقة الجهاز هنا.', k => go('linkkid-' + k)) }, el('span', { class: 'e', text: '👥' }), el('span', {}, el('b', { text: 'هاتف مشترك بين بعض الأبناء' }), el('small', { text: 'اربطه بأحد الأبناء بـ QR، ثم اضغط «➕ إضافة ابن» في بطاقة الجهاز، وحدّد وقت كل ابن.' }))),
-      el('button', { class: 'dv-case', onclick: famCreate }, el('span', { class: 'e', text: '🏠' }), el('span', {}, el('b', { text: 'هذا الهاتف هو جهاز الأسرة' }), el('small', { text: 'إذا كان أبناؤك يدرسون على هاتفك أنت. تضبط جداولهم هنا، ثم تشغّل «وضع الأبناء» وتترك لهم الهاتف — دون QR ودون كلمات مرور للأطفال.' }))));
+      el('button', { class: 'dv-case', onclick: () => go('devices-fam') }, el('span', { class: 'e', text: '🏠' }), el('span', {}, el('b', { text: 'هاتفي أنا يستعمله الأبناء' }), el('small', { text: 'هاتف واحد للأسرة: لكل ابن وقته، أو يختار الابن اسمه. صفحتك محمية برمز أو بالبصمة.' }))),
+      el('button', { class: 'dv-case', onclick: () => go('devices-shared') }, el('span', { class: 'e', text: '👥' }), el('span', {}, el('b', { text: 'هاتف مشترك بين أكثر من ابن' }), el('small', { text: 'هاتف للأبناء (غير هاتفك) يدرس عليه ابنان أو أكثر: بالجدول أو باختيار الاسم. يُربط برمز QR واحد.' }))),
+      el('button', { class: 'dv-case', onclick: () => go('devices-own') }, el('span', { class: 'e', text: '📱' }), el('span', {}, el('b', { text: 'هاتف خاص لابن' }), el('small', { text: 'كل ابن له هاتفه: يُربط بملفه برمز QR ويدخل مباشرة.' }))));
     box.append(el('b', { text: 'أجهزتي (' + R.devices.length + ')' }));
     if (!R.devices.length) box.append(el('p', { class: 'note', text: 'لا توجد أجهزة مرتبطة بعد.' }));
     R.devices.sort((a, b) => (a.kind === 'fam' ? 0 : 1) - (b.kind === 'fam' ? 0 : 1) || b.last - a.last).forEach(D => box.append(card(D)));
@@ -109,9 +109,9 @@ export async function renderDevices(ctx) {
       el('button', { class: 'btn ghost sm', text: D.paused ? '▶ إعادة التفعيل' : '⏸ إيقاف الجهاز', onclick: () => upd(D, { paused: !D.paused }, D.paused ? 'أُعيد التفعيل' : 'أُوقف الجهاز') }),
       D.schedOn ? el('button', { class: 'btn ghost sm', text: '⏱ تمديد وقت', onclick: () => extend(D) }) : null,
       D.ext && D.ext.until > now() ? el('button', { class: 'btn ghost sm', text: '✕ إلغاء التمديد', onclick: () => upd(D, { ext: null }, 'أُلغي التمديد') }) : null);
-    if (isFam) { act.append(mine ? el('button', { class: 'btn sun sm', text: '🧒 تشغيل وضع الأبناء الآن', onclick: () => { LS.set('fam_mode', '1'); boot(C, true); } })
+    if (isFam) { act.append(mine ? el('button', { class: 'btn sun sm', text: '🧒 تشغيل وضع الأبناء الآن', onclick: () => { if (!D.hasPin) { fbk(msg, 'info', 'ضع أولاً رمزاً لولي الأمر حتى لا يدخل الأبناء صفحتك.'); go('devices-lock-' + D.id); return; } LS.set('fam_mode', '1'); boot(C, true); } })
         : el('button', { class: 'btn ghost sm', text: '📲 استخدمه على هذا الهاتف', onclick: () => { LS.set('fam_dev', D.id); renderDevices(C); } }),
-      el('button', { class: 'btn ghost sm', text: D.hasPin ? '🔐 تغيير/إزالة رمز ولي الأمر' : '🔐 رمز لولي الأمر (اختياري)', onclick: () => setPin(D) })); }
+      el('button', { class: 'btn ghost sm', text: D.hasPin ? '🔐 الرمز والبصمة' : '🔐 ضع رمز ولي الأمر', onclick: () => go('devices-lock-' + D.id) })); }
     act.append(el('button', { class: 'btn ghost sm', style: 'color:#c22a43', text: '✕ إلغاء الربط', onclick: async e => { const b = e.currentTarget; if (b.dataset.c !== '1') { b.dataset.c = '1'; b.textContent = '⚠️ متأكد؟ اضغط مرة أخرى'; return; }
       try { await call('devAdmin', { op: 'unlink', kind: D.kind, dev: D.id }); if (mine) { LS.set('fam_dev', null); LS.set('fam_mode', null); } R.devices = R.devices.filter(x => x !== D); fbk(msg, 'ok', '✓ أُلغي ربط الجهاز. نتائج الأبناء محفوظة.'); draw(); } catch (x) { fbk(msg, 'bad', fnErr(x)); } } }));
     c.append(act); return c;
@@ -149,7 +149,7 @@ export async function renderDevices(ctx) {
 /* =============================== على الجهاز نفسه: الحارس =============================== */
 // يعمل على جهاز الابن (مرتبط بـ QR) إذا كان مشتركاً أو له جدول أو موقوفاً، وعلى جهاز الأسرة في «وضع الأبناء».
 let G = null;
-const PARENT_ROUTES = /^(account|kids|who|devices|guide|admin(-.*)?|ctrl-.*|tt-.*|kid-.*|linkkid-.*|link(-\d+)?|subscribe|login(-.*)?|onboard|paid-.*|teacher.*|crs-.*)$/;
+const PARENT_ROUTES = /^(account|kids|who|devices(-.*)?|guide|admin(-.*)?|ctrl-.*|tt-.*|kid-.*|linkkid-.*|link(-\d+)?|subscribe|login(-.*)?|onboard|paid-.*|teacher.*|crs-.*)$/;
 export async function boot(ctx, startNow) {
   C = ctx; css();
   const fam = !C.ACC.kid; if (fam && !(LS.get('fam_mode') === '1' && LS.get('fam_dev'))) return stop();
@@ -196,10 +196,10 @@ async function switchTo(pid) {
   try { await C.call('kidSwitch', { pid }); await C.auth.currentUser.getIdToken(true); setTimeout(() => location.reload(), 600); }
   catch (e) { screen('⚠️', 'تعذّر الانتقال', C.fnErr(e)); setTimeout(refresh, 20000); }
 }
-function screen(ic, t, d, extra) { const { el } = C;
+function screen(ic, t, d, extra, gate) { const { el } = C;
   if (!G.overlay) { G.overlay = el('div', { id: 'devguard' }); document.body.append(G.overlay); }
   G.overlay.innerHTML = ''; G.overlay.append(el('div', { class: 'in' }, el('div', { style: 'font-size:4rem;line-height:1', text: ic }), el('h2', { text: t }), el('p', { class: 'note', style: 'font-size:1rem', text: d }), extra || null,
-    G.fam ? el('button', { class: 'btn ghost', text: '👤 دخول ولي الأمر', onclick: () => parentGate('who') }) : null));
+    G.fam && !gate ? el('button', { class: 'btn ghost', text: '👤 دخول ولي الأمر', onclick: () => parentGate('who') }) : null));
   G.pill && G.pill.remove(); G.pill = null; }
 function chooser() { const { el } = C; const D = G.dev;
   screen('👋', 'من يدرس الآن؟', 'اضغط على اسمك.', el('div', { class: 'dg-kids' }, ...D.pids.map(p => { const k = (G.kids || {})[p] || {};
@@ -215,11 +215,127 @@ function pill() { const { el } = C; const D = G.dev; if (!D) return;
 function parentGate(h) { const { el } = C; const pinH = LS.get('fam_pin');
   const leave = () => { LS.set('fam_mode', null); stop(); C.go(h && PARENT_ROUTES.test(h) ? h : 'who'); };
   if (!pinH) { let n = 0; return screen('🔒', 'هذه الصفحة لولي الأمر', 'أنت في «وضع الأبناء». الخروج يعيد الهاتف لحساب ولي الأمر.', el('div', { class: 'row', style: 'gap:8px;justify-content:center' },
-    el('button', { class: 'btn sun', text: 'الخروج من وضع الأبناء', onclick: e => { if (++n < 2) { e.currentTarget.textContent = '⚠️ اضغط مرة أخرى للتأكيد'; return; } leave(); } }), el('button', { class: 'btn ghost', text: 'رجوع', onclick: back }))); }
+    el('button', { class: 'btn sun', text: 'الخروج من وضع الأبناء', onclick: e => { if (++n < 2) { e.currentTarget.textContent = '⚠️ اضغط مرة أخرى للتأكيد'; return; } leave(); } }), el('button', { class: 'btn ghost', text: 'رجوع', onclick: back })), true); }
   let v = ''; const dots = el('div', { class: 'dg-dots', text: '' }); const m = el('div');
+  const bioB = LS.get('fam_bio') ? el('button', { class: 'btn sun', text: '👆 البصمة أو الوجه', onclick: async () => { if (await bioCheck()) leave(); else C.fbk(m, 'bad', 'لم يتم التحقق. استعمل الرمز.'); } }) : null;
   const press = async k => { if (k === '⌫') v = v.slice(0, -1); else if (v.length < 4) v += k; dots.textContent = '●'.repeat(v.length);
     if (v.length === 4) { if (await sha('mj:' + C.ACC.user.uid + ':' + v) === pinH) leave(); else { v = ''; dots.textContent = ''; C.fbk(m, 'bad', 'الرمز غير صحيح'); } } };
-  screen('🔐', 'رمز ولي الأمر', 'اكتب الرمز للخروج من «وضع الأبناء».', el('div', { class: 'stack', style: 'align-items:center' }, dots, m,
-    el('div', { class: 'dg-pin' }, ...['1', '2', '3', '4', '5', '6', '7', '8', '9', '', '0', '⌫'].map(k => k ? el('button', { text: k, onclick: () => press(k) }) : el('span'))), el('button', { class: 'btn ghost', text: 'رجوع', onclick: back })));
+  screen('🔐', 'صفحة ولي الأمر', bioB ? 'افتح بالبصمة أو الوجه، أو اكتب الرمز.' : 'اكتب الرمز للخروج من «وضع الأبناء».', el('div', { class: 'stack', style: 'align-items:center' }, bioB, dots, m,
+    el('div', { class: 'dg-pin' }, ...['1', '2', '3', '4', '5', '6', '7', '8', '9', '', '0', '⌫'].map(k => k ? el('button', { text: k, onclick: () => press(k) }) : el('span'))), el('button', { class: 'btn ghost', text: 'رجوع', onclick: back })), true);
   function back() { G.overlay && G.overlay.remove(); G.overlay = null; C.go('home'); tick(); }
+}
+
+/* =============================== البصمة / الوجه (WebAuthn على هذا الهاتف فقط) ===============================
+   تُستعمل قفلاً لصفحة ولي الأمر في «وضع الأبناء». القفل الأساسي هو الرمز، والبصمة اختصار له على هذا الجهاز. */
+const b64 = a => btoa(String.fromCharCode(...new Uint8Array(a))).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+const unb64 = s => Uint8Array.from(atob(s.replace(/-/g, '+').replace(/_/g, '/')), c => c.charCodeAt(0));
+export async function bioAvailable() { try { return !!(window.PublicKeyCredential && await PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable()); } catch (e) { return false; } }
+async function bioRegister() {
+  const cred = await navigator.credentials.create({ publicKey: { challenge: crypto.getRandomValues(new Uint8Array(32)), rp: { name: 'المجتهد' },
+    user: { id: crypto.getRandomValues(new Uint8Array(16)), name: 'parent', displayName: 'ولي الأمر' }, pubKeyCredParams: [{ type: 'public-key', alg: -7 }, { type: 'public-key', alg: -257 }],
+    authenticatorSelection: { authenticatorAttachment: 'platform', userVerification: 'required', residentKey: 'discouraged' }, timeout: 60000, attestation: 'none' } });
+  LS.set('fam_bio', b64(cred.rawId)); return true; }
+async function bioCheck() { const id = LS.get('fam_bio'); if (!id) return false;
+  try { await navigator.credentials.get({ publicKey: { challenge: crypto.getRandomValues(new Uint8Array(32)), allowCredentials: [{ type: 'public-key', id: unb64(id) }], userVerification: 'required', timeout: 60000 } }); return true; }
+  catch (e) { return false; } }
+
+/* =============================== معالج الإعداد خطوة بخطوة ===============================
+   devices-fam    : هاتف ولي الأمر للأسرة (الأبناء ← طريقة الاستخدام ← الجدول ← القفل ← تشغيل)
+   devices-shared : هاتف مشترك للأبناء (الأبناء ← الطريقة ← الجدول ← رمز QR واحد للجميع)
+   devices-own    : هاتف خاص لكل ابن
+   devices-lock-<id> : رمز ولي الأمر والبصمة لجهاز الأسرة */
+const WZ_CSS = `.wz-steps{display:flex;gap:6px;justify-content:center}.wz-steps i{width:28px;height:6px;border-radius:9px;background:var(--line)}.wz-steps i.on{background:#1f72e0}
+.wz-kids{display:grid;grid-template-columns:repeat(auto-fill,minmax(110px,1fr));gap:8px}.wz-kid{border:2px solid var(--line);background:var(--card);border-radius:16px;padding:10px 6px;display:flex;flex-direction:column;align-items:center;gap:4px;font:inherit;color:var(--ink);cursor:pointer}
+.wz-kid.on{border-color:#1f72e0;background:#e3f0ff}.wz-kid .av{font-size:2rem}.wz-opt{display:flex;gap:10px;align-items:flex-start;padding:12px;border:2px solid var(--line);border-radius:16px;background:var(--card);font:inherit;color:var(--ink);text-align:start;cursor:pointer;width:100%}
+.wz-opt.on{border-color:#1f72e0;background:#e3f0ff}.wz-opt .e{font-size:1.7rem}.wz-opt b{display:block}.wz-opt small{color:var(--muted);line-height:1.6}
+.wz-pin{font-size:1.6rem;letter-spacing:10px;text-align:center;direction:ltr;max-width:200px;margin:auto}`;
+function schedEditor(el, pids, K, S) { // يعدّل S في مكانه
+  const w = el('div', { class: 'stack' }); const nm = p => (K[p] || {}).name || '؟';
+  const draw = () => { w.innerHTML = '';
+    pids.forEach(p => { const L = S[p] = S[p] || []; if (!L.length) L.push({ d: [6, 0, 1, 2, 3, 4], s: '16:00', e: '17:00' });
+      w.append(el('b', { text: AV((K[p] || {}).avatar) + ' ' + nm(p) }));
+      L.forEach((x, i) => w.append(el('div', { class: 'dv-sl' }, ...DAYS.map(([d, t]) => el('button', { class: 'dv-day' + (x.d.includes(d) ? ' on' : ''), text: t, onclick: () => { x.d = x.d.includes(d) ? x.d.filter(y => y !== d) : [...x.d, d]; draw(); } })),
+        el('span', { text: 'من' }), el('input', { type: 'time', value: x.s, onchange: e => { x.s = e.target.value; } }), el('span', { text: 'إلى' }), el('input', { type: 'time', value: x.e, onchange: e => { x.e = e.target.value; } }),
+        L.length > 1 ? el('button', { class: 'btn ghost sm', text: '✕', onclick: () => { L.splice(i, 1); draw(); } }) : null)));
+      w.append(el('button', { class: 'btn ghost sm', text: '+ فترة أخرى لـ' + nm(p), onclick: () => { L.push({ d: [6, 0, 1, 2, 3, 4], s: '18:00', e: '19:00' }); draw(); } })); }); };
+  draw(); return w; }
+const schedBad = (S, pids) => { const L = pids.flatMap(p => S[p] || []); return L.find(x => !x.d.length || !x.s || !x.e || hm(x.e) <= hm(x.s)) ? 'كل فترة تحتاج يوماً واحداً على الأقل، ووقت نهاية بعد البداية.' : ''; };
+
+export async function renderSetup(ctx, h) {
+  C = ctx; css(); if (!document.getElementById('wz-css')) document.head.append(C.el('style', { id: 'wz-css', text: WZ_CSS }));
+  const { el, page, fbk, call, fnErr, go, ACC, gradeName } = C;
+  const kind = h.replace(/^devices-/, '');
+  const T = { fam: '🏠 هاتفي أنا للأسرة', shared: '👥 هاتف مشترك للأبناء', own: '📱 هاتف خاص لكل ابن' };
+  const s = page(kind.startsWith('lock') ? '🔐 قفل صفحة ولي الأمر' : T[kind] || 'إعداد الأجهزة', 'إعداد خطوة بخطوة', 'devices');
+  const msg = el('div'), box = el('div', { class: 'stack' }); s.append(box, msg);
+  const kids = (ACC.profiles || []).filter(p => p.id !== 'me'); const K = Object.fromEntries(kids.map(k => [k.id, k]));
+  if (!kids.length) { box.append(el('p', { class: 'note', text: 'أضف أبناءك أولاً، ثم ارجع إلى هنا.' }), el('button', { class: 'btn sun', text: '＋ أضف ابناً', onclick: () => go('kids') })); return; }
+  const st = { step: 0, pids: kids.map(k => k.id), mode: 'sched', S: {}, pin: '' };
+  const dots = n => el('div', { class: 'wz-steps' }, ...Array.from({ length: n }, (_, i) => el('i', { class: i <= st.step ? 'on' : '' })));
+  const nav = (back, next, nextT) => el('div', { class: 'row', style: 'gap:8px' }, next ? el('button', { class: 'btn sun', text: nextT || 'التالي ←', onclick: next }) : null, back ? el('button', { class: 'btn ghost', text: 'رجوع', onclick: back }) : el('button', { class: 'btn ghost', text: 'إلغاء', onclick: () => go('devices') }));
+  const kidPick = (min) => el('div', { class: 'wz-kids' }, ...kids.map(k => el('button', { class: 'wz-kid' + (st.pids.includes(k.id) ? ' on' : ''), onclick: () => { st.pids = st.pids.includes(k.id) ? st.pids.filter(x => x !== k.id) : [...st.pids, k.id]; draw(); } },
+    el('span', { class: 'av', text: AV(k.avatar) }), el('b', { text: (st.pids.includes(k.id) ? '✓ ' : '') + k.name }), el('small', { text: 'الصف ' + gradeName(k.grade) }))));
+  const modePick = () => el('div', { class: 'stack' },
+    el('button', { class: 'wz-opt' + (st.mode === 'sched' ? ' on' : ''), onclick: () => { st.mode = 'sched'; draw(); } }, el('span', { class: 'e', text: '⏰' }), el('span', {}, el('b', { text: 'لكل ابن وقته (جدول)' }), el('small', { text: 'مثلاً: سعاد من 4 إلى 5، رهف من 5 إلى 6. عند انتهاء وقت ابن يُحفظ تقدّمه وينتقل الهاتف تلقائياً إلى من بعده.' }))),
+    el('button', { class: 'wz-opt' + (st.mode === 'open' ? ' on' : ''), onclick: () => { st.mode = 'open'; draw(); } }, el('span', { class: 'e', text: '🙋' }), el('span', {}, el('b', { text: 'مفتوح: كل ابن يفتح ملفه' }), el('small', { text: 'عند فتح المجتهد يظهر «من يدرس الآن؟» ويضغط كل ابن على اسمه. بدون أوقات محددة.' }))));
+  const mins = () => (kind === 'shared' ? 2 : 1);
+  const steps = {
+    kids: () => [el('b', { text: kind === 'fam' ? 'من من أبنائك يدرس على هاتفك؟' : 'من من أبنائك يدرس على هذا الهاتف المشترك؟' }), kidPick(),
+      nav(null, () => { if (st.pids.length < mins()) { fbk(msg, 'bad', kind === 'shared' ? 'اختر ابنين على الأقل (لابن واحد استعمل «هاتف خاص»).' : 'اختر ابناً واحداً على الأقل.'); return; } msg.innerHTML = ''; st.step++; draw(); })],
+    mode: () => [el('b', { text: 'كيف يتناوبون على الهاتف؟' }), st.pids.length === 1 ? el('p', { class: 'note', text: 'ابن واحد: الجدول يحدد أوقات استعماله، أو اتركه مفتوحاً.' }) : null, modePick(),
+      nav(() => { st.step--; draw(); }, () => { st.step++; if (st.mode === 'open') st.step++; draw(); })],
+    sched: () => [el('b', { text: '⏰ وقت كل ابن' }), el('p', { class: 'note', text: 'حدّد الأيام والساعات. لا يُسمح بتداخل أوقات الأبناء. يمكنك تعديلها لاحقاً في أي وقت.' }), schedEditor(el, st.pids, K, st.S),
+      nav(() => { st.step--; draw(); }, () => { const b = schedBad(st.S, st.pids); if (b) { fbk(msg, 'bad', b); return; } msg.innerHTML = ''; st.step++; draw(); })],
+  };
+  let famId = null;
+  const draw = () => { box.innerHTML = '';
+    if (kind === 'own') return drawOwn();
+    if (kind.startsWith('lock')) return drawLock(kind.slice(5));
+    const order = kind === 'fam' ? ['kids', 'mode', 'sched', 'lock', 'done'] : ['kids', 'mode', 'sched', 'qr'];
+    box.append(dots(order.length));
+    const k = order[st.step];
+    if (steps[k]) box.append(...steps[k]().filter(Boolean));
+    else if (k === 'lock') box.append(...lockStep(async (pinH, bio) => {
+      try { const r = await call('devAdmin', { op: 'famCreate', name: 'هاتف ولي الأمر', pids: st.pids }); famId = r.id; LS.set('fam_dev', r.id);
+        await call('devAdmin', { op: 'update', kind: 'fam', dev: r.id, patch: { pids: st.pids, sched: st.mode === 'sched' ? st.S : {}, schedOn: st.mode === 'sched', pinH } });
+        LS.set('fam_pin', pinH); st.step++; draw(); } catch (e) { fbk(msg, 'bad', conflict(e)); } }, () => { st.step = st.mode === 'open' ? 1 : 2; draw(); }));
+    else if (k === 'done') box.append(el('div', { class: 'panel stack', style: 'text-align:center' }, el('div', { style: 'font-size:3rem', text: '✅' }), el('b', { text: 'هاتفك جاهز للأسرة' }),
+      el('p', { class: 'note', text: st.mode === 'sched' ? 'عندما تعطي الهاتف لأبنائك اضغط «ابدأ وضع الأبناء». يظهر ملف صاحب الوقت تلقائياً، وعند انتهاء وقته ينتقل إلى من بعده. للعودة إلى صفحتك اضغط «👤 دخول ولي الأمر» واستعمل الرمز أو البصمة.' : 'عندما تعطي الهاتف لأبنائك اضغط «ابدأ وضع الأبناء». يظهر «من يدرس الآن؟» ويختار كل ابن اسمه. للعودة إلى صفحتك استعمل الرمز أو البصمة.' }),
+      el('button', { class: 'btn sun', text: '🧒 ابدأ وضع الأبناء الآن', onclick: () => { LS.set('fam_mode', '1'); boot(C, true); } }), el('button', { class: 'btn ghost', text: 'لاحقاً — إلى «أجهزتي»', onclick: () => go('devices') })));
+    else if (k === 'qr') drawQR();
+  };
+  const conflict = e => { const m = /conflict:([^:]+):([^:]+):([\d:]+-[\d:]+):([\d:]+-[\d:]+)/.exec(String(e && e.message || '')); return m ? 'تعارض في المواعيد: وقت ' + ((K[m[1]] || {}).name || '') + ' (' + m[3] + ') يتداخل مع وقت ' + ((K[m[2]] || {}).name || '') + ' (' + m[4] + '). عدّل أحدهما.' : fnErr(e); };
+  function lockStep(onDone, back) {
+    const p1 = el('input', { class: 'tinput wz-pin', type: 'password', inputmode: 'numeric', maxlength: '4', placeholder: '••••', autocomplete: 'new-password', 'aria-label': 'رمز من 4 أرقام' });
+    const p2 = el('input', { class: 'tinput wz-pin', type: 'password', inputmode: 'numeric', maxlength: '4', placeholder: '••••', autocomplete: 'new-password', 'aria-label': 'أعد الرمز' });
+    const bio = el('div'); let useBio = false;
+    bioAvailable().then(ok => { if (!ok) { bio.append(el('small', { class: 'note', text: 'البصمة/الوجه غير متاحة في هذا المتصفح، والرمز يكفي.' })); return; }
+      bio.append(el('label', { class: 'sndrow' }, el('input', { type: 'checkbox', onchange: e => { useBio = e.target.checked; } }), el('b', { text: '👆 أريد الفتح أيضاً ببصمة الإصبع أو الوجه على هذا الهاتف' }))); });
+    return [el('b', { text: '🔐 قفل صفحة ولي الأمر' }), el('p', { class: 'note', text: 'حتى لا يدخل الأبناء صفحتك أو يغيّروا الجدول: اختر رمزاً من 4 أرقام لا يعرفه الأبناء. يُطلب عند الخروج من «وضع الأبناء».' }),
+      el('span', { class: 'note', text: 'الرمز:' }), p1, el('span', { class: 'note', text: 'أعد كتابته:' }), p2, bio,
+      nav(back, async () => { if (!/^\d{4}$/.test(p1.value)) { fbk(msg, 'bad', 'الرمز 4 أرقام.'); return; } if (p1.value !== p2.value) { fbk(msg, 'bad', 'الرمزان غير متطابقين.'); return; }
+        if (useBio) { try { await bioRegister(); } catch (e) { fbk(msg, 'bad', 'لم يتم تسجيل البصمة/الوجه. يمكنك المتابعة بالرمز فقط.'); return; } } else LS.set('fam_bio', null);
+        msg.innerHTML = ''; onDone(await sha('mj:' + ACC.user.uid + ':' + p1.value), useBio); }, 'حفظ القفل ←')]; }
+  function drawLock(id) { box.append(...lockStep(async pinH => { try { await call('devAdmin', { op: 'update', kind: 'fam', dev: id, patch: { pinH } }); LS.set('fam_pin', pinH); fbk(msg, 'ok', '✓ حُفظ القفل.'); setTimeout(() => go('devices'), 700); } catch (e) { fbk(msg, 'bad', fnErr(e)); } }, () => go('devices')),
+    el('button', { class: 'btn ghost sm', style: 'color:#c22a43', text: 'إزالة القفل (غير مستحسن)', onclick: async () => { try { await call('devAdmin', { op: 'update', kind: 'fam', dev: id, patch: { pinH: '' } }); LS.set('fam_pin', null); LS.set('fam_bio', null); LS.set('fam_mode', null); go('devices'); } catch (e) { fbk(msg, 'bad', fnErr(e)); } } })); }
+  async function drawQR() {
+    const names = st.pids.map(p => K[p].name).join(' و');
+    box.append(el('b', { text: '📷 اربط الهاتف المشترك' }), el('div', { class: 'lk-steps' },
+      el('p', { class: 'note', text: '1) على الهاتف المشترك افتح mujtahid.ly ← «دخول» ← «🧒 أنا طالب، عندي رمز»، ثم امسح رمز QR أو اكتب الأرقام.' }),
+      el('p', { class: 'note', text: '2) يُربط الهاتف بـ ' + names + ' دفعة واحدة' + (st.mode === 'sched' ? '، ويُطبَّق جدولهم مباشرة.' : '، ويختار كل منهم اسمه عند الفتح.') })));
+    const out = el('div', { class: 'stack', style: 'align-items:center' }, el('span', { class: 'note', text: '⏳ جارٍ إنشاء الرمز…' })); box.append(out, nav(() => { st.step = st.mode === 'open' ? 1 : 2; draw(); }, null));
+    try { const r = await call('createLinkCode', { pids: st.pids, ...(st.mode === 'sched' ? { sched: st.S, schedOn: true } : {}) }); out.innerHTML = '';
+      const qr = el('div', { class: 'qrbox' }), left = el('span', { class: 'note' });
+      out.append(el('div', { class: 'linkcode', dir: 'ltr', text: r.code.slice(0, 3) + ' ' + r.code.slice(3) }), qr, left);
+      const t = setInterval(() => { const m = Math.max(0, r.exp - Date.now()); left.textContent = m ? 'صالح لمدة ' + Math.ceil(m / 60000) + ' دقيقة' : 'انتهت صلاحية الرمز — ارجع وأنشئ رمزاً جديداً'; if (!m || !out.isConnected) clearInterval(t); }, 1000);
+      C.loadQR().then(Q => { new Q(qr, { text: location.origin + location.pathname + '#link-' + r.code, width: 200, height: 200, correctLevel: Q.CorrectLevel.M }); }).catch(() => {});
+      // ننتظر ظهور الجهاز ثم نعرض النجاح
+      const t0 = Date.now(); const poll = setInterval(async () => { if (!out.isConnected || Date.now() - t0 > 15 * 60000) { clearInterval(poll); return; }
+        try { const L = await call('devAdmin', { op: 'list' }); const D = L.devices.find(d => d.kind === 'kid' && st.pids.every(p => d.pids.includes(p)) && (d.at || d.last || 0) >= t0 - 60000);
+          if (D) { clearInterval(poll); box.innerHTML = ''; box.append(el('div', { class: 'panel stack', style: 'text-align:center' }, el('div', { style: 'font-size:3rem', text: '✅' }), el('b', { text: 'رُبط الهاتف المشترك بـ ' + names }), el('button', { class: 'btn sun', text: 'إلى «أجهزتي»', onclick: () => go('devices') }))); } } catch (e) {} }, 5000);
+    } catch (e) { out.innerHTML = ''; fbk(msg, 'bad', conflict(e)); } }
+  function drawOwn() { box.append(el('p', { class: 'note', text: 'اختر الابن الذي له هاتف خاص، ثم امسح رمز QR من هاتفه. كرّر ذلك لكل ابن له هاتف.' }),
+    el('div', { class: 'wz-kids' }, ...kids.map(k => el('button', { class: 'wz-kid', onclick: () => go('linkkid-' + k.id) }, el('span', { class: 'av', text: AV(k.avatar) }), el('b', { text: k.name }), el('small', { text: '📱 اربط هاتفه' })))),
+    nav(() => go('devices'), null)); }
+  draw();
 }

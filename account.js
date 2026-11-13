@@ -409,6 +409,10 @@ function renderWho() {
         el('button', { onclick: () => go('linkkid-' + p.id) }, el('span', { text: '📱' }), 'ربط موبايله'),
         el('button', { onclick: () => go('tt-' + p.id) }, el('span', { text: '📅' }), 'الجدول' + (p.tt && p.tt.on ? ' ✓' : '')),
         el('button', { onclick: () => go('ctrl-' + p.id) }, el('span', { text: '🎛️' }), 'التحكم' + (ctrlOn ? ' ✓' : ''))))); });
+  if (kidsOf().length) { const fm = localStorage.getItem('mj_fam_dev');
+    s.append(el('div', { class: 'kx-devcard' }, el('div', { class: 'h' }, el('span', { text: '📱' }), el('span', {}, el('b', { text: 'على أي هاتف يدرس أبناؤك؟' }), el('small', { text: fm ? 'هاتفك مُعدّ كهاتف للأسرة. يمكنك تشغيل «وضع الأبناء» أو تعديل الأوقات.' : 'هاتف لكل ابن، أو هاتف مشترك بينهم، أو هاتفك أنت بأوقات لكل ابن وقفل لصفحتك.' }))),
+      el('div', { class: 'b' }, el('button', { onclick: () => go(fm ? 'devices' : 'devices-fam') }, '🏠', el('b', { text: 'هاتفي أنا' })), el('button', { onclick: () => go('devices-shared') }, '👥', el('b', { text: 'هاتف مشترك' })), el('button', { onclick: () => go('devices-own') }, '📱', el('b', { text: 'هاتف لكل ابن' }))),
+      el('button', { class: 'linkbtn', text: 'كل الأجهزة والأوقات ←', onclick: () => go('devices') }))); }
   if (!ACC.co && kidsOf().length < MAX_KIDS) g.append(el('button', { class: 'kx-wadd', onclick: () => go('kids') }, el('span', { text: '＋' }), el('b', { text: 'أضف ابناً' }), el('small', { text: 'حتى ' + MAX_KIDS + ' أبناء في حساب واحد' })));
   s.append(g, el('div', { class: 'row', style: 'gap:8px;justify-content:center' }, el('button', { class: 'btn ghost', text: '✏️ إدارة الأبناء', onclick: () => go('kids') }), el('button', { class: 'btn ghost', text: '📱 أجهزتي', onclick: () => go('devices') }), el('button', { class: 'btn ghost', text: '🧭 الدليل', onclick: () => go('guide') }), el('button', { class: 'btn ghost', text: '⚙️ حسابي', onclick: () => go('account') })));
 }
@@ -1481,13 +1485,14 @@ function renderGuide(i = 0) {
 }
 function renderAxAdmin() { if (!ACC.user) { go('login'); return; } const s = page('تحليلات المنصة', 'جارٍ التحميل…', 'admin');
   import('./axadmin.js').then(m => m.default({ call, fnErr, ACC, page, fbk, D, el, go, store })).catch(() => fbk(s, 'bad', 'تعذّر التحميل. تحقق من الاتصال.')); }
-const devCtx = () => ({ call, fnErr, ACC, page, fbk, D, el, go, store, setActive, auth, gradeName });
+const devCtx = () => ({ call, fnErr, ACC, page, fbk, D, el, go, store, setActive, auth, gradeName, loadQR });
 function renderDevicesPage() { if (!ACC.user || !isAdult()) { go('login'); return; } page('📱 أجهزتي المرتبطة', 'جارٍ التحميل…', 'who'); import('./devices.js').then(m => m.renderDevices(devCtx())).catch(() => fbk(D.root, 'bad', 'تعذّر التحميل.')); }
 const ROUTES = { devices: renderDevicesPage, guide: () => renderGuide(0), 'admin-ax': renderAxAdmin, admin: renderAdmin, subscribe: renderSubscribe, login: renderLogin, 'login-phone': () => authForm('phone'), 'login-email': () => authForm('email'), onboard: renderOnboard, kids: renderKids, who: renderWho, account: renderAccount };
 initTeach({ call, fnErr, ACC, page, fbk, D, el, go, store });
 ACC.route = h => { if (ACC.guardRoute && ACC.guardRoute(h)) return true; if (ACC.teachRoute && ACC.teachRoute(h)) return true; const pm = /^paid-([A-Za-z0-9]{10,40})(-x)?$/.exec(h); const lm = /^link(?:-(\d{6}))?$/.exec(h); if (lm) { if (!ACC.ready) { page('…', 'جارٍ التحميل', 'home'); return true; } renderLink(lm[1]); return true; }
   const tk = /^tt-([A-Za-z0-9]{1,30})$/.exec(h); if (tk) { if (!ACC.ready) { page('…', 'جارٍ التحميل', 'home'); return true; } renderTT(tk[1]); return true; }
   const ck = /^ctrl-([A-Za-z0-9]{1,30})$/.exec(h); if (ck) { if (!ACC.ready) { page('…', 'جارٍ التحميل', 'home'); return true; } renderCtrl(ck[1]); return true; }
+  const dw = /^devices-(fam|shared|own|lock-[A-Za-z0-9_-]{6,40})$/.exec(h); if (dw) { if (!ACC.ready) { page('…', 'جارٍ التحميل', 'home'); return true; } if (!ACC.user || !isAdult()) { go('login'); return true; } import('./devices.js').then(m => m.renderSetup(devCtx(), h)).catch(e => fbk(page('⚠️', '', 'who'), 'bad', 'تعذّر التحميل: ' + (e.message || e))); return true; }
   const lk = /^linkkid-([A-Za-z0-9]{1,30})$/.exec(h); if (lk) { if (!ACC.ready) { page('…', 'جارٍ التحميل', 'home'); return true; } renderLinkKid(lk[1]); return true; }
   const km = /^kid-([A-Za-z0-9]{1,30})$/.exec(h); const f = pm ? () => renderPaid(pm[1], !!pm[2]) : km ? () => renderKid(km[1]) : ROUTES[h]; if (!f) return false; if (!ACC.ready) { page('…', 'جارٍ التحميل', 'home'); return true; } if (ACC.loadError && ACC.user) { showLoadError(); return true; } f(); return true; };
 
