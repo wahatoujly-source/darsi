@@ -3,8 +3,8 @@
    التذاكر: ticketSend / ticketMine (للمستخدم أو الزائر بمفتاح سري محفوظ في جهازه)، والإدارة: adminTickets. */
 let C; // { call, fnErr, ACC, page, fbk, D, el, go, store }
 const ev = (n, p, once) => { try { window.AX && AX.ev(n, p || {}, once); } catch (e) {} };
-const CATS = [['pay', '💳', 'الدفع والاشتراك'], ['login', '🔐', 'التسجيل والدخول'], ['kids', '👨‍👩‍👧', 'الأبناء والأجهزة'], ['lessons', '📚', 'الدروس والمحتوى'], ['idea', '💡', 'اقتراح'], ['other', '✉️', 'أخرى']];
-const CTX_CAT = { pay: 'pay', paid: 'pay', login: 'login', kids: 'kids', devices: 'kids', lessons: 'lessons' };
+const CATS = [['pay', '💳', 'الدفع والاشتراك'], ['login', '🔐', 'التسجيل والدخول'], ['kids', '👨‍👩‍👧', 'الأبناء والأجهزة'], ['lessons', '📚', 'الدروس والمحتوى'], ['teach', '👩‍🏫', 'المعلمون والدورات'], ['idea', '💡', 'اقتراح'], ['other', '✉️', 'أخرى']];
+const CTX_CAT = { pay: 'pay', paid: 'pay', login: 'login', kids: 'kids', devices: 'kids', lessons: 'lessons', teach: 'teach' };
 const fmt = ms => ms ? new Date(ms).toLocaleString('ar-LY-u-nu-latn', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' }) : '';
 const ST = { open: ['⏳ بانتظار الرد', '#b45309'], answered: ['💬 تم الرد', '#15803d'], closed: ['✓ مغلقة', '#6b7280'] };
 let DATA = null;

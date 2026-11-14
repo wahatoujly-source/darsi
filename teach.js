@@ -52,6 +52,7 @@ export default function initTeach(X) {
 .tv.idle .tv-bar{opacity:0}
 .tv-bar button{background:none;border:0;color:#fff;font-size:1rem;cursor:pointer;padding:4px 6px;font-weight:800}
 .tv-bar input{flex:1;accent-color:#fbbf24;min-width:40px}.tv-bar span{font-size:.75rem;font-variant-numeric:tabular-nums}
+.tv.v{aspect-ratio:9/16;width:auto;align-self:center;height:min(78vh,760px);max-width:100%;margin-inline:auto}
 .tv.full{position:fixed;inset:0;z-index:9999;border-radius:0;aspect-ratio:auto;width:100vw;height:100vh}
 .tv-end{display:flex;flex-direction:column;gap:8px;width:min(100%,420px)}
 .tv-end button{border:0;border-radius:12px;padding:9px 12px;font:inherit;font-weight:700;cursor:pointer;text-align:start;background:rgba(255,255,255,.12);color:#fff}
@@ -162,10 +163,10 @@ export default function initTeach(X) {
       if (document.fullscreenElement || document.webkitFullscreenElement) { (document.exitFullscreen || document.webkitExitFullscreen).call(document); return; }
       if (tv.classList.contains('full')) { exitFull(); return; }
       const rq = tv.requestFullscreen || tv.webkitRequestFullscreen;
-      if (rq) { try { await rq.call(tv); try { await screen.orientation.lock('landscape'); } catch (e) {} return; } catch (e) {} }
+      if (rq) { try { await rq.call(tv); if (!tv.classList.contains('v')) { try { await screen.orientation.lock('landscape'); } catch (e) {} } return; } catch (e) {} }
       tv.classList.add('full'); document.body.style.overflow = 'hidden'; };
     return { el: tv,
-      load(id, t, autoplay) { vid = id; title = t; started = false; if (P) { try { P.destroy(); } catch (e) {} P = null; ready = false; } frame.innerHTML = ''; playB.textContent = '▶'; seek.value = '0'; cur.textContent = dur.textContent = '0:00'; showCover('poster'); if (autoplay) play(); },
+      load(id, t, autoplay, vert) { vid = id; title = t; started = false; tv.classList.toggle('v', !!vert); if (P) { try { P.destroy(); } catch (e) {} P = null; ready = false; } frame.innerHTML = ''; playB.textContent = '▶'; seek.value = '0'; cur.textContent = dur.textContent = '0:00'; showCover('poster'); if (autoplay) play(); },
       locked(msgEl) { vid = null; if (P) { try { P.destroy(); } catch (e) {} P = null; ready = false; } frame.innerHTML = ''; cover.style.display = 'grid'; cover.className = 'tv-cover'; cover.innerHTML = ''; cover.append(msgEl); },
     };
   }
@@ -237,7 +238,7 @@ export default function initTeach(X) {
     const P = makePlayer({ wm: r.wm, sub: t.name, endScreen });
     const lockMsg = () => el('div', {}, el('div', { style: 'font-size:2.2rem', text: '🔒' }), el('p', { text: 'هذا الدرس للمشتركين في الدورة' }), el('small', { text: 'الدرس الأول مجاني — اشترك لمشاهدة الكل' }));
     const pick = (i, auto) => { if (!playable(i)) { if (!full) buyBox.scrollIntoView({ behavior: 'smooth' }); return; } curI = i; rows.forEach((x, j) => x.classList.toggle('on', j === i));
-      P.load(r.vids[c.lessons[i].id], (i + 1) + '. ' + c.lessons[i].title, auto); if (auto) P.el.scrollIntoView({ behavior: 'smooth', block: 'center' }); };
+      P.load(r.vids[c.lessons[i].id], (i + 1) + '. ' + c.lessons[i].title, auto, c.lessons[i].vert); if (auto) P.el.scrollIntoView({ behavior: 'smooth', block: 'center' }); };
     s.append(P.el);
     s.append(el('div', {}, el('div', { class: 'tc-m', style: 'display:flex;gap:6px;flex-wrap:wrap;align-items:center;color:var(--muted);font-size:.8rem' }, tag(KIND[c.kind] || 'دورة'), el('span', { text: where(c) }), c.students ? el('span', { text: '👥 ' + c.students + ' مشترك' }) : null),
       el('h2', { style: 'margin:6px 0;font-family:var(--f-display)', text: c.title })));
@@ -409,7 +410,7 @@ export default function initTeach(X) {
     const queue = []; let running = false;
     const upEls = {};
     const showUp = id => { const u = UP[id], e = upEls[id]; if (!e || !u) return; e.bar.style.width = (u.pct || 0) + '%'; e.txt.textContent = u.msg || ''; e.wrap.style.display = u.busy || u.msg ? '' : 'none'; };
-    const durOf = f => new Promise(res => { try { const v = document.createElement('video'); v.preload = 'metadata'; v.onloadedmetadata = () => { res(Math.max(1, Math.round(v.duration / 60))); URL.revokeObjectURL(v.src); }; v.onerror = () => res(0); v.src = URL.createObjectURL(f); setTimeout(() => res(0), 8000); } catch (e) { res(0); } });
+    const durOf = f => new Promise(res => { try { const v = document.createElement('video'); v.preload = 'metadata'; v.onloadedmetadata = () => { durOf.vert = v.videoHeight > v.videoWidth * 1.05; res(Math.max(1, Math.round(v.duration / 60))); URL.revokeObjectURL(v.src); }; v.onerror = () => res(0); v.src = URL.createObjectURL(f); setTimeout(() => res(0), 8000); } catch (e) { res(0); } });
     const xput = (url, file, start, prog) => new Promise((res, rej) => { const x = new XMLHttpRequest(); x.open('PUT', url);
       if (start > 0) x.setRequestHeader('Content-Range', 'bytes ' + start + '-' + (file.size - 1) + '/' + file.size);
       x.upload.onprogress = e => prog(start + e.loaded);
@@ -421,11 +422,11 @@ export default function initTeach(X) {
         else if (x.status === 308) { const r = x.getResponseHeader('Range'); res({ next: r ? Number(r.split('-')[1]) + 1 : 0 }); } else rej(new Error('http ' + x.status)); };
       x.onerror = () => rej(new Error('net')); x.send(); });
     const fmtMB = b => (b / 1048576).toFixed(b > 1e9 ? 0 : 1) + ' م.ب';
-    const finish = async (l, vid, min) => { for (let i = 0; i < 6; i++) { try { return await call('teach', { op: 'upDone', cid: curCid, lid: l.id, vid, min }); } catch (e) { if (i === 5) throw e; await new Promise(r => setTimeout(r, 5000)); } } };
+    const finish = async (l, vid, min) => { for (let i = 0; i < 6; i++) { try { return await call('teach', { op: 'upDone', cid: curCid, lid: l.id, vid, min, vert: !!l.vert }); } catch (e) { if (i === 5) throw e; await new Promise(r => setTimeout(r, 5000)); } } };
     const doUpload = async (l, file) => { const u = UP[l.id] = { busy: true, pct: 0, msg: 'جارٍ التحضير…' }; showUp(l.id);
       try {
         if (!l.title.trim()) l.title = file.name.replace(/\.[a-z0-9]{2,5}$/i, '').slice(0, 80);
-        const min = await durOf(file); if (min && !l.min) { l.min = min; drawL(); }
+        durOf.vert = null; const min = await durOf(file); if (durOf.vert != null) l.vert = durOf.vert; if (min && !l.min) l.min = min; drawL();
         await doSave(false, true);
         const { url } = await call('teach', { op: 'upInit', cid: curCid, lid: l.id, size: file.size, type: file.type || 'video/mp4', origin: location.origin });
         let start = 0, res = null, t0 = Date.now();
@@ -459,7 +460,7 @@ export default function initTeach(X) {
       lw.append(el('div', { class: 'tc-ed' }, el('span', { class: 'n', text: String(i + 1) }), el('div', { class: 'f' }, t,
         el('div', { class: 'r' }, upBtn, fi, l.ready ? tag('✓ الفيديو مرفوع', 'ok') : null, i === 0 ? tag('مجاني — دعاية لدورتك', 'ok') : null),
         wrap,
-        el('div', { class: 'r' }, mn, el('span', { class: 'note', text: 'دقيقة' }), el('span', { style: 'flex:1' }),
+        el('div', { class: 'r' }, mn, el('span', { class: 'note', text: 'دقيقة' }), el('button', { class: 'btn ghost sm', title: 'اتجاه الفيديو: يُكتشف تلقائياً عند الرفع، ويمكنك تغييره', text: l.vert ? '📱 طولي' : '🖥️ عرضي', onclick: () => { l.vert = !l.vert; drawL(); } }), el('span', { style: 'flex:1' }),
           el('button', { class: 'linkbtn', text: '⬆', onclick: () => mv(-1) }), el('button', { class: 'linkbtn', text: '⬇', onclick: () => mv(1) }),
           busy ? null : el('button', { class: 'linkbtn', text: '🗑️', onclick: () => { C.lessons.splice(i, 1); drawL(); } }))))); showUp(l.id); });
       const multi = picker(true, fs => { fs.forEach(f => { const l = { id: rid(), title: f.name.replace(/\.[a-z0-9]{2,5}$/i, '').slice(0, 80), min: 0 }; C.lessons.push(l); }); drawL();
@@ -471,7 +472,7 @@ export default function initTeach(X) {
     drawL();
     const doSave = async (submit, quiet) => {
       C.lessons.forEach((l, i) => { if (!String(l.title || '').trim()) l.title = 'الدرس ' + (i + 1); });
-      const r = await call('teach', { op: 'save', cid: curCid, cat: catSel.value, grade: gSel.value, subject: sSel.value, skill: skill.value, kind: kSel.value, title: title.value, desc: desc.value, price: Number(price.value), lessons: C.lessons.map(l => ({ id: l.id, title: l.title, min: l.min || 0, src: '' })) });
+      const r = await call('teach', { op: 'save', cid: curCid, cat: catSel.value, grade: gSel.value, subject: sSel.value, skill: skill.value, kind: kSel.value, title: title.value, desc: desc.value, price: Number(price.value), lessons: C.lessons.map(l => ({ id: l.id, title: l.title, min: l.min || 0, src: '', vert: !!l.vert })) });
       if (!curCid) { curCid = r.cid; history.replaceState(null, '', '#studio-' + r.cid); }
       if (submit && !r.live) { await call('teach', { op: 'submit', cid: r.cid }); curStatus = 'pending'; }
       if (!quiet) drawL();

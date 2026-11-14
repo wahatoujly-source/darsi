@@ -1675,7 +1675,7 @@ function renderDevicesPage() { if (!ACC.user || !isAdult()) { go('login'); retur
 const helpCtx = () => ({ call, fnErr, ACC, page, fbk, D, el, go, store, onSeen: () => helpBadge(0) });
 function renderHelpPage() { const o = ACC.helpOpt; ACC.helpOpt = null; page('💬 المساعدة', 'جارٍ التحميل…', 'home'); import('./help.js').then(m => m.renderHelp(helpCtx(), o)).catch(() => fbk(D.root, 'bad', 'تعذّر التحميل. تحقق من الاتصال.')); }
 /* زر «مساعدة» العائم: يظهر في الصفحات العامة (ليس داخل الدرس أو الاختبار أو وضع الطفل) */
-const HELP_CTX = h => /^(subscribe)$/.test(h) ? 'pay' : /^paid-/.test(h) ? 'paid' : /^(login|login-phone|login-email|onboard)$/.test(h) ? 'login' : /^(kids|kid-|who|guide)/.test(h) ? 'kids' : /^devices/.test(h) ? 'devices' : h === 'account' ? 'account' : /^g\d|^gs/.test(h) ? 'lessons' : 'home';
+const HELP_CTX = h => /^(subscribe)$/.test(h) ? 'pay' : /^paid-/.test(h) ? 'paid' : /^(login|login-phone|login-email|onboard)$/.test(h) ? 'login' : /^(kids|kid-|who|guide)/.test(h) ? 'kids' : /^devices/.test(h) ? 'devices' : h === 'account' ? 'account' : /^(studio|tch-|courses|crs-|cpaid-)/.test(h) ? 'teach' : /^g\d|^gs/.test(h) ? 'lessons' : 'home';
 let HB = null;
 function helpBadge(n) { if (HB) HB.querySelector('i').textContent = n ? String(n) : ''; if (HB) HB.classList.toggle('has', !!n); }
 function helpFab() { const h = (location.hash || '').slice(1);
