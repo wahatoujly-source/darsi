@@ -313,6 +313,13 @@ function authForm(kind) {
   setTimeout(() => id.focus(), 50);
 }
 
+/* حفظ ملف حساب جديد: من المتصفح، ثم من الخادم إذا رفضته القواعد (وثيقة ناقصة قديمة مثلاً) */
+async function saveNewProfile(data) {
+  try { await setDoc(uref(), data); return; }
+  catch (e) { if (!/permission/.test(e.code || '')) throw e;
+    AXe('reg_error', { m: 'profile', code: 'rules_fallback' });
+    await call('initMe', { name: data.name, role: data.role, phone: data.phone || null, email: data.email || null, ob: data.ob || null }); }
+}
 const obData = () => { const o = store.get('ob', null) || {}; if (!o.role) return null;
   return { from: String(o.role).slice(0, 10), n: Math.min(12, o.n | 0), kids: (o.kids || []).filter(Boolean).map(String).slice(0, 12), tg: (o.tg || []).map(String).slice(0, 12), alsoParent: !!o.alsoParent }; };
 function renderOnboard() {
@@ -342,7 +349,7 @@ function renderOnboard() {
       const data = { name: nm, role, phone: phoneOf(u) || u.phoneNumber || null, email: phoneOf(u) ? null : (u.email || null), createdAt: serverTimestamp() };
       // اختيارات رحلة البداية (عدد الأبناء وصفوفهم، صفوف المعلم) تُربط بالحساب لتسهيل إضافة الأبناء لاحقاً
       { const ob = obData(); if (ob) data.ob = ob; }
-      await setDoc(uref(), data);
+      await saveNewProfile(data);
       try { await updateProfile(u, { displayName: nm }); } catch (e) {}
       ACC.profile = data; AXe('signup_done', { role, g: grade || '' }); window.AX && AX.flush();
       await claimRef();
@@ -1040,27 +1047,41 @@ function renderSubscribe() {
       if (!ACC.profile) { const nm = nameIn.value.trim(); if (nm.length < 2) { payBtn.disabled = false; fbk(msg, 'bad', 'اكتب اسمك.'); nameIn.focus(); return; }
         const u = ACC.user; const data = { name: nm, role: who, phone: phoneOf(u) || u.phoneNumber || null, email: phoneOf(u) ? null : (u.email || null), createdAt: serverTimestamp() };
         { const ob = obData(); if (ob) data.ob = ob; }
-        await setDoc(uref(), data); try { await updateProfile(u, { displayName: nm }); } catch (e) {}
+        await saveNewProfile(data); try { await updateProfile(u, { displayName: nm }); } catch (e) {}
         ACC.profile = data; AXe('signup_done', { role: who, g: grade || '', via: 'pay' }); await claimRef();
         if (who === 'student') { await setDoc(pref('me'), { name: nm, grade: grade || null, avatar: AVATARS[0], createdAt: serverTimestamp() }); await loadProfiles(); await setActive('me'); } else ACC.profiles = []; }
       fbk(msg, 'info', 'جارٍ فتح صفحة الدفع…');
-      const r = await call('createOrder', { plan: pl.id, kind: pl.base, grade, subject });
+      const r = await call('createOrder', { plan: pl.id, kind: pl.base, grade, subject, force: payBtn._force ? true : undefined }); payBtn._force = false;
       store.set('pend_pay', null); store.set('last_order', r.orderId); AXe('pay_redirect', { plan: pl.id, oid: r.orderId, amt: r.amount }); if (window.AX) await AX.flush(); location.href = r.url;
-    } catch (e) { AXe('pay_error', { plan: pl.id, code: String(e.code || 'x').slice(0, 40), msg: String(fnErr(e)).slice(0, 80) }); fbk(msg, 'bad', fnErr(e)); payBtn.disabled = false; } } });
+    } catch (e) { AXe('pay_error', { plan: pl.id, code: String(e.code || 'x').slice(0, 40), msg: String(fnErr(e)).slice(0, 80) }); payBtn.disabled = false;
+      const pm = /^PENDING:([A-Za-z0-9]+):(.*)$/s.exec(String(e && e.message || ''));
+      if (pm) { msg.innerHTML = ''; msg.append(el('div', { class: 'feedback bad', text: '⚠️ ' + pm[2] }),
+        el('div', { class: 'row', style: 'gap:8px;flex-wrap:wrap;margin-top:8px' },
+          el('button', { class: 'btn sun', text: '✅ دفعت بالفعل — تحقّق من اشتراكي', onclick: () => go('paid-' + pm[1]) }),
+          el('button', { class: 'btn ghost', text: 'لم يُخصم مني شيء — دفع جديد', onclick: () => { if (!confirm('تأكد من رصيدك أولاً: إذا خُصم منك المبلغ فلا تدفع مرة أخرى.\n\nهل أنت متأكد أنه لم يُخصم منك شيء؟')) return; payBtn._force = true; payBtn.click(); } })));
+        return; }
+      fbk(msg, 'bad', fnErr(e)); } } });
   s.append(box);
   draw();
   call('getPlans', {}).then(r => { plans = r.plans || []; M = r.matrix && r.matrix.on && r.matrix.cols.length ? r.matrix : null; draw(); if (pend && pl) setTimeout(() => { const t = box.querySelector('.kx-pay'); t && t.scrollIntoView({ behavior: 'smooth', block: 'center' }); }, 100); }).catch(e => fbk(msg, 'bad', fnErr(e)));
 }
 
 /* ---------- back from MyPay ---------- */
+function payHelp(orderId) {
+  return el('div', { class: 'card', style: 'margin-top:12px;border:2px solid #f59e0b' },
+    el('b', { text: '⚠️ إذا خُصم منك المبلغ فلا تدفع مرة أخرى' }),
+    el('p', { class: 'note', text: 'اشتراكك محفوظ برقم الطلب أدناه، ونفعّله لك يدوياً بعد التأكد من الدفع. أرسل رقم الطلب لصفحة المجتهد على فيسبوك مع صورة إشعار الخصم.' }),
+    el('div', { class: 'code', dir: 'ltr', style: 'font-weight:800;word-break:break-all', text: orderId }),
+    el('div', { class: 'row', style: 'gap:8px;flex-wrap:wrap' },
+      el('button', { class: 'btn ghost', text: '📋 نسخ رقم الطلب', onclick: async (ev) => { try { await navigator.clipboard.writeText(orderId); ev.target.textContent = '✓ نُسخ'; } catch (e) {} } }),
+      el('button', { class: 'btn ghost', text: '🔄 إعادة التحقق', onclick: () => renderPaid(orderId, false) })));
+}
 function renderPaid(orderId, cancelled) {
   const s = page('نتيجة الدفع', '', 'home');
   const st = el('div'); s.append(st); AXe(cancelled ? 'pay_cancel' : 'pay_return', { oid: orderId }, orderId);
-  if (cancelled) { fbk(st, 'info', 'لم تكتمل عملية الدفع. يمكنك المحاولة مرة أخرى متى شئت، وإذا خُصم منك مبلغ فسيتفعّل اشتراكك تلقائياً خلال دقائق.');
-    s.append(el('button', { class: 'btn sun', text: 'العودة إلى الباقات ←', onclick: () => go('subscribe') }), el('p', { class: 'note', text: 'إذا واجهتك مشكلة في الدفع تواصل معنا وسنساعدك.' }));
-    if (ACC.user) getDoc(doc(db, 'subscriptions', orderId)).then(d => { if (d.exists()) renderPaid(orderId, false); }).catch(() => {}); return; }
-  fbk(st, 'info', '⏳ جارٍ تأكيد الدفع… لا تغلق الصفحة.');
-  if (!ACC.user) { fbk(st, 'info', 'سجّل الدخول بنفس الحساب لنتأكد من الدفع.'); return; }
+  if (!ACC.user) { fbk(st, 'info', 'سجّل الدخول بنفس الحساب لنتأكد من الدفع.'); s.append(payHelp(orderId)); return; }
+  // حتى عند الرجوع من «الإلغاء» نتحقق أولاً: بعض البوابات ترجع لرابط الإلغاء رغم نجاح الدفع
+  fbk(st, 'info', cancelled ? '⏳ نتحقق من حالة الدفع…' : '⏳ جارٍ تأكيد الدفع… لا تغلق الصفحة.');
   let n = 0;
   const tick = async () => {
     try { const d = await getDoc(doc(db, 'subscriptions', orderId));
@@ -1068,9 +1089,9 @@ function renderPaid(orderId, cancelled) {
         if (isAdult() && !kidsOf().length) s.append(el('div', { class: 'feedback info', text: 'خطوة أخيرة: أضف أسماء أبنائك وصفوفهم ليبدؤوا الدراسة.' }), el('button', { class: 'btn sun', text: '👨‍👩‍👧 أضف أبنائي ←', onclick: () => go('kids') }));
         else s.append(el('button', { class: 'btn sun', text: 'ابدأ التعلّم ←', onclick: () => go('home') })); return; }
     } catch (e) {}
-    if (++n < 30) setTimeout(tick, 3000);
-    else { AXe('pay_unconfirmed', { oid: orderId }, orderId); fbk(st, 'bad', 'لم يصلنا تأكيد الدفع بعد. إذا خُصم المبلغ فسيُفعَّل اشتراكك تلقائياً خلال دقائق؛ وإن لم يُفعَّل تواصل معنا وأرسل رقم الطلب.');
-      s.append(el('p', { class: 'note', dir: 'ltr', text: 'رقم الطلب: ' + orderId })); }
+    if (++n < (cancelled ? 4 : 30)) setTimeout(tick, 3000);
+    else if (cancelled) { fbk(st, 'info', 'لم تكتمل عملية الدفع ولم يُخصم شيء على حد علمنا.'); s.append(payHelp(orderId), el('button', { class: 'btn sun', style: 'margin-top:10px', text: 'العودة إلى الباقات ←', onclick: () => go('subscribe') })); }
+    else { AXe('pay_unconfirmed', { oid: orderId }, orderId); fbk(st, 'bad', 'لم يصلنا تأكيد الدفع من البوابة بعد. قد يتأخر التأكيد قليلاً، ويتفعّل اشتراكك تلقائياً عند وصوله.'); s.append(payHelp(orderId)); }
   };
   tick();
 }
@@ -1194,6 +1215,41 @@ function booksBox() {
   box.append(body, el('button', { class: 'btn sun', text: '💾 حفظ إعدادات الكتب', onclick: async e => { e.target.disabled = true;
     try { await call('adminSetBooks', { books: M }); await loadAccess(); fbk(msg, 'ok', '✓ حُفظت. تظهر للمستخدمين عند فتح المنصة أو تحديثها.'); } catch (x) { fbk(msg, 'bad', fnErr(x)); } e.target.disabled = false; } }), msg);
   draw(); return box;
+}
+/* ---------- admin: orders & payments (review, manual activation, refunds) ---------- */
+function ordersBox() {
+  const box = el('div', { class: 'panel accbox' }, el('b', { text: '🧾 الطلبات والمدفوعات' }),
+    el('span', { class: 'note', text: 'كل عمليات الدفع الأخيرة. إذا دفع المشترك ولم يتفعّل اشتراكه (تأكد من الدفع في لوحة ماي باي) اضغط «تفعيل». الطلبات المكررة التي استرددت مبلغها علّمها «مُسترد».' }));
+  const body = el('div', { class: 'stack' }), msg = el('div'); let only = 'issues';
+  const ST = { pending: ['⏳ بانتظار التأكيد', '#b45309'], paid: ['✅ مدفوع', '#15803d'], failed: ['✖ فشل', '#b91c1c'], refunded: ['↩ مُسترد', '#6b7280'], dismissed: ['— مُلغى', '#6b7280'] };
+  const t = ms => ms ? new Date(ms).toLocaleString('ar-LY-u-nu-latn', { dateStyle: 'short', timeStyle: 'short' }) : '';
+  const load = async () => { body.innerHTML = ''; body.append(el('span', { class: 'note', text: 'جارٍ التحميل…' }));
+    let R; try { R = await call('adminOrders', { op: 'list' }); } catch (e) { body.innerHTML = ''; fbk(msg, 'bad', fnErr(e)); return; }
+    body.innerHTML = '';
+    const byU = {}; R.rows.forEach(r => { (byU[r.uid] = byU[r.uid] || []).push(r); });
+    const dupe = r => r.status === 'pending' && (byU[r.uid] || []).some(x => x !== r && x.plan === r.plan && Math.abs(x.at - r.at) < 6 * 3600e3);
+    body.append(el('div', { class: 'row', style: 'gap:6px;flex-wrap:wrap' }, ...[['issues', 'تحتاج مراجعة'], ['all', 'الكل']].map(([k, n]) => el('button', { class: 'btn ghost sm' + (only === k ? ' on' : ''), text: n, onclick: () => { only = k; load(); } }))));
+    const rows = R.rows.filter(r => only === 'all' || r.status === 'pending');
+    if (!rows.length) body.append(el('span', { class: 'note', text: 'لا توجد طلبات تحتاج مراجعة 👍' }));
+    rows.forEach(r => { const u = R.users[r.uid] || {}; const [sn, sc] = ST[r.status] || [r.status, '#555'];
+      const act = async (op) => { let note = '';
+        if (op === 'activate' && !confirm('تفعيل اشتراك «' + (r.planName || r.plan) + '» لـ ' + (u.name || 'المستخدم') + '؟\nتأكد أولاً أن المبلغ ' + r.amount + ' د.ل وصل فعلاً في ماي باي.')) return;
+        if (op !== 'activate') { note = prompt(op === 'refunded' ? 'ملاحظة (مثلاً: استرداد دفعة مكررة)' : 'سبب الإلغاء', op === 'refunded' ? 'استرداد دفعة مكررة' : 'مكرر/لم يُدفع'); if (note === null) return; }
+        try { await call('adminOrders', { op, id: r.id, note }); fbk(msg, 'ok', '✓ تم.'); load(); } catch (e) { fbk(msg, 'bad', fnErr(e)); } };
+      body.append(el('div', { class: 'accrow', style: 'flex-direction:column;align-items:stretch;gap:4px' },
+        el('div', { style: 'display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap' }, el('b', { text: (u.name || '—') + ' · ' + (r.planName || r.plan) + ' · ' + r.amount + ' د.ل' }), el('span', { style: 'color:' + sc + ';font-weight:800', text: sn + (r.manual ? ' (يدوي)' : '') })),
+        el('span', { class: 'note', dir: 'auto', text: [u.phone, u.role, t(r.at), r.gw && 'البوابة: ' + r.gw, r.note].filter(Boolean).join(' · ') }),
+        el('span', { class: 'note', dir: 'ltr', style: 'font-family:monospace', text: r.id }),
+        dupe(r) ? el('span', { style: 'color:#b91c1c;font-weight:700', text: '⚠️ يبدو مكرراً: نفس الباقة ونفس المستخدم في نفس اليوم' }) : null,
+        r.status === 'pending' || r.status === 'failed' ? el('div', { class: 'row', style: 'gap:6px;flex-wrap:wrap' },
+          el('button', { class: 'btn sun sm', text: '✅ تفعيل (دفع مؤكد)', onclick: () => act('activate') }),
+          el('button', { class: 'btn ghost sm', text: '↩ مُسترد', onclick: () => act('refunded') }),
+          el('button', { class: 'btn ghost sm', text: '— إلغاء', onclick: () => act('dismiss') })) : null)); });
+    if (R.logs && R.logs.length) { const d = el('details', {}, el('summary', { text: '📡 آخر إشعارات بوابة الدفع (' + R.logs.length + ')' }));
+      R.logs.forEach(l => d.append(el('div', { class: 'note', dir: 'ltr', style: 'font-family:monospace;font-size:12px;border-bottom:1px solid #eee;padding:4px 0', text: [t(l.at), l.result, 'sig=' + (l.sig ? 'ok' : 'BAD(' + l.sigHdr + ')'), l.event, l.status, l.custom, l.amount + ' ' + l.currency, 'keys=' + (l.keys || []).join(',')].join(' | ') })));
+      body.append(d); } else body.append(el('span', { class: 'note', text: '📡 لم يصل أي إشعار من بوابة الدفع منذ تفعيل هذا السجل.' }));
+  };
+  box.append(body, msg); load(); return box;
 }
 /* ---------- admin: flexible plans (price, duration, kids limit) ---------- */
 function plansBox() {
@@ -1547,7 +1603,7 @@ function renderAdmin() {
   if (can('grant')) s.append(grantBox());
   if (can('browse')) s.append(browseBox());
   if (ACC.owner) s.append(staffBox());
-  if (can('plans')) s.append(plansBox());
+  if (can('plans')) s.append(ordersBox(), plansBox());
   if (can('plans') || can('stats')) s.append(refAdminBox());
   if (can('stats') || can('push')) s.append(arenaAdminBox());
   if (can('push')) s.append(pushBox());
@@ -1644,7 +1700,7 @@ onAuthStateChanged(auth, async user => {
     }
     else if (user) {
       try { const tr = await withTimeout(user.getIdTokenResult()).catch(() => null); if (tr && tr.claims && tr.claims.coOf) ACC.co = { owner: tr.claims.coOf };
-        const snap = await withTimeout(getDoc(uref())); ACC.profile = snap.exists() ? snap.data() : null; if (ACC.profile) { await withTimeout(loadProfiles()); await withTimeout(loadSubs()); } }
+        const snap = await withTimeout(getDoc(uref())); ACC.profile = snap.exists() && snap.data().role ? snap.data() : null; /* وثيقة بلا نوع حساب = حساب لم يكتمل */ if (ACC.profile) { await withTimeout(loadProfiles()); await withTimeout(loadSubs()); } }
       catch (e) { console.error('profile', e); ACC.loadError = e; }
       { const ak = 'adm2_' + user.uid; let A = store.get(ak, null);
         const applyA = A => { ACC.isAdmin = !!A; ACC.owner = !!(A && A.owner); ACC.perms = (A && A.perms) || []; ACC.adminBrowse = ACC.can('browse') && !!store.get('admin_browse', false); if (!ACC.adminBrowse) store.set('admin_browse', false); };
