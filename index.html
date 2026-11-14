@@ -1385,6 +1385,13 @@ html body .ar .row{border:0;background:#f6f7fc;border-radius:14px}
 .shr-row button span{font-size:1.5rem}
 @media (max-width:479px){.shr-pill{display:none}}
 /* متصفح فيسبوك وإنستغرام الداخلي */
+.hp-fab{position:fixed;inset-inline-start:14px;bottom:calc(16px + env(safe-area-inset-bottom));z-index:60;display:flex;align-items:center;gap:6px;border:0;border-radius:999px;padding:10px 16px 10px 14px;background:linear-gradient(135deg,#1fb27a,#0a7c86);color:#fff;font:800 .92rem var(--f-display,inherit);box-shadow:0 8px 22px rgba(10,124,134,.35);cursor:pointer}
+.hp-fab span{font-size:1.15rem}.hp-fab i{font-style:normal;display:none;min-width:20px;height:20px;border-radius:10px;background:#e8384f;color:#fff;font-size:.75rem;line-height:20px;text-align:center;padding:0 5px}.hp-fab.has i{display:inline-block}
+@media(max-width:480px){.hp-fab b{display:none}.hp-fab{padding:12px}}
+.hp-q{font-size:1rem}.hp-grp,.hp-top{display:grid;gap:6px;margin-top:6px}.hp-top{background:#fff8e6;border:1.5px solid #f6d27a;border-radius:16px;padding:10px}
+.hp-qa{background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:10px 12px}.hp-qa summary{cursor:pointer;font-weight:800;color:var(--ink);line-height:1.6}.hp-qa p{margin:8px 0 2px;line-height:1.8;color:var(--ink-2,#3a4a5a)}
+.hp-cats{display:flex;flex-wrap:wrap;gap:6px}.hp-msg{border-radius:14px;padding:8px 12px;max-width:92%}.hp-msg p{margin:2px 0 0;white-space:pre-wrap;line-height:1.7}.hp-msg small{opacity:.7}
+.hp-msg.u{background:#eef2ff;align-self:flex-start}.hp-msg.a{background:#e7f8ef;align-self:flex-end;border:1px solid #bfe9d0}.hp-th,.hp-tk{display:flex;flex-direction:column;gap:8px}
 .iab{display:grid;gap:8px;border-radius:16px;padding:12px;background:#eef4ff;border:1.5px solid #c9dafc;line-height:1.7;font-size:.9rem;color:#17305e}
 .iab b{font-family:var(--f-display)}
 </style>
@@ -2813,9 +2820,9 @@ function renderPrivacy(){root.innerHTML='';root.append(bar('الخصوصية و�
     S('ما لا نفعله',['لا نبيع بياناتك ولا نشاركها مع معلنين.','لا نعرض إعلانات للأطفال داخل الدروس.','لا نطلب من الطفل رقم هاتف أو بريداً؛ ولي الأمر هو من يدير حسابه.']),
     S('أين تُحفظ البيانات','تُحفظ على خوادم Google Firebase (خارج ليبيا) بحماية وتشفير. الرسائل القصيرة عبر مزوّد ليبي (resala)، والدفع عبر ماي باي.'),
     S('الأطفال','حسابات الأطفال تُنشأ وتُدار من ولي الأمر، وله أن يطّلع على تقدّم ابنه، وأن يلغي ربط أي جهاز، وأن يحذف ملف الابن في أي وقت من صفحة «أبنائي».'),
-    S('حذف الحساب','يمكنك طلب حذف حسابك وكل بياناته بمراسلتنا، ويتم الحذف خلال 30 يوماً.'),
-    S('شروط الاستخدام',['الاشتراك صالح حتى 31 أغسطس من العام الدراسي الذي اشتركت فيه، أياً كان تاريخ الاشتراك.','الاشتراك شخصي للحساب وأبنائه، ولا يجوز بيعه أو مشاركته مع غيرهم. عدد الأجهزة محدود حسب الباقة.','لا يُسترد المبلغ بعد تفعيل الاشتراك، إلا إذا تعذّر علينا تقديم الخدمة.','الدروس الأولى من كل كتاب، والتربية الإسلامية، والتربية الوطنية مجانية.','محتوى المنصة التفاعلي (الشرح، والأنشطة، والأسئلة، والتصميم) ملك لمنصة المجتهد، ويُمنع نسخه أو إعادة نشره. المنهج الدراسي نفسه ملك لوزارة التربية والتعليم.','نعمل على دقة المحتوى ومراجعته باستمرار، وإن وجدت خطأ فأخبرنا لنصلحه.','قد نحدّث هذه الشروط، ونعلن عن أي تغيير مهم داخل المنصة.']),
-    S('تواصل معنا',CONTACT?'للاستفسار أو طلب حذف البيانات: '+CONTACT:'للاستفسار أو طلب حذف البيانات تواصل معنا عبر صفحة المنصة الرسمية.')));}
+    S('حذف الحساب','يمكنك حذف حسابك وكل بيانات أبنائك نهائياً في أي وقت من «حسابي ← إدارة الحساب ← حذف الحساب».'),
+    S('شروط الاستخدام',['مدة الاشتراك حسب الباقة التي تختارها (أسبوع، شهر، شهرين، 3 أشهر، أو العام الدراسي حتى 31 أغسطس)، وتبدأ من لحظة التفعيل. لا يتجدد الاشتراك تلقائياً ولا نسحب أي مبلغ دون طلبك.','الاشتراك شخصي للحساب وأبنائه، ولا يجوز بيعه أو مشاركته مع غيرهم. عدد الأجهزة محدود حسب الباقة.','سياسة الاسترداد: يُعاد المبلغ كاملاً إذا دفعت أكثر من مرة لنفس الطلب، أو إذا تعذّر علينا تفعيل اشتراكك. بعد تفعيل الاشتراك وبدء استخدامه لا يُسترد المبلغ إلا إذا تعذّر علينا تقديم الخدمة.','الدروس الأولى من كل كتاب، والتربية الإسلامية، والتربية الوطنية مجانية.','محتوى المنصة التفاعلي (الشرح، والأنشطة، والأسئلة، والتصميم) ملك لمنصة المجتهد، ويُمنع نسخه أو إعادة نشره. المنهج الدراسي نفسه ملك لوزارة التربية والتعليم.','نعمل على دقة المحتوى ومراجعته باستمرار، وإن وجدت خطأ فأخبرنا لنصلحه.','قد نحدّث هذه الشروط، ونعلن عن أي تغيير مهم داخل المنصة.']),
+    S('تواصل معنا','لأي سؤال أو مشكلة اضغط زر «💬 مساعدة» الموجود في صفحات المنصة، واكتب سؤالك كتذكرة، ويصلك ردّنا في نفس المكان.'),el('button',{class:'btn sun',text:'💬 افتح المساعدة',onclick:()=>go('help')})));}
 
 /* ================= أول زيارة: 3 لوحات تعريفية ← من أنت؟ ← التسجيل ================= */
 const ILL={

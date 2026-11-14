@@ -1,5 +1,5 @@
 // درسي — offline support. Bump VERSION on every deploy.
-const VERSION='darsi-v121';
+const VERSION='darsi-v122';
 const SHELL=['./','./index.html','./manifest.json','./account.js','./icons/icon-192.png','./icons/icon-512.png'];
 self.addEventListener('install',e=>{e.waitUntil(caches.open(VERSION).then(c=>c.addAll(SHELL)).then(()=>self.skipWaiting()));});
 self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(ks=>Promise.all(ks.filter(k=>k!==VERSION).map(k=>caches.delete(k)))).then(()=>self.clients.claim()));});
@@ -8,7 +8,7 @@ self.addEventListener('fetch',e=>{
   const url=new URL(r.url);
   const isPage=r.mode==='navigate';
   // الصفحات العامة (/g/ و /l/ و sitemap…) تمرّ إلى الشبكة كما هي ولا تُخزَّن مكان التطبيق
-  if(isPage&&/^\/(g|l|og)\//.test(url.pathname))return;
+  if(isPage&&/^\/(g|l|og|faq)\//.test(url.pathname))return;
   if(isPage){ // network first, so new lessons appear; cache as fallback offline (only the app shell itself)
     e.respondWith(fetch(r).then(res=>{if(res.ok&&/^\/(index\.html)?$/.test(url.pathname)){const cp=res.clone();caches.open(VERSION).then(c=>c.put('./index.html',cp));}return res;}).catch(()=>caches.match('./index.html')));return;}
   if(url.origin===location.origin||/fonts\.(googleapis|gstatic)\.com$/.test(url.hostname)||(url.hostname==='www.gstatic.com'&&url.pathname.startsWith('/firebasejs/'))){ // stale-while-revalidate

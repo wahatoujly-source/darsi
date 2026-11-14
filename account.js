@@ -1070,10 +1070,11 @@ function renderSubscribe() {
 function payHelp(orderId) {
   return el('div', { class: 'card', style: 'margin-top:12px;border:2px solid #f59e0b' },
     el('b', { text: '⚠️ إذا خُصم منك المبلغ فلا تدفع مرة أخرى' }),
-    el('p', { class: 'note', text: 'اشتراكك محفوظ برقم الطلب أدناه، ونفعّله لك يدوياً بعد التأكد من الدفع. أرسل رقم الطلب لصفحة المجتهد على فيسبوك مع صورة إشعار الخصم.' }),
+    el('p', { class: 'note', text: 'طلبك محفوظ برقمه أدناه. أرسل لنا تذكرة من «المساعدة» (يُرفق رقم الطلب تلقائياً) ونفعّل اشتراكك يدوياً بعد التأكد من الدفع.' }),
     el('div', { class: 'code', dir: 'ltr', style: 'font-weight:800;word-break:break-all', text: orderId }),
     el('div', { class: 'row', style: 'gap:8px;flex-wrap:wrap' },
       el('button', { class: 'btn ghost', text: '📋 نسخ رقم الطلب', onclick: async (ev) => { try { await navigator.clipboard.writeText(orderId); ev.target.textContent = '✓ نُسخ'; } catch (e) {} } }),
+      el('button', { class: 'btn sun', text: '✉️ أرسل تذكرة دعم', onclick: () => { store.set('last_order', orderId); store.set('help_ctx', 'paid'); ACC.helpOpt = { cat: 'pay', focus: true }; go('help'); } }),
       el('button', { class: 'btn ghost', text: '🔄 إعادة التحقق', onclick: () => renderPaid(orderId, false) })));
 }
 function renderPaid(orderId, cancelled) {
@@ -1311,7 +1312,7 @@ function plansBox() {
 
 /* ---------- admin: supervisors with specific permissions (owner only) ---------- */
 const PERM_AR = { ax: '📈 تحليلات المنصة والتحويلات (بيانات حساسة)', stats: '📊 الإحصائيات والمشتركون', grant: '🎁 منح وإلغاء الاشتراكات المجانية', plans: '💰 الباقات والأسعار', access: '🔐 فتح وإغلاق الدروس والكتب', tts: '🔊 الأصوات',
-  teach_req: '👩‍🏫 قبول طلبات المعلمين', teach_courses: '🎬 مراجعة ونشر دورات الفيديو', teach_wd: '💸 طلبات سحب أرصدة المعلمين', browse: '👁️ تصفّح كل الدروس للمراجعة', push: '🔔 إرسال الإشعارات' };
+  teach_req: '👩‍🏫 قبول طلبات المعلمين', teach_courses: '🎬 مراجعة ونشر دورات الفيديو', teach_wd: '💸 طلبات سحب أرصدة المعلمين', browse: '👁️ تصفّح كل الدروس للمراجعة', push: '🔔 إرسال الإشعارات', support: '🎫 الرد على تذاكر الدعم' };
 function staffBox() {
   const box = el('div', { class: 'panel accbox' }, el('b', { text: '🧑‍💼 المشرفون' }),
     el('span', { class: 'note', text: 'أضف مشرفاً من الأشخاص المسجّلين في المنصة، واختر صلاحياته بالضبط. يرى المشرف في لوحة الإدارة الأقسام المسموحة له فقط، ولا يستطيع إضافة مشرفين أو تغيير إعدادات المنصة الأساسية.' }));
@@ -1603,6 +1604,7 @@ function renderAdmin() {
   if (can('grant')) s.append(grantBox());
   if (can('browse')) s.append(browseBox());
   if (ACC.owner) s.append(staffBox());
+  if (can('support')) { const hb = el('div'); s.append(hb); import('./help.js').then(m => hb.append(m.adminBox(helpCtx()))).catch(() => {}); }
   if (can('plans')) s.append(ordersBox(), plansBox());
   if (can('plans') || can('stats')) s.append(refAdminBox());
   if (can('stats') || can('push')) s.append(arenaAdminBox());
@@ -1670,7 +1672,18 @@ function renderAxAdmin() { if (!ACC.user) { go('login'); return; } const s = pag
   import('./axadmin.js').then(m => m.default({ call, fnErr, ACC, page, fbk, D, el, go, store })).catch(() => fbk(s, 'bad', 'تعذّر التحميل. تحقق من الاتصال.')); }
 const devCtx = () => ({ call, fnErr, ACC, page, fbk, D, el, go, store, setActive, auth, gradeName, loadQR });
 function renderDevicesPage() { if (!ACC.user || !isAdult()) { go('login'); return; } page('📱 أجهزتي المرتبطة', 'جارٍ التحميل…', 'who'); import('./devices.js').then(m => m.renderDevices(devCtx())).catch(() => fbk(D.root, 'bad', 'تعذّر التحميل.')); }
-const ROUTES = { devices: renderDevicesPage, guide: () => renderGuide(0), 'admin-ax': renderAxAdmin, admin: renderAdmin, subscribe: renderSubscribe, login: renderLogin, 'login-phone': () => authForm('phone'), 'login-email': () => authForm('email'), onboard: renderOnboard, kids: renderKids, who: renderWho, account: renderAccount };
+const helpCtx = () => ({ call, fnErr, ACC, page, fbk, D, el, go, store, onSeen: () => helpBadge(0) });
+function renderHelpPage() { const o = ACC.helpOpt; ACC.helpOpt = null; page('💬 المساعدة', 'جارٍ التحميل…', 'home'); import('./help.js').then(m => m.renderHelp(helpCtx(), o)).catch(() => fbk(D.root, 'bad', 'تعذّر التحميل. تحقق من الاتصال.')); }
+/* زر «مساعدة» العائم: يظهر في الصفحات العامة (ليس داخل الدرس أو الاختبار أو وضع الطفل) */
+const HELP_CTX = h => /^(subscribe)$/.test(h) ? 'pay' : /^paid-/.test(h) ? 'paid' : /^(login|login-phone|login-email|onboard)$/.test(h) ? 'login' : /^(kids|kid-|who|guide)/.test(h) ? 'kids' : /^devices/.test(h) ? 'devices' : h === 'account' ? 'account' : /^g\d|^gs/.test(h) ? 'lessons' : 'home';
+let HB = null;
+function helpBadge(n) { if (HB) HB.querySelector('i').textContent = n ? String(n) : ''; if (HB) HB.classList.toggle('has', !!n); }
+function helpFab() { const h = (location.hash || '').slice(1);
+  if (!HB) { HB = el('button', { class: 'hp-fab', 'aria-label': 'المساعدة', onclick: () => { store.set('help_ctx', HELP_CTX((location.hash || '').slice(1))); AXe('help_fab', { ctx: store.get('help_ctx', '') }); go('help'); } }, el('span', { text: '💬' }), el('b', { text: 'مساعدة' }), el('i')); document.body.append(HB);
+    setTimeout(() => import('./help.js').then(m => m.unread(helpCtx())).then(helpBadge).catch(() => {}), 4000); }
+  HB.hidden = !!ACC.kid || /^(l-|help|admin|test|tst|arena|ob-|devices-lock|kids-mode|exam)/.test(h) || document.body.classList.contains('wl-on'); }
+window.addEventListener('hashchange', () => setTimeout(helpFab, 50));
+const ROUTES = { help: renderHelpPage, devices: renderDevicesPage, guide: () => renderGuide(0), 'admin-ax': renderAxAdmin, admin: renderAdmin, subscribe: renderSubscribe, login: renderLogin, 'login-phone': () => authForm('phone'), 'login-email': () => authForm('email'), onboard: renderOnboard, kids: renderKids, who: renderWho, account: renderAccount };
 initTeach({ call, fnErr, ACC, page, fbk, D, el, go, store });
 ACC.route = h => { if (ACC.guardRoute && ACC.guardRoute(h)) return true; if (ACC.teachRoute && ACC.teachRoute(h)) return true; const pm = /^paid-([A-Za-z0-9]{10,40})(-x)?$/.exec(h); const lm = /^link(?:-(\d{6}))?$/.exec(h); if (lm) { if (!ACC.ready) { page('…', 'جارٍ التحميل', 'home'); return true; } renderLink(lm[1]); return true; }
   const tk = /^tt-([A-Za-z0-9]{1,30})$/.exec(h); if (tk) { if (!ACC.ready) { page('…', 'جارٍ التحميل', 'home'); return true; } renderTT(tk[1]); return true; }
@@ -1712,7 +1725,7 @@ onAuthStateChanged(auth, async user => {
       else if (ACC.pid && !ACC.loadError) withTimeout(pullProgress(ACC.pid)).catch(() => {});
     } else { ACC.pid = null; store.set('acc_pid', null); }
   } catch (e) { console.error('auth', e); ACC.loadError = e; }
-  ACC.ready = true; pushRefresh();
+  ACC.ready = true; pushRefresh(); helpFab();
   // حارس الأجهزة: جهاز ابن (خاص/مشترك/بجدول) أو هاتف الأسرة في «وضع الأبناء»
   try { if (ACC.kid || (user && !user.isAnonymous && localStorage.getItem('mj_fam_mode') === '1')) import('./devices.js').then(m => m.boot(devCtx())).catch(() => {}); } catch (e) {}
   const h = location.hash.replace(/^#/, '');
