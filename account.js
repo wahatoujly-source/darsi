@@ -854,7 +854,8 @@ const subApplies = sub => {
   if (sc.any) return true;                        // منحة الإدارة: لكل ملفات الحساب
   if (sc.teacherOnly) return role === 'teacher' && ACC.pid === 'me';
   if (sc.kids) { if (!ACC.pid || ACC.pid === 'me') return false; if (sc.kidIds) return sc.kidIds.includes(ACC.pid);
-    if (sc.maxKids) { const ks = (ACC.profiles || []).filter(p => p.id !== 'me').sort((x, y) => ((x.createdAt && x.createdAt.toMillis && x.createdAt.toMillis()) || 0) - ((y.createdAt && y.createdAt.toMillis && y.createdAt.toMillis()) || 0)).map(p => p.id);
+    if (sc.maxKids) { const isK = p => String(p.grade || '') === 'k', preP = sub.plan === 'pre_k'; /* أطفال التمهيدي لا يأخذون مكاناً من عدد الطلاب؛ باقة التمهيدي لأطفاله فقط */
+      const ks = (ACC.profiles || []).filter(p => p.id !== 'me' && (preP ? isK(p) : !isK(p))).sort((x, y) => ((x.createdAt && x.createdAt.toMillis && x.createdAt.toMillis()) || 0) - ((y.createdAt && y.createdAt.toMillis && y.createdAt.toMillis()) || 0)).map(p => p.id);
       return ks.slice(0, sc.maxKids).includes(ACC.pid); } return true; }
   if (ACC.kid) return false;
   return role === 'student' || (!!sc.self && ACC.pid === 'me');
@@ -877,7 +878,9 @@ function trialPick() {
     conf.disabled = true; try { await call('trialGrade', { grade: sel }); await loadSubs(); D.cheer && D.cheer('win'); D.route(); } catch (e) { fbk(m, 'bad', fnErr(e)); conf.disabled = false; } } });
   drawG(); box.append(gp, conf, m); return box;
 }
-ACC.hasAccess = (g, s) => ACC.subs.some(sub => { if (sub.kind === 'trial' || !subApplies(sub)) return false; const sc = sub.scope || {};
+/* التمهيدي مجاني لكل أطفال ولي الأمر المشترك في أي باقة مدفوعة (نفس قاعدة الخادم) */
+ACC.preFree = () => ACC.subs.some(x => x.kind !== 'trial' && x.active !== false && x.end && x.end.toMillis() > Date.now() && !(x.scope || {}).teacherOnly && x.plan !== 'pre_k');
+ACC.hasAccess = (g, s) => (String(g) === 'k' && ACC.preFree()) || ACC.subs.some(sub => { if (sub.kind === 'trial' || !subApplies(sub)) return false; const sc = sub.scope || {};
   if (sc.pairs) return sc.pairs.includes(g + ':' + s);
   return (sc.grades || []).some(x => x === '*' || x === g) && (sc.subjects || []).some(x => x === '*' || x === s); });
 let _plansC = null; ACC.getPlans = () => { if (_plansC && Date.now() - _plansC.t < 3e5) return Promise.resolve(_plansC.r); return call('getPlans', {}).then(r => { _plansC = { t: Date.now(), r }; return r; }); };
@@ -968,12 +971,14 @@ function renderSubscribe() {
   let who = ACC.profile ? ACC.profile.role : (pend && pend.who) || (obR === 'student' ? 'student' : obR === 'parent' || obR === 'teacher' ? 'parent' : store.get('sub_who', 'parent'));
   const box = el('div', { class: 'stack' }), msg = el('div');
   let plans = null, pl = null, grade = (pend && pend.grade) || null, subject = (pend && pend.subject) || null;
-  const kidsN = (ACC.profiles || []).filter(p => p.id !== 'me').length;
+  const kidsN = (ACC.profiles || []).filter(p => p.id !== 'me' && String(p.grade || '') !== 'k').length; // أطفال التمهيدي مجانيون مع أي باقة ولا يُحسبون
+  const kidsK = (ACC.profiles || []).filter(p => p.id !== 'me' && String(p.grade || '') === 'k'); let spKid = kidsK.length === 1 ? kidsK[0].id : null;
   const nameIn = el('input', { class: 'tinput', placeholder: 'اسمك (ولي الأمر أو الطالب)', 'aria-label': 'الاسم', value: (ACC.user && ACC.user.displayName) || '' });
   let M = null, SP = [], spOn = null; const mst = { n: 0, col: null };
   /* باقات صف ثابت (التمهيدي): تظهر أعلى جدول الأسعار، وتظهر أولاً لمن جاء من صفحات التمهيدي أو عنده ابن في التمهيدي */
   const spFirst = () => /(^|-)k(-|$)|^gk/.test(String(D.App.after || '')) || (ACC.profiles || []).some(p => String(p.grade) === 'k');
   const spCards = () => { if (!SP.length) return null; const w = el('div', { class: 'stack', style: 'gap:8px' });
+    if (ACC.preFree && ACC.preFree()) { w.append(el('div', { class: 'feedback ok', text: '🧸 التمهيدي مجاني لكل أطفالك ضمن اشتراكك الحالي — أضفهم من «أبنائي» ويُفتح لهم مباشرة.' })); return w; }
     SP.forEach(p => w.append(el('button', { class: 'kx-plan' + (spOn === p ? ' on' : ''), style: 'width:100%', onclick: () => { spOn = spOn === p ? null : p; if (spOn) { AXe('plan_select', { plan: p.id, price: p.price, who }); pl = p; grade = p.grade; } else { pl = null; grade = null; } store.set('pend_pay', null); draw(); setTimeout(() => { const t = box.querySelector('.kx-pay'); t && t.scrollIntoView({ behavior: 'smooth', block: 'center' }); }, 60); } },
       el('span', { class: 'rib', text: '🧸 الروضة' }), el('span', { class: 'rd' }),
       el('span', { class: 'tx' }, el('b', { text: p.name }), p.desc ? el('small', { text: p.desc }) : null, el('span', { class: 'du', text: '⏳ ' + ((p.dur || {}).t === 'days' ? p.dur.days + ' يوماً من يوم الدفع' : durLabel(p)) })),
@@ -987,7 +992,7 @@ function renderSubscribe() {
     box.append(matrixView(M, mst, (x, picked) => { if (picked) { const p = mxPick(M, mst); p && AXe('plan_select', { plan: p.id, price: p.price, who }); } store.set('pend_pay', null); draw(); }, { fixedN: who === 'student', kidsTitle: kidsN ? 'عدد الطلاب (عندك ' + kidsN + ' في الحساب)' : 'كم طالباً تريد أن تشترك له؟' }));
     pl = mxPick(M, mst); if (!pl) return;
     if (who !== 'student' && kidsN > mst.n) { box.append(el('div', { class: 'feedback info', text: 'عندك ' + kidsN + ' أبناء في الحساب. اختر ' + kidsLbl(kidsN) + ' أو أكثر ليشملهم الاشتراك.' })); return; }
-    box.append(el('div', { class: 'mx-inc' }, el('b', { text: '✅ يشمل:' }), el('span', { text: who === 'student' ? 'كل مواد صفّك ودروسه بالصوت والصورة، والتمارين والاختبارات، والمسابقات.' : 'كل الصفوف والمواد لـ' + kidsLbl(mst.n) + '، لكل طالب ملفه وتقريره، وربط هاتفه، والجدول والتحكم.' })));
+    box.append(el('div', { class: 'mx-inc' }, el('b', { text: '✅ يشمل:' }), el('span', { text: who === 'student' ? 'كل مواد صفّك ودروسه بالصوت والصورة، والتمارين والاختبارات، والمسابقات.' : 'كل الصفوف والمواد لـ' + kidsLbl(mst.n) + '، لكل طالب ملفه وتقريره، وربط هاتفه، والجدول والتحكم. 🧸 والتمهيدي مجاني لكل أطفالك طوال مدة الاشتراك.' })));
     if (who === 'student') { const me = (ACC.profiles || []).find(p => p.id === 'me'); if (me && me.grade && !grade) grade = String(me.grade);
       if (!me || !me.grade) { const w = el('div', { class: 'gpick' }); GRADES.forEach(([g, n]) => w.append(el('button', { class: 'btn ghost sm' + (String(grade) === String(g) ? ' on' : ''), text: n, onclick: () => { grade = g; draw(); } }))); box.append(el('div', { class: 'kx-h kx-step', text: 'في أي صف أنت؟' }), w); if (!grade) return; } }
     payArea();
@@ -995,7 +1000,9 @@ function renderSubscribe() {
   const draw = () => {
     box.innerHTML = '';
     if (!plans && !M) { box.append(el('span', { class: 'note', text: 'جارٍ تحميل الباقات…' })); return; }
-    if (spOn) { box.append(spCards(), el('div', { class: 'mx-inc' }, el('b', { text: '✅ يشمل:' }), el('span', { text: 'كل دروس التمهيدي (الأرقام، الحروف العربية، الحروف الإنجليزية) بالصوت والصورة والألعاب، لكل أبنائك في التمهيدي.' }))); payArea(); return; }
+    if (spOn) { box.append(spCards(), el('div', { class: 'mx-inc' }, el('b', { text: '✅ يشمل:' }), el('span', { text: 'كل دروس التمهيدي (الأرقام، الحروف العربية، الحروف الإنجليزية) بالصوت والصورة والألعاب، لطفل واحد. 💡 مع أي باقة من باقات المنصة يكون التمهيدي مجانياً لكل أطفالك.' })));
+      if (kidsK.length > 1 && who !== 'student') { const w = el('div', { class: 'gpick' }); kidsK.forEach(k => w.append(el('button', { class: 'btn ghost sm' + (spKid === k.id ? ' on' : ''), text: (k.avatar || '🙂') + ' ' + k.name, onclick: () => { spKid = k.id; draw(); } }))); box.append(el('div', { class: 'kx-h kx-step', text: 'لأي طفل تشترك؟' }), w); if (!spKid) return; }
+      payArea(); return; }
     if (SP.length && spFirst()) box.append(el('div', { class: 'kx-h', text: 'لطفلك في الروضة 👇' }), spCards(), el('div', { class: 'kx-h', text: 'أو باقات المنصة كاملة 👇' }));
     if (M) { if (SP.length && !spFirst()) box.append(spCards()); if (!ACC.profile) box.append(el('div', { class: 'rp-seg kx-who2' }, ...[['parent', '👨‍👩‍👧 لأبنائي'], ['student', '🎒 لنفسي (طالب)']].map(([k, t]) =>
       el('button', { class: who === k ? 'on' : '', text: t, onclick: () => { who = k; store.set('sub_who', k); grade = null; mst.n = 0; draw(); } })))); drawMx(); return; }
@@ -1061,7 +1068,7 @@ function renderSubscribe() {
         ACC.profile = data; AXe('signup_done', { role: who, g: grade || '', via: 'pay' }); await claimRef();
         if (who === 'student') { await setDoc(pref('me'), { name: nm, grade: grade || null, avatar: AVATARS[0], createdAt: serverTimestamp() }); await loadProfiles(); await setActive('me'); } else ACC.profiles = []; }
       fbk(msg, 'info', 'جارٍ فتح صفحة الدفع…');
-      const r = await call('createOrder', { plan: pl.id, kind: pl.base, grade, subject, force: payBtn._force ? true : undefined }); payBtn._force = false;
+      const r = await call('createOrder', { plan: pl.id, kind: pl.base, grade, subject, kid: pl.grade ? spKid || undefined : undefined, force: payBtn._force ? true : undefined }); payBtn._force = false;
       store.set('pend_pay', null); store.set('last_order', r.orderId); AXe('pay_redirect', { plan: pl.id, oid: r.orderId, amt: r.amount }); if (window.AX) await AX.flush(); location.href = r.url;
     } catch (e) { AXe('pay_error', { plan: pl.id, code: String(e.code || 'x').slice(0, 40), msg: String(fnErr(e)).slice(0, 80) }); payBtn.disabled = false;
       const pm = /^PENDING:([A-Za-z0-9]+):(.*)$/s.exec(String(e && e.message || ''));
