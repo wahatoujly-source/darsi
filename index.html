@@ -484,7 +484,15 @@ section{padding-top:12px}
 .ksh-w.on{border-color:var(--sun);background:var(--sun-soft);transform:scale(1.07)}
 .kdg-scene{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:4px 0 8px}
 .kdg-scene .kitem{font-size:3rem;padding:0 2px}
+.kdg-show.many{font-size:2rem;max-width:180px;line-height:1.3;padding:8px 12px}
 .kdg-empty{font-size:4.2rem;line-height:1.1;filter:saturate(.8)}
+.kord-slots{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:8px 0 16px}
+.kord-s{min-width:56px;height:62px;padding:0 6px;display:grid;place-items:center;border:3px dashed var(--line);border-radius:16px;background:var(--card);font:800 2rem var(--f-display);color:var(--c1)}
+.kord-s.on{border:3px solid var(--ok);background:var(--ok-soft)}
+.kord-s.pop{animation:kbounce .5s}
+.kord-s.sing{background:var(--sun-soft);border-color:var(--sun);transform:scale(1.12)}
+.kord-pool .kopt{font-size:2.2rem;min-width:64px}
+.kopt.gone{visibility:hidden}
 .kdg,.ktr{user-select:none;-webkit-user-select:none}
 .kdg-mid{display:flex;align-items:center;justify-content:center;gap:16px;margin:2px 0 12px}
 .kdg-show{border:0;border-radius:24px;background:var(--sun-soft);color:var(--c1);font:800 4rem/1.15 var(--f-display);min-width:110px;padding:2px 20px;cursor:pointer}
@@ -2259,7 +2267,7 @@ C.kdrag=(b,ctx)=>{
         o.onclick=()=>{if(o.classList.contains('cnt'))return;o.classList.add('cnt');o.dataset.n=++cnt;stopAll();tones([520+cnt*110],{dur:.1});spk(N[cnt],lang,1);};objs.push(o);sc.append(o);}if(!it.n)sc.append(el('span',{class:'kdg-empty',text:it.box||'🧺'}));box.append(sc);}
     const target=el('div',{class:'kdg-box','aria-label':'المربع'},el('span',{class:'q',text:'?'}));
     const mid=el('div',{class:'kdg-mid'});
-    if(it.show)mid.append(el('button',{class:'kdg-show',lang:/[a-z]/i.test(it.show)?'en':null,text:it.show,onclick:()=>{stopAll();spk(it.say||it.show,it.lang||lang,1);}}));
+    if(it.show)mid.append(el('button',{class:'kdg-show'+(isEmo(it.show)&&it.show.length>3?' many':''),dir:/[0-9a-z]/i.test(it.show)?'ltr':null,lang:/[a-z]/i.test(it.show)?'en':null,text:it.show,onclick:()=>{stopAll();spk(it.say||it.show,it.lang||lang,1);}}));
     mid.append(target);box.append(mid);
     const recount=async()=>{const t=TTS.token;cnt=0;objs.forEach(o=>{o.classList.remove('cnt');delete o.dataset.n;});await spk('نعدّ معاً','ar',1);
       for(let k=0;k<objs.length;k++){if(t!==TTS.token)return;objs[k].classList.add('cnt');objs[k].dataset.n=k+1;await spk(N[k+1],lang,1);await sleep(200);}cnt=objs.length;};
@@ -2295,12 +2303,47 @@ C.kdrag=(b,ctx)=>{
   return box;
 };
 
+/* أرتّب بالتسلسل: يضغط الطفل على البطاقات بالترتيب (1 2 3… / أ ب ت… / A B C…) فتنتقل إلى مكانها في الصف وتُنطق */
+C.korder=(b,ctx)=>{
+  const lang=kidLang(b,ctx),box=el('div',{class:'panel kgame kord'});let i=0,score=0;
+  const nameOf=(it,k)=>(it.say&&it.say[k])||it.seq[k];
+  function show(){
+    box.innerHTML='';stopAll();if(i>=b.items.length){const ok=score>=Math.ceil(b.items.length*.6);box.append(el('div',{class:'result ok'},el('div',{class:'result-emo',text:'🏆'}),starsRow(score===b.items.length?3:2),el('div',{class:'result-msg',text:'أحسنت! رتّبتها كلها'})),el('button',{class:'btn',style:'margin-top:12px',text:'↺ العب مرة أخرى',onclick:()=>{i=0;score=0;show();}}));cheer('win');claps(12);ctx.done();return;}
+    const it=b.items[i],L=it.lang||lang,en=L==='en'||/^[0-9A-Za-z]/.test(it.seq[0])&&L==='en';let k=0,miss=0;
+    const prog=el('div',{class:'kprog'});b.items.forEach((_,j)=>prog.append(el('i',{class:j<i?'d':j===i?'c':''})));
+    const qt=it.q||b.q||'اضغط عليها بالترتيب';
+    const ask=async()=>{stopAll();const t=TTS.token;await spk(qt,'ar',1);if(t===TTS.token&&k<it.seq.length)spk(nameOf(it,k),L,1);};
+    const slots=el('div',{class:'kord-slots',dir:L==='en'||/^[0-9]/.test(it.seq[0])?'ltr':'rtl'});const S=it.seq.map((x,j)=>{const s=el('span',{class:'kord-s'+(it.given&&it.given.includes(j)?' on':''),text:it.given&&it.given.includes(j)?x:''});slots.append(s);return s;});
+    while(it.given&&it.given.includes(k))k++;
+    const pool=el('div',{class:'kopts kord-pool'});
+    const fb=el('div',{class:'kfb'});
+    shuffle(it.seq.map((x,j)=>j).filter(j=>!(it.given&&it.given.includes(j)))).forEach(j=>{const t=el('button',{class:'kopt',lang:L==='en'?'en':null,text:it.seq[j]});
+      t.onclick=async()=>{if(t.disabled)return;
+        if(j===k){t.disabled=true;t.classList.add('gone');S[j].textContent=it.seq[j];S[j].classList.add('on','pop');tones([520+k*60],{dur:.1});stopAll();spk(nameOf(it,j),L,1);pool.querySelectorAll('.hint').forEach(x=>x.classList.remove('hint'));
+          k++;while(it.given&&it.given.includes(k))k++;
+          if(k>=it.seq.length){if(!miss)score++;cheer('right');claps();confetti();await sleep(900);const tk=TTS.token;
+            if(it.chant!==false){for(let q=0;q<it.seq.length;q++){if(tk!==TTS.token||!box.isConnected)return;S[q].classList.add('sing');await spk(nameOf(it,q),L,1);S[q].classList.remove('sing');}}
+            await sleep(500);if(box.isConnected&&b.items[i]===it){i++;show();}}}
+        else{miss++;t.classList.add('wrong','shake');setTimeout(()=>t.classList.remove('wrong','shake'),500);cheer('wrong');stopAll();
+          await spk('ابحث عن','ar',1);spk(nameOf(it,k),L,1);if(miss>=2)$$('.kopt',pool).forEach(x=>{if(x.textContent===it.seq[k]&&!x.disabled)x.classList.add('hint');});}};
+      pool.append(t);});
+    box.append(prog,el('div',{class:'kq'},el('span',{text:qt}),el('button',{class:'btn ghost sm',text:'🔊','aria-label':'أعد',onclick:ask})),slots,pool,fb);ask();
+  }
+  box.append(b.intro?el('div',{class:'kw-intro',html:b.intro}):null,startGate('ابدأ الترتيب',show));
+  return box;
+};
 /* أكتب بالخطوات: نشاهد القلم يرسم كل خطّ بترتيبه، ثم يمشي الطفل بإصبعه من النقطة الخضراء على نفس المسار */
 const KGLYPH={
   '1':['M80 62 L112 30 L112 172'],
   '2':['M62 68 C62 30 140 28 140 66 C140 100 96 128 60 172 L146 172'],
   '3':['M64 52 C82 24 138 30 136 64 C134 92 108 98 94 98 C120 98 142 110 140 138 C138 176 80 180 60 150'],
   '0':['M100 30 C48 30 48 172 100 172 C152 172 152 30 100 30'],
+  'ص':['M98 96 C110 66 164 64 160 92 C158 104 120 104 98 98 C96 140 60 150 40 112'],
+  'ض':['M98 96 C110 66 164 64 160 92 C158 104 120 104 98 98 C96 140 60 150 40 112','M126 46 L136 46'],
+  'M':['M56 172 L56 30 L100 120 L144 30 L144 172'],
+  'm':['M50 90 L50 172','M50 116 C56 80 100 80 100 116 L100 172','M100 116 C106 80 150 80 150 116 L150 172'],
+  'N':['M60 172 L60 30 L140 172 L140 30'],
+  'n':['M70 90 L70 172','M70 120 C78 82 134 82 134 120 L134 172'],
   '10':['M48 62 L74 32 L74 172','M140 32 C98 32 98 172 140 172 C182 172 182 32 140 32'],
   'ز':['M120 70 C126 104 118 138 66 168','M114 44 L124 44'],
   'س':['M172 72 C172 100 152 100 152 80 C152 100 132 100 132 80 C132 150 46 160 40 110'],
