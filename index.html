@@ -484,7 +484,10 @@ section{padding-top:12px}
 .ksh-w.on{border-color:var(--sun);background:var(--sun-soft);transform:scale(1.07)}
 .kdg-scene{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:4px 0 8px}
 .kdg-scene .kitem{font-size:3rem;padding:0 2px}
+.kdg-show.wide{font-size:2.4rem;padding:8px 14px;white-space:nowrap}
+.kdg-mid:has(.kdg-show.wide),.kdg-mid:has(.kdg-show.many){flex-wrap:wrap}
 .kdg-show.many{font-size:2rem;max-width:180px;line-height:1.3;padding:8px 12px}
+.kdg-show.many[dir=ltr]{max-width:none;white-space:nowrap;font-size:1.8rem}
 .kdg-empty{font-size:4.2rem;line-height:1.1;filter:saturate(.8)}
 .kord-slots{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:8px 0 16px}
 .kord-s{min-width:56px;height:62px;padding:0 6px;display:grid;place-items:center;border:3px dashed var(--line);border-radius:16px;background:var(--card);font:800 2rem var(--f-display);color:var(--c1)}
@@ -2267,7 +2270,7 @@ C.kdrag=(b,ctx)=>{
         o.onclick=()=>{if(o.classList.contains('cnt'))return;o.classList.add('cnt');o.dataset.n=++cnt;stopAll();tones([520+cnt*110],{dur:.1});spk(N[cnt],lang,1);};objs.push(o);sc.append(o);}if(!it.n)sc.append(el('span',{class:'kdg-empty',text:it.box||'🧺'}));box.append(sc);}
     const target=el('div',{class:'kdg-box','aria-label':'المربع'},el('span',{class:'q',text:'?'}));
     const mid=el('div',{class:'kdg-mid'});
-    if(it.show)mid.append(el('button',{class:'kdg-show'+(isEmo(it.show)&&it.show.length>3?' many':''),dir:/[0-9a-z]/i.test(it.show)?'ltr':null,lang:/[a-z]/i.test(it.show)?'en':null,text:it.show,onclick:()=>{stopAll();spk(it.say||it.show,it.lang||lang,1);}}));
+    if(it.show)mid.append(el('button',{class:'kdg-show'+(isEmo(it.show)&&it.show.length>3?' many':!isEmo(it.show)&&it.show.length>5?' wide':''),dir:/[0-9a-z➕➖]/i.test(it.show)?'ltr':null,lang:/[a-z]/i.test(it.show)?'en':null,text:it.show,onclick:()=>{stopAll();spk(it.say||it.show,it.lang||lang,1);}}));
     mid.append(target);box.append(mid);
     const recount=async()=>{const t=TTS.token;cnt=0;objs.forEach(o=>{o.classList.remove('cnt');delete o.dataset.n;});await spk('نعدّ معاً','ar',1);
       for(let k=0;k<objs.length;k++){if(t!==TTS.token)return;objs[k].classList.add('cnt');objs[k].dataset.n=k+1;await spk(N[k+1],lang,1);await sleep(200);}cnt=objs.length;};
@@ -2338,6 +2341,28 @@ const KGLYPH={
   '2':['M62 68 C62 30 140 28 140 66 C140 100 96 128 60 172 L146 172'],
   '3':['M64 52 C82 24 138 30 136 64 C134 92 108 98 94 98 C120 98 142 110 140 138 C138 176 80 180 60 150'],
   '0':['M100 30 C48 30 48 172 100 172 C152 172 152 30 100 30'],
+  'ل':['M120 40 L120 140 C120 170 60 172 48 136'],
+  'م':['M110 100 C96 80 140 76 140 100 C140 116 120 120 100 112 L100 178'],
+  'ن':['M150 96 C156 150 130 166 100 166 C68 166 44 150 50 96','M96 70 L106 70'],
+  'ه':['M100 64 C56 74 52 160 100 160 C148 160 144 74 100 64','M88 112 C96 96 112 104 104 124'],
+  'و':['M120 96 C120 70 84 70 86 96 C88 110 110 112 120 104 C126 140 100 168 64 172'],
+  'ي':['M150 80 C120 70 96 92 120 110 C150 130 150 160 100 160 C64 160 46 148 50 120','M88 180 L98 180','M108 180 L118 180'],
+  'S':['M144 56 C130 26 60 26 60 62 C60 100 140 96 140 136 C140 176 66 178 56 146'],
+  's':['M132 100 C124 84 76 84 76 108 C76 130 132 124 132 148 C132 172 80 174 70 158'],
+  'T':['M54 30 L146 30','M100 30 L100 172'],
+  't':['M100 40 L100 160 C100 174 124 176 134 166','M70 88 L130 88'],
+  'U':['M60 30 L60 130 C60 182 140 182 140 130 L140 30'],
+  'u':['M68 90 L68 140 C68 180 132 180 132 140','M132 90 L132 172'],
+  'V':['M54 30 L100 172 L146 30'],
+  'v':['M64 90 L100 172 L136 90'],
+  'W':['M40 30 L68 172 L100 80 L132 172 L160 30'],
+  'w':['M44 90 L68 172 L100 110 L132 172 L156 90'],
+  'X':['M58 30 L142 172','M142 30 L58 172'],
+  'x':['M68 90 L132 172','M132 90 L68 172'],
+  'Y':['M56 30 L100 100','M144 30 L100 100 L100 172'],
+  'y':['M66 90 L100 160','M134 90 L86 196'],
+  'Z':['M56 30 L144 30 L56 172 L144 172'],
+  'z':['M68 90 L132 90 L68 172 L132 172'],
   'ط':['M84 152 C92 120 130 104 152 124 C166 140 150 154 124 154 L46 154','M94 48 L94 148'],
   'ظ':['M84 152 C92 120 130 104 152 124 C166 140 150 154 124 154 L46 154','M94 48 L94 148','M124 94 L134 94'],
   'ع':['M130 66 C112 46 78 58 92 82 C100 92 120 94 132 90 C90 96 64 116 64 144 C64 176 120 180 150 166'],
