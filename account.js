@@ -970,7 +970,15 @@ function renderSubscribe() {
   let plans = null, pl = null, grade = (pend && pend.grade) || null, subject = (pend && pend.subject) || null;
   const kidsN = (ACC.profiles || []).filter(p => p.id !== 'me').length;
   const nameIn = el('input', { class: 'tinput', placeholder: 'اسمك (ولي الأمر أو الطالب)', 'aria-label': 'الاسم', value: (ACC.user && ACC.user.displayName) || '' });
-  let M = null; const mst = { n: 0, col: null };
+  let M = null, SP = [], spOn = null; const mst = { n: 0, col: null };
+  /* باقات صف ثابت (التمهيدي): تظهر أعلى جدول الأسعار، وتظهر أولاً لمن جاء من صفحات التمهيدي أو عنده ابن في التمهيدي */
+  const spFirst = () => /(^|-)k(-|$)|^gk/.test(String(D.App.after || '')) || (ACC.profiles || []).some(p => String(p.grade) === 'k');
+  const spCards = () => { if (!SP.length) return null; const w = el('div', { class: 'stack', style: 'gap:8px' });
+    SP.forEach(p => w.append(el('button', { class: 'kx-plan' + (spOn === p ? ' on' : ''), style: 'width:100%', onclick: () => { spOn = spOn === p ? null : p; if (spOn) { AXe('plan_select', { plan: p.id, price: p.price, who }); pl = p; grade = p.grade; } else { pl = null; grade = null; } store.set('pend_pay', null); draw(); setTimeout(() => { const t = box.querySelector('.kx-pay'); t && t.scrollIntoView({ behavior: 'smooth', block: 'center' }); }, 60); } },
+      el('span', { class: 'rib', text: '🧸 الروضة' }), el('span', { class: 'rd' }),
+      el('span', { class: 'tx' }, el('b', { text: p.name }), p.desc ? el('small', { text: p.desc }) : null, el('span', { class: 'du', text: '⏳ ' + ((p.dur || {}).t === 'days' ? p.dur.days + ' يوماً من يوم الدفع' : durLabel(p)) })),
+      el('span', { class: 'pr' }, el('b', { text: String(p.price) }), el('small', { text: 'دينار' })))));
+    return w; };
   const drawMx = () => {
     if (!mst.n) { const pm = pend && /^mx(\d+)_(\w+)$/.exec(pend.plan || ''); if (pm) { mst.n = +pm[1]; mst.col = pm[2]; } else mst.n = who === 'student' ? 1 : Math.max(1, kidsN || ((store.get('ob', null) || {}).n | 0) || 1); }
     if (who === 'student') mst.n = 1;
@@ -987,7 +995,9 @@ function renderSubscribe() {
   const draw = () => {
     box.innerHTML = '';
     if (!plans && !M) { box.append(el('span', { class: 'note', text: 'جارٍ تحميل الباقات…' })); return; }
-    if (M) { if (!ACC.profile) box.append(el('div', { class: 'rp-seg kx-who2' }, ...[['parent', '👨‍👩‍👧 لأبنائي'], ['student', '🎒 لنفسي (طالب)']].map(([k, t]) =>
+    if (spOn) { box.append(spCards(), el('div', { class: 'mx-inc' }, el('b', { text: '✅ يشمل:' }), el('span', { text: 'كل دروس التمهيدي (الأرقام، الحروف العربية، الحروف الإنجليزية) بالصوت والصورة والألعاب، لكل أبنائك في التمهيدي.' }))); payArea(); return; }
+    if (SP.length && spFirst()) box.append(el('div', { class: 'kx-h', text: 'لطفلك في الروضة 👇' }), spCards(), el('div', { class: 'kx-h', text: 'أو باقات المنصة كاملة 👇' }));
+    if (M) { if (SP.length && !spFirst()) box.append(spCards()); if (!ACC.profile) box.append(el('div', { class: 'rp-seg kx-who2' }, ...[['parent', '👨‍👩‍👧 لأبنائي'], ['student', '🎒 لنفسي (طالب)']].map(([k, t]) =>
       el('button', { class: who === k ? 'on' : '', text: t, onclick: () => { who = k; store.set('sub_who', k); grade = null; mst.n = 0; draw(); } })))); drawMx(); return; }
     if (!ACC.profile) box.append(el('div', { class: 'rp-seg kx-who2' }, ...[['parent', '👨‍👩‍👧 لأبنائي'], ['student', '🎒 لنفسي (طالب)']].map(([k, t]) =>
       el('button', { class: who === k ? 'on' : '', text: t, onclick: () => { who = k; store.set('sub_who', k); pl = null; grade = null; subject = null; draw(); } }))));
@@ -1031,7 +1041,7 @@ function renderSubscribe() {
     const d = pl.dur || {}, endTxt = pl.mx ? (d.t === 'days' ? 'المدة ' + d.days + ' يوماً من يوم الدفع.' : 'صالح حتى ' + fmtDate(pl.end) + '.') : d.t === 'days' ? 'المدة ' + durLabel(pl) + ' من يوم الدفع.' : 'صالح ' + durLabel(pl) + '.';
     const gname = grade ? (GRADES.find(([g]) => String(g) === String(grade)) || [, ''])[1] : '';
     box.append(el('div', { class: 'paybox kx-pay' },
-      el('div', { class: 'sum' }, el('span', {}, el('small', { text: 'الباقة' }), el('b', { text: pl.name + (gname ? ' · ' + gname : '') })), el('span', { class: 'tot' }, el('small', { text: 'المبلغ' }), el('b', { text: pl.price + ' د.ل' }))),
+      el('div', { class: 'sum' }, el('span', {}, el('small', { text: 'الباقة' }), el('b', { text: pl.name + (gname && !pl.grade ? ' · ' + gname : '') })), el('span', { class: 'tot' }, el('small', { text: 'المبلغ' }), el('b', { text: pl.price + ' د.ل' }))),
       el('span', { class: 'note', text: endTxt }),
       logged && !ACC.profile ? el('div', { class: 'stack', style: 'gap:4px' }, el('b', { text: 'ما اسمك؟' }), nameIn) : null,
       el('div', { class: 'ways' }, ...['سداد', 'ادفع لي', 'موبي كاش', 'معاملات', 'يسر باي', 'صحارى باي'].map(t => el('span', { text: t }))),
@@ -1063,7 +1073,7 @@ function renderSubscribe() {
       fbk(msg, 'bad', fnErr(e)); } } });
   s.append(box);
   draw();
-  call('getPlans', {}).then(r => { plans = r.plans || []; M = r.matrix && r.matrix.on && r.matrix.cols.length ? r.matrix : null; draw(); if (pend && pl) setTimeout(() => { const t = box.querySelector('.kx-pay'); t && t.scrollIntoView({ behavior: 'smooth', block: 'center' }); }, 100); }).catch(e => fbk(msg, 'bad', fnErr(e)));
+  call('getPlans', {}).then(r => { plans = r.plans || []; SP = r.special || []; if (pend && pend.plan) { const sp = SP.find(p => p.id === pend.plan); if (sp) { spOn = sp; pl = sp; grade = sp.grade; } } M = r.matrix && r.matrix.on && r.matrix.cols.length ? r.matrix : null; draw(); if (pend && pl) setTimeout(() => { const t = box.querySelector('.kx-pay'); t && t.scrollIntoView({ behavior: 'smooth', block: 'center' }); }, 100); }).catch(e => fbk(msg, 'bad', fnErr(e)));
 }
 
 /* ---------- back from MyPay ---------- */

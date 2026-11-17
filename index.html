@@ -2744,7 +2744,8 @@ C.tapWords=(b,ctx)=>{
         el('button',{class:'btn ghost',text:'▶ اقرأ الجملة',onclick:()=>{stopAll();speakAr(it.s);}})),fb);};
   draw();return box;
 };
-function render(block,ctx){const f=C[block.type];if(!f)return el('div',{class:'feedback bad',text:'نوع غير معروف: '+block.type});const c={...ctx,done:block.star?ctx.done:()=>{}};return f(block,c);}
+function render(block,ctx){const f=C[block.type];if(!f){const k='upd_'+block.type;let n=0;try{n=+sessionStorage.getItem(k)||0;sessionStorage.setItem(k,n+1);}catch(e){}if(n<1)setTimeout(()=>location.reload(),600);
+    return el('div',{class:'feedback info'},'🔄 يوجد تحديث جديد للمنصة. ',el('button',{class:'btn sm',text:'حدّث الآن',onclick:()=>location.reload()}));}const c={...ctx,done:block.star?ctx.done:()=>{}};return f(block,c);}
 
 /* =========================================================
    App shell: catalogue, subscription, lesson player
@@ -2823,7 +2824,13 @@ const isStandalone=()=>matchMedia('(display-mode: standalone)').matches||navigat
 const isIOS=/iphone|ipad|ipod/i.test(navigator.userAgent);
 window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();installEvt=e;const h=location.hash.replace('#','');if(!h||h==='home')renderHome();});
 window.addEventListener('appinstalled',()=>{installEvt=null;const b=$('#installCard');b&&b.remove();});
-if('serviceWorker' in navigator&&(location.protocol==='https:'||location.hostname==='localhost')){window.addEventListener('load',()=>{navigator.serviceWorker.register('sw.js').catch(()=>{});});}
+if('serviceWorker' in navigator&&(location.protocol==='https:'||location.hostname==='localhost')){window.addEventListener('load',()=>{navigator.serviceWorker.register('sw.js').catch(()=>{});});
+  /* التطبيق المفتوح طويلاً يتحدّث تلقائياً: نفحص التحديث عند العودة للشاشة، ونعيد التحميل للنسخة الجديدة خارج الدروس */
+  let _upd=false;const hadCtl=!!navigator.serviceWorker.controller;
+  navigator.serviceWorker.addEventListener('controllerchange',()=>{if(!hadCtl)return;_upd=true;if(!/^#l-/.test(location.hash))location.reload();});
+  addEventListener('hashchange',()=>{if(_upd&&!/^#l-/.test(location.hash))location.reload();});
+  const chk=()=>navigator.serviceWorker.getRegistration().then(r=>r&&r.update()).catch(()=>{});
+  document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible')chk();});setInterval(chk,30*60000);}
 function installCard(){
   if(isStandalone())return null;
   if(installEvt)return el('div',{class:'install',id:'installCard'},el('div',{},el('b',{text:'ثبّت المجتهد على جوالك'}),el('span',{class:'note',text:'يفتح كتطبيق بشاشة كاملة، ويعمل دون إنترنت.'})),
