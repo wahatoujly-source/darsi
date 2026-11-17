@@ -34,7 +34,7 @@ const isAdult = () => !!(ACC.profile && ['parent', 'teacher'].includes(ACC.profi
 const kidsOf = () => ACC.profiles.filter(p => p.id !== 'me');
 const AVATARS = ['🦁','🐯','🐼','🐨','🦊','🐸','🐵','🦄','🐢','🐬','🦉','🐝'];
 const ROLES = { student: ['🧒', 'طالب', 'أدرس دروسي بنفسي'], parent: ['👨‍👩‍👧', 'ولي أمر', 'أتابع حتى 6 من أبنائي'], teacher: ['👩‍🏫', 'معلم', 'أستعمل الدروس مع طلابي، ويمكنني إضافة أبنائي'] };
-const GRADES = [['1','الأول'],['2','الثاني'],['3','الثالث'],['4','الرابع'],['5','الخامس'],['6','السادس'],['7','السابع'],['8','الثامن'],['9','التاسع'],['s1','الأول الثانوي']];
+const GRADES = [['k','التمهيدي'],['1','الأول'],['2','الثاني'],['3','الثالث'],['4','الرابع'],['5','الخامس'],['6','السادس'],['7','السابع'],['8','الثامن'],['9','التاسع'],['s1','الأول الثانوي']];
 const gNum = g => /^s/.test(String(g)) ? 10 : (+g || 3);
 const gradeName = g => (GRADES.find(x => x[0] === String(g)) || [, ''])[1];
 
@@ -684,7 +684,7 @@ function renderKidAccount() {
     el('div', { class: 'bgx' }), el('span', { class: 'sp1', text: '✨' }), el('span', { class: 'sp2', text: '⭐' }),
     el('div', { class: 'avw' + (p.avatar ? ' emo' : '') }, p.avatar ? el('span', { text: p.avatar }) : el('img', { src: U(pair[0]), alt: '' })),
     el('h2', { text: p.name || '' }),
-    el('div', { class: 'chips' }, el('span', { class: 'c', text: '🎒 الصف ' + gradeName(p.grade) + ' أساسي' }), el('span', { class: 'c', text: lv.icon + ' ' + lv.name })),
+    el('div', { class: 'chips' }, el('span', { class: 'c', text: '🎒 الصف ' + gradeName(p.grade) + (p.grade === 'k' ? ' (روضة)' : /^s/.test(String(p.grade)) ? '' : ' أساسي') }), el('span', { class: 'c', text: lv.icon + ' ' + lv.name })),
     el('div', { class: 'stats' },
       el('div', {}, el('b', { text: String(stars) }), el('small', { text: 'نجمة' })),
       el('div', {}, el('b', { text: String(stk) }), el('small', { text: 'يوم متتالٍ 🔥' })),

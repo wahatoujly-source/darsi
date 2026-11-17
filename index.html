@@ -473,6 +473,7 @@ section{padding-top:12px}
 .ksh-glyph{display:block;margin:0 auto 12px;min-width:150px;padding:4px 30px;border:0;border-radius:30px;background:var(--sun-soft);color:var(--c1);font:800 7rem/1.15 var(--f-display);cursor:pointer;box-shadow:0 6px 0 rgba(0,0,0,.06)}
 .ksh-glyph.pulse,.kdg-box.ok,.ktr-dot circle.pulse{animation:kbounce .7s}
 @keyframes kbounce{30%{transform:scale(1.15)}60%{transform:scale(.95)}100%{transform:scale(1)}}
+.ksh-glyph.long{font-size:3.4rem;letter-spacing:.06em;padding:14px 22px}
 .ksh-objs{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;min-height:80px;margin:6px 0 4px}
 .ksh-objs .kitem{font-size:3.6rem;opacity:.12;transition:opacity .3s,transform .3s}
 .ksh-objs .kitem.on{opacity:1}
@@ -2213,7 +2214,7 @@ const kOpt=o=>o&&typeof o==='object'?o:{t:String(o)};
 /* أشوف وأسمع: رقم كبير تظهر معه الأشياء واحداً واحداً، أو حرف كبير مع صور كلماته */
 C.kshow=(b,ctx)=>{
   const lang=kidLang(b,ctx),box=el('div',{class:'panel kshw'});const N=KNUM[lang==='en'?'en':'ar'];
-  const glyph=el('button',{class:'ksh-glyph',lang:lang==='en'?'en':null,text:b.glyph,onclick:()=>{stopAll();glyph.classList.remove('pulse');void glyph.offsetWidth;glyph.classList.add('pulse');spk(b.name||b.say||b.glyph,lang,1);}});
+  const glyph=el('button',{class:'ksh-glyph'+(String(b.glyph).replace(/\s/g,'').length>2?' long':''),dir:/[0-9a-z]/i.test(b.glyph)?'ltr':null,lang:lang==='en'?'en':null,text:b.glyph,onclick:()=>{stopAll();glyph.classList.remove('pulse');void glyph.offsetWidth;glyph.classList.add('pulse');spk(b.name||b.say||b.glyph,lang,1);}});
   let objs=[],cards=[],cnt=0;
   const scene=el('div',{class:'ksh-objs'});
   if(b.n){const ems=[].concat(b.em||'⭐');for(let k=0;k<b.n;k++){const o=el('button',{class:'kitem','aria-label':'عُدّ',text:ems[k%ems.length]});
@@ -2296,6 +2297,17 @@ const KGLYPH={
   '1':['M80 62 L112 30 L112 172'],
   '2':['M62 68 C62 30 140 28 140 66 C140 100 96 128 60 172 L146 172'],
   '3':['M64 52 C82 24 138 30 136 64 C134 92 108 98 94 98 C120 98 142 110 140 138 C138 176 80 180 60 150'],
+  '4':['M114 30 L56 128 L150 128','M118 72 L118 172'],
+  '5':['M78 32 L72 96 C94 80 142 84 140 128 C138 174 82 178 60 152','M78 32 L140 32'],
+  'ب':['M158 90 C162 128 150 140 100 140 C50 140 38 128 42 90','M94 168 L106 168'],
+  'ت':['M158 90 C162 128 150 140 100 140 C50 140 38 128 42 90','M84 72 L94 72','M106 72 L116 72'],
+  'ث':['M158 90 C162 128 150 140 100 140 C50 140 38 128 42 90','M84 78 L94 78','M106 78 L116 78','M95 58 L105 58'],
+  'B':['M66 30 L66 172','M66 30 C150 30 150 100 66 100','M66 100 C162 100 162 172 66 172'],
+  'b':['M70 24 L70 172','M70 124 C82 84 140 86 140 128 C140 172 82 176 70 150'],
+  'C':['M146 58 C120 18 52 28 52 100 C52 172 120 182 146 142'],
+  'c':['M136 104 C120 76 70 82 70 128 C70 172 120 178 136 150'],
+  'D':['M62 30 L62 172','M62 30 C170 30 170 172 62 172'],
+  'd':['M134 118 C124 84 70 84 70 128 C70 172 128 176 134 140','M134 24 L134 174'],
   'أ':['M104 64 L104 178','M118 22 C104 12 90 24 100 34 C104 38 111 38 116 36 L86 50'],
   'A':['M100 28 L54 172','M100 28 L146 172','M72 122 L128 122'],
   'a':['M136 98 C128 70 70 68 68 124 C66 178 132 178 136 126','M136 84 L136 174']};
