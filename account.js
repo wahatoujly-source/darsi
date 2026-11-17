@@ -790,8 +790,8 @@ function renderAccount() {
   link('🔒', '#eef0f6', 'الخصوصية وشروط الاستخدام', '', () => go('privacy'));
   link('🚪', '#ffe4e4', 'تسجيل الخروج', '', async () => { await signOut(auth); go('home'); }, true);
   s.append(el('div', { class: 'kx-card pad0' }, el('div', { class: 'hd', style: 'padding:12px 14px 4px' }, el('b', { text: '⚙️ الإعدادات' })), list));
-  call('adminCheck', {}).then(() => { ACC.isAdmin = true; admSlot.append(el('div', { class: 'it' }, el('button', { class: 'r', onclick: () => go('admin') },
-    el('span', { class: 'ic', style: 'background:#fff1c2', text: '🛠️' }), el('span', { class: 'tt' }, el('b', { text: 'لوحة الإدارة' }), el('small', { text: 'للمدير والمشرفين' })), el('span', { class: 'ch', text: '‹' })))); }).catch(() => {});
+  call('adminCheck', {}).then(() => { ACC.isAdmin = true; admSlot.append(el('div', { class: 'it' }, el('button', { class: 'r', 'data-adm-row': '1', onclick: () => go('admin') },
+    el('span', { class: 'ic', style: 'background:#fff1c2', text: '🛠️' }), el('span', { class: 'tt' }, el('b', { text: 'لوحة الإدارة' }), el('small', { text: 'للمدير والمشرفين' })), el('span', { class: 'ch', text: '‹' })))); ACC.tkMark(); ACC.tkPoll(); }).catch(() => {});
   s.append(el('p', { class: 'note', dir: 'ltr', style: 'text-align:center;font-size:.7rem;opacity:.5;margin:0', text: 'ID: ' + u.uid }));
 }
 
@@ -842,6 +842,15 @@ ACC.loadPaid = async id => {
 /* ---------- subscriptions ---------- */
 ACC.subs = []; ACC.perms = []; ACC.owner = false;
 ACC.can = p => !!ACC.isAdmin && (ACC.owner || (ACC.perms || []).includes(p));
+/* تذاكر الدعم المفتوحة: علامة حمراء على «حسابي» وعلى «لوحة الإدارة» قبل الدخول (للمدير ومن له صلاحية الدعم) */
+ACC.tkOpen = 0;
+const tkBadge = n => el('span', { class: 'tk-bd', text: n > 9 ? '9+' : String(n) });
+ACC.tkMark = () => { const n = ACC.tkOpen; document.querySelectorAll('.tk-bd').forEach(x => x.remove()); if (!n) return;
+  document.querySelectorAll('.kx-nav .kx-nv').forEach(b => { const im = b.querySelector('img'); if (im && /n_acc/.test(im.getAttribute('src') || '')) b.append(tkBadge(n)); });
+  document.querySelectorAll('[data-adm-row]').forEach(b => b.append(tkBadge(n))); };
+ACC.tkPoll = async () => { if (!ACC.can('support')) { ACC.tkOpen = 0; return; } try { const r = await call('adminTickets', { op: 'list' }); ACC.tkOpen = (r.list || []).filter(t => t.status === 'open').length; } catch (e) { return; } ACC.tkMark(); };
+setInterval(() => { if (ACC.isAdmin && document.visibilityState === 'visible') ACC.tkPoll(); }, 5 * 60000);
+document.addEventListener('visibilitychange', () => { if (ACC.isAdmin && document.visibilityState === 'visible') ACC.tkPoll(); });
 async function loadSubs() {
   ACC.subs = [];
   try { const q = query(collection(db, 'subscriptions'), where('uid', '==', OW()));
@@ -1621,7 +1630,10 @@ function renderAdmin() {
   if (can('grant')) s.append(grantBox());
   if (can('browse')) s.append(browseBox());
   if (ACC.owner) s.append(staffBox());
-  if (can('support')) { const hb = el('div'); s.append(hb); import('./help.js').then(m => hb.append(m.adminBox(helpCtx()))).catch(() => {}); }
+  if (can('support')) { const hb = el('div', { id: 'adm-tk' }); s.append(hb); import('./help.js').then(m => hb.append(m.adminBox(helpCtx()))).catch(() => {});
+    /* تنبيه أعلى اللوحة عند وجود تذاكر مفتوحة */
+    const tb = el('button', { class: 'btn', style: 'width:100%;font-size:1.05rem;padding:14px;background:#e8384f;border-color:#e8384f;color:#fff', hidden: true, onclick: () => { const t = document.getElementById('adm-tk'); t && t.scrollIntoView({ behavior: 'smooth', block: 'start' }); } });
+    s.querySelector('.gx-hero').after(tb); ACC.tkPoll().then(() => { if (ACC.tkOpen) { tb.hidden = false; tb.textContent = '🎫 ' + ACC.tkOpen + (ACC.tkOpen === 1 ? ' تذكرة دعم جديدة تنتظر ردك' : ' تذاكر دعم تنتظر ردك') + ' ←'; } }); }
   if (can('plans')) s.append(ordersBox(), plansBox());
   if (can('plans') || can('stats')) s.append(refAdminBox());
   if (can('stats') || can('push')) s.append(arenaAdminBox());
@@ -1737,7 +1749,7 @@ onAuthStateChanged(auth, async user => {
         const fetchA = async () => { try { const r = await call('adminCheck', {}); return { owner: !!r.owner, perms: r.perms || [] }; } catch (e) { return /permission|unauthenticated/.test(e.code || '') ? false : null; } };
         if (A === null) { A = await fetchA(); if (A !== null) store.set(ak, A); }
         applyA(A);
-        fetchA().then(B => { if (B !== null && JSON.stringify(B) !== JSON.stringify(A)) { store.set(ak, B); applyA(B); } }); }
+        fetchA().then(B => { if (B !== null && JSON.stringify(B) !== JSON.stringify(A)) { store.set(ak, B); applyA(B); } ACC.tkPoll(); }); }
       if (ACC.profiles.length && !ACC.profiles.some(p => p.id === ACC.pid)) await setActive(ACC.profiles.length === 1 ? ACC.profiles[0].id : null);
       else if (ACC.pid && !ACC.loadError) withTimeout(pullProgress(ACC.pid)).catch(() => {});
     } else { ACC.pid = null; store.set('acc_pid', null); }
