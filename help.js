@@ -78,6 +78,57 @@ export async function renderHelp(ctx, opt) {
   drawMine();
 }
 
+/* ----- صاحب التذكرة: من هو، وإجراءات مباشرة (تحويل نوع الحساب، منحة مجانية، تفعيل دفعة، إلغاء منحة) ----- */
+const ROLE_N = { student: '🎒 طالب', parent: '👨‍👩‍👧 ولي أمر', teacher: '👩‍🏫 معلم' };
+const OST = { pending: '⏳ بانتظار التأكيد', paid: '✅ مدفوع', failed: '✖ فشل', refunded: '↩ مُسترد', dismissed: '— مُلغى' };
+function whoBox(t, reload) {
+  const { el, call, fnErr, fbk, ACC } = C;
+  const box = el('div', { class: 'tk-who' }, el('span', { class: 'note', text: '👤 جارٍ التعرّف على صاحب التذكرة…' })), m = el('div');
+  const day = ms => ms ? new Date(ms).toLocaleDateString('ar-LY-u-nu-latn', { day: 'numeric', month: 'short', year: 'numeric' }) : '—';
+  const draw = async () => {
+    let w; try { w = await call('adminTickets', { op: 'who', id: t.id }); } catch (e) { box.innerHTML = ''; fbk(box, 'bad', fnErr(e)); return; }
+    box.innerHTML = '';
+    if (!w.found) { box.append(el('div', { class: 'tk-who-h' }, el('b', { text: '🚫 غير مسجّل في المنصة' }), el('span', { class: 'note', dir: 'ltr', text: w.phone || '' })),
+      el('span', { class: 'note', text: 'لا يوجد حساب بهذا الرقم. اطلب منه في الرد أن يسجّل بنفس الرقم، ثم يمكنك منحه أو تفعيل ما يلزم من هنا.' })); return; }
+    const kids = w.profiles.filter(p => p.id !== 'me'), me = w.profiles.find(p => p.id === 'me');
+    const actSubs = w.subs.filter(x => x.active);
+    box.append(el('div', { class: 'tk-who-h' }, el('b', { text: '✅ مسجّل: ' + (w.name || '—') }), el('span', { class: 'tk-chip', text: ROLE_N[w.role] || w.role || 'بدون نوع' })),
+      el('span', { class: 'note', dir: 'auto', text: [w.phone && w.phone.replace('+218', '0'), w.email, 'سجّل ' + day(w.createdAt), w.lastSeen && 'آخر دخول ' + day(w.lastSeen), w.devices && w.devices + ' جهاز ابن مربوط'].filter(Boolean).join(' · ') }),
+      kids.length ? el('span', { class: 'note', text: '👧 الأبناء: ' + kids.map(k => k.name + (k.grade ? ' (' + C.gradeName(k.grade) + ')' : '')).join('، ') }) : (w.role === 'parent' ? el('span', { class: 'note', text: '👧 لم يضف أبناء بعد' }) : null),
+      me && me.grade && w.role === 'student' ? el('span', { class: 'note', text: '🎒 صفه: ' + C.gradeName(me.grade) }) : null,
+      el('span', { class: 'note', text: actSubs.length ? '⭐ اشتراكات فعّالة: ' + actSubs.map(x => (x.planName || (x.kind === 'gift' ? 'منحة' : x.kind)) + ' حتى ' + day(x.end)).join('، ') : '⭐ لا يوجد اشتراك فعّال' }));
+    /* الطلبات: تفعيل دفعة لم تتفعّل */
+    if (w.orders.length) { const ol = el('div', { class: 'stack', style: 'gap:4px' }, el('b', { text: '🧾 آخر عمليات الدفع' }));
+      w.orders.forEach(o => ol.append(el('div', { class: 'tk-row' }, el('span', { text: (o.planName || '') + ' · ' + o.amount + ' د.ل · ' + (OST[o.status] || o.status) + ' · ' + day(o.at) }),
+        ['pending', 'failed'].includes(o.status) && ACC.can('plans') ? el('button', { class: 'btn sm', text: '✅ تفعيل', onclick: async () => { if (!confirm('تفعيل «' + o.planName + '» لـ ' + (w.name || 'المستخدم') + '؟\nتأكد أن المبلغ ' + o.amount + ' د.ل وصل في ماي باي.')) return;
+          try { await call('adminOrders', { op: 'activate', id: o.id, note: 'من تذكرة' }); fbk(m, 'ok', '✓ تم تفعيل الاشتراك.'); draw(); } catch (e) { fbk(m, 'bad', fnErr(e)); } } }) : null)));
+      box.append(ol); }
+    /* المنح الفعّالة: إلغاء */
+    const gifts = actSubs.filter(x => x.kind === 'gift');
+    if (gifts.length && ACC.can('grant')) gifts.forEach(g => box.append(el('div', { class: 'tk-row' }, el('span', { text: '🎁 منحة ' + ((g.scope.grades || [])[0] === '*' ? 'كل الصفوف' : 'الصف ' + C.gradeName((g.scope.grades || [])[0])) + ' حتى ' + day(g.end) }),
+      el('button', { class: 'btn ghost sm', text: 'إلغاء المنحة', onclick: async e => { if (e.target.dataset.c !== '1') { e.target.dataset.c = '1'; e.target.textContent = 'تأكيد الإلغاء'; return; } try { await call('adminRevoke', { id: g.id }); fbk(m, 'ok', '✓ أُلغيت.'); draw(); } catch (er) { fbk(m, 'bad', fnErr(er)); } } }))));
+    if (!ACC.can('grant')) { box.append(m); return; }
+    /* تحويل نوع الحساب */
+    let gSel = null; const gp = el('div', { class: 'gpick', hidden: true });
+    C.GRADES.forEach(([g, n]) => gp.append(el('button', { class: 'btn ghost sm', text: n, onclick: e => { gSel = g; [...gp.children].forEach(x => x.classList.remove('on')); e.currentTarget.classList.add('on'); } })));
+    const setRole = async r => { if (r === 'student' && !gSel) { gp.hidden = false; fbk(m, 'info', 'اختر صف الطالب ثم اضغط «طالب» مرة أخرى.'); return; }
+      if (!confirm('تحويل حساب ' + (w.name || '') + ' إلى «' + ROLE_N[r] + '»؟' + (actSubs.length ? '\nاشتراكه المدفوع يتحوّل معه.' : ''))) return;
+      try { const x = await call('adminTickets', { op: 'role', id: t.id, uid: w.uid, role: r, grade: gSel }); fbk(m, 'ok', '✓ تم التحويل' + (x.converted ? ' مع الاشتراك' : '') + '. وصلته رسالة في التذكرة.'); reload(); } catch (e) { fbk(m, 'bad', fnErr(e)); } };
+    box.append(el('b', { text: '🔁 تحويل نوع الحساب' }), el('div', { class: 'row', style: 'gap:6px;flex-wrap:wrap' },
+      ...['parent', 'student', 'teacher'].filter(r => r !== w.role).map(r => el('button', { class: 'btn ghost sm', text: 'إلى ' + ROLE_N[r], onclick: () => setRole(r) }))), gp);
+    /* منحة مجانية */
+    const gr = el('select', { class: 'qsel' }, el('option', { value: '*', text: 'كل الصفوف' }), ...C.GRADES.map(([g, n]) => el('option', { value: g, text: 'الصف ' + n })));
+    { const kg = [...new Set(kids.map(k => String(k.grade)).filter(Boolean))]; if (w.role === 'student' && me && me.grade) gr.value = String(me.grade); else if (kg.length === 1) gr.value = kg[0]; }
+    const du = el('select', { class: 'qsel' }, ...[['7', 'أسبوع'], ['30', 'شهر'], ['45', '45 يوماً'], ['90', '3 أشهر'], ['', 'حتى نهاية العام الدراسي']].map(([v, n]) => el('option', { value: v, text: n })));
+    const wy = el('select', { class: 'qsel' }, ...[['other', 'تعويض عن مشكلة'], ['promo', 'عرض ترويجي'], ['family', 'أقارب وأصدقاء']].map(([v, n]) => el('option', { value: v, text: n })));
+    box.append(el('b', { text: '🎁 فتح باقة مجاناً' }), el('div', { class: 'row', style: 'gap:6px;flex-wrap:wrap' }, gr, du, wy),
+      el('button', { class: 'btn sun sm', text: '🎁 امنح الآن', onclick: async e => { const b = e.currentTarget; b.disabled = true;
+        try { await call('adminGrant', { uid: w.uid, grade: gr.value, days: du.value ? +du.value : 0, why: wy.value, note: 'تذكرة: ' + (t.catName || '') });
+          fbk(m, 'ok', '✓ تم المنح (' + gr.options[gr.selectedIndex].text + ' — ' + du.options[du.selectedIndex].text + '). اكتب له في الرد أن يعيد فتح المنصة.'); draw(); } catch (er) { fbk(m, 'bad', fnErr(er)); } b.disabled = false; } }), m);
+  };
+  draw(); return box;
+}
+
 /* ----- لوحة الإدارة: تذاكر الدعم ----- */
 export function adminBox(ctx) {
   C = ctx; const { el, fbk, call, fnErr } = C;
@@ -93,6 +144,7 @@ export function adminBox(ctx) {
         el('span', { class: 'note', dir: 'auto', text: [t.phone, t.guest ? 'زائر' : t.role, t.page && 'من صفحة: ' + t.page, fmt(t.createdAt)].filter(Boolean).join(' · ') }),
         t.orderId ? el('span', { class: 'note', dir: 'ltr', style: 'font-family:monospace', text: '🧾 ' + t.orderId + '  ← راجعه في «الطلبات والمدفوعات»' }) : null);
       t.msgs.forEach(m => b.append(el('div', { class: 'hp-msg ' + (m.by === 'a' ? 'a' : 'u') }, el('small', { text: (m.by === 'a' ? 'الدعم' : t.name || 'المستخدم') + ' · ' + fmt(m.at) }), el('p', { text: m.t }))));
+      b.append(whoBox(t, load));
       const rt = el('textarea', { class: 'tinput', rows: 2, placeholder: 'اكتب الرد…' });
       const act = async (op, close) => { try { if (op === 'reply' && rt.value.trim().length < 2) return; await call('adminTickets', { op, id: t.id, text: rt.value.trim(), close }); fbk(msg, 'ok', '✓ تم.'); load(); } catch (e) { fbk(msg, 'bad', fnErr(e)); } };
       b.append(rt, el('div', { class: 'row', style: 'gap:6px;flex-wrap:wrap' },

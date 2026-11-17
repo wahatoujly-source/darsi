@@ -1701,7 +1701,7 @@ function renderAxAdmin() { if (!ACC.user) { go('login'); return; } const s = pag
   import('./axadmin.js').then(m => m.default({ call, fnErr, ACC, page, fbk, D, el, go, store })).catch(() => fbk(s, 'bad', 'تعذّر التحميل. تحقق من الاتصال.')); }
 const devCtx = () => ({ call, fnErr, ACC, page, fbk, D, el, go, store, setActive, auth, gradeName, loadQR });
 function renderDevicesPage() { if (!ACC.user || !isAdult()) { go('login'); return; } page('📱 أجهزتي المرتبطة', 'جارٍ التحميل…', 'who'); import('./devices.js').then(m => m.renderDevices(devCtx())).catch(() => fbk(D.root, 'bad', 'تعذّر التحميل.')); }
-const helpCtx = () => ({ call, fnErr, ACC, page, fbk, D, el, go, store, onSeen: () => helpBadge(0) });
+const helpCtx = () => ({ call, fnErr, ACC, page, fbk, D, el, go, store, GRADES, gradeName, loadSubs, onSeen: () => helpBadge(0) });
 function renderHelpPage() { const o = ACC.helpOpt; ACC.helpOpt = null; page('💬 المساعدة', 'جارٍ التحميل…', 'home'); import('./help.js').then(m => m.renderHelp(helpCtx(), o)).catch(() => fbk(D.root, 'bad', 'تعذّر التحميل. تحقق من الاتصال.')); }
 /* زر «مساعدة» العائم: يظهر في الصفحات العامة (ليس داخل الدرس أو الاختبار أو وضع الطفل) */
 const HELP_CTX = h => /^(subscribe)$/.test(h) ? 'pay' : /^paid-/.test(h) ? 'paid' : /^(login|login-phone|login-email|onboard)$/.test(h) ? 'login' : /^(kids|kid-|who|guide)/.test(h) ? 'kids' : /^devices/.test(h) ? 'devices' : h === 'account' ? 'account' : /^(studio|tch-|courses|crs-|cpaid-)/.test(h) ? 'teach' : /^g\d|^gs/.test(h) ? 'lessons' : 'home';
