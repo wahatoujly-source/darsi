@@ -2283,7 +2283,7 @@ C.kdrag=(b,ctx)=>{
       stopAll();const t=TTS.token;if(count){await recount();if(t!==TTS.token)return;await spk(tries>=2?'اسحب الرقم المضيء':qt,'ar',1);}else{await spk('حاول مرة أخرى','ar',1);if(t===TTS.token&&it.say)await spk(it.say,it.lang||lang,1);}};
     const judge=tile=>{if(locked)return;tile.dataset.a==='1'?good(tile):bad(tile);};
     const overBox=(x,y)=>{const r=target.getBoundingClientRect();return x>r.left-30&&x<r.right+30&&y>r.top-30&&y<r.bottom+30;};
-    shuffle(opts).forEach(o=>{const tile=el('button',{class:'kopt kdg-t'+(isEmo(o.t)?' emo':'')+(o.t.length>3&&isEmo(o.t)?' many':''),'data-a':o.t===ans?'1':'0',lang:/[a-z]/i.test(o.t)?'en':null,text:o.t});
+    shuffle(opts).forEach(o=>{const tile=el('button',{class:'kopt kdg-t'+(isEmo(o.t)?' emo':'')+(o.t.length>3&&isEmo(o.t)?' many':''),'data-a':(o.id||o.t)===ans?'1':'0',style:o.row?'font-size:1.45rem;white-space:nowrap;max-width:none;letter-spacing:-.05em':o.sz?'font-size:'+o.sz+'rem;min-height:96px':null,lang:/[a-z]/i.test(o.t)?'en':null,text:o.t});
       let gh=null,sx=0,sy=0,moved=false;
       tile.addEventListener('pointerdown',e=>{if(locked)return;e.preventDefault();try{tile.setPointerCapture(e.pointerId);}catch(_){}sx=e.clientX;sy=e.clientY;moved=false;
         if(o.w){stopAll();spk(o.w,o.lang||lang,1);}
@@ -2338,6 +2338,25 @@ const KGLYPH={
   '2':['M62 68 C62 30 140 28 140 66 C140 100 96 128 60 172 L146 172'],
   '3':['M64 52 C82 24 138 30 136 64 C134 92 108 98 94 98 C120 98 142 110 140 138 C138 176 80 180 60 150'],
   '0':['M100 30 C48 30 48 172 100 172 C152 172 152 30 100 30'],
+  'ط':['M84 152 C92 120 130 104 152 124 C166 140 150 154 124 154 L46 154','M94 48 L94 148'],
+  'ظ':['M84 152 C92 120 130 104 152 124 C166 140 150 154 124 154 L46 154','M94 48 L94 148','M124 94 L134 94'],
+  'ع':['M130 66 C112 46 78 58 92 82 C100 92 120 94 132 90 C90 96 64 116 64 144 C64 176 120 180 150 166'],
+  'غ':['M130 66 C112 46 78 58 92 82 C100 92 120 94 132 90 C90 96 64 116 64 144 C64 176 120 180 150 166','M98 28 L108 28'],
+  'ف':['M128 98 C112 72 150 64 156 92 C158 108 140 112 128 104 C150 120 150 150 100 150 C64 150 48 140 44 110','M146 50 L156 50'],
+  'ق':['M124 96 C110 72 148 64 152 90 C154 108 136 110 126 104 C150 120 152 172 100 172 C64 172 50 150 56 126','M126 50 L136 50','M146 50 L156 50'],
+  'ك':['M150 40 L150 130 C150 160 120 160 60 160 C46 160 42 150 44 136','M106 94 L88 108 L106 118'],
+  'O':['M100 30 C46 30 46 172 100 172 C154 172 154 30 100 30'],
+  'o':['M100 92 C64 92 64 172 100 172 C136 172 136 92 100 92'],
+  'P':['M64 172 L64 30','M64 30 C150 30 150 104 64 104'],
+  'p':['M70 90 L70 196','M70 112 C82 80 140 82 140 124 C140 168 82 170 70 140'],
+  'Q':['M100 30 C46 30 46 172 100 172 C154 172 154 30 100 30','M112 140 L150 180'],
+  'q':['M132 112 C120 80 66 82 66 124 C66 168 120 170 132 140','M132 90 L132 196'],
+  'R':['M64 172 L64 30','M64 30 C150 30 150 104 64 104','M96 104 L144 172'],
+  'r':['M76 90 L76 172','M76 124 C84 92 116 86 134 98'],
+  '🔴':['M100 36 C56 36 36 66 36 100 C36 140 66 166 100 166 C140 166 164 136 164 100 C164 62 136 36 100 36'],
+  '🟥':['M44 44 L156 44','M156 44 L156 156','M156 156 L44 156','M44 156 L44 44'],
+  '🔺':['M100 34 L164 160','M164 160 L36 160','M36 160 L100 34'],
+  '▬':['M24 64 L176 64','M176 64 L176 140','M176 140 L24 140','M24 140 L24 64'],
   'ص':['M98 96 C110 66 164 64 160 92 C158 104 120 104 98 98 C96 140 60 150 40 112'],
   'ض':['M98 96 C110 66 164 64 160 92 C158 104 120 104 98 98 C96 140 60 150 40 112','M126 46 L136 46'],
   'M':['M56 172 L56 30 L100 120 L144 30 L144 172'],
