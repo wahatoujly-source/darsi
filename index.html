@@ -3313,19 +3313,20 @@ function renderMastered(info,id){const A=window.ACC,kid=A&&(A.kid||(A.pid&&A.pid
     el('div',{class:'lx-ac'},el('button',{class:'btn ghost',text:'📚 دروس المادة',onclick:()=>go('g'+info.grade+'-'+info.subject.id)}))));}
 /* مشاركة الدرس: رابط عام لكل درس (/l/<id>/) فيه عنوان الدرس وصورته ووصفه لمعاينة واتساب وفيسبوك، ولا يحمل أي بيانات عن الطالب */
 const SITE=/(^|\.)mujtahid\.ly$/.test(location.hostname)?location.origin:'https://mujtahid.ly';
-function shareLesson(id,title,sub){const link=src=>SITE+'/l/'+id+'/?utm_source='+src+'&utm_medium=share&utm_campaign=lesson';
-  const txt='📚 درس «'+title+'» — '+sub+' على منصة المجتهد. جرّبه مجاناً:';
+function shareLesson(id,title,sub,res){const link=src=>SITE+'/l/'+id+'/?utm_source='+src+'&utm_medium=share&utm_campaign=lesson';
+  /* مع نتيجة الطالب: رسالة ولي الأمر لمن يختارهم من جهات اتصاله (لا يوجد رقم ثابت للمنصة) */
+  const txt=res?('🎉 '+(res.name?'ابني '+res.name:'ابني')+' أنهى درس «'+title+'» ('+sub+') على منصة المجتهد'+(res.stars?' وحصل على '+'⭐'.repeat(res.stars):'')+'\n📚 دروس المنهج الليبي بالصوت والصورة والألعاب. جرّبوه مجاناً:'):('📚 درس «'+title+'» — '+sub+' على منصة المجتهد. جرّبه مجاناً:');
   const log=to=>{window.AX&&AX.ev('share_click',{l:id,to});};
   const open=u=>{const w=window.open(u,'_blank');if(w){try{w.opener=null;}catch(e){}}else location.href=u;};
   const close=()=>{ov.remove();};
   const ov=el('div',{class:'shr',onclick:e=>{if(e.target===ov)close();}});
   const msg=el('small',{class:'note'});
   const B=(ic,t,fn)=>el('button',{onclick:fn},el('span',{text:ic}),t);
-  ov.append(el('div',{class:'shr-box',role:'dialog','aria-label':'مشاركة الدرس'},el('b',{text:'📤 شارك هذا الدرس'}),el('small',{class:'note',text:title+' — '+sub}),
+  ov.append(el('div',{class:'shr-box',role:'dialog','aria-label':'مشاركة الدرس'},el('b',{text:res?'📤 شارك نتيجة الدرس':'📤 شارك هذا الدرس'}),el('small',{class:'note',text:title+' — '+sub}),
     el('div',{class:'shr-row'},
-      B('💬','واتساب',()=>{log('whatsapp');open('https://wa.me/?text='+encodeURIComponent(txt+'\n'+link('whatsapp')));}),
+      B('💬','واتساب',()=>{log('whatsapp');/* بلا رقم: يفتح واتساب ليختار المرسِل من يرسل له */open('https://wa.me/?text='+encodeURIComponent(txt+'\n'+link('whatsapp')));}),
       B('📘','فيسبوك',()=>{log('facebook');open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(link('facebook')));}),
-      B('🔗','نسخ الرابط',async()=>{log('copy');const u=link('copy');try{await navigator.clipboard.writeText(u);msg.textContent='✓ نُسخ الرابط';}catch(e){msg.textContent=u;}}),
+      B('🔗',res?'نسخ الرسالة':'نسخ الرابط',async()=>{log('copy');const u=res?txt+'\n'+link('copy'):link('copy');try{await navigator.clipboard.writeText(u);msg.textContent=res?'✓ نُسخت الرسالة مع الرابط':'✓ نُسخ الرابط';}catch(e){msg.textContent=u;}}),
       navigator.share?B('📲','المزيد',async()=>{log('native');try{await navigator.share({title:title+' — المجتهد',text:txt,url:link('native')});close();}catch(e){}}):null),msg,
     el('button',{class:'btn ghost',text:'إغلاق',onclick:close})));
   document.body.append(ov);addEventListener('hashchange',close,{once:true});}
@@ -3377,7 +3378,7 @@ async function renderLesson(id){
       el('div',{class:'lx-stars'},...[1,2,3].map(i=>el('span',{class:i<=lvl?'on':'',style:'--i:'+i,text:'★'}))),
       el('div',{class:'lx-sc'},el('b',{text:st+'/'+N}),' خطوات أنجزتها'),
       nxt?el('button',{class:'btn lx-nx',onclick:()=>go('l-'+nxt.id)},el('small',{text:'الدرس التالي'}),el('span',{text:nxt.title+' ←'})):el('div',{class:'lx-done',text:'🏁 هذا آخر درس في المادة!'}),
-      el('div',{class:'lx-ac'},el('button',{class:'btn ghost',text:'↺ أعد الدرس',onclick:()=>{end.remove();navBox.hidden=false;voiceNote();show(1);}}),el('button',{class:'btn ghost',text:'📚 دروس المادة',onclick:()=>go(backTo)}),window.ACC&&ACC.kid?null:el('button',{class:'btn ghost',text:'📤 شارك الدرس',onclick:()=>shareLesson(id,L.title,info.subject.name+' — '+((gradeInfo(info.grade)||{}).name||''))})));
+      el('div',{class:'lx-ac'},el('button',{class:'btn ghost',text:'↺ أعد الدرس',onclick:()=>{end.remove();navBox.hidden=false;voiceNote();show(1);}}),el('button',{class:'btn ghost',text:'📚 دروس المادة',onclick:()=>go(backTo)}),window.ACC&&ACC.kid?null:el('button',{class:'btn ghost',text:'📤 شارك النتيجة',onclick:()=>shareLesson(id,L.title,info.subject.name+' — '+((gradeInfo(info.grade)||{}).name||''),{name:nm,stars:lvl})})));
     if(mastered(id))end.append(el('div',{class:'cta-soft'},el('span',{style:'font-size:1.6rem',text:'🏆'}),el('span',{class:'tx'},el('b',{text:'أتقنت الدرس بنسبة '+lessonBest(id)+'%'}),el('small',{text:'في النسخة المجانية يُغلق الدرس بعد إتقانه، ويمكنك الانتقال للدرس التالي. المشتركون يعيدون الدروس متى شاؤوا.'}))));
     {const A=window.ACC,subbed=App.sub||(A&&A.hasAnySub&&A.hasAnySub())||(A&&(A.kid||A.co))||OPEN_ACCESS,day=new Date().toISOString().slice(0,10);
      if(!subbed&&store.get('cta_end_day','')!==day){store.set('cta_end_day',day);
