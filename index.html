@@ -491,6 +491,8 @@ section{padding-top:12px}
 .kdg-box{width:108px;height:108px;display:grid;place-items:center;border:4px dashed var(--sea);border-radius:26px;background:var(--sea-soft);transition:transform .15s}
 .kdg-box .q{font:800 3rem var(--f-display);color:var(--sea);opacity:.6}
 .kdg-box.hot{transform:scale(1.08);border-style:solid}
+.kdg-box:has(.many){width:auto;min-width:108px;height:auto;min-height:108px;padding:6px}
+.kdg-box .kopt.many{max-width:170px}
 .kdg-box.ok{border:4px solid var(--ok);background:var(--ok-soft)}
 .kdg-box .kopt{pointer-events:none;border-color:var(--ok);background:var(--card)}
 .kdg-opts .kopt{touch-action:none;user-select:none;-webkit-user-select:none;font-size:2.8rem}
@@ -2299,6 +2301,16 @@ const KGLYPH={
   '2':['M62 68 C62 30 140 28 140 66 C140 100 96 128 60 172 L146 172'],
   '3':['M64 52 C82 24 138 30 136 64 C134 92 108 98 94 98 C120 98 142 110 140 138 C138 176 80 180 60 150'],
   '0':['M100 30 C48 30 48 172 100 172 C152 172 152 30 100 30'],
+  '10':['M48 62 L74 32 L74 172','M140 32 C98 32 98 172 140 172 C182 172 182 32 140 32'],
+  'ز':['M120 70 C126 104 118 138 66 168','M114 44 L124 44'],
+  'س':['M172 72 C172 100 152 100 152 80 C152 100 132 100 132 80 C132 150 46 160 40 110'],
+  'ش':['M172 72 C172 100 152 100 152 80 C152 100 132 100 132 80 C132 150 46 160 40 110','M140 46 L148 46','M158 46 L166 46','M149 28 L157 28'],
+  'J':['M80 30 L140 30','M120 30 L120 140 C120 180 64 180 60 146'],
+  'j':['M118 90 L118 170 C118 198 74 196 70 176','M114 52 L122 52'],
+  'K':['M64 30 L64 172','M138 30 L64 112','M90 88 L140 172'],
+  'k':['M70 24 L70 172','M130 88 L70 140','M92 122 L134 172'],
+  'L':['M70 30 L70 172 L140 172'],
+  'l':['M100 24 L100 172'],
   '8':['M100 98 C60 92 62 32 100 32 C138 32 140 92 100 98 C52 104 52 172 100 172 C148 172 148 104 100 98'],
   '9':['M136 70 C134 30 66 30 66 70 C66 108 132 110 136 70 L132 172'],
   'د':['M86 70 C104 88 122 108 126 132 C128 146 112 150 70 150'],
