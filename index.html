@@ -484,6 +484,7 @@ section{padding-top:12px}
 .ksh-w.on{border-color:var(--sun);background:var(--sun-soft);transform:scale(1.07)}
 .kdg-scene{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:4px 0 8px}
 .kdg-scene .kitem{font-size:3rem;padding:0 2px}
+.kdg-empty{font-size:4.2rem;line-height:1.1;filter:saturate(.8)}
 .kdg,.ktr{user-select:none;-webkit-user-select:none}
 .kdg-mid{display:flex;align-items:center;justify-content:center;gap:16px;margin:2px 0 12px}
 .kdg-show{border:0;border-radius:24px;background:var(--sun-soft);color:var(--c1);font:800 4rem/1.15 var(--f-display);min-width:110px;padding:2px 20px;cursor:pointer}
@@ -2230,7 +2231,7 @@ C.kshow=(b,ctx)=>{
     for(const c of cards){if(t!==TTS.token)return;c.classList.add('on');c.scrollIntoView({block:'nearest',behavior:'smooth'});if(b.sound){await spk(b.sound,lang,1);await sleep(120);}const w=b.words[cards.indexOf(c)];await spk(w.w,lang,1);c.classList.remove('on');await sleep(250);}
     if(t!==TTS.token)return;if(b.outro)await spk(b.outro,'ar',1);ctx.done();again.hidden=false;}
   const again=el('button',{class:'btn ghost',style:'margin-top:12px',text:'↺ شاهد مرة أخرى',onclick:play,hidden:true});
-  box.append(glyph,b.n?scene:null,words,el('div',{class:'row',style:'justify-content:center'},again),startGate(b.gate||'شاهد واسمع',()=>{if(b.n)objs.forEach(o=>o.classList.remove('on'));play();}));
+  box.append(glyph,b.n?scene:b.empty?el('div',{class:'ksh-objs'},el('span',{class:'kdg-empty',text:b.empty})):null,words,el('div',{class:'row',style:'justify-content:center'},again),startGate(b.gate||'شاهد واسمع',()=>{if(b.n)objs.forEach(o=>o.classList.remove('on'));play();}));
   if(b.n)objs.forEach(o=>o.classList.add('on'));
   return box;
 };
@@ -2253,7 +2254,7 @@ C.kdrag=(b,ctx)=>{
     box.append(prog,el('div',{class:'kq'},el('span',{text:qt}),el('button',{class:'btn ghost sm',text:'🔊','aria-label':'أعد السؤال',onclick:ask})));
     const objs=[];
     if(count){const sc=el('div',{class:'kdg-scene'});const ems=[].concat(it.em);for(let k=0;k<it.n;k++){const o=el('button',{class:'kitem','aria-label':'عُدّ',text:ems[k%ems.length]});
-        o.onclick=()=>{if(o.classList.contains('cnt'))return;o.classList.add('cnt');o.dataset.n=++cnt;stopAll();tones([520+cnt*110],{dur:.1});spk(N[cnt],lang,1);};objs.push(o);sc.append(o);}box.append(sc);}
+        o.onclick=()=>{if(o.classList.contains('cnt'))return;o.classList.add('cnt');o.dataset.n=++cnt;stopAll();tones([520+cnt*110],{dur:.1});spk(N[cnt],lang,1);};objs.push(o);sc.append(o);}if(!it.n)sc.append(el('span',{class:'kdg-empty',text:it.box||'🧺'}));box.append(sc);}
     const target=el('div',{class:'kdg-box','aria-label':'المربع'},el('span',{class:'q',text:'?'}));
     const mid=el('div',{class:'kdg-mid'});
     if(it.show)mid.append(el('button',{class:'kdg-show',lang:/[a-z]/i.test(it.show)?'en':null,text:it.show,onclick:()=>{stopAll();spk(it.say||it.show,it.lang||lang,1);}}));
@@ -2297,7 +2298,17 @@ const KGLYPH={
   '1':['M80 62 L112 30 L112 172'],
   '2':['M62 68 C62 30 140 28 140 66 C140 100 96 128 60 172 L146 172'],
   '3':['M64 52 C82 24 138 30 136 64 C134 92 108 98 94 98 C120 98 142 110 140 138 C138 176 80 180 60 150'],
+  '0':['M100 30 C48 30 48 172 100 172 C152 172 152 30 100 30'],
   '4':['M114 30 L56 128 L150 128','M118 72 L118 172'],
+  '6':['M134 36 C90 28 62 80 62 128 C62 174 140 176 140 132 C140 92 74 94 64 128'],
+  '7':['M58 32 L142 32 L84 172'],
+  'ج':['M58 74 C84 62 116 62 138 74 C96 84 64 104 64 140 C64 174 120 178 150 164','M100 132 L110 132'],
+  'ح':['M58 74 C84 62 116 62 138 74 C96 84 64 104 64 140 C64 174 120 178 150 164'],
+  'خ':['M58 74 C84 62 116 62 138 74 C96 84 64 104 64 140 C64 174 120 178 150 164','M92 40 L102 40'],
+  'E':['M70 30 L70 172','M70 30 L140 30','M70 100 L128 100','M70 172 L140 172'],
+  'e':['M68 126 L136 126 C136 84 70 82 68 126 C66 172 120 176 136 152'],
+  'F':['M70 30 L70 172','M70 30 L140 30','M70 100 L124 100'],
+  'f':['M134 40 C120 22 90 24 90 56 L90 174','M66 92 L120 92'],
   '5':['M78 32 L72 96 C94 80 142 84 140 128 C138 174 82 178 60 152','M78 32 L140 32'],
   'ب':['M158 90 C162 128 150 140 100 140 C50 140 38 128 42 90','M94 168 L106 168'],
   'ت':['M158 90 C162 128 150 140 100 140 C50 140 38 128 42 90','M84 72 L94 72','M106 72 L116 72'],
