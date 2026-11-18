@@ -70,7 +70,7 @@ export default async function runSol(D, h) {
     const paintHide = () => { hideBtn.textContent = selfTest ? '👁️ أظهر الإجابات' : '🙈 أخفِ الإجابات لأختبر نفسي'; hideBtn.classList.toggle('on', selfTest); };
     paintHide(); tools.append(hideBtn);
     sec.append(el('div', { class: 'sol-sticky' }, inp, chips), tools);
-    const chipList = [{ n: 0, t: 'الكل' }, ...B.chapters.filter(c => B.ex.some(e => e.ch === c.n)).map(c => ({ n: c.n, t: c.n >= 8 ? c.t : 'الفصل ' + c.n }))];
+    const chipList = [{ n: 0, t: 'الكل' }, ...B.chapters.filter(c => B.ex.some(e => e.ch === c.n)).map(c => ({ n: c.n, t: c.ev ? c.t : 'الفصل ' + c.n }))];
     const drawChips = () => { chips.innerHTML = ''; chipList.forEach(c => chips.append(el('button', { class: 'sol-c' + (chap === c.n ? ' on' : ''), text: c.t, title: (B.chapters.find(x => x.n === c.n) || {}).t || '', onclick: () => { chap = c.n; q = ''; inp.value = ''; drawChips(); draw(); } }))); };
     drawChips();
     if (kidAns) sec.append(el('div', { class: 'feedback info', text: '📌 ولي أمرك سمح لك برؤية الناتج النهائي فقط، لتتأكد من إجابتك بعد أن تحل بنفسك.' }));
@@ -105,7 +105,7 @@ export default async function runSol(D, h) {
       if (!qq) {
         let lastCh = -1;
         B.ex.filter(e => !chap || e.ch === chap).forEach(e => {
-          if (e.ch !== lastCh) { lastCh = e.ch; const c = B.chapters.find(x => x.n === e.ch); if (c) list.append(el('h3', { class: 'sol-h', text: (c.n < 8 ? 'الفصل ' + c.n + ': ' : '') + c.t })); }
+          if (e.ch !== lastCh) { lastCh = e.ch; const c = B.chapters.find(x => x.n === e.ch); if (c) list.append(el('h3', { class: 'sol-h', text: (c.ev ? '' : 'الفصل ' + c.n + ': ') + c.t })); }
           list.append(exCard(e, openSet.has(e.id)));
         });
         return;
@@ -252,7 +252,7 @@ const CSS = `.sol{display:flex;flex-direction:column;gap:12px;padding-bottom:40p
 .sol-instr{margin:6px 2px 0;font-weight:700;color:#8a5a00}
 .sol-it{border:1.5px solid var(--line);border-radius:16px;padding:10px 12px;display:flex;flex-direction:column;gap:8px;background:#fffdf7}
 .sol-it .qh{display:flex;gap:8px;align-items:baseline;flex-wrap:wrap}.sol-it .qn{background:#2f6fed;color:#fff;border-radius:99px;padding:0 10px;font-size:.85rem;font-weight:700}
-.sol-it .qq{font-size:1.08rem;line-height:2;font-weight:600}
+.sol-it .qq{font-size:1.08rem;line-height:2;font-weight:600;white-space:pre-line}
 .sol-a{background:#e9f8ef;border:1.5px solid #9fdcb4;border-radius:12px;padding:6px 10px;display:flex;gap:8px;align-items:baseline;flex-wrap:wrap}.sol-a .l{color:#2b7a3d;font-weight:700}.sol-a .v{font-weight:700;font-size:1.05rem}
 .sol-sb{align-self:flex-start}
 .sol-steps{border-inline-start:4px solid #ffcf70;padding-inline-start:10px}.sol-steps ol{margin:0;padding-inline-start:22px;display:flex;flex-direction:column;gap:6px}
