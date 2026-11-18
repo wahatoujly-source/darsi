@@ -1243,6 +1243,26 @@ function booksBox() {
     try { await call('adminSetBooks', { books: M }); await loadAccess(); fbk(msg, 'ok', '✓ حُفظت. تظهر للمستخدمين عند فتح المنصة أو تحديثها.'); } catch (x) { fbk(msg, 'bad', fnErr(x)); } e.target.disabled = false; } }), msg);
   draw(); return box;
 }
+/* ---------- admin: solutions of textbook exercises (sol.js) — on/off, who sees answers / steps, hide a book ---------- */
+function solBox() {
+  const S = Object.assign({ on: true, ans: 'all', steps: 'reg', off: [] }, (ACC.access || {}).sol || {}); S.off = new Set(S.off || []);
+  const box = el('div', { class: 'panel accbox' }, el('b', { text: '✍️ حلول تمارين الكتب' }),
+    el('span', { class: 'note', text: 'حلول تمارين الكتاب المدرسي بالخطوات (تظهر في صفحة المادة وداخل الدروس وفي صفحة الصف). اختر من يرى الناتج النهائي ومن يرى خطوات الحل، ويمكنك إخفاء أي كتاب.' }));
+  const msg = el('div'), body = el('div', { class: 'stack' });
+  const on = el('input', { type: 'checkbox' }); on.checked = S.on !== false; on.onchange = () => { S.on = on.checked; };
+  const OPT = [['all', 'الجميع (حتى الزوار)'], ['reg', 'المسجلون (حساب مجاني)'], ['subs', 'المشتركون فقط']];
+  const sel = (k) => { const x = el('select', {}, ...OPT.map(([v, t]) => el('option', { value: v, text: t }))); x.value = S[k]; x.onchange = () => { S[k] = x.value; }; return x; };
+  const row = (t, c) => el('label', { style: 'display:flex;gap:8px;align-items:center;flex-wrap:wrap' }, el('span', { style: 'min-width:150px', text: t }), c);
+  body.append(el('label', { class: 'sndrow' }, on, el('b', { text: 'تفعيل حلول التمارين في المنصة' })), row('الناتج النهائي يظهر لـ:', sel('ans')), row('خطوات الحل تظهر لـ:', sel('steps')));
+  const bl = el('div', { class: 'stack' }); body.append(el('b', { text: 'الكتب المتاحة' }), bl);
+  fetch('data/sol/index.json').then(r => r.json()).then(I => { bl.innerHTML = '';
+    Object.entries(I.books || {}).forEach(([k, b]) => { const c = el('input', { type: 'checkbox' }); c.checked = !S.off.has(k); c.onchange = () => { c.checked ? S.off.delete(k) : S.off.add(k); };
+      bl.append(el('label', { class: 'sndrow' }, c, el('span', {}, el('b', { text: b.t + ' — الصف ' + gradeName(b.g) }), el('span', { class: 'note', text: ' (' + b.ex + ' تمريناً · ' + b.items + ' سؤالاً) ' }), el('a', { href: '#sol-' + k, text: 'افتح' })))); });
+    if (!bl.childElementCount) bl.append(el('span', { class: 'note', text: 'لا توجد كتب بعد.' })); }).catch(() => fbk(msg, 'bad', 'تعذّر تحميل قائمة الحلول.'));
+  box.append(body, el('button', { class: 'btn sun', text: '💾 حفظ إعدادات الحلول', onclick: async e => { e.target.disabled = true;
+    try { await call('adminSol', { on: S.on !== false, ans: S.ans, steps: S.steps, off: [...S.off] }); await loadAccess(); fbk(msg, 'ok', '✓ حُفظت. تظهر للمستخدمين عند فتح المنصة أو تحديثها.'); } catch (x) { fbk(msg, 'bad', fnErr(x)); } e.target.disabled = false; } }), msg);
+  return box;
+}
 /* ---------- admin: orders & payments (review, manual activation, refunds) ---------- */
 function ordersBox() {
   const box = el('div', { class: 'panel accbox' }, el('b', { text: '🧾 الطلبات والمدفوعات' }),
@@ -1639,7 +1659,7 @@ function renderAdmin() {
   if (can('stats') || can('push')) s.append(arenaAdminBox());
   if (can('push')) s.append(pushBox());
   if (can('tts')) s.append(ttsBox());
-  if (can('access')) s.append(accessBox(), booksBox());
+  if (can('access')) s.append(accessBox(), booksBox(), solBox());
   if (teachAny) s.append(ACC.teachAdminBox());
   adminSafety(s);
   if (!can('stats')) return;

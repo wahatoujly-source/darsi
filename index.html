@@ -969,6 +969,11 @@ header.bar .back svg{color:var(--kx-ink)!important}
 .tipx:after{content:'';position:absolute;bottom:-8px;inset-inline-start:28px;border:8px solid transparent;border-bottom:0;border-top-color:#ffd45c}
 @keyframes tipb{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}@media (prefers-reduced-motion:reduce){.tipx{animation:none}}
 html[data-theme=dark] .tipx{background:#3a3110;color:#ffe9a8;border-color:#a8861e}
+.sol-entry{display:flex;align-items:center;gap:12px;width:100%;margin:12px 0 4px;padding:12px 14px;border-radius:20px;border:2px solid #ffcf70;background:linear-gradient(135deg,#fff8e6,#ffe7b3);color:#4a3200;font:inherit;text-align:start;cursor:pointer;box-shadow:0 3px 0 #f0b43c}
+.sol-entry .i{font-size:1.8rem}.sol-entry .t{flex:1;display:flex;flex-direction:column}.sol-entry b{font-family:var(--f-display);font-size:1.05rem}.sol-entry small{opacity:.8;font-size:.82rem}.sol-entry .g{font-size:1.3rem}
+.sol-entry.sm{margin:8px 0;padding:9px 12px;box-shadow:none}.sol-entry.sm b{font-size:.95rem}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .sol-entry{background:linear-gradient(135deg,#3a2e10,#2a2208);color:#ffe2a6;border-color:#6b5320;box-shadow:none}}
+:root[data-theme="dark"] .sol-entry{background:linear-gradient(135deg,#3a2e10,#2a2208);color:#ffe2a6;border-color:#6b5320;box-shadow:none}
 .cta-soft{display:flex;gap:10px;align-items:center;margin:14px 0;padding:12px 14px;border-radius:16px;background:linear-gradient(135deg,#fff3e0,#ffe0b8);border:1.5px solid #ffc98a;color:#5a3500}
 .cta-soft .tx{flex:1;min-width:0}.cta-soft b{display:block}.cta-soft small{display:block;font-size:.82rem;opacity:.85;margin-top:2px}.cta-soft .btn{flex:0 0 auto}
 html[data-theme=dark] .cta-soft{background:linear-gradient(135deg,#3b2a12,#4a2f0b);border-color:#8a5a1a;color:#ffe2b8}
@@ -3278,6 +3283,13 @@ const KX_GR={k:['#ffd36b','#ff9f1c','#d97706'],s1:['#4fb3a9','#1f7f86','#14595e'
 const KX_SUB={ar:['#ffe3e3','#ffadad'],en:['#e2f0ff','#9dc8ff'],math:['#fff1d6','#ffcf70'],isl:['#dff7ea','#86d9ac'],sci:['#ece5ff','#bea6ff'],civ:['#ffe9e0','#ffb59a'],soc:['#dff4ff','#8fd3f5'],hist:['#fff0dc','#f4c487'],geo:['#e3f6e6','#97d6a2'],comp:['#dffaf7','#7fdccf'],art:['#ffe6f2','#ffa6cf'],phy:['#efe6ff','#c4a8ff'],chem:['#e0f8f3','#86dccb'],bio:['#fde7f6','#f2a6dc'],it:['#e6eefc','#a8c0ec'],socio:['#e3f0ff','#9cc7f7'],stat:['#fff4e0','#ffc98a']};
 const kxPair=n=>(n==='k'||+n<=3?['k1','k2']:+n<=6?['k3','k4']:['k5','k6']);
 const kxVars=n=>{const c=KX_GR[n]||['#8aa0ff','#5b6cf0','#3e4bc0'];return '--a:'+c[0]+';--b:'+c[1]+';--d:'+c[2];};
+// حلول تمارين الكتاب (sol.js): الكتب المتاحة حسب إعداد الإدارة config/access.sol
+const solBooks=g=>{const I=App.sol,S=ACCX().sol||{},adm=!!(window.ACC&&ACC.isAdmin);if(!I||!I.books||(S.on===false&&!adm))return[];return Object.entries(I.books).filter(([k,b])=>(adm||!(S.off||[]).includes(k))&&(g==null||String(b.g)===String(g)));};
+const solTile=(g,sub)=>{const L=solBooks(g);if(!L.length)return null;return kxMini('q_learn','حلول التمارين',sub?'بالخطوات من الكتاب':'',()=>go(L.length===1&&g!=null?'sol-'+L[0][0]:'sol'));};
+function solEntry(host,g,sid,lid){const done=()=>{host.innerHTML='';const k=g+'-'+sid,b=solBooks(g).find(x=>x[0]===k);if(!b)return;
+  if(lid){const L=App.sol.lessons&&App.sol.lessons[lid];if(!L||L.b!==k)return;host.append(el('button',{class:'sol-entry sm',onclick:()=>go('sol-'+k+'~l-'+lid)},el('span',{class:'i',text:'✍️'}),el('span',{class:'t'},el('b',{text:'حلول تمارين هذا الدرس من الكتاب'}),el('small',{text:L.ex.length+(L.ex.length>2?' تمارين':L.ex.length===2?' تمرينان':' تمرين')+' بالناتج وخطوات الحل'})),el('span',{class:'g',text:'←'})));return;}
+  host.append(el('button',{class:'sol-entry',onclick:()=>{window.AX&&AX.ev('sol_entry',{b:k});go('sol-'+k);}},el('span',{class:'i',text:'✍️'}),el('span',{class:'t'},el('b',{text:'حلول تمارين الكتاب بالخطوات'}),el('small',{text:b[1].ex+' تمريناً · '+b[1].items+' سؤالاً · ابحث برقم الصفحة أو التمرين'})),el('span',{class:'g',text:'←'})));};
+  if(App.sol)done();else getJSON('data/sol/index.json').then(I=>{App.sol=I;done();}).catch(()=>{});}
 const kxMini=(img,t,sub,fn)=>el('button',{class:'kx-m',onclick:fn},el('img',{src:UIMG(img),alt:'',loading:'lazy'}),t,sub?el('small',{text:sub}):null);
 const kxArenaOn=()=>!!(ACCX().arena&&ACCX().arena.on);
 const kxTeachOn=()=>{const tc=ACCX().teach||{};return !!((tc.on&&tc.show)||(window.ACC&&ACC.isAdmin&&tc.on));};
@@ -3323,6 +3335,7 @@ function renderHome(){
   root.append(sec);
   {const mm=[];if(kxArenaOn())mm.push(kxMini('q_comp','المسابقات','مباشرة مع طلاب ليبيا',()=>go('arena')));
    mm.push(kxMini('q_times','جدول الضرب','من 1 إلى 12',()=>go('times')),kxMini('q_test','اختبر مستواك','مجاناً — دقيقتان',()=>go('test')));
+   {const st=solTile(LG||null,1);if(st)mm.push(st);}
    if(bkAnyOn())mm.push(kxMini('x_all','كتب PDF','كتب المنهج مجاناً',()=>go('books')));
    if(kxTeachOn())mm.push(kxMini('n_lessons','دورات المعلمين','فيديو من معلمين معتمدين',()=>go('courses')));
    root.append(el('div',{class:'kx-mini'},...mm));}
@@ -3366,6 +3379,7 @@ function renderGrade(n){
   if(kxArenaOn()&&(ng>=2||!ng))root.append(el('button',{class:'kx-cta',onclick:()=>go('arena')},el('img',{src:UIMG('q_comp'),alt:''}),'تحدّي المنافسة'));
   const mm=[];if(ng>=2)mm.push(kxMini('q_times','جدول الضرب','',()=>go('times')));
   mm.push(kxMini('q_test','اختبر مستواك','',()=>go('test')));
+  {const st=solTile(n);if(st)mm.push(st);}
   if(bkGradeOn(String(n)))mm.push(kxMini('x_all','كتب PDF','',()=>go('books-'+n)));
   {const tc=ACCX().teach||{};if(tc.on&&tc.show)mm.push(kxMini('n_lessons','دورات فيديو','',()=>go('courses-g'+n)));}
   if(ng<2)mm.unshift(kxMini('n_ach','إنجازاتي','',()=>go('myreport')));
@@ -3386,6 +3400,7 @@ function renderSubject(n,sid){
        el('div',{class:'kx-bar'},el('i',{style:'width:'+Math.max(3,pct)+'%'})),
        next?el('button',{class:'kx-go2',onclick:()=>{tipDone('start');go('l-'+next.id);}},el('small',{text:st?'أكمل من حيث توقفت':'ابدأ أول درس'}),el('b',{lang:sid==='en'?'en':null,text:next.title})):null)));
    if(next&&!st){const h=root.lastChild,t=tip('start','👇 اضغط الزر الأزرق «ابدأ أول درس»، أو اختر أي درس من القائمة',h);t&&root.insertBefore(t,h);}}
+  {const sh=el('div');root.append(sh);solEntry(sh,n,sid);}
   const sec=el('section',{class:'kx-subj',style:'--k:'+KS[1]+';--t:'+KS[0]});const CT=learnerCtrl();const only=CT&&CT.lessons&&CT.lessons[sid]&&CT.lessons[sid].length?CT.lessons[sid]:null;
   if(only)sec.append(el('div',{class:'feedback info',text:'📌 الدروس التي اختارها لك ولي أمرك.'}));
   let lastBook=null;
@@ -3492,6 +3507,7 @@ async function renderLesson(id){
   root.innerHTML='';
   const head=bar(el('span',{lang:L.lang==='en'?'en':null,text:L.title}),L.titleAr,backTo,el('span',{class:'row',style:'flex-wrap:nowrap;gap:6px'},window.ACC&&ACC.kid?null:el('button',{class:'pill shr-pill','aria-label':'شارك الدرس',title:'شارك الدرس',text:'📤',onclick:()=>shareLesson(id,L.title,info.subject.name+' — '+((gradeInfo(info.grade)||{}).name||''))}),snd,stars));head.classList.add('lx-head');const prog=el('div',{class:'lx-prog'},el('i'));head.append(nav,prog);root.append(head);
   if(info.lesson.ref)root.append(el('div',{class:'refchip'},el('span',{text:'📖'}),el('span',{},'في كتابك: ',el('b',{text:info.lesson.ref.replace(/–/g,'\u2060–\u2060')}))));
+  {const sh=el('div');root.append(sh);solEntry(sh,info.grade,info.subject.id,id);}
   let cur=1;const sections=[];const stepKey='step_'+id;GAME.opened(id);voiceCheck(root,L.lang==='en'?'en':'ar');
   const award=n=>{if(done.has(n))return;done.add(n);if(window.AX&&AX.lesson&&AX.lesson.l===id)AX.lesson.st=done.size;store.set('done_'+id,[...done]);window.ACC&&ACC.saveProgress&&ACC.saveProgress(id,[...done]);cheer('star');drawNav();GAME.onStar();};
   function drawNav(){nav.innerHTML='';L.steps.forEach((s,i)=>{const n=i+1;const b=el('button',{class:done.has(n)?'done':'',onclick:()=>show(n)},el('span',{class:'n',text:AR[i]}),s.title);if(n===cur)b.setAttribute('aria-current','step');nav.append(b);});stars.textContent='★ '+done.size+'/'+N;prog.firstChild.style.width=Math.round(cur/N*100)+'%';}
@@ -3778,6 +3794,7 @@ function route(){setTimeout(adminBanner,0);TTS.phonics=false;TTS.phx=null;
   if((!h||h==='home')&&!store.get('welcomed',false)&&!(window.ACC&&ACC.user)){renderStart();return;}
   if(h==='arena'||/^arena-\d{10}_L[1-6]$/.test(h)){import('./arena.js').then(m=>m.default(window.DARSI,h)).catch(()=>{root.innerHTML='';root.append(el('p',{class:'note',style:'padding:30px',text:'تعذّر التحميل. تحقق من الاتصال.'}));});return;}
   if(h==='times'||/^times-\d{1,2}$/.test(h)){import('./times.js').then(m=>m.default(window.DARSI,h)).catch(()=>{root.innerHTML='';root.append(el('p',{class:'note',style:'padding:30px',text:'تعذّر التحميل. تحقق من الاتصال.'}));});return;}
+  if(/^sol(?:-[a-z0-9]+-[a-z]+)?(?:~[a-z0-9-]+)?$/.test(h)){import('./sol.js').then(m=>m.default(window.DARSI,h)).catch(()=>{root.innerHTML='';root.append(el('p',{class:'note',style:'padding:30px',text:'تعذّر التحميل. تحقق من الاتصال.'}));});return;}
   if(h==='test'||/^test-/.test(h)){import('./test.js').then(m=>m.default(window.DARSI,h)).catch(()=>{root.innerHTML='';root.append(el('p',{class:'note',style:'padding:30px',text:'تعذّر التحميل. تحقق من الاتصال.'}));});return;}
   {const im=/^i-([2-9A-HJ-NP-Z]{6})$/.exec(h);if(im){store.set('ref_in',{c:im[1],at:Date.now()});renderInvite(im[1]);return;}}
   if(h==='welcome'){renderWelcome(0);return;}if(h==='start'){renderStart();return;}
@@ -3805,12 +3822,13 @@ function route(){setTimeout(adminBanner,0);TTS.phonics=false;TTS.phx=null;
   else renderHome();
 }
 window.addEventListener('hashchange',()=>{if(document.startViewTransition&&!matchMedia('(prefers-reduced-motion: reduce)').matches){const t=document.startViewTransition(()=>route());[t.ready,t.finished,t.updateCallbackDone].forEach(x=>x&&x.catch(()=>{}));}else{route();root.classList.remove('enter');void root.offsetWidth;root.classList.add('enter');}});
-window.DARSI={speak,isFree,gradeInfo,adminFree,regOnly,tip,tipDone,ttsOn,ttsGet,sayAr,speakAr,FX,tick,gradeName:id=>(gradeInfo(id)||{}).name||'',LOGO,TT,lessonStudy,studyLine,VOX,arUnits,PRAISE,el,go,store,App,route,cheer,bar,root,$,$$,GAME,REPORT,findLesson:id=>App.catalog?findLesson(id):null};
+window.DARSI={speak,isFree,gradeInfo,adminFree,regOnly,tip,tipDone,ttsOn,ttsGet,sayAr,speakAr,FX,tick,gradeName:id=>(gradeInfo(id)||{}).name||'',LOGO,TT,lessonStudy,studyLine,VOX,arUnits,PRAISE,el,go,store,App,route,cheer,bar,root,$,$$,GAME,REPORT,findLesson:id=>App.catalog?findLesson(id):null,getJSON,ACCX,registered,canOpen,lockedGrade};
 const SPLASH_T0=performance.now();function hideSplash(){const sp=document.getElementById('splash');if(!sp)return;const wait=sessionStorage.getItem('mj_splash')?0:Math.max(0,1700-(performance.now()-SPLASH_T0));try{sessionStorage.setItem('mj_splash','1')}catch(e){}setTimeout(()=>{sp.classList.add('go');setTimeout(()=>sp.remove(),600);},wait);}
 // عند فتح التطبيق: نضع الرئيسية أولاً في السجل ثم نعود إلى آخر مكان توقف فيه الطالب
 (function bootNav(){let fresh=false;try{fresh=!sessionStorage.getItem('mj_open');sessionStorage.setItem('mj_open','1')}catch(e){}
   const h=location.hash.replace(/^#/,'');
   if(fresh&&(!h||h==='home')){history.replaceState(null,'','#home');const last=store.get('last_route',null);if(last&&last!=='home')App.resume=last;}})();
+getJSON('data/sol/index.json').then(I=>{App.sol=I;}).catch(()=>{});
 getJSON('data/catalog.json').then(c=>{markFree(c);{const O=['isl','ar','math','stat','phy','chem','bio','en','sci','soc','hist','geo','socio','civ','comp','it','art'],k=x=>{const i=O.indexOf(x.id);return i<0?99:i;};Object.values(c.grades||{}).forEach(L=>Array.isArray(L)&&L.sort((a,b)=>k(a)-k(b)));}App.catalog=c;route();hideSplash();if(App.resume){const r=App.resume;App.resume=null;setTimeout(()=>go(r),60);}}).catch(()=>{hideSplash();root.innerHTML='';root.append(el('div',{class:'err'},el('p',{text:'تعذّر تحميل قائمة الدروس. تحقق من الاتصال وحاول مرة أخرى.'}),el('button',{class:'btn',text:'أعد المحاولة',onclick:()=>location.reload()})));});
 })();
 </script>
