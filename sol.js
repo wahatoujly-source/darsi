@@ -115,7 +115,7 @@ export default async function runSol(D, h) {
       if (/^\d{1,3}$/.test(nq)) {
         const p = +nq, hit = B.ex.filter(e => e.pages.includes(p));
         if (hit.length) { list.append(el('p', { class: 'note', text: 'تمارين صفحة ' + p + ':' })); hit.forEach(e => list.append(exCard(e, true))); }
-        if (!hit.length) list.append(el('div', { class: 'empty' }, el('p', { text: 'لا توجد تمارين في صفحة ' + p + '. التمارين في الصفحات من ' + B.ex[0].pg + ' إلى ' + B.ex[B.ex.length - 1].pg + '.' })));
+        if (!hit.length) list.append(el('div', { class: 'empty' }, el('p', { text: 'لا توجد تمارين في صفحة ' + p + '. صفحات التمارين: ' + [...new Set(B.ex.map(e => e.pg))].sort((a, b) => a - b).join('، ') + '.' })));
         return;
       }
       // رقم تمرين مثل 1-ب أو 2 جـ أو "تمرين 5 ط"
@@ -135,7 +135,7 @@ export default async function runSol(D, h) {
     function exCard(e, open) {
       const body = el('div', { class: 'sol-items' });
       const head = el('button', { class: 'sol-exh', 'aria-expanded': String(!!open) },
-        el('span', { class: 'pg', html: '<small>ص</small>' + e.pg }),
+        el('span', { class: 'pg', html: '<small>ص</small>' + e.pg + (B.ex.some(x => x.b2) ? '<small>' + (e.b2 ? 'ف2' : 'ف1') + '</small>' : '') }),
         el('span', { class: 'tx' }, el('b', { text: e.l }), el('small', { text: e.ls + ' · ' + e.it.length + ' سؤالاً' })),
         el('span', { class: 'st', text: seen.has(e.id) ? '✓' : '' }), el('span', { class: 'ar', text: '▾' }));
       const card = el('div', { class: 'sol-ex' + (open ? ' open' : ''), id: 'sx-' + e.id }, head, body);
@@ -158,7 +158,7 @@ export default async function runSol(D, h) {
       c.append(el('div', { class: 'qh' }, el('span', { class: 'qn', text: (x.p ? x.p : 'س ' + x.n) }),
         !inEx && x.i ? el('small', { class: 'note', html: fmt(x.i) }) : null),
         el('div', { class: 'qq', html: fmt(x.q) }));
-      if (x.f) c.append(el('div', { class: 'sol-fig' }, '📐 هذا السؤال يعتمد على شكل في كتابك صفحة ' + e.pg + ' ', IX.books[key].img ? el('button', { class: 'linkbtn', text: 'اعرض الصفحة', onclick: () => viewer(e) }) : null));
+      if (x.f) c.append(el('div', { class: 'sol-fig' }, '📐 هذا السؤال يعتمد على شكل في كتابك صفحة ' + e.pg + (e.b2 ? ' (الفصل الثاني)' : '') + ' ', IX.books[key].img ? el('button', { class: 'linkbtn', text: 'اعرض الصفحة', onclick: () => viewer(e) }) : null));
       // الإجابة
       const ans = el('div', { class: 'sol-a' }, el('span', { class: 'l', text: x.k === 'construction' ? '📏 الإنشاء:' : x.k === 'drawing' ? '📊 الرسم:' : '✅ الإجابة:' }), el('span', { class: 'v', html: fmt(x.a) }));
       if (!ansOk) c.append(lockBtn(C.ans, 'لعرض الإجابة'));
@@ -193,7 +193,7 @@ export default async function runSol(D, h) {
       let i = 0; const ps = e.pages;
       const img = el('img', { alt: 'صفحة من الكتاب', loading: 'eager', title: 'اضغط للتكبير', onclick: () => img.classList.toggle('z') });
       const cap = el('b'), prev = el('button', { class: 'btn ghost sm', text: '→ السابقة' }), next = el('button', { class: 'btn ghost sm', text: 'التالية ←' });
-      const show = () => { img.src = 'data/sol/img/' + key + '/p' + String(ps[i]).padStart(3, '0') + '.webp'; cap.textContent = 'صفحة ' + ps[i]; prev.disabled = i === 0; next.disabled = i === ps.length - 1; };
+      const show = () => { img.src = 'data/sol/img/' + key + '/' + (e.b2 ? 'q' : 'p') + String(ps[i]).padStart(3, '0') + '.webp'; cap.textContent = 'صفحة ' + ps[i] + (e.b2 ? ' — الفصل الثاني' : ''); prev.disabled = i === 0; next.disabled = i === ps.length - 1; };
       prev.onclick = () => { if (i > 0) { i--; show(); } }; next.onclick = () => { if (i < ps.length - 1) { i++; show(); } };
       const close = () => { ov.remove(); document.removeEventListener('keydown', kd); };
       const kd = k => { if (k.key === 'Escape') close(); };
