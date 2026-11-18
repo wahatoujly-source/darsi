@@ -541,7 +541,7 @@ function renderCtrl(pid) {
   const g = String(p.grade || ''); const subs = (D.App.catalog.grades[g] || []);
   const s = page('ماذا يدرس ' + p.name + '؟', 'الصف ' + gradeName(g), 'who'); s.append(kidStrip(p, '🎛 تحكّم في دروس ' + p.name, 'اختر المواد والدروس التي تظهر له، والأصوات'));
   const c0 = p.ctrl || {}; const selS = new Set(c0.subjects || []); const selL = {}; Object.entries(c0.lessons || {}).forEach(([k, v]) => selL[k] = new Set(v));
-  let all = !selS.size; const msg = el('div'); const box = el('div', { class: 'stack' }); const snd = { voice: true, praise: true, fx: true, ...(p.snd || {}) }; let boardOn = p.board !== false; const tmc = { mode: 'prog', tables: [], ...(p.tmc || {}) };
+  let all = !selS.size; const msg = el('div'); const box = el('div', { class: 'stack' }); const snd = { voice: true, praise: true, fx: true, ...(p.snd || {}) }; let boardOn = p.board !== false; const tmc = { mode: 'prog', tables: [], ...(p.tmc || {}) }; let solK = ['on', 'ans', 'off'].includes(p.sol) ? p.sol : 'on';
   const lessonsOf = sb => { const out = []; (sb.books || [{ units: sb.units }]).forEach(b => (b.units || []).forEach(u => u.lessons.forEach(l => { if (l.ready && !out.some(x => x.id === l.id)) out.push({ ...l, unit: u.title }); }))); return out; };
   const draw = () => { box.innerHTML = '';
     box.append(el('div', { class: 'panel accbox' }, el('b', { text: '1) المواد' }),
@@ -578,12 +578,16 @@ function renderCtrl(pid) {
       .forEach(([k, t, d]) => tmp.append(el('label', { class: 'sndrow' }, el('input', { type: 'radio', name: 'tmc' + pid, checked: tmc.mode === k ? '' : null, onchange: () => { tmc.mode = k; draw(); } }), el('span', {}, el('b', { text: t }), el('small', { class: 'note', text: ' ' + d })))));
     if (tmc.mode === 'manual') tmp.append(el('div', { class: 'gpick' }, ...Array.from({ length: 12 }, (_, i) => i + 1).map(n => el('button', { class: 'btn ghost sm' + (tmc.tables.includes(n) ? ' on' : ''), text: (tmc.tables.includes(n) ? '✓ ' : '') + 'جدول ' + n,
       onclick: () => { tmc.tables = tmc.tables.includes(n) ? tmc.tables.filter(x => x !== n) : [...tmc.tables, n].sort((a, b) => a - b); draw(); } }))));
-    box.append(lp, sp, tmp,
+    // 6) حلول تمارين الكتاب: مفتوحة افتراضياً، وولي الأمر يقرر
+    const slp = el('div', { class: 'panel accbox' }, el('b', { text: '6) ✍️ حلول تمارين الكتاب' }), el('span', { class: 'note', text: 'حلول تمارين الكتاب المدرسي: الناتج النهائي وخطوات الحل. اختر ما يُسمح لـ ' + p.name + ' برؤيته.' }));
+    [['on', '🔓 مفتوحة كاملة', 'الناتج النهائي وخطوات الحل (الافتراضي)'], ['ans', '✅ الناتج النهائي فقط', 'يتأكد من إجابته دون أن يرى طريقة الحل'], ['off', '🔒 مغلقة', 'لا تظهر له الحلول أبداً']]
+      .forEach(([k, t, d]) => slp.append(el('label', { class: 'sndrow' }, el('input', { type: 'radio', name: 'solk' + pid, checked: solK === k ? '' : null, onchange: () => { solK = k; } }), el('span', {}, el('b', { text: t }), el('small', { class: 'note', text: ' ' + d })))));
+    box.append(lp, sp, tmp, slp,
       el('button', { class: 'btn sun', text: '💾 حفظ', onclick: async e => { e.target.disabled = true;
         const ctrl = { subjects: all ? [] : [...selS], lessons: {} }; Object.entries(selL).forEach(([k, v]) => { if (v.size && (all || selS.has(k))) ctrl.lessons[k] = [...v]; });
         if (tmc.mode === 'manual' && !tmc.tables.length) { fbk(msg, 'bad', 'اختر جدولاً واحداً على الأقل في «جدول الضرب».'); e.target.disabled = false; return; }
         const tmcS = { mode: tmc.mode, tables: tmc.mode === 'manual' ? tmc.tables : [] };
-        try { await setDoc(pref(pid), { name: p.name, ctrl, snd: { ...snd }, board: boardOn, tmc: tmcS, ctrlAt: serverTimestamp() }, { mergeFields: ['name', 'ctrl', 'snd', 'board', 'tmc', 'ctrlAt'] }); p.ctrl = ctrl; p.snd = { ...snd }; p.board = boardOn; p.tmc = tmcS; fbk(msg, 'ok', '✓ تم الحفظ. يظهر التغيير على جهاز ' + p.name + ' عند فتح المنصة.'); D.cheer && D.cheer('win'); }
+        try { await setDoc(pref(pid), { name: p.name, ctrl, snd: { ...snd }, board: boardOn, tmc: tmcS, sol: solK, ctrlAt: serverTimestamp() }, { mergeFields: ['name', 'ctrl', 'snd', 'board', 'tmc', 'sol', 'ctrlAt'] }); p.ctrl = ctrl; p.snd = { ...snd }; p.board = boardOn; p.tmc = tmcS; p.sol = solK; fbk(msg, 'ok', '✓ تم الحفظ. يظهر التغيير على جهاز ' + p.name + ' عند فتح المنصة.'); D.cheer && D.cheer('win'); }
         catch (x) { fbk(msg, 'bad', errMsg(x)); } e.target.disabled = false; } }), msg);
   };
   draw(); s.append(box);

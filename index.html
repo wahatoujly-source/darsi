@@ -3284,7 +3284,9 @@ const KX_SUB={ar:['#ffe3e3','#ffadad'],en:['#e2f0ff','#9dc8ff'],math:['#fff1d6',
 const kxPair=n=>(n==='k'||+n<=3?['k1','k2']:+n<=6?['k3','k4']:['k5','k6']);
 const kxVars=n=>{const c=KX_GR[n]||['#8aa0ff','#5b6cf0','#3e4bc0'];return '--a:'+c[0]+';--b:'+c[1]+';--d:'+c[2];};
 // حلول تمارين الكتاب (sol.js): الكتب المتاحة حسب إعداد الإدارة config/access.sol
-const solBooks=g=>{const I=App.sol,S=ACCX().sol||{},adm=!!(window.ACC&&ACC.isAdmin);if(!I||!I.books||(S.on===false&&!adm))return[];return Object.entries(I.books).filter(([k,b])=>(adm||!(S.off||[]).includes(k))&&(g==null||String(b.g)===String(g)));};
+// تحكم ولي الأمر لكل ابن: profiles/{pid}.sol = 'on' (الافتراضي) | 'ans' (الناتج فقط) | 'off' (مغلقة) — لا يخص حساب الطالب المستقل
+const kidSol=()=>{const A=window.ACC;if(!A||!A.user||!A.pid||A.pid==='me'||!A.profiles||A.isAdmin)return'on';const p=A.profiles.find(x=>x.id===A.pid);return p&&['ans','off'].includes(p.sol)?p.sol:'on';};
+const solBooks=g=>{const I=App.sol,S=ACCX().sol||{},adm=!!(window.ACC&&ACC.isAdmin);if(!I||!I.books||(S.on===false&&!adm)||kidSol()==='off')return[];return Object.entries(I.books).filter(([k,b])=>(adm||!(S.off||[]).includes(k))&&(g==null||String(b.g)===String(g)));};
 const solTile=(g,sub)=>{const L=solBooks(g);if(!L.length)return null;return kxMini('q_learn','حلول التمارين',sub?'بالخطوات من الكتاب':'',()=>go(L.length===1&&g!=null?'sol-'+L[0][0]:'sol'));};
 function solEntry(host,g,sid,lid){const done=()=>{host.innerHTML='';const k=g+'-'+sid,b=solBooks(g).find(x=>x[0]===k);if(!b)return;
   if(lid){const L=App.sol.lessons&&App.sol.lessons[lid];if(!L||L.b!==k)return;host.append(el('button',{class:'sol-entry sm',onclick:()=>go('sol-'+k+'~l-'+lid)},el('span',{class:'i',text:'✍️'}),el('span',{class:'t'},el('b',{text:'حلول تمارين هذا الدرس من الكتاب'}),el('small',{text:L.ex.length+(L.ex.length>2?' تمارين':L.ex.length===2?' تمرينان':' تمرين')+' بالناتج وخطوات الحل'})),el('span',{class:'g',text:'←'})));return;}
@@ -3822,7 +3824,7 @@ function route(){setTimeout(adminBanner,0);TTS.phonics=false;TTS.phx=null;
   else renderHome();
 }
 window.addEventListener('hashchange',()=>{if(document.startViewTransition&&!matchMedia('(prefers-reduced-motion: reduce)').matches){const t=document.startViewTransition(()=>route());[t.ready,t.finished,t.updateCallbackDone].forEach(x=>x&&x.catch(()=>{}));}else{route();root.classList.remove('enter');void root.offsetWidth;root.classList.add('enter');}});
-window.DARSI={speak,isFree,gradeInfo,adminFree,regOnly,tip,tipDone,ttsOn,ttsGet,sayAr,speakAr,FX,tick,gradeName:id=>(gradeInfo(id)||{}).name||'',LOGO,TT,lessonStudy,studyLine,VOX,arUnits,PRAISE,el,go,store,App,route,cheer,bar,root,$,$$,GAME,REPORT,findLesson:id=>App.catalog?findLesson(id):null,getJSON,ACCX,registered,canOpen,lockedGrade};
+window.DARSI={speak,isFree,gradeInfo,adminFree,regOnly,tip,tipDone,ttsOn,ttsGet,sayAr,speakAr,FX,tick,gradeName:id=>(gradeInfo(id)||{}).name||'',LOGO,TT,lessonStudy,studyLine,VOX,arUnits,PRAISE,el,go,store,App,route,cheer,bar,root,$,$$,GAME,REPORT,findLesson:id=>App.catalog?findLesson(id):null,kidSol,getJSON,ACCX,registered,canOpen,lockedGrade};
 const SPLASH_T0=performance.now();function hideSplash(){const sp=document.getElementById('splash');if(!sp)return;const wait=sessionStorage.getItem('mj_splash')?0:Math.max(0,1700-(performance.now()-SPLASH_T0));try{sessionStorage.setItem('mj_splash','1')}catch(e){}setTimeout(()=>{sp.classList.add('go');setTimeout(()=>sp.remove(),600);},wait);}
 // عند فتح التطبيق: نضع الرئيسية أولاً في السجل ثم نعود إلى آخر مكان توقف فيه الطالب
 (function bootNav(){let fresh=false;try{fresh=!sessionStorage.getItem('mj_open');sessionStorage.setItem('mj_open','1')}catch(e){}

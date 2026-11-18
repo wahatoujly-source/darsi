@@ -17,6 +17,8 @@ export default async function runSol(D, h) {
   try { IX = await D.getJSON('data/sol/index.json'); } catch (e) { fail(); return; }
   const C = CFG();
   if (!C.on && !admin()) { off('حلول التمارين غير متاحة حالياً', 'عُد إليها لاحقاً.'); return; }
+  const KS = D.kidSol ? D.kidSol() : 'on';
+  if (KS === 'off') { off('حلول التمارين مغلقة', 'أغلقها ولي أمرك. اسأله إذا احتجت إليها.'); return; }
   if (!m[1]) { renderAll(); return; }
   const key = m[1] + '-' + m[2];
   if (!IX.books[key] || ((C.off || []).includes(key) && !admin())) { off('حلول هذا الكتاب غير متاحة حالياً', ''); return; }
@@ -47,7 +49,7 @@ export default async function runSol(D, h) {
   function renderBook(B, sel) {
     const g = String(B.grade), s = B.subject, key = B.key;
     { const LG = D.lockedGrade && D.lockedGrade(); if (LG && LG !== g && !admin()) { location.replace('#sol'); return; } }
-    const ansOk = ok(C.ans, g, s), stepsOk = ok(C.steps, g, s);
+    const ansOk = ok(C.ans, g, s), stepsOk = KS !== 'ans' && ok(C.steps, g, s), kidAns = KS === 'ans';
     const SEEN = 'solv_' + key, seen = new Set(store.get(SEEN, []));
     let selfTest = store.get('sol_hide', false), chap = 0, q = '';
     root.innerHTML = '';
@@ -71,7 +73,8 @@ export default async function runSol(D, h) {
     const chipList = [{ n: 0, t: 'الكل' }, ...B.chapters.filter(c => B.ex.some(e => e.ch === c.n)).map(c => ({ n: c.n, t: c.n >= 8 ? c.t : 'الفصل ' + c.n }))];
     const drawChips = () => { chips.innerHTML = ''; chipList.forEach(c => chips.append(el('button', { class: 'sol-c' + (chap === c.n ? ' on' : ''), text: c.t, title: (B.chapters.find(x => x.n === c.n) || {}).t || '', onclick: () => { chap = c.n; q = ''; inp.value = ''; drawChips(); draw(); } }))); };
     drawChips();
-    if (!ansOk || !stepsOk) {
+    if (kidAns) sec.append(el('div', { class: 'feedback info', text: '📌 ولي أمرك سمح لك برؤية الناتج النهائي فقط، لتتأكد من إجابتك بعد أن تحل بنفسك.' }));
+    else if (!ansOk || !stepsOk) {
       const w = !ansOk ? C.ans : C.steps;
       sec.append(el('div', { class: 'cta-soft' }, el('span', { style: 'font-size:1.5rem', text: w === 'subs' ? '⭐' : '🔑' }),
         el('span', { class: 'tx' }, el('b', { text: w === 'subs' ? (ansOk ? 'خطوات الحل للمشتركين' : 'الحلول للمشتركين') : (ansOk ? 'خطوات الحل مجانية لمن عنده حساب' : 'الحلول مجانية لمن عنده حساب') }),
@@ -164,6 +167,7 @@ export default async function runSol(D, h) {
       // الخطوات
       const stp = el('div', { class: 'sol-steps', hidden: true });
       const sb = el('button', { class: 'btn sm sol-sb', text: '📝 خطوات الحل', onclick: () => {
+        if (kidAns) return;
         if (!stepsOk) { gate(need(C.steps)); return; }
         if (!stp.childElementCount) {
           const ol = el('ol');
@@ -174,7 +178,8 @@ export default async function runSol(D, h) {
           ev('sol_steps', { b: key, e: e.id });
         }
         stp.hidden = !stp.hidden; sb.textContent = stp.hidden ? '📝 خطوات الحل' : '▴ إخفاء الخطوات'; } });
-      if (!stepsOk) sb.textContent = (C.steps === 'subs' ? '⭐ ' : '🔑 ') + 'خطوات الحل';
+      if (kidAns) sb.hidden = true;
+      else if (!stepsOk) sb.textContent = (C.steps === 'subs' ? '⭐ ' : '🔑 ') + 'خطوات الحل';
       c.append(sb, stp);
       if (x.nt) c.append(el('div', { class: 'sol-nt', text: 'ℹ️ ' + x.nt }));
       if (x.bk) c.append(el('div', { class: 'sol-nt', text: '📕 في مفتاح إجابات الكتاب: ' + x.bk }));
