@@ -47,7 +47,7 @@ export default async function runSol(D, h) {
 
   // ---------- كتاب واحد ----------
   function renderBook(B, sel) {
-    const g = String(B.grade), s = B.subject, key = B.key;
+    const g = String(B.grade), s = B.subject, key = B.key, LTR = s === 'en';
     { const LG = D.lockedGrade && D.lockedGrade(); if (LG && LG !== g && !admin()) { location.replace('#sol'); return; } }
     const ansOk = ok(C.ans, g, s), stepsOk = KS !== 'ans' && ok(C.steps, g, s), kidAns = KS === 'ans';
     const SEEN = 'solv_' + key, seen = new Set(store.get(SEEN, []));
@@ -70,7 +70,7 @@ export default async function runSol(D, h) {
     const paintHide = () => { hideBtn.textContent = selfTest ? '👁️ أظهر الإجابات' : '🙈 أخفِ الإجابات لأختبر نفسي'; hideBtn.classList.toggle('on', selfTest); };
     paintHide(); tools.append(hideBtn);
     sec.append(el('div', { class: 'sol-sticky' }, inp, chips), tools);
-    const chipList = [{ n: 0, t: 'الكل' }, ...B.chapters.filter(c => B.ex.some(e => e.ch === c.n)).map(c => ({ n: c.n, t: c.ev ? c.t : 'الفصل ' + c.n }))];
+    const chipList = [{ n: 0, t: 'الكل' }, ...B.chapters.filter(c => B.ex.some(e => e.ch === c.n)).map(c => ({ n: c.n, t: c.ev ? c.t : (B.subject === 'en' ? 'Unit ' : 'الفصل ') + c.n }))];
     const drawChips = () => { chips.innerHTML = ''; chipList.forEach(c => chips.append(el('button', { class: 'sol-c' + (chap === c.n ? ' on' : ''), text: c.t, title: (B.chapters.find(x => x.n === c.n) || {}).t || '', onclick: () => { chap = c.n; q = ''; inp.value = ''; drawChips(); draw(); } }))); };
     drawChips();
     if (kidAns) sec.append(el('div', { class: 'feedback info', text: '📌 ولي أمرك سمح لك برؤية الناتج النهائي فقط، لتتأكد من إجابتك بعد أن تحل بنفسك.' }));
@@ -105,7 +105,7 @@ export default async function runSol(D, h) {
       if (!qq) {
         let lastCh = -1;
         B.ex.filter(e => !chap || e.ch === chap).forEach(e => {
-          if (e.ch !== lastCh) { lastCh = e.ch; const c = B.chapters.find(x => x.n === e.ch); if (c) list.append(el('h3', { class: 'sol-h', text: (c.ev ? '' : 'الفصل ' + c.n + ': ') + c.t })); }
+          if (e.ch !== lastCh) { lastCh = e.ch; const c = B.chapters.find(x => x.n === e.ch); if (c) list.append(el('h3', { class: 'sol-h', text: (c.ev || B.subject === 'en' ? '' : 'الفصل ' + c.n + ': ') + c.t })); }
           list.append(exCard(e, openSet.has(e.id)));
         });
         return;
@@ -140,7 +140,7 @@ export default async function runSol(D, h) {
         el('span', { class: 'st', text: seen.has(e.id) ? '✓' : '' }), el('span', { class: 'ar', text: '▾' }));
       const card = el('div', { class: 'sol-ex' + (open ? ' open' : ''), id: 'sx-' + e.id }, head, body);
       const fill = () => { if (body.childElementCount) return; body.append(exTools(e));
-        let lastN = null; e.it.forEach(x => { if (x.i && x.n !== lastN) body.append(el('p', { class: 'sol-instr', html: fmt(x.n + '- ' + x.i) })); lastN = x.n; body.append(itemCard(e, x, true)); }); };
+        let lastN = null; e.it.forEach(x => { if (x.i && x.n !== lastN) body.append(el('p', { class: 'sol-instr', dir: LTR ? 'auto' : null, html: fmt(LTR ? x.i : x.n + '- ' + x.i) })); lastN = x.n; body.append(itemCard(e, x, true)); }); };
       if (open) { fill(); mark(e); }
       head.onclick = () => { const o = !card.classList.contains('open'); card.classList.toggle('open', o); head.setAttribute('aria-expanded', String(o)); if (o) { fill(); mark(e); if (o) openSet.add(e.id); } else openSet.delete(e.id); };
       return card;
@@ -155,12 +155,12 @@ export default async function runSol(D, h) {
 
     function itemCard(e, x, inEx) {
       const c = el('div', { class: 'sol-it' });
-      c.append(el('div', { class: 'qh' }, el('span', { class: 'qn', text: (x.p ? x.p : 'س ' + x.n) }),
+      c.append(el('div', { class: 'qh' }, el('span', { class: 'qn', text: LTR ? (String(x.n) + (x.p ? ' ' + x.p : '')) : (x.p ? x.p : 'س ' + x.n) }),
         !inEx && x.i ? el('small', { class: 'note', html: fmt(x.i) }) : null),
-        el('div', { class: 'qq', html: fmt(x.q) }));
+        el('div', { class: 'qq', dir: LTR ? 'auto' : null, html: fmt(x.q) }));
       if (x.f) c.append(el('div', { class: 'sol-fig' }, '📐 هذا السؤال يعتمد على شكل في كتابك صفحة ' + e.pg + (e.b2 ? ' (الفصل الثاني)' : '') + ' ', IX.books[key].img ? el('button', { class: 'linkbtn', text: 'اعرض الصفحة', onclick: () => viewer(e) }) : null));
       // الإجابة
-      const ans = el('div', { class: 'sol-a' }, el('span', { class: 'l', text: x.k === 'construction' ? '📏 الإنشاء:' : x.k === 'drawing' ? '📊 الرسم:' : '✅ الإجابة:' }), el('span', { class: 'v', html: fmt(x.a) }));
+      const ans = el('div', { class: 'sol-a' }, el('span', { class: 'l', text: x.k === 'construction' ? '📏 الإنشاء:' : x.k === 'drawing' ? '📊 الرسم:' : '✅ الإجابة:' }), el('span', { class: 'v', dir: LTR ? 'auto' : null, html: fmt(x.a) }));
       if (!ansOk) c.append(lockBtn(C.ans, 'لعرض الإجابة'));
       else if (selfTest) { const b = el('button', { class: 'btn ghost sm sol-rev', text: '👁️ أظهر الإجابة', onclick: () => { b.replaceWith(ans); } }); c.append(b); }
       else c.append(ans);
