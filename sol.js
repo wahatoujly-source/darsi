@@ -70,7 +70,7 @@ export default async function runSol(D, h) {
     const paintHide = () => { hideBtn.textContent = selfTest ? '👁️ أظهر الإجابات' : '🙈 أخفِ الإجابات لأختبر نفسي'; hideBtn.classList.toggle('on', selfTest); };
     paintHide(); tools.append(hideBtn);
     sec.append(el('div', { class: 'sol-sticky' }, inp, chips), tools);
-    const chipList = [{ n: 0, t: 'الكل' }, ...B.chapters.filter(c => B.ex.some(e => e.ch === c.n)).map(c => ({ n: c.n, t: (c.ev || B.subject === 'ar') ? c.t : (B.subject === 'en' ? 'Unit ' : 'الفصل ') + c.n }))];
+    const chipList = [{ n: 0, t: 'الكل' }, ...B.chapters.filter(c => B.ex.some(e => e.ch === c.n)).map(c => ({ n: c.n, t: (c.ev || !['math', 'sci', 'en'].includes(B.subject)) ? c.t : (B.subject === 'en' ? 'Unit ' : 'الفصل ') + c.n }))];
     const drawChips = () => { chips.innerHTML = ''; chipList.forEach(c => chips.append(el('button', { class: 'sol-c' + (chap === c.n ? ' on' : ''), text: c.t, title: (B.chapters.find(x => x.n === c.n) || {}).t || '', onclick: () => { chap = c.n; q = ''; inp.value = ''; drawChips(); draw(); } }))); };
     drawChips();
     if (kidAns) sec.append(el('div', { class: 'feedback info', text: '📌 ولي أمرك سمح لك برؤية الناتج النهائي فقط، لتتأكد من إجابتك بعد أن تحل بنفسك.' }));
@@ -105,7 +105,7 @@ export default async function runSol(D, h) {
       if (!qq) {
         let lastCh = -1;
         B.ex.filter(e => !chap || e.ch === chap).forEach(e => {
-          if (e.ch !== lastCh) { lastCh = e.ch; const c = B.chapters.find(x => x.n === e.ch); if (c) list.append(el('h3', { class: 'sol-h', text: (c.ev || B.subject === 'en' || B.subject === 'ar' ? '' : 'الفصل ' + c.n + ': ') + c.t })); }
+          if (e.ch !== lastCh) { lastCh = e.ch; const c = B.chapters.find(x => x.n === e.ch); if (c) list.append(el('h3', { class: 'sol-h', text: (c.ev || B.subject === 'en' || !['math', 'sci'].includes(B.subject) ? '' : 'الفصل ' + c.n + ': ') + c.t })); }
           list.append(exCard(e, openSet.has(e.id)));
         });
         return;
