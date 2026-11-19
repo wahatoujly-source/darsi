@@ -81,7 +81,25 @@ export async function renderHelp(ctx, opt) {
 /* ----- صاحب التذكرة: من هو، وإجراءات مباشرة (تحويل نوع الحساب، منحة مجانية، تفعيل دفعة، إلغاء منحة) ----- */
 const ROLE_N = { student: '🎒 طالب', parent: '👨‍👩‍👧 ولي أمر', teacher: '👩‍🏫 معلم' };
 const OST = { pending: '⏳ بانتظار التأكيد', paid: '✅ مدفوع', failed: '✖ فشل', refunded: '↩ مُسترد', dismissed: '— مُلغى' };
-function whoBox(t, reload) {
+const dt = ms => ms ? new Date(ms).toLocaleString('ar-LY-u-nu-latn', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' }) : '—';
+const REPLY = {
+  done: (o, w) => 'مرحباً ' + (w.name || '') + '، تم تفعيل اشتراكك «' + (o.planName || '') + '» ✅. أغلق المنصة وافتحها من جديد لتظهر لك كل الدروس. نتمنى لأبنائك التوفيق.',
+  paid: (o, w) => 'مرحباً ' + (w.name || '') + '، اشتراكك «' + (o.planName || '') + '» مفعّل بالفعل ✅. إذا لم تظهر الدروس: أغلق المنصة وافتحها من جديد، وتأكد أنك داخل بنفس الحساب (' + ((w.phone || '').replace('+218', '0') || w.email || '') + ').',
+  unknown: (o, w) => 'مرحباً ' + (w.name || '') + '، راجعنا عملية الدفع (' + o.amount + ' د.ل) ولم يصلنا من ماي باي ما يؤكد إتمامها؛ يبدو أن الدفع لم يكتمل. إذا خُصم المبلغ منك فعلاً، أرسل لنا هنا صورة رسالة الخصم أو رقم العملية ووقتها، ونفعّل اشتراكك فوراً. وإذا لم يُخصم شيء فيمكنك إعادة المحاولة من «اشترك».',
+  failed: (o, w) => 'مرحباً ' + (w.name || '') + '، بوابة الدفع أبلغتنا أن العملية (' + o.amount + ' د.ل) لم تكتمل، ولم يُخصم منك شيء. أعد المحاولة من «اشترك»، وتأكد من رصيد المحفظة ومن إدخال رمز التأكيد. إذا خُصم منك المبلغ رغم ذلك أرسل لنا صورة رسالة الخصم.',
+  noLink: (o, w) => 'مرحباً ' + (w.name || '') + '، لم تصل عملية الدفع إلى صفحة ماي باي (تعذّر فتح رابط الدفع)، ولم يُخصم منك شيء. أعد المحاولة من «اشترك» بعد قليل، ويفضّل فتح المنصة من متصفح Chrome بدل متصفح فيسبوك.',
+  none: () => 'مرحباً، لم نجد أي عملية دفع باسم حسابك. هل دفعت من حساب آخر أو برقم هاتف مختلف؟ أرسل لنا رقم الهاتف الذي سجّلت به وصورة رسالة الخصم، ونراجعها فوراً.',
+};
+// الحكم على كل عملية دفع: اللون، والعنوان، والشرح، والرد المقترح
+const VERD = {
+  paid: { c: '#2b8a3e', t: '✅ مدفوع ومفعّل', why: o => o.manual ? 'فُعّلت يدوياً سابقاً. لا يلزم أي إجراء.' : 'ماي باي أكّد الدفع وتفعّل الاشتراك تلقائياً. لا يلزم أي إجراء؛ المشكلة غالباً في الجهاز أو الحساب.', reply: REPLY.paid },
+  likely: { c: '#e8590c', t: '⚠️ دفع غالباً — يحتاج تفعيل', why: o => 'وصلنا إشعار «نجاح» من ماي باي لهذه العملية لكنه لم يُقبل تلقائياً (' + ((o.logs[0] || {}).result || '') + '). الأرجح أنه دفع فعلاً: تأكد سريعاً في ماي باي ثم فعّل.', reply: REPLY.done },
+  unknown: { c: '#868e96', t: '⏳ لم يصلنا أي تأكيد', why: o => 'فتح صفحة الدفع في ماي باي ولم يصلنا أي إشعار (لا نجاح ولا فشل). في الغالب لم يُكمل الدفع. لا تفعّل إلا إذا وجدت العملية في لوحة ماي باي (ابحث بالمبلغ ' + o.amount + ' د.ل ووقت ' + dt(o.at) + ') أو أرسل إيصالاً.', reply: REPLY.unknown },
+  failed: { c: '#c92a2a', t: '❌ فشل أو أُلغي', why: o => 'ماي باي أبلغنا أن العملية لم تكتمل (' + (o.gw || 'فشل') + '). لم يُخصم شيء — لا تفعّل.', reply: REPLY.failed },
+  noLink: { c: '#c92a2a', t: '❌ لم يصل للدفع', why: o => 'لم يُفتح رابط الدفع أصلاً (خطأ من البوابة أو أغلق الصفحة قبلها). لم يُخصم شيء — لا تفعّل.', reply: REPLY.noLink },
+  closed: { c: '#495057', t: '— مسترد / ملغى', why: o => 'أُغلقت هذه العملية سابقاً' + (o.note ? ': ' + o.note : '.'), reply: null },
+};
+function whoBox(t, reload, fill) {
   const { el, call, fnErr, fbk, ACC } = C;
   const box = el('div', { class: 'tk-who' }, el('span', { class: 'note', text: '👤 جارٍ التعرّف على صاحب التذكرة…' })), m = el('div');
   const day = ms => ms ? new Date(ms).toLocaleDateString('ar-LY-u-nu-latn', { day: 'numeric', month: 'short', year: 'numeric' }) : '—';
@@ -97,12 +115,30 @@ function whoBox(t, reload) {
       kids.length ? el('span', { class: 'note', text: '👧 الأبناء: ' + kids.map(k => k.name + (k.grade ? ' (' + C.gradeName(k.grade) + ')' : '')).join('، ') }) : (w.role === 'parent' ? el('span', { class: 'note', text: '👧 لم يضف أبناء بعد' }) : null),
       me && me.grade && w.role === 'student' ? el('span', { class: 'note', text: '🎒 صفه: ' + C.gradeName(me.grade) }) : null,
       el('span', { class: 'note', text: actSubs.length ? '⭐ اشتراكات فعّالة: ' + actSubs.map(x => (x.planName || (x.kind === 'gift' ? 'منحة' : x.kind)) + ' حتى ' + day(x.end)).join('، ') : '⭐ لا يوجد اشتراك فعّال' }));
-    /* الطلبات: تفعيل دفعة لم تتفعّل */
-    if (w.orders.length) { const ol = el('div', { class: 'stack', style: 'gap:4px' }, el('b', { text: '🧾 آخر عمليات الدفع' }));
-      w.orders.forEach(o => ol.append(el('div', { class: 'tk-row' }, el('span', { text: (o.planName || '') + ' · ' + o.amount + ' د.ل · ' + (OST[o.status] || o.status) + ' · ' + day(o.at) }),
-        ['pending', 'failed'].includes(o.status) && ACC.can('plans') ? el('button', { class: 'btn sm', text: '✅ تفعيل', onclick: async () => { if (!confirm('تفعيل «' + o.planName + '» لـ ' + (w.name || 'المستخدم') + '؟\nتأكد أن المبلغ ' + o.amount + ' د.ل وصل في ماي باي.')) return;
-          try { await call('adminOrders', { op: 'activate', id: o.id, note: 'من تذكرة' }); fbk(m, 'ok', '✓ تم تفعيل الاشتراك.'); draw(); } catch (e) { fbk(m, 'bad', fnErr(e)); } } }) : null)));
+    /* عمليات الدفع: تشخيص واضح لكل عملية + القرار المقترح + رد جاهز */
+    if (w.orders.length) { const ol = el('div', { class: 'stack', style: 'gap:6px' }, el('b', { text: '🧾 عمليات الدفع — ماذا وصلنا من ماي باي؟' }));
+      w.orders.forEach(o => { const V = VERD[o.verdict] || VERD.unknown;
+        const card = el('div', { class: 'tk-pay', style: 'border-color:' + V.c },
+          el('div', { class: 'tk-row' }, el('b', { text: (o.ticket ? '📌 ' : '') + (o.planName || 'باقة') + ' · ' + o.amount + ' د.ل' }), el('span', { class: 'tk-chip', style: 'background:' + V.c + ';color:#fff', text: V.t })),
+          el('span', { class: 'note', text: 'أُنشئت ' + dt(o.at) + (o.paidAt ? ' · فُعّلت ' + dt(o.paidAt) + (o.manual ? ' (يدوياً)' : ' (تلقائياً)') : '') + (o.ticket ? ' · هذه العملية المذكورة في التذكرة' : '') }),
+          el('div', { class: 'tk-why', text: V.why(o) }),
+          el('span', { class: 'note', dir: 'ltr', style: 'font-family:monospace;font-size:.75rem', text: 'رقم العملية (custom في ماي باي): ' + o.id + (o.tx ? '  ·  tx: ' + o.tx : '') }));
+        if (o.note) card.append(el('span', { class: 'note', text: '📝 ' + o.note }));
+        const acts = el('div', { class: 'row', style: 'gap:6px;flex-wrap:wrap' });
+        if (V.reply && fill) acts.append(el('button', { class: 'btn ghost sm', text: '💬 رد جاهز', onclick: () => fill(V.reply(o, w)) }));
+        if (['pending', 'failed'].includes(o.status) && ACC.can('plans')) {
+          const ev = el('select', { class: 'qsel' }, ...[['', '— كيف تحققت من وصول المبلغ؟ —'], ['mypay', 'رأيت العملية في لوحة ماي باي'], ['receipt', 'أرسل إيصالاً وطابقته'], ['signal', 'إشعار نجاح وصل من البوابة'], ['free', 'لم يدفع — تفعيل مجاملة']].map(([v, n]) => el('option', { value: v, text: n })));
+          if (o.verdict === 'likely') ev.value = 'signal';
+          acts.append(ev, el('button', { class: 'btn sm', text: '✅ تفعيل', onclick: async () => {
+            if (!ev.value) { fbk(m, 'info', 'اختر أولاً كيف تحققت من وصول المبلغ. إذا لم تجد العملية في ماي باي فلا تفعّل، واستعمل «رد جاهز».'); ev.focus(); return; }
+            if (!confirm('تفعيل «' + o.planName + '» (' + o.amount + ' د.ل) لـ ' + (w.name || 'المستخدم') + '؟\nالتحقق: ' + ev.options[ev.selectedIndex].text)) return;
+            try { await call('adminOrders', { op: 'activate', id: o.id, note: 'من تذكرة — ' + ev.options[ev.selectedIndex].text }); fbk(m, 'ok', '✓ تم التفعيل. أرسل له الرد الجاهز.'); if (fill) fill(REPLY.done(o, w)); draw(); } catch (e) { fbk(m, 'bad', fnErr(e)); } } }));
+        }
+        if (acts.childElementCount) card.append(acts);
+        ol.append(card); });
       box.append(ol); }
+    else if (t.cat === 'pay') box.append(el('div', { class: 'tk-why', text: '🔎 لا توجد أي عملية دفع باسم هذا الحساب. لم يصل إلى صفحة الدفع أصلاً (أو دفع من حساب آخر). اطلب رقم الهاتف الذي سجّل به أو صورة الإيصال.' }),
+      fill ? el('button', { class: 'btn ghost sm', text: '💬 رد جاهز', onclick: () => fill(REPLY.none()) }) : null);
     /* المنح الفعّالة: إلغاء */
     const gifts = actSubs.filter(x => x.kind === 'gift');
     if (gifts.length && ACC.can('grant')) gifts.forEach(g => box.append(el('div', { class: 'tk-row' }, el('span', { text: '🎁 منحة ' + ((g.scope.grades || [])[0] === '*' ? 'كل الصفوف' : 'الصف ' + C.gradeName((g.scope.grades || [])[0])) + ' حتى ' + day(g.end) }),
@@ -132,7 +168,8 @@ function whoBox(t, reload) {
 /* ----- لوحة الإدارة: تذاكر الدعم ----- */
 export function adminBox(ctx) {
   C = ctx; const { el, fbk, call, fnErr } = C;
-  const box = el('div', { class: 'panel accbox' }, el('b', { text: '🎫 تذاكر الدعم' }), el('span', { class: 'note', text: 'أسئلة المستخدمين والزوار. ردّك يظهر لهم في «المساعدة» ويصلهم إشعار.' }));
+  const box = el('div', { class: 'panel accbox' }, el('b', { text: '🎫 تذاكر الدعم' }), el('span', { class: 'note', text: 'أسئلة المستخدمين والزوار. ردّك يظهر لهم في «المساعدة» ويصلهم إشعار.' }),
+    el('details', {}, el('summary', { class: 'note', text: '❓ كيف أتعامل مع تذاكر الدفع؟' }), el('div', { class: 'tk-why', html: '<b>كل عملية دفع تظهر بلون وحكم:</b><br>✅ <b>مدفوع ومفعّل</b>: لا تفعّل شيئاً، المشكلة في الجهاز أو الحساب ← رد جاهز.<br>⚠️ <b>دفع غالباً</b>: وصل إشعار نجاح من ماي باي ولم يُقبل ← تأكد سريعاً ثم فعّل.<br>⏳ <b>لم يصلنا أي تأكيد</b>: فتح صفحة الدفع فقط. أغلب هؤلاء لم يدفعوا ← لا تفعّل إلا إذا وجدت العملية في لوحة ماي باي (بالمبلغ والوقت) أو أرسل إيصالاً ← وإلا أرسل الرد الجاهز.<br>❌ <b>فشل / لم يصل للدفع</b>: لم يُخصم شيء ← لا تفعّل، أرسل الرد الجاهز.<br>عند التفعيل اختر كيف تحققت؛ يُحفظ مع العملية للمراجعة لاحقاً.' })));
   const body = el('div', { class: 'stack' }), msg = el('div'); let all = false;
   const load = async () => { body.innerHTML = ''; body.append(el('span', { class: 'note', text: 'جارٍ التحميل…' }));
     let r; try { r = await call('adminTickets', { op: 'list', all }); } catch (e) { body.innerHTML = ''; fbk(msg, 'bad', fnErr(e)); return; }
@@ -144,8 +181,8 @@ export function adminBox(ctx) {
         el('span', { class: 'note', dir: 'auto', text: [t.phone, t.guest ? 'زائر' : t.role, t.page && 'من صفحة: ' + t.page, fmt(t.createdAt)].filter(Boolean).join(' · ') }),
         t.orderId ? el('span', { class: 'note', dir: 'ltr', style: 'font-family:monospace', text: '🧾 ' + t.orderId + '  ← راجعه في «الطلبات والمدفوعات»' }) : null);
       t.msgs.forEach(m => b.append(el('div', { class: 'hp-msg ' + (m.by === 'a' ? 'a' : 'u') }, el('small', { text: (m.by === 'a' ? 'الدعم' : t.name || 'المستخدم') + ' · ' + fmt(m.at) }), el('p', { text: m.t }))));
-      b.append(whoBox(t, load));
-      const rt = el('textarea', { class: 'tinput', rows: 2, placeholder: 'اكتب الرد…' });
+      const rt = el('textarea', { class: 'tinput', rows: 3, placeholder: 'اكتب الرد… (أو اضغط «رد جاهز» في عملية الدفع)' });
+      b.append(whoBox(t, load, txt => { rt.value = txt; rt.focus(); rt.scrollIntoView({ block: 'center', behavior: 'smooth' }); }));
       const act = async (op, close) => { try { if (op === 'reply' && rt.value.trim().length < 2) return; await call('adminTickets', { op, id: t.id, text: rt.value.trim(), close }); fbk(msg, 'ok', '✓ تم.'); load(); } catch (e) { fbk(msg, 'bad', fnErr(e)); } };
       b.append(rt, el('div', { class: 'row', style: 'gap:6px;flex-wrap:wrap' },
         el('button', { class: 'btn sun sm', text: 'إرسال الرد', onclick: () => act('reply') }), el('button', { class: 'btn ghost sm', text: 'إرسال وإغلاق', onclick: () => act('reply', true) }),
