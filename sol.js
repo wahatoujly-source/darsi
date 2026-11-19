@@ -178,7 +178,7 @@ export default async function runSol(D, h) {
           ev('sol_steps', { b: key, e: e.id });
         }
         stp.hidden = !stp.hidden; sb.textContent = stp.hidden ? '📝 خطوات الحل' : '▴ إخفاء الخطوات'; } });
-      if (kidAns) sb.hidden = true;
+      if (kidAns || !(x.s && x.s.length)) sb.hidden = true;
       else if (!stepsOk) sb.textContent = (C.steps === 'subs' ? '⭐ ' : '🔑 ') + 'خطوات الحل';
       c.append(sb, stp);
       if (x.nt) c.append(el('div', { class: 'sol-nt', text: 'ℹ️ ' + x.nt }));
