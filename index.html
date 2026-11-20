@@ -1764,8 +1764,14 @@ function mathSpeech0(t){return String(t)
   .replace(/≠/g,' لا يساوي ').replace(/=/g,' يساوي ').replace(/>/g,' أكبر من ').replace(/</g,' أصغر من ')
   .replace(/[()\[\]]/g,' ').replace(/\s+/g,' ').trim();}
 const AR_LET={'ا':'ألف','أ':'ألف','ب':'باء','ت':'تاء','ث':'ثاء','ج':'جيم','ح':'حاء','خ':'خاء','د':'دال','ذ':'ذال','ر':'راء','ز':'زاي','س':'سين','ش':'شين','ص':'صاد','ض':'ضاد','ط':'طاء','ظ':'ظاء','ع':'عين','غ':'غين','ف':'فاء','ق':'قاف','ك':'كاف','ل':'لام','م':'ميم','ن':'نون','ه':'هاء','و':'واو','ي':'ياء','ء':'همزة','ة':'تاء مربوطة','ى':'ألف مقصورة'};
+/* letter names fully vowelled: the cloud voice misreads bare names such as «غين» and «ميم» */
+const AR_LETV={'ألف':'أَلِفٌ','باء':'بَاءٌ','تاء':'تَاءٌ','ثاء':'ثَاءٌ','جيم':'جِيمٌ','حاء':'حَاءٌ','خاء':'خَاءٌ','دال':'دَالٌ','ذال':'ذَالٌ','راء':'رَاءٌ','زاي':'زَايٌ','سين':'سِينٌ','شين':'شِينٌ','صاد':'صَادٌ','ضاد':'ضَادٌ','طاء':'طَاءٌ','ظاء':'ظَاءٌ','عين':'عَيْنٌ','غين':'غَيْنٌ','فاء':'فَاءٌ','قاف':'قَافٌ','كاف':'كَافٌ','لام':'لَامٌ','ميم':'مِيمٌ','نون':'نُونٌ','هاء':'هَاءٌ','واو':'وَاوٌ','ياء':'يَاءٌ','همزة':'هَمْزَةٌ'};
+const arLetName=l=>({'أ':'هَمْزَةٌ','إ':'هَمْزَةٌ','آ':'أَلِفُ مَدٍّ','ة':'تَاءٌ مَرْبُوطَةٌ','ى':'أَلِفٌ مَقْصُورَةٌ'})[l]||AR_LETV[AR_LET[l]]||AR_LET[l]||l;
+/* a short utterance that is only a letter name («غين»، «حرف الميم») is read with full vowels */
+const arLetNames=t=>/^[\s«»"'،.!؟:]*((حرف|الحرف)\s+)?(ال)?[ء-ي]{3,4}[\s«»"'،.!؟:]*$/.test(t)?t.replace(/(^|[\s«"'])(ال)?([ء-ي]{3,4})(?=$|[\s»"'،.!؟:])/g,(m,a,al,w)=>AR_LETV[w]?a+(al?'الْ':'')+(al?AR_LETV[w].replace(/ٌ$/,/حرف\s+ال/.test(t)?'ِ':'ُ'):AR_LETV[w]):m):t;
 const arLetters=t=>t.replace(/(^|\s)و\s+(?=[0-9٠-٩])/g,'$1و').replace(/(^|\s)ص\s?(?=[0-9٠-٩])/g,'$1صفحة ')/* a lone letter WITH a vowel mark is a sound (بَ، أُ، سْ): keep it so the voice says the sound; tanween is read as the sound + n (بً → بَنْ) */
-  .replace(/(^|[\s(«"'،,:؛\-–])([اأإآبتثجحخدذرزسشصضطظعغفقكلمنهويءة])([ًٌٍ])(?=$|[\s)»"'،,.:؛\-–])/g,(m,a,l,t)=>a+(l==='ا'?'أ':l)+({'ً':'َ','ٌ':'ُ','ٍ':'ِ'})[t]+'نْ')
+  .replace(/(^|[\s(«"'،,:؛\-–])([اأإآبتثجحخدذرزسشصضطظعغفقكلمنهويءة])(ّ?)([ًٌٍ])(?=$|[\s)»"'،,.:؛\-–])/g,(m,a,l,sh,t)=>a+arLetName(l)+' '+({'ً':'بِتَنْوِينِ الْفَتْحِ','ٌ':'بِتَنْوِينِ الضَّمِّ','ٍ':'بِتَنْوِينِ الْكَسْرِ'})[t])
+  .replace(/(^|[\s(«"'،,:؛\-–])([اأإآبتثجحخدذرزسشصضطظعغفقكلمنهويءة])(ّ?)([َُِْ])(?=$|[\s)»"'،,.:؛\-–])/g,(m,a,l,sh,v)=>a+arLetName(l)+' '+(sh?'مُشَدَّدَةٌ ':'')+({'َ':'مَفْتُوحَةٌ','ُ':'مَضْمُومَةٌ','ِ':'مَكْسُورَةٌ','ْ':'سَاكِنَةٌ'})[v])
   .replace(/(?<![0-9٠-٩°]\s?)(^|[\s(«"'،,:؛\-–])([اأبتثجحخدذرزسشصضطظعغفقكلمنهويءةى])(?=$|[\s)»"'،,.:؛\-–])/g,(m,a,l)=>a+AR_LET[l]);
 const EN_SEG=/([A-Za-z][A-Za-z0-9'’\- ]*[A-Za-z0-9]|[A-Za-z])/g;
 /* ---------- recorded voices (ElevenLabs): sentence-level mp3s, browser TTS as fallback ---------- */
@@ -1777,8 +1783,10 @@ const VOX={on:store.get('vox',true),sets:null,
     a.onended=()=>done(true);a.onerror=()=>done(false);a.onpause=()=>done(true);a.play().catch(()=>done(false));setTimeout(()=>done(true),30000);});}};
 const sentSplit=s=>String(s).split(/(?<=[.!؟?…])\s+|\n+/).map(x=>x.trim()).filter(x=>/[ء-ي]/.test(x));
 /* the exact Arabic sentences the app will say for a text (same pipeline at runtime and when generating audio) */
-function arUnits(t){const out=[];t=String(t).replace(/(^|\s)[بلكف]ـ\s*(?=[:؟?.،]|$)/g,'$1').replace(/[{}ـ]/g,'').replace(/[\p{Extended_Pictographic}\uFE0F\u200D]/gu,'');for(const p of qSplit(t)){if(p.q){out.push({q:p.q});continue;}const parts=String(p.t).split(EN_SEG);
-  parts.forEach((x,i)=>{if(!x)return;if(i%2===1){out.push({en:x});return;}if(!x.replace(/[\s.,،:؛()«»"'\-–]/g,''))return;sentSplit(mathSpeech(arLetters(x))).forEach(z=>out.push({ar:z}));});}return out;}
+/* admin pronunciation dictionary (config/access.tts.dict): exact phrase → how the voice should say it */
+function arDict(t){const d=(ACCX().tts||{}).dict;if(!Array.isArray(d)||!d.length)return t;for(const e of d){if(e&&e[0])t=t.split(e[0]).join(e[1]||'');}return t;}
+function arUnits(t){const out=[];t=arDict(String(t)).replace(/\s*[←→⇐⇒↔⟵⟶➜➡⬅↩↪]\s*/g,'، ').replace(/(^|\s)[بلكف]ـ\s*(?=[:؟?.،]|$)/g,'$1').replace(/[{}ـ]/g,'').replace(/[\p{Extended_Pictographic}\uFE0F\u200D]/gu,'');for(const p of qSplit(t)){if(p.q){out.push({q:p.q});continue;}const parts=String(p.t).split(EN_SEG);
+  parts.forEach((x,i)=>{if(!x)return;if(i%2===1){out.push({en:x});return;}if(!x.replace(/[\s.,،:؛()«»"'\-–]/g,''))return;sentSplit(mathSpeech(arLetters(arLetNames(x)))).forEach(z=>out.push({ar:z}));});}return out;}
 /* cloud voice: the server reads any Arabic sentence with a natural voice and caches it (admin switch: config/access.tts.on) */
 const TTSC={url:'https://europe-west1-mujtahid-810d7.cloudfunctions.net/tts',m:new Map(),bad:0};
 const ttsOn=()=>{const t=ACCX().tts;return !!(t&&t.on)&&TTSC.bad<4;};
@@ -2502,7 +2510,7 @@ C.syll=(b,ctx)=>{
   b.items.forEach((it,i)=>{const parts=it.parts.map(p=>el('span',{class:'kpart',text:p}));const word=el('div',{class:'kword'},hl(it.w));
     const card=el('div',{class:'ksy'},word,el('div',{class:'kparts'},...parts.flatMap((p,k)=>k?[el('span',{class:'ksep',text:'/'}),p]:[p])),el('div',{class:'kword sm'},hl(it.w)));
     const btn=el('button',{class:'btn',text:'▶ اسمع وردّد',onclick:async()=>{stopAll();const t=TTS.token;word.classList.add('on');await spk(plain(it.w),lang);word.classList.remove('on');
-      for(let k=0;k<parts.length;k++){if(t!==TTS.token)return;parts[k].classList.add('on');await spk(it.say?it.say[k]:it.parts[k],lang);await sleep(200);parts[k].classList.remove('on');}
+      for(let k=0;k<parts.length;k++){if(t!==TTS.token)return;parts[k].classList.add('on');await spk(it.say?it.say[k]:(lang==='ar'&&k?it.parts.slice(0,k+1).join(''):it.parts[k]),lang);await sleep(200);parts[k].classList.remove('on');}
       if(t!==TTS.token)return;word.classList.add('on');await spk(plain(it.w),lang);word.classList.remove('on');done.add(i);card.classList.add('heard');if(done.size>=b.items.length)ctx.done();}});
     card.append(btn);wrap.append(card);});
   return wrap;

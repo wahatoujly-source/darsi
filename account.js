@@ -104,7 +104,7 @@ const ERR = {
   'auth/wrong-password': 'كلمة المرور غير صحيحة.',
   'auth/user-not-found': 'لا يوجد حساب بهذه البيانات. أنشئ حساباً جديداً.',
   'auth/email-already-in-use': 'هذا البريد مسجّل من قبل. ادخل بكلمة المرور.',
-  'auth/weak-password': 'كلمة المرور قصيرة. اكتب 6 أحرف أو أكثر.',
+  'auth/weak-password': 'كلمة المرور قصيرة. اكتب 4 أحرف أو أرقام على الأقل.',
   'auth/network-request-failed': 'لا يوجد اتصال بالإنترنت.',
   'auth/popup-closed-by-user': 'أُغلقت نافذة جوجل قبل إتمام الدخول.',
   'auth/unauthorized-domain': 'هذا الموقع غير مسموح له بالدخول بعد (Authorized domains).',
@@ -112,7 +112,7 @@ const ERR = {
   'auth/internal-error': 'تعذّر الاتصال بالخادم لحظياً. حاول مرة أخرى.',
   'auth/web-storage-unsupported': 'هذا المتصفح يمنع حفظ الدخول. افتح الموقع في Chrome أو Safari.',
   'auth/user-disabled': 'هذا الحساب موقوف. تواصل معنا.',
-  'auth/password-does-not-meet-requirements': 'كلمة المرور لا تستوفي الشروط. اكتب 6 أحرف أو أكثر.',
+  'auth/password-does-not-meet-requirements': 'كلمة المرور لا تستوفي الشروط. اكتب 4 أحرف أو أرقام على الأقل.',
   'auth/missing-password': 'اكتب كلمة المرور.',
   'auth/admin-restricted-operation': 'طريقة الدخول هذه غير مفعّلة بعد.',
   'auth/quota-exceeded': 'ضغط كبير على الخدمة الآن. حاول بعد دقائق.',
@@ -279,7 +279,7 @@ function authForm(kind) {
     const ok = /^09[1-5]\d{7}$/.test(t);
     phHint.style.color = ok ? '#1b7f3a' : t.length >= 3 && !/^09[1-5]/.test(t) ? '#c22a43' : '';
     phHint.textContent = ok ? '✓ رقم صحيح' : t.length >= 3 && !/^09[1-5]/.test(t) ? 'يبدأ الرقم بـ 091 أو 092 أو 093 أو 094 أو 095' : t.length ? 'باقي ' + (10 - t.length) + ' أرقام' : 'الرقم الليبي 10 أرقام: 091 أو 092 أو 093 أو 094 أو 095 ثم 7 أرقام.'; }); }
-  const pw = el('input', { class: 'au-in', type: 'password', placeholder: 'كلمة المرور (6 أحرف أو أكثر)', 'aria-label': 'كلمة المرور', autocomplete: 'new-password' });
+  const pw = el('input', { class: 'au-in', type: 'password', placeholder: 'كلمة المرور (4 أحرف أو أرقام أو أكثر)', 'aria-label': 'كلمة المرور', autocomplete: 'new-password' });
   [id, pw].forEach(x => x.addEventListener('input', () => AXe('reg_input', { m: M, mode }, M + mode), { once: false }));
   const eye = el('button', { class: 'au-eye', type: 'button', text: '👁️', onclick: () => { pw.type = pw.type === 'password' ? 'text' : 'password'; } });
   const tabs = el('div', { class: 'au-tabs' }); const go_ = el('button', { class: 'au-main' }); const extra = el('div');
@@ -291,18 +291,19 @@ function authForm(kind) {
       try { await sendPasswordResetEmail(auth, id.value.trim()); fbk(msg, 'ok', 'أرسلنا رابط تغيير كلمة المرور إلى بريدك.'); } catch (e) { fbk(msg, 'bad', errMsg(e)); } } })); };
   go_.onclick = async () => { msg.innerHTML = ''; const create = mode === 'new'; AXe('reg_submit', { m: M, mode });
     if (!isPhone && !/^\S+@\S+\.\S+$/.test(id.value.trim())) AXe('reg_error', { m: M, mode, code: 'bad_email' });
-    if ((pw.value || '').length < 6) { AXe('reg_error', { m: M, mode, code: 'short_password' }); fbk(msg, 'bad', 'كلمة المرور 6 أحرف أو أكثر.'); return; }
+    if ((pw.value || '').length < 4) { AXe('reg_error', { m: M, mode, code: 'short_password' }); fbk(msg, 'bad', 'كلمة المرور 4 أحرف أو أرقام على الأقل.'); return; }
+    const PW = pwFix(pw.value);
     let login = id.value.trim();
     if (isPhone) { const n = libyanPhone(login); if (!n) { AXe('reg_error', { m: M, mode, code: 'bad_phone' }); fbk(msg, 'bad', 'اكتب رقماً ليبياً من 10 أرقام يبدأ بـ 091 أو 092 أو 093 أو 094 أو 095، مثل 0912345678.'); return; } login = phoneEmail(n); }
     go_.disabled = true; go_.classList.add('busy');
-    try { create ? await createUserWithEmailAndPassword(auth, login, pw.value) : await signInWithEmailAndPassword(auth, login, pw.value); }
+    try { create ? await createUserWithEmailAndPassword(auth, login, PW) : await signInWithEmailAndPassword(auth, login, PW); }
     catch (e0) { let e = e0;
       // الحساب أُنشئ رغم الخطأ (انقطاع لحظة الرد): نكمل مباشرة
       if (auth.currentUser && !auth.currentUser.isAnonymous) { AXe('reg_error', { m: M, mode, code: 'recovered:' + String(e0.code || 'x').slice(0, 40) }); go_.disabled = false; go_.classList.remove('busy'); return; }
       // «مسجّل من قبل» عند إنشاء حساب: نجرّب الدخول بنفس كلمة المرور تلقائياً
-      if (create && e0.code === 'auth/email-already-in-use') { try { await signInWithEmailAndPassword(auth, login, pw.value); AXe('reg_auth', { m: M, via: 'existing' }); go_.disabled = false; go_.classList.remove('busy'); return; } catch (e1) { e = e0; } }
+      if (create && e0.code === 'auth/email-already-in-use') { try { await signInWithEmailAndPassword(auth, login, PW); AXe('reg_auth', { m: M, via: 'existing' }); go_.disabled = false; go_.classList.remove('busy'); return; } catch (e1) { e = e0; } }
       // خطأ شبكة لحظي: محاولة ثانية واحدة
-      if (['auth/network-request-failed', 'auth/internal-error'].includes(e0.code)) { try { await new Promise(r => setTimeout(r, 1200)); create ? await createUserWithEmailAndPassword(auth, login, pw.value) : await signInWithEmailAndPassword(auth, login, pw.value); go_.disabled = false; go_.classList.remove('busy'); return; } catch (e2) { e = e2; if (auth.currentUser && !auth.currentUser.isAnonymous) { go_.disabled = false; go_.classList.remove('busy'); return; } } } AXe('reg_error', { m: M, mode, code: String(e.code || 'x').slice(0, 60) }); fbk(msg, 'bad', e.code === 'auth/email-already-in-use' ? (isPhone ? 'هذا الرقم مسجّل من قبل. اختر «لدي حساب».' : 'هذا البريد مسجّل من قبل. اختر «لدي حساب».') : e.code === 'auth/invalid-credential' ? (isPhone ? 'الرقم أو كلمة المرور غير صحيحة.' : 'البريد أو كلمة المرور غير صحيحة.') : errMsg(e)); }
+      if (['auth/network-request-failed', 'auth/internal-error'].includes(e0.code)) { try { await new Promise(r => setTimeout(r, 1200)); create ? await createUserWithEmailAndPassword(auth, login, PW) : await signInWithEmailAndPassword(auth, login, PW); go_.disabled = false; go_.classList.remove('busy'); return; } catch (e2) { e = e2; if (auth.currentUser && !auth.currentUser.isAnonymous) { go_.disabled = false; go_.classList.remove('busy'); return; } } } AXe('reg_error', { m: M, mode, code: String(e.code || 'x').slice(0, 60) }); fbk(msg, 'bad', e.code === 'auth/email-already-in-use' ? (isPhone ? 'هذا الرقم مسجّل من قبل. اختر «لدي حساب».' : 'هذا البريد مسجّل من قبل. اختر «لدي حساب».') : e.code === 'auth/invalid-credential' ? (isPhone ? 'الرقم أو كلمة المرور غير صحيحة.' : 'البريد أو كلمة المرور غير صحيحة.') : errMsg(e)); }
     go_.disabled = false; go_.classList.remove('busy'); };
   draw();
   root.append(el('section', { class: 'au' }, el('button', { class: 'au-back', text: '→', 'aria-label': 'رجوع', onclick: () => go('login') }),
@@ -313,6 +314,11 @@ function authForm(kind) {
   setTimeout(() => id.focus(), 50);
 }
 
+/* اسم افتراضي إذا ترك المستخدم خانة الاسم فارغة (يمكنه تغييره لاحقاً من حسابه) */
+function defName(role) { const u = ACC.user || {}; const dn = String(u.displayName || '').trim(); if (dn.length >= 2) return dn.slice(0, 40);
+  return ({ parent: 'ولي أمر', student: 'طالب المجتهد', teacher: 'معلم' })[role] || 'مستخدم المجتهد'; }
+/* كلمة مرور قصيرة (4 أو 5 أحرف) مسموحة: Firebase يشترط 6، فنكمّلها بلاحقة ثابتة. كلمات 6+ تبقى كما هي (الحسابات القديمة لا تتأثر) */
+const pwFix = p => (p.length >= 6 ? p : p + '#mj26');
 /* حفظ ملف حساب جديد: من المتصفح، ثم من الخادم إذا رفضته القواعد (وثيقة ناقصة قديمة مثلاً) */
 async function saveNewProfile(data) {
   try { await setDoc(uref(), data); return; }
@@ -339,8 +345,8 @@ function renderOnboard() {
   kidBox.append(el('b', { text: 'صفك الدراسي' }), gsel, el('b', { text: 'اختر صورتك' }), av);
   draw();
   const save = el('button', { class: 'btn sun paybig', text: 'ابدأ', onclick: async () => {
-    const nm = name.value.trim();
-    if (nm.length < 2) { AXe('reg_error', { m: 'onboard', code: 'no_name' }); fbk(msg, 'bad', 'اكتب الاسم.'); return; }
+    let nm = name.value.trim();
+    if (nm.length < 2) { AXe('reg_error', { m: 'onboard', code: 'no_name_default' }); nm = defName(role); }
     if (!role) { AXe('reg_error', { m: 'onboard', code: 'no_role' }); fbk(msg, 'bad', 'اختر: طالب أو ولي أمر أو معلم.'); return; }
     if (role === 'student' && !grade) { AXe('reg_error', { m: 'onboard', code: 'no_grade' }); fbk(msg, 'bad', 'اختر صفك الدراسي.'); return; }
     save.disabled = true;
@@ -1074,7 +1080,7 @@ function renderSubscribe() {
     if (!logged) { store.set('pend_pay', { plan: pl.id, grade, subject, who }); D.App.after = 'subscribe'; go('login'); return; }
     payBtn.disabled = true;
     try {
-      if (!ACC.profile) { const nm = nameIn.value.trim(); if (nm.length < 2) { payBtn.disabled = false; fbk(msg, 'bad', 'اكتب اسمك.'); nameIn.focus(); return; }
+      if (!ACC.profile) { let nm = nameIn.value.trim(); if (nm.length < 2) nm = defName('parent');
         const u = ACC.user; const data = { name: nm, role: who, phone: phoneOf(u) || u.phoneNumber || null, email: phoneOf(u) ? null : (u.email || null), createdAt: serverTimestamp() };
         { const ob = obData(); if (ob) data.ob = ob; }
         await saveNewProfile(data); try { await updateProfile(u, { displayName: nm }); } catch (e) {}
@@ -1178,7 +1184,7 @@ function accessBox() {
 function ttsBox() {
   const T0 = (ACC.access || {}).tts || {};
   const stage = (x, oldV, oldR, defV) => { x = x || {}; return { rate: Number(x.rate != null ? x.rate : (oldR != null ? oldR : 0.9)), a: x.a || oldV || defV, b: x.b || '', mode: x.mode || 'single', subj: Object.assign({}, x.subj || {}) }; };
-  const C = { on: !!T0.on, p: stage(T0.p, T0.f, T0.rate, 'ar-XA-Chirp3-HD-Aoede'), s: stage(T0.s, T0.m, T0.rate, 'ar-XA-Chirp3-HD-Charon') };
+  const C = { on: !!T0.on, p: stage(T0.p, T0.f, T0.rate, 'ar-XA-Chirp3-HD-Aoede'), s: stage(T0.s, T0.m, T0.rate, 'ar-XA-Chirp3-HD-Charon'), dict: (T0.dict || []).map(e => [e[0], e[1]]) };
   const stBox = el('div', { class: 'feedback ' + (C.on ? 'ok' : 'info'), text: C.on ? '✅ الصوت الجديد مفعّل الآن في كل الدروس' : '⏸️ الصوت الجديد غير مفعّل بعد — اضغط «تفعيل الصوت الجديد الآن»' });
   const box = el('div', { class: 'panel accbox' }, el('b', { text: '🔊 القراءة الصوتية التلقائية' }),
     el('span', { class: 'note', text: 'صوت Google المختار هو الصوت الرسمي لكل الدروس، حتى لو لم يكن في جهاز الطالب صوت عربي. لكل مرحلة سرعة خاصة وصوتان (مثلاً معلم ومعلمة)، وتختار كيف يُستعملان. يُنشأ صوت كل جملة مرة واحدة ويُحفظ للجميع.' }), stBox);
@@ -1196,7 +1202,7 @@ function ttsBox() {
     const lab = v => v.name.replace('ar-XA-', '').replace('Chirp3-HD-', '') + (v.g === 'FEMALE' ? ' — صوت أنثى' : v.g === 'MALE' ? ' — صوت ذكر' : '');
     const vsel = (val, onch, blank) => { const x = el('select', { class: 'qsel', onchange: e => onch(e.target.value) }, ...(blank ? [el('option', { value: '', text: blank })] : []), ...list.map(v => el('option', { value: v.name, text: lab(v) }))); x.value = val || ''; return x; };
     const setOn = async (v, btn) => { btn.disabled = true;
-      try { await call('adminTts', { op: 'cfg', on: v, p: C.p, s: C.s }); await loadAccess(); C.on = v;
+      try { await call('adminTts', { op: 'cfg', on: v, p: C.p, s: C.s, dict: C.dict }); await loadAccess(); C.on = v;
         stBox.className = 'feedback ' + (v ? 'ok' : 'info'); stBox.textContent = v ? '✅ الصوت الجديد مفعّل الآن في كل الدروس' : '⏸️ الصوت الجديد موقوف'; fbk(msg, 'ok', v ? '✓ تم التفعيل. افتح أي درس وجرّب.' : '✓ تم الإيقاف.'); drawOnBtn(); }
       catch (x) { fbk(msg, 'bad', fnErr(x)); } btn.disabled = false; };
     const onWrap = el('div'); const drawOnBtn = () => { onWrap.innerHTML = ''; onWrap.append(C.on ? el('button', { class: 'btn ghost', text: '⏸️ إيقاف الصوت الجديد', onclick: e => setOn(false, e.target) }) : el('button', { class: 'btn sun paybig', text: '✅ تفعيل الصوت الجديد الآن', onclick: e => setOn(true, e.target) })); };
@@ -1215,11 +1221,23 @@ function ttsBox() {
         if (S.mode === 'alt' && !S.b) w.append(el('span', { class: 'note', style: 'color:#b45309', text: '⚠️ اختر الصوت الثاني ليعمل التناوب.' })); };
       draw(); return w; };
     const st = r.stats || {};
+    /* قاموس النطق: كلمة يقرؤها الصوت خطأ → اكتب كيف تُقرأ (بالتشكيل أو بطريقة أخرى)، جرّبها، ثم احفظ */
+    const dictW = el('div', { class: 'stack', style: 'gap:6px' });
+    const tryText = async (text, btn) => { btn.disabled = true; try { const r2 = await call('adminTts', { op: 'try', text, voice: C.p.a, rate: C.p.rate }); if (audio) audio.pause(); audio = new Audio('data:audio/mpeg;base64,' + r2.audio); audio.play(); } catch (e) { fbk(msg, 'bad', fnErr(e)); } btn.disabled = false; };
+    const drawDict = () => { dictW.innerHTML = '';
+      C.dict.forEach((e, i) => { const a = el('input', { class: 'tinput', value: e[0], placeholder: 'كما في الدرس', oninput: x => { e[0] = x.target.value; } }), b = el('input', { class: 'tinput', value: e[1], placeholder: 'كيف يُقرأ', oninput: x => { e[1] = x.target.value; } });
+        dictW.append(el('div', { class: 'row', style: 'gap:6px;flex-wrap:nowrap;align-items:center' }, a, el('span', { text: '←' }), b,
+          el('button', { class: 'btn ghost sm', title: 'اسمع النطق الجديد', text: '▶', onclick: ev => (e[1] || e[0]) && tryText(e[1] || e[0], ev.target) }),
+          el('button', { class: 'btn ghost sm', title: 'حذف', text: '✕', onclick: () => { C.dict.splice(i, 1); drawDict(); } }))); });
+      dictW.append(el('button', { class: 'btn ghost sm', text: '+ أضف كلمة', onclick: () => { C.dict.push(['', '']); drawDict(); } })); };
+    drawDict();
+    const dictBox = el('div', { class: 'panel', style: 'border:2px dashed #9ad0d6' }, el('b', { text: '📖 قاموس النطق' }),
+      el('span', { class: 'note', text: 'إذا سمعت كلمة تُنطق خطأ في درس، اكتبها كما هي في الدرس، واكتب بجانبها كيف تُقرأ (بالتشكيل الكامل غالباً)، ثم اضغط ▶ لتسمع، ثم «حفظ». يُطبَّق على كل الدروس.' }), dictW);
     body.append(onWrap, stagePanel('p', '🧒 الصفوف 1–6'), stagePanel('s', '🧑 الصفوف 7–9'),
-      el('span', { class: 'note', text: 'نص التجربة (غيّره كما تريد):' }), sample,
+      el('span', { class: 'note', text: 'نص التجربة (غيّره كما تريد):' }), sample, dictBox,
       el('span', { class: 'note', text: 'المحفوظ: ' + (st.items || 0) + ' جملة (' + (st.chars || 0) + ' حرف) · اليوم: ' + (r.today || 0) + ' حرف. مجاني حتى نحو مليون حرف شهرياً. تغيير الصوت أو السرعة يُنشئ الجمل من جديد تلقائياً عند الحاجة.' }),
-      el('button', { class: 'btn', text: '💾 حفظ الأصوات والسرعات', onclick: async e => { e.target.disabled = true;
-        try { await call('adminTts', { op: 'cfg', on: C.on, p: C.p, s: C.s }); await loadAccess(); fbk(msg, 'ok', '✓ حُفظت. تظهر في الدروس خلال دقيقة.'); }
+      el('button', { class: 'btn', text: '💾 حفظ الأصوات والسرعات والقاموس', onclick: async e => { e.target.disabled = true;
+        try { await call('adminTts', { op: 'cfg', on: C.on, p: C.p, s: C.s, dict: C.dict }); await loadAccess(); fbk(msg, 'ok', '✓ حُفظت. تظهر في الدروس خلال دقيقة.'); }
         catch (x) { fbk(msg, 'bad', fnErr(x)); } e.target.disabled = false; } }));
   }).catch(e => { body.innerHTML = ''; body.append(el('span', { class: 'note', text: '⚠️ ' + fnErr(e) }),
     el('a', { href: 'https://console.cloud.google.com/apis/library/texttospeech.googleapis.com?project=mujtahid-810d7', target: '_blank', rel: 'noopener', class: 'btn sun', text: 'تفعيل Cloud Text-to-Speech API' })); });
