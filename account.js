@@ -1731,8 +1731,8 @@ function renderAdmin() {
 }
 
 loadAccess().then(() => { if (D.App.catalog) D.route(); });
-document.addEventListener('visibilitychange', async () => { if (document.visibilityState === 'visible') { const o = JSON.stringify(ACC.access || {}); await loadAccess(); if (JSON.stringify(ACC.access) !== o && D.App.catalog) D.route(); } if (document.visibilityState === 'visible' && ACC.kid) { try { const d = await getDoc(pref(ACC.kid.pid)); if (d.exists()) { const old = JSON.stringify(ACC.profiles[0] && ACC.profiles[0].ctrl || null); ACC.profiles = [{ id: d.id, ...d.data() }]; if (JSON.stringify(d.data().ctrl || null) !== old && D.App.catalog) D.route(); } } catch (e) {} }
-  if (document.visibilityState === 'visible' && ACC.user && ACC.profile) { const n = ACC.subs.length; await loadSubs(); if (ACC.subs.length !== n && D.App.catalog) D.route(); } });
+document.addEventListener('visibilitychange', async () => { if (document.visibilityState === 'visible') { const o = JSON.stringify(ACC.access || {}); await loadAccess(); if (JSON.stringify(ACC.access) !== o && D.App.catalog && !/^#(admin|account)/.test(location.hash)) D.route(); } if (document.visibilityState === 'visible' && ACC.kid) { try { const d = await getDoc(pref(ACC.kid.pid)); if (d.exists()) { const old = JSON.stringify(ACC.profiles[0] && ACC.profiles[0].ctrl || null); ACC.profiles = [{ id: d.id, ...d.data() }]; if (JSON.stringify(d.data().ctrl || null) !== old && D.App.catalog) D.route(); } } catch (e) {} }
+  if (document.visibilityState === 'visible' && ACC.user && ACC.profile) { const n = ACC.subs.length; await loadSubs(); if (ACC.subs.length !== n && D.App.catalog && !/^#(admin|account)/.test(location.hash)) D.route(); } });
 
 /* ---------- دليل ولي الأمر: خطوات قصيرة قابلة للتخطي، ويمكن فتحه لاحقاً من «حسابي» ---------- */
 const GUIDE = [

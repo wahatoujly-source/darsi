@@ -2893,8 +2893,9 @@ window.addEventListener('appinstalled',()=>{installEvt=null;const b=$('#installC
 if('serviceWorker' in navigator&&(location.protocol==='https:'||location.hostname==='localhost')){window.addEventListener('load',()=>{navigator.serviceWorker.register('sw.js').catch(()=>{});});
   /* التطبيق المفتوح طويلاً يتحدّث تلقائياً: نفحص التحديث عند العودة للشاشة، ونعيد التحميل للنسخة الجديدة خارج الدروس */
   let _upd=false;const hadCtl=!!navigator.serviceWorker.controller;
-  navigator.serviceWorker.addEventListener('controllerchange',()=>{if(!hadCtl)return;_upd=true;if(!/^#l-/.test(location.hash))location.reload();});
-  addEventListener('hashchange',()=>{if(_upd&&!/^#l-/.test(location.hash))location.reload();});
+  const keep=()=>/^#(l-|admin|account)/.test(location.hash);
+  navigator.serviceWorker.addEventListener('controllerchange',()=>{if(!hadCtl)return;_upd=true;if(!keep())location.reload();});
+  addEventListener('hashchange',()=>{if(_upd&&!keep())location.reload();});
   const chk=()=>navigator.serviceWorker.getRegistration().then(r=>r&&r.update()).catch(()=>{});
   document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible')chk();});setInterval(chk,30*60000);}
 function installCard(){
