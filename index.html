@@ -1799,7 +1799,7 @@ const ttsVoice=()=>{const t=ACCX().tts||{};const st=VOX.voice()==='m'?'s':'p';co
   return[st,a];};
 const ttsGet=z=>{const[st,v]=ttsVoice();
   if(!TTSC.pre)TTSC.pre={};if(!TTSC.pre[v]){TTSC.pre[v]=1;setTimeout(()=>PRAISE.ar.forEach(p=>ttsGet(p)),50);} // عبارات التشجيع جاهزة مسبقاً لكل صوت
-  const u=TTSC.url+'?st='+st+'&v='+encodeURIComponent(v)+'&t='+encodeURIComponent(String(z).replace(/\s+/g,' ').trim());
+  const S_=(ACCX().tts||{})[st]||{};const u=TTSC.url+'?st='+st+'&v='+encodeURIComponent(v)+(S_.rate?'&r='+S_.rate:'')+'&k=2&t='+encodeURIComponent(String(z).replace(/\s+/g,' ').trim());
   if(!TTSC.m.has(u)){const p=fetch(u).then(r=>{if(!r.ok)throw new Error(r.status);return r.blob();}).then(b=>{TTSC.bad=0;return URL.createObjectURL(b);}).catch(()=>{TTSC.m.delete(u);TTSC.bad++;return null;});TTSC.m.set(u,p);}
   return TTSC.m.get(u);};
 const vxRec=async z=>{if(!VOX.on)return null;await VOX.load();const v=VOX.voice(),k=VOX.key(z);return VOX.sets[v]&&VOX.sets[v].has(k)?'aud/'+v+'/'+k+'.mp3':null;};

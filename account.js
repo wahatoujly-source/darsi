@@ -1199,9 +1199,12 @@ function ttsBox() {
     s: [['ar', 'اللغة العربية'], ['math', 'الرياضيات'], ['sci', 'العلوم'], ['isl', 'التربية الإسلامية'], ['hist', 'التاريخ'], ['geo', 'الجغرافيا'], ['civ', 'التربية الوطنية'], ['comp', 'الحاسوب']] };
   body.append(el('span', { class: 'note', text: 'جارٍ جلب الأصوات…' }));
   call('adminTts', { op: 'voices' }).then(r => { body.innerHTML = '';
-    const list = r.voices.filter(v => /Chirp3-HD|Chirp-HD|Neural2|Wavenet/.test(v.name)).sort((a, b) => (/Chirp3/.test(b.name) - /Chirp3/.test(a.name)) || a.name.localeCompare(b.name));
+    /* الأصوات الحديثة (Chirp3-HD) فقط افتراضياً؛ الأصوات القديمة (Wavenet/Neural2/Standard) ثقيلة وآلية فتُخفى إلا عند الطلب */
+    const all = r.voices.filter(v => /Chirp3-HD|Chirp-HD|Neural2|Wavenet|Standard/.test(v.name)).sort((a, b) => (/Chirp3/.test(b.name) - /Chirp3/.test(a.name)) || a.name.localeCompare(b.name));
+    let showOld = store.get('tts_old', false); const list = [];
+    const fillList = () => { list.length = 0; all.filter(v => showOld || /Chirp3-HD/.test(v.name)).forEach(v => list.push(v)); }; fillList();
     const lab = v => v.name.replace('ar-XA-', '').replace('Chirp3-HD-', '') + (v.g === 'FEMALE' ? ' — صوت أنثى' : v.g === 'MALE' ? ' — صوت ذكر' : '');
-    const vsel = (val, onch, blank) => { const x = el('select', { class: 'qsel', onchange: e => onch(e.target.value) }, ...(blank ? [el('option', { value: '', text: blank })] : []), ...list.map(v => el('option', { value: v.name, text: lab(v) }))); x.value = val || ''; return x; };
+    const vsel = (val, onch, blank) => { if (val && !list.some(v => v.name === val)) { const o = all.find(v => v.name === val); if (o) list.push(o); } const x = el('select', { class: 'qsel', onchange: e => onch(e.target.value) }, ...(blank ? [el('option', { value: '', text: blank })] : []), ...list.map(v => el('option', { value: v.name, text: lab(v) }))); x.value = val || ''; return x; };
     const setOn = async (v, btn) => { btn.disabled = true;
       try { await call('adminTts', { op: 'cfg', on: v, p: C.p, s: C.s, dict: C.dict, names: C.names, cls: C.cls }); await loadAccess(); C.on = v;
         stBox.className = 'feedback ' + (v ? 'ok' : 'info'); stBox.textContent = v ? '✅ الصوت الجديد مفعّل الآن في كل الدروس' : '⏸️ الصوت الجديد موقوف'; fbk(msg, 'ok', v ? '✓ تم التفعيل. افتح أي درس وجرّب.' : '✓ تم الإيقاف.'); drawOnBtn(); }
@@ -1220,9 +1223,14 @@ function ttsBox() {
         [['single', '🎙️ صوت واحد في كل الدروس', 'الصوت الأول فقط'], ['alt', '🔁 تناوب بين الصوتين حسب الدرس', 'درس بصوت المعلم ودرس بصوت المعلمة — كأن الدروس من أكثر من مدرّس'], ['subject', '📚 صوت لكل مادة', 'تختار صوت كل مادة، ويبقى نفسه في كل صفوف المرحلة']].forEach(([m, t, d]) =>
           w.append(el('label', { class: 'sndrow', style: 'margin:0' }, el('input', { type: 'radio', name: 'tmode_' + k, checked: S.mode === m ? '' : null, onchange: () => { S.mode = m; draw(); } }), el('span', {}, el('b', { text: t }), el('small', { class: 'note', text: ' — ' + d })))));
         if (S.mode === 'subject') SUBJ[k].forEach(([sid, sn]) => w.append(el('div', { class: 'row', style: 'gap:6px;align-items:center' }, el('span', { style: 'min-width:110px;font-weight:700', text: sn }),
-          vsel(S.subj[sid] || '', v => { if (v) S.subj[sid] = v; else delete S.subj[sid]; }, '— الصوت الأول —'), el('button', { class: 'btn ghost sm', text: '▶', onclick: e => tryV(S.subj[sid] || S.a, S.rate, e.target) }))));
+          vsel(S.subj[sid] || '', v => { if (v) S.subj[sid] = v; else delete S.subj[sid]; draw(); }, '— الصوت الأول —'), el('button', { class: 'btn ghost sm', text: '▶', onclick: e => tryV(S.subj[sid] || S.a, S.rate, e.target) })),
+          S.subj[sid] && S.subj[sid] !== S.a && S.subj[sid] !== S.b ? nameIn(S.subj[sid]) : el('small', { class: 'note', text: S.subj[sid] ? '(اسم المدرس نفسه المكتوب أعلاه لهذا الصوت)' : '' })));
+        { const nm = v => (C.names[v] ? ' — ' + C.names[v] : ''); const short = v => (v || '').replace('ar-XA-', '').replace('Chirp3-HD-', '');
+          w.append(el('div', { class: 'feedback info', style: 'margin:0' }, '🎧 ما يسمعه الطالب: ' + (S.mode === 'alt' && S.b ? 'درس بصوت ' + short(S.a) + nm(S.a) + ' ودرس بصوت ' + short(S.b) + nm(S.b) + ' (يتبدّل من درس لآخر، ويبقى ثابتاً داخل الدرس الواحد)'
+            : S.mode === 'subject' ? 'كل مادة بصوتها المختار أدناه، والمواد غير المحددة بصوت ' + short(S.a) + nm(S.a) : 'كل الدروس بصوت ' + short(S.a) + nm(S.a))));
+          if (k === 's') w.append(el('span', { class: 'note', style: 'color:#b45309', text: 'ℹ️ دروس الصفوف 7–9 (غير الإنجليزي) صامتة بطبيعتها: الطالب يقرأ بنفسه. هذا الصوت يُسمع فيها فقط في ترحيب المعلم وانتقالاته، وكلمات التشجيع، والأجزاء العربية في دروس الإنجليزي. نطق الكلمات الإنجليزية نفسها بصوت الجهاز وليس من هنا.' })); }
         if (S.mode === 'alt' && !S.b) w.append(el('span', { class: 'note', style: 'color:#b45309', text: '⚠️ اختر الصوت الثاني ليعمل التناوب.' })); };
-      draw(); return w; };
+      draw(); w.redraw = draw; return w; };
     const st = r.stats || {};
     /* قاموس النطق: كلمة يقرؤها الصوت خطأ → اكتب كيف تُقرأ (بالتشكيل أو بطريقة أخرى)، جرّبها، ثم احفظ */
     const dictW = el('div', { class: 'stack', style: 'gap:6px' });
@@ -1242,7 +1250,9 @@ function ttsBox() {
       el('div', { class: 'row', style: 'gap:6px;flex-wrap:wrap' }, ...C.cls.trial.map(id => el('a', { class: 'btn ghost sm', href: '#l-' + id, text: '▶ ' + id }))));
     const dictBox = el('div', { class: 'panel', style: 'border:2px dashed #9ad0d6' }, el('b', { text: '📖 قاموس النطق' }),
       el('span', { class: 'note', text: 'إذا سمعت كلمة تُنطق خطأ في درس، اكتبها كما هي في الدرس، واكتب بجانبها كيف تُقرأ (بالتشكيل الكامل غالباً)، ثم اضغط ▶ لتسمع، ثم «حفظ». يُطبَّق على كل الدروس.' }), dictW);
-    body.append(onWrap, stagePanel('p', '🧒 الصفوف 1–6'), stagePanel('s', '🧑 الصفوف 7–9'),
+    const oldT = el('label', { class: 'sndrow', style: 'margin:0' }, el('input', { type: 'checkbox', checked: showOld ? '' : null, onchange: e => { showOld = e.target.checked; store.set('tts_old', showOld); fillList(); panels.forEach(p => p.redraw()); } }), el('span', {}, el('b', { text: 'إظهار الأصوات القديمة' }), el('small', { class: 'note', text: ' — Wavenet/Neural2: آلية وثقيلة، لا يُنصح بها' })));
+    const panels = [stagePanel('p', '🧒 الصفوف 1–6'), stagePanel('s', '🧑 الصفوف 7–9')];
+    body.append(onWrap, oldT, ...panels,
       el('span', { class: 'note', text: 'نص التجربة (غيّره كما تريد):' }), sample, clsBox, dictBox,
       el('span', { class: 'note', text: 'المحفوظ: ' + (st.items || 0) + ' جملة (' + (st.chars || 0) + ' حرف) · اليوم: ' + (r.today || 0) + ' حرف. مجاني حتى نحو مليون حرف شهرياً. تغيير الصوت أو السرعة يُنشئ الجمل من جديد تلقائياً عند الحاجة.' }),
       el('button', { class: 'btn', text: '💾 حفظ الأصوات والسرعات والقاموس', onclick: async e => { e.target.disabled = true;
