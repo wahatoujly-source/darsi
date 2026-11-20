@@ -527,6 +527,7 @@ section{padding-top:12px}
 .ktr-wrap svg{display:block;width:100%;height:100%;touch-action:none;user-select:none;-webkit-user-select:none}
 .ktr-dot circle{transform-box:fill-box;transform-origin:center}
 .kwin{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;font-size:1.2rem}
+.cls-card{display:flex;align-items:center;gap:10px;margin:8px 0 12px;padding:10px 12px;border-radius:16px;background:linear-gradient(135deg,#fff7e6,#eaf6ef);border:1px solid #f3d9a4}.cls-card .cls-ic{font-size:1.7rem}.cls-card .cls-tx{flex:1;display:grid}.cls-card small{color:#6b7280}body.dark .cls-card{background:#1f2937;border-color:#374151}
 .ksyll{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px}
 .ksy{border:2.5px solid var(--line);border-radius:20px;background:var(--card);padding:12px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:6px}
 .ksy.heard{border-color:var(--ok)}
@@ -1816,6 +1817,35 @@ async function sayAr(z){if(PR.p){const w=PR.p;await Promise.race([w,new Promise(
 const speakAr=async(t,o={})=>{if(TTS.quiet&&!o.force)return;const tok=TTS.token;const us=arUnits(t);for(let i=0;i<us.length;i++){const u=us[i];if(tok!==TTS.token)return;
   const nx=us[i+1];if(nx&&nx.ar&&ttsOn())ttsGet(nx.ar);
   if(u.q)await playQ(u.q);else if(u.en){if(TTS.en&&TTS.en.length)await speak(u.en,{lang:'en'});else await speak(u.en,{lang:'ar'});}else await sayAr(u.ar);}};
+
+/* ---------- المعلم في الفصل: ترحيب في بداية الدرس، جملة عند الانتقال بين الخطوات، خلاصة ووداع في النهاية ----------
+   يُبنى تلقائياً من عنوان الدرس وعناوين خطواته (أو من L.cls = {goals:[], steps:[], outro} إن كُتب يدوياً)، بأسلوب حسب المرحلة.
+   الإعداد: config/access.tts.cls = {on, trial:[دروس تجربة للمدير]} · اسم المدرس لكل صوت: tts.names · ولي الأمر يوقفه: snd.cls=false */
+const CLS={
+  conf(){return (ACCX().tts||{}).cls||{};},
+  active(L){if(!L||L.lang==='en'||L.subject==='en'||!ttsOn())return false;if(kidSound().cls===false||store.get('cls_off',false))return false;const c=CLS.conf();
+    if(c.on)return true;return !!(window.ACC&&ACC.isAdmin)&&(c.trial||[]).includes(L.id);},
+  name(){const t=ACCX().tts||{};return ((t.names||{})[ttsVoice()[1]]||'').trim();},
+  band(L){const g=/^s/.test(String(L.grade))?10:+String(L.grade).replace(/\D/g,'');return g<=3?'k':g<=6?'m':'s';},
+  clean:x=>String(x||'').replace(/<[^>]+>/g,'').replace(/[\p{Extended_Pictographic}\uFE0F]/gu,'').replace(/[؟?!.:]+\s*$/,'').trim(),
+  goals(L){if(L.cls&&L.cls.goals)return L.cls.goals;const a=[];L.steps.forEach(s=>{if(/اختبار/.test(s.title))return;const h=CLS.clean(s.heading||s.title);if(h&&!a.includes(h))a.push(h);});return a.slice(0,4);},
+  stepName(L,i){const c=L.cls&&L.cls.steps;return (c&&c[i])||CLS.clean(L.steps[i].heading||L.steps[i].title);},
+  list(a){a=a.filter(Boolean);return a.length<2?a.join(''):a.slice(0,-1).join('، ')+'، و'+a[a.length-1];},
+  ord:['أولاً','ثانياً','ثالثاً','رابعاً'],
+  intro(L,subj){const b=CLS.band(L),n=CLS.name(),T=CLS.clean(L.title),G=CLS.goals(L);
+    if(b==='k')return 'السلام عليكم يا أبطال! '+(n?'معكم '+n+'، و':'')+'منصة المجتهد ترحب بكم. درسنا اليوم: '+T+'. سنتعلم فيه: '+CLS.list(G)+'، ثم نختبر أنفسنا. هل أنتم جاهزون؟ هيا بنا!';
+    if(b==='m')return 'السلام عليكم ورحمة الله. '+(n?'معكم '+n+'. ':'')+'منصة المجتهد تحييكم وترحب بكم. درس اليوم بعنوان: '+T+'، في مادة '+subj+'. سنتعرف فيه على '+G.join('، ثم ')+'، وفي النهاية نختبر أنفسنا. ركّزوا معي جيداً، ولنبدأ.';
+    return 'السلام عليكم. أهلاً بكم في منصة المجتهد'+(n?'، معكم '+n:'')+'. موضوع درسنا اليوم: '+T+'. وأهدافه أن تكون قادراً في نهايته على: '+G.map((g,i)=>(CLS.ord[i]||'')+'، '+g).join('. ')+'. فلنبدأ على بركة الله.';},
+  step(L,i){const b=CLS.band(L),S=L.steps[i],nm=CLS.stepName(L,i);
+    if(/اختبار/.test(S.title))return b==='k'?'أحسنتم! والآن جاء وقت الاختبار. ركّزوا جيداً، أنتم قادرون!':b==='m'?'أحسنتم. والآن نختبر أنفسنا فيما تعلمناه. اقرؤوا كل سؤال بتمعّن.':'والآن إلى اختبار قصير فيما درسناه. ركّزوا، وأجيبوا بدقة.';
+    const k=b==='k'?['أحسنتم! والآن هيا إلى: ','رائع! ننتقل إلى: ','ممتاز! والآن: ']:b==='m'?['أحسنتم. ننتقل الآن إلى: ','جميل. والخطوة التالية: ','والآن: ']:['ننتقل الآن إلى: ','والآن: '];return k[i%k.length]+nm+'.';},
+  outro(L,ref){const b=CLS.band(L),T=CLS.clean(L.title),G=CLS.goals(L),R=ref?String(ref).replace(/[⁠]/g,''):'';
+    if(L.cls&&L.cls.outro)return L.cls.outro;
+    if(b==='k')return 'رائع! اليوم تعلّمنا: '+T+'. أنتم أبطال! نلتقي في الدرس القادم إن شاء الله. مع السلامة!';
+    if(b==='m')return 'إلى هنا نكون قد أنهينا درس '+T+'، وتعرّفنا فيه على '+CLS.list(G.slice(0,3))+'. '+(R?'راجعوا ما تعلمتموه في كتابكم، '+R+'. ':'')+'أحسنتم، وإلى اللقاء في الدرس القادم.';
+    return 'إلى هنا نكون قد أنهينا درس '+T+'، ولخّصنا فيه '+CLS.list(G.slice(0,3))+'. '+(R?'راجعوا التمارين في كتابكم، '+R+'. ':'')+'والسلام عليكم ورحمة الله.';},
+  say(t){if(!t)return Promise.resolve();return speakAr(t,{force:true});}
+};
 
 /* ---------- encouragement sounds (Web Audio chimes + spoken praise + confetti) ---------- */
 const FX={ctx:null,on:store.get('sound',true),lang:'ar',lastWin:0};
@@ -3526,7 +3556,13 @@ async function renderLesson(id){
   L.steps.forEach((s,i)=>{const n=i+1;const ctx={L,stepIndex:n,done:()=>award(n)};
     const sec=el('section',{class:'lsec t'+(i%6),hidden:n!==1},el('div',{class:'eyebrow',text:s.eyebrow}),el('h2',{text:s.heading,style:/^[A-Za-z]/.test(s.heading||'')?'unicode-bidi:plaintext;text-align:right':null}),s.lead?el('p',{class:'lead'},kids?el('button',{class:'lead-say','aria-label':'اسمع التعليمات',text:'🔊',onclick:()=>{stopAll();speakAr(s.say||s.lead);}}):null,s.lead):null);
     const body=el('div',{class:'stack'});s.blocks.forEach((b,j)=>{const nd=render(b,ctx);const mark=()=>GAME.setCur({lid:id,si:i,bi:j});nd.addEventListener('pointerdown',mark,true);nd.addEventListener('focusin',mark,true);body.append(nd);});sec.append(body);sections.push(sec);root.append(sec);});
-  const prev=el('button',{class:'btn ghost',text:'→ السابق',onclick:()=>show(cur-1)}),next=el('button',{class:'btn',onclick:()=>cur===N?finish():show(cur+1)});
+  const clsOn=CLS.active(L);
+  const prev=el('button',{class:'btn ghost',text:'→ السابق',onclick:()=>show(cur-1)}),next=el('button',{class:'btn',onclick:()=>{if(cur===N){finish();return;}show(cur+1);if(clsOn)CLS.say(CLS.step(L,cur-1));}});
+  if(clsOn){const txt=CLS.intro(L,info.subject.name),who=CLS.name()||'المعلم';
+    const card=el('div',{class:'cls-card'},el('span',{class:'cls-ic',text:'🎙️'}),el('span',{class:'cls-tx'},el('b',{text:'ترحيب '+who}),el('small',{text:'تحية الدرس وما سنتعلمه اليوم'})),
+      el('button',{class:'btn ghost sm',text:'▶ اسمع',onclick:()=>{stopAll();CLS.say(txt);}}),el('button',{class:'btn ghost sm',text:'⏭ تخطَّ',onclick:()=>{stopAll();card.remove();}}));
+    const h2=$('h2',sections[0]);(h2||sections[0]).after(card);
+    if(store.get(stepKey,1)===1)setTimeout(()=>{if(location.hash==='#l-'+id&&card.isConnected)CLS.say(txt);},700);}
   const navBox=el('div',{class:'nav lx-nav'},prev,next);{const t=tip('lesson','⭐ أكمل الخطوات والتمارين لتجمع النجوم وتعرف نتيجتك في نهاية الدرس',next);t&&root.append(t);}root.append(navBox);
   const vnote=el('p',{class:'note lx-vn'});root.append(vnote);
   const voiceNote=()=>{const need=L.lang==='en'?TTS.en:TTS.ar;vnote.textContent=!TTS.synth?'🔇 المتصفح لا يدعم النطق الآلي.':(!need.length&&!(L.lang!=='en'&&ttsOn()))?('🔇 لا يوجد صوت '+(L.lang==='en'?'إنجليزي':'عربي')+' في هذا الجهاز — ثبّته من إعدادات «تحويل النص إلى كلام».'):'';vnote.hidden=!vnote.textContent;};
@@ -3549,7 +3585,8 @@ async function renderLesson(id){
      if(!subbed&&store.get('cta_end_day','')!==day){store.set('cta_end_day',day);
        end.append(el('div',{class:'cta-soft'},el('span',{style:'font-size:1.8rem',text:'🔓'}),el('span',{class:'tx'},el('b',{text:'أعجبك الدرس؟ باقي المواد بنفس الطريقة'}),el('small',{text:'الرياضيات والعلوم والعربي والإنجليزي وغيرها — شرح بالصوت وتمارين وتقارير لولي الأمر.'})),
          el('button',{class:'btn sun sm',text:'شاهد الباقات',onclick:()=>{window.AX&&AX.ev('cta_click',{from:'lesson_end',s:info.subject.id});go('subscribe');}})));}}
-    root.append(end);cheer(lvl===3?'perfect':'win');window.scrollTo({top:0,behavior:'smooth'});}
+    root.append(end);cheer(lvl===3?'perfect':'win');window.scrollTo({top:0,behavior:'smooth'});
+    if(clsOn){const t0=TTS.token;setTimeout(()=>{if(t0===TTS.token&&end.isConnected)CLS.say(CLS.outro(L,info.lesson.ref));},1800);}}
   voiceNote();setTimeout(voiceNote,1200);
   function show(n){stopAll();cur=Math.max(1,Math.min(N,n));if(window.AX&&AX.lesson&&AX.lesson.l===id)AX.lesson.cur=Math.max(AX.lesson.cur,cur);store.set(stepKey,cur);sections.forEach((s,i)=>s.hidden=i+1!==cur);prev.disabled=cur===1;next.textContent=cur===N?'إنهاء الدرس ✓':'التالي ←';
     if(L.steps[cur-1].starOnVisit)award(cur);drawNav();const cb=$('[aria-current]',nav);cb&&cb.scrollIntoView({block:'nearest',inline:'center'});window.scrollTo({top:0,behavior:'smooth'});}
