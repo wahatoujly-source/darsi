@@ -1826,6 +1826,10 @@ const CLS={
   active(L){if(!L||L.lang==='en'||L.subject==='en'||!ttsOn())return false;if(kidSound().cls===false||store.get('cls_off',false))return false;const c=CLS.conf();
     if(c.on)return true;return !!(window.ACC&&ACC.isAdmin)&&(c.trial||[]).includes(L.id);},
   name(){const t=ACCX().tts||{};return ((t.names||{})[ttsVoice()[1]]||'').trim();},
+  /* «أنا الأستاذة رنا، سأكون معلمتكم اليوم.» — المؤنث من لقب الاسم، وإلا من نوع الصوت المختار */
+  fem(n){if(/^(ال)?(أستاذة|استاذة|معلمة|مدرسة|المدرّسة)\s/.test(n))return true;if(/^(ال)?(أستاذ|استاذ|معلم|مدرس|شيخ)\s/.test(n))return false;
+    return /-(Achernar|Aoede|Autonoe|Callirrhoe|Despina|Erinome|Gacrux|Kore|Laomedeia|Leda|Pulcherrima|Sulafat|Vindemiatrix|Zephyr)$/.test(ttsVoice()[1]||'');},
+  me(){const n=CLS.name();return n?'أنا '+n+'، '+(CLS.fem(n)?'سأكون معلمتكم':'سأكون معلمكم')+' اليوم. ':'';},
   band(L){const g=/^s/.test(String(L.grade))?10:+String(L.grade).replace(/\D/g,'');return g<=3?'k':g<=6?'m':'s';},
   clean:x=>String(x||'').replace(/<[^>]+>/g,'').replace(/[\p{Extended_Pictographic}\uFE0F]/gu,'').replace(/[؟?!.:]+\s*$/,'').trim(),
   goals(L){if(L.cls&&L.cls.goals)return L.cls.goals;const a=[];L.steps.forEach(s=>{if(/اختبار/.test(s.title))return;const h=CLS.clean(s.heading||s.title);if(h&&!a.includes(h))a.push(h);});return a.slice(0,4);},
@@ -1833,9 +1837,9 @@ const CLS={
   list(a){a=a.filter(Boolean);return a.length<2?a.join(''):a.slice(0,-1).join('، ')+'، و'+a[a.length-1];},
   ord:['أولاً','ثانياً','ثالثاً','رابعاً'],
   intro(L,subj){const b=CLS.band(L),n=CLS.name(),T=CLS.clean(L.title),G=CLS.goals(L);
-    if(b==='k')return 'السلام عليكم يا أبطال! '+(n?'معكم '+n+'، و':'')+'منصة المجتهد ترحب بكم. درسنا اليوم: '+T+'. سنتعلم فيه: '+CLS.list(G)+'، ثم نختبر أنفسنا. هل أنتم جاهزون؟ هيا بنا!';
-    if(b==='m')return 'السلام عليكم ورحمة الله. '+(n?'معكم '+n+'. ':'')+'منصة المجتهد تحييكم وترحب بكم. درس اليوم بعنوان: '+T+'، في مادة '+subj+'. سنتعرف فيه على '+G.join('، ثم ')+'، وفي النهاية نختبر أنفسنا. ركّزوا معي جيداً، ولنبدأ.';
-    return 'السلام عليكم. أهلاً بكم في منصة المجتهد'+(n?'، معكم '+n:'')+'. موضوع درسنا اليوم: '+T+'. وأهدافه أن تكون قادراً في نهايته على: '+G.map((g,i)=>(CLS.ord[i]||'')+'، '+g).join('. ')+'. فلنبدأ على بركة الله.';},
+    if(b==='k')return 'السلام عليكم يا أبطال! '+CLS.me()+'منصة المجتهد ترحب بكم. درسنا اليوم: '+T+'. سنتعلم فيه: '+CLS.list(G)+'، ثم نختبر أنفسنا. هل أنتم جاهزون؟ هيا بنا!';
+    if(b==='m')return 'السلام عليكم ورحمة الله. '+CLS.me()+'منصة المجتهد تحييكم وترحب بكم. درس اليوم بعنوان: '+T+'، في مادة '+subj+'. سنتعرف فيه على '+G.join('، ثم ')+'، وفي النهاية نختبر أنفسنا. ركّزوا معي جيداً، ولنبدأ.';
+    return 'السلام عليكم. '+CLS.me()+'أهلاً بكم في منصة المجتهد. موضوع درسنا اليوم: '+T+'. وأهدافه أن تكون قادراً في نهايته على: '+G.map((g,i)=>(CLS.ord[i]||'')+'، '+g).join('. ')+'. فلنبدأ على بركة الله.';},
   step(L,i){const b=CLS.band(L),S=L.steps[i],nm=CLS.stepName(L,i);
     if(/اختبار/.test(S.title))return b==='k'?'أحسنتم! والآن جاء وقت الاختبار. ركّزوا جيداً، أنتم قادرون!':b==='m'?'أحسنتم. والآن نختبر أنفسنا فيما تعلمناه. اقرؤوا كل سؤال بتمعّن.':'والآن إلى اختبار قصير فيما درسناه. ركّزوا، وأجيبوا بدقة.';
     const k=b==='k'?['أحسنتم! والآن هيا إلى: ','رائع! ننتقل إلى: ','ممتاز! والآن: ']:b==='m'?['أحسنتم. ننتقل الآن إلى: ','جميل. والخطوة التالية: ','والآن: ']:['ننتقل الآن إلى: ','والآن: '];return k[i%k.length]+nm+'.';},
