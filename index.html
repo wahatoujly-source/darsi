@@ -3352,6 +3352,18 @@ function solEntry(host,g,sid,lid){const done=()=>{host.innerHTML='';const k=g+'-
   if(lid){const L=App.sol.lessons&&App.sol.lessons[lid];if(!L||L.b!==k)return;host.append(el('button',{class:'sol-entry sm',onclick:()=>go('sol-'+k+'~l-'+lid)},el('span',{class:'i',text:'✍️'}),el('span',{class:'t'},el('b',{text:'حلول تمارين هذا الدرس من الكتاب'}),el('small',{text:L.ex.length+(L.ex.length>2?' تمارين':L.ex.length===2?' تمرينان':' تمرين')+' بالناتج وخطوات الحل'})),el('span',{class:'g',text:'←'})));return;}
   host.append(el('button',{class:'sol-entry',onclick:()=>{window.AX&&AX.ev('sol_entry',{b:k});go('sol-'+k);}},el('span',{class:'i',text:'✍️'}),el('span',{class:'t'},el('b',{text:'حلول تمارين الكتاب بالخطوات'}),el('small',{text:b[1].ex+' تمريناً · '+b[1].items+' سؤالاً · ابحث برقم الصفحة أو التمرين'})),el('span',{class:'g',text:'←'})));};
   if(App.sol)done();else getJSON('data/sol/index.json').then(I=>{App.sol=I;done();}).catch(()=>{});}
+/* «عرض المجتهد»: زر عرض شرائح الدرس (من برنامج التحويل) — يظهر حسب إعداد المدير (config/access.viewer) */
+const DK={p:null};
+const deckIdx=()=>DK.p||(DK.p=fetch('https://firestore.googleapis.com/v1/projects/mujtahid-810d7/databases/(default)/documents/config/decks').then(r=>r.ok?r.json():{}).then(j=>(((j.fields||{}).m||{}).mapValue||{}).fields||{}).catch(()=>{DK.p=null;return {};}));
+function deckEntry(host,id){const V=ACCX().viewer||{},A=window.ACC,adm=!!(A&&A.isAdmin);if(!V.on&&!adm)return;
+  deckIdx().then(m=>{if(!m[id]||!host.isConnected)return;
+    const sub=App.sub||adm||OPEN_ACCESS||!!(A&&(A.kid||A.co||(A.hasAnySub&&A.hasAnySub())));const who=V.on?V.who:'admin';let ok=true,lock=null;
+    if(who==='admin')ok=adm;else if(who==='reg'){ok=registered()||adm;lock='login';}else if(who==='subs'){ok=sub;lock=registered()?'subscribe':'login';}
+    const free=ok?null:(lock&&V.free>0?V.free:0);if(!ok&&!free)return;
+    const n=+(m[id].integerValue||0),msg=el('small',{class:'note'});
+    host.append(el('button',{class:'sol-entry sm',onclick:()=>{msg.textContent='';import('./viewer.js').then(x=>x.default(window.DARSI,id,{free,lock,voice:ttsOn()?(V.voice==='teacher'?'teacher':'base'):false})).catch(()=>{msg.textContent='⚠️ تعذّر فتح العرض — تحقق من الاتصال';});}},
+      el('span',{class:'i',text:'🎬'}),el('span',{class:'t'},el('b',{text:'عرض الدرس شرائح'+(voiceLbl(V))+(adm&&!V.on?' — للمدير فقط الآن':'')}),el('small',{text:n+' شريحة · للمراجعة السريعة أو للعرض على شاشة الفصل'+(free?' · معاينة '+free+' شرائح':'')}))),msg);});}
+const voiceLbl=V=>ttsOn()?' بالصوت':'';
 const kxMini=(img,t,sub,fn)=>el('button',{class:'kx-m',onclick:fn},el('img',{src:UIMG(img),alt:'',loading:'lazy'}),t,sub?el('small',{text:sub}):null);
 const kxArenaOn=()=>!!(ACCX().arena&&ACCX().arena.on);
 const kxTeachOn=()=>{const tc=ACCX().teach||{};return !!((tc.on&&tc.show)||(window.ACC&&ACC.isAdmin&&tc.on));};
@@ -3570,6 +3582,7 @@ async function renderLesson(id){
   const head=bar(el('span',{lang:L.lang==='en'?'en':null,text:L.title}),L.titleAr,backTo,el('span',{class:'row',style:'flex-wrap:nowrap;gap:6px'},window.ACC&&ACC.kid?null:el('button',{class:'pill shr-pill','aria-label':'شارك الدرس',title:'شارك الدرس',text:'📤',onclick:()=>shareLesson(id,L.title,info.subject.name+' — '+((gradeInfo(info.grade)||{}).name||''))}),snd,stars));head.classList.add('lx-head');const prog=el('div',{class:'lx-prog'},el('i'));head.append(nav,prog);root.append(head);
   if(info.lesson.ref)root.append(el('div',{class:'refchip'},el('span',{text:'📖'}),el('span',{},'في كتابك: ',el('b',{text:info.lesson.ref.replace(/–/g,'\u2060–\u2060')}))));
   {const sh=el('div');root.append(sh);solEntry(sh,info.grade,info.subject.id,id);}
+  {const vw=el('div');root.append(vw);deckEntry(vw,id);}
   let cur=1;const sections=[];const stepKey='step_'+id;GAME.opened(id);voiceCheck(root,L.lang==='en'?'en':'ar');
   const award=n=>{if(done.has(n))return;done.add(n);if(window.AX&&AX.lesson&&AX.lesson.l===id)AX.lesson.st=done.size;store.set('done_'+id,[...done]);window.ACC&&ACC.saveProgress&&ACC.saveProgress(id,[...done]);cheer('star');drawNav();GAME.onStar();};
   function drawNav(){nav.innerHTML='';L.steps.forEach((s,i)=>{const n=i+1;const b=el('button',{class:done.has(n)?'done':'',onclick:()=>show(n)},el('span',{class:'n',text:AR[i]}),s.title);if(n===cur)b.setAttribute('aria-current','step');nav.append(b);});stars.textContent='★ '+done.size+'/'+N;prog.firstChild.style.width=Math.round(cur/N*100)+'%';}
@@ -3891,7 +3904,7 @@ function route(){setTimeout(adminBanner,0);TTS.phonics=false;TTS.phx=null;
   else renderHome();
 }
 window.addEventListener('hashchange',()=>{if(document.startViewTransition&&!matchMedia('(prefers-reduced-motion: reduce)').matches){const t=document.startViewTransition(()=>route());[t.ready,t.finished,t.updateCallbackDone].forEach(x=>x&&x.catch(()=>{}));}else{route();root.classList.remove('enter');void root.offsetWidth;root.classList.add('enter');}});
-window.DARSI={speak,isFree,gradeInfo,adminFree,regOnly,tip,tipDone,ttsOn,ttsGet,sayAr,speakAr,FX,tick,gradeName:id=>(gradeInfo(id)||{}).name||'',LOGO,TT,lessonStudy,studyLine,VOX,arUnits,PRAISE,el,go,store,App,route,cheer,bar,root,$,$$,GAME,REPORT,findLesson:id=>App.catalog?findLesson(id):null,kidSol,getJSON,ACCX,registered,canOpen,lockedGrade};
+window.DARSI={speak,isFree,gradeInfo,adminFree,regOnly,tip,tipDone,ttsOn,ttsGet,sayAr,speakAr,FX,tick,gradeName:id=>(gradeInfo(id)||{}).name||'',LOGO,TT,lessonStudy,studyLine,VOX,arUnits,PRAISE,el,go,store,App,route,cheer,bar,root,$,$$,GAME,REPORT,findLesson:id=>App.catalog?findLesson(id):null,kidSol,getJSON,ACCX,registered,canOpen,lockedGrade,tvPick,ttsUrl:TTSC.url};
 const SPLASH_T0=performance.now();function hideSplash(){const sp=document.getElementById('splash');if(!sp)return;const wait=sessionStorage.getItem('mj_splash')?0:Math.max(0,1700-(performance.now()-SPLASH_T0));try{sessionStorage.setItem('mj_splash','1')}catch(e){}setTimeout(()=>{sp.classList.add('go');setTimeout(()=>sp.remove(),600);},wait);}
 // عند فتح التطبيق: نضع الرئيسية أولاً في السجل ثم نعود إلى آخر مكان توقف فيه الطالب
 (function bootNav(){let fresh=false;try{fresh=!sessionStorage.getItem('mj_open');sessionStorage.setItem('mj_open','1')}catch(e){}

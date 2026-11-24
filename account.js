@@ -1345,48 +1345,76 @@ const MAT_TYPES = { pptx: 'باوربوينت', ppsx: 'عرض مباشر', ppsx_
 const MAT_STATE = [['hidden', '🔒 مخفية (الإدارة فقط)'], ['subs', '⭐ للمشتركين'], ['all', '🌍 للجميع']];
 const MAT_MIME = { pptx: 'application/vnd.openxmlformats-officedocument.presentationml.presentation', ppsx: 'application/vnd.openxmlformats-officedocument.presentationml.slideshow', docx: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', pdf: 'application/pdf', html: 'text/html; charset=utf-8' };
 const mb = n => (n / 1048576).toFixed(n < 10485760 ? 1 : 0) + ' ميغا';
+/* إعداد «عرض المجتهد»: تشغيل، لمن يظهر، أي صوت، ومعاينة مجانية لغير المشترك */
+function viewerBox() { const V = Object.assign({ on: false, who: 'admin', voice: 'base', free: 3 }, (ACC.access || {}).viewer || {}); const m = el('div'), stat = el('span', { class: 'note', text: '…' });
+  call('adminMat', { op: 'dstat' }).then(r => { stat.textContent = '🎬 العروض المرفوعة: ' + r.total + ' درس' + (r.total ? ' (' + Object.entries(r.by).map(([g, n]) => 'الصف ' + g + ': ' + n).join(' · ') + ')' : ' — جهّزها من البرنامج: تبويب «تجهيز للرفع» ← «تجهيز عرض المجتهد لكل دروس المنصة»'); }).catch(() => { stat.textContent = ''; });
+  const radios = (name, key, opts) => opts.map(([v, t, d]) => el('label', { class: 'sndrow', style: 'margin:0' }, el('input', { type: 'radio', name, checked: V[key] === v ? '' : null, onchange: () => { V[key] = v; } }), el('span', {}, el('b', { text: t }), d ? el('small', { class: 'note', text: ' — ' + d }) : null)));
+  return el('div', { class: 'panel', style: 'border:2px dashed #c4b5fd;margin-bottom:10px' }, el('b', { text: '🎬 عرض المجتهد (شرائح الدرس داخل المنصة)' }),
+    el('span', { class: 'note', text: 'زر «🎬 عرض الدرس شرائح» في صفحة الدرس: يعمل على الموبايل والآيفون واللابتوب وشاشة الفصل، تلقائياً بالصوت أو يدوياً للمعلم. قبل التفعيل يظهر لك أنت فقط للتجربة.' }), stat,
+    el('label', { class: 'sndrow', style: 'margin:0' }, el('input', { type: 'checkbox', checked: V.on ? '' : null, onchange: e => { V.on = e.target.checked; } }), el('b', { text: 'مفعّل' })),
+    el('span', { class: 'note', text: 'لمن يظهر؟' }), ...radios('vwho', 'who', [['admin', '🛠️ للمدير فقط', 'للتجربة'], ['reg', '👤 للمسجلين', 'غير المسجل يرى معاينة ثم «سجّل مجاناً»'], ['subs', '⭐ للمشتركين', 'غير المشترك يرى معاينة ثم «اشترك»'], ['all', '🌍 للجميع', '']]),
+    el('div', { class: 'row', style: 'gap:6px;align-items:center' }, el('span', { text: 'عدد شرائح المعاينة المجانية:' }), el('input', { class: 'tinput', type: 'number', min: '0', max: '30', style: 'width:80px', value: String(V.free), oninput: e => { V.free = +e.target.value || 0; } }), el('small', { class: 'note', text: '(0 = لا يظهر الزر لغير المسموح لهم)' })),
+    el('span', { class: 'note', text: 'الصوت في العروض:' }), ...radios('vvoice', 'voice', [['base', '💰 الصوت الأساسي للمرحلة (موفّر)', 'نفس صوت فيديوهات البرنامج — الجمل المولّدة سابقاً لا تُحسب من الحصة'], ['teacher', '👩‍🏫 المدرّس المفضّل للطالب', 'كل مدرّس يُولِّد جمله مرة واحدة — استهلاك أكبر في البداية']]),
+    el('button', { class: 'btn', text: '💾 حفظ إعداد العروض', onclick: async e => { e.target.disabled = true; try { await call('adminMat', { op: 'vcfg', viewer: V }); await loadAccess(); fbk(m, 'ok', '✓ حُفظ.'); } catch (x) { fbk(m, 'bad', fnErr(x)); } e.target.disabled = false; } }), m);
+}
 function matBox() {
   const box = el('div', { class: 'panel accbox' }, el('b', { text: '📦 المواد التعليمية (ملفات الدروس)' }),
     el('span', { class: 'note', text: 'ارفع حزمة مادة كاملة (ملف ZIP من «برنامج التحويل ← تجهيز للرفع»). كل ملف يذهب لدرسه تلقائياً، وإعادة رفع نفس المادة تستبدل القديمة. الفيديوهات تُرفع ليوتيوب وتُربط هنا برابط قائمة التشغيل. طريقة ظهورها للمعلمين وأولياء الأمور تُفعَّل لاحقاً.' }));
   const msg = el('div'), prev = el('div', { class: 'stack' }), list = el('div', { class: 'stack' });
   const inp = el('input', { type: 'file', accept: '.zip,application/zip', multiple: true });
+  const onlyDecks = el('input', { type: 'checkbox' });
   let busy = false;
   // قراءة حزمة: الفهرس + التأكد أن كل ملفاته موجودة داخلها
   const readPack = async f => { const JSZip = await loadJSZip(); let zip; try { zip = await JSZip.loadAsync(f); } catch (er) { throw new Error('هذا ليس ملف ZIP صالحاً (أو الملف تالف)'); }
     const mf = zip.file('manifest.json'); if (!mf) throw new Error('ليس حزمة من برنامج التحويل (لا يوجد فهرس)');
-    const M = JSON.parse(await mf.async('string')); if (M.format !== 'mujtahid-pack') throw new Error('صيغة الحزمة غير معروفة');
+    const M = JSON.parse(await mf.async('string'));
+    if (M.format === 'mujtahid-decks') { const decks = (M.decks || []).filter(x => zip.file(x.deck)).map(x => ({ id: x.ref, arc: x.deck, subject: x.subject, grade: M.grade }));
+      if (!decks.length) throw new Error('حزمة العروض فارغة'); return { zip, M, files: [], decks }; }
+    if (M.format !== 'mujtahid-pack') throw new Error('صيغة الحزمة غير معروفة');
     const files = M.lessons.flatMap(l => l.files); const miss = files.filter(x => !zip.file('files/' + x.key));
     if (miss.length) throw new Error('الحزمة ناقصة: ' + miss.length + ' ملف غير موجود داخلها');
-    return { zip, M, files }; };
+    const decks = M.lessons.filter(l => l.deck && zip.file(l.deck)).map(l => ({ id: (l.ref || ('g' + M.grade + '-' + M.subject + '-' + l.order)).toLowerCase(), arc: l.deck, subject: M.subject, grade: M.grade }));
+    return { zip, M, files, decks }; };
+  /* «عرض المجتهد»: الشرائح تُحفظ في المنصة على دفعات صغيرة */
+  const uploadDecks = async (zip, decks, onp) => { let done = 0, batch = [], size = 0;
+    const send = async () => { if (!batch.length) return; for (let t = 0; t < 3; t++) { try { await call('adminMat', { op: 'decks', items: batch }); break; } catch (er) { if (t === 2) throw er; await new Promise(z => setTimeout(z, 2000 * (t + 1))); } }
+      done += batch.length; onp(done); batch = []; size = 0; };
+    for (const x of decks) { const js = await zip.file(x.arc).async('string'); batch.push({ id: x.id, grade: x.grade, subject: x.subject, deck: JSON.parse(js) }); size += js.length;
+      if (batch.length >= 40 || size > 1500000) await send(); }
+    await send(); return done; };
   // رفع حزمة واحدة: روابط مؤقتة ← رفع مباشر إلى R2 (4 ملفات معاً، 3 محاولات لكل ملف) ← حفظ الفهرس
-  const uploadPack = async (f, onp) => { const { zip, M, files } = await readPack(f);
+  const uploadPack = async (f, onp) => { const { zip, M, files, decks } = await readPack(f); const tot = (onlyDecks.checked ? 0 : files.length) + decks.length;
+    if (onlyDecks.checked || !files.length) { const n = await uploadDecks(zip, decks, d => onp(d, tot, 0)); return { lessons: n, files: 0, bytes: 0, decks: n }; }
     const r = await call('adminMat', { op: 'urls', grade: M.grade, subject: M.subject, files: files.map(x => ({ key: x.key, size: x.size })) });
     let done = 0; const fail = []; const q = [...files];
     const put = async x => { const blob = await zip.file('files/' + x.key).async('blob'); const ext = x.key.split('.').pop();
       for (let t = 0; t < 3; t++) { try { const res = await fetch(r.urls[x.key], { method: 'PUT', body: blob, headers: { 'Content-Type': MAT_MIME[ext] || 'application/octet-stream' } }); if (res.ok) return true; } catch (er) { /* إعادة المحاولة */ } await new Promise(z => setTimeout(z, 2000 * (t + 1))); } return false; };
-    const worker = async () => { while (q.length) { const x = q.shift(); if (!(await put(x))) fail.push(x); done++; onp(done, files.length, fail.length); } };
+    const worker = async () => { while (q.length) { const x = q.shift(); if (!(await put(x))) fail.push(x); done++; onp(done, tot, fail.length); } };
     await Promise.all([worker(), worker(), worker(), worker()]);
     if (fail.length) throw new Error('لم يكتمل رفع ' + fail.length + ' ملف — أعد رفع هذه الحزمة (الملفات المرفوعة لن تتكرر)');
-    return call('adminMat', { op: 'commit', grade: M.grade, subject: M.subject, manifest: M }); };
+    const c = await call('adminMat', { op: 'commit', grade: M.grade, subject: M.subject, manifest: M });
+    c.decks = decks.length ? await uploadDecks(zip, decks, d => onp(files.length + d, tot, 0)) : 0; return c; };
 
   inp.addEventListener('change', async () => { prev.innerHTML = ''; msg.innerHTML = ''; const F = [...(inp.files || [])]; if (!F.length) return;
     const rows = [], ok = [];
     for (const f of F) { const st = el('span', { class: 'note', text: 'جارٍ القراءة…' }), bar = el('progress', { max: 1, value: 0, style: 'width:100%', hidden: true });
       const row = el('div', { style: 'border:1px solid var(--line);border-radius:12px;padding:8px;display:flex;flex-direction:column;gap:4px' }, el('b', { text: f.name.replace(/\.zip$/i, '') }), st, bar);
       prev.append(row); rows.push({ f, st, bar });
-      try { const { M, files } = await readPack(f); const bytes = files.reduce((a, x) => a + x.size, 0);
-        st.textContent = M.lessons.length + ' درس · ' + files.length + ' ملف · ' + mb(bytes) + ' · مربوط بالمنصة: ' + M.lessons.filter(l => l.ref).length + ' من ' + M.lessons.length;
-        ok.push(rows[rows.length - 1]); rows[rows.length - 1].n = files.length; }
+      try { const { M, files, decks } = await readPack(f); const bytes = files.reduce((a, x) => a + x.size, 0);
+        st.textContent = M.format === 'mujtahid-decks' ? '🎬 عروض المجتهد: ' + decks.length + ' درس (الصف ' + (M.grade_name || M.grade) + ')'
+          : M.lessons.length + ' درس · ' + files.length + ' ملف · ' + mb(bytes) + ' · مربوط بالمنصة: ' + M.lessons.filter(l => l.ref).length + ' من ' + M.lessons.length + (decks.length ? ' · 🎬 ' + decks.length + ' عرض' : '');
+        ok.push(rows[rows.length - 1]); rows[rows.length - 1].n = files.length + decks.length; rows[rows.length - 1].nd = decks.length; }
       catch (x) { st.textContent = '❌ ' + fnErr(x); st.style.color = '#c62828'; } }
     if (!ok.length) return;
+    if (ok.some(R => R.nd && R.n > R.nd)) prev.append(el('label', { class: 'sndrow', style: 'margin:0' }, onlyDecks, el('span', {}, el('b', { text: '🎬 ارفع العروض فقط' }), el('small', { class: 'note', text: ' — بدون إعادة رفع ملفات الباوربوينت والوورد (أسرع بكثير إذا كانت الملفات مرفوعة من قبل)' }))));
     prev.append(el('span', { class: 'note', text: '💡 للرفع الليلي: اترك هذه الصفحة مفتوحة والجهاز على الشاحن، وشغّل «🌙 إبقاء الجهاز مستيقظاً» في برنامج التحويل. الشاشة لن تنطفئ أثناء الرفع.' }));
     prev.append(el('button', { class: 'btn sun', text: '⬆️ رفع ' + (ok.length > 1 ? 'كل الحزم (' + ok.length + ')' : 'الحزمة') + ' إلى المنصة', onclick: async e => {
       if (busy) return; busy = true; e.target.disabled = true; inp.disabled = true;
       let lock = null; try { lock = await navigator.wakeLock.request('screen'); } catch (er) { /* غير مدعوم */ }
       let good = 0, total = 0; const t0 = Date.now();
       for (const R of ok) { R.bar.hidden = false; R.bar.max = R.n || 1; R.st.style.color = ''; R.st.textContent = 'جارٍ الرفع…';
-        try { const c = await uploadPack(R.f, (d, n, fl) => { R.bar.value = d; R.st.textContent = 'تم رفع ' + d + ' من ' + n + (fl ? ' — فشل ' + fl : ''); });
-          R.st.textContent = '✓ رُفعت: ' + c.lessons + ' درس · ' + c.files + ' ملف · ' + mb(c.bytes) + (c.removed ? ' · حُذف ' + c.removed + ' ملف قديم' : ''); R.st.style.color = '#2e7d32'; good++; total += c.bytes; }
+        try { const c = await uploadPack(R.f, (d, n, fl) => { R.bar.max = n || 1; R.bar.value = d; R.st.textContent = 'تم رفع ' + d + ' من ' + n + (fl ? ' — فشل ' + fl : ''); });
+          R.st.textContent = '✓ رُفعت: ' + (c.files ? c.lessons + ' درس · ' + c.files + ' ملف · ' + mb(c.bytes) : '') + (c.decks ? (c.files ? ' · ' : '') + '🎬 ' + c.decks + ' عرض' : '') + (c.removed ? ' · حُذف ' + c.removed + ' ملف قديم' : ''); R.st.style.color = '#2e7d32'; good++; total += c.bytes; }
         catch (x) { R.st.textContent = '❌ ' + fnErr(x); R.st.style.color = '#c62828'; } }
       try { if (lock) await lock.release(); } catch (er) { /* */ }
       const mins = Math.max(1, Math.round((Date.now() - t0) / 60000));
@@ -1400,7 +1428,7 @@ function matBox() {
       list.append(el('b', { text: 'المواد المرفوعة (' + L.length + ') — المجموع ' + mb(L.reduce((a, x) => a + x.bytes, 0)) }));
       L.forEach(m => list.append(matRow(m, loadList))); }).catch(e => { list.innerHTML = ''; fbk(list, 'bad', fnErr(e)); }); };
 
-  box.append(el('div', { class: 'row', style: 'gap:8px;align-items:center;flex-wrap:wrap' }, el('span', { text: 'اختر حزمة أو أكثر (يمكن اختيار كل مواد الصف معاً):' }), inp), prev, msg, el('hr'), list);
+  box.append(viewerBox(), el('div', { class: 'row', style: 'gap:8px;align-items:center;flex-wrap:wrap' }, el('span', { text: 'اختر حزمة أو أكثر (يمكن اختيار كل مواد الصف معاً، وحزم «عروض المجتهد» أيضاً):' }), inp), prev, msg, el('hr'), list);
   loadList(); return box;
 }
 function matRow(m, reload) {
