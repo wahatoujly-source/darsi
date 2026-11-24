@@ -578,6 +578,8 @@ function renderCtrl(pid) {
       tg('fx', '🔔 المؤثرات الصوتية', 'نغمات الصح والخطأ والفوز.'),
       tg('cls', '🎙️ ترحيب المعلم في الدروس', 'تحية في بداية الدرس، وكلمة عند الانتقال بين الخطوات، وخلاصة في نهايته — كأنه في الفصل.'),
       el('span', { class: 'note', text: 'ملاحظة: دروس الإنجليزي، وحروف اللغة العربية للصفوف 1–3، وأسئلة «اسمع واختر»، وتلاوة القرآن يبقى صوتها دائماً لأنها تعتمد عليه.' }),
+      (() => { const k = gNum(p.grade) <= 6 ? 'p' : 's'; const tp = teacherPick(k, (snd.tv || {})[k] || '', v => { snd.tv = { ...(snd.tv || {}), [k]: v }; if (!v) delete snd.tv[k]; });
+        return tp ? el('div', { class: 'stack', style: 'gap:6px' }, el('b', { text: '🎙️ المدرّس المفضّل لـ' + p.name }), el('small', { class: 'note', text: 'اختر الصوت الذي يشرح له الدروس، واضغط ▶ لتسمعه. لا تنسَ «حفظ» في الأسفل.' }), tp) : null; })(),
       el('b', { text: '4) لوحة الأبطال' }), el('label', { class: 'sndrow' }, el('input', { type: 'checkbox', checked: p.board !== false ? '' : null, onchange: e => { boardOn = e.target.checked; } }), el('span', {}, el('b', { text: '🏆 إظهار ' + p.name + ' في لوحة الترتيب' }), el('small', { class: 'note', text: 'يظهر الاسم الأول والصورة الرمزية والنقاط فقط، لطلاب الصف نفسه.' }))));
     // 5) جدول الضرب: ثلاثة أنماط للتحكم (لا تؤثر على الزوار)
     const tmp = el('div', { class: 'panel accbox' }, el('b', { text: '5) ✖️ جدول الضرب' }), el('span', { class: 'note', text: 'النجاح في كل مستوى يحتاج 80% على الأقل في الاختبار، ويستطيع ' + p.name + ' إعادة المحاولة. تظهر تدريباته ونتائجه في تقريره.' }));
@@ -705,6 +707,7 @@ function renderKidAccount() {
   const T = [['n_ach', 'تقريري', () => go('myreport')], ['q_review', 'أخطائي', () => go('mistakes')], ['q_comp', 'لوحة الأبطال', () => go('board')],
     ['q_times', 'جدول الضرب', () => go('times')], ['q_test', 'اختبر مستواك', () => go('test')], ['x_all', 'كتبي PDF', () => go('books')]];
   s.append(el('div', { class: 'kx-qk' }, ...T.map(([im, t, fn]) => el('button', { onclick: fn }, el('span', { class: 'ib' }, el('img', { src: U(im), alt: '', loading: 'lazy' })), el('b', { text: t })))));
+  { const tc = teacherCard([gNum(p.grade) <= 6 ? 'p' : 's']); if (tc) s.append(tc); }
   s.append(el('div', { class: 'kx-linked' }, el('span', { class: 'i', text: '🔗' }), el('span', {}, el('b', { text: 'هذا الجهاز مربوط بحساب ولي أمرك' }), el('small', { text: 'نجومك وتقدّمك تُحفظ تلقائياً ويراها ولي أمرك.' }))));
 }
 
@@ -800,6 +803,7 @@ function renderAccount() {
   const admSlot = el('div'); list.append(admSlot);
   link('🔒', '#eef0f6', 'الخصوصية وشروط الاستخدام', '', () => go('privacy'));
   link('🚪', '#ffe4e4', 'تسجيل الخروج', '', async () => { await signOut(auth); go('home'); }, true);
+  { const tc = teacherCard(P.role === 'student' && P.grade ? [gNum(P.grade) <= 6 ? 'p' : 's'] : null); if (tc) s.append(tc); }
   s.append(el('div', { class: 'kx-card pad0' }, el('div', { class: 'hd', style: 'padding:12px 14px 4px' }, el('b', { text: '⚙️ الإعدادات' })), list));
   call('adminCheck', {}).then(() => { ACC.isAdmin = true; admSlot.append(el('div', { class: 'it' }, el('button', { class: 'r', 'data-adm-row': '1', onclick: () => go('admin') },
     el('span', { class: 'ic', style: 'background:#fff1c2', text: '🛠️' }), el('span', { class: 'tt' }, el('b', { text: 'لوحة الإدارة' }), el('small', { text: 'للمدير والمشرفين' })), el('span', { class: 'ch', text: '‹' })))); ACC.tkMark(); ACC.tkPoll(); }).catch(() => {});
@@ -1182,10 +1186,43 @@ function accessBox() {
   setTimeout(draw, 0); return box;
 }
 /* ---------- admin: cloud voice (Google Chirp HD) — on/off, voice per stage, speed, audition ---------- */
+/* ===== اختيار المدرّس المفضّل: ولي الأمر (لكل ابن) أو المستخدم نفسه يختار صوت مدرّس من قائمة المدير ===== */
+const TV_URL = 'https://europe-west1-mujtahid-810d7.cloudfunctions.net/tts'; let tvAudio = null;
+const TV_FEM = /-(Achernar|Aoede|Autonoe|Callirrhoe|Despina|Erinome|Gacrux|Kore|Laomedeia|Leda|Pulcherrima|Sulafat|Vindemiatrix|Zephyr)$/;
+const tvCfg = () => (ACC.access || {}).tts || {};
+const tvList = st => { const t = tvCfg(); return t.on && t.pick !== 'off' ? ((t[st] || {}).t || []) : []; };
+const tvCan = () => { const t = tvCfg(); return t.pick !== 'subs' || ACC.isAdmin || ACC.kid || ACC.co || (ACC.hasAnySub && ACC.hasAnySub()); };
+const tvName = v => ((tvCfg().names || {})[v] || '').trim();
+const tvFem = v => { const n = tvName(v); if (/^(ال)?(أستاذة|استاذة|معلمة|مدرسة|المدرّسة)\s/.test(n)) return true; if (/^(ال)?(أستاذ|استاذ|معلم|مدرس|شيخ)\s/.test(n)) return false; return TV_FEM.test(v); };
+const tvPlay = (st, v, btn) => { const n = tvName(v); const fem = tvFem(v);
+  const txt = 'مرحباً يا بطل! ' + (n ? 'أنا ' + n + '، ' : '') + (fem ? 'سأكون معلمتك' : 'سأكون معلمك') + ' في دروس المجتهد. هيا نتعلم معاً!';
+  const r = (tvCfg()[st] || {}).rate; if (tvAudio) tvAudio.pause();
+  tvAudio = new Audio(TV_URL + '?st=' + st + '&v=' + encodeURIComponent(v) + (r ? '&r=' + r : '') + '&k=2&t=' + encodeURIComponent(txt));
+  if (btn) { btn.disabled = true; const done = () => { btn.disabled = false; }; tvAudio.onended = done; tvAudio.onerror = done; setTimeout(done, 9000); }
+  tvAudio.play().catch(() => { if (btn) btn.disabled = false; }); };
+/* st: 'p' (1–6) أو 's' (7–9) · cur: الصوت المختار حالياً · onPick(v) ('' = تلقائي) */
+function teacherPick(st, cur, onPick) { const L = tvList(st); if (!L.length) return null; const can = tvCan(); let sel = L.includes(cur) ? cur : '';
+  const w = el('div', { class: 'tvgrid' });
+  const draw = () => { w.innerHTML = '';
+    w.append(el('button', { class: 'tvc' + (!sel ? ' on' : ''), disabled: can ? null : '', onclick: () => { sel = ''; onPick(''); draw(); } },
+      el('span', { class: 'tvi', text: '🎲' }), el('span', { class: 'tvt' }, el('b', { text: 'تلقائي' + (!sel ? ' ✓' : '') }), el('small', { text: 'تختار المنصة المدرّس حسب المادة والدرس' }))));
+    L.forEach(v => { const n = tvName(v) || (tvFem(v) ? 'معلمة' : 'معلم'); const d = ((tvCfg().descs || {})[v] || '');
+      w.append(el('div', { class: 'tvc' + (sel === v ? ' on' : '') + (can ? '' : ' lock'), role: 'button', tabindex: '0', onclick: e => { if (!can || e.target.closest('.tvp')) return; sel = v; onPick(v); draw(); } },
+        el('span', { class: 'tvi', text: tvFem(v) ? '👩‍🏫' : '👨‍🏫' }), el('span', { class: 'tvt' }, el('b', { text: n + (sel === v ? ' ✓' : '') }), d ? el('small', { text: d }) : null),
+        el('button', { class: 'btn ghost sm tvp', title: 'اسمع صوته', text: '▶', onclick: e => { e.stopPropagation(); tvPlay(st, v, e.currentTarget); } }))); });
+    if (!can) w.append(el('div', { class: 'feedback info', style: 'margin:0;grid-column:1/-1' }, '⭐ اختيار المدرّس متاح للمشتركين — يمكنك سماع الأصوات الآن. ', el('a', { href: '#subscribe', text: 'اشترك' }))); };
+  draw(); return w; }
+/* بطاقة «معلمك المفضّل» في صفحة الحساب: تُحفظ في هذا الجهاز */
+function teacherCard(stages) { const st0 = (stages || ['p', 's']).filter(k => tvList(k).length); if (!st0.length) return null;
+  const box = el('div', { class: 'kx-card' }, el('div', { class: 'hd' }, el('b', { text: '🎙️ معلمك المفضّل' })),
+    el('span', { class: 'note', text: 'اختر الصوت الذي يشرح لك الدروس. اضغط ▶ لتسمع كل مدرّس.' }));
+  st0.forEach(k => { if (st0.length > 1) box.append(el('b', { style: 'display:block;margin-top:8px', text: k === 'p' ? 'الصفوف 1–6' : 'الصفوف 7–9' }));
+    box.append(teacherPick(k, store.get('tv_' + k, ''), v => { store.set('tv_' + k, v); })); });
+  return box; }
 function ttsBox() {
   const T0 = (ACC.access || {}).tts || {};
-  const stage = (x, oldV, oldR, defV) => { x = x || {}; return { rate: Number(x.rate != null ? x.rate : (oldR != null ? oldR : 0.9)), a: x.a || oldV || defV, b: x.b || '', mode: x.mode || 'single', subj: Object.assign({}, x.subj || {}) }; };
-  const C = { on: !!T0.on, p: stage(T0.p, T0.f, T0.rate, 'ar-XA-Chirp3-HD-Aoede'), s: stage(T0.s, T0.m, T0.rate, 'ar-XA-Chirp3-HD-Charon'), dict: (T0.dict || []).map(e => [e[0], e[1]]), names: Object.assign({}, T0.names || {}), cls: { on: !!(T0.cls || {}).on, trial: [...((T0.cls || {}).trial || ['ar-1-l0', 'math-1-c1-l3', 'ar-5-u1-l1', 'ar-8-u1-l1'])] } };
+  const stage = (x, oldV, oldR, defV) => { x = x || {}; return { rate: Number(x.rate != null ? x.rate : (oldR != null ? oldR : 0.9)), a: x.a || oldV || defV, b: x.b || '', mode: x.mode || 'single', subj: Object.assign({}, x.subj || {}), t: [...(x.t || [])] }; };
+  const C = { on: !!T0.on, p: stage(T0.p, T0.f, T0.rate, 'ar-XA-Chirp3-HD-Aoede'), s: stage(T0.s, T0.m, T0.rate, 'ar-XA-Chirp3-HD-Charon'), dict: (T0.dict || []).map(e => [e[0], e[1]]), names: Object.assign({}, T0.names || {}), descs: Object.assign({}, T0.descs || {}), pick: T0.pick || 'all', cls: { on: !!(T0.cls || {}).on, trial: [...((T0.cls || {}).trial || ['ar-1-l0', 'math-1-c1-l3', 'ar-5-u1-l1', 'ar-8-u1-l1'])] } };
   const stBox = el('div', { class: 'feedback ' + (C.on ? 'ok' : 'info'), text: C.on ? '✅ الصوت الجديد مفعّل الآن في كل الدروس' : '⏸️ الصوت الجديد غير مفعّل بعد — اضغط «تفعيل الصوت الجديد الآن»' });
   const box = el('div', { class: 'panel accbox' }, el('b', { text: '🔊 القراءة الصوتية التلقائية' }),
     el('span', { class: 'note', text: 'صوت Google المختار هو الصوت الرسمي لكل الدروس، حتى لو لم يكن في جهاز الطالب صوت عربي. لكل مرحلة سرعة خاصة وصوتان (مثلاً معلم ومعلمة)، وتختار كيف يُستعملان. يُنشأ صوت كل جملة مرة واحدة ويُحفظ للجميع.' }), stBox);
@@ -1206,7 +1243,7 @@ function ttsBox() {
     const lab = v => v.name.replace('ar-XA-', '').replace('Chirp3-HD-', '') + (v.g === 'FEMALE' ? ' — صوت أنثى' : v.g === 'MALE' ? ' — صوت ذكر' : '');
     const vsel = (val, onch, blank) => { if (val && !list.some(v => v.name === val)) { const o = all.find(v => v.name === val); if (o) list.push(o); } const x = el('select', { class: 'qsel', onchange: e => onch(e.target.value) }, ...(blank ? [el('option', { value: '', text: blank })] : []), ...list.map(v => el('option', { value: v.name, text: lab(v) }))); x.value = val || ''; return x; };
     const setOn = async (v, btn) => { btn.disabled = true;
-      try { await call('adminTts', { op: 'cfg', on: v, p: C.p, s: C.s, dict: C.dict, names: C.names, cls: C.cls }); await loadAccess(); C.on = v;
+      try { await call('adminTts', { op: 'cfg', on: v, p: C.p, s: C.s, dict: C.dict, names: C.names, cls: C.cls, descs: C.descs, pick: C.pick }); await loadAccess(); C.on = v;
         stBox.className = 'feedback ' + (v ? 'ok' : 'info'); stBox.textContent = v ? '✅ الصوت الجديد مفعّل الآن في كل الدروس' : '⏸️ الصوت الجديد موقوف'; fbk(msg, 'ok', v ? '✓ تم التفعيل. افتح أي درس وجرّب.' : '✓ تم الإيقاف.'); drawOnBtn(); }
       catch (x) { fbk(msg, 'bad', fnErr(x)); } btn.disabled = false; };
     const onWrap = el('div'); const drawOnBtn = () => { onWrap.innerHTML = ''; onWrap.append(C.on ? el('button', { class: 'btn ghost', text: '⏸️ إيقاف الصوت الجديد', onclick: e => setOn(false, e.target) }) : el('button', { class: 'btn sun paybig', text: '✅ تفعيل الصوت الجديد الآن', onclick: e => setOn(true, e.target) })); };
@@ -1229,7 +1266,20 @@ function ttsBox() {
           w.append(el('div', { class: 'feedback info', style: 'margin:0' }, '🎧 ما يسمعه الطالب: ' + (S.mode === 'alt' && S.b ? 'درس بصوت ' + short(S.a) + nm(S.a) + ' ودرس بصوت ' + short(S.b) + nm(S.b) + ' (يتبدّل من درس لآخر، ويبقى ثابتاً داخل الدرس الواحد)'
             : S.mode === 'subject' ? 'كل مادة بصوتها المختار أدناه، والمواد غير المحددة بصوت ' + short(S.a) + nm(S.a) : 'كل الدروس بصوت ' + short(S.a) + nm(S.a))));
           if (k === 's') w.append(el('span', { class: 'note', style: 'color:#b45309', text: 'ℹ️ دروس الصفوف 7–9 (غير الإنجليزي) صامتة بطبيعتها: الطالب يقرأ بنفسه. هذا الصوت يُسمع فيها فقط في ترحيب المعلم وانتقالاته، وكلمات التشجيع، والأجزاء العربية في دروس الإنجليزي. نطق الكلمات الإنجليزية نفسها بصوت الجهاز وليس من هنا.' })); }
-        if (S.mode === 'alt' && !S.b) w.append(el('span', { class: 'note', style: 'color:#b45309', text: '⚠️ اختر الصوت الثاني ليعمل التناوب.' })); };
+        if (S.mode === 'alt' && !S.b) w.append(el('span', { class: 'note', style: 'color:#b45309', text: '⚠️ اختر الصوت الثاني ليعمل التناوب.' }));
+        /* مدرّسو المرحلة: يختار منهم ولي الأمر صوت المدرّس المفضّل لابنه */
+        const tw = el('div', { style: 'border-top:1px dashed var(--line);padding-top:8px;display:flex;flex-direction:column;gap:6px' });
+        tw.append(el('b', { text: '👩‍🏫 مدرّسون يختار منهم ولي الأمر (' + S.t.length + ' من 6)' }),
+          el('span', { class: 'note', text: 'المقترح 4 (معلمتان ومعلمان). اكتب لكل صوت اسماً ووصفاً قصيراً (مثلاً: «صوت هادئ ودافئ، يناسب الصغار»). من لم يختر يبقى له الإعداد أعلاه.' }));
+        S.t.forEach((v, i) => tw.append(el('div', { class: 'stack', style: 'gap:4px;border:1px solid var(--line);border-radius:10px;padding:8px' },
+          el('div', { class: 'row', style: 'gap:6px;align-items:center' }, el('b', { text: (i + 1) + '.' }), vsel(v, nv => { if (nv && !S.t.includes(nv)) { S.t[i] = nv; draw(); } }),
+            el('button', { class: 'btn ghost sm', text: '▶ اسمع', onclick: e => tryV(v, S.rate, e.target) }),
+            i > 0 ? el('button', { class: 'btn ghost sm', title: 'تقديم', text: '↑', onclick: () => { S.t.splice(i - 1, 0, S.t.splice(i, 1)[0]); draw(); } }) : null,
+            el('button', { class: 'btn ghost sm', title: 'حذف', text: '✕', onclick: () => { S.t.splice(i, 1); draw(); } })),
+          nameIn(v),
+          el('input', { class: 'tinput', value: C.descs[v] || '', placeholder: 'وصف قصير يظهر لولي الأمر — اختياري', oninput: e => { const x = e.target.value.trim(); if (x) C.descs[v] = x; else delete C.descs[v]; } }))));
+        if (S.t.length < 6) tw.append(el('button', { class: 'btn ghost sm', text: '+ أضف مدرّساً', onclick: () => { const nv = list.map(x => x.name).find(n => !S.t.includes(n)); if (nv) { S.t.push(nv); draw(); } } }));
+        w.append(tw); };
       draw(); w.redraw = draw; return w; };
     const st = r.stats || {};
     /* قاموس النطق: كلمة يقرؤها الصوت خطأ → اكتب كيف تُقرأ (بالتشكيل أو بطريقة أخرى)، جرّبها، ثم احفظ */
@@ -1248,15 +1298,19 @@ function ttsBox() {
       el('label', { class: 'sndrow', style: 'margin:0' }, el('input', { type: 'checkbox', checked: C.cls.on ? '' : null, onchange: e => { C.cls.on = e.target.checked; } }), el('span', {}, el('b', { text: 'مفعّل لكل الطلاب في كل الدروس' }), el('small', { class: 'note', text: ' — إذا لم تفعّله يعمل لك أنت (المدير) فقط في دروس التجربة أدناه' }))),
       el('span', { class: 'note', text: 'دروس التجربة (للمدير فقط قبل التفعيل العام):' }), trialIn,
       el('div', { class: 'row', style: 'gap:6px;flex-wrap:wrap' }, ...C.cls.trial.map(id => el('a', { class: 'btn ghost sm', href: '#l-' + id, text: '▶ ' + id }))));
+    const pickBox = el('div', { class: 'panel', style: 'border:2px dashed #c4b5fd' }, el('b', { text: '👩‍🏫 من يستطيع اختيار المدرّس المفضّل؟' }),
+      el('span', { class: 'note', text: 'يظهر لولي الأمر في «تحكّم» كل ابن، وللطالب في «حسابي». الصوت المختار يُستعمل في كل دروس المرحلة.' }),
+      ...[['all', '🌍 الجميع', 'مجاناً لكل المستخدمين (مناسب وقت الإطلاق والدعاية)'], ['subs', '⭐ المشتركون فقط', 'غير المشترك يسمع الأصوات لكن لا يختار'], ['off', '⏸️ موقوف', 'لا تظهر قائمة المدرّسين']]
+        .map(([m, t, d]) => el('label', { class: 'sndrow', style: 'margin:0' }, el('input', { type: 'radio', name: 'tvpick', checked: C.pick === m ? '' : null, onchange: () => { C.pick = m; } }), el('span', {}, el('b', { text: t }), el('small', { class: 'note', text: ' — ' + d })))));
     const dictBox = el('div', { class: 'panel', style: 'border:2px dashed #9ad0d6' }, el('b', { text: '📖 قاموس النطق' }),
       el('span', { class: 'note', text: 'إذا سمعت كلمة تُنطق خطأ في درس، اكتبها كما هي في الدرس، واكتب بجانبها كيف تُقرأ (بالتشكيل الكامل غالباً)، ثم اضغط ▶ لتسمع، ثم «حفظ». يُطبَّق على كل الدروس.' }), dictW);
     const oldT = el('label', { class: 'sndrow', style: 'margin:0' }, el('input', { type: 'checkbox', checked: showOld ? '' : null, onchange: e => { showOld = e.target.checked; store.set('tts_old', showOld); fillList(); panels.forEach(p => p.redraw()); } }), el('span', {}, el('b', { text: 'إظهار الأصوات القديمة' }), el('small', { class: 'note', text: ' — Wavenet/Neural2: آلية وثقيلة، لا يُنصح بها' })));
     const panels = [stagePanel('p', '🧒 الصفوف 1–6'), stagePanel('s', '🧑 الصفوف 7–9')];
     body.append(onWrap, oldT, ...panels,
-      el('span', { class: 'note', text: 'نص التجربة (غيّره كما تريد):' }), sample, clsBox, dictBox,
+      el('span', { class: 'note', text: 'نص التجربة (غيّره كما تريد):' }), sample, pickBox, clsBox, dictBox,
       el('span', { class: 'note', text: 'المحفوظ: ' + (st.items || 0) + ' جملة (' + (st.chars || 0) + ' حرف) · اليوم: ' + (r.today || 0) + ' حرف. مجاني حتى نحو مليون حرف شهرياً. تغيير الصوت أو السرعة يُنشئ الجمل من جديد تلقائياً عند الحاجة.' }),
       el('button', { class: 'btn', text: '💾 حفظ الأصوات والسرعات والقاموس', onclick: async e => { e.target.disabled = true;
-        try { await call('adminTts', { op: 'cfg', on: C.on, p: C.p, s: C.s, dict: C.dict, names: C.names, cls: C.cls }); await loadAccess(); fbk(msg, 'ok', '✓ حُفظت. تظهر في الدروس خلال دقيقة.'); }
+        try { await call('adminTts', { op: 'cfg', on: C.on, p: C.p, s: C.s, dict: C.dict, names: C.names, cls: C.cls, descs: C.descs, pick: C.pick }); await loadAccess(); fbk(msg, 'ok', '✓ حُفظت. تظهر في الدروس خلال دقيقة.'); }
         catch (x) { fbk(msg, 'bad', fnErr(x)); } e.target.disabled = false; } }));
   }).catch(e => { body.innerHTML = ''; body.append(el('span', { class: 'note', text: '⚠️ ' + fnErr(e) }),
     el('a', { href: 'https://console.cloud.google.com/apis/library/texttospeech.googleapis.com?project=mujtahid-810d7', target: '_blank', rel: 'noopener', class: 'btn sun', text: 'تفعيل Cloud Text-to-Speech API' })); });

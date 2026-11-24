@@ -1081,6 +1081,7 @@ body.has-nav .kx-nav{display:flex}body.has-nav header.bar .pill.dup,body.has-nav
 .kx-ph .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px}
 .kx-ph .stats div{background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.3);border-radius:18px;padding:6px 4px;backdrop-filter:blur(4px)}
 .kx-ph .stats b{display:block;font-family:var(--kx-d);font-weight:800;font-size:22px;line-height:1.1}.kx-ph .stats small{font-size:11px;font-weight:700;opacity:.92}
+.tvgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:8px;margin-top:6px}.tvc{display:flex;align-items:center;gap:8px;text-align:right;font:inherit;background:#fff;border:2px solid #e7e4ff;border-radius:16px;padding:8px 10px;cursor:pointer;color:inherit}.tvc.on{border-color:#7c5cff;background:#f4f0ff;box-shadow:0 4px 14px rgba(124,92,255,.18)}.tvc.lock{cursor:default;opacity:.85}.tvc:disabled{opacity:.6}.tvc .tvi{font-size:28px;line-height:1}.tvc .tvt{flex:1;display:flex;flex-direction:column;gap:2px;min-width:0}.tvc .tvt small{color:#667;font-size:12px;line-height:1.35}.tvc .tvp{flex:none}
 .kx-card{background:rgba(255,255,255,.94);border:1.5px solid #fff;border-radius:24px;padding:12px 12px;box-shadow:0 8px 22px rgba(59,75,211,.08)}.kx-card.pad0{padding:0;overflow:hidden}
 .kx-card .hd{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:8px}.kx-card .hd b{font-family:var(--kx-d);font-weight:800;font-size:17px;color:var(--kx-ink)}
 .kx-card .lnk{border:0;background:#f0eeff;color:#5b3df0;font-weight:800;font-size:12.5px;border-radius:999px;padding:3px 12px;cursor:pointer}
@@ -1801,7 +1802,12 @@ function arUnits(t){const out=[];t=arDict(String(t)).replace(/\s*[←→⇐⇒�
 const TTSC={url:'https://europe-west1-mujtahid-810d7.cloudfunctions.net/tts',m:new Map(),bad:0};
 const ttsOn=()=>{const t=ACCX().tts;return !!(t&&t.on)&&TTSC.bad<4;};
 /* which voice: stage (1–6 / 7–9) → one voice, alternate per lesson, or per subject — chosen in the admin panel */
+/* المدرّس المفضّل: اختيار ولي الأمر لهذا الابن، أو اختيار المستخدم في هذا الجهاز — إن سمحت الإدارة */
+const tvPick=(t,st,S)=>{if(!t.on||t.pick==='off'||!(S.t||[]).length)return '';
+  if(t.pick==='subs'){const A=window.ACC;if(!(App.sub||(A&&(A.isAdmin||A.kid||A.co))||(A&&A.hasAnySub&&A.hasAnySub())))return '';}
+  const v=(kidSound().tv||{})[st]||store.get('tv_'+st,'');return S.t.includes(v)?v:'';};
 const ttsVoice=()=>{const t=ACCX().tts||{};const st=VOX.voice()==='m'?'s':'p';const S=t[st]||{};const a=S.a||(st==='s'?t.m:t.f)||'';
+  {const tp=tvPick(t,st,S);if(tp)return[st,tp];}
   const lid=(/^#l-([a-z0-9-]+)$/.exec(location.hash)||[])[1]||'';const subj=lid.split('-')[0];
   if(S.mode==='subject'&&S.subj&&S.subj[subj])return[st,S.subj[subj]];
   if(S.mode==='alt'&&S.b&&lid){let h=0;for(const c of lid)h=(h*31+c.charCodeAt(0))|0;return[st,(h&1)?S.b:a];}
