@@ -1287,7 +1287,7 @@ function booksBox() {
 /* ---------- admin: المواد التعليمية — حزم ملفات الدروس من برنامج التحويل → Cloudflare R2 ---------- */
 let _jszip;
 const loadJSZip = () => _jszip || (_jszip = new Promise((res, rej) => { const sc = document.createElement('script'); sc.src = 'https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js'; sc.onload = () => res(window.JSZip); sc.onerror = () => { _jszip = null; rej(new Error('تعذّر تحميل قارئ ملفات ZIP — تحقق من الإنترنت')); }; document.head.append(sc); }));
-const MAT_TYPES = { pptx: 'باوربوينت', ppsx: 'عرض مباشر', ppsx_voice: 'عرض بالصوت', docx: 'وورد', pdf: 'PDF', html: 'HTML' };
+const MAT_TYPES = { pptx: 'باوربوينت', ppsx: 'عرض مباشر', ppsx_voice: 'عرض بالصوت', docx: 'وورد', pdf: 'PDF', html: 'HTML', sol_pptx: '✍️ حل التمارين', sol_ppsx: '✍️ حل التمارين (عرض)', sol_docx: '✍️ حل التمارين (وورد)' };
 const MAT_STATE = [['hidden', '🔒 مخفية (الإدارة فقط)'], ['subs', '⭐ للمشتركين'], ['all', '🌍 للجميع']];
 const MAT_MIME = { pptx: 'application/vnd.openxmlformats-officedocument.presentationml.presentation', ppsx: 'application/vnd.openxmlformats-officedocument.presentationml.slideshow', docx: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', pdf: 'application/pdf', html: 'text/html; charset=utf-8' };
 const mb = n => (n / 1048576).toFixed(n < 10485760 ? 1 : 0) + ' ميغا';
