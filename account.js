@@ -1354,6 +1354,62 @@ const MAT_STATE = [['hidden', '🔒 مخفية (الإدارة فقط)'], ['subs
 const MAT_MIME = { pptx: 'application/vnd.openxmlformats-officedocument.presentationml.presentation', ppsx: 'application/vnd.openxmlformats-officedocument.presentationml.slideshow', docx: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', pdf: 'application/pdf', html: 'text/html; charset=utf-8' };
 const mb = n => (n / 1048576).toFixed(n < 10485760 ? 1 : 0) + ' ميغا';
 /* إعداد «عرض المجتهد»: تشغيل، لمن يظهر، أي صوت، ومعاينة مجانية لغير المشترك */
+/* ===== 💳 الاستهلاك والتكاليف: كل خدمة مدفوعة، المجاني منها، ما استهلكناه، التكلفة التقديرية، والسقوف والإيقاف الطارئ ===== */
+function usageBox() {
+  const box = el('div', { class: 'panel accbox' }, el('b', { text: '💳 الاستهلاك والتكاليف' }),
+    el('span', { class: 'note', text: 'كل خدمة مدفوعة في المنصة: كم المجاني، كم استهلكنا اليوم وهذا الشهر، والتكلفة التقديرية بعد المجاني. يُحدَّث تلقائياً كل ساعة، ويصلك إشعار عند الاقتراب من نهاية المجاني، وتتوقف الخدمات التي تختارها تلقائياً إذا وصلت التكلفة حدّك الشهري.' }));
+  const body = el('div', { class: 'stack' }), msg = el('div'); box.append(body, msg);
+  const fmt = n => Math.round(Number(n || 0)).toLocaleString('en');
+  const bar = (pct, color) => el('div', { style: 'height:9px;border-radius:9px;background:#eef0f4;overflow:hidden' }, el('i', { style: 'display:block;height:100%;width:' + Math.min(100, Math.max(pct ? 2 : 0, pct)) + '%;background:' + color }));
+  const STOP_T = { tts: ['🔊 توليد الأصوات الجديدة', 'الجمل المحفوظة تبقى تعمل؛ لا تُولَّد جمل جديدة'], sms: ['📱 رسائل رمز التحقق', '⚠️ يمنع التسجيل والدخول برقم الهاتف'], arena: ['🏟️ الساحة (المسابقات)', 'تتوقف مهمة الساحة كل 15 دقيقة'], push: ['🔔 الإشعارات الآلية اليومية', 'أثقل مهمة على قاعدة البيانات (تقرأ كل المستخدمين يومياً)'] };
+  const load = async refresh => { body.innerHTML = ''; body.append(el('span', { class: 'note', text: refresh ? '⏳ جارٍ القراءة من جوجل…' : 'جارٍ التحميل…' }));
+    try { draw(await call('adminUsage', { op: 'get', refresh: !!refresh })); } catch (e) { body.innerHTML = ''; fbk(body, 'bad', fnErr(e)); } };
+  const draw = r => { body.innerHTML = ''; const S = r.snap || { items: {}, total: 0 }, D = r.def, C = r.cfg, own = !!ACC.owner, lim = C.limits.monthUsd;
+    /* الملخص */
+    const pct = lim ? S.total / lim * 100 : 0, stops = Object.keys(r.stop || {}).filter(k => r.stop[k]);
+    body.append(el('div', { class: 'feedback ' + (S.total > 0 ? (lim && pct >= 80 ? 'bad' : 'info') : 'ok'), style: 'margin:0;display:flex;flex-direction:column;gap:6px' },
+      el('b', { style: 'font-size:1.15rem', text: S.total > 0 ? '💵 التكلفة التقديرية لهذا الشهر: ' + S.total + '$' + (lim ? ' من حدّك ' + lim + '$' : '') : '✅ كل شيء ضمن المجاني هذا الشهر' }),
+      lim ? bar(pct, pct >= 100 ? '#c62828' : pct >= 80 ? '#b45309' : '#2e7d32') : null,
+      el('small', { text: 'آخر تحديث: ' + (S.at ? new Date(S.at).toLocaleString('ar-LY-u-nu-latn', { hour: '2-digit', minute: '2-digit', day: 'numeric', month: 'numeric' }) : '—') }),
+      el('button', { class: 'btn ghost sm', style: 'align-self:flex-start', text: '🔄 تحديث الآن', onclick: () => load(true) })));
+    if (stops.length) body.append(el('div', { class: 'feedback bad', style: 'margin:0', text: '🛑 متوقف الآن: ' + stops.map(k => (STOP_T[k] || [k])[0]).join('، ') + ' — أعد تشغيله من «الإيقاف الطارئ» أدناه.' }));
+    /* الخدمات */
+    Object.keys(D).forEach(k => { const d = D[k], it = S.items[k] || {}, sv = C.svc[k]; const used = d.period === 'day' ? it.today : it.month; const p = sv.free ? used / sv.free * 100 : (used ? 100 : 0);
+      const col = sv.free && p >= 100 ? '#c62828' : p >= C.limits.alertPct ? '#b45309' : '#2e7d32';
+      const st = !sv.free ? (sv.price ? '💵 مدفوع من أول وحدة' : 'ℹ️ اكتب سعر الوحدة في الإعدادات') : p >= 100 ? '⛔ تجاوز المجاني' : p >= C.limits.alertPct ? '⚠️ قريب من نهاية المجاني' : '✅ ضمن المجاني';
+      body.append(el('div', { style: 'border:1px solid var(--line);border-radius:12px;padding:9px;display:flex;flex-direction:column;gap:5px' },
+        el('div', { class: 'row', style: 'justify-content:space-between;gap:6px;flex-wrap:wrap' }, el('b', { text: d.t }), el('small', { style: 'color:' + col + ';font-weight:700', text: st })),
+        sv.free ? bar(p, col) : null,
+        el('small', { class: 'note', text: 'اليوم: ' + fmt(it.today) + ' ' + d.unit + ' · هذا الشهر: ' + fmt(it.month) + ' ' + d.unit + (sv.free ? ' · المجاني: ' + fmt(sv.free) + ' ' + d.unit + (d.period === 'day' ? ' يومياً' : ' شهرياً') : '') + ' · التكلفة: ' + (it.cost || 0) + '$' }),
+        it.err ? el('small', { style: 'color:#c62828', text: '⚠️ ' + it.err }) : null)); });
+    if (Object.values(S.items || {}).some(x => /مراقبة جوجل/.test(x.err || ''))) body.append(el('a', { class: 'btn sun sm', target: '_blank', rel: 'noopener', href: 'https://console.cloud.google.com/apis/library/monitoring.googleapis.com?project=mujtahid-810d7', text: 'تفعيل Cloud Monitoring API (لقراءة استهلاك قاعدة البيانات والدوال)' }));
+    body.append(el('span', { class: 'note', text: 'الأرقام تقديرية من عدّادات المنصة ومراقبة جوجل. الفاتورة الحقيقية: ' }),
+      el('div', { class: 'row', style: 'gap:6px;flex-wrap:wrap' }, el('a', { class: 'btn ghost sm', target: '_blank', rel: 'noopener', href: 'https://console.cloud.google.com/billing?project=mujtahid-810d7', text: '🧾 فواتير جوجل' }),
+        el('a', { class: 'btn ghost sm', target: '_blank', rel: 'noopener', href: 'https://dash.cloudflare.com/?to=/:account/r2/overview', text: '🗄️ Cloudflare R2' })));
+    if (!own) return;
+    /* الإيقاف الطارئ */
+    const stop = Object.assign({}, r.stop || {});
+    body.append(el('b', { style: 'margin-top:6px', text: '🛑 الإيقاف الطارئ' }), el('span', { class: 'note', text: 'أوقف أي خدمة مكلفة فوراً، وأعد تشغيلها متى شئت.' }),
+      ...Object.entries(STOP_T).map(([k, [t, d]]) => el('label', { class: 'sndrow', style: 'margin:0' }, el('input', { type: 'checkbox', checked: stop[k] ? '' : null, onchange: e => { stop[k] = e.target.checked; } }), el('span', {}, el('b', { text: 'إيقاف ' + t }), el('small', { class: 'note', text: ' — ' + d })))),
+      el('button', { class: 'btn', text: '💾 حفظ حالة الخدمات', onclick: async e => { e.target.disabled = true; try { await call('adminUsage', { op: 'stop', stop }); await loadAccess(); fbk(msg, 'ok', '✓ حُفظت.'); load(); } catch (x) { fbk(msg, 'bad', fnErr(x)); } e.target.disabled = false; } }));
+    /* السقوف والحدود */
+    const L = Object.assign({}, C.limits), TC = Object.assign({}, r.ttsCap), SC = Object.assign({}, r.smsCap), SV = JSON.parse(JSON.stringify(C.svc));
+    const num = (o, k, w) => el('input', { class: 'tinput', type: 'number', min: '0', step: 'any', style: 'width:' + (w || 120) + 'px', value: String(o[k] != null ? o[k] : ''), oninput: e => { o[k] = Number(e.target.value) || 0; } });
+    const line = (lab, inp, note) => el('div', { class: 'row', style: 'gap:6px;align-items:center;flex-wrap:wrap' }, el('b', { style: 'min-width:170px', text: lab }), inp, note ? el('small', { class: 'note', text: note }) : null);
+    const adv = el('details', {}, el('summary', { text: '⚙️ المجاني والأسعار لكل خدمة (متقدم)' }),
+      ...Object.keys(D).map(k => line(D[k].t, el('span', { class: 'row', style: 'gap:4px;align-items:center' }, 'المجاني:', num(SV[k], 'free', 110), 'السعر $:', num(SV[k], 'price', 90)), 'لكل ' + fmt(D[k].per) + ' ' + D[k].unit + (D[k].period === 'day' ? ' (المجاني يومي)' : ''))));
+    body.append(el('b', { style: 'margin-top:6px', text: '🎚️ السقوف والحدود' }),
+      line('حد الإنفاق الشهري ($):', num(L, 'monthUsd', 90), '0 = بدون حد. عند الوصول إليه تتوقف تلقائياً الخدمات المختارة أدناه'),
+      el('div', { class: 'row', style: 'gap:10px;flex-wrap:wrap' }, el('small', { class: 'note', text: 'يتوقف تلقائياً:' }), ...Object.entries(STOP_T).map(([k, [t]]) => el('label', { class: 'row', style: 'gap:4px;align-items:center' },
+        el('input', { type: 'checkbox', checked: L.auto.includes(k) ? '' : null, onchange: e => { L.auto = e.target.checked ? [...new Set([...L.auto, k])] : L.auto.filter(x => x !== k); } }), el('small', { text: t })))),
+      line('نسبة التنبيه (%):', num(L, 'alertPct', 70), 'إشعار لك عند الوصول لهذه النسبة من المجاني'),
+      line('🔊 أحرف الأصوات يومياً:', num(TC, 'day'), '33,000 ≈ مليون شهرياً'), line('🔊 أحرف الأصوات شهرياً:', num(TC, 'month'), '950,000 = يبقى مجانياً'),
+      line('📱 رسائل التحقق يومياً:', num(SC, 'day'), 'الحماية من الإساءة'), line('📱 رسائل التحقق شهرياً:', num(SC, 'month'), '0 = بدون سقف شهري'), adv,
+      el('button', { class: 'btn', text: '💾 حفظ السقوف والحدود', onclick: async e => { e.target.disabled = true;
+        try { await call('adminUsage', { op: 'cfg', cfg: { svc: SV, limits: L }, ttsCap: TC, smsCap: SC }); await loadAccess(); fbk(msg, 'ok', '✓ حُفظت.'); load(); } catch (x) { fbk(msg, 'bad', fnErr(x)); } e.target.disabled = false; } }));
+  };
+  load(); return box;
+}
 function viewerBox() { const V = Object.assign({ on: false, who: 'admin', voice: 'base', free: 3 }, (ACC.access || {}).viewer || {}); const m = el('div'), stat = el('span', { class: 'note', text: '…' });
   call('adminMat', { op: 'dstat' }).then(r => { stat.textContent = '🎬 العروض المرفوعة: ' + r.total + ' درس' + (r.total ? ' (' + Object.entries(r.by).map(([g, n]) => 'الصف ' + g + ': ' + n).join(' · ') + ')' : ' — جهّزها من البرنامج: تبويب «تجهيز للرفع» ← «تجهيز عرض المجتهد لكل دروس المنصة»'); }).catch(() => { stat.textContent = ''; });
   const radios = (name, key, opts) => opts.map(([v, t, d]) => el('label', { class: 'sndrow', style: 'margin:0' }, el('input', { type: 'radio', name, checked: V[key] === v ? '' : null, onchange: () => { V[key] = v; } }), el('span', {}, el('b', { text: t }), d ? el('small', { class: 'note', text: ' — ' + d }) : null)));
@@ -1579,7 +1635,7 @@ function plansBox() {
 
 /* ---------- admin: supervisors with specific permissions (owner only) ---------- */
 const PERM_AR = { ax: '📈 تحليلات المنصة والتحويلات (بيانات حساسة)', stats: '📊 الإحصائيات والمشتركون', grant: '🎁 منح وإلغاء الاشتراكات المجانية', plans: '💰 الباقات والأسعار', access: '🔐 فتح وإغلاق الدروس والكتب', tts: '🔊 الأصوات',
-  teach_req: '👩‍🏫 قبول طلبات المعلمين', teach_courses: '🎬 مراجعة ونشر دورات الفيديو', teach_wd: '💸 طلبات سحب أرصدة المعلمين', browse: '👁️ تصفّح كل الدروس للمراجعة', push: '🔔 إرسال الإشعارات', support: '🎫 الرد على تذاكر الدعم', materials: '📦 المواد التعليمية (رفع ملفات الدروس)' };
+  teach_req: '👩‍🏫 قبول طلبات المعلمين', teach_courses: '🎬 مراجعة ونشر دورات الفيديو', teach_wd: '💸 طلبات سحب أرصدة المعلمين', browse: '👁️ تصفّح كل الدروس للمراجعة', push: '🔔 إرسال الإشعارات', support: '🎫 الرد على تذاكر الدعم', materials: '📦 المواد التعليمية (رفع ملفات الدروس)', usage: '💳 الاستهلاك والتكاليف' };
 function staffBox() {
   const box = el('div', { class: 'panel accbox' }, el('b', { text: '🧑‍💼 المشرفون' }),
     el('span', { class: 'note', text: 'أضف مشرفاً من الأشخاص المسجّلين في المنصة، واختر صلاحياته بالضبط. يرى المشرف في لوحة الإدارة الأقسام المسموحة له فقط، ولا يستطيع إضافة مشرفين أو تغيير إعدادات المنصة الأساسية.' }));
@@ -1867,6 +1923,7 @@ function renderAdmin() {
     call('adminAx', { op: 'alerts' }).then(r => { const n = (r.list || []).filter(x => !x.read).length; if (n) { bd.hidden = false; bd.textContent = n + ' تنبيه جديد'; } }).catch(() => {}); }
   const statsHost = el('div'), listHost = el('div');
   if (can('stats')) { s.append(statsHost); fbk(statsHost, 'info', 'جارٍ تحميل الإحصائيات…'); }
+  if (can('usage')) s.append(usageBox());
   if (can('stats')) s.append(heroesBox());
   if (can('grant')) s.append(grantBox());
   if (can('browse')) s.append(browseBox());
