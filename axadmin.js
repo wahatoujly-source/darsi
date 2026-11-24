@@ -100,14 +100,31 @@ export default function axAdmin({ call, fnErr, ACC, page, fbk, D, el, go, store 
     per, tabs, msg, body);
   drawTabs(); drawPer();
 
-  async function load() {
+  /* توفير القراءات: لا يُحسب أي تحليل تلقائياً. الصفحة تعرض التحليل الأسبوعي المحفوظ، وأي فترة أخرى بضغطة «حلّل» */
+  const fmtT = t => new Date(t).toLocaleString('ar-LY-u-nu-latn', { day: 'numeric', month: 'numeric', hour: '2-digit', minute: '2-digit' });
+  function load() {
+    const [from, to] = range(); body.innerHTML = ''; msg.innerHTML = '';
+    msg.append(el('div', { class: 'feedback info', style: 'display:flex;flex-direction:column;gap:8px;align-items:flex-start' },
+      el('span', { text: 'الفترة المختارة: ' + fmtD(from) + (to - from > DAY + 1000 ? ' — ' + fmtD(to - 1) : '') + '. التحليل يقرأ كل بيانات الفترة من قاعدة البيانات، فلا يُحسب إلا عند طلبك.' }),
+      el('div', { class: 'ax-row' }, el('button', { class: 'on', text: '▶ حلّل هذه الفترة', onclick: () => run() }), el('button', { text: '📅 عرض التحليل الأسبوعي', onclick: () => showWeekly() }))));
+  }
+  async function run() {
     const [from, to] = range(); body.innerHTML = ''; fbk(msg, 'info', '⏳ جارٍ حساب التقرير…');
     try { R = await call('adminAx', { op: 'report', from, to, full: true }); msg.innerHTML = ''; render(); }
     catch (e) { fbk(msg, 'bad', fnErr(e)); }
   }
-  async function loadAlerts() { try { const a = await call('adminAx', { op: 'alerts' }); ACC._axAlerts = a.list || []; unread = ACC._axAlerts.filter((x) => !x.read).length; drawTabs(); if (tab === 'al') render(); } catch (e) {} }
+  async function showWeekly() {
+    body.innerHTML = ''; fbk(msg, 'info', '⏳ جارٍ فتح التحليل الأسبوعي…');
+    try { const w = await call('adminAx', { op: 'weekly' });
+      if (w.none) { msg.innerHTML = ''; msg.append(el('div', { class: 'feedback info', style: 'display:flex;flex-direction:column;gap:8px;align-items:flex-start' },
+        el('span', { text: '📅 التحليل الأسبوعي يُحسب تلقائياً كل خميس الساعة 21:15 ويُحفظ هنا. لم يُحسب بعد — اختر فترة واضغط «حلّل».' }),
+        el('button', { class: 'on', text: '▶ حلّل آخر 7 أيام الآن', onclick: () => { P = { k: '7' }; drawPer(); run(); } }))); return; }
+      R = w.r; msg.innerHTML = ''; msg.append(el('div', { class: 'feedback ok', text: '📅 التحليل الأسبوعي: ' + fmtD(w.from) + ' — ' + fmtD(w.to - 1) + ' · حُسب ' + fmtT(w.at) + ' · لتحليل فترة أخرى اخترها ثم «حلّل».' })); render(); }
+    catch (e) { fbk(msg, 'bad', fnErr(e)); }
+  }
+  async function loadAlerts() { try { const a = await call('adminAx', { op: 'alerts', n: 40 }); ACC._axAlerts = a.list || []; unread = ACC._axAlerts.filter((x) => !x.read).length; drawTabs(); if (tab === 'al') render(); } catch (e) {} }
   (async () => { try { const p = await call('adminGetPlans', {}); (p.list || []).forEach((x) => { planNames[x.id] = x.name; }); } catch (e) { try { const p = await call('getPlans', {}); (p.plans || []).forEach((x) => { planNames[x.id] = x.name; }); } catch (e2) {} } })();
-  load(); loadAlerts();
+  showWeekly(); loadAlerts();
 
   function render() {
     body.innerHTML = ''; if (tab === 'al') { renderAlerts(); return; } if (!R) return;

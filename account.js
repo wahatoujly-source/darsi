@@ -1239,7 +1239,7 @@ function ttsBox() {
   const SUBJ = { p: [['ar', 'اللغة العربية'], ['math', 'الرياضيات'], ['sci', 'العلوم'], ['isl', 'التربية الإسلامية'], ['soc', 'الاجتماعيات'], ['civ', 'التربية الوطنية'], ['comp', 'الحاسوب']],
     s: [['ar', 'اللغة العربية'], ['math', 'الرياضيات'], ['sci', 'العلوم'], ['isl', 'التربية الإسلامية'], ['hist', 'التاريخ'], ['geo', 'الجغرافيا'], ['civ', 'التربية الوطنية'], ['comp', 'الحاسوب']] };
   body.append(el('span', { class: 'note', text: 'جارٍ جلب الأصوات…' }));
-  call('adminTts', { op: 'voices' }).then(r => { body.innerHTML = '';
+  box._lazy = () => call('adminTts', { op: 'voices' }).then(r => { body.innerHTML = '';
     /* الأصوات الحديثة (Chirp3-HD) فقط افتراضياً؛ الأصوات القديمة (Wavenet/Neural2/Standard) ثقيلة وآلية فتُخفى إلا عند الطلب */
     const all = r.voices.filter(v => /Chirp3-HD|Chirp-HD|Neural2|Wavenet|Standard/.test(v.name)).sort((a, b) => (/Chirp3/.test(b.name) - /Chirp3/.test(a.name)) || a.name.localeCompare(b.name));
     let showOld = store.get('tts_old', false); const list = [];
@@ -1391,7 +1391,7 @@ function usageBox() {
     { const B = S.byFn || {}, rd = (S.items || {}).fs_read || {};
       const FN_AR = { tts: '🔊 الأصوات (جلب الجمل المحفوظة)', adminax: '📈 فتح «تحليلات المنصة»', axwatch: '🌙 مراقبة التحليلات الليلية', pushauto: '🔔 الإشعارات الآلية اليومية', adminpush: '🔔 الإشعارات (لوحة الإدارة)',
         adminactivity: '🏆 الأبطال وتصفح الطلاب (الإدارة)', adminstats: '📊 الإحصائيات (الإدارة)', arenatick: '🏟️ الساحة (كل 15 دقيقة)', arena: '🏟️ الساحة', adminarena: '🏟️ الساحة (الإدارة)', adminrefs: '🎁 الدعوات (الإدارة)',
-        adminorders: '💰 الطلبات (الإدارة)', admintickets: '🎫 تذاكر الدعم (الإدارة)', adminteach: '👨‍🏫 المعلمون (الإدارة)', usagewatch: '💳 مراقبة الاستهلاك', adminusage: '💳 لوحة الاستهلاك', adminmat: '📦 المواد التعليمية',
+        adminorders: '💰 الطلبات (الإدارة)', admintickets: '🎫 تذاكر الدعم (الإدارة)', adminteach: '👨‍🏫 المعلمون (الإدارة)', usagewatch: '💳 مراقبة الاستهلاك', cron: '⏰ المهام المجدولة (الساحة، الإشعارات، المراقبة، التحليل الأسبوعي)', adminusage: '💳 لوحة الاستهلاك', adminmat: '📦 المواد التعليمية',
         getlesson: '📖 فتح الدروس', initme: '👤 بدء الجلسة', kiddevicestate: '📱 أجهزة الأبناء', admincheck: '🛠️ فحص صلاحية الإدارة', adminfinduser: '🔎 البحث عن مستخدم', teach: '👨‍🏫 المعلمون', admintts: '🔊 إعدادات الأصوات' };
       const row = (lab, t, m, bold) => el('div', { class: 'row', style: 'justify-content:space-between;gap:8px;border-bottom:1px dashed var(--line);padding:3px 0' + (bold ? ';font-weight:700' : '') }, el('span', { text: lab }), el('small', { style: 'white-space:nowrap', text: 'اليوم ' + fmt(t) + ' · الشهر ' + fmt(m) }));
       const fns = Object.keys(B.month || {}).sort((a, b) => (B.today[b] || 0) - (B.today[a] || 0) || B.month[b] - B.month[a]);
@@ -1428,18 +1428,19 @@ function usageBox() {
       el('button', { class: 'btn', text: '💾 حفظ السقوف والحدود', onclick: async e => { e.target.disabled = true;
         try { await call('adminUsage', { op: 'cfg', cfg: { svc: SV, limits: L }, ttsCap: TC, smsCap: SC }); await loadAccess(); fbk(msg, 'ok', '✓ حُفظت.'); load(); } catch (x) { fbk(msg, 'bad', fnErr(x)); } e.target.disabled = false; } }));
   };
-  load(); return box;
+  box._lazy = () => load(); return box;
 }
 function viewerBox() { const V = Object.assign({ on: false, who: 'admin', voice: 'base', free: 3 }, (ACC.access || {}).viewer || {}); const m = el('div'), stat = el('span', { class: 'note', text: '…' });
-  call('adminMat', { op: 'dstat' }).then(r => { stat.textContent = '🎬 العروض المرفوعة: ' + r.total + ' درس' + (r.total ? ' (' + Object.entries(r.by).map(([g, n]) => 'الصف ' + g + ': ' + n).join(' · ') + ')' : ' — جهّزها من البرنامج: تبويب «تجهيز للرفع» ← «تجهيز عرض المجتهد لكل دروس المنصة»'); }).catch(() => { stat.textContent = ''; });
+  const loadStat = () => call('adminMat', { op: 'dstat' }).then(r => { stat.textContent = '🎬 العروض المرفوعة: ' + r.total + ' درس' + (r.total ? ' (' + Object.entries(r.by).map(([g, n]) => 'الصف ' + g + ': ' + n).join(' · ') + ')' : ' — جهّزها من البرنامج: تبويب «تجهيز للرفع» ← «تجهيز عرض المجتهد لكل دروس المنصة»'); }).catch(() => { stat.textContent = ''; });
   const radios = (name, key, opts) => opts.map(([v, t, d]) => el('label', { class: 'sndrow', style: 'margin:0' }, el('input', { type: 'radio', name, checked: V[key] === v ? '' : null, onchange: () => { V[key] = v; } }), el('span', {}, el('b', { text: t }), d ? el('small', { class: 'note', text: ' — ' + d }) : null)));
-  return el('div', { class: 'panel', style: 'border:2px dashed #c4b5fd;margin-bottom:10px' }, el('b', { text: '🎬 عرض المجتهد (شرائح الدرس داخل المنصة)' }),
+  const vb = el('div', { class: 'panel', style: 'border:2px dashed #c4b5fd;margin-bottom:10px' }, el('b', { text: '🎬 عرض المجتهد (شرائح الدرس داخل المنصة)' }),
     el('span', { class: 'note', text: 'زر «🎬 عرض الدرس شرائح» في صفحة الدرس: يعمل على الموبايل والآيفون واللابتوب وشاشة الفصل، تلقائياً بالصوت أو يدوياً للمعلم. قبل التفعيل يظهر لك أنت فقط للتجربة.' }), stat,
     el('label', { class: 'sndrow', style: 'margin:0' }, el('input', { type: 'checkbox', checked: V.on ? '' : null, onchange: e => { V.on = e.target.checked; } }), el('b', { text: 'مفعّل' })),
     el('span', { class: 'note', text: 'لمن يظهر؟' }), ...radios('vwho', 'who', [['admin', '🛠️ للمدير فقط', 'للتجربة'], ['reg', '👤 للمسجلين', 'غير المسجل يرى معاينة ثم «سجّل مجاناً»'], ['subs', '⭐ للمشتركين', 'غير المشترك يرى معاينة ثم «اشترك»'], ['all', '🌍 للجميع', '']]),
     el('div', { class: 'row', style: 'gap:6px;align-items:center' }, el('span', { text: 'عدد شرائح المعاينة المجانية:' }), el('input', { class: 'tinput', type: 'number', min: '0', max: '30', style: 'width:80px', value: String(V.free), oninput: e => { V.free = +e.target.value || 0; } }), el('small', { class: 'note', text: '(0 = لا يظهر الزر لغير المسموح لهم)' })),
     el('span', { class: 'note', text: 'الصوت في العروض:' }), ...radios('vvoice', 'voice', [['base', '💰 الصوت الأساسي للمرحلة (موفّر)', 'نفس صوت فيديوهات البرنامج — الجمل المولّدة سابقاً لا تُحسب من الحصة'], ['teacher', '👩‍🏫 المدرّس المفضّل للطالب', 'كل مدرّس يُولِّد جمله مرة واحدة — استهلاك أكبر في البداية']]),
     el('button', { class: 'btn', text: '💾 حفظ إعداد العروض', onclick: async e => { e.target.disabled = true; try { await call('adminMat', { op: 'vcfg', viewer: V }); await loadAccess(); fbk(m, 'ok', '✓ حُفظ.'); } catch (x) { fbk(m, 'bad', fnErr(x)); } e.target.disabled = false; } }), m);
+  vb._load = loadStat; return vb;
 }
 function matBox() {
   const box = el('div', { class: 'panel accbox' }, el('b', { text: '📦 المواد التعليمية (ملفات الدروس)' }),
@@ -1512,8 +1513,8 @@ function matBox() {
       list.append(el('b', { text: 'المواد المرفوعة (' + L.length + ') — المجموع ' + mb(L.reduce((a, x) => a + x.bytes, 0)) }));
       L.forEach(m => list.append(matRow(m, loadList))); }).catch(e => { list.innerHTML = ''; fbk(list, 'bad', fnErr(e)); }); };
 
-  box.append(viewerBox(), el('div', { class: 'row', style: 'gap:8px;align-items:center;flex-wrap:wrap' }, el('span', { text: 'اختر حزمة أو أكثر (يمكن اختيار كل مواد الصف معاً، وحزم «عروض المجتهد» أيضاً):' }), inp), prev, msg, el('hr'), list);
-  loadList(); return box;
+  const vb = viewerBox(); box.append(vb, el('div', { class: 'row', style: 'gap:8px;align-items:center;flex-wrap:wrap' }, el('span', { text: 'اختر حزمة أو أكثر (يمكن اختيار كل مواد الصف معاً، وحزم «عروض المجتهد» أيضاً):' }), inp), prev, msg, el('hr'), list);
+  box._lazy = () => { loadList(); vb._load(); }; return box;
 }
 function matRow(m, reload) {
   const w = el('div', { style: 'border:1px solid var(--line);border-radius:14px;padding:10px;display:flex;flex-direction:column;gap:8px' }), m2 = el('div'), det = el('div', { class: 'stack', hidden: true });
@@ -1593,7 +1594,7 @@ function ordersBox() {
       R.logs.forEach(l => d.append(el('div', { class: 'note', dir: 'ltr', style: 'font-family:monospace;font-size:12px;border-bottom:1px solid #eee;padding:4px 0', text: [t(l.at), l.result, 'sig=' + (l.sig ? 'ok' : 'BAD(' + l.sigHdr + ')'), l.event, l.status, l.custom, l.amount + ' ' + l.currency, 'keys=' + (l.keys || []).join(',')].join(' | ') })));
       body.append(d); } else body.append(el('span', { class: 'note', text: '📡 لم يصل أي إشعار من بوابة الدفع منذ تفعيل هذا السجل.' }));
   };
-  box.append(body, msg); load(); return box;
+  box.append(body, msg); box._lazy = load; return box;
 }
 /* ---------- admin: flexible plans (price, duration, kids limit) ---------- */
 function plansBox() {
@@ -1676,7 +1677,7 @@ function staffBox() {
           el('span', { class: 'note', text: 'اختر صلاحياته:' }), permPick(sel),
           el('button', { class: 'btn sun', text: 'اجعله مشرفاً', onclick: async () => { try { const x = await call('adminStaff', { op: 'set', uid: u.uid, perms: [...sel] }); drawList(x.staff); res.innerHTML = ''; fbk(msg, 'ok', '✓ أُضيف المشرف. يسجّل دخوله ثم يفتح «حسابي ← لوحة الإدارة».'); } catch (e) { fbk(msg, 'bad', fnErr(e)); } } }))); });
     } catch (e) { fbk(msg, 'bad', fnErr(e)); } } })), res, msg);
-  call('adminStaff', { op: 'list' }).then(r => drawList(r.staff)).catch(e => fbk(msg, 'bad', fnErr(e)));
+  box._lazy = () => call('adminStaff', { op: 'list' }).then(r => drawList(r.staff)).catch(e => fbk(msg, 'bad', fnErr(e)));
   return box;
 }
 
@@ -1940,7 +1941,7 @@ function renderAdmin() {
   if (can('ax')) { const bd = el('span', { class: 'ax-bd', style: 'background:#e8384f;color:#fff;border-radius:99px;padding:0 8px;font-size:.8rem;margin-inline-start:6px', hidden: true });
     s.append(el('button', { class: 'btn sun', style: 'width:100%;font-size:1.05rem;padding:14px', onclick: () => go('admin-ax') }, '📈 تحليلات المنصة والتحويلات', bd));
     s.append(el('button', { class: 'btn', style: 'width:100%;font-size:1.05rem;padding:14px', onclick: () => { store.set('ax_tab', 'full'); go('admin-ax'); } }, '📑 التقرير الشامل للمنصة'));
-    call('adminAx', { op: 'alerts' }).then(r => { const n = (r.list || []).filter(x => !x.read).length; if (n) { bd.hidden = false; bd.textContent = n + ' تنبيه جديد'; } }).catch(() => {}); }
+    call('adminAx', { op: 'alerts', n: 10 }).then(r => { const n = (r.list || []).filter(x => !x.read).length; if (n) { bd.hidden = false; bd.textContent = n + ' تنبيه جديد'; } }).catch(() => {}); }
   const statsHost = el('div'), listHost = el('div');
   if (can('stats')) { s.append(statsHost); fbk(statsHost, 'info', 'جارٍ تحميل الإحصائيات…'); }
   if (can('usage')) s.append(usageBox());
