@@ -1284,6 +1284,85 @@ function booksBox() {
     try { await call('adminSetBooks', { books: M }); await loadAccess(); fbk(msg, 'ok', '✓ حُفظت. تظهر للمستخدمين عند فتح المنصة أو تحديثها.'); } catch (x) { fbk(msg, 'bad', fnErr(x)); } e.target.disabled = false; } }), msg);
   draw(); return box;
 }
+/* ---------- admin: المواد التعليمية — حزم ملفات الدروس من برنامج التحويل → Cloudflare R2 ---------- */
+let _jszip;
+const loadJSZip = () => _jszip || (_jszip = new Promise((res, rej) => { const sc = document.createElement('script'); sc.src = 'https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js'; sc.onload = () => res(window.JSZip); sc.onerror = () => { _jszip = null; rej(new Error('تعذّر تحميل قارئ ملفات ZIP — تحقق من الإنترنت')); }; document.head.append(sc); }));
+const MAT_TYPES = { pptx: 'باوربوينت', ppsx: 'عرض مباشر', ppsx_voice: 'عرض بالصوت', docx: 'وورد', pdf: 'PDF', html: 'HTML' };
+const MAT_STATE = [['hidden', '🔒 مخفية (الإدارة فقط)'], ['subs', '⭐ للمشتركين'], ['all', '🌍 للجميع']];
+const MAT_MIME = { pptx: 'application/vnd.openxmlformats-officedocument.presentationml.presentation', ppsx: 'application/vnd.openxmlformats-officedocument.presentationml.slideshow', docx: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', pdf: 'application/pdf', html: 'text/html; charset=utf-8' };
+const mb = n => (n / 1048576).toFixed(n < 10485760 ? 1 : 0) + ' ميغا';
+function matBox() {
+  const box = el('div', { class: 'panel accbox' }, el('b', { text: '📦 المواد التعليمية (ملفات الدروس)' }),
+    el('span', { class: 'note', text: 'ارفع حزمة مادة كاملة (ملف ZIP من «برنامج التحويل ← تجهيز للرفع»). كل ملف يذهب لدرسه تلقائياً، وإعادة رفع نفس المادة تستبدل القديمة. الفيديوهات تُرفع ليوتيوب وتُربط هنا برابط قائمة التشغيل. طريقة ظهورها للمعلمين وأولياء الأمور تُفعَّل لاحقاً.' }));
+  const msg = el('div'), prev = el('div', { class: 'stack' }), list = el('div', { class: 'stack' });
+  const inp = el('input', { type: 'file', accept: '.zip,application/zip' });
+  let busy = false;
+
+  inp.addEventListener('change', async () => { prev.innerHTML = ''; msg.innerHTML = ''; const f = inp.files && inp.files[0]; if (!f) return;
+    fbk(prev, 'info', 'جارٍ قراءة الحزمة…');
+    try { const JSZip = await loadJSZip(); const zip = await JSZip.loadAsync(f);
+      const mf = zip.file('manifest.json'); if (!mf) throw new Error('هذا الملف ليس حزمة من برنامج التحويل (لا يوجد فهرس).');
+      const M = JSON.parse(await mf.async('string')); if (M.format !== 'mujtahid-pack') throw new Error('صيغة الحزمة غير معروفة.');
+      const files = M.lessons.flatMap(l => l.files.map(x => ({ ...x, lesson: l.title })));
+      const missing = files.filter(x => !zip.file('files/' + x.key)); if (missing.length) throw new Error('الحزمة ناقصة: ' + missing.length + ' ملف غير موجود داخلها.');
+      const cnt = {}; files.forEach(x => cnt[x.type] = (cnt[x.type] || 0) + 1);
+      const linked = M.lessons.filter(l => l.ref).length, bytes = files.reduce((a, x) => a + x.size, 0);
+      prev.innerHTML = '';
+      const bar = el('progress', { max: files.length, value: 0, style: 'width:100%', hidden: true }), st = el('div');
+      prev.append(el('div', { class: 'feedback info' },
+        el('b', { text: (M.subject_name || M.subject) + ' — الصف ' + (M.grade_name || M.grade) }), el('br'),
+        M.lessons.length + ' درس · ' + files.length + ' ملف · ' + mb(bytes) + ' · مربوط بدروس المنصة: ' + linked + ' من ' + M.lessons.length, el('br'),
+        Object.entries(cnt).map(([k, v]) => (MAT_TYPES[k] || k) + ': ' + v).join(' · ')),
+        el('button', { class: 'btn sun', text: '⬆️ رفع الحزمة إلى المنصة', onclick: async e => { if (busy) return; busy = true; e.target.disabled = true; bar.hidden = false;
+          try {
+            const r = await call('adminMat', { op: 'urls', grade: M.grade, subject: M.subject, files: files.map(x => ({ key: x.key, size: x.size })) });
+            let done = 0; const fail = []; const q = [...files];
+            const put = async x => { const blob = await zip.file('files/' + x.key).async('blob'); const ext = x.key.split('.').pop();
+              for (let t = 0; t < 3; t++) { try { const res = await fetch(r.urls[x.key], { method: 'PUT', body: blob, headers: { 'Content-Type': MAT_MIME[ext] || 'application/octet-stream' } }); if (res.ok) return true; } catch (er) { /* إعادة المحاولة */ } await new Promise(z => setTimeout(z, 1500 * (t + 1))); } return false; };
+            const worker = async () => { while (q.length) { const x = q.shift(); if (!(await put(x))) fail.push(x); done++; bar.value = done; st.textContent = 'تم رفع ' + done + ' من ' + files.length + (fail.length ? ' — فشل ' + fail.length : ''); } };
+            await Promise.all([worker(), worker(), worker(), worker()]);
+            if (fail.length) throw new Error('لم يكتمل رفع ' + fail.length + ' ملف (مثل: ' + fail[0].name + '). أعد المحاولة — الملفات التي رُفعت لن تتكرر.');
+            const c = await call('adminMat', { op: 'commit', grade: M.grade, subject: M.subject, manifest: M });
+            fbk(msg, 'ok', '✓ رُفعت المادة: ' + c.lessons + ' درس · ' + c.files + ' ملف · ' + mb(c.bytes) + (c.removed ? ' · حُذف ' + c.removed + ' ملف قديم' : ''));
+            prev.innerHTML = ''; inp.value = ''; loadList();
+          } catch (x) { fbk(msg, 'bad', fnErr(x)); }
+          busy = false; e.target.disabled = false; } }), bar, st);
+    } catch (x) { fbk(prev, 'bad', fnErr(x)); } });
+
+  const loadList = () => { list.innerHTML = ''; list.append(el('span', { class: 'note', text: 'جارٍ تحميل المواد المرفوعة…' }));
+    call('adminMat', { op: 'list' }).then(r => { list.innerHTML = ''; const L = (r.list || []).sort((a, b) => String(a.grade).localeCompare(String(b.grade), 'ar', { numeric: true }) || String(a.subject_name).localeCompare(String(b.subject_name), 'ar'));
+      if (!L.length) { list.append(el('span', { class: 'note', text: 'لا توجد مواد مرفوعة بعد.' })); return; }
+      list.append(el('b', { text: 'المواد المرفوعة (' + L.length + ') — المجموع ' + mb(L.reduce((a, x) => a + x.bytes, 0)) }));
+      L.forEach(m => list.append(matRow(m, loadList))); }).catch(e => { list.innerHTML = ''; fbk(list, 'bad', fnErr(e)); }); };
+
+  box.append(el('div', { class: 'row', style: 'gap:8px;align-items:center;flex-wrap:wrap' }, el('span', { text: 'اختر حزمة المادة:' }), inp), prev, msg, el('hr'), list);
+  loadList(); return box;
+}
+function matRow(m, reload) {
+  const w = el('div', { style: 'border:1px solid var(--line);border-radius:14px;padding:10px;display:flex;flex-direction:column;gap:8px' }), m2 = el('div'), det = el('div', { class: 'stack', hidden: true });
+  const stSel = el('select', { class: 'qsel' }, ...MAT_STATE.map(([v, t]) => el('option', { value: v, text: t }))); stSel.value = m.state || 'hidden';
+  const yt = el('input', { type: 'url', placeholder: 'رابط قائمة تشغيل يوتيوب للمادة (اختياري)', value: m.yt || '', style: 'flex:1;min-width:220px', dir: 'ltr' });
+  let sure = false;
+  w.append(el('div', { class: 'row', style: 'justify-content:space-between;flex-wrap:wrap;gap:6px' },
+      el('b', { text: (m.subject_name || m.subject) + ' — الصف ' + (m.grade_name || m.grade) }),
+      el('span', { class: 'note', text: m.lessons + ' درس · ' + m.files + ' ملف · ' + mb(m.bytes) + (m.updated ? ' · ' + new Date(m.updated).toLocaleDateString('en-GB') : '') })),
+    el('div', { class: 'row', style: 'gap:6px;flex-wrap:wrap;align-items:center' }, el('span', { text: 'الظهور:' }), stSel,
+      el('button', { class: 'btn ghost sm', text: '💾 حفظ الظهور', onclick: async () => { try { await call('adminMat', { op: 'state', id: m.id, state: stSel.value }); fbk(m2, 'ok', '✓ حُفظ (العرض للجمهور يُفعَّل لاحقاً).'); } catch (e) { fbk(m2, 'bad', fnErr(e)); } } })),
+    el('div', { class: 'row', style: 'gap:6px;flex-wrap:wrap' }, yt,
+      el('button', { class: 'btn ghost sm', text: '💾 حفظ الرابط', onclick: async () => { try { await call('adminMat', { op: 'yt', id: m.id, yt: yt.value }); fbk(m2, 'ok', '✓ حُفظ رابط يوتيوب.'); } catch (e) { fbk(m2, 'bad', fnErr(e)); } } })),
+    el('div', { class: 'row', style: 'gap:6px;flex-wrap:wrap' },
+      el('button', { class: 'btn ghost sm', text: '📂 الدروس والملفات', onclick: async () => { det.hidden = !det.hidden; if (det.hidden || det.dataset.ok) return;
+        det.append(el('span', { class: 'note', text: 'جارٍ التحميل…' }));
+        try { const r = await call('adminMat', { op: 'get', id: m.id }); det.innerHTML = ''; det.dataset.ok = '1';
+          (r.item.lessons || []).forEach(l => det.append(el('div', { class: 'accrow sm', style: 'flex-wrap:wrap;gap:4px' }, el('span', { text: String(l.order).padStart(2, '0') + ' - ' + l.title + (l.ref ? '' : ' ⚠️ غير مربوط بدرس') }),
+            el('span', { class: 'row', style: 'gap:4px;flex-wrap:wrap' }, ...l.files.map(f => el('button', { class: 'linkbtn', text: MAT_TYPES[f.type] || f.type, title: f.name + ' — ' + mb(f.size), onclick: async () => { try { const u = await call('adminMat', { op: 'url', id: m.id, key: f.key }); window.open(u.url, '_blank'); } catch (e) { fbk(m2, 'bad', fnErr(e)); } } }))))));
+        } catch (e) { det.innerHTML = ''; fbk(m2, 'bad', fnErr(e)); } } }),
+      el('button', { class: 'btn ghost sm', style: 'color:#c62828', text: '🗑️ حذف المادة وملفاتها', onclick: async e => {
+        if (!sure) { sure = true; e.target.textContent = '⚠️ اضغط مرة أخرى لحذف كل ملفات المادة نهائياً'; setTimeout(() => { sure = false; if (e.target.isConnected) e.target.textContent = '🗑️ حذف المادة وملفاتها'; }, 5000); return; }
+        e.target.disabled = true; try { const r = await call('adminMat', { op: 'del', id: m.id, confirm: true }); fbk(m2, 'ok', '✓ حُذفت (' + r.removed + ' ملف).'); setTimeout(reload, 800); } catch (x) { fbk(m2, 'bad', fnErr(x)); e.target.disabled = false; } } })),
+    det, m2);
+  return w;
+}
 /* ---------- admin: solutions of textbook exercises (sol.js) — on/off, who sees answers / steps, hide a book ---------- */
 function solBox() {
   const S = Object.assign({ on: true, ans: 'all', steps: 'reg', off: [] }, (ACC.access || {}).sol || {}); S.off = new Set(S.off || []);
@@ -1399,7 +1478,7 @@ function plansBox() {
 
 /* ---------- admin: supervisors with specific permissions (owner only) ---------- */
 const PERM_AR = { ax: '📈 تحليلات المنصة والتحويلات (بيانات حساسة)', stats: '📊 الإحصائيات والمشتركون', grant: '🎁 منح وإلغاء الاشتراكات المجانية', plans: '💰 الباقات والأسعار', access: '🔐 فتح وإغلاق الدروس والكتب', tts: '🔊 الأصوات',
-  teach_req: '👩‍🏫 قبول طلبات المعلمين', teach_courses: '🎬 مراجعة ونشر دورات الفيديو', teach_wd: '💸 طلبات سحب أرصدة المعلمين', browse: '👁️ تصفّح كل الدروس للمراجعة', push: '🔔 إرسال الإشعارات', support: '🎫 الرد على تذاكر الدعم' };
+  teach_req: '👩‍🏫 قبول طلبات المعلمين', teach_courses: '🎬 مراجعة ونشر دورات الفيديو', teach_wd: '💸 طلبات سحب أرصدة المعلمين', browse: '👁️ تصفّح كل الدروس للمراجعة', push: '🔔 إرسال الإشعارات', support: '🎫 الرد على تذاكر الدعم', materials: '📦 المواد التعليمية (رفع ملفات الدروس)' };
 function staffBox() {
   const box = el('div', { class: 'panel accbox' }, el('b', { text: '🧑‍💼 المشرفون' }),
     el('span', { class: 'note', text: 'أضف مشرفاً من الأشخاص المسجّلين في المنصة، واختر صلاحياته بالضبط. يرى المشرف في لوحة الإدارة الأقسام المسموحة له فقط، ولا يستطيع إضافة مشرفين أو تغيير إعدادات المنصة الأساسية.' }));
@@ -1701,6 +1780,7 @@ function renderAdmin() {
   if (can('push')) s.append(pushBox());
   if (can('tts')) s.append(ttsBox());
   if (can('access')) s.append(accessBox(), booksBox(), solBox());
+  if (can('materials')) s.append(matBox());
   if (teachAny) s.append(ACC.teachAdminBox());
   adminSafety(s);
   if (!can('stats')) return;
