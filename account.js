@@ -6,7 +6,7 @@ import { getAuth, onAuthStateChanged, signOut, GoogleAuthProvider, signInWithPop
   sendPasswordResetEmail, updateProfile } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js';
 import { getFunctions, httpsCallable } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-functions.js';
 import { getMessaging, getToken, deleteToken, isSupported } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-messaging.js';
-import { getFirestore, doc, getDoc, setDoc, getDocs, collection, deleteDoc, serverTimestamp, query, where }
+import { getFirestore, doc, getDoc, setDoc, getDocs, collection, deleteDoc, serverTimestamp, query, where, Timestamp }
   from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js';
 
 const firebaseConfig = {
@@ -167,9 +167,13 @@ const prog = (pid, lid) => doc(db, 'users', OW(), 'profiles', pid, 'progress', l
 async function loadProfiles() { const s = await getDocs(pcol()); ACC.profiles = s.docs.map(d => ({ id: d.id, ...d.data() })); }
 
 /* progress for the active child lives in localStorage under p_<pid>_done_<lesson> (see store in index.html) */
+/* توفير القراءات: أول مرة في الجهاز نقرأ كل التقدّم، وبعدها فقط ما تغيّر منذ آخر مزامنة (من جهاز آخر مثلاً) */
 async function pullProgress(pid) {
-  try { const s = await getDocs(collection(db, 'users', OW(), 'profiles', pid, 'progress'));
+  const sk = 'darsi_psync_' + OW() + '_' + pid; let last = 0; try { last = +localStorage.getItem(sk) || 0; } catch (e) {}
+  try { const col = collection(db, 'users', OW(), 'profiles', pid, 'progress'); const t0 = Date.now();
+    const s = await getDocs(last ? query(col, where('at', '>', Timestamp.fromMillis(last - 5 * 60000))) : col);
     s.forEach(d => { try { localStorage.setItem('darsi_p_' + pid + '_done_' + d.id, JSON.stringify(d.data().done || [])); } catch (e) {} });
+    try { localStorage.setItem(sk, String(t0)); } catch (e) {}
   } catch (e) { console.warn('progress', e); }
 }
 /* first profile inherits whatever the child did on this device before signing in */
@@ -1383,6 +1387,21 @@ function usageBox() {
         sv.free ? bar(p, col) : null,
         el('small', { class: 'note', text: 'اليوم: ' + fmt(it.today) + ' ' + d.unit + ' · هذا الشهر: ' + fmt(it.month) + ' ' + d.unit + (sv.free ? ' · المجاني: ' + fmt(sv.free) + ' ' + d.unit + (d.period === 'day' ? ' يومياً' : ' شهرياً') : '') + ' · التكلفة: ' + (it.cost || 0) + '$' }),
         it.err ? el('small', { style: 'color:#c62828', text: '⚠️ ' + it.err }) : null)); });
+    /* من أين جاءت القراءات؟ */
+    { const B = S.byFn || {}, rd = (S.items || {}).fs_read || {};
+      const FN_AR = { tts: '🔊 الأصوات (جلب الجمل المحفوظة)', adminax: '📈 فتح «تحليلات المنصة»', axwatch: '🌙 مراقبة التحليلات الليلية', pushauto: '🔔 الإشعارات الآلية اليومية', adminpush: '🔔 الإشعارات (لوحة الإدارة)',
+        adminactivity: '🏆 الأبطال وتصفح الطلاب (الإدارة)', adminstats: '📊 الإحصائيات (الإدارة)', arenatick: '🏟️ الساحة (كل 15 دقيقة)', arena: '🏟️ الساحة', adminarena: '🏟️ الساحة (الإدارة)', adminrefs: '🎁 الدعوات (الإدارة)',
+        adminorders: '💰 الطلبات (الإدارة)', admintickets: '🎫 تذاكر الدعم (الإدارة)', adminteach: '👨‍🏫 المعلمون (الإدارة)', usagewatch: '💳 مراقبة الاستهلاك', adminusage: '💳 لوحة الاستهلاك', adminmat: '📦 المواد التعليمية',
+        getlesson: '📖 فتح الدروس', initme: '👤 بدء الجلسة', kiddevicestate: '📱 أجهزة الأبناء', admincheck: '🛠️ فحص صلاحية الإدارة', adminfinduser: '🔎 البحث عن مستخدم', teach: '👨‍🏫 المعلمون', admintts: '🔊 إعدادات الأصوات' };
+      const row = (lab, t, m, bold) => el('div', { class: 'row', style: 'justify-content:space-between;gap:8px;border-bottom:1px dashed var(--line);padding:3px 0' + (bold ? ';font-weight:700' : '') }, el('span', { text: lab }), el('small', { style: 'white-space:nowrap', text: 'اليوم ' + fmt(t) + ' · الشهر ' + fmt(m) }));
+      const fns = Object.keys(B.month || {}).sort((a, b) => (B.today[b] || 0) - (B.today[a] || 0) || B.month[b] - B.month[a]);
+      const sT = fns.reduce((a, f) => a + (B.today[f] || 0), 0), sM = fns.reduce((a, f) => a + (B.month[f] || 0), 0);
+      const det = el('details', { open: '' }, el('summary', { text: '🔎 من أين جاءت قراءات قاعدة البيانات؟' }),
+        fns.length ? el('small', { class: 'note', text: 'العدّ يعمل منذ يوم ' + (B.since || '—') + ' من الشهر. «المتصفحات» = ما يقرؤه الطلاب والزوار وصفحات الإدارة مباشرة (تقديري = المجموع − الخادم).' }) : el('small', { class: 'note', text: 'العدّ يبدأ بعد نشر التحديث — ستظهر هنا القراءات لكل جزء من المنصة.' }),
+        ...fns.slice(0, 15).map(f => row(FN_AR[f] || f, B.today[f] || 0, B.month[f] || 0)),
+        fns.length ? row('🌐 المتصفحات مباشرة (تقديري)', Math.max(0, (rd.today || 0) - sT), Math.max(0, (rd.month || 0) - sM)) : null,
+        fns.length ? row('المجموع (من مراقبة جوجل)', rd.today || 0, rd.month || 0, true) : null);
+      body.append(det); }
     if (Object.values(S.items || {}).some(x => /مراقبة جوجل/.test(x.err || ''))) body.append(el('a', { class: 'btn sun sm', target: '_blank', rel: 'noopener', href: 'https://console.cloud.google.com/apis/library/monitoring.googleapis.com?project=mujtahid-810d7', text: 'تفعيل Cloud Monitoring API (لقراءة استهلاك قاعدة البيانات والدوال)' }));
     body.append(el('span', { class: 'note', text: 'الأرقام تقديرية من عدّادات المنصة ومراقبة جوجل. الفاتورة الحقيقية: ' }),
       el('div', { class: 'row', style: 'gap:6px;flex-wrap:wrap' }, el('a', { class: 'btn ghost sm', target: '_blank', rel: 'noopener', href: 'https://console.cloud.google.com/billing?project=mujtahid-810d7', text: '🧾 فواتير جوجل' }),
@@ -1970,7 +1989,8 @@ function renderAdmin() {
 }
 
 loadAccess().then(() => { if (D.App.catalog) D.route(); });
-document.addEventListener('visibilitychange', async () => { if (document.visibilityState === 'visible') { const o = JSON.stringify(ACC.access || {}); await loadAccess(); if (JSON.stringify(ACC.access) !== o && D.App.catalog && !/^#(admin|account)/.test(location.hash)) D.route(); } if (document.visibilityState === 'visible' && ACC.kid) { try { const d = await getDoc(pref(ACC.kid.pid)); if (d.exists()) { const old = JSON.stringify(ACC.profiles[0] && ACC.profiles[0].ctrl || null); ACC.profiles = [{ id: d.id, ...d.data() }]; if (JSON.stringify(d.data().ctrl || null) !== old && D.App.catalog) D.route(); } } catch (e) {} }
+let ACC_VIS = Date.now(); /* عند الرجوع للتطبيق: نعيد قراءة الإعدادات والاشتراك مرة كل 5 دقائق على الأكثر */
+document.addEventListener('visibilitychange', async () => { if (document.visibilityState === 'visible') { if (Date.now() - ACC_VIS < 5 * 60000) return; ACC_VIS = Date.now(); const o = JSON.stringify(ACC.access || {}); await loadAccess(); if (JSON.stringify(ACC.access) !== o && D.App.catalog && !/^#(admin|account)/.test(location.hash)) D.route(); } if (document.visibilityState === 'visible' && ACC.kid) { try { const d = await getDoc(pref(ACC.kid.pid)); if (d.exists()) { const old = JSON.stringify(ACC.profiles[0] && ACC.profiles[0].ctrl || null); ACC.profiles = [{ id: d.id, ...d.data() }]; if (JSON.stringify(d.data().ctrl || null) !== old && D.App.catalog) D.route(); } } catch (e) {} }
   if (document.visibilityState === 'visible' && ACC.user && ACC.profile) { const n = ACC.subs.length; await loadSubs(); if (ACC.subs.length !== n && D.App.catalog && !/^#(admin|account)/.test(location.hash)) D.route(); } });
 
 /* ---------- دليل ولي الأمر: خطوات قصيرة قابلة للتخطي، ويمكن فتحه لاحقاً من «حسابي» ---------- */
