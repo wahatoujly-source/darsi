@@ -1295,39 +1295,50 @@ function matBox() {
   const box = el('div', { class: 'panel accbox' }, el('b', { text: '📦 المواد التعليمية (ملفات الدروس)' }),
     el('span', { class: 'note', text: 'ارفع حزمة مادة كاملة (ملف ZIP من «برنامج التحويل ← تجهيز للرفع»). كل ملف يذهب لدرسه تلقائياً، وإعادة رفع نفس المادة تستبدل القديمة. الفيديوهات تُرفع ليوتيوب وتُربط هنا برابط قائمة التشغيل. طريقة ظهورها للمعلمين وأولياء الأمور تُفعَّل لاحقاً.' }));
   const msg = el('div'), prev = el('div', { class: 'stack' }), list = el('div', { class: 'stack' });
-  const inp = el('input', { type: 'file', accept: '.zip,application/zip' });
+  const inp = el('input', { type: 'file', accept: '.zip,application/zip', multiple: true });
   let busy = false;
+  // قراءة حزمة: الفهرس + التأكد أن كل ملفاته موجودة داخلها
+  const readPack = async f => { const JSZip = await loadJSZip(); let zip; try { zip = await JSZip.loadAsync(f); } catch (er) { throw new Error('هذا ليس ملف ZIP صالحاً (أو الملف تالف)'); }
+    const mf = zip.file('manifest.json'); if (!mf) throw new Error('ليس حزمة من برنامج التحويل (لا يوجد فهرس)');
+    const M = JSON.parse(await mf.async('string')); if (M.format !== 'mujtahid-pack') throw new Error('صيغة الحزمة غير معروفة');
+    const files = M.lessons.flatMap(l => l.files); const miss = files.filter(x => !zip.file('files/' + x.key));
+    if (miss.length) throw new Error('الحزمة ناقصة: ' + miss.length + ' ملف غير موجود داخلها');
+    return { zip, M, files }; };
+  // رفع حزمة واحدة: روابط مؤقتة ← رفع مباشر إلى R2 (4 ملفات معاً، 3 محاولات لكل ملف) ← حفظ الفهرس
+  const uploadPack = async (f, onp) => { const { zip, M, files } = await readPack(f);
+    const r = await call('adminMat', { op: 'urls', grade: M.grade, subject: M.subject, files: files.map(x => ({ key: x.key, size: x.size })) });
+    let done = 0; const fail = []; const q = [...files];
+    const put = async x => { const blob = await zip.file('files/' + x.key).async('blob'); const ext = x.key.split('.').pop();
+      for (let t = 0; t < 3; t++) { try { const res = await fetch(r.urls[x.key], { method: 'PUT', body: blob, headers: { 'Content-Type': MAT_MIME[ext] || 'application/octet-stream' } }); if (res.ok) return true; } catch (er) { /* إعادة المحاولة */ } await new Promise(z => setTimeout(z, 2000 * (t + 1))); } return false; };
+    const worker = async () => { while (q.length) { const x = q.shift(); if (!(await put(x))) fail.push(x); done++; onp(done, files.length, fail.length); } };
+    await Promise.all([worker(), worker(), worker(), worker()]);
+    if (fail.length) throw new Error('لم يكتمل رفع ' + fail.length + ' ملف — أعد رفع هذه الحزمة (الملفات المرفوعة لن تتكرر)');
+    return call('adminMat', { op: 'commit', grade: M.grade, subject: M.subject, manifest: M }); };
 
-  inp.addEventListener('change', async () => { prev.innerHTML = ''; msg.innerHTML = ''; const f = inp.files && inp.files[0]; if (!f) return;
-    fbk(prev, 'info', 'جارٍ قراءة الحزمة…');
-    try { const JSZip = await loadJSZip(); const zip = await JSZip.loadAsync(f);
-      const mf = zip.file('manifest.json'); if (!mf) throw new Error('هذا الملف ليس حزمة من برنامج التحويل (لا يوجد فهرس).');
-      const M = JSON.parse(await mf.async('string')); if (M.format !== 'mujtahid-pack') throw new Error('صيغة الحزمة غير معروفة.');
-      const files = M.lessons.flatMap(l => l.files.map(x => ({ ...x, lesson: l.title })));
-      const missing = files.filter(x => !zip.file('files/' + x.key)); if (missing.length) throw new Error('الحزمة ناقصة: ' + missing.length + ' ملف غير موجود داخلها.');
-      const cnt = {}; files.forEach(x => cnt[x.type] = (cnt[x.type] || 0) + 1);
-      const linked = M.lessons.filter(l => l.ref).length, bytes = files.reduce((a, x) => a + x.size, 0);
-      prev.innerHTML = '';
-      const bar = el('progress', { max: files.length, value: 0, style: 'width:100%', hidden: true }), st = el('div');
-      prev.append(el('div', { class: 'feedback info' },
-        el('b', { text: (M.subject_name || M.subject) + ' — الصف ' + (M.grade_name || M.grade) }), el('br'),
-        M.lessons.length + ' درس · ' + files.length + ' ملف · ' + mb(bytes) + ' · مربوط بدروس المنصة: ' + linked + ' من ' + M.lessons.length, el('br'),
-        Object.entries(cnt).map(([k, v]) => (MAT_TYPES[k] || k) + ': ' + v).join(' · ')),
-        el('button', { class: 'btn sun', text: '⬆️ رفع الحزمة إلى المنصة', onclick: async e => { if (busy) return; busy = true; e.target.disabled = true; bar.hidden = false;
-          try {
-            const r = await call('adminMat', { op: 'urls', grade: M.grade, subject: M.subject, files: files.map(x => ({ key: x.key, size: x.size })) });
-            let done = 0; const fail = []; const q = [...files];
-            const put = async x => { const blob = await zip.file('files/' + x.key).async('blob'); const ext = x.key.split('.').pop();
-              for (let t = 0; t < 3; t++) { try { const res = await fetch(r.urls[x.key], { method: 'PUT', body: blob, headers: { 'Content-Type': MAT_MIME[ext] || 'application/octet-stream' } }); if (res.ok) return true; } catch (er) { /* إعادة المحاولة */ } await new Promise(z => setTimeout(z, 1500 * (t + 1))); } return false; };
-            const worker = async () => { while (q.length) { const x = q.shift(); if (!(await put(x))) fail.push(x); done++; bar.value = done; st.textContent = 'تم رفع ' + done + ' من ' + files.length + (fail.length ? ' — فشل ' + fail.length : ''); } };
-            await Promise.all([worker(), worker(), worker(), worker()]);
-            if (fail.length) throw new Error('لم يكتمل رفع ' + fail.length + ' ملف (مثل: ' + fail[0].name + '). أعد المحاولة — الملفات التي رُفعت لن تتكرر.');
-            const c = await call('adminMat', { op: 'commit', grade: M.grade, subject: M.subject, manifest: M });
-            fbk(msg, 'ok', '✓ رُفعت المادة: ' + c.lessons + ' درس · ' + c.files + ' ملف · ' + mb(c.bytes) + (c.removed ? ' · حُذف ' + c.removed + ' ملف قديم' : ''));
-            prev.innerHTML = ''; inp.value = ''; loadList();
-          } catch (x) { fbk(msg, 'bad', fnErr(x)); }
-          busy = false; e.target.disabled = false; } }), bar, st);
-    } catch (x) { fbk(prev, 'bad', fnErr(x)); } });
+  inp.addEventListener('change', async () => { prev.innerHTML = ''; msg.innerHTML = ''; const F = [...(inp.files || [])]; if (!F.length) return;
+    const rows = [], ok = [];
+    for (const f of F) { const st = el('span', { class: 'note', text: 'جارٍ القراءة…' }), bar = el('progress', { max: 1, value: 0, style: 'width:100%', hidden: true });
+      const row = el('div', { style: 'border:1px solid var(--line);border-radius:12px;padding:8px;display:flex;flex-direction:column;gap:4px' }, el('b', { text: f.name.replace(/\.zip$/i, '') }), st, bar);
+      prev.append(row); rows.push({ f, st, bar });
+      try { const { M, files } = await readPack(f); const bytes = files.reduce((a, x) => a + x.size, 0);
+        st.textContent = M.lessons.length + ' درس · ' + files.length + ' ملف · ' + mb(bytes) + ' · مربوط بالمنصة: ' + M.lessons.filter(l => l.ref).length + ' من ' + M.lessons.length;
+        ok.push(rows[rows.length - 1]); rows[rows.length - 1].n = files.length; }
+      catch (x) { st.textContent = '❌ ' + fnErr(x); st.style.color = '#c62828'; } }
+    if (!ok.length) return;
+    prev.append(el('span', { class: 'note', text: '💡 للرفع الليلي: اترك هذه الصفحة مفتوحة والجهاز على الشاحن، وشغّل «🌙 إبقاء الجهاز مستيقظاً» في برنامج التحويل. الشاشة لن تنطفئ أثناء الرفع.' }));
+    prev.append(el('button', { class: 'btn sun', text: '⬆️ رفع ' + (ok.length > 1 ? 'كل الحزم (' + ok.length + ')' : 'الحزمة') + ' إلى المنصة', onclick: async e => {
+      if (busy) return; busy = true; e.target.disabled = true; inp.disabled = true;
+      let lock = null; try { lock = await navigator.wakeLock.request('screen'); } catch (er) { /* غير مدعوم */ }
+      let good = 0, total = 0; const t0 = Date.now();
+      for (const R of ok) { R.bar.hidden = false; R.bar.max = R.n || 1; R.st.style.color = ''; R.st.textContent = 'جارٍ الرفع…';
+        try { const c = await uploadPack(R.f, (d, n, fl) => { R.bar.value = d; R.st.textContent = 'تم رفع ' + d + ' من ' + n + (fl ? ' — فشل ' + fl : ''); });
+          R.st.textContent = '✓ رُفعت: ' + c.lessons + ' درس · ' + c.files + ' ملف · ' + mb(c.bytes) + (c.removed ? ' · حُذف ' + c.removed + ' ملف قديم' : ''); R.st.style.color = '#2e7d32'; good++; total += c.bytes; }
+        catch (x) { R.st.textContent = '❌ ' + fnErr(x); R.st.style.color = '#c62828'; } }
+      try { if (lock) await lock.release(); } catch (er) { /* */ }
+      const mins = Math.max(1, Math.round((Date.now() - t0) / 60000));
+      fbk(msg, good === ok.length ? 'ok' : 'bad', (good === ok.length ? '✓ اكتمل الرفع: ' : 'اكتمل جزئياً: ') + good + ' من ' + ok.length + ' حزمة · ' + mb(total) + ' · خلال ' + mins + ' دقيقة' + (good < ok.length ? ' — أعد اختيار الحزم الفاشلة فقط وارفعها.' : ''));
+      busy = false; inp.disabled = false; inp.value = ''; loadList(); } }));
+  });
 
   const loadList = () => { list.innerHTML = ''; list.append(el('span', { class: 'note', text: 'جارٍ تحميل المواد المرفوعة…' }));
     call('adminMat', { op: 'list' }).then(r => { list.innerHTML = ''; const L = (r.list || []).sort((a, b) => String(a.grade).localeCompare(String(b.grade), 'ar', { numeric: true }) || String(a.subject_name).localeCompare(String(b.subject_name), 'ar'));
@@ -1335,7 +1346,7 @@ function matBox() {
       list.append(el('b', { text: 'المواد المرفوعة (' + L.length + ') — المجموع ' + mb(L.reduce((a, x) => a + x.bytes, 0)) }));
       L.forEach(m => list.append(matRow(m, loadList))); }).catch(e => { list.innerHTML = ''; fbk(list, 'bad', fnErr(e)); }); };
 
-  box.append(el('div', { class: 'row', style: 'gap:8px;align-items:center;flex-wrap:wrap' }, el('span', { text: 'اختر حزمة المادة:' }), inp), prev, msg, el('hr'), list);
+  box.append(el('div', { class: 'row', style: 'gap:8px;align-items:center;flex-wrap:wrap' }, el('span', { text: 'اختر حزمة أو أكثر (يمكن اختيار كل مواد الصف معاً):' }), inp), prev, msg, el('hr'), list);
   loadList(); return box;
 }
 function matRow(m, reload) {
