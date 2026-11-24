@@ -1303,7 +1303,7 @@ function ttsBox() {
       el('input', { class: 'tinput', type: 'number', min: '1000', step: '1000', style: 'width:130px', value: String(C.cap[k]), oninput: e => { C.cap[k] = +e.target.value || 0; } }), el('small', { class: 'note', text: note }));
     const mUsed = r.month != null ? r.month : null;
     const capBox = el('div', { class: 'panel', style: 'border:2px dashed #fca5a5' }, el('b', { text: '💰 سقف استهلاك الأصوات الجديدة' }),
-      el('span', { class: 'note', text: 'جوجل تعطي مليون حرف مجاناً كل شهر، وبعدها 30 دولاراً لكل مليون. إذا وصل أحد السقفين يتوقف توليد الجمل الجديدة فقط، والجمل المحفوظة تبقى تعمل. التجديد اليومي الساعة 2:00 ليلاً بتوقيت ليبيا، والشهري أول كل شهر.' }),
+      el('span', { class: 'note', text: 'جوجل تعطي مليون حرف مجاناً كل شهر، وبعدها 30 دولاراً لكل مليون. إذا وصل أحد السقفين يتوقف توليد الجمل الجديدة فقط، والجمل المحفوظة تبقى تعمل. العدّ بتوقيت فاتورة جوجل: يتجدد اليومي الساعة 10:00 صباحاً بتوقيت ليبيا شتاءً (9:00 صيفاً)، والشهري أول كل شهر في نفس الساعة.' }),
       capNum('day', 'السقف اليومي:', 'حرف — 33,000 يومياً ≈ مليون في الشهر'), capNum('month', 'السقف الشهري:', 'حرف — اتركه 950,000 ليبقى كل شيء مجانياً'),
       el('div', { class: 'feedback ' + (mUsed != null && mUsed > 900000 ? 'bad' : 'info'), style: 'margin:0', text: '📊 اليوم: ' + (r.today || 0).toLocaleString('en') + ' حرف · هذا الشهر: ' + (mUsed != null ? mUsed.toLocaleString('en') + ' حرف' : 'يُحسب مع أول جملة جديدة') }));
     const pickBox = el('div', { class: 'panel', style: 'border:2px dashed #c4b5fd' }, el('b', { text: '👩‍🏫 من يستطيع اختيار المدرّس المفضّل؟' }),
@@ -1370,6 +1370,7 @@ function usageBox() {
     body.append(el('div', { class: 'feedback ' + (S.total > 0 ? (lim && pct >= 80 ? 'bad' : 'info') : 'ok'), style: 'margin:0;display:flex;flex-direction:column;gap:6px' },
       el('b', { style: 'font-size:1.15rem', text: S.total > 0 ? '💵 التكلفة التقديرية لهذا الشهر: ' + S.total + '$' + (lim ? ' من حدّك ' + lim + '$' : '') : '✅ كل شيء ضمن المجاني هذا الشهر' }),
       lim ? bar(pct, pct >= 100 ? '#c62828' : pct >= 80 ? '#b45309' : '#2e7d32') : null,
+      S.mStart ? el('small', { text: '📅 شهر فاتورة جوجل بدأ ' + new Date(S.mStart).toLocaleString('ar-LY-u-nu-latn', { day: 'numeric', month: 'numeric', hour: '2-digit', minute: '2-digit', timeZone: 'Africa/Tripoli' }) + ' بتوقيت ليبيا · يوم المجاني في قاعدة البيانات وسقف الأصوات اليومي يتجددان الساعة ' + new Date(S.dStart).toLocaleTimeString('ar-LY-u-nu-latn', { hour: '2-digit', minute: '2-digit', timeZone: 'Africa/Tripoli' }) }) : null,
       el('small', { text: 'آخر تحديث: ' + (S.at ? new Date(S.at).toLocaleString('ar-LY-u-nu-latn', { hour: '2-digit', minute: '2-digit', day: 'numeric', month: 'numeric' }) : '—') }),
       el('button', { class: 'btn ghost sm', style: 'align-self:flex-start', text: '🔄 تحديث الآن', onclick: () => load(true) })));
     if (stops.length) body.append(el('div', { class: 'feedback bad', style: 'margin:0', text: '🛑 متوقف الآن: ' + stops.map(k => (STOP_T[k] || [k])[0]).join('، ') + ' — أعد تشغيله من «الإيقاف الطارئ» أدناه.' }));
