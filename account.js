@@ -1222,7 +1222,7 @@ function teacherCard(stages) { const st0 = (stages || ['p', 's']).filter(k => tv
 function ttsBox() {
   const T0 = (ACC.access || {}).tts || {};
   const stage = (x, oldV, oldR, defV) => { x = x || {}; return { rate: Number(x.rate != null ? x.rate : (oldR != null ? oldR : 0.9)), a: x.a || oldV || defV, b: x.b || '', mode: x.mode || 'single', subj: Object.assign({}, x.subj || {}), t: [...(x.t || [])] }; };
-  const C = { on: !!T0.on, p: stage(T0.p, T0.f, T0.rate, 'ar-XA-Chirp3-HD-Aoede'), s: stage(T0.s, T0.m, T0.rate, 'ar-XA-Chirp3-HD-Charon'), dict: (T0.dict || []).map(e => [e[0], e[1]]), names: Object.assign({}, T0.names || {}), descs: Object.assign({}, T0.descs || {}), pick: T0.pick || 'all', cls: { on: !!(T0.cls || {}).on, trial: [...((T0.cls || {}).trial || ['ar-1-l0', 'math-1-c1-l3', 'ar-5-u1-l1', 'ar-8-u1-l1'])] } };
+  const C = { on: !!T0.on, p: stage(T0.p, T0.f, T0.rate, 'ar-XA-Chirp3-HD-Aoede'), s: stage(T0.s, T0.m, T0.rate, 'ar-XA-Chirp3-HD-Charon'), dict: (T0.dict || []).map(e => [e[0], e[1]]), names: Object.assign({}, T0.names || {}), descs: Object.assign({}, T0.descs || {}), pick: T0.pick || 'all', cap: { day: (T0.cap || {}).day || 33000, month: (T0.cap || {}).month || 950000 }, cls: { on: !!(T0.cls || {}).on, trial: [...((T0.cls || {}).trial || ['ar-1-l0', 'math-1-c1-l3', 'ar-5-u1-l1', 'ar-8-u1-l1'])] } };
   const stBox = el('div', { class: 'feedback ' + (C.on ? 'ok' : 'info'), text: C.on ? '✅ الصوت الجديد مفعّل الآن في كل الدروس' : '⏸️ الصوت الجديد غير مفعّل بعد — اضغط «تفعيل الصوت الجديد الآن»' });
   const box = el('div', { class: 'panel accbox' }, el('b', { text: '🔊 القراءة الصوتية التلقائية' }),
     el('span', { class: 'note', text: 'صوت Google المختار هو الصوت الرسمي لكل الدروس، حتى لو لم يكن في جهاز الطالب صوت عربي. لكل مرحلة سرعة خاصة وصوتان (مثلاً معلم ومعلمة)، وتختار كيف يُستعملان. يُنشأ صوت كل جملة مرة واحدة ويُحفظ للجميع.' }), stBox);
@@ -1243,7 +1243,7 @@ function ttsBox() {
     const lab = v => v.name.replace('ar-XA-', '').replace('Chirp3-HD-', '') + (v.g === 'FEMALE' ? ' — صوت أنثى' : v.g === 'MALE' ? ' — صوت ذكر' : '');
     const vsel = (val, onch, blank) => { if (val && !list.some(v => v.name === val)) { const o = all.find(v => v.name === val); if (o) list.push(o); } const x = el('select', { class: 'qsel', onchange: e => onch(e.target.value) }, ...(blank ? [el('option', { value: '', text: blank })] : []), ...list.map(v => el('option', { value: v.name, text: lab(v) }))); x.value = val || ''; return x; };
     const setOn = async (v, btn) => { btn.disabled = true;
-      try { await call('adminTts', { op: 'cfg', on: v, p: C.p, s: C.s, dict: C.dict, names: C.names, cls: C.cls, descs: C.descs, pick: C.pick }); await loadAccess(); C.on = v;
+      try { await call('adminTts', { op: 'cfg', on: v, p: C.p, s: C.s, dict: C.dict, names: C.names, cls: C.cls, descs: C.descs, pick: C.pick, cap: C.cap }); await loadAccess(); C.on = v;
         stBox.className = 'feedback ' + (v ? 'ok' : 'info'); stBox.textContent = v ? '✅ الصوت الجديد مفعّل الآن في كل الدروس' : '⏸️ الصوت الجديد موقوف'; fbk(msg, 'ok', v ? '✓ تم التفعيل. افتح أي درس وجرّب.' : '✓ تم الإيقاف.'); drawOnBtn(); }
       catch (x) { fbk(msg, 'bad', fnErr(x)); } btn.disabled = false; };
     const onWrap = el('div'); const drawOnBtn = () => { onWrap.innerHTML = ''; onWrap.append(C.on ? el('button', { class: 'btn ghost', text: '⏸️ إيقاف الصوت الجديد', onclick: e => setOn(false, e.target) }) : el('button', { class: 'btn sun paybig', text: '✅ تفعيل الصوت الجديد الآن', onclick: e => setOn(true, e.target) })); };
@@ -1298,6 +1298,14 @@ function ttsBox() {
       el('label', { class: 'sndrow', style: 'margin:0' }, el('input', { type: 'checkbox', checked: C.cls.on ? '' : null, onchange: e => { C.cls.on = e.target.checked; } }), el('span', {}, el('b', { text: 'مفعّل لكل الطلاب في كل الدروس' }), el('small', { class: 'note', text: ' — إذا لم تفعّله يعمل لك أنت (المدير) فقط في دروس التجربة أدناه' }))),
       el('span', { class: 'note', text: 'دروس التجربة (للمدير فقط قبل التفعيل العام):' }), trialIn,
       el('div', { class: 'row', style: 'gap:6px;flex-wrap:wrap' }, ...C.cls.trial.map(id => el('a', { class: 'btn ghost sm', href: '#l-' + id, text: '▶ ' + id }))));
+    /* سقف الأحرف الجديدة: المجاني في جوجل مليون حرف شهرياً، وبعده 30 دولاراً لكل مليون */
+    const capNum = (k, lab, note) => el('div', { class: 'row', style: 'gap:6px;align-items:center;flex-wrap:wrap' }, el('b', { style: 'min-width:120px', text: lab }),
+      el('input', { class: 'tinput', type: 'number', min: '1000', step: '1000', style: 'width:130px', value: String(C.cap[k]), oninput: e => { C.cap[k] = +e.target.value || 0; } }), el('small', { class: 'note', text: note }));
+    const mUsed = r.month != null ? r.month : null;
+    const capBox = el('div', { class: 'panel', style: 'border:2px dashed #fca5a5' }, el('b', { text: '💰 سقف استهلاك الأصوات الجديدة' }),
+      el('span', { class: 'note', text: 'جوجل تعطي مليون حرف مجاناً كل شهر، وبعدها 30 دولاراً لكل مليون. إذا وصل أحد السقفين يتوقف توليد الجمل الجديدة فقط، والجمل المحفوظة تبقى تعمل. التجديد اليومي الساعة 2:00 ليلاً بتوقيت ليبيا، والشهري أول كل شهر.' }),
+      capNum('day', 'السقف اليومي:', 'حرف — 33,000 يومياً ≈ مليون في الشهر'), capNum('month', 'السقف الشهري:', 'حرف — اتركه 950,000 ليبقى كل شيء مجانياً'),
+      el('div', { class: 'feedback ' + (mUsed != null && mUsed > 900000 ? 'bad' : 'info'), style: 'margin:0', text: '📊 اليوم: ' + (r.today || 0).toLocaleString('en') + ' حرف · هذا الشهر: ' + (mUsed != null ? mUsed.toLocaleString('en') + ' حرف' : 'يُحسب مع أول جملة جديدة') }));
     const pickBox = el('div', { class: 'panel', style: 'border:2px dashed #c4b5fd' }, el('b', { text: '👩‍🏫 من يستطيع اختيار المدرّس المفضّل؟' }),
       el('span', { class: 'note', text: 'يظهر لولي الأمر في «تحكّم» كل ابن، وللطالب في «حسابي». الصوت المختار يُستعمل في كل دروس المرحلة.' }),
       ...[['all', '🌍 الجميع', 'مجاناً لكل المستخدمين (مناسب وقت الإطلاق والدعاية)'], ['subs', '⭐ المشتركون فقط', 'غير المشترك يسمع الأصوات لكن لا يختار'], ['off', '⏸️ موقوف', 'لا تظهر قائمة المدرّسين']]
@@ -1307,10 +1315,10 @@ function ttsBox() {
     const oldT = el('label', { class: 'sndrow', style: 'margin:0' }, el('input', { type: 'checkbox', checked: showOld ? '' : null, onchange: e => { showOld = e.target.checked; store.set('tts_old', showOld); fillList(); panels.forEach(p => p.redraw()); } }), el('span', {}, el('b', { text: 'إظهار الأصوات القديمة' }), el('small', { class: 'note', text: ' — Wavenet/Neural2: آلية وثقيلة، لا يُنصح بها' })));
     const panels = [stagePanel('p', '🧒 الصفوف 1–6'), stagePanel('s', '🧑 الصفوف 7–9')];
     body.append(onWrap, oldT, ...panels,
-      el('span', { class: 'note', text: 'نص التجربة (غيّره كما تريد):' }), sample, pickBox, clsBox, dictBox,
+      el('span', { class: 'note', text: 'نص التجربة (غيّره كما تريد):' }), sample, capBox, pickBox, clsBox, dictBox,
       el('span', { class: 'note', text: 'المحفوظ: ' + (st.items || 0) + ' جملة (' + (st.chars || 0) + ' حرف) · اليوم: ' + (r.today || 0) + ' حرف. مجاني حتى نحو مليون حرف شهرياً. تغيير الصوت أو السرعة يُنشئ الجمل من جديد تلقائياً عند الحاجة.' }),
       el('button', { class: 'btn', text: '💾 حفظ الأصوات والسرعات والقاموس', onclick: async e => { e.target.disabled = true;
-        try { await call('adminTts', { op: 'cfg', on: C.on, p: C.p, s: C.s, dict: C.dict, names: C.names, cls: C.cls, descs: C.descs, pick: C.pick }); await loadAccess(); fbk(msg, 'ok', '✓ حُفظت. تظهر في الدروس خلال دقيقة.'); }
+        try { await call('adminTts', { op: 'cfg', on: C.on, p: C.p, s: C.s, dict: C.dict, names: C.names, cls: C.cls, descs: C.descs, pick: C.pick, cap: C.cap }); await loadAccess(); fbk(msg, 'ok', '✓ حُفظت. تظهر في الدروس خلال دقيقة.'); }
         catch (x) { fbk(msg, 'bad', fnErr(x)); } e.target.disabled = false; } }));
   }).catch(e => { body.innerHTML = ''; body.append(el('span', { class: 'note', text: '⚠️ ' + fnErr(e) }),
     el('a', { href: 'https://console.cloud.google.com/apis/library/texttospeech.googleapis.com?project=mujtahid-810d7', target: '_blank', rel: 'noopener', class: 'btn sun', text: 'تفعيل Cloud Text-to-Speech API' })); });
