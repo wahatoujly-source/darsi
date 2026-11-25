@@ -1518,7 +1518,16 @@ function matBox() {
       list.append(el('b', { text: 'المواد المرفوعة (' + L.length + ') — المجموع ' + mb(L.reduce((a, x) => a + x.bytes, 0)) }));
       L.forEach(m => list.append(matRow(m, loadList))); }).catch(e => { list.innerHTML = ''; fbk(list, 'bad', fnErr(e)); }); };
 
-  const vb = viewerBox(); box.append(vb, el('div', { class: 'row', style: 'gap:8px;align-items:center;flex-wrap:wrap' }, el('span', { text: 'اختر حزمة أو أكثر (يمكن اختيار كل مواد الصف معاً، وحزم «عروض المجتهد» أيضاً):' }), inp), prev, msg, el('hr'), list);
+  /* ربط برنامج الكمبيوتر (رفع الفيديوهات إلى يوتيوب تلقائياً) — للمالك */
+  const pk = el('div', { class: 'panel', style: 'border:2px dashed #fca5a5;margin-bottom:10px' }, el('b', { text: '🔑 ربط برنامج الكمبيوتر (رفع فيديوهات يوتيوب)' }),
+    el('span', { class: 'note', text: 'البرنامج يرفع الفيديوهات إلى قناة المنصة المربوطة باسم الدرس والمادة والصف ووصف كامل، بلا تكرار. أنشئ مفتاحاً والصقه في البرنامج (تبويب «📺 يوتيوب»). إنشاء مفتاح جديد يُبطل القديم.' }));
+  if (ACC.owner) pk.append(el('button', { class: 'btn ghost sm', style: 'align-self:flex-start', text: '🔑 إنشاء مفتاح للبرنامج', onclick: async e => { e.target.disabled = true;
+    try { const r = await call('adminMat', { op: 'progKey' }); const inp2 = el('input', { class: 'tinput', readonly: '', value: r.key, style: 'direction:ltr;width:100%' });
+      e.target.replaceWith(el('div', { class: 'stack', style: 'gap:6px' }, inp2, el('div', { class: 'row', style: 'gap:6px' },
+        el('button', { class: 'btn sm', text: '📋 نسخ المفتاح', onclick: ev => { inp2.select(); try { navigator.clipboard.writeText(r.key); } catch (x) { document.execCommand('copy'); } ev.target.textContent = '✓ نُسخ'; } })),
+        el('small', { class: 'note', text: '⚠️ لن يظهر المفتاح مرة أخرى. الصقه في البرنامج الآن، ولا ترسله لأحد.' }))); }
+    catch (x) { e.target.disabled = false; fbk(msg, 'bad', fnErr(x)); } } }));
+  const vb = viewerBox(); box.append(pk, vb, el('div', { class: 'row', style: 'gap:8px;align-items:center;flex-wrap:wrap' }, el('span', { text: 'اختر حزمة أو أكثر (يمكن اختيار كل مواد الصف معاً، وحزم «عروض المجتهد» أيضاً):' }), inp), prev, msg, el('hr'), list);
   box._lazy = () => { loadList(); vb._load(); }; return box;
 }
 function matRow(m, reload) {
