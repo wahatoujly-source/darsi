@@ -1353,7 +1353,7 @@ function booksBox() {
 /* ---------- admin: المواد التعليمية — حزم ملفات الدروس من برنامج التحويل → Cloudflare R2 ---------- */
 let _jszip;
 const loadJSZip = () => _jszip || (_jszip = new Promise((res, rej) => { const sc = document.createElement('script'); sc.src = 'https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js'; sc.onload = () => res(window.JSZip); sc.onerror = () => { _jszip = null; rej(new Error('تعذّر تحميل قارئ ملفات ZIP — تحقق من الإنترنت')); }; document.head.append(sc); }));
-const MAT_TYPES = { pptx: 'باوربوينت', ppsx: 'عرض مباشر', ppsx_voice: 'عرض بالصوت', docx: 'وورد', pdf: 'PDF', html: 'HTML', sol_pptx: '✍️ حل التمارين', sol_ppsx: '✍️ حل التمارين (عرض)', sol_docx: '✍️ حل التمارين (وورد)' };
+const MAT_TYPES = { pptx: 'باوربوينت', ppsx: 'ملف عرض (يُنزَّل)', ppsx_voice: 'ملف عرض بالصوت (يُنزَّل)', docx: 'وورد', pdf: 'PDF', html: 'HTML', sol_pptx: '✍️ حل التمارين', sol_ppsx: '✍️ حل التمارين (عرض)', sol_docx: '✍️ حل التمارين (وورد)' };
 const MAT_STATE = [['hidden', '🔒 مخفية (الإدارة فقط)'], ['subs', '⭐ للمشتركين'], ['all', '🌍 للجميع']];
 const MAT_MIME = { pptx: 'application/vnd.openxmlformats-officedocument.presentationml.presentation', ppsx: 'application/vnd.openxmlformats-officedocument.presentationml.slideshow', docx: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', pdf: 'application/pdf', html: 'text/html; charset=utf-8' };
 const mb = n => (n / 1048576).toFixed(n < 10485760 ? 1 : 0) + ' ميغا';
@@ -1533,7 +1533,7 @@ function matRow(m, reload) {
         det.append(el('span', { class: 'note', text: 'جارٍ التحميل…' }));
         try { const r = await call('adminMat', { op: 'get', id: m.id }); det.innerHTML = ''; det.dataset.ok = '1';
           (r.item.lessons || []).forEach(l => det.append(el('div', { class: 'accrow sm', style: 'flex-wrap:wrap;gap:4px' }, el('span', { text: String(l.order).padStart(2, '0') + ' - ' + l.title + (l.ref ? '' : ' ⚠️ غير مربوط بدرس') }),
-            el('span', { class: 'row', style: 'gap:4px;flex-wrap:wrap' }, ...l.files.map(f => el('button', { class: 'linkbtn', text: MAT_TYPES[f.type] || f.type, title: f.name + ' — ' + mb(f.size), onclick: async () => { try { const u = await call('adminMat', { op: 'url', id: m.id, key: f.key }); window.open(u.url, '_blank'); } catch (e) { fbk(m2, 'bad', fnErr(e)); } } }))))));
+            el('span', { class: 'row', style: 'gap:4px;flex-wrap:wrap' }, l.ref ? el('button', { class: 'linkbtn', style: 'font-weight:700', text: '🎬 عرض الآن', title: 'يفتح الدرس شرائح داخل المنصة (بدون تنزيل)', onclick: () => import('./viewer.js').then(x => x.default(window.DARSI, l.ref, { voice: (ACC.access.viewer || {}).voice === 'teacher' ? 'teacher' : 'base' })).catch(e => fbk(m2, 'bad', 'تعذّر فتح العرض: ' + e.message)) }) : null, ...l.files.map(f => el('button', { class: 'linkbtn', text: MAT_TYPES[f.type] || f.type, title: f.name + ' — ' + mb(f.size), onclick: async () => { try { const u = await call('adminMat', { op: 'url', id: m.id, key: f.key }); window.open(u.url, '_blank'); } catch (e) { fbk(m2, 'bad', fnErr(e)); } } }))))));
         } catch (e) { det.innerHTML = ''; fbk(m2, 'bad', fnErr(e)); } } }),
       el('button', { class: 'btn ghost sm', style: 'color:#c62828', text: '🗑️ حذف المادة وملفاتها', onclick: async e => {
         if (!sure) { sure = true; e.target.textContent = '⚠️ اضغط مرة أخرى لحذف كل ملفات المادة نهائياً'; setTimeout(() => { sure = false; if (e.target.isConnected) e.target.textContent = '🗑️ حذف المادة وملفاتها'; }, 5000); return; }
