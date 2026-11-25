@@ -3355,6 +3355,11 @@ function solEntry(host,g,sid,lid){const done=()=>{host.innerHTML='';const k=g+'-
 /* «عرض المجتهد»: زر عرض شرائح الدرس (من برنامج التحويل) — يظهر حسب إعداد المدير (config/access.viewer) */
 const DK={p:null};
 const deckIdx=()=>DK.p||(DK.p=fetch('https://firestore.googleapis.com/v1/projects/mujtahid-810d7/databases/(default)/documents/config/decks').then(r=>r.ok?r.json():{}).then(j=>(((j.fields||{}).m||{}).mapValue||{}).fields||{}).catch(()=>{DK.p=null;return {};}));
+const YK={};const ytIdx=()=>YK.p||(YK.p=fetch('https://firestore.googleapis.com/v1/projects/mujtahid-810d7/databases/(default)/documents/config/ytIndex').then(r=>r.ok?r.json():{}).then(j=>(((j.fields||{}).m||{}).mapValue||{}).fields||{}).catch(()=>{YK.p=null;return {};}));
+function vidEntry(host,id){ytIdx().then(m=>{const v=((m[id]||{}).stringValue||'').replace(/[^A-Za-z0-9_-]/g,'');if(!v||!host.isConnected)return;const fr=el('div');
+  const b=el('button',{class:'btn ghost',style:'width:100%;margin:6px 0',text:'▶ شاهد شرح الدرس (فيديو)',onclick:()=>{if(fr.firstChild){fr.innerHTML='';b.textContent='▶ شاهد شرح الدرس (فيديو)';return;}window.AXe&&AXe('yt_play',{l:id});b.textContent='✕ إغلاق الفيديو';
+    fr.append(el('div',{style:'position:relative;padding-top:56.25%;border-radius:14px;overflow:hidden;background:#000'},el('iframe',{src:'https://www.youtube-nocookie.com/embed/'+v+'?autoplay=1&rel=0',title:'شرح الدرس',style:'position:absolute;inset:0;width:100%;height:100%;border:0',allow:'autoplay; encrypted-media; picture-in-picture; fullscreen',allowfullscreen:true,referrerpolicy:'strict-origin-when-cross-origin'})));}});
+  host.append(b,fr);});}
 function deckEntry(host,id){const V=ACCX().viewer||{},A=window.ACC,adm=!!(A&&A.isAdmin);if(!V.on&&!adm)return;
   deckIdx().then(m=>{if(!m[id]||!host.isConnected)return;
     const sub=App.sub||adm||OPEN_ACCESS||!!(A&&(A.kid||A.co||(A.hasAnySub&&A.hasAnySub())));const who=V.on?V.who:'admin';let ok=true,lock=null;
@@ -3583,6 +3588,7 @@ async function renderLesson(id){
   if(info.lesson.ref)root.append(el('div',{class:'refchip'},el('span',{text:'📖'}),el('span',{},'في كتابك: ',el('b',{text:info.lesson.ref.replace(/–/g,'\u2060–\u2060')}))));
   {const sh=el('div');root.append(sh);solEntry(sh,info.grade,info.subject.id,id);}
   {const vw=el('div');root.append(vw);deckEntry(vw,id);}
+  {const yv=el('div');root.append(yv);vidEntry(yv,id);}
   let cur=1;const sections=[];const stepKey='step_'+id;GAME.opened(id);voiceCheck(root,L.lang==='en'?'en':'ar');
   const award=n=>{if(done.has(n))return;done.add(n);if(window.AX&&AX.lesson&&AX.lesson.l===id)AX.lesson.st=done.size;store.set('done_'+id,[...done]);window.ACC&&ACC.saveProgress&&ACC.saveProgress(id,[...done]);cheer('star');drawNav();GAME.onStar();};
   function drawNav(){nav.innerHTML='';L.steps.forEach((s,i)=>{const n=i+1;const b=el('button',{class:done.has(n)?'done':'',onclick:()=>show(n)},el('span',{class:'n',text:AR[i]}),s.title);if(n===cur)b.setAttribute('aria-current','step');nav.append(b);});stars.textContent='★ '+done.size+'/'+N;prog.firstChild.style.width=Math.round(cur/N*100)+'%';}

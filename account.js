@@ -784,6 +784,7 @@ function renderAccount() {
     T.push(['n_ach', 'التقارير', () => go(isAdult() && kids.length ? 'who' : 'myreport')]);
     { const tc = (ACC.access || {}).teach || {}; if (tc.on || ACC.isAdmin) T.push(['n_lessons', 'دوراتي', () => go('courses-mine')]); }
     if (P.role === 'teacher' || ACC.isAdmin) T.push(['k6', 'منصة المعلم', () => go('studio')]);
+    if ((P.role === 'teacher' && ((ACC.access || {}).shopOn)) || ACC.isAdmin) T.push(['x_all', 'مكتبة المعلم', () => go('matshop')]);
     T.push(['x_all', 'كتب PDF', () => go('books')], ['q_test', 'اختبر مستوى', () => go('test')], ['q_times', 'جدول الضرب', () => go('times')]);
     s.append(el('div', { class: 'kx-qk' }, ...T.slice(0, 6).map(([im, t, fn]) => el('button', { onclick: fn }, el('span', { class: 'ib' }, el('img', { src: U(im), alt: '', loading: 'lazy' })), el('b', { text: t }))))); }
   /* ---- settings list (each row opens its panel) ---- */
@@ -1130,6 +1131,8 @@ function renderPaid(orderId, cancelled) {
   fbk(st, 'info', cancelled ? '⏳ نتحقق من حالة الدفع…' : '⏳ جارٍ تأكيد الدفع… لا تغلق الصفحة.');
   let n = 0;
   const tick = async () => {
+    try { const g = await getDoc(doc(db, 'matGrants', orderId)).catch(() => null);
+      if (g && g.exists()) { D.cheer && D.cheer('win'); AXe('pay_confirmed', { oid: orderId, k: 'mat' }, orderId); fbk(st, 'ok', '🎉 تم الدفع وفُتحت لك المواد حتى ' + fmtDate(g.data().until.toMillis()) + '.'); s.append(el('button', { class: 'btn sun', text: '📦 افتح مكتبتي وحمّل الملفات ←', onclick: () => go('matshop') })); return; } } catch (e) {}
     try { const d = await getDoc(doc(db, 'subscriptions', orderId));
       if (d.exists()) { await loadSubs(); D.cheer && D.cheer('win'); AXe('pay_confirmed', { oid: orderId }, orderId); fbk(st, 'ok', '🎉 تم الدفع وتفعيل اشتراكك حتى ' + fmtDate(d.data().end.toMillis()) + '.');
         if (isAdult() && !kidsOf().length) s.append(el('div', { class: 'feedback info', text: 'خطوة أخيرة: أضف أسماء أبنائك وصفوفهم ليبدؤوا الدراسة.' }), el('button', { class: 'btn sun', text: '👨‍👩‍👧 أضف أبنائي ←', onclick: () => go('kids') }));
@@ -1527,7 +1530,11 @@ function matBox() {
         el('button', { class: 'btn sm', text: '📋 نسخ المفتاح', onclick: ev => { inp2.select(); try { navigator.clipboard.writeText(r.key); } catch (x) { document.execCommand('copy'); } ev.target.textContent = '✓ نُسخ'; } })),
         el('small', { class: 'note', text: '⚠️ لن يظهر المفتاح مرة أخرى. الصقه في البرنامج الآن، ولا ترسله لأحد.' }))); }
     catch (x) { e.target.disabled = false; fbk(msg, 'bad', fnErr(x)); } } }));
-  const vb = viewerBox(); box.append(pk, vb, el('div', { class: 'row', style: 'gap:8px;align-items:center;flex-wrap:wrap' }, el('span', { text: 'اختر حزمة أو أكثر (يمكن اختيار كل مواد الصف معاً، وحزم «عروض المجتهد» أيضاً):' }), inp), prev, msg, el('hr'), list);
+  const vb = viewerBox();
+  const shp = el('details', { class: 'panel', style: 'margin:0' }, el('summary', { style: 'cursor:pointer;font-weight:800', text: '🛒 بيع المواد للمعلمين (الأسعار، الباقات، الصلاحية، المبيعات)' }));
+  const shb = el('div', { class: 'stack', style: 'gap:8px;margin-top:8px' }); shp.append(shb);
+  shp.addEventListener('toggle', () => { if (shp.open && !shp._l) { shp._l = 1; import('./shopadmin.js').then(x => x.default({ el, call, fbk, fnErr }, shb)).catch(e => fbk(shb, 'bad', 'تعذّر التحميل: ' + e.message)); } });
+  box.append(pk, vb, shp, el('div', { class: 'row', style: 'gap:8px;align-items:center;flex-wrap:wrap' }, el('span', { text: 'اختر حزمة أو أكثر (يمكن اختيار كل مواد الصف معاً، وحزم «عروض المجتهد» أيضاً):' }), inp), prev, msg, el('hr'), list);
   box._lazy = () => { loadList(); vb._load(); }; return box;
 }
 function matRow(m, reload) {
@@ -2047,7 +2054,7 @@ function helpFab() { const h = (location.hash || '').slice(1);
     setTimeout(() => import('./help.js').then(m => m.unread(helpCtx())).then(helpBadge).catch(() => {}), 4000); }
   HB.hidden = !!ACC.kid || /^(l-|help|admin|test|tst|arena|ob-|devices-lock|kids-mode|exam)/.test(h) || document.body.classList.contains('wl-on'); }
 window.addEventListener('hashchange', () => setTimeout(helpFab, 50));
-const ROUTES = { help: renderHelpPage, devices: renderDevicesPage, guide: () => renderGuide(0), 'admin-ax': renderAxAdmin, admin: renderAdmin, subscribe: renderSubscribe, login: renderLogin, 'login-phone': () => authForm('phone'), 'login-email': () => authForm('email'), onboard: renderOnboard, kids: renderKids, who: renderWho, account: renderAccount };
+const ROUTES = { matshop: () => { page('📦 مكتبة المعلم', 'جارٍ التحميل…', 'home'); import('./shop.js').then(m => m.default({ page, el, call, fbk, fnErr, go, ACC })).catch(() => fbk(D.root, 'bad', 'تعذّر التحميل. تحقق من الاتصال.')); }, help: renderHelpPage, devices: renderDevicesPage, guide: () => renderGuide(0), 'admin-ax': renderAxAdmin, admin: renderAdmin, subscribe: renderSubscribe, login: renderLogin, 'login-phone': () => authForm('phone'), 'login-email': () => authForm('email'), onboard: renderOnboard, kids: renderKids, who: renderWho, account: renderAccount };
 initTeach({ call, fnErr, ACC, page, fbk, D, el, go, store });
 ACC.route = h => { if (ACC.guardRoute && ACC.guardRoute(h)) return true; if (ACC.teachRoute && ACC.teachRoute(h)) return true; const pm = /^paid-([A-Za-z0-9]{10,40})(-x)?$/.exec(h); const lm = /^link(?:-(\d{6}))?$/.exec(h); if (lm) { if (!ACC.ready) { page('…', 'جارٍ التحميل', 'home'); return true; } renderLink(lm[1]); return true; }
   const tk = /^tt-([A-Za-z0-9]{1,30})$/.exec(h); if (tk) { if (!ACC.ready) { page('…', 'جارٍ التحميل', 'home'); return true; } renderTT(tk[1]); return true; }
