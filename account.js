@@ -1468,16 +1468,21 @@ function matBox() {
       if (batch.length >= 40 || size > 1500000) await send(); }
     await send(); return done; };
   // رفع حزمة واحدة: روابط مؤقتة ← رفع مباشر إلى R2 (4 ملفات معاً، 3 محاولات لكل ملف) ← حفظ الفهرس
-  const uploadPack = async (f, onp) => { const { zip, M, files, decks } = await readPack(f); const tot = (onlyDecks.checked ? 0 : files.length) + decks.length;
-    if (onlyDecks.checked || !files.length) { const n = await uploadDecks(zip, decks, d => onp(d, tot, 0)); return { lessons: n, files: 0, bytes: 0, decks: n }; }
-    const r = await call('adminMat', { op: 'urls', grade: M.grade, subject: M.subject, files: files.map(x => ({ key: x.key, size: x.size })) });
+  const uploadPack = async (f, onp) => { const { zip, M, files: all, decks } = await readPack(f);
+    /* الرفع اليومي: الملفات المرفوعة من قبل بنفس الاسم والحجم لا تُرفع مرة ثانية (فقط الجديد مثل العرض بالصوت) */
+    const have = {}; if (all.length && !onlyDecks.checked) { try { const g = await call('adminMat', { op: 'get', id: (String(M.grade) + '_' + M.subject).replace(/[^a-z0-9_-]/gi, '').slice(0, 40) });
+      ((g.item || {}).lessons || []).forEach(l => (l.files || []).forEach(x => { have[x.key] = x.size; })); } catch (e) { /* مادة جديدة */ } }
+    const files = all.filter(x => have[x.key] !== x.size), same = all.length - files.length;
+    const tot = (onlyDecks.checked ? 0 : files.length) + decks.length;
+    if (onlyDecks.checked || !all.length) { const n = await uploadDecks(zip, decks, d => onp(d, tot, 0)); return { lessons: n, files: 0, bytes: 0, decks: n }; }
+    const r = files.length ? await call('adminMat', { op: 'urls', grade: M.grade, subject: M.subject, files: files.map(x => ({ key: x.key, size: x.size })) }) : { urls: {} };
     let done = 0; const fail = []; const q = [...files];
     const put = async x => { const blob = await zip.file('files/' + x.key).async('blob'); const ext = x.key.split('.').pop();
       for (let t = 0; t < 3; t++) { try { const res = await fetch(r.urls[x.key], { method: 'PUT', body: blob, headers: { 'Content-Type': MAT_MIME[ext] || 'application/octet-stream' } }); if (res.ok) return true; } catch (er) { /* إعادة المحاولة */ } await new Promise(z => setTimeout(z, 2000 * (t + 1))); } return false; };
     const worker = async () => { while (q.length) { const x = q.shift(); if (!(await put(x))) fail.push(x); done++; onp(done, tot, fail.length); } };
     await Promise.all([worker(), worker(), worker(), worker()]);
     if (fail.length) throw new Error('لم يكتمل رفع ' + fail.length + ' ملف — أعد رفع هذه الحزمة (الملفات المرفوعة لن تتكرر)');
-    const c = await call('adminMat', { op: 'commit', grade: M.grade, subject: M.subject, manifest: M });
+    const c = await call('adminMat', { op: 'commit', grade: M.grade, subject: M.subject, manifest: M }); c.same = same; c.sent = files.length;
     c.decks = decks.length ? await uploadDecks(zip, decks, d => onp(files.length + d, tot, 0)) : 0; return c; };
 
   inp.addEventListener('change', async () => { prev.innerHTML = ''; msg.innerHTML = ''; const F = [...(inp.files || [])]; if (!F.length) return;
@@ -1499,7 +1504,7 @@ function matBox() {
       let good = 0, total = 0; const t0 = Date.now();
       for (const R of ok) { R.bar.hidden = false; R.bar.max = R.n || 1; R.st.style.color = ''; R.st.textContent = 'جارٍ الرفع…';
         try { const c = await uploadPack(R.f, (d, n, fl) => { R.bar.max = n || 1; R.bar.value = d; R.st.textContent = 'تم رفع ' + d + ' من ' + n + (fl ? ' — فشل ' + fl : ''); });
-          R.st.textContent = '✓ رُفعت: ' + (c.files ? c.lessons + ' درس · ' + c.files + ' ملف · ' + mb(c.bytes) : '') + (c.decks ? (c.files ? ' · ' : '') + '🎬 ' + c.decks + ' عرض' : '') + (c.removed ? ' · حُذف ' + c.removed + ' ملف قديم' : ''); R.st.style.color = '#2e7d32'; good++; total += c.bytes; }
+          R.st.textContent = '✓ رُفعت: ' + (c.files ? c.lessons + ' درس · ' + c.files + ' ملف · ' + mb(c.bytes) : '') + (c.same ? ' · (أُرسل ' + c.sent + ' ملف جديد/معدّل فقط، و' + c.same + ' موجود من قبل)' : '') + (c.decks ? (c.files ? ' · ' : '') + '🎬 ' + c.decks + ' عرض' : '') + (c.removed ? ' · حُذف ' + c.removed + ' ملف قديم' : ''); R.st.style.color = '#2e7d32'; good++; total += c.bytes; }
         catch (x) { R.st.textContent = '❌ ' + fnErr(x); R.st.style.color = '#c62828'; } }
       try { if (lock) await lock.release(); } catch (er) { /* */ }
       const mins = Math.max(1, Math.round((Date.now() - t0) / 60000));
