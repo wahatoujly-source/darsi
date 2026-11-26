@@ -449,4 +449,9 @@
 <url><loc>https://mujtahid.ly/s/7-sci/r5/</loc><priority>0.6</priority></url>
 <url><loc>https://mujtahid.ly/s/7-sci/r6/</loc><priority>0.6</priority></url>
 <url><loc>https://mujtahid.ly/s/7-sci/t6/</loc><priority>0.6</priority></url>
+<url><loc>https://mujtahid.ly/s/7-geo/</loc><priority>0.8</priority></url>
+<url><loc>https://mujtahid.ly/s/7-geo/u1/</loc><priority>0.6</priority></url>
+<url><loc>https://mujtahid.ly/s/7-geo/u2/</loc><priority>0.6</priority></url>
+<url><loc>https://mujtahid.ly/s/7-geo/u3/</loc><priority>0.6</priority></url>
+<url><loc>https://mujtahid.ly/s/7-geo/u4/</loc><priority>0.6</priority></url>
 </urlset>
